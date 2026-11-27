@@ -1,68 +1,68 @@
-export const id = 32;
-export const ids = [32];
+export const id = 33;
+export const ids = [33];
 export const modules = {
-  39973: (ee, ie, He) => {
-    function ye(ee) {
-      return void 0 === ee ? void 0 : [ee[0], ee[1], ee[2]]
+  40380: (WW, iW, OW) => {
+    function mW(WW) {
+      return void 0 === WW ? void 0 : [WW[0], WW[1], WW[2]]
     }
 
-    function be(ee) {
-      const ie = ee.particles;
+    function EW(WW) {
+      const iW = WW.particles;
       return {
         opts: {
-          texture: ie.texture,
-          bk: ie.bk,
-          minLifeTime: ie.minLifeTime,
-          maxLifeTime: ie.maxLifeTime,
-          minSize: ie.minSize,
-          maxSize: ie.maxSize,
-          minEmitPower: ie.minEmitPower,
-          maxEmitPower: ie.maxEmitPower,
-          emitRate: ie.emitRate,
-          gravity: ye(ie.gravity),
-          dir1: ye(ie.dir1),
-          dir2: ye(ie.dir2),
-          colorGradients: ie.colorGradients,
-          blendMode: ie.blendMode
+          texture: iW.texture,
+          aZ: iW.aZ,
+          minLifeTime: iW.minLifeTime,
+          maxLifeTime: iW.maxLifeTime,
+          minSize: iW.minSize,
+          maxSize: iW.maxSize,
+          minEmitPower: iW.minEmitPower,
+          maxEmitPower: iW.maxEmitPower,
+          emitRate: iW.emitRate,
+          gravity: mW(iW.gravity),
+          dir1: mW(iW.dir1),
+          dir2: mW(iW.dir2),
+          colorGradients: iW.colorGradients,
+          blendMode: iW.blendMode
         },
-        half: [ie.width / 2, ie.height / 2, ie.depth / 2]
+        half: [iW.width / 2, iW.height / 2, iW.depth / 2]
       }
     }
-    He.d(ie, {
-      d: () => be
+    OW.d(iW, {
+      d: () => EW
     })
   },
-  39925: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me,
-      i: () => Je,
-      m: () => Fe,
-      o: () => Ke
+  40337: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      g: () => wW,
+      h: () => cW,
+      i: () => PW
     });
-    var ye = He(198);
-    const be = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      Me = "PetRoot";
-    let Ke = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      Ue = be;
+    var mW = OW(192);
+    const EW = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      NW = "PetRoot";
+    let PW = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      LW = EW;
     new Map, new Map;
 
-    function Fe(ee) {
-      var ie;
-      return null !== (ie = (0, ye.b)(Ke, ee)) && void 0 !== ie ? ie : null
+    function cW(WW) {
+      var iW;
+      return null !== (iW = (0, mW.c)(PW, WW)) && void 0 !== iW ? iW : null
     }
 
-    function Je(ee) {
-      var ie;
-      return null !== (ie = (0, ye.b)(Ue, ee)) && void 0 !== ie ? ie : null
+    function wW(WW) {
+      var iW;
+      return null !== (iW = (0, mW.c)(LW, WW)) && void 0 !== iW ? iW : null
     }
   },
-  39980: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => ye,
-      f: () => be,
-      j: () => Me
+  40384: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW,
+      f: () => EW,
+      j: () => NW
     });
-    class ye {
+    class mW {
       constructor() {
         this.pose = {
           pos: [0, 0, 0],
@@ -70,355 +70,355 @@ export const modules = {
           mode: "flying",
           seated: !1,
           clip: void 0
-        }, this.Op = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
+        }, this.Sj = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
       }
-      step(ee) {
-        var ie;
+      step(WW) {
+        var iW;
         const {
-          feet: He,
-          heading: ye,
-          tuning: Ke
-        } = ee, Ue = Math.min(Math.max(ee.dt, 0), .1), {
-          pose: Fe,
-          Op: Je,
-          target: oe
+          feet: OW,
+          heading: mW,
+          tuning: PW
+        } = WW, LW = Math.min(Math.max(WW.dt, 0), .1), {
+          pose: cW,
+          Sj: wW,
+          target: tW
         } = this;
-        if (this.started && Ue > 0) {
-          const ee = Math.hypot(He[0] - this.lastFeet[0], He[1] - this.lastFeet[1], He[2] - this.lastFeet[2]);
-          this.speed += (ee / Ue - this.speed) * Math.min(Ue / .15, 1)
+        if (this.started && LW > 0) {
+          const WW = Math.hypot(OW[0] - this.lastFeet[0], OW[1] - this.lastFeet[1], OW[2] - this.lastFeet[2]);
+          this.speed += (WW / LW - this.speed) * Math.min(LW / .15, 1)
         }
-        this.lastFeet[0] = He[0], this.lastFeet[1] = He[1], this.lastFeet[2] = He[2], this.stillS = this.speed > .3 ? 0 : this.stillS + Ue;
-        const Re = this.stillS >= .6 ? "perched" : "flying";
-        "flying" === Re && "perched" === Fe.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += Ue, Fe.mode = Re;
-        const ke = Math.sin(ye),
-          qe = Math.cos(ye);
-        "perched" === Re ? (Me(oe, He, Ke.perchOffset, ke, qe), oe[1] += ee.headTopY - He[1]) : (Me(oe, He, Ke.followOffset, ke, qe), oe[1] += be(Ke, ee.timeS));
+        this.lastFeet[0] = OW[0], this.lastFeet[1] = OW[1], this.lastFeet[2] = OW[2], this.stillS = this.speed > .3 ? 0 : this.stillS + LW;
+        const ZW = this.stillS >= .6 ? "perched" : "flying";
+        "flying" === ZW && "perched" === cW.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += LW, cW.mode = ZW;
+        const xW = Math.sin(mW),
+          lW = Math.cos(mW);
+        "perched" === ZW ? (NW(tW, OW, PW.perchOffset, xW, lW), tW[1] += WW.headTopY - OW[1]) : (NW(tW, OW, PW.followOffset, xW, lW), tW[1] += EW(PW, WW.timeS));
         const {
-          pos: fe
-        } = Fe, Te = Math.hypot(oe[0] - fe[0], oe[1] - fe[1], oe[2] - fe[2]);
-        if (!this.started || Te > 8 || "perched" === Re && (this.perchLocked || Te < .05)) this.perchLocked = this.started && "perched" === Re, fe[0] = oe[0], fe[1] = oe[1], fe[2] = oe[2], Je[0] = Je[1] = Je[2] = 0;
+          pos: AW
+        } = cW, bW = Math.hypot(tW[0] - AW[0], tW[1] - AW[1], tW[2] - AW[2]);
+        if (!this.started || bW > 8 || "perched" === ZW && (this.perchLocked || bW < .05)) this.perchLocked = this.started && "perched" === ZW, AW[0] = tW[0], AW[1] = tW[1], AW[2] = tW[2], wW[0] = wW[1] = wW[2] = 0;
         else {
-          const ee = Ke.followStiffness;
-          for (let ie = 0; ie < 3; ie++) Je[ie] += (ee * ee * (oe[ie] - fe[ie]) - 2 * ee * Je[ie]) * Ue, fe[ie] += Je[ie] * Ue
+          const WW = PW.followStiffness;
+          for (let iW = 0; iW < 3; iW++) wW[iW] += (WW * WW * (tW[iW] - AW[iW]) - 2 * WW * wW[iW]) * LW, AW[iW] += wW[iW] * LW
         }
-        const pe = ye + Ke.yawOffset;
-        var Xe;
-        return this.started ? Fe.yaw += ((Xe = pe - Fe.yaw) - 2 * Math.PI * Math.round(Xe / (2 * Math.PI))) * Math.min(8 * Ue, 1) : Fe.yaw = pe, this.started = !0, Fe.seated = "perched" === Re && this.perchLocked, Fe.clip = null === (ie = Ke.clips) || void 0 === ie ? void 0 : ie[this.gH(Re)], Fe
+        const jW = mW + PW.yawOffset;
+        var UW;
+        return this.started ? cW.yaw += ((UW = jW - cW.yaw) - 2 * Math.PI * Math.round(UW / (2 * Math.PI))) * Math.min(8 * LW, 1) : cW.yaw = jW, this.started = !0, cW.seated = "perched" === ZW && this.perchLocked, cW.clip = null === (iW = PW.clips) || void 0 === iW ? void 0 : iW[this.bO(ZW)], cW
       }
       reset() {
         this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0, this.pose.mode = "flying", this.pose.seated = !1
       }
-      gH(ee) {
-        return "perched" === ee ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
+      bO(WW) {
+        return "perched" === WW ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
       }
     }
 
-    function be(ee, ie) {
-      return ee.bobAmplitude * Math.sin(2 * Math.PI * ee.bobHz * ie)
+    function EW(WW, iW) {
+      return WW.bobAmplitude * Math.sin(2 * Math.PI * WW.bobHz * iW)
     }
 
-    function Me(ee, ie, He, ye, be) {
-      const [Me, Ke, Ue] = He;
-      ee[0] = ie[0] + Me * be + Ue * ye, ee[1] = ie[1] + Ke, ee[2] = ie[2] - Me * ye + Ue * be
+    function NW(WW, iW, OW, mW, EW) {
+      const [NW, PW, LW] = OW;
+      WW[0] = iW[0] + NW * EW + LW * mW, WW[1] = iW[1] + PW, WW[2] = iW[2] - NW * mW + LW * EW
     }
   },
-  5319: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => ae,
-      g: () => Ve
+  5599: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => eW,
+      g: () => dW
     });
-    var ye = He(5326),
-      be = He(335);
-    const Me = 120,
-      Ke = 260,
-      Ue = 1.15,
-      Fe = 1.2,
-      Je = 2,
-      oe = 1.08,
-      Re = .8,
-      ke = .95,
-      qe = 8,
-      fe = "[\"')\\]\u300d\u300f\uff09]*",
-      Te = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${fe}$`),
-      pe = new RegExp(`[?\uff1f]${fe}$`),
-      Xe = new RegExp(`[!\uff01]${fe}$`),
-      ze = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Be = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Ee = new RegExp(`[${Be}]`),
-      ge = new RegExp(`[${Be}]|[^${Be}]+`, "g"),
-      Oe = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var mW = OW(5605),
+      EW = OW(327);
+    const NW = 120,
+      PW = 260,
+      LW = 1.15,
+      cW = 1.2,
+      wW = 2,
+      tW = 1.08,
+      ZW = .8,
+      xW = .95,
+      lW = 8,
+      AW = "[\"')\\]\u300d\u300f\uff09]*",
+      bW = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${AW}$`),
+      jW = new RegExp(`[?\uff1f]${AW}$`),
+      UW = new RegExp(`[!\uff01]${AW}$`),
+      kW = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      sW = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      MW = new RegExp(`[${sW}]`),
+      KW = new RegExp(`[${sW}]|[^${sW}]+`, "g"),
+      SW = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function de(ee) {
-      let ie = 2166136261;
-      for (let He = 0; He < ee.length; He++) ie ^= ee.charCodeAt(He), ie = Math.imul(ie, 16777619);
-      return (ie >>> 0) / 4294967295 * 2 - 1
+    function YW(WW) {
+      let iW = 2166136261;
+      for (let OW = 0; OW < WW.length; OW++) iW ^= WW.charCodeAt(OW), iW = Math.imul(iW, 16777619);
+      return (iW >>> 0) / 4294967295 * 2 - 1
     }
 
-    function We(ee) {
-      var ie;
-      if (Ee.test(ee)) return 1;
-      const He = ee.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        ye = He.replace(/[^0-9]/g, "");
-      if (ye.length > 0 && !/\p{L}/u.test(He)) return Math.min(ye.length, 4);
-      const be = null !== (ie = He.match(Oe)) && void 0 !== ie ? ie : [];
-      if (0 === be.length) {
-        var Me, Ke;
-        const ee = null !== (Me = null === (Ke = He.match(/\p{L}/gu)) || void 0 === Ke ? void 0 : Ke.length) && void 0 !== Me ? Me : 0;
-        return 0 === ee ? 0 : Math.min(Math.max(1, Math.round(ee / 2.5)), qe)
+    function yW(WW) {
+      var iW;
+      if (MW.test(WW)) return 1;
+      const OW = WW.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        mW = OW.replace(/[^0-9]/g, "");
+      if (mW.length > 0 && !/\p{L}/u.test(OW)) return Math.min(mW.length, 4);
+      const EW = null !== (iW = OW.match(SW)) && void 0 !== iW ? iW : [];
+      if (0 === EW.length) {
+        var NW, PW;
+        const WW = null !== (NW = null === (PW = OW.match(/\p{L}/gu)) || void 0 === PW ? void 0 : PW.length) && void 0 !== NW ? NW : 0;
+        return 0 === WW ? 0 : Math.min(Math.max(1, Math.round(WW / 2.5)), lW)
       }
-      const Ue = He.replace(/[^\p{L}]/gu, ""),
-        Fe = be.length > 1 && "e" === be.at(-1) && Ue.endsWith("e") && !Ue.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(ee.replace(/[^\p{L}]/gu, ""));
-      return Math.min(be.length - (Fe ? 1 : 0), qe)
+      const LW = OW.replace(/[^\p{L}]/gu, ""),
+        cW = EW.length > 1 && "e" === EW.at(-1) && LW.endsWith("e") && !LW.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(WW.replace(/[^\p{L}]/gu, ""));
+      return Math.min(EW.length - (cW ? 1 : 0), lW)
     }
 
-    function te(ee) {
-      return ee.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function TW(WW) {
+      return WW.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Ze(ee) {
-      const ie = ee.replace(/[^\p{L}]/gu, "");
-      return ie.length >= 2 && ie === ie.toUpperCase() && ie !== ie.toLowerCase()
+    function JW(WW) {
+      const iW = WW.replace(/[^\p{L}]/gu, "");
+      return iW.length >= 2 && iW === iW.toUpperCase() && iW !== iW.toLowerCase()
     }
 
-    function we(ee, ie) {
-      var He;
-      const qe = ie && (0, ye.l)(ie),
-        fe = null !== (He = null === qe || void 0 === qe ? void 0 : qe.syllableMs) && void 0 !== He ? He : ye.d,
-        Be = function(ee) {
-          const ie = [];
-          for (const ye of (0, be.kc)(ee))
-            if ("string" === typeof ye)
-              for (const ee of ye.split(/(\s+)/)) {
-                if ("" === ee) continue;
-                if (/^\s+$/.test(ee)) {
-                  ie.push({
+    function hW(WW, iW) {
+      var OW;
+      const lW = iW && (0, mW.h)(iW),
+        AW = null !== (OW = null === lW || void 0 === lW ? void 0 : lW.syllableMs) && void 0 !== OW ? OW : mW.d,
+        sW = function(WW) {
+          const iW = [];
+          for (const mW of (0, EW.kc)(WW))
+            if ("string" === typeof mW)
+              for (const WW of mW.split(/(\s+)/)) {
+                if ("" === WW) continue;
+                if (/^\s+$/.test(WW)) {
+                  iW.push({
                     kind: "space",
-                    text: ee
+                    text: WW
                   });
                   continue
                 }
-                if (!Ee.test(ee)) {
-                  ie.push({
+                if (!MW.test(WW)) {
+                  iW.push({
                     kind: "word",
-                    text: ee,
+                    text: WW,
                     delayMs: 0
                   });
                   continue
                 }
-                let ye = !0;
-                for (const be of null !== (He = ee.match(ge)) && void 0 !== He ? He : []) {
-                  var He;
-                  const ee = ie.at(-1);
-                  ye || "word" !== (null === ee || void 0 === ee ? void 0 : ee.kind) || Ee.test(be) || /[\p{L}\p{N}]/u.test(be) ? (ye || ie.push({
+                let mW = !0;
+                for (const EW of null !== (OW = WW.match(KW)) && void 0 !== OW ? OW : []) {
+                  var OW;
+                  const WW = iW.at(-1);
+                  mW || "word" !== (null === WW || void 0 === WW ? void 0 : WW.kind) || MW.test(EW) || /[\p{L}\p{N}]/u.test(EW) ? (mW || iW.push({
                     kind: "space",
                     text: "\u200b"
-                  }), ie.push({
+                  }), iW.push({
                     kind: "word",
-                    text: be,
+                    text: EW,
                     delayMs: 0
-                  }), ye = !1) : ee.text += be
+                  }), mW = !1) : WW.text += EW
                 }
-              } else ie.push({
+              } else iW.push({
                 kind: "icon",
-                text: ye.icon,
+                text: mW.icon,
                 delayMs: 0
               });
-          return ie
-        }(ee),
-        Oe = [];
-      let we = [];
-      for (const ye of Be) "space" !== ye.kind && (we.push(ye), Te.test(ye.text) && (Oe.push(we), we = []));
-      Oe.push(we);
-      const De = [];
-      let Pe = 0;
-      for (const ye of Oe) {
-        var Ae, Ye;
-        const ee = null !== (Ae = null === (Ye = ye.at(-1)) || void 0 === Ye ? void 0 : Ye.text) && void 0 !== Ae ? Ae : "",
-          ie = pe.test(ee),
-          He = Xe.test(ee),
-          be = ye.map((ee => "word" === ee.kind ? We(ee.text) : 1)),
-          Be = be.findLastIndex((ee => ee > 0));
-        for (const [pe, Xe] of ye.entries()) {
-          const ee = "word" === Xe.kind,
-            ye = be[pe];
-          Xe.delayMs = Pe;
-          for (let be = 0; qe && be < ye; be++) {
+          return iW
+        }(WW),
+        SW = [];
+      let hW = [];
+      for (const mW of sW) "space" !== mW.kind && (hW.push(mW), bW.test(mW.text) && (SW.push(hW), hW = []));
+      SW.push(hW);
+      const HW = [];
+      let nW = 0;
+      for (const mW of SW) {
+        var uW, oW;
+        const WW = null !== (uW = null === (oW = mW.at(-1)) || void 0 === oW ? void 0 : oW.text) && void 0 !== uW ? uW : "",
+          iW = jW.test(WW),
+          OW = UW.test(WW),
+          EW = mW.map((WW => "word" === WW.kind ? yW(WW.text) : 1)),
+          sW = EW.findLastIndex((WW => WW > 0));
+        for (const [jW, UW] of mW.entries()) {
+          const WW = "word" === UW.kind,
+            mW = EW[jW];
+          UW.delayMs = nW;
+          for (let EW = 0; lW && EW < mW; EW++) {
             const {
-              intonation: Me
-            } = qe;
-            let Ke = Be > 0 ? -Me.declineSemitones * (pe / Be) : 0;
-            Ke += de(`${te(Xe.text)}|${be}`) * Me.variationSemitones;
-            const Te = Math.min(1, Me.variationSemitones);
-            let ze = qe.glideSemitones,
-              Ee = 1;
-            He && (Ke += Me.exclaimLiftSemitones, Ee *= Ue), ie && pe === Be && (Ke += Me.questionRiseSemitones * (ye > 1 ? .5 + .5 * be / (ye - 1) : 1), be === ye - 1 && (ze = Math.abs(ze) + Me.questionRiseSemitones / 2)), ee && Ze(Xe.text) && (Ke += Je * Te, Ee *= Fe), ye > 1 && 0 === be && (Ke += Re * Te, Ee *= oe), De.push({
-              atMs: Pe + be * fe,
-              semitones: Ke,
-              glideSemitones: ze,
-              durationMs: be < ye - 1 ? Math.min(qe.durationMs, fe * ke) : qe.durationMs,
-              level: Ee
+              intonation: NW
+            } = lW;
+            let PW = sW > 0 ? -NW.declineSemitones * (jW / sW) : 0;
+            PW += YW(`${TW(UW.text)}|${EW}`) * NW.variationSemitones;
+            const bW = Math.min(1, NW.variationSemitones);
+            let kW = lW.glideSemitones,
+              MW = 1;
+            OW && (PW += NW.exclaimLiftSemitones, MW *= LW), iW && jW === sW && (PW += NW.questionRiseSemitones * (mW > 1 ? .5 + .5 * EW / (mW - 1) : 1), EW === mW - 1 && (kW = Math.abs(kW) + NW.questionRiseSemitones / 2)), WW && JW(UW.text) && (PW += wW * bW, MW *= cW), mW > 1 && 0 === EW && (PW += ZW * bW, MW *= tW), HW.push({
+              atMs: nW + EW * AW,
+              semitones: PW,
+              glideSemitones: kW,
+              durationMs: EW < mW - 1 ? Math.min(lW.durationMs, AW * xW) : lW.durationMs,
+              level: MW
             })
           }
-          Pe += ye * fe + (Te.test(Xe.text) ? Ke : ze.test(Xe.text) ? Me : 0)
+          nW += mW * AW + (bW.test(UW.text) ? PW : kW.test(UW.text) ? NW : 0)
         }
       }
       return {
-        pieces: Be.map((ee => "space" === ee.kind ? ee : "icon" === ee.kind ? {
+        pieces: sW.map((WW => "space" === WW.kind ? WW : "icon" === WW.kind ? {
           kind: "icon",
-          icon: ee.text,
-          delayMs: ee.delayMs
+          icon: WW.text,
+          delayMs: WW.delayMs
         } : {
           kind: "word",
-          text: ee.text,
-          delayMs: ee.delayMs
+          text: WW.text,
+          delayMs: WW.delayMs
         })),
-        blips: De
+        blips: HW
       }
     }
-    var De = He(1127),
-      Pe = He(1196),
-      Ae = He(1988);
+    var HW = OW(1172),
+      nW = OW(1244),
+      uW = OW(2042);
 
-    function Ye(ee) {
-      if ("string" === typeof ee) return ee;
-      const ie = Pe.f.get().getCurrentLanguageCode();
-      return (0, De.o)(ie, ee.translationKey, (0, De.m)(ee.params, Ae.c.shown))
+    function oW(WW) {
+      if ("string" === typeof WW) return WW;
+      const iW = nW.e.get().getCurrentLanguageCode();
+      return (0, HW.p)(iW, WW.translationKey, (0, HW.o)(WW.params, uW.e.shown))
     }
 
-    function Ve(ee) {
-      const ie = void 0 === ee.voice ? null : (0, ye.n)(ee.voice),
-        He = ie && (0, ye.l)(ie);
+    function dW(WW) {
+      const iW = void 0 === WW.voice ? null : (0, mW.j)(WW.voice),
+        OW = iW && (0, mW.h)(iW);
       return {
-        plan: we(Ye(ee.line), He),
-        synth: He
+        plan: hW(oW(WW.line), OW),
+        synth: OW
       }
     }
 
-    function ae(ee) {
-      const ie = [];
-      let He = [];
-      for (const [be, Me] of ee.entries()) {
-        var ye;
-        "space" === Me.kind && (" " !== Me.text || "icon" !== (null === (ye = ee[be + 1]) || void 0 === ye ? void 0 : ye.kind)) ? (He.length > 0 && ie.push(He), ie.push([Me]), He = []) : He.push(Me)
+    function eW(WW) {
+      const iW = [];
+      let OW = [];
+      for (const [EW, NW] of WW.entries()) {
+        var mW;
+        "space" === NW.kind && (" " !== NW.text || "icon" !== (null === (mW = WW[EW + 1]) || void 0 === mW ? void 0 : mW.kind)) ? (OW.length > 0 && iW.push(OW), iW.push([NW]), OW = []) : OW.push(NW)
       }
-      return He.length > 0 && ie.push(He), ie
+      return OW.length > 0 && iW.push(OW), iW
     }
   },
-  5333: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => oe,
-      f: () => Re
+  5610: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => tW,
+      h: () => ZW
     });
-    var ye = He(5338),
-      be = He(18);
-    const Me = .25,
-      Ke = .85,
-      Ue = .02,
-      Fe = .01;
+    var mW = OW(5615),
+      EW = OW(25);
+    const NW = .25,
+      PW = .85,
+      LW = .02,
+      cW = .01;
 
-    function Je(ee, ie, He, ye, be, Me, Ue) {
+    function wW(WW, iW, OW, mW, EW, NW, LW) {
       const {
-        waveform: Fe,
-        pitchHz: Je,
-        attackMs: oe,
-        releaseMs: Re,
-        lowpassHz: ke
-      } = He, qe = be + ye.durationMs / 1e3, fe = Je * 2 ** (ye.semitones / 12), Te = ee.createOscillator();
-      Te.type = Fe, Te.frequency.setValueAtTime(fe, be), Te.frequency.exponentialRampToValueAtTime(fe * 2 ** (ye.glideSemitones / 12), qe);
-      const pe = be + Math.min(oe, ye.durationMs) / 1e3,
-        Xe = ee.createGain();
-      Xe.gain.setValueAtTime(0, be), Xe.gain.linearRampToValueAtTime(Me, pe), Xe.gain.linearRampToValueAtTime(Me * Ke, Math.max(pe, qe - Re / 1e3)), Xe.gain.linearRampToValueAtTime(0, qe);
-      const ze = [Te];
-      if (null !== ke) {
-        const ie = ee.createBiquadFilter();
-        ie.type = "lowpass", ie.frequency.value = ke, ze.push(ie)
+        waveform: cW,
+        pitchHz: wW,
+        attackMs: tW,
+        releaseMs: ZW,
+        lowpassHz: xW
+      } = OW, lW = EW + mW.durationMs / 1e3, AW = wW * 2 ** (mW.semitones / 12), bW = WW.createOscillator();
+      bW.type = cW, bW.frequency.setValueAtTime(AW, EW), bW.frequency.exponentialRampToValueAtTime(AW * 2 ** (mW.glideSemitones / 12), lW);
+      const jW = EW + Math.min(tW, mW.durationMs) / 1e3,
+        UW = WW.createGain();
+      UW.gain.setValueAtTime(0, EW), UW.gain.linearRampToValueAtTime(NW, jW), UW.gain.linearRampToValueAtTime(NW * PW, Math.max(jW, lW - ZW / 1e3)), UW.gain.linearRampToValueAtTime(0, lW);
+      const kW = [bW];
+      if (null !== xW) {
+        const iW = WW.createBiquadFilter();
+        iW.type = "lowpass", iW.frequency.value = xW, kW.push(iW)
       }
-      ze.push(Xe, ie);
-      for (let Ke = 1; Ke < ze.length; Ke++) ze[Ke - 1].connect(ze[Ke]);
-      return Te.onended = () => {
-        for (const ee of ze.slice(0, -1)) ee.disconnect();
-        Ue()
-      }, Te.start(be), Te.stop(qe), Te
+      kW.push(UW, iW);
+      for (let PW = 1; PW < kW.length; PW++) kW[PW - 1].connect(kW[PW]);
+      return bW.onended = () => {
+        for (const WW of kW.slice(0, -1)) WW.disconnect();
+        LW()
+      }, bW.start(EW), bW.stop(lW), bW
     }
 
-    function oe(ee, ie, He, ye, be, Ke) {
-      if (0 === ye.length) return Ke(), () => {};
-      const oe = Me * He.volume * be,
-        Re = ee.createGain();
-      Re.connect(ie);
-      const ke = ee.currentTime + Ue,
-        qe = new Set;
-      for (const Me of ye) {
-        const ie = Je(ee, Re, He, Me, ke + Me.atMs / 1e3, oe * Me.level, (() => {
-          qe.delete(ie), 0 === qe.size && (Re.disconnect(), Ke())
+    function tW(WW, iW, OW, mW, EW, PW) {
+      if (0 === mW.length) return PW(), () => {};
+      const tW = NW * OW.volume * EW,
+        ZW = WW.createGain();
+      ZW.connect(iW);
+      const xW = WW.currentTime + LW,
+        lW = new Set;
+      for (const NW of mW) {
+        const iW = wW(WW, ZW, OW, NW, xW + NW.atMs / 1e3, tW * NW.level, (() => {
+          lW.delete(iW), 0 === lW.size && (ZW.disconnect(), PW())
         }));
-        qe.add(ie)
+        lW.add(iW)
       }
       return () => {
-        const ie = ee.currentTime;
-        Re.gain.setTargetAtTime(0, ie, Fe);
-        for (const ee of qe) try {
-          ee.stop(ie + 5 * Fe)
+        const iW = WW.currentTime;
+        ZW.gain.setTargetAtTime(0, iW, cW);
+        for (const WW of lW) try {
+          WW.stop(iW + 5 * cW)
         } catch {}
       }
     }
 
-    function Re(ee, ie) {
-      var He;
-      const Me = ye.Howler.ctx,
-        Ke = ye.Howler.masterGain;
-      if (!Me || !Ke || !be.e.get("soundOnFromAd")) return () => {};
-      const Ue = ye.Howler;
-      return null === (He = Ue._autoResume) || void 0 === He || He.call(Ue), oe(Me, Ke, ee, ie, be.e.get("soundVolume"), (() => {
-        var ee;
-        null === (ee = Ue._autoSuspend) || void 0 === ee || ee.call(Ue)
+    function ZW(WW, iW) {
+      var OW;
+      const NW = mW.Howler.ctx,
+        PW = mW.Howler.masterGain;
+      if (!NW || !PW || !EW.d.get("soundOnFromAd")) return () => {};
+      const LW = mW.Howler;
+      return null === (OW = LW._autoResume) || void 0 === OW || OW.call(LW), tW(NW, PW, WW, iW, EW.d.get("soundVolume"), (() => {
+        var WW;
+        null === (WW = LW._autoSuspend) || void 0 === WW || WW.call(LW)
       }))
     }
   },
-  39956: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      closeClientGame: () => Ri,
-      createDefaultClientPlugins: () => oi
+  40366: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      closeClientGame: () => Zi,
+      createDefaultClientPlugins: () => ti
     });
-    var ye = He(347);
+    var mW = OW(344);
 
-    function be() {
-      let ee;
+    function EW() {
+      let WW;
       return {
-        onCreate(ie) {
-          ee = ie
+        onCreate(iW) {
+          WW = iW
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(ie, He, be, Me, Ke, Ue) {
-          var Fe, Je;
-          if ("Iron Chest" !== ee.getMetaInfo(Ke).rootName) return;
-          if (!ee.hasEffect(ie, "Thief")) return;
-          const oe = ee.getBlockData(He, be, Me);
-          return ee.getPlayerDbId(ie) !== (null === oe || void 0 === oe || null === (Fe = oe.persisted) || void 0 === Fe || null === (Je = Fe.shared) || void 0 === Je ? void 0 : Je.ownerDbId) ? (ee.sendMessage(ie, [{
+        onPlayerAttemptAltAction(iW, OW, EW, NW, PW, LW) {
+          var cW, wW;
+          if ("Iron Chest" !== WW.getMetaInfo(PW).rootName) return;
+          if (!WW.hasEffect(iW, "Thief")) return;
+          const tW = WW.getBlockData(OW, EW, NW);
+          return WW.getPlayerDbId(iW) !== (null === tW || void 0 === tW || null === (cW = tW.persisted) || void 0 === cW || null === (wW = cW.shared) || void 0 === wW ? void 0 : wW.ownerDbId) ? (WW.sendMessage(iW, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: ye.L.redUiText
+              color: mW.M.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var Me = He(4598),
-      Ke = He(1189);
-    const Ue = 8.4,
-      Fe = 1e-4,
-      Je = .15,
-      oe = .04,
-      Re = [.12, .04, .12],
-      ke = 26,
-      qe = {
+    var NW = OW(2937),
+      PW = OW(1230);
+    const LW = 8.4,
+      cW = 1e-4,
+      wW = .15,
+      tW = .04,
+      ZW = [.12, .04, .12],
+      xW = 26,
+      lW = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        bk: 1,
-        minLifeTime: Fe,
-        maxLifeTime: Fe,
+        aZ: 1,
+        minLifeTime: cW,
+        maxLifeTime: cW,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -431,19 +431,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: Me.e.Standard
+        blendMode: NW.d.Standard
       },
-      fe = {
+      AW = {
         texture: "bubble",
         mipmaps: !1,
-        bk: 96,
+        aZ: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: ke,
+        emitRate: xW,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -457,159 +457,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: Me.e.Standard
+        blendMode: NW.d.Standard
       },
-      Te = [0, 0, 0],
-      pe = [0, 0, 0];
+      bW = [0, 0, 0],
+      jW = [0, 0, 0];
 
-    function Xe(ee) {
-      const ie = new Map;
-      let He = null;
+    function UW(WW) {
+      const iW = new Map;
+      let OW = null;
 
-      function ye(ee) {
-        var ie, He;
-        null === (ie = ee.bubbles) || void 0 === ie || ie.stop(), null === (He = ee.fish) || void 0 === He || He.stop()
+      function mW(WW) {
+        var iW, OW;
+        null === (iW = WW.bubbles) || void 0 === iW || iW.stop(), null === (OW = WW.fish) || void 0 === OW || OW.stop()
       }
 
-      function be(He) {
-        if (!He.readDrawnPosition(ee, pe)) {
-          for (const ee of ie.values()) {
-            var ye;
-            null === (ye = ee.bubbles) || void 0 === ye || ye.setEmitRate(0)
+      function EW(OW) {
+        if (!OW.readDrawnPosition(WW, jW)) {
+          for (const WW of iW.values()) {
+            var mW;
+            null === (mW = WW.bubbles) || void 0 === mW || mW.setEmitRate(0)
           }
           return
         }
-        const be = performance.now();
-        for (const [ee, Ke] of ie) {
-          var Me;
-          if (null === (Me = Ke.bubbles) || void 0 === Me || Me.setEmitRate(0), !He.readDrawnPosition(ee, Te)) continue;
-          if (!((Te[0] - pe[0]) ** 2 + (Te[1] - pe[1]) ** 2 + (Te[2] - pe[2]) ** 2 < 900)) continue;
-          const ie = Math.max(0, Ke.biteAt - be),
-            ye = Ke.approachDurationMs > 0 ? Math.min(1, 1 - ie / Ke.approachDurationMs) : 1,
-            Fe = (Ke.approachDurationMs - ie) / 1e3,
-            Xe = Ke.phase + .25 * Math.sin(1.7 * Fe + Ke.phase),
-            ze = Math.min(Ke.approachDurationMs / 3e3 * 2.8, Ue) * (1 - ye) * (1 + .15 * Math.sin(2.1 * Fe + Ke.phase)),
-            Be = Math.min(1, 4 * (1 - ye)),
-            Ee = (.45 * Math.sin(4.1 * Fe + Ke.phase) + .18 * Math.sin(9.7 * Fe + 2 * Ke.phase)) * Be,
-            ge = Te[0] + Math.cos(Xe) * ze - Math.sin(Xe) * Ee,
-            Oe = Math.ceil(Ke.surfaceY),
-            de = Te[2] + Math.sin(Xe) * ze + Math.cos(Xe) * Ee,
+        const EW = performance.now();
+        for (const [WW, PW] of iW) {
+          var NW;
+          if (null === (NW = PW.bubbles) || void 0 === NW || NW.setEmitRate(0), !OW.readDrawnPosition(WW, bW)) continue;
+          if (!((bW[0] - jW[0]) ** 2 + (bW[1] - jW[1]) ** 2 + (bW[2] - jW[2]) ** 2 < 900)) continue;
+          const iW = Math.max(0, PW.biteAt - EW),
+            mW = PW.approachDurationMs > 0 ? Math.min(1, 1 - iW / PW.approachDurationMs) : 1,
+            cW = (PW.approachDurationMs - iW) / 1e3,
+            UW = PW.phase + .25 * Math.sin(1.7 * cW + PW.phase),
+            kW = Math.min(PW.approachDurationMs / 3e3 * 2.8, LW) * (1 - mW) * (1 + .15 * Math.sin(2.1 * cW + PW.phase)),
+            sW = Math.min(1, 4 * (1 - mW)),
+            MW = (.45 * Math.sin(4.1 * cW + PW.phase) + .18 * Math.sin(9.7 * cW + 2 * PW.phase)) * sW,
+            KW = bW[0] + Math.cos(UW) * kW - Math.sin(UW) * MW,
+            SW = Math.ceil(PW.surfaceY),
+            YW = bW[2] + Math.sin(UW) * kW + Math.cos(UW) * MW,
             {
-              fishAt: We,
-              bubblesAt: te
-            } = Ke;
-          We[0] = te[0] = ge, We[1] = Oe + Je, te[1] = Oe + oe, We[2] = te[2] = de, Ke.fish ??= He.createParticles(qe, {
-            pos: We
-          }), Ke.fish.moveTo(We), Ke.fish.emit(1), Ke.bubbles ??= He.createParticles(fe, {
-            pos: te,
-            half: Re
-          }), Ke.bubbles.moveTo(te), Ke.bubbles.setEmitRate(ke + 32 * (.5 + .5 * Math.sin(9 * Fe + Ke.phase)) ** 4 + 13 * ye)
+              fishAt: yW,
+              bubblesAt: TW
+            } = PW;
+          yW[0] = TW[0] = KW, yW[1] = SW + wW, TW[1] = SW + tW, yW[2] = TW[2] = YW, PW.fish ??= OW.createParticles(lW, {
+            pos: yW
+          }), PW.fish.moveTo(yW), PW.fish.emit(1), PW.bubbles ??= OW.createParticles(AW, {
+            pos: TW,
+            half: ZW
+          }), PW.bubbles.moveTo(TW), PW.bubbles.setEmitRate(xW + 32 * (.5 + .5 * Math.sin(9 * cW + PW.phase)) ** 4 + 13 * mW)
         }
       }
       return {
-        onCreate(ee) {
-          He = ee
+        onCreate(WW) {
+          OW = WW
         },
         onAfterRender() {
-          He && be(He)
+          OW && EW(OW)
         },
         onClose() {
-          for (const ee of ie.values()) ye(ee);
-          ie.clear(), He = null
+          for (const WW of iW.values()) mW(WW);
+          iW.clear(), OW = null
         },
-        onReceivedMessageFromServer(ee, He) {
-          if (ee !== Ke.B) return;
+        onReceivedMessageFromServer(WW, OW) {
+          if (WW !== PW.r) return;
           const {
-            hookId: be,
-            waiting: Me
-          } = He;
-          if (Me) ie.has(be) || ie.set(be, {
+            hookId: EW,
+            waiting: NW
+          } = OW;
+          if (NW) iW.has(EW) || iW.set(EW, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + Me.remainingMs,
-            approachDurationMs: Me.durationMs,
-            surfaceY: Me.surfaceY,
+            biteAt: performance.now() + NW.remainingMs,
+            approachDurationMs: NW.durationMs,
+            surfaceY: NW.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const ee = ie.get(be);
-            ee && ye(ee), ie.delete(be)
+            const WW = iW.get(EW);
+            WW && mW(WW), iW.delete(EW)
           }
         }
       }
     }
-    var ze = He(5333),
-      Be = He(5319);
+    var kW = OW(5610),
+      sW = OW(5599);
 
-    function Ee(ee) {
-      let ie, He = null,
-        ye = null;
-      const be = () => {
-        var ee;
-        null === (ee = ye) || void 0 === ee || ee(), ye = null
+    function MW(WW) {
+      let iW, OW = null,
+        mW = null;
+      const EW = () => {
+        var WW;
+        null === (WW = mW) || void 0 === WW || WW(), mW = null
       };
       return {
-        onCreate(ye) {
-          ie = ye, He = ie.getClientOption(ee, "dialogue")
+        onCreate(mW) {
+          iW = mW, OW = iW.getClientOption(WW, "dialogue")
         },
         onAfterRender() {
-          if (!ie) return;
-          const Me = ie.getClientOption(ee, "dialogue");
-          if (Me === He) return;
-          if (He = Me, be(), !Me || !1 === Me.animateIn) return;
+          if (!iW) return;
+          const NW = iW.getClientOption(WW, "dialogue");
+          if (NW === OW) return;
+          if (OW = NW, EW(), !NW || !1 === NW.animateIn) return;
           const {
-            plan: Ke,
-            synth: Ue
-          } = (0, Be.g)(Me);
-          Ue && (ye = (0, ze.f)(Ue, Ke.blips))
+            plan: PW,
+            synth: LW
+          } = (0, sW.g)(NW);
+          LW && (mW = (0, kW.h)(LW, PW.blips))
         },
-        onClose: be
+        onClose: EW
       }
     }
-    var ge = He(39965);
-    const Oe = [
+    var KW = OW(40371);
+    const SW = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      de = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      We = [0, 1, 2, 0, 2, 3];
+      YW = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      yW = [0, 1, 2, 0, 2, 3];
 
-    function te(ee, ie, He) {
-      var ye;
-      let [be, Me, Ke] = ie;
-      if (ee.hasPackModel("Furnace")) return null;
-      const Ue = ((null !== (ye = ee.getMetaInfo(He).rot) && void 0 !== ye ? ye : 1) - 1) * Math.PI / 2,
-        Fe = Math.PI + Ue,
-        Je = Math.cos(Fe),
-        oe = Math.sin(Fe),
-        Re = [];
-      for (const [fe, Te] of Oe) Re.push(fe * Je, Te, -fe * oe);
-      const ke = {
-          positions: Re,
-          indices: We,
-          uvs: de
+    function TW(WW, iW, OW) {
+      var mW;
+      let [EW, NW, PW] = iW;
+      if (WW.hasPackModel("Furnace")) return null;
+      const LW = ((null !== (mW = WW.getMetaInfo(OW).rot) && void 0 !== mW ? mW : 1) - 1) * Math.PI / 2,
+        cW = Math.PI + LW,
+        wW = Math.cos(cW),
+        tW = Math.sin(cW),
+        ZW = [];
+      for (const [AW, bW] of SW) ZW.push(AW * wW, bW, -AW * tW);
+      const xW = {
+          positions: ZW,
+          indices: yW,
+          uvs: YW
         },
-        qe = [be + .5 + .51 * Math.sin(Ue), Me + .375, Ke + .5 + .51 * Math.cos(Ue)];
-      return ee.createGameMesh(ke, {
+        lW = [EW + .5 + .51 * Math.sin(LW), NW + .375, PW + .5 + .51 * Math.cos(LW)];
+      return WW.createGameMesh(xW, {
         kind: "furnaceFire"
-      }, qe)
+      }, lW)
     }
 
-    function Ze(ee) {
-      return Math.floor(ee / 200) % 3
+    function JW(WW) {
+      return Math.floor(WW / 200) % 3
     }
 
-    function we(ee, ie, He) {
-      ee.setGameMesh(ie, {
-        uvOffset: [0, He / 3]
+    function hW(WW, iW, OW) {
+      WW.setGameMesh(iW, {
+        uvOffset: [0, OW / 3]
       })
     }
-    const De = [.12, .025, .12],
-      Pe = [{
+    const HW = [.12, .025, .12],
+      nW = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -622,7 +622,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: Me.e.Standard,
+          blendMode: NW.d.Standard,
           soft: !0
         },
         perSecond: 7
@@ -639,140 +639,140 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: Me.e.Add,
+          blendMode: NW.d.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class Ae {
+    class uW {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(ee, ie) {
-        const He = ee.getBlockId(ie[0], ie[1], ie[2]);
-        if ("Furnace" !== ee.getMetaInfo(He).rootName) return;
-        const ye = performance.now();
-        let be = this.smokes.find((ee => ee.pos[0] === ie[0] && ee.pos[1] === ie[1] && ee.pos[2] === ie[2] && ee.po === He));
-        if (be || (be = {
-            pos: [ie[0], ie[1], ie[2]],
-            po: He,
-            endMs: ye,
+      start(WW, iW) {
+        const OW = WW.getBlockId(iW[0], iW[1], iW[2]);
+        if ("Furnace" !== WW.getMetaInfo(OW).rootName) return;
+        const mW = performance.now();
+        let EW = this.smokes.find((WW => WW.pos[0] === iW[0] && WW.pos[1] === iW[1] && WW.pos[2] === iW[2] && WW.NL === OW));
+        if (EW || (EW = {
+            pos: [iW[0], iW[1], iW[2]],
+            NL: OW,
+            endMs: mW,
             lastBurstMs: -1 / 0,
-            pending: new Array(Pe.length).fill(0),
-            fire: te(ee, ie, He)
-          }, this.smokes.push(be), null !== be.fire && (we(ee, be.fire, Ze(ye)), this.shownFireFrame = -1)), be.endMs = ye + 6e3, this.smokes.length > 4) {
-          const ie = this.smokes.reduce(((ee, ie) => ie.endMs < ee.endMs ? ie : ee));
-          Ye(ee, ie), this.smokes.splice(this.smokes.indexOf(ie), 1)
+            pending: new Array(nW.length).fill(0),
+            fire: TW(WW, iW, OW)
+          }, this.smokes.push(EW), null !== EW.fire && (hW(WW, EW.fire, JW(mW)), this.shownFireFrame = -1)), EW.endMs = mW + 6e3, this.smokes.length > 4) {
+          const iW = this.smokes.reduce(((WW, iW) => iW.endMs < WW.endMs ? iW : WW));
+          oW(WW, iW), this.smokes.splice(this.smokes.indexOf(iW), 1)
         }
-        ye - be.lastBurstMs >= 300 && (be.lastBurstMs = ye, Pe.forEach(((ee, ie) => {
-          be.pending[ie] += ee.style.count
+        mW - EW.lastBurstMs >= 300 && (EW.lastBurstMs = mW, nW.forEach(((WW, iW) => {
+          EW.pending[iW] += WW.style.count
         })))
       }
-      onAfterRender(ee, ie) {
+      onAfterRender(WW, iW) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const He = performance.now();
-        this.smokes = this.smokes.filter((ie => {
-          const [ye, be, Me] = ie.pos, Ke = He < ie.endMs && ee.getBlockId(ye, be, Me) === ie.po;
-          return Ke || Ye(ee, ie), Ke
+        const OW = performance.now();
+        this.smokes = this.smokes.filter((iW => {
+          const [mW, EW, NW] = iW.pos, PW = OW < iW.endMs && WW.getBlockId(mW, EW, NW) === iW.NL;
+          return PW || oW(WW, iW), PW
         }));
-        const ye = Ze(He);
-        if (ye !== this.shownFireFrame) {
-          this.shownFireFrame = ye;
-          for (const ie of this.smokes) null !== ie.fire && we(ee, ie.fire, ye)
+        const mW = JW(OW);
+        if (mW !== this.shownFireFrame) {
+          this.shownFireFrame = mW;
+          for (const iW of this.smokes) null !== iW.fire && hW(WW, iW.fire, mW)
         }
-        if (!ee.particlesEnabled()) {
-          for (const ee of this.smokes) ee.pending.fill(0);
+        if (!WW.particlesEnabled()) {
+          for (const WW of this.smokes) WW.pending.fill(0);
           return
         }
-        const be = Math.min(ie, 250) / 1e3;
-        for (const Me of this.smokes) {
-          const [ie, ye, Ke] = Me.pos;
-          if (0 !== ee.getBlockId(ie, ye + 1, Ke)) {
-            Me.pending.fill(0);
+        const EW = Math.min(iW, 250) / 1e3;
+        for (const NW of this.smokes) {
+          const [iW, mW, PW] = NW.pos;
+          if (0 !== WW.getBlockId(iW, mW + 1, PW)) {
+            NW.pending.fill(0);
             continue
           }
-          const Ue = (Me.endMs - He) / 6e3,
-            Fe = this.centre;
-          Fe[0] = ie + .5, Fe[1] = ye + 1.275, Fe[2] = Ke + .5, Pe.forEach(((ie, He) => {
-            Me.pending[He] += ie.perSecond * Ue * be;
-            const ye = Math.floor(Me.pending[He]);
-            ye > 0 && this.emit(ee, He, Fe, ye) && (Me.pending[He] -= ye)
+          const LW = (NW.endMs - OW) / 6e3,
+            cW = this.centre;
+          cW[0] = iW + .5, cW[1] = mW + 1.275, cW[2] = PW + .5, nW.forEach(((iW, OW) => {
+            NW.pending[OW] += iW.perSecond * LW * EW;
+            const mW = Math.floor(NW.pending[OW]);
+            mW > 0 && this.emit(WW, OW, cW, mW) && (NW.pending[OW] -= mW)
           }))
         }
       }
-      dispose(ee) {
-        for (const He of this.smokes) Ye(ee, He);
+      dispose(WW) {
+        for (const OW of this.smokes) oW(WW, OW);
         this.smokes = [];
-        for (const He of null !== (ie = this.puffers) && void 0 !== ie ? ie : []) {
-          var ie;
-          He.dispose()
+        for (const OW of null !== (iW = this.puffers) && void 0 !== iW ? iW : []) {
+          var iW;
+          OW.dispose()
         }
         this.puffers = null
       }
-      emit(ee, ie, He, ye) {
-        return this.puffers ??= Pe.map((ee => {
+      emit(WW, iW, OW, mW) {
+        return this.puffers ??= nW.map((WW => {
           let {
-            style: ie,
-            perSecond: He
-          } = ee;
-          const ye = (ie.count / .3 + He) * ie.life[1];
-          return new ge.e(ie, Math.ceil(4 * ye), De)
-        })), this.puffers[ie].emit(ee, He, this.renderFrame, ye)
+            style: iW,
+            perSecond: OW
+          } = WW;
+          const mW = (iW.count / .3 + OW) * iW.life[1];
+          return new KW.h(iW, Math.ceil(4 * mW), HW)
+        })), this.puffers[iW].emit(WW, OW, this.renderFrame, mW)
       }
     }
 
-    function Ye(ee, ie) {
-      null !== ie.fire && (ee.disposeGameMesh(ie.fire), ie.fire = null)
+    function oW(WW, iW) {
+      null !== iW.fire && (WW.disposeGameMesh(iW.fire), iW.fire = null)
     }
 
-    function Ve() {
-      let ee;
-      const ie = new Ae;
+    function dW() {
+      let WW;
+      const iW = new uW;
       return {
-        onCreate(ie) {
-          ee = ie
+        onCreate(iW) {
+          WW = iW
         },
-        onReceivedMessageFromServer(He, ye) {
-          He === Ke.F && ie.start(ee, ye)
+        onReceivedMessageFromServer(OW, mW) {
+          OW === PW.s && iW.start(WW, mW)
         },
-        onAfterRender(He) {
-          ie.onAfterRender(ee, He)
+        onAfterRender(OW) {
+          iW.onAfterRender(WW, OW)
         },
         onClose() {
-          ie.dispose(ee)
+          iW.dispose(WW)
         }
       }
     }
-    var ae = He(186),
-      ce = He(39925),
-      xe = He(39973),
-      Le = He(39980);
-    class Ce {
-      constructor(ee, ie, He) {
-        this.api = ee, this.wearer = ie, this.name = He, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new Le.d, this.shown = !1, this.raised = 0
+    var eW = OW(182),
+      vW = OW(40337),
+      gW = OW(40380),
+      DW = OW(40384);
+    class VW {
+      constructor(WW, iW, OW) {
+        this.api = WW, this.wearer = iW, this.name = OW, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new DW.e, this.shown = !1, this.raised = 0
       }
-      update(ee) {
-        var ie;
-        const He = (0, ce.m)(this.name);
-        if (!He) return void this.dispose();
-        if (!this.madeFrom || this.madeFrom.model === He.model && this.madeFrom.scale === He.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(He.model, He.scale), this.madeFrom = He, !this.model)) return void this.raiseNametag(0);
-        if (!(ee.drawn && !ee.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
-        const ye = this.motion.step({
-          dt: ee.dt,
-          feet: ee.feet,
-          heading: ee.heading,
-          headTopY: ee.headTopY,
-          tuning: He,
-          timeS: ee.timeS
+      update(WW) {
+        var iW;
+        const OW = (0, vW.h)(this.name);
+        if (!OW) return void this.dispose();
+        if (!this.madeFrom || this.madeFrom.model === OW.model && this.madeFrom.scale === OW.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(OW.model, OW.scale), this.madeFrom = OW, !this.model)) return void this.raiseNametag(0);
+        if (!(WW.drawn && !WW.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
+        const mW = this.motion.step({
+          dt: WW.dt,
+          feet: WW.feet,
+          heading: WW.heading,
+          headTopY: WW.headTopY,
+          tuning: OW,
+          timeS: WW.timeS
         });
-        this.model.setPose(ye.pos, ye.yaw + Math.PI), this.model.setClip(null !== (ie = ye.clip) && void 0 !== ie ? ie : null);
-        const be = ye.seated ? He : null;
-        be !== this.perchedWith && (this.perchedWith = be, this.model.setPerch(be && {
-          XH: this.wearer,
-          offset: be.perchOffset,
-          yaw: be.yawOffset
-        })), this.setShown(!0), this.raiseNametag(He.nametagRaise)
+        this.model.setPose(mW.pos, mW.yaw + Math.PI), this.model.setClip(null !== (iW = mW.clip) && void 0 !== iW ? iW : null);
+        const EW = mW.seated ? OW : null;
+        EW !== this.perchedWith && (this.perchedWith = EW, this.model.setPerch(EW && {
+          ZO: this.wearer,
+          offset: EW.perchOffset,
+          yaw: EW.yawOffset
+        })), this.setShown(!0), this.raiseNametag(OW.nametagRaise)
       }
       refreshNametag() {
         0 !== this.raised && this.api.setNametagOffset(this.wearer, this.raised)
@@ -780,66 +780,66 @@ export const modules = {
       dispose() {
         this.freeModel(), this.raiseNametag(0)
       }
-      raiseNametag(ee) {
-        ee !== this.raised && (this.raised = ee, this.api.setNametagOffset(this.wearer, ee))
+      raiseNametag(WW) {
+        WW !== this.raised && (this.raised = WW, this.api.setNametagOffset(this.wearer, WW))
       }
       freeModel() {
-        var ee;
-        null === (ee = this.model) || void 0 === ee || ee.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
+        var WW;
+        null === (WW = this.model) || void 0 === WW || WW.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
       }
-      setShown(ee) {
-        this.model && ee !== this.shown && (this.shown = ee, this.model.setVisible(ee))
+      setShown(WW) {
+        this.model && WW !== this.shown && (this.shown = WW, this.model.setVisible(WW))
       }
     }
-    class ve {
-      constructor(ee, ie) {
-        this.api = ee, this.name = ie, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
+    class pW {
+      constructor(WW, iW) {
+        this.api = WW, this.name = iW, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
       }
-      update(ee) {
-        const ie = (0, ce.i)(this.name);
-        if (ie !== this.madeFrom && this.stop(), !ie) return;
-        const He = ee.ownFirstPerson ? ie.ownInFirstPerson : ee.drawn;
-        if (He) {
+      update(WW) {
+        const iW = (0, vW.g)(this.name);
+        if (iW !== this.madeFrom && this.stop(), !iW) return;
+        const OW = WW.ownFirstPerson ? iW.ownInFirstPerson : WW.drawn;
+        if (OW) {
           const {
-            centre: He
+            centre: OW
           } = this;
-          if ((0, Le.j)(He, ee.feet, ie.offset, Math.sin(ee.heading), Math.cos(ee.heading)), this.particles) this.particles.moveTo(He, this.half);
+          if ((0, DW.j)(OW, WW.feet, iW.offset, Math.sin(WW.heading), Math.cos(WW.heading)), this.particles) this.particles.moveTo(OW, this.half);
           else {
-            const ee = (0, xe.d)(ie);
-            this.half = ee.half, this.particles = this.api.createParticles(ee.opts, {
-              pos: He,
-              half: ee.half
-            }), this.madeFrom = ie, this.emitting = !0
+            const WW = (0, gW.d)(iW);
+            this.half = WW.half, this.particles = this.api.createParticles(WW.opts, {
+              pos: OW,
+              half: WW.half
+            }), this.madeFrom = iW, this.emitting = !0
           }
         }
-        this.particles && He !== this.emitting && (this.emitting = He, this.particles.setEmitRate(He ? ie.particles.emitRate : 0))
+        this.particles && OW !== this.emitting && (this.emitting = OW, this.particles.setEmitRate(OW ? iW.particles.emitRate : 0))
       }
       stop() {
-        var ee;
-        null === (ee = this.particles) || void 0 === ee || ee.stop(), this.particles = null, this.madeFrom = null
+        var WW;
+        null === (WW = this.particles) || void 0 === WW || WW.stop(), this.particles = null, this.madeFrom = null
       }
     }
-    const ue = .25,
-      me = 48,
-      le = 4,
-      Se = 24,
-      ne = 12,
-      je = .6,
-      se = 1 / ae.g.playerEyeToHeightRatio;
+    const fW = .25,
+      CW = 48,
+      XW = 4,
+      BW = 24,
+      qW = 12,
+      RW = .6,
+      GW = 1 / eW.f.playerEyeToHeightRatio;
 
-    function Ie(ee, ie, He) {
-      const ye = ee.filter((ee => ee[ie] <= me));
-      return ye.sort(((ee, He) => ee[ie] - He[ie])), new Set(ye.slice(0, He).map((ee => ee.id)))
+    function IW(WW, iW, OW) {
+      const mW = WW.filter((WW => WW[iW] <= CW));
+      return mW.sort(((WW, OW) => WW[iW] - OW[iW])), new Set(mW.slice(0, OW).map((WW => WW.id)))
     }
 
-    function he() {
-      let ee;
-      const ie = new Map;
-      let He = 0,
-        ye = 0;
-      const be = [0, 0, 0],
-        Me = {
-          feet: be,
+    function aW() {
+      let WW;
+      const iW = new Map;
+      let OW = 0,
+        mW = 0;
+      const EW = [0, 0, 0],
+        NW = {
+          feet: EW,
           heading: 0,
           headTopY: 0,
           drawn: !1,
@@ -848,96 +848,96 @@ export const modules = {
           timeS: 0
         };
 
-      function Ke(ee) {
-        var ie, He;
-        null === (ie = ee.pet) || void 0 === ie || ie.dispose(), null === (He = ee.aura) || void 0 === He || He.stop()
+      function PW(WW) {
+        var iW, OW;
+        null === (iW = WW.pet) || void 0 === iW || iW.dispose(), null === (OW = WW.aura) || void 0 === OW || OW.stop()
       }
 
-      function Ue(ie, He) {
-        var ye, Ke;
+      function LW(iW, OW) {
+        var mW, PW;
         const {
-          id: Ue
-        } = ie, Fe = ee.readDrawnPosition(Ue, be) ? ee.getDrawnHeading(Ue) : null, Je = null === Fe ? null : ee.getDrawnEyeHeight(Ue);
-        if (null === Fe || null === Je) Me.drawn = !1, Me.ownFirstPerson = !1;
+          id: LW
+        } = iW, cW = WW.readDrawnPosition(LW, EW) ? WW.getDrawnHeading(LW) : null, wW = null === cW ? null : WW.getDrawnEyeHeight(LW);
+        if (null === cW || null === wW) NW.drawn = !1, NW.ownFirstPerson = !1;
         else {
-          const ie = He.cameraPosition;
-          Me.heading = Fe, Me.headTopY = be[1] + Je * se, Me.drawn = ee.isAlive(Ue) && ee.isEntityDrawn(Ue), Me.ownFirstPerson = ee.isLocalPlayer(Ue) && ee.isAlive(Ue) && Math.hypot(ie[0] - be[0], ie[1] - be[1] - Je, ie[2] - be[2]) < je
+          const iW = OW.cameraPosition;
+          NW.heading = cW, NW.headTopY = EW[1] + wW * GW, NW.drawn = WW.isAlive(LW) && WW.isEntityDrawn(LW), NW.ownFirstPerson = WW.isLocalPlayer(LW) && WW.isAlive(LW) && Math.hypot(iW[0] - EW[0], iW[1] - EW[1] - wW, iW[2] - EW[2]) < RW
         }
-        null === (ye = ie.pet) || void 0 === ye || ye.update(Me), null === (Ke = ie.aura) || void 0 === Ke || Ke.update(Me)
+        null === (mW = iW.pet) || void 0 === mW || mW.update(NW), null === (PW = iW.aura) || void 0 === PW || PW.update(NW)
       }
       return {
-        onCreate(ie) {
-          ee = ie
+        onCreate(iW) {
+          WW = iW
         },
-        onAfterRender(Fe, Je) {
-          const oe = Fe / 1e3;
-          ye += oe, He -= oe, He <= 0 && (He = ue, function(He) {
-            const ye = [];
-            for (const Ke of ee.getPlayerIds()) {
-              const Me = ee.getPlayerCosmetics(Ke),
-                Ue = void 0 !== (null === Me || void 0 === Me ? void 0 : Me.pet) && (0, ce.m)(Me.pet) ? Me.pet : null,
-                Fe = void 0 !== (null === Me || void 0 === Me ? void 0 : Me.aura) && (0, ce.i)(Me.aura) ? Me.aura : null;
-              if (null === Ue && null === Fe || !ee.readDrawnPosition(Ke, be)) continue;
-              const Je = Math.hypot(be[0] - He[0], be[1] - He[1], be[2] - He[2]),
-                oe = ie.get(Ke);
-              ye.push({
-                id: Ke,
-                pet: Ue,
-                aura: Fe,
-                petDist: null === Ue ? 1 / 0 : Je - (null !== oe && void 0 !== oe && oe.pet ? le : 0),
-                auraDist: null === Fe ? 1 / 0 : Je - (null !== oe && void 0 !== oe && oe.aura ? le : 0)
+        onAfterRender(cW, wW) {
+          const tW = cW / 1e3;
+          mW += tW, OW -= tW, OW <= 0 && (OW = fW, function(OW) {
+            const mW = [];
+            for (const PW of WW.getPlayerIds()) {
+              const NW = WW.getPlayerCosmetics(PW),
+                LW = void 0 !== (null === NW || void 0 === NW ? void 0 : NW.pet) && (0, vW.h)(NW.pet) ? NW.pet : null,
+                cW = void 0 !== (null === NW || void 0 === NW ? void 0 : NW.aura) && (0, vW.g)(NW.aura) ? NW.aura : null;
+              if (null === LW && null === cW || !WW.readDrawnPosition(PW, EW)) continue;
+              const wW = Math.hypot(EW[0] - OW[0], EW[1] - OW[1], EW[2] - OW[2]),
+                tW = iW.get(PW);
+              mW.push({
+                id: PW,
+                pet: LW,
+                aura: cW,
+                petDist: null === LW ? 1 / 0 : wW - (null !== tW && void 0 !== tW && tW.pet ? XW : 0),
+                auraDist: null === cW ? 1 / 0 : wW - (null !== tW && void 0 !== tW && tW.aura ? XW : 0)
               })
             }
-            const Me = Ie(ye, "petDist", Se),
-              Ue = ee.particlesEnabled() ? Ie(ye, "auraDist", ne) : new Set,
-              Fe = new Set;
+            const NW = IW(mW, "petDist", BW),
+              LW = WW.particlesEnabled() ? IW(mW, "auraDist", qW) : new Set,
+              cW = new Set;
             for (const {
-                id: be,
-                pet: Ke,
-                aura: Te
+                id: EW,
+                pet: PW,
+                aura: bW
               }
-              of ye) {
-              var Je, oe, Re;
-              const He = null !== (Je = ie.get(be)) && void 0 !== Je ? Je : {
-                  id: be,
+              of mW) {
+              var wW, tW, ZW;
+              const OW = null !== (wW = iW.get(EW)) && void 0 !== wW ? wW : {
+                  id: EW,
                   pet: null,
                   aura: null
                 },
-                ye = Me.has(be) ? Ke : null,
-                pe = Ue.has(be) ? Te : null;
-              var ke, qe, fe;
-              (null === (oe = He.pet) || void 0 === oe ? void 0 : oe.name) !== ye ? (null === (ke = He.pet) || void 0 === ke || ke.dispose(), He.pet = null === ye ? null : new Ce(ee, be, ye)) : null === (qe = He.pet) || void 0 === qe || qe.refreshNametag(), (null === (Re = He.aura) || void 0 === Re ? void 0 : Re.name) !== pe && (null === (fe = He.aura) || void 0 === fe || fe.stop(), He.aura = null === pe ? null : new ve(ee, pe)), (He.pet || He.aura) && (ie.set(be, He), Fe.add(be))
+                mW = NW.has(EW) ? PW : null,
+                jW = LW.has(EW) ? bW : null;
+              var xW, lW, AW;
+              (null === (tW = OW.pet) || void 0 === tW ? void 0 : tW.name) !== mW ? (null === (xW = OW.pet) || void 0 === xW || xW.dispose(), OW.pet = null === mW ? null : new VW(WW, EW, mW)) : null === (lW = OW.pet) || void 0 === lW || lW.refreshNametag(), (null === (ZW = OW.aura) || void 0 === ZW ? void 0 : ZW.name) !== jW && (null === (AW = OW.aura) || void 0 === AW || AW.stop(), OW.aura = null === jW ? null : new pW(WW, jW)), (OW.pet || OW.aura) && (iW.set(EW, OW), cW.add(EW))
             }
-            for (const [ee, be] of ie) Fe.has(ee) || (Ke(be), ie.delete(ee))
-          }(Je.cameraPosition)), Me.dt = oe, Me.timeS = ye;
-          for (const ee of ie.values()) Ue(ee, Je)
+            for (const [WW, EW] of iW) cW.has(WW) || (PW(EW), iW.delete(WW))
+          }(wW.cameraPosition)), NW.dt = tW, NW.timeS = mW;
+          for (const WW of iW.values()) LW(WW, wW)
         },
         onClose() {
-          for (const ee of ie.values()) Ke(ee);
-          ie.clear()
+          for (const WW of iW.values()) PW(WW);
+          iW.clear()
         }
       }
     }
-    var Ne = He(9453);
-    const Ge = "skyblockLoot",
-      re = "autoPickupClick";
-    var Qe = He(1653);
+    var rW = OW(9963);
+    const zW = "skyblockLoot",
+      FW = "autoPickupClick";
+    var QW = OW(1770);
 
-    function ei(ee, ie) {
+    function Wi(WW, iW) {
       return [{
         timeFraction: 0,
-        minColor: [255 * ee[0], 255 * ee[1], 255 * ee[2], 1],
-        maxColor: [255 * ie[0], 255 * ie[1], 255 * ie[2], 1]
+        minColor: [255 * WW[0], 255 * WW[1], 255 * WW[2], 1],
+        maxColor: [255 * iW[0], 255 * iW[1], 255 * iW[2], 1]
       }, {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }]
     }
     const ii = [0, 0, 0],
-      Hi = {
+      Oi = {
         texture: "glint",
         mipmaps: !1,
-        bk: 24,
+        aZ: 24,
         minLifeTime: .18,
         maxLifeTime: .35,
         minSize: .07,
@@ -947,21 +947,21 @@ export const modules = {
         emitRate: 12,
         dir1: ii,
         dir2: ii,
-        blendMode: Me.e.OneOne
+        blendMode: NW.d.OneOne
       },
-      yi = {
-        ...Hi,
-        colorGradients: ei([1, .88, .38], [1, .65, .15])
+      mi = {
+        ...Oi,
+        colorGradients: Wi([1, .88, .38], [1, .65, .15])
       },
-      bi = {
-        ...Hi,
-        colorGradients: ei([.55, .95, 1], [.9, 1, 1])
+      Ei = {
+        ...Oi,
+        colorGradients: Wi([.55, .95, 1], [.9, 1, 1])
       },
-      Mi = [.5, .5, .5],
-      Ki = {
+      Ni = [.5, .5, .5],
+      Pi = {
         texture: "glint",
         mipmaps: !1,
-        bk: 24,
+        aZ: 24,
         minLifeTime: .2,
         maxLifeTime: .4,
         minSize: .12,
@@ -969,24 +969,24 @@ export const modules = {
         minEmitPower: .5,
         maxEmitPower: 1.5,
         emitRate: 0,
-        colorGradients: ei([1, .12, .12], [1, .35, .2]),
-        blendMode: Me.e.OneOne
+        colorGradients: Wi([1, .12, .12], [1, .35, .2]),
+        blendMode: NW.d.OneOne
       };
-    class Ui {
+    class Li {
       constructor() {
         this.drops = new Map
       }
-      DR(ee, ie) {
-        if ("overflowFlash" === ie.kind) {
-          const [He, ye, be] = ie.position, Me = ee.createParticles(Ki, {
-            pos: [He, ye, be],
-            half: Mi
+      yZ(WW, iW) {
+        if ("overflowFlash" === iW.kind) {
+          const [OW, mW, EW] = iW.position, NW = WW.createParticles(Pi, {
+            pos: [OW, mW, EW],
+            half: Ni
           });
-          return Me.emit(18), void Me.stop()
+          return NW.emit(18), void NW.stop()
         }
-        this.drops.has(ie.itemId) || this.drops.set(ie.itemId, {
-          owner: ie.owner,
-          cosmetic: ie.cosmetic,
+        this.drops.has(iW.itemId) || this.drops.set(iW.itemId, {
+          owner: iW.owner,
+          cosmetic: iW.cosmetic,
           pickupDelayCleared: !1,
           seen: !1,
           markedAt: performance.now(),
@@ -995,168 +995,168 @@ export const modules = {
           particles: null
         })
       }
-      YR(ee) {
+      hZ(WW) {
         if (0 === this.drops.size) return;
-        const ie = performance.now(),
-          He = ee.getCameraPosition();
-        let ye = 0;
-        for (const Me of this.drops.values()) null !== Me.particles && ye++;
-        for (const [Me, Ke] of this.drops) {
-          const Ue = ee.getPositionView(Me);
-          if (null === Ue) {
-            var be;
-            if (Ke.seen || ie - Ke.markedAt > 5e3) null !== Ke.particles && ye--, null === (be = Ke.particles) || void 0 === be || be.stop(), this.drops.delete(Me);
+        const iW = performance.now(),
+          OW = WW.getCameraPosition();
+        let mW = 0;
+        for (const NW of this.drops.values()) null !== NW.particles && mW++;
+        for (const [NW, PW] of this.drops) {
+          const LW = WW.getPositionView(NW);
+          if (null === LW) {
+            var EW;
+            if (PW.seen || iW - PW.markedAt > 5e3) null !== PW.particles && mW--, null === (EW = PW.particles) || void 0 === EW || EW.stop(), this.drops.delete(NW);
             continue
           }
-          Ke.cosmetic || !ee.isLocalPlayer(Ke.owner) || Ke.pickupDelayCleared || (ee.clearPickupDelay(Me), Ke.pickupDelayCleared = !0);
-          const Fe = Ke.lastPosition,
-            Je = Ke.seen && (Ue[0] - Fe[0]) ** 2 + (Ue[1] - Fe[1]) ** 2 + (Ue[2] - Fe[2]) ** 2 > 4e-4,
-            oe = (Ue[0] - He[0]) ** 2 + (Ue[1] - He[1]) ** 2 + (Ue[2] - He[2]) ** 2 < 2025;
-          Ke.seen = !0, Fe[0] = Ue[0], Fe[1] = Ue[1], Fe[2] = Ue[2], Je && (Ke.lastMovingAt = ie), null !== Ke.particles && (!oe || ie - Ke.lastMovingAt > 500) && (Ke.particles.stop(), Ke.particles = null, ye--), Je && oe && null === Ke.particles && ye < 32 && (Ke.particles = ee.createParticles(Ke.cosmetic ? bi : yi, {
-            pos: Ue
-          }), ye++), null !== Ke.particles && (Ke.particles.moveTo(Ue), Ke.particles.setEmitRate(Je ? 12 : 0)), !Je && null === Ke.particles && ie - Math.max(Ke.lastMovingAt, Ke.markedAt) > 2e3 && this.drops.delete(Me)
+          PW.cosmetic || !WW.isLocalPlayer(PW.owner) || PW.pickupDelayCleared || (WW.clearPickupDelay(NW), PW.pickupDelayCleared = !0);
+          const cW = PW.lastPosition,
+            wW = PW.seen && (LW[0] - cW[0]) ** 2 + (LW[1] - cW[1]) ** 2 + (LW[2] - cW[2]) ** 2 > 4e-4,
+            tW = (LW[0] - OW[0]) ** 2 + (LW[1] - OW[1]) ** 2 + (LW[2] - OW[2]) ** 2 < 2025;
+          PW.seen = !0, cW[0] = LW[0], cW[1] = LW[1], cW[2] = LW[2], wW && (PW.lastMovingAt = iW), null !== PW.particles && (!tW || iW - PW.lastMovingAt > 500) && (PW.particles.stop(), PW.particles = null, mW--), wW && tW && null === PW.particles && mW < 32 && (PW.particles = WW.createParticles(PW.cosmetic ? Ei : mi, {
+            pos: LW
+          }), mW++), null !== PW.particles && (PW.particles.moveTo(LW), PW.particles.setEmitRate(wW ? 12 : 0)), !wW && null === PW.particles && iW - Math.max(PW.lastMovingAt, PW.markedAt) > 2e3 && this.drops.delete(NW)
         }
       }
       dispose() {
-        for (const ie of this.drops.values()) {
-          var ee;
-          null === (ee = ie.particles) || void 0 === ee || ee.stop()
+        for (const iW of this.drops.values()) {
+          var WW;
+          null === (WW = iW.particles) || void 0 === WW || WW.stop()
         }
         this.drops.clear()
       }
     }
-    const Fi = new Set;
+    const ci = new Set;
 
-    function Ji() {
-      let ee;
-      const ie = new Ui;
+    function wi() {
+      let WW;
+      const iW = new Li;
       return {
-        onCreate(ie) {
-          ee = ie
+        onCreate(iW) {
+          WW = iW
         },
-        onReceivedMessageFromServer(He, ye) {
-          if (He === Ge) ie.DR(ee, ye);
-          else if (He === re) {
-            const ee = ye,
-              ie = `${ee.id}|${ee.value}`;
-            Fi.has(ie) || (Fi.add(ie), (0, Qe.h)({
-              id: ee.id,
-              value: ee.value
+        onReceivedMessageFromServer(OW, mW) {
+          if (OW === zW) iW.yZ(WW, mW);
+          else if (OW === FW) {
+            const WW = mW,
+              iW = `${WW.id}|${WW.value}`;
+            ci.has(iW) || (ci.add(iW), (0, QW.e)({
+              id: WW.id,
+              value: WW.value
             }))
           }
         },
-        YR() {
-          ie.YR(ee)
+        hZ() {
+          iW.hZ(WW)
         },
         onClose() {
-          ie.dispose()
+          iW.dispose()
         }
       }
     }
 
-    function oi(ee, ie, He, ye) {
+    function ti(WW, iW, OW, mW) {
       return {
-        cosmeticCompanions: he(),
-        dialogue: Ee(ye.localPlayerId),
-        fishing: Xe(ye.localPlayerId),
-        furnaceSmoke: Ve(),
-        ironChest: be(),
-        localBlockBroken: (0, Ne.d)(),
-        magnetLoot: Ji()
+        cosmeticCompanions: aW(),
+        dialogue: MW(mW.localPlayerId),
+        fishing: UW(mW.localPlayerId),
+        furnaceSmoke: dW(),
+        ironChest: EW(),
+        localBlockBroken: (0, rW.b)(),
+        magnetLoot: wi()
       }
     }
 
-    function Ri(ee, ie) {
-      for (const be of [ee, ...null !== ie && void 0 !== ie ? ie : []]) try {
-        var He;
-        null === be || void 0 === be || null === (He = be.onClose) || void 0 === He || He.call(be)
-      } catch (ye) {
-        console.error("Error in client onClose callback", ye)
+    function Zi(WW, iW) {
+      for (const EW of [WW, ...null !== iW && void 0 !== iW ? iW : []]) try {
+        var OW;
+        null === EW || void 0 === EW || null === (OW = EW.onClose) || void 0 === OW || OW.call(EW)
+      } catch (mW) {
+        console.error("Error in client onClose callback", mW)
       }
     }
   },
-  9453: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Me,
-      f: () => be
+  9963: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => NW,
+      e: () => EW
     });
-    var ye = He(27);
-    const be = "localBlockBroken";
+    var mW = OW(27);
+    const EW = "localBlockBroken";
 
-    function Me() {
+    function NW() {
       return {
-        onPlayerChangeBlock(ee, ie, He, Me, Ke, Ue) {
-          "Air" === Ue && ye.h.yR(be)
+        onPlayerChangeBlock(WW, iW, OW, NW, PW, LW) {
+          "Air" === LW && mW.l.iZ(EW)
         }
       }
     }
   },
-  39965: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => ye,
-      e: () => Me
+  40371: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => mW,
+      h: () => NW
     });
-    const ye = 1 / .6,
-      be = {
+    const mW = 1 / .6,
+      EW = {
         kind: "smokePuff"
       };
-    class Me {
-      constructor(ee, ie, He) {
-        this.style = ee, this.bk = ie, this.half = He, this.particles = null, this.lastFrame = -1
+    class NW {
+      constructor(WW, iW, OW) {
+        this.style = WW, this.aZ = iW, this.half = OW, this.particles = null, this.lastFrame = -1
       }
-      emit(ee, ie, He) {
-        let Me = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return He !== this.lastFrame && (this.lastFrame = He, this.particles || (this.particles = ee.createParticles(function(ee, ie) {
+      emit(WW, iW, OW) {
+        let NW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return OW !== this.lastFrame && (this.lastFrame = OW, this.particles || (this.particles = WW.createParticles(function(WW, iW) {
           const [
-            [He, Me, Ke],
-            [Ue, Fe, Je]
-          ] = ee.colours;
+            [OW, NW, PW],
+            [LW, cW, wW]
+          ] = WW.colours;
           return {
-            texture: ee.soft ? be : "square_particle",
-            bk: ie,
-            minLifeTime: ee.life[0] / ye,
-            maxLifeTime: ee.life[1] / ye,
-            minEmitPower: ee.power[0] * ye,
-            maxEmitPower: ee.power[1] * ye,
-            minSize: ee.size[0],
-            maxSize: ee.size[1],
+            texture: WW.soft ? EW : "square_particle",
+            aZ: iW,
+            minLifeTime: WW.life[0] / mW,
+            maxLifeTime: WW.life[1] / mW,
+            minEmitPower: WW.power[0] * mW,
+            maxEmitPower: WW.power[1] * mW,
+            minSize: WW.size[0],
+            maxSize: WW.size[1],
             emitRate: 0,
-            gravity: [0, ee.lift * ye * ye, 0],
-            dir1: [-ee.spread, 1, -ee.spread],
-            dir2: [ee.spread, 1, ee.spread],
+            gravity: [0, WW.lift * mW * mW, 0],
+            dir1: [-WW.spread, 1, -WW.spread],
+            dir2: [WW.spread, 1, WW.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [He, Me, Ke, ee.alpha],
-              maxColor: [Ue, Fe, Je, ee.alpha]
+              minColor: [OW, NW, PW, WW.alpha],
+              maxColor: [LW, cW, wW, WW.alpha]
             }, {
               timeFraction: 1,
-              minColor: [He, Me, Ke, 0],
-              maxColor: [Ue, Fe, Je, 0]
+              minColor: [OW, NW, PW, 0],
+              maxColor: [LW, cW, wW, 0]
             }],
-            blendMode: ee.blendMode
+            blendMode: WW.blendMode
           }
-        }(this.style, this.bk), {
-          pos: ie,
+        }(this.style, this.aZ), {
+          pos: iW,
           half: this.half
-        })), this.particles.moveTo(ie, this.half), this.particles.emit(Me), !0)
+        })), this.particles.moveTo(iW, this.half), this.particles.emit(NW), !0)
       }
       dispose() {
-        var ee;
-        null === (ee = this.particles) || void 0 === ee || ee.stop(), this.particles = null
+        var WW;
+        null === (WW = this.particles) || void 0 === WW || WW.stop(), this.particles = null
       }
     }
   },
-  5326: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => be,
-      h: () => ye,
-      k: () => Me,
-      l: () => Fe,
-      n: () => Ke
+  5605: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => EW,
+      e: () => mW,
+      g: () => NW,
+      h: () => cW,
+      j: () => PW
     });
-    const ye = ["sine", "triangle", "square", "sawtooth"],
-      be = 55,
-      Me = {
+    const mW = ["sine", "triangle", "square", "sawtooth"],
+      EW = 55,
+      NW = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1295,39 +1295,39 @@ export const modules = {
         }
       };
 
-    function Ke(ee) {
-      return "string" !== typeof ee ? ee : Object.hasOwn(Me, ee) ? Me[ee] : null
+    function PW(WW) {
+      return "string" !== typeof WW ? WW : Object.hasOwn(NW, WW) ? NW[WW] : null
     }
 
-    function Ue(ee, ie, He) {
-      return Math.min(He, Math.max(ie, ee))
+    function LW(WW, iW, OW) {
+      return Math.min(OW, Math.max(iW, WW))
     }
 
-    function Fe(ee) {
-      const ie = Ue(ee.durationMs, 10, 500),
-        He = Ue(ee.attackMs, 0, ie),
+    function cW(WW) {
+      const iW = LW(WW.durationMs, 10, 500),
+        OW = LW(WW.attackMs, 0, iW),
         {
-          intonation: be
-        } = ee;
+          intonation: EW
+        } = WW;
       return {
-        waveform: ye.includes(ee.waveform) ? ee.waveform : "sine",
-        pitchHz: Ue(ee.pitchHz, 20, 4e3),
-        glideSemitones: Ue(ee.glideSemitones, -24, 24),
-        durationMs: ie,
-        attackMs: He,
-        releaseMs: Ue(ee.releaseMs, 0, ie - He),
-        lowpassHz: null === ee.lowpassHz ? null : Ue(ee.lowpassHz, 20, 2e4),
-        volume: Ue(ee.volume, 0, 2),
+        waveform: mW.includes(WW.waveform) ? WW.waveform : "sine",
+        pitchHz: LW(WW.pitchHz, 20, 4e3),
+        glideSemitones: LW(WW.glideSemitones, -24, 24),
+        durationMs: iW,
+        attackMs: OW,
+        releaseMs: LW(WW.releaseMs, 0, iW - OW),
+        lowpassHz: null === WW.lowpassHz ? null : LW(WW.lowpassHz, 20, 2e4),
+        volume: LW(WW.volume, 0, 2),
         intonation: {
-          variationSemitones: Ue(be.variationSemitones, 0, 6),
-          declineSemitones: Ue(be.declineSemitones, 0, 12),
-          questionRiseSemitones: Ue(be.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: Ue(be.exclaimLiftSemitones, 0, 12)
+          variationSemitones: LW(EW.variationSemitones, 0, 6),
+          declineSemitones: LW(EW.declineSemitones, 0, 12),
+          questionRiseSemitones: LW(EW.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: LW(EW.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: Ue(ee.syllableMs, 25, 200)
+        syllableMs: LW(WW.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

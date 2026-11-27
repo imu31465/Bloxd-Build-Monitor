@@ -1,261 +1,394 @@
 export const id = 266;
 export const ids = [266];
 export const modules = {
-  38581: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => be
+  38323: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => LW,
+      g: () => PW,
+      i: () => EW
     });
-    var ye = He(38590);
-    class be {
-      static GetPlanes(ee) {
-        const ie = [];
-        for (let He = 0; He < 6; He++) ie.push(new ye.c(0, 0, 0, 0));
-        return be.GetPlanesToRef(ee, ie), ie
+    const mW = 1024,
+      EW = 16,
+      NW = 36e4;
+    class PW {
+      constructor(WW) {
+        this.boneCount = WW, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * WW), this.position = new Float64Array(3 * WW), this.scale = new Float64Array(3 * WW).fill(1), this.touched = new Uint8Array(WW)
       }
-      static GetNearPlaneToRef(ee, ie) {
-        const He = ee.m;
-        ie.normal.x = He[3] + He[2], ie.normal.y = He[7] + He[6], ie.normal.z = He[11] + He[10], ie.d = He[15] + He[14], ie.normalize()
+      clampToLimits() {
+        for (let WW = 0; WW < this.boneCount; WW++)
+          if (0 !== this.touched[WW])
+            for (let iW = 3 * WW; iW < 3 * WW + 3; iW++) {
+              const WW = this.rotation[iW],
+                OW = this.position[iW],
+                PW = this.scale[iW];
+              WW >= -36e4 && WW <= NW || (this.rotation[iW] = cW(WW, NW)), OW >= -1024 && OW <= mW || (this.position[iW] = cW(OW, mW)), PW >= -EW && PW <= EW || (this.scale[iW] = cW(PW, EW, 1))
+            }
       }
-      static GetFarPlaneToRef(ee, ie) {
-        const He = ee.m;
-        ie.normal.x = He[3] - He[2], ie.normal.y = He[7] - He[6], ie.normal.z = He[11] - He[10], ie.d = He[15] - He[14], ie.normalize()
-      }
-      static GetLeftPlaneToRef(ee, ie) {
-        const He = ee.m;
-        ie.normal.x = He[3] + He[0], ie.normal.y = He[7] + He[4], ie.normal.z = He[11] + He[8], ie.d = He[15] + He[12], ie.normalize()
-      }
-      static GetRightPlaneToRef(ee, ie) {
-        const He = ee.m;
-        ie.normal.x = He[3] - He[0], ie.normal.y = He[7] - He[4], ie.normal.z = He[11] - He[8], ie.d = He[15] - He[12], ie.normalize()
-      }
-      static GetTopPlaneToRef(ee, ie) {
-        const He = ee.m;
-        ie.normal.x = He[3] - He[1], ie.normal.y = He[7] - He[5], ie.normal.z = He[11] - He[9], ie.d = He[15] - He[13], ie.normalize()
-      }
-      static GetBottomPlaneToRef(ee, ie) {
-        const He = ee.m;
-        ie.normal.x = He[3] + He[1], ie.normal.y = He[7] + He[5], ie.normal.z = He[11] + He[9], ie.d = He[15] + He[13], ie.normalize()
-      }
-      static GetPlanesToRef(ee, ie) {
-        be.GetNearPlaneToRef(ee, ie[0]), be.GetFarPlaneToRef(ee, ie[1]), be.GetLeftPlaneToRef(ee, ie[2]), be.GetRightPlaneToRef(ee, ie[3]), be.GetTopPlaneToRef(ee, ie[4]), be.GetBottomPlaneToRef(ee, ie[5])
-      }
-      static IsPointInFrustum(ee, ie) {
-        for (let He = 0; He < 6; He++)
-          if (ie[He].dotCoordinate(ee) < 0) return !1;
-        return !0
-      }
-    }
-  },
-  38590: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => be
-    });
-    var ye = He(37917);
-    class be {
-      constructor(ee, ie, He, be) {
-        this.normal = new ye.p(ee, ie, He), this.d = be
-      }
-      Qbe() {
-        return [this.normal.x, this.normal.y, this.normal.z, this.d]
-      }
-      clone() {
-        return new be(this.normal.x, this.normal.y, this.normal.z, this.d)
-      }
-      getClassName() {
-        return "Plane"
-      }
-      getHashCode() {
-        let ee = this.normal.getHashCode();
-        return ee = 397 * ee ^ this.d, ee
-      }
-      normalize() {
-        const ee = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let ie = 0;
-        return 0 !== ee && (ie = 1 / ee), this.normal.x *= ie, this.normal.y *= ie, this.normal.z *= ie, this.d *= ie, this
-      }
-      transform(ee) {
-        const ie = be._TmpMatrix;
-        ee.invertToRef(ie);
-        const He = ie.m,
-          ye = this.normal.x,
-          Me = this.normal.y,
-          Ke = this.normal.z,
-          Ue = this.d,
-          Fe = ye * He[0] + Me * He[1] + Ke * He[2] + Ue * He[3],
-          Je = ye * He[4] + Me * He[5] + Ke * He[6] + Ue * He[7],
-          oe = ye * He[8] + Me * He[9] + Ke * He[10] + Ue * He[11],
-          Re = ye * He[12] + Me * He[13] + Ke * He[14] + Ue * He[15];
-        return new be(Fe, Je, oe, Re)
-      }
-      dotCoordinate(ee) {
-        return this.normal.x * ee.x + this.normal.y * ee.y + this.normal.z * ee.z + this.d
-      }
-      copyFromPoints(ee, ie, He) {
-        const ye = ie.x - ee.x,
-          be = ie.y - ee.y,
-          Me = ie.z - ee.z,
-          Ke = He.x - ee.x,
-          Ue = He.y - ee.y,
-          Fe = He.z - ee.z,
-          Je = be * Fe - Me * Ue,
-          oe = Me * Ke - ye * Fe,
-          Re = ye * Ue - be * Ke,
-          ke = Math.sqrt(Je * Je + oe * oe + Re * Re);
-        let qe;
-        return qe = 0 !== ke ? 1 / ke : 0, this.normal.x = Je * qe, this.normal.y = oe * qe, this.normal.z = Re * qe, this.d = -(this.normal.x * ee.x + this.normal.y * ee.y + this.normal.z * ee.z), this
-      }
-      isFrontFacingTo(ee, ie) {
-        return ye.p.Dot(this.normal, ee) <= ie
-      }
-      signedDistanceTo(ee) {
-        return ye.p.Dot(ee, this.normal) + this.d
-      }
-      static FromArray(ee) {
-        return new be(ee[0], ee[1], ee[2], ee[3])
-      }
-      static FromPoints(ee, ie, He) {
-        const ye = new be(0, 0, 0, 0);
-        return ye.copyFromPoints(ee, ie, He), ye
-      }
-      static FromPositionAndNormal(ee, ie) {
-        const He = new be(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(ee, ie, He)
-      }
-      static FromPositionAndNormalToRef(ee, ie, He) {
-        return He.normal.jD(ie), He.normal.normalize(), He.d = -ee.dot(He.normal), He
-      }
-      static SignedDistanceToPlaneFromPositionAndNormal(ee, ie, He) {
-        const be = -(ie.x * ee.x + ie.y * ee.y + ie.z * ee.z);
-        return ye.p.Dot(He, ie) + be
-      }
-    }
-    be._TmpMatrix = ye.b.Identity()
-  },
-  39463: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Me
-    });
-    var ye = He(39467);
-    const be = (ee, ie, He) => ee ? ee.getClassName && "Mesh" === ee.getClassName() ? null : !ee.getClassName || "SubMesh" !== ee.getClassName() && "PhysicsBody" !== ee.getClassName() ? ee.clone ? ee.clone() : Array.isArray(ee) ? ee.slice() : He && "object" === typeof ee ? {
-      ...ee
-    } : null : ee.clone(ie) : null;
-    class Me {
-      static DeepCopy(ee, ie, He, Me) {
-        let Ke = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Ue = function(ee) {
-          const ie = [];
-          do {
-            const He = Object.getOwnPropertyNames(ee);
-            for (const ee of He) - 1 === ie.indexOf(ee) && ie.push(ee)
-          } while (ee = Object.getPrototypeOf(ee));
-          return ie
-        }(ee);
-        for (const Je of Ue) {
-          if ("_" === Je[0] && (!Me || -1 === Me.indexOf(Je))) continue;
-          if (Je.endsWith("Observable")) continue;
-          if (He && -1 !== He.indexOf(Je)) continue;
-          const Ue = ee[Je],
-            oe = typeof Ue;
-          if ("function" !== oe) try {
-            if ("object" === oe)
-              if (Ue instanceof Uint8Array) ie[Je] = Uint8Array.from(Ue);
-              else if (Ue instanceof Array) {
-              if (ie[Je] = [], Ue.length > 0)
-                if ("object" == typeof Ue[0])
-                  for (let ee = 0; ee < Ue.length; ee++) {
-                    const He = be(Ue[ee], ie, Ke); - 1 === ie[Je].indexOf(He) && ie[Je].push(He)
-                  } else ie[Je] = Ue.slice(0)
-            } else ie[Je] = be(Ue, ie, Ke);
-            else ie[Je] = Ue
-          } catch (Fe) {
-            ye.e.Warn(Fe.message)
+      reset() {
+        for (let WW = 0; WW < this.boneCount; WW++)
+          if (0 !== this.touched[WW]) {
+            this.touched[WW] = 0;
+            for (let iW = 3 * WW; iW < 3 * WW + 3; iW++) this.rotation[iW] = 0, this.position[iW] = 0, this.scale[iW] = 1
           }
+      }
+    }
+    class LW {
+      constructor(WW) {
+        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * WW), this.position = new Float64Array(3 * WW), this.scaleDelta = new Float64Array(3 * WW), this.boneWeight = new Float64Array(WW), this.touched = new Uint8Array(WW), this.overrides = new Uint8Array(WW), this.touchedBones = new Int32Array(WW)
+      }
+      touch(WW, iW, OW) {
+        0 === this.touched[WW] && (this.touched[WW] = 1, this.touchedBones[this.touchedCount++] = WW), this.boneWeight[WW] += iW, OW && (this.overrides[WW] = 1)
+      }
+      applyTo(WW, iW, OW) {
+        let mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        for (let EW = 0; EW < this.touchedCount; EW++) {
+          const NW = this.touchedBones[EW],
+            PW = this.boneWeight[NW];
+          if (OW || 1 === this.overrides[NW]) {
+            const OW = iW * Math.min(1, PW);
+            for (let iW = 3 * NW; iW < 3 * NW + 3; iW++) WW.rotation[iW] += (this.rotation[iW] / PW - WW.rotation[iW]) * OW, WW.position[iW] += (this.position[iW] / PW - WW.position[iW]) * OW, WW.scale[iW] += (1 + this.scaleDelta[iW] / PW - WW.scale[iW]) * OW
+          } else {
+            const OW = mW && PW > 1 ? iW / PW : iW;
+            for (let iW = 3 * NW; iW < 3 * NW + 3; iW++) WW.rotation[iW] += this.rotation[iW] * OW, WW.position[iW] += this.position[iW] * OW, WW.scale[iW] *= 1 + this.scaleDelta[iW] * OW
+          }
+          WW.touched[NW] = 1
         }
       }
+      clear() {
+        for (let WW = 0; WW < this.touchedCount; WW++) {
+          const iW = this.touchedBones[WW];
+          this.touched[iW] = 0, this.overrides[iW] = 0, this.boneWeight[iW] = 0;
+          for (let WW = 3 * iW; WW < 3 * iW + 3; WW++) this.rotation[WW] = 0, this.position[WW] = 0, this.scaleDelta[WW] = 0
+        }
+        this.touchedCount = 0
+      }
+    }
+
+    function cW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      return Number.isNaN(WW) ? OW : Math.min(iW, Math.max(-iW, WW))
     }
   },
-  38745: (ee, ie, He) => {
-    function ye() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (ee => {
-        const ie = 16 * Math.random() | 0;
-        return ("x" === ee ? ie : 3 & ie | 8).toString(16)
-      }))
-    }
-    He.d(ie, {
-      d: () => ye
-    })
-  },
-  39467: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => ye
+  38320: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => cW,
+      h: () => LW
     });
-    class ye {
-      static _CheckLimit(ee, ie) {
-        let He = ye._LogLimitOutputs[ee];
-        return He ? He.current++ : (He = {
-          limit: ie,
-          current: 1
-        }, ye._LogLimitOutputs[ee] = He), He.current <= He.limit
+    var mW = OW(38307),
+      EW = OW(344),
+      NW = OW(2012),
+      PW = OW(38323);
+
+    function LW(WW) {
+      if ("kO" in WW) return TW.createAnimationScript(WW);
+      return new tW(WW).createAnimationScript()
+    }
+
+    function cW(WW, iW, OW, EW) {
+      const NW = WW.kO <= 0 ? 1 : iW + OW * Math.max(0, EW) / WW.kO;
+      return WW.sO === mW.i.LoopOnLastFrame ? NW % 1 : WW.sO === mW.i.NoLoop && NW >= 1 ? null : Math.min(1, NW)
+    }
+    class wW {
+      createAnimationScript(WW) {
+        const {
+          kO: iW,
+          loop: OW,
+          MO: mW
+        } = WW;
+        return {
+          kO: Math.round(iW),
+          sO: this.createLoopMode(null !== OW && void 0 !== OW && OW),
+          MO: this.createNodeSkeletonAnimationScript(null !== mW && void 0 !== mW ? mW : null)
+        }
       }
-      static _GenerateLimitMessage(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const He = ye._LogLimitOutputs[ee];
-        if (!He || !ye.MessageLimitReached) return;
-        const be = this._Levels[ie];
-        He.current === He.limit && ye[be.name](ye.MessageLimitReached.replace(/%LIMIT%/g, "" + He.limit).replace(/%TYPE%/g, be.name ?? ""))
+      createLoopMode(WW) {
+        switch (WW) {
+          case !1:
+            return mW.i.NoLoop;
+          case !0:
+            return mW.i.LoopOnLastFrame;
+          case "hold-on-last-frame":
+            return mW.i.HoldOnLastFrame
+        }
+        throw new Error(`Invalid loop mode schema: ${WW}`)
       }
-      static _AddLogEntry(ee) {
-        ye._LogCache = ee + ye._LogCache, ye.OnNewCacheEntry && ye.OnNewCacheEntry(ee)
+      createNodeSkeletonAnimationScript(WW) {
+        if (null === WW) return null;
+        const iW = {};
+        for (const OW in WW) {
+          const mW = WW[OW];
+          iW[OW] = this.createNodeAnimationScript(mW)
+        }
+        return iW
       }
-      static _FormatMessage(ee) {
-        const ie = ee => ee < 10 ? "0" + ee : "" + ee,
-          He = new Date;
-        return "[" + ie(He.getHours()) + ":" + ie(He.getMinutes()) + ":" + ie(He.getSeconds()) + "]: " + ee
+      createNodeAnimationScript(WW) {
+        const {
+          timeline: iW
+        } = WW, OW = iW.filter((WW => Number.isFinite(WW.timeFraction)));
+        return OW.sort(((WW, iW) => WW.timeFraction - iW.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(OW, "rotation", lW),
+          position: this.createTimelineFromKeyframes(OW, "position", bW),
+          scale: this.createTimelineFromKeyframes(OW, "scale", bW, UW)
+        }
       }
-      static _LogDisabled(ee, ie) {}
-      static _LogEnabled() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          ie = arguments.length > 1 ? arguments[1] : void 0,
-          He = arguments.length > 2 ? arguments[2] : void 0;
-        const be = Array.isArray(ie) ? ie[0] : ie;
-        if (void 0 !== He && !ye._CheckLimit(be, He)) return;
-        const Me = ye._FormatMessage(be),
-          Ke = this._Levels[ee],
-          Ue = Array.isArray(ie) ? ie.slice(1) : [];
-        Ke.logFunc && Ke.logFunc("BJS - " + Me, ...Ue);
-        const Fe = `<div style='color:${Ke.color}'>${Me}</div><br>`;
-        ye._AddLogEntry(Fe), ye._GenerateLimitMessage(be, ee)
-      }
-      static get LogCache() {
-        return ye._LogCache
-      }
-      static ClearLogCache() {
-        ye._LogCache = "", ye._LogLimitOutputs = {}, ye.errorsCount = 0
-      }
-      static set LogLevels(ee) {
-        ye.Log = ye._LogDisabled, ye.Warn = ye._LogDisabled, ye.Error = ye._LogDisabled;
-        const ie = [ye.MessageLogLevel, ye.WarningLogLevel, ye.ErrorLogLevel];
-        for (const He of ie)
-          if ((ee & He) === He) {
-            const ee = this._Levels[He];
-            ye[ee.name] = ye._LogEnabled.bind(ye, He)
+      createTimelineFromKeyframes(WW, iW, OW) {
+        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : WW => WW;
+        const EW = [];
+        for (const wW of WW) {
+          const WW = wW[iW];
+          if (WW) {
+            const iW = this.createAnimationFrameWithoutPrecomputes(wW.timeFraction, WW, mW);
+            ZW(iW) && EW.push(iW)
           }
+        }
+        const NW = [];
+        for (let wW = 0; wW < EW.length; wW++) {
+          var PW, LW, cW;
+          const WW = EW[wW],
+            iW = null !== (PW = EW[wW - 1]) && void 0 !== PW ? PW : WW,
+            mW = null !== (LW = EW[wW + 1]) && void 0 !== LW ? LW : WW,
+            tW = null !== (cW = EW[wW + 2]) && void 0 !== cW ? cW : mW;
+          NW.push({
+            ...WW,
+            ...OW(iW.post, iW.timeFraction, WW.post, WW.timeFraction, mW.pre, mW.timeFraction, tW.pre, tW.timeFraction)
+          })
+        }
+        return NW
+      }
+      createAnimationFrameWithoutPrecomputes(WW, iW, OW) {
+        let mW, EW, NW = null;
+        var PW;
+        if ("object" === typeof iW && "point" in iW) NW = null !== (PW = iW.YO) && void 0 !== PW ? PW : null, mW = iW.point, EW = iW.point;
+        else if ("object" === typeof iW && "pre" in iW) {
+          var LW;
+          NW = null !== (LW = iW.YO) && void 0 !== LW ? LW : null, mW = iW.pre, EW = iW.post
+        } else mW = iW, EW = iW;
+        return {
+          timeFraction: WW,
+          YO: this.createLerpMode(NW),
+          pre: OW(mW),
+          post: OW(EW)
+        }
+      }
+      createLerpMode(WW) {
+        return null === WW ? mW.f.Linear : wW.LERP_MODE_SCHEMA_MAPPING[WW]
       }
     }
-    ye.NoneLogLevel = 0, ye.MessageLogLevel = 1, ye.WarningLogLevel = 2, ye.ErrorLogLevel = 4, ye.AllLogLevel = 7, ye.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", ye._LogCache = "", ye._LogLimitOutputs = {}, ye._Levels = [{}, {
-      color: "white",
-      logFunc: console.log,
-      name: "Log"
-    }, {
-      color: "orange",
-      logFunc: console.warn,
-      name: "Warn"
-    }, {}, {
-      color: "red",
-      logFunc: console.error,
-      name: "Error"
-    }], ye.errorsCount = 0, ye.Log = ye._LogEnabled.bind(ye, ye.MessageLogLevel), ye.Warn = ye._LogEnabled.bind(ye, ye.WarningLogLevel), ye.Error = ye._LogEnabled.bind(ye, ye.ErrorLogLevel)
+    wW.LERP_MODE_SCHEMA_MAPPING = {
+      linear: mW.f.Linear,
+      "catmull-rom-spline": mW.f.CatmullRomSpline
+    };
+    class tW {
+      constructor(WW) {
+        this.animationSchema = WW
+      }
+      createAnimationScript() {
+        const {
+          animation_length: WW,
+          loop: iW,
+          bones: OW
+        } = this.animationSchema;
+        return {
+          kO: Math.round(1e3 * WW),
+          sO: this.createLoopMode(null !== iW && void 0 !== iW && iW),
+          MO: this.createNodeSkeletonAnimationScript(null !== OW && void 0 !== OW ? OW : null)
+        }
+      }
+      createLoopMode(WW) {
+        switch (WW) {
+          case !1:
+            return mW.i.NoLoop;
+          case !0:
+            return mW.i.LoopOnLastFrame;
+          case "hold_on_last_frame":
+            return mW.i.HoldOnLastFrame
+        }
+        throw new Error(`Invalid Blockbench loop mode schema: ${WW}`)
+      }
+      createNodeSkeletonAnimationScript(WW) {
+        if (null === WW) return null;
+        const iW = {};
+        for (const OW in WW) {
+          const mW = WW[OW];
+          iW[OW] = this.createNodeAnimationScript(mW)
+        }
+        return iW
+      }
+      createNodeAnimationScript(WW) {
+        const {
+          rotation: iW,
+          position: OW,
+          scale: mW
+        } = WW;
+        return {
+          rotation: this.createAnimationTimeline(null !== iW && void 0 !== iW ? iW : null, sW, lW, !0),
+          position: this.createAnimationTimeline(null !== OW && void 0 !== OW ? OW : null, KW, bW, !1),
+          scale: this.createAnimationTimeline(null !== mW && void 0 !== mW ? mW : null, jW, bW, !1)
+        }
+      }
+      createAnimationTimeline(WW, iW, OW, mW) {
+        if (null === WW) return [];
+        (Array.isArray(WW) || "number" === typeof WW) && (WW = {
+          "0.0": WW
+        });
+        const EW = Object.entries(WW).map((WW => {
+          let [OW, mW] = WW;
+          const EW = Number(OW) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(EW, mW, iW)
+        })).filter(ZW);
+        EW.sort(((WW, iW) => WW.timeFraction - iW.timeFraction)), mW && function(WW) {
+          for (let iW = 1; iW < WW.length; iW++) {
+            const OW = WW[iW - 1].post,
+              mW = WW[iW],
+              EW = SW(mW.pre),
+              NW = SW(mW.post),
+              PW = yW(OW, mW.pre);
+            yW(OW, EW) < PW && (WW[iW] = {
+              ...mW,
+              pre: EW,
+              post: NW
+            })
+          }
+        }(EW);
+        const NW = [];
+        for (let wW = 0; wW < EW.length; wW++) {
+          var PW, LW, cW;
+          const WW = EW[wW],
+            iW = null !== (PW = EW[wW - 1]) && void 0 !== PW ? PW : WW,
+            mW = null !== (LW = EW[wW + 1]) && void 0 !== LW ? LW : WW,
+            tW = null !== (cW = EW[wW + 2]) && void 0 !== cW ? cW : mW;
+          NW.push({
+            ...WW,
+            ...OW(iW.post, iW.timeFraction, WW.post, WW.timeFraction, mW.pre, mW.timeFraction, tW.pre, tW.timeFraction)
+          })
+        }
+        return NW
+      }
+      createAnimationFrameWithoutPrecomputes(WW, iW, OW) {
+        let mW, EW, NW = null;
+        if ("object" === typeof iW && "post" in iW) {
+          var PW;
+          NW = null !== (PW = iW.lerp_mode) && void 0 !== PW ? PW : null, EW = OW(iW.post), mW = void 0 !== iW.pre ? OW(iW.pre) : EW
+        } else {
+          const WW = OW(iW);
+          EW = WW, mW = WW
+        }
+        return {
+          timeFraction: WW,
+          YO: this.createLerpMode(NW),
+          pre: mW,
+          post: EW
+        }
+      }
+      createLerpMode(WW) {
+        return null === WW ? mW.f.Linear : tW.LERP_MODE_SCHEMA_MAPPING[WW]
+      }
+    }
+
+    function ZW(WW) {
+      return Number.isFinite(WW.timeFraction) && xW(WW.pre) && xW(WW.post)
+    }
+
+    function xW(WW) {
+      return Number.isFinite(WW[0]) && Number.isFinite(WW[1]) && Number.isFinite(WW[2])
+    }
+
+    function lW(WW, iW, OW, mW, EW, NW, PW, LW) {
+      const cW = NW - iW,
+        wW = NW - mW,
+        tW = LW - mW,
+        ZW = [null, null, null];
+      for (let xW = 0; xW < ZW.length; xW++) ZW[xW] = AW(WW[xW], OW[xW], EW[xW], PW[xW], cW, tW);
+      return {
+        yO: wW,
+        JO: ZW
+      }
+    }
+
+    function AW(WW, iW, OW, mW, NW, PW) {
+      return {
+        HO: EW.e.computeShortestRotation(WW, OW) / NW,
+        nO: EW.e.computeShortestRotation(iW, mW) / PW,
+        delta: EW.e.computeShortestRotation(iW, OW)
+      }
+    }
+
+    function bW(WW, iW, OW, mW, EW, NW, PW, LW) {
+      const cW = NW - iW,
+        wW = NW - mW,
+        tW = LW - mW,
+        ZW = [null, null, null];
+      for (let xW = 0; xW < ZW.length; xW++) ZW[xW] = {
+        HO: (EW[xW] - WW[xW]) / cW,
+        nO: (PW[xW] - OW[xW]) / tW,
+        delta: EW[xW] - OW[xW]
+      };
+      return {
+        yO: wW,
+        JO: ZW
+      }
+    }
+
+    function jW(WW) {
+      return UW("number" === typeof WW ? [WW, WW, WW] : WW)
+    }
+
+    function UW(WW) {
+      return [kW(WW[0]), kW(WW[1]), kW(WW[2])]
+    }
+
+    function kW(WW) {
+      return Number.isFinite(WW) ? Math.min(PW.i, Math.max(-PW.i, WW)) : WW
+    }
+
+    function sW(WW) {
+      const [iW, OW, mW] = WW, PW = -(0, NW.i)(iW), LW = -(0, NW.i)(OW), cW = (0, NW.i)(mW), wW = EW.e.quaternionFromEulerZYX(PW, LW, cW);
+      return EW.e.eulerYXZFromQuaternion(wW)
+    }
+    tW.LERP_MODE_SCHEMA_MAPPING = {
+      linear: mW.f.Linear,
+      catmullrom: mW.f.CatmullRomSpline
+    };
+    const MW = 1 / 16;
+
+    function KW(WW) {
+      return [-WW[0] * MW, WW[1] * MW, WW[2] * MW]
+    }
+
+    function SW(WW) {
+      const [iW, OW, mW] = WW;
+      return [iW >= 0 ? Math.PI - iW : -Math.PI - iW, YW(OW + Math.PI), YW(mW + Math.PI)]
+    }
+
+    function YW(WW) {
+      return EW.e.mod(WW + Math.PI, 2 * Math.PI) - Math.PI
+    }
+
+    function yW(WW, iW) {
+      return Math.abs(EW.e.computeShortestRotation(WW[0], iW[0])) + Math.abs(EW.e.computeShortestRotation(WW[1], iW[1])) + Math.abs(EW.e.computeShortestRotation(WW[2], iW[2]))
+    }
+    const TW = new wW
+  },
+  38307: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => PW,
+      d: () => NW,
+      f: () => mW,
+      i: () => EW
+    });
+    let mW = function(WW) {
+        return WW[WW.Linear = 0] = "Linear", WW[WW.CatmullRomSpline = 1] = "CatmullRomSpline", WW
+      }({}),
+      EW = function(WW) {
+        return WW[WW.NoLoop = 0] = "NoLoop", WW[WW.LoopOnLastFrame = 1] = "LoopOnLastFrame", WW[WW.HoldOnLastFrame = 2] = "HoldOnLastFrame", WW
+      }({}),
+      NW = function(WW) {
+        return WW[WW.Movement = 0] = "Movement", WW[WW.Action = 1] = "Action", WW[WW.Emote = 2] = "Emote", WW[WW.Custom = 3] = "Custom", WW
+      }({}),
+      PW = function(WW) {
+        return WW[WW.Start = 0] = "Start", WW[WW.Stop = 1] = "Stop", WW
+      }({})
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

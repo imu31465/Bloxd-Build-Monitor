@@ -1,116 +1,116 @@
-export const id = 31;
-export const ids = [31];
+export const id = 32;
+export const ids = [32];
 export const modules = {
-  40439: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      default: () => Ue
+  40900: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => LW
     });
-    var ye = He(34905);
-    const be = 1e3 / 3;
+    var mW = OW(35243);
+    const EW = 1e3 / 3;
 
-    function Me(ee, ie, He) {
-      if ("parenthetical-seconds" === ie) return ` (${ee}s)`;
-      const ye = `${Math.floor(ee/60)}:${(ee%60).toString().padStart(2,"0")}`;
-      return He ? `${He}${ye}` : ye
+    function NW(WW, iW, OW) {
+      if ("parenthetical-seconds" === iW) return ` (${WW}s)`;
+      const mW = `${Math.floor(WW/60)}:${(WW%60).toString().padStart(2,"0")}`;
+      return OW ? `${OW}${mW}` : mW
     }
 
-    function Ke(ee, ie, He, be, Me) {
-      var Ke;
-      const Ue = {
-        ...be.baseNametag
+    function PW(WW, iW, OW, EW, NW) {
+      var PW;
+      const LW = {
+        ...EW.baseNametag
       };
-      Ue.content = [...null !== (Ke = be.baseNametag.content) && void 0 !== Ke ? Ke : [], {
+      LW.content = [...null !== (PW = EW.baseNametag.content) && void 0 !== PW ? PW : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,ye.d)(Me)}`
-      }], ee.setOtherEntitySetting(ie, He, "nameTagInfo", Ue)
+        str: `: ${(0,mW.e)(NW)}`
+      }], WW.setOtherEntitySetting(iW, OW, "nameTagInfo", LW)
     }
-    const Ue = function(ee, ie, He, ye) {
-      let Ue, {
-        localPlayerId: Fe
-      } = ye;
-      const Je = new Map,
-        oe = new Map;
-      let Re = 0,
-        ke = 0;
+    const LW = function(WW, iW, OW, mW) {
+      let LW, {
+        localPlayerId: cW
+      } = mW;
+      const wW = new Map,
+        tW = new Map;
+      let ZW = 0,
+        xW = 0;
       return {
-        onCreate: ee => {
-          Ue = ee
+        onCreate: WW => {
+          LW = WW
         },
-        YR: ee => {
-          const ie = Date.now();
-          for (const [ye, be] of Je) {
-            const ee = Math.floor((ie - be.startTime) / 1e3),
-              Ke = Math.max(0, be.remainingSeconds - ee);
-            if (Ke === be.lastRenderedSecond) continue;
-            be.lastRenderedSecond = Ke;
-            const oe = {
-                str: Me(Ke, be.format, be.prefix),
-                style: be.style
+        hZ: WW => {
+          const iW = Date.now();
+          for (const [mW, EW] of wW) {
+            const WW = Math.floor((iW - EW.startTime) / 1e3),
+              PW = Math.max(0, EW.remainingSeconds - WW);
+            if (PW === EW.lastRenderedSecond) continue;
+            EW.lastRenderedSecond = PW;
+            const tW = {
+                str: NW(PW, EW.format, EW.prefix),
+                style: EW.style
               },
-              Re = {
-                ...be.baseNametag
+              ZW = {
+                ...EW.baseNametag
               };
-            var He;
-            if ("content" === be.location) Re.content = [...null !== (He = be.baseNametag.content) && void 0 !== He ? He : [], oe];
-            else Re.subtitle = [oe];
-            Ue.setOtherEntitySetting(Fe, ye, "nameTagInfo", Re), Ke <= 0 && Je.delete(ye)
+            var OW;
+            if ("content" === EW.location) ZW.content = [...null !== (OW = EW.baseNametag.content) && void 0 !== OW ? OW : [], tW];
+            else ZW.subtitle = [tW];
+            LW.setOtherEntitySetting(cW, mW, "nameTagInfo", ZW), PW <= 0 && wW.delete(mW)
           }
-          if (oe.size > 0 && ie - Re >= be) {
-            Re = ie, ke = (ke + 1) % 3;
-            let ee = 0;
-            for (const [He, ye] of oe) {
-              if (ee++ % 3 !== ke) continue;
-              const be = Math.floor((ie - ye.startTime) / 1e3);
-              if (be === ye.lastRenderedSecond) continue;
-              ye.lastRenderedSecond = be;
-              const Me = ye.accumulatedIncome + ye.incomePerSecond * BigInt(be);
-              Ke(Ue, Fe, He, ye, Me)
+          if (tW.size > 0 && iW - ZW >= EW) {
+            ZW = iW, xW = (xW + 1) % 3;
+            let WW = 0;
+            for (const [OW, mW] of tW) {
+              if (WW++ % 3 !== xW) continue;
+              const EW = Math.floor((iW - mW.startTime) / 1e3);
+              if (EW === mW.lastRenderedSecond) continue;
+              mW.lastRenderedSecond = EW;
+              const NW = mW.accumulatedIncome + mW.incomePerSecond * BigInt(EW);
+              PW(LW, cW, OW, mW, NW)
             }
           }
         },
-        onReceivedMessageFromServer: (ee, ie) => {
-          if ("startCountdown" === ee) Je.set(ie.eId, {
-            baseNametag: ie.baseNametag,
-            remainingSeconds: ie.remainingSeconds,
+        onReceivedMessageFromServer: (WW, iW) => {
+          if ("startCountdown" === WW) wW.set(iW.eId, {
+            baseNametag: iW.baseNametag,
+            remainingSeconds: iW.remainingSeconds,
             startTime: Date.now(),
-            format: ie.format,
-            location: ie.location,
-            prefix: ie.prefix,
-            style: ie.style,
+            format: iW.format,
+            location: iW.location,
+            prefix: iW.prefix,
+            style: iW.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === ee) Je.delete(ie.eId);
-          else if ("startIncomeTicking" === ee) {
-            const ee = {
-              baseNametag: ie.baseNametag,
-              accumulatedIncome: BigInt(ie.accumulatedIncome),
-              incomePerSecond: BigInt(ie.incomePerSecond),
+          else if ("stopCountdown" === WW) wW.delete(iW.eId);
+          else if ("startIncomeTicking" === WW) {
+            const WW = {
+              baseNametag: iW.baseNametag,
+              accumulatedIncome: BigInt(iW.accumulatedIncome),
+              incomePerSecond: BigInt(iW.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            oe.set(ie.eId, ee), Ke(Ue, Fe, ie.eId, ee, ee.accumulatedIncome)
-          } else "stopIncomeTicking" === ee && oe.delete(ie.eId) && Ue.setOtherEntitySetting(Fe, ie.eId, "nameTagInfo", {
+            tW.set(iW.eId, WW), PW(LW, cW, iW.eId, WW, WW.accumulatedIncome)
+          } else "stopIncomeTicking" === WW && tW.delete(iW.eId) && LW.setOtherEntitySetting(cW, iW.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (ee, ie, He, ye, be, Me) => {
-          if (Me && "Mesh" === Ue.getEntityType(Me)) {
-            const ie = Ue.getEntityName(Me);
-            "Upgrades" === ie ? Ue.openShop(ee, !1, "Upgrades") : "Items" === ie ? Ue.openShop(ee, !1, "Items") : "Prestige" === ie ? Ue.openShop(ee, !1, "Prestige") : "Collections" === ie ? Ue.openShop(ee, !1, "Collections") : "Base Skins" === ie ? Ue.openShop(ee, !1, "Base Skins") : "Gauntlet" === ie ? Ue.openShop(ee, !1, "Gauntlet") : "Diamond Shop" === ie && Ue.openShop(ee, !1, "Diamond Shop")
+        onPlayerAltAction: (WW, iW, OW, mW, EW, NW) => {
+          if (NW && "Mesh" === LW.getEntityType(NW)) {
+            const iW = LW.getEntityName(NW);
+            "Upgrades" === iW ? LW.openShop(WW, !1, "Upgrades") : "Items" === iW ? LW.openShop(WW, !1, "Items") : "Prestige" === iW ? LW.openShop(WW, !1, "Prestige") : "Collections" === iW ? LW.openShop(WW, !1, "Collections") : "Base Skins" === iW ? LW.openShop(WW, !1, "Base Skins") : "Gauntlet" === iW ? LW.openShop(WW, !1, "Gauntlet") : "Diamond Shop" === iW && LW.openShop(WW, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  34905: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => be,
-      h: () => Ke
+  35243: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW,
+      g: () => PW
     });
-    const ye = [{
+    const mW = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function be(ee) {
-      let ie, He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof ee) {
-        if (!Number.isFinite(ee)) return "0";
-        if (Math.abs(ee) < 100) {
-          const ie = ee < 0 ? "-" : "",
-            He = Math.abs(ee);
-          return He >= 10 ? `${ie}${He.toFixed(1).replace(/\.0$/,"")}` : `${ie}${He.toFixed(2).replace(/\.?0+$/,"")}`
+    function EW(WW) {
+      let iW, OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof WW) {
+        if (!Number.isFinite(WW)) return "0";
+        if (Math.abs(WW) < 100) {
+          const iW = WW < 0 ? "-" : "",
+            OW = Math.abs(WW);
+          return OW >= 10 ? `${iW}${OW.toFixed(1).replace(/\.0$/,"")}` : `${iW}${OW.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        ie = BigInt(Math.floor(ee))
-      } else ie = ee;
-      const be = ie < 0n ? -ie : ie,
-        Me = ie < 0n ? "-" : "",
-        Ke = be.toString();
-      if (Ke.length <= He) return `${Me}${Ke}`;
-      const Ue = 3 * Math.floor((Ke.length - 1) / 3);
-      if (Ue < 3) return `${Me}${Ke}`;
-      if (Ue > 3 * ye.length) {
-        const ee = Ke[0],
-          ie = Ke.slice(1, 3).replace(/0+$/, "");
-        return `${Me}${ie?`${ee}.${ie}`:ee}e${Ke.length-1}`
+        iW = BigInt(Math.floor(WW))
+      } else iW = WW;
+      const EW = iW < 0n ? -iW : iW,
+        NW = iW < 0n ? "-" : "",
+        PW = EW.toString();
+      if (PW.length <= OW) return `${NW}${PW}`;
+      const LW = 3 * Math.floor((PW.length - 1) / 3);
+      if (LW < 3) return `${NW}${PW}`;
+      if (LW > 3 * mW.length) {
+        const WW = PW[0],
+          iW = PW.slice(1, 3).replace(/0+$/, "");
+        return `${NW}${iW?`${WW}.${iW}`:WW}e${PW.length-1}`
       }
       const {
-        threshold: Fe,
-        suffix: Je
-      } = ye[ye.length - Ue / 3], oe = be / Fe, Re = Number(1000n * (be % Fe) / Fe), ke = Number(oe) + Re / 1e3;
-      let qe;
-      return qe = ke >= 100 ? Math.floor(ke).toString() : ke >= 10 ? ke.toFixed(1).replace(/\.0$/, "") : ke.toFixed(2).replace(/\.?0+$/, ""), `${Me}${qe}${Je}`
+        threshold: cW,
+        suffix: wW
+      } = mW[mW.length - LW / 3], tW = EW / cW, ZW = Number(1000n * (EW % cW) / cW), xW = Number(tW) + ZW / 1e3;
+      let lW;
+      return lW = xW >= 100 ? Math.floor(xW).toString() : xW >= 10 ? xW.toFixed(1).replace(/\.0$/, "") : xW.toFixed(2).replace(/\.?0+$/, ""), `${NW}${lW}${wW}`
     }
-    const Me = ye.map((ee => {
+    const NW = mW.map((WW => {
       let {
-        threshold: ie,
-        suffix: He
-      } = ee;
+        threshold: iW,
+        suffix: OW
+      } = WW;
       return {
-        threshold: Number(ie),
-        suffix: He
+        threshold: Number(iW),
+        suffix: OW
       }
-    })).filter((ee => {
+    })).filter((WW => {
       let {
-        threshold: ie
-      } = ee;
-      return Number.isFinite(ie)
+        threshold: iW
+      } = WW;
+      return Number.isFinite(iW)
     }));
 
-    function Ke(ee) {
-      const ie = Math.abs(ee),
-        He = ee < 0 ? "-" : "";
+    function PW(WW) {
+      const iW = Math.abs(WW),
+        OW = WW < 0 ? "-" : "";
       for (const {
-          threshold: ye,
-          suffix: be
+          threshold: mW,
+          suffix: EW
         }
-        of Me)
-        if (ie >= ye) {
-          const ee = ie / ye;
-          if (ee >= 1e3) return `${He}${ie.toExponential(2).replace("e+","e")}`;
-          let Me;
-          return Me = ee >= 100 ? Math.floor(ee).toString() : ee >= 10 ? ee.toFixed(1).replace(/\.0$/, "") : ee.toFixed(2).replace(/\.?0+$/, ""), `${He}${Me}${be}`
-        } return `${He}${ie}`
+        of NW)
+        if (iW >= mW) {
+          const WW = iW / mW;
+          if (WW >= 1e3) return `${OW}${iW.toExponential(2).replace("e+","e")}`;
+          let NW;
+          return NW = WW >= 100 ? Math.floor(WW).toString() : WW >= 10 ? WW.toFixed(1).replace(/\.0$/, "") : WW.toFixed(2).replace(/\.?0+$/, ""), `${OW}${NW}${EW}`
+        } return `${OW}${iW}`
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

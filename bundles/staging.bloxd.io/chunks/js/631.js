@@ -1,150 +1,462 @@
 export const id = 631;
 export const ids = [631];
 export const modules = {
-  45396: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ke
+  54022: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      _KTXTextureLoader: () => AW
     });
-    var ye = He(40954);
-    const be = "clipPlaneFragment",
-      Me = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
+    var mW = OW(39911);
+    class EW {
+      constructor(WW, iW) {
+        if (this.data = WW, this.isInvalid = !1, !EW.IsValid(WW)) return this.isInvalid = !0, void mW.b.Error("texture missing KTX identifier");
+        const OW = Uint32Array.BYTES_PER_ELEMENT,
+          NW = new DataView(this.data.buffer, this.data.byteOffset + 12, 13 * OW),
+          PW = 67305985 === NW.getUint32(0, !0);
+        return this.glType = NW.getUint32(1 * OW, PW), this.glTypeSize = NW.getUint32(2 * OW, PW), this.glFormat = NW.getUint32(3 * OW, PW), this.glInternalFormat = NW.getUint32(4 * OW, PW), this.glBaseInternalFormat = NW.getUint32(5 * OW, PW), this.pixelWidth = NW.getUint32(6 * OW, PW), this.pixelHeight = NW.getUint32(7 * OW, PW), this.pixelDepth = NW.getUint32(8 * OW, PW), this.numberOfArrayElements = NW.getUint32(9 * OW, PW), this.numberOfFaces = NW.getUint32(10 * OW, PW), this.numberOfMipmapLevels = NW.getUint32(11 * OW, PW), this.bytesOfKeyValueData = NW.getUint32(12 * OW, PW), 0 !== this.glType ? (mW.b.Error("only compressed formats currently supported"), void(this.isInvalid = !0)) : (this.numberOfMipmapLevels = Math.max(1, this.numberOfMipmapLevels), 0 === this.pixelHeight || 0 !== this.pixelDepth ? (mW.b.Error("only 2D textures currently supported"), void(this.isInvalid = !0)) : 0 !== this.numberOfArrayElements ? (mW.b.Error("texture arrays not currently supported"), void(this.isInvalid = !0)) : this.numberOfFaces !== iW ? (mW.b.Error("number of faces expected" + iW + ", but found " + this.numberOfFaces), void(this.isInvalid = !0)) : void(this.loadType = EW.COMPRESSED_2D))
+      }
+      uploadLevels(WW, iW) {
+        switch (this.loadType) {
+          case EW.COMPRESSED_2D:
+            this._upload2DCompressedLevels(WW, iW);
+          case EW.TEX_2D:
+          case EW.COMPRESSED_3D:
+          case EW.TEX_3D:
+        }
+      }
+      _upload2DCompressedLevels(WW, iW) {
+        let OW = EW.HEADER_LEN + this.bytesOfKeyValueData,
+          mW = this.pixelWidth,
+          NW = this.pixelHeight;
+        const PW = iW ? this.numberOfMipmapLevels : 1;
+        for (let EW = 0; EW < PW; EW++) {
+          const iW = new Int32Array(this.data.buffer, this.data.byteOffset + OW, 1)[0];
+          OW += 4;
+          for (let PW = 0; PW < this.numberOfFaces; PW++) {
+            const LW = new Uint8Array(this.data.buffer, this.data.byteOffset + OW, iW);
+            WW.VA()._uploadCompressedDataToTextureDirectly(WW, WW.format, mW, NW, LW, PW, EW), OW += iW, OW += 3 - (iW + 3) % 4
+          }
+          mW = Math.max(1, .5 * mW), NW = Math.max(1, .5 * NW)
+        }
+      }
+      static IsValid(WW) {
+        if (WW.byteLength >= 12) {
+          const iW = new Uint8Array(WW.buffer, WW.byteOffset, 12);
+          if (171 === iW[0] && 75 === iW[1] && 84 === iW[2] && 88 === iW[3] && 32 === iW[4] && 49 === iW[5] && 49 === iW[6] && 187 === iW[7] && 13 === iW[8] && 10 === iW[9] && 26 === iW[10] && 10 === iW[11]) return !0
+        }
+        return !1
+      }
+    }
+    EW.HEADER_LEN = 64, EW.COMPRESSED_2D = 0, EW.COMPRESSED_3D = 1, EW.TEX_2D = 2, EW.TEX_3D = 3;
+    var NW, PW, LW, cW = OW(54026),
+      wW = OW(41620);
+
+    function tW(WW, iW) {
+      const OW = iW?.jsDecoderModule || KTX2DECODER;
+      WW && (WW.wasmBaseUrl && (OW.Transcoder.WasmBaseUrl = WW.wasmBaseUrl), WW.wasmUASTCToASTC && (OW.LiteTranscoder_UASTC_ASTC.WasmModuleURL = WW.wasmUASTCToASTC), WW.wasmUASTCToBC7 && (OW.LiteTranscoder_UASTC_BC7.WasmModuleURL = WW.wasmUASTCToBC7), WW.wasmUASTCToRGBA_UNORM && (OW.LiteTranscoder_UASTC_RGBA_UNORM.WasmModuleURL = WW.wasmUASTCToRGBA_UNORM), WW.wasmUASTCToRGBA_SRGB && (OW.LiteTranscoder_UASTC_RGBA_SRGB.WasmModuleURL = WW.wasmUASTCToRGBA_SRGB), WW.wasmUASTCToR8_UNORM && (OW.LiteTranscoder_UASTC_R8_UNORM.WasmModuleURL = WW.wasmUASTCToR8_UNORM), WW.wasmUASTCToRG8_UNORM && (OW.LiteTranscoder_UASTC_RG8_UNORM.WasmModuleURL = WW.wasmUASTCToRG8_UNORM), WW.jsMSCTranscoder && (OW.MSCTranscoder.JSModuleURL = WW.jsMSCTranscoder), WW.wasmMSCTranscoder && (OW.MSCTranscoder.WasmModuleURL = WW.wasmMSCTranscoder), WW.wasmZSTDDecoder && (OW.ZSTDDecoder.WasmModuleURL = WW.wasmZSTDDecoder)), iW && (iW.wasmUASTCToASTC && (OW.LiteTranscoder_UASTC_ASTC.WasmBinary = iW.wasmUASTCToASTC), iW.wasmUASTCToBC7 && (OW.LiteTranscoder_UASTC_BC7.WasmBinary = iW.wasmUASTCToBC7), iW.wasmUASTCToRGBA_UNORM && (OW.LiteTranscoder_UASTC_RGBA_UNORM.WasmBinary = iW.wasmUASTCToRGBA_UNORM), iW.wasmUASTCToRGBA_SRGB && (OW.LiteTranscoder_UASTC_RGBA_SRGB.WasmBinary = iW.wasmUASTCToRGBA_SRGB), iW.wasmUASTCToR8_UNORM && (OW.LiteTranscoder_UASTC_R8_UNORM.WasmBinary = iW.wasmUASTCToR8_UNORM), iW.wasmUASTCToRG8_UNORM && (OW.LiteTranscoder_UASTC_RG8_UNORM.WasmBinary = iW.wasmUASTCToRG8_UNORM), iW.jsMSCTranscoder && (OW.MSCTranscoder.JSModule = iW.jsMSCTranscoder), iW.wasmMSCTranscoder && (OW.MSCTranscoder.WasmBinary = iW.wasmMSCTranscoder), iW.wasmZSTDDecoder && (OW.ZSTDDecoder.WasmBinary = iW.wasmZSTDDecoder))
+    }
+
+    function ZW(WW) {
+      let iW;
+      "undefined" === typeof WW && "undefined" !== typeof KTX2DECODER && (WW = KTX2DECODER), onmessage = OW => {
+        if (OW.data) switch (OW.data.action) {
+          case "init": {
+            const mW = OW.data.urls;
+            mW && (mW.jsDecoderModule && "undefined" === typeof WW && (importScripts(mW.jsDecoderModule), WW = KTX2DECODER), tW(mW)), OW.data.wasmBinaries && tW(void 0, {
+              ...OW.data.wasmBinaries,
+              jsDecoderModule: WW
+            }), iW = new WW.KTX2Decoder, postMessage({
+              action: "init"
+            });
+            break
+          }
+          case "setDefaultDecoderOptions":
+            WW.KTX2Decoder.DefaultDecoderOptions = OW.data.options;
+            break;
+          case "decode":
+            iW.decode(OW.data.data, OW.data.caps, OW.data.options).then((WW => {
+              const iW = [];
+              for (let OW = 0; OW < WW.mipmaps.length; ++OW) {
+                const mW = WW.mipmaps[OW];
+                mW && mW.data && iW.push(mW.data.buffer)
+              }
+              postMessage({
+                action: "decoded",
+                success: !0,
+                decodedData: WW
+              }, iW)
+            })).catch((WW => {
+              postMessage({
+                action: "decoded",
+                success: !1,
+                tP: WW
+              })
+            }))
+        }
+      }
+    }! function(WW) {
+      WW[WW.ETC1S = 0] = "ETC1S", WW[WW.UASTC4x4 = 1] = "UASTC4x4", WW[WW.RGBA32 = 2] = "RGBA32"
+    }(NW || (NW = {})),
+    function(WW) {
+      WW[WW.ASTC_4X4_RGBA = 0] = "ASTC_4X4_RGBA", WW[WW.ASTC_4x4_RGBA = 0] = "ASTC_4x4_RGBA", WW[WW.BC7_RGBA = 1] = "BC7_RGBA", WW[WW.BC3_RGBA = 2] = "BC3_RGBA", WW[WW.BC1_RGB = 3] = "BC1_RGB", WW[WW.PVRTC1_4_RGBA = 4] = "PVRTC1_4_RGBA", WW[WW.PVRTC1_4_RGB = 5] = "PVRTC1_4_RGB", WW[WW.ETC2_RGBA = 6] = "ETC2_RGBA", WW[WW.ETC1_RGB = 7] = "ETC1_RGB", WW[WW.RGBA32 = 8] = "RGBA32", WW[WW.R8 = 9] = "R8", WW[WW.RG8 = 10] = "RG8"
+    }(PW || (PW = {})),
+    function(WW) {
+      WW[WW.COMPRESSED_RGBA_BPTC_UNORM_EXT = 36492] = "COMPRESSED_RGBA_BPTC_UNORM_EXT", WW[WW.COMPRESSED_RGBA_ASTC_4X4_KHR = 37808] = "COMPRESSED_RGBA_ASTC_4X4_KHR", WW[WW.COMPRESSED_RGB_S3TC_DXT1_EXT = 33776] = "COMPRESSED_RGB_S3TC_DXT1_EXT", WW[WW.COMPRESSED_RGBA_S3TC_DXT5_EXT = 33779] = "COMPRESSED_RGBA_S3TC_DXT5_EXT", WW[WW.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 35842] = "COMPRESSED_RGBA_PVRTC_4BPPV1_IMG", WW[WW.COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 35840] = "COMPRESSED_RGB_PVRTC_4BPPV1_IMG", WW[WW.COMPRESSED_RGBA8_ETC2_EAC = 37496] = "COMPRESSED_RGBA8_ETC2_EAC", WW[WW.COMPRESSED_RGB8_ETC2 = 37492] = "COMPRESSED_RGB8_ETC2", WW[WW.COMPRESSED_RGB_ETC1_WEBGL = 36196] = "COMPRESSED_RGB_ETC1_WEBGL", WW[WW.RGBA8Format = 32856] = "RGBA8Format", WW[WW.R8Format = 33321] = "R8Format", WW[WW.RG8Format = 33323] = "RG8Format"
+    }(LW || (LW = {}));
+    class xW {
+      static GetDefaultNumWorkers() {
+        return "object" === typeof navigator && navigator.hardwareConcurrency ? Math.min(Math.floor(.5 * navigator.hardwareConcurrency), 4) : 1
+      }
+      static _Initialize(WW) {
+        if (xW._WorkerPoolPromise || xW._DecoderModulePromise) return;
+        const iW = {
+          wasmBaseUrl: wW.f.ScriptBaseUrl,
+          jsDecoderModule: wW.f.GetBabylonScriptURL(this.URLConfig.jsDecoderModule, !0),
+          wasmUASTCToASTC: wW.f.GetBabylonScriptURL(this.URLConfig.wasmUASTCToASTC, !0),
+          wasmUASTCToBC7: wW.f.GetBabylonScriptURL(this.URLConfig.wasmUASTCToBC7, !0),
+          wasmUASTCToRGBA_UNORM: wW.f.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_UNORM, !0),
+          wasmUASTCToRGBA_SRGB: wW.f.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_SRGB, !0),
+          wasmUASTCToR8_UNORM: wW.f.GetBabylonScriptURL(this.URLConfig.wasmUASTCToR8_UNORM, !0),
+          wasmUASTCToRG8_UNORM: wW.f.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRG8_UNORM, !0),
+          jsMSCTranscoder: wW.f.GetBabylonScriptURL(this.URLConfig.jsMSCTranscoder, !0),
+          wasmMSCTranscoder: wW.f.GetBabylonScriptURL(this.URLConfig.wasmMSCTranscoder, !0),
+          wasmZSTDDecoder: wW.f.GetBabylonScriptURL(this.URLConfig.wasmZSTDDecoder, !0)
+        };
+        WW && "function" === typeof Worker && "undefined" !== typeof URL ? xW._WorkerPoolPromise = new Promise((OW => {
+          const mW = `${tW}(${ZW})()`,
+            EW = URL.createObjectURL(new Blob([mW], {
+              type: "application/javascript"
+            }));
+          OW(new cW.d(WW, (async () => await async function(WW, iW, OW) {
+            return await new Promise(((mW, EW) => {
+              const NW = iW => {
+                  WW.removeEventListener("error", NW), WW.removeEventListener("message", PW), EW(iW)
+                },
+                PW = iW => {
+                  "init" === iW.data.action && (WW.removeEventListener("error", NW), WW.removeEventListener("message", PW), mW(WW))
+                };
+              WW.addEventListener("error", NW), WW.addEventListener("message", PW), WW.postMessage({
+                action: "init",
+                urls: OW,
+                wasmBinaries: iW
+              })
+            }))
+          }(new Worker(EW), void 0, iW))))
+        })) : "undefined" === typeof xW._KTX2DecoderModule ? xW._DecoderModulePromise = wW.f.LoadBabylonScriptAsync(iW.jsDecoderModule).then((() => (xW._KTX2DecoderModule = KTX2DECODER, xW._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, xW._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, tW(iW, xW._KTX2DecoderModule), new xW._KTX2DecoderModule.KTX2Decoder))) : (xW._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, xW._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, xW._DecoderModulePromise = Promise.resolve(new xW._KTX2DecoderModule.KTX2Decoder))
+      }
+      constructor(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xW.DefaultNumWorkers;
+        this._engine = WW;
+        const OW = "object" === typeof iW && iW.workerPool || xW.WorkerPool;
+        if (OW) xW._WorkerPoolPromise = Promise.resolve(OW);
+        else {
+          "object" === typeof iW ? xW._KTX2DecoderModule = iW?.binariesAndModulesContainer?.jsDecoderModule : "undefined" !== typeof KTX2DECODER && (xW._KTX2DecoderModule = KTX2DECODER);
+          const WW = "number" === typeof iW ? iW : iW.numWorkers ?? xW.DefaultNumWorkers;
+          xW._Initialize(WW)
+        }
+      }
+      async _uploadAsync(WW, iW, OW) {
+        const mW = await this._decodeAsync(WW, OW);
+        this._createTexture(mW, iW, OW)
+      }
+      async _decodeAsync(WW, iW) {
+        const OW = this._engine.getCaps(),
+          mW = {
+            astc: !!OW.astc,
+            bptc: !!OW.bptc,
+            s3tc: !!OW.s3tc,
+            pvrtc: !!OW.pvrtc,
+            etc2: !!OW.etc2,
+            etc1: !!OW.etc1
+          };
+        if (xW._WorkerPoolPromise) {
+          const OW = await xW._WorkerPoolPromise;
+          return await new Promise(((EW, NW) => {
+            OW.push(((OW, PW) => {
+              const LW = WW => {
+                  OW.removeEventListener("error", LW), OW.removeEventListener("message", cW), NW(WW), PW()
+                },
+                cW = WW => {
+                  "decoded" === WW.data.action && (OW.removeEventListener("error", LW), OW.removeEventListener("message", cW), WW.data.success ? EW(WW.data.decodedData) : NW({
+                    message: WW.data.tP
+                  }), PW())
+                };
+              OW.addEventListener("error", LW), OW.addEventListener("message", cW), OW.postMessage({
+                action: "setDefaultDecoderOptions",
+                options: xW.DefaultDecoderOptions._getKTX2DecoderOptions()
+              });
+              const wW = new Uint8Array(WW.byteLength);
+              wW.set(new Uint8Array(WW.buffer, WW.byteOffset, WW.byteLength)), OW.postMessage({
+                action: "decode",
+                data: wW,
+                caps: mW,
+                options: iW
+              }, [wW.buffer])
+            }))
+          }))
+        }
+        if (xW._DecoderModulePromise) {
+          const mW = await xW._DecoderModulePromise;
+          return xW.DefaultDecoderOptions.isDirty && (xW._KTX2DecoderModule.KTX2Decoder.DefaultDecoderOptions = xW.DefaultDecoderOptions._getKTX2DecoderOptions()), await new Promise(((EW, NW) => {
+            mW.decode(WW, OW, iW).then((WW => {
+              EW(WW)
+            })).catch((WW => {
+              NW({
+                message: WW
+              })
+            }))
+          }))
+        }
+        throw new Error("KTX2 decoder module is not available")
+      }
+      _createTexture(WW, iW, OW) {
+        if ((WW.layerCount ?? 1) > 1) throw new Error("KTX2 container - array textures are not supported by this texture loader.");
+        this._engine._bindTextureDirectly(3553, iW), OW && (OW.transcodedFormat = WW.transcodedFormat, OW.isInGammaSpace = WW.isInGammaSpace, OW.hasAlpha = WW.hasAlpha, OW.transcoderName = WW.transcoderName);
+        let mW = !0;
+        switch (WW.transcodedFormat) {
+          case 32856:
+            iW.type = 0, iW.format = 5;
+            break;
+          case 33321:
+            iW.type = 0, iW.format = 6;
+            break;
+          case 33323:
+            iW.type = 0, iW.format = 7;
+            break;
+          default:
+            iW.format = WW.transcodedFormat, mW = !1
+        }
+        if (iW._gammaSpace = WW.isInGammaSpace, iW.generateMipMaps = WW.mipmaps.length > 1, iW.width = WW.mipmaps[0].width, iW.height = WW.mipmaps[0].height, WW.errors) throw new Error("KTX2 container - could not transcode the data. " + WW.errors);
+        for (let EW = 0; EW < WW.mipmaps.length; ++EW) {
+          const OW = WW.mipmaps[EW];
+          if (!OW || !OW.data) throw new Error("KTX2 container - could not transcode one of the image");
+          mW ? (iW.width = OW.width, iW.height = OW.height, this._engine._uploadDataToTextureDirectly(iW, OW.data, 0, EW, void 0, !0)) : this._engine._uploadCompressedDataToTextureDirectly(iW, WW.transcodedFormat, OW.width, OW.height, OW.data, 0, EW)
+        }
+        iW._extension = ".ktx2", iW.isReady = !0, this._engine._bindTextureDirectly(3553, null)
+      }
+      static IsValid(WW) {
+        if (WW.byteLength >= 12) {
+          const iW = new Uint8Array(WW.buffer, WW.byteOffset, 12);
+          if (171 === iW[0] && 75 === iW[1] && 84 === iW[2] && 88 === iW[3] && 32 === iW[4] && 50 === iW[5] && 48 === iW[6] && 187 === iW[7] && 13 === iW[8] && 10 === iW[9] && 26 === iW[10] && 10 === iW[11]) return !0
+        }
+        return !1
+      }
+    }
+
+    function lW(WW) {
+      switch (WW) {
+        case 35916:
+          return 33776;
+        case 35918:
+          return 33778;
+        case 35919:
+          return 33779;
+        case 37493:
+          return 37492;
+        case 37497:
+          return 37496;
+        case 37495:
+          return 37494;
+        case 37840:
+          return 37808;
+        case 37841:
+          return 37809;
+        case 37842:
+          return 37810;
+        case 37843:
+          return 37811;
+        case 37844:
+          return 37812;
+        case 37845:
+          return 37813;
+        case 37846:
+          return 37814;
+        case 37847:
+          return 37815;
+        case 37848:
+          return 37816;
+        case 37849:
+          return 37817;
+        case 37850:
+          return 37818;
+        case 37851:
+          return 37819;
+        case 37852:
+          return 37820;
+        case 37853:
+          return 37821;
+        case 36493:
+          return 36492
+      }
+      return null
+    }
+    xW.URLConfig = {
+      jsDecoderModule: "https://cdn.babylonjs.com/babylon.ktx2Decoder.js",
+      wasmUASTCToASTC: null,
+      wasmUASTCToBC7: null,
+      wasmUASTCToRGBA_UNORM: null,
+      wasmUASTCToRGBA_SRGB: null,
+      wasmUASTCToR8_UNORM: null,
+      wasmUASTCToRG8_UNORM: null,
+      jsMSCTranscoder: null,
+      wasmMSCTranscoder: null,
+      wasmZSTDDecoder: null
+    }, xW.DefaultNumWorkers = xW.GetDefaultNumWorkers(), xW.DefaultDecoderOptions = new class {
+      constructor() {
+        this._isDirty = !0, this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = !0, this._ktx2DecoderOptions = {}
+      }
+      get isDirty() {
+        return this._isDirty
+      }
+      get useRGBAIfASTCBC7NotAvailableWhenUASTC() {
+        return this._useRGBAIfASTCBC7NotAvailableWhenUASTC
+      }
+      set useRGBAIfASTCBC7NotAvailableWhenUASTC(WW) {
+        this._useRGBAIfASTCBC7NotAvailableWhenUASTC !== WW && (this._useRGBAIfASTCBC7NotAvailableWhenUASTC = WW, this._isDirty = !0)
+      }
+      get useRGBAIfOnlyBC1BC3AvailableWhenUASTC() {
+        return this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC
+      }
+      set useRGBAIfOnlyBC1BC3AvailableWhenUASTC(WW) {
+        this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC !== WW && (this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = WW, this._isDirty = !0)
+      }
+      get forceRGBA() {
+        return this._forceRGBA
+      }
+      set forceRGBA(WW) {
+        this._forceRGBA !== WW && (this._forceRGBA = WW, this._isDirty = !0)
+      }
+      get forceR8() {
+        return this._forceR8
+      }
+      set forceR8(WW) {
+        this._forceR8 !== WW && (this._forceR8 = WW, this._isDirty = !0)
+      }
+      get forceRG8() {
+        return this._forceRG8
+      }
+      set forceRG8(WW) {
+        this._forceRG8 !== WW && (this._forceRG8 = WW, this._isDirty = !0)
+      }
+      get bypassTranscoders() {
+        return this._bypassTranscoders
+      }
+      set bypassTranscoders(WW) {
+        this._bypassTranscoders !== WW && (this._bypassTranscoders = WW, this._isDirty = !0)
+      }
+      _getKTX2DecoderOptions() {
+        if (!this._isDirty) return this._ktx2DecoderOptions;
+        this._isDirty = !1;
+        const WW = {};
+        return void 0 !== this._useRGBAIfASTCBC7NotAvailableWhenUASTC && (WW.useRGBAIfASTCBC7NotAvailableWhenUASTC = this._useRGBAIfASTCBC7NotAvailableWhenUASTC), void 0 !== this._forceRGBA && (WW.forceRGBA = this._forceRGBA), void 0 !== this._forceR8 && (WW.forceR8 = this._forceR8), void 0 !== this._forceRG8 && (WW.forceRG8 = this._forceRG8), void 0 !== this._bypassTranscoders && (WW.bypassTranscoders = this._bypassTranscoders), this.useRGBAIfOnlyBC1BC3AvailableWhenUASTC && (WW.transcodeFormatDecisionTree = {
+          UASTC: {
+            transcodeFormat: [PW.BC1_RGB, PW.BC3_RGBA],
+            yes: {
+              transcodeFormat: PW.RGBA32,
+              engineFormat: 32856,
+              roundToMultiple4: !1
+            }
+          }
+        }), this._ktx2DecoderOptions = WW, WW
+      }
+    };
+    class AW {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(WW, iW, OW, mW) {
+        if (Array.isArray(WW)) return;
+        iW._invertVScale = !iW.invertY;
+        const NW = iW.VA(),
+          PW = new EW(WW, 6),
+          LW = lW(PW.glInternalFormat);
+        null !== LW ? (iW.format = LW, iW._useSRGBBuffer = NW._getUseSRGBBuffer(!0, !iW.generateMipMaps), iW._gammaSpace = !0) : iW.format = PW.glInternalFormat;
+        const cW = PW.numberOfMipmapLevels > 1 && iW.generateMipMaps;
+        NW._unpackFlipY(!0), PW.uploadLevels(iW, iW.generateMipMaps), iW.width = PW.pixelWidth, iW.height = PW.pixelHeight, NW._setCubeMapTextureParams(iW, cW, PW.numberOfMipmapLevels - 1), iW.isReady = !0, iW.onLoadedObservable.notifyObservers(iW), iW.onLoadedObservable.clear(), mW && mW()
+      }
+      loadData(WW, iW, OW, NW) {
+        if (EW.IsValid(WW)) {
+          iW._invertVScale = !iW.invertY;
+          const mW = new EW(WW, 1),
+            NW = lW(mW.glInternalFormat);
+          null !== NW ? (iW.format = NW, iW._useSRGBBuffer = iW.VA()._getUseSRGBBuffer(!0, !iW.generateMipMaps), iW._gammaSpace = !0) : iW.format = mW.glInternalFormat, OW(mW.pixelWidth, mW.pixelHeight, iW.generateMipMaps, !0, (() => {
+            mW.uploadLevels(iW, iW.generateMipMaps)
+          }), mW.isInvalid)
+        } else if (xW.IsValid(WW)) {
+          new xW(iW.VA())._uploadAsync(WW, iW, NW).then((() => {
+            OW(iW.width, iW.height, iW.generateMipMaps, !0, (() => {}), !1)
+          }), (WW => {
+            mW.b.Warn(`Failed to load KTX2 texture data: ${WW.message}`), OW(0, 0, !1, !1, (() => {}), !0)
+          }))
+        } else mW.b.Error("texture missing KTX identifier"), OW(0, 0, !1, !1, (() => {}), !0)
+      }
     }
   },
-  45380: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ke
+  54026: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => EW
     });
-    var ye = He(40954);
-    const be = "clipPlaneFragmentDeclaration",
-      Me = "#ifdef CLIPPLANE\nvarying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nvarying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nvarying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nvarying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nvarying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nvarying float fClipDistance6;\n#endif\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
+    class mW {
+      constructor(WW) {
+        this._pendingActions = new Array, this._workerInfos = WW.map((WW => ({
+          workerPromise: Promise.resolve(WW),
+          idle: !0
+        })))
+      }
+      dispose() {
+        for (const WW of this._workerInfos) WW.workerPromise.then((WW => {
+          WW.terminate()
+        }));
+        this._workerInfos.length = 0, this._pendingActions.length = 0
+      }
+      push(WW) {
+        this._executeOnIdleWorker(WW) || this._pendingActions.push(WW)
+      }
+      _executeOnIdleWorker(WW) {
+        for (const iW of this._workerInfos)
+          if (iW.idle) return this._execute(iW, WW), !0;
+        return !1
+      }
+      _execute(WW, iW) {
+        WW.idle = !1, WW.workerPromise.then((OW => {
+          iW(OW, (() => {
+            const iW = this._pendingActions.shift();
+            iW ? this._execute(WW, iW) : WW.idle = !0
+          }))
+        }))
+      }
     }
-  },
-  45422: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ke
-    });
-    var ye = He(40954);
-    const be = "fogFragment",
-      Me = "#ifdef FOG\nfloat fog=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor.rgb=mix(vFogColor,color.rgb,fog);\n#endif\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
+    class EW extends mW {
+      constructor(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : EW.DefaultOptions;
+        super([]), this._maxWorkers = WW, this._createWorkerAsync = iW, this._options = OW
+      }
+      push(WW) {
+        if (!this._executeOnIdleWorker(WW))
+          if (this._workerInfos.length < this._maxWorkers) {
+            const iW = {
+              workerPromise: this._createWorkerAsync(),
+              idle: !1
+            };
+            this._workerInfos.push(iW), this._execute(iW, WW)
+          } else this._pendingActions.push(WW)
+      }
+      _execute(WW, iW) {
+        WW.timeoutId && (clearTimeout(WW.timeoutId), delete WW.timeoutId), super._execute(WW, ((OW, mW) => {
+          iW(OW, (() => {
+            mW(), WW.idle && (WW.timeoutId = setTimeout((() => {
+              WW.workerPromise.then((WW => {
+                WW.terminate()
+              }));
+              const iW = this._workerInfos.indexOf(WW); - 1 !== iW && this._workerInfos.splice(iW, 1)
+            }), this._options.idleTimeElapsedBeforeRelease))
+          }))
+        }))
+      }
     }
-  },
-  45388: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ke
-    });
-    var ye = He(40954);
-    const be = "fogFragmentDeclaration",
-      Me = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\n#define E 2.71828\nuniform vec4 vFogInfos;uniform vec3 vFogColor;varying vec3 vFogDistance;float CalcFogFactor()\n{float fogCoeff=1.0;float fogStart=vFogInfos.y;float fogEnd=vFogInfos.z;float fogDensity=vFogInfos.w;float fogDistance=length(vFogDistance);if (FOGMODE_LINEAR==vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
-    }
-  },
-  45105: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ke
-    });
-    var ye = He(40954);
-    const be = "helperFunctions",
-      Me = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
-    }
-  },
-  45345: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ke
-    });
-    var ye = He(40954);
-    const be = "imageProcessingDeclaration",
-      Me = "#ifdef EXPOSURE\nuniform float exposureLinear;\n#endif\n#ifdef CONTRAST\nuniform float contrast;\n#endif\n#ifdef WHITEBALANCE\nuniform mat3 whiteBalanceMatrix;\n#endif\n#if defined(VIGNETTE) || defined(DITHER)\nuniform vec2 vInverseScreenSize;\n#endif\n#ifdef VIGNETTE\nuniform vec4 vignetteSettings1;uniform vec4 vignetteSettings2;\n#endif\n#ifdef COLORCURVES\nuniform vec4 vCameraColorCurveNegative;uniform vec4 vCameraColorCurveNeutral;uniform vec4 vCameraColorCurvePositive;\n#endif\n#ifdef COLORGRADING\n#ifdef COLORGRADING3D\nuniform highp sampler3D txColorTransform;\n#else\nuniform sampler2D txColorTransform;\n#endif\nuniform vec4 colorTransformSettings;\n#endif\n#ifdef DITHER\nuniform float ditherIntensity;\n#endif\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
-    }
-  },
-  45351: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke
-    });
-    var ye = He(40954);
-    const be = "imageProcessingFunctions",
-      Me = "#if defined(COLORGRADING) && !defined(COLORGRADING3D)\n/** \n* Polyfill for SAMPLE_TEXTURE_3D,which is unsupported in WebGL.\n* sampler3dSetting.x=textureOffset (0.5/textureSize).\n* sampler3dSetting.y=textureSize.\n*/\n#define inline\nvec3 sampleTexture3D(sampler2D colorTransform,vec3 color,vec2 sampler3dSetting)\n{float sliceSize=2.0*sampler3dSetting.x; \n#ifdef SAMPLER3DGREENDEPTH\nfloat sliceContinuous=(color.g-sampler3dSetting.x)*sampler3dSetting.y;\n#else\nfloat sliceContinuous=(color.b-sampler3dSetting.x)*sampler3dSetting.y;\n#endif\nfloat sliceInteger=floor(sliceContinuous);float sliceFraction=sliceContinuous-sliceInteger;\n#ifdef SAMPLER3DGREENDEPTH\nvec2 sliceUV=color.rb;\n#else\nvec2 sliceUV=color.rg;\n#endif\nsliceUV.x*=sliceSize;sliceUV.x+=sliceInteger*sliceSize;sliceUV=saturate(sliceUV);vec4 slice0Color=texture2D(colorTransform,sliceUV);sliceUV.x+=sliceSize;sliceUV=saturate(sliceUV);vec4 slice1Color=texture2D(colorTransform,sliceUV);vec3 result=mix(slice0Color.rgb,slice1Color.rgb,sliceFraction);\n#ifdef SAMPLER3DBGRMAP\ncolor.rgb=result.rgb;\n#else\ncolor.rgb=result.bgr;\n#endif\nreturn color;}\n#endif\n#if TONEMAPPING==3\nconst float PBRNeutralStartCompression=0.8-0.04;const float PBRNeutralDesaturation=0.15;vec3 PBRNeutralToneMapping( vec3 color ) {float x=min(color.r,min(color.g,color.b));float offset=x<0.08 ? x-6.25*x*x : 0.04;color-=offset;float peak=max(color.r,max(color.g,color.b));if (peak<PBRNeutralStartCompression) return color;float d=1.-PBRNeutralStartCompression;float newPeak=1.-d*d/(peak+d-PBRNeutralStartCompression);color*=newPeak/peak;float g=1.-1./(PBRNeutralDesaturation*(peak-newPeak)+1.);return mix(color,newPeak*vec3(1,1,1),g);}\n#endif\n#if TONEMAPPING==2\nconst mat3 ACESInputMat=mat3(\nvec3(0.59719,0.07600,0.02840),\nvec3(0.35458,0.90834,0.13383),\nvec3(0.04823,0.01566,0.83777)\n);const mat3 ACESOutputMat=mat3(\nvec3( 1.60475,-0.10208,-0.00327),\nvec3(-0.53108, 1.10813,-0.07276),\nvec3(-0.07367,-0.00605, 1.07602)\n);vec3 RRTAndODTFit(vec3 v)\n{vec3 a=v*(v+0.0245786)-0.000090537;vec3 b=v*(0.983729*v+0.4329510)+0.238081;return a/b;}\nvec3 ACESFitted(vec3 color)\n{color=ACESInputMat*color;color=RRTAndODTFit(color);color=ACESOutputMat*color;color=saturate(color);return color;}\n#endif\n#define CUSTOM_IMAGEPROCESSINGFUNCTIONS_DEFINITIONS\nvec4 applyImageProcessing(vec4 result) {\n#define CUSTOM_IMAGEPROCESSINGFUNCTIONS_UPDATERESULT_ATSTART\n#ifdef WHITEBALANCE\nresult.rgb=whiteBalanceMatrix*result.rgb;result.rgb=max(result.rgb,0.0);\n#endif\n#ifdef EXPOSURE\nresult.rgb*=exposureLinear;\n#endif\n#ifdef VIGNETTE\nvec2 viewportXY=gl_FragCoord.xy*vInverseScreenSize;viewportXY=viewportXY*2.0-1.0;vec3 vignetteXY1=vec3(viewportXY*vignetteSettings1.xy+vignetteSettings1.zw,1.0);float vignetteTerm=dot(vignetteXY1,vignetteXY1);float vignette=pow(vignetteTerm,vignetteSettings2.w);vec3 vignetteColor=vignetteSettings2.rgb;\n#ifdef VIGNETTEBLENDMODEMULTIPLY\nvec3 vignetteColorMultiplier=mix(vignetteColor,vec3(1,1,1),vignette);result.rgb*=vignetteColorMultiplier;\n#endif\n#ifdef VIGNETTEBLENDMODEOPAQUE\nresult.rgb=mix(vignetteColor,result.rgb,vignette);\n#endif\n#endif\n#if TONEMAPPING==3\nresult.rgb=PBRNeutralToneMapping(result.rgb);\n#elif TONEMAPPING==2\nresult.rgb=ACESFitted(result.rgb);\n#elif TONEMAPPING==1\nconst float tonemappingCalibration=1.590579;result.rgb=1.0-exp2(-tonemappingCalibration*result.rgb);\n#endif\nresult.rgb=toGammaSpace(result.rgb);result.rgb=saturate(result.rgb);\n#ifdef CONTRAST\nvec3 resultHighContrast=result.rgb*result.rgb*(3.0-2.0*result.rgb);if (contrast<1.0) {result.rgb=mix(vec3(0.5,0.5,0.5),result.rgb,contrast);} else {result.rgb=mix(result.rgb,resultHighContrast,contrast-1.0);}\nresult.rgb=max(result.rgb,0.);\n#endif\n#ifdef COLORGRADING\nvec3 colorTransformInput=result.rgb*colorTransformSettings.xxx+colorTransformSettings.yyy;\n#ifdef COLORGRADING3D\nvec3 colorTransformOutput=texture(txColorTransform,colorTransformInput).rgb;\n#else\nvec3 colorTransformOutput=sampleTexture3D(txColorTransform,colorTransformInput,colorTransformSettings.yz).rgb;\n#endif\nresult.rgb=mix(result.rgb,colorTransformOutput,colorTransformSettings.www);\n#endif\n#ifdef COLORCURVES\nfloat luma=getLuminance(result.rgb);vec2 curveMix=clamp(vec2(luma*3.0-1.5,luma*-3.0+1.5),vec2(0.0),vec2(1.0));vec4 colorCurve=vCameraColorCurveNeutral+curveMix.x*vCameraColorCurvePositive-curveMix.y*vCameraColorCurveNegative;result.rgb*=colorCurve.rgb;result.rgb=mix(vec3(luma),result.rgb,colorCurve.a);\n#endif\n#ifdef DITHER\nfloat rand=getRand(gl_FragCoord.xy*vInverseScreenSize);float dither=mix(-ditherIntensity,ditherIntensity,rand);result.rgb=saturate(result.rgb+vec3(dither));\n#endif\n#define CUSTOM_IMAGEPROCESSINGFUNCTIONS_UPDATERESULT_ATEND\nreturn result;}";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
-    }
-  },
-  45186: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Ke
-    });
-    var ye = He(40954);
-    const be = "logDepthDeclaration",
-      Me = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
-    }
-  },
-  45420: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Ke
-    });
-    var ye = He(40954);
-    const be = "logDepthFragment",
-      Me = "#ifdef LOGARITHMICDEPTH\ngl_FragDepthEXT=log2(vFragmentDepth)*logarithmicDepthConstant*0.5;\n#endif\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
-    }
-  },
-  45277: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ke
-    });
-    var ye = He(40954);
-    const be = "objectIdFunctions",
-      Me = "highp vec4 encodeObjectId(highp float objectId) {\n#ifdef PREPASS_OBJECT_ID_R8\nreturn vec4(objectId/255.0,0.0,0.0,1.0);\n#else\nhighp float id=floor(objectId);highp vec3 encodedId=vec3(\nfloor(mod(id,16777216.0)/65536.0),\nfloor(mod(id,65536.0)/256.0),\nmod(id,256.0)\n)/255.0;return vec4(encodedId,step(0.5,id));\n#endif\n}\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
-    }
-  },
-  45283: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke
-    });
-    var ye = He(40954);
-    He(45277);
-    const be = "prePassDeclaration",
-      Me = "#ifdef PREPASS\n#extension GL_EXT_draw_buffers : require\n#ifdef PREPASS_MESH_BLEND_TAG\n#if {X}>0\n#if PREPASS_MESH_BLEND_TAG_INDEX==0\nlayout(location=0) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=0) out highp vec4 glFragData0;\n#endif\n#endif\n#if {X}>1\n#if PREPASS_MESH_BLEND_TAG_INDEX==1\nlayout(location=1) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=1) out highp vec4 glFragData1;\n#endif\n#endif\n#if {X}>2\n#if PREPASS_MESH_BLEND_TAG_INDEX==2\nlayout(location=2) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=2) out highp vec4 glFragData2;\n#endif\n#endif\n#if {X}>3\n#if PREPASS_MESH_BLEND_TAG_INDEX==3\nlayout(location=3) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=3) out highp vec4 glFragData3;\n#endif\n#endif\n#if {X}>4\n#if PREPASS_MESH_BLEND_TAG_INDEX==4\nlayout(location=4) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=4) out highp vec4 glFragData4;\n#endif\n#endif\n#if {X}>5\n#if PREPASS_MESH_BLEND_TAG_INDEX==5\nlayout(location=5) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=5) out highp vec4 glFragData5;\n#endif\n#endif\n#if {X}>6\n#if PREPASS_MESH_BLEND_TAG_INDEX==6\nlayout(location=6) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=6) out highp vec4 glFragData6;\n#endif\n#endif\n#if {X}>7\n#if PREPASS_MESH_BLEND_TAG_INDEX==7\nlayout(location=7) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=7) out highp vec4 glFragData7;\n#endif\n#endif\nvoid writeGeometryFragmentOutput(highp int index,highp vec4 value) {\n#if {X}>0 && PREPASS_MESH_BLEND_TAG_INDEX != 0\nif (index==0) { glFragData0=value; }\n#endif\n#if {X}>1 && PREPASS_MESH_BLEND_TAG_INDEX != 1\nif (index==1) { glFragData1=value; }\n#endif\n#if {X}>2 && PREPASS_MESH_BLEND_TAG_INDEX != 2\nif (index==2) { glFragData2=value; }\n#endif\n#if {X}>3 && PREPASS_MESH_BLEND_TAG_INDEX != 3\nif (index==3) { glFragData3=value; }\n#endif\n#if {X}>4 && PREPASS_MESH_BLEND_TAG_INDEX != 4\nif (index==4) { glFragData4=value; }\n#endif\n#if {X}>5 && PREPASS_MESH_BLEND_TAG_INDEX != 5\nif (index==5) { glFragData5=value; }\n#endif\n#if {X}>6 && PREPASS_MESH_BLEND_TAG_INDEX != 6\nif (index==6) { glFragData6=value; }\n#endif\n#if {X}>7 && PREPASS_MESH_BLEND_TAG_INDEX != 7\nif (index==7) { glFragData7=value; }\n#endif\n}\n#define WRITE_GEOMETRY_FRAGMENT_OUTPUT(INDEX,VALUE) writeGeometryFragmentOutput(INDEX,VALUE)\n#else\nlayout(location=0) out highp vec4 glFragData[{X}];\n#define WRITE_GEOMETRY_FRAGMENT_OUTPUT(INDEX,VALUE) gl_FragData[INDEX]=VALUE\n#endif\nhighp vec4 gl_FragColor;\n#ifndef PREPASS_CUSTOM_VARYINGS\n#ifdef PREPASS_LOCAL_POSITION\nvarying highp vec3 vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nvarying highp vec3 vViewPos;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying highp float vNormViewDepth;\n#endif\n#if (defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)) && !defined(PREPASS_VELOCITY_ZERO)\nvarying highp vec4 vCurrentPosition;varying highp vec4 vPreviousPosition;\n#endif\n#endif\n#ifdef PREPASS_OBJECT_ID\nuniform highp float objectId;\n#include<objectIdFunctions>\n#endif\n#ifdef PREPASS_MESH_BLEND_TAG\nuniform highp int meshBlendTag;\n#endif\n#endif\n";
-    ye.d.IncludesShadersStore[be] || (ye.d.IncludesShadersStore[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
+    EW.DefaultOptions = {
+      idleTimeElapsedBeforeRelease: 1e3
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,386 +1,187 @@
 export const id = 11;
 export const ids = [11];
 export const modules = {
-  37420: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => pe,
-      d: () => Xe,
-      h: () => ke,
-      j: () => Re
+  37868: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => jW,
+      h: () => UW,
+      l: () => xW,
+      o: () => ZW
     });
-    var ye = He(34867),
-      be = He(37424),
-      Me = He(37427),
-      Ke = He(9446),
-      Ue = He(1432),
-      Fe = He(59),
-      Je = He(77),
-      oe = He(1228);
+    var mW = OW(35220),
+      EW = OW(3361),
+      NW = OW(3368),
+      PW = OW(9954),
+      LW = OW(1526),
+      cW = OW(62),
+      wW = OW(80),
+      tW = OW(1283);
 
-    function Re() {
-      var ee;
-      return (0, Ue.j)(be.b, (0, be.p)()), (0, oe.jsx)(oe.Fragment, {
-        children: null === (ee = (0, be.p)()) || void 0 === ee ? void 0 : ee.content
+    function ZW() {
+      var WW;
+      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
+        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
       })
     }
 
-    function ke(ee) {
-      var ie;
+    function xW(WW) {
+      var iW;
       let {
-        show: He
-      } = ee;
-      (0, Ue.j)(be.b, (0, be.p)());
-      const Je = null === (ie = (0, be.p)()) || void 0 === ie ? void 0 : ie.menu;
-      return (0, Fe.useEffect)((() => {
-        var ee;
-        He || (null === Je || void 0 === Je || null === (ee = Je.onClose) || void 0 === ee || ee.call(Je), (0, Me.l)())
-      }), [He, Je]), (0, Fe.useEffect)((() => He ? (0, Ke.g)(Me.r, Me.e) : void 0), [He]), (0, oe.jsx)(ye.e, {
-        showing: He,
+        show: OW
+      } = WW;
+      (0, LW.g)(EW.g, (0, EW.F)());
+      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
+      return (0, cW.useEffect)((() => {
+        var WW;
+        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
+      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
+        showing: OW,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Je || void 0 === Je ? void 0 : Je.content
+        children: null === wW || void 0 === wW ? void 0 : wW.content
       })
     }
-    const qe = new Map,
-      fe = new Set;
+    const lW = new Map,
+      AW = new Set;
 
-    function Te(ee, ie) {
-      ie ? qe.set(ee, ie) : qe.delete(ee);
-      for (const He of fe) He()
+    function bW(WW, iW) {
+      iW ? lW.set(WW, iW) : lW.delete(WW);
+      for (const OW of AW) OW()
     }
 
-    function pe(ee) {
+    function jW(WW) {
       let {
-        placement: ie = "bottom"
-      } = ee;
-      const He = (0, Fe.useRef)(null);
-      return (0, Fe.useLayoutEffect)((() => {
-        const ee = He.current;
-        return Te(ie, ee), () => {
-          qe.get(ie) === ee && Te(ie, null)
+        placement: iW = "bottom"
+      } = WW;
+      const OW = (0, cW.useRef)(null);
+      return (0, cW.useLayoutEffect)((() => {
+        const WW = OW.current;
+        return bW(iW, WW), () => {
+          lW.get(iW) === WW && bW(iW, null)
         }
-      }), [ie]), (0, oe.jsx)("div", {
-        ref: He,
-        id: `clientGameHud-${ie}`,
+      }), [iW]), (0, tW.jsx)("div", {
+        ref: OW,
+        id: `clientGameHud-${iW}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Xe(ee) {
+    function UW(WW) {
       let {
-        children: ie,
-        placement: He = "bottom"
-      } = ee;
-      const [ye, be] = (0, Fe.useState)((() => {
-        var ee;
-        return null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null
+        children: iW,
+        placement: OW = "bottom"
+      } = WW;
+      const [mW, EW] = (0, cW.useState)((() => {
+        var WW;
+        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
       }));
-      return (0, Fe.useEffect)((() => {
-        const ee = () => {
-          var ee;
-          be(null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null)
+      return (0, cW.useEffect)((() => {
+        const WW = () => {
+          var WW;
+          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
         };
-        return fe.add(ee), ee(), () => {
-          fe.delete(ee)
+        return AW.add(WW), WW(), () => {
+          AW.delete(WW)
         }
-      }), [He]), ye ? (0, Je.createPortal)(ie, ye) : null
+      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
     }
   },
-  34867: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me
+  35220: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
     });
-    var ye = He(4931),
-      be = He(4937);
+    var mW = OW(5243),
+      EW = OW(5251);
 
-    function Me(ee) {
+    function NW(WW) {
       let {
-        children: ie,
-        showing: He,
-        globallyUniqueKey: Me,
-        alwaysMountChildren: Ke = !1,
-        doGameplayStartStopOnShow: Ue = !0,
-        keepsMovement: Fe = !1
-      } = ee;
-      return (0, be.e)(!0, He, Me, Fe), (0, ye.c)(Ue, He), He || Ke ? ie : null
+        children: iW,
+        showing: OW,
+        globallyUniqueKey: NW,
+        alwaysMountChildren: PW = !1,
+        doGameplayStartStopOnShow: LW = !0,
+        keepsMovement: cW = !1
+      } = WW;
+      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
     }
   },
-  5537: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ke
+  9954: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => EW
     });
-    var ye = He(1053),
-      be = He.n(ye),
-      Me = He(1228);
-
-    function Ke(ee) {
-      let {
-        options: ie,
-        value: He,
-        onChange: ye,
-        ariaLabel: Ke,
-        className: Ue,
-        reselectable: Fe = !1,
-        keepsFocus: Je = !1,
-        padTabs: oe
-      } = ee;
-      const Re = void 0 !== oe;
-      return (0, Me.jsx)("div", {
-        className: be()("SegmentedToggle", Ue),
-        role: "group",
-        "aria-label": Ke,
-        "data-pad-tabs": oe,
-        children: ie.map((ee => {
-          const ie = ee.value === He;
-          return (0, Me.jsx)("button", {
-            type: "button",
-            "aria-pressed": ie,
-            "data-pad-tab": Re || void 0,
-            "data-pad-selected": Re && ie ? "true" : void 0,
-            "data-pad-default-focus": Re && ie || void 0,
-            "aria-label": ee.ariaLabel,
-            title: ee.ariaLabel,
-            className: be()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: ie
-            }),
-            onMouseDown: Je ? ee => {
-              ee.preventDefault()
-            } : void 0,
-            onClick: () => {
-              ie && !Fe || ye(ee.value)
-            },
-            children: ee.label
-          }, ee.value)
-        }))
-      })
-    }
-  },
-  9446: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Me,
-      g: () => be
-    });
-    let ye = null;
-    const be = function(ee) {
-        const ie = {
-          cycle: ee,
+    let mW = null;
+    const EW = function(WW) {
+        const iW = {
+          cycle: WW,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return ye = ie, () => {
-          ye === ie && (ye = null)
+        return mW = iW, () => {
+          mW === iW && (mW = null)
         }
       },
-      Me = () => {
-        var ee;
-        return null !== (ee = ye) && void 0 !== ee && ee.canCycle() ? ye.cycle : null
+      NW = () => {
+        var WW;
+        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
       }
   },
-  37652: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => be,
-      f: () => Me
+  37980: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => EW,
+      c: () => NW
     });
-    const ye = new Map;
+    const mW = new Map;
 
-    function be(ee) {
-      var ie;
-      return null === ee ? null : null !== (ie = ye.get(ee)) && void 0 !== ie ? ie : null
+    function EW(WW) {
+      var iW;
+      return null === WW ? null : null !== (iW = mW.get(WW)) && void 0 !== iW ? iW : null
     }
 
-    function Me(ee, ie) {
-      return ye.set(ee, ie), () => {
-        ye.get(ee) === ie && ye.delete(ee)
-      }
-    }
-  },
-  37427: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Me,
-      e: () => Te,
-      f: () => pe,
-      h: () => Ue,
-      j: () => ke,
-      l: () => Xe,
-      n: () => Re,
-      p: () => Be,
-      r: () => fe,
-      u: () => ze
-    });
-    var ye = He(18),
-      be = He(27);
-    const Me = "clientGameInventoryButtonsChanged",
-      Ke = new Map;
-
-    function Ue() {
-      return [...Ke.values()].sort(((ee, ie) => {
-        var He, ye;
-        return (null !== (He = ee.order) && void 0 !== He ? He : 0) - (null !== (ye = ie.order) && void 0 !== ye ? ye : 0)
-      }))
-    }
-    let Fe = null;
-
-    function Je(ee) {
-      Fe = ee
-    }
-    let oe = !1;
-
-    function Re(ee) {
-      oe = !0;
-      try {
-        ee.onClick()
-      } finally {
-        oe = !1
-      }
-      ee.panel && "clientGame" === ye.e.get("openInGameMenuName") && Je(ee.id)
-    }
-
-    function ke() {
-      return oe
-    }
-
-    function qe() {
-      return Ue().filter((ee => ee.panel && !ee.disabled))
-    }
-
-    function fe(ee) {
-      const ie = qe(),
-        He = ie.findIndex((ee => ee.id === Fe));
-      return !(He < 0 || ie.length < 2) && (Re(ie[(He + ee + ie.length) % ie.length]), !0)
-    }
-
-    function Te() {
-      return null !== Fe && qe().length > 1
-    }
-
-    function pe() {
-      Je(null)
-    }
-
-    function Xe() {
-      "inventory" !== ye.e.get("openInGameMenuName") && Je(null)
-    }
-
-    function ze() {
-      const ee = Fe;
-      return Je(null), ee
-    }
-
-    function Be(ee) {
-      return Ke.set(ee.id, ee), be.h.yR(Me, Ue(), !0), () => {
-        Ke.get(ee.id) === ee && (Ke.delete(ee.id), be.h.yR(Me, Ue()))
+    function NW(WW, iW) {
+      return mW.set(WW, iW), () => {
+        mW.get(WW) === iW && mW.delete(WW)
       }
     }
   },
-  37424: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ue,
-      d: () => ze,
-      h: () => pe,
-      l: () => Xe,
-      m: () => ke,
-      p: () => Je,
-      s: () => Te,
-      v: () => qe,
-      z: () => oe
+  39606: (WW, iW, OW) => {
+    OW.d(iW, {
+      C: () => yW,
+      F: () => KW,
+      G: () => MW,
+      J: () => xW,
+      M: () => bW,
+      N: () => UW,
+      O: () => EW,
+      c: () => tW,
+      f: () => cW,
+      j: () => sW,
+      l: () => wW,
+      n: () => LW,
+      q: () => PW,
+      t: () => NW,
+      w: () => YW,
+      x: () => lW,
+      y: () => SW
     });
-    var ye = He(18),
-      be = He(27),
-      Me = He(1246),
-      Ke = He(37427);
-    const Ue = "clientGameUiChanged";
-    let Fe = null;
+    var mW = OW(5797);
 
-    function Je() {
-      return Fe
+    function EW(WW) {
+      return Math.floor(WW).toLocaleString("en-US")
     }
+    const NW = 2e3,
+      PW = .005,
+      LW = .001,
+      cW = 2,
+      wW = "Fluid Tank",
+      tW = "Coolant Mixer",
+      ZW = 144;
 
-    function oe(ee, ie) {
-      const He = {
-        content: ee,
-        menu: ie
-      };
-      return Fe = He, be.h.yR(Ue, Fe, !0), () => {
-        Fe === He && (Fe = null, fe = !1, pe(), be.h.yR(Ue, null))
-      }
+    function xW(WW) {
+      const iW = WW.split("|")[0];
+      return (0, mW.p)(iW) ? iW === mW.e ? "cryo" : "water" : null
     }
-    let Re = null;
-
-    function ke() {
-      return Re
-    }
-
-    function qe(ee) {
-      return Re = ee, () => {
-        Re === ee && (Re = null)
-      }
-    }
-    let fe = !1;
-
-    function Te() {
-      const ee = ye.e.get("openInGameMenuName");
-      "clientGame" !== ee && (fe = "inventory" === ee), (0, Ke.j)() || (0, Ke.f)(), (0, Me.w)(Me.c), ye.e.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function pe() {
-      Be(!1)
-    }
-
-    function Xe() {
-      Be(fe)
-    }
-
-    function ze() {
-      fe && Be(!1)
-    }
-
-    function Be(ee) {
-      "clientGame" === ye.e.get("openInGameMenuName") && ye.e.set({
-        openInGameMenuName: ee ? "inventory" : null
-      }), ee || (0, Ke.f)(), fe = !1
-    }
-  },
-  39214: (ee, ie, He) => {
-    He.d(ie, {
-      A: () => Oe,
-      E: () => We,
-      H: () => ge,
-      I: () => Ee,
-      L: () => ke,
-      P: () => Te,
-      T: () => Xe,
-      V: () => be,
-      e: () => oe,
-      f: () => Fe,
-      j: () => Be,
-      l: () => Je,
-      o: () => Ue,
-      s: () => Ke,
-      u: () => Me,
-      v: () => de,
-      w: () => qe
-    });
-    var ye = He(10049);
-
-    function be(ee) {
-      return Math.floor(ee).toLocaleString("en-US")
-    }
-    const Me = 2e3,
-      Ke = .005,
-      Ue = .001,
-      Fe = 2,
-      Je = "Fluid Tank",
-      oe = "Coolant Mixer",
-      Re = 144;
-
-    function ke(ee) {
-      const ie = ee.split("|")[0];
-      return (0, ye.n)(ie) ? ie === ye.e ? "cryo" : "water" : null
-    }
-    const qe = [
+    const lW = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -388,43 +189,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      fe = 63;
+      AW = 63;
 
-    function Te(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const He = ie ? function(ee, ie, He) {
-        const ye = qe.findIndex((ye => {
-          let [be, Me, Ke] = ye;
-          return be === ee && Me === ie && Ke === He
+    function bW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const OW = iW ? function(WW, iW, OW) {
+        const mW = lW.findIndex((mW => {
+          let [EW, NW, PW] = mW;
+          return EW === WW && NW === iW && PW === OW
         }));
-        return ye < 0 ? 0 : 1 << ye
-      }(ie[0], ie[1], ie[2]) : 0;
-      return "maker" === ee ? {
-        kind: ee,
-        faces: He
-      } : "user" === ee ? {
-        kind: ee,
-        faces: fe & ~He
+        return mW < 0 ? 0 : 1 << mW
+      }(iW[0], iW[1], iW[2]) : 0;
+      return "maker" === WW ? {
+        kind: WW,
+        faces: OW
+      } : "user" === WW ? {
+        kind: WW,
+        faces: AW & ~OW
       } : {
-        kind: ee,
-        faces: fe
+        kind: WW,
+        faces: AW
       }
     }
 
-    function pe(ee) {
-      return "pipe" === ee || "tank" === ee || "maker" === ee
+    function jW(WW) {
+      return "pipe" === WW || "tank" === WW || "maker" === WW
     }
 
-    function Xe(ee, ie, He) {
-      return 0 !== (ee.faces & 1 << He) && 0 !== (ie.faces & 1 << (1 ^ He)) && (pe(ee.kind) || pe(ie.kind))
+    function UW(WW, iW, OW) {
+      return 0 !== (WW.faces & 1 << OW) && 0 !== (iW.faces & 1 << (1 ^ OW)) && (jW(WW.kind) || jW(iW.kind))
     }
-    const ze = (ee, ie, He, ye) => ({
-        input: ee,
-        inputAmount: ye,
-        output: ie,
-        outputAmount: He
+    const kW = (WW, iW, OW, mW) => ({
+        input: WW,
+        inputAmount: mW,
+        output: iW,
+        outputAmount: OW
       }),
-      Be = {
+      sW = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -443,7 +244,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [ze("Uranium Grit", "Uranium Pellet", 1, 12), ze("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [kW("Uranium Grit", "Uranium Pellet", 1, 12), kW("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -464,57 +265,57 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [ze("Biomass", "", 0, 1)],
+          recipes: [kW("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: Re,
+          cryoMade: ZW,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function Ee(ee, ie) {
-      return 1e3 * (null !== ie && void 0 !== ie ? ie : 0) / ee.opMs
+    function MW(WW, iW) {
+      return 1e3 * (null !== iW && void 0 !== iW ? iW : 0) / WW.opMs
     }
 
-    function ge(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const He = Ee(Be["Coolant Mixer"], Re) * ie;
-      return ee <= 0 ? 0 : Math.ceil(ee / He - 1e-9)
+    function KW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const OW = MW(sW["Coolant Mixer"], ZW) * iW;
+      return WW <= 0 ? 0 : Math.ceil(WW / OW - 1e-9)
     }
-    const Oe = "baf2Water",
-      de = "baf2waterclose",
-      We = "baf2wateropen"
+    const SW = "baf2Water",
+      YW = "baf2waterclose",
+      yW = "baf2wateropen"
   },
-  39211: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => te,
-      e: () => Ee,
-      h: () => Be
+  39602: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => TW,
+      g: () => MW,
+      i: () => sW
     });
-    var ye = He(9961),
-      be = He(9985),
-      Me = He(10049),
-      Ke = He(39214),
-      Ue = He(10046);
-    const Fe = (0, Ke.P)("pipe"),
-      Je = (0, Ke.P)("tank"),
-      oe = (0, Ke.P)("port"),
-      Re = "Reactor Port";
+    var mW = OW(5725),
+      EW = OW(5745),
+      NW = OW(5797),
+      PW = OW(39606),
+      LW = OW(5790);
+    const cW = (0, PW.M)("pipe"),
+      wW = (0, PW.M)("tank"),
+      tW = (0, PW.M)("port"),
+      ZW = "Reactor Port";
 
-    function ke(ee, ie, He) {
-      const ye = new Set([Me.i, Me.e, Re, ...ie, ...He, ...ee ? [Ke.l] : []]);
+    function xW(WW, iW, OW) {
+      const mW = new Set([NW.h, NW.e, ZW, ...iW, ...OW, ...WW ? [PW.l] : []]);
       return {
-        makers: new Set(ie),
-        roots: ye
+        makers: new Set(iW),
+        roots: mW
       }
     }
-    const qe = {
-        water: ke(!0, ["Condenser"], ["Centrifuge", "Synthesizer", Ke.e]),
-        cryo: ke(!1, [Ke.e], [])
+    const lW = {
+        water: xW(!0, ["Condenser"], ["Centrifuge", "Synthesizer", PW.c]),
+        cryo: xW(!1, [PW.c], [])
       },
-      fe = new Set([...qe.water.roots, ...qe.cryo.roots]),
-      Te = {
+      AW = new Set([...lW.water.roots, ...lW.cryo.roots]),
+      bW = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -522,120 +323,120 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      pe = be.d.map((ee => Te[ee])),
-      Xe = pe.map((ee => {
-        let [ie, He, ye] = ee;
-        return Ke.w.findIndex((ee => {
-          let [be, Me, Ke] = ee;
-          return be === ie && Me === He && Ke === ye
+      jW = EW.g.map((WW => bW[WW])),
+      UW = jW.map((WW => {
+        let [iW, OW, mW] = WW;
+        return PW.x.findIndex((WW => {
+          let [EW, NW, PW] = WW;
+          return EW === iW && NW === OW && PW === mW
         }))
       }));
 
-    function ze(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const He = ye.i[ee],
-        be = null === He || void 0 === He ? void 0 : He.meta.rootName,
-        ke = qe[ie];
-      if (!be || !ke.roots.has(be)) return null;
-      if ((0, Me.n)(be)) return (0, Ke.L)(He.name) === ie ? Fe : null;
-      if (be === Ke.l) return Je;
-      if (be === Re) return He.name.endsWith("|Water") ? oe : null;
-      const [fe, Te] = Ue.e[(He.meta.rot || 1) - 1];
-      return (0, Ke.P)(ke.makers.has(be) ? "maker" : "user", [-fe, 0, -Te])
+    function kW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const OW = mW.j[WW],
+        EW = null === OW || void 0 === OW ? void 0 : OW.meta.rootName,
+        xW = lW[iW];
+      if (!EW || !xW.roots.has(EW)) return null;
+      if ((0, NW.p)(EW)) return (0, PW.J)(OW.name) === iW ? cW : null;
+      if (EW === PW.l) return wW;
+      if (EW === ZW) return OW.name.endsWith("|Water") ? tW : null;
+      const [AW, bW] = LW.h[(OW.meta.rot || 1) - 1];
+      return (0, PW.M)(xW.makers.has(EW) ? "maker" : "user", [-AW, 0, -bW])
     }
 
-    function Be(ee, ie, He, be) {
-      let Me = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function sW(WW, iW, OW, EW) {
+      let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: Ue
-      } = qe[Me];
-      return pe.some(((Je, oe) => {
-        var Re, ke;
-        let [qe, fe, Te] = Je;
-        const pe = ee(ie + qe, He + fe, be + Te),
-          Be = ze(pe, Me);
-        return null !== Be && Ue.has(null !== (Re = null === (ke = ye.i[pe]) || void 0 === ke ? void 0 : ke.meta.rootName) && void 0 !== Re ? Re : "") && !(0, Ke.T)(Fe, Be, Xe[oe])
+        makers: LW
+      } = lW[NW];
+      return jW.some(((wW, tW) => {
+        var ZW, xW;
+        let [lW, AW, bW] = wW;
+        const jW = WW(iW + lW, OW + AW, EW + bW),
+          sW = kW(jW, NW);
+        return null !== sW && LW.has(null !== (ZW = null === (xW = mW.j[jW]) || void 0 === xW ? void 0 : xW.meta.rootName) && void 0 !== ZW ? ZW : "") && !(0, PW.N)(cW, sW, UW[tW])
       }))
     }
 
-    function Ee(ee) {
-      const ie = ye.i[ee];
-      return ie ? (0, Ke.L)(ie.name) : null
+    function MW(WW) {
+      const iW = mW.j[WW];
+      return iW ? (0, PW.J)(iW.name) : null
     }
-    let ge = null;
+    let KW = null;
 
-    function Oe(ee) {
-      if (!ge) {
-        ge = new Map;
-        for (const ee of ["water", "cryo"])
-          for (let ie = 0; ie < 64; ie++)
-            for (const He of [!1, !0]) ge.set((0, Me.o)(ee, ie, He), {
-              Lq: ee,
-              mask: ie,
-              full: He
+    function SW(WW) {
+      if (!KW) {
+        KW = new Map;
+        for (const WW of ["water", "cryo"])
+          for (let iW = 0; iW < 64; iW++)
+            for (const OW of [!1, !0]) KW.set((0, NW.s)(WW, iW, OW), {
+              dl: WW,
+              mask: iW,
+              full: OW
             })
       }
-      return ge.get(ee)
+      return KW.get(WW)
     }
-    const de = new Map(Array.from({
-      length: Me.j + 1
-    }, ((ee, ie) => [(0, Me.p)(ie), ie])));
+    const YW = new Map(Array.from({
+      length: NW.l + 1
+    }, ((WW, iW) => [(0, NW.u)(iW), iW])));
 
-    function We(ee, ie, He, be, Me, Ke) {
-      return pe.some(((Ue, Fe) => {
-        var Je, oe, Re;
-        let [ke, qe, fe] = Ue;
-        if (0 === (Ke >> Fe & 1)) return !1;
-        const Te = null !== (Je = null === (oe = ye.i[ee(ie + ke, He + qe, be + fe)]) || void 0 === oe ? void 0 : oe.name) && void 0 !== Je ? Je : "",
-          pe = Oe(Te);
-        return pe ? pe.Lq === Me && pe.full : (null !== (Re = function(ee) {
-          var ie;
-          return null !== (ie = de.get(ee)) && void 0 !== ie ? ie : null
-        }(Te)) && void 0 !== Re ? Re : 0) > 0
+    function yW(WW, iW, OW, EW, NW, PW) {
+      return jW.some(((LW, cW) => {
+        var wW, tW, ZW;
+        let [xW, lW, AW] = LW;
+        if (0 === (PW >> cW & 1)) return !1;
+        const bW = null !== (wW = null === (tW = mW.j[WW(iW + xW, OW + lW, EW + AW)]) || void 0 === tW ? void 0 : tW.name) && void 0 !== wW ? wW : "",
+          jW = SW(bW);
+        return jW ? jW.dl === NW && jW.full : (null !== (ZW = function(WW) {
+          var iW;
+          return null !== (iW = YW.get(WW)) && void 0 !== iW ? iW : null
+        }(bW)) && void 0 !== ZW ? ZW : 0) > 0
       }))
     }
-    class te {
+    class TW {
       constructor() {
-        this.reshapeOffsets = pe
+        this.reshapeOffsets = jW
       }
-      handles(ee) {
-        return null !== Ee(ee)
+      handles(WW) {
+        return null !== MW(WW)
       }
-      affects(ee) {
-        var ie, He;
-        return fe.has(null !== (ie = null === (He = ye.i[ee]) || void 0 === He ? void 0 : He.meta.rootName) && void 0 !== ie ? ie : "")
+      affects(WW) {
+        var iW, OW;
+        return AW.has(null !== (iW = null === (OW = mW.j[WW]) || void 0 === OW ? void 0 : OW.meta.rootName) && void 0 !== iW ? iW : "")
       }
-      placedBy(ee) {
-        var ie;
-        return (null === (ie = ye.i[ee]) || void 0 === ie ? void 0 : ie.meta.rootName) === Me.e ? Me.i : null
+      placedBy(WW) {
+        var iW;
+        return (null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.meta.rootName) === NW.e ? NW.h : null
       }
-      shape(ee, ie, He, be, Ue, Je) {
-        var oe, Re, ke;
-        const qe = null !== (oe = null === (Re = ye.i[Ue]) || void 0 === Re ? void 0 : Re.name) && void 0 !== oe ? oe : "",
-          fe = Je || qe !== Me.i ? null !== (ke = (0, Ke.L)(qe)) && void 0 !== ke ? ke : "water" : function(ee, ie, He, ye) {
-            return pe.some(((be, Me) => {
-              let [Ue, Je, oe] = be;
-              const Re = ze(ee(ie + Ue, He + Je, ye + oe), "cryo");
-              return null !== Re && "port" !== Re.kind && (0, Ke.T)(Fe, Re, Xe[Me])
+      shape(WW, iW, OW, EW, LW, wW) {
+        var tW, ZW, xW;
+        const lW = null !== (tW = null === (ZW = mW.j[LW]) || void 0 === ZW ? void 0 : ZW.name) && void 0 !== tW ? tW : "",
+          AW = wW || lW !== NW.h ? null !== (xW = (0, PW.J)(lW)) && void 0 !== xW ? xW : "water" : function(WW, iW, OW, mW) {
+            return jW.some(((EW, NW) => {
+              let [LW, wW, tW] = EW;
+              const ZW = kW(WW(iW + LW, OW + wW, mW + tW), "cryo");
+              return null !== ZW && "port" !== ZW.kind && (0, PW.N)(cW, ZW, UW[NW])
             })) ? "cryo" : "water"
-          }(ee, ie, He, be),
-          Te = function(ee, ie, He, ye) {
-            let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              Me = 0;
-            return pe.forEach(((Ue, Je) => {
-              let [oe, Re, ke] = Ue;
-              const qe = ze(ee(ie + oe, He + Re, ye + ke), be);
-              qe && (0, Ke.T)(Fe, qe, Xe[Je]) && (Me |= 1 << Je)
-            })), Me
-          }(ee, ie, He, be, fe),
-          Be = Je ? function(ee) {
-            var ie;
-            return !0 === (null === (ie = Oe(ee)) || void 0 === ie ? void 0 : ie.full)
-          }(qe) : We(ee, ie, He, be, fe, Te);
-        return (0, ye.j)((0, Me.o)(fe, Te, Be))
+          }(WW, iW, OW, EW),
+          bW = function(WW, iW, OW, mW) {
+            let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              NW = 0;
+            return jW.forEach(((LW, wW) => {
+              let [tW, ZW, xW] = LW;
+              const lW = kW(WW(iW + tW, OW + ZW, mW + xW), EW);
+              lW && (0, PW.N)(cW, lW, UW[wW]) && (NW |= 1 << wW)
+            })), NW
+          }(WW, iW, OW, EW, AW),
+          sW = wW ? function(WW) {
+            var iW;
+            return !0 === (null === (iW = SW(WW)) || void 0 === iW ? void 0 : iW.full)
+          }(lW) : yW(WW, iW, OW, EW, AW, bW);
+        return (0, mW.l)((0, NW.s)(AW, bW, sW))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

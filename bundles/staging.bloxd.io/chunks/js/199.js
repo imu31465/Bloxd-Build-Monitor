@@ -1,43 +1,40 @@
 export const id = 199;
 export const ids = [199];
 export const modules = {
-  9810: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      pageBody: () => ye
+  10282: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const ye = {
-      whatIs: ["Trust no one. In Bloxd Murder Mystery friends go quiet, roles stay secret and every round turns into a guessing game full of twists and close calls. It's a social deduction game for up to 12 players. Can you work out who the Murderer is before it's too late?"],
-      howToPlay: ["When a round starts, everyone gets a secret role. Most of you will be Innocents, and your job is simply to stay alive as long as you can. One player is the Detective and gets a gun to find and stop the Murderer. And one player is the Murderer. They get their weapon after a short countdown and have to take out everyone else.", "Innocents can collect 10 Moonstone from around the map to get a gun of their own. If the Detective gets taken out, their gun drops and someone else can pick it up. Guns have a 5-second cooldown, so make each shot count. Careful as the Detective, though. Shoot an innocent player and you're out too. Stop the Murderer or survive until the 4-minute timer runs out, and then you'll find out who it really was."],
-      features: ["Up to 12 Players per Round", "Three Secret Roles: Innocent, Detective and Murderer", "Collect Moonstone to Earn a Gun", "4 Maps That Change Every Round: Mansion, Laboratory, Dinosaur and Water Park", "Map Secrets like Trapdoors, Poisoned Water, Reactor Doors and Moonstone Rings", "Please the Dino to Reveal a Role or Win a Gun", "Earn Gold to Unlock Murderer Weapons and Funny Death Messages", "Daily and Weekly Quests", "Track Your Wins as Detective and Murderer"],
-      tips: ["As an Innocent, keep moving and pick up Moonstone whenever you can", "Watch how people act. The Murderer will be trying to blend in", "As the Detective, only shoot when you're sure", "If the Detective goes down, grab that dropped gun", "As the Murderer, catch players on their own when nobody's looking", "Every map has secrets, so explore them for an edge"],
-      similarGames: ["hideseek", "infection", "horrorHotel", "ninetyNineNights"],
+    const mW = {
+      whatIs: ["One block, floating in the sky, with a nametag that says \"I'm your One Block, break me!\" That's how every Bloxd One Block island starts. Break it and it comes straight back as something new, so you keep getting blocks, items and chests. Survive up there, unlock new phases, and slowly turn your tiny island into an empire."],
+      howToPlay: ["Break your One Block. Then break it again. And again. The more blocks you mine, the more phases you unlock, from the Forest and Plains right up to the Volcano and the Moon. Each phase changes what your block turns into, so there's always something new popping up. Once every phase is unlocked, you can switch between them whenever you like.", "To get going, collect 3 Gold Coins from chests. Then bridge over to the portal island nearby and walk into your portal. It takes you to One Village, the Hub. There you can spend coins in the shops, leave them with Bling Bling the banker, do daily and weekly quests and upgrade the guilds. When you're done, type /home or use a portal to head back to your island."],
+      features: ["17 Phases to Unlock, from Forest to the Moon", "Super Mining, Super Digging and Mega Chop Skills", "One Village Hub with Shops, a Bank and Treasure Chests", "Daily and Weekly Quests", "Painter's, Monster Hunter's and Farmer's Guilds", "Chat Events like Trivia, Unscramble and Type the Fastest", "Crops, a Rotating Trader and Double Drop Chance", "Gold Portal Skins for Saving Coins", "Visit Friends' Islands and Keep Multiple Island Saves"],
+      tips: ["Open every chest you find. That's where your Gold Coins come from.", "Put your coins in the bank, where your balance stays safe forever.", "Save 1,000, 50,000 or 1,000,000 coins in the bank to unlock gold portal skins.", "Level up your skills, then right click to use them. They've got a cooldown, so pick your moment.", "Use Mega Chop on trees to find way more chests.", "Only switch on Allow Edit for people you trust. Anyone with it can take your blocks.", "Lost? Type /home and you'll be straight back on your island."],
+      similarGames: ["skyblock", "skyIslands", "classic_survival"],
       faq: [{
-        question: "What is Bloxd Murder Mystery?",
-        answer: "A social deduction mode. One player is secretly the Murderer, one is the Detective, and everyone else tries to survive and work out who the Murderer is."
+        question: "What is Bloxd One Block?",
+        answer: "A sky challenge where you start on a single floating block. Break it to get new blocks, items and chests, unlock phases and grow your island into an empire."
       }, {
-        question: "What are the roles in Murder Mystery?",
-        answer: "Innocents try to stay alive. The Detective tries to find and stop the Murderer. The Murderer tries to take out every other player."
+        question: "Is Bloxd One Block a skyblock game?",
+        answer: "Sort of. You start with one block in the sky and build everything from there. Bloxd Skyblock is a different mode, though: that one's an RPG with skills, quests and dungeons, while One Block is all about breaking your block to unlock 17 phases."
       }, {
-        question: "Who wins a round of Murder Mystery?",
-        answer: "If the Murderer takes out all the Innocents, they win. Everyone else wins by stopping the Murderer or surviving until the 4-minute timer runs out."
+        question: "How many phases are in Bloxd One Block?",
+        answer: "17, from Forest and Plains through Ocean, Desert and Dungeon to the Volcano and the Moon. Mine enough blocks to unlock each one. When you've got them all, you can change phase."
       }, {
-        question: "How do I get a gun?",
-        answer: "Collect 10 Moonstone, or pick up the Detective's gun if it's been dropped. On the Dinosaur map the dino might hand you one too."
+        question: "How do I get to the Hub in One Block?",
+        answer: "Grab 3 Gold Coins from chests, bridge over to the portal island nearby and walk into your portal. Type /home to come back."
       }, {
-        question: "How long is a round?",
-        answer: "4 minutes."
+        question: "Where do One Block coins come from?",
+        answer: "Chests from your One Block and the Hub treasure chests, daily and weekly quests, or watching an ad for coins."
       }, {
-        question: "How many people do you need to play Murder Mystery?",
-        answer: "You need at least 2 to start, and a round can hold up to 12."
+        question: "How do I open my portal in One Block?",
+        answer: "Type /open in chat. You can also add visitors in your island access settings, even if your portal is closed."
       }, {
-        question: "Can I play Murder Mystery with friends?",
-        answer: "Yes. Jump into the same game and see which of you spots the Murderer first."
-      }, {
-        question: "How do I earn gold?",
-        answer: "Survive, collect Moonstone, stop the Murderer or win as the Murderer. Rewards only kick in when there are at least 5 players in the game."
+        question: "Can I have more than one island?",
+        answer: "Yes. The Island Manager lets you create new islands, rename them, load another save or delete one, up to a maximum number of islands."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,84 +1,37 @@
 export const id = 211;
-export const ids = [211, 212];
+export const ids = [211];
 export const modules = {
-  34699: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      reportJsMainStall: () => Ue,
-      resetJsMainStallReport: () => Fe
+  10343: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    var ye = He(34708),
-      be = He(1814),
-      Me = He(34712);
-    let Ke = !1;
-
-    function Ue(ee, ie, He, Ue) {
-      Ke || (Ke = !0, (0, be.reportClientError)("wasm_load", (0, Me.c)(ee, ie, He, Ue, (0, Me.e)()), "JS-mainStall", !0, ye.CAPPED_COUNTS_VISIT_CAP))
+    const mW = {
+      whatIs: ["Something's broken loose in an abandoned research lab, and your squad has been sent in to deal with it. Bloxd Containment Breach is a co-op PvE survival horror shooter. You fight through the infested halls, contain the anomaly before the breach spreads, and then try to get out alive. Grab some friends and see if you can make it."],
+      howToPlay: ["Get your squad together in the lobby and visit the Loadout NPC. That's where you choose a primary gun, a secondary, throwables, healing items, armour and a perk. Then step onto a queue pad: Normal takes up to 6 players and Hard takes up to 4. You need at least 2 to start. Every run builds a fresh chain of lab rooms full of infected scientists and failed experiments. Sealed doors open as you push on, and an objective arrow shows you the way.", "Clear each room, open the loot chests and track down the anomaly. Each anomaly is a different boss.", "Go down and you turn into a ghost. Mobs ignore ghosts and ghosts can't shoot, but you can still help out with ghost actions like Open Path. A teammate can revive you with a splash healing potion, and you'll get your inventory back. If the whole squad ends up as ghosts, the run's over. Contain the anomaly and you earn a boss part, which you can spend along with the gold from your kills on better gear."],
+      features: ["Normal (Up to 6 Players) and Hard (Up to 4 Players) Difficulties", "A New Chain of Lab Rooms Every Run", "9 Anomaly Bosses to Find and Contain", "Encounters That Adapt as You Play", "Loadouts with Guns, Throwables, Healing, Armour and Perks", "Upgrade Your Gear with Gold and Boss Parts", "Ghost Mode and Team Revives", "Locators to Choose Which Anomaly You Face", "A Codex to Track Every Anomaly You've Met and Contained"],
+      tips: ["Stick with your squad. Being alone in the dark is how you go down", "Carry splash healing potions so you can revive teammates", "Open every loot chest you come across", "Turned into a ghost? Use Open Path to help your team", "Contain anomalies to earn boss parts for higher-tier gear", "Arm a Locator before deploying if you need parts from a particular anomaly", "Try Normal before you take on Hard"],
+      similarGames: ["ninetyNineNights", "horrorHotel", "infection", "backrooms"],
+      faq: [{
+        question: "What is Bloxd Containment Breach?",
+        answer: "A co-op PvE horror shooter. Your squad fights through an abandoned research lab to find and contain a dangerous anomaly."
+      }, {
+        question: "How many players can play Containment Breach?",
+        answer: "Up to 6 on Normal, or up to 4 on Hard."
+      }, {
+        question: "Can I play Containment Breach solo?",
+        answer: "Not on your own, sorry. A run needs at least 2 players, so bring a friend or team up with someone in the lobby."
+      }, {
+        question: "What happens when you go down in Containment Breach?",
+        answer: "You become a ghost until a teammate revives you with a splash healing potion. If everyone ends up as a ghost, the run is lost."
+      }, {
+        question: "How do I upgrade guns in Containment Breach?",
+        answer: "Go to the Loadout NPC and spend gold and boss parts there. Gold comes from kills, and your squad gets a boss part every time it contains an anomaly."
+      }, {
+        question: "Can I choose which anomaly I fight?",
+        answer: "Yes. Buy a Locator from the Locator NPC and arm it before you deploy. It shatters after one use."
+      }]
     }
-
-    function Fe() {
-      Ke = !1
-    }
-  },
-  34712: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ue,
-      e: () => Ke
-    });
-    var ye = He(260),
-      be = He(123),
-      Me = He(34717);
-
-    function Ke() {
-      var ee, ie, He;
-      return null !== (ee = (0, ye.j)(null !== (ie = null === (He = (0, be.p)()) || void 0 === He ? void 0 : He.renderer) && void 0 !== ie ? ie : null, (0, be.n)())) && void 0 !== ee ? ee : "unknown"
-    }
-
-    function Ue(ee, ie, He, ye, be) {
-      const Ke = null === ie ? "untimed" : `${Math.round(ie)} ms`;
-      return `frames stalled, ${He}, gpu ${(0,Me.d)(be)}, blocking ${Ke}, drawn ${Math.round(ee)} ms apart, timers ${ye.timers}, timer gap ${Math.round(ye.longestGapMs)} ms`
-    }
-  },
-  34708: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      CAPPED_COUNTS_VISIT_CAP: () => Me,
-      reportCappedWasmFailure: () => Fe,
-      reportUncappedWasmFailure: () => Ue,
-      reportWasmCrash: () => be,
-      reportWasmFailure: () => Ke
-    });
-    var ye = He(1814);
-
-    function be(ee) {
-      (0, ye.reportClientError)("wasm_load", ee.message, ee.code)
-    }
-    const Me = ye.MAX_ERRORS_PER_VISIT - 4;
-
-    function Ke(ee, ie, He, be) {
-      (0, ye.reportClientError)(ee, ie, He, !1, ye.MAX_ERRORS_PER_VISIT, {
-        context: be
-      })
-    }
-
-    function Ue(ee, ie, He, be) {
-      (0, ye.reportClientError)(ee, ie, He, !1, 1 / 0, {
-        context: be
-      })
-    }
-
-    function Fe(ee, ie, He, be) {
-      (0, ye.reportClientError)(ee, ie, He, !1, Me, {
-        context: be
-      })
-    }
-  },
-  34717: (ee, ie, He) => {
-    function ye(ee) {
-      return String(ee).replace(/\d/g, (ee => String.fromCharCode(97 + Number(ee))))
-    }
-    He.d(ie, {
-      d: () => ye
-    })
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

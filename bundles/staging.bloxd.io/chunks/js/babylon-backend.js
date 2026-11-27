@@ -1,109 +1,109 @@
 export const id = 0;
 export const ids = [0];
 export const modules = {
-  42196: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      CapeMaterialPlugin: () => Ee,
-      HueTintMaterialPlugin: () => ge,
-      LifeformMaterialPlugin: () => Oe,
-      OverlayMaterialPlugin: () => de
+  42601: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      CapeMaterialPlugin: () => MW,
+      HueTintMaterialPlugin: () => KW,
+      LifeformMaterialPlugin: () => SW,
+      OverlayMaterialPlugin: () => YW
     });
-    var ye = He(42201),
-      be = He(38850);
-    class Me extends((0, ye.e)(be.c)) {}(0, ye.h)(be.c, Me);
-    var Ke = He(38126);
-    class Ue extends((0, ye.e)(Ke.f)) {}(0, ye.h)(Ke.f, Ue);
-    var Fe = He(38685);
-    class Je extends((0, ye.e)(Fe.g)) {}(0, ye.h)(Fe.g, Je);
-    var oe = He(38146),
-      Re = He(41380),
-      ke = He(38141);
-    class qe extends((0, ye.e)(ke.f)) {
-      constructor(ee, ie, He) {
-        super(ee, ie, He), (0, oe.i)(ee)
+    var mW = OW(42603),
+      EW = OW(39198);
+    class NW extends((0, mW.d)(EW.b)) {}(0, mW.g)(EW.b, NW);
+    var PW = OW(38485);
+    class LW extends((0, mW.d)(PW.e)) {}(0, mW.g)(PW.e, LW);
+    var cW = OW(39025);
+    class wW extends((0, mW.d)(cW.f)) {}(0, mW.g)(cW.f, wW);
+    var tW = OW(38511),
+      ZW = OW(41782),
+      xW = OW(38502);
+    class lW extends((0, mW.d)(xW.h)) {
+      constructor(WW, iW, OW) {
+        super(WW, iW, OW), (0, tW.i)(WW)
       }
-      dispose(ee) {
-        (0, oe.m)(this._material), super.dispose(ee)
+      dispose(WW) {
+        (0, tW.k)(this._material), super.dispose(WW)
       }
-    }(0, ye.h)(ke.f, qe), (0, ke.j)({
-      disableUnusedSpecularTerm: ye.d,
-      isLightingDisabled: ee => ee instanceof Re.StandardMaterial && ee.disableLighting
+    }(0, mW.g)(xW.h, lW), (0, xW.j)({
+      disableUnusedSpecularTerm: mW.c,
+      isLightingDisabled: WW => WW instanceof ZW.StandardMaterial && WW.disableLighting
     });
-    var fe = He(39479);
-    class Te extends((0, ye.e)(fe.g)) {}(0, ye.h)(fe.g, Te);
-    var pe = He(39577),
-      Xe = He(38026),
-      ze = He(38949),
-      Be = He(38137);
-    class Ee extends((0, ye.e)(pe.c)) {}(0, ye.h)(pe.c, Ee);
-    class ge extends((0, ye.e)(Xe.b)) {}(0, ye.h)(Xe.b, ge);
-    class Oe extends((0, ye.e)(ze.m)) {}(0, ye.h)(ze.m, Oe);
-    class de extends((0, ye.e)(Be.d)) {}(0, ye.h)(Be.d, de)
+    var AW = OW(39915);
+    class bW extends((0, mW.d)(AW.d)) {}(0, mW.g)(AW.d, bW);
+    var jW = OW(40011),
+      UW = OW(38376),
+      kW = OW(39308),
+      sW = OW(38500);
+    class MW extends((0, mW.d)(jW.b)) {}(0, mW.g)(jW.b, MW);
+    class KW extends((0, mW.d)(UW.b)) {}(0, mW.g)(UW.b, KW);
+    class SW extends((0, mW.d)(kW.m)) {}(0, mW.g)(kW.m, SW);
+    class YW extends((0, mW.d)(sW.c)) {}(0, mW.g)(sW.c, YW)
   },
-  44740: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      addBabylonLights: () => Di,
-      createSceneParticleSystem: () => Vi,
-      default: () => ci
+  53714: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      addBabylonLights: () => Hi,
+      createSceneParticleSystem: () => di,
+      default: () => vi
     });
-    var ye = He(44748),
-      be = (He(41092), He(42193), He(41601), He(44758)),
-      Me = He(38020),
-      Ke = He(37913),
-      Ue = He(44769),
-      Fe = He(44778),
-      Je = He(38075),
-      oe = (He(42201), He(44789)),
-      Re = He(44783),
-      ke = He(39508),
-      qe = He(44791),
-      fe = He(40954),
-      Te = He(39492);
-    const pe = "gpuParticles",
-      Xe = "gpuParticlesSummed",
-      ze = Te.v,
-      Be = ee => ee / 4,
-      Ee = (ee, ie, He, ye) => Array.from({
-        length: ie
-      }, ((be, Me) => `(${((ee,ie,He)=>0===ie?`${ee} < 1`:ie===He-1?`${ee} >= ${ie}`:`${ee} == ${ie}`)(ee,Me,ie)} ? ${He(Me)} : ${ye})`)).join("\n\t\t+ "),
-      ge = (ee, ie, He) => `vec4 ${ee}(int i) {\n\treturn ${Ee("i",He,(ee=>`gpuParticleSystem[${ie+ee}]`),"vec4(0.0)")};\n}\n`,
-      Oe = `\n${ge("colorPositionsAt",Be(ze.colorPositions),Te.b/4)}\n${ge("color1At",Be(ze.color1),Te.b)}\n${ge("color2At",Be(ze.color2),Te.b)}\n${ge("velocityAt",Be(ze.Op),Te.b)}\n${ge("remapStopAt",Be(ze.remap),Te.b)}\nfloat componentAt(vec4 v, int j) {\n\treturn ${Ee("j",4,(ee=>`v[${ee}]`),"0.0")};\n}\n`,
-      de = (ee, ie, He, ye) => ee ? `${He}(${ye})` : `gpuParticleSystem[${ie} + ${ye}]`,
-      We = ee => `gpuParticleSystem[${ee>>2}].${"xyzw"[3&ee]}`,
-      te = ee => `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${Te.b}\n#define COLOR_POSITIONS ${Be(ze.colorPositions)}\n#define COLOR1 ${Be(ze.color1)}\n#define COLOR2 ${Be(ze.color2)}\n#define VELOCITY ${Be(ze.Op)}\n#define REMAP ${Be(ze.remap)}\n#define RECORDS_PER_ROW ${Te.l}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${Te.n/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${We(ze.gravity)}, ${We(ze.gravity+1)}, ${We(ze.gravity+2)}); }\nint colorCount() { return int(${We(ze.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${Be(ze.colorDead)}]; }\nint velocityCount() { return int(${We(ze.velocityCount)}); }\nint remapCount() { return int(${We(ze.remapCount)}); }\n${ee?Oe:""}\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn ${ee?"componentAt(colorPositionsAt(i / 4), i % 4)":"gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4]"};\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(${de(ee,"COLOR1","color1At","i")}, ${de(ee,"COLOR2","color2At","i")}, random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = ${de(ee,"VELOCITY","velocityAt","i")};\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = ${de(ee,"VELOCITY","velocityAt","i")}.x * life;\n\t\tfloat b = ${de(ee,"VELOCITY","velocityAt","i + 1")}.x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(${de(ee,"VELOCITY","velocityAt","n - 1")}.x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = ${de(ee,"REMAP","remapStopAt","n - 1")}.yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = ${de(ee,"REMAP","remapStopAt","i")};\n\t\t\tvec4 b = ${de(ee,"REMAP","remapStopAt","i + 1")};\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`,
-      Ze = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
-    fe.d.ShadersStore[`${pe}VertexShader`] = te(!1), fe.d.ShadersStore[`${pe}PixelShader`] = Ze, fe.d.ShadersStore[`${Xe}VertexShader`] = te(!0), fe.d.ShadersStore[`${Xe}PixelShader`] = Ze;
-    const we = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
-      De = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
-    var Pe = He(39488),
-      Ae = He(44799);
-    class Ye extends Pe.d {
-      constructor(ee, ie, He, ye) {
-        super(ee, ie, He), this.renderer = He, this.yp = ye, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(Te.n), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, Ae.g)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (ee, ie) => {
+    var mW = OW(53720),
+      EW = (OW(41491), OW(42599), OW(41997), OW(53738)),
+      NW = OW(38369),
+      PW = OW(38235),
+      LW = OW(53752),
+      cW = OW(53756),
+      wW = OW(38431),
+      tW = (OW(42603), OW(53769)),
+      ZW = OW(53763),
+      xW = OW(39948),
+      lW = OW(53774),
+      AW = OW(41392),
+      bW = OW(39931);
+    const jW = "gpuParticles",
+      UW = "gpuParticlesSummed",
+      kW = bW.A,
+      sW = WW => WW / 4,
+      MW = (WW, iW, OW, mW) => Array.from({
+        length: iW
+      }, ((EW, NW) => `(${((WW,iW,OW)=>0===iW?`${WW} < 1`:iW===OW-1?`${WW} >= ${iW}`:`${WW} == ${iW}`)(WW,NW,iW)} ? ${OW(NW)} : ${mW})`)).join("\n\t\t+ "),
+      KW = (WW, iW, OW) => `vec4 ${WW}(int i) {\n\treturn ${MW("i",OW,(WW=>`gpuParticleSystem[${iW+WW}]`),"vec4(0.0)")};\n}\n`,
+      SW = `\n${KW("colorPositionsAt",sW(kW.colorPositions),bW.c/4)}\n${KW("color1At",sW(kW.color1),bW.c)}\n${KW("color2At",sW(kW.color2),bW.c)}\n${KW("velocityAt",sW(kW.Sj),bW.c)}\n${KW("remapStopAt",sW(kW.remap),bW.c)}\nfloat componentAt(vec4 v, int j) {\n\treturn ${MW("j",4,(WW=>`v[${WW}]`),"0.0")};\n}\n`,
+      YW = (WW, iW, OW, mW) => WW ? `${OW}(${mW})` : `gpuParticleSystem[${iW} + ${mW}]`,
+      yW = WW => `gpuParticleSystem[${WW>>2}].${"xyzw"[3&WW]}`,
+      TW = WW => `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${bW.c}\n#define COLOR_POSITIONS ${sW(kW.colorPositions)}\n#define COLOR1 ${sW(kW.color1)}\n#define COLOR2 ${sW(kW.color2)}\n#define VELOCITY ${sW(kW.Sj)}\n#define REMAP ${sW(kW.remap)}\n#define RECORDS_PER_ROW ${bW.p}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${bW.t/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${yW(kW.gravity)}, ${yW(kW.gravity+1)}, ${yW(kW.gravity+2)}); }\nint colorCount() { return int(${yW(kW.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${sW(kW.colorDead)}]; }\nint velocityCount() { return int(${yW(kW.velocityCount)}); }\nint remapCount() { return int(${yW(kW.remapCount)}); }\n${WW?SW:""}\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn ${WW?"componentAt(colorPositionsAt(i / 4), i % 4)":"gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4]"};\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(${YW(WW,"COLOR1","color1At","i")}, ${YW(WW,"COLOR2","color2At","i")}, random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = ${YW(WW,"VELOCITY","velocityAt","i")};\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = ${YW(WW,"VELOCITY","velocityAt","i")}.x * life;\n\t\tfloat b = ${YW(WW,"VELOCITY","velocityAt","i + 1")}.x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(${YW(WW,"VELOCITY","velocityAt","n - 1")}.x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = ${YW(WW,"REMAP","remapStopAt","n - 1")}.yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = ${YW(WW,"REMAP","remapStopAt","i")};\n\t\t\tvec4 b = ${YW(WW,"REMAP","remapStopAt","i + 1")};\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`,
+      JW = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
+    AW.c.ShadersStore[`${jW}VertexShader`] = TW(!1), AW.c.ShadersStore[`${jW}PixelShader`] = JW, AW.c.ShadersStore[`${UW}VertexShader`] = TW(!0), AW.c.ShadersStore[`${UW}PixelShader`] = JW;
+    const hW = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
+      HW = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
+    var nW = OW(39925),
+      uW = OW(53776);
+    class oW extends nW.d {
+      constructor(WW, iW, OW, mW) {
+        super(WW, iW, OW), this.renderer = OW, this.rb = mW, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(bW.t), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, uW.g)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (WW, iW) => {
           const {
-            engine: He
-          } = this, ye = He._gl;
-          He._bindTextureDirectly(ye.TEXTURE_2D, this.records, !0), He._unpackFlipY(!1);
-          const be = this.ring.recordBits;
-          for (let Me = ee; Me < ie;) {
-            const ee = Math.floor(Me / Te.l),
-              He = Math.min(ie, (ee + 1) * Te.l);
-            ye.texSubImage2D(ye.TEXTURE_2D, 0, Me % Te.l * 4, ee, 4 * (He - Me), 1, ye.RGBA_INTEGER, ye.UNSIGNED_INT, be, Me * Te.c), Me = He
+            engine: OW
+          } = this, mW = OW._gl;
+          OW._bindTextureDirectly(mW.TEXTURE_2D, this.records, !0), OW._unpackFlipY(!1);
+          const EW = this.ring.recordBits;
+          for (let NW = WW; NW < iW;) {
+            const WW = Math.floor(NW / bW.p),
+              OW = Math.min(iW, (WW + 1) * bW.p);
+            mW.texSubImage2D(mW.TEXTURE_2D, 0, NW % bW.p * 4, WW, 4 * (OW - NW), 1, mW.RGBA_INTEGER, mW.UNSIGNED_INT, EW, NW * bW.g), NW = OW
           }
-          He._bindTextureDirectly(ye.TEXTURE_2D, null)
-        }, this.id = ee;
-        const be = ye.Nf();
-        this.engine = be;
-        const Me = Math.max(1, ie),
-          Ke = Math.min(Me, Te.l);
-        this.records = be.createRawTexture(null, 4 * Ke, Math.ceil(Me / Ke), oe.c.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, oe.c.TEXTURE_NEAREST_SAMPLINGMODE, null, oe.c.TEXTURETYPE_UNSIGNED_INTEGER)
+          OW._bindTextureDirectly(mW.TEXTURE_2D, null)
+        }, this.id = WW;
+        const EW = mW.VA();
+        this.engine = EW;
+        const NW = Math.max(1, iW),
+          PW = Math.min(NW, bW.p);
+        this.records = EW.createRawTexture(null, 4 * PW, Math.ceil(NW / PW), tW.e.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, tW.e.TEXTURE_NEAREST_SAMPLINGMODE, null, tW.e.TEXTURETYPE_UNSIGNED_INTEGER)
       }
       animate() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.yp.getAnimationRatio() || 1;
-        const ie = this.yp.getFrameId();
-        if (ie === this.animatedFrame) return !1;
-        const He = super.animate(ee);
-        return He && (this.animatedFrame = ie, this.ring.takeUploads(this.uploadSlots)), He
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.rb.getAnimationRatio() || 1;
+        const iW = this.rb.getFrameId();
+        if (iW === this.animatedFrame) return !1;
+        const OW = super.animate(WW);
+        return OW && (this.animatedFrame = iW, this.ring.takeUploads(this.uploadSlots)), OW
       }
       render() {
         return this.renderer.render(this)
@@ -112,779 +112,780 @@ export const modules = {
       clone() {
         return null
       }
-      prepareDraw(ee) {
-        (0, Ae.h)(this, this.uniforms, this.uniformBits, ee);
-        for (const He of Te.r) this.uniforms[He] = this.uniformBits[He];
-        var ie;
-        (0, Ae.l)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (ie = this.ramp) || void 0 === ie || ie.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = Re.c.CreateRGBATexture(this.rampTexels.texels, Te.i, 1, this.yp, !1, !1, oe.c.TEXTURE_NEAREST_SAMPLINGMODE))
+      prepareDraw(WW) {
+        (0, uW.h)(this, this.uniforms, this.uniformBits, WW);
+        for (const OW of bW.w) this.uniforms[OW] = this.uniformBits[OW];
+        var iW;
+        (0, uW.i)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (iW = this.ramp) || void 0 === iW || iW.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = ZW.b.CreateRGBATexture(this.rampTexels.texels, bW.l, 1, this.rb, !1, !1, tW.e.TEXTURE_NEAREST_SAMPLINGMODE))
       }
       releaseGl() {
-        var ee;
-        this.records.dispose(), null === (ee = this.ramp) || void 0 === ee || ee.dispose(), this.ramp = null
+        var WW;
+        this.records.dispose(), null === (WW = this.ramp) || void 0 === WW || WW.dispose(), this.ramp = null
       }
     }
-    const Ve = "the context was lost before the programs linked";
-    class ae {
-      constructor(ee, ie) {
-        this.yp = ee, this.reportFailure = ie, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.linkingPair = !1, this.pairFailure = null, this.shader = pe, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, qe.b)(), this.engine = ee.Nf(), this.whiteRamp = Re.c.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, ee, !1, !1, oe.c.TEXTURE_NEAREST_SAMPLINGMODE);
-        const He = this.linkPair(pe),
-          ye = null !== He && He !== Ve ? this.linkPair(Xe) : He;
-        null === ye && null !== He ? (console.warn(`GPU particles link their fallback here: ${He}`), this.reportFailure(He, !0)) : null !== ye && this.fail(ye === Ve ? Ve : null !== He && void 0 !== He ? He : ye)
+    const dW = "the context was lost before the programs linked";
+    class eW {
+      constructor(WW, iW) {
+        this.rb = WW, this.reportFailure = iW, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.linkingPair = !1, this.pairFailure = null, this.shader = jW, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, lW.b)(), this.engine = WW.VA(), this.whiteRamp = ZW.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, WW, !1, !1, tW.e.TEXTURE_NEAREST_SAMPLINGMODE);
+        const OW = this.linkPair(jW),
+          mW = null !== OW && OW !== dW ? this.linkPair(UW) : OW;
+        null === mW && null !== OW ? (console.warn(`GPU particles link their fallback here: ${OW}`), this.reportFailure(OW, !0)) : null !== mW && this.fail(mW === dW ? dW : null !== OW && void 0 !== OW ? OW : mW)
       }
-      bC(ee, ie) {
-        const He = Te.l * this.engine.getCaps().maxTextureSize;
-        ie > He && this.warnOnce(`capacity:${ee}`, `particle system ${ee} holds ${He} particles, not ${ie}: its records texture's limit`);
-        const ye = new Ye(ee, Math.min(ie, He), this, this.yp);
-        return this.yp.addParticleSystem(ye), ye
+      wV(WW, iW) {
+        const OW = bW.p * this.engine.getCaps().maxTextureSize;
+        iW > OW && this.warnOnce(`capacity:${WW}`, `particle system ${WW} holds ${OW} particles, not ${iW}: its records texture's limit`);
+        const mW = new oW(WW, Math.min(iW, OW), this, this.rb);
+        return this.rb.addParticleSystem(mW), mW
       }
-      canDraw(ee) {
-        var ie, He;
-        if (this.failed || null === (ie = ee.texture) || void 0 === ie || null === (He = ie.mirror) || void 0 === He || !He.isReady()) return !1;
-        for (const ye of (0, ke.p)(ee.blendMode))
-          if (!this.effectFor(ye).isReady()) return !1;
+      canDraw(WW) {
+        var iW, OW;
+        if (this.failed || null === (iW = WW.texture) || void 0 === iW || null === (OW = iW.mirror) || void 0 === OW || !OW.isReady()) return !1;
+        for (const mW of (0, xW.h)(WW.blendMode))
+          if (!this.effectFor(mW).isReady()) return !1;
         return !0
       }
-      disposeStopped(ee) {
-        this.yp._toBeDisposed.push(ee)
+      disposeStopped(WW) {
+        this.rb._toBeDisposed.push(WW)
       }
-      remove(ee) {
-        this.yp.removeParticleSystem(ee), ee.releaseGl()
+      remove(WW) {
+        this.rb.removeParticleSystem(WW), WW.releaseGl()
       }
-      render(ee) {
-        var ie;
-        if (!ee.isReady() || !ee.hasLiveParticles()) return 0;
+      render(WW) {
+        var iW;
+        if (!WW.isReady() || !WW.hasLiveParticles()) return 0;
         const {
-          engine: He,
-          yp: ye,
-          frame: be
+          engine: OW,
+          rb: mW,
+          frame: EW
         } = this;
-        ee.prepareDraw(this.warnOnce), ee.drawOffset(be, 0), be[3] = ee.drawTime();
-        const Me = ee.ring.drawStart(),
-          Ke = ee.ring.drawCount(),
-          Ue = null !== (ie = ee.ramp) && void 0 !== ie ? ie : this.whiteRamp;
-        He.setState(!1);
-        for (const Fe of (0, ke.p)(ee.blendMode)) {
-          const ie = this.effectFor(Fe);
-          He.enableEffect(ie), ie.setTexture("gpuParticleTexture", ee.texture.mirror), ie.setTexture("gpuParticleRampTexture", Ue), ie._bindTexture("gpuParticleRecords", ee.records), ie.setMatrix("gpuParticleView", ye.getViewMatrix()), ie.setMatrix("gpuParticleProjection", ye.getProjectionMatrix()), ie.setFloatArray4("gpuParticleSystem", ee.uniforms), ie.setFloat4("gpuParticleFrame", be[0], be[1], be[2], be[3]), ie.setFloat2("gpuParticleRange", Me, Ke), ie.setFloat("gpuParticleRamp", ee.uniforms[Te.v.ramp]), He.bindBuffers(this.vertexBuffers, null, ie), He.setAlphaMode((0, ke.l)(Fe)), He.drawArraysType(oe.c.MATERIAL_TriangleStripDrawMode, 0, 4, Ke), ie._bindTexture("gpuParticleRecords", null)
+        WW.prepareDraw(this.warnOnce), WW.drawOffset(EW, 0), EW[3] = WW.drawTime();
+        const NW = WW.ring.drawStart(),
+          PW = WW.ring.drawCount(),
+          LW = null !== (iW = WW.ramp) && void 0 !== iW ? iW : this.whiteRamp;
+        OW.setState(!1);
+        for (const cW of (0, xW.h)(WW.blendMode)) {
+          const iW = this.effectFor(cW);
+          OW.enableEffect(iW), iW.setTexture("gpuParticleTexture", WW.texture.mirror), iW.setTexture("gpuParticleRampTexture", LW), iW._bindTexture("gpuParticleRecords", WW.records), iW.setMatrix("gpuParticleView", mW.getViewMatrix()), iW.setMatrix("gpuParticleProjection", mW.getProjectionMatrix()), iW.setFloatArray4("gpuParticleSystem", WW.uniforms), iW.setFloat4("gpuParticleFrame", EW[0], EW[1], EW[2], EW[3]), iW.setFloat2("gpuParticleRange", NW, PW), iW.setFloat("gpuParticleRamp", WW.uniforms[bW.A.ramp]), OW.bindBuffers(this.vertexBuffers, null, iW), OW.setAlphaMode((0, xW.e)(cW)), OW.drawArraysType(tW.e.MATERIAL_TriangleStripDrawMode, 0, 4, PW), iW._bindTexture("gpuParticleRecords", null)
         }
-        return He.setAlphaMode(oe.c.ALPHA_DISABLE), Ke
+        return OW.setAlphaMode(tW.e.ALPHA_DISABLE), PW
       }
-      linkPair(ee) {
-        this.shader = ee, this.pairFailure = null, this.linkingPair = !0;
+      linkPair(WW) {
+        this.shader = WW, this.pairFailure = null, this.linkingPair = !0;
         try {
-          return this.effect = this.createEffect(ee, ""), this.multiplyEffect = this.createEffect(ee, "#define MULTIPLY_PASS"), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect), this.pairFailure
+          return this.effect = this.createEffect(WW, ""), this.multiplyEffect = this.createEffect(WW, "#define MULTIPLY_PASS"), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect), this.pairFailure
         } finally {
           this.linkingPair = !1
         }
       }
-      awaitLink(ee) {
-        const ie = ee.getPipelineContext(),
-          He = this.gl();
-        He && null === this.pairFailure && (!ie || ie.isParallelCompiled && !ie.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : ie.isParallelCompiled && ie.program && (He.getProgramParameter(ie.program, He.LINK_STATUS) || this.programFailed(function(ee, ie, He) {
-          if (ee.isContextLost()) return Ve;
-          for (const [ye, be] of [
-              ["VERTEX SHADER", ie.vertexShader],
-              ["FRAGMENT SHADER", ie.fragmentShader]
+      awaitLink(WW) {
+        const iW = WW.getPipelineContext(),
+          OW = this.gl();
+        OW && null === this.pairFailure && (!iW || iW.isParallelCompiled && !iW.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : iW.isParallelCompiled && iW.program && (OW.getProgramParameter(iW.program, OW.LINK_STATUS) || this.programFailed(function(WW, iW, OW) {
+          if (WW.isContextLost()) return dW;
+          for (const [mW, EW] of [
+              ["VERTEX SHADER", iW.vertexShader],
+              ["FRAGMENT SHADER", iW.fragmentShader]
             ]) {
-            const ie = be && !ee.getShaderParameter(be, ee.COMPILE_STATUS) ? ee.getShaderInfoLog(be) : null;
-            if (ie) return `${ye} ${ie}`
+            const iW = EW && !WW.getShaderParameter(EW, WW.COMPILE_STATUS) ? WW.getShaderInfoLog(EW) : null;
+            if (iW) return `${mW} ${iW}`
           }
-          return ee.getProgramInfoLog(He) || "a program did not link"
-        }(He, ie, ie.program))))
+          return WW.getProgramInfoLog(OW) || "a program did not link"
+        }(OW, iW, iW.program))))
       }
       gl() {
         return this.engine._gl
       }
-      effectFor(ee) {
-        return ee === ke.d ? this.multiplyEffect : this.effect
+      effectFor(WW) {
+        return WW === xW.b ? this.multiplyEffect : this.effect
       }
-      createEffect(ee, ie) {
-        return this.engine.createEffect(ee, [], we, De, ie, void 0, void 0, ((ie, He) => {
-          var ye;
-          ee === this.shader && this.programFailed(null !== (ye = this.gl()) && void 0 !== ye && ye.isContextLost() ? Ve : function(ee) {
-            const ie = ee.split("\n    at ")[0];
-            return /^\S*@\S*:\d+:\d+/.test(ie) ? "a program failed, its log not in this browser's stack" : ie.replace(/^Error: /, "")
-          }(He))
+      createEffect(WW, iW) {
+        return this.engine.createEffect(WW, [], hW, HW, iW, void 0, void 0, ((iW, OW) => {
+          var mW;
+          WW === this.shader && this.programFailed(null !== (mW = this.gl()) && void 0 !== mW && mW.isContextLost() ? dW : function(WW) {
+            const iW = WW.split("\n    at ")[0];
+            return /^\S*@\S*:\d+:\d+/.test(iW) ? "a program failed, its log not in this browser's stack" : iW.replace(/^Error: /, "")
+          }(OW))
         }))
       }
-      programFailed(ee) {
-        this.linkingPair ? this.pairFailure ??= ee : this.fail(ee)
+      programFailed(WW) {
+        this.linkingPair ? this.pairFailure ??= WW : this.fail(WW)
       }
-      fail(ee) {
+      fail(WW) {
         if (!this.failed) {
-          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${ee}`), this.reportFailure(ee, !1);
-          for (const ee of this.yp.zW.slice()) ee instanceof Ye && ee.disposeOnStop && ee.dispose()
+          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${WW}`), this.reportFailure(WW, !1);
+          for (const WW of this.rb.vY.slice()) WW instanceof oW && WW.disposeOnStop && WW.dispose()
         }
       }
     }
-    var ce = He(40913);
-    class xe extends ce.b {
+    var vW = OW(41359);
+    class gW extends vW.c {
       createEffect() {
-        const ee = super.createEffect(...arguments);
-        return Ce(ee), Le.has(ee) || (Le.add(ee), ee.onCompileObservable.add((() => {
-          Ce(ee)
-        }))), ee
+        const WW = super.createEffect(...arguments);
+        return VW(WW), DW.has(WW) || (DW.add(WW), WW.onCompileObservable.add((() => {
+          VW(WW)
+        }))), WW
       }
     }
-    const Le = new WeakSet;
+    const DW = new WeakSet;
 
-    function Ce(ee) {
-      ee._vertexSourceCodeBeforeMigration = "", ee._fragmentSourceCodeBeforeMigration = ""
+    function VW(WW) {
+      WW._vertexSourceCodeBeforeMigration = "", WW._fragmentSourceCodeBeforeMigration = ""
     }
-    var ve = He(41306),
-      ue = He(42177),
-      me = He(41067),
-      le = He(41273),
-      Se = He(41269),
-      ne = He(41195),
-      je = He(42244),
-      se = He(38341),
-      Ie = He(44803),
-      he = He(44806),
-      Ne = He(44812),
-      Ge = He(41216),
-      re = He(3084),
-      Qe = He(38209),
-      ei = He(41437),
-      ii = He(38284),
-      Hi = He(38227);
+    var pW = OW(41715),
+      fW = OW(42588),
+      CW = OW(41469),
+      XW = OW(41680),
+      BW = OW(41675),
+      qW = OW(41604),
+      RW = OW(42650),
+      GW = OW(38691),
+      IW = OW(53781),
+      aW = OW(53788),
+      rW = OW(53797),
+      zW = OW(41628),
+      FW = OW(3911),
+      QW = OW(38576),
+      Wi = OW(41825),
+      ii = OW(38645),
+      Oi = OW(38594);
 
-    function yi(ee) {
-      if (ee.visibility < 1 || !ee.isVisible || !ee.isEnabled() || ee.metadata[Hi.d] || !ee.isReady()) return !0;
-      const ie = ee.pW;
-      if (!ie || 0 === ie.length) return !0;
-      for (let He = 0; He < ie.length; He++) {
-        const ye = ie[He],
-          be = ye.iT();
-        if (!be || !be.isReadyForSubMesh(ee, ye, !1)) return !0
+    function mi(WW) {
+      if (WW.visibility < 1 || !WW.isVisible || !WW.isEnabled() || WW.metadata[Oi.g] || !WW.isReady()) return !0;
+      const iW = WW.hY;
+      if (!iW || 0 === iW.length) return !0;
+      for (let OW = 0; OW < iW.length; OW++) {
+        const mW = iW[OW],
+          EW = mW.BA();
+        if (!EW || !EW.isReadyForSubMesh(WW, mW, !1)) return !0
       }
       return !1
     }
-    class bi {
-      constructor(ee, ie) {
-        this.uk = ee, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, ie.onBeforeActiveMeshesEvaluationObservable.add((() => {
+    class Ei {
+      constructor(WW, iW) {
+        this.Hx = WW, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, iW.onBeforeActiveMeshesEvaluationObservable.add((() => {
           this.armed = !0
         }))
       }
-      gR(ee) {
-        var ie;
-        const He = this.armed;
-        if (this.armed = !1, this.vis = null, !He) return !1;
+      kZ(WW) {
+        var iW;
+        const OW = this.armed;
+        if (this.armed = !1, this.vis = null, !OW) return !1;
         this.culled = 0;
         const {
-          uk: ye
-        } = this, be = null === (ie = ye.iW) || void 0 === ie ? void 0 : ie.visibility;
-        if (!be || !ee || ye.PR.pT) return !1;
-        if (!(ye.xR.KMe[0] >= ii.f)) return !1;
-        const Me = ee.getProjectionMatrix().m;
-        if (0 !== Me[15]) return !1;
-        const Ke = ye.yq,
-          Ue = ee.globalPosition,
-          Fe = this.eye;
-        return Fe[0] = Ue.x + Ke[0], Fe[1] = Ue.y + Ke[1], Fe[2] = Ue.z + Ke[2], !!be.eyeClear(Fe[0], Fe[1], Fe[2], ee.minZ, Me, ye.xR) && (this.vis = be, this.passable.clear(), this.count = 0, !0)
+          Hx: mW
+        } = this, EW = null === (iW = mW.bY) || void 0 === iW ? void 0 : iW.visibility;
+        if (!EW || !WW || mW.TZ.Lb) return !1;
+        if (!(mW.oZ.lEW[0] >= ii.f)) return !1;
+        const NW = WW.getProjectionMatrix().m;
+        if (0 !== NW[15]) return !1;
+        const PW = mW.Wl,
+          LW = WW.globalPosition,
+          cW = this.eye;
+        return cW[0] = LW.x + PW[0], cW[1] = LW.y + PW[1], cW[2] = LW.z + PW[2], !!EW.eyeClear(cW[0], cW[1], cW[2], WW.minZ, NW, mW.oZ) && (this.vis = EW, this.passable.clear(), this.count = 0, !0)
       }
-      see(ee, ie) {
-        const He = this.count++;
-        if (He === this.cellSlots.length) {
-          const ee = new Int32Array(2 * He);
-          ee.set(this.cellSlots), this.cellSlots = ee
+      see(WW, iW) {
+        const OW = this.count++;
+        if (OW === this.cellSlots.length) {
+          const WW = new Int32Array(2 * OW);
+          WW.set(this.cellSlots), this.cellSlots = WW
         }
-        this.cellSlots[He] = ie, this.meshes[He] = ee
+        this.cellSlots[OW] = iW, this.meshes[OW] = WW
       }
-      seeThrough(ee) {
-        this.passable.add(ee)
+      seeThrough(WW) {
+        this.passable.add(WW)
       }
-      finish(ee, ie) {
+      finish(WW, iW) {
         const {
-          vis: He,
-          eye: ye,
-          meshes: be,
-          count: Me,
-          cellSlots: Ke
+          vis: OW,
+          eye: mW,
+          meshes: EW,
+          count: NW,
+          cellSlots: PW
         } = this, {
-          xR: Ue
-        } = this.uk, [Fe, Je] = Ue.KMe, oe = null !== He && He.update(ye[0], ye[1], ye[2], Ue.ER, Fe, Je, this.passable);
-        let Re = 0;
-        for (let ke = 0; ke < Me; ke++) {
-          const ye = be[ke];
-          if (oe) {
-            const ee = 3 * Ke[ke];
-            if (ee >= 0 && !He.isDrawn(ie[ee], ie[ee + 1], ie[ee + 2])) {
-              Re++;
+          oZ: LW
+        } = this.Hx, [cW, wW] = LW.lEW, tW = null !== OW && OW.update(mW[0], mW[1], mW[2], LW.UZ, cW, wW, this.passable);
+        let ZW = 0;
+        for (let xW = 0; xW < NW; xW++) {
+          const mW = EW[xW];
+          if (tW) {
+            const WW = 3 * PW[xW];
+            if (WW >= 0 && !OW.isDrawn(iW[WW], iW[WW + 1], iW[WW + 2])) {
+              ZW++;
               continue
             }
           }
-          Ge.f.prototype.push.call(ee, ye)
+          zW.g.prototype.push.call(WW, mW)
         }
-        be.fill(null, 0, Me), this.count = 0, this.vis = null, this.culled = Re
+        EW.fill(null, 0, NW), this.count = 0, this.vis = null, this.culled = ZW
       }
     }
-    var Mi = He(38265),
-      Ki = He(38220),
-      Ui = He(41414),
-      Fi = He(44815),
-      Ji = He(41421),
-      oi = He(41323);
-    let Ri = 1;
+    var Ni = OW(38626),
+      Pi = OW(38589),
+      Li = OW(41805),
+      ci = OW(53801),
+      wi = OW(41808),
+      ti = OW(41732);
+    let Zi = 1;
+    const xi = new WeakSet;
+
+    function li() {
+      return Zi
+    }
+
+    function Ai() {
+      Zi = Zi >= 1073741823 ? 1 : Zi + 1
+    }
+
+    function bi(WW) {
+      const iW = WW.metadata;
+      if (!iW || !0 !== iW[QW.q]) return;
+      const OW = iW[QW.v],
+        mW = null === OW || void 0 === OW ? void 0 : OW._noaStamps;
+      if (!OW || !mW) return;
+      const EW = OW.entries.indexOf(WW);
+      EW >= 0 && (mW[EW] = 0)
+    }
+
+    function ji(WW) {
+      const iW = WW.hY;
+      for (let OW = 0; OW < iW.length; OW++) {
+        const WW = iW[OW].BA();
+        if (WW && !WW.isFrozen) return !1
+      }
+      for (let OW = 0; OW < iW.length; OW++) {
+        const WW = iW[OW].BA();
+        WW && xi.add(WW)
+      }
+      return !0
+    }
+    let Ui = !1;
     const ki = new WeakSet;
 
-    function qi() {
-      return Ri
+    function si(WW, iW) {
+      const OW = WW[iW];
+      if ("function" !== typeof OW) throw new Error(`terrainDrawState: Babylon has no ${iW} to hook`);
+      return OW
     }
 
-    function fi() {
-      Ri = Ri >= 1073741823 ? 1 : Ri + 1
-    }
-
-    function Ti(ee) {
-      const ie = ee.metadata;
-      if (!ie || !0 !== ie[Qe.s]) return;
-      const He = ie[Qe.y],
-        ye = null === He || void 0 === He ? void 0 : He._noaStamps;
-      if (!He || !ye) return;
-      const be = He.entries.indexOf(ee);
-      be >= 0 && (ye[be] = 0)
-    }
-
-    function Xi(ee) {
-      const ie = ee.pW;
-      for (let He = 0; He < ie.length; He++) {
-        const ee = ie[He].iT();
-        if (ee && !ee.isFrozen) return !1
-      }
-      for (let He = 0; He < ie.length; He++) {
-        const ee = ie[He].iT();
-        ee && ki.add(ee)
-      }
-      return !0
-    }
-    let zi = !1;
-    const Bi = new WeakSet;
-
-    function Ei(ee, ie) {
-      const He = ee[ie];
-      if ("function" !== typeof He) throw new Error(`terrainDrawState: Babylon has no ${ie} to hook`);
-      return He
-    }
-
-    function gi(ee, ie, He, ye, be) {
-      const Me = He.xR.ER,
-        Ke = new Map;
-      let Ue = 0;
-      const Fe = new bi(He, ee),
-        Je = new Mi.c(Me, ee.Nf());
-      ! function(ee) {
-        if (Bi.has(ee) || (Bi.add(ee), ee.onContextLostObservable.add(fi), ee.hf.add(fi)), zi) return;
-        zi = !0;
-        const ie = Fi.c.prototype,
-          He = Ei(ie, "_markSubMeshesAsDirty");
-        Object.assign(ie, {
-          _markSubMeshesAsDirty(ee) {
-            He.call(this, ee), Ti(this)
+    function Mi(WW, iW, OW, mW, EW) {
+      const NW = OW.oZ.UZ,
+        PW = new Map;
+      let LW = 0;
+      const cW = new Ei(OW, WW),
+        wW = new Ni.d(NW, WW.VA());
+      ! function(WW) {
+        if (ki.has(WW) || (ki.add(WW), WW.onContextLostObservable.add(Ai), WW.DA.add(Ai)), Ui) return;
+        Ui = !0;
+        const iW = ci.b.prototype,
+          OW = si(iW, "_markSubMeshesAsDirty");
+        Object.assign(iW, {
+          _markSubMeshesAsDirty(WW) {
+            OW.call(this, WW), bi(this)
           }
         });
-        const ye = Ei(oi.d.prototype, "_syncParentEnabledState");
-        Object.assign(oi.d.prototype, {
+        const mW = si(ti.d.prototype, "_syncParentEnabledState");
+        Object.assign(ti.d.prototype, {
           _syncParentEnabledState() {
-            ye.call(this), Ti(this)
+            mW.call(this), bi(this)
           }
         });
-        const be = Ei(Ji.b.prototype, "resetDrawCache");
-        Ji.b.prototype.resetDrawCache = function(ee, ie) {
-          be.call(this, ee, ie), Ti(this.getMesh())
+        const EW = si(wi.d.prototype, "resetDrawCache");
+        wi.d.prototype.resetDrawCache = function(WW, iW) {
+          EW.call(this, WW, iW), bi(this.getMesh())
         };
-        const Me = Ui.e.prototype,
-          Ke = Ei(Me, "markDirty");
-        Me.markDirty = function(ee) {
-          Ke.call(this, ee), ki.has(this) && fi()
+        const NW = Li.d.prototype,
+          PW = si(NW, "markDirty");
+        NW.markDirty = function(WW) {
+          PW.call(this, WW), xi.has(this) && Ai()
         };
-        const Ue = Ei(Me, "_markAllSubMeshesAsDirty");
-        Object.assign(Me, {
-          _markAllSubMeshesAsDirty(ee) {
-            Ue.call(this, ee), ki.has(this) && fi()
+        const LW = si(NW, "_markAllSubMeshesAsDirty");
+        Object.assign(NW, {
+          _markAllSubMeshesAsDirty(WW) {
+            LW.call(this, WW), xi.has(this) && Ai()
           }
         })
-      }(ee.Nf());
-      let oe = new Float64Array(384),
-        Re = new Int32Array(64),
-        ke = new Uint8Array(64),
-        qe = new Float64Array(64),
-        fe = new Int32Array(192),
-        Te = 0;
-      const pe = [],
-        Xe = new Float64Array(24),
-        ze = () => {
-          const ee = pe.pop();
-          return void 0 !== ee ? (Re[ee] = 0, ee) : (Te === Re.length && (oe = Oi(oe, new Float64Array(2 * oe.length)), Re = Oi(Re, new Int32Array(2 * Re.length)), ke = Oi(ke, new Uint8Array(2 * ke.length)), qe = Oi(qe, new Float64Array(2 * qe.length)), fe = Oi(fe, new Int32Array(2 * fe.length))), Te++)
+      }(WW.VA());
+      let tW = new Float64Array(384),
+        ZW = new Int32Array(64),
+        xW = new Uint8Array(64),
+        lW = new Float64Array(64),
+        AW = new Int32Array(192),
+        bW = 0;
+      const jW = [],
+        UW = new Float64Array(24),
+        kW = () => {
+          const WW = jW.pop();
+          return void 0 !== WW ? (ZW[WW] = 0, WW) : (bW === ZW.length && (tW = Ki(tW, new Float64Array(2 * tW.length)), ZW = Ki(ZW, new Int32Array(2 * ZW.length)), xW = Ki(xW, new Uint8Array(2 * xW.length)), lW = Ki(lW, new Float64Array(2 * lW.length)), AW = Ki(AW, new Int32Array(2 * AW.length))), bW++)
         },
-        Be = ee => {
-          const ie = 6 * ee._noaSlot,
-            He = ee.qMe[0],
-            ye = ee.qMe[1];
-          oe[ie] = He.x, oe[ie + 1] = He.y, oe[ie + 2] = He.z, oe[ie + 3] = ye.x, oe[ie + 4] = ye.y, oe[ie + 5] = ye.z
+        sW = WW => {
+          const iW = 6 * WW._noaSlot,
+            OW = WW.MEW[0],
+            mW = WW.MEW[1];
+          tW[iW] = OW.x, tW[iW + 1] = OW.y, tW[iW + 2] = OW.z, tW[iW + 3] = mW.x, tW[iW + 4] = mW.y, tW[iW + 5] = mW.z
         },
-        Ee = (ee, ie, He) => {
-          if (!He) return Fe.see(ee, -1), !1;
-          const ye = yi(ee);
-          return ye && Fe.seeThrough(qe[ie]), Fe.see(ee, ie), !ye
+        MW = (WW, iW, OW) => {
+          if (!OW) return cW.see(WW, -1), !1;
+          const mW = mi(WW);
+          return mW && cW.seeThrough(lW[iW]), cW.see(WW, iW), !mW
         };
-      let ge = -1;
-      return ee.getActiveMeshCandidates = () => {
-        const He = ee.frustumPlanes,
-          ye = ie._selectionContent;
-        ye.reset(), (He => {
-          const ye = ee.frustumPlanes;
-          Ue = Ue + 1 | 0 || 1;
-          const be = ie.blocks,
-            Me = Fe.gR(ee.activeCamera),
-            Ke = Me && !0;
-          if (Ke) {
-            const ie = ee.Nf().currentRenderPassId;
-            ie !== ge && (ge = ie, fi())
+      let KW = -1;
+      return WW.getActiveMeshCandidates = () => {
+        const OW = WW.frustumPlanes,
+          mW = iW._selectionContent;
+        mW.reset(), (OW => {
+          const mW = WW.frustumPlanes;
+          LW = LW + 1 | 0 || 1;
+          const EW = iW.blocks,
+            NW = cW.kZ(WW.activeCamera),
+            PW = NW && !0;
+          if (PW) {
+            const iW = WW.VA().currentRenderPassId;
+            iW !== KW && (KW = iW, Ai())
           }
-          const Je = qi(),
-            qe = Ke && !1;
-          be.length > 0 && function(ee, ie) {
-            for (let He = 0; He < 6; He++) {
-              const ye = ee[He],
-                be = ye.normal;
-              ie[4 * He] = be.x, ie[4 * He + 1] = be.y, ie[4 * He + 2] = be.z, ie[4 * He + 3] = ye.d
+          const wW = li(),
+            lW = PW && !1;
+          EW.length > 0 && function(WW, iW) {
+            for (let OW = 0; OW < 6; OW++) {
+              const mW = WW[OW],
+                EW = mW.normal;
+              iW[4 * OW] = EW.x, iW[4 * OW + 1] = EW.y, iW[4 * OW + 2] = EW.z, iW[4 * OW + 3] = mW.d
             }
-          }(ye, Xe);
-          const Te = oe,
-            pe = Re,
-            ze = ke;
-          for (let ee = 0; ee < be.length; ee++) {
-            const ie = be[ee];
-            if (!ei.d.IsInFrustum(ie.qMe, ye)) continue;
-            const oe = ie.entries;
+          }(mW, UW);
+          const bW = tW,
+            jW = ZW,
+            kW = xW;
+          for (let WW = 0; WW < EW.length; WW++) {
+            const iW = EW[WW];
+            if (!Wi.b.IsInFrustum(iW.MEW, mW)) continue;
+            const tW = iW.entries;
             {
-              const ee = ie._noaSlots,
-                ye = ie._noaStamps,
-                be = ie._noaTerrain;
-              for (let ie = 0; ie < oe.length; ie++) {
-                const Re = ee[ie];
-                if (pe[Re] !== Ue && (pe[Re] = Ue, ze[Re] = di(Te, 6 * Re, Xe) ? 1 : 0), 0 === ze[Re]) continue;
-                const ke = oe[ie];
-                if (Ke && ye[ie] === Je) qe && 1 === be[ie] && yi(ke) && 0, Fe.see(ke, 1 === be[ie] ? Re : -1);
-                else if (Ke) {
-                  ye[ie] = Je;
-                  const ee = !0 === ke.metadata[Ki.h];
-                  be[ie] = ee ? 1 : 0;
-                  const He = Ee(ke, Re, ee);
-                  !ee || He && Xi(ke) || (ye[ie] = 0)
-                } else Me ? Ee(ke, Re, !0 === ke.metadata[Ki.h]) : Ge.f.prototype.push.call(He, ke)
+              const WW = iW._noaSlots,
+                mW = iW._noaStamps,
+                EW = iW._noaTerrain;
+              for (let iW = 0; iW < tW.length; iW++) {
+                const ZW = WW[iW];
+                if (jW[ZW] !== LW && (jW[ZW] = LW, kW[ZW] = Si(bW, 6 * ZW, UW) ? 1 : 0), 0 === kW[ZW]) continue;
+                const xW = tW[iW];
+                if (PW && mW[iW] === wW) lW && 1 === EW[iW] && mi(xW) && 0, cW.see(xW, 1 === EW[iW] ? ZW : -1);
+                else if (PW) {
+                  mW[iW] = wW;
+                  const WW = !0 === xW.metadata[Pi.l];
+                  EW[iW] = WW ? 1 : 0;
+                  const OW = MW(xW, ZW, WW);
+                  !WW || OW && ji(xW) || (mW[iW] = 0)
+                } else NW ? MW(xW, ZW, !0 === xW.metadata[Pi.l]) : zW.g.prototype.push.call(OW, xW)
               }
               continue
             }
           }
-          Me && Fe.finish(He, fe)
-        })(ye), Je.apply(ye, ee.activeCamera);
-        const Me = ie.kMe;
-        for (let ee = 0; ee < Me.length; ee++) {
-          const ie = Me[ee];
-          ie.isEnabled() && Ge.f.prototype.push.call(ye, ie)
+          NW && cW.finish(OW, AW)
+        })(mW), wW.apply(mW, WW.activeCamera);
+        const NW = iW.sEW;
+        for (let WW = 0; WW < NW.length; WW++) {
+          const iW = NW[WW];
+          iW.isEnabled() && zW.g.prototype.push.call(mW, iW)
         }
-        return be(ye, He), ye
+        return EW(mW, OW), mW
       }, {
-        fMe: () => Fe.culled,
-        Nbe: (ee, ie) => {
-          const be = Math.floor(ie[0] / Me),
-            Ue = Math.floor(ie[1] / Me),
-            Fe = Math.floor(ie[2] / Me),
-            Je = `${be}|${Ue}|${Fe}`;
-          let oe = Ke.get(Je);
-          if (!oe) {
-            const ee = [0, 0, 0];
-            He.NHe([be * Me - 1, Ue * Me - 1, Fe * Me - 1], null, ee), oe = Object.assign(ye(ee, Me + 2), {
-              TMe: Je,
-              pMe: 0,
+        KEW: () => cW.culled,
+        xEW: (WW, iW) => {
+          const EW = Math.floor(iW[0] / NW),
+            LW = Math.floor(iW[1] / NW),
+            cW = Math.floor(iW[2] / NW),
+            wW = `${EW}|${LW}|${cW}`;
+          let tW = PW.get(wW);
+          if (!tW) {
+            const WW = [0, 0, 0];
+            OW.fiW([EW * NW - 1, LW * NW - 1, cW * NW - 1], null, WW), tW = Object.assign(mW(WW, NW + 2), {
+              SEW: wW,
+              YEW: 0,
               _selectionId: 0,
               _inFrustum: !1,
-              _noaSlot: ze()
-            }), Be(oe), qe[oe._noaSlot] = (0, re.f)(be, Ue, Fe), fe[3 * oe._noaSlot] = be, fe[3 * oe._noaSlot + 1] = Ue, fe[3 * oe._noaSlot + 2] = Fe, Ke.set(Je, oe)
+              _noaSlot: kW()
+            }), sW(tW), lW[tW._noaSlot] = (0, FW.e)(EW, LW, cW), AW[3 * tW._noaSlot] = EW, AW[3 * tW._noaSlot + 1] = LW, AW[3 * tW._noaSlot + 2] = cW, PW.set(wW, tW)
           }
-          oe.pMe++, ee.metadata[Qe.B] = oe
+          tW.YEW++, WW.metadata[QW.y] = tW
         },
-        gL: ee => {
-          const ie = ee.metadata[Qe.B];
-          ie && (ie.pMe--, ie.pMe <= 0 && (Ke.delete(ie.TMe), pe.push(ie._noaSlot)), ee.metadata[Qe.B] = null)
+        pD: WW => {
+          const iW = WW.metadata[QW.y];
+          iW && (iW.YEW--, iW.YEW <= 0 && (PW.delete(iW.SEW), jW.push(iW._noaSlot)), WW.metadata[QW.y] = null)
         },
-        RMe: (ee, ie) => {
-          const He = ee,
-            ye = ie.metadata[Qe.B];
-          (He._noaSlots ??= []).push(ye._noaSlot), (He._noaStamps ??= []).push(0), (He._noaTerrain ??= []).push(0), He.entries.push(ie)
+        kEW: (WW, iW) => {
+          const OW = WW,
+            mW = iW.metadata[QW.y];
+          (OW._noaSlots ??= []).push(mW._noaSlot), (OW._noaStamps ??= []).push(0), (OW._noaTerrain ??= []).push(0), OW.entries.push(iW)
         },
-        removeEntry: (ee, ie) => {
-          const He = ee,
-            ye = He.entries,
-            be = ye.indexOf(ie);
-          if (be < 0) return;
-          const Me = He._noaSlots,
-            Ke = He._noaStamps,
-            Ue = He._noaTerrain,
-            Fe = ye.length - 1;
-          ye[be] = ye[Fe], Me[be] = Me[Fe], Ke[be] = Ke[Fe], Ue[be] = Ue[Fe], ye.pop(), Me.pop(), Ke.pop(), Ue.pop()
+        removeEntry: (WW, iW) => {
+          const OW = WW,
+            mW = OW.entries,
+            EW = mW.indexOf(iW);
+          if (EW < 0) return;
+          const NW = OW._noaSlots,
+            PW = OW._noaStamps,
+            LW = OW._noaTerrain,
+            cW = mW.length - 1;
+          mW[EW] = mW[cW], NW[EW] = NW[cW], PW[EW] = PW[cW], LW[EW] = LW[cW], mW.pop(), NW.pop(), PW.pop(), LW.pop()
         },
-        Zie: ee => {
-          for (const ie of Ke.values()) {
-            ie.MMe.XMe(ee), ie.bMe.XMe(ee);
-            for (const He of ie.qMe) He.XMe(ee);
-            Be(ie)
+        YWW: WW => {
+          for (const iW of PW.values()) {
+            iW.ZEW.yEW(WW), iW.tEW.yEW(WW);
+            for (const OW of iW.MEW) OW.yEW(WW);
+            sW(iW)
           }
         }
       }
     }
 
-    function Oi(ee, ie) {
-      return ie.set(ee), ie
+    function Ki(WW, iW) {
+      return iW.set(WW), iW
     }
 
-    function di(ee, ie, He) {
-      const ye = ee[ie],
-        be = ee[ie + 1],
-        Me = ee[ie + 2],
-        Ke = ee[ie + 3],
-        Ue = ee[ie + 4],
-        Fe = ee[ie + 5];
-      for (let Je = 0; Je < 24; Je += 4) {
-        const ee = He[Je],
-          ie = He[Je + 1],
-          oe = He[Je + 2];
-        if (!(ee * (ee >= 0 ? Ke : ye) + ie * (ie >= 0 ? Ue : be) + oe * (oe >= 0 ? Fe : Me) + He[Je + 3] >= 0)) return !1
+    function Si(WW, iW, OW) {
+      const mW = WW[iW],
+        EW = WW[iW + 1],
+        NW = WW[iW + 2],
+        PW = WW[iW + 3],
+        LW = WW[iW + 4],
+        cW = WW[iW + 5];
+      for (let wW = 0; wW < 24; wW += 4) {
+        const WW = OW[wW],
+          iW = OW[wW + 1],
+          tW = OW[wW + 2];
+        if (!(WW * (WW >= 0 ? PW : mW) + iW * (iW >= 0 ? LW : EW) + tW * (tW >= 0 ? cW : NW) + OW[wW + 3] >= 0)) return !1
       }
       return !0
     }
-    var Wi = He(38597);
-    class ti {
-      constructor(ee, ie) {
-        var He = ee.yp;
-        He.Cbe(new Ne.b(He));
-        var ye = new Ie.e(Fe);
-        He.EMe = ye, ye.blocks = [];
-        var be, Me = {},
-          Ue = [];
-        this.textPlanes = Ue, this.fMe = () => be.fMe(), this.Zie = ee => {
-          oe(ye, ee), be.Zie(ee)
-        }, this.Nbe = (ie, He, Ke) => {
-          if (!ie.metadata) throw new Error("Mesh should have mesh.metadata property");
-          if (!ie.metadata[Qe.y] && !ie.metadata[Qe.p]) {
-            if (!He) {
-              var Fe = ye.kMe;
-              if (ie.metadata[Qe.F] && !ie.parent) {
-                Fe = Ue;
-                var oe = ie.WC().OMe;
-                ie.metadata[Qe.H] = oe.center.length() + oe.radius, ie.Gf = !0
+    var Yi = OW(38948);
+    class yi {
+      constructor(WW, iW) {
+        var OW = WW.rb;
+        OW.MmW(new rW.b(OW));
+        var mW = new IW.d(cW);
+        OW.JEW = mW, mW.blocks = [];
+        var EW, NW = {},
+          LW = [];
+        this.textPlanes = LW, this.KEW = () => EW.KEW(), this.YWW = WW => {
+          tW(mW, WW), EW.YWW(WW)
+        }, this.xEW = (iW, OW, PW) => {
+          if (!iW.metadata) throw new Error("Mesh should have mesh.metadata property");
+          if (!iW.metadata[QW.v] && !iW.metadata[QW.o]) {
+            if (!OW) {
+              var cW = mW.sEW;
+              if (iW.metadata[QW.E] && !iW.parent) {
+                cW = LW;
+                var tW = iW.KV().HEW;
+                iW.metadata[QW.F] = tW.center.length() + tW.radius, iW.pA = !0
               }
-              return Fe.push(ie), ie.metadata[Qe.l] = Fe, void(ie.metadata[Qe.p] = !0)
+              return cW.push(iW), iW.metadata[QW.j] = cW, void(iW.metadata[QW.o] = !0)
             }
-            var ke = Math.floor(Ke[0] / Je),
-              qe = Math.floor(Ke[1] / Je),
-              fe = Math.floor(Ke[2] / Je),
-              Te = ke + "|" + qe + "|" + fe,
-              pe = Me[Te];
-            if (!pe) {
-              var Xe = [ke * Je, qe * Je, fe * Je],
-                ze = [0, 0, 0];
-              ee.uk.NHe(Xe, null, ze), pe = Re(ze, Je), ye.blocks.push(pe), Me[Te] = pe, pe.TMe = Te
+            var xW = Math.floor(PW[0] / wW),
+              lW = Math.floor(PW[1] / wW),
+              AW = Math.floor(PW[2] / wW),
+              bW = xW + "|" + lW + "|" + AW,
+              jW = NW[bW];
+            if (!jW) {
+              var UW = [xW * wW, lW * wW, AW * wW],
+                kW = [0, 0, 0];
+              WW.Hx.fiW(UW, null, kW), jW = ZW(kW, wW), mW.blocks.push(jW), NW[bW] = jW, jW.SEW = bW
             }
-            be.Nbe(ie, Ke), be.RMe(pe, ie), pe.pMe = (pe.pMe || 0) + 1, ie.metadata[Qe.y] = pe, ie.metadata[Qe.s] = !0, ie.Gf = !0
+            EW.xEW(iW, PW), EW.kEW(jW, iW), jW.YEW = (jW.YEW || 0) + 1, iW.metadata[QW.v] = jW, iW.metadata[QW.q] = !0, iW.pA = !0
           }
-        }, this.gL = ee => {
-          if (ee.metadata) {
-            ee.metadata[Qe.p] && ((0, re.n)(ee.metadata[Qe.l], ee), ee.metadata[Qe.p] = !1), ee.metadata[Qe.l] === Ue && (ee.Gf = !1), ee.metadata[Qe.l] = void 0, ee.metadata[Qe.H] = void 0;
-            var ie = ee.metadata[Qe.y];
-            ie && ie.entries && (ee.metadata[Qe.s] && be.removeEntry(ie, ee), ie.pMe--, ie.pMe <= 0 && (delete Me[ie.TMe], (0, re.n)(ye.blocks, ie))), be.gL(ee), ee.metadata[Qe.y] = null, ee.metadata[Qe.s] = !1
+        }, this.pD = WW => {
+          if (WW.metadata) {
+            WW.metadata[QW.o] && ((0, FW.i)(WW.metadata[QW.j], WW), WW.metadata[QW.o] = !1), WW.metadata[QW.j] === LW && (WW.pA = !1), WW.metadata[QW.j] = void 0, WW.metadata[QW.F] = void 0;
+            var iW = WW.metadata[QW.v];
+            iW && iW.entries && (WW.metadata[QW.q] && EW.removeEntry(iW, WW), iW.YEW--, iW.YEW <= 0 && (delete NW[iW.SEW], (0, FW.i)(mW.blocks, iW))), EW.pD(WW), WW.metadata[QW.v] = null, WW.metadata[QW.q] = !1
           }
-        }, this.bie = function(ee) {
-          let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (ee.metadata[Qe.y]) {
-            if (ee.metadata[Qe.s] === ie) return;
-            var He = ee.metadata[Qe.y];
-            He && He.entries && (ie ? be.RMe(He, ee) : be.removeEntry(He, ee)), ee.metadata[Qe.s] = ie
+        }, this.NWW = function(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (WW.metadata[QW.v]) {
+            if (WW.metadata[QW.q] === iW) return;
+            var OW = WW.metadata[QW.v];
+            OW && OW.entries && (iW ? EW.kEW(OW, WW) : EW.removeEntry(OW, WW)), WW.metadata[QW.q] = iW
           } else {
-            if (ee.metadata[Qe.p] === ie) return;
-            var Me = ee.metadata[Qe.l] || ye.kMe;
-            ie ? Me.push(ee) : (0, re.n)(Me, ee), ee.metadata[Qe.p] = ie
+            if (WW.metadata[QW.o] === iW) return;
+            var NW = WW.metadata[QW.j] || mW.sEW;
+            iW ? NW.push(WW) : (0, FW.i)(NW, WW), WW.metadata[QW.o] = iW
           }
         };
-        var Fe = () => {},
-          Je = ie * ee.uk.xR.ER,
-          oe = (ee, ie) => {
-            ee.blocks.forEach((ee => {
-              ee.MMe.XMe(ie), ee.bMe.XMe(ie), ee.qMe.forEach((ee => ee.XMe(ie))), ee.blocks && oe(ee, ie)
+        var cW = () => {},
+          wW = iW * WW.Hx.oZ.UZ,
+          tW = (WW, iW) => {
+            WW.blocks.forEach((WW => {
+              WW.ZEW.yEW(iW), WW.tEW.yEW(iW), WW.MEW.forEach((WW => WW.yEW(iW))), WW.blocks && tW(WW, iW)
             }))
           },
-          Re = (ee, ie) => {
-            var He = new Ke.rf(ee[0], ee[1], ee[2]),
-              ye = new Ke.rf(ee[0] + ie, ee[1] + ie, ee[2] + ie);
-            return new he.c(He, ye, void 0, void 0, void 0, Fe)
+          ZW = (WW, iW) => {
+            var OW = new PW.fA(WW[0], WW[1], WW[2]),
+              mW = new PW.fA(WW[0] + iW, WW[1] + iW, WW[2] + iW);
+            return new aW.e(OW, mW, void 0, void 0, void 0, cW)
           };
-        be = gi(He, ye, ee.uk, Re, ((ee, ie) => {
-          for (var He = 0; He < Ue.length; He++) {
-            var ye = Ue[He];
-            ye.isEnabled(!1) && ((0, Wi.d)(ye, ie) && Ge.f.prototype.push.call(ee, ye))
+        EW = Mi(OW, mW, WW.Hx, ZW, ((WW, iW) => {
+          for (var OW = 0; OW < LW.length; OW++) {
+            var mW = LW[OW];
+            mW.isEnabled(!1) && ((0, Yi.e)(mW, iW) && zW.g.prototype.push.call(WW, mW))
           }
         }))
       }
     }
 
-    function Zi(ee) {
+    function Ti(WW) {
       const {
-        holderPosition: ie,
-        holderRotation: He,
-        Z8: ye,
-        fov: be,
-        near: Me,
-        far: Ke
-      } = ee.model.W8, Ue = ee.PMe;
-      Ue.position.wie(ie[0], ie[1], ie[2]), Ue.rotation.wie(He[0], He[1], He[2]);
-      const Fe = ee.camera;
-      Fe.position.wie(ye[0], ye[1], ye[2]), Fe.fov = be, Fe.minZ = Me, Fe.maxZ = Ke
+        holderPosition: iW,
+        holderRotation: OW,
+        f4: mW,
+        fov: EW,
+        near: NW,
+        far: PW
+      } = WW.model.o4, LW = WW.gEW;
+      LW.position.yWW(iW[0], iW[1], iW[2]), LW.rotation.yWW(OW[0], OW[1], OW[2]);
+      const cW = WW.camera;
+      cW.position.yWW(mW[0], mW[1], mW[2]), cW.fov = EW, cW.minZ = NW, cW.maxZ = PW
     }
 
-    function wi(ee) {
-      const ie = ee.Nf(),
-        He = ie,
-        ye = He._gl;
-      if (!ye || He.dT < 2 || ie.Gbe || ye.getParameter(ye.DEPTH_BITS) < 24) return !1;
-      const be = ee._renderingManager,
-        Me = be.getRenderingGroup(-1),
-        Ke = be.getRenderingGroup(0),
-        Ue = le.b.prototype.render;
-      return Me.render = function(ee, ie, He, ye, be, Me, Fe, Je, oe) {
-        (ee || Ke._empty) && Ue.call(this, ee, ie, He, ye, be, Me, Fe, Je, oe)
-      }, Ke.render = function(ee, He, be, Ke) {
-        let Fe = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Je = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Re = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          ke = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          qe = arguments.length > 8 ? arguments[8] : void 0;
-        ee ? Ue.call(this, ee, He, be, Ke, Fe, Je, Re, ke, qe) : (ie.setAlphaMode(oe.c.ALPHA_DISABLE), Ue.call(this, null, !1, !1, Ke, Fe, Je, Re, !1), Me._empty || (ye.depthRange(1, 1), Ue.call(Me, null, He, be, Ke, Fe, Je, Re, ke, qe), ye.depthRange(0, 1)), Ue.call(this, null, He, be, Ke, !1, !1, !1, ke, qe))
+    function Ji(WW) {
+      const iW = WW.VA(),
+        OW = iW,
+        mW = OW._gl;
+      if (!mW || OW.bb < 2 || iW.nmW || mW.getParameter(mW.DEPTH_BITS) < 24) return !1;
+      const EW = WW._renderingManager,
+        NW = EW.getRenderingGroup(-1),
+        PW = EW.getRenderingGroup(0),
+        LW = XW.c.prototype.render;
+      return NW.render = function(WW, iW, OW, mW, EW, NW, cW, wW, tW) {
+        (WW || PW._empty) && LW.call(this, WW, iW, OW, mW, EW, NW, cW, wW, tW)
+      }, PW.render = function(WW, OW, EW, PW) {
+        let cW = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          wW = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          ZW = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          xW = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          lW = arguments.length > 8 ? arguments[8] : void 0;
+        WW ? LW.call(this, WW, OW, EW, PW, cW, wW, ZW, xW, lW) : (iW.setAlphaMode(tW.e.ALPHA_DISABLE), LW.call(this, null, !1, !1, PW, cW, wW, ZW, !1), NW._empty || (mW.depthRange(1, 1), LW.call(NW, null, OW, EW, PW, cW, wW, ZW, xW, lW), mW.depthRange(0, 1)), LW.call(this, null, OW, EW, PW, !1, !1, !1, xW, lW))
       }, !0
     }
 
-    function Di(ee, ie) {
-      return [ie, se.e].map(((ie, He) => {
-        const ye = new be.b("light", Ke.rf.FromArray(ie), ee);
-        return ye.diffuse = Me.Color3.FromArray([1, 1, 1]), ye.specular = Me.Color3.FromArray([1, 1, 1]), ye.intensity = se.d[He], ye
+    function Hi(WW, iW) {
+      return [iW, GW.e].map(((iW, OW) => {
+        const mW = new EW.d("light", PW.fA.FromArray(iW), WW);
+        return mW.diffuse = NW.Color3.FromArray([1, 1, 1]), mW.specular = NW.Color3.FromArray([1, 1, 1]), mW.intensity = GW.b[OW], mW
       }))
     }
-    class Pi extends Fe.b {
+    class ni extends cW.c {
       constructor() {
         super(...arguments), this.heldTexture = null
       }
       get texture() {
         return this.heldTexture
       }
-      set texture(ee) {
-        var ie;
-        this.heldTexture = ee, this.particleTexture = null !== (ie = null === ee || void 0 === ee ? void 0 : ee.mirror) && void 0 !== ie ? ie : null
+      set texture(WW) {
+        var iW;
+        this.heldTexture = WW, this.particleTexture = null !== (iW = null === WW || void 0 === WW ? void 0 : WW.mirror) && void 0 !== iW ? iW : null
       }
       isEmitting() {
         return this.isStarted() && !this._stopped
       }
       dispose() {
-        let ee = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          He = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        ee && (this.particleTexture = null, (0, Je.A)(this.heldTexture), this.heldTexture = null), super.dispose(ee, ie, He)
+        let WW = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        WW && (this.particleTexture = null, (0, wW.D)(this.heldTexture), this.heldTexture = null), super.dispose(WW, iW, OW)
       }
     }
 
-    function Ai(ee, ie, He, ye) {
-      return ie && !ie.failed ? ie.bC(He, ye) : new Pi(He, ye, ee)
+    function ui(WW, iW, OW, mW) {
+      return iW && !iW.failed ? iW.wV(OW, mW) : new ni(OW, mW, WW)
     }
-    const Yi = new WeakMap;
+    const oi = new WeakMap;
 
-    function Vi(ee, ie, He) {
-      var ye;
-      let be = null !== (ye = Yi.get(ee)) && void 0 !== ye ? ye : null;
-      return !be && ee.Nf().dT >= 2 && (be = new ae(ee, (ie => {
-        console.error(`Particle programs failed in scene ${ee.uid}: ${ie}`)
-      })), Yi.set(ee, be)), Ai(ee, be, ie, He)
+    function di(WW, iW, OW) {
+      var mW;
+      let EW = null !== (mW = oi.get(WW)) && void 0 !== mW ? mW : null;
+      return !EW && WW.VA().bb >= 2 && (EW = new eW(WW, (iW => {
+        console.error(`Particle programs failed in scene ${WW.uid}: ${iW}`)
+      })), oi.set(WW, EW)), ui(WW, EW, iW, OW)
     }
-    const ai = ye.e.Zero();
-    const ci = {
-      Rbe: function(ee, ie) {
-        return new xe(ee, ie.Ube, {
-          preserveDrawingBuffer: ie.preserveDrawingBuffer,
+    const ei = mW.b.Zero();
+    const vi = {
+      rOW: function(WW, iW) {
+        return new gW(WW, iW.ROW, {
+          preserveDrawingBuffer: iW.preserveDrawingBuffer,
           powerPreference: "high-performance",
           alpha: !1,
           stencil: !1
         })
       },
-      VMe: function(ee, ie) {
-        ! function(ee, ie, He) {
-          const ye = new ne.b(ee.engine);
-          ee.yp = ye, ye.detachControl(), ye.autoClear = !1, Se.b.MIN_RENDERINGGROUPS = -1;
-          for (let Me = Se.b.MIN_RENDERINGGROUPS; Me <= 1; Me++) ye.setRenderingOrder(Me, le.b.PainterSortCompare, le.b.PainterSortCompare, le.b.PainterSortCompare);
-          ye.setRenderingAutoClearDepthStencil(0, !1), me.e.Enabled = !1, ee.ZMe = new ti(ee, Math.round(ie.wMe)), ee.PMe = new ue.b("camHolder", ye), ee.camera = new ve.e("camera", new Ke.rf(0, 0, 0), ye), ee.camera.parent = ee.PMe, Zi(ee), (0, se.f)(ee, ((ee, ie, He) => (0, je.h)(ie, He, ee.yp))), ye.clearColor = Me.e.FromArray(ie.clearColor), ye.ambientColor = Me.Color3.FromArray(ie.ambientColor);
-          const be = He(ye, ie.YMe);
-          ye.onNewLightAddedObservable.add((ee => {
-            be.some((ie => ie === ee)) || console.error(`Light "${ee.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
-          })), ye.skipPointerMovePicking = !0
-        }(ee, ie, Di), wi(ee.yp)
+      pEW: function(WW, iW) {
+        ! function(WW, iW, OW) {
+          const mW = new qW.c(WW.engine);
+          WW.rb = mW, mW.detachControl(), mW.autoClear = !1, BW.d.MIN_RENDERINGGROUPS = -1;
+          for (let NW = BW.d.MIN_RENDERINGGROUPS; NW <= 1; NW++) mW.setRenderingOrder(NW, XW.c.PainterSortCompare, XW.c.PainterSortCompare, XW.c.PainterSortCompare);
+          mW.setRenderingAutoClearDepthStencil(0, !1), CW.e.Enabled = !1, WW.dEW = new yi(WW, Math.round(iW.eEW)), WW.gEW = new fW.e("camHolder", mW), WW.camera = new pW.b("camera", new PW.fA(0, 0, 0), mW), WW.camera.parent = WW.gEW, Ti(WW), (0, GW.g)(WW, ((WW, iW, OW) => (0, RW.e)(iW, OW, WW.rb))), mW.clearColor = NW.c.FromArray(iW.clearColor), mW.ambientColor = NW.Color3.FromArray(iW.ambientColor);
+          const EW = OW(mW, iW.VEW);
+          mW.onNewLightAddedObservable.add((WW => {
+            EW.some((iW => iW === WW)) || console.error(`Light "${WW.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
+          })), mW.skipPointerMovePicking = !0
+        }(WW, iW, Hi), Ji(WW.rb)
       },
-      DMe: Zi,
-      setBabylonFog: function(ee, ie, He, ye) {
-        const be = ee.yp;
-        be.fogMode = 3, be.fogStart = ie, be.fogEnd = He, be.fogColor.set(ye[0], ye[1], ye[2])
+      vEW: Ti,
+      setBabylonFog: function(WW, iW, OW, mW) {
+        const EW = WW.rb;
+        EW.fogMode = 3, EW.fogStart = iW, EW.fogEnd = OW, EW.fogColor.set(mW[0], mW[1], mW[2])
       },
-      cMe: function(ee, ie, He) {
-        return ee.engine.dT >= 2 && !ee.xMe && (ee.xMe = new ae(ee.yp, ee.LMe)), Ai(ee.yp, ee.xMe, ie, He)
+      CEW: function(WW, iW, OW) {
+        return WW.engine.bb >= 2 && !WW.XEW && (WW.XEW = new eW(WW.rb, WW.BEW)), ui(WW.rb, WW.XEW, iW, OW)
       },
-      vMe: function(ee, ie) {
-        ee.yp.zW.forEach((He => {
-          if (He instanceof Ye) return void He.Zie(ie, ee.uk.yq);
-          const ye = He;
-          if (ye.emitter.getConnectedParticleSystems)
-            for (const ee of ye._particles) ee.position.set(ee.position.x - ie[0], ee.position.y - ie[1], ee.position.z - ie[2]);
+      REW: function(WW, iW) {
+        WW.rb.vY.forEach((OW => {
+          if (OW instanceof oW) return void OW.YWW(iW, WW.Hx.Wl);
+          const mW = OW;
+          if (mW.emitter.getConnectedParticleSystems)
+            for (const WW of mW._particles) WW.position.set(WW.position.x - iW[0], WW.position.y - iW[1], WW.position.z - iW[2]);
           else {
-            if (!ye.worldOffset) throw new Error("Particle system has no world offset");
-            ye.worldOffset.x = -ee.uk.yq[0], ye.worldOffset.y = -ee.uk.yq[1], ye.worldOffset.z = -ee.uk.yq[2]
+            if (!mW.worldOffset) throw new Error("Particle system has no world offset");
+            mW.worldOffset.x = -WW.Hx.Wl[0], mW.worldOffset.y = -WW.Hx.Wl[1], mW.worldOffset.z = -WW.Hx.Wl[2]
           }
         }))
       },
-      linesFromArrays: function(ee, ie, He) {
-        const ye = new Ue.d(ie, ee.yp, null, void 0, void 0, !1);
-        return (0, je.f)(ie, He, ee.yp, ye), ye
+      linesFromArrays: function(WW, iW, OW) {
+        const mW = new LW.b(iW, WW.rb, null, void 0, void 0, !1);
+        return (0, RW.d)(iW, OW, WW.rb, mW), mW
       },
-      bp: Ti,
-      CMe: function(ee, ie) {
-        return ai.origin.jD(ie.origin), ai.direction.jD(ie.direction), ai.length = ie.length, ai.epsilon = ie.epsilon, ai.CMe(ee, !1, void 0, !1, void 0, !0).pickedPoint
+      zb: bi,
+      qEW: function(WW, iW) {
+        return ei.origin.HJ(iW.origin), ei.direction.HJ(iW.direction), ei.length = iW.length, ei.epsilon = iW.epsilon, ei.qEW(WW, !1, void 0, !1, void 0, !0).pickedPoint
       }
     }
   },
-  42201: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => me,
-      e: () => ze,
-      h: () => Ie
+  42603: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => XW,
+      d: () => sW,
+      g: () => rW
     });
-    var ye = He(41380),
-      be = He(42210),
-      Me = He(42250),
-      Ke = He(42217),
-      Ue = He(38650),
-      Fe = He(38659),
-      Je = He(38664),
-      oe = He(38673),
-      Re = He(38070),
-      ke = He(38075),
-      qe = He(42219),
-      fe = He(38045),
-      Te = He(38057),
-      pe = He(38034);
+    var mW = OW(41782),
+      EW = OW(42612),
+      NW = OW(42652),
+      PW = OW(42616),
+      LW = OW(38995),
+      cW = OW(39004),
+      wW = OW(39009),
+      tW = OW(39011),
+      ZW = OW(38464),
+      xW = OW(38427),
+      lW = OW(38431),
+      AW = OW(42623),
+      bW = OW(38405),
+      jW = OW(38419),
+      UW = OW(38388);
 
-    function Xe(ee, ie) {
-      return Object.assign((function(ee, He, ye, be) {
-        return ie(this.featureState, ee, He, ye, be)
+    function kW(WW, iW) {
+      return Object.assign((function(WW, OW, mW, EW) {
+        return iW(this.featureState, WW, OW, mW, EW)
       }), {
-        oR: ee
+        cZ: WW
       })
     }
 
-    function ze(ee) {
-      const ie = class extends qe.e {
-          constructor(ie, He) {
-            const ye = (0, Te.V)(ie),
-              be = ye && (0, Te.y)(ye, ee.name);
-            for (var Me = arguments.length, Ke = new Array(Me > 2 ? Me - 2 : 0), Ue = 2; Ue < Me; Ue++) Ke[Ue - 2] = arguments[Ue];
-            super(ie, ee.name, ee.priority, be ? be.defines : ee.defines(...Ke), !1), this.featureState = void 0, this.featureState = He, this._pluginManager._addPlugin(this), this._enable(!0), (0, Te.A)(this._material, ee, this.featureState, this._pluginDefineNames)
+    function sW(WW) {
+      const iW = class extends AW.e {
+          constructor(iW, OW) {
+            const mW = (0, jW.bb)(iW),
+              EW = mW && (0, jW.v)(mW, WW.name);
+            for (var NW = arguments.length, PW = new Array(NW > 2 ? NW - 2 : 0), LW = 2; LW < NW; LW++) PW[LW - 2] = arguments[LW];
+            super(iW, WW.name, WW.priority, EW ? EW.defines : WW.defines(...PW), !1), this.featureState = void 0, this.featureState = OW, this._pluginManager._addPlugin(this), this._enable(!0), (0, jW.x)(this._material, WW, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return ee.className
+            return WW.className
           }
-          isCompatible(ee) {
-            return ee === pe.b.GLSL || ee === pe.b.WGSL
+          isCompatible(WW) {
+            return WW === UW.e.GLSL || WW === UW.e.WGSL
           }
         },
-        He = (0, fe.e)(ee);
-      for (const [ye, be] of Object.entries(fe.c)) {
-        const Me = ee[ye];
-        if (Me) {
-          const ee = He[ye];
-          Object.defineProperty(ie.prototype, be, {
-            value: Xe(Me, ee),
+        OW = (0, bW.i)(WW);
+      for (const [mW, EW] of Object.entries(bW.d)) {
+        const NW = WW[mW];
+        if (NW) {
+          const WW = OW[mW];
+          Object.defineProperty(iW.prototype, EW, {
+            value: kW(NW, WW),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return ie
+      return iW
     }
-    class Be extends(ze(Ue.e)) {}
-    var Ee = He(40913),
-      ge = He(42223),
-      Oe = He(42229);
+    class MW extends(sW(LW.e)) {}
+    var KW = OW(41359),
+      SW = OW(42630),
+      YW = OW(42633);
 
-    function de(ee, ie, He) {
-      return (0, Oe.e)(He, ie.urls, (() => async function(ee, ie, He) {
+    function yW(WW, iW, OW) {
+      return (0, YW.i)(OW, iW.urls, (() => async function(WW, iW, OW) {
         const {
-          width: ye
-        } = ee[0].getSize(), be = ee.map(((ee, He) => {
-          var be;
-          const Me = Math.round(ee.getSize().height / ye),
-            Ke = null === ie || void 0 === ie ? void 0 : ie[He];
+          width: mW
+        } = WW[0].getSize(), EW = WW.map(((WW, OW) => {
+          var EW;
+          const NW = Math.round(WW.getSize().height / mW),
+            PW = null === iW || void 0 === iW ? void 0 : iW[OW];
           return {
-            pixels: Ke && Ke.byteLength === ye * ye * Me * 4 ? Ke : null !== (be = We.get(ee.getInternalTexture())) && void 0 !== be ? be : ee._readPixelsSync(),
-            layers: Me
+            pixels: PW && PW.byteLength === mW * mW * NW * 4 ? PW : null !== (EW = TW.get(WW.getInternalTexture())) && void 0 !== EW ? EW : WW._readPixelsSync(),
+            layers: NW
           }
-        })), Me = Math.min(He.Nf().getCaps().texture2DArrayMaxLayerCount, 256), Ue = (0, Oe.c)(be, ye, Me).map((ee => {
+        })), NW = Math.min(OW.VA().getCaps().texture2DArrayMaxLayerCount, 256), LW = (0, YW.e)(EW, mW, NW).map((WW => {
           let {
-            pixels: ie,
-            layers: be
-          } = ee;
+            pixels: iW,
+            layers: EW
+          } = WW;
           return {
-            atlas: new ge.c(ie, ye, ye, be, Ee.b.TEXTUREFORMAT_RGBA, He, !0, !1, Ke.d.NEAREST_NEAREST_MIPLINEAR),
-            layers: be
+            atlas: new SW.b(iW, mW, mW, EW, KW.c.TEXTUREFORMAT_RGBA, OW, !0, !1, PW.d.NEAREST_NEAREST_MIPLINEAR),
+            layers: EW
           }
         }));
-        return ee.forEach(((ee, ie) => {
-          const ye = ee.getInternalTexture();
-          We.has(ye) || (! function(ee, ie) {
-            const He = ie.createRawTexture(new Uint8Array(4), 1, 1, Ee.b.TEXTUREFORMAT_RGBA, !1, !1, Ke.d.NEAREST_SAMPLINGMODE);
-            ee._hardwareTexture.release(), ie.unbindAllTextures(), He._swapAndDie(ee, !1)
-          }(ye, He.Nf()), We.set(ye, be[ie].pixels))
-        })), Ue
-      }(ee, ie.pixels, He)))
+        return WW.forEach(((WW, iW) => {
+          const mW = WW.getInternalTexture();
+          TW.has(mW) || (! function(WW, iW) {
+            const OW = iW.createRawTexture(new Uint8Array(4), 1, 1, KW.c.TEXTUREFORMAT_RGBA, !1, !1, PW.d.NEAREST_SAMPLINGMODE);
+            WW._hardwareTexture.release(), iW.unbindAllTextures(), OW._swapAndDie(WW, !1)
+          }(mW, OW.VA()), TW.set(mW, EW[iW].pixels))
+        })), LW
+      }(WW, iW.pixels, OW)))
     }
-    const We = new WeakMap;
-    var te = He(38682);
-    class Ze extends(ze(Fe.k)) {
-      constructor(ee, ie) {
-        super(ee, ie), this.loaded = new Set, this.mirrors = void 0, this.mirrors = ie.textures.map((ee => ee.mirror)), ie.useWebGL2 && !ie.imagesPerAtlas.length && ie.textureAtlases.splice(0, ie.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((ee, ie) => {
-          ee.onLoadObservable.add((ee => {
-            this.setTextureArrayData(ee, ie).catch((ee => {
-              console.error(`Failed to build the texture arrays, at atlas ${ie}`, ee)
+    const TW = new WeakMap;
+    var JW = OW(39017);
+    class hW extends(sW(cW.e)) {
+      constructor(WW, iW) {
+        super(WW, iW), this.loaded = new Set, this.mirrors = void 0, this.mirrors = iW.textures.map((WW => WW.mirror)), iW.useWebGL2 && !iW.imagesPerAtlas.length && iW.textureAtlases.splice(0, iW.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((WW, iW) => {
+          WW.onLoadObservable.add((WW => {
+            this.setTextureArrayData(WW, iW).catch((WW => {
+              console.error(`Failed to build the texture arrays, at atlas ${iW}`, WW)
             }))
           }))
-        })), (0, te.l)(ie, ee.shaderLanguage)
+        })), (0, JW.h)(iW, WW.shaderLanguage)
       }
-      async setTextureArrayData(ee, ie) {
-        const He = this.featureState,
+      async setTextureArrayData(WW, iW) {
+        const OW = this.featureState,
           {
-            width: ye,
-            height: be
-          } = ee.getSize(),
-          Me = this._material.shaderLanguage;
-        if (!He.useWebGL2) return void(0, te.f)(this._material, He, ie, ye, Math.round(be / ye), Me);
-        if (this.loaded.add(ie), this.loaded.size < this.mirrors.length) return;
-        const Ke = await de(this.mirrors, He.sources, this._material.Xx());
-        (0, te.d)(this._material, He, Ke, ye, Me)
+            width: mW,
+            height: EW
+          } = WW.getSize(),
+          NW = this._material.shaderLanguage;
+        if (!OW.useWebGL2) return void(0, JW.f)(this._material, OW, iW, mW, Math.round(EW / mW), NW);
+        if (this.loaded.add(iW), this.loaded.size < this.mirrors.length) return;
+        const PW = await yW(this.mirrors, OW.sources, this._material.bD());
+        (0, JW.d)(this._material, OW, PW, mW, NW)
       }
     }
-    var we = He(42233),
-      De = He(41429),
-      Pe = He(37913),
-      Ae = He(42240),
-      Ye = He(41535),
-      Ve = He(41421),
-      ae = He(42177),
-      ce = He(38314),
-      xe = He(42244);
-    class Le extends we.c {
+    var HW = OW(42635),
+      nW = OW(41818),
+      uW = OW(38235),
+      oW = OW(42641),
+      dW = OW(41927),
+      eW = OW(41808),
+      vW = OW(42588),
+      gW = OW(38669),
+      DW = OW(42650);
+    class VW extends HW.e {
       getData() {
         return null
       }
@@ -893,334 +894,335 @@ export const modules = {
         super._rebuild()
       }
     }
-    const Ce = {
-      Mesh: Ae.e,
-      TransformNode: ae.b,
-      bR: we.c,
-      VertexBuffer: we.f,
-      BoundingInfo: De.c,
-      rf: Pe.rf,
-      ArenaBuffer: Le,
-      SubMesh: Ve.b,
-      VertexData: Ye.e,
-      MirroredGeometry: xe.b,
-      meshFromArrays: xe.f,
-      plainMeshFromArrays: xe.h
+    const pW = {
+      Mesh: oW.e,
+      TransformNode: vW.e,
+      OZ: HW.e,
+      VertexBuffer: HW.g,
+      BoundingInfo: nW.b,
+      fA: uW.fA,
+      ArenaBuffer: VW,
+      SubMesh: eW.d,
+      VertexData: dW.c,
+      MirroredGeometry: DW.c,
+      meshFromArrays: DW.d,
+      plainMeshFromArrays: DW.e
     };
-    (0, ce.f)(Ce);
-    var ve = He(38146);
-    class ue extends(ze(oe.e)) {
-      constructor(ee, ie) {
-        if (super(ee, ie), ee instanceof ye.StandardMaterial && ie.dirLightCount > 0) {
-          const ie = ee,
-            He = ie._blockDirtyMechanism;
-          ie._blockDirtyMechanism = !0, ee.disableLighting = !0, ie._blockDirtyMechanism = He;
-          const ye = (0, Te.V)(ee);
-          ye && (ye.disableLighting = !0, (0, Te.S)(ye))
-        }(0, ve.i)(ee)
+    (0, gW.f)(pW);
+    var fW = OW(38511);
+    class CW extends(sW(tW.l)) {
+      constructor(WW, iW) {
+        if (super(WW, iW), WW instanceof mW.StandardMaterial && iW.dirLightCount > 0) {
+          const iW = WW,
+            OW = iW._blockDirtyMechanism;
+          iW._blockDirtyMechanism = !0, WW.disableLighting = !0, iW._blockDirtyMechanism = OW;
+          const mW = (0, jW.bb)(WW);
+          mW && (mW.disableLighting = !0, (0, jW._)(mW))
+        }(0, fW.i)(WW)
       }
-      dispose(ee) {
-        (0, ve.m)(this._material), super.dispose(ee)
+      dispose(WW) {
+        (0, fW.k)(this._material), super.dispose(WW)
       }
     }
 
-    function me(ee, ie) {
-      if (!(ie instanceof ye.StandardMaterial) || ie.specularTexture) return;
+    function XW(WW, iW) {
+      if (!(iW instanceof mW.StandardMaterial) || iW.specularTexture) return;
       const {
-        r: He,
-        g: be,
-        b: Me
-      } = ie.specularColor;
-      0 === He && 0 === be && 0 === Me && (ee.SPECULARTERM = !1)
-    }(0, oe.d)({
-      disableUnusedSpecularTerm: me
+        r: OW,
+        g: EW,
+        b: NW
+      } = iW.specularColor;
+      0 === OW && 0 === EW && 0 === NW && (WW.SPECULARTERM = !1)
+    }(0, tW.h)({
+      disableUnusedSpecularTerm: XW
     });
-    var le = He(38081),
-      Se = He(38330);
-    const ne = new RegExp(`^#define ${Je.c}\\s*$`, "m");
-    class je extends(ze(Je.h)) {
-      constructor(ee, ie) {
-        super(ee, ie), this.xf = !1, ie.ditherOnlyWhileFading && (Se.f.add(ee), this.prewarmDitherTwins(ee))
+    var BW = OW(38437),
+      qW = OW(38683);
+    const RW = new RegExp(`^#define ${wW.c}\\s*$`, "m");
+    class GW extends(sW(wW.i)) {
+      constructor(WW, iW) {
+        super(WW, iW), this.JA = !1, iW.ditherOnlyWhileFading && (qW.h.add(WW), this.prewarmDitherTwins(WW))
       }
-      prewarmDitherTwins(ee) {
-        const ie = new WeakSet;
-        ee.onEffectCreatedObservable.add((He => {
+      prewarmDitherTwins(WW) {
+        const iW = new WeakSet;
+        WW.onEffectCreatedObservable.add((OW => {
           let {
-            effect: ye,
-            subMesh: be
-          } = He;
-          if (this.featureState.prewarmingDither || ie.has(ye)) return;
-          ie.add(ye);
-          const Me = null === be || void 0 === be ? void 0 : be.getMesh();
-          Me && !ne.test(ye.defines) && ee.Xx().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(Me) || ie.delete(ye)
+            effect: mW,
+            subMesh: EW
+          } = OW;
+          if (this.featureState.prewarmingDither || iW.has(mW)) return;
+          iW.add(mW);
+          const NW = null === EW || void 0 === EW ? void 0 : EW.getMesh();
+          NW && !RW.test(mW.defines) && WW.bD().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(NW) || iW.delete(mW)
           }))
         }))
       }
-      prewarmDither(ee) {
-        if (this.xf || ee.RZ()) return !1;
-        const ie = new Ve.b(0, 0, 0, 0, 0, ee, void 0, !1, !1);
+      prewarmDither(WW) {
+        if (this.JA || WW.Ay()) return !1;
+        const iW = new eW.d(0, 0, 0, 0, 0, WW, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(ee, ie)
+          this._material.isReadyForSubMesh(WW, iW)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== ie.effect
+        return null !== iW.effect
       }
-      dispose(ee) {
-        this.xf = !0, super.dispose(ee)
+      dispose(WW) {
+        this.JA = !0, super.dispose(WW)
       }
     }
-    const se = new Map;
+    class IW extends(sW(ZW.d)) {}
+    const aW = new Map;
 
-    function Ie(ee, ie) {
-      se.set(ee, ie)
+    function rW(WW, iW) {
+      aW.set(WW, iW)
     }
-    Ie(Ue.e, Be), Ie(Fe.k, Ze), Ie(Je.h, je), Ie(oe.e, ue), (0, Re.d)({
-      create: (ee, ie) => {
-        const He = new ye.StandardMaterial(ee.name, ie);
-        return (0, le.o)(ee, He), He.detailMap._pluginDefineNames
+    rW(LW.e, MW), rW(cW.e, hW), rW(wW.i, GW), rW(tW.l, CW), rW(ZW.d, IW), (0, xW.c)({
+      create: (WW, iW) => {
+        const OW = new mW.StandardMaterial(WW.name, iW);
+        return (0, BW.w)(WW, OW), OW.detailMap._pluginDefineNames
       },
-      write: (ee, ie, He) => {
-        (0, le.S)(ee.mirror, ie, He)
+      write: (WW, iW, OW) => {
+        (0, BW.Z)(WW.mirror, iW, OW)
       },
-      addFeature: (ee, ie, He) => {
-        const ye = se.get(ie.feature);
-        if (!ye) throw new Error(`${ie.feature.name} has no plugin class (registerPluginClass)`);
-        new ye(ee.mirror, ie.state, ...He)
+      addFeature: (WW, iW, OW) => {
+        const mW = aW.get(iW.feature);
+        if (!mW) throw new Error(`${iW.feature.name} has no plugin class (registerPluginClass)`);
+        new mW(WW.mirror, iW.state, ...OW)
       },
-      texture: (ee, ie, He) => {
+      texture: (WW, iW, OW) => {
         let {
-          url: ye,
-          noMipmap: be,
-          invertY: Me,
-          samplingMode: Ue,
-          data: Fe,
-          sets: Je
-        } = He;
-        if (!Fe) {
-          const He = new Ke.d(ye, ie, be, Me, Ue);
-          return Object.assign(He, Je), void(0, ke.F)(ee, He)
+          url: mW,
+          noMipmap: EW,
+          invertY: NW,
+          samplingMode: LW,
+          data: cW,
+          sets: wW
+        } = OW;
+        if (!cW) {
+          const OW = new PW.d(mW, iW, EW, NW, LW);
+          return Object.assign(OW, wW), void(0, lW.O)(WW, OW)
         }
-        const oe = {},
-          Re = new Promise(((ee, ie) => {
-            oe.onLoad = ee, oe.onError = (ee, He) => {
-              ie(new Error(`${Fe.context}: ${(null===He||void 0===He?void 0:He.message)||ee||"Failed to load texture"}`))
+        const tW = {},
+          ZW = new Promise(((WW, iW) => {
+            tW.onLoad = WW, tW.onError = (WW, OW) => {
+              iW(new Error(`${cW.context}: ${(null===OW||void 0===OW?void 0:OW.message)||WW||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: qe,
-            bytes: fe,
-            label: Te
-          } = Fe,
-          pe = {
-            noMipmap: be,
+            mimeType: xW,
+            bytes: AW,
+            label: bW
+          } = cW,
+          jW = {
+            noMipmap: EW,
             invertY: !1,
-            samplingMode: Ue,
-            ...oe,
-            mimeType: qe,
+            samplingMode: LW,
+            ...tW,
+            mimeType: xW,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          Xe = new Ke.d(null, ie, pe);
-        le.q.set(Xe, Re), Object.assign(Xe, Je), Xe.updateURL(ye, fe);
-        const ze = Xe.getInternalTexture();
-        ze && (ze.label = Te), ee.uvSet = Xe.coordinatesIndex, ee.matrix.set((0, le.L)(Xe)), (0, ke.F)(ee, Xe)
+          UW = new PW.d(null, iW, jW);
+        BW.z.set(UW, ZW), Object.assign(UW, wW), UW.updateURL(mW, AW);
+        const kW = UW.getInternalTexture();
+        kW && (kW.label = bW), WW.uvSet = UW.coordinatesIndex, WW.matrix.set((0, BW.U)(UW)), (0, lW.O)(WW, UW)
       },
-      cube: (ee, ie, He) => {
+      cube: (WW, iW, OW) => {
         let {
-          rootUrl: ye,
-          files: Me,
-          noMipmap: Ue,
-          luminance: Fe
-        } = He;
+          rootUrl: mW,
+          files: NW,
+          noMipmap: LW,
+          luminance: cW
+        } = OW;
         const {
-          samplingMode: Je
-        } = ee.sampler, oe = Je === (0, ke.y)(Ue) ? null : () => {
-          (0, le.K)(Re, Je)
-        }, Re = new be.c(ye, ie, null, Ue, Me, oe, null, (0, ke.u)(Fe));
-        Re.coordinatesMode = Ke.d.SKYBOX_MODE, (0, ke.F)(ee, Re)
+          samplingMode: wW
+        } = WW.sampler, tW = wW === (0, lW.A)(LW) ? null : () => {
+          (0, BW.R)(ZW, wW)
+        }, ZW = new EW.b(mW, iW, null, LW, NW, tW, null, (0, lW.z)(cW));
+        ZW.coordinatesMode = PW.d.SKYBOX_MODE, (0, lW.O)(WW, ZW)
       },
-      canvas: (ee, ie, He) => {
+      canvas: (WW, iW, OW) => {
         let {
-          width: ye,
-          height: be,
-          mipmaps: Ue,
-          samplingMode: Fe,
-          hasAlpha: Je = !1,
-          wrap: oe = Ke.d.CLAMP_ADDRESSMODE
-        } = He;
-        const Re = new Me.d(ie, {
-          width: ye,
-          height: be
-        }, ee, Ue, Fe);
-        Re.hasAlpha = Je, Re.wrapU = oe, Re.wrapV = oe;
-        const ke = (0, le.y)(Re);
-        return (0, le.C)(ke, Re), ke
+          width: mW,
+          height: EW,
+          mipmaps: LW,
+          samplingMode: cW,
+          hasAlpha: wW = !1,
+          wrap: tW = PW.d.CLAMP_ADDRESSMODE
+        } = OW;
+        const ZW = new NW.d(iW, {
+          width: mW,
+          height: EW
+        }, WW, LW, cW);
+        ZW.hasAlpha = wW, ZW.wrapU = tW, ZW.wrapV = tW;
+        const xW = (0, BW.H)(ZW);
+        return (0, BW.K)(xW, ZW), xW
       }
     })
   },
-  42244: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => oe,
-      f: () => Re,
-      h: () => ke
+  42650: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => tW,
+      d: () => ZW,
+      e: () => xW
     });
-    var ye = He(42233),
-      be = He(41175),
-      Me = He(41429),
-      Ke = He(41540),
-      Ue = He(42240),
-      Fe = He(41535),
-      Je = He(38195);
-    class oe extends Ke.b {
+    var mW = OW(42635),
+      EW = OW(41582),
+      NW = OW(41818),
+      PW = OW(41929),
+      LW = OW(42641),
+      cW = OW(41927),
+      wW = OW(38562);
+    class tW extends PW.b {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (ee, ie) => {
-          this.releaseUnlessInstanced(ie)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (WW, iW) => {
+          this.releaseUnlessInstanced(iW)
         }, this.onLinked = null
       }
-      link(ee) {
-        var ie;
-        (0, Je.k)(ee), this.model = ee, null === (ie = this.onLinked) || void 0 === ie || ie.call(this, ee)
+      link(WW) {
+        var iW;
+        (0, wW.k)(WW), this.model = WW, null === (iW = this.onLinked) || void 0 === iW || iW.call(this, WW)
       }
       relink() {
         this.release();
-        const ee = [];
-        for (const be of Object.values(this._vertexBuffers))
-          if (!be.getIsInstanced()) {
+        const WW = [];
+        for (const EW of Object.values(this._vertexBuffers))
+          if (!EW.getIsInstanced()) {
             const {
-              byteOffset: ie,
-              byteStride: He,
-              type: ye,
-              normalized: Me
-            } = be;
-            ee.push({
-              kind: be.getKind(),
-              data: be.getData(),
-              offset: ie,
-              stride: He,
-              components: be.getSize(),
-              glType: ye,
-              isNormalized: Me
+              byteOffset: iW,
+              byteStride: OW,
+              type: mW,
+              normalized: NW
+            } = EW;
+            WW.push({
+              kind: EW.getKind(),
+              data: EW.getData(),
+              offset: iW,
+              stride: OW,
+              components: EW.getSize(),
+              glType: mW,
+              isNormalized: NW
             })
-          } const ie = this._indices.length ? this._indices : null,
+          } const iW = this._indices.length ? this._indices : null,
           {
-            minimum: He,
-            maximum: ye
+            minimum: OW,
+            maximum: mW
           } = this.extend;
-        this.link(new Je.c(ee, ie, this.getTotalVertices(), new Float64Array(He.Qbe()), new Float64Array(ye.Qbe())))
+        this.link(new wW.d(WW, iW, this.getTotalVertices(), new Float64Array(OW.wEW()), new Float64Array(mW.wEW())))
       }
-      copy(ee) {
-        if (!this.model) return super.copy(ee);
-        const ie = new oe(ee, this.Xx()),
-          He = this.eMe(void 0, !0);
-        He && ie.setIndices(He);
-        let Ke = !1;
-        for (const Me in this._vertexBuffers) {
-          const ee = this._vertexBuffers[Me],
-            He = ee.getData();
-          if (!He) continue;
-          const Ue = ee.getSize(),
+      copy(WW) {
+        if (!this.model) return super.copy(WW);
+        const iW = new tW(WW, this.bD()),
+          OW = this.IEW(void 0, !0);
+        OW && iW.setIndices(OW);
+        let PW = !1;
+        for (const NW in this._vertexBuffers) {
+          const WW = this._vertexBuffers[NW],
+            OW = WW.getData();
+          if (!OW) continue;
+          const LW = WW.getSize(),
             {
-              type: Fe,
-              byteOffset: Je,
-              byteStride: oe,
-              normalized: Re
-            } = ee;
-          Ke ||= ee.isUpdatable();
-          const ke = ee.getIsInstanced() ? (He instanceof Array ? 4 * He.length : He.byteLength) / oe : this.getTotalVertices(),
-            qe = (0, be.s)(He, Ue, Fe, Je, oe, ke, !0),
-            fe = {
-              updatable: ee.isUpdatable(),
-              stride: Ue,
-              type: Fe,
-              normalized: Re,
+              type: cW,
+              byteOffset: wW,
+              byteStride: tW,
+              normalized: ZW
+            } = WW;
+          PW ||= WW.isUpdatable();
+          const xW = WW.getIsInstanced() ? (OW instanceof Array ? 4 * OW.length : OW.byteLength) / tW : this.getTotalVertices(),
+            lW = (0, EW.l)(OW, LW, cW, wW, tW, xW, !0),
+            AW = {
+              updatable: WW.isUpdatable(),
+              stride: LW,
+              type: cW,
+              normalized: ZW,
               takeBufferOwnership: !0,
-              instanced: ee.getIsInstanced()
+              instanced: WW.getIsInstanced()
             };
-          ie.setVerticesBuffer(new ye.f(this.Nf(), qe, Me, fe), ke)
+          iW.setVerticesBuffer(new mW.g(this.VA(), lW, NW, AW), xW)
         }
-        return ie._updatable = Ke, ie._boundingInfo = new Me.c(this.extend.minimum, this.extend.maximum), ie.relink(), ie
+        return iW._updatable = PW, iW._boundingInfo = new NW.b(this.extend.minimum, this.extend.maximum), iW.relink(), iW
       }
-      static mergeMeshes(ee, ie, He, ye, be, Me) {
-        const Fe = ee[0].Xx(),
-          Je = new Ue.e(ee[0].name + "_merged", Fe),
-          Re = new oe(Ke.b.RandomId(), Fe, void 0, !1, Je);
+      static mergeMeshes(WW, iW, OW, mW, EW, NW) {
+        const cW = WW[0].bD(),
+          wW = new LW.e(WW[0].name + "_merged", cW),
+          ZW = new tW(PW.b.RandomId(), cW, void 0, !1, wW);
         try {
-          if (!Ue.e.MergeMeshes(ee, ie, He, Je, be, Me)) return Je.dispose(), null
-        } catch (ke) {
-          throw Je.dispose(), ke
+          if (!LW.e.MergeMeshes(WW, iW, OW, wW, EW, NW)) return wW.dispose(), null
+        } catch (xW) {
+          throw wW.dispose(), xW
         }
-        return Re.relink(), Je
+        return ZW.relink(), wW
       }
-      removeVerticesData(ee) {
-        this.releaseUnlessInstanced(ee), super.removeVerticesData(ee)
+      removeVerticesData(WW) {
+        this.releaseUnlessInstanced(WW), super.removeVerticesData(WW)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(ee) {
-        var ie;
-        ee && null !== (ie = this.getVertexBuffer(ee)) && void 0 !== ie && ie.getIsInstanced() || this.release()
+      releaseUnlessInstanced(WW) {
+        var iW;
+        WW && null !== (iW = this.getVertexBuffer(WW)) && void 0 !== iW && iW.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, Je.q)(this.model), this.model = null)
+        this.model && ((0, wW.q)(this.model), this.model = null)
       }
     }
 
-    function Re(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Ue.e(ee, He);
-      const be = (0, Je.h)(ie),
+    function ZW(WW, iW, OW) {
+      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new LW.e(WW, OW);
+      const EW = (0, wW.i)(iW),
         {
-          positions: Me,
-          normals: Re,
-          uvs: ke,
-          indices: qe,
-          named: fe = {}
-        } = ie,
-        Te = new Fe.e;
-      Te.positions = Me, Te.normals = null !== Re && void 0 !== Re ? Re : null, Te.uvs = null !== ke && void 0 !== ke ? ke : null, Te.indices = qe;
-      const pe = new oe(Ke.b.RandomId(), He, Te, !1, ye);
+          positions: NW,
+          normals: ZW,
+          uvs: xW,
+          indices: lW,
+          named: AW = {}
+        } = iW,
+        bW = new cW.c;
+      bW.positions = NW, bW.normals = null !== ZW && void 0 !== ZW ? ZW : null, bW.uvs = null !== xW && void 0 !== xW ? xW : null, bW.indices = lW;
+      const jW = new tW(PW.b.RandomId(), OW, bW, !1, mW);
       for (const {
-          kind: Ke,
-          components: Ue
+          kind: PW,
+          components: LW
         }
-        of be.vertexAttributes) Ke in fe && ye.setVerticesData(Ke, fe[Ke], !1, Ue);
-      return pe.link(be), ye
+        of EW.vertexAttributes) PW in AW && mW.setVerticesData(PW, AW[PW], !1, LW);
+      return jW.link(EW), mW
     }
 
-    function ke(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const be = new Ue.e(ee, He),
+    function xW(WW, iW, OW) {
+      let mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const EW = new LW.e(WW, OW),
         {
-          positions: Me,
-          normals: Ke,
-          uvs: Je,
-          indices: oe
-        } = ie;
-      return Object.assign(new Fe.e, {
-        positions: Me,
-        normals: Ke,
-        uvs: Je,
-        indices: oe
-      }).applyToMesh(be, ye), be
+          positions: NW,
+          normals: PW,
+          uvs: wW,
+          indices: tW
+        } = iW;
+      return Object.assign(new cW.c, {
+        positions: NW,
+        normals: PW,
+        uvs: wW,
+        indices: tW
+      }).applyToMesh(EW, mW), EW
     }
   },
-  39492: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => ye,
-      c: () => Ke,
-      e: () => Me,
-      i: () => be,
-      l: () => Ue,
-      n: () => Je,
-      r: () => oe,
-      v: () => Fe
+  39931: (WW, iW, OW) => {
+    OW.d(iW, {
+      A: () => cW,
+      c: () => mW,
+      g: () => PW,
+      h: () => NW,
+      l: () => EW,
+      p: () => LW,
+      t: () => wW,
+      w: () => tW
     });
-    const ye = 16,
-      be = 256,
-      Me = {
+    const mW = 16,
+      EW = 256,
+      NW = {
         position: 0,
         time: 3,
         direction: 4,
@@ -1229,9 +1231,9 @@ export const modules = {
         seed: 9,
         colour: 12
       },
-      Ke = 16,
-      Ue = 256,
-      Fe = {
+      PW = 16,
+      LW = 256,
+      cW = {
         gravity: 0,
         colorCount: 3,
         colorDead: 4,
@@ -1239,28 +1241,28 @@ export const modules = {
         remapCount: 9,
         ramp: 10,
         colorPositions: 12,
-        color1: 12 + ye,
-        color2: 12 + 5 * ye,
-        Op: 12 + 9 * ye,
-        remap: 12 + 13 * ye
+        color1: 12 + mW,
+        color2: 12 + 5 * mW,
+        Sj: 12 + 9 * mW,
+        remap: 12 + 13 * mW
       },
-      Je = 12 + 17 * ye,
-      oe = [Fe.colorCount, Fe.velocityCount, Fe.remapCount, Fe.ramp]
+      wW = 12 + 17 * mW,
+      tW = [cW.colorCount, cW.velocityCount, cW.remapCount, cW.ramp]
   },
-  39488: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => pe,
-      f: () => Be
+  39925: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => jW,
+      g: () => sW
     });
-    var ye = He(37938),
-      be = He(37913),
-      Me = He(38075),
-      Ke = He(39492);
-    class Ue {
-      constructor(ee) {
-        this.bk = ee, this.records = void 0, this.recordBits = void 0, this.deaths = void 0, this.cursor = 0, this.highWater = 0, this.uploadFrom = -1, this.uploadTo = 0, this.wrapTo = 0;
-        const ie = Math.max(1, ee);
-        this.records = new Float32Array(ie * Ke.c), this.recordBits = new Uint32Array(this.records.buffer), this.deaths = new Float64Array(ie).fill(-1 / 0)
+    var mW = OW(38285),
+      EW = OW(38235),
+      NW = OW(38431),
+      PW = OW(39931);
+    class LW {
+      constructor(WW) {
+        this.aZ = WW, this.records = void 0, this.recordBits = void 0, this.deaths = void 0, this.cursor = 0, this.highWater = 0, this.uploadFrom = -1, this.uploadTo = 0, this.wrapTo = 0;
+        const iW = Math.max(1, WW);
+        this.records = new Float32Array(iW * PW.g), this.recordBits = new Uint32Array(this.records.buffer), this.deaths = new Float64Array(iW).fill(-1 / 0)
       }
       restart() {
         this.cursor = 0, this.highWater = 0
@@ -1268,30 +1270,30 @@ export const modules = {
       clear() {
         this.deaths.fill(-1 / 0), this.restart(), this.uploadFrom = -1, this.wrapTo = 0
       }
-      freeSlot(ee) {
-        const ie = this.bk;
-        for (let He = 0; He < ie; He++) {
-          const He = this.cursor;
-          if (this.cursor = He + 1 === ie ? 0 : He + 1, this.deaths[He] <= ee) return He
+      freeSlot(WW) {
+        const iW = this.aZ;
+        for (let OW = 0; OW < iW; OW++) {
+          const OW = this.cursor;
+          if (this.cursor = OW + 1 === iW ? 0 : OW + 1, this.deaths[OW] <= WW) return OW
         }
         return -1
       }
-      written(ee, ie) {
-        this.deaths[ee] = ie, ee >= this.highWater && (this.highWater = ee + 1), this.uploadFrom < 0 ? (this.uploadFrom = ee, this.uploadTo = ee + 1) : ee >= this.uploadFrom && 0 === this.wrapTo ? this.uploadTo = Math.max(this.uploadTo, ee + 1) : this.wrapTo = Math.max(this.wrapTo, ee + 1)
+      written(WW, iW) {
+        this.deaths[WW] = iW, WW >= this.highWater && (this.highWater = WW + 1), this.uploadFrom < 0 ? (this.uploadFrom = WW, this.uploadTo = WW + 1) : WW >= this.uploadFrom && 0 === this.wrapTo ? this.uploadTo = Math.max(this.uploadTo, WW + 1) : this.wrapTo = Math.max(this.wrapTo, WW + 1)
       }
-      shiftTimes(ee) {
-        const ie = this.records,
-          He = this.highWater * Ke.c;
-        for (let ye = Ke.e.time; ye < He; ye += Ke.c) ie[ye] -= ee;
+      shiftTimes(WW) {
+        const iW = this.records,
+          OW = this.highWater * PW.g;
+        for (let mW = PW.h.time; mW < OW; mW += PW.g) iW[mW] -= WW;
         this.highWater > 0 && (this.uploadFrom = 0, this.uploadTo = this.highWater, this.wrapTo = 0)
       }
-      takeUploads(ee) {
-        this.uploadFrom >= 0 && (ee(this.uploadFrom, this.uploadTo), this.wrapTo > 0 && ee(0, this.wrapTo)), this.uploadFrom = -1, this.wrapTo = 0
+      takeUploads(WW) {
+        this.uploadFrom >= 0 && (WW(this.uploadFrom, this.uploadTo), this.wrapTo > 0 && WW(0, this.wrapTo)), this.uploadFrom = -1, this.wrapTo = 0
       }
-      liveCount(ee) {
-        let ie = 0;
-        for (let He = 0; He < this.highWater; He++) this.deaths[He] > ee && ie++;
-        return ie
+      liveCount(WW) {
+        let iW = 0;
+        for (let OW = 0; OW < this.highWater; OW++) this.deaths[OW] > WW && iW++;
+        return iW
       }
       drawCount() {
         return this.highWater
@@ -1300,107 +1302,107 @@ export const modules = {
         return this.cursor < this.highWater ? this.cursor : 0
       }
     }
-    var Fe = He(38020),
-      Je = He(39499),
-      oe = He(39503),
-      Re = He(39508);
-    class ke {
+    var cW = OW(38369),
+      wW = OW(39938),
+      tW = OW(39940),
+      ZW = OW(39948);
+    class xW {
       constructor() {
-        this.particleEmitterType = new oe.d, this.texture = null, this.blendMode = Re.h, this.emitRate = 10, this.manualEmitCount = -1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minSize = 1, this.maxSize = 1, this.updateSpeed = .01, this.gravity = be.rf.Zero(), this.worldOffset = new be.rf(0, 0, 0), this.color1 = new Fe.e(1, 1, 1, 1), this.color2 = new Fe.e(1, 1, 1, 1), this.colorDead = new Fe.e(0, 0, 0, 1), this.useRampGradients = !1, this.disposeOnStop = !1, this.colorGradients = null, this.velocityGradients = null, this.colorRemapGradients = null, this.rampGradients = null
+        this.particleEmitterType = new tW.d, this.texture = null, this.blendMode = ZW.d, this.emitRate = 10, this.manualEmitCount = -1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minSize = 1, this.maxSize = 1, this.updateSpeed = .01, this.gravity = EW.fA.Zero(), this.worldOffset = new EW.fA(0, 0, 0), this.color1 = new cW.c(1, 1, 1, 1), this.color2 = new cW.c(1, 1, 1, 1), this.colorDead = new cW.c(0, 0, 0, 1), this.useRampGradients = !1, this.disposeOnStop = !1, this.colorGradients = null, this.velocityGradients = null, this.colorRemapGradients = null, this.rampGradients = null
       }
       get direction1() {
-        var ee;
-        return null !== (ee = qe(this).direction1) && void 0 !== ee ? ee : be.rf.Zero()
+        var WW;
+        return null !== (WW = lW(this).direction1) && void 0 !== WW ? WW : EW.fA.Zero()
       }
-      set direction1(ee) {
-        const ie = qe(this);
-        ie.direction1 && (ie.direction1 = ee)
+      set direction1(WW) {
+        const iW = lW(this);
+        iW.direction1 && (iW.direction1 = WW)
       }
       get direction2() {
-        var ee;
-        return null !== (ee = qe(this).direction2) && void 0 !== ee ? ee : be.rf.Zero()
+        var WW;
+        return null !== (WW = lW(this).direction2) && void 0 !== WW ? WW : EW.fA.Zero()
       }
-      set direction2(ee) {
-        const ie = qe(this);
-        ie.direction2 && (ie.direction2 = ee)
+      set direction2(WW) {
+        const iW = lW(this);
+        iW.direction2 && (iW.direction2 = WW)
       }
       get minEmitBox() {
-        var ee;
-        return null !== (ee = qe(this).minEmitBox) && void 0 !== ee ? ee : be.rf.Zero()
+        var WW;
+        return null !== (WW = lW(this).minEmitBox) && void 0 !== WW ? WW : EW.fA.Zero()
       }
-      set minEmitBox(ee) {
-        const ie = qe(this);
-        ie.minEmitBox && (ie.minEmitBox = ee)
+      set minEmitBox(WW) {
+        const iW = lW(this);
+        iW.minEmitBox && (iW.minEmitBox = WW)
       }
       get maxEmitBox() {
-        var ee;
-        return null !== (ee = qe(this).maxEmitBox) && void 0 !== ee ? ee : be.rf.Zero()
+        var WW;
+        return null !== (WW = lW(this).maxEmitBox) && void 0 !== WW ? WW : EW.fA.Zero()
       }
-      set maxEmitBox(ee) {
-        const ie = qe(this);
-        ie.maxEmitBox && (ie.maxEmitBox = ee)
+      set maxEmitBox(WW) {
+        const iW = lW(this);
+        iW.maxEmitBox && (iW.maxEmitBox = WW)
       }
-      createBoxEmitter(ee, ie, He, ye) {
-        const be = new oe.d;
-        return this.particleEmitterType = be, be.direction1 = ee, be.direction2 = ie, be.minEmitBox = He, be.maxEmitBox = ye, be
+      createBoxEmitter(WW, iW, OW, mW) {
+        const EW = new tW.d;
+        return this.particleEmitterType = EW, EW.direction1 = WW, EW.direction2 = iW, EW.minEmitBox = OW, EW.maxEmitBox = mW, EW
       }
-      addColorGradient(ee, ie, He) {
-        return this.colorGradients ??= [], this.colorGradients.push(new Je.e(ee, ie, He)), this.colorGradients.sort(fe), this
+      addColorGradient(WW, iW, OW) {
+        return this.colorGradients ??= [], this.colorGradients.push(new wW.d(WW, iW, OW)), this.colorGradients.sort(AW), this
       }
-      removeColorGradient(ee) {
-        return Te(this.colorGradients, ee), this
+      removeColorGradient(WW) {
+        return bW(this.colorGradients, WW), this
       }
       getColorGradients() {
         return this.colorGradients
       }
-      addVelocityGradient(ee, ie, He) {
-        return this.velocityGradients ??= [], this.velocityGradients.push(new Je.i(ee, ie, He)), this.velocityGradients.sort(fe), this
+      addVelocityGradient(WW, iW, OW) {
+        return this.velocityGradients ??= [], this.velocityGradients.push(new wW.i(WW, iW, OW)), this.velocityGradients.sort(AW), this
       }
       getVelocityGradients() {
         return this.velocityGradients
       }
-      addColorRemapGradient(ee, ie, He) {
-        return this.colorRemapGradients ??= [], this.colorRemapGradients.push(new Je.i(ee, ie, He)), this.colorRemapGradients.sort(fe), this
+      addColorRemapGradient(WW, iW, OW) {
+        return this.colorRemapGradients ??= [], this.colorRemapGradients.push(new wW.i(WW, iW, OW)), this.colorRemapGradients.sort(AW), this
       }
       getColorRemapGradients() {
         return this.colorRemapGradients
       }
-      addRampGradient(ee, ie) {
-        return this.rampGradients ??= [], this.rampGradients.push(new Je.g(ee, ie)), this.rampGradients.sort(fe), this
+      addRampGradient(WW, iW) {
+        return this.rampGradients ??= [], this.rampGradients.push(new wW.g(WW, iW)), this.rampGradients.sort(AW), this
       }
-      removeRampGradient(ee) {
-        return Te(this.rampGradients, ee), this
+      removeRampGradient(WW) {
+        return bW(this.rampGradients, WW), this
       }
       getRampGradients() {
         return this.rampGradients
       }
     }
 
-    function qe(ee) {
-      return ee.particleEmitterType
+    function lW(WW) {
+      return WW.particleEmitterType
     }
 
-    function fe(ee, ie) {
-      return ee.gradient < ie.gradient ? -1 : ee.gradient > ie.gradient ? 1 : 0
+    function AW(WW, iW) {
+      return WW.gradient < iW.gradient ? -1 : WW.gradient > iW.gradient ? 1 : 0
     }
 
-    function Te(ee, ie) {
-      const He = ee ? ee.findIndex((ee => ee.gradient === ie)) : -1;
-      He >= 0 && ee.splice(He, 1)
+    function bW(WW, iW) {
+      const OW = WW ? WW.findIndex((WW => WW.gradient === iW)) : -1;
+      OW >= 0 && WW.splice(OW, 1)
     }
-    class pe extends ke {
-      constructor(ee, ie, He) {
-        super(), this.name = ee, this.host = He, this.onDispose = Xe, this.onAnimationEnd = null, this.ring = void 0, this.emitterValue = be.rf.Zero(), this.emitterDisposed = null, this.time = 0, this.epoch = 0, this.anchor = [0, 0, 0], this.shift = [0, 0, 0], this.liveUntil = -1 / 0, this.newPartsExcess = 0, this.started = !1, this.stopped = !1, this.alive = !1, this.xf = !1, this.emitterMatrix = new be.Matrix, this.inverseEmitterMatrix = new be.Matrix, this.spawned = {
-          position: new be.rf,
-          direction: new be.rf
-        }, this.ring = new Ue(ie)
+    class jW extends xW {
+      constructor(WW, iW, OW) {
+        super(), this.name = WW, this.host = OW, this.onDispose = UW, this.onAnimationEnd = null, this.ring = void 0, this.emitterValue = EW.fA.Zero(), this.emitterDisposed = null, this.time = 0, this.epoch = 0, this.anchor = [0, 0, 0], this.shift = [0, 0, 0], this.liveUntil = -1 / 0, this.newPartsExcess = 0, this.started = !1, this.stopped = !1, this.alive = !1, this.JA = !1, this.emitterMatrix = new EW.Matrix, this.inverseEmitterMatrix = new EW.Matrix, this.spawned = {
+          position: new EW.fA,
+          direction: new EW.fA
+        }, this.ring = new LW(iW)
       }
       get emitter() {
         return this.emitterValue
       }
-      set emitter(ee) {
-        var ie;
-        null === (ie = this.emitterDisposed) || void 0 === ie || ie.remove(), this.emitterDisposed = null, this.emitterValue = ee, ee && Ee(ee) && (this.emitterDisposed = ee.Bx.add((() => {
+      set emitter(WW) {
+        var iW;
+        null === (iW = this.emitterDisposed) || void 0 === iW || iW.remove(), this.emitterDisposed = null, this.emitterValue = WW, WW && MW(WW) && (this.emitterDisposed = WW.jD.add((() => {
           this.emitterDisposed = null, this.dispose()
         })))
       }
@@ -1420,12 +1422,12 @@ export const modules = {
         return this.started && !this.stopped
       }
       isReady() {
-        return !this.xf && null !== this.emitterValue && this.host.canDraw(this)
+        return !this.JA && null !== this.emitterValue && this.host.canDraw(this)
       }
       dispose() {
-        var ee;
-        let ie = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this.xf || (this.xf = !0, null === (ee = this.emitterDisposed) || void 0 === ee || ee.remove(), this.emitterDisposed = null, ie && ((0, Me.A)(this.texture), this.texture = null), this.host.remove(this), this.onDispose())
+        var WW;
+        let iW = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        this.JA || (this.JA = !0, null === (WW = this.emitterDisposed) || void 0 === WW || WW.remove(), this.emitterDisposed = null, iW && ((0, NW.D)(this.texture), this.texture = null), this.host.remove(this), this.onDispose())
       }
       reset() {
         this.liveUntil = -1 / 0, this.alive = !1, this.ring.clear()
@@ -1433,258 +1435,258 @@ export const modules = {
       getActiveCount() {
         return this.ring.liveCount(this.time)
       }
-      animateIfActive(ee) {
-        const ie = this.emitter;
-        return !!ie && !(Ee(ie) && !ie.isEnabled()) && this.animate(ee)
+      animateIfActive(WW) {
+        const iW = this.emitter;
+        return !!iW && !(MW(iW) && !iW.isEnabled()) && this.animate(WW)
       }
-      animate(ee) {
+      animate(WW) {
         if (!this.started) return !1;
         if (!this.isReady()) return this.endIfSpent(), !1;
-        const ie = this.updateSpeed * ee;
-        let He;
-        return this.manualEmitCount > -1 ? (He = this.manualEmitCount, this.newPartsExcess = 0, this.manualEmitCount = 0) : (He = this.emitRate * ie | 0, this.newPartsExcess += this.emitRate * ie - He), this.newPartsExcess > 1 && (He += this.newPartsExcess | 0, this.newPartsExcess -= this.newPartsExcess | 0), this.stopped && (He = 0), this.alive = this.liveUntil > this.time, this.time += ie, this.time - this.epoch > 4096 && (this.ring.shiftTimes(this.time - this.epoch), this.epoch = this.time), He > 0 && this.spawn(He), !(this.stopped && !this.alive && this.end()) && (0 === this.manualEmitCount && this.disposeOnStop && (this.stopped = !0), !0)
+        const iW = this.updateSpeed * WW;
+        let OW;
+        return this.manualEmitCount > -1 ? (OW = this.manualEmitCount, this.newPartsExcess = 0, this.manualEmitCount = 0) : (OW = this.emitRate * iW | 0, this.newPartsExcess += this.emitRate * iW - OW), this.newPartsExcess > 1 && (OW += this.newPartsExcess | 0, this.newPartsExcess -= this.newPartsExcess | 0), this.stopped && (OW = 0), this.alive = this.liveUntil > this.time, this.time += iW, this.time - this.epoch > 4096 && (this.ring.shiftTimes(this.time - this.epoch), this.epoch = this.time), OW > 0 && this.spawn(OW), !(this.stopped && !this.alive && this.end()) && (0 === this.manualEmitCount && this.disposeOnStop && (this.stopped = !0), !0)
       }
       endIfSpent() {
-        this.started && this.stopped && !this.xf && !this.hasLiveParticles() && (this.manualEmitCount > 0 && (this.manualEmitCount = 0), this.end())
+        this.started && this.stopped && !this.JA && !this.hasLiveParticles() && (this.manualEmitCount > 0 && (this.manualEmitCount = 0), this.end())
       }
       end() {
-        var ee;
-        return this.started = !1, null === (ee = this.onAnimationEnd) || void 0 === ee || ee.call(this), !!this.xf || !!this.disposeOnStop && (this.host.disposeStopped(this), !0)
+        var WW;
+        return this.started = !1, null === (WW = this.onAnimationEnd) || void 0 === WW || WW.call(this), !!this.JA || !!this.disposeOnStop && (this.host.disposeStopped(this), !0)
       }
       hasLiveParticles() {
         return this.liveUntil > this.time
       }
-      drawOffset(ee, ie) {
-        ee[ie] = this.anchor[0] + this.shift[0] + this.worldOffset.x, ee[ie + 1] = this.anchor[1] + this.shift[1] + this.worldOffset.y, ee[ie + 2] = this.anchor[2] + this.shift[2] + this.worldOffset.z
+      drawOffset(WW, iW) {
+        WW[iW] = this.anchor[0] + this.shift[0] + this.worldOffset.x, WW[iW + 1] = this.anchor[1] + this.shift[1] + this.worldOffset.y, WW[iW + 2] = this.anchor[2] + this.shift[2] + this.worldOffset.z
       }
       drawTime() {
         return this.time - this.epoch
       }
-      Zie(ee, ie) {
-        this.emitterValue && Ee(this.emitterValue) ? (this.shift[0] -= ee[0], this.shift[1] -= ee[1], this.shift[2] -= ee[2]) : this.worldOffset.set(-ie[0], -ie[1], -ie[2])
+      YWW(WW, iW) {
+        this.emitterValue && MW(this.emitterValue) ? (this.shift[0] -= WW[0], this.shift[1] -= WW[1], this.shift[2] -= WW[2]) : this.worldOffset.set(-iW[0], -iW[1], -iW[2])
       }
-      spawn(ee) {
-        var ie, He;
-        const Me = this.emitterValue,
-          Ue = Ee(Me) ? Me.getWorldMatrix() : be.Matrix.TranslationToRef(Me.x, Me.y, Me.z, this.emitterMatrix);
-        Ue.invertToRef(this.inverseEmitterMatrix);
+      spawn(WW) {
+        var iW, OW;
+        const NW = this.emitterValue,
+          LW = MW(NW) ? NW.getWorldMatrix() : EW.Matrix.TranslationToRef(NW.x, NW.y, NW.z, this.emitterMatrix);
+        LW.invertToRef(this.inverseEmitterMatrix);
         const {
-          position: Fe,
-          direction: Je
-        } = this.spawned, oe = this.spawned, Re = this.ring, ke = this.liveUntil <= this.time;
-        ke && (this.epoch = this.time, this.shift[0] = this.shift[1] = this.shift[2] = 0, Re.restart());
+          position: cW,
+          direction: wW
+        } = this.spawned, tW = this.spawned, ZW = this.ring, xW = this.liveUntil <= this.time;
+        xW && (this.epoch = this.time, this.shift[0] = this.shift[1] = this.shift[2] = 0, ZW.restart());
         const {
-          records: qe,
-          recordBits: fe
-        } = Re, Te = Ke.e, pe = null === (ie = this.getColorGradients()) || void 0 === ie ? void 0 : ie[0], Xe = pe ? pe.color1 : this.color1, ze = pe ? null !== (He = pe.color2) && void 0 !== He ? He : pe.color1 : this.color2;
-        for (let be = 0; be < ee; be++) {
-          const ee = Re.freeSlot(this.time);
-          if (ee < 0) break;
-          const ie = (0, ye.RandomRange)(this.minLifeTime, this.maxLifeTime),
-            He = (0, ye.RandomRange)(this.minEmitPower, this.maxEmitPower);
-          this.particleEmitterType.startPositionFunction(Ue, Fe, oe, !1), this.particleEmitterType.startDirectionFunction(Ue, Je, oe, !1, this.inverseEmitterMatrix), 0 === He ? Je.set(0, 0, 0) : Je.scaleInPlace(He);
-          const Me = (0, ye.RandomRange)(this.minSize, this.maxSize);
-          ke && 0 === be && (this.anchor[0] = Fe.x, this.anchor[1] = Fe.y, this.anchor[2] = Fe.z);
-          const pe = ee * Ke.c;
-          qe[pe + Te.position] = Fe.x - this.anchor[0] - this.shift[0], qe[pe + Te.position + 1] = Fe.y - this.anchor[1] - this.shift[1], qe[pe + Te.position + 2] = Fe.z - this.anchor[2] - this.shift[2], qe[pe + Te.time] = this.time - this.epoch, qe[pe + Te.direction] = Je.x, qe[pe + Te.direction + 1] = Je.y, qe[pe + Te.direction + 2] = Je.z, qe[pe + Te.lifeTime] = ie, qe[pe + Te.size] = Me, fe[pe + Te.seed] = 4294967296 * Math.random() >>> 0;
-          const Be = Math.random();
-          qe[pe + Te.colour] = Xe.r + (ze.r - Xe.r) * Be, qe[pe + Te.colour + 1] = Xe.g + (ze.g - Xe.g) * Be, qe[pe + Te.colour + 2] = Xe.b + (ze.b - Xe.b) * Be, qe[pe + Te.colour + 3] = Xe.a + (ze.a - Xe.a) * Be;
-          const Ee = this.time + ie;
-          Ee > this.liveUntil && (this.liveUntil = Ee), Re.written(ee, Ee)
+          records: lW,
+          recordBits: AW
+        } = ZW, bW = PW.h, jW = null === (iW = this.getColorGradients()) || void 0 === iW ? void 0 : iW[0], UW = jW ? jW.color1 : this.color1, kW = jW ? null !== (OW = jW.color2) && void 0 !== OW ? OW : jW.color1 : this.color2;
+        for (let EW = 0; EW < WW; EW++) {
+          const WW = ZW.freeSlot(this.time);
+          if (WW < 0) break;
+          const iW = (0, mW.RandomRange)(this.minLifeTime, this.maxLifeTime),
+            OW = (0, mW.RandomRange)(this.minEmitPower, this.maxEmitPower);
+          this.particleEmitterType.startPositionFunction(LW, cW, tW, !1), this.particleEmitterType.startDirectionFunction(LW, wW, tW, !1, this.inverseEmitterMatrix), 0 === OW ? wW.set(0, 0, 0) : wW.scaleInPlace(OW);
+          const NW = (0, mW.RandomRange)(this.minSize, this.maxSize);
+          xW && 0 === EW && (this.anchor[0] = cW.x, this.anchor[1] = cW.y, this.anchor[2] = cW.z);
+          const jW = WW * PW.g;
+          lW[jW + bW.position] = cW.x - this.anchor[0] - this.shift[0], lW[jW + bW.position + 1] = cW.y - this.anchor[1] - this.shift[1], lW[jW + bW.position + 2] = cW.z - this.anchor[2] - this.shift[2], lW[jW + bW.time] = this.time - this.epoch, lW[jW + bW.direction] = wW.x, lW[jW + bW.direction + 1] = wW.y, lW[jW + bW.direction + 2] = wW.z, lW[jW + bW.lifeTime] = iW, lW[jW + bW.size] = NW, AW[jW + bW.seed] = 4294967296 * Math.random() >>> 0;
+          const sW = Math.random();
+          lW[jW + bW.colour] = UW.r + (kW.r - UW.r) * sW, lW[jW + bW.colour + 1] = UW.g + (kW.g - UW.g) * sW, lW[jW + bW.colour + 2] = UW.b + (kW.b - UW.b) * sW, lW[jW + bW.colour + 3] = UW.a + (kW.a - UW.a) * sW;
+          const MW = this.time + iW;
+          MW > this.liveUntil && (this.liveUntil = MW), ZW.written(WW, MW)
         }
       }
     }
 
-    function Xe() {}
-    const ze = 5;
+    function UW() {}
+    const kW = 5;
 
-    function Be(ee, ie) {
-      const He = [];
-      let ye = 0;
-      for (const be of ee) be.isReady() || (ye++, He.length < ze && He.push(`${ie} particle system ${be.name}`));
-      return ye > He.length && He.push(`${ye-He.length} more ${ie} particle systems`), He
+    function sW(WW, iW) {
+      const OW = [];
+      let mW = 0;
+      for (const EW of WW) EW.isReady() || (mW++, OW.length < kW && OW.push(`${iW} particle system ${EW.name}`));
+      return mW > OW.length && OW.push(`${mW-OW.length} more ${iW} particle systems`), OW
     }
 
-    function Ee(ee) {
-      return void 0 !== ee.position
+    function MW(WW) {
+      return void 0 !== WW.position
     }
   },
-  44799: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => pe,
-      g: () => Ue,
-      h: () => Ke,
-      l: () => Je
+  53776: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => jW,
+      g: () => LW,
+      h: () => PW,
+      i: () => wW
     });
-    var ye = He(38020),
-      be = He(39499),
-      Me = He(39492);
+    var mW = OW(38369),
+      EW = OW(39938),
+      NW = OW(39931);
 
-    function Ke(ee, ie, He, ye) {
-      const be = Me.v;
-      ie.fill(0), ee.gravity.toArray(ie, be.gravity), ee.colorDead.toArray(ie, be.colorDead), He[be.ramp] = ee.useRampGradients ? 1 : 0;
-      const Ke = ee.getColorGradients(),
-        Ue = ke(ee, Ke, "colour", ye);
-      He[be.colorCount] = Ue;
-      for (let Me = 0; Me < Ue; Me++) {
-        var Fe;
-        const ee = Ke[qe(Ke, Me)];
-        ie[be.colorPositions + Me] = ee.gradient, ee.color1.toArray(ie, be.color1 + 4 * Me), (null !== (Fe = ee.color2) && void 0 !== Fe ? Fe : ee.color1).toArray(ie, be.color2 + 4 * Me)
+    function PW(WW, iW, OW, mW) {
+      const EW = NW.A;
+      iW.fill(0), WW.gravity.toArray(iW, EW.gravity), WW.colorDead.toArray(iW, EW.colorDead), OW[EW.ramp] = WW.useRampGradients ? 1 : 0;
+      const PW = WW.getColorGradients(),
+        LW = xW(WW, PW, "colour", mW);
+      OW[EW.colorCount] = LW;
+      for (let NW = 0; NW < LW; NW++) {
+        var cW;
+        const WW = PW[lW(PW, NW)];
+        iW[EW.colorPositions + NW] = WW.gradient, WW.color1.toArray(iW, EW.color1 + 4 * NW), (null !== (cW = WW.color2) && void 0 !== cW ? cW : WW.color1).toArray(iW, EW.color2 + 4 * NW)
       }
-      const Je = ee.getVelocityGradients(),
-        oe = ke(ee, Je, "Op", ye);
-      He[be.velocityCount] = oe;
-      for (let Me = 0; Me < oe; Me++) ze(ie, be.Op + 4 * Me, Je[qe(Je, Me)]);
-      const Re = ee.useRampGradients ? ee.getColorRemapGradients() : null,
-        fe = ke(ee, Re, "colour remap", ye);
-      He[be.remapCount] = fe;
-      for (let Me = 0; Me < fe; Me++) ze(ie, be.remap + 4 * Me, Re[qe(Re, Me)])
+      const wW = WW.getVelocityGradients(),
+        tW = xW(WW, wW, "Sj", mW);
+      OW[EW.velocityCount] = tW;
+      for (let NW = 0; NW < tW; NW++) kW(iW, EW.Sj + 4 * NW, wW[lW(wW, NW)]);
+      const ZW = WW.useRampGradients ? WW.getColorRemapGradients() : null,
+        AW = xW(WW, ZW, "colour remap", mW);
+      OW[EW.remapCount] = AW;
+      for (let NW = 0; NW < AW; NW++) kW(iW, EW.remap + 4 * NW, ZW[lW(ZW, NW)])
     }
 
-    function Ue() {
+    function LW() {
       return {
         key: [],
-        texels: new Uint8Array(4 * Me.i)
+        texels: new Uint8Array(4 * NW.l)
       }
     }
-    const Fe = [];
+    const cW = [];
 
-    function Je(ee, ie) {
-      return oe(ee, Fe), !Xe(Fe, ie.key) && (ie.key.length = 0, ie.key.push(...Fe), ie.key.length > 0 && function(ee, ie) {
-        for (let He = 0; He < Me.i; He++) be.k.GetCurrentGradient(He / Me.i, ee, ((ee, ie, He) => {
-          ye.Color3.LerpToRef(ee.color, ie.color, He, Re)
-        })), ie[4 * He] = 255 * Re.r, ie[4 * He + 1] = 255 * Re.g, ie[4 * He + 2] = 255 * Re.b, ie[4 * He + 3] = 255
-      }(ee.getRampGradients(), ie.texels), !0)
+    function wW(WW, iW) {
+      return tW(WW, cW), !UW(cW, iW.key) && (iW.key.length = 0, iW.key.push(...cW), iW.key.length > 0 && function(WW, iW) {
+        for (let OW = 0; OW < NW.l; OW++) EW.m.GetCurrentGradient(OW / NW.l, WW, ((WW, iW, OW) => {
+          mW.Color3.LerpToRef(WW.color, iW.color, OW, ZW)
+        })), iW[4 * OW] = 255 * ZW.r, iW[4 * OW + 1] = 255 * ZW.g, iW[4 * OW + 2] = 255 * ZW.b, iW[4 * OW + 3] = 255
+      }(WW.getRampGradients(), iW.texels), !0)
     }
 
-    function oe(ee, ie) {
-      ie.length = 0;
-      const He = ee.useRampGradients ? ee.getRampGradients() : null;
-      if (null !== He && void 0 !== He && He.length) {
-        ie.push(He.length);
-        for (const ee of He) ie.push(ee.gradient, ee.color.r, ee.color.g, ee.color.b)
+    function tW(WW, iW) {
+      iW.length = 0;
+      const OW = WW.useRampGradients ? WW.getRampGradients() : null;
+      if (null !== OW && void 0 !== OW && OW.length) {
+        iW.push(OW.length);
+        for (const WW of OW) iW.push(WW.gradient, WW.color.r, WW.color.g, WW.color.b)
       }
     }
-    const Re = new ye.Color3;
+    const ZW = new mW.Color3;
 
-    function ke(ee, ie, He, ye) {
-      return ie ? ie.length > Me.b ? (ye(`particleStops:${He}`, `GPU particles use the first 2 and last ${Me.b-2} of more than ${Me.b} ${He} gradient stops (${ee.name})`), Me.b) : ie.length : 0
+    function xW(WW, iW, OW, mW) {
+      return iW ? iW.length > NW.c ? (mW(`particleStops:${OW}`, `GPU particles use the first 2 and last ${NW.c-2} of more than ${NW.c} ${OW} gradient stops (${WW.name})`), NW.c) : iW.length : 0
     }
 
-    function qe(ee, ie) {
-      return ie < 2 || ee.length <= Me.b ? ie : ee.length - Me.b + ie
+    function lW(WW, iW) {
+      return iW < 2 || WW.length <= NW.c ? iW : WW.length - NW.c + iW
     }
-    const fe = new Float32Array(Me.n),
-      Te = new Uint32Array(fe.buffer);
+    const AW = new Float32Array(NW.t),
+      bW = new Uint32Array(AW.buffer);
 
-    function pe(ee, ie, He) {
-      return Ke(ee, fe, Te, He), ie && Xe(Te, ie) ? null : Te.slice()
+    function jW(WW, iW, OW) {
+      return PW(WW, AW, bW, OW), iW && UW(bW, iW) ? null : bW.slice()
     }
 
-    function Xe(ee, ie) {
-      if (ee.length !== ie.length) return !1;
-      for (let He = 0; He < ee.length; He++)
-        if (ee[He] !== ie[He]) return !1;
+    function UW(WW, iW) {
+      if (WW.length !== iW.length) return !1;
+      for (let OW = 0; OW < WW.length; OW++)
+        if (WW[OW] !== iW[OW]) return !1;
       return !0
     }
 
-    function ze(ee, ie, He) {
-      var ye;
-      ee[ie] = He.gradient, ee[ie + 1] = He.factor1, ee[ie + 2] = null !== (ye = He.factor2) && void 0 !== ye ? ye : He.factor1
+    function kW(WW, iW, OW) {
+      var mW;
+      WW[iW] = OW.gradient, WW[iW + 1] = OW.factor1, WW[iW + 2] = null !== (mW = OW.factor2) && void 0 !== mW ? mW : OW.factor1
     }
   },
-  42229: (ee, ie, He) => {
-    function ye(ee, ie, He) {
-      const ye = ie * ie * 4,
-        be = ee[0].layers,
-        Me = be * (ee.length - 1) + ee[ee.length - 1].layers,
-        Ke = new Uint8Array(Me * ye);
-      ee.forEach(((ie, He) => {
-        const Me = He + 1 < ee.length ? Math.min(ie.layers, be) : ie.layers;
-        Ke.set(new Uint8Array(ie.pixels.buffer, ie.pixels.byteOffset, Me * ye), He * be * ye)
+  42633: (WW, iW, OW) => {
+    function mW(WW, iW, OW) {
+      const mW = iW * iW * 4,
+        EW = WW[0].layers,
+        NW = EW * (WW.length - 1) + WW[WW.length - 1].layers,
+        PW = new Uint8Array(NW * mW);
+      WW.forEach(((iW, OW) => {
+        const NW = OW + 1 < WW.length ? Math.min(iW.layers, EW) : iW.layers;
+        PW.set(new Uint8Array(iW.pixels.buffer, iW.pixels.byteOffset, NW * mW), OW * EW * mW)
       }));
-      const Ue = Math.max(1, Math.min(Me, He || Me));
-      if (Ue === Me) return [{
-        pixels: Ke,
-        layers: Me
+      const LW = Math.max(1, Math.min(NW, OW || NW));
+      if (LW === NW) return [{
+        pixels: PW,
+        layers: NW
       }];
-      const Fe = [];
-      for (let Je = 0; Je < Me; Je += Ue) {
-        const ee = Math.min(Me, Je + Ue);
-        Fe.push({
-          pixels: Ke.slice(Je * ye, ee * ye),
-          layers: ee - Je
+      const cW = [];
+      for (let wW = 0; wW < NW; wW += LW) {
+        const WW = Math.min(NW, wW + LW);
+        cW.push({
+          pixels: PW.slice(wW * mW, WW * mW),
+          layers: WW - wW
         })
       }
-      return Fe
+      return cW
     }
-    He.d(ie, {
-      c: () => ye,
-      e: () => Me
+    OW.d(iW, {
+      e: () => mW,
+      i: () => NW
     });
-    const be = new WeakMap;
+    const EW = new WeakMap;
 
-    function Me(ee, ie, He) {
-      var ye, Me;
-      const Ke = null !== (ye = be.get(ee)) && void 0 !== ye ? ye : new Map;
-      be.set(ee, Ke);
-      const Ue = null !== (Me = Ke.get(ie[0])) && void 0 !== Me ? Me : [];
-      Ke.set(ie[0], Ue);
-      const Fe = Ue.find((ee => ee.urls.length === ie.length && ee.urls.every(((ee, He) => ee === ie[He]))));
-      if (Fe) return Fe.built;
-      const Je = {
-        urls: [...ie],
-        built: He()
+    function NW(WW, iW, OW) {
+      var mW, NW;
+      const PW = null !== (mW = EW.get(WW)) && void 0 !== mW ? mW : new Map;
+      EW.set(WW, PW);
+      const LW = null !== (NW = PW.get(iW[0])) && void 0 !== NW ? NW : [];
+      PW.set(iW[0], LW);
+      const cW = LW.find((WW => WW.urls.length === iW.length && WW.urls.every(((WW, OW) => WW === iW[OW]))));
+      if (cW) return cW.built;
+      const wW = {
+        urls: [...iW],
+        built: OW()
       };
-      return Ue.push(Je), Je.built.catch((() => {
-        Ue.splice(Ue.indexOf(Je), 1)
-      })), Je.built
+      return LW.push(wW), wW.built.catch((() => {
+        LW.splice(LW.indexOf(wW), 1)
+      })), wW.built
     }
   },
-  39508: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Me,
-      h: () => be,
-      l: () => Fe,
-      p: () => Re
+  39948: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => NW,
+      d: () => EW,
+      e: () => cW,
+      h: () => ZW
     });
-    var ye = He(38012);
-    const be = 0,
-      Me = 3,
-      Ke = 4,
-      Ue = new Map([
-        [be, ye.e.ALPHA_ONEONE],
-        [1, ye.e.ALPHA_COMBINE],
-        [2, ye.e.ALPHA_ADD],
-        [Me, ye.e.ALPHA_MULTIPLY],
-        [-1, ye.e.ALPHA_SUBTRACT]
+    var mW = OW(38364);
+    const EW = 0,
+      NW = 3,
+      PW = 4,
+      LW = new Map([
+        [EW, mW.e.ALPHA_ONEONE],
+        [1, mW.e.ALPHA_COMBINE],
+        [2, mW.e.ALPHA_ADD],
+        [NW, mW.e.ALPHA_MULTIPLY],
+        [-1, mW.e.ALPHA_SUBTRACT]
       ]);
 
-    function Fe(ee) {
-      var ie;
-      return null !== (ie = Ue.get(ee)) && void 0 !== ie ? ie : ee
+    function cW(WW) {
+      var iW;
+      return null !== (iW = LW.get(WW)) && void 0 !== iW ? iW : WW
     }
-    const Je = [Me, 2],
-      oe = new Map;
+    const wW = [NW, 2],
+      tW = new Map;
 
-    function Re(ee) {
-      if (ee === Ke) return Je;
-      let ie = oe.get(ee);
-      return ie || (ie = [ee], oe.set(ee, ie)), ie
+    function ZW(WW) {
+      if (WW === PW) return wW;
+      let iW = tW.get(WW);
+      return iW || (iW = [WW], tW.set(WW, iW)), iW
     }
   },
-  44791: (ee, ie, He) => {
-    function ye() {
-      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const ie = new Set;
-      return (He, ye) => {
-        ie.has(He) || (ie.add(He), console.warn(ee + ye))
+  53774: (WW, iW, OW) => {
+    function mW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const iW = new Set;
+      return (OW, mW) => {
+        iW.has(OW) || (iW.add(OW), console.warn(WW + mW))
       }
     }
-    He.d(ie, {
-      b: () => ye
+    OW.d(iW, {
+      b: () => mW
     })
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

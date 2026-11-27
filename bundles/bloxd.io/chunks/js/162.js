@@ -1,214 +1,249 @@
 export const id = 162;
 export const ids = [162];
 export const modules = {
-  7349: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      BloxdMsnAccountSdk: () => Re,
-      MsnSdkAdaptor: () => Te
+  7639: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => MW,
+      i: () => KW,
+      l: () => kW,
+      m: () => UW
     });
-    var ye = He(1300),
-      be = He(1119),
-      Me = He(3856),
-      Ke = He(610),
-      Ue = He(1737);
-    const Fe = "https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.23.min.js";
-    let Je = null;
+    var mW = OW(7646);
+    const EW = 6,
+      NW = 3,
+      PW = 1,
+      LW = 2,
+      cW = 4,
+      wW = 8,
+      tW = 16,
+      ZW = 32,
+      xW = 64,
+      lW = 128,
+      AW = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function oe() {
-      return Je ??= async function() {
-        await (0, be.b)(Fe, {}, !1);
-        for (let ee = 0; ee < 50 && !window.$msstart; ee++) await (0, Ke.U)(100)
-      }(), Je
-    }
-    class Re {
-      constructor() {}
-      static async setup() {
-        if (null !== (0, Ue.c)()) return new Re;
-        try {
-          await Promise.race([oe(), (0, Ke.U)(1e4).then((() => {
-            throw new Error("Not loaded after 10000ms")
-          }))])
-        } catch (ee) {
-          return console.error("MSN Play SDK failed to load, so MSN Play accounts are unavailable:", ee), null
-        }
-        return window.$msstart ? new Re : (console.error("MSN Play SDK script loaded but window.$msstart is missing, so MSN Play accounts are unavailable"), null)
-      }
-      async getSignedInUser() {
-        const ee = (0, Ue.c)();
-        if (null !== ee) return ee;
-        try {
-          return await Promise.race([window.$msstart.getSignedInUserAsync(), (0, Ke.U)(1e4).then((() => {
-            throw new Error("No answer after 10000ms")
-          }))])
-        } catch (ie) {
-          return "USER_NOT_CONSENTED" !== (null === ie || void 0 === ie ? void 0 : ie.code) && console.error("Failed to get the signed-in MSN Play player:", ie), null
-        }
-      }
-      async signIn() {
-        var ee;
-        return null !== (ee = (0, Ue.c)()) && void 0 !== ee ? ee : await window.$msstart.signInAsync()
-      }
-    }
-    const ke = 20,
-      qe = {
-        top: [{
-          width: 970,
-          height: 250
-        }, {
-          width: 728,
-          height: 90
-        }, {
-          width: 320,
-          height: 50
-        }],
-        right: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }],
-        left: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }]
-      },
-      fe = {
-        leaderboard: {
-          1: ["right", "left"],
-          5: ["top", "left"]
-        },
-        square: {
-          1: []
-        },
-        skyscraper: {
-          2: []
-        }
-      };
-    class Te extends ye.d {
-      constructor() {
-        super(), this.name = "msn", this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
-      }
-      static async setup() {
-        return await oe(), new Te
-      }
-      playVideoAd(ee, ie) {
-        this.playVideoOrRewarded("video", ee, ee)
-      }
-      playRewarded(ee, ie) {
-        this.playVideoOrRewarded("rewarded", ee, ie)
-      }
-      canShowBloxdAd(ee) {
-        for (const ie in fe)
-          if (ee.adId in fe[ie]) return !1;
-        return !0
-      }
-      async renderBanner(ee) {
-        if (null !== this.currentlyShowingBannerPlacement) return void console.log(`AD ${(0,Me.c)(ee)}: msn placement is already showing so not requesting`);
-        const ie = fe[ee.adType][ee.adId];
-        if ((0, Ke.P)(ie)) return void console.warn(`AD ${(0,Me.c)(ee)}: no msn placement is configured for this bloxd placement so not showing any ad`);
-        const He = [];
-        for (const ye of ie)
-          for (const ee of qe[ye])
-            if (ee.width <= window.innerWidth - 40 && ee.height <= window.innerHeight - 40) {
-              const ie = {
-                placement: ye,
-                width: ee.width,
-                height: ee.height
-              };
-              if (!He.some((ee => Xe(ie, ee)))) {
-                He.push(ie);
-                break
-              }
-            } if (He.length > 0) {
-          console.log(`AD ${(0,Me.c)(ee)}: Attempting to show msn units: `, He);
-          const ie = He.map((ee => `${ee.placement}:${ee.width}x${ee.height}`));
-          this.currentlyShowingBannerPlacement = {
-            placementId: (0, Me.c)(ee),
-            renderPromise: window.$msstart.showDisplayAdsAsync(ie).then((() => {
-              console.log(`AD ${(0,Me.c)(ee)}: Successfully request msn banner ad`)
-            })).catch((ie => {
-              console.log(`AD ${(0,Me.c)(ee)}: Error while requesting msn banner ad`, ie)
-            }))
-          }
-        } else console.warn(`AD ${(0,Me.c)(ee)}: couldn't find an msn unit that fit screen size`)
-      }
-      async clearBanner(ee) {
-        null !== this.currentlyShowingBannerPlacement && (0, Me.c)(ee) === this.currentlyShowingBannerPlacement.placementId && (console.log(`AD ${(0,Me.c)(ee)}: Attempting to clear msn banner ads for banner`, ee), await this.clearAllBannerAds())
-      }
-      async clearAllBannerAds() {
-        try {
-          if (this.isCurrentlyClearingAllBanners) return;
-          this.isCurrentlyClearingAllBanners = !0, null !== this.currentlyShowingBannerPlacement && await this.currentlyShowingBannerPlacement.renderPromise, await window.$msstart.hideDisplayAdsAsync(), console.log("AD: Successfully cleared all msn banner ads")
-        } catch (ee) {
-          console.log("AD: Error while clearing all msn banner ads", ee)
-        } finally {
-          this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
-        }
-      }
-      playVideoOrRewarded(ee, ie, He) {
-        const ye = ie => {
-          console.error(`AD: Error while playing MSN ${ee} ad: `, ie), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), He()
-        };
-        if (window.$msstart) {
-          console.log(`AD: Attempting to play MSN ${ee} ad`), document.getElementById("GenericVideoWrapper").style.display = "flex";
-          const He = async () => {
-            try {
-              const He = await window.$msstart.loadAdsAsync("rewarded" === ee),
-                ye = await window.$msstart.showAdsAsync(He.instanceId);
-              this.clearAllBannerAds(), await ye.showAdsCompletedAsync, console.log(`AD: Successfully finished MSN ${ee} ad`), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), ie()
-            } catch (He) {
-              ye(He)
-            }
-          };
-          window.adStartSoPause(null, {
-            preventMovement: !0
-          }), He()
-        } else ye(`AD: Can't play MSN ${ee} ad because sdk is not loaded`)
-      }
+    function bW(WW) {
+      if (!WW) return 0;
+      const iW = AW.indexOf(WW);
+      if (iW <= 0) throw new Error(`"${WW}" is not a shader pack hook function`);
+      return iW
     }
 
-    function pe(ee) {
-      let ie, He;
-      switch (ee.placement) {
-        case "top":
-          ie = (window.innerWidth - ee.width) / 2, He = ke;
-          break;
-        case "right":
-          ie = window.innerWidth - ee.width - ke, He = window.innerHeight / 2 - ee.height / 2 - 10;
-          break;
-        case "left":
-          ie = ke, He = window.innerHeight / 2 - ee.height / 2 - 10
-      }
+    function jW(WW) {
+      if (0 === WW) return null;
+      const iW = AW[WW];
+      if (void 0 === iW) throw new Error(`${WW} is not a shader pack hook function id`);
+      return iW
+    }
+
+    function UW(WW) {
+      const iW = mW.e.length;
       return {
-        x1: ie,
-        y1: He,
-        x2: ie + ee.width,
-        y2: He + ee.height
+        strict: WW >= iW,
+        program: mW.e[WW % iW]
       }
     }
 
-    function Xe(ee, ie) {
-      const He = pe(ee),
-        ye = pe(ie);
-      return !(He.x2 <= ye.x1 || ye.x2 <= He.x1 || He.y2 <= ye.y1 || ye.y2 <= He.y1)
+    function kW(WW) {
+      return Number(WW.strict) * mW.e.length + mW.e.indexOf(WW.program)
     }
+
+    function sW(WW) {
+      return "" === WW ? [] : WW.split(" ")
+    }
+
+    function MW(WW) {
+      const iW = {
+        variantFlags: new Uint8Array(EW),
+        hooks: new Uint8Array(EW * NW),
+        moduleCodes: Array(EW).fill(""),
+        reads: Array(2 * EW).fill("")
+      };
+      for (const OW of WW) {
+        const WW = kW(OW.key),
+          mW = (WW, iW) => null === OW.hooks.surface || OW.reads.fragment.includes(WW) ? 0 : iW;
+        iW.variantFlags[WW] = (OW.sceneDepth ? PW : 0) | (OW.movesVertices ? LW : 0) | (OW.sunShadow ? cW : 0) | (OW.airShadow ? wW : 0) | (OW.discards ? tW : 0) | mW("localPosition", ZW) | mW("enchantSpeed", xW) | mW("enchantTier", lW), iW.hooks[WW * NW] = bW(OW.hooks.vertex), iW.hooks[WW * NW + 1] = bW(OW.hooks.surface), iW.hooks[WW * NW + 2] = bW(OW.hooks.light), iW.moduleCodes[WW] = OW.moduleCode, iW.reads[2 * WW] = OW.reads.vertex.join(" "), iW.reads[2 * WW + 1] = OW.reads.fragment.join(" ")
+      }
+      return iW
+    }
+
+    function KW(WW) {
+      const {
+        hooks: iW,
+        moduleCodes: OW,
+        reads: mW
+      } = WW;
+      return Array.from(WW.variantFlags, ((WW, EW) => {
+        const ZW = EW * NW;
+        return {
+          key: UW(EW),
+          hooks: {
+            vertex: jW(iW[ZW]),
+            surface: jW(iW[ZW + 1]),
+            light: jW(iW[ZW + 2])
+          },
+          moduleCode: OW[EW],
+          sceneDepth: 0 !== (WW & PW),
+          sunShadow: 0 !== (WW & cW),
+          airShadow: 0 !== (WW & wW),
+          movesVertices: 0 !== (WW & LW),
+          discards: 0 !== (WW & tW),
+          reads: {
+            vertex: sW(mW[2 * EW]),
+            fragment: sW(mW[2 * EW + 1])
+          }
+        }
+      }))
+    }
+  },
+  42321: (WW, iW, OW) => {
+    OW.d(iW, {
+      D: () => AW,
+      e: () => EW,
+      f: () => mW,
+      g: () => xW,
+      j: () => tW,
+      l: () => jW,
+      m: () => NW,
+      o: () => LW,
+      q: () => cW,
+      t: () => PW,
+      x: () => bW,
+      z: () => lW
+    });
+    const mW = 3,
+      EW = 0,
+      NW = 1,
+      PW = 2,
+      LW = {
+        uniform: 3,
+        El: 4,
+        special: 5,
+        volume: 6,
+        sampler: 7,
+        entities: 8,
+        entityGrids: 9
+      },
+      cW = 10,
+      wW = "BloxdPackInputs",
+      tW = "bloxdPackInputs",
+      ZW = [{
+        name: "seconds",
+        type: "f32",
+        offset: 0
+      }, {
+        name: "lit",
+        type: "u32",
+        offset: 4
+      }, {
+        name: "renderOffset",
+        type: "vec3i",
+        offset: 16
+      }, {
+        name: "sunDirection",
+        type: "vec3f",
+        offset: 32
+      }, {
+        name: "eyePosition",
+        type: "vec3f",
+        offset: 48
+      }, {
+        name: "shadowDirection",
+        type: "vec3f",
+        offset: 64
+      }],
+      xW = 80;
+
+    function lW() {
+      const WW = ZW.map((WW => {
+        let {
+          name: iW,
+          type: OW
+        } = WW;
+        return `    ${iW}: ${OW},\n`
+      })).join("");
+      return `struct ${wW} {\n${WW}}\n@group(${mW}) @binding(${EW}) var<uniform> ${tW}: ${wW};\n`
+    }
+
+    function AW(WW, iW) {
+      const OW = new DataView(WW, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, xW),
+        [mW, EW, NW, PW, LW, cW] = ZW;
+      OW.setFloat32(mW.offset, iW.seconds, !0), OW.setUint32(EW.offset, iW.lit ? 1 : 0, !0);
+      for (let wW = 0; wW < 3; wW++) OW.setInt32(NW.offset + 4 * wW, iW.renderOffset[wW], !0), OW.setFloat32(PW.offset + 4 * wW, iW.vWW[wW], !0), OW.setFloat32(LW.offset + 4 * wW, iW.eyePosition[wW], !0), OW.setFloat32(cW.offset + 4 * wW, iW.shadowDirection[wW], !0)
+    }
+
+    function bW(WW) {
+      const iW = new Uint32Array(Math.max(1, WW.length));
+      return WW.forEach(((WW, OW) => {
+        let {
+          id: mW,
+          rotation: EW
+        } = WW;
+        iW[OW] = 65535 & mW | (3 & EW) << 16
+      })), iW
+    }
+    const jW = {
+      off: 0,
+      strict: 1,
+      allow: 2
+    }
+  },
+  7646: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW,
+      g: () => PW,
+      j: () => LW,
+      n: () => EW,
+      p: () => NW
+    });
+    const mW = ["terrain", "liquid", "model"];
+
+    function EW() {
+      const WW = [];
+      for (const iW of [!1, !0])
+        for (const OW of mW) WW.push({
+          strict: iW,
+          program: OW
+        });
+      return WW
+    }
+
+    function NW(WW) {
+      return `${WW.strict?"strict":"allow"}.${WW.program}`
+    }
+
+    function PW(WW) {
+      return !WW.hooks.vertex && !WW.hooks.surface && !WW.hooks.light
+    }
+
+    function LW(WW, iW) {
+      return "off" !== iW && (null === WW || WW.some((WW => WW.key.strict === ("strict" === iW) && !PW(WW))))
+    }
+  },
+  44886: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      SHADER_PACK_INPUTS_BINDING: () => NW.e,
+      SHADER_PACK_INPUTS_GROUP: () => NW.f,
+      SHADER_PACK_INPUTS_SIZE: () => NW.g,
+      SHADER_PACK_INPUTS_VAR: () => NW.j,
+      SHADER_PACK_MODES: () => NW.l,
+      SHADER_PACK_PROGRAMS: () => mW.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => NW.m,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => NW.o,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => NW.q,
+      SHADER_PACK_TEXTURES_BINDING: () => NW.t,
+      encodeTextureLayers: () => NW.x,
+      flattenVariants: () => EW.e,
+      isVariantOff: () => mW.g,
+      packRunsIn: () => mW.j,
+      shaderPackInputsWgsl: () => NW.z,
+      shaderPackVariantKeys: () => mW.n,
+      variantKeyId: () => mW.p,
+      writeShaderPackInputs: () => NW.D
+    });
+    var mW = OW(7646),
+      EW = OW(7639),
+      NW = OW(42321)
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

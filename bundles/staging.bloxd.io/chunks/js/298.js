@@ -1,1043 +1,369 @@
-/*! For license information please see u88b9b.298.2a7679ab.chunk.js.LICENSE.txt */
 export const id = 298;
 export const ids = [298];
 export const modules = {
-  41649: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      getAnalytics: () => Ii,
-      getGoogleAnalyticsClientId: () => Qi,
-      initializeAnalytics: () => Ni,
-      isSupported: () => Gi,
-      logEvent: () => bH,
-      setAnalyticsCollectionEnabled: () => HH,
-      setConsent: () => MH,
-      setCurrentScreen: () => ri,
-      setDefaultEventParameters: () => yH,
-      setUserId: () => eH,
-      setUserProperties: () => iH,
-      settings: () => ji
+  53769: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW
     });
-    var ye = He(41625),
-      be = He(41640),
-      Me = He(41632),
-      Ke = He(41628);
-    let Ue, Fe;
-    const Je = new WeakMap,
-      oe = new WeakMap,
-      Re = new WeakMap,
-      ke = new WeakMap,
-      qe = new WeakMap;
-    let fe = {
-      get(ee, ie, He) {
-        if (ee instanceof IDBTransaction) {
-          if ("done" === ie) return oe.get(ee);
-          if ("objectStoreNames" === ie) return ee.objectStoreNames || Re.get(ee);
-          if ("store" === ie) return He.objectStoreNames[1] ? void 0 : He.objectStore(He.objectStoreNames[0])
+    class mW {}
+    mW.AUTOSAMPLERSUFFIX = "Sampler", mW.DISABLEUA = "#define DISABLE_UNIFORMITY_ANALYSIS", mW.ALPHA_DISABLE = 0, mW.ALPHA_ADD = 1, mW.ALPHA_COMBINE = 2, mW.ALPHA_SUBTRACT = 3, mW.ALPHA_MULTIPLY = 4, mW.ALPHA_MAXIMIZED = 5, mW.ALPHA_ONEONE = 6, mW.ALPHA_PREMULTIPLIED = 7, mW.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, mW.ALPHA_INTERPOLATE = 9, mW.ALPHA_SCREENMODE = 10, mW.ALPHA_ONEONE_ONEONE = 11, mW.ALPHA_ALPHATOCOLOR = 12, mW.ALPHA_REVERSEONEMINUS = 13, mW.ALPHA_SRC_DSTONEMINUSSRCALPHA = 14, mW.ALPHA_ONEONE_ONEZERO = 15, mW.ALPHA_EXCLUSION = 16, mW.ALPHA_LAYER_ACCUMULATE = 17, mW.ALPHA_MIN = 18, mW.ALPHA_MAX = 19, mW.ALPHA_DUAL_SRC0_ADD_SRC1xDST = 20, mW.ALPHA_REPLACE_COLOR = 21, mW.ALPHA_EQUATION_ADD = 0, mW.ALPHA_EQUATION_SUBSTRACT = 1, mW.ALPHA_EQUATION_REVERSE_SUBTRACT = 2, mW.ALPHA_EQUATION_MAX = 3, mW.ALPHA_EQUATION_MIN = 4, mW.ALPHA_EQUATION_DARKEN = 5, mW.DELAYLOADSTATE_NONE = 0, mW.DELAYLOADSTATE_LOADED = 1, mW.DELAYLOADSTATE_LOADING = 2, mW.DELAYLOADSTATE_NOTLOADED = 4, mW.NEVER = 512, mW.ALWAYS = 519, mW.LESS = 513, mW.EQUAL = 514, mW.LEQUAL = 515, mW.GREATER = 516, mW.GEQUAL = 518, mW.NOTEQUAL = 517, mW.KEEP = 7680, mW.ZERO = 0, mW.REPLACE = 7681, mW.INCR = 7682, mW.DECR = 7683, mW.INVERT = 5386, mW.INCR_WRAP = 34055, mW.DECR_WRAP = 34056, mW.TEXTURE_CLAMP_ADDRESSMODE = 0, mW.TEXTURE_WRAP_ADDRESSMODE = 1, mW.TEXTURE_MIRROR_ADDRESSMODE = 2, mW.TEXTURE_REPETITION_NONE = 0, mW.TEXTURE_REPETITION_NOISE_BLEND = 1, mW.TEXTURE_REPETITION_HEX_TILING = 2, mW.TEXTURE_REPETITION_TILE_RANDOMIZATION = 3, mW.TEXTURE_REPETITION_VORONOI_BOMBING = 4, mW.TEXTURE_CREATIONFLAG_STORAGE = 1, mW.TEXTUREFORMAT_ALPHA = 0, mW.TEXTUREFORMAT_LUMINANCE = 1, mW.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, mW.TEXTUREFORMAT_RGB = 4, mW.TEXTUREFORMAT_RGBA = 5, mW.TEXTUREFORMAT_RED = 6, mW.TEXTUREFORMAT_R = 6, mW.TEXTUREFORMAT_R16_UNORM = 33322, mW.TEXTUREFORMAT_RG16_UNORM = 33324, mW.TEXTUREFORMAT_RGB16_UNORM = 32852, mW.TEXTUREFORMAT_RGBA16_UNORM = 32859, mW.TEXTUREFORMAT_R16_SNORM = 36760, mW.TEXTUREFORMAT_RG16_SNORM = 36761, mW.TEXTUREFORMAT_RGB16_SNORM = 36762, mW.TEXTUREFORMAT_RGBA16_SNORM = 36763, mW.TEXTUREFORMAT_RG = 7, mW.TEXTUREFORMAT_RED_INTEGER = 8, mW.TEXTUREFORMAT_R_INTEGER = 8, mW.TEXTUREFORMAT_RG_INTEGER = 9, mW.TEXTUREFORMAT_RGB_INTEGER = 10, mW.TEXTUREFORMAT_RGBA_INTEGER = 11, mW.TEXTUREFORMAT_BGRA = 12, mW.TEXTUREFORMAT_DEPTH24_STENCIL8 = 13, mW.TEXTUREFORMAT_DEPTH32_FLOAT = 14, mW.TEXTUREFORMAT_DEPTH16 = 15, mW.TEXTUREFORMAT_DEPTH24 = 16, mW.TEXTUREFORMAT_DEPTH24UNORM_STENCIL8 = 17, mW.TEXTUREFORMAT_DEPTH32FLOAT_STENCIL8 = 18, mW.TEXTUREFORMAT_STENCIL8 = 19, mW.TEXTUREFORMAT_UNDEFINED = 4294967295, mW.TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM = 36492, mW.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_BPTC_UNORM = 36493, mW.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT = 36495, mW.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_SIGNED_FLOAT = 36494, mW.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT5 = 33779, mW.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919, mW.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT3 = 33778, mW.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918, mW.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT1 = 33777, mW.TEXTUREFORMAT_COMPRESSED_RGB_S3TC_DXT1 = 33776, mW.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917, mW.TEXTUREFORMAT_COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_4x4 = 37808, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x4 = 37809, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x5 = 37810, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x5 = 37811, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x6 = 37812, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x5 = 37813, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x6 = 37814, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x8 = 37815, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x5 = 37816, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x6 = 37817, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x8 = 37818, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x10 = 37819, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x10 = 37820, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x12 = 37821, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 37840, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 37841, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 37842, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 37843, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 37844, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 37845, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 37846, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 37847, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 37848, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 37849, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 37850, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 37851, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 37852, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 37853, mW.TEXTUREFORMAT_COMPRESSED_RGB_ETC1_WEBGL = 36196, mW.TEXTUREFORMAT_COMPRESSED_RGB8_ETC2 = 37492, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ETC2 = 37493, mW.TEXTUREFORMAT_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495, mW.TEXTUREFORMAT_COMPRESSED_RGBA8_ETC2_EAC = 37496, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497, mW.TEXTURETYPE_UNSIGNED_BYTE = 0, mW.TEXTURETYPE_UNSIGNED_INT = 0, mW.TEXTURETYPE_FLOAT = 1, mW.TEXTURETYPE_HALF_FLOAT = 2, mW.TEXTURETYPE_BYTE = 3, mW.TEXTURETYPE_SHORT = 4, mW.TEXTURETYPE_UNSIGNED_SHORT = 5, mW.TEXTURETYPE_INT = 6, mW.TEXTURETYPE_UNSIGNED_INTEGER = 7, mW.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, mW.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, mW.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, mW.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, mW.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, mW.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, mW.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, mW.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, mW.TEXTURETYPE_UNDEFINED = 16, mW.TEXTURE_2D = 3553, mW.TEXTURE_2D_ARRAY = 35866, mW.TEXTURE_CUBE_MAP = 34067, mW.TEXTURE_CUBE_MAP_ARRAY = 3735928559, mW.TEXTURE_3D = 32879, mW.TEXTURE_NEAREST_SAMPLINGMODE = 1, mW.TEXTURE_NEAREST_NEAREST = 1, mW.TEXTURE_BILINEAR_SAMPLINGMODE = 2, mW.TEXTURE_LINEAR_LINEAR = 2, mW.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, mW.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, mW.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, mW.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, mW.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, mW.TEXTURE_NEAREST_LINEAR = 7, mW.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, mW.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, mW.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, mW.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, mW.TEXTURE_LINEAR_NEAREST = 12, mW.TEXTURE_EXPLICIT_MODE = 0, mW.TEXTURE_SPHERICAL_MODE = 1, mW.TEXTURE_PLANAR_MODE = 2, mW.TEXTURE_CUBIC_MODE = 3, mW.TEXTURE_PROJECTION_MODE = 4, mW.TEXTURE_SKYBOX_MODE = 5, mW.TEXTURE_INVCUBIC_MODE = 6, mW.TEXTURE_EQUIRECTANGULAR_MODE = 7, mW.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, mW.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, mW.TEXTURE_FILTERING_QUALITY_OFFLINE = 4096, mW.TEXTURE_FILTERING_QUALITY_HIGH = 64, mW.TEXTURE_FILTERING_QUALITY_MEDIUM = 16, mW.TEXTURE_FILTERING_QUALITY_LOW = 8, mW.SCALEMODE_FLOOR = 1, mW.SCALEMODE_NEAREST = 2, mW.SCALEMODE_CEILING = 3, mW.MATERIAL_TextureDirtyFlag = 1, mW.MATERIAL_LightDirtyFlag = 2, mW.MATERIAL_FresnelDirtyFlag = 4, mW.MATERIAL_AttributesDirtyFlag = 8, mW.MATERIAL_MiscDirtyFlag = 16, mW.MATERIAL_PrePassDirtyFlag = 32, mW.MATERIAL_ImageProcessingDirtyFlag = 64, mW.MATERIAL_AllDirtyFlag = 127, mW.MATERIAL_TriangleFillMode = 0, mW.MATERIAL_WireFrameFillMode = 1, mW.MATERIAL_PointFillMode = 2, mW.MATERIAL_PointListDrawMode = 3, mW.MATERIAL_LineListDrawMode = 4, mW.MATERIAL_LineLoopDrawMode = 5, mW.MATERIAL_LineStripDrawMode = 6, mW.MATERIAL_TriangleStripDrawMode = 7, mW.MATERIAL_TriangleFanDrawMode = 8, mW.MATERIAL_ClockWiseSideOrientation = 0, mW.MATERIAL_CounterClockWiseSideOrientation = 1, mW.MATERIAL_DIFFUSE_MODEL_E_OREN_NAYAR = 0, mW.MATERIAL_DIFFUSE_MODEL_BURLEY = 1, mW.MATERIAL_DIFFUSE_MODEL_LAMBERT = 2, mW.MATERIAL_DIFFUSE_MODEL_LEGACY = 3, mW.MATERIAL_DIELECTRIC_SPECULAR_MODEL_GLTF = 0, mW.MATERIAL_DIELECTRIC_SPECULAR_MODEL_OPENPBR = 1, mW.MATERIAL_CONDUCTOR_SPECULAR_MODEL_GLTF = 0, mW.MATERIAL_CONDUCTOR_SPECULAR_MODEL_OPENPBR = 1, mW.ACTION_NothingTrigger = 0, mW.ACTION_OnPickTrigger = 1, mW.ACTION_OnLeftPickTrigger = 2, mW.ACTION_OnRightPickTrigger = 3, mW.ACTION_OnCenterPickTrigger = 4, mW.ACTION_OnPickDownTrigger = 5, mW.ACTION_OnDoublePickTrigger = 6, mW.ACTION_OnPickUpTrigger = 7, mW.ACTION_OnPickOutTrigger = 16, mW.ACTION_OnLongPressTrigger = 8, mW.ACTION_OnPointerOverTrigger = 9, mW.ACTION_OnPointerOutTrigger = 10, mW.ACTION_OnEveryFrameTrigger = 11, mW.ACTION_OnIntersectionEnterTrigger = 12, mW.ACTION_OnIntersectionExitTrigger = 13, mW.ACTION_OnKeyDownTrigger = 14, mW.ACTION_OnKeyUpTrigger = 15, mW.PARTICLES_BILLBOARDMODE_Y = 2, mW.PARTICLES_BILLBOARDMODE_ALL = 7, mW.PARTICLES_BILLBOARDMODE_STRETCHED = 8, mW.PARTICLES_BILLBOARDMODE_STRETCHED_LOCAL = 9, mW.MESHES_CULLINGSTRATEGY_STANDARD = 0, mW.MESHES_CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, mW.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, mW.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, mW.SCENELOADER_NO_LOGGING = 0, mW.SCENELOADER_MINIMAL_LOGGING = 1, mW.SCENELOADER_SUMMARY_LOGGING = 2, mW.SCENELOADER_DETAILED_LOGGING = 3, mW.PREPASS_IRRADIANCE_LEGACY_TEXTURE_TYPE = 0, mW.PREPASS_POSITION_TEXTURE_TYPE = 1, mW.PREPASS_VELOCITY_TEXTURE_TYPE = 2, mW.PREPASS_REFLECTIVITY_TEXTURE_TYPE = 3, mW.PREPASS_COLOR_TEXTURE_TYPE = 4, mW.PREPASS_DEPTH_TEXTURE_TYPE = 5, mW.PREPASS_NORMAL_TEXTURE_TYPE = 6, mW.PREPASS_ALBEDO_SQRT_TEXTURE_TYPE = 7, mW.PREPASS_WORLD_NORMAL_TEXTURE_TYPE = 8, mW.PREPASS_LOCAL_POSITION_TEXTURE_TYPE = 9, mW.PREPASS_SCREENSPACE_DEPTH_TEXTURE_TYPE = 10, mW.PREPASS_VELOCITY_LINEAR_TEXTURE_TYPE = 11, mW.PREPASS_ALBEDO_TEXTURE_TYPE = 12, mW.PREPASS_NORMALIZED_VIEW_DEPTH_TEXTURE_TYPE = 13, mW.PREPASS_IRRADIANCE_TEXTURE_TYPE = 14, mW.PREPASS_OBJECT_ID_TEXTURE_TYPE = 15, mW.PREPASS_MESH_BLEND_TAG_TEXTURE_TYPE = 16, mW.BUFFER_CREATIONFLAG_READ = 1, mW.BUFFER_CREATIONFLAG_WRITE = 2, mW.BUFFER_CREATIONFLAG_READWRITE = 3, mW.BUFFER_CREATIONFLAG_UNIFORM = 4, mW.BUFFER_CREATIONFLAG_VERTEX = 8, mW.BUFFER_CREATIONFLAG_INDEX = 16, mW.BUFFER_CREATIONFLAG_STORAGE = 32, mW.BUFFER_CREATIONFLAG_INDIRECT = 64, mW.RENDERPASS_MAIN = 0, mW.INPUT_ALT_KEY = 18, mW.INPUT_CTRL_KEY = 17, mW.INPUT_META_KEY1 = 91, mW.INPUT_META_KEY2 = 92, mW.INPUT_META_KEY3 = 93, mW.INPUT_SHIFT_KEY = 16, mW.SNAPSHOTRENDERING_STANDARD = 0, mW.SNAPSHOTRENDERING_FAST = 1, mW.PERSPECTIVE_CAMERA = 0, mW.ORTHOGRAPHIC_CAMERA = 1, mW.FOVMODE_VERTICAL_FIXED = 0, mW.FOVMODE_HORIZONTAL_FIXED = 1, mW.RIG_MODE_NONE = 0, mW.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, mW.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, mW.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, mW.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, mW.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, mW.RIG_MODE_VR = 20, mW.RIG_MODE_CUSTOM = 22, mW.MAX_SUPPORTED_UV_SETS = 6, mW.GL_ALPHA_EQUATION_ADD = 32774, mW.GL_ALPHA_EQUATION_MIN = 32775, mW.GL_ALPHA_EQUATION_MAX = 32776, mW.GL_ALPHA_EQUATION_SUBTRACT = 32778, mW.GL_ALPHA_EQUATION_REVERSE_SUBTRACT = 32779, mW.GL_ALPHA_FUNCTION_SRC = 768, mW.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_COLOR = 769, mW.GL_ALPHA_FUNCTION_SRC_ALPHA = 770, mW.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_ALPHA = 771, mW.GL_ALPHA_FUNCTION_DST_ALPHA = 772, mW.GL_ALPHA_FUNCTION_ONE_MINUS_DST_ALPHA = 773, mW.GL_ALPHA_FUNCTION_DST_COLOR = 774, mW.GL_ALPHA_FUNCTION_ONE_MINUS_DST_COLOR = 775, mW.GL_ALPHA_FUNCTION_SRC_ALPHA_SATURATED = 776, mW.GL_ALPHA_FUNCTION_CONSTANT_COLOR = 32769, mW.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_COLOR = 32770, mW.GL_ALPHA_FUNCTION_CONSTANT_ALPHA = 32771, mW.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_ALPHA = 32772, mW.GL_ALPHA_FUNCTION_SRC1_COLOR = 35065, mW.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_COLOR = 35066, mW.GL_ALPHA_FUNCTION_SRC1_ALPHA = 34185, mW.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_ALPHA = 35067, mW.SnippetUrl = "https://snippet.babylonjs.com", mW.FOGMODE_NONE = 0, mW.FOGMODE_EXP = 1, mW.FOGMODE_EXP2 = 2, mW.FOGMODE_LINEAR = 3, mW.BYTE = 5120, mW.UNSIGNED_BYTE = 5121, mW.SHORT = 5122, mW.UNSIGNED_SHORT = 5123, mW.INT = 5124, mW.UNSIGNED_INT = 5125, mW.FLOAT = 5126, mW.HALF_FLOAT = 5131, mW.PositionKind = "position", mW.NormalKind = "normal", mW.TangentKind = "tangent", mW.UVKind = "uv", mW.UV2Kind = "uv2", mW.UV3Kind = "uv3", mW.UV4Kind = "uv4", mW.UV5Kind = "uv5", mW.UV6Kind = "uv6", mW.ColorKind = "color", mW.ColorInstanceKind = "instanceColor", mW.MatricesIndicesKind = "matricesIndices", mW.MatricesWeightsKind = "matricesWeights", mW.MatricesIndicesExtraKind = "matricesIndicesExtra", mW.MatricesWeightsExtraKind = "matricesWeightsExtra", mW.ANIMATIONTYPE_FLOAT = 0, mW.ANIMATIONTYPE_VECTOR3 = 1, mW.ANIMATIONTYPE_QUATERNION = 2, mW.ANIMATIONTYPE_MATRIX = 3, mW.ANIMATIONTYPE_COLOR3 = 4, mW.ANIMATIONTYPE_COLOR4 = 7, mW.ANIMATIONTYPE_VECTOR2 = 5, mW.ANIMATIONTYPE_SIZE = 6, mW.ShadowMinZ = 0, mW.ShadowMaxZ = 1e4, mW.OUTLINELAYER_SAMPLING_TRIDIRECTIONAL = 0, mW.OUTLINELAYER_SAMPLING_OCTADIRECTIONAL = 1
+  },
+  53745: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => cW
+    });
+    var mW = OW(41516),
+      EW = OW(41519),
+      NW = OW(38241),
+      PW = OW(41773),
+      LW = OW(41739);
+    let cW = (() => {
+      var WW;
+      let iW, OW, cW, wW, tW = PW.b,
+        ZW = [];
+      return WW = class extends tW {
+        constructor() {
+          super(...arguments), this._position = (0, mW.g)(this, ZW), this._needProjectionMatrixCompute = !0, this._viewMatrix = NW.d.Identity(), this._projectionMatrix = NW.d.Identity()
         }
-        return Xe(ee[ie])
-      },
-      set: (ee, ie, He) => (ee[ie] = He, !0),
-      has: (ee, ie) => ee instanceof IDBTransaction && ("done" === ie || "store" === ie) || ie in ee
-    };
-
-    function Te(ee) {
-      return ee !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (Fe || (Fe = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(ee) ? function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        return ee.apply(ze(this), He), Xe(Je.get(this))
-      } : function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        return Xe(ee.apply(ze(this), He))
-      } : function(ie) {
-        for (var He = arguments.length, ye = new Array(He > 1 ? He - 1 : 0), be = 1; be < He; be++) ye[be - 1] = arguments[be];
-        const Me = ee.call(ze(this), ie, ...ye);
-        return Re.set(Me, ie.sort ? ie.sort() : [ie]), Xe(Me)
-      }
-    }
-
-    function pe(ee) {
-      return "function" === typeof ee ? Te(ee) : (ee instanceof IDBTransaction && function(ee) {
-        if (oe.has(ee)) return;
-        const ie = new Promise(((ie, He) => {
-          const ye = () => {
-              ee.removeEventListener("complete", be), ee.removeEventListener("error", Me), ee.removeEventListener("abort", Me)
-            },
-            be = () => {
-              ie(), ye()
-            },
-            Me = () => {
-              He(ee.error || new DOMException("AbortError", "AbortError")), ye()
-            };
-          ee.addEventListener("complete", be), ee.addEventListener("error", Me), ee.addEventListener("abort", Me)
-        }));
-        oe.set(ee, ie)
-      }(ee), ie = ee, (Ue || (Ue = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((ee => ie instanceof ee)) ? new Proxy(ee, fe) : ee);
-      var ie
-    }
-
-    function Xe(ee) {
-      if (ee instanceof IDBRequest) return function(ee) {
-        const ie = new Promise(((ie, He) => {
-          const ye = () => {
-              ee.removeEventListener("success", be), ee.removeEventListener("error", Me)
-            },
-            be = () => {
-              ie(Xe(ee.result)), ye()
-            },
-            Me = () => {
-              He(ee.error), ye()
-            };
-          ee.addEventListener("success", be), ee.addEventListener("error", Me)
-        }));
-        return ie.then((ie => {
-          ie instanceof IDBCursor && Je.set(ie, ee)
-        })).catch((() => {})), qe.set(ie, ee), ie
-      }(ee);
-      if (ke.has(ee)) return ke.get(ee);
-      const ie = pe(ee);
-      return ie !== ee && (ke.set(ee, ie), qe.set(ie, ee)), ie
-    }
-    const ze = ee => qe.get(ee);
-    const Be = ["get", "getKey", "getAll", "getAllKeys", "count"],
-      Ee = ["put", "add", "delete", "clear"],
-      ge = new Map;
-
-    function Oe(ee, ie) {
-      if (!(ee instanceof IDBDatabase) || ie in ee || "string" !== typeof ie) return;
-      if (ge.get(ie)) return ge.get(ie);
-      const He = ie.replace(/FromIndex$/, ""),
-        ye = ie !== He,
-        be = Ee.includes(He);
-      if (!(He in (ye ? IDBIndex : IDBObjectStore).prototype) || !be && !Be.includes(He)) return;
-      const Me = async function(ee) {
-        const ie = this.transaction(ee, be ? "readwrite" : "readonly");
-        let Me = ie.store;
-        for (var Ke = arguments.length, Ue = new Array(Ke > 1 ? Ke - 1 : 0), Fe = 1; Fe < Ke; Fe++) Ue[Fe - 1] = arguments[Fe];
-        return ye && (Me = Me.index(Ue.shift())), (await Promise.all([Me[He](...Ue), be && ie.done]))[0]
-      };
-      return ge.set(ie, Me), Me
-    }
-    fe = (ee => ({
-      ...ee,
-      get: (ie, He, ye) => Oe(ie, He) || ee.get(ie, He, ye),
-      has: (ie, He) => !!Oe(ie, He) || ee.has(ie, He)
-    }))(fe);
-    const de = "@firebase/installations",
-      We = "0.6.4",
-      te = 1e4,
-      Ze = `w:${We}`,
-      we = "FIS_v2",
-      De = 36e5,
-      Pe = {
-        "missing-app-config-values": 'Missing App configuration value: "{$valueName}"',
-        "not-registered": "Firebase Installation is not registered.",
-        "installation-not-found": "Firebase Installation not found.",
-        "request-failed": '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
-        "app-offline": "Could not process request. Application offline.",
-        "delete-pending-registration": "Can't delete installation while there is a pending registration request."
-      },
-      Ae = new Me.h("installations", "Installations", Pe);
-
-    function Ye(ee) {
-      return ee instanceof Me.k && ee.code.includes("request-failed")
-    }
-
-    function Ve(ee) {
-      let {
-        projectId: ie
-      } = ee;
-      return `https://firebaseinstallations.googleapis.com/v1/projects/${ie}/installations`
-    }
-
-    function ae(ee) {
-      return {
-        token: ee.token,
-        requestStatus: 2,
-        expiresIn: (ie = ee.expiresIn, Number(ie.replace("s", "000"))),
-        creationTime: Date.now()
-      };
-      var ie
-    }
-    async function ce(ee, ie) {
-      const He = (await ie.json()).error;
-      return Ae.create("request-failed", {
-        requestName: ee,
-        serverCode: He.code,
-        serverMessage: He.message,
-        serverStatus: He.status
-      })
-    }
-
-    function xe(ee) {
-      let {
-        apiKey: ie
-      } = ee;
-      return new Headers({
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "x-goog-api-key": ie
-      })
-    }
-
-    function Le(ee, ie) {
-      let {
-        refreshToken: He
-      } = ie;
-      const ye = xe(ee);
-      return ye.append("Authorization", function(ee) {
-        return `${we} ${ee}`
-      }(He)), ye
-    }
-    async function Ce(ee) {
-      const ie = await ee();
-      return ie.status >= 500 && ie.status < 600 ? ee() : ie
-    }
-
-    function ve(ee) {
-      return new Promise((ie => {
-        setTimeout(ie, ee)
-      }))
-    }
-    const ue = /^[cdef][\w-]{21}$/;
-
-    function me() {
-      try {
-        const ee = new Uint8Array(17);
-        (self.crypto || self.msCrypto).getRandomValues(ee), ee[0] = 112 + ee[0] % 16;
-        const ie = function(ee) {
-          const ie = (He = ee, btoa(String.fromCharCode(...He)).replace(/\+/g, "-").replace(/\//g, "_"));
-          var He;
-          return ie.substr(0, 22)
-        }(ee);
-        return ue.test(ie) ? ie : ""
-      } catch (ee) {
-        return ""
-      }
-    }
-
-    function le(ee) {
-      return `${ee.appName}!${ee.appId}`
-    }
-    const Se = new Map;
-
-    function ne(ee, ie) {
-      const He = le(ee);
-      je(He, ie),
-        function(ee, ie) {
-          const He = Ie();
-          He && He.postMessage({
-            key: ee,
-            fid: ie
-          });
-          he()
-        }(He, ie)
-    }
-
-    function je(ee, ie) {
-      const He = Se.get(ee);
-      if (He)
-        for (const ye of He) ye(ie)
-    }
-    let se = null;
-
-    function Ie() {
-      return !se && "BroadcastChannel" in self && (se = new BroadcastChannel("[Firebase] FID Change"), se.onmessage = ee => {
-        je(ee.data.key, ee.data.fid)
-      }), se
-    }
-
-    function he() {
-      0 === Se.size && se && (se.close(), se = null)
-    }
-    const Ne = "firebase-installations-store";
-    let Ge = null;
-
-    function re() {
-      return Ge || (Ge = function(ee, ie) {
-        let {
-          blocked: He,
-          upgrade: ye,
-          blocking: be,
-          terminated: Me
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ke = indexedDB.open(ee, ie),
-          Ue = Xe(Ke);
-        return ye && Ke.addEventListener("upgradeneeded", (ee => {
-          ye(Xe(Ke.result), ee.oldVersion, ee.newVersion, Xe(Ke.transaction))
-        })), He && Ke.addEventListener("blocked", (() => He())), Ue.then((ee => {
-          Me && ee.addEventListener("close", (() => Me())), be && ee.addEventListener("versionchange", (() => be()))
-        })).catch((() => {})), Ue
-      }("firebase-installations-database", 1, {
-        upgrade: (ee, ie) => {
-          if (0 === ie) ee.createObjectStore(Ne)
+        _setPosition(WW) {
+          this._position = WW
         }
-      })), Ge
-    }
-    async function Qe(ee, ie) {
-      const He = le(ee),
-        ye = (await re()).transaction(Ne, "readwrite"),
-        be = ye.objectStore(Ne),
-        Me = await be.get(He);
-      return await be.put(ie, He), await ye.done, Me && Me.fid === ie.fid || ne(ee, ie.fid), ie
-    }
-    async function ei(ee) {
-      const ie = le(ee),
-        He = (await re()).transaction(Ne, "readwrite");
-      await He.objectStore(Ne).delete(ie), await He.done
-    }
-    async function ii(ee, ie) {
-      const He = le(ee),
-        ye = (await re()).transaction(Ne, "readwrite"),
-        be = ye.objectStore(Ne),
-        Me = await be.get(He),
-        Ke = ie(Me);
-      return void 0 === Ke ? await be.delete(He) : await be.put(Ke, He), await ye.done, !Ke || Me && Me.fid === Ke.fid || ne(ee, Ke.fid), Ke
-    }
-    async function Hi(ee) {
-      let ie;
-      const He = await ii(ee.appConfig, (He => {
-        const ye = function(ee) {
-            const ie = ee || {
-              fid: me(),
-              registrationStatus: 0
-            };
-            return Mi(ie)
-          }(He),
-          be = function(ee, ie) {
-            if (0 === ie.registrationStatus) {
-              if (!navigator.onLine) {
-                return {
-                  installationEntry: ie,
-                  registrationPromise: Promise.reject(Ae.create("app-offline"))
-                }
-              }
-              const He = {
-                  fid: ie.fid,
-                  registrationStatus: 1,
-                  registrationTime: Date.now()
-                },
-                ye = async function(ee, ie) {
-                  try {
-                    const He = await async function(ee, ie) {
-                      let {
-                        appConfig: He,
-                        heartbeatServiceProvider: ye
-                      } = ee, {
-                        fid: be
-                      } = ie;
-                      const Me = Ve(He),
-                        Ke = xe(He),
-                        Ue = ye.getImmediate({
-                          optional: !0
-                        });
-                      if (Ue) {
-                        const ee = await Ue.getHeartbeatsHeader();
-                        ee && Ke.append("x-firebase-client", ee)
-                      }
-                      const Fe = {
-                          fid: be,
-                          authVersion: we,
-                          appId: He.appId,
-                          sdkVersion: Ze
-                        },
-                        Je = {
-                          method: "POST",
-                          headers: Ke,
-                          body: JSON.stringify(Fe)
-                        },
-                        oe = await Ce((() => fetch(Me, Je)));
-                      if (oe.ok) {
-                        const ee = await oe.json();
-                        return {
-                          fid: ee.fid || be,
-                          registrationStatus: 2,
-                          refreshToken: ee.refreshToken,
-                          authToken: ae(ee.authToken)
-                        }
-                      }
-                      throw await ce("Create Installation", oe)
-                    }(ee, ie);
-                    return Qe(ee.appConfig, He)
-                  } catch (He) {
-                    throw Ye(He) && 409 === He.customData.serverCode ? await ei(ee.appConfig) : await Qe(ee.appConfig, {
-                      fid: ie.fid,
-                      registrationStatus: 0
-                    }), He
-                  }
-                }(ee, He);
-              return {
-                installationEntry: He,
-                registrationPromise: ye
-              }
-            }
-            return 1 === ie.registrationStatus ? {
-              installationEntry: ie,
-              registrationPromise: yi(ee)
-            } : {
-              installationEntry: ie
-            }
-          }(ee, ye);
-        return ie = be.registrationPromise, be.installationEntry
-      }));
-      return "" === He.fid ? {
-        installationEntry: await ie
-      } : {
-        installationEntry: He,
-        registrationPromise: ie
-      }
-    }
-    async function yi(ee) {
-      let ie = await bi(ee.appConfig);
-      for (; 1 === ie.registrationStatus;) await ve(100), ie = await bi(ee.appConfig);
-      if (0 === ie.registrationStatus) {
-        const {
-          installationEntry: ie,
-          registrationPromise: He
-        } = await Hi(ee);
-        return He || ie
-      }
-      return ie
-    }
-
-    function bi(ee) {
-      return ii(ee, (ee => {
-        if (!ee) throw Ae.create("installation-not-found");
-        return Mi(ee)
-      }))
-    }
-
-    function Mi(ee) {
-      return 1 === (ie = ee).registrationStatus && ie.registrationTime + te < Date.now() ? {
-        fid: ee.fid,
-        registrationStatus: 0
-      } : ee;
-      var ie
-    }
-    async function Ki(ee, ie) {
-      let {
-        appConfig: He,
-        heartbeatServiceProvider: ye
-      } = ee;
-      const be = function(ee, ie) {
-          let {
-            fid: He
-          } = ie;
-          return `${Ve(ee)}/${He}/authTokens:generate`
-        }(He, ie),
-        Me = Le(He, ie),
-        Ke = ye.getImmediate({
-          optional: !0
-        });
-      if (Ke) {
-        const ee = await Ke.getHeartbeatsHeader();
-        ee && Me.append("x-firebase-client", ee)
-      }
-      const Ue = {
-          installation: {
-            sdkVersion: Ze,
-            appId: He.appId
-          }
-        },
-        Fe = {
-          method: "POST",
-          headers: Me,
-          body: JSON.stringify(Ue)
-        },
-        Je = await Ce((() => fetch(be, Fe)));
-      if (Je.ok) {
-        return ae(await Je.json())
-      }
-      throw await ce("Generate Auth Token", Je)
-    }
-    async function Ui(ee) {
-      let ie, He = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const ye = await ii(ee.appConfig, (ye => {
-        if (!Ji(ye)) throw Ae.create("not-registered");
-        const be = ye.authToken;
-        if (!He && function(ee) {
-            return 2 === ee.requestStatus && ! function(ee) {
-              const ie = Date.now();
-              return ie < ee.creationTime || ee.creationTime + ee.expiresIn < ie + De
-            }(ee)
-          }(be)) return ye;
-        if (1 === be.requestStatus) return ie = async function(ee, ie) {
-          let He = await Fi(ee.appConfig);
-          for (; 1 === He.authToken.requestStatus;) await ve(100), He = await Fi(ee.appConfig);
-          const ye = He.authToken;
-          return 0 === ye.requestStatus ? Ui(ee, ie) : ye
-        }(ee, He), ye;
-        {
-          if (!navigator.onLine) throw Ae.create("app-offline");
-          const He = function(ee) {
-            const ie = {
-              requestStatus: 1,
-              requestTime: Date.now()
-            };
-            return Object.assign(Object.assign({}, ee), {
-              authToken: ie
-            })
-          }(ye);
-          return ie = async function(ee, ie) {
-            try {
-              const He = await Ki(ee, ie),
-                ye = Object.assign(Object.assign({}, ie), {
-                  authToken: He
-                });
-              return await Qe(ee.appConfig, ye), He
-            } catch (He) {
-              if (!Ye(He) || 401 !== He.customData.serverCode && 404 !== He.customData.serverCode) {
-                const He = Object.assign(Object.assign({}, ie), {
-                  authToken: {
-                    requestStatus: 0
-                  }
-                });
-                await Qe(ee.appConfig, He)
-              } else await ei(ee.appConfig);
-              throw He
-            }
-          }(ee, He), He
+        get position() {
+          return this._position
         }
-      }));
-      return ie ? await ie : ye.authToken
-    }
-
-    function Fi(ee) {
-      return ii(ee, (ee => {
-        if (!Ji(ee)) throw Ae.create("not-registered");
-        const ie = ee.authToken;
-        return 1 === (He = ie).requestStatus && He.requestTime + te < Date.now() ? Object.assign(Object.assign({}, ee), {
-          authToken: {
-            requestStatus: 0
-          }
-        }) : ee;
-        var He
-      }))
-    }
-
-    function Ji(ee) {
-      return void 0 !== ee && 2 === ee.registrationStatus
-    }
-    async function oi(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const He = ee;
-      await async function(ee) {
-        const {
-          registrationPromise: ie
-        } = await Hi(ee);
-        ie && await ie
-      }(He);
-      return (await Ui(He, ie)).token
-    }
-
-    function Ri(ee) {
-      return Ae.create("missing-app-config-values", {
-        valueName: ee
-      })
-    }
-    const ki = "installations",
-      qi = ee => {
-        const ie = ee.getProvider("app").getImmediate(),
-          He = function(ee) {
-            if (!ee || !ee.options) throw Ri("App Configuration");
-            if (!ee.name) throw Ri("App Name");
-            const ie = ["projectId", "apiKey", "appId"];
-            for (const He of ie)
-              if (!ee.options[He]) throw Ri(He);
-            return {
-              appName: ee.name,
-              projectId: ee.options.projectId,
-              apiKey: ee.options.apiKey,
-              appId: ee.options.appId
-            }
-          }(ie);
-        return {
-          app: ie,
-          appConfig: He,
-          heartbeatServiceProvider: (0, ye.r)(ie, "heartbeat"),
-          _delete: () => Promise.resolve()
+        set position(WW) {
+          this._setPosition(WW)
         }
-      },
-      fi = ee => {
-        const ie = ee.getProvider("app").getImmediate(),
-          He = (0, ye.r)(ie, ki).getImmediate();
-        return {
-          getId: () => async function(ee) {
-            const ie = ee,
-              {
-                installationEntry: He,
-                registrationPromise: ye
-              } = await Hi(ie);
-            return ye ? ye.catch(console.error) : Ui(ie).catch(console.error), He.fid
-          }(He),
-          getToken: ee => oi(He, ee)
+        _setDirection(WW) {
+          this._direction = WW
         }
-      };
-    (0, ye.v)(new Ke.h(ki, qi, "PUBLIC")), (0, ye.v)(new Ke.h("installations-internal", fi, "PRIVATE")), (0, ye.H)(de, We), (0, ye.H)(de, We, "esm2017");
-    const Ti = "analytics",
-      Xi = "https://www.googletagmanager.com/gtag/js",
-      zi = new be.e("@firebase/analytics"),
-      Bi = {
-        "already-exists": "A Firebase Analytics instance with the appId {$id}  already exists. Only one Firebase Analytics instance can be created for each appId.",
-        "already-initialized": "initializeAnalytics() cannot be called again with different options than those it was initially called with. It can be called again with the same options to return the existing instance, or getAnalytics() can be used to get a reference to the already-intialized instance.",
-        "already-initialized-settings": "Firebase Analytics has already been initialized.settings() must be called before initializing any Analytics instanceor it will have no effect.",
-        "interop-component-reg-failed": "Firebase Analytics Interop Component failed to instantiate: {$reason}",
-        "invalid-analytics-context": "Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "indexeddb-unavailable": "IndexedDB unavailable or restricted in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "fetch-throttle": "The config fetch request timed out while in an exponential backoff state. Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.",
-        "config-fetch-failed": "Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}",
-        "no-api-key": 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid API key.',
-        "no-app-id": 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid app ID.',
-        "no-client-id": 'The "client_id" field is empty.',
-        "invalid-gtag-resource": "Trusted Types detected an invalid gtag resource: {$gtagURL}."
-      },
-      Ei = new Me.h("analytics", "Analytics", Bi);
-
-    function gi(ee) {
-      if (!ee.startsWith(Xi)) {
-        const ie = Ei.create("invalid-gtag-resource", {
-          gtagURL: ee
-        });
-        return zi.warn(ie.message), ""
-      }
-      return ee
-    }
-
-    function Oi(ee) {
-      return Promise.all(ee.map((ee => ee.catch((ee => ee)))))
-    }
-
-    function di(ee, ie) {
-      const He = function(ee, ie) {
-          let He;
-          return window.trustedTypes && (He = window.trustedTypes.createPolicy(ee, ie)), He
-        }("firebase-js-sdk-policy", {
-          createScriptURL: gi
-        }),
-        ye = document.createElement("script"),
-        be = `${Xi}?l=${ee}&id=${ie}`;
-      ye.src = He ? null === He || void 0 === He ? void 0 : He.createScriptURL(be) : be, ye.async = !0, document.head.appendChild(ye)
-    }
-
-    function Wi(ee, ie, He, ye) {
-      return async function(be) {
-        try {
-          for (var Me = arguments.length, Ke = new Array(Me > 1 ? Me - 1 : 0), Ue = 1; Ue < Me; Ue++) Ke[Ue - 1] = arguments[Ue];
-          if ("event" === be) {
-            const [ye, be] = Ke;
-            await async function(ee, ie, He, ye, be) {
-              try {
-                let Me = [];
-                if (be && be.send_to) {
-                  let ee = be.send_to;
-                  Array.isArray(ee) || (ee = [ee]);
-                  const ye = await Oi(He);
-                  for (const He of ee) {
-                    const ee = ye.find((ee => ee.measurementId === He)),
-                      be = ee && ie[ee.appId];
-                    if (!be) {
-                      Me = [];
-                      break
-                    }
-                    Me.push(be)
-                  }
-                }
-                0 === Me.length && (Me = Object.values(ie)), await Promise.all(Me), ee("event", ye, be || {})
-              } catch (Me) {
-                zi.error(Me)
-              }
-            }(ee, ie, He, ye, be)
-          } else if ("config" === be) {
-            const [be, Me] = Ke;
-            await async function(ee, ie, He, ye, be, Me) {
-              const Ke = ye[be];
-              try {
-                if (Ke) await ie[Ke];
-                else {
-                  const ee = (await Oi(He)).find((ee => ee.measurementId === be));
-                  ee && await ie[ee.appId]
-                }
-              } catch (Ue) {
-                zi.error(Ue)
-              }
-              ee("config", be, Me)
-            }(ee, ie, He, ye, be, Me)
-          } else if ("consent" === be) {
-            const [ie] = Ke;
-            ee("consent", "update", ie)
-          } else if ("get" === be) {
-            const [ie, He, ye] = Ke;
-            ee("get", ie, He, ye)
-          } else if ("set" === be) {
-            const [ie] = Ke;
-            ee("set", ie)
-          } else ee(be, ...Ke)
-        } catch (Fe) {
-          zi.error(Fe)
+        get direction() {
+          return this._direction
         }
+        set direction(WW) {
+          this._setDirection(WW)
+        }
+        get shadowMinZ() {
+          return this._shadowMinZ
+        }
+        set shadowMinZ(WW) {
+          this._shadowMinZ = WW, this.forceProjectionMatrixCompute()
+        }
+        get shadowMaxZ() {
+          return this._shadowMaxZ
+        }
+        set shadowMaxZ(WW) {
+          this._shadowMaxZ = WW, this.forceProjectionMatrixCompute()
+        }
+        computeTransformedInformation() {
+          return !(!this.parent || !this.parent.getWorldMatrix) && (this.transformedPosition || (this.transformedPosition = NW.q.Zero()), NW.q.TransformCoordinatesToRef(this.position, this.parent.getWorldMatrix(), this.transformedPosition), this.direction && (this.transformedDirection || (this.transformedDirection = NW.q.Zero()), NW.q.TransformNormalToRef(this.direction, this.parent.getWorldMatrix(), this.transformedDirection)), !0)
+        }
+        getDepthScale() {
+          return 50
+        }
+        getShadowDirection(WW) {
+          return this.transformedDirection ? this.transformedDirection : this.direction
+        }
+        getAbsolutePosition() {
+          return this.transformedPosition ? this.transformedPosition : this.position
+        }
+        setDirectionToTarget(WW) {
+          return this.direction = NW.q.Normalize(WW.subtract(this.position)), this.direction
+        }
+        getRotation() {
+          this.direction.normalize();
+          const WW = NW.q.Cross(this.direction, LW.c.Y),
+            iW = NW.q.Cross(WW, this.direction);
+          return NW.q.RotationFromAxis(WW, iW, this.direction)
+        }
+        needCube() {
+          return !1
+        }
+        needProjectionMatrixCompute() {
+          return this._needProjectionMatrixCompute
+        }
+        forceProjectionMatrixCompute() {
+          this._needProjectionMatrixCompute = !0
+        }
+        _initCache() {
+          super._initCache(), this._cache.position = NW.q.Zero()
+        }
+        _isSynchronized() {
+          return !!this._cache.position.equals(this.position)
+        }
+        computeWorldMatrix(WW) {
+          return !WW && this.isSynchronized() ? (this._currentRenderId = this.bD().getRenderId(), this._worldMatrix) : (this._updateCache(), this._cache.position.HJ(this.position), this._worldMatrix || (this._worldMatrix = NW.d.Identity()), NW.d.TranslationToRef(this.position.x, this.position.y, this.position.z, this._worldMatrix), this.parent && this.parent.getWorldMatrix && (this._worldMatrix.multiplyToRef(this.parent.getWorldMatrix(), this._worldMatrix), this._markSyncedWithParent()), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix)
+        }
+        getDepthMinZ(WW) {
+          return void 0 !== this.shadowMinZ ? this.shadowMinZ : WW?.minZ || 0
+        }
+        getDepthMaxZ(WW) {
+          return void 0 !== this.shadowMaxZ ? this.shadowMaxZ : WW?.maxZ || 1e4
+        }
+        setShadowProjectionMatrix(WW, iW, OW) {
+          return this.customProjectionMatrixBuilder ? this.customProjectionMatrixBuilder(iW, OW, WW) : this._setDefaultShadowProjectionMatrix(WW, iW, OW), this
+        }
+        _syncParentEnabledState() {
+          super._syncParentEnabledState(), this.parent && this.parent.getWorldMatrix || (this.transformedPosition = null, this.transformedDirection = null)
+        }
+        getViewMatrix(WW) {
+          const iW = NW.l.fA[0];
+          let OW = this.position;
+          this.computeTransformedInformation() && (OW = this.transformedPosition), NW.q.NormalizeToRef(this.getShadowDirection(WW), iW), 1 === Math.abs(NW.q.Dot(iW, NW.q.Up())) && (iW.z = 1e-13);
+          const mW = NW.l.fA[1];
+          return OW.addToRef(iW, mW), NW.d.LookAtLHToRef(OW, mW, NW.q.Up(), this._viewMatrix), this._viewMatrix
+        }
+        getProjectionMatrix(WW, iW) {
+          return this.setShadowProjectionMatrix(this._projectionMatrix, WW ?? this._viewMatrix, iW ?? []), this._projectionMatrix
+        }
+      }, (() => {
+        const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(tW[Symbol.metadata] ?? null) : void 0;
+        iW = [(0, EW.K)()], OW = [(0, EW.K)()], cW = [(0, EW.M)()], wW = [(0, EW.M)()], (0, mW.e)(WW, null, iW, {
+          kind: "getter",
+          name: "position",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "position" in WW,
+            get: WW => WW.position
+          },
+          metadata: NW
+        }, null, ZW), (0, mW.e)(WW, null, OW, {
+          kind: "getter",
+          name: "direction",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "direction" in WW,
+            get: WW => WW.direction
+          },
+          metadata: NW
+        }, null, ZW), (0, mW.e)(WW, null, cW, {
+          kind: "getter",
+          name: "shadowMinZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "shadowMinZ" in WW,
+            get: WW => WW.shadowMinZ
+          },
+          metadata: NW
+        }, null, ZW), (0, mW.e)(WW, null, wW, {
+          kind: "getter",
+          name: "shadowMaxZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "shadowMaxZ" in WW,
+            get: WW => WW.shadowMaxZ
+          },
+          metadata: NW
+        }, null, ZW), NW && Object.defineProperty(WW, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: NW
+        })
+      })(), WW
+    })()
+  },
+  53763: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => EW
+    });
+    var mW = OW(41992);
+    class EW extends mW.h {
+      constructor(WW, iW, OW, EW, NW) {
+        let PW = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          LW = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          cW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3,
+          wW = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+          tW = arguments.length > 9 ? arguments[9] : void 0,
+          ZW = arguments.length > 10 ? arguments[10] : void 0,
+          xW = arguments.length > 11 ? arguments[11] : void 0,
+          lW = arguments.length > 12 ? arguments[12] : void 0;
+        super(null, NW, !PW, LW, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, tW), this.format = EW, this._engine && (this._engine._caps.textureFloatLinearFiltering || 1 !== wW || (cW = 1), this._engine._caps.textureHalfFloatLinearFiltering || 2 !== wW || (cW = 1), this._texture = this._engine.createRawTexture(WW, iW, OW, EW, PW, LW, cW, null, wW, tW ?? 0, ZW ?? !1, lW), this.wrapU = mW.h.CLAMP_ADDRESSMODE, this.wrapV = mW.h.CLAMP_ADDRESSMODE, this._waitingForData = !!xW && !WW)
+      }
+      update(WW) {
+        this.updateMipLevel(WW, 0)
+      }
+      updateMipLevel(WW, iW) {
+        this._getEngine().updateRawTexture(this._texture, WW, this._texture.format, this._texture.invertY, null, this._texture.type, this._texture._useSRGBBuffer, iW), this._waitingForData = !1
+      }
+      clone() {
+        if (!this._texture) return super.clone();
+        const WW = new EW(null, this.getSize().width, this.getSize().height, this.format, this.bD(), this._texture.generateMipMaps, this._invertY, this.samplingMode, this._texture.type, this._texture._creationFlags, this._useSRGBBuffer);
+        return WW._texture = this._texture, this._texture.incrementReferences(), WW
+      }
+      isReady() {
+        return super.isReady() && !this._waitingForData
+      }
+      static CreateLuminanceTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 1, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateLuminanceAlphaTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 2, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateAlphaTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 0, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateRGBTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 4, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9])
+      }
+      static CreateRGBATexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 5, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9], arguments.length > 10 && void 0 !== arguments[10] && arguments[10])
+      }
+      static CreateRGBAStorageTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 5, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, 1, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
+      }
+      static CreateRTexture(WW, iW, OW, NW) {
+        let PW = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          LW = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          cW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : mW.h.TRILINEAR_SAMPLINGMODE;
+        return new EW(WW, iW, OW, 6, NW, PW, LW, cW, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1)
+      }
+      static CreateRStorageTexture(WW, iW, OW, NW) {
+        let PW = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          LW = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          cW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : mW.h.TRILINEAR_SAMPLINGMODE;
+        return new EW(WW, iW, OW, 6, NW, PW, LW, cW, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1, 1)
       }
     }
-    const ti = new class {
-      constructor() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3;
-        this.throttleMetadata = ee, this.intervalMillis = ie
+  },
+  53801: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW.b
+    });
+    var mW = OW(41942);
+    (0, mW.d)()
+  },
+  53752: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW.c
+    });
+    var mW = OW(41969);
+    (0, mW.d)()
+  },
+  41969: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => xW,
+      d: () => bW
+    });
+    var mW, EW, NW = OW(38372),
+      PW = OW(41660),
+      LW = OW(41919),
+      cW = OW(41976),
+      wW = OW(41805),
+      tW = OW(41985),
+      ZW = OW(41415);
+    class xW extends LW.e {
+      _isShaderMaterial(WW) {
+        return !!WW && "ShaderMaterial" === WW.getClassName()
       }
-      getThrottleMetadata(ee) {
-        return this.throttleMetadata[ee]
-      }
-      setThrottleMetadata(ee, ie) {
-        this.throttleMetadata[ee] = ie
-      }
-      deleteThrottleMetadata(ee) {
-        delete this.throttleMetadata[ee]
-      }
-    };
-
-    function Zi(ee) {
-      return new Headers({
-        Accept: "application/json",
-        "x-goog-api-key": ee
-      })
-    }
-    async function wi(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ti,
-        He = arguments.length > 2 ? arguments[2] : void 0;
-      const {
-        appId: ye,
-        apiKey: be,
-        measurementId: Me
-      } = ee.options;
-      if (!ye) throw Ei.create("no-app-id");
-      if (!be) {
-        if (Me) return {
-          measurementId: Me,
-          appId: ye
+      constructor(WW) {
+        let iW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          mW = arguments.length > 5 ? arguments[5] : void 0,
+          EW = arguments.length > 6 ? arguments[6] : void 0,
+          LW = arguments.length > 7 ? arguments[7] : void 0;
+        super(WW, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, iW, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = mW, this.useVertexAlpha = EW, this.color = new NW.b(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, iW && (this.color = iW.color.clone(), this.alpha = iW.alpha, this.useVertexColor = iW.useVertexColor, this.useVertexAlpha = iW.useVertexAlpha), this.intersectionThreshold = .1;
+        const cW = {
+          attributes: [PW.k.PositionKind],
+          uniforms: ["world", "viewProjection"],
+          needAlphaBlending: !0,
+          defines: [],
+          useClipPlane: null,
+          shaderLanguage: 0
         };
-        throw Ei.create("no-api-key")
-      }
-      const Ke = ie.getThrottleMetadata(ye) || {
-          backoffCount: 0,
-          throttleEndTimeMillis: Date.now()
-        },
-        Ue = new Pi;
-      return setTimeout((async () => {
-        Ue.abort()
-      }), void 0 !== He ? He : 6e4), Di({
-        appId: ye,
-        apiKey: be,
-        measurementId: Me
-      }, Ke, Ue, ie)
-    }
-    async function Di(ee, ie, He) {
-      let {
-        throttleEndTimeMillis: ye,
-        backoffCount: be
-      } = ie, Ke = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ti;
-      var Ue;
-      const {
-        appId: Fe,
-        measurementId: Je
-      } = ee;
-      try {
-        await
-        function(ee, ie) {
-          return new Promise(((He, ye) => {
-            const be = Math.max(ie - Date.now(), 0),
-              Me = setTimeout(He, be);
-            ee.addEventListener((() => {
-              clearTimeout(Me), ye(Ei.create("fetch-throttle", {
-                throttleEndTimeMillis: ie
-              }))
-            }))
-          }))
-        }(He, ye)
-      } catch (oe) {
-        if (Je) return zi.warn(`Timed out fetching this Firebase app's measurement ID from the server. Falling back to the measurement ID ${Je} provided in the "measurementId" field in the local Firebase config. [${null===oe||void 0===oe?void 0:oe.message}]`), {
-          appId: Fe,
-          measurementId: Je
-        };
-        throw oe
-      }
-      try {
-        const ie = await async function(ee) {
-          var ie;
-          const {
-            appId: He,
-            apiKey: ye
-          } = ee, be = {
-            method: "GET",
-            headers: Zi(ye)
-          }, Me = "https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig".replace("{app-id}", He), Ke = await fetch(Me, be);
-          if (200 !== Ke.status && 304 !== Ke.status) {
-            let ee = "";
-            try {
-              const He = await Ke.json();
-              (null === (ie = He.error) || void 0 === ie ? void 0 : ie.message) && (ee = He.error.message)
-            } catch (Ue) {}
-            throw Ei.create("config-fetch-failed", {
-              httpStatus: Ke.status,
-              responseMessage: ee
-            })
-          }
-          return Ke.json()
-        }(ee);
-        return Ke.deleteThrottleMetadata(Fe), ie
-      } catch (oe) {
-        const ie = oe;
-        if (! function(ee) {
-            if (!(ee instanceof Me.k) || !ee.customData) return !1;
-            const ie = Number(ee.customData.httpStatus);
-            return 429 === ie || 500 === ie || 503 === ie || 504 === ie
-          }(ie)) {
-          if (Ke.deleteThrottleMetadata(Fe), Je) return zi.warn(`Failed to fetch this Firebase app's measurement ID from the server. Falling back to the measurement ID ${Je} provided in the "measurementId" field in the local Firebase config. [${null===ie||void 0===ie?void 0:ie.message}]`), {
-            appId: Fe,
-            measurementId: Je
+        if (this.useVertexAlpha ? cW.defines.push("#define VERTEXALPHA") : cW.needAlphaBlending = !1, this.useVertexColor ? (cW.defines.push("#define VERTEXCOLOR"), cW.attributes.push(PW.k.ColorKind)) : (cW.uniforms.push("color"), this._color4 = new NW.d), LW) this.material = LW;
+        else {
+          this.bD().VA().isWebGPU && !xW.ForceGLSL && (this._shaderLanguage = 1), cW.shaderLanguage = this._shaderLanguage, cW.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([OW.e(662).then((() => OW(54717))), OW.e(668).then((() => OW(54719)))]) : await Promise.all([OW.e(644).then((() => OW(54721))), OW.e(650).then((() => OW(54726)))])
           };
-          throw oe
+          const WW = new tW.o("colorShader", this.bD(), "color", cW, !1);
+          WW.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(WW)
         }
-        const ye = 503 === Number(null === (Ue = null === ie || void 0 === ie ? void 0 : ie.customData) || void 0 === Ue ? void 0 : Ue.httpStatus) ? (0, Me.r)(be, Ke.intervalMillis, 30) : (0, Me.r)(be, Ke.intervalMillis),
-          Re = {
-            throttleEndTimeMillis: Date.now() + ye,
-            backoffCount: be + 1
-          };
-        return Ke.setThrottleMetadata(Fe, Re), zi.debug(`Calling attemptFetch again in ${ye} millis`), Di(ee, Re, He, Ke)
       }
-    }
-    class Pi {
-      constructor() {
-        this.listeners = []
+      getClassName() {
+        return "LinesMesh"
       }
-      addEventListener(ee) {
-        this.listeners.push(ee)
+      get material() {
+        return this._internalAbstractMeshDataInfo._material
       }
-      abort() {
-        this.listeners.forEach((ee => ee()))
+      set material(WW) {
+        const iW = this.material;
+        if (iW === WW) return;
+        const OW = iW && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(WW), OW && iW?.dispose()
       }
-    }
-    let Ai, Yi;
-
-    function Vi(ee) {
-      Yi = ee
-    }
-
-    function ai(ee) {
-      Ai = ee
-    }
-    async function ci(ee, ie, He, ye, be, Ke, Ue) {
-      var Fe;
-      const Je = wi(ee);
-      Je.then((ie => {
-        He[ie.measurementId] = ie.appId, ee.options.measurementId && ie.measurementId !== ee.options.measurementId && zi.warn(`The measurement ID in the local Firebase config (${ee.options.measurementId}) does not match the measurement ID fetched from the server (${ie.measurementId}). To ensure analytics events are always sent to the correct Analytics property, update the measurement ID field in the local config or remove it from the local config.`)
-      })).catch((ee => zi.error(ee))), ie.push(Je);
-      const oe = async function() {
-        if (!(0, Me.T)()) return zi.warn(Ei.create("indexeddb-unavailable", {
-          errorInfo: "IndexedDB is not available in this environment."
-        }).message), !1;
-        try {
-          await (0, Me.db)()
-        } catch (ee) {
-          return zi.warn(Ei.create("indexeddb-unavailable", {
-            errorInfo: null === ee || void 0 === ee ? void 0 : ee.toString()
-          }).message), !1
-        }
-        return !0
-      }().then((ee => ee ? ye.getId() : void 0)), [Re, ke] = await Promise.all([Je, oe]);
-      (function(ee) {
-        const ie = window.document.getElementsByTagName("script");
-        for (const He of Object.values(ie))
-          if (He.src && He.src.includes(Xi) && He.src.includes(ee)) return He;
-        return null
-      })(Ke) || di(Ke, Re.measurementId), Yi && (be("consent", "default", Yi), Vi(void 0)), be("js", new Date);
-      const qe = null !== (Fe = null === Ue || void 0 === Ue ? void 0 : Ue.config) && void 0 !== Fe ? Fe : {};
-      return qe.origin = "firebase", qe.update = !0, null != ke && (qe.firebase_id = ke), be("config", Re.measurementId, qe), Ai && (be("set", Ai), ai(void 0)), Re.measurementId
-    }
-    class xi {
-      constructor(ee) {
-        this.app = ee
+      _setInternalMaterial(WW) {
+        this._setMaterial(WW), this.material && (this.material.fillMode = wW.d.LineListDrawMode, this.material.disableLighting = !0)
       }
-      _delete() {
-        return delete Li[this.app.options.appId], Promise.resolve()
-      }
-    }
-    let Li = {},
-      Ci = [];
-    const vi = {};
-    let ui, mi, li = "dataLayer",
-      Si = "gtag",
-      ni = !1;
-
-    function ji(ee) {
-      if (ni) throw Ei.create("already-initialized");
-      ee.dataLayerName && (li = ee.dataLayerName), ee.gtagName && (Si = ee.gtagName)
-    }
-
-    function si(ee, ie, He) {
-      ! function() {
-        const ee = [];
-        if ((0, Me.O)() && ee.push("This is a browser extension environment."), (0, Me.m)() || ee.push("Cookies are not available."), ee.length > 0) {
-          const ie = ee.map(((ee, ie) => `(${ie+1}) ${ee}`)).join(" "),
-            He = Ei.create("invalid-analytics-context", {
-              errorInfo: ie
-            });
-          zi.warn(He.message)
-        }
-      }();
-      const ye = ee.options.appId;
-      if (!ye) throw Ei.create("no-app-id");
-      if (!ee.options.apiKey) {
-        if (!ee.options.measurementId) throw Ei.create("no-api-key");
-        zi.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest measurement ID for this Firebase app. Falling back to the measurement ID ${ee.options.measurementId} provided in the "measurementId" field in the local Firebase config.`)
-      }
-      if (null != Li[ye]) throw Ei.create("already-exists", {
-        id: ye
-      });
-      if (!ni) {
-        ! function(ee) {
-          let ie = [];
-          Array.isArray(window[ee]) ? ie = window[ee] : window[ee] = ie
-        }(li);
-        const {
-          wrappedGtag: ee,
-          gtagCore: ie
-        } = function(ee, ie, He, ye, be) {
-          let Me = function() {
-            for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
-            window[ye].push(arguments)
-          };
-          return window[be] && "function" === typeof window[be] && (Me = window[be]), window[be] = Wi(Me, ee, ie, He), {
-            gtagCore: Me,
-            wrappedGtag: window[be]
-          }
-        }(Li, Ci, vi, li, Si);
-        mi = ee, ui = ie, ni = !0
-      }
-      Li[ye] = ci(ee, Ci, vi, ie, ui, li, He);
-      return new xi(ee)
-    }
-
-    function Ii() {
-      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ye.D)();
-      ee = (0, Me.I)(ee);
-      const ie = (0, ye.r)(ee, Ti);
-      return ie.isInitialized() ? ie.getImmediate() : Ni(ee)
-    }
-
-    function Ni(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const He = (0, ye.r)(ee, Ti);
-      if (He.isInitialized()) {
-        const ee = He.getImmediate();
-        if ((0, Me.t)(ie, He.getOptions())) return ee;
-        throw Ei.create("already-initialized")
-      }
-      return He.initialize({
-        options: ie
-      })
-    }
-    async function Gi() {
-      if ((0, Me.O)()) return !1;
-      if (!(0, Me.m)()) return !1;
-      if (!(0, Me.T)()) return !1;
-      try {
-        return await (0, Me.db)()
-      } catch (ee) {
+      get checkCollisions() {
         return !1
       }
-    }
-
-    function ri(ee, ie, He) {
-      ee = (0, Me.I)(ee), async function(ee, ie, He, ye) {
-        if (ye && ye.global) return ee("set", {
-          screen_name: He
-        }), Promise.resolve();
-        ee("config", await ie, {
-          update: !0,
-          screen_name: He
-        })
-      }(mi, Li[ee.app.options.appId], ie, He).catch((ee => zi.error(ee)))
-    }
-    async function Qi(ee) {
-      return ee = (0, Me.I)(ee), async function(ee, ie) {
-        const He = await ie;
-        return new Promise(((ie, ye) => {
-          ee("get", He, "client_id", (ee => {
-            ee || ye(Ei.create("no-client-id")), ie(ee)
-          }))
-        }))
-      }(mi, Li[ee.app.options.appId])
-    }
-
-    function eH(ee, ie, He) {
-      ee = (0, Me.I)(ee), async function(ee, ie, He, ye) {
-        if (ye && ye.global) return ee("set", {
-          user_id: He
-        }), Promise.resolve();
-        ee("config", await ie, {
-          update: !0,
-          user_id: He
-        })
-      }(mi, Li[ee.app.options.appId], ie, He).catch((ee => zi.error(ee)))
-    }
-
-    function iH(ee, ie, He) {
-      ee = (0, Me.I)(ee), async function(ee, ie, He, ye) {
-        if (ye && ye.global) {
-          const ie = {};
-          for (const ee of Object.keys(He)) ie[`user_properties.${ee}`] = He[ee];
-          return ee("set", ie), Promise.resolve()
+      set checkCollisions(WW) {}
+      _bind(WW, iW) {
+        if (!this._geometry) return this;
+        const OW = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(iW, OW) : this._geometry._bind(iW, OW, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+          const {
+            r: WW,
+            g: iW,
+            b: OW
+          } = this.color;
+          this._color4.set(WW, iW, OW, this.alpha), this.material.setColor4("color", this._color4)
         }
-        ee("config", await ie, {
-          update: !0,
-          user_properties: He
-        })
-      }(mi, Li[ee.app.options.appId], ie, He).catch((ee => zi.error(ee)))
-    }
-
-    function HH(ee, ie) {
-      ee = (0, Me.I)(ee), async function(ee, ie) {
-        const He = await ee;
-        window[`ga-disable-${He}`] = !ie
-      }(Li[ee.app.options.appId], ie).catch((ee => zi.error(ee)))
-    }
-
-    function yH(ee) {
-      mi ? mi("set", ee) : ai(ee)
-    }
-
-    function bH(ee, ie, He, ye) {
-      ee = (0, Me.I)(ee), async function(ee, ie, He, ye, be) {
-        if (be && be.global) ee("event", He, ye);
-        else {
-          const be = await ie;
-          ee("event", He, Object.assign(Object.assign({}, ye), {
-            send_to: be
-          }))
-        }
-      }(mi, Li[ee.app.options.appId], ie, He, ye).catch((ee => zi.error(ee)))
-    }
-
-    function MH(ee) {
-      mi ? mi("consent", "update", ee) : Vi(ee)
-    }
-    const KH = "@firebase/analytics",
-      UH = "0.10.0";
-    (0, ye.v)(new Ke.h(Ti, ((ee, ie) => {
-      let {
-        options: He
-      } = ie;
-      return si(ee.getProvider("app").getImmediate(), ee.getProvider("installations-internal").getImmediate(), He)
-    }), "PUBLIC")), (0, ye.v)(new Ke.h("analytics-internal", (function(ee) {
-      try {
-        const ie = ee.getProvider(Ti).getImmediate();
-        return {
-          logEvent: (ee, He, ye) => bH(ie, ee, He, ye)
-        }
-      } catch (ie) {
-        throw Ei.create("interop-component-reg-failed", {
-          reason: ie
-        })
+        return this
       }
-    }), "PRIVATE")), (0, ye.H)(KH, UH), (0, ye.H)(KH, UH, "esm2017")
+      _draw(WW, iW, OW) {
+        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
+        const mW = this.bD().VA();
+        return this._unIndexed ? mW.drawArraysType(wW.d.LineListDrawMode, WW.verticesStart, WW.verticesCount, OW) : mW.drawElementsType(wW.d.LineListDrawMode, WW.indexStart, WW.indexCount, OW), this
+      }
+      dispose(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || iW) && this.material?.dispose(!1, !1, !0), super.dispose(WW)
+      }
+      clone(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          OW = arguments.length > 2 ? arguments[2] : void 0;
+        if (iW && void 0 === iW._addToSceneRootNodes) {
+          const OW = iW;
+          return OW.source = this, new xW(WW, this.bD(), OW.parent, OW.source, OW.doNotCloneChildren)
+        }
+        return new xW(WW, this.bD(), iW, this, OW)
+      }
+      createInstance(WW) {
+        const iW = new lW(WW, this);
+        if (this.bV) {
+          iW.bV = {};
+          for (const WW in this.bV) iW.bV[WW] = this.bV[WW]
+        }
+        return iW
+      }
+      serialize(WW) {
+        super.serialize(WW), WW.color = this.color.wEW(), WW.alpha = this.alpha
+      }
+      static Parse(WW, iW) {
+        const OW = new xW(WW.name, iW);
+        return OW.color = NW.b.FromArray(WW.color), OW.alpha = WW.alpha, OW
+      }
+    }
+    xW.ForceGLSL = !1;
+    class lW extends cW.e {
+      constructor(WW, iW) {
+        super(WW, iW), this.intersectionThreshold = iW.intersectionThreshold
+      }
+      getClassName() {
+        return "InstancedLinesMesh"
+      }
+    }
+    let AW = !1;
+
+    function bW() {
+      AW || (AW = !0, LW.e._LinesMeshParser = (WW, iW) => xW.Parse(WW, iW))
+    }(mW = xW.prototype).enableEdgesRendering ?? (mW.enableEdgesRendering = (0, ZW.k)("LinesMesh", "enableEdgesRendering")), (EW = lW.prototype).enableEdgesRendering ?? (EW.enableEdgesRendering = (0, ZW.k)("InstancedLinesMesh", "enableEdgesRendering"))
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

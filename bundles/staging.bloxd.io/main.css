@@ -62,6 +62,8 @@
 .HomePage .HomePageInner .HomePageInnerRight {
   --home-inner-padding-left: max(var(--notchLeft), 0.5rem);
   --home-inner-padding-right: max(var(--notchRight), 0.5rem);
+  --home-inner-padding-top: max(var(--notchTop), 1rem);
+  --home-inner-padding-bottom: max(var(--notchBottom), 1rem);
   background-color: #2b3249;
   display: flex;
   flex-direction: column;
@@ -69,13 +71,14 @@
   gap: 1rem;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: max(var(--notchTop), 1rem) var(--home-inner-padding-right) max(var(--notchBottom), 1rem) var(--home-inner-padding-left);
+  padding: var(--home-inner-padding-top) var(--home-inner-padding-right) var(--home-inner-padding-bottom) var(--home-inner-padding-left);
   scrollbar-width: none;
   transition: padding .2s
 }
 
 .HomePage .HomePageInner .HomePageInnerRight .HomePageInnerRightBody {
-  padding-bottom: calc(250px + 2rem)
+  --home-body-padding-bottom: calc(250px + 2rem);
+  padding-bottom: var(--home-body-padding-bottom)
 }
 
 .HomePage .HomePageInner .HomePageInnerRight .HomePageInnerRightBody:has(>main>.GameInformation) {
@@ -141,6 +144,105 @@
   background-size: auto, 4rem 4rem
 }
 
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight {
+  --home-inner-padding-top: max(var(--notchTop), 2rem);
+  isolation: isolate
+}
+
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeSnowfall {
+  flex-shrink: 0;
+  height: 0;
+  margin-bottom: -1rem;
+  position: sticky;
+  top: 0;
+  z-index: -1
+}
+
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeSnowfall:before {
+  animation: HomeSnowfallDrop 16s steps(256) infinite;
+  background: url(/static/media/snow.d0e8fa887c9503a4f0cb.svg) 0 0/256px 256px;
+  content: "";
+  height: calc(100dvh + 256px);
+  left: calc(var(--home-inner-padding-left)*-1);
+  pointer-events: none;
+  position: absolute;
+  right: calc(var(--home-inner-padding-right)*-1);
+  top: calc(-256px - var(--home-inner-padding-top))
+}
+
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeChristmasLights {
+  flex-shrink: 0;
+  height: 0;
+  margin-bottom: -1rem;
+  position: relative;
+  z-index: 2
+}
+
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeChristmasLights:after,
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeChristmasLights:before {
+  background-repeat: repeat-x;
+  background-size: 22.5rem 1.875rem;
+  content: "";
+  height: 1.875rem;
+  left: calc(var(--home-inner-padding-left)*-1);
+  pointer-events: none;
+  position: absolute;
+  right: calc(var(--home-inner-padding-right)*-1);
+  top: calc(var(--home-inner-padding-top)*-1)
+}
+
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeChristmasLights:before {
+  background-image: url(/static/media/lights.9c6a772aec2b23964988.svg)
+}
+
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeChristmasLights:after {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAAUCAYAAACzgLAGAAAACGFjVEwAAAACAAAAAPONk3AAAAAaZmNUTAAAAAAAAADwAAAAFAAAAAAAAAAAAyAD6AAA2kE3EAAAAFxJREFUeNrt0CERAEAIAEH64GjxRT8nFoXD7c5cgYsAAAAAAAAAgCHr/S2H/PPPQP/wz0D//MNA//wzEP/8M9A///wz0D//DDTQP/8M9M8//wz0zz//DPTPP4ADDYQ2VnCA1e90AAAAGmZjVEwAAAABAAAA8AAAABQAAAAAAAAAAAMgA+gAAEEy3cQAAAAtZmRBVAAAAAJ42u3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAOBrSxQAAdxLDAAAAAAASUVORK5CYII=);
+  image-rendering: pixelated
+}
+
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeSnowyGround {
+  height: 0;
+  position: relative
+}
+
+.HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeSnowyGround:before {
+  background: url(/static/media/snowyGround.9a8394d9450912edc77c.svg) 0 0/40rem 12.25rem repeat-x;
+  content: "";
+  height: 12.25rem;
+  left: calc(var(--home-inner-padding-left)*-1);
+  pointer-events: none;
+  position: absolute;
+  right: calc(var(--home-inner-padding-right)*-1);
+  top: calc(var(--home-body-padding-bottom) + var(--home-inner-padding-bottom) - 12.25rem)
+}
+
+.HomePage.ChristmasTheme .GameCardContainer:nth-child(3n+2) .AvailableGame:after {
+  background-color: #f2f2f2;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 92% 50%, 92% 100%, 80% 100%, 80% 50%, 64% 50%, 64% 85%, 50% 85%, 50% 50%, 34% 50%, 34% 100%, 22% 100%, 22% 50%, 10% 50%, 10% 80%, 0 80%);
+  content: "";
+  height: 15%;
+  left: -1px;
+  pointer-events: none;
+  position: absolute;
+  right: -1px;
+  top: -4%;
+  z-index: 1
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeChristmasLights:after,
+  .HomePage.ChristmasTheme .HomePageInner .HomePageInnerRight .HomeSnowfall {
+    display: none
+  }
+}
+
+@keyframes HomeSnowfallDrop {
+  to {
+    transform: translateY(256px)
+  }
+}
+
 .HomeHeader {
   display: flex;
   flex-direction: row;
@@ -156,10 +258,6 @@
   opacity: 1;
   pointer-events: auto;
   transition: opacity .6s
-}
-
-.HomeHeader.HomeHeaderUnderFollowBadge {
-  padding-top: 1.5rem
 }
 
 .HomeHeader .HomeHeaderInner {
@@ -200,6 +298,13 @@
 
 .HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait.HomeHeaderTopWithStore .HomeHeaderRightContainer .HomeHeaderRight {
   padding: 0 .25rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopWithStore:not(.HomeHeaderTopPortrait) .HomeHeaderStoreButton .HomeHeaderStoreDealChip {
+  left: 50%;
+  right: auto;
+  top: calc(100% + .25rem);
+  transform: translateX(-50%)
 }
 
 @media(pointer:coarse)and (min-width:667px) {
@@ -287,6 +392,11 @@
   width: .6rem
 }
 
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .HomeHeaderStoreDot.HomeHeaderStoreDotLow {
+  bottom: .3rem;
+  top: auto
+}
+
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton:after {
   border: max(min(4px, .15em), 2px) solid;
   border-image: linear-gradient(90deg, #ff6b9d, #ffa64d, gold, #7dd87d, #6bb5ff, #c084fc, #ff6b9d) 1;
@@ -309,11 +419,15 @@
 }
 
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton .HomeHeaderStoreDealChip {
-  left: 50%;
   pointer-events: none;
   position: absolute;
-  top: calc(100% + .25rem);
-  transform: translateX(-50%)
+  right: -.2rem;
+  top: -.6rem;
+  z-index: 1
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton .HomeHeaderStoreDealChip .svg-inline--fa path {
+  fill: currentColor
 }
 
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton[data-pressing] {
@@ -804,15 +918,10 @@
   --fa-secondary-opacity: 1;
   font-size: .7em;
   position: absolute;
-  right: -.36em;
-  rotate: 20deg;
-  top: -.51em;
+  right: -.08em;
+  rotate: 12deg;
+  top: -.42em;
   z-index: 2
-}
-
-.InGameHeaderLogo .LogoLoader .LoaderSantaHat,
-.TitleContainer .LogoLoader .LoaderSantaHat {
-  top: -.25em
 }
 
 .LogoLoader .LogoLoaderInner {
@@ -3605,9 +3714,9 @@ a {
 
 .HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
   align-items: center;
-  background-color: rgba(60, 75, 104, .72);
+  background-color: var(--hud-key-face, rgba(60, 75, 104, .72));
   border: 2px solid #0f0f0f;
-  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 3px 0 #1a1f2e;
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -3659,8 +3768,8 @@ a {
 }
 
 .HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon[data-pressing] {
-  background-color: rgba(75, 94, 130, .85);
-  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  background-color: var(--hud-key-pressed, rgba(75, 94, 130, .85));
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 1px 0 #1a1f2e;
   opacity: 1;
   transform: translateY(2px);
   transition: none
@@ -3716,9 +3825,9 @@ a {
 
 .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
   align-items: center;
-  background-color: rgba(60, 75, 104, .72);
+  background-color: var(--hud-key-face, rgba(60, 75, 104, .72));
   border: 2px solid #0f0f0f;
-  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 3px 0 #1a1f2e;
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -3770,8 +3879,8 @@ a {
 }
 
 .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon[data-pressing] {
-  background-color: rgba(75, 94, 130, .85);
-  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  background-color: var(--hud-key-pressed, rgba(75, 94, 130, .85));
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 1px 0 #1a1f2e;
   opacity: 1;
   transform: translateY(2px);
   transition: none
@@ -3816,9 +3925,9 @@ a {
 
 .HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
   align-items: center;
-  background-color: rgba(60, 75, 104, .72);
+  background-color: var(--hud-key-face, rgba(60, 75, 104, .72));
   border: 2px solid #0f0f0f;
-  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 3px 0 #1a1f2e;
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -3870,8 +3979,8 @@ a {
 }
 
 .HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon[data-pressing] {
-  background-color: rgba(75, 94, 130, .85);
-  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  background-color: var(--hud-key-pressed, rgba(75, 94, 130, .85));
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 1px 0 #1a1f2e;
   opacity: 1;
   transform: translateY(2px);
   transition: none
@@ -3916,9 +4025,9 @@ a {
 
 .HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
   align-items: center;
-  background-color: rgba(60, 75, 104, .72);
+  background-color: var(--hud-key-face, rgba(60, 75, 104, .72));
   border: 2px solid #0f0f0f;
-  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 3px 0 #1a1f2e;
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -3970,8 +4079,8 @@ a {
 }
 
 .HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon[data-pressing] {
-  background-color: rgba(75, 94, 130, .85);
-  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  background-color: var(--hud-key-pressed, rgba(75, 94, 130, .85));
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 1px 0 #1a1f2e;
   opacity: 1;
   transform: translateY(2px);
   transition: none
@@ -4016,9 +4125,9 @@ a {
 
 .HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
   align-items: center;
-  background-color: rgba(60, 75, 104, .72);
+  background-color: var(--hud-key-face, rgba(60, 75, 104, .72));
   border: 2px solid #0f0f0f;
-  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 3px 0 #1a1f2e;
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -4070,8 +4179,8 @@ a {
 }
 
 .HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon[data-pressing] {
-  background-color: rgba(75, 94, 130, .85);
-  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  background-color: var(--hud-key-pressed, rgba(75, 94, 130, .85));
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 1px 0 #1a1f2e;
   opacity: 1;
   transform: translateY(2px);
   transition: none
@@ -4116,9 +4225,9 @@ a {
 
 .HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
   align-items: center;
-  background-color: rgba(60, 75, 104, .72);
+  background-color: var(--hud-key-face, rgba(60, 75, 104, .72));
   border: 2px solid #0f0f0f;
-  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 3px 0 #1a1f2e;
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -4170,8 +4279,8 @@ a {
 }
 
 .HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon[data-pressing] {
-  background-color: rgba(75, 94, 130, .85);
-  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  background-color: var(--hud-key-pressed, rgba(75, 94, 130, .85));
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 1px 0 #1a1f2e;
   opacity: 1;
   transform: translateY(2px);
   transition: none
@@ -4216,9 +4325,9 @@ a {
 
 .HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
   align-items: center;
-  background-color: rgba(60, 75, 104, .72);
+  background-color: var(--hud-key-face, rgba(60, 75, 104, .72));
   border: 2px solid #0f0f0f;
-  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 3px 0 #1a1f2e;
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -4270,8 +4379,8 @@ a {
 }
 
 .HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon[data-pressing] {
-  background-color: rgba(75, 94, 130, .85);
-  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  background-color: var(--hud-key-pressed, rgba(75, 94, 130, .85));
+  box-shadow: inset 0 1.5px 0 var(--hud-key-bevel, #586e99), 0 1px 0 #1a1f2e;
   opacity: 1;
   transform: translateY(2px);
   transition: none
@@ -4790,7 +4899,8 @@ a {
 
 .LoginPopup .LoginPopupInner .LoginPopupTitle {
   font-size: 1.6rem;
-  padding: 0 5rem
+  overflow-wrap: anywhere;
+  padding-inline: 5rem
 }
 
 .LoginPopup .LoginPopupInner .LoginOptionListButtons {
@@ -4840,6 +4950,400 @@ a {
   display: flex;
   flex-direction: column;
   gap: .5rem
+}
+
+.SaveProgressPopup .SaveProgressValue .SaveProgressHeader {
+  display: flex;
+  justify-content: center
+}
+
+.SaveProgressPopup .SaveProgressValue .SaveProgressBadge {
+  font-size: 2.6rem;
+  height: 5rem;
+  position: relative;
+  width: 5rem
+}
+
+.SaveProgressPopup .SaveProgressValue .SaveProgressBadge,
+.SaveProgressPopup .SaveProgressValue .SaveProgressBadge .SaveProgressBadgeCheck {
+  align-items: center;
+  background-color: rgba(255, 185, 20, .15);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #ffb914;
+  display: flex;
+  justify-content: center
+}
+
+.SaveProgressPopup .SaveProgressValue .SaveProgressBadge .SaveProgressBadgeCheck {
+  background-color: #303a59;
+  bottom: -.6rem;
+  color: #1dd06d;
+  font-size: 1.1rem;
+  height: 2rem;
+  position: absolute;
+  right: -.6rem;
+  width: 2rem
+}
+
+.SaveProgressPopup .SaveProgressValue .SaveProgressBody {
+  color: #cfcfcf;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  text-align: center
+}
+
+.SaveProgressPopup .SaveProgressStays {
+  color: #cfcfcf;
+  font-size: .9rem;
+  text-align: center;
+  width: 100%
+}
+
+.SaveProgressChip {
+  align-items: stretch;
+  animation-duration: .2s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-name: fadeInScaleUp;
+  display: flex;
+  gap: .3rem;
+  isolation: isolate;
+  justify-content: flex-end;
+  margin-top: .4rem;
+  pointer-events: auto
+}
+
+.SaveProgressChip .SaveProgressChipSave {
+  font-size: 1rem;
+  gap: .4rem;
+  padding: .3rem .8rem
+}
+
+@media(pointer:coarse) {
+  .SaveProgressChip .SaveProgressChipSave {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.SaveProgressChip .SaveProgressChipClose {
+  padding: .3rem .6rem
+}
+
+@media(pointer:coarse) {
+  .SaveProgressChip .SaveProgressChipClose {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.SaveProgressChip.SaveProgressChipOverMenu {
+  position: fixed;
+  right: calc(.6rem + env(safe-area-inset-right, 0px));
+  top: calc(4.5rem + env(safe-area-inset-top, 0px));
+  z-index: 21
+}
+
+.InGamePromptLuckySkinBlock {
+  font-size: 1.3rem
+}
+
+.InGamePromptHint {
+  color: #cfcfcf
+}
+
+.UiRequests {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  pointer-events: auto;
+  z-index: 1
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .UiRequests {
+    max-width: calc(65vw - 1rem)
+  }
+
+  .UiRequests .UiRequestText {
+    overflow-wrap: anywhere
+  }
+
+  .UiRequests .UiRequestText .TextFromServerEntityName {
+    white-space: normal
+  }
+}
+
+.UiRequests .UiRequestContainer.UiRequestContainer-exit {
+  opacity: 1;
+  pointer-events: none;
+  transform: translateX(0)
+}
+
+.UiRequests .UiRequestContainer.UiRequestContainer-exit-active {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(1.5rem);
+  transition: opacity .2s ease-in, transform .2s ease-in
+}
+
+.UiRequests .UiRequestContainer.RewardedAdUiRequestContainer {
+  animation: shake 3s infinite;
+  animation-delay: 6s
+}
+
+.UiRequests .UiRequestContainer.RewardedAdUiRequestContainer .UiRequest .UiRequestInner {
+  animation: shine 4s linear infinite;
+  background: linear-gradient(110deg, #303a59, #303a59 2rem, #394980 0, #394980 4rem, #303a59 0, #303a59);
+  background-position: -4rem 0;
+  background-size: calc(200% + 4rem) 100%
+}
+
+@keyframes shine {
+  0% {
+    background-position: -4rem 0
+  }
+
+  12.5% {
+    background-position: -100% 0
+  }
+
+  to {
+    background-position: -100% 0
+  }
+}
+
+.UiRequests .UiRequestContainer.RewardedAdUiRequestContainer .UiRequest .UiRequestInner {
+  border-color: #ffb914
+}
+
+.UiRequests .UiRequestContainer .UiRequest {
+  animation-duration: .25s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-name: topRightStackIn;
+  animation-timing-function: cubic-bezier(.2, .8, .2, 1)
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner {
+  align-items: center;
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex;
+  gap: .5rem;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: .5rem 1rem .5rem .5rem;
+  position: relative
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlayDefault {
+  background-color: transparent
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlayLoading {
+  background-color: rgba(48, 58, 89, .9);
+  font-size: 2rem
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlaySuccess {
+  background-color: rgba(48, 58, 89, .9)
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlaySuccess .UiRequestSuccessOverlayIcon {
+  font-size: 2rem;
+  position: relative
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlaySuccess .UiRequestSuccessOverlayText {
+  font-size: 1.3rem;
+  font-weight: 700
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestLeft {
+  align-items: center;
+  display: flex;
+  font-size: 3rem;
+  height: 5rem;
+  justify-content: center;
+  width: 5rem
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestText {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-right: auto;
+  padding: .25rem 1.25rem .25rem .4rem
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestButtonList {
+  align-items: center;
+  display: flex;
+  gap: .5rem;
+  justify-content: center
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestButtonList .UiRequestButton {
+  box-shadow: none;
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 700
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestButtonList .UiRequestButton .ButtonBody {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center
+}
+
+.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestButtonList .UiRequestButton .KeyboardButtonRepresentation {
+  font-size: .8rem
+}
+
+@keyframes chestShake {
+  0% {
+    transform: translateX(-50%) rotate(6deg)
+  }
+
+  25% {
+    transform: translateX(-50%) rotate(-4deg)
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(6deg)
+  }
+
+  75% {
+    transform: translateX(-50%) rotate(-4deg)
+  }
+
+  to {
+    transform: translateX(-50%) rotate(0)
+  }
+}
+
+@keyframes pop {
+  0% {
+    bottom: 0;
+    opacity: 0
+  }
+
+  to {
+    bottom: 1.5rem;
+    opacity: 0
+  }
+}
+
+.ChestContainer {
+  height: 5.5rem;
+  position: relative;
+  width: 5rem
+}
+
+.ChestContainer .ChestImage {
+  -ms-interpolation-mode: nearest-neighbor;
+  animation: chestShake .4s 3;
+  bottom: 0;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  transform-origin: center center;
+  transition: width .2s;
+  width: 4rem
+}
+
+.ChestContainer .ChestImage.ChestImageSmall {
+  width: 2.5rem
+}
+
+.ChestContainer .ChestShine {
+  animation-delay: .2s;
+  animation-duration: .2s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-name: fadeInScaleUp;
+  bottom: 1rem;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+  height: 2.5rem;
+  isolation: isolate;
+  left: calc(50% - 1.9rem);
+  position: absolute;
+  width: 3.8rem
+}
+
+.ChestContainer .ChestShine .ChestShineBackground {
+  background: linear-gradient(0, rgba(255, 185, 20, .8), rgba(255, 185, 20, 0));
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%
+}
+
+.ChestContainer .RewardItemsContainer {
+  align-items: center;
+  display: flex;
+  gap: .4rem;
+  height: 3rem;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.ChestContainer .RewardItemsContainer .RewardItem {
+  font-size: 1.5rem;
+  height: 100%;
+  position: relative;
+  transform-origin: center bottom;
+  width: 0
+}
+
+.ChestContainer .RewardItemsContainer .RewardItem.RewardItemShow .TextFromServer {
+  bottom: .25rem;
+  opacity: 1
+}
+
+.ChestContainer .RewardItemsContainer .RewardItem .TextFromServer {
+  bottom: -1rem;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: opacity .4s, bottom .4s;
+  transition-delay: .2s
 }
 
 .CosmeticPackGrantedIcon {
@@ -7148,25 +7652,10 @@ a {
   white-space: nowrap
 }
 
-.TitleContainer .TitleContainerTop .Title .TitleSantaHat {
-  --fa-primary-color: #e73131;
-  --fa-secondary-color: #fff;
-  --fa-secondary-opacity: 1;
-  font-size: .55em;
-  position: absolute;
-  right: -.2em;
-  rotate: 20deg;
-  top: -1.25em
-}
-
 .TitleContainer .TitleContainerTop .Title.TitleNinetyNineNightsBundle {
   font-size: .65em;
   line-height: 1.1;
   white-space: pre-line
-}
-
-.TitleContainer .TitleContainerTop .Title.TitleNinetyNineNightsBundle .TitleSantaHat {
-  display: none
 }
 
 .TitleContainer .TitleContainerTop .LogoContainer {
@@ -7336,11 +7825,11 @@ html[data-app-covered] .WholeAppWrapper .DailyDropPointerOutline {
   color: #22283b;
   cursor: pointer;
   display: flex;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  gap: .4rem;
+  gap: .5rem;
   line-height: 1;
-  padding: .3rem .7rem .3rem .4rem;
+  padding: .3rem .8rem .3rem .3rem;
   position: relative;
   white-space: nowrap
 }
@@ -7355,7 +7844,11 @@ html[data-app-covered] .WholeAppWrapper .DailyDropPointerOutline {
 
 .DailyDropBubble .DailyDropBubbleBlock {
   animation: DailyDropBlockHop 1.8s ease-out 3;
-  font-size: 1.2rem
+  background-color: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  display: flex;
+  font-size: 1.35rem;
+  padding: .1rem
 }
 
 .DailyDropBubble.DailyDropBubbleBeside {
@@ -7533,21 +8026,39 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 
 .NewPlayerDealChip {
   align-items: center;
-  background-color: #1a1f2e;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  color: #fcd373;
   display: inline-flex;
   font-size: max(.8rem, 11px);
   font-weight: 900;
   gap: .25rem;
-  padding: .1rem .45rem;
   white-space: nowrap
 }
 
 .NewPlayerDealChip svg {
   height: .85em;
   width: .85em
+}
+
+.NewPlayerDealChip.NewPlayerDealChipPill {
+  background-color: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #fcd373;
+  padding: .1rem .45rem
+}
+
+.NewPlayerDealChip.NewPlayerDealChipInButton {
+  -webkit-text-fill-color: currentColor;
+  color: #fcd373;
+  font-size: max(.8rem, 10px)
+}
+
+.NewPlayerDealChip.NewPlayerDealChipTag {
+  background-color: #ffb914;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #1a1f2e;
+  padding: .05rem .35rem;
+  text-shadow: none
 }
 
 .CountdownTime {
@@ -8098,7 +8609,16 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
   align-items: stretch;
   display: flex;
   gap: .5rem;
-  min-width: 0
+  min-width: 0;
+  position: relative
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarActionsRow .SocialBarShopDealTag {
+  bottom: calc(100% - .6rem);
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  z-index: 2
 }
 
 @supports(overflow-x:clip) {
@@ -8152,6 +8672,31 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
   right: .3rem;
   top: .3rem;
   width: .6rem
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarShopButton .SocialBarShopDot.SocialBarShopDotLow {
+  bottom: .3rem;
+  top: auto
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarActionsRow.SocialBarActionsRowDeal .SocialBarActionButton {
+  height: auto;
+  min-height: 3.1rem
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarShopButton .SocialBarShopLabel {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  line-height: 1.1;
+  min-width: 0
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarShopButton .SocialBarShopLabel .SocialBarShopLine {
+  align-items: center;
+  display: flex;
+  gap: .5rem
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarDealChipRow {
@@ -10839,9 +11384,6 @@ html[data-app-covered] .WholeAppWrapper .AdBannerContainer .AdBanner.CosmeticPac
 }
 
 .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailCosmeticsArea .CharCustomPartWrapper .CharCustomPart {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
   height: 85%;
   width: 85%
 }
@@ -11401,6 +11943,34 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
   margin-top: .4rem
 }
 
+.PremiumCurrencyPurchase.PremiumCurrencyPurchaseGifting .PremiumCurrencyPurchaseButtons {
+  background: #303a59;
+  bottom: -1.5rem;
+  margin: 0 -1.5rem -1.5rem;
+  padding: 1rem 1.5rem 1.5rem;
+  position: sticky;
+  z-index: 1
+}
+
+.PremiumCurrencyPurchase.PremiumCurrencyPurchaseGifting .PremiumCurrencyPurchaseButtons>.GoldButton {
+  flex-grow: 1
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .PremiumCurrencyPurchase.PremiumCurrencyPurchaseGifting .PremiumCurrencyPurchaseButtons {
+    flex-wrap: wrap
+  }
+
+  .PremiumCurrencyPurchase.PremiumCurrencyPurchaseGifting .PremiumCurrencyPurchaseButtons>.GoldButton {
+    flex-basis: 100%;
+    order: -1
+  }
+
+  .PremiumCurrencyPurchase.PremiumCurrencyPurchaseGifting .PremiumCurrencyPurchaseButtons>:not(.GoldButton) {
+    flex: 1 1
+  }
+}
+
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseBuy {
   align-items: center;
   display: flex;
@@ -11665,10 +12235,907 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 }
 
 .BundlesLoadFailed {
-  align-items: center;
+  align-items: center
+}
+
+.BundlesLoadFailed,
+.GiftChoices {
   display: flex;
   flex-direction: column;
   gap: 1rem
+}
+
+.GiftChoices {
+  text-align: left
+}
+
+.GiftChoices .GiftChoicesSection {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  min-width: 0
+}
+
+.GiftChoices .GiftChoicesLabel {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800
+}
+
+.GiftWrapRow {
+  display: flex;
+  gap: .6rem
+}
+
+@media(pointer:coarse)and (orientation:landscape)and (max-width:667px) {
+  .GiftWrapRow {
+    gap: .3rem
+  }
+}
+
+.GiftWrapRow {
+  overflow-x: auto;
+  padding: .3rem .2rem;
+  scrollbar-width: none
+}
+
+.GiftWrapRow::-webkit-scrollbar {
+  display: none
+}
+
+.GiftWrapTile {
+  align-items: center;
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: .3rem;
+  padding: 0;
+  width: 5.8rem
+}
+
+@media(pointer:coarse) {
+  .GiftWrapTile {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.GiftWrapTile .GiftWrapTileArt {
+  border: .25rem solid transparent;
+  box-sizing: border-box;
+  display: block;
+  font-size: 5.4rem;
+  height: 5.8rem;
+  position: relative;
+  transition: transform .12s ease-out;
+  width: 5.8rem
+}
+
+@media(hover:hover) {
+  .GiftWrapTile:hover .GiftWrapTileArt {
+    transform: translateY(-.15rem)
+  }
+}
+
+.GiftWrapTile.pad-focused .GiftWrapTileArt {
+  transform: translateY(-.15rem)
+}
+
+@media(hover:none) {
+  .GiftWrapTile:active .GiftWrapTileArt {
+    transform: translateY(-.15rem)
+  }
+}
+
+.GiftWrapTile .GiftWrapTileName {
+  font-size: 1.2rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.GiftWrapTile.GiftWrapTilePicked {
+  color: #fff
+}
+
+.GiftWrapTile.GiftWrapTilePicked .GiftWrapTileArt {
+  animation: GiftWrapPicked .35s cubic-bezier(.34, 1.56, .64, 1);
+  border-color: #ffb914
+}
+
+.GiftWrapTile.GiftWrapTileLocked {
+  cursor: default
+}
+
+.GiftWrapTile.GiftWrapTileLocked .GiftWrapSwatch {
+  filter: grayscale(.6) brightness(.55)
+}
+
+.GiftWrapTile .GiftWrapTileLock {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-weight: 800;
+  gap: .2rem;
+  inset: 0;
+  justify-content: center;
+  position: absolute
+}
+
+.GiftWrapTile .GiftWrapTileLock svg {
+  font-size: 1.8rem
+}
+
+.GiftWrapTile .GiftWrapTileUntil {
+  text-wrap: balance;
+  background: rgba(26, 31, 46, .85);
+  bottom: 0;
+  color: #fcd373;
+  font-size: 1.2rem;
+  font-weight: 800;
+  left: 0;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  padding: .2rem;
+  position: absolute;
+  right: 0;
+  text-align: center
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .GiftWrapTile {
+    width: 5.6rem
+  }
+
+  .GiftWrapTile .GiftWrapTileArt {
+    font-size: 5.2rem;
+    height: 5.6rem;
+    width: 5.6rem
+  }
+
+  .GiftWrapTile .GiftWrapTileName {
+    display: none
+  }
+}
+
+@keyframes GiftWrapPicked {
+  0% {
+    transform: scale(.85)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.GiftMessageChips {
+  display: flex;
+  gap: .6rem
+}
+
+.GiftMessageQuickChips {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  height: 3.6rem;
+  margin-left: -.6rem;
+  min-width: 0;
+  overflow: hidden;
+  overflow: clip;
+  row-gap: 10rem
+}
+
+@media(pointer:coarse) {
+  .GiftMessageQuickChips {
+    height: max(3.6rem, 44px)
+  }
+}
+
+.GiftMessageQuickChips:before {
+  content: "";
+  width: 0
+}
+
+.GiftMessageQuickChips .GiftMessageChip {
+  flex-shrink: 0;
+  margin-left: .6rem;
+  max-width: none
+}
+
+.GiftMessageQuickChips .GiftMessageChip:focus-visible {
+  outline-offset: -.4rem
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .GiftMessageQuickChips {
+    display: none
+  }
+}
+
+.GiftMessageChip {
+  align-items: center;
+  background: #3c4b68;
+  border: .2rem solid #0f0f0f;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex: 0 1 auto;
+  font-size: 1.5rem;
+  max-width: 100%;
+  min-height: 3.6rem;
+  min-width: 0;
+  padding: .3rem 1.2rem;
+  position: relative;
+  text-align: left
+}
+
+@media(pointer:coarse) {
+  .GiftMessageChip {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.GiftMessageChip .GiftMessageChipText {
+  min-width: 0;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.GiftMessageChip.GiftMessageChipPicked {
+  background: #394980;
+  border-color: #ffb914;
+  flex-shrink: 0;
+  max-width: calc(100% - 10rem)
+}
+
+.GiftMessageChip.GiftMessageChipMore {
+  flex-shrink: 0;
+  padding-right: 2.8rem
+}
+
+.GiftMessageChip.GiftMessageChipMore:after {
+  border: .45rem solid transparent;
+  border-top-color: #f2f2f2;
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-25%)
+}
+
+.GiftMessageChip.GiftMessageChipMore.GiftMessageChipOpen:after {
+  border-bottom-color: #f2f2f2;
+  border-top-color: transparent;
+  transform: translateY(-75%)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+
+  .GiftMessageChip.GiftMessageChipMore,
+  .GiftMessageChip.GiftMessageChipQuick {
+    display: none
+  }
+
+  .GiftMessageChip.GiftMessageChipPicked {
+    max-width: 100%;
+    min-height: 4.4rem;
+    padding-right: 3rem;
+    width: 100%
+  }
+
+  .GiftMessageChip.GiftMessageChipPicked:after {
+    border: .5rem solid transparent;
+    border-top-color: #f2f2f2;
+    content: "";
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-25%)
+  }
+
+  .GiftMessageChip.GiftMessageChipPicked.GiftMessageChipOpen:after {
+    border-bottom-color: #f2f2f2;
+    border-top-color: transparent;
+    transform: translateY(-75%)
+  }
+}
+
+.GiftMessagePanel {
+  animation-duration: .3s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-name: fadeIn;
+  background: #3c4b68;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  isolation: isolate;
+  padding: .6rem
+}
+
+.GiftMessagePanel .GiftMessageTabs {
+  font-size: 1.5rem
+}
+
+.GiftMessagePanel .GiftMessageList {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  max-height: 26rem;
+  overflow-y: auto
+}
+
+.GiftMessagePanel .GiftMessageOption {
+  align-items: center;
+  background: #394980;
+  border: .2rem solid transparent;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.5rem;
+  gap: .8rem;
+  justify-content: space-between;
+  min-height: 4rem;
+  padding: .4rem 1.2rem;
+  text-align: left
+}
+
+@media(pointer:coarse) {
+  .GiftMessagePanel .GiftMessageOption {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.GiftMessagePanel .GiftMessageOption.GiftMessageOptionPicked {
+  border-color: #ffb914
+}
+
+.GiftMessagePanel .GiftMessageOption.GiftMessageOptionLocked {
+  color: #a4a4a4;
+  cursor: default
+}
+
+.GiftMessagePanel .GiftMessageOptionLevel {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  flex-shrink: 0;
+  font-weight: 800;
+  gap: .4rem
+}
+
+.GiftLevelStrip {
+  background: #1a1f2e;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  padding: 1rem 1.4rem
+}
+
+.GiftLevelStrip .GiftLevelStripTop {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem .8rem;
+  justify-content: space-between
+}
+
+.GiftLevelStrip .GiftLevelStripLevel {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 800
+}
+
+.GiftLevelStrip .GiftLevelStripGift {
+  color: #cfcfcf;
+  font-size: 1.4rem;
+  white-space: nowrap
+}
+
+.GiftLevelStrip .GiftLevelStripGift b {
+  color: #ffb914
+}
+
+.GiftLevelStrip .GiftLevelStripBar {
+  background: rgba(182, 131, 14, .45);
+  height: 1rem;
+  overflow: hidden;
+  position: relative
+}
+
+.GiftLevelStrip .GiftLevelStripAdd,
+.GiftLevelStrip .GiftLevelStripFill {
+  bottom: 0;
+  position: absolute;
+  top: 0
+}
+
+.GiftLevelStrip .GiftLevelStripFill {
+  background: #ffb914;
+  left: 0
+}
+
+.GiftLevelStrip .GiftLevelStripAdd {
+  animation: GiftLevelStripAdd 1.4s ease-in-out infinite;
+  background: #fcd373
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GiftLevelStrip .GiftLevelStripAdd {
+    animation: none;
+    opacity: .7
+  }
+}
+
+.GiftLevelStrip .GiftLevelStripNote {
+  color: #cfcfcf;
+  font-size: 1.4rem;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+@keyframes GiftLevelStripAdd {
+
+  0%,
+  to {
+    opacity: .35
+  }
+
+  50% {
+    opacity: .85
+  }
+}
+
+.SegmentedToggle {
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex;
+  flex-shrink: 0
+}
+
+.SegmentedToggle .SegmentedToggleOption {
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  cursor: pointer;
+  font: inherit;
+  min-width: 5.5em;
+  padding: .4em 1em;
+  position: relative
+}
+
+@media(pointer:coarse) {
+  .SegmentedToggle .SegmentedToggleOption:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.SegmentedToggle .SegmentedToggleOption:before {
+  inset-inline: 0
+}
+
+.SegmentedToggle .SegmentedToggleOption:not(:first-child) {
+  border-left: 1px solid #0f0f0f
+}
+
+@media(hover:hover) {
+  .SegmentedToggle .SegmentedToggleOption:hover {
+    background-color: #394980;
+    color: #fff
+  }
+}
+
+.SegmentedToggle .SegmentedToggleOption.pad-focused {
+  background-color: #394980;
+  color: #fff
+}
+
+@media(hover:none) {
+  .SegmentedToggle .SegmentedToggleOption:active {
+    background-color: #394980;
+    color: #fff
+  }
+}
+
+.SegmentedToggle .SegmentedToggleOption:focus-visible {
+  outline: 2px solid #ffb914;
+  outline-offset: -2px
+}
+
+.SegmentedToggle .SegmentedToggleOption.SegmentedToggleOptionSelected {
+  background-color: #2e80ee;
+  color: #fff;
+  cursor: default
+}
+
+.GiftWrapLook_classic {
+  --gift-paper: repeating-linear-gradient(45deg, #e63946 0 0.1em, #fff4f0 0.1em 0.2em);
+  --gift-ribbon: #ffd166;
+  --gift-ribbon-solid: #ffd166;
+  --gift-glow: #ffd84a
+}
+
+.GiftWrapLook_blocks {
+  --gift-paper: radial-gradient(#6d4426 18%, transparent 20%) 0 0 /0.2em 0.2em, linear-gradient(#6abe30 0 24%, #8a5a33 24%);
+  --gift-lid-paper: radial-gradient(#4f9a20 20%, transparent 22%) 0 0 /0.18em 0.18em, #6abe30;
+  --gift-ribbon: #7ff3f0;
+  --gift-ribbon-solid: #7ff3f0;
+  --gift-glow: #b6f27a
+}
+
+.GiftWrapLook_gems {
+  --gift-paper: linear-gradient(45deg, #7b3fb5 25%, transparent 25% 75%, #7b3fb5 75%) 0 0 /0.25em 0.25em, linear-gradient(-45deg, #7b3fb5 25%, transparent 25% 75%, #7b3fb5 75%) 0 0 /0.25em 0.25em, #4a1f73;
+  --gift-ribbon: #ff7ad9;
+  --gift-ribbon-solid: #ff7ad9;
+  --gift-glow: #c9a8ff
+}
+
+.GiftWrapLook_stars {
+  --gift-paper: radial-gradient(circle at 20% 30%, #fff 0.015em, transparent 0.025em) 0 0 /0.33em 0.33em, radial-gradient(circle at 70% 70%, #fff6b0 0.02em, transparent 0.03em) 0 0 /0.45em 0.45em, linear-gradient(#141a45, #2b2f7a);
+  --gift-ribbon: #d9e2ff;
+  --gift-ribbon-solid: #d9e2ff;
+  --gift-glow: #ffe9a8
+}
+
+.GiftWrapLook_legend {
+  --gift-paper: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M0 12 12 0l12 12-12 12Z' fill='none' stroke='%23fff4c8' stroke-opacity='.7' stroke-width='.8'/%3E%3Cpath d='m7.2 15.2.7-5.6 2.2 2.5L12 8.6l1.9 3.5 2.2-2.5.7 5.6ZM7.2 15.6h9.6v1.5H7.2z' fill='%23fff1b8' fill-opacity='.9'/%3E%3Cpath d='M0-2.4.7-.7l1.7.7L.7.7 0 2.4-.7.7-2.4 0l1.7-.7ZM24-2.4l.7 1.7 1.7.7-1.7.7-.7 1.7-.7-1.7-1.7-.7 1.7-.7ZM0 21.6l.7 1.7 1.7.7-1.7.7-.7 1.7-.7-1.7-1.7-.7 1.7-.7ZM24 21.6l.7 1.7 1.7.7-1.7.7-.7 1.7-.7-1.7-1.7-.7 1.7-.7Z' fill='%23fff'/%3E%3C/svg%3E") 0 0 /0.34em 0.34em, linear-gradient(135deg, #ffe58a, #f5b700 32%, #ffe9a6 50%, #e09b00 72%, #ffcf4a);
+  --gift-ribbon: linear-gradient(90deg, #f7c843 0 12%, #5b21b6 12% 30%, #7c3aed 50%, #5b21b6 70% 88%, #f7c843 88%);
+  --gift-ribbon-solid: #6d28d9;
+  --gift-glow: #fff1a8
+}
+
+.GiftWrapLook_sweater {
+  --gift-paper: repeating-linear-gradient(90deg, transparent 0 0.06em, rgba(0, 0, 0, .08) 0.06em 0.07em), linear-gradient(#c1121f 0 30%, #fff 30% 36%, #2d6a4f 36% 64%, #fff 64% 70%, #c1121f 70%);
+  --gift-ribbon: #f8f9fa;
+  --gift-ribbon-solid: #f8f9fa;
+  --gift-glow: #dff3ff
+}
+
+.GiftWrapLook_festive {
+  --gift-paper: radial-gradient(circle, #2fa155 20%, transparent 22%) 0 0 /0.2em 0.2em, #1f7a3a;
+  --gift-ribbon: #e63946;
+  --gift-ribbon-solid: #e63946;
+  --gift-glow: #fff1b0
+}
+
+.GiftWrapSheen {
+  animation: GiftWrapSheen 3.2s ease-in-out infinite;
+  background: linear-gradient(105deg, transparent 35%, hsla(0, 0%, 100%, .75) 48%, hsla(0, 0%, 100%, .15) 56%, transparent 64%) no-repeat;
+  background-size: 250% 100%;
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GiftWrapSheen {
+    animation: none;
+    opacity: 0
+  }
+}
+
+@keyframes GiftWrapSheen {
+
+  0%,
+  55% {
+    background-position: 130% 0
+  }
+
+  to {
+    background-position: -30% 0
+  }
+}
+
+.GiftWrapSwatch {
+  background: var(--gift-paper);
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+.GiftWrapSwatch:after {
+  background: var(--gift-ribbon);
+  bottom: 0;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: .16em
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.GiftLevelUpPopup {
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.GiftLevelUpPopup {
+    box-sizing: border-box;
+    max-width: none;
+    width: calc(100vw - 2rem)
+  }
+}
+
+.GiftLevelUp {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  isolation: isolate;
+  max-width: 100%;
+  padding: .6rem 0 .2rem;
+  position: relative;
+  width: 36rem
+}
+
+.GiftLevelUp .GiftLevelUpTitle {
+  animation: GiftLevelUpTitle .45s cubic-bezier(.34, 1.56, .64, 1);
+  color: #fcd373;
+  font-size: 2.6rem;
+  font-weight: 900
+}
+
+.GiftLevelUp .GiftLevelUpRays {
+  animation: GiftLevelUpRays 9s linear infinite;
+  background: repeating-conic-gradient(rgba(255, 185, 20, .22) 0 10deg, transparent 10deg 30deg);
+  height: 26rem;
+  left: 50%;
+  margin-left: -13rem;
+  -webkit-mask-image: radial-gradient(closest-side, #000 30%, transparent);
+  mask-image: radial-gradient(closest-side, #000 30%, transparent);
+  opacity: .5;
+  position: absolute;
+  top: 1rem;
+  transition: opacity .4s;
+  width: 26rem;
+  z-index: -1
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GiftLevelUp .GiftLevelUpRays {
+    animation: none
+  }
+}
+
+.GiftLevelUp.GiftLevelUpRevealed .GiftLevelUpRays {
+  opacity: 1
+}
+
+.GiftLevelUp.GiftLevelUpMax .GiftLevelUpRays {
+  background: repeating-conic-gradient(rgba(243, 138, 182, .2) 0 8deg, rgba(255, 185, 20, .25) 8deg 16deg, transparent 16deg 30deg)
+}
+
+.GiftLevelUp .GiftLevelUpTitleHolder {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 4.4rem;
+  position: relative
+}
+
+.GiftLevelUp .GiftLevelUpTitle.GiftLevelUpTitleTick {
+  animation: GiftLevelUpTick .22s cubic-bezier(.34, 1.56, .64, 1)
+}
+
+.GiftLevelUp.GiftLevelUpRevealed .GiftLevelUpTitle {
+  animation: GiftLevelUpLand .45s cubic-bezier(.34, 1.56, .64, 1)
+}
+
+.GiftLevelUp .GiftLevelUpHero {
+  align-items: center;
+  display: flex;
+  height: 9rem;
+  justify-content: center;
+  position: relative
+}
+
+.GiftLevelUp .GiftLevelUpHeroArt {
+  animation: GiftLevelUpLand .5s cubic-bezier(.34, 1.56, .64, 1);
+  display: block;
+  font-size: 6.4rem;
+  line-height: 1
+}
+
+.GiftLevelUp .GiftLevelUpHeroArt.GiftLevelUpHeroWrap {
+  border: .3rem solid #ffb914;
+  box-sizing: border-box;
+  font-size: 7.8rem;
+  height: 8.4rem;
+  width: 8.4rem
+}
+
+.GiftLevelUp .GiftLevelUpUnlocked {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  min-height: 2rem;
+  text-align: center
+}
+
+.GiftLevelUp .GiftLevelUpNext {
+  color: #cfcfcf;
+  font-size: 1.4rem;
+  min-height: 1.8rem;
+  text-align: center
+}
+
+.GiftLevelUp .GiftLevelUpBurst {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%
+}
+
+.GiftLevelUp .GiftLevelUpBurst i {
+  --burst-angle: calc(var(--burst-index)*30deg);
+  --burst-distance: 5rem;
+  animation: GiftLevelUpSpark .5s ease-out;
+  background: #fcd373;
+  height: .7rem;
+  left: -.35rem;
+  opacity: 0;
+  position: absolute;
+  top: -.35rem;
+  width: .7rem
+}
+
+.GiftLevelUp .GiftLevelUpBurst i:nth-child(3n) {
+  background: #f2f2f2
+}
+
+.GiftLevelUp .GiftLevelUpBurst i:nth-child(3n+1) {
+  background: #36e785
+}
+
+.GiftLevelUp .GiftLevelUpBurst.GiftLevelUpBurstFinal i {
+  --burst-distance: 5.5rem;
+  animation-duration: .8s;
+  height: 1rem;
+  width: 1rem
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GiftLevelUp .GiftLevelUpBurst {
+    display: none
+  }
+}
+
+.GiftLevelUp .GiftLevelUpRange {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  min-height: 2rem
+}
+
+.GiftLevelUp .GiftLevelUpBar {
+  background: #1a1f2e;
+  height: 1rem;
+  overflow: hidden;
+  position: relative;
+  width: 80%
+}
+
+.GiftLevelUp .GiftLevelUpBar .GiftLevelUpBarFill {
+  animation: GiftLevelUpBar var(--bar-ms) ease-out;
+  background: linear-gradient(90deg, #b6830e, #fcd373);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: var(--bar-to)
+}
+
+.GiftLevelUp .GiftLevelUpButtons {
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  margin-top: .4rem;
+  width: 100%
+}
+
+.GiftLevelUp .GiftLevelUpButtons>* {
+  min-width: 14rem
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .GiftLevelUp .GiftLevelUpHeroArt,
+  .GiftLevelUp .GiftLevelUpTitle {
+    animation: none !important
+  }
+}
+
+@keyframes GiftLevelUpTitle {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes GiftLevelUpRays {
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+@keyframes GiftLevelUpTick {
+  0% {
+    transform: scale(.8)
+  }
+
+  60% {
+    transform: scale(1.12)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+@keyframes GiftLevelUpLand {
+  0% {
+    transform: scale(1)
+  }
+
+  35% {
+    transform: scale(1.25) rotate(-4deg)
+  }
+
+  to {
+    transform: scale(1) rotate(0)
+  }
+}
+
+@keyframes GiftLevelUpSpark {
+  0% {
+    opacity: 1;
+    transform: rotate(var(--burst-angle)) translateY(-3rem) scale(1)
+  }
+
+  to {
+    opacity: 0;
+    transform: rotate(var(--burst-angle)) translateY(calc(var(--burst-distance, 6.5rem)*-1)) scale(.4)
+  }
+}
+
+@keyframes GiftLevelUpBar {
+  0% {
+    width: var(--bar-from)
+  }
+
+  to {
+    width: var(--bar-to)
+  }
 }
 
 .PackPerkChips {
@@ -11842,6 +13309,12 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 
 .StoreTierLabel.StoreTierLabelMythic {
   color: #f38ab6
+}
+
+.CharCustomPart {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain
 }
 
 .CharCustomPart.CharCustomPartWithPlaceholder {
@@ -12221,6 +13694,25 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   width: 5rem
 }
 
+.BloxdDropdownAnchor {
+  display: contents
+}
+
+.BloxdDropdownAnchor .Dropdown-menu {
+  scroll-margin-bottom: calc(var(--notchBottom) + .5rem)
+}
+
+.BloxdDropdownAnchor .Dropdown-root.is-open:after {
+  content: "";
+  height: calc(20.6rem + var(--notchBottom));
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+  width: 1px
+}
+
 .WholeAppWrapper {
   height: 100vh;
   height: 100dvh;
@@ -12572,14 +14064,14 @@ html[data-app-covered=skipped] .WholeAppWrapper {
   z-index: 17
 }
 
-.ForceRotatePromptEntering {
+.ForceRotatePromptEntering>* {
+  visibility: hidden
+}
+
+.ForceRotatePromptOpaque {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
   background-color: #22283b
-}
-
-.ForceRotatePromptEntering>* {
-  visibility: hidden
 }
 
 .RotateScreenPrompt {
@@ -12730,6 +14222,25 @@ html[data-app-covered=skipped] .WholeAppWrapper {
   }
 }
 
+.LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody.LoadingOverlayRightBodyStuck {
+  justify-content: flex-end;
+  min-height: 0
+}
+
+.LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody.LoadingOverlayRightBodyStuck:before {
+  content: "";
+  margin-top: auto
+}
+
+.LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody.LoadingOverlayRightBodyStuck:after {
+  content: "";
+  margin-bottom: auto
+}
+
+.LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody.LoadingOverlayRightBodyStuck .LoadingCharacters {
+  min-height: 0
+}
+
 .LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .LogoLoaderLoadingContainer {
   align-items: center;
   display: flex;
@@ -12782,6 +14293,45 @@ html[data-app-covered=skipped] .WholeAppWrapper {
   width: 100%
 }
 
+.LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .LoadingOverlayStuck {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: max(var(--notchBottom), 1rem);
+  width: 100%
+}
+
+.LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .LoadingOverlayStuck .LoadingOverlayStuckMessage {
+  color: #fcd373;
+  height: auto
+}
+
+.LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .LoadingOverlayStuck .NewButton {
+  font-size: 2rem
+}
+
+@media(pointer:coarse) {
+  .LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .LoadingOverlayStuck .NewButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.LoadingOverlay .LoadingOverlayRight.LoadingOverlayRightCharacters .LoadingOverlayRightAdBannerContainer {
+  flex-shrink: 1000
+}
+
+.LoadingOverlay .LoadingOverlayRight.LoadingOverlayRightCharacters .LoadingOverlayRightBody {
+  min-height: 0;
+  padding-bottom: max(var(--notchBottom), 1.5rem)
+}
+
+.LoadingOverlay .LoadingOverlayRight.LoadingOverlayRightCharacters .LoadingProgressBar {
+  flex-shrink: 0
+}
+
 .HidableBannerWrapperHidden *,
 .HidableBannerWrapperHidden :after,
 .HidableBannerWrapperHidden :before {
@@ -12825,7 +14375,7 @@ html[data-app-covered=skipped] .WholeAppWrapper {
 
 .LoadingCharacters .LoadingFigure:after {
   background: radial-gradient(closest-side, rgba(26, 31, 46, .7), rgba(26, 31, 46, 0));
-  bottom: -2.5%;
+  bottom: 12%;
   content: "";
   height: 7%;
   left: 12%;
@@ -12855,10 +14405,7 @@ html[data-app-covered=skipped] .WholeAppWrapper {
 }
 
 .LoadingCharacters .LoadingFigure .LoadingFigureOutline {
-  fill: #394980;
-  height: auto;
-  inset: 0 22% 4%;
-  width: auto
+  fill: #394980
 }
 
 .LoadingCharacters .LoadingFigure .LoadingFigureModel {
@@ -12895,12 +14442,10 @@ html[data-app-covered=skipped] .WholeAppWrapper {
   position: relative
 }
 
-@media(pointer:coarse) {
-  .LoadingCharacters .LoadingFigure .LoadingCharacterCustomise:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
-    position: absolute
-  }
+.LoadingCharacters .LoadingFigure .LoadingCharacterCustomise:before {
+  content: "";
+  inset: min(-.6em, min(0px, (100% - 44px)/2)) min(-1em, min(0px, (100% - 44px)/2));
+  position: absolute
 }
 
 .LoadingCharacters .LoadingFigure .LoadingCharacterCustomise {
@@ -13834,7 +15379,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   width: 7rem
 }
 
-.ProfileCardHost .ProfileCard .ProfileCardModelPanel .ProfileCardModel.OutfitLoading .CharCustomisationPreview {
+.ProfileCardHost .ProfileCard .ProfileCardModelPanel .ProfileCardModel.Undressed .CharCustomisationPreview {
   visibility: hidden
 }
 
@@ -14649,297 +16194,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   font-size: .8rem
 }
 
-.UiRequests {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  pointer-events: auto;
-  z-index: 1
-}
-
-@media(orientation:portrait)and (max-width:600px) {
-  .UiRequests {
-    max-width: calc(65vw - 1rem)
-  }
-
-  .UiRequests .UiRequestText {
-    overflow-wrap: anywhere
-  }
-
-  .UiRequests .UiRequestText .TextFromServerEntityName {
-    white-space: normal
-  }
-}
-
-.UiRequests .UiRequestContainer.UiRequestContainer-exit {
-  opacity: 1;
-  pointer-events: none;
-  transform: translateX(0)
-}
-
-.UiRequests .UiRequestContainer.UiRequestContainer-exit-active {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(1.5rem);
-  transition: opacity .2s ease-in, transform .2s ease-in
-}
-
-.UiRequests .UiRequestContainer.RewardedAdUiRequestContainer {
-  animation: shake 3s infinite;
-  animation-delay: 6s
-}
-
-.UiRequests .UiRequestContainer.RewardedAdUiRequestContainer .UiRequest .UiRequestInner {
-  animation: shine 4s linear infinite;
-  background: linear-gradient(110deg, #303a59, #303a59 2rem, #394980 0, #394980 4rem, #303a59 0, #303a59);
-  background-position: -4rem 0;
-  background-size: calc(200% + 4rem) 100%
-}
-
-@keyframes shine {
-  0% {
-    background-position: -4rem 0
-  }
-
-  12.5% {
-    background-position: -100% 0
-  }
-
-  to {
-    background-position: -100% 0
-  }
-}
-
-.UiRequests .UiRequestContainer.RewardedAdUiRequestContainer .UiRequest .UiRequestInner {
-  border-color: #ffb914
-}
-
-.UiRequests .UiRequestContainer .UiRequest {
-  animation-duration: .25s;
-  animation-fill-mode: backwards;
-  animation-iteration-count: 1;
-  animation-name: topRightStackIn;
-  animation-timing-function: cubic-bezier(.2, .8, .2, 1)
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner {
-  align-items: center;
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  display: flex;
-  gap: .5rem;
-  justify-content: flex-start;
-  overflow: hidden;
-  padding: .5rem 1rem .5rem .5rem;
-  position: relative
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-  height: 100%;
-  justify-content: center;
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 2
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlayDefault {
-  background-color: transparent
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlayLoading {
-  background-color: rgba(48, 58, 89, .9);
-  font-size: 2rem
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlaySuccess {
-  background-color: rgba(48, 58, 89, .9)
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlaySuccess .UiRequestSuccessOverlayIcon {
-  font-size: 2rem;
-  position: relative
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestOverlay.UiRequestOverlaySuccess .UiRequestSuccessOverlayText {
-  font-size: 1.3rem;
-  font-weight: 700
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestLeft {
-  align-items: center;
-  display: flex;
-  font-size: 3rem;
-  height: 5rem;
-  justify-content: center;
-  width: 5rem
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight {
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestText {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-right: auto;
-  padding: .25rem 1.25rem .25rem .4rem
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestButtonList {
-  align-items: center;
-  display: flex;
-  gap: .5rem;
-  justify-content: center
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestButtonList .UiRequestButton {
-  box-shadow: none;
-  flex-grow: 1;
-  font-size: 1rem;
-  font-weight: 700
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestButtonList .UiRequestButton .ButtonBody {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-  justify-content: center
-}
-
-.UiRequests .UiRequestContainer .UiRequest .UiRequestInner .UiRequestRight .UiRequestButtonList .UiRequestButton .KeyboardButtonRepresentation {
-  font-size: .8rem
-}
-
-@keyframes chestShake {
-  0% {
-    transform: translateX(-50%) rotate(6deg)
-  }
-
-  25% {
-    transform: translateX(-50%) rotate(-4deg)
-  }
-
-  50% {
-    transform: translateX(-50%) rotate(6deg)
-  }
-
-  75% {
-    transform: translateX(-50%) rotate(-4deg)
-  }
-
-  to {
-    transform: translateX(-50%) rotate(0)
-  }
-}
-
-@keyframes pop {
-  0% {
-    bottom: 0;
-    opacity: 0
-  }
-
-  to {
-    bottom: 1.5rem;
-    opacity: 0
-  }
-}
-
-.ChestContainer {
-  height: 5.5rem;
-  position: relative;
-  width: 5rem
-}
-
-.ChestContainer .ChestImage {
-  -ms-interpolation-mode: nearest-neighbor;
-  animation: chestShake .4s 3;
-  bottom: 0;
-  image-rendering: optimizeSpeed;
-  image-rendering: -o-crisp-edges;
-  image-rendering: pixelated;
-  image-rendering: optimize-contrast;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  transform-origin: center center;
-  transition: width .2s;
-  width: 4rem
-}
-
-.ChestContainer .ChestImage.ChestImageSmall {
-  width: 2.5rem
-}
-
-.ChestContainer .ChestShine {
-  animation-delay: .2s;
-  animation-duration: .2s;
-  animation-fill-mode: backwards;
-  animation-iteration-count: 1;
-  animation-name: fadeInScaleUp;
-  bottom: 1rem;
-  clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
-  height: 2.5rem;
-  isolation: isolate;
-  left: calc(50% - 1.9rem);
-  position: absolute;
-  width: 3.8rem
-}
-
-.ChestContainer .ChestShine .ChestShineBackground {
-  background: linear-gradient(0, rgba(255, 185, 20, .8), rgba(255, 185, 20, 0));
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  width: 100%
-}
-
-.ChestContainer .RewardItemsContainer {
-  align-items: center;
-  display: flex;
-  gap: .4rem;
-  height: 3rem;
-  justify-content: center;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%
-}
-
-.ChestContainer .RewardItemsContainer .RewardItem {
-  font-size: 1.5rem;
-  height: 100%;
-  position: relative;
-  transform-origin: center bottom;
-  width: 0
-}
-
-.ChestContainer .RewardItemsContainer .RewardItem.RewardItemShow .TextFromServer {
-  bottom: .25rem;
-  opacity: 1
-}
-
-.ChestContainer .RewardItemsContainer .RewardItem .TextFromServer {
-  bottom: -1rem;
-  opacity: 0;
-  position: absolute;
-  transform: translateX(-50%);
-  transition: opacity .4s, bottom .4s;
-  transition-delay: .2s
-}
-
 .SeasonPassRewardTile {
   align-items: center;
   background-color: #3c4b68;
@@ -15386,30 +16640,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   to {
     opacity: 0
   }
-}
-
-.SessionReplayFollowBadge {
-  align-items: center;
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  display: flex;
-  gap: 6px;
-  left: 50%;
-  padding: 2px 8px;
-  pointer-events: none;
-  position: fixed;
-  top: var(--hud-auto-inset-top);
-  transform: translateX(-50%);
-  white-space: nowrap;
-  z-index: 2147483645
-}
-
-.SessionReplayFollowBadge .SessionReplayFollowBadgeDot {
-  background: #e34f4f;
-  height: 8px;
-  width: 8px
 }
 
 .RouterError {
@@ -17580,6 +18810,147 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
   flex: none
 }
 
+.CgFirstPlayHero {
+  align-items: stretch;
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: flex;
+  gap: 1.25rem;
+  margin: .5rem 0 1rem;
+  padding: .75rem;
+  width: 100%
+}
+
+.CgFirstPlayHero .CgFirstPlayHeroArt {
+  flex: 0 0 auto;
+  width: min(40%, 30rem, 45vh)
+}
+
+.CgFirstPlayHero .CgFirstPlayHeroText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: .6rem;
+  justify-content: center;
+  min-width: 0
+}
+
+.CgFirstPlayHero .CgFirstPlayHeroEyebrow {
+  color: #ffb914;
+  font-size: 1rem
+}
+
+.CgFirstPlayHero .CgFirstPlayHeroTagline {
+  color: #fff;
+  font-size: 1.35rem;
+  line-height: 1.25
+}
+
+.CgFirstPlayHero .CgFirstPlayHeroPlay {
+  align-self: flex-start;
+  font-size: 1.6rem;
+  min-width: 12rem
+}
+
+@media(max-aspect-ratio:1/1), (max-width:600px) {
+  .CgFirstPlayHero {
+    align-items: center;
+    gap: .6rem;
+    padding: .5rem
+  }
+
+  .CgFirstPlayHero .CgFirstPlayHeroArt {
+    width: min(40%, 45vh)
+  }
+
+  .CgFirstPlayHero .CgFirstPlayHeroTagline {
+    font-size: 1rem
+  }
+
+  .CgFirstPlayHero .CgFirstPlayHeroPlay {
+    align-self: stretch;
+    font-size: 1.2rem;
+    min-width: 0
+  }
+}
+
+.CgSaveProgressBody {
+  align-items: center;
+  display: flex;
+  gap: 1rem
+}
+
+.CgSaveProgressBody .CgSaveProgressText {
+  flex: 1 1 auto;
+  min-width: 0
+}
+
+.CgSaveProgressBody .CgSaveProgressTitle {
+  color: #ffb914;
+  font-size: 1.3rem
+}
+
+.CgSaveProgressBody .CgSaveProgressSubtitle {
+  color: #f2f2f2;
+  font-size: 1rem;
+  line-height: 1.3
+}
+
+.CgSaveProgressBody .CgSaveProgressLogin {
+  flex: 0 0 auto;
+  min-width: 13rem
+}
+
+.CgSaveProgressCard {
+  align-items: flex-start;
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: flex;
+  gap: .75rem;
+  margin: .5rem 0 1rem;
+  padding: .75rem .75rem .75rem 1rem;
+  width: 100%
+}
+
+.CgSaveProgressCard .CgSaveProgressBody {
+  align-self: center;
+  flex: 1 1 auto
+}
+
+.CgSaveProgressCard .CgSaveProgressExit {
+  flex: 0 0 auto
+}
+
+@media(max-width:600px) {
+  .CgSaveProgressCard .CgSaveProgressBody {
+    align-items: stretch;
+    flex-direction: column
+  }
+}
+
+.CgSaveProgressPopup {
+  max-width: calc(100vw - 2rem);
+  width: 30rem
+}
+
+.CgSaveProgressPopup .CgSaveProgressBody {
+  align-items: stretch;
+  flex-direction: column;
+  text-align: center
+}
+
+.CgSaveProgressPopup .CgSaveProgressBody .CgSaveProgressText {
+  padding: 0 5rem
+}
+
+.NewPlayerGameTile {
+  display: contents
+}
+
 @property --ring-progress {
   syntax: "<number>";
   inherits: false;
@@ -17604,7 +18975,7 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
   line-height: inherit;
   margin: 0 0 .75rem;
   min-height: calc(6.6rem + 2px);
-  padding: .5rem .75rem;
+  padding: .75rem;
   position: relative;
   text-align: inherit;
   text-shadow: inherit;
@@ -18424,23 +19795,4 @@ html[data-app-covered] .WholeAppWrapper .UpdateWaitingProgress.Sweeping .UpdateW
   .BlockHopperRunDistance {
     font-size: 1.9rem
   }
-}
-
-.SessionReplayDot {
-  background: #e34f4f;
-  left: 50%;
-  padding: .25rem;
-  pointer-events: none;
-  position: fixed;
-  top: var(--hud-auto-inset-top);
-  transform: translateX(-50%);
-  z-index: 2147483646
-}
-
-.SessionReplayDot:after {
-  background: #fff;
-  content: "";
-  display: block;
-  height: .5rem;
-  width: .5rem
 }

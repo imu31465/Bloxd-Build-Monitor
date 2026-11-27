@@ -1,584 +1,805 @@
 export const id = 264;
 export const ids = [264];
 export const modules = {
-  42142: (ee, ie, He) => {
-    He.d(ie, {
-      noaDevTools: () => Re
+  38372: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => ZW,
+      d: () => xW,
+      f: () => bW,
+      j: () => lW
     });
-    var ye = He(38265),
-      be = He(38247),
-      Me = He(2969),
-      Ke = He(1768),
-      Ue = He(42065);
+    var mW = OW(38253),
+      EW = OW(38249),
+      NW = OW(38285),
+      PW = OW(38299);
 
-    function Fe(ee) {
-      const {
-        PR: ie
-      } = ee, He = ie.engine, ye = {
-        width: He.getRenderWidth(),
-        height: He.getRenderHeight()
-      };
-      return {
-        canvas: He.getRenderingCanvas(),
-        maxTextureSize: He.getCaps().maxTextureSize,
-        tR: () => !ee.AR,
-        resize: (ee, ie) => {
-          He.setSize(ee, ie)
-        },
-        restoreSize: () => {
-          He.setSize(ye.width, ye.height), ie.resize()
-        },
-        onFrameDrawn: He => {
-          const ye = () => {
-            ie.FW && He()
-          };
-          return ee.on("afterRender", ye), () => {
-            ee.off("afterRender", ye)
-          }
-        }
-      }
+    function LW(WW) {
+      return Math.pow(WW, EW.i)
     }
-    var Je = He(34751);
 
-    function oe(ee, ie) {
-      let {
-        width: Je,
-        height: oe,
-        colouring: Re
-      } = ie;
-      const ke = "normals" === Re,
-        qe = "depth" === Re;
-      return new Promise((ie => {
-        try {
-          const fe = (0, Me.h)();
-          if (fe.PR.pT) return "screenshot" !== ee || null !== Re ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void ie()) : void(0, Ue.f)(Fe(fe), Je, oe).finally(ie);
-          const Te = fe.PR.engine,
-            pe = fe.PR.Xx(),
-            Xe = Je,
-            ze = oe;
-          Promise.all([Promise.all([He.e(283), He.e(284), He.e(260)]).then((() => He(63809))), Promise.all([He.e(259), He.e(258), He.e(283), He.e(284), He.e(281), He.e(285), He.e(288), He.e(620), He.e(265)]).then((() => He(63814))), Promise.all([He.e(259), He.e(258), He.e(283), He.e(284), He.e(281), He.e(291), He.e(285), He.e(293), He.e(267)]).then((() => He(63819))), He.e(661).then((() => He(63827))), Promise.all([He.e(258), He.e(254)]).then((() => He(37913))), He.e(282).then((() => He(63834))), He.e(263).then((() => He(63840)))]).then((Me => {
-            const {
-              CreateScreenshotUsingRenderTarget: Ue
-            } = Me[1], {
-              ShaderMaterial: Fe
-            } = Me[2], {
-              ShaderLanguage: Je
-            } = Me[3], {
-              rf: oe
-            } = Me[4], {
-              registerDevtoolsShader: Re
-            } = Me[6], fe = Je.GLSL, Be = new Map, Ee = pe.meshes.filter((ee => ee.material));
-            let ge = !1,
-              Oe = null;
-
-            function de() {
-              var ee;
-              ge && (ge = !1, (0, ye.d)(pe.meshes, !1)), null === (ee = Oe) || void 0 === ee || ee(), Oe = null, Ee.forEach((ee => {
-                const ie = Be.get(ee);
-                ie && (ee.material = ie)
-              }))
-            }
-            if (ke) {
-              const ee = [],
-                ie = [];
-              Ee.forEach((He => {
-                const ye = He.name.toLowerCase(),
-                  be = He.WC().boundingBox.center,
-                  Me = pe.activeCamera.position.subtract(be).length();
-                ye.includes("sky") || ye.includes("background") || ye.includes("environment") || Me > 1e3 ? ie.push(He) : ee.push(He)
-              })), Re("devtoolsNormal", fe);
-              const He = new Fe("normalMaterial", pe, "devtoolsNormal", {
-                attributes: ["position", "normal"],
-                uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: fe
-              });
-              Re("devtoolsWhite", fe);
-              const ye = new Fe("whiteMaterial", pe, "devtoolsWhite", {
-                attributes: ["position"],
-                uniforms: ["worldViewProjection"],
-                shaderLanguage: fe
-              });
-              ee.forEach((ee => {
-                Be.set(ee, ee.material), ee.material = He
-              })), ie.forEach((ee => {
-                Be.set(ee, ee.material), ee.material = ye
-              }))
-            } else if (qe) {
-              Re("devtoolsDepth", fe);
-              const ee = pe.activeCamera.position;
-              let ie = 0,
-                He = 1 / 0;
-              Ee.forEach((ye => {
-                const be = ye.name.toLowerCase();
-                if (be.includes("sky") || be.includes("background") || be.includes("environment")) return;
-                const Me = ye.WC().boundingBox.center,
-                  Ke = oe.TransformCoordinates(Me, ye.getWorldMatrix()),
-                  Ue = ee.subtract(Ke).length();
-                Ue > 1e3 || (ie = Math.max(ie, Ue), He = Math.min(He, Ue))
-              }));
-              const ye = ie - He;
-              ie += .1 * ye, He = Math.max(0, He - .1 * ye), console.log(`Depth range: min=${He.toFixed(2)}, max=${ie.toFixed(2)}, range=${ye.toFixed(2)}`), ye < 1 && (ie = He + 10);
-              const be = new Fe("depthMaterial", pe, "devtoolsDepth", {
-                attributes: ["position"],
-                uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: fe
-              });
-              be.setVector3("cameraPosition", ee), be.setFloat("maxDepth", ie), be.setFloat("minDepth", He), Ee.forEach((ee => {
-                Be.set(ee, ee.material), ee.material = be
-              }))
-            }
-            if ((0, ye.d)(pe.meshes, !0), ge = !0, "glb" === ee && (Oe = (0, be.b)(pe.meshes)), "screenshot" === ee) {
-              let ee = `bloxd-screenshot-${Xe}x${ze}-${Date.now()}.png`;
-              ke ? ee = `bloxd-screenshot-normals-${Xe}x${ze}-${Date.now()}.png` : qe && (ee = `bloxd-screenshot-depth-${Xe}x${ze}-${Date.now()}.png`), Ue(Te, pe.activeCamera, {
-                width: Xe,
-                height: ze
-              }, (function(He) {
-                de(), fetch(He).then((function(ee) {
-                  return ee.blob()
-                })).then((function(He) {
-                  (0, Ke.downloadBlob)(He, ee), ie()
-                })).catch((function(ee) {
-                  console.error("Error processing screenshot:", ee), ie()
-                }))
-              }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), de(), ie()
-              }))
-            } else {
-              let ee = "yp";
-              ke ? ee = "scene-normals" : qe && (ee = "scene-depth"), ke || qe ? setTimeout((() => {
-                (async function() {
-                  const {
-                    StandardMaterial: ee
-                  } = await Promise.all([He.e(259), He.e(258), He.e(283), He.e(284), He.e(281), He.e(291), He.e(290), He.e(266)]).then((() => He(41380))), {
-                    Color3: ie
-                  } = await Promise.all([He.e(259), He.e(262)]).then((() => He(38020))), ye = [], be = [];
-                  if (Ee.forEach((ee => {
-                      const ie = ee.name.toLowerCase(),
-                        He = ee.WC().boundingBox.center,
-                        Me = pe.activeCamera.position.subtract(He).length();
-                      ie.includes("sky") || ie.includes("background") || ie.includes("environment") || Me > 1e3 ? be.push(ee) : ye.push(ee)
-                    })), ke) ye.forEach(((He, ye) => {
-                    const be = He.getVerticesData("normal");
-                    if (be) {
-                      const Me = [];
-                      for (let ee = 0; ee < be.length; ee += 3) {
-                        const ie = Math.abs(be[ee]),
-                          He = Math.abs(be[ee + 1]),
-                          ye = Math.abs(be[ee + 2]);
-                        Me.push(ie, He, ye, 1)
-                      }
-                      He.setVerticesData("color", Me);
-                      const Ke = new ee(`vertexColorMat_${ye}`, pe);
-                      Ke.disableLighting = !0, Ke.emissiveColor = new ie(1, 1, 1), Ke.specularColor = new ie(0, 0, 0), He.material = Ke
-                    }
-                  })), be.forEach(((He, ye) => {
-                    const be = He.getVerticesData("position");
-                    if (be) {
-                      const Me = [],
-                        Ke = be.length / 3;
-                      for (let ee = 0; ee < Ke; ee++) Me.push(1, 1, 1, 1);
-                      He.setVerticesData("color", Me);
-                      const Ue = new ee(`whiteMat_${ye}`, pe);
-                      Ue.disableLighting = !0, Ue.emissiveColor = new ie(1, 1, 1), Ue.specularColor = new ie(0, 0, 0), He.material = Ue
-                    }
-                  }));
-                  else if (qe) {
-                    const He = pe.activeCamera.position;
-                    let be = 0,
-                      Me = 1 / 0;
-                    ye.forEach((ee => {
-                      const ie = ee.WC().boundingBox.center,
-                        ye = oe.TransformCoordinates(ie, ee.getWorldMatrix()),
-                        Ke = He.subtract(ye).length();
-                      be = Math.max(be, Ke), Me = Math.min(Me, Ke)
-                    }));
-                    const Ke = be - Me;
-                    be += .1 * Ke, Me = Math.max(0, Me - .1 * Ke), Ke < 1 && (be = Me + 10), Ee.forEach(((ye, Ke) => {
-                      const Ue = ye.name.toLowerCase(),
-                        Fe = ye.WC().boundingBox.center,
-                        Je = oe.TransformCoordinates(Fe, ye.getWorldMatrix()),
-                        Re = He.subtract(Je).length();
-                      if (!(Ue.includes("sky") || Ue.includes("background") || Ue.includes("environment") || Re > 1e3)) {
-                        const He = 1 - Math.min(Math.max((Re - Me) / (be - Me), 0), 1),
-                          Ue = new ee(`depthMat_${Ke}`, pe);
-                        Ue.diffuseColor = new ie(He, He, He), Ue.specularColor = new ie(0, 0, 0), ye.material = Ue
-                      }
-                    }))
-                  }
-                })().then((() => Promise.all([He.e(259), He.e(258), He.e(283), He.e(284), He.e(281), He.e(291), He.e(285), He.e(290), He.e(288), He.e(280), He.e(293), He.e(303), He.e(620), He.e(272), He.e(292), He.e(257)]).then((() => He(63844))))).then((ie => ie.GLTF2Export.GLBAsync(pe, ee))).then((ee => {
-                  de(), ee.downloadFiles(), ie()
-                })).catch((ee => {
-                  console.error("Error exporting GLB:", ee), de(), ie()
-                }))
-              }), 100) : Promise.all([He.e(259), He.e(258), He.e(283), He.e(284), He.e(281), He.e(291), He.e(285), He.e(290), He.e(288), He.e(280), He.e(293), He.e(303), He.e(620), He.e(272), He.e(292), He.e(257)]).then((() => He(63844))).then((He => {
-                He.GLTF2Export.GLBAsync(pe, ee).then((ee => {
-                  de(), ee.downloadFiles(), ie()
-                })).catch((ee => {
-                  console.error("Error exporting GLB:", ee), de(), ie()
-                }))
-              })).catch((ee => {
-                console.error("Error importing serializers:", ee), de(), ie()
-              }))
-            }
-          })).catch((ee => {
-            console.error("Error downloading the scene:", ee), ie()
-          }))
-        } catch (fe) {
-          console.error("Error taking screenshot:", fe), ie()
-        }
-      }))
+    function cW(WW) {
+      return WW <= .04045 ? .0773993808 * WW : Math.pow(.947867299 * (WW + .055), 2.4)
     }
-    const Re = new class {
+
+    function wW(WW) {
+      return Math.pow(WW, EW.h)
+    }
+
+    function tW(WW) {
+      return WW <= .0031308 ? 12.92 * WW : 1.055 * Math.pow(WW, .41666) - .055
+    }
+    class ZW {
       constructor() {
-        this.tools = Je.ALL_DEV_TOOLS
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = WW, this.g = iW, this.b = OW
       }
-      downloadScene(ee, ie) {
-        return oe(ee, ie)
+      toString() {
+        return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
       }
-      async setAmbientLightIntensity(ee) {
-        const {
-          Color3: ie
-        } = await Promise.all([He.e(259), He.e(262)]).then((() => He(38020)));
-        (0, Me.h)().PR.Xx().ambientColor = ie.FromArray([ee, ee, ee])
+      getClassName() {
+        return "Color3"
       }
-      capturePhoto(ee, ie, He) {
-        return function(ee, ie, He, ye) {
-          return (0, Ue.d)(Fe(ee), ie, He, ye)
-        }((0, Me.h)(), ee, ie, He)
+      getHashCode() {
+        let WW = 255 * this.r | 0;
+        return WW = 397 * WW ^ 255 * this.g, WW = 397 * WW ^ 255 * this.b, WW
+      }
+      toArray(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return WW[iW] = this.r, WW[iW + 1] = this.g, WW[iW + 2] = this.b, this
+      }
+      mZ(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return ZW.FromArrayToRef(WW, iW, this), this
+      }
+      toColor4() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new xW(this.r, this.g, this.b, WW)
+      }
+      wEW() {
+        return [this.r, this.g, this.b]
+      }
+      toLuminance() {
+        return .3 * this.r + .59 * this.g + .11 * this.b
+      }
+      multiply(WW) {
+        return new ZW(this.r * WW.r, this.g * WW.g, this.b * WW.b)
+      }
+      multiplyToRef(WW, iW) {
+        return iW.r = this.r * WW.r, iW.g = this.g * WW.g, iW.b = this.b * WW.b, iW
+      }
+      multiplyInPlace(WW) {
+        return this.r *= WW.r, this.g *= WW.g, this.b *= WW.b, this
+      }
+      multiplyByFloats(WW, iW, OW) {
+        return new ZW(this.r * WW, this.g * iW, this.b * OW)
+      }
+      divide(WW) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideToRef(WW, iW) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideInPlace(WW) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      minimizeInPlace(WW) {
+        return this.minimizeInPlaceFromFloats(WW.r, WW.g, WW.b)
+      }
+      maximizeInPlace(WW) {
+        return this.maximizeInPlaceFromFloats(WW.r, WW.g, WW.b)
+      }
+      minimizeInPlaceFromFloats(WW, iW, OW) {
+        return this.r = Math.min(WW, this.r), this.g = Math.min(iW, this.g), this.b = Math.min(OW, this.b), this
+      }
+      maximizeInPlaceFromFloats(WW, iW, OW) {
+        return this.r = Math.max(WW, this.r), this.g = Math.max(iW, this.g), this.b = Math.max(OW, this.b), this
+      }
+      floorToRef(WW) {
+        throw new ReferenceError("Can not floor a color")
+      }
+      floor() {
+        throw new ReferenceError("Can not floor a color")
+      }
+      fractToRef(WW) {
+        throw new ReferenceError("Can not fract a color")
+      }
+      fract() {
+        throw new ReferenceError("Can not fract a color")
+      }
+      equals(WW) {
+        return WW && this.r === WW.r && this.g === WW.g && this.b === WW.b
+      }
+      equalsFloats(WW, iW, OW) {
+        return this.jLW(WW, iW, OW)
+      }
+      jLW(WW, iW, OW) {
+        return this.r === WW && this.g === iW && this.b === OW
+      }
+      equalsWithEpsilon(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EW.e;
+        return (0, NW.WithinEpsilon)(this.r, WW.r, iW) && (0, NW.WithinEpsilon)(this.g, WW.g, iW) && (0, NW.WithinEpsilon)(this.b, WW.b, iW)
+      }
+      Lj() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateInPlace() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateToRef(WW) {
+        throw new ReferenceError("Can not negate a color")
+      }
+      scale(WW) {
+        return new ZW(this.r * WW, this.g * WW, this.b * WW)
+      }
+      scaleInPlace(WW) {
+        return this.r *= WW, this.g *= WW, this.b *= WW, this
+      }
+      scaleToRef(WW, iW) {
+        return iW.r = this.r * WW, iW.g = this.g * WW, iW.b = this.b * WW, iW
+      }
+      scaleAndAddToRef(WW, iW) {
+        return iW.r += this.r * WW, iW.g += this.g * WW, iW.b += this.b * WW, iW
+      }
+      clampToRef() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          OW = arguments.length > 2 ? arguments[2] : void 0;
+        return OW.r = (0, NW.Clamp)(this.r, WW, iW), OW.g = (0, NW.Clamp)(this.g, WW, iW), OW.b = (0, NW.Clamp)(this.b, WW, iW), OW
+      }
+      add(WW) {
+        return new ZW(this.r + WW.r, this.g + WW.g, this.b + WW.b)
+      }
+      addInPlace(WW) {
+        return this.r += WW.r, this.g += WW.g, this.b += WW.b, this
+      }
+      addInPlaceFromFloats(WW, iW, OW) {
+        return this.r += WW, this.g += iW, this.b += OW, this
+      }
+      addToRef(WW, iW) {
+        return iW.r = this.r + WW.r, iW.g = this.g + WW.g, iW.b = this.b + WW.b, iW
+      }
+      subtract(WW) {
+        return new ZW(this.r - WW.r, this.g - WW.g, this.b - WW.b)
+      }
+      subtractToRef(WW, iW) {
+        return iW.r = this.r - WW.r, iW.g = this.g - WW.g, iW.b = this.b - WW.b, iW
+      }
+      yEW(WW) {
+        return this.r -= WW.r, this.g -= WW.g, this.b -= WW.b, this
+      }
+      subtractFromFloats(WW, iW, OW) {
+        return new ZW(this.r - WW, this.g - iW, this.b - OW)
+      }
+      subtractFromFloatsToRef(WW, iW, OW, mW) {
+        return mW.r = this.r - WW, mW.g = this.g - iW, mW.b = this.b - OW, mW
+      }
+      clone() {
+        return new ZW(this.r, this.g, this.b)
+      }
+      HJ(WW) {
+        return this.r = WW.r, this.g = WW.g, this.b = WW.b, this
+      }
+      yWW(WW, iW, OW) {
+        return this.r = WW, this.g = iW, this.b = OW, this
+      }
+      set(WW, iW, OW) {
+        return this.yWW(WW, iW, OW)
+      }
+      Z5(WW) {
+        return this.r = this.g = this.b = WW, this
+      }
+      toHexString() {
+        const WW = Math.round(255 * this.r),
+          iW = Math.round(255 * this.g),
+          OW = Math.round(255 * this.b);
+        return "#" + (0, NW.ToHex)(WW) + (0, NW.ToHex)(iW) + (0, NW.ToHex)(OW)
+      }
+      fromHexString(WW) {
+        return "#" !== WW.substring(0, 1) || 7 !== WW.length || (this.r = parseInt(WW.substring(1, 3), 16) / 255, this.g = parseInt(WW.substring(3, 5), 16) / 255, this.b = parseInt(WW.substring(5, 7), 16) / 255), this
+      }
+      toHSV() {
+        return this.toHSVToRef(new ZW)
+      }
+      toHSVToRef(WW) {
+        const iW = this.r,
+          OW = this.g,
+          mW = this.b,
+          EW = Math.max(iW, OW, mW),
+          NW = Math.min(iW, OW, mW);
+        let PW = 0,
+          LW = 0;
+        const cW = EW,
+          wW = EW - NW;
+        return 0 !== EW && (LW = wW / EW), EW != NW && (EW == iW ? (PW = (OW - mW) / wW, OW < mW && (PW += 6)) : EW == OW ? PW = (mW - iW) / wW + 2 : EW == mW && (PW = (iW - OW) / wW + 4), PW *= 60), WW.r = PW, WW.g = LW, WW.b = cW, WW
+      }
+      toLinearSpace() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const iW = new ZW;
+        return this.toLinearSpaceToRef(iW, WW), iW
+      }
+      toLinearSpaceToRef(WW) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (WW.r = cW(this.r), WW.g = cW(this.g), WW.b = cW(this.b)) : (WW.r = LW(this.r), WW.g = LW(this.g), WW.b = LW(this.b)), this
+      }
+      toGammaSpace() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const iW = new ZW;
+        return this.toGammaSpaceToRef(iW, WW), iW
+      }
+      toGammaSpaceToRef(WW) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (WW.r = tW(this.r), WW.g = tW(this.g), WW.b = tW(this.b)) : (WW.r = wW(this.r), WW.g = wW(this.g), WW.b = wW(this.b)), this
+      }
+      static HSVtoRGBToRef(WW, iW, OW, mW) {
+        const EW = OW * iW,
+          NW = WW / 60,
+          PW = EW * (1 - Math.abs(NW % 2 - 1));
+        let LW = 0,
+          cW = 0,
+          wW = 0;
+        NW >= 0 && NW <= 1 ? (LW = EW, cW = PW) : NW >= 1 && NW <= 2 ? (LW = PW, cW = EW) : NW >= 2 && NW <= 3 ? (cW = EW, wW = PW) : NW >= 3 && NW <= 4 ? (cW = PW, wW = EW) : NW >= 4 && NW <= 5 ? (LW = PW, wW = EW) : NW >= 5 && NW <= 6 && (LW = EW, wW = PW);
+        const tW = OW - EW;
+        return mW.r = LW + tW, mW.g = cW + tW, mW.b = wW + tW, mW
+      }
+      static FromHSV(WW, iW, OW) {
+        const mW = new ZW(0, 0, 0);
+        return ZW.HSVtoRGBToRef(WW, iW, OW, mW), mW
+      }
+      static FromHexString(WW) {
+        return new ZW(0, 0, 0).fromHexString(WW)
+      }
+      static FromArray(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new ZW(WW[iW], WW[iW + 1], WW[iW + 2])
+      }
+      static FromArrayToRef(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          OW = arguments.length > 2 ? arguments[2] : void 0;
+        OW.r = WW[iW], OW.g = WW[iW + 1], OW.b = WW[iW + 2]
+      }
+      static FromInts(WW, iW, OW) {
+        return new ZW(WW / 255, iW / 255, OW / 255)
+      }
+      static Lerp(WW, iW, OW) {
+        const mW = new ZW(0, 0, 0);
+        return ZW.LerpToRef(WW, iW, OW, mW), mW
+      }
+      static LerpToRef(WW, iW, OW, mW) {
+        mW.r = WW.r + (iW.r - WW.r) * OW, mW.g = WW.g + (iW.g - WW.g) * OW, mW.b = WW.b + (iW.b - WW.b) * OW
+      }
+      static Hermite(WW, iW, OW, mW, EW) {
+        const NW = EW * EW,
+          PW = EW * NW,
+          LW = 2 * PW - 3 * NW + 1,
+          cW = -2 * PW + 3 * NW,
+          wW = PW - 2 * NW + EW,
+          tW = PW - NW,
+          xW = WW.r * LW + OW.r * cW + iW.r * wW + mW.r * tW,
+          lW = WW.g * LW + OW.g * cW + iW.g * wW + mW.g * tW,
+          AW = WW.b * LW + OW.b * cW + iW.b * wW + mW.b * tW;
+        return new ZW(xW, lW, AW)
+      }
+      static Hermite1stDerivative(WW, iW, OW, mW, EW) {
+        const NW = ZW.Black();
+        return this.Hermite1stDerivativeToRef(WW, iW, OW, mW, EW, NW), NW
+      }
+      static Hermite1stDerivativeToRef(WW, iW, OW, mW, EW, NW) {
+        const PW = EW * EW;
+        NW.r = 6 * (PW - EW) * WW.r + (3 * PW - 4 * EW + 1) * iW.r + 6 * (-PW + EW) * OW.r + (3 * PW - 2 * EW) * mW.r, NW.g = 6 * (PW - EW) * WW.g + (3 * PW - 4 * EW + 1) * iW.g + 6 * (-PW + EW) * OW.g + (3 * PW - 2 * EW) * mW.g, NW.b = 6 * (PW - EW) * WW.b + (3 * PW - 4 * EW + 1) * iW.b + 6 * (-PW + EW) * OW.b + (3 * PW - 2 * EW) * mW.b
+      }
+      static Red() {
+        return new ZW(1, 0, 0)
+      }
+      static Green() {
+        return new ZW(0, 1, 0)
+      }
+      static Blue() {
+        return new ZW(0, 0, 1)
+      }
+      static Black() {
+        return new ZW(0, 0, 0)
+      }
+      static get BlackReadOnly() {
+        return ZW._BlackReadOnly
+      }
+      static White() {
+        return new ZW(1, 1, 1)
+      }
+      static Purple() {
+        return new ZW(.5, 0, .5)
+      }
+      static Magenta() {
+        return new ZW(1, 0, 1)
+      }
+      static Yellow() {
+        return new ZW(1, 1, 0)
+      }
+      static Gray() {
+        return new ZW(.5, .5, .5)
+      }
+      static Teal() {
+        return new ZW(0, 1, 1)
+      }
+      static Random() {
+        return new ZW(Math.random(), Math.random(), Math.random())
       }
     }
-  },
-  42065: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ue,
-      f: () => Fe
-    });
-    var ye = He(1790);
-    const be = 33177600,
-      Me = 3e4;
-    let Ke = !1;
-
-    function Ue(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const {
-        scale: Ue = 1,
-        type: Fe = "image/png",
-        quality: Je
-      } = ye;
-      return ee.tR() ? Ke ? Promise.reject(new Error("A screenshot is already being taken")) : (Ke = !0, new Promise(((ye, oe) => {
-        let Re, ke = 2,
-          qe = null;
-        const fe = () => {
-          var ie;
-          Ke = !1, null === (ie = qe) || void 0 === ie || ie(), clearTimeout(Re);
-          try {
-            ee.restoreSize()
-          } catch (He) {
-            console.error("A screenshot couldn't size the canvas back", He)
+    ZW._V8PerformanceHack = new ZW(.5, .5, .5), ZW._BlackReadOnly = ZW.Black();
+    class xW {
+      constructor() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = WW, this.g = iW, this.b = OW, this.a = mW
+      }
+      wEW() {
+        return [this.r, this.g, this.b, this.a]
+      }
+      toArray(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return WW[iW] = this.r, WW[iW + 1] = this.g, WW[iW + 2] = this.b, WW[iW + 3] = this.a, this
+      }
+      mZ(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = WW[iW], this.g = WW[iW + 1], this.b = WW[iW + 2], this.a = WW[iW + 3], this
+      }
+      equals(WW) {
+        return WW && this.r === WW.r && this.g === WW.g && this.b === WW.b && this.a === WW.a
+      }
+      add(WW) {
+        return new xW(this.r + WW.r, this.g + WW.g, this.b + WW.b, this.a + WW.a)
+      }
+      addToRef(WW, iW) {
+        return iW.r = this.r + WW.r, iW.g = this.g + WW.g, iW.b = this.b + WW.b, iW.a = this.a + WW.a, iW
+      }
+      addInPlace(WW) {
+        return this.r += WW.r, this.g += WW.g, this.b += WW.b, this.a += WW.a, this
+      }
+      addInPlaceFromFloats(WW, iW, OW, mW) {
+        return this.r += WW, this.g += iW, this.b += OW, this.a += mW, this
+      }
+      subtract(WW) {
+        return new xW(this.r - WW.r, this.g - WW.g, this.b - WW.b, this.a - WW.a)
+      }
+      subtractToRef(WW, iW) {
+        return iW.r = this.r - WW.r, iW.g = this.g - WW.g, iW.b = this.b - WW.b, iW.a = this.a - WW.a, iW
+      }
+      yEW(WW) {
+        return this.r -= WW.r, this.g -= WW.g, this.b -= WW.b, this.a -= WW.a, this
+      }
+      subtractFromFloats(WW, iW, OW, mW) {
+        return new xW(this.r - WW, this.g - iW, this.b - OW, this.a - mW)
+      }
+      subtractFromFloatsToRef(WW, iW, OW, mW, EW) {
+        return EW.r = this.r - WW, EW.g = this.g - iW, EW.b = this.b - OW, EW.a = this.a - mW, EW
+      }
+      scale(WW) {
+        return new xW(this.r * WW, this.g * WW, this.b * WW, this.a * WW)
+      }
+      scaleInPlace(WW) {
+        return this.r *= WW, this.g *= WW, this.b *= WW, this.a *= WW, this
+      }
+      scaleToRef(WW, iW) {
+        return iW.r = this.r * WW, iW.g = this.g * WW, iW.b = this.b * WW, iW.a = this.a * WW, iW
+      }
+      scaleAndAddToRef(WW, iW) {
+        return iW.r += this.r * WW, iW.g += this.g * WW, iW.b += this.b * WW, iW.a += this.a * WW, iW
+      }
+      clampToRef() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          OW = arguments.length > 2 ? arguments[2] : void 0;
+        return OW.r = (0, NW.Clamp)(this.r, WW, iW), OW.g = (0, NW.Clamp)(this.g, WW, iW), OW.b = (0, NW.Clamp)(this.b, WW, iW), OW.a = (0, NW.Clamp)(this.a, WW, iW), OW
+      }
+      multiply(WW) {
+        return new xW(this.r * WW.r, this.g * WW.g, this.b * WW.b, this.a * WW.a)
+      }
+      multiplyToRef(WW, iW) {
+        return iW.r = this.r * WW.r, iW.g = this.g * WW.g, iW.b = this.b * WW.b, iW.a = this.a * WW.a, iW
+      }
+      multiplyInPlace(WW) {
+        return this.r *= WW.r, this.g *= WW.g, this.b *= WW.b, this.a *= WW.a, this
+      }
+      multiplyByFloats(WW, iW, OW, mW) {
+        return new xW(this.r * WW, this.g * iW, this.b * OW, this.a * mW)
+      }
+      divide(WW) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideToRef(WW, iW) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideInPlace(WW) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      minimizeInPlace(WW) {
+        return this.r = Math.min(this.r, WW.r), this.g = Math.min(this.g, WW.g), this.b = Math.min(this.b, WW.b), this.a = Math.min(this.a, WW.a), this
+      }
+      maximizeInPlace(WW) {
+        return this.r = Math.max(this.r, WW.r), this.g = Math.max(this.g, WW.g), this.b = Math.max(this.b, WW.b), this.a = Math.max(this.a, WW.a), this
+      }
+      minimizeInPlaceFromFloats(WW, iW, OW, mW) {
+        return this.r = Math.min(WW, this.r), this.g = Math.min(iW, this.g), this.b = Math.min(OW, this.b), this.a = Math.min(mW, this.a), this
+      }
+      maximizeInPlaceFromFloats(WW, iW, OW, mW) {
+        return this.r = Math.max(WW, this.r), this.g = Math.max(iW, this.g), this.b = Math.max(OW, this.b), this.a = Math.max(mW, this.a), this
+      }
+      floorToRef(WW) {
+        throw new ReferenceError("Can not floor a color")
+      }
+      floor() {
+        throw new ReferenceError("Can not floor a color")
+      }
+      fractToRef(WW) {
+        throw new ReferenceError("Can not fract a color")
+      }
+      fract() {
+        throw new ReferenceError("Can not fract a color")
+      }
+      Lj() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateInPlace() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateToRef(WW) {
+        throw new ReferenceError("Can not negate a color")
+      }
+      equalsWithEpsilon(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EW.e;
+        return (0, NW.WithinEpsilon)(this.r, WW.r, iW) && (0, NW.WithinEpsilon)(this.g, WW.g, iW) && (0, NW.WithinEpsilon)(this.b, WW.b, iW) && (0, NW.WithinEpsilon)(this.a, WW.a, iW)
+      }
+      jLW(WW, iW, OW, mW) {
+        return this.r === WW && this.g === iW && this.b === OW && this.a === mW
+      }
+      toString() {
+        return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
+      }
+      getClassName() {
+        return "Color4"
+      }
+      getHashCode() {
+        let WW = 255 * this.r | 0;
+        return WW = 397 * WW ^ 255 * this.g, WW = 397 * WW ^ 255 * this.b, WW = 397 * WW ^ 255 * this.a, WW
+      }
+      clone() {
+        return (new xW).HJ(this)
+      }
+      HJ(WW) {
+        return this.r = WW.r, this.g = WW.g, this.b = WW.b, this.a = WW.a, this
+      }
+      yWW(WW, iW, OW, mW) {
+        return this.r = WW, this.g = iW, this.b = OW, this.a = mW, this
+      }
+      set(WW, iW, OW, mW) {
+        return this.yWW(WW, iW, OW, mW)
+      }
+      Z5(WW) {
+        return this.r = this.g = this.b = this.a = WW, this
+      }
+      toHexString() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const iW = Math.round(255 * this.r),
+          OW = Math.round(255 * this.g),
+          mW = Math.round(255 * this.b);
+        if (WW) return "#" + (0, NW.ToHex)(iW) + (0, NW.ToHex)(OW) + (0, NW.ToHex)(mW);
+        const EW = Math.round(255 * this.a);
+        return "#" + (0, NW.ToHex)(iW) + (0, NW.ToHex)(OW) + (0, NW.ToHex)(mW) + (0, NW.ToHex)(EW)
+      }
+      fromHexString(WW) {
+        return "#" !== WW.substring(0, 1) || 9 !== WW.length && 7 !== WW.length || (this.r = parseInt(WW.substring(1, 3), 16) / 255, this.g = parseInt(WW.substring(3, 5), 16) / 255, this.b = parseInt(WW.substring(5, 7), 16) / 255, 9 === WW.length && (this.a = parseInt(WW.substring(7, 9), 16) / 255)), this
+      }
+      toLinearSpace() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const iW = new xW;
+        return this.toLinearSpaceToRef(iW, WW), iW
+      }
+      toLinearSpaceToRef(WW) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (WW.r = cW(this.r), WW.g = cW(this.g), WW.b = cW(this.b)) : (WW.r = LW(this.r), WW.g = LW(this.g), WW.b = LW(this.b)), WW.a = this.a, this
+      }
+      toGammaSpace() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const iW = new xW;
+        return this.toGammaSpaceToRef(iW, WW), iW
+      }
+      toGammaSpaceToRef(WW) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (WW.r = tW(this.r), WW.g = tW(this.g), WW.b = tW(this.b)) : (WW.r = wW(this.r), WW.g = wW(this.g), WW.b = wW(this.b)), WW.a = this.a, this
+      }
+      static FromHexString(WW) {
+        return "#" !== WW.substring(0, 1) || 9 !== WW.length && 7 !== WW.length ? new xW(0, 0, 0, 0) : new xW(0, 0, 0, 1).fromHexString(WW)
+      }
+      static Lerp(WW, iW, OW) {
+        return xW.LerpToRef(WW, iW, OW, new xW)
+      }
+      static LerpToRef(WW, iW, OW, mW) {
+        return mW.r = WW.r + (iW.r - WW.r) * OW, mW.g = WW.g + (iW.g - WW.g) * OW, mW.b = WW.b + (iW.b - WW.b) * OW, mW.a = WW.a + (iW.a - WW.a) * OW, mW
+      }
+      static Hermite(WW, iW, OW, mW, EW) {
+        const NW = EW * EW,
+          PW = EW * NW,
+          LW = 2 * PW - 3 * NW + 1,
+          cW = -2 * PW + 3 * NW,
+          wW = PW - 2 * NW + EW,
+          tW = PW - NW,
+          ZW = WW.r * LW + OW.r * cW + iW.r * wW + mW.r * tW,
+          lW = WW.g * LW + OW.g * cW + iW.g * wW + mW.g * tW,
+          AW = WW.b * LW + OW.b * cW + iW.b * wW + mW.b * tW,
+          bW = WW.a * LW + OW.a * cW + iW.a * wW + mW.a * tW;
+        return new xW(ZW, lW, AW, bW)
+      }
+      static Hermite1stDerivative(WW, iW, OW, mW, EW) {
+        const NW = new xW;
+        return this.Hermite1stDerivativeToRef(WW, iW, OW, mW, EW, NW), NW
+      }
+      static Hermite1stDerivativeToRef(WW, iW, OW, mW, EW, NW) {
+        const PW = EW * EW;
+        NW.r = 6 * (PW - EW) * WW.r + (3 * PW - 4 * EW + 1) * iW.r + 6 * (-PW + EW) * OW.r + (3 * PW - 2 * EW) * mW.r, NW.g = 6 * (PW - EW) * WW.g + (3 * PW - 4 * EW + 1) * iW.g + 6 * (-PW + EW) * OW.g + (3 * PW - 2 * EW) * mW.g, NW.b = 6 * (PW - EW) * WW.b + (3 * PW - 4 * EW + 1) * iW.b + 6 * (-PW + EW) * OW.b + (3 * PW - 2 * EW) * mW.b, NW.a = 6 * (PW - EW) * WW.a + (3 * PW - 4 * EW + 1) * iW.a + 6 * (-PW + EW) * OW.a + (3 * PW - 2 * EW) * mW.a
+      }
+      static FromColor3(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new xW(WW.r, WW.g, WW.b, iW)
+      }
+      static FromArray(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new xW(WW[iW], WW[iW + 1], WW[iW + 2], WW[iW + 3])
+      }
+      static FromArrayToRef(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          OW = arguments.length > 2 ? arguments[2] : void 0;
+        OW.r = WW[iW], OW.g = WW[iW + 1], OW.b = WW[iW + 2], OW.a = WW[iW + 3]
+      }
+      static FromInts(WW, iW, OW, mW) {
+        return new xW(WW / 255, iW / 255, OW / 255, mW / 255)
+      }
+      static CheckColors4(WW, iW) {
+        if (WW.length === 3 * iW) {
+          const iW = [];
+          for (let OW = 0; OW < WW.length; OW += 3) {
+            const mW = OW / 3 * 4;
+            iW[mW] = WW[OW], iW[mW + 1] = WW[OW + 1], iW[mW + 2] = WW[OW + 2], iW[mW + 3] = 1
           }
+          return iW
+        }
+        return WW
+      }
+    }
+    xW._V8PerformanceHack = new xW(.5, .5, .5, .5);
+    class lW {}
+    lW.Color3 = (0, mW.c)(3, ZW.Black), lW.Color4 = (0, mW.c)(3, (() => new xW(0, 0, 0, 0)));
+    let AW = !1;
+
+    function bW() {
+      AW || (AW = !0, Object.defineProperties(ZW.prototype, {
+        dimension: {
+          value: [3]
+        },
+        rank: {
+          value: 1
+        }
+      }), Object.defineProperties(xW.prototype, {
+        dimension: {
+          value: [4]
+        },
+        rank: {
+          value: 1
+        }
+      }), (0, PW.h)("BABYLON.Color3", ZW), (0, PW.h)("BABYLON.Color4", xW))
+    }
+  },
+  38249: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => NW,
+      h: () => mW,
+      i: () => EW
+    });
+    const mW = 1 / 2.2,
+      EW = 2.2;
+    Math.sqrt(5);
+    let NW = .001
+  },
+  38285: (WW, iW, OW) => {
+    function mW(WW) {
+      return parseInt(WW.toString().replace(/\W/g, ""))
+    }
+
+    function EW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(WW - iW) <= OW
+    }
+
+    function NW(WW, iW, OW) {
+      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return WW < iW - mW || WW > OW + mW
+    }
+
+    function PW(WW, iW) {
+      return WW === iW ? WW : Math.random() * (iW - WW) + WW
+    }
+
+    function LW(WW, iW, OW) {
+      return WW + (iW - WW) * OW
+    }
+
+    function cW(WW, iW, OW) {
+      let mW = jW(iW - WW, 360);
+      return mW > 180 && (mW -= 360), WW + mW * xW(OW)
+    }
+
+    function wW(WW, iW, OW) {
+      let mW;
+      return mW = WW != iW ? xW((OW - WW) / (iW - WW)) : 0, mW
+    }
+
+    function tW(WW, iW, OW, mW, EW) {
+      const NW = EW * EW,
+        PW = EW * NW;
+      return WW * (2 * PW - 3 * NW + 1) + OW * (-2 * PW + 3 * NW) + iW * (PW - 2 * NW + EW) + mW * (PW - NW)
+    }
+
+    function ZW(WW, iW, OW, mW, EW) {
+      const NW = EW * EW;
+      return 6 * (NW - EW) * WW + (3 * NW - 4 * EW + 1) * iW + 6 * (-NW + EW) * OW + (3 * NW - 2 * EW) * mW
+    }
+
+    function xW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(OW, Math.max(iW, WW))
+    }
+
+    function lW(WW) {
+      return WW -= 2 * Math.PI * Math.floor((WW + Math.PI) / (2 * Math.PI))
+    }
+
+    function AW(WW) {
+      const iW = WW.toString(16);
+      return WW <= 15 ? ("0" + iW).toUpperCase() : iW.toUpperCase()
+    }
+
+    function bW(WW) {
+      if (Math.log2) return Math.floor(Math.log2(WW));
+      if (WW < 0) return NaN;
+      if (0 === WW) return -1 / 0;
+      let iW = 0;
+      if (WW < 1) {
+        for (; WW < 1;) iW++, WW *= 2;
+        iW = -iW
+      } else if (WW > 1)
+        for (; WW > 1;) iW++, WW = Math.floor(WW / 2);
+      return iW
+    }
+
+    function jW(WW, iW) {
+      return WW - Math.floor(WW / iW) * iW
+    }
+
+    function UW(WW, iW, OW) {
+      return (WW - iW) / (OW - iW)
+    }
+
+    function kW(WW, iW, OW) {
+      return WW * (OW - iW) + iW
+    }
+
+    function sW(WW, iW) {
+      let OW = jW(iW - WW, 360);
+      return OW > 180 && (OW -= 360), OW
+    }
+
+    function MW(WW, iW) {
+      const OW = jW(WW, 2 * iW);
+      return iW - Math.abs(OW - iW)
+    }
+
+    function KW(WW, iW, OW) {
+      let mW = xW(OW);
+      return mW = -2 * mW * mW * mW + 3 * mW * mW, iW * mW + WW * (1 - mW)
+    }
+
+    function SW(WW, iW, OW) {
+      let mW;
+      return mW = Math.abs(iW - WW) <= OW ? iW : WW + Math.sign(iW - WW) * OW, mW
+    }
+
+    function YW(WW, iW, OW) {
+      const mW = sW(WW, iW);
+      let EW;
+      return EW = -OW < mW && mW < OW ? iW : SW(WW, iW = WW + mW, OW), EW
+    }
+
+    function yW(WW, iW, OW) {
+      return (WW - iW) / (OW - iW)
+    }
+
+    function TW(WW, iW, OW) {
+      return (OW - iW) * WW + iW
+    }
+
+    function JW(WW, iW) {
+      const OW = WW % iW;
+      return 0 === OW ? iW : JW(iW, OW)
+    }
+    OW.r(iW), OW.d(iW, {
+      Clamp: () => xW,
+      DeltaAngle: () => sW,
+      Denormalize: () => kW,
+      ExtractAsInt: () => mW,
+      Hermite: () => tW,
+      Hermite1stDerivative: () => ZW,
+      HighestCommonFactor: () => JW,
+      ILog2: () => bW,
+      InverseLerp: () => wW,
+      Lerp: () => LW,
+      LerpAngle: () => cW,
+      MoveTowards: () => SW,
+      MoveTowardsAngle: () => YW,
+      Normalize: () => UW,
+      NormalizeRadians: () => lW,
+      OutsideRange: () => NW,
+      PercentToRange: () => TW,
+      PingPong: () => MW,
+      RandomRange: () => PW,
+      RangeToPercent: () => yW,
+      Repeat: () => jW,
+      SmoothStep: () => KW,
+      ToHex: () => AW,
+      WithinEpsilon: () => EW
+    })
+  },
+  38253: (WW, iW, OW) => {
+    function mW(WW, iW) {
+      const OW = [];
+      for (let mW = 0; mW < WW; ++mW) OW.push(iW());
+      return OW
+    }
+
+    function EW(WW, iW) {
+      return mW(WW, iW)
+    }
+    OW.d(iW, {
+      c: () => mW,
+      f: () => EW,
+      j: () => PW
+    });
+    const NW = ["push", "splice", "pop", "shift", "unshift"];
+
+    function PW(WW, iW) {
+      const OW = NW.map((OW => function(WW, iW, OW) {
+        const mW = WW[iW];
+        if ("function" !== typeof mW) return null;
+        const EW = function() {
+          const mW = WW.length,
+            NW = EW.previous.apply(WW, arguments);
+          return OW(iW, mW), NW
         };
-        Re = setTimeout((() => {
-          fe(), oe(new Error("No frame was drawn to capture"))
-        }), Me);
-        try {
-          const ye = function(ee, ie, He) {
-            const ye = Math.max(1, ee),
-              Me = Math.max(1, ie),
-              Ke = Math.min(1, He / Math.max(ye, Me), Math.sqrt(be / (ye * Me)));
-            return {
-              width: Math.max(1, Math.floor(ye * Ke)),
-              height: Math.max(1, Math.floor(Me * Ke))
-            }
-          }(ie, He, ee.maxTextureSize);
-          ee.resize(ye.width, ye.height, Ue * ye.width / Math.max(1, ie))
-        } catch (Te) {
-          return fe(), void oe(Te)
+        return mW.next = EW, EW.previous = mW, WW[iW] = EW, () => {
+          const OW = EW.previous;
+          if (!OW) return;
+          const mW = EW.next;
+          mW ? (OW.next = mW, mW.previous = OW) : (OW.next = void 0, WW[iW] = OW), EW.next = void 0, EW.previous = void 0
         }
-        qe = ee.onFrameDrawn((() => {
-          if (ke--, ke > 0) return;
-          const {
-            canvas: ie
-          } = ee, He = {
-            width: ie.width,
-            height: ie.height
-          };
-          try {
-            ie.toBlob((ee => {
-              ee ? ye({
-                blob: ee,
-                ...He
-              }) : oe(new Error("The canvas gave no image"))
-            }), Fe, Je)
-          } catch (Te) {
-            oe(Te)
-          } finally {
-            fe()
-          }
-        }))
-      }))) : Promise.reject(new Error("Screenshots need a game to be running"))
-    }
-    async function Fe(ee, ie, He) {
-      try {
-        const be = await Ue(ee, ie, He);
-        (0, ye.e)(be.blob, `bloxd-screenshot-${be.width}x${be.height}-${Date.now()}.png`)
-      } catch (be) {
-        console.error("Error taking screenshot:", be)
-      }
-    }
-  },
-  38265: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Je,
-      d: () => Ue,
-      e: () => Ke
-    });
-    var ye = He(38258),
-      be = He(38273);
-    let Me = 0;
-
-    function Ke(ee, ie) {
-      const He = ee;
-      He._noaFaceGroups = null !== ie && void 0 !== ie ? ie : null, He._noaFaceEpoch = -1, He._noaFaceMask = -1, He._noaFaceCount = -1, He._noaFaceMaterial = null;
-      const ye = ee.pW;
-      ye && 1 === ye.length && (ye[0].indexStart = 0, ye[0].indexCount = ee.getTotalIndices())
-    }
-
-    function Ue(ee, ie) {
-      if (ie) {
-        Me++;
-        for (const ie of ee) {
-          const ee = ie._noaFaceGroups;
-          ee && Ke(ie, ee)
-        }
-      } else Me = Math.max(0, Me - 1)
-    }
-
-    function Fe(ee, ie, He) {
-      let be = -1,
-        Me = 0;
-      for (let Ke = 0; Ke < ye.g; Ke++) {
-        const He = ee[Ke],
-          Ue = ee[Ke + 1];
-        Ue > He && ie & 1 << ye.c[Ke] && (be < 0 && (be = He), Me = Ue)
-      }
-      return be < 0 ? (He[0] = 0, He[1] = 0, 0) : (He[0] = be, He[1] = Me - be, Me - be)
-    }
-    class Je {
-      constructor(ee, ie) {
-        this.BR = ee, this.engine = ie, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
-      }
-      apply(ee, ie) {
-        if (!ie) return;
-        const He = ie.getProjectionMatrix().m,
-          Ke = 0 === Me && 0 === He[15],
-          Ue = ie.globalPosition,
-          {
-            engine: Je
-          } = this,
-          oe = Ke ? (0, be.c)(He, Je.getRenderWidth(), Je.getRenderHeight()) : 0;
-        Ue.x === this.eyeX && Ue.y === this.eyeY && Ue.z === this.eyeZ && oe === this.focalPx && Ke === this.culling || (this.epoch++, this.eyeX = Ue.x, this.eyeY = Ue.y, this.eyeZ = Ue.z, this.focalPx = oe, this.culling = Ke);
-        const {
-          epoch: Re,
-          range: ke
-        } = this, qe = this.BR / 2, fe = qe * Math.sqrt(3), Te = ee.data, pe = ee.length;
-        let Xe = 0;
-        for (let Me = 0; Me < pe; Me++) {
-          const ee = Te[Me],
-            ie = ee._noaFaceGroups;
-          if (ie && (ee._noaFaceEpoch !== Re || ee._noaFaceMaterial !== ee.material)) {
-            ee._noaFaceEpoch = Re, ee._noaFaceMaterial = ee.material;
-            const He = ee.pW,
-              Me = He && 1 === He.length ? He[0] : null;
-            let Je = -1;
-            if (Ke && Me && (0, ye.v)(ee.material)) {
-              const He = ee.position,
-                ye = Ue.x - He.x,
-                Me = Ue.y - He.y,
-                Ke = Ue.z - He.z,
-                Fe = ye - qe,
-                Re = Me - qe,
-                ke = Ke - qe,
-                Te = Math.sqrt(Fe * Fe + Re * Re + ke * ke) + fe;
-              Je = (0, be.k)(ie, ye, Me, Ke, (0, be.g)(Te, oe))
-            }
-            if (Me && Je !== ee._noaFaceMask) {
-              ee._noaFaceMask = Je;
-              let He = 0,
-                be = ie[ye.g]; - 1 !== Je && (be = Fe(ie, Je, ke), He = ke[0]), ee._noaFaceCount = be, Me.indexStart = 6 * He, Me.indexCount = 6 * be, Me.setBoundingInfo(ee.WC())
-            }
-          }
-          ie && 0 === ee._noaFaceCount || (Te[Xe++] = ee)
-        }
-        ee.length = Xe
-      }
-    }
-  },
-  38247: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Fe,
-      d: () => Ue
-    });
-    const ye = new WeakSet;
-    let be = 0;
-    const Me = new Set;
-
-    function Ke(ee, ie) {
-      ee._data = ie
-    }
-
-    function Ue(ee) {
-      var ie, He;
-      (null !== (ie = null === (He = ee.getBuffer()) || void 0 === He ? void 0 : He.bk) && void 0 !== ie ? ie : 0) > 0 && (ye.add(ee), 0 === be ? Ke(ee, null) : Me.add(ee))
-    }
-
-    function Fe(ee) {
-      be++;
-      for (const He of function(ee) {
-          const ie = new Set;
-          for (const be of ee) {
-            const ee = be.geometry;
-            for (const be of Object.values(null !== (He = null === ee || void 0 === ee ? void 0 : ee.getVertexBuffers()) && void 0 !== He ? He : {})) {
-              var He;
-              const ee = be.getWrapperBuffer();
-              ye.has(ee) && ie.add(ee)
-            }
-          }
-          return ie
-        }(ee)) He.getData() || Je(He), Me.add(He);
-      let ie = !0;
+      }(WW, OW, iW)));
       return () => {
-        if (ie && (ie = !1, be--, 0 === be)) {
-          for (const ee of Me) Ke(ee, null);
-          Me.clear()
-        }
+        for (const WW of OW) WW?.()
       }
-    }
-
-    function Je(ee) {
-      const ie = ee.getBuffer();
-      if (!ie || !(ie.bk > 0)) return;
-      const He = ee._engine,
-        ye = new Uint8Array(ie.bk);
-      He.bindArrayBuffer(ie), He._gl.getBufferSubData(He._gl.ARRAY_BUFFER, 0, ye), He._resetVertexBufferBinding(), Ke(ee, ye)
     }
   },
-  38258: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke,
-      g: () => Me,
-      j: () => Fe,
-      m: () => ye,
-      n: () => Ue,
-      r: () => be,
-      v: () => Je
+  38299: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      h: () => EW
     });
-    const ye = 6,
-      be = [0, 2, 4, 1, 3, 5, 0, 2],
-      Me = 6,
-      Ke = [1, 0, 3, 2, 5, 4];
-    for (let oe = Me; oe < be.length; oe++)
-      if (be[oe] !== be[oe - Me]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const Ue = be.length + 1,
-      Fe = (() => {
-        const ee = [];
-        for (let ie = 0; ie < Me; ie++) ee[be[ie]] = ie;
-        return ee
-      })();
+    const mW = {};
 
-    function Je(ee) {
-      return !!ee && ee.backFaceCulling && (0 === ee.transparencyMode || 1 === ee.transparencyMode)
-    }
-  },
-  38273: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ue,
-      g: () => Fe,
-      j: () => oe,
-      k: () => Je,
-      n: () => fe
-    });
-    var ye = He(38258);
-    const be = 1 / 16,
-      Me = 1 / 64,
-      Ke = 2048;
-    ye.m;
-
-    function Ue(ee, ie, He) {
-      return Math.min(Math.abs(ee[0] * ie), Math.abs(ee[5] * He)) / 2
+    function EW(WW, iW) {
+      mW[WW] = iW
     }
 
-    function Fe(ee, ie) {
-      return be + Me * ee * ee / ie
-    }
-
-    function Je(ee, ie, He, be, Me) {
-      const Ke = ye.n;
-      return oe(ee[Ke], ee[Ke + 1], ee[Ke + 2], ee[Ke + 3], ee[Ke + 4], ee[Ke + 5], ie, He, be, Me)
-    }
-
-    function oe(ee, ie, He, ye, be, Me, Ke, Ue, Fe, Je) {
-      return (Ke <= ee - Je ? 0 : 1) | (Ke >= ie + Je ? 0 : 2) | (Ue <= He - Je ? 0 : 4) | (Ue >= ye + Je ? 0 : 8) | (Fe <= be - Je ? 0 : 16) | (Fe >= Me + Je ? 0 : 32)
-    }
-    const Re = (() => {
-        const ee = [];
-        for (let ie = 0; ie < ye.r.length; ie++) {
-          let He = 0;
-          for (let be = ie + 1; be <= ye.r.length; be++) {
-            const Me = 1 << ye.r[be - 1];
-            if (He & Me) break;
-            He |= Me, ee.push({
-              start: ie,
-              end: be,
-              Pe: He
-            })
-          }
-        }
-        return ee
-      })(),
-      ke = [];
-
-    function qe(ee, ie) {
-      const He = ye.j[ie];
-      return ee[He + 1] - ee[He]
-    }
-
-    function fe(ee, ie, He) {
-      let be = 0;
-      for (let Ke = 0; Ke < ye.m; Ke++) qe(ee, Ke) > 0 && (be |= 1 << Ke);
-      if (0 === (ie &= be)) return 0;
-      if (ie === be) return He[0] = 0, He[1] = ee[ye.g], 1;
-      let Me = null,
-        Ue = 1 / 0;
-      for (const Je of function(ee) {
-          let ie = ke[ee];
-          if (ie) return ie;
-          const He = new Map,
-            ye = (ee, ie) => {
-              const ye = 4 * ee + ie.length / 2;
-              He.has(ye) || He.set(ye, {
-                Pe: ee,
-                windows: ie
-              })
-            };
-          for (const Me of Re)
-            if ((Me.Pe & ee) === ee && ye(Me.Pe, [Me.start, Me.end]), 0 !== (Me.Pe & ee))
-              for (const ie of Re) ie.start < Me.end || 0 !== (Me.Pe & ie.Pe) || 0 === (ie.Pe & ee) || ((Me.Pe | ie.Pe) & ee) !== ee || ye(Me.Pe | ie.Pe, [Me.start, Me.end, ie.start, ie.end]);
-          const be = [...He.values()];
-          return ie = be.filter((ee => !be.some((ie => ie !== ee && (ie.Pe & ee.Pe) === ie.Pe && ie.windows.length <= ee.windows.length)))), ke[ee] = ie, ie
-        }(ie)) {
-        let He = (Je.windows.length / 2 - 1) * Ke;
-        const Fe = Je.Pe & ~ie & be;
-        for (let ie = 0; ie < ye.m; ie++) Fe & 1 << ie && (He += qe(ee, ie));
-        He < Ue && (Me = Je, Ue = He)
-      }
-      const Fe = Me.windows;
-      for (let ye = 0; ye < Fe.length; ye += 2) {
-        const ie = ee[Fe[ye]];
-        He[ye] = ie, He[ye + 1] = ee[Fe[ye + 1]] - ie
-      }
-      return Fe.length / 2
+    function NW(WW) {
+      return mW[WW]
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

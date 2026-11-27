@@ -1,130 +1,130 @@
-export const id = 36;
-export const ids = [36];
+export const id = 37;
+export const ids = [37];
 export const modules = {
-  37213: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      DUMP_GAP_MS: () => Je,
-      DiagSink: () => qe,
-      ITEM_GAP_MS: () => be,
-      ITEM_METADATA_BYTES: () => Fe,
-      MAX_LINE_CHARS: () => Ke,
-      MAX_MESSAGE_BYTES: () => Me
+  37677: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      DUMP_GAP_MS: () => wW,
+      DiagSink: () => lW,
+      ITEM_GAP_MS: () => EW,
+      ITEM_METADATA_BYTES: () => cW,
+      MAX_LINE_CHARS: () => PW,
+      MAX_MESSAGE_BYTES: () => NW
     });
-    const ye = "bloxdDiagSinkDays",
-      be = 4e4,
-      Me = 2048,
-      Ke = 400,
-      Ue = 262144,
-      Fe = 1500,
-      Je = 6e5,
-      oe = new TextEncoder;
+    const mW = "bloxdDiagSinkDays",
+      EW = 4e4,
+      NW = 2048,
+      PW = 400,
+      LW = 262144,
+      cW = 1500,
+      wW = 6e5,
+      tW = new TextEncoder;
 
-    function Re(ee) {
-      return oe.encode(ee).length
+    function ZW(WW) {
+      return tW.encode(WW).length
     }
 
-    function ke(ee) {
-      return Fe + Re(ee)
+    function xW(WW) {
+      return cW + ZW(WW)
     }
-    class qe {
-      constructor(ee, ie) {
-        this.claim = ee, this.deps = ie, this.queue = [], this.pageLines = 0, this.pageBytes = 0, this.stopped = !1, this.dropped = !1, this.lastSentMs = Number.NEGATIVE_INFINITY, this.lastDumpMs = void 0, this.sentDumps = new Map, this.lastDumpMs = ie.now()
+    class lW {
+      constructor(WW, iW) {
+        this.claim = WW, this.deps = iW, this.queue = [], this.pageLines = 0, this.pageBytes = 0, this.stopped = !1, this.dropped = !1, this.lastSentMs = Number.NEGATIVE_INFINITY, this.lastDumpMs = void 0, this.sentDumps = new Map, this.lastDumpMs = iW.now()
       }
       start() {
         setInterval((() => {
-          this.YR()
-        }), be), window.addEventListener("visibilitychange", (() => {
+          this.hZ()
+        }), EW), window.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && (this.deps.releaseHeld(), this.flush())
         }), !0)
       }
-      add(ee) {
-        this.stopped || (this.pageLines + this.queue.length < 500 ? this.queue.push(function(ee) {
-          const ie = ee.replace(/\n/g, " | ");
-          if (ie.length <= Ke) return ie;
-          let He = Ke - 3;
-          const ye = ie.charCodeAt(He - 1);
-          return ye >= 55296 && ye <= 56319 && He--, `${ie.slice(0,He)}...`
-        }(ee)) : this.dropped = !0)
+      add(WW) {
+        this.stopped || (this.pageLines + this.queue.length < 500 ? this.queue.push(function(WW) {
+          const iW = WW.replace(/\n/g, " | ");
+          if (iW.length <= PW) return iW;
+          let OW = PW - 3;
+          const mW = iW.charCodeAt(OW - 1);
+          return mW >= 55296 && mW <= 56319 && OW--, `${iW.slice(0,OW)}...`
+        }(WW)) : this.dropped = !0)
       }
-      YR() {
-        this.deps.now() - this.lastDumpMs >= Je && (this.lastDumpMs = this.deps.now(), this.queueDumps()), this.flush()
+      hZ() {
+        this.deps.now() - this.lastDumpMs >= wW && (this.lastDumpMs = this.deps.now(), this.queueDumps()), this.flush()
       }
       flush() {
-        if (this.stopped || 0 === this.queue.length || this.deps.now() - this.lastSentMs < be - 1e3) return;
-        const ee = this.readDay(),
-          ie = [];
-        let He = 0,
-          ye = null;
-        for (const be of this.queue) {
-          const Ke = Re(be) + (ie.length > 0 ? 1 : 0);
-          if (He + Ke > Me) break;
-          const Je = Fe + He + Ke;
-          if (this.pageBytes + Je > Ue) {
-            ye = "page";
+        if (this.stopped || 0 === this.queue.length || this.deps.now() - this.lastSentMs < EW - 1e3) return;
+        const WW = this.readDay(),
+          iW = [];
+        let OW = 0,
+          mW = null;
+        for (const EW of this.queue) {
+          const PW = ZW(EW) + (iW.length > 0 ? 1 : 0);
+          if (OW + PW > NW) break;
+          const wW = cW + OW + PW;
+          if (this.pageBytes + wW > LW) {
+            mW = "page";
             break
           }
-          if (!this.dayFits(ee, ie.length + 1, Je)) {
-            ye = "day";
+          if (!this.dayFits(WW, iW.length + 1, wW)) {
+            mW = "day";
             break
           }
-          ie.push(be), He += Ke
+          iW.push(EW), OW += PW
         }
-        null === ye && this.dropped && ie.length === this.queue.length && (ye = "page"), this.queue.splice(0, ie.length), ie.length > 0 && !this.sendCharged(ee, ie.join("\n"), ie.length, "lines") || null !== ye && this.stopAt(ye, ee)
+        null === mW && this.dropped && iW.length === this.queue.length && (mW = "page"), this.queue.splice(0, iW.length), iW.length > 0 && !this.sendCharged(WW, iW.join("\n"), iW.length, "lines") || null !== mW && this.stopAt(mW, WW)
       }
       queueDumps() {
-        for (const [ee, ie] of this.deps.dumps()) {
-          const He = ie.split("\n").slice(0, 20),
-            ye = He.join("\n");
-          if (this.sentDumps.get(ee) !== ye) {
-            this.sentDumps.set(ee, ye);
-            for (const ie of He) this.add(`[dump:${ee}] ${ie}`)
+        for (const [WW, iW] of this.deps.dumps()) {
+          const OW = iW.split("\n").slice(0, 20),
+            mW = OW.join("\n");
+          if (this.sentDumps.get(WW) !== mW) {
+            this.sentDumps.set(WW, mW);
+            for (const iW of OW) this.add(`[dump:${WW}] ${iW}`)
           }
         }
       }
-      stopAt(ee, ie) {
+      stopAt(WW, iW) {
         this.stopped = !0, this.queue.length = 0;
-        const He = "page" === ee ? "diag_cap: the page's cap (500 lines, 256 KB), so this page sends no more" : `diag_cap: the claim's daily cap (${this.claim.perClientLines} lines, ${this.dayBytes()/1e3} KB), so it sends no more today`;
-        if ("day" === ee) {
-          if (ie.capSent) return;
-          ie.capSent = !0
-        } else if (!this.dayFits(ie, 1, ke(He))) return;
-        this.sendCharged(ie, He, 1, "cap")
+        const OW = "page" === WW ? "diag_cap: the page's cap (500 lines, 256 KB), so this page sends no more" : `diag_cap: the claim's daily cap (${this.claim.perClientLines} lines, ${this.dayBytes()/1e3} KB), so it sends no more today`;
+        if ("day" === WW) {
+          if (iW.capSent) return;
+          iW.capSent = !0
+        } else if (!this.dayFits(iW, 1, xW(OW))) return;
+        this.sendCharged(iW, OW, 1, "cap")
       }
       dayBytes() {
         return 400 * this.claim.perClientLines
       }
-      dayFits(ee, ie, He) {
-        return ee.lines + ie <= this.claim.perClientLines && ee.bytes + He <= this.dayBytes()
+      dayFits(WW, iW, OW) {
+        return WW.lines + iW <= this.claim.perClientLines && WW.bytes + OW <= this.dayBytes()
       }
       readDays() {
-        var ee;
-        return null !== (ee = this.deps.storage.getItem(ye)) && void 0 !== ee ? ee : {}
+        var WW;
+        return null !== (WW = this.deps.storage.getItem(mW)) && void 0 !== WW ? WW : {}
       }
       readDay() {
-        const ee = new Date(this.deps.now()).toISOString().slice(0, 10),
-          ie = this.readDays()[this.claim.claimId];
-        return (null === ie || void 0 === ie ? void 0 : ie.day) === ee ? ie : {
-          day: ee,
+        const WW = new Date(this.deps.now()).toISOString().slice(0, 10),
+          iW = this.readDays()[this.claim.claimId];
+        return (null === iW || void 0 === iW ? void 0 : iW.day) === WW ? iW : {
+          day: WW,
           lines: 0,
           bytes: 0,
           capSent: !1
         }
       }
-      writeDay(ee) {
-        const ie = Object.fromEntries(Object.entries(this.readDays()).filter((ie => {
-          let [, He] = ie;
-          return He.day === ee.day
+      writeDay(WW) {
+        const iW = Object.fromEntries(Object.entries(this.readDays()).filter((iW => {
+          let [, OW] = iW;
+          return OW.day === WW.day
         })));
-        return ie[this.claim.claimId] = ee, this.deps.storage.setItem(ye, ie)
+        return iW[this.claim.claimId] = WW, this.deps.storage.setItem(mW, iW)
       }
-      sendCharged(ee, ie, He, ye) {
-        const be = ke(ie);
-        return ee.lines += He, ee.bytes += be, this.writeDay(ee) ? (this.pageLines += He, this.pageBytes += be, this.lastSentMs = this.deps.now(), this.deps.send(ie, {
-          diag_kind: ye
+      sendCharged(WW, iW, OW, mW) {
+        const EW = xW(iW);
+        return WW.lines += OW, WW.bytes += EW, this.writeDay(WW) ? (this.pageLines += OW, this.pageBytes += EW, this.lastSentMs = this.deps.now(), this.deps.send(iW, {
+          diag_kind: mW
         }), !0) : (console.warn("The diag sink can't keep its daily count, so it sends nothing"), this.stopped = !0, this.queue.length = 0, !1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

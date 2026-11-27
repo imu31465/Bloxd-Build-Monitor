@@ -1,24 +1,24 @@
-export const id = 29;
-export const ids = [29];
+export const id = 30;
+export const ids = [30];
 export const modules = {
-  40430: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      default: () => ye
+  40896: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => mW
     });
-    const ye = function() {
-      let ee;
+    const mW = function() {
+      let WW;
       return {
-        onCreate: ie => {
-          ee = ie
+        onCreate: iW => {
+          WW = iW
         },
-        onPlayerAltAction: (ie, He, ye, be, Me, Ke) => {
-          if (!Ke || "Mesh" !== ee.getEntityType(Ke)) return;
-          const Ue = ee.getEntityName(Ke);
-          "Perks" === Ue ? ee.openShop(ie, !1, "Perks") : "Returning Bonus" === Ue && ee.openShop(ie, !1, "Returning Player Bonus")
+        onPlayerAltAction: (iW, OW, mW, EW, NW, PW) => {
+          if (!PW || "Mesh" !== WW.getEntityType(PW)) return;
+          const LW = WW.getEntityName(PW);
+          "Perks" === LW ? WW.openShop(iW, !1, "Perks") : "Returning Bonus" === LW && WW.openShop(iW, !1, "Returning Player Bonus")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

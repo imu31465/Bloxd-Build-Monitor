@@ -1,949 +1,535 @@
 export const id = 233;
 export const ids = [233];
 export const modules = {
-  37049: (ee, ie, He) => {
-    function ye(ee, ie, He) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(ee, ie).getContext("2d", He);
-      const ye = document.createElement("canvas");
-      return ye.width = ee, ye.height = ie, ye.getContext("2d", He)
-    }
-
-    function be(ee, ie) {
-      return ee.getContext("2d", ie)
-    }
-    He.d(ie, {
-      c: () => be,
-      f: () => ye
-    })
-  },
-  41899: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ue
+  35324: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => oW,
+      h: () => uW,
+      l: () => nW
     });
-    const ye = 1 << 20,
-      be = 1 << 21,
-      Me = 1024,
-      Ke = 2048;
+    var mW = OW(35330);
+    const EW = {
+        fileBytes: 4194304,
+        vertices: 65535,
+        indices: 196608,
+        accessorElements: 196608,
+        primitives: 64,
+        nodes: 128,
+        meshes: 64,
+        materials: 8,
+        images: 8,
+        imageSide: 1024
+      },
+      NW = {
+        items: 1024,
+        perFile: 1024,
+        surfaces: 256,
+        few: 64,
+        bounds: 16,
+        attributeMembers: 32
+      },
+      PW = 1048576,
+      LW = "is not a binary glTF 2.0 file",
+      cW = "loads data from outside the file",
+      wW = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
+      tW = {
+        POSITION: "VEC3",
+        NORMAL: "VEC3",
+        TEXCOORD_0: "VEC2",
+        COLOR_0: "VEC4"
+      },
+      ZW = {
+        type: "VEC2",
+        componentTypes: [5126, 5121, 5123]
+      },
+      xW = {
+        TANGENT: {
+          type: "VEC4",
+          componentTypes: [5126]
+        },
+        TEXCOORD_1: ZW,
+        TEXCOORD_2: ZW,
+        TEXCOORD_3: ZW,
+        TEXCOORD_4: ZW,
+        TEXCOORD_5: ZW
+      },
+      lW = new Set(mW.i.map((WW => {
+        let [iW] = WW;
+        return iW
+      }))),
+      AW = {
+        1: "line",
+        2: "line loop",
+        3: "line strip",
+        5: "triangle strip",
+        6: "triangle fan"
+      },
+      bW = 5126;
 
-    function Ue(ee, ie, He) {
-      const Ue = ee + ye,
-        Fe = ie + Me,
-        Je = He + ye;
-      return Ue < 0 || Ue >= be || Je < 0 || Je >= be || Fe < 0 || Fe >= Ke ? -1 : (Ue * be + Je) * Ke + Fe
+    function jW(WW) {
+      return WW.toLocaleString("en-US")
     }
-  },
-  41890: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => ye,
-      c: () => Ke,
-      e: () => be,
-      h: () => Me,
-      j: () => oe,
-      k: () => Je,
-      n: () => Fe,
-      q: () => Ue
-    });
-    He(3811);
-    He(41899);
 
-    function ye(ee) {}
-
-    function be(ee) {}
-
-    function Me(ee) {}
-
-    function Ke(ee) {}
-
-    function Ue(ee) {}
-
-    function Fe(ee, ie, He) {}
-
-    function Je(ee) {}
-
-    function oe(ee) {}
-  },
-  41887: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Be,
-      d: () => fe,
-      h: () => je,
-      i: () => we,
-      j: () => Ae,
-      m: () => Ye,
-      p: () => ze,
-      q: () => pe,
-      u: () => Xe,
-      v: () => Ze,
-      w: () => me,
-      y: () => Oe,
-      A: () => Le,
-      E: () => ne,
-      F: () => Ve,
-      G: () => ce
-    });
-    var ye = He(5271),
-      be = He(41743),
-      Me = (He(41890), He(8));
-    class Ke {
-      constructor(ee, ie) {
-        this.memory = ee, this.access = ie, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.bk = 0, this.u32 = new Me.h(0), this.f32 = new Me.d(0), this.u8 = new Me.b(0), this.dataView = new Me.f(new ArrayBuffer(0)), this.refresh()
-      }
-      refresh() {
-        this.ptr = this.access.ptr(), this.bk = this.access.bk(), this.buffer = (0, Me.E)(this.memory()), this.u32 = new Me.h(this.buffer, this.ptr, this.bk >>> 2), this.f32 = new Me.d(this.buffer, this.ptr, this.bk >>> 2), this.u8 = new Me.b(this.buffer, this.ptr, this.bk), this.dataView = new Me.f(this.buffer, this.ptr, this.bk)
-      }
-      ensureViews() {
-        (0, Me.E)(this.memory()) !== this.buffer && this.refresh()
-      }
-      get view() {
-        return this.ensureViews(), this.dataView
-      }
-      room(ee) {
-        return !!this.fits(ee) || (this.dropped++, !1)
-      }
-      fits(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
-        this.ensureViews();
-        const He = ie + ee;
-        return He <= this.bk || He <= ye.Ac && 0 !== this.access.reserve(He) && (this.refresh(), He <= this.bk)
-      }
-      consume(ee) {
-        const ie = this.cursor - ee;
-        ie > 0 && ee > 0 && (this.ensureViews(), this.u8.copyWithin(0, ee, this.cursor)), this.cursor = ie > 0 ? ie : 0
-      }
-      writeRecord(ee, ie, He, be, Me) {
-        if (!this.room(ye.pb)) return !1;
-        const Ke = this.cursor >>> 2;
-        return this.u32[Ke] = 65535 & ee | (65535 & ie) << 16, this.f32[Ke + 1] = He, this.f32[Ke + 2] = be, this.u32[Ke + 3] = Me >>> 0, this.cursor += ye.pb, !0
-      }
-      writeOptions(ee, ie) {
-        const He = ie.byteLength,
-          be = ye.pb + (0, ye.le)(He);
-        if (!this.fits(be)) return !1;
-        const Me = this.cursor,
-          Ke = Me >>> 2;
-        this.u32[Ke] = ye.qb.Options, this.u32[Ke + 1] = He, this.u32[Ke + 2] = 0, this.u32[Ke + 3] = ee >>> 0;
-        const Ue = Me + ye.pb;
-        return this.u8.set(ie, Ue), this.u8.fill(0, Ue + He, Me + be), this.cursor += be, !0
-      }
-      writeWorkerRecord(ee, ie, He, be, Me, Ke) {
-        const Ue = Ke.byteLength,
-          Fe = ye.Bd + (0, ye.le)(Ue);
-        if (Ue > ye.zd) return this.dropped++, !1;
-        if (!this.room(Fe)) return !1;
-        const Je = this.cursor,
-          oe = Je >>> 2;
-        this.u32[oe] = ee >>> 0, this.u32[oe + 1] = 65535 & ie | (65535 & He) << 16, this.u32[oe + 2] = be >>> 0, this.u32[oe + 3] = Me >>> 0, this.u32[oe + 4] = Ue;
-        const Re = Je + ye.Bd;
-        return this.u8.set(Ke, Re), this.u8.fill(0, Re + Ue, Je + Fe), this.cursor += Fe, !0
-      }
-      written() {
-        return this.ensureViews(), this.u8.subarray(0, this.cursor)
-      }
-      writeFrame(ee, ie) {
-        return this.writeNet(ye.Ub.Frame, ee, ie)
-      }
-      writeOpen(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(ye.Ub.Open, ee, Fe(ie))
-      }
-      writeClose(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(ye.Ub.Close, ee, Fe(ie))
-      }
-      writeNet(ee, ie, He) {
-        const be = He.byteLength,
-          Me = ye.Rb + (0, ye.le)(be);
-        if (be > ye.Kb) return this.dropped++, !1;
-        if (!this.room(Me)) return !1;
-        const Ke = this.cursor;
-        this.u32[Ke >>> 2] = be, this.u32[1 + (Ke >>> 2)] = (0, ye.ie)(ee, ie);
-        const Ue = Ke + ye.Rb;
-        return this.u8.set(He, Ue), this.u8.fill(0, Ue + be, Ke + Me), this.cursor += Me, !0
-      }
-      gR(ee, ie, He) {
-        const be = ye.m + (0, ye.le)(He);
-        if (!this.room(be)) return -1;
-        const Me = this.cursor;
-        this.u32[Me >>> 2] = 65535 & ee | (65535 & ie) << 16, this.u32[1 + (Me >>> 2)] = He;
-        const Ke = Me + ye.m;
-        return this.u8.fill(0, Ke, Me + be), this.cursor += be, Ke
-      }
-      growForCmd(ee) {
-        return this.fits(ye.m + (0, ye.le)(ee), 0)
-      }
-      writeCmd(ee, ie, He) {
-        const ye = this.gR(ee, ie, He.byteLength);
-        return !(ye < 0) && (this.u8.set(He, ye), !0)
-      }
-      copyWritten(ee, ie) {
-        return this.ensureViews(), this.u8.slice(ee, ee + ie)
-      }
+    function UW(WW, iW, OW) {
+      return WW > iW ? `has ${jW(WW)} ${OW} (the limit is ${jW(iW)})` : null
     }
-    const Ue = new Me.b(0);
 
-    function Fe(ee) {
-      if (0 === ee) return Ue;
-      const ie = new Me.b(ye.Ob);
-      for (let He = 0; He < ye.Ob; He++) ie[He] = ee >>> 8 * He & 255;
-      return ie
+    function kW(WW, iW) {
+      return Number.isInteger(WW) && WW >= 0 && WW < (null !== iW && void 0 !== iW ? iW : 0)
     }
-    class Je {
-      constructor(ee, ie) {
-        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new Ke(ie, {
-          ptr: () => ee.Bk(),
-          bk: () => ee.tUe(),
-          reserve: ie => ee.LUe(ie)
-        }), this.net = new Ke(ie, {
-          ptr: () => ee.aUe(),
-          bk: () => ee.VUe(),
-          reserve: ie => ee.CUe(ie)
-        }), this.worker = new Ke(ie, {
-          ptr: () => ee.KFe(),
-          bk: () => ee.MFe(),
-          reserve: ie => ee.vUe(ie)
-        }), this.cmd = new Ke(ie, {
-          ptr: () => ee.pUe(),
-          bk: () => ee.fUe(),
-          reserve: ie => ee.TUe(ie)
-        })
-      }
-      reset(ee, ie, He) {
-        this.input.consume(ee), this.worker.consume(ie), this.cmd.consume(He)
-      }
-    }
-    var oe = He(36965),
-      Re = He(2495),
-      ke = He(5265),
-      qe = He(41903);
-    const fe = "coreFrame",
-      Te = "fatalStatus",
-      pe = "otherCall",
-      Xe = "coreRings",
-      ze = "netIn",
-      Be = "abi",
-      Ee = "netOut",
-      ge = "workerOut",
-      Oe = "worldgenHost",
-      de = "eventWalker",
-      We = "netEvent",
-      te = "envEvent",
-      Ze = "sharedTables",
-      we = "inputAction",
-      De = "frameSends",
-      Pe = new Set([de, We, te, De, we, Ze]),
-      Ae = "wasmMemory",
-      Ye = "meshHost";
 
-    function Ve(ee, ie) {
-      ee.forEachWorkerOut(((He, be, Me) => {
-        if ((0, ye._d)(He)) try {
-          var Ke;
-          null === (Ke = ie.worldgen) || void 0 === Ke || Ke.take(He, Me)
-        } catch (Fe) {
-          ee.crash(Oe, Fe)
-        } else try {
-          var Ue;
-          null === (Ue = ie.mesh) || void 0 === Ue || Ue.take(He, be, Me)
-        } catch (Fe) {
-          ee.crash(Ye, Fe)
-        }
-      }))
+    function sW(WW) {
+      return Number.isInteger(WW) && WW >= 0
     }
-    const ae = 1048576;
 
-    function ce(ee, ie) {
-      let He = !1;
-      const ye = () => {
-        He = !1, ie()
+    function MW(WW, iW) {
+      return void 0 !== WW && (!Array.isArray(WW) || WW.length > iW)
+    }
+
+    function KW(WW, iW) {
+      return "object" === typeof WW && null !== WW && Object.keys(WW).length > iW
+    }
+
+    function SW(WW) {
+      var iW;
+      return `${WW.normalized?"normalized ":""}${null!==(iW=mW.e[WW.componentType])&&void 0!==iW?iW:WW.componentType} ${WW.type}`
+    }
+
+    function YW(WW) {
+      const iW = iW => {
+        var OW;
+        return null !== (OW = WW[iW]) && void 0 !== OW ? OW : -1
       };
-      return () => {
-        !He && ee.cursor >= ae && (He = !0, queueMicrotask(ye))
-      }
+      return 255 === iW(0) && 216 === iW(1) ? "JPEG" : 82 === iW(0) && 73 === iW(1) && 87 === iW(8) && 69 === iW(9) ? "WebP" : 171 === iW(0) && 75 === iW(1) && 84 === iW(2) && 88 === iW(3) ? "KTX2" : "non-PNG"
     }
-    const xe = new Set([Te, pe, Oe, Ye]);
 
-    function Le(ee) {
-      return Pe.has(ee.site) ? ee.error instanceof WebAssembly.RuntimeError || (0, be.i)(ee.error) : !xe.has(ee.site) && ee.error instanceof Error
+    function yW(WW) {
+      return WW.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((iW, OW) => WW[OW] === iW)) && 73 === WW[12] && 72 === WW[13] && 68 === WW[14] && 82 === WW[15]
     }
-    const Ce = "events",
-      ve = [],
-      ue = "debugLog",
-      me = "terrainTextures",
-      le = "sunShadowTextures",
-      Se = new TextDecoder;
 
-    function ne(ee, ie) {
-      const {
-        site: He,
-        error: be,
-        header: Me
-      } = ee, Ke = Me ? (0, ye.Xd)(Me.lastError) : "noFrame", Ue = `CORE-${He===Te?Ke:He}`, Fe = null === be || void 0 === be ? "" : ` ${(0,oe.n)(be)}`, Je = {
-        site: He,
-        wasmBuild: ie.wasm,
-        clientVersion: ie.client
-      };
-      return Me && (Je.status = String(Me.status), Je.lastError = Ke, Je.lastErrorCode = String(Me.lastError), Je.lastErrorDetail = String(Me.lastErrorDetail), Je.errorCount = String(Me.errorCount), Je.frameIndex = String(Me.frameIndex), Je.tickIndex = String(Me.tickIndex)), {
-        code: Ue,
-        message: `core ${He}, last error ${Ke};${Fe}`,
-        details: Je
-      }
+    function TW(WW) {
+      return /^[aeiou]/i.test(WW) ? `an ${WW}` : `a ${WW}`
     }
-    class je {
-      constructor(ee, ie, He) {
-        this.core = ee, this.memory = ie, this.handlers = He, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
-          ptr: 0,
-          len: 0,
-          net: ve,
-          netOffsets: this.netOffsets,
-          kind: "none"
-        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.atSendsStop = !1, this.rings = new Je(ee, ie)
-      }
-      get netKeptFrames() {
-        return this.keptFrames
-      }
-      get netWrittenSinceFrame() {
-        return this.rings.net.cursor - this.netKept
-      }
-      hasPendingCommands() {
-        return this.rings.cmd.cursor > 0
-      }
-      framePaces(ee) {
-        if (this.stopped || this.drawsHeld) return !1;
-        try {
-          return this.core.OUe(ee)
-        } catch (ie) {
-          return this.crash(fe, ie), !1
-        }
-      }
-      get isStopped() {
-        return this.stopped
-      }
-      frame(ee, ie) {
-        var He;
-        let Me = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this.stopped) return !1;
-        if (!this.writePendingInput()) return !1;
-        const {
-          input: Ke,
-          net: Ue,
-          worker: Fe,
-          cmd: Je
-        } = this.rings, oe = Ue.cursor, Re = ie && !this.drawsHeld;
-        let pe = ye.F.Fatal;
-        const Xe = Ke.cursor,
-          Be = Fe.cursor,
-          Ee = Je.cursor;
-        let ge, Oe = null;
-        const te = this.handlers.onSends;
-        try {
-          const ie = (Re ? ye._.Draws : 0) | (Me ? ye._.NetAll : 0) | (te ? ye._.StopForSends : 0);
-          pe = (0, qe.c)((() => {
-            let He = this.core.frame(ee, Xe, Ue.cursor, Be, ie, Ee);
-            for (; He === ye.$c && te;) {
-              var be;
-              if (ge ??= null === (be = this.gameHost) || void 0 === be ? void 0 : be.takeFault(), void 0 === ge && !this.takeSends(te)) return ye.F.Fatal;
-              He = this.core.yX()
-            }
-            return He
-          }))
-        } catch (Se) {
-          Oe = {
-            error: Se
-          }
-        }
-        ge ??= null === (He = this.gameHost) || void 0 === He ? void 0 : He.takeFault();
-        const Ze = this.stopped || null !== Oe || void 0 !== ge;
-        this.rings.reset(Ze ? Ke.cursor : Xe, Ze ? Fe.cursor : Be, Ze ? Je.cursor : Ee);
-        const we = null === Oe && void 0 === ge,
-          De = we && !this.stopped && pe === ye.F.Fatal && 0 === this.core.nq(),
-          Pe = we && !De ? this.headerView() : null,
-          Ae = De ? {
-            ...null !== (Ye = this.lastHeader) && void 0 !== Ye ? Ye : (0, ye.oe)(new Uint32Array(ye.eb)),
-            status: ye.F.Fatal,
-            lastError: ye.E.CoreBusy,
-            lastErrorDetail: 0
-          } : null === Pe ? null : (0, ye.oe)(Pe);
-        var Ye;
-        null !== Ae && (this.lastHeader = Ae);
-        const Ve = null !== Ae && pe !== ye.F.Fatal,
-          ae = Ve && null !== Pe ? Pe[ye.ib.NetInKept] : 0,
-          ce = Ve && ae <= oe && ae % 4 === 0 ? ae : null;
-        var xe, Le;
-        null !== Ae && null !== ce && pe === ye.F.Errors && (null === (xe = (Le = this.handlers).onErrors) || void 0 === xe || xe.call(Le, Ae));
-        const Ce = null === ce ? ve : this.readEvents(oe);
-        if (Ue.consume(oe - (null !== ce && void 0 !== ce ? ce : 0)), this.netKept = null !== ce && void 0 !== ce ? ce : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== Oe) return this.crash(fe, void 0 === ge || ge instanceof be.c ? Oe.error : ge), !1;
-        if (void 0 !== ge || null === Ae) return this.crashOn(fe, ge), !1;
-        if (De) return this.crash(Te, null), !1;
-        const ue = this.headerView()[ye.ib.FrameDraw];
-        if (this.lastFrameKind = (0, ke.d)(Re, ue), pe === ye.F.Fatal) return this.crash(Te, null), !1;
-        if (null === ce) return this.crash(ze, `the core kept ${ae} of ${oe} net-in bytes`), !1;
-        if (this.eventWalker) {
-          if (this.stopped) return !1;
-          const ee = this.frameEvents,
-            ie = this.headerView();
-          ee.ptr = ie[ye.ib.EventsPtr], ee.len = ie[ye.ib.EventsLen], ee.net = Ce, ee.kind = this.lastFrameKind;
-          try {
-            this.eventWalker(ee)
-          } catch (Se) {
-            return this.crashOn(de, Se), !1
-          }
-          return this.handEnvEvents()
-        }
-        for (const ye of Ce) {
-          if (this.stopped) return !1;
-          try {
-            var me, le;
-            null === (me = (le = this.handlers).onNetEvent) || void 0 === me || me.call(le, ye)
-          } catch (Se) {
-            return this.crashOn(We, Se), !1
-          }
-        }
-        return this.handEnvEvents()
-      }
-      handEnvEvents() {
-        for (const Me of this.graceEvents) {
-          if (this.stopped) return !1;
-          try {
-            var ee, ie;
-            null === (ee = (ie = this.handlers).onReconnectGrace) || void 0 === ee || ee.call(ie, Me)
-          } catch (be) {
-            return this.crashOn(We, be), !1
-          }
-        }
-        for (const Me of this.envEvents) {
-          if (this.stopped) return !1;
-          try {
-            var He, ye;
-            null === (He = (ye = this.handlers).onEnvEvent) || void 0 === He || He.call(ye, Me)
-          } catch (be) {
-            return this.crashOn(te, be), !1
-          }
-        }
-        return !this.stopped
-      }
-      setEventWalker(ee) {
-        this.eventWalker = ee
-      }
-      writePendingInput() {
-        if (this.stopped) return !1;
-        const {
-          input: ee
-        } = this.rings;
-        try {
-          const ie = this.unsentUiPrefs;
-          ie && ee.writeRecord(ye.qb.UiPrefs, 0, ie.nametagCutDistance, 0, (0, ye.se)(ie)) && (this.unsentUiPrefs = null);
-          const He = this.unsentEnvPrefs;
-          He && ee.writeRecord(ye.qb.EnvPrefs, (0, ye.Yd)(He), He.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
-          const be = this.unsentLookPrefs;
-          be && ee.writeRecord(ye.qb.Sensitivity, 0, be.mouse, be.touch, (0, Re.j)(be.fovPercent)) && (this.unsentLookPrefs = null);
-          let Me = 0;
-          for (const {
-              aux: ye,
-              payload: Ke
-            }
-            of this.unsentOptions) {
-            if (!ee.writeOptions(ye, Ke)) {
-              if (ee.cursor > 0) break;
-              this.optionsDropped++
-            }
-            Me++
-          }
-          Me > 0 && this.unsentOptions.splice(0, Me)
-        } catch (ie) {
-          return this.crash(Xe, ie), !1
-        }
-        return !0
-      }
-      setHoldDraws(ee) {
-        this.drawsHeld = ee
-      }
-      setUiPrefs(ee) {
-        this.unsentUiPrefs = {
-          ...ee
-        }
-      }
-      setEnvPrefs(ee) {
-        this.unsentEnvPrefs = {
-          ...ee
-        }
-      }
-      setLookPrefs(ee) {
-        this.unsentLookPrefs = {
-          ...ee
-        }
-      }
-      queueOptions(ee, ie) {
-        return !this.isStopped && (ie.byteLength > ye.Yb.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
-          aux: ee,
-          payload: ie
-        }), !0))
-      }
-      setChunkCap(ee) {
-        return this.callCore("setChunkCap", null, (ie => ie.jUe(ee)))
-      }
-      shedMemory(ee) {
-        const ie = this.callCore("shedMemory", null, (ie => ie.QUe(ee)));
-        return 0 === ie ? null : ie
-      }
-      addDistanceInUse() {
-        const ee = this.callCore("addDistanceInUse", null, (ee => ee.JUe()));
-        return 0 === ee ? null : ee
-      }
-      setChunkAddDistance(ee, ie) {
-        return this.callCore("setChunkAddDistance", !1, (He => He.nUe(ee, ie)))
-      }
-      setGameHost(ee) {
-        return this.callCore("setGameHost", !1, (ie => (ie.gUe(ee), this.gameHost = ee, !0)))
-      }
-      setAntiCheatProbes(ee) {
-        return this.callCore("setAntiCheatProbes", !1, (ie => ie.lUe(ee)))
-      }
-      setAmbientOcclusion(ee) {
-        this.callCore("setAmbientOcclusion", void 0, (ie => {
-          ie.mUe(ee)
-        }))
-      }
-      setPoseLod(ee) {
-        this.callCore("setPoseLod", void 0, (ie => {
-          ie.IUe(ee)
-        }))
-      }
-      setDebugLog(ee, ie) {
-        this.callCore(ue, void 0, (He => {
-          He.rp(ee, ie)
-        }))
-      }
-      takeDebugLog(ee) {
-        return this.callCore(ue, [], (ie => ie.Qp(ee)))
-      }
-      setTextureLayers(ee) {
-        return this.callCore("setTextureLayers", !1, (ie => ie.rUe(ee)))
-      }
-      setBlockColours(ee) {
-        let {
-          blocks: ie,
-          counts: He,
-          values: ye
-        } = ee;
-        return this.callCore("setBlockColours", !1, (ee => ee.Sbe(ie, He, ye)))
-      }
-      terrainTextureNames() {
-        return this.callCore(me, [], (ee => ee.bFe()))
-      }
-      setTerrainTextures(ee, ie, He, ye) {
-        return this.callCore(me, !1, (be => be.GUe(ee, He, ie, ye)))
-      }
-      setShaderPack(ee, ie, He, ye, be, Me) {
-        return this.callCore("setShaderPack", !1, (Ke => {
-          var Ue, Fe;
-          return null !== (Ue = null === (Fe = Ke.iMe) || void 0 === Fe ? void 0 : Fe.call(Ke, ee, ie, He, ye, be, Me)) && void 0 !== Ue && Ue
-        }))
-      }
-      sunShadowWantedTextures() {
-        return this.callCore(le, null, (ee => {
-          var ie, He;
-          return null !== (ie = null === (He = ee.eFe) || void 0 === He ? void 0 : He.call(ee)) && void 0 !== ie ? ie : null
-        }))
-      }
-      setSunShadowTexture(ee, ie, He, ye, be) {
-        this.callCore(le, void 0, (Me => {
-          var Ke;
-          null === (Ke = Me.NUe) || void 0 === Ke || Ke.call(Me, ee, ie, He, ye, be)
-        }))
-      }
-      takeSunShadowWarnings() {
-        return this.callCore(le, [], (ee => {
-          var ie, He;
-          return null !== (ie = null === (He = ee.HFe) || void 0 === He ? void 0 : He.call(ee)) && void 0 !== ie ? ie : []
-        }))
-      }
-      sunShadowsHeld() {
-        return this.callCore(le, null, (ee => {
-          var ie, He;
-          return null !== (ie = null === (He = ee.iFe) || void 0 === He ? void 0 : He.call(ee)) && void 0 !== ie ? ie : null
-        }))
-      }
-      callCore(ee, ie, He) {
-        if (this.stopped) return ie;
-        try {
-          return He(this.core)
-        } catch (ye) {
-          return this.crash(ee, ye), ie
-        }
-      }
-      readEvents(ee) {
-        this.netOffsets.length = 0;
-        const ie = this.headerView(),
-          He = ie[ye.ib.EventsPtr],
-          be = ie[ye.ib.EventsLen];
-        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === be) return ve;
-        const Me = [],
-          Ke = this.memory().buffer;
-        if (He % 4 !== 0 || He + be > Ke.byteLength) return this.crash(Ce, `events of ${be} bytes at ${He} outside ${Ke.byteLength} bytes of memory`), ve;
-        const Ue = new DataView(Ke, He, be),
-          Fe = this.rings.net,
-          Je = (ie, He) => ie + He <= ee ? Fe.copyWritten(ie, He) : null;
-        let oe = 0;
-        for (; oe < be;) {
-          const ee = oe + ye.S,
-            ie = ee <= be ? Ue.getUint32(oe, !0) : -1,
-            Fe = ie >>> 16;
-          if (ie < 0 || Fe > be - ee) return this.crash(Ce, `event record at ${oe} overruns its ${be} bytes`), ve;
-          const we = 65535 & ie,
-            De = ie => Ue.getUint32(ee + 4 * ie, !0);
-          if (we === ye.U.RawMessage) {
-            const ee = Fe >= ye.Cc.BYTES ? 65535 & De(1) : -1,
-              ie = ee === ye.Cc.STRING_TYPE,
-              He = Fe === (ie ? ye.Cc.STRING_TYPE_BYTES : ye.Cc.BYTES) ? Je(De(2), De(3)) : null,
-              be = ie && He ? Je(De(4), De(5)) : null;
-            if (!He || ie && !be) return this.crash(Ce, `RawMessage at ${oe} of ${Fe} bytes names bytes outside net-in`), ve;
-            this.netOffsets.push(oe), Me.push({
-              type: "message",
-              conn: De(0),
-              nF: ee,
-              payloadKind: De(1) >>> 16,
-              payload: He,
-              stringType: be ? Se.decode(be) : null
-            })
-          } else if (we === ye.U.CoreErrors) {
-            var Re, ke;
-            const ee = Fe >= 4 ? De(0) : -1;
-            if (ee < 0 || ee > ye.A.PAIRS_MAX || Fe !== 4 * (ye.A.FIXED_WORDS + ye.A.PAIR_WORDS * ee)) return this.crash(Ce, `CoreErrors at ${oe} of ${Fe} bytes`), ve;
-            const ie = [];
-            for (let He = 0; He < ee; He++) ie.push({
-              code: De(1 + 2 * He),
-              detail: De(2 + 2 * He)
-            });
-            null === (Re = (ke = this.handlers).onCoreErrors) || void 0 === Re || Re.call(ke, ie, De(1 + 2 * ee))
-          } else if (we === ye.U.RenderReload) {
-            var qe, fe;
-            if (Fe !== ye.Pc.BYTES) return this.crash(Ce, `RenderReload at ${oe} of ${Fe} bytes`), ve;
-            null === (qe = (fe = this.handlers).onRenderReload) || void 0 === qe || qe.call(fe, De(0), De(1), De(2))
-          } else if (we === ye.U.JoinPreloadEnded) {
-            var Te, pe;
-            if (Fe !== ye.ub.BYTES) return this.crash(Ce, `JoinPreloadEnded at ${oe} of ${Fe} bytes`), ve;
-            null === (Te = (pe = this.handlers).onJoinPreloadEnded) || void 0 === Te || Te.call(pe, {
-              chunks: De(ye.ub.CHUNKS),
-              bytes: De(ye.ub.BYTES_HELD),
-              asked: De(ye.ub.ASKED),
-              replaced: De(ye.ub.REPLACED),
-              dropped: De(ye.ub.DROPPED)
-            })
-          } else if (we === ye.U.Images) {
-            var Xe, ze;
-            null === (Xe = (ze = this.handlers).onImages) || void 0 === Xe || Xe.call(ze, new Uint8Array(Ke.slice(He + ee, He + ee + Fe)))
-          } else if (we === ye.U.ModelRequests)
-            for (let He = 0; He < Fe >>> 2; He++) {
-              var Be, Ee;
-              null === (Be = (Ee = this.handlers).onModelRequest) || void 0 === Be || Be.call(Ee, De(He))
-            } else if (we === ye.U.ModelTaken) {
-              var ge, Oe;
-              if (Fe < 4) return this.crash(Ce, `ModelTaken at ${oe} of ${Fe} bytes`), ve;
-              const ee = new Uint32Array((Fe >>> 2) - 1);
-              for (let ie = 0; ie < ee.length; ie++) ee[ie] = De(1 + ie);
-              null === (ge = (Oe = this.handlers).onModelTaken) || void 0 === ge || ge.call(Oe, De(0), ee)
-            } else if (we === ye.U.TerrainTexturesWanted) {
-            var de, We;
-            if (0 !== Fe) return this.crash(Ce, `TerrainTexturesWanted at ${oe} of ${Fe} bytes`), ve;
-            null === (de = (We = this.handlers).onTerrainTexturesWanted) || void 0 === de || de.call(We)
-          } else if (we === ye.U.KeepAliveDue) {
-            var te, Ze;
-            if (Fe > ye.vb) return this.crash(Ce, `KeepAliveDue at ${oe} of ${Fe} bytes`), ve;
-            null === (te = (Ze = this.handlers).onKeepAlive) || void 0 === te || te.call(Ze, new Uint8Array(Ke, He + ee, Fe).slice())
-          } else if (we === ye.U.ConnectionState) {
-            if (Fe !== ye.o) return this.crash(Ce, `ConnectionState at ${oe} of ${Fe} bytes`), ve;
-            this.netOffsets.push(oe), Me.push({
-              type: "connection",
-              conn: De(0),
-              phase: De(1),
-              code: 0 | De(2)
-            })
-          } else if (we === ye.U.EnvLighting || we === ye.U.SkyImages) {
-            if (Fe !== (we === ye.U.EnvLighting ? ye.P : ye.bd)) return this.crash(Ce, `event ${we} at ${oe} of ${Fe} bytes`), ve;
-            this.envEvents.push({
-              kind: we,
-              payload: new Uint8Array(Ke.slice(He + ee, He + ee + Fe))
-            })
-          } else if (we === ye.U.ReconnectGrace) {
-            if (Fe !== ye.mc) return this.crash(Ce, `ReconnectGrace at ${oe} of ${Fe} bytes`), ve;
-            const ee = De(2);
-            this.graceEvents.push({
-              conn: De(0),
-              graceMs: De(1),
-              sessionBased: 0 !== (ee & ye.Ec.SessionBased),
-              replayOffer: 0 !== (ee & ye.Ec.ReplayOffer)
-            })
-          }
-          oe = ee + (0, ye.le)(Fe)
-        }
-        return Me
-      }
-      takeSends(ee) {
-        this.atSendsStop = !0;
-        try {
-          ee()
-        } catch (ie) {
-          this.crashOn(De, ie)
-        } finally {
-          this.atSendsStop = !1
-        }
-        return !this.stopped
-      }
-      forEachNetOut(ee) {
-        this.forEachOut(Ee, "net-out", ye.ib.NetOutPtr, ye.ib.NetOutLen, ye.Rb, 0, ((ie, He, be, Me) => {
-          const Ke = (0, ye.ee)(He);
-          Ke === ye.Ub.Frame ? ee((0, ye.ce)(He), be) : this.crash(Ee, `net-out record at ${Me} is kind ${Ke}, not a frame`)
-        }))
-      }
-      forEachWorkerOut(ee) {
-        this.forEachOut(ge, "worker-out", ye.ib.WorkerOutPtr, ye.ib.WorkerOutLen, ye.vd, 4, ((ie, He, be, Me) => {
-          const Ke = 255 & ie,
-            Ue = Ke === ye.Od.Init ? this.initOf(be, Me) : be;
-          null !== Ue && ee(Ke, ie >>> 8 & 16777215, Ue)
-        }))
-      }
-      initOf(ee, ie) {
-        const He = this.memory().buffer;
-        if (ee.byteLength !== ye.lb) return this.crash(ge, `worker-out Init record at ${ie} is ${ee.byteLength} bytes, not a view`), null;
-        const be = new DataView(ee.buffer, ee.byteOffset, ye.lb),
-          Me = be.getUint32(0, !0),
-          Ke = be.getUint32(4, !0);
-        return Me + Ke > He.byteLength ? (this.crash(ge, `worker-out Init record at ${ie} names ${Ke} bytes at ${Me} outside ${He.byteLength} bytes of memory`), null) : new Uint8Array(He, Me, Ke)
-      }
-      forEachOut(ee, ie, He, be, Me, Ke, Ue) {
-        if (!this.headerReadable()) return;
-        const Fe = this.headerView(),
-          Je = Fe[He],
-          oe = Fe[be];
-        if (0 === oe) return;
-        const Re = this.memory().buffer;
-        if (Je % 4 !== 0 || Je + oe > Re.byteLength) return void this.crash(ee, `${ie} of ${oe} bytes at ${Je} outside ${Re.byteLength} bytes of memory`);
-        const ke = new DataView(Re, Je, oe);
-        let qe = 0;
-        for (; qe < oe;) {
-          const He = qe + Me,
-            be = He <= oe ? ke.getUint32(qe + Ke, !0) : -1;
-          if (be < 0 || be > oe - He) return void this.crash(ee, `${ie} record at ${qe} overruns its ${oe} bytes`);
-          if (Ue(ke.getUint32(qe, !0), ke.getUint32(qe + 4, !0), new Uint8Array(Re, Je + He, be), qe), this.stopped) return;
-          qe = He + (0, ye.le)(be)
-        }
-      }
-      forEachEvent(ee) {
-        if (this.stopped || null === this.lastHeader) return;
-        const ie = this.headerView(),
-          He = ie[ye.ib.EventsPtr],
-          be = ie[ye.ib.EventsLen];
-        if (0 === be) return;
-        const Me = this.memory().buffer;
-        if (He % 4 !== 0 || He + be > Me.byteLength) return void this.crash(Ce, `events of ${be} bytes at ${He} outside ${Me.byteLength} bytes of memory`);
-        const Ke = new DataView(Me, He, be);
-        let Ue = 0;
-        for (; Ue < be;) {
-          const ie = Ue + ye.S,
-            He = ie <= be ? Ke.getUint32(Ue, !0) : -1,
-            Me = He >>> 16;
-          if (He < 0 || Me > be - ie) return void this.crash(Ce, `event record at ${Ue} overruns its ${be} bytes`);
-          ee(65535 & He, Ke, ie, Me), Ue = ie + (0, ye.le)(Me)
-        }
-      }
-      crashOn(ee, ie) {
-        ie instanceof be.c ? this.crash(Ce, ie.message) : this.crash(ee, ie)
-      }
-      crash(ee, ie) {
-        this.stopped || (this.stopped = !0, this.handlers.onCrash({
-          site: ee,
-          error: ie,
-          header: this.lastHeader
-        }))
-      }
-      headerWord(ee) {
-        return this.headerReadable() ? this.headerView()[ee] : 0
-      }
-      headerReadable() {
-        return !this.stopped && (null !== this.lastHeader || this.atSendsStop)
-      }
-      readLoadCounts(ee) {
-        const ie = this.loadCountWords();
-        return null !== ie && (ee.chunksReceived = ie[ye.Cb.ChunksReceived], ee.chunksCancelled = this.headerView()[ye.ib.ChunksCancelled], ee.chunksStored = ie[ye.Cb.ChunksStored], ee.jobsSent = ie[ye.Cb.JobsSent], ee.jobsDone = ie[ye.Cb.JobsDone], ee.jobsInFlight = ie[ye.Cb.JobsInFlight], ee.workersLive = ie[ye.Cb.WorkersLive], ee.workersRetired = ie[ye.Cb.WorkersRetired], !0)
-      }
-      readViewQueuedPrograms() {
-        var ee, ie;
-        const He = null !== (ee = null === (ie = this.loadCountWords()) || void 0 === ie ? void 0 : ie[ye.Cb.ViewQueuedPrograms]) && void 0 !== ee ? ee : 0;
-        return 0 === He ? null : He - 1
-      }
-      readFirstViewWait(ee, ie) {
-        const He = this.loadCountWords();
-        return null === He ? null : [He[ye.Cb.FirstViewLinkMs], He[ye.Cb.FirstViewTerrainMs], He[ye.Cb.FirstViewHeldMs], He[ye.Cb.FirstViewOtherMs], He[ye.Cb.FirstViewGaps], He[ye.Cb.FirstViewGapMs], ee, ie]
-      }
-      loadCountWords() {
-        if (this.stopped || null === this.lastHeader) return null;
-        const ee = this.core.Gp();
-        if (0 === ee) return null;
-        const ie = this.memory().buffer;
-        return ie !== this.loadCountsBuffer && (this.loadCountsBuffer = ie, this.loadCounts = new Uint32Array(ie, ee, ye.xb)), this.loadCounts
-      }
-      headerView() {
-        const ee = this.memory().buffer;
-        return ee !== this.headerBuffer && (this.headerBuffer = ee, this.header = new Uint32Array(ee, this.core.nq(), ye.eb)), this.header
-      }
-    }
-  },
-  41903: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ke,
-      c: () => Me
-    });
-    var ye = He(5153);
-    let be = null;
 
-    function Me(ee) {
-      be = {
-        scanned: !1
-      };
+    function JW(WW) {
+      const iW = WW.byteStride;
+      return void 0 === iW || Number.isInteger(iW) && iW >= 4 && iW <= 252 && iW % 4 === 0
+    }
+
+    function hW(WW, iW, OW) {
+      var mW, EW;
+      const NW = null === (mW = WW.bufferViews) || void 0 === mW ? void 0 : mW[OW];
+      if (!NW || !iW || 0 !== NW.buffer) return null;
+      const PW = null !== (EW = NW.byteOffset) && void 0 !== EW ? EW : 0;
+      return !sW(PW) || !sW(NW.byteLength) || PW + NW.byteLength > iW.byteLength ? null : iW.subarray(PW, PW + NW.byteLength)
+    }
+
+    function HW(WW, iW) {
+      var OW, EW, NW;
+      const PW = mW.o[iW.type],
+        LW = mW.c[iW.componentType];
+      if (!PW || !LW || !Number.isInteger(iW.count) || iW.count < 0) return !1;
+      if (void 0 === iW.bufferView) return !0;
+      const cW = null === (OW = WW.bufferViews) || void 0 === OW ? void 0 : OW[iW.bufferView],
+        wW = null !== (EW = iW.byteOffset) && void 0 !== EW ? EW : 0;
+      if (!cW || !sW(wW) || wW % LW !== 0) return !1;
+      const tW = PW * LW,
+        ZW = null !== (NW = cW.byteStride) && void 0 !== NW ? NW : tW;
+      if (ZW < tW) return !1;
+      return (0 === iW.count ? 0 : wW + ZW * (iW.count - 1) + tW) <= cW.byteLength
+    }
+
+    function nW(WW) {
+      return WW > EW.fileBytes ? `is ${(WW/PW).toFixed(1)} MiB (the limit is ${EW.fileBytes/PW} MiB)` : null
+    }
+
+    function uW(WW, iW) {
       try {
-        return ee()
-      } finally {
-        be = null
-      }
-    }
-
-    function Ke() {
-      const ee = be;
-      if (null === ee) return (0, ye.e)();
-      const ie = (0, ye.e)(!ee.scanned);
-      return ee.scanned = !0, ie
-    }
-  },
-  41948: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => ye
-    });
-    const ye = {
-      webgpu: "rust_webgpu",
-      webgl: "rust_webgl2",
-      webgl1: "rust_webgl1"
-    }
-  },
-  37102: (ee, ie, He) => {
-    function ye() {
-      return He(37108)
-    }
-
-    function be() {
-      return He(37116)
-    }
-
-    function Me(ee) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(ee)
-    }
-    He.d(ie, {
-      b: () => Me,
-      e: () => ye,
-      h: () => be
-    })
-  },
-  36965: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ue,
-      g: () => Je,
-      k: () => Ke,
-      n: () => Re
-    });
-    var ye = He(36950),
-      be = He(8);
-    const Me = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
-
-    function Ke(ee) {
-      if (ee instanceof WebAssembly.RuntimeError) return !0;
-      const ie = ee instanceof Error ? ee.stack : void 0;
-      return "string" === typeof ie && Me.test(ie)
-    }
-
-    function Ue(ee, ie, He) {
-      var be;
-      const Ke = ee instanceof Error ? ee.name : "thrown",
-        Ue = (ee instanceof Error && null !== (be = ee.stack) && void 0 !== be ? be : "").split("\n").filter((ee => Me.test(ee))).slice(0, 8).map((ee => ee.trim())),
-        Fe = null === ie ? "wasm memory unknown" : `wasm memory ${Math.round(ie/2**20)} MB`,
-        Je = null === He.panic ? "" : `, panic: ${(0,ye.i)(He.panic)}`,
-        oe = `${Ke}: ${ee instanceof Error?ee.message:String(ee)}`;
-      return `${(0,ye.m)(He.kind,He.refusedBytes)} ${oe} (${Fe})${Je}${Ue.length>0?` | ${Ue.join(" < ")}`:""}`
-    }
-    const Fe = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
-
-    function Je(ee) {
-      var ie;
-      let He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(ee instanceof Error) || !Fe.test(ee.message)) return {};
-      if (!("detached" in He)) return {
-        arrayBufferDetached: "absent"
-      };
-      return {
-        arrayBufferDetached: (0, be.S)(null === (ie = (0, be.J)(He, "detached")) || void 0 === ie ? void 0 : ie.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
-      }
-    }
-    const oe = 500;
-
-    function Re(ee) {
-      let ie = "[object Object]";
-      try {
-        ie = String(ee)
-      } catch {}
-      if ("[object Object]" !== ie) return ie;
-      try {
-        var He, ye;
-        return null !== (He = null === (ye = JSON.stringify(ee)) || void 0 === ye ? void 0 : ye.slice(0, oe)) && void 0 !== He ? He : ie
+        return function(WW, iW) {
+          var OW, PW, ZW, jW, sW, nW, uW, oW, dW, eW, vW, gW, DW, VW, pW, fW, CW;
+          const XW = Array.isArray(WW.extensionsUsed) && WW.extensionsUsed.includes("KHR_draco_mesh_compression");
+          if (function(WW, iW) {
+              var OW, mW;
+              const {
+                items: EW,
+                perFile: PW,
+                surfaces: LW,
+                few: cW,
+                bounds: wW,
+                attributeMembers: tW
+              } = NW;
+              if (MW(WW.extensionsRequired, cW) || MW(WW.animations, 1 / 0) || MW(WW.skins, 1 / 0)) return !0;
+              if (null !== (OW = WW.animations) && void 0 !== OW && OW.length || null !== (mW = WW.skins) && void 0 !== mW && mW.length) return !1;
+              if ([
+                  [WW.buffers, cW],
+                  [WW.scenes, cW],
+                  [WW.bufferViews, EW],
+                  [WW.accessors, EW],
+                  [WW.nodes, EW],
+                  [WW.meshes, EW],
+                  [WW.materials, LW],
+                  [WW.textures, LW],
+                  [WW.samplers, LW],
+                  [WW.images, LW]
+                ].some((WW => {
+                  let [iW, OW] = WW;
+                  return MW(iW, OW)
+                }))) return !0;
+              for (const NW of null !== (ZW = WW.accessors) && void 0 !== ZW ? ZW : []) {
+                var ZW, xW, lW;
+                if (Number.isInteger(NW.count) && (!Number.isSafeInteger(NW.count) || Object.is(NW.count, -0)) || MW(null !== (xW = NW.min) && void 0 !== xW ? xW : void 0, wW) || MW(null !== (lW = NW.max) && void 0 !== lW ? lW : void 0, wW)) return !0
+              }
+              for (const NW of null !== (AW = WW.scenes) && void 0 !== AW ? AW : []) {
+                var AW;
+                if (MW(NW.nodes, EW)) return !0
+              }
+              let bW = 0;
+              for (const NW of null !== (jW = WW.nodes) && void 0 !== jW ? jW : []) {
+                var jW, UW, kW;
+                if (MW(NW.children, PW)) return !0;
+                bW += null !== (UW = null === (kW = NW.children) || void 0 === kW ? void 0 : kW.length) && void 0 !== UW ? UW : 0
+              }
+              if (bW > PW) return !0;
+              let sW = 0;
+              for (const NW of null !== (SW = WW.meshes) && void 0 !== SW ? SW : []) {
+                var SW;
+                if (!Array.isArray(NW.primitives)) return !0;
+                if (sW += NW.primitives.length, sW > PW) return !0;
+                for (const WW of NW.primitives) {
+                  var YW;
+                  const OW = iW ? null === (YW = WW.extensions) || void 0 === YW ? void 0 : YW.KHR_draco_mesh_compression : void 0;
+                  if (KW(WW.attributes, tW) || KW(null === OW || void 0 === OW ? void 0 : OW.attributes, tW)) return !0
+                }
+              }
+              return !1
+            }(WW, XW)) return LW;
+          const BW = null === (OW = WW.asset) || void 0 === OW ? void 0 : OW.version;
+          if ("string" !== typeof BW || !/^2\.\d+/.test(BW)) return `uses glTF version ${null!==BW&&void 0!==BW?BW:"(none)"}`;
+          const qW = null === (PW = WW.asset) || void 0 === PW ? void 0 : PW.minVersion;
+          if (void 0 !== qW && "2.0" !== qW) return `uses glTF version ${qW}`;
+          for (const mW of null !== (RW = WW.extensionsRequired) && void 0 !== RW ? RW : []) {
+            var RW;
+            if (!wW.has(mW)) return `requires the glTF extension ${mW}`
+          }
+          if (null !== (ZW = WW.animations) && void 0 !== ZW && ZW.length) return "has animations";
+          if (null !== (jW = WW.skins) && void 0 !== jW && jW.length) return "uses skins";
+          const GW = null !== (sW = WW.buffers) && void 0 !== sW ? sW : [];
+          for (const [mW, EW] of GW.entries()) {
+            if (void 0 !== EW.uri) return cW;
+            if (mW > 0 || !iW) return LW
+          }
+          for (const [mW, EW] of(null !== (IW = WW.bufferViews) && void 0 !== IW ? IW : []).entries()) {
+            var IW;
+            if (!hW(WW, iW, mW) || !JW(EW)) return LW
+          }
+          const aW = null !== (nW = WW.accessors) && void 0 !== nW ? nW : [];
+          for (const mW of aW) {
+            if (void 0 !== mW.sparse) return "uses sparse accessors";
+            const iW = Number.isInteger(mW.count) ? UW(mW.count, EW.accessorElements, "elements in an accessor") : null;
+            if (iW) return iW;
+            if (!HW(WW, mW)) return LW
+          }
+          const rW = null !== (uW = WW.scenes) && void 0 !== uW ? uW : [];
+          if (1 !== rW.length) return `has ${rW.length} scenes`;
+          const zW = (0, mW.v)(WW);
+          if (void 0 !== zW && 0 !== zW) return LW;
+          const FW = null !== (oW = WW.nodes) && void 0 !== oW ? oW : [],
+            QW = null !== (dW = WW.meshes) && void 0 !== dW ? dW : [],
+            Wi = null !== (eW = WW.materials) && void 0 !== eW ? eW : [],
+            ii = null !== (vW = WW.textures) && void 0 !== vW ? vW : [],
+            Oi = null !== (gW = WW.images) && void 0 !== gW ? gW : [],
+            mi = null !== (DW = null !== (VW = null !== (pW = UW(FW.length, EW.nodes, "nodes")) && void 0 !== pW ? pW : UW(QW.length, EW.meshes, "meshes")) && void 0 !== VW ? VW : UW(Wi.length, EW.materials, "materials")) && void 0 !== DW ? DW : UW(Oi.length, EW.images, "images");
+          if (mi) return mi;
+          const Ei = new Set;
+          for (const mW of FW)
+            for (const WW of null !== (Ni = mW.children) && void 0 !== Ni ? Ni : []) {
+              var Ni;
+              if (!kW(WW, FW.length) || Ei.has(WW)) return LW;
+              Ei.add(WW)
+            }
+          const Pi = new Set,
+            Li = WW => {
+              var iW;
+              return !Pi.has(WW) && (Pi.add(WW), (null !== (iW = FW[WW].children) && void 0 !== iW ? iW : []).every(Li))
+            };
+          for (const mW of null !== (ci = rW[0].nodes) && void 0 !== ci ? ci : []) {
+            var ci;
+            if (!kW(mW, FW.length) || Ei.has(mW) || !Li(mW)) return LW
+          }
+          for (const mW of FW) {
+            if (void 0 !== mW.matrix) return "uses node matrices";
+            if (void 0 !== mW.skin) return "uses skins";
+            if (void 0 !== mW.weights) return "uses morph targets";
+            if (void 0 !== mW.mesh && !kW(mW.mesh, QW.length)) return LW;
+            const WW = [
+              [mW.translation, 3],
+              [mW.rotation, 4],
+              [mW.scale, 3]
+            ];
+            for (const [iW, OW] of WW)
+              if (void 0 !== iW && (!Array.isArray(iW) || iW.length !== OW || !iW.every((WW => Number.isFinite(WW))))) return LW
+          }
+          let wi = -1,
+            ti = 0,
+            Zi = 0,
+            xi = null;
+          for (const EW of QW) {
+            if (void 0 !== EW.weights) return "uses morph targets";
+            if (0 === EW.primitives.length) return LW;
+            for (const OW of EW.primitives) {
+              var li, Ai;
+              const EW = null !== (li = OW.mode) && void 0 !== li ? li : 4;
+              var bi;
+              if (4 !== EW && 0 !== EW) return `uses ${null!==(bi=AW[EW])&&void 0!==bi?bi:`mode ${EW}`} primitives`;
+              if (void 0 !== OW.targets) return "uses morph targets";
+              if (void 0 !== OW.material && !kW(OW.material, Wi.length)) return LW;
+              const NW = XW ? null === (Ai = OW.extensions) || void 0 === Ai ? void 0 : Ai.KHR_draco_mesh_compression : void 0;
+              if (NW) {
+                if (4 !== EW) return "uses Draco-compressed points";
+                if (!hW(WW, iW, NW.bufferView) || "object" !== typeof NW.attributes) return LW
+              }
+              const PW = OW.attributes;
+              if ("object" !== typeof PW || null === PW) return LW;
+              if (void 0 === PW.POSITION) return "has a primitive with no positions";
+              if (!kW(PW.POSITION, aW.length)) return LW;
+              const cW = aW[PW.POSITION].count;
+              for (const [WW, iW] of Object.entries(PW)) {
+                if (!kW(iW, aW.length)) return LW;
+                if (/^(JOINTS|WEIGHTS)_\d+$/.test(WW)) return "uses skins";
+                const OW = aW[iW],
+                  mW = tW[WW];
+                if (mW && (OW.componentType !== bW || OW.normalized || OW.type !== mW)) return `stores ${WW} as ${SW(OW)}`;
+                const EW = xW[WW];
+                if (EW && (OW.type !== EW.type || !EW.componentTypes.includes(OW.componentType) || OW.componentType === bW === !!OW.normalized)) return `stores ${WW} as ${SW(OW)}`;
+                if (lW.has(WW) && OW.count !== cW) return "has vertex attributes of different lengths"
+              }
+              if (NW) {
+                if (void 0 === OW.indices) return LW;
+                for (const iW in NW.attributes)
+                  if (lW.has(iW) && void 0 === PW[iW]) return LW;
+                if (void 0 === NW.attributes.POSITION) return LW;
+                const WW = kW(OW.indices, aW.length) ? aW[OW.indices].count : -1;
+                if (0 === WW) return LW;
+                if (-1 === wi) wi = NW.bufferView, ti = cW, Zi = WW;
+                else {
+                  xi ??= new Map([
+                    [wi, [ti, Zi]]
+                  ]);
+                  const iW = xi.get(NW.bufferView);
+                  if (iW && (iW[0] !== cW || iW[1] !== WW)) return LW;
+                  xi.set(NW.bufferView, null !== iW && void 0 !== iW ? iW : [cW, WW])
+                }
+              }
+              let wW = cW;
+              if (void 0 !== OW.indices) {
+                if (!kW(OW.indices, aW.length)) return LW;
+                const WW = aW[OW.indices];
+                if ("SCALAR" !== WW.type) return LW;
+                if (5121 === WW.componentType) return "uses 8-bit indices";
+                var ji;
+                if (5123 !== WW.componentType && 5125 !== WW.componentType) return `stores indices as ${null!==(ji=mW.e[WW.componentType])&&void 0!==ji?ji:WW.componentType}`;
+                if (!NW && void 0 === WW.bufferView) return LW;
+                wW = WW.count
+              }
+              if (4 === EW && wW % 3 !== 0) return LW
+            }
+          }
+          let Ui = 0,
+            ki = 0,
+            si = 0;
+          for (let mW = 0; mW < FW.length; mW++) {
+            const WW = FW[mW].mesh;
+            if (void 0 !== WW && Pi.has(mW))
+              for (const iW of QW[WW].primitives) si++, Ui += aW[iW.attributes.POSITION].count, void 0 !== iW.indices && (ki += aW[iW.indices].count)
+          }
+          const Mi = null !== (fW = null !== (CW = UW(Ui, EW.vertices, "vertices")) && void 0 !== CW ? CW : UW(ki, EW.indices, "indices")) && void 0 !== fW ? fW : UW(si, EW.primitives, "primitives");
+          if (Mi) return Mi;
+          for (const mW of Wi) {
+            var Ki, Si;
+            if (void 0 !== mW.emissiveTexture) return "uses an emissive texture";
+            const iW = null !== (Ki = mW.alphaMode) && void 0 !== Ki ? Ki : "OPAQUE";
+            if ("OPAQUE" !== iW && "MASK" !== iW && "BLEND" !== iW) return LW;
+            const OW = null === (Si = mW.pbrMetallicRoughness) || void 0 === Si ? void 0 : Si.baseColorTexture;
+            if (OW) {
+              var Yi, yi, Ti, Ji, Hi;
+              const iW = null !== (Yi = WW.extensionsUsed) && void 0 !== Yi && Yi.includes("KHR_texture_transform") ? null === (yi = OW.extensions) || void 0 === yi ? void 0 : yi.KHR_texture_transform : void 0;
+              if (0 !== (null !== (Ti = OW.texCoord) && void 0 !== Ti ? Ti : 0) || 0 !== (null !== (Ji = null === iW || void 0 === iW ? void 0 : iW.texCoord) && void 0 !== Ji ? Ji : 0)) return "uses a second UV set";
+              const mW = ii[OW.index];
+              if (!mW || !kW(mW.source, Oi.length) || void 0 !== mW.sampler && !kW(mW.sampler, null === (Hi = WW.samplers) || void 0 === Hi ? void 0 : Hi.length)) return LW
+            }
+          }
+          for (const mW of Oi) {
+            if (void 0 !== mW.uri) return cW;
+            if (void 0 === mW.bufferView) return LW;
+            const OW = hW(WW, iW, mW.bufferView);
+            if (!OW) return LW;
+            if ("image/png" !== mW.mimeType) {
+              var ni, ui, oi;
+              return `has ${TW(null!==(ni=null!==(ui={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(oi=mW.mimeType)&&void 0!==oi?oi:""])&&void 0!==ui?ui:mW.mimeType)&&void 0!==ni?ni:"untyped")} image`
+            }
+            if (!yW(OW)) return `has ${TW(YW(OW))} image`;
+            const NW = new DataView(OW.buffer, OW.byteOffset, OW.byteLength),
+              PW = NW.getUint32(16),
+              wW = NW.getUint32(20);
+            if (PW > EW.imageSide || wW > EW.imageSide) return `has a ${PW} \xd7 ${wW} image (the limit is ${EW.imageSide})`
+          }
+          return null
+        }(WW, iW)
       } catch {
-        return ie
+        return LW
+      }
+    }
+
+    function oW(WW) {
+      const iW = nW(WW.byteLength);
+      if (iW) return iW;
+      try {
+        const {
+          json: iW,
+          bin: OW
+        } = (0, mW.y)(WW);
+        return uW(iW, OW)
+      } catch (OW) {
+        if (OW instanceof mW.n) return OW.reason;
+        throw OW
       }
     }
   },
-  37108: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
-  },
-  37116: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
-  },
-  36950: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => ye,
-      g: () => Me,
-      i: () => Fe,
-      k: () => Ke,
-      m: () => be
+  35330: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => AW,
+      e: () => lW,
+      i: () => jW,
+      l: () => PW,
+      n: () => NW,
+      o: () => bW,
+      r: () => ZW,
+      t: () => xW,
+      v: () => LW,
+      y: () => tW
     });
-    const ye = /^alloc_failed (\d+) bytes$/;
-
-    function be(ee, ie) {
-      return Me(ee, ie) ? `trap=alloc_failed ${ie} bytes` : `trap=${ee}`
-    }
-
-    function Me(ee, ie) {
-      return "unreachable" === ee && ie > 0
-    }
-
-    function Ke(ee, ie, He) {
-      const ye = function(ee) {
-        return ee instanceof WebAssembly.RuntimeError ? /unreachable/i.test(ee.message) ? "unreachable" : /out of bounds/i.test(ee.message) ? "out_of_bounds" : "runtime_error" : (ee instanceof RangeError || ee instanceof Error && "InternalError" === ee.name) && /call stack|recursion/i.test(ee.message) ? "stack_overflow" : "js_error"
-      }(ee);
-      if ("unreachable" !== ye) return {
-        kind: ye,
-        panic: null,
-        refusedBytes: 0
-      };
-      const be = ie(),
-        Me = He();
-      return {
-        kind: ye,
-        panic: Me > 0 ? null : be,
-        refusedBytes: Me
+    const mW = 1179937895,
+      EW = 1313821514;
+    class NW extends Error {
+      constructor(WW) {
+        super(`GLB refused: it ${WW}`), this.reason = WW, this.name = "GlbRefused"
       }
     }
-    const Ue = 300;
-
-    function Fe(ee) {
-      return ee.replace(/\s*\n\s*/g, " / ").slice(0, Ue)
+    class PW extends Error {
+      constructor(WW) {
+        super(WW), this.name = "GlbError"
+      }
     }
+
+    function LW(WW) {
+      return Reflect.get(WW, "scene")
+    }
+    const cW = 5130562,
+      wW = "is not a binary glTF 2.0 file";
+
+    function tW(WW) {
+      var iW;
+      const OW = WW instanceof Uint8Array ? WW : new Uint8Array(WW),
+        PW = function(WW) {
+          const iW = new DataView(WW.buffer, WW.byteOffset, WW.byteLength);
+          if (WW.byteLength < 20 || iW.getUint32(0, !0) !== mW || 2 !== iW.getUint32(4, !0)) return null;
+          const OW = Math.min(iW.getUint32(8, !0), WW.byteLength),
+            NW = iW.getUint32(12, !0);
+          if (iW.getUint32(16, !0) !== EW || 20 + NW > OW) return null;
+          let PW;
+          try {
+            PW = JSON.parse((new TextDecoder).decode(WW.subarray(20, 20 + NW)))
+          } catch {
+            return null
+          }
+          return "object" === typeof PW && null !== PW ? {
+            json: PW,
+            jsonEnd: 20 + NW,
+            length: OW
+          } : null
+        }(OW);
+      if (null === PW) throw new NW(wW);
+      const LW = PW.json,
+        {
+          jsonEnd: tW,
+          length: ZW
+        } = PW,
+        xW = new DataView(OW.buffer, OW.byteOffset, OW.byteLength);
+      let lW = -1,
+        AW = 0;
+      for (let mW = tW; mW < ZW;) {
+        if (mW + 8 > ZW) throw new NW(wW);
+        const WW = xW.getUint32(mW, !0),
+          iW = xW.getUint32(mW + 4, !0);
+        if (mW + 8 + WW > ZW || iW === EW || iW === cW && -1 !== lW) throw new NW(wW);
+        iW === cW && (lW = mW + 8, AW = WW), mW += 8 + WW
+      }
+      let bW = null;
+      const jW = null === (iW = LW.buffers) || void 0 === iW ? void 0 : iW[0];
+      if (-1 !== lW && jW && void 0 === jW.uri) {
+        if (!(jW.byteLength >= 0) || jW.byteLength > AW) throw new NW(wW);
+        bW = new Uint8Array(OW.buffer, OW.byteOffset + lW, jW.byteLength)
+      }
+      return {
+        json: LW,
+        bin: bW,
+        fileBytes: OW.byteLength
+      }
+    }
+
+    function ZW(WW) {
+      const iW = WW.slice(WW.indexOf(",") + 1),
+        OW = Uint8Array.fromBase64;
+      if (OW) return OW(iW).buffer;
+      const mW = atob(iW),
+        EW = new Uint8Array(mW.length);
+      for (let NW = 0; NW < mW.length; NW++) EW[NW] = mW.charCodeAt(NW);
+      return EW.buffer
+    }
+    async function xW(WW) {
+      if (WW.startsWith("data:")) return ZW(WW);
+      const iW = await fetch(WW);
+      if (!iW.ok) throw new PW(`fetching ${WW} failed: ${iW.status} ${iW.statusText}`);
+      return await iW.arrayBuffer()
+    }
+    const lW = {
+        5120: "i8",
+        5121: "u8",
+        5122: "i16",
+        5123: "u16",
+        5125: "u32",
+        5126: "f32"
+      },
+      AW = {
+        5120: 1,
+        5121: 1,
+        5122: 2,
+        5123: 2,
+        5125: 4,
+        5126: 4
+      },
+      bW = {
+        SCALAR: 1,
+        VEC2: 2,
+        VEC3: 3,
+        VEC4: 4,
+        MAT2: 4,
+        MAT3: 9,
+        MAT4: 16
+      },
+      jW = [
+        ["POSITION", "position"],
+        ["NORMAL", "normal"],
+        ["TANGENT", "tangent"],
+        ["TEXCOORD_0", "uv"],
+        ["TEXCOORD_1", "uv2"],
+        ["TEXCOORD_2", "uv3"],
+        ["TEXCOORD_3", "uv4"],
+        ["TEXCOORD_4", "uv5"],
+        ["TEXCOORD_5", "uv6"],
+        ["COLOR_0", "color"]
+      ]
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,139 +1,139 @@
-export const id = 70;
-export const ids = [70];
+export const id = 71;
+export const ids = [71];
 export const modules = {
-  37617: (ee, ie, He) => {
-    async function ye(ee) {
-      const ie = await fetch(ee, {
+  37606: (WW, iW, OW) => {
+    async function mW(WW) {
+      const iW = await fetch(WW, {
         priority: "low"
       });
-      if (!ie.ok) throw new Error(`Fetching ${ee} failed: HTTP ${ie.status}`);
-      const He = ie.body.getReader();
-      for (; !(await He.read()).done;);
+      if (!iW.ok) throw new Error(`Fetching ${WW} failed: HTTP ${iW.status}`);
+      const OW = iW.body.getReader();
+      for (; !(await OW.read()).done;);
     }
-    He.d(ie, {
-      e: () => ye
+    OW.d(iW, {
+      d: () => mW
     })
   },
-  42125: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      prefetchWasmClient: () => de,
-      probeWebgl2AheadOfJoin: () => oe.Q,
-      startJoinLoad: () => Be,
-      startLoadAheadOfJoin: () => ge
+  42198: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      prefetchWasmClient: () => YW,
+      probeWebgl2AheadOfJoin: () => tW.K,
+      startJoinLoad: () => sW,
+      startLoadAheadOfJoin: () => KW
     });
-    var ye = He(3094),
-      be = He(37003),
-      Me = He(41955),
-      Ke = He(1268),
-      Ue = He(41827),
-      Fe = (He(41890), He(37617)),
-      Je = He(2177),
-      oe = He(41823),
-      Re = He(42068),
-      ke = He(37102);
-    const qe = "[bloxd-wasm-client]";
-    let fe = null,
-      Te = null,
-      pe = null,
-      Xe = null,
-      ze = null;
+    var mW = OW(2381),
+      EW = OW(37297),
+      NW = OW(42202),
+      PW = OW(1303),
+      LW = OW(42216),
+      cW = (OW(42244), OW(37606)),
+      wW = OW(2296),
+      tW = OW(42255),
+      ZW = OW(42362),
+      xW = OW(37446);
+    const lW = "[bloxd-wasm-client]";
+    let AW = null,
+      bW = null,
+      jW = null,
+      UW = null,
+      kW = null;
 
-    function Be() {
-      return Xe ??= (async () => {
+    function sW() {
+      return UW ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const ee = await (0, oe.N)();
-        if (null === ee) return;
-        if ((0, Ue.p)(ee)) return (0, oe.S)("none"), void Ee("none");
-        (0, oe.S)(ee.backend);
-        const ie = await ee.load();
-        Ee(ie.name);
-        const He = "unloaded" === (0, ye.B)();
-        if (He && (0, oe.j)(), !await (0, Re.c)(ie)) return void console.warn(`${qe} the join's early wasm load failed: the boot loads the client itself`);
-        if (!He) return;
-        const Me = (0, be.j)(ie.name);
-        void 0 !== Me ? (0, Ke.logClientMeasurement)("wasm_join_compile", {
-          ms: Math.round(Me.ms)
+        const WW = await (0, tW.J)();
+        if (null === WW) return;
+        if ((0, LW.r)(WW)) return (0, tW.L)("none"), void MW("none");
+        (0, tW.L)(WW.backend);
+        const iW = await WW.load();
+        MW(iW.name);
+        const OW = "unloaded" === (0, mW.D)();
+        if (OW && (0, tW.n)(), !await (0, ZW.c)(iW)) return void console.warn(`${lW} the join's early wasm load failed: the boot loads the client itself`);
+        if (!OW) return;
+        const NW = (0, EW.n)(iW.name);
+        void 0 !== NW ? (0, PW.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(NW.ms)
         }, {
-          path: Me.path,
-          build: ie.name
-        }) : console.warn(`${qe} the join's wasm load left no record of how it compiled ${ie.name}`)
-      })().catch((ee => {
-        console.warn(`${qe} the join's early wasm load did not start: the boot loads the client itself`, ee)
-      })), Xe
+          path: NW.path,
+          build: iW.name
+        }) : console.warn(`${lW} the join's wasm load left no record of how it compiled ${iW.name}`)
+      })().catch((WW => {
+        console.warn(`${lW} the join's early wasm load did not start: the boot loads the client itself`, WW)
+      })), UW
     }
 
-    function Ee(ee) {
-      null !== ze && (0, Ke.logClientMeasurement)("wasm_compile_ahead", {
-        hit: ze === ee ? 1 : 0
+    function MW(WW) {
+      null !== kW && (0, PW.logClientMeasurement)("wasm_compile_ahead", {
+        hit: kW === WW ? 1 : 0
       }, {
-        guessed: ze,
-        loaded: ee
+        guessed: kW,
+        loaded: WW
       })
     }
 
-    function ge() {
-      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === pe) {
-        var ie;
-        const He = null !== (ie = ee.joinStarted) && void 0 !== ie ? ie : () => !1;
-        pe = Promise.all([de(ee), Oe(He)]).then((() => {}))
+    function KW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === jW) {
+        var iW;
+        const OW = null !== (iW = WW.joinStarted) && void 0 !== iW ? iW : () => !1;
+        jW = Promise.all([YW(WW), SW(OW)]).then((() => {}))
       }
-      return pe
+      return jW
     }
 
-    function Oe(ee) {
-      return Te ??= (async () => {
+    function SW(WW) {
+      return bW ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const ie = await (0, oe.f)();
-        null === ie || ee() || "unloaded" !== (0, ye.B)() || (ze = ie.name, await (0, be.e)([ie, Me.e], "low"))
-      })().catch((ee => {
-        console.warn(`${qe} the compile ahead of the join did not start: the join loads the client itself`, ee)
-      })), Te
+        const iW = await (0, tW.h)();
+        null === iW || WW() || "unloaded" !== (0, mW.D)() || (kW = iW.name, await (0, EW.e)([iW, NW.d], "low"))
+      })().catch((WW => {
+        console.warn(`${lW} the compile ahead of the join did not start: the join loads the client itself`, WW)
+      })), bW
     }
 
-    function de() {
+    function YW() {
       let {
-        joinStarted: ee = () => !1,
-        language: ie = ""
+        joinStarted: WW = () => !1,
+        language: iW = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return fe ??= async function(ee, ie) {
-        if (!await async function(ee) {
-            if (ee()) return !1;
-            let ie;
+      return AW ??= async function(WW, iW) {
+        if (!await async function(WW) {
+            if (WW()) return !1;
+            let iW;
             try {
-              var He;
-              const ee = await fetch((0, Je.c)("static/js/u88b9b.wasmJoinFiles.json"), {
-                ...Je.b,
+              var OW;
+              const WW = await fetch((0, wW.g)("static/js/1yqdn.wasmJoinFiles.json"), {
+                ...wW.d,
                 priority: "low"
               });
-              if (ee.ok && /\bno-store\b/.test(null !== (He = ee.headers.get("Cache-Control")) && void 0 !== He ? He : "")) return !1;
-              ie = await (0, Je.f)(ee)
-            } catch (be) {
-              return console.warn(`${qe} the join's chunk list did not load: the join downloads its chunks itself`, be), !ee()
+              if (WW.ok && /\bno-store\b/.test(null !== (OW = WW.headers.get("Cache-Control")) && void 0 !== OW ? OW : "")) return !1;
+              iW = await (0, wW.j)(WW)
+            } catch (EW) {
+              return console.warn(`${lW} the join's chunk list did not load: the join downloads its chunks itself`, EW), !WW()
             }
-            if (ee()) return !1;
-            const ye = document.createElement("link").relList.supports("prefetch");
-            for (const Me of ie) {
-              const ee = (0, Je.c)(Me);
-              ye ? We(ee) : (0, Fe.e)(ee).catch((ie => {
-                console.warn(`${qe} prefetching ${ee} failed`, ie)
+            if (WW()) return !1;
+            const mW = document.createElement("link").relList.supports("prefetch");
+            for (const NW of iW) {
+              const WW = (0, wW.g)(NW);
+              mW ? yW(WW) : (0, cW.d)(WW).catch((iW => {
+                console.warn(`${lW} prefetching ${WW} failed`, iW)
               }))
             }
             return !0
-          }(ee)) return;
-        const He = [(0, Fe.e)((0, ke.e)())];
-        (0, ke.b)(ie) && He.push((0, Fe.e)((0, ke.h)()));
-        await Promise.all(He)
-      }(ee, ie).catch((ee => {
-        console.warn(`${qe} the prefetch failed: the join downloads the client itself`, ee)
-      })), fe
+          }(WW)) return;
+        const OW = [(0, cW.d)((0, xW.d)())];
+        (0, xW.b)(iW) && OW.push((0, cW.d)((0, xW.h)()));
+        await Promise.all(OW)
+      }(WW, iW).catch((WW => {
+        console.warn(`${lW} the prefetch failed: the join downloads the client itself`, WW)
+      })), AW
     }
 
-    function We(ee) {
-      const ie = document.createElement("link");
-      ie.rel = "prefetch", ie.href = ee, ee.endsWith(".js") && (ie.crossOrigin = "anonymous"), document.head.appendChild(ie)
+    function yW(WW) {
+      const iW = document.createElement("link");
+      iW.rel = "prefetch", iW.href = WW, WW.endsWith(".js") && (iW.crossOrigin = "anonymous"), document.head.appendChild(iW)
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

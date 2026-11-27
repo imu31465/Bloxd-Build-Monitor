@@ -1,30 +1,30 @@
-export const id = 66;
-export const ids = [66];
+export const id = 67;
+export const ids = [67];
 export const modules = {
-  54297: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      startPageTexturePackFeed: () => Ke
+  54835: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      startPageTexturePackFeed: () => PW
     });
-    var ye = He(1141),
-      be = He(35),
-      Me = He(54292);
+    var mW = OW(1185),
+      EW = OW(39),
+      NW = OW(54829);
 
-    function Ke(ee, ie) {
-      const He = new Me.e({
-        store: be.e,
-        warn: ee,
-        oneShot: ie,
-        fetchLatest: async ee => {
-          const ie = await fetch(`${ye.clientSideServerUrls.texturePackUrl}/${ee}.json`, {
+    function PW(WW, iW) {
+      const OW = new NW.c({
+        store: EW.f,
+        warn: WW,
+        oneShot: iW,
+        fetchLatest: async WW => {
+          const iW = await fetch(`${mW.clientSideServerUrls.texturePackUrl}/${WW}.json`, {
             cache: "reload"
           });
-          if (!ie.ok) throw new Error(`fetching texture pack ${ee} answered HTTP ${ie.status}`);
-          return await ie.json()
+          if (!iW.ok) throw new Error(`fetching texture pack ${WW} answered HTTP ${iW.status}`);
+          return await iW.json()
         }
       });
-      return (0, Me.g)(He), He
+      return (0, NW.g)(OW), OW
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

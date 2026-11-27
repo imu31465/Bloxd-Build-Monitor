@@ -1,649 +1,584 @@
 export const id = 269;
 export const ids = [269];
 export const modules = {
-  38891: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Je,
-      e: () => ye,
-      i: () => Ue,
-      k: () => be,
-      n: () => Ke,
-      p: () => Me
+  42543: (WW, iW, OW) => {
+    OW.d(iW, {
+      noaDevTools: () => ZW
     });
-    const ye = 1.001,
-      be = .501,
-      Me = .025,
-      Ke = .75,
-      Ue = .08,
-      Fe = 4;
+    var mW = OW(38626),
+      EW = OW(38612),
+      NW = OW(2365),
+      PW = OW(1856),
+      LW = OW(42471);
 
-    function Je() {
-      const ee = be,
-        ie = Me,
-        He = ee - ie / 2,
-        ye = (2 * ee - 2 * ie) / (2 * Fe - 1),
-        Ke = [];
-      for (const be of [-He, He])
-        for (const Me of [-He, He])
-          for (let He = 0; He < Fe; He++) {
-            const Ue = -ee + ie + ye * (2 * He + .5);
-            Ke.push([ye, ie, ie, Ue, be, Me]), Ke.push([ie, ye, ie, be, Ue, Me]), Ke.push([ie, ie, ye, be, Me, Ue])
-          }
-      for (const be of [-He, He])
-        for (const ee of [-He, He])
-          for (const ye of [-He, He]) Ke.push([ie, ie, ie, be, ee, ye]);
-      return Ke
-    }
-  },
-  39214: (ee, ie, He) => {
-    He.d(ie, {
-      A: () => Oe,
-      E: () => We,
-      H: () => ge,
-      I: () => Ee,
-      L: () => ke,
-      P: () => Te,
-      T: () => Xe,
-      V: () => be,
-      e: () => oe,
-      f: () => Fe,
-      j: () => Be,
-      l: () => Je,
-      o: () => Ue,
-      s: () => Ke,
-      u: () => Me,
-      v: () => de,
-      w: () => qe
-    });
-    var ye = He(10049);
-
-    function be(ee) {
-      return Math.floor(ee).toLocaleString("en-US")
-    }
-    const Me = 2e3,
-      Ke = .005,
-      Ue = .001,
-      Fe = 2,
-      Je = "Fluid Tank",
-      oe = "Coolant Mixer",
-      Re = 144;
-
-    function ke(ee) {
-      const ie = ee.split("|")[0];
-      return (0, ye.n)(ie) ? ie === ye.e ? "cryo" : "water" : null
-    }
-    const qe = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 1, 0],
-        [0, -1, 0],
-        [0, 0, 1],
-        [0, 0, -1]
-      ],
-      fe = 63;
-
-    function Te(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const He = ie ? function(ee, ie, He) {
-        const ye = qe.findIndex((ye => {
-          let [be, Me, Ke] = ye;
-          return be === ee && Me === ie && Ke === He
-        }));
-        return ye < 0 ? 0 : 1 << ye
-      }(ie[0], ie[1], ie[2]) : 0;
-      return "maker" === ee ? {
-        kind: ee,
-        faces: He
-      } : "user" === ee ? {
-        kind: ee,
-        faces: fe & ~He
-      } : {
-        kind: ee,
-        faces: fe
-      }
-    }
-
-    function pe(ee) {
-      return "pipe" === ee || "tank" === ee || "maker" === ee
-    }
-
-    function Xe(ee, ie, He) {
-      return 0 !== (ee.faces & 1 << He) && 0 !== (ie.faces & 1 << (1 ^ He)) && (pe(ee.kind) || pe(ie.kind))
-    }
-    const ze = (ee, ie, He, ye) => ({
-        input: ee,
-        inputAmount: ye,
-        output: ie,
-        outputAmount: He
-      }),
-      Be = {
-        Condenser: {
-          kind: "Condenser",
-          opMs: 2e3,
-          inputSlot: null,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [],
-          powerPerOp: 60,
-          fluidMade: 12,
-          couplable: !0,
-          couplerSlot: 0
-        },
-        Centrifuge: {
-          kind: "Centrifuge",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [ze("Uranium Grit", "Uranium Pellet", 1, 12), ze("Spent Pellet", "Plutonium Pellet", 1, 4)],
-          powerPerOp: 600,
-          waterPerOp: 24
-        },
-        Synthesizer: {
-          kind: "Synthesizer",
-          opMs: 6e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [],
-          powerPerOp: 120,
-          waterPerOp: 12,
-          synth: !0
-        },
-        "Coolant Mixer": {
-          kind: "Coolant Mixer",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [ze("Biomass", "", 0, 1)],
-          powerPerOp: 720,
-          waterPerOp: 144,
-          cryoMade: Re,
-          couplable: !0,
-          couplerSlot: 1
-        }
-      };
-
-    function Ee(ee, ie) {
-      return 1e3 * (null !== ie && void 0 !== ie ? ie : 0) / ee.opMs
-    }
-
-    function ge(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const He = Ee(Be["Coolant Mixer"], Re) * ie;
-      return ee <= 0 ? 0 : Math.ceil(ee / He - 1e-9)
-    }
-    const Oe = "baf2Water",
-      de = "baf2waterclose",
-      We = "baf2wateropen"
-  },
-  39208: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ve,
-      e: () => ae
-    });
-    var ye = He(9961),
-      be = He(1e4);
-    const Me = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1],
-      [0, 1, 0],
-      [0, -1, 0]
-    ];
-    var Ke = He(10012),
-      Ue = He(39031),
-      Fe = He(10008);
-    const Je = {
-      1: [0, -1],
-      2: [-1, 0],
-      3: [0, 1],
-      4: [1, 0]
-    };
-
-    function oe(ee) {
-      let [ie, He] = ee;
-      return [-He, ie]
-    }
-
-    function Re(ee, ie) {
-      return ee[0] === ie[0] && ee[1] === ie[1]
-    }
-
-    function ke(ee, ie) {
-      return ee[0] * ie[0] + ee[1] * ie[1] === 0
-    }
-    const qe = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-    var fe = He(10046);
-
-    function Te(ee, ie, He, ye, be) {
-      return ie < fe.o || ie >= fe.o + fe.p || Math.floor(ee / fe.v) === Math.floor(ye / fe.v) && Math.floor(He / fe.v) === Math.floor(be / fe.v)
-    }
-    const pe = "Splitter",
-      Xe = "Sorting Gate",
-      ze = new Set(fe.J),
-      Be = new Set([...fe.J, "Belt Loader", "Fast Loader", Xe]),
-      Ee = new Set(fe.r),
-      ge = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 0, 1],
-        [0, 0, -1],
-        [0, 1, 0],
-        [0, -1, 0]
-      ];
-
-    function Oe(ee) {
-      var ie, He;
-      return null !== (ie = null === (He = ye.i[ee]) || void 0 === He ? void 0 : He.meta.rootName) && void 0 !== ie ? ie : ""
-    }
-
-    function de(ee) {
-      return Oe(ee) === fe.i && (0, fe.V)(ye.i[ee].name)
-    }
-    var We = He(10003),
-      te = He(10026);
-    const Ze = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-
-    function we(ee) {
-      var ie, He;
-      const be = null === (ie = ye.i[ee]) || void 0 === ie ? void 0 : ie.meta;
-      return (null === be || void 0 === be ? void 0 : be.rootName) !== te.n ? null : {
-        rot: null !== (He = be.rot) && void 0 !== He ? He : 1,
-        half: (0, te.h)(be.rootName, be.metaStr)
-      }
-    }
-
-    function De(ee, ie, He, ye) {
-      return we(ee(ie, He, ye))
-    }
-
-    function Pe(ee, ie, He, ye, be) {
-      let {
-        rot: Me,
-        half: Ke
-      } = be;
-      const [Ue, Fe] = (0, te.m)(Me, Ke), Je = De(ee, ie + Ue, He, ye + Fe);
-      return null !== Je && Je.rot === Me && Je.half === te.p[Ke]
-    }
-    var Ae = He(39211);
-    const Ye = [new class {
-      constructor() {
-        this.reshapeOffsets = qe
-      }
-      handles(ee) {
-        var ie;
-        return "Stairs" === (null === (ie = ye.i[ee]) || void 0 === ie ? void 0 : ie.model)
-      }
-      affects(ee) {
-        return this.handles(ee)
-      }
-      shape(ee, ie, He, be, Me) {
-        const Ke = this.stairsOf(Me),
-          Ue = this.cornerAt(ee, ie, He, be, Ke),
-          Je = Ke.half === Fe.d.top ? "top" : "bot";
-        return (0, ye.j)(`${ye.i[Me].meta.rootName}|meta|rot${Ke.rot}|${Je}${null===Ue?"":`|${Ue}`}`)
-      }
-      stairsOf(ee) {
-        const {
-          rot: ie,
-          halfblockPlacement: He
-        } = ye.i[ee].meta;
-        return {
-          rot: ie,
-          half: He
-        }
-      }
-      stairsAt(ee, ie, He, ye) {
-        const be = ee(ie, He, ye);
-        return this.handles(be) ? this.stairsOf(be) : null
-      }
-      cornerAt(ee, ie, He, ye, be) {
-        let {
-          rot: Me,
-          half: Ke
-        } = be;
-        const Ue = Je[Me],
-          Fe = be => {
-            let [Ue, Fe] = be;
-            const Je = this.stairsAt(ee, ie + Ue, He, ye + Fe);
-            return null !== Je && Je.rot === Me && Je.half === Ke
-          },
-          qe = this.stairsAt(ee, ie + Ue[0], He, ye + Ue[1]);
-        if (null !== qe && qe.half === Ke) {
-          const ee = Je[qe.rot];
-          if (ke(Ue, ee) && !Fe([-ee[0], -ee[1]])) return Re(ee, oe(Ue)) ? "outerLeft" : "outerRight"
-        }
-        const fe = this.stairsAt(ee, ie - Ue[0], He, ye - Ue[1]);
-        if (null !== fe && fe.half === Ke) {
-          const ee = Je[fe.rot];
-          if (ke(Ue, ee) && !Fe(ee)) return Re(ee, oe(Ue)) ? "innerLeft" : "innerRight"
-        }
-        return null
-      }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = Me, this.rootIds = new Set(be.g.map((ee => (0, ye.j)(ee))))
-      }
-      handles(ee) {
-        var ie;
-        const He = null === (ie = ye.i[ee]) || void 0 === ie ? void 0 : ie.meta;
-        return void 0 !== He && this.rootIds.has(He.rootId)
-      }
-      affects(ee) {
-        return this.handles(ee)
-      }
-      placedBy(ee) {
-        return ye.i[ee].meta.rootName === be.n ? null : be.n
-      }
-      shape(ee, ie, He, Me, Ke) {
-        const {
-          rootId: Ue,
-          rootName: Fe,
-          rot: Je
-        } = ye.i[Ke].meta;
-        let oe = 0;
-        return be.s[Je].forEach(((be, Ke) => {
-          var Fe;
-          let [Re, ke, qe] = be;
-          const fe = null === (Fe = ye.i[ee(ie + Re, He + ke, Me + qe)]) || void 0 === Fe ? void 0 : Fe.meta;
-          (null === fe || void 0 === fe ? void 0 : fe.rootId) === Ue && fe.rot === Je && (oe |= 1 << Ke)
-        })), (0, ye.j)((0, be.e)(Fe, Je, oe))
-      }
-    }, ...Ke.e.map((ee => new Ue.c(ee))), new class {
-      constructor() {
-        this.reshapeOffsets = ge
-      }
-      handles(ee) {
-        const ie = Oe(ee);
-        return ze.has(ie) || ie === fe.i
-      }
-      affects(ee) {
-        const ie = Oe(ee);
-        return Be.has(ie) || Ee.has(ie) || ie === pe || ie === fe.i || void 0 !== fe.b[ie]
-      }
-      shape(ee, ie, He, be, Me, Ke) {
-        const {
-          rootName: Ue,
-          rot: Fe
-        } = ye.i[Me].meta;
-        return Ue === fe.i ? Ke ? Me : function(ee, ie, He, be, Me) {
-          const [Ke, Ue] = fe.e[Me - 1];
-          for (let Fe = 1; Fe <= fe.G; Fe++) {
-            const [Je, oe] = [ie - Ke * Fe, be - Ue * Fe], Re = ee(Je, He, oe);
-            if (Oe(Re) === fe.i && ye.i[Re].meta.rot === Me && Te(ie, He, be, Je, oe)) return (0, ye.j)((0, fe.eb)(Me, !de(Re)))
-          }
-          return (0, ye.j)((0, fe.eb)(Me, !1))
-        }(ee, ie, He, be, Fe) : (0, ye.j)((0, fe.M)(Ue, Fe, function(ee, ie, He, be, Me) {
-          const [Ke, Ue] = fe.e[Me - 1], Fe = (Me, Ke) => function(ee, ie, He) {
-            var be;
-            const Me = null === (be = ye.i[ee]) || void 0 === be ? void 0 : be.meta;
-            if (!Me) return !1;
-            const Ke = Me.rootName,
-              Ue = Be.has(Ke) || de(ee);
-            if (!Ue && !Ee.has(Ke) && Ke !== pe) return !1;
-            const [Fe, Je] = fe.e[Me.rot - 1];
-            if (Ue && Fe === -ie && Je === -He) return !0;
-            if (Ee.has(Ke)) return Fe === ie && Je === He;
-            const oe = ye.i[ee].name;
-            return (Ke === pe ? (0, fe.ab)(oe, Fe, Je) : Ke === Xe ? [(0, fe.O)(oe, Fe, Je)] : []).some((ee => {
-              let [ye, be] = ee;
-              return ye === -ie && be === -He
-            }))
-          }(ee(ie + Me, He, be + Ke), Me, Ke), Je = ee(ie - Ke, He, be - Ue), oe = Oe(Je) === pe && ye.i[Je].meta.rot === Me, Re = 1 === fe.b[Oe(ee(ie, He - 1, be))] || -1 === fe.b[Oe(ee(ie, He + 1, be))];
-          if (Re || oe || Fe(-Ke, -Ue)) return null;
-          const ke = Fe(-Ue, Ke),
-            qe = Fe(Ue, -Ke);
-          if (ke === qe) return null;
-          return ke ? "turnLeft" : "turnRight"
-        }(ee, ie, He, be, Fe)))
-      }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = Ze, this.rootId = (0, ye.j)(te.n)
-      }
-      handles(ee) {
-        var ie;
-        return (null === (ie = ye.i[ee]) || void 0 === ie ? void 0 : ie.meta.rootId) === this.rootId
-      }
-      affects(ee) {
-        return this.handles(ee)
-      }
-      shape(ee, ie, He, be, Me, Ke) {
-        const Ue = we(Me);
-        return (0, ye.j)((Fe = Ue.rot, null !== (Je = Ke ? this.reshapedHalf(ee, ie, He, be, Ue) : this.placedHalf(ee, ie, He, be, Ue.rot)) ? (0, te.e)(te.n, Fe, Je) : 1 === Fe ? te.n : `${te.n}|meta|rot${Fe}`));
-        var Fe, Je
-      }
-      placedHalf(ee, ie, He, ye, be) {
-        const [Me, Ke] = We.d[be];
-        for (const [Ue, Fe] of [
-            ["right", 1],
-            ["left", -1]
-          ]) {
-          const Je = ie + Fe * Me,
-            oe = ye + Fe * Ke,
-            Re = De(ee, Je, He, oe);
-          if (null !== Re && Re.rot === be && (null === Re.half || !Pe(ee, Je, He, oe, Re))) return Ue
-        }
-        return null
-      }
-      reshapedHalf(ee, ie, He, ye, be) {
-        if (null !== be.half && Pe(ee, ie, He, ye, be)) return be.half;
-        for (const Me of ["right", "left"]) {
-          const [Ke, Ue] = (0, te.m)(be.rot, Me), Fe = De(ee, ie + Ke, He, ye + Ue);
-          if (null !== Fe && Fe.rot === be.rot && Fe.half === te.p[Me]) return Me
-        }
-        return null
-      }
-    }, new Ae.d];
-
-    function Ve(ee, ie, He, ye, be) {
-      let Me = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const Ke of Ye)
-        if (Ke.handles(be)) return Ke.shape(ee, ie, He, ye, be, Me);
-      return be
-    }
-
-    function ae(ee) {
-      for (const ye of Ye) {
-        var ie, He;
-        if (ye.handles(ee)) return null !== (ie = null === (He = ye.placedBy) || void 0 === He ? void 0 : He.call(ye, ee)) && void 0 !== ie ? ie : null
-      }
-      return null
-    }
-  },
-  39211: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => te,
-      e: () => Ee,
-      h: () => Be
-    });
-    var ye = He(9961),
-      be = He(9985),
-      Me = He(10049),
-      Ke = He(39214),
-      Ue = He(10046);
-    const Fe = (0, Ke.P)("pipe"),
-      Je = (0, Ke.P)("tank"),
-      oe = (0, Ke.P)("port"),
-      Re = "Reactor Port";
-
-    function ke(ee, ie, He) {
-      const ye = new Set([Me.i, Me.e, Re, ...ie, ...He, ...ee ? [Ke.l] : []]);
-      return {
-        makers: new Set(ie),
-        roots: ye
-      }
-    }
-    const qe = {
-        water: ke(!0, ["Condenser"], ["Centrifuge", "Synthesizer", Ke.e]),
-        cryo: ke(!1, [Ke.e], [])
-      },
-      fe = new Set([...qe.water.roots, ...qe.cryo.roots]),
-      Te = {
-        nx: [-1, 0, 0],
-        ny: [0, -1, 0],
-        nz: [0, 0, -1],
-        px: [1, 0, 0],
-        py: [0, 1, 0],
-        pz: [0, 0, 1]
-      },
-      pe = be.d.map((ee => Te[ee])),
-      Xe = pe.map((ee => {
-        let [ie, He, ye] = ee;
-        return Ke.w.findIndex((ee => {
-          let [be, Me, Ke] = ee;
-          return be === ie && Me === He && Ke === ye
-        }))
-      }));
-
-    function ze(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const He = ye.i[ee],
-        be = null === He || void 0 === He ? void 0 : He.meta.rootName,
-        ke = qe[ie];
-      if (!be || !ke.roots.has(be)) return null;
-      if ((0, Me.n)(be)) return (0, Ke.L)(He.name) === ie ? Fe : null;
-      if (be === Ke.l) return Je;
-      if (be === Re) return He.name.endsWith("|Water") ? oe : null;
-      const [fe, Te] = Ue.e[(He.meta.rot || 1) - 1];
-      return (0, Ke.P)(ke.makers.has(be) ? "maker" : "user", [-fe, 0, -Te])
-    }
-
-    function Be(ee, ie, He, be) {
-      let Me = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function cW(WW) {
       const {
-        makers: Ue
-      } = qe[Me];
-      return pe.some(((Je, oe) => {
-        var Re, ke;
-        let [qe, fe, Te] = Je;
-        const pe = ee(ie + qe, He + fe, be + Te),
-          Be = ze(pe, Me);
-        return null !== Be && Ue.has(null !== (Re = null === (ke = ye.i[pe]) || void 0 === ke ? void 0 : ke.meta.rootName) && void 0 !== Re ? Re : "") && !(0, Ke.T)(Fe, Be, Xe[oe])
-      }))
-    }
-
-    function Ee(ee) {
-      const ie = ye.i[ee];
-      return ie ? (0, Ke.L)(ie.name) : null
-    }
-    let ge = null;
-
-    function Oe(ee) {
-      if (!ge) {
-        ge = new Map;
-        for (const ee of ["water", "cryo"])
-          for (let ie = 0; ie < 64; ie++)
-            for (const He of [!1, !0]) ge.set((0, Me.o)(ee, ie, He), {
-              Lq: ee,
-              mask: ie,
-              full: He
-            })
+        TZ: iW
+      } = WW, OW = iW.engine, mW = {
+        width: OW.getRenderWidth(),
+        height: OW.getRenderHeight()
+      };
+      return {
+        canvas: OW.getRenderingCanvas(),
+        maxTextureSize: OW.getCaps().maxTextureSize,
+        KZ: () => !WW.JZ,
+        resize: (WW, iW) => {
+          OW.setSize(WW, iW)
+        },
+        restoreSize: () => {
+          OW.setSize(mW.width, mW.height), iW.resize()
+        },
+        onFrameDrawn: OW => {
+          const mW = () => {
+            iW.TY && OW()
+          };
+          return WW.on("afterRender", mW), () => {
+            WW.off("afterRender", mW)
+          }
+        }
       }
-      return ge.get(ee)
     }
-    const de = new Map(Array.from({
-      length: Me.j + 1
-    }, ((ee, ie) => [(0, Me.p)(ie), ie])));
+    var wW = OW(35114);
 
-    function We(ee, ie, He, be, Me, Ke) {
-      return pe.some(((Ue, Fe) => {
-        var Je, oe, Re;
-        let [ke, qe, fe] = Ue;
-        if (0 === (Ke >> Fe & 1)) return !1;
-        const Te = null !== (Je = null === (oe = ye.i[ee(ie + ke, He + qe, be + fe)]) || void 0 === oe ? void 0 : oe.name) && void 0 !== Je ? Je : "",
-          pe = Oe(Te);
-        return pe ? pe.Lq === Me && pe.full : (null !== (Re = function(ee) {
-          var ie;
-          return null !== (ie = de.get(ee)) && void 0 !== ie ? ie : null
-        }(Te)) && void 0 !== Re ? Re : 0) > 0
+    function tW(WW, iW) {
+      let {
+        width: wW,
+        height: tW,
+        colouring: ZW
+      } = iW;
+      const xW = "normals" === ZW,
+        lW = "depth" === ZW;
+      return new Promise((iW => {
+        try {
+          const AW = (0, NW.h)();
+          if (AW.TZ.Lb) return "screenshot" !== WW || null !== ZW ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void iW()) : void(0, LW.f)(cW(AW), wW, tW).finally(iW);
+          const bW = AW.TZ.engine,
+            jW = AW.TZ.bD(),
+            UW = wW,
+            kW = tW;
+          Promise.all([Promise.all([OW.e(289), OW.e(290), OW.e(265)]).then((() => OW(64385))), Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(291), OW.e(294), OW.e(629), OW.e(271)]).then((() => OW(64392))), Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(299), OW.e(273)]).then((() => OW(64398))), OW.e(670).then((() => OW(64402))), Promise.all([OW.e(263), OW.e(259)]).then((() => OW(38235))), OW.e(288).then((() => OW(64405))), OW.e(268).then((() => OW(64410)))]).then((NW => {
+            const {
+              CreateScreenshotUsingRenderTarget: LW
+            } = NW[1], {
+              ShaderMaterial: cW
+            } = NW[2], {
+              ShaderLanguage: wW
+            } = NW[3], {
+              fA: tW
+            } = NW[4], {
+              registerDevtoolsShader: ZW
+            } = NW[6], AW = wW.GLSL, sW = new Map, MW = jW.meshes.filter((WW => WW.material));
+            let KW = !1,
+              SW = null;
+
+            function YW() {
+              var WW;
+              KW && (KW = !1, (0, mW.g)(jW.meshes, !1)), null === (WW = SW) || void 0 === WW || WW(), SW = null, MW.forEach((WW => {
+                const iW = sW.get(WW);
+                iW && (WW.material = iW)
+              }))
+            }
+            if (xW) {
+              const WW = [],
+                iW = [];
+              MW.forEach((OW => {
+                const mW = OW.name.toLowerCase(),
+                  EW = OW.KV().boundingBox.center,
+                  NW = jW.activeCamera.position.subtract(EW).length();
+                mW.includes("sky") || mW.includes("background") || mW.includes("environment") || NW > 1e3 ? iW.push(OW) : WW.push(OW)
+              })), ZW("devtoolsNormal", AW);
+              const OW = new cW("normalMaterial", jW, "devtoolsNormal", {
+                attributes: ["position", "normal"],
+                uniforms: ["worldViewProjection", "world"],
+                shaderLanguage: AW
+              });
+              ZW("devtoolsWhite", AW);
+              const mW = new cW("whiteMaterial", jW, "devtoolsWhite", {
+                attributes: ["position"],
+                uniforms: ["worldViewProjection"],
+                shaderLanguage: AW
+              });
+              WW.forEach((WW => {
+                sW.set(WW, WW.material), WW.material = OW
+              })), iW.forEach((WW => {
+                sW.set(WW, WW.material), WW.material = mW
+              }))
+            } else if (lW) {
+              ZW("devtoolsDepth", AW);
+              const WW = jW.activeCamera.position;
+              let iW = 0,
+                OW = 1 / 0;
+              MW.forEach((mW => {
+                const EW = mW.name.toLowerCase();
+                if (EW.includes("sky") || EW.includes("background") || EW.includes("environment")) return;
+                const NW = mW.KV().boundingBox.center,
+                  PW = tW.TransformCoordinates(NW, mW.getWorldMatrix()),
+                  LW = WW.subtract(PW).length();
+                LW > 1e3 || (iW = Math.max(iW, LW), OW = Math.min(OW, LW))
+              }));
+              const mW = iW - OW;
+              iW += .1 * mW, OW = Math.max(0, OW - .1 * mW), console.log(`Depth range: min=${OW.toFixed(2)}, max=${iW.toFixed(2)}, range=${mW.toFixed(2)}`), mW < 1 && (iW = OW + 10);
+              const EW = new cW("depthMaterial", jW, "devtoolsDepth", {
+                attributes: ["position"],
+                uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
+                shaderLanguage: AW
+              });
+              EW.setVector3("cameraPosition", WW), EW.setFloat("maxDepth", iW), EW.setFloat("minDepth", OW), MW.forEach((WW => {
+                sW.set(WW, WW.material), WW.material = EW
+              }))
+            }
+            if ((0, mW.g)(jW.meshes, !0), KW = !0, "glb" === WW && (SW = (0, EW.c)(jW.meshes)), "screenshot" === WW) {
+              let WW = `bloxd-screenshot-${UW}x${kW}-${Date.now()}.png`;
+              xW ? WW = `bloxd-screenshot-normals-${UW}x${kW}-${Date.now()}.png` : lW && (WW = `bloxd-screenshot-depth-${UW}x${kW}-${Date.now()}.png`), LW(bW, jW.activeCamera, {
+                width: UW,
+                height: kW
+              }, (function(OW) {
+                YW(), fetch(OW).then((function(WW) {
+                  return WW.blob()
+                })).then((function(OW) {
+                  (0, PW.downloadBlob)(OW, WW), iW()
+                })).catch((function(WW) {
+                  console.error("Error processing screenshot:", WW), iW()
+                }))
+              }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
+                console.error("Screenshot timed out"), YW(), iW()
+              }))
+            } else {
+              let WW = "rb";
+              xW ? WW = "scene-normals" : lW && (WW = "scene-depth"), xW || lW ? setTimeout((() => {
+                (async function() {
+                  const {
+                    StandardMaterial: WW
+                  } = await Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(296), OW.e(272)]).then((() => OW(41782))), {
+                    Color3: iW
+                  } = await Promise.all([OW.e(264), OW.e(267)]).then((() => OW(38369))), mW = [], EW = [];
+                  if (MW.forEach((WW => {
+                      const iW = WW.name.toLowerCase(),
+                        OW = WW.KV().boundingBox.center,
+                        NW = jW.activeCamera.position.subtract(OW).length();
+                      iW.includes("sky") || iW.includes("background") || iW.includes("environment") || NW > 1e3 ? EW.push(WW) : mW.push(WW)
+                    })), xW) mW.forEach(((OW, mW) => {
+                    const EW = OW.getVerticesData("normal");
+                    if (EW) {
+                      const NW = [];
+                      for (let WW = 0; WW < EW.length; WW += 3) {
+                        const iW = Math.abs(EW[WW]),
+                          OW = Math.abs(EW[WW + 1]),
+                          mW = Math.abs(EW[WW + 2]);
+                        NW.push(iW, OW, mW, 1)
+                      }
+                      OW.setVerticesData("color", NW);
+                      const PW = new WW(`vertexColorMat_${mW}`, jW);
+                      PW.disableLighting = !0, PW.emissiveColor = new iW(1, 1, 1), PW.specularColor = new iW(0, 0, 0), OW.material = PW
+                    }
+                  })), EW.forEach(((OW, mW) => {
+                    const EW = OW.getVerticesData("position");
+                    if (EW) {
+                      const NW = [],
+                        PW = EW.length / 3;
+                      for (let WW = 0; WW < PW; WW++) NW.push(1, 1, 1, 1);
+                      OW.setVerticesData("color", NW);
+                      const LW = new WW(`whiteMat_${mW}`, jW);
+                      LW.disableLighting = !0, LW.emissiveColor = new iW(1, 1, 1), LW.specularColor = new iW(0, 0, 0), OW.material = LW
+                    }
+                  }));
+                  else if (lW) {
+                    const OW = jW.activeCamera.position;
+                    let EW = 0,
+                      NW = 1 / 0;
+                    mW.forEach((WW => {
+                      const iW = WW.KV().boundingBox.center,
+                        mW = tW.TransformCoordinates(iW, WW.getWorldMatrix()),
+                        PW = OW.subtract(mW).length();
+                      EW = Math.max(EW, PW), NW = Math.min(NW, PW)
+                    }));
+                    const PW = EW - NW;
+                    EW += .1 * PW, NW = Math.max(0, NW - .1 * PW), PW < 1 && (EW = NW + 10), MW.forEach(((mW, PW) => {
+                      const LW = mW.name.toLowerCase(),
+                        cW = mW.KV().boundingBox.center,
+                        wW = tW.TransformCoordinates(cW, mW.getWorldMatrix()),
+                        ZW = OW.subtract(wW).length();
+                      if (!(LW.includes("sky") || LW.includes("background") || LW.includes("environment") || ZW > 1e3)) {
+                        const OW = 1 - Math.min(Math.max((ZW - NW) / (EW - NW), 0), 1),
+                          LW = new WW(`depthMat_${PW}`, jW);
+                        LW.diffuseColor = new iW(OW, OW, OW), LW.specularColor = new iW(0, 0, 0), mW.material = LW
+                      }
+                    }))
+                  }
+                })().then((() => Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(629), OW.e(278), OW.e(298), OW.e(262)]).then((() => OW(64419))))).then((iW => iW.GLTF2Export.GLBAsync(jW, WW))).then((WW => {
+                  YW(), WW.downloadFiles(), iW()
+                })).catch((WW => {
+                  console.error("Error exporting GLB:", WW), YW(), iW()
+                }))
+              }), 100) : Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(629), OW.e(278), OW.e(298), OW.e(262)]).then((() => OW(64419))).then((OW => {
+                OW.GLTF2Export.GLBAsync(jW, WW).then((WW => {
+                  YW(), WW.downloadFiles(), iW()
+                })).catch((WW => {
+                  console.error("Error exporting GLB:", WW), YW(), iW()
+                }))
+              })).catch((WW => {
+                console.error("Error importing serializers:", WW), YW(), iW()
+              }))
+            }
+          })).catch((WW => {
+            console.error("Error downloading the scene:", WW), iW()
+          }))
+        } catch (AW) {
+          console.error("Error taking screenshot:", AW), iW()
+        }
       }))
     }
-    class te {
+    const ZW = new class {
       constructor() {
-        this.reshapeOffsets = pe
+        this.tools = wW.ALL_DEV_TOOLS
       }
-      handles(ee) {
-        return null !== Ee(ee)
+      downloadScene(WW, iW) {
+        return tW(WW, iW)
       }
-      affects(ee) {
-        var ie, He;
-        return fe.has(null !== (ie = null === (He = ye.i[ee]) || void 0 === He ? void 0 : He.meta.rootName) && void 0 !== ie ? ie : "")
+      async setAmbientLightIntensity(WW) {
+        const {
+          Color3: iW
+        } = await Promise.all([OW.e(264), OW.e(267)]).then((() => OW(38369)));
+        (0, NW.h)().TZ.bD().ambientColor = iW.FromArray([WW, WW, WW])
       }
-      placedBy(ee) {
-        var ie;
-        return (null === (ie = ye.i[ee]) || void 0 === ie ? void 0 : ie.meta.rootName) === Me.e ? Me.i : null
-      }
-      shape(ee, ie, He, be, Ue, Je) {
-        var oe, Re, ke;
-        const qe = null !== (oe = null === (Re = ye.i[Ue]) || void 0 === Re ? void 0 : Re.name) && void 0 !== oe ? oe : "",
-          fe = Je || qe !== Me.i ? null !== (ke = (0, Ke.L)(qe)) && void 0 !== ke ? ke : "water" : function(ee, ie, He, ye) {
-            return pe.some(((be, Me) => {
-              let [Ue, Je, oe] = be;
-              const Re = ze(ee(ie + Ue, He + Je, ye + oe), "cryo");
-              return null !== Re && "port" !== Re.kind && (0, Ke.T)(Fe, Re, Xe[Me])
-            })) ? "cryo" : "water"
-          }(ee, ie, He, be),
-          Te = function(ee, ie, He, ye) {
-            let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              Me = 0;
-            return pe.forEach(((Ue, Je) => {
-              let [oe, Re, ke] = Ue;
-              const qe = ze(ee(ie + oe, He + Re, ye + ke), be);
-              qe && (0, Ke.T)(Fe, qe, Xe[Je]) && (Me |= 1 << Je)
-            })), Me
-          }(ee, ie, He, be, fe),
-          Be = Je ? function(ee) {
-            var ie;
-            return !0 === (null === (ie = Oe(ee)) || void 0 === ie ? void 0 : ie.full)
-          }(qe) : We(ee, ie, He, be, fe, Te);
-        return (0, ye.j)((0, Me.o)(fe, Te, Be))
+      capturePhoto(WW, iW, OW) {
+        return function(WW, iW, OW, mW) {
+          return (0, LW.d)(cW(WW), iW, OW, mW)
+        }((0, NW.h)(), WW, iW, OW)
       }
     }
   },
-  38990: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => ye,
-      e: () => Me
+  42471: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW,
+      f: () => cW
     });
-    const ye = ["Chest", "Loot Chest", "Moonstone Chest"],
-      be = [{
-        name: "Workbench",
-        exactMatch: !0
-      }, {
-        name: "Furnace",
-        exactMatch: !0
-      }, {
-        name: "Artisan Bench",
-        exactMatch: !0
-      }, {
-        name: "Potion Table",
-        exactMatch: !0
-      }, {
-        name: "Salvaging Table",
-        exactMatch: !0
-      }, {
-        name: "Enchanting Table",
-        exactMatch: !1
-      }];
+    var mW = OW(1876);
+    const EW = 33177600,
+      NW = 3e4;
+    let PW = !1;
 
-    function Me(ee) {
-      return be.find((ie => ie.exactMatch ? ee === ie.name : ee.includes(ie.name)))
+    function LW(WW, iW, OW) {
+      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const {
+        scale: LW = 1,
+        type: cW = "image/png",
+        quality: wW
+      } = mW;
+      return WW.KZ() ? PW ? Promise.reject(new Error("A screenshot is already being taken")) : (PW = !0, new Promise(((mW, tW) => {
+        let ZW, xW = 2,
+          lW = null;
+        const AW = () => {
+          var iW;
+          PW = !1, null === (iW = lW) || void 0 === iW || iW(), clearTimeout(ZW);
+          try {
+            WW.restoreSize()
+          } catch (OW) {
+            console.error("A screenshot couldn't size the canvas back", OW)
+          }
+        };
+        ZW = setTimeout((() => {
+          AW(), tW(new Error("No frame was drawn to capture"))
+        }), NW);
+        try {
+          const mW = function(WW, iW, OW) {
+            const mW = Math.max(1, WW),
+              NW = Math.max(1, iW),
+              PW = Math.min(1, OW / Math.max(mW, NW), Math.sqrt(EW / (mW * NW)));
+            return {
+              width: Math.max(1, Math.floor(mW * PW)),
+              height: Math.max(1, Math.floor(NW * PW))
+            }
+          }(iW, OW, WW.maxTextureSize);
+          WW.resize(mW.width, mW.height, LW * mW.width / Math.max(1, iW))
+        } catch (bW) {
+          return AW(), void tW(bW)
+        }
+        lW = WW.onFrameDrawn((() => {
+          if (xW--, xW > 0) return;
+          const {
+            canvas: iW
+          } = WW, OW = {
+            width: iW.width,
+            height: iW.height
+          };
+          try {
+            iW.toBlob((WW => {
+              WW ? mW({
+                blob: WW,
+                ...OW
+              }) : tW(new Error("The canvas gave no image"))
+            }), cW, wW)
+          } catch (bW) {
+            tW(bW)
+          } finally {
+            AW()
+          }
+        }))
+      }))) : Promise.reject(new Error("Screenshots need a game to be running"))
+    }
+    async function cW(WW, iW, OW) {
+      try {
+        const EW = await LW(WW, iW, OW);
+        (0, mW.e)(EW.blob, `bloxd-screenshot-${EW.width}x${EW.height}-${Date.now()}.png`)
+      } catch (EW) {
+        console.error("Error taking screenshot:", EW)
+      }
+    }
+  },
+  38626: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => wW,
+      g: () => LW,
+      i: () => PW
+    });
+    var mW = OW(38623),
+      EW = OW(38631);
+    let NW = 0;
+
+    function PW(WW, iW) {
+      const OW = WW;
+      OW._noaFaceGroups = null !== iW && void 0 !== iW ? iW : null, OW._noaFaceEpoch = -1, OW._noaFaceMask = -1, OW._noaFaceCount = -1, OW._noaFaceMaterial = null;
+      const mW = WW.hY;
+      mW && 1 === mW.length && (mW[0].indexStart = 0, mW[0].indexCount = WW.getTotalIndices())
+    }
+
+    function LW(WW, iW) {
+      if (iW) {
+        NW++;
+        for (const iW of WW) {
+          const WW = iW._noaFaceGroups;
+          WW && PW(iW, WW)
+        }
+      } else NW = Math.max(0, NW - 1)
+    }
+
+    function cW(WW, iW, OW) {
+      let EW = -1,
+        NW = 0;
+      for (let PW = 0; PW < mW.f; PW++) {
+        const OW = WW[PW],
+          LW = WW[PW + 1];
+        LW > OW && iW & 1 << mW.d[PW] && (EW < 0 && (EW = OW), NW = LW)
+      }
+      return EW < 0 ? (OW[0] = 0, OW[1] = 0, 0) : (OW[0] = EW, OW[1] = NW - EW, NW - EW)
+    }
+    class wW {
+      constructor(WW, iW) {
+        this.jZ = WW, this.engine = iW, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+      }
+      apply(WW, iW) {
+        if (!iW) return;
+        const OW = iW.getProjectionMatrix().m,
+          PW = 0 === NW && 0 === OW[15],
+          LW = iW.globalPosition,
+          {
+            engine: wW
+          } = this,
+          tW = PW ? (0, EW.e)(OW, wW.getRenderWidth(), wW.getRenderHeight()) : 0;
+        LW.x === this.eyeX && LW.y === this.eyeY && LW.z === this.eyeZ && tW === this.focalPx && PW === this.culling || (this.epoch++, this.eyeX = LW.x, this.eyeY = LW.y, this.eyeZ = LW.z, this.focalPx = tW, this.culling = PW);
+        const {
+          epoch: ZW,
+          range: xW
+        } = this, lW = this.jZ / 2, AW = lW * Math.sqrt(3), bW = WW.data, jW = WW.length;
+        let UW = 0;
+        for (let NW = 0; NW < jW; NW++) {
+          const WW = bW[NW],
+            iW = WW._noaFaceGroups;
+          if (iW && (WW._noaFaceEpoch !== ZW || WW._noaFaceMaterial !== WW.material)) {
+            WW._noaFaceEpoch = ZW, WW._noaFaceMaterial = WW.material;
+            const OW = WW.hY,
+              NW = OW && 1 === OW.length ? OW[0] : null;
+            let wW = -1;
+            if (PW && NW && (0, mW.w)(WW.material)) {
+              const OW = WW.position,
+                mW = LW.x - OW.x,
+                NW = LW.y - OW.y,
+                PW = LW.z - OW.z,
+                cW = mW - lW,
+                ZW = NW - lW,
+                xW = PW - lW,
+                bW = Math.sqrt(cW * cW + ZW * ZW + xW * xW) + AW;
+              wW = (0, EW.m)(iW, mW, NW, PW, (0, EW.h)(bW, tW))
+            }
+            if (NW && wW !== WW._noaFaceMask) {
+              WW._noaFaceMask = wW;
+              let OW = 0,
+                EW = iW[mW.f]; - 1 !== wW && (EW = cW(iW, wW, xW), OW = xW[0]), WW._noaFaceCount = EW, NW.indexStart = 6 * OW, NW.indexCount = 6 * EW, NW.setBoundingInfo(WW.KV())
+            }
+          }
+          iW && 0 === WW._noaFaceCount || (bW[UW++] = WW)
+        }
+        WW.length = UW
+      }
+    }
+  },
+  38612: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => cW,
+      d: () => LW
+    });
+    const mW = new WeakSet;
+    let EW = 0;
+    const NW = new Set;
+
+    function PW(WW, iW) {
+      WW._data = iW
+    }
+
+    function LW(WW) {
+      var iW, OW;
+      (null !== (iW = null === (OW = WW.getBuffer()) || void 0 === OW ? void 0 : OW.aZ) && void 0 !== iW ? iW : 0) > 0 && (mW.add(WW), 0 === EW ? PW(WW, null) : NW.add(WW))
+    }
+
+    function cW(WW) {
+      EW++;
+      for (const OW of function(WW) {
+          const iW = new Set;
+          for (const EW of WW) {
+            const WW = EW.geometry;
+            for (const EW of Object.values(null !== (OW = null === WW || void 0 === WW ? void 0 : WW.getVertexBuffers()) && void 0 !== OW ? OW : {})) {
+              var OW;
+              const WW = EW.getWrapperBuffer();
+              mW.has(WW) && iW.add(WW)
+            }
+          }
+          return iW
+        }(WW)) OW.getData() || wW(OW), NW.add(OW);
+      let iW = !0;
+      return () => {
+        if (iW && (iW = !1, EW--, 0 === EW)) {
+          for (const WW of NW) PW(WW, null);
+          NW.clear()
+        }
+      }
+    }
+
+    function wW(WW) {
+      const iW = WW.getBuffer();
+      if (!iW || !(iW.aZ > 0)) return;
+      const OW = WW._engine,
+        mW = new Uint8Array(iW.aZ);
+      OW.bindArrayBuffer(iW), OW._gl.getBufferSubData(OW._gl.ARRAY_BUFFER, 0, mW), OW._resetVertexBufferBinding(), PW(WW, mW)
+    }
+  },
+  38623: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      f: () => NW,
+      g: () => cW,
+      k: () => mW,
+      o: () => LW,
+      s: () => EW,
+      w: () => wW
+    });
+    const mW = 6,
+      EW = [0, 2, 4, 1, 3, 5, 0, 2],
+      NW = 6,
+      PW = [1, 0, 3, 2, 5, 4];
+    for (let tW = NW; tW < EW.length; tW++)
+      if (EW[tW] !== EW[tW - NW]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const LW = EW.length + 1,
+      cW = (() => {
+        const WW = [];
+        for (let iW = 0; iW < NW; iW++) WW[EW[iW]] = iW;
+        return WW
+      })();
+
+    function wW(WW) {
+      return !!WW && WW.backFaceCulling && (0 === WW.transparencyMode || 1 === WW.transparencyMode)
+    }
+  },
+  38631: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => LW,
+      h: () => cW,
+      j: () => tW,
+      m: () => wW,
+      o: () => AW
+    });
+    var mW = OW(38623);
+    const EW = 1 / 16,
+      NW = 1 / 64,
+      PW = 2048;
+    mW.k;
+
+    function LW(WW, iW, OW) {
+      return Math.min(Math.abs(WW[0] * iW), Math.abs(WW[5] * OW)) / 2
+    }
+
+    function cW(WW, iW) {
+      return EW + NW * WW * WW / iW
+    }
+
+    function wW(WW, iW, OW, EW, NW) {
+      const PW = mW.o;
+      return tW(WW[PW], WW[PW + 1], WW[PW + 2], WW[PW + 3], WW[PW + 4], WW[PW + 5], iW, OW, EW, NW)
+    }
+
+    function tW(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW) {
+      return (PW <= WW - wW ? 0 : 1) | (PW >= iW + wW ? 0 : 2) | (LW <= OW - wW ? 0 : 4) | (LW >= mW + wW ? 0 : 8) | (cW <= EW - wW ? 0 : 16) | (cW >= NW + wW ? 0 : 32)
+    }
+    const ZW = (() => {
+        const WW = [];
+        for (let iW = 0; iW < mW.s.length; iW++) {
+          let OW = 0;
+          for (let EW = iW + 1; EW <= mW.s.length; EW++) {
+            const NW = 1 << mW.s[EW - 1];
+            if (OW & NW) break;
+            OW |= NW, WW.push({
+              start: iW,
+              end: EW,
+              iW: OW
+            })
+          }
+        }
+        return WW
+      })(),
+      xW = [];
+
+    function lW(WW, iW) {
+      const OW = mW.g[iW];
+      return WW[OW + 1] - WW[OW]
+    }
+
+    function AW(WW, iW, OW) {
+      let EW = 0;
+      for (let PW = 0; PW < mW.k; PW++) lW(WW, PW) > 0 && (EW |= 1 << PW);
+      if (0 === (iW &= EW)) return 0;
+      if (iW === EW) return OW[0] = 0, OW[1] = WW[mW.f], 1;
+      let NW = null,
+        LW = 1 / 0;
+      for (const wW of function(WW) {
+          let iW = xW[WW];
+          if (iW) return iW;
+          const OW = new Map,
+            mW = (WW, iW) => {
+              const mW = 4 * WW + iW.length / 2;
+              OW.has(mW) || OW.set(mW, {
+                iW: WW,
+                windows: iW
+              })
+            };
+          for (const NW of ZW)
+            if ((NW.iW & WW) === WW && mW(NW.iW, [NW.start, NW.end]), 0 !== (NW.iW & WW))
+              for (const iW of ZW) iW.start < NW.end || 0 !== (NW.iW & iW.iW) || 0 === (iW.iW & WW) || ((NW.iW | iW.iW) & WW) !== WW || mW(NW.iW | iW.iW, [NW.start, NW.end, iW.start, iW.end]);
+          const EW = [...OW.values()];
+          return iW = EW.filter((WW => !EW.some((iW => iW !== WW && (iW.iW & WW.iW) === iW.iW && iW.windows.length <= WW.windows.length)))), xW[WW] = iW, iW
+        }(iW)) {
+        let OW = (wW.windows.length / 2 - 1) * PW;
+        const cW = wW.iW & ~iW & EW;
+        for (let iW = 0; iW < mW.k; iW++) cW & 1 << iW && (OW += lW(WW, iW));
+        OW < LW && (NW = wW, LW = OW)
+      }
+      const cW = NW.windows;
+      for (let mW = 0; mW < cW.length; mW += 2) {
+        const iW = WW[cW[mW]];
+        OW[mW] = iW, OW[mW + 1] = WW[cW[mW + 1]] - iW
+      }
+      return cW.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

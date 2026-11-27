@@ -1,8684 +1,11252 @@
+/*! For license information please see 1yqdn.301.00b8a7e0.chunk.js.LICENSE.txt */
 export const id = 301;
 export const ids = [301];
 export const modules = {
-  44799: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => pe,
-      g: () => Ue,
-      h: () => Ke,
-      l: () => Je
+  42009: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => uP,
+      h: () => oP,
+      k: () => tc
     });
-    var ye = He(38020),
-      be = He(39499),
-      Me = He(39492);
-
-    function Ke(ee, ie, He, ye) {
-      const be = Me.v;
-      ie.fill(0), ee.gravity.toArray(ie, be.gravity), ee.colorDead.toArray(ie, be.colorDead), He[be.ramp] = ee.useRampGradients ? 1 : 0;
-      const Ke = ee.getColorGradients(),
-        Ue = ke(ee, Ke, "colour", ye);
-      He[be.colorCount] = Ue;
-      for (let Me = 0; Me < Ue; Me++) {
-        var Fe;
-        const ee = Ke[qe(Ke, Me)];
-        ie[be.colorPositions + Me] = ee.gradient, ee.color1.toArray(ie, be.color1 + 4 * Me), (null !== (Fe = ee.color2) && void 0 !== Fe ? Fe : ee.color1).toArray(ie, be.color2 + 4 * Me)
-      }
-      const Je = ee.getVelocityGradients(),
-        oe = ke(ee, Je, "Op", ye);
-      He[be.velocityCount] = oe;
-      for (let Me = 0; Me < oe; Me++) ze(ie, be.Op + 4 * Me, Je[qe(Je, Me)]);
-      const Re = ee.useRampGradients ? ee.getColorRemapGradients() : null,
-        fe = ke(ee, Re, "colour remap", ye);
-      He[be.remapCount] = fe;
-      for (let Me = 0; Me < fe; Me++) ze(ie, be.remap + 4 * Me, Re[qe(Re, Me)])
-    }
-
-    function Ue() {
-      return {
-        key: [],
-        texels: new Uint8Array(4 * Me.i)
-      }
-    }
-    const Fe = [];
-
-    function Je(ee, ie) {
-      return oe(ee, Fe), !Xe(Fe, ie.key) && (ie.key.length = 0, ie.key.push(...Fe), ie.key.length > 0 && function(ee, ie) {
-        for (let He = 0; He < Me.i; He++) be.k.GetCurrentGradient(He / Me.i, ee, ((ee, ie, He) => {
-          ye.Color3.LerpToRef(ee.color, ie.color, He, Re)
-        })), ie[4 * He] = 255 * Re.r, ie[4 * He + 1] = 255 * Re.g, ie[4 * He + 2] = 255 * Re.b, ie[4 * He + 3] = 255
-      }(ee.getRampGradients(), ie.texels), !0)
-    }
-
-    function oe(ee, ie) {
-      ie.length = 0;
-      const He = ee.useRampGradients ? ee.getRampGradients() : null;
-      if (null !== He && void 0 !== He && He.length) {
-        ie.push(He.length);
-        for (const ee of He) ie.push(ee.gradient, ee.color.r, ee.color.g, ee.color.b)
-      }
-    }
-    const Re = new ye.Color3;
-
-    function ke(ee, ie, He, ye) {
-      return ie ? ie.length > Me.b ? (ye(`particleStops:${He}`, `GPU particles use the first 2 and last ${Me.b-2} of more than ${Me.b} ${He} gradient stops (${ee.name})`), Me.b) : ie.length : 0
-    }
-
-    function qe(ee, ie) {
-      return ie < 2 || ee.length <= Me.b ? ie : ee.length - Me.b + ie
-    }
-    const fe = new Float32Array(Me.n),
-      Te = new Uint32Array(fe.buffer);
-
-    function pe(ee, ie, He) {
-      return Ke(ee, fe, Te, He), ie && Xe(Te, ie) ? null : Te.slice()
-    }
-
-    function Xe(ee, ie) {
-      if (ee.length !== ie.length) return !1;
-      for (let He = 0; He < ee.length; He++)
-        if (ee[He] !== ie[He]) return !1;
-      return !0
-    }
-
-    function ze(ee, ie, He) {
-      var ye;
-      ee[ie] = He.gradient, ee[ie + 1] = He.factor1, ee[ie + 2] = null !== (ye = He.factor2) && void 0 !== ye ? ye : He.factor1
-    }
-  },
-  42229: (ee, ie, He) => {
-    function ye(ee, ie, He) {
-      const ye = ie * ie * 4,
-        be = ee[0].layers,
-        Me = be * (ee.length - 1) + ee[ee.length - 1].layers,
-        Ke = new Uint8Array(Me * ye);
-      ee.forEach(((ie, He) => {
-        const Me = He + 1 < ee.length ? Math.min(ie.layers, be) : ie.layers;
-        Ke.set(new Uint8Array(ie.pixels.buffer, ie.pixels.byteOffset, Me * ye), He * be * ye)
-      }));
-      const Ue = Math.max(1, Math.min(Me, He || Me));
-      if (Ue === Me) return [{
-        pixels: Ke,
-        layers: Me
-      }];
-      const Fe = [];
-      for (let Je = 0; Je < Me; Je += Ue) {
-        const ee = Math.min(Me, Je + Ue);
-        Fe.push({
-          pixels: Ke.slice(Je * ye, ee * ye),
-          layers: ee - Je
-        })
-      }
-      return Fe
-    }
-    He.d(ie, {
-      c: () => ye,
-      e: () => Me
-    });
-    const be = new WeakMap;
-
-    function Me(ee, ie, He) {
-      var ye, Me;
-      const Ke = null !== (ye = be.get(ee)) && void 0 !== ye ? ye : new Map;
-      be.set(ee, Ke);
-      const Ue = null !== (Me = Ke.get(ie[0])) && void 0 !== Me ? Me : [];
-      Ke.set(ie[0], Ue);
-      const Fe = Ue.find((ee => ee.urls.length === ie.length && ee.urls.every(((ee, He) => ee === ie[He]))));
-      if (Fe) return Fe.built;
-      const Je = {
-        urls: [...ie],
-        built: He()
-      };
-      return Ue.push(Je), Je.built.catch((() => {
-        Ue.splice(Ue.indexOf(Je), 1)
-      })), Je.built
-    }
-  },
-  44791: (ee, ie, He) => {
-    function ye() {
-      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const ie = new Set;
-      return (He, ye) => {
-        ie.has(He) || (ie.add(He), console.warn(ee + ye))
-      }
-    }
-    He.d(ie, {
-      b: () => ye
-    })
-  },
-  44835: (ee, ie, He) => {
-    He.d(ie, {
-      createLiteRendererAsync: () => LF,
-      liteBabylonBackend: () => ve,
-      setPipelineFailureHook: () => Ui
-    });
-    var ye = He(38020),
-      be = He(38341),
-      Me = He(38743),
-      Ke = He(38070),
-      Ue = He(38751);
-    class Fe extends Ue.b {
-      constructor() {
-        for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
-        super(...ie), this.color = new ye.Color3(1, 1, 1), this.alpha = 1, this.material = {
-          name: "colorShader",
-          uniqueId: ie[0].Xx().getUniqueId(),
-          shaderPath: "color",
-          fillMode: 4,
-          sideOrientation: null,
-          alphaMode: 2,
-          forceDepthWrite: !1,
-          disableDepthWrite: !1,
-          backFaceCulling: !0,
-          cullBackFaces: !0,
-          depthFunction: 0,
-          zOffset: 0,
-          zOffsetUnits: 0,
-          disableColorWrite: !1,
-          getClassName: () => "ShaderMaterial",
-          needAlphaBlendingForMesh: ee => ee.visibility < 1 || ee.hasVertexAlpha,
-          needAlphaTestingForMesh: () => !1,
-          dispose: () => {}
-        }
-      }
-      getClassName() {
-        return "LinesMesh"
-      }
-    }
-    const Je = ["VERTEXCOLOR", "VERTEXALPHA", "INSTANCES", "THIN_INSTANCES", "INSTANCESCOLOR", "FOG", "LITE_FRONT_LAYER"],
-      oe = ee => 1 << Je.indexOf(ee),
-      Re = oe("VERTEXCOLOR"),
-      ke = oe("INSTANCES"),
-      qe = oe("THIN_INSTANCES"),
-      fe = oe("INSTANCESCOLOR"),
-      Te = oe("FOG"),
-      pe = oe("LITE_FRONT_LAYER");
-
-    function Xe(ee, ie, He, ye) {
-      let be = 0;
-      return ee.isVerticesDataPresent("color") && (be |= Re), "none" !== ie && (be |= ke), "thin" === ie && (be |= qe, ee.isVerticesDataPresent("instanceColor") && (be |= fe)), ye.fogEnabled && ee.applyFog && 0 !== ye.fogMode && (be |= Te), He >= 1 && (be |= pe), be
-    }
-
-    function ze(ee, ie) {
-      ee.updateColor4("color", ie.color, ie.alpha)
-    }
-    var Be = He(38682),
-      Ee = He(38146),
-      ge = He(38081),
-      Oe = He(38034),
-      de = He(38659),
-      We = He(38673),
-      te = He(38057),
-      Ze = He(38064),
-      we = He(38075);
-    const De = Oe.b.GLSL;
-    class Pe {
-      constructor(ee, ie) {
-        this.name = ee, this.yp = ie, this.uniqueId = void 0, this.checkReadyOnlyOnce = !1, this._blockDirtyMechanism = !1, this.disposers = [], this.Bx = {
-          addOnce: ee => {
-            this.disposers.push(ee)
-          }
-        }, this.uniqueId = ie.getUniqueId()
-      }
-      get isFrozen() {
-        return this.checkReadyOnlyOnce
-      }
-      Xx() {
-        return this.yp
-      }
-      getClassName() {
-        return "LiteMaterial"
-      }
-      freeze() {
-        this.checkReadyOnlyOnce = !0
-      }
-      unfreeze() {
-        this.checkReadyOnlyOnce = !1
-      }
-      markDirty() {}
-      get fillMode() {
-        return this.model.fillMode
-      }
-      needAlphaBlendingForMesh(ee) {
-        return (0, te.M)(this.model, ee.visibility, ee.hasVertexAlpha)
-      }
-      needAlphaTestingForMesh(ee) {
-        return (0, te.O)(this.model, ee.visibility, ee.hasVertexAlpha)
-      }
-      dispose() {
-        (0, Ee.m)(this);
-        for (const ee of this.disposers.splice(0)) ee()
-      }
-      get model() {
-        return (0, te.V)(this)
-      }
-    }
-    const Ae = new WeakSet;
-
-    function Ye(ee) {
-      return Ae.has(ee)
-    }
-
-    function Ve(ee) {
-      Ae.add(ee)
-    }
-    const ae = {
-      create: (ee, ie) => ((0, ge.o)(ee, new Pe(ee.name, ie)), Ze.b.defines()),
-      write: () => {},
-      addFeature: (ee, ie) => {
-        const He = ee.mirror;
-        ie.feature === We.e && ie.state.dirLightCount > 0 && (ee.disableLighting = !0, (0, te.S)(ee)), "BLOXD_LIGHTING" in ie.defines && (0, Ee.i)(He), ie.feature === de.k && ((0, Be.l)(ie.state, De), function(ee, ie) {
-          const He = ee.Xx().Nf();
-          setTimeout((() => {
-            He.atlasArrays(ie.sources).then((He => {
-              (0, Be.d)(ee, ie, He.map((ee => ({
-                atlas: ee,
-                layers: ee.layers
-              }))), He[0].layerWidth, De)
-            })).catch((ee => {
-              console.error("Failed to build the atlas's texture arrays", ee)
-            }))
-          }))
-        }(He, ie.state))
+    var mW, EW = Object.defineProperty,
+      NW = (WW, iW, OW) => ((WW, iW, OW) => iW in WW ? EW(WW, iW, {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: OW
+      }) : WW[iW] = OW)(WW, "symbol" !== typeof iW ? iW + "" : iW, OW),
+      PW = Object.defineProperty,
+      LW = (WW, iW, OW) => ((WW, iW, OW) => iW in WW ? PW(WW, iW, {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: OW
+      }) : WW[iW] = OW)(WW, "symbol" !== typeof iW ? iW + "" : iW, OW),
+      cW = (WW => (WW[WW.Document = 0] = "Document", WW[WW.DocumentType = 1] = "DocumentType", WW[WW.Element = 2] = "Element", WW[WW.Text = 3] = "Text", WW[WW.CDATA = 4] = "CDATA", WW[WW.Comment = 5] = "Comment", WW))(cW || {});
+    const wW = {
+        Node: ["childNodes", "parentNode", "parentElement", "textContent", "ownerDocument", "firstChild", "lastChild", "nextSibling", "previousSibling"],
+        ShadowRoot: ["host", "styleSheets"],
+        Element: ["shadowRoot", "querySelector", "querySelectorAll"],
+        MutationObserver: []
       },
-      texture: (ee, ie, He) => {
-        let {
-          data: ye,
-          sets: be
-        } = He;
-        var Me;
-        (Ve(ee), ye) && (ee.uvSet = null !== (Me = null === be || void 0 === be ? void 0 : be.coordinatesIndex) && void 0 !== Me ? Me : 0, (0, ge.Z)(ee.matrix, null !== be && void 0 !== be ? be : {}))
+      tW = {
+        Node: ["contains", "getRootNode"],
+        ShadowRoot: ["getSelection"],
+        Element: [],
+        MutationObserver: ["constructor"]
       },
-      cube: Ve,
-      canvas: (ee, ie, He) => {
-        let {
-          width: ye,
-          height: be,
-          mipmaps: Me,
-          samplingMode: Ke = we.h.trilinear,
-          hasAlpha: Ue = !1,
-          wrap: Fe = we.b.clamp
-        } = He;
-        const Je = ee.Nf().createCanvas(ye, be),
-          oe = new we.k("2d", {
-            kind: "canvas",
-            width: ye,
-            height: be,
-            canvas: Je
-          }, {
-            samplingMode: Ke,
-            wrapU: Fe,
-            wrapV: Fe,
-            noMipmap: !Me,
-            invertY: !0
-          });
-        return oe.hasAlpha = Ue, Ve(oe), oe
-      }
-    };
-    var ce = He(38171),
-      xe = He(37931);
-    class Le {
-      constructor(ee, ie, He) {
-        this.engine = ee, this.clearColor = ie, this.ambientColor = He, this.onBeforeRenderObservable = new xe.d, this.onBeforeCameraRenderObservable = new xe.d, this.onAfterRenderObservable = new xe.d, this.activeCamera = null, this.useRightHandedSystem = !1, this.iblIntensity = 1, this.particlesEnabled = !0, this.meshes = [], this.materials = [], this.textures = [], this.transformNodes = [], this.zW = [], this.frustumPlanes = void 0, this.draw = () => {}, this.frameId = 0, this.animationRatio = 1, this.lastId = 0, this.pending = []
-      }
-      Nf() {
-        return this.engine
-      }
-      getUniqueId() {
-        return ++this.lastId
-      }
-      getFrameId() {
-        return this.frameId
-      }
-      getAnimationRatio() {
-        return this.animationRatio
-      }
-      addPendingData(ee) {
-        this.pending.push(ee)
-      }
-      removePendingData(ee) {
-        const ie = this.pending.indexOf(ee); - 1 !== ie && this.pending.splice(ie, 1)
-      }
-      getWaitingItemsCount() {
-        return this.pending.length
-      }
-      isReady() {
-        return 0 === this.pending.length
-      }
-      getActiveMeshes() {
-        return []
-      }
-      render() {
-        this.frameId++, this.animationRatio = .06 * Math.max(1, Math.min(this.engine.getDeltaTime(), 1e3)), this.draw(), this.onAfterRenderObservable.notifyObservers(this)
-      }
-    }
+      ZW = {},
+      xW = {};
 
-    function Ce() {
-      throw new Error("Lite has no WebGL engine, Babylon particles or Babylon picks")
+    function lW(WW) {
+      if (ZW[WW]) return ZW[WW];
+      const iW = globalThis[WW],
+        OW = iW.prototype,
+        mW = WW in wW ? wW[WW] : void 0,
+        EW = Boolean(mW && mW.every((WW => {
+          var iW, mW;
+          return Boolean(null == (mW = null == (iW = Object.getOwnPropertyDescriptor(OW, WW)) ? void 0 : iW.get) ? void 0 : mW.toString().includes("[native code]"))
+        }))),
+        NW = WW in tW ? tW[WW] : void 0,
+        PW = Boolean(NW && NW.every((WW => {
+          var iW;
+          return "function" === typeof OW[WW] && (null == (iW = OW[WW]) ? void 0 : iW.toString().includes("[native code]"))
+        })));
+      if (EW && PW && !globalThis.Zone) return ZW[WW] = iW.prototype, iW.prototype;
+      try {
+        const mW = document.createElement("iframe");
+        mW.style.display = "none", document.body.appendChild(mW);
+        const EW = mW.contentWindow;
+        if (!EW) return iW.prototype;
+        const NW = EW[WW].prototype;
+        if (!NW) return mW.remove(), OW;
+        const PW = navigator.userAgent;
+        return PW.includes("Safari") && !PW.includes("Chrome") ? (mW.classList.add("rr-block"), mW.setAttribute("__rrwebUntaintedMutationObserver", ""), xW[WW] = () => mW.remove()) : mW.remove(), ZW[WW] = NW
+      } catch {
+        return OW
+      }
     }
-    const ve = {
-      Rbe: Ce,
-      VMe: (ee, ie) => {
-        const He = new Le(ee.engine, ye.e.FromArray(ie.clearColor), ye.Color3.FromArray(ie.ambientColor));
-        (0, Ke.d)(ae, He), ee.yp = He,
-          function(ee, ie) {
-            const He = Object.assign((0, ce.h)(ee, "camera"), {
-              layerMask: 268435455
-            });
-            ee.model.nodes.setWorldSource(He.row, ee.model.view.worldMatrix), ee.camera = ie.activeCamera = He
-          }(ee, He), (0, be.f)(ee, ((ee, ie, He) => (0, Me.g)(ee, ie, He, Ue.b)))
+    const AW = {};
+
+    function bW(WW, iW, OW) {
+      var mW, EW;
+      const NW = null == (mW = AW[WW]) ? void 0 : mW[OW];
+      if (NW) return NW.call(iW);
+      const PW = lW(WW),
+        LW = null == (EW = Object.getOwnPropertyDescriptor(PW, OW)) ? void 0 : EW.get;
+      return LW ? ((AW[WW] || (AW[WW] = {}))[OW] = LW, LW.call(iW)) : iW[OW]
+    }
+    const jW = {};
+
+    function UW(WW, iW, OW) {
+      const mW = `${WW}.${String(OW)}`;
+      if (jW[mW]) return jW[mW].bind(iW);
+      const EW = lW(WW)[OW];
+      return "function" !== typeof EW ? iW[OW] : (jW[mW] = EW, EW.bind(iW))
+    }
+    let kW = Date.now;
+    /[1-9][0-9]{12}/.test(Date.now().toString()) || (kW = () => (new Date).getTime());
+    const sW = {
+      ownerDocument: function(WW) {
+        return bW("Node", WW, "ownerDocument")
       },
-      DMe: () => {},
-      setBabylonFog: () => {},
-      cMe: Ce,
-      vMe: () => {},
-      linesFromArrays: (ee, ie, He) => (0, Me.g)(ee, ie, He, Fe),
-      bp: () => {},
-      CMe: Ce
-    };
-    var ue = He(44888),
-      me = He(44900),
-      le = He(44909);
-    class Se {
-      constructor(ee) {
-        this.deviceLost = void 0, this.lost = !1, this.refusedFrames = 0, this.refused = void 0;
-        const ie = new Promise((ee => {
-          this.refused = ee
-        }));
-        this.deviceLost = Promise.race([ee, ie]), this.deviceLost.then((() => {
-          this.lost = !0
-        }))
-      }
-      frameDrawn() {
-        this.refusedFrames = 0
-      }
-      frameFailed(ee) {
-        (function(ee) {
-          const {
-            name: ie,
-            message: He
-          } = null !== ee && void 0 !== ee ? ee : {};
-          return "InvalidStateError" === ie && "string" === typeof He && He.startsWith("GPUDevice.")
-        })(ee) && (this.refusedFrames++, 3 === this.refusedFrames && this.refused({
-          reason: "unknown",
-          message: ee.message,
-          framesRefused: !0
-        }))
-      }
-    }
-    var ne = He(42229),
-      je = He(39508);
-
-    function se(ee) {
-      return Math.max(4, 4 * Math.ceil(ee / 4))
-    }
-
-    function Ie(ee, ie, He, ye) {
-      const be = ee.createBuffer({
-        label: ye,
-        size: se(ie.byteLength),
-        usage: He,
-        mappedAtCreation: !0
-      });
-      return new Uint8Array(be.getMappedRange(), 0, ie.byteLength).set(new Uint8Array(ie.buffer, ie.byteOffset, ie.byteLength)), be.unmap(), be
-    }
-
-    function he(ee, ie) {
-      return Math.floor(Math.log2(Math.max(ee, ie))) + 1
-    }
-
-    function Ne(ee, ie, He, ye, be, Me) {
-      const Ke = ee.createTexture({
-          label: Me,
-          size: {
-            width: He,
-            height: ye,
-            depthOrArrayLayers: be
-          },
-          format: "rgba8unorm",
-          mipLevelCount: he(He, ye),
-          usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
-        }),
-        Ue = (ie, He, ye, Me) => {
-          ee.queue.writeTexture({
-            texture: Ke,
-            mipLevel: He
-          }, ie, {
-            bytesPerRow: 4 * ye,
-            rowsPerImage: Me
-          }, {
-            width: ye,
-            height: Me,
-            depthOrArrayLayers: be
-          })
-        };
-      Ue(ie, 0, He, ye);
-      let Fe = 1;
-      for (const Je of function*(ee, ie, He, ye) {
-          let be = ee,
-            Me = ie,
-            Ke = He;
-          for (; Me > 1 || Ke > 1;) {
-            const ee = Math.max(1, Me >> 1),
-              ie = Math.max(1, Ke >> 1),
-              He = new Uint8Array(ee * ie * ye * 4),
-              Ue = 4 * Me;
-            let Fe = 0;
-            for (let Je = 0; Je < ye; Je++) {
-              const ye = Je * Ue * Ke;
-              for (let Je = 0; Je < ie; Je++) {
-                const ie = ye + Math.min(2 * Je, Ke - 1) * Ue,
-                  oe = ye + Math.min(2 * Je + 1, Ke - 1) * Ue;
-                for (let ye = 0; ye < ee; ye++) {
-                  const ee = 4 * Math.min(2 * ye, Me - 1),
-                    Ke = 4 * Math.min(2 * ye + 1, Me - 1);
-                  for (let ye = 0; ye < 4; ye++) He[Fe++] = be[ie + ee + ye] + be[ie + Ke + ye] + be[oe + ee + ye] + be[oe + Ke + ye] + 2 >> 2
-                }
-              }
+      childNodes: function(WW) {
+        return bW("Node", WW, "childNodes")
+      },
+      parentNode: function(WW) {
+        return bW("Node", WW, "parentNode")
+      },
+      parentElement: function(WW) {
+        return bW("Node", WW, "parentElement")
+      },
+      textContent: function(WW) {
+        return bW("Node", WW, "textContent")
+      },
+      firstChild: function(WW) {
+        return bW("Node", WW, "firstChild")
+      },
+      lastChild: function(WW) {
+        return bW("Node", WW, "lastChild")
+      },
+      nextSibling: function(WW) {
+        return bW("Node", WW, "nextSibling")
+      },
+      previousSibling: function(WW) {
+        return bW("Node", WW, "previousSibling")
+      },
+      contains: function(WW, iW) {
+        return UW("Node", WW, "contains")(iW)
+      },
+      getRootNode: function(WW) {
+        return UW("Node", WW, "getRootNode")()
+      },
+      host: function(WW) {
+        return WW && "host" in WW ? bW("ShadowRoot", WW, "host") : null
+      },
+      styleSheets: function(WW) {
+        return WW.styleSheets
+      },
+      shadowRoot: function(WW) {
+        return WW && "shadowRoot" in WW ? bW("Element", WW, "shadowRoot") : null
+      },
+      querySelector: function(WW, iW) {
+        return bW("Element", WW, "querySelector")(iW)
+      },
+      querySelectorAll: function(WW, iW) {
+        return bW("Element", WW, "querySelectorAll")(iW)
+      },
+      nowTimestamp: kW,
+      mutationObserverCtor: function() {
+        return [lW("MutationObserver").constructor, xW.MutationObserver ?? (() => {})]
+      },
+      patch: function(WW, iW, OW) {
+        try {
+          if (!(iW in WW)) return () => {};
+          const mW = WW[iW],
+            EW = OW(mW);
+          return "function" === typeof EW && (EW.prototype = EW.prototype || {}, Object.defineProperties(EW, {
+            __rrweb_original__: {
+              enumerable: !1,
+              value: mW
             }
-            yield {
-              data: He,
-              width: ee,
-              height: ie
-            }, be = He, Me = ee, Ke = ie
+          })), WW[iW] = EW, () => {
+            WW[iW] = mW
           }
-        }(ie, He, ye, be)) Ue(Je.data, Fe++, Je.width, Je.height);
-      return Ke
-    }
-    const Ge = {
-      premultiplyAlpha: "none",
-      colorSpaceConversion: "none"
+        } catch {
+          return () => {}
+        }
+      }
     };
 
-    function re(ee) {
-      if (ee.startsWith("data:")) {
-        const ie = ee.search(/[;,]/);
-        return `data:${ie>5?ee.slice(5,ie):""} URL of ${ee.length} characters`
-      }
-      return ee.length > 80 ? `${ee.slice(0,80)}...` : ee
+    function MW(WW) {
+      return WW.nodeType === WW.ELEMENT_NODE
     }
-    async function Qe(ee) {
-      const ie = await fetch(ee);
-      if (!ie.ok) throw new Error(`${re(ee)}: ${ie.status} ${ie.statusText}`);
-      return createImageBitmap(await ie.blob(), Ge)
-    }
-    async function ei(ee) {
-      const ie = await Qe(ee),
-        He = new OffscreenCanvas(ie.width, ie.height),
-        ye = He.getContext("2d", {
-          willReadFrequently: !0
-        });
-      if (!ye) throw new Error("No 2D context to decode an image");
-      ye.drawImage(ie, 0, 0);
-      const {
-        data: be
-      } = ye.getImageData(0, 0, ie.width, ie.height);
-      return ie.close(), {
-        pixels: new Uint8Array(be.buffer, be.byteOffset, be.byteLength),
-        width: He.width,
-        height: He.height
-      }
-    }
-
-    function ii(ee, ie) {
-      return (0, ne.e)(ee, ie.urls, (async () => {
-        const He = await Promise.all(ie.urls.map((async (ee, He) => {
-            var ye, be, Me, Ke, Ue;
-            return null !== (Ke = null !== (be = null === (Me = ie.pixels) || void 0 === Me ? void 0 : Me[He]) && void 0 !== be ? be : null, Ue = ie.layerWidth, ye = null !== Ke && void 0 !== Ke && Ke.byteLength && Ue && Ke.byteLength % (Ue * Ue * 4) === 0 ? {
-              pixels: Ke,
-              layerWidth: Ue,
-              layers: Ke.byteLength / (Ue * Ue * 4)
-            } : null) && void 0 !== ye ? ye : await async function(ee) {
-              const {
-                pixels: ie,
-                width: He
-              } = await ei(ee);
-              return {
-                pixels: ie,
-                layerWidth: He,
-                layers: ie.byteLength / (He * He * 4)
-              }
-            }(ee)
-          }))),
-          ye = He[0].layerWidth;
-        return (0, ne.c)(He, ye, ee.limits.maxTextureArrayLayers).map(((He, be) => {
-          let {
-            pixels: Me,
-            layers: Ke
-          } = He;
-          return {
-            texture: Ne(ee, Me, ye, ye, Ke, `atlas-${be}-${re(ie.urls[0])}`),
-            layerWidth: ye,
-            layers: Ke
-          }
-        }))
-      }))
-    }
-    const Hi = new Map([
-        [0, "zero"],
-        [1, "one"],
-        [768, "src"],
-        [769, "one-minus-src"],
-        [770, "src-alpha"],
-        [771, "one-minus-src-alpha"],
-        [772, "dst-alpha"],
-        [773, "one-minus-dst-alpha"],
-        [774, "dst"],
-        [775, "one-minus-dst"],
-        [776, "src-alpha-saturated"]
-      ]),
-      yi = new Map([
-        [1, [770, 1, "add"]],
-        [2, [770, 771, "add"]],
-        [3, [0, 769, "add"]],
-        [4, [774, 0, "add"]],
-        [5, [770, 769, "add"]],
-        [6, [1, 1, "add"]],
-        [7, [1, 771, "add"]],
-        [8, [1, 771, "add"]],
-        [10, [1, 769, "add"]],
-        [11, [1, 1, "add"]],
-        [14, [1, 771, "add"]],
-        [15, [1, 1, "add"]],
-        [17, [770, 771, "add"]],
-        [18, [1, 1, "min"]],
-        [19, [1, 1, "max"]]
-      ]);
-
-    function bi(ee) {
-      for (const ie of (0, je.p)(ee))
-        if (!yi.has((0, je.l)(ie))) return !1;
-      return !0
-    }
-
-    function Mi(ee) {
-      const ie = yi.get(ee);
-      if (!ie) return null;
-      const [He, ye, be] = ie;
-      return {
-        srcFactor: Hi.get(He),
-        dstFactor: Hi.get(ye),
-        operation: be
-      }
-    }
-    let Ki = null;
-
-    function Ui(ee) {
-      Ki = ee
-    }
-    const Fi = new WeakSet;
-
-    function Ji(ee) {
-      return Fi.has(ee)
-    }
-
-    function oi(ee, ie, He, ye) {
-      let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      var Me;
-      Ji(ee) || (null === (Me = Ki) || void 0 === Me || Me(ie, He, ye, be))
-    }
-    class Ri {
-      constructor(ee) {
-        this.resources = ee, this.matrixKey = {
-          bk: 0
-        }, this.attributesKey = {
-          bk: 0
-        }, this.inputs = Object.create(null);
-        for (let ie = 0; ie < 4; ie++) this.inputs[`world${ie}`] = new fi(this.matrixKey, 16 * ie, 64, 4)
-      }
-      release() {
-        this.resources.liveUploads.delete(this), this.resources.bufferDeleted(this.matrixKey), this.resources.bufferDeleted(this.attributesKey)
-      }
-      bind(ee, ie) {
-        this.resources.liveUploads.add(this), this.resources.vertexBufferCreated(this.matrixKey, ee, !0), ie && this.resources.vertexBufferCreated(this.attributesKey, ie, !0)
-      }
-    }
-    class ki extends Ri {
-      constructor(ee, ie, He) {
-        super(ee), this.mesh = ie, this.rowStride = void 0, this.matrices = null, this.attributes = null;
-        const ye = this.inputs;
-        let be = 0;
-        for (const {
-            size: Ke
-          }
-          of He) be += Ke;
-        for (const {
-            name: Ke,
-            offset: Ue,
-            size: Fe,
-            type: Je
-          }
-          of He) ye[Ke] = new fi(this.attributesKey, 4 * Ue, 4 * be, Fe, !0, Je);
-        this.rowStride = be, ee.Zee.set(ie, this);
-        const Me = ie.isVerticesDataPresent;
-        ie.isVerticesDataPresent = (ee, He) => ee in ye || Me.call(ie, ee, He)
-      }
-      attach(ee, ie) {
-        this.matrices = ee, this.attributes = ie, this.bind(ee, ie), this.mirror(ee, ee.length, ee.length / 16)
-      }
-      rebind() {
-        this.bind(this.matrices, this.attributes)
-      }
-      Rie(ee) {
-        this.matrices && this.resources.vertexBufferUpdated(this.matrixKey, this.matrices, 0, ee ? 64 * ee : void 0)
-      }
-      kie() {
-        this.attributes && this.resources.vertexBufferUpdated(this.attributesKey, this.attributes)
-      }
-      matrixRows(ee, ie) {
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 16 * ee, 16 * ie)
-      }
-      attributeRows(ee, ie) {
-        this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, ee * this.rowStride, ie * this.rowStride)
-      }
-      release() {
-        super.release(), this.matrices = null, this.attributes = null, this.mirror(null, 512, 0)
-      }
-      mirror(ee, ie, He) {
-        const ye = this.mesh._thinInstanceDataStorage;
-        ye.matrixData = ee, ye.matrixBufferSize = ie, ye.worldMatrices = null, ye.instancesCount = He
-      }
-    }
-    class qi extends Ri {
-      constructor(ee, ie, He) {
-        var ye, be, Me, Ke;
-        super(ee), this.layout = void 0, this.offsets = void 0, this.rowStride = void 0, this.matrices = new Float32Array(512), this.attributes = void 0, this.frame = -1, this.count = 0, this.packedSource = null, this.packedBatch = null, this.layout = null !== (ye = null === He || void 0 === He ? void 0 : He.interleavedKinds) && void 0 !== ye ? ye : null, this.offsets = null !== (be = null === He || void 0 === He ? void 0 : He.interleavedOffsets) && void 0 !== be ? be : [], this.rowStride = null !== (Me = null === He || void 0 === He ? void 0 : He.interleavedRowStride) && void 0 !== Me ? Me : 0, null === (Ke = this.layout) || void 0 === Ke || Ke.forEach(((ee, ie) => {
-          this.inputs[ee] = new fi(this.attributesKey, 4 * this.offsets[ie], 4 * this.rowStride, He.strides[ee])
-        })), this.attributes = this.rowStride > 0 ? new Float32Array(32 * this.rowStride) : null, this.bind(this.matrices, this.attributes), ee.batchUploads.set(ie, this), ie.Bx.addOnce((() => {
-          this.release()
-        }))
-      }
-      rebind() {
-        this.bind(this.matrices, this.attributes)
-      }
-      get packedMatrices() {
-        return this.matrices
-      }
-      packedRowMesh(ee) {
-        const ie = this.packedBatch;
-        return ie.renderSelf ? 0 === ee ? this.packedSource : ie.instances[ee - 1] : ie.instances[ee]
-      }
-      get packedAttributes() {
-        return this.attributes
-      }
-      pack(ee, ie, He, ye) {
-        const be = (ie.renderSelf ? 1 : 0) + ie.rows.length;
-        if (this.frame = ye, this.count = be, this.packedSource = ee, this.packedBatch = ie, 0 === be) return;
-        if (ee.getWorldMatrix(), 16 * be > this.matrices.length) {
-          let ee = this.matrices.length / 16;
-          for (; ee < be;) ee *= 2;
-          this.matrices = new Float32Array(16 * ee), this.attributes &&= new Float32Array(ee * this.rowStride), this.bind(this.matrices, this.attributes)
-        }
-        let Me = 0;
-        ie.renderSelf && this.packRow(Me++, ee, ie.row, He);
-        for (let Ke = 0; Ke < ie.rows.length; Ke++) this.packRow(Me++, ie.instances[Ke], ie.rows[Ke], He);
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 0, 16 * be), this.attributes && this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, 0, be * this.rowStride)
-      }
-      packRow(ee, ie, He, ye) {
-        const be = this.matrices;
-        if (He < 0) be.set(ie.getWorldMatrix().m, 16 * ee);
-        else
-          for (let Je = 0; Je < 16; Je++) be[16 * ee + Je] = ye[16 * He + Je];
-        const Me = this.attributes;
-        if (!Me) return;
-        const Ke = ie.pC,
-          Ue = this.layout;
-        for (let Je = 0; Je < Ue.length; Je++) {
-          var Fe;
-          const ie = null !== (Fe = Ke[Ue[Je]]) && void 0 !== Fe ? Fe : 0,
-            He = ee * this.rowStride + this.offsets[Je];
-          ie.toArray ? ie.toArray(Me, He) : ie.copyToArray ? ie.copyToArray(Me, He) : Me[He] = ie
-        }
-      }
-    }
-    class fi {
-      constructor(ee, ie, He, ye) {
-        let be = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Me = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5126,
-          Ke = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        this.key = ee, this.byteOffset = ie, this.byteStride = He, this.size = ye, this.instanced = be, this.type = Me, this.normalized = Ke
-      }
-      getBuffer() {
-        return this.key
-      }
-      getSize() {
-        return this.size
-      }
-      getIsInstanced() {
-        return this.instanced
-      }
-    }
-    const Ti = "CANVAS_ALPHA_ONE",
-      Xi = `override ${Ti}: bool = false;`,
-      zi = {
-        srcFactor: "zero",
-        dstFactor: "one",
-        operation: "add"
-      };
-
-    function Bi(ee, ie, He) {
-      var ye;
-      let be = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const Me = null !== (ye = ie._colorFormat) && void 0 !== ye ? ye : "bgra8unorm",
-        Ke = be ? 15 : 0;
-      return He ? {
-        ...ee,
-        targets: [{
-          format: Me,
-          blend: {
-            color: He,
-            alpha: zi
-          },
-          writeMask: Ke
-        }]
-      } : {
-        ...ee,
-        constants: {
-          ...ee.constants,
-          [Ti]: 1
-        },
-        targets: [{
-          format: Me,
-          writeMask: Ke
-        }]
-      }
-    }
-
-    function Ei(ee, ie) {
-      ee._renderables.push(ie)
-    }
-
-    function gi(ee) {
-      return ee._device
-    }
-
-    function Oi(ee) {
-      var ie, He;
-      return null !== (ie = null === (He = ee._frameGraph) || void 0 === He ? void 0 : He._tasks) && void 0 !== ie ? ie : []
-    }
-
-    function di(ee) {
-      return ee._currentEncoder
-    }
-
-    function Wi(ee) {
-      return ee.createBindGroupLayout({
-        label: "lite-scene-equivalent",
-        entries: [{
-          binding: 0,
-          visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-          buffer: {
-            type: "uniform"
-          }
-        }, {
-          binding: 1,
-          visibility: GPUShaderStage.FRAGMENT,
-          buffer: {
-            type: "uniform"
-          }
-        }]
-      })
-    }
-    const ti = "greater-equal",
-      Zi = 2e5,
-      wi = 1e5,
-      Di = new WeakMap;
-
-    function Pi(ee, ie) {
-      let He = Di.get(ee);
-      if (!He) {
-        He = {
-          module: ee.createShaderModule({
-            label: "placeholder",
-            code: "@vertex fn v() -> @builtin(position) vec4f { return vec4f(0.0, 0.0, 0.0, 1.0); }\n@fragment fn f() -> @location(0) vec4f { return vec4f(0.0); }"
-          }),
-          pipelines: new Map
-        }, Di.set(ee, He)
-      }
-      const ye = `${ie._colorFormat}|${ie._depthStencilFormat}|${ie._sampleCount}`;
-      let be = He.pipelines.get(ye);
-      if (!be) {
-        var Me;
-        const {
-          module: Ke
-        } = He;
-        be = ee.createRenderPipeline({
-          label: `placeholder ${ye}`,
-          layout: ee.createPipelineLayout({
-            bindGroupLayouts: []
-          }),
-          vertex: {
-            module: Ke,
-            entryPoint: "v"
-          },
-          fragment: {
-            module: Ke,
-            entryPoint: "f",
-            targets: [{
-              format: null !== (Me = ie._colorFormat) && void 0 !== Me ? Me : "bgra8unorm",
-              writeMask: 0
-            }]
-          },
-          depthStencil: ie._depthStencilFormat ? {
-            format: ie._depthStencilFormat,
-            depthCompare: "always",
-            depthWriteEnabled: !1
-          } : void 0,
-          multisample: {
-            count: ie._sampleCount
-          }
-        }), He.pipelines.set(ye, be)
-      }
-      return be
-    }
-
-    function Ai(ee, ie, He) {
-      const ye = ie.eye,
-        be = ie.viewMatrix;
-      ee[0] = ye[0] + be[2] * He, ee[1] = ye[1] + be[6] * He, ee[2] = ye[2] + be[10] * He
-    }
-    var Yi = He(38795),
-      Vi = He(44791),
-      ai = He(38045);
-    const ci = Math.PI,
-      xi = ci / 1.95,
-      Li = [5e-4 / 94, 125e-7, 5e-4 / 18],
-      Ci = [
-        [68e-8, .686],
-        [55e-8, .678],
-        [45e-8, .666]
-      ].map((ee => {
-        let [ie, He] = ee;
-        return .434 * ci * Math.pow(2 * ci / ie, 2) * He
-      }));
-
-    function vi(ee, ie, He) {
-      const {
-        up: ye,
-        mieDirectionalG: be
-      } = ee, Me = 1 - li(1 - Math.exp(ie[1] / 45e4), 0, 1), Ke = ee.rayleigh - (1 - Me), Ue = Math.hypot(ie[0], ie[1], ie[2]), Fe = Ue > 0 ? 1 / Ue : 0, Je = He.sunDir;
-      for (let qe = 0; qe < 3; qe++) Je[qe] = ie[qe] * Fe;
-      const oe = Je[0] * ye[0] + Je[1] * ye[1] + Je[2] * ye[2],
-        Re = 1e3 * Math.max(0, 1 - Math.exp(-(xi - Math.acos(li(oe, -1, 1))) / 1.5));
-      He.sunE = Re;
-      const ke = .2 * ee.turbidity * 1e-17 * ee.mieCoefficient;
-      for (let qe = 0; qe < 3; qe++) {
-        const ee = Li[qe] * Ke,
-          ie = Ci[qe] * ke,
-          ye = Re / (ee + ie);
-        He.inScatterR[qe] = ee * ye, He.inScatterM[qe] = ie * ye, He.extinctionBeta[qe] = 8400 * ee + 1250 * ie
-      }
-      return He.sunsetMix = li(Math.pow(1 - oe, 5), 0, 1), He.sunDiscE = 19e3 * Re, He.mieScale = (1 - be * be) / (4 * ci), He.mieBase = 1 + be * be, He.mieSlope = 2 * be, He
-    }
-    const ui = {
-      A: .15,
-      B: .5,
-      C: .1,
-      D: .2,
-      E: .02,
-      F: .3
-    };
-    const mi = 1 / function(ee) {
-      const {
-        A: ie,
-        B: He,
-        C: ye,
-        D: be,
-        E: Me,
-        F: Ke
-      } = ui;
-      return (ee * (ie * ee + ye * He) + be * Me) / (ee * (ie * ee + He) + be * Ke) - Me / Ke
-    }(1e3);
-
-    function li(ee, ie, He) {
-      return Math.min(Math.max(ee, ie), He)
-    }
-    const Si = /^\s*#(ifdef|ifndef|if|elif|else|endif|define|undef)\b(.*)$/;
-
-    function ni(ee, ie) {
-      const He = new Map(ie),
-        ye = [],
-        be = [],
-        Me = () => 0 === be.length || be[be.length - 1].active;
-      let Ke = null;
-      const Ue = () => {
-        const ee = [...He].filter((ee => {
-            let [, ie] = ee;
-            return !0 !== ie
-          })),
-          ie = ee.map((ee => {
-            let [ie] = ee;
-            return ie
-          })).join("|");
-        Ke = ee.length ? new RegExp(`\\b(${ie})\\b`, "g") : null
-      };
-      Ue();
-      for (const Fe of ee.split("\n")) {
-        const ee = Si.exec(Fe);
-        if (!ee) {
-          Me() && ye.push(Ke ? ji(Fe, Ke, He) : Fe);
-          continue
-        }
-        const ie = ee[1],
-          Je = ee[2].trim();
-        if ("ifdef" === ie || "ifndef" === ie || "if" === ie) {
-          const ee = Me(),
-            ye = "if" === ie ? si(Je, He) : He.has(Je) === ("ifdef" === ie);
-          be.push({
-            active: ee && ye,
-            parentActive: ee,
-            taken: ye
-          })
-        } else if ("elif" === ie || "else" === ie) {
-          const ee = be[be.length - 1];
-          if (!ee) throw new Error(`#${ie} without #if`);
-          const ye = !ee.taken && ("else" === ie || si(Je, He));
-          ee.active = ee.parentActive && ye, ee.taken = ee.taken || ye
-        } else if ("endif" === ie) {
-          if (!be.pop()) throw new Error("#endif without #if")
-        } else if (Me()) {
-          const [ee, ...ye] = Je.split(/\s+/);
-          "undef" === ie ? He.delete(ee) : He.set(ee, !ye.length || ye.join(" ")), Ue()
-        }
-      }
-      if (be.length) throw new Error("Unterminated #if");
-      return ye.join("\n")
-    }
-
-    function ji(ee, ie, He) {
-      return ee.replace(ie, (ee => {
-        const ie = He.get(ee);
-        return "string" === typeof ie ? ie : ee
-      }))
-    }
-
-    function si(ee, ie) {
-      var He;
-      const ye = null !== (He = ee.match(/defined|\d+(\.\d+)?|\w+|&&|\|\||==|!=|>=|<=|[()!<>]/g)) && void 0 !== He ? He : [];
-      let be = 0;
-      const Me = () => ye[be],
-        Ke = () => ye[be++],
-        Ue = ee => {
-          const He = /^\d/.test(ee) ? ee : ie.get(ee);
-          return "string" === typeof He ? parseInt(He) : Number.NaN
-        },
-        Fe = () => {
-          const ee = Ke();
-          if ("!" === ee) return !Fe();
-          if ("(" === ee) {
-            const ee = oe();
-            return Ke(), ee
-          }
-          if ("defined" === ee) {
-            const ee = "(" === Me();
-            ee && Ke();
-            const He = Ke();
-            return ee && Ke(), ie.has(He)
-          }
-          const He = Me();
-          if ("==" === He || "!=" === He || ">" === He || "<" === He || ">=" === He || "<=" === He) {
-            Ke();
-            const ie = Ue(ee),
-              ye = Ue(Ke());
-            if (Number.isNaN(ie) || Number.isNaN(ye)) return !1;
-            switch (He) {
-              case "==":
-                return ie === ye;
-              case "!=":
-                return ie !== ye;
-              case ">":
-                return ie > ye;
-              case "<":
-                return ie < ye;
-              case ">=":
-                return ie >= ye;
-              default:
-                return ie <= ye
-            }
-          }
-          return ie.has(ee)
-        },
-        Je = () => {
-          let ee = Fe();
-          for (;
-            "&&" === Me();) {
-            Ke();
-            const ie = Fe();
-            ee = ee && ie
-          }
-          return ee
-        },
-        oe = () => {
-          let ee = Je();
-          for (;
-            "||" === Me();) {
-            Ke();
-            const ie = Je();
-            ee = ee || ie
-          }
-          return ee
-        },
-        Re = oe();
-      if (be !== ye.length) throw new Error(`Cannot evaluate #if ${ee}`);
-      return Re
-    }
-    var Ii = He(38133),
-      Ni = He(38231),
-      Gi = He(38236),
-      ri = He(41807),
-      Qi = He(39546);
-    const eH = 32,
-      iH = [10, 3, 10],
-      HH = [21, 7, 21],
-      yH = HH[0] * HH[1] * HH[2],
-      bH = 0,
-      MH = 1,
-      KH = 2,
-      UH = 3,
-      FH = 64,
-      JH = 512,
-      oH = 4 * yH,
-      RH = 1536,
-      kH = oH + yH * RH,
-      qH = 1073741824,
-      fH = kH + 1;
-
-    function TH(ee, ie) {
-      const He = ee % ie;
-      return He < 0 ? He + ie : He
-    }
-
-    function pH(ee, ie, He) {
-      return ye = TH(ee, HH[0]), be = TH(ie, HH[1]), Me = TH(He, HH[2]), ye + HH[0] * (be + HH[1] * Me);
-      var ye, be, Me
-    }
-
-    function XH(ee, ie, He) {
-      return ee + 8 * (ie + 8 * He)
-    }
-
-    function zH(ee, ie, He) {
-      return ee + 4 * (ie + 4 * He)
-    }
-    const BH = 65535,
-      EH = 0,
-      gH = 1,
-      OH = 2,
-      dH = 3;
-
-    function WH(ee) {
-      return Math.ceil(ee * ee / 32)
-    }
-    const tH = 8192,
-      ZH = 1 << 18,
-      wH = 65536,
-      DH = 294912,
-      PH = 128,
-      AH = 4096,
-      YH = 16,
-      VH = 16385,
-      aH = 81921,
-      cH = 147457,
-      xH = 4194304;
-    const LH = [0, 0, 0],
-      CH = [0, 0, 0];
-
-    function vH(ee, ie, He, ye) {
-      ! function(ee, ie, He) {
-        const [ye, be, Me] = [ee[0], ee[1], ee[2]];
-        let Ke, Ue, Fe;
-        Math.abs(be) < .99 ? (Ke = Me, Ue = 0, Fe = -ye) : (Ke = -be, Ue = ye, Fe = 0);
-        const Je = Math.hypot(Ke, Ue, Fe);
-        ie[0] = Ke / Je, ie[1] = Ue / Je, ie[2] = Fe / Je, He[0] = be * ie[2] - Me * ie[1], He[1] = Me * ie[0] - ye * ie[2], He[2] = ye * ie[1] - be * ie[0]
-      }(ye, LH, CH);
-      const be = 1 / 32;
-      for (const [Me, Ke] of [
-          [0, LH],
-          [4, CH]
-        ]) {
-        for (let He = 0; He < 3; He++) ee[ie + Me + He] = Ke[He] * be;
-        ee[ie + Me + 3] = -(Ke[0] * He[0] + Ke[1] * He[1] + Ke[2] * He[2]) * be
-      }
-    }
-    class uH {
-      constructor() {
-        this.words = new Uint32Array(cH), this.parts = 0, this.refs = 0, this.floats = new Float32Array(this.words.buffer), this.rects = new Int32Array(16384), this.counts = new Uint32Array(16384), this.inverse = new Float64Array(16), this.view = new Float32Array(8), this.viewAt = 0, this.light = [0, 1, 0]
-      }
-      gR(ee, ie) {
-        this.parts = 0, this.refs = 0, this.view = ee, this.viewAt = ie;
-        const He = ee[ie + 1] * ee[ie + 6] - ee[ie + 2] * ee[ie + 5],
-          ye = ee[ie + 2] * ee[ie + 4] - ee[ie] * ee[ie + 6],
-          be = ee[ie] * ee[ie + 5] - ee[ie + 1] * ee[ie + 4],
-          Me = Math.hypot(He, ye, be) || 1;
-        this.light[0] = He / Me, this.light[1] = ye / Me, this.light[2] = be / Me
-      }
-      add(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (this.parts >= AH || ! function(ee, ie, He) {
-            const ye = ee[ie],
-              be = ee[ie + 1],
-              Me = ee[ie + 2],
-              Ke = ee[ie + 3],
-              Ue = ee[ie + 4],
-              Fe = ee[ie + 5],
-              Je = ee[ie + 6],
-              oe = ee[ie + 7],
-              Re = ee[ie + 8],
-              ke = ee[ie + 9],
-              qe = ee[ie + 10],
-              fe = ee[ie + 11],
-              Te = ee[ie + 12],
-              pe = ee[ie + 13],
-              Xe = ee[ie + 14],
-              ze = ee[ie + 15],
-              Be = ye * Fe - be * Ue,
-              Ee = ye * Je - Me * Ue,
-              ge = ye * oe - Ke * Ue,
-              Oe = be * Je - Me * Fe,
-              de = be * oe - Ke * Fe,
-              We = Me * oe - Ke * Je,
-              te = Re * pe - ke * Te,
-              Ze = Re * Xe - qe * Te,
-              we = Re * ze - fe * Te,
-              De = ke * Xe - qe * pe,
-              Pe = ke * ze - fe * pe,
-              Ae = qe * ze - fe * Xe,
-              Ye = Be * Ae - Ee * Pe + ge * De + Oe * we - de * Ze + We * te;
-            if (!(Math.abs(Ye) > 1e-12)) return !1;
-            const Ve = 1 / Ye;
-            return He[0] = (Fe * Ae - Je * Pe + oe * De) * Ve, He[1] = (Me * Pe - be * Ae - Ke * De) * Ve, He[2] = (pe * We - Xe * de + ze * Oe) * Ve, He[3] = (qe * de - ke * We - fe * Oe) * Ve, He[4] = (Je * we - Ue * Ae - oe * Ze) * Ve, He[5] = (ye * Ae - Me * we + Ke * Ze) * Ve, He[6] = (Xe * ge - Te * We - ze * Ee) * Ve, He[7] = (Re * We - qe * ge + fe * Ee) * Ve, He[8] = (Ue * Pe - Fe * we + oe * te) * Ve, He[9] = (be * we - ye * Pe - Ke * te) * Ve, He[10] = (Te * de - pe * ge + ze * Be) * Ve, He[11] = (ke * ge - Re * de - fe * Be) * Ve, He[12] = (Fe * Ze - Ue * De - Je * te) * Ve, He[13] = (ye * De - be * Ze + Me * te) * Ve, He[14] = (pe * Ee - Te * Oe - Xe * Be) * Ve, He[15] = (Re * Oe - ke * Ee + qe * Be) * Ve, !0
-          }(ie, He, this.inverse)) return;
-        const {
-          view: ye,
-          viewAt: be
-        } = this, Me = He;
-        let Ke = 1 / 0,
-          Ue = 1 / 0,
-          Fe = -1 / 0,
-          Je = -1 / 0,
-          oe = -1 / 0;
-        const [Re, ke, qe] = this.light;
-        for (let ge = 0; ge < 8; ge++) {
-          const He = 1 & ge ? ee.hi[0] : ee.lo[0],
-            fe = 2 & ge ? ee.hi[1] : ee.lo[1],
-            Te = 4 & ge ? ee.hi[2] : ee.lo[2],
-            pe = He * ie[Me] + fe * ie[Me + 4] + Te * ie[Me + 8] + ie[Me + 12],
-            Xe = He * ie[Me + 1] + fe * ie[Me + 5] + Te * ie[Me + 9] + ie[Me + 13],
-            ze = He * ie[Me + 2] + fe * ie[Me + 6] + Te * ie[Me + 10] + ie[Me + 14],
-            Be = ye[be] * pe + ye[be + 1] * Xe + ye[be + 2] * ze + ye[be + 3],
-            Ee = ye[be + 4] * pe + ye[be + 5] * Xe + ye[be + 6] * ze + ye[be + 7];
-          Ke = Math.min(Ke, Be), Ue = Math.min(Ue, Ee), Fe = Math.max(Fe, Be), Je = Math.max(Je, Ee), oe = Math.max(oe, Re * pe + ke * Xe + qe * ze)
-        }
-        if (Fe < -1 || Je < -1 || Ke >= 1 || Ue >= 1) return;
-        const fe = this.parts++,
-          Te = this.rects;
-        Te[4 * fe] = mH(Ke), Te[4 * fe + 1] = mH(Ue), Te[4 * fe + 2] = mH(Fe), Te[4 * fe + 3] = mH(Je);
-        const pe = this.inverse,
-          {
-            cell: Xe,
-            dims: ze,
-            lo: Be
-          } = ee,
-          Ee = aH + fe * YH;
-        for (let ge = 0; ge < 3; ge++) this.floats[Ee + 4 * ge] = pe[ge] / Xe, this.floats[Ee + 4 * ge + 1] = pe[4 + ge] / Xe, this.floats[Ee + 4 * ge + 2] = pe[8 + ge] / Xe, this.floats[Ee + 4 * ge + 3] = (pe[12 + ge] - Be[ge]) / Xe;
-        this.words[Ee + 12] = ee.at, this.floats[Ee + 13] = oe + .001 * (1 + Math.abs(oe)), this.words[Ee + 14] = ze[0] | ze[1] << 8 | ze[2] << 16
-      }
-      finish() {
-        const ee = PH,
-          {
-            counts: ie,
-            rects: He,
-            words: ye
-          } = this;
-        ie.fill(0);
-        let be = 0,
-          Me = 0;
-        for (; Me < this.parts; Me++) {
-          const ye = 4 * Me,
-            Ke = (He[ye + 2] - He[ye] + 1) * (He[ye + 3] - He[ye + 1] + 1);
-          if (be + Ke > 65536) break;
-          be += Ke;
-          for (let be = He[ye + 1]; be <= He[ye + 3]; be++)
-            for (let Me = He[ye]; Me <= He[ye + 2]; Me++) ie[be * ee + Me]++
-        }
-        let Ke = 0;
-        for (let Fe = 0; Fe < 16384; Fe++) ye[Fe] = Ke, Ke += ie[Fe], ie[Fe] = ye[Fe];
-        ye[16384] = Ke;
-        for (let Fe = 0; Fe < Me; Fe++) {
-          const be = 4 * Fe;
-          for (let Me = He[be + 1]; Me <= He[be + 3]; Me++)
-            for (let Ke = He[be]; Ke <= He[be + 2]; Ke++) ye[VH + ie[Me * ee + Ke]++] = Fe
-        }
-        const Ue = this.floats;
-        for (let Fe = 0; Fe < 16384; Fe++) {
-          const ee = VH + ye[Fe],
-            ie = ee + Math.min(ye[Fe + 1] - ye[Fe], 64);
-          for (let He = ee + 1; He < ie; He++) {
-            const ie = ye[He],
-              be = Ue[81934 + ie * YH];
-            let Me = He - 1;
-            for (; Me >= ee && Ue[81934 + ye[Me] * YH] < be; Me--) ye[Me + 1] = ye[Me];
-            ye[Me + 1] = ie
-          }
-        }
-        this.refs = be
-      }
-    }
-
-    function mH(ee) {
-      return Math.min(127, Math.max(0, Math.floor((.5 * ee + .5) * PH)))
-    }
-
-    function lH(ee, ie, He, ye, be) {
-      for (let Me = 0; Me < 4; Me++)
-        for (let Ke = 0; Ke < 4; Ke++) be[4 * Me + Ke] = ee[ie + 4 * Me] * He[ye + Ke] + ee[ie + 4 * Me + 1] * He[ye + 4 + Ke] + ee[ie + 4 * Me + 2] * He[ye + 8 + Ke] + ee[ie + 4 * Me + 3] * He[ye + 12 + Ke]
-    }
-
-    function SH(ee, ie, He, ye, be) {
-      const Me = ee[0] - ie,
-        Ke = ee[1] - He,
-        Ue = ee[2] - ye,
-        Fe = ee[3] - ie,
-        Je = ee[4] - He,
-        oe = ee[5] - ye,
-        Re = ee[6] - ie,
-        ke = ee[7] - He,
-        qe = ee[8] - ye;
-      if (Math.min(Me, Fe, Re) > be || Math.max(Me, Fe, Re) < -be) return !1;
-      if (Math.min(Ke, Je, ke) > be || Math.max(Ke, Je, ke) < -be) return !1;
-      if (Math.min(Ue, oe, qe) > be || Math.max(Ue, oe, qe) < -be) return !1;
-      const fe = Fe - Me,
-        Te = Je - Ke,
-        pe = oe - Ue,
-        Xe = Re - Fe,
-        ze = ke - Je,
-        Be = qe - oe,
-        Ee = Te * Be - pe * ze,
-        ge = pe * Xe - fe * Be,
-        Oe = fe * ze - Te * Xe;
-      if (Math.abs(Ee * Me + ge * Ke + Oe * Ue) > be * (Math.abs(Ee) + Math.abs(ge) + Math.abs(Oe))) return !1;
-      const de = [fe, Te, pe, Xe, ze, Be, Me - Re, Ke - ke, Ue - qe];
-      for (let We = 0; We < 3; We++) {
-        const ee = de[3 * We],
-          ie = de[3 * We + 1],
-          He = de[3 * We + 2];
-        for (let ye = 0; ye < 3; ye++) {
-          const fe = 0 === ye ? 0 : 1 === ye ? He : -ie,
-            Te = 0 === ye ? -He : 1 === ye ? 0 : ee,
-            pe = 0 === ye ? ie : 1 === ye ? -ee : 0,
-            Xe = fe * Me + Te * Ke + pe * Ue,
-            ze = fe * Fe + Te * Je + pe * oe,
-            Be = fe * Re + Te * ke + pe * qe,
-            Ee = be * (Math.abs(fe) + Math.abs(Te) + Math.abs(pe));
-          if (Math.min(Xe, ze, Be) > Ee || Math.max(Xe, ze, Be) < -Ee) return !1
-        }
-      }
-      return !0
-    }
-    const nH = new Float32Array(1);
-    new Uint32Array(nH.buffer);
-    var jH = He(39549);
-
-    function sH(ee) {
-      const [ie, He, ye] = jH.p;
-      return `struct BloxdSpSunShadow {\n\teyeChunk: vec3i,\n\tstaleCount: u32,\n\tvolumeLo: vec3i,\n\tentityX: vec4f,\n\tentityY: vec4f,\n\tstale: array<vec4i, 4>,\n}\n@group(${ee.group}) @binding(${ee.uniform}) var<uniform> bloxdSpSunShadow: BloxdSpSunShadow;\nfn bloxdSpVolumeTexel(cell: vec3i) -> vec3i {\n\treturn cell & vec3i(${ie-1}, ${He-1}, ${ye-1});\n}\n`
-    }
-
-    function IH(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        He = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const [be, Me, Ke] = HH, [Ue, Fe, Je] = iH, oe = Math.log2(eH), Re = ye ? "var<private> bloxdSpCrossed: bool;\n" : "", ke = ye ? "\t\t\tbloxdSpCrossed = true;\n" : "";
-      return `@group(${ee.group}) @binding(${ee.Uq}) var<storage, read> bloxdSpShadowVoxels: array<u32>;\n@group(${ee.group}) @binding(${ee.special}) var<storage, read> bloxdSpShadowSpecial: array<u32>;\n${He?"var<private> bloxdSpPlaneTolerance: f32;\n":""}${Re}struct BloxdSpBoxExit {\n\tt: f32,\n\taxis: i32,\n\tcell: vec3i,\n}\n// inv: 1 / d, 0 where d is, taken once per ray rather than divided per exit\nfn bloxdSpExitBox(o: vec3f, d: vec3f, inv: vec3f, lo: vec3i, offset: vec3i, size: i32) -> BloxdSpBoxExit {\n\tlet low = vec3f(lo - offset);\n\tlet far = select(low, low + f32(size), d > vec3f(0.0));\n\tlet ta = select(vec3f(1e30), (far - o) * inv, d != vec3f(0.0));\n\tvar axis = 0;\n\tvar t = ta.x;\n\tif (ta.y < t) {\n\t\tt = ta.y;\n\t\taxis = 1;\n\t}\n\tif (ta.z < t) {\n\t\tt = ta.z;\n\t\taxis = 2;\n\t}\n\tlet inside = clamp(vec3i(floor(o + t * d)) + offset, lo, lo + vec3i(size - 1));\n\tlet beyond = select(lo - vec3i(1), lo + vec3i(size), d > vec3f(0.0));\n\t// select, not cell[axis] = beyond[axis]: dynamic indexing spills the vector to memory on some drivers (~9% of the frame on Mali)\n\tlet cell = select(inside, beyond, vec3<bool>(axis == 0, axis == 1, axis == 2));\n\treturn BloxdSpBoxExit(t, axis, cell);\n}\nfn bloxdSpMaskBit(word: u32, bit: u32) -> bool {\n\treturn ((bloxdSpShadowSpecial[word + (bit >> 5u)] >> (bit & 31u)) & 1u) == 1u;\n}\nfn bloxdSpCasterBlocks(caster: u32, o: vec3f, d: vec3f, cell: vec3i, offset: vec3i, t0: f32, t1: f32, axis: i32) -> bool {\n\tlet base = 0u + caster * 4u;\n\tlet kind = bloxdSpShadowSpecial[base];\n\tlet data = bloxdSpShadowSpecial[base + 1u];\n\t// Every loop here has a fixed bound, whatever the buffers hold: a GPU stuck in one loses the device\n\tlet count = min(bloxdSpShadowSpecial[base + 2u], 4u);\n\tlet size = bloxdSpShadowSpecial[base + 3u];\n\tlet q = o - vec3f(cell - offset);\n\tif (kind == ${gH}u) {\n\t\tlet qs = q * 8.0;\n\t\tlet ds = d * 8.0;\n\t\tlet invs = select(vec3f(0.0), 1.0 / ds, ds != vec3f(0.0));\n\t\tvar sub = clamp(vec3i(floor(qs + t0 * ds)), vec3i(0), vec3i(7));\n\t\tfor (var step = 0; step < 24; step++) {\n\t\t\tif (bloxdSpMaskBit(data, u32(sub.x + 8 * (sub.y + 8 * sub.z)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t\tlet exit = bloxdSpExitBox(qs, ds, invs, sub, vec3i(0), 1);\n\t\t\t// Only the axis it left by can be out of the shape\n\t\t\tif (exit.t >= t1 || any(exit.cell < vec3i(0)) || any(exit.cell >= vec3i(8))) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tsub = exit.cell;\n\t\t}\n\t\treturn false;\n\t}\n\tlet fs = f32(size);\n\tif (kind == ${OH}u) {\n\t\tfor (var p = 0u; p < count; p++) {\n\t\t\tlet plane = data + p * 4u;\n\t\t\tlet tx = bitcast<f32>(bloxdSpShadowSpecial[plane]);\n\t\t\tlet tz = bitcast<f32>(bloxdSpShadowSpecial[plane + 1u]);\n\t\t\tlet along = bitcast<f32>(bloxdSpShadowSpecial[plane + 2u]);\n\t\t\tlet dn = d.x * tz - d.z * tx;\n\t\t\tif (abs(dn) < 1e-6) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet t = (along - ((q.x - 0.5) * tz - (q.z - 0.5) * tx)) / dn;\n\t\t\t// Not a plane the trace starts on (SUN_SHADOW_PLANE_START), nor in its first cell one within depth's error of it\n\t\t\tif (t < select(t0, t0 + 0.0009765625, axis < 0) || t > t1${He?" || (axis < 0 && abs(t * dn) < bloxdSpPlaneTolerance)":""}) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet h = q + t * d;\n\t\t\tlet u = (h.x - 0.5) * tx + (h.z - 0.5) * tz + 0.5;\n\t\t\tlet v = 1.0 - h.y;\n\t\t\tif (u < 0.0 || u >= 1.0 || v < 0.0 || v >= 1.0) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tif (bloxdSpMaskBit(bloxdSpShadowSpecial[plane + 3u], u32(floor(u * fs)) + size * u32(floor(v * fs)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n\tif (kind == ${dH}u && axis >= 0) {\n\t\t// In through the +axis face going down the axis, else the -axis face; faces go +x, -x, +y, -y, +z, -z\n\t\tlet plusFace = d[axis] < 0.0;\n\t\tlet face = u32(2 * axis) + select(1u, 0u, plusFace);\n\t\tlet h = clamp(q + t0 * d, vec3f(0.0), vec3f(1.0));\n\t\t// As terrain samples faces (terrainShader.ts packedUv)\n\t\tvar uv = vec2f(select(h.x, 1.0 - h.x, plusFace), 1.0 - h.y);\n\t\tif (axis == 0) {\n\t\t\tuv = vec2f(select(1.0 - h.z, h.z, plusFace), 1.0 - h.y);\n\t\t} else if (axis == 1) {\n\t\t\tuv = vec2f(select(1.0 - h.x, h.x, plusFace), 1.0 - h.z);\n\t\t}\n\t\tlet texel = min(vec2u(floor(uv * fs)), vec2u(size - 1u));\n\t\treturn bloxdSpMaskBit(data + face * ((size * size + 31u) / 32u), texel.x + size * texel.y);\n\t}\n\treturn false;\n}\nfn bloxdSpWindowSlot(chunk: vec3i) -> u32 {\n\tlet window = vec3i(${be}, ${Me}, ${Ke});\n\tlet r = chunk % window;\n\tlet s = select(r, r + window, r < vec3i(0));\n\treturn u32(s.x + ${be} * (s.y + ${Me} * s.z));\n}\nfn bloxdSpWindowHas(chunk: vec3i) -> bool {\n\treturn all(abs(chunk - bloxdSpSunShadow.eyeChunk) <= vec3i(${Ue}, ${Fe}, ${Je}));\n}\nfn bloxdSpCellFull(cell: vec3i) -> bool {\n\tlet chunk = cell >> vec3u(${oe}u);\n\tif (!bloxdSpWindowHas(chunk)) {\n\t\treturn false;\n\t}\n\tlet slot = bloxdSpWindowSlot(chunk);\n\tlet record = slot * 4u;\n\tlet named = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\tlet state = bloxdSpShadowVoxels[record + 3u] & 255u;\n\tif (!named || state != ${UH}u) {\n\t\treturn named && state == ${KH}u;\n\t}\n\tlet local = cell - chunk * 32;\n\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\tlet brickBase = ${oH}u + slot * 1536u + brick * 3u;\n\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\tif (((bloxdSpShadowVoxels[brickBase + (bit >> 5u)] >> (bit & 31u)) & 1u) == 0u) {\n\t\treturn false;\n\t}\n\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\tif (pool == 0u) {\n\t\treturn true;\n\t}\n\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\treturn ((entry >> ((bit & 1u) * 16u)) & 0xffffu) == 65535u;\n}\n// ownCell: whether the caster in the cell it starts in can block it (sunShadowTrace.ts traceSunShadow)\nfn bloxdSpShadowMarch(o: vec3f, d: vec3f, offset: vec3i, maxSteps: i32, ownCell: bool) -> vec4f {\n\tvar cell = vec3i(floor(o)) + offset;\n\tvar t = 0.0;\n\tvar axis = -1;\n\tlet inv = select(vec3f(0.0), 1.0 / d, d != vec3f(0.0));\n\t// The chunk the slot and record were read for: they change only with it\n\tvar cached = vec3i(-2147483647);\n\tvar slot = 0u;\n\tvar named = false;\n\tvar state = 0u;\n\t// Rising above the window's highest cell that may block, it crosses nothing more (0: never written)\n\tlet windowWord = bloxdSpShadowVoxels[${kH}u];\n\tlet windowTop = select(2147483647, bitcast<i32>(windowWord) - 1073741824, d.y > 0.0 && windowWord != 0u);\n${ie?"\tlet exits = bloxdSpRayFresh(o, d, offset);\n":""}\tfor (var step = 0; step < maxSteps; step++) {\n${ie?`\t\tif (exits && step > 0 && step % ${GH} == 0 && bloxdSpVolumeOpenLit(o + t * d, offset)) {\n\t\t\treturn vec4f(o + t * d, -1.0);\n\t\t}\n`:""}\t\tif (cell.y > windowTop) {\n\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t}\n\t\tlet chunk = cell >> vec3u(${oe}u);\n\t\tif (any(chunk != cached)) {\n\t\t\tif (!bloxdSpWindowHas(chunk)) {\n\t\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t\t}\n\t\t\tcached = chunk;\n\t\t\tslot = bloxdSpWindowSlot(chunk);\n\t\t\tlet record = slot * 4u;\n\t\t\tnamed = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\t\t\tstate = bloxdSpShadowVoxels[record + 3u];\n\t\t}\n\t\tlet chunkLo = chunk * 32;\n\t\tlet kind = state & 255u;\n\t\t// Rising above its highest cell that may block, it crosses nothing more in the chunk\n\t\tif (!named || kind == ${bH}u || kind == ${MH}u || (d.y > 0.0 && cell.y - chunkLo.y > i32(state >> 8u))) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo, offset, 32);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tif (kind == ${KH}u) {\n\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t}\n\t\tlet local = cell - chunkLo;\n\t\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\t\tlet brickBase = ${oH}u + slot * 1536u + brick * 3u;\n\t\tlet low = bloxdSpShadowVoxels[brickBase];\n\t\tlet high = bloxdSpShadowVoxels[brickBase + 1u];\n\t\tif (low == 0u && high == 0u) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo + (local & vec3i(~3)), offset, 4);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\t\tlet exit = bloxdSpExitBox(o, d, inv, cell, offset, 1);\n\t\tif (((select(high, low, bit < 32u) >> (bit & 31u)) & 1u) == 1u) {\n\t\t\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\t\t\tif (pool == 0u) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n\t\t\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\t\t\tlet caster = (entry >> ((bit & 1u) * 16u)) & 0xffffu;\n\t\t\tif (caster == 65535u || ((ownCell || axis >= 0) && bloxdSpCasterBlocks(caster, o, d, cell, offset, t, exit.t, axis))) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n${ke}\t\t}\n\t\tt = max(t, exit.t);\n\t\taxis = exit.axis;\n\t\tcell = exit.cell;\n\t}\n\treturn vec4f(o + t * d, -1.0);\n}\n`
-    }
-    const hH = {
-      group: 0,
-      uniform: 0,
-      Uq: 1,
-      special: 2,
-      work: 3,
-      volume: 4
-    };
-
-    function NH() {
-      const ee = hH;
-      return `${sH(ee)}${IH(ee,!1,!1,!0)}struct BloxdSpVolumeBox {\n\tlo: vec3i,\n\tfirst: u32,\n\tsize: vec3u,\n}\nstruct BloxdSpVolumeWork {\n\tlight: vec3f,\n\tboxes: u32,\n\tbox: array<BloxdSpVolumeBox, ${jH.e}>,\n}\n@group(${ee.group}) @binding(${ee.work}) var<uniform> bloxdSpVolumeWork: BloxdSpVolumeWork;\n@group(${ee.group}) @binding(${ee.volume}) var bloxdSpVolumeOut: texture_storage_3d<rgba8unorm, write>;\n@compute @workgroup_size(${jH.m})\nfn main(@builtin(global_invocation_id) id: vec3u) {\n\tvar at = 0u;\n\tlet boxes = min(bloxdSpVolumeWork.boxes, ${jH.e}u);\n\tfor (var b = 1u; b < boxes; b++) {\n\t\tif (id.x >= bloxdSpVolumeWork.box[b].first) {\n\t\t\tat = b;\n\t\t}\n\t}\n\tlet box = bloxdSpVolumeWork.box[at];\n\tlet index = id.x - box.first;\n\tif (index >= box.size.x * box.size.y * box.size.z) {\n\t\treturn;\n\t}\n\tlet r = box.lo + vec3i(vec3u(index % box.size.x, (index / box.size.x) % box.size.y, index / (box.size.x * box.size.y)));\n\t// From the cell's centre, relative to the volume's corner: exact in f32\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet cell = lo + r;\n\tlet open = !bloxdSpCellFull(cell);\n\tvar lit = 0.0;\n\tbloxdSpCrossed = false;\n\tif (open) {\n\t\t// Past its own caster: a cell's light is what reaches it (sunShadowVolume.ts sunShadowVolumeCell)\n\t\tlet march = bloxdSpShadowMarch(vec3f(r) + vec3f(0.5), bloxdSpVolumeWork.light, lo, ${jH.f}, false);\n\t\tlit = select(march.w, 1.0, march.w < 0.0);\n\t}\n\ttextureStore(bloxdSpVolumeOut, bloxdSpVolumeTexel(cell), vec4f(lit, select(0.0, 1.0, open), select(0.0, 1.0, lit == 1.0 && !bloxdSpCrossed), 1.0));\n}\n`
-    }
-    const GH = 2;
-    const rH = "fn bloxdSpNormalCode(n: vec3f) -> f32 {\n\tlet a = abs(n);\n\tif (a.x >= a.y && a.x >= a.z) {\n\t\treturn select(1.0, 0.0, n.x > 0.0);\n\t}\n\tif (a.y >= a.z) {\n\t\treturn select(3.0, 2.0, n.y > 0.0);\n\t}\n\treturn select(5.0, 4.0, n.z > 0.0);\n}\n";
-
-    function QH(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      const ye = `var<private> bloxdSpShadowPosition: vec3f;\nfn bloxdSpShadowLight() -> vec4f {\n\t// Towards the sun or moon, as the CPU works it out (sunShadowLight)\n\tlet bloxdSpLight = -${ie.shadowDirection};\n\treturn vec4f(bloxdSpLight, smoothstep(0.0, 0.1, bloxdSpLight.y));\n}\n`,
-        be = "trace" === He || "lit" === He,
-        Me = "maskEdge" === He ? "bloxdSpMaskEdge()" : "textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0).r",
-        Ke = be ? `\tlet bloxdSpOrigin = bloxdSpShadowPosition + bloxdSpShadowNormal * 0.25;\n\tlet bloxdSpMarch = bloxdSpShadowMarch(bloxdSpOrigin, bloxdSpLight.xyz, ${ie.renderOffset}, 64, true);\n\tvar bloxdSpLit = bloxdSpMarch.w;\n\tif (bloxdSpLit < 0.0) {\n\t\t// Out of steps, or open and lit from here: on from the volume, from where it got to\n\t\tbloxdSpLit = bloxdSpVolumeAt(bloxdSpMarch.xyz, ${ie.renderOffset});\n\t}\n\tif (bloxdSpLit > 0.0 && !bloxdSpShadowFirstPerson) {\n\t\t// Lifeforms and items, but not on the first-person held item, which the body you're in would shade as you turn\n\t\tbloxdSpLit *= bloxdSpEntityLight(bloxdSpShadowPosition, bloxdSpLight.xyz, bloxdSpFacingDot);\n\t}\n\treturn ${"lit"===He?"bloxdSpLit":"bloxdSpLight.w * bloxdSpFacing * bloxdSpLit"};\n` : `\treturn bloxdSpLight.w * bloxdSpFacing * ${Me};\n`;
-      return `${ye}${ee.sunShadow?`var<private> bloxdSpShadowNormal: vec3f;\nvar<private> bloxdSpShadowEmissive: bool;\nvar<private> bloxdSpShadowFirstPerson: bool;\n${be?function(){const[ee,ie,He]=jH.p;return`fn bloxdSpRayFresh(o: vec3f, d: vec3f, offset: vec3i) -> bool {\n\tif (bloxdSpSunShadow.staleCount > 4u) {\n\t\treturn false;\n\t}\n\tlet inv = select(vec3f(1e30), 1.0 / d, d != vec3f(0.0));\n\tlet count = bloxdSpSunShadow.staleCount;\n\tfor (var b = 0u; b < count; b++) {\n\t\tlet lo = vec3f(bloxdSpSunShadow.stale[b].xyz - offset) - 1.0;\n\t\tlet a = (lo - o) * inv;\n\t\tlet z = (lo + 34.0 - o) * inv;\n\t\tlet near = max(max(min(a.x, z.x), min(a.y, z.y)), min(a.z, z.z));\n\t\tlet far = min(min(max(a.x, z.x), max(a.y, z.y)), max(a.z, z.z));\n\t\tif (far >= max(near, 0.0)) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\nfn bloxdSpVolumeOpenLit(p: vec3f, offset: vec3i) -> bool {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${ee}.0, ${ie}.0, ${He}.0);\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.5)) || any(r > size - vec3f(0.5))) {\n\t\treturn false;\n\t}\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, (r + vec3f(bloxdSpVolumeTexel(lo))) / size, 0.0);\n\treturn sample.b >= 0.999;\n}\n`}():""}fn bloxdShadow() -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\t// A face lit by its own light\n\tif (bloxdSpShadowEmissive) {\n\t\treturn 1.0;\n\t}\n\tlet bloxdSpFacingDot = dot(bloxdSpShadowNormal, bloxdSpLight.xyz);\n\tlet bloxdSpFacing = smoothstep(0.0, 0.5, bloxdSpFacingDot);\n\tif (bloxdSpLight.w <= 0.0 || bloxdSpFacing <= 0.0) {\n\t\treturn 0.0;\n\t}\n${Ke}}\n`:""}${ee.airShadow?`fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\tlet bloxdSpAt = mix(${ie.eyePosition}, bloxdSpShadowPosition, clamp(bloxdSpT, 0.0, 1.0));\n\treturn bloxdSpLight.w * bloxdSpVolumeAt(bloxdSpAt, ${ie.renderOffset});\n}\n`:""}`
-    }
-    const ey = "bloxdSpOwnTexture";
-
-    function iy(ee) {
-      return `u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(${ee.texture}) - 1u)))`
-    }
-    const Hy = `fn bloxdSpFlags(bloxdSpWord: u32) -> BloxdFlags {\n\tvar bloxdSpOut: BloxdFlags;\n${Yi.e.map((ee=>{let[ie,He]=ee;return`\tbloxdSpOut.${ie} = (bloxdSpWord & ${He}u) != 0u;\n`})).join("")}\treturn bloxdSpOut;\n}\n`;
-
-    function yy(ee) {
-      return `bloxdSpFlags(${ee})`
-    }
-    const by = `${ri.k}.eyePosition`;
-
-    function My(ee, ie, He, ye, be) {
-      const Me = ee.indexOf(ie);
-      if (Me < 0 || ee.indexOf(ie, Me + 1) >= 0) throw new Error(`Lite's ${be} program changed at the shader pack ${ye} hook: ${Me<0?"no":"more than one"} anchor (lite/${be}ShaderPack.ts)`);
-      return ee.slice(0, Me) + He + ee.slice(Me + ie.length)
-    }
-
-    function Ky(ee) {
-      return ee.sunShadow || ee.airShadow
-    }
-
-    function Uy(ee, ie) {
-      return ie && Ky(ee)
-    }
-    const Fy = {
-      group: ri.f,
-      ...ri.q
-    };
-
-    function Jy(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      if (!Ky(ee)) return "";
-      if (ie) {
-        const ie = Fy,
-          be = "trace" === He || "lit" === He;
-        let Me = "";
-        ee.sunShadow && (Me = be ? `${IH(ie,!0,"lit"===He)}${ye=ie,`@group(${ye.group}) @binding(${ye.entities}) var<storage, read> bloxdSpShadowEntities: array<u32>;\n@group(${ye.group}) @binding(${ye.entityGrids}) var<storage, read> bloxdSpShadowEntityGrids: array<u32>;\nfn bloxdSpEntityRow(i: u32) -> vec4f {\n\treturn bitcast<vec4f>(vec4u(bloxdSpShadowEntities[i], bloxdSpShadowEntities[i + 1u], bloxdSpShadowEntities[i + 2u], bloxdSpShadowEntities[i + 3u]));\n}\nfn bloxdSpEntityLight(p: vec3f, light: vec3f, facing: f32) -> f32 {\n\tlet p4 = vec4f(p, 1.0);\n\tlet across = vec2f(dot(bloxdSpSunShadow.entityX, p4), dot(bloxdSpSunShadow.entityY, p4));\n\tif (any(abs(across) >= vec2f(1.0))) {\n\t\treturn 1.0;\n\t}\n\tlet bin = vec2u(clamp(vec2i(floor((across * 0.5 + 0.5) * 128.0)), vec2i(0), vec2i(127)));\n\tlet b = bin.y * 128u + bin.x;\n\tlet start = bloxdSpShadowEntities[b];\n\tlet count = min(bloxdSpShadowEntities[b + 1u] - start, 64u);\n\tlet along = dot(p, light);\n\tfor (var k = 0u; k < count; k++) {\n\t\tlet base = 81921u + bloxdSpShadowEntities[16385u + start + k] * 16u;\n\t\t// Ending before the fragment along the light, as do those after it: their rays can't meet them\n\t\tif (bitcast<f32>(bloxdSpShadowEntities[base + 13u]) < along) {\n\t\t\tbreak;\n\t\t}\n\t\tlet r0 = bloxdSpEntityRow(base);\n\t\tlet r1 = bloxdSpEntityRow(base + 4u);\n\t\tlet r2 = bloxdSpEntityRow(base + 8u);\n\t\tlet packed = bloxdSpShadowEntities[base + 14u];\n\t\tlet dims = vec3u(packed & 0xffu, (packed >> 8u) & 0xffu, packed >> 16u);\n\t\t// In cells from the grid's low corner, and per unit along the light\n\t\tlet q = vec3f(dot(r0, p4), dot(r1, p4), dot(r2, p4));\n\t\t// Its rows' least squared length: the square of 1 over its largest scale, in cells\n\t\tlet shortest = min(min(dot(r0.xyz, r0.xyz), dot(r1.xyz, r1.xyz)), dot(r2.xyz, r2.xyz));\n\t\tvar dq = vec3f(dot(r0.xyz, light), dot(r1.xyz, light), dot(r2.xyz, light));\n\t\tdq = select(dq, vec3f(1e-9), abs(dq) < vec3f(1e-9));\n\t\tlet inv = 1.0 / dq;\n\t\tlet size = vec3f(dims);\n\t\tlet ta = -q * inv;\n\t\tlet tb = (size - q) * inv;\n\t\tlet tlo = min(ta, tb);\n\t\tlet thi = max(ta, tb);\n\t\t// Off the face's plane, past the cells around its own surface: its largest cells, over how fast the light leaves the\n\t\t// plane (finite as the face turns away)\n\t\tlet t0 = max(max(tlo.x, tlo.y), max(tlo.z, 2.0 * inverseSqrt(shortest) / max(facing, 1e-3)));\n\t\tlet t1 = min(min(thi.x, thi.y), thi.z);\n\t\tif (t0 >= t1) {\n\t\t\tcontinue;\n\t\t}\n\t\tlet up = dq > vec3f(0.0);\n\t\tvar at = vec3i(clamp(floor(q + dq * t0), vec3f(0.0), size - 1.0));\n\t\tlet step = select(vec3i(-1), vec3i(1), up);\n\t\tlet delta = abs(inv);\n\t\tvar next = (vec3f(at) + select(vec3f(0.0), vec3f(1.0), up) - q) * inv;\n\t\tlet data = bloxdSpShadowEntities[base + 12u];\n\t\tfor (var s = 0; s < 198; s++) {\n\t\t\tlet index = u32(at.x) + dims.x * (u32(at.y) + dims.y * u32(at.z));\n\t\t\tif ((bloxdSpShadowEntityGrids[data + (index >> 5u)] & (1u << (index & 31u))) != 0u) {\n\t\t\t\treturn 0.0;\n\t\t\t}\n\t\t\tif (next.x <= next.y && next.x <= next.z) {\n\t\t\t\tat.x += step.x;\n\t\t\t\tnext.x += delta.x;\n\t\t\t} else if (next.y <= next.z) {\n\t\t\t\tat.y += step.y;\n\t\t\t\tnext.y += delta.y;\n\t\t\t} else {\n\t\t\t\tat.z += step.z;\n\t\t\t\tnext.z += delta.z;\n\t\t\t}\n\t\t\tif (any(at < vec3i(0)) || any(at >= vec3i(dims))) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn 1.0;\n}\n`}` : function(ee, ie, He) {
-          const ye = `@group(${ee}) @binding(${ie}) var bloxdSpShadowMask: texture_2d<f32>;\nvar<private> bloxdSpShadowPixel: vec2i;\n`;
-          return He ? `${ye}var<private> bloxdSpShadowZ: f32;\nvar<private> bloxdSpShadowDz: vec2f;\n${rH}fn bloxdSpMaskEdge() -> f32 {\n\tlet code = bloxdSpNormalCode(bloxdSpShadowNormal);\n\tlet tolerance = abs(bloxdSpShadowDz.x) + abs(bloxdSpShadowDz.y) + 1e-7;\n\tlet m = textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0);\n\tlet mCode = floor(m.r * 0.5);\n\tlet mError = select(1e30, abs(m.g - bloxdSpShadowZ), mCode == code);\n\tif (mError <= tolerance) {\n\t\treturn m.r - mCode * 2.0;\n\t}\n\tlet last = vec2i(textureDimensions(bloxdSpShadowMask)) - 1;\n\tvar lit = m.r - mCode * 2.0;\n\tvar error = mError;\n${["-1, 0","1, 0","0, -1","0, 1"].map((ee=>`\t{\n\t\tlet o = vec2i(${ee});\n\t\tlet q = textureLoad(bloxdSpShadowMask, clamp(bloxdSpShadowPixel + o, vec2i(0), last), 0);\n\t\tlet qCode = floor(q.r * 0.5);\n\t\tlet e = abs(q.g - (bloxdSpShadowZ + dot(vec2f(o), bloxdSpShadowDz)));\n\t\tif (qCode == code && e < error) {\n\t\t\terror = e;\n\t\t\tlit = q.r - qCode * 2.0;\n\t\t}\n\t}\n`)).join("")}\treturn lit;\n}\n` : ye
-        }(ie.group, ri.s, "maskEdge" === He));
-        const Ke = {
-          shadowDirection: `${ri.k}.shadowDirection`,
-          renderOffset: `${ri.k}.renderOffset`,
-          eyePosition: `${ri.k}.eyePosition`
-        };
-        return `${sH(ie)}${Me}${function(ee){const[ie,He,ye]=jH.p;return`@group(${ee.group}) @binding(${ee.volume}) var bloxdSpShadowVolume: texture_3d<f32>;\n@group(${ee.group}) @binding(${ee.sampler}) var bloxdSpShadowVolumeSampler: sampler;\nfn bloxdSpVolumeAt(p: vec3f, offset: vec3i) -> f32 {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${ie}.0, ${He}.0, ${ye}.0);\n\t// From the volume's low corner, in whole blocks either side, so f32 keeps it exact\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.0)) || any(r > size)) {\n\t\treturn 1.0;\n\t}\n\t// Clear of the edges, where filtering would wrap onto the far side\n\tlet uvw = (clamp(r, vec3f(0.5), size - vec3f(0.5)) + vec3f(bloxdSpVolumeTexel(lo))) / size;\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, uvw, 0.0);\n\tif (sample.g < 0.03125) {\n\t\treturn 1.0;\n\t}\n\treturn min(sample.r / sample.g, 1.0);\n}\n`}(ie)}${QH(ee,Ke,He)}`
-      }
-      var ye;
-      return `${ee.sunShadow?"fn bloxdShadow() -> f32 {\n\treturn 1.0;\n}\n":""}${ee.airShadow?"fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\treturn 1.0;\n}\n":""}`
-    }
-
-    function oy(ee, ie, He, ye) {
-      let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "trace";
-      if (!ie) return "";
-      const Me = (Ke = "fragmentInputs.vPositionW", Ue = ee.sunShadow ? {
-        normal: He,
-        flags: ye
-      } : null, `\n\tbloxdSpShadowPosition = ${Ke};\n${Ue?`\tbloxdSpShadowNormal = normalize(${Ue.normal});\n\tbloxdSpShadowEmissive = (${Ue.flags} & ${Yi.d.emissive}u) != 0u;\n\tbloxdSpShadowFirstPerson = (${Ue.flags} & ${Yi.h}u) != 0u;\n`:""}`);
-      var Ke, Ue;
-      return ee.sunShadow && ("mask" === be || "maskEdge" === be) ? `${Me}${Fe="fragmentInputs.position",Je="maskEdge"===be,`\n\tbloxdSpShadowPixel = vec2i(${Fe}.xy);\n${Je?`\tbloxdSpShadowZ = ${Fe}.z;\n\tbloxdSpShadowDz = vec2f(dpdx(${Fe}.z), dpdy(${Fe}.z));\n`:""}`}` : Me;
-      var Fe, Je
-    }
-    const Ry = "bloxdSpTextureRotation",
-      ky = "bloxdSpTextureLayers",
-      qy = `@group(${ri.f}) @binding(${ri.u}) var<storage, read> ${ky}: array<u32>;\n`;
-
-    function fy(ee) {
-      return `\tvertexOutputs.vPackTexture = ${ky}[min(u32(${ee}), arrayLength(&${ky}) - 1u)];\n`
-    }
-
-    function Ty(ee) {
-      return void 0 !== ee.uv
-    }
 
-    function py(ee) {
-      if (!ee) return "fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn vec2u(1u);\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\treturn vec4f(1.0);\n}\n";
-      if (Ty(ee)) return function(ee) {
-        const {
-          texture: ie,
-          cells: He,
-          layers: ye
-        } = ee, be = `textureDimensions(${ie}, bloxdSpLevel)`, Me = He ? `max(vec2u(vec2f(${be}) / ${He}), vec2u(1u))` : be, Ke = He ? `fn bloxdSpOwnTexel(bloxdSpCellIndex: f32, bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${Me};\n\tlet bloxdSpIndex = u32(round(bloxdSpCellIndex));\n\tlet bloxdSpAcross = max(u32(round(${He}.x)), 1u);\n\tlet bloxdSpDown = max(u32(round(${He}.y)), 1u);\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\tlet bloxdSpCellAt = vec2u(bloxdSpIndex % bloxdSpAcross, bloxdSpIndex / bloxdSpAcross % bloxdSpDown);\n\treturn textureLoad(${ie}, min(bloxdSpCellAt * bloxdSpSize + bloxdSpAt, ${be} - 1u), bloxdSpLevel);\n}\n` : `fn bloxdSpOwnTexel(bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${Me};\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\treturn textureLoad(${ie}, bloxdSpAt, bloxdSpLevel);\n}\n`;
-        let Ue;
-        if (He)
-          if (1 === ye.length) Ue = `\treturn bloxdSpOwnTexel(${ye[0]}, bloxdSpUv, bloxdSpLevel);\n`;
-          else {
-            const ee = ye.length - 1;
-            Ue = `\tvar bloxdSpColour = bloxdSpOwnTexel(${ye[ee]}, bloxdSpUv, bloxdSpLevel);\n\tbloxdSpColour = vec4f(bloxdSpColour.rgb * bloxdSpColour.a, bloxdSpColour.a);\n`;
-            for (let ie = ee - 1; ie >= 0; ie--) Ue += `\t{\n\t\tlet bloxdSpLayer = bloxdSpOwnTexel(${ye[ie]}, bloxdSpUv, bloxdSpLevel);\n\t\tbloxdSpColour = vec4f(mix(bloxdSpColour.rgb, bloxdSpLayer.rgb, bloxdSpLayer.a), bloxdSpLayer.a + bloxdSpColour.a * (1.0 - bloxdSpLayer.a));\n\t}\n`;
-            Ue += "\treturn vec4f(bloxdSpColour.rgb / max(bloxdSpColour.a, 0.001), bloxdSpColour.a);\n"
-          }
-        else Ue = "\treturn bloxdSpOwnTexel(bloxdSpUv, bloxdSpLevel);\n";
-        return `${ee.id?`var<private> ${ey}: u32;\n`:""}${Ke}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\tlet bloxdSpLevel = ${iy(ee)};\n\treturn ${Me};\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId != ${ee.id?ey:"0u"}) {\n\t\treturn vec4f(1.0);\n\t}\n\tlet bloxdSpLevel = ${iy(ee)};\n${Ue}}\n`
-      }(ee);
-      const ie = ee,
-        He = ee => {
-          const He = ee > 0 ? `bloxdSpLayer - ${ie.layers*ee}u` : "bloxdSpLayer";
-          return `return textureSampleLevel(textureAtlas${ee}, ${ie.sampler}, bloxdSpTurned, ${He}, round(bloxdSpMipLevel));`
-        };
-      let ye = "";
-      for (let Me = 0; Me < ie.count - 1; Me++) ye += `\tif (bloxdSpLayer < ${ie.layers*(Me+1)}u) {\n\t\t${He(Me)}\n\t}\n`;
-      const be = ie.frame ? `${ie.frame("f32(bloxdSpTextureId - 1u)","let bloxdSpFrame = ")}\tlet bloxdSpLayer = u32(round(bloxdSpFrame));\n` : "\tlet bloxdSpLayer = bloxdSpTextureId - 1u;\n";
-      return `var<private> ${Ry}: u32;\n${qy}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn textureDimensions(textureAtlas0, u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(textureAtlas0) - 1u))));\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId == 0u) {\n\t\treturn vec4f(1.0);\n\t}\n\t// Each quarter turn clockwise the face shows its texture at reads the unturned texture at (v, 1 - u)\n\tvar bloxdSpTurned = bloxdSpUv;\n\tif (${Ry} == 1u) {\n\t\tbloxdSpTurned = vec2f(bloxdSpUv.y, 1.0 - bloxdSpUv.x);\n\t} else if (${Ry} == 2u) {\n\t\tbloxdSpTurned = 1.0 - bloxdSpUv;\n\t} else if (${Ry} == 3u) {\n\t\tbloxdSpTurned = vec2f(1.0 - bloxdSpUv.y, bloxdSpUv.x);\n\t}\n${be}${ye}\t${He(ie.count-1)}\n}\n`
-    }
-
-    function Xy(ee, ie, He) {
-      return !!ee.surface && "bloxdDefaultSurface" !== ee.surface && function(ee, ie) {
-        return "liquid" === ie || !ee
-      }(ie, He)
-    }
-
-    function zy(ee, ie) {
-      return ee.vertex ? `\n\t{\n\t\tlet bloxdSpVertexIn = BloxdVertexIn(worldPos.xyz, vertexOutputs.vNormalW, ${ie.vertexLocalPosition}, ${yy(ie.vertexFlags)});\n\t\tlet bloxdSpVertex = ${ee.vertex}(bloxdSpVertexIn);\n\t\tworldPos = vec4f(bloxdSpVertex.position, worldPos.w);\n\t}\n` : ""
-    }
-
-    function By(ee, ie, He, ye, be) {
-      if (!ee.surface) return "";
-      const Me = (ee, ie) => `\n\tlet bloxdSpTexelUV = ${ee};\n\tlet bloxdSpDdx = dpdx(bloxdSpTexelUV);\n\tlet bloxdSpDdy = dpdy(bloxdSpTexelUV);\n\tlet bloxdSpLod = 0.5 * log2(max(max(dot(bloxdSpDdx, bloxdSpDdx), dot(bloxdSpDdy, bloxdSpDdy)), 1e-10));\n\tlet bloxdSpMipLevel = clamp(bloxdSpLod, 0.0, f32(textureNumLevels(${ie}) - 1u));`;
-      let Ke = "",
-        Ue = "0u, 0u, vec2f(0.0), 0.0";
-      const Fe = ye && Ty(ye) ? ye : null,
-        Je = ye && !Ty(ye) ? ye : null;
-      if (Fe) {
-        Ke = `${Fe.id?`\n\tlet bloxdSpTexture = ${Fe.id};\n\t${ey} = bloxdSpTexture & 0xffffu;`:""}\n\tlet bloxdSpUv = ${Fe.uv};${Me(function(ee,ie){var He;return`${null!==(He=ee.levelUv)&&void 0!==He?He:ee.cells?`${ie} / ${ee.cells}`:ie} * vec2f(textureDimensions(${ee.texture}))`}(Fe,"bloxdSpUv"),Fe.texture)}`, Ue = (Fe.id ? `${ey}, bloxdSpTexture >> 16u` : "0u, 0u") + ", bloxdSpUv, bloxdSpMipLevel"
-      } else Je && (Ke = `\n\tlet bloxdSpTexture = fragmentInputs.vPackTexture;\n\t${Ry} = bloxdSpTexture >> 16u;${Me(`fragmentInputs.vMainUV1 * ${(0,Ii.mb)(Je.width)}`,"textureAtlas0")}`, Ue = `bloxdSpTexture & 0xffffu, ${Ry}, fragmentInputs.vMainUV1, bloxdSpMipLevel`);
-      const oe = be.overlayColour,
-        Re = oe ? "mix(bloxdSpSurface.colour, bloxdSpSurface.overlayColour.rgb, bloxdSpSurface.overlayColour.a)" : "bloxdSpSurface.colour",
-        ke = "bloxdDefaultSurface" !== ee.surface || oe ? `\n\tbaseColor = vec4f(${Re}, baseColor.a);` : "",
-        qe = Xy(ee, ie, He) ? `\n\t${be.alphaOut} = bloxdSpSurface.alpha;` : "";
-      return `${Ke}\n\tlet bloxdSpSurfaceIn = BloxdSurfaceIn(baseColor.rgb, ${be.alpha}, ${be.enchantTier}, ${be.enchantColour}, ${be.enchantSpeed}, ${null!==oe&&void 0!==oe?oe:"vec4f(0.0)"}, fragmentInputs.vPositionW, ${be.normal}, ${be.localPosition}, ${yy(be.flags)}, ${Ue});\n\tlet bloxdSpSurface = ${ee.surface}(bloxdSpSurfaceIn);${ke}${qe}\n`
-    }
-    const Ey = "bloxdSpLightIn";
-
-    function gy(ee, ie, He, ye) {
-      if (!ee.light) return "";
-      const be = ie ? `${Ii.k}.rgb, ${Ii.k}.w, uniforms.uAmbientLightColour, uniforms.uSkyLightColour, ${Ii.h}` : "vec3f(0.0), 1.0, vec3f(1.0), vec3f(1.0), vec3f(0.0)",
-        {
-          lambert: Me,
-          diffuse: Ke,
-          emissive: Ue,
-          ambient: Fe,
-          fogColour: Je,
-          fogAlpha: oe,
-          normal: Re
-        } = ye;
-      return `\tvar ${Ey} = BloxdLightIn(vec3f(0.0), ${He?Me:"0.0"}, ${Ke}, ${Ue}, ${Fe}, ${be}, ${Je}, ${oe}, fragmentInputs.vPositionW, ${Re}, bloxdSpSurfaceIn.localPosition, bloxdSpSurfaceIn.flags, bloxdSpSurfaceIn.textureId, bloxdSpSurfaceIn.textureRotation, bloxdSpSurfaceIn.uv, bloxdSpSurfaceIn.mipLevel);\n\t${Ey}.litColour = bloxdLitColour(bloxdSpSurface, ${Ey});\n`
-    }
-
-    function Oy(ee) {
-      return ee.light ? `\n\t{\n\t\tlet bloxdSpLight = ${ee.light}(bloxdSpSurface, ${Ey});\n\t\tcolor = vec4f(bloxdSpLight.colour, color.a);\n\t}\n` : ""
-    }
-    const dy = "\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n",
-      Wy = "\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n",
-      ty = "\treturn color;\n}",
-      Zy = {
-        vertexFlags: "vertexOutputs.vBlockFlags",
-        vertexLocalPosition: "vec3f(0.0)",
-        flags: "fragmentInputs.vBlockFlags",
-        normal: "normalize(fragmentInputs.vNormalW)",
-        alpha: "alpha",
-        alphaOut: "alpha",
-        lambert: "fragmentInputs.vTerrainLambert",
-        diffuse: "material.vDiffuseColor.rgb",
-        emissive: "material.emissiveAndLevel.xyz",
-        ambient: "ambient",
-        fogColour: "select(vec3f(0.0), uniforms.vFogColor, uniforms.vFogInfos.x != 0.0)",
-        fogAlpha: "1.0 - fog",
-        enchantTier: "0u",
-        enchantColour: "vec4f(0.0)",
-        enchantSpeed: "0.0",
-        localPosition: "vec3f(0.0)",
-        overlayColour: null
-      };
-    const wy = Object.freeze({});
-
-    function Dy(ee) {
-      var ie;
-      return !(null === (ie = (0, Qi.c)(ee)) || void 0 === ie || !ie.sceneDepth)
-    }
-
-    function Py(ee) {
-      const ie = (0, Qi.c)(ee);
-      return !!ie && Xy(ie.hooks, ie.strict, ie.program)
-    }
-
-    function Ay(ee, ie, He, ye) {
-      return My(ee, ie, He, ye, "terrain")
-    }
-
-    function Yy(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "none";
-      const Me = function(ee) {
-          return (0, Qi.b)(ee.packVariant, ee.liquid ? "liquid" : "terrain")
-        }(ee),
-        {
-          hooks: Ke
-        } = Me,
-        Ue = Uy(Me, ye),
-        Fe = "edge" === be ? "maskEdge" : "plain" === be ? "mask" : "trace",
-        Je = zy(Ke, Zy);
-      Je && (ie = Ay(ie, "\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n", `\tvar worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);${Je}\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n`, "vertex"));
-      const oe = "atlas" === ee.texture ? {
-          count: ee.atlasCount,
-          layers: ee.atlasLayers,
-          width: ee.W4,
-          sampler: "atlasSampler",
-          frame: ee.animated ? He : null
-        } : null,
-        Re = `${Me.sceneDepth?"\n\tbloxdSpPixel = vec2i(fragmentInputs.position.xy);\n\tbloxdSpPositionW = fragmentInputs.vPositionW;\n":""}${oy(Me,Ue,Zy.normal,Zy.flags,Fe)}${By(Ke,Me.strict,Me.program,oe,Zy)}`;
-      Re && (ie = Ay(ie, dy, `${dy.slice(0,-1)}${Re}`, "surface"));
-      const ke = Oy(Ke);
-      return ke && (ie = Ay(ie, Wy, `${gy(Ke,ee.lighting,ee.dirLightCount>0,Zy)}${Wy}`, "light input"), ie = Ay(ie, ty, `${ke.slice(1)}${ty}`, "light")), `${(0,ri.z)()}${Me.sceneDepth?`@group(${ri.f}) @binding(${ri.p}) var bloxdSpSceneDepth: texture_2d<f32>;\nvar<private> bloxdSpPixel: vec2i;\nvar<private> bloxdSpPositionW: vec3f;\nfn bloxdOpaqueBehind() -> BloxdOpaqueBehind {\n\tlet bloxdSpZ = textureLoad(bloxdSpSceneDepth, bloxdSpPixel, 0).r;\n\tif (bloxdSpZ <= 0.0) {\n\t\treturn BloxdOpaqueBehind(false, vec3f(0.0), 0.0);\n\t}\n\tlet bloxdSpEye = ${by};\n\tlet bloxdSpScale = max(bloxdSpZ / (scene.view * vec4f(bloxdSpPositionW, 1.0)).z, 1.0);\n\tlet bloxdSpBehind = bloxdSpEye + (bloxdSpPositionW - bloxdSpEye) * bloxdSpScale;\n\treturn BloxdOpaqueBehind(true, bloxdSpBehind, distance(bloxdSpBehind, bloxdSpEye));\n}\n`:""}${Jy(Me,Ue,Fe)}${py(oe)}${Hy}fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * 0.5)) + bloxdRenderOffset();\n}\n${Me.code}${ie}`
-    }
-    const Vy = Oe.b.WGSL;
-
-    function ay(ee) {
-      return void 0 !== ee.packVariant
-    }
-    const cy = {
-        uMe: 0,
-        mMe: 4,
-        lMe: 8,
-        SMe: 12,
-        fogInfos: 16,
-        fogColour: 20,
-        outputHeight: 23,
-        sceneAmbient: 24,
-        dirLights: 28,
-        aoLevels: 44
-      },
-      xy = cy.aoLevels + 4,
-      Ly = {
-        diffuse: 0,
-        ambientAndCutoff: 4,
-        emissiveAndLevel: 8,
-        anim: 12
-      },
-      Cy = "\nstruct TerrainFrameUniforms {\n\tuHeldLightColour: vec4f,\n\tuHeldLightPos: vec4f,\n\tuSkyLightColour: vec3f,\n\tuAmbientLightColour: vec3f,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tsceneAmbient: vec3f,\n\tuDirLights: array<vec4f, 4>,\n\taoLevels: vec4f,\n}\n",
-      vy = "\nstruct TerrainMaterialUniforms {\n\tvDiffuseColor: vec4f,\n\tambientAndCutoff: vec4f,\n\temissiveAndLevel: vec4f,\n\tanim: vec4f,\n}\n",
-      uy = "\nstruct LiteSceneUniforms {\n\tviewProjection: mat4x4f,\n\tview: mat4x4f,\n\tvEyePosition: vec4f,\n}\n@group(0) @binding(0) var<uniform> scene: LiteSceneUniforms;\nfn liteWorldLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, clip.z * 0.5, clip.w);\n}\nfn liteFrontLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, (clip.z + clip.w) * 0.5, clip.w);\n}\n",
-      my = "\n\tlet fading = fragmentInputs.vVisibility < 255.0 / 256.0;\n\tif (fading && fragmentInputs.vVisibility < bayerDither(vec2f(fragmentInputs.position.x, uniforms.outputHeight - fragmentInputs.position.y))) {\n\t\tdiscard;\n\t}\n",
-      ly = "\nfn calcFogFactor(fogDistance: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = uniforms.vFogInfos.y;\n\tlet fogEnd = uniforms.vFogInfos.z;\n\tlet fogDensity = uniforms.vFogInfos.w;\n\tlet dist = length(fogDistance);\n\tif (uniforms.vFogInfos.x == 3.0) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (uniforms.vFogInfos.x == 1.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (uniforms.vFogInfos.x == 2.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n",
-      Sy = {
-        position: 0,
-        normal: 1,
-        color: 2,
-        uv: 3,
-        packedLight: 5,
-        blockFlagWords: 7
-      },
-      ny = 0,
-      jy = 3,
-      sy = 4,
-      Iy = 5,
-      hy = `\nfn packedNormal(dir: u32) -> vec4f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\treturn vec4f(select(0.0, s, axis == 0u), select(0.0, s, axis == 1u), select(0.0, s, axis == 2u), 0.0);\n}\nfn packedUv(p: vec3f, dir: u32, corner: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet du = select(-${Ni.d}, ${Ni.d}, corner == 0u || corner == 3u);\n\tlet dv = select(-${Ni.d}, ${Ni.d}, corner < 2u);\n\tif (axis == 0u) {\n\t\treturn vec2f(s * (p.z + du), -(p.y + dv));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(s * (p.x + dv), -(p.z + du));\n\t}\n\treturn vec2f(-s * (p.x + du), -(p.y + dv));\n}\n`,
-      Ny = `\n@group(1) @binding(2) var<storage, read> quads: array<u32>;\n// A quad's light: its four slots' packed values as u16, two a word, the lower slot in the low half (liteTerrainArena.ts)\n@group(1) @binding(3) var<storage, read> quadLight: array<u32>;\nfn quadSlotLight(quad: u32, slot: u32) -> f32 {\n\tlet pair = quadLight[quad * 2u + (slot >> 1u)];\n\treturn f32(select(pair, pair >> 16u, (slot & 1u) == 1u) & 0xffffu);\n}\nfn slotCorner(dir: u32, diagonal: u32, slot: u32) -> u32 {\n\tlet reversed = any(vec3u(dir) == vec3u(${[0,1,2,3,4,5].filter((ee=>Gi.b>>ee&1)).join("u, ")}u));\n\treturn (diagonal + select(slot, 4u - slot, reversed)) & 3u;\n}\nfn quadCorner(r0: u32, axis: u32, corner: u32) -> vec3f {\n\tlet w = f32(((r0 >> 18u) & 63u) + 1u) * select(0.0, 1.0, corner == 1u || corner == 2u);\n\tlet h = f32(((r0 >> 24u) & 63u) + 1u) * select(0.0, 1.0, corner >= 2u);\n\tlet du = select(vec3f(0.0, 0.0, w), vec3f(w, 0.0, 0.0), axis == 2u);\n\tlet dv = select(vec3f(0.0, h, 0.0), vec3f(h, 0.0, 0.0), axis == 1u);\n\treturn vec3f(f32(r0 & 63u), f32((r0 >> 6u) & 63u), f32((r0 >> 12u) & 63u)) + du + dv;\n}\n`;
-    const Gy = {
-      YR: "material.anim.x",
-      stride: "material.anim.y",
-      count: "material.anim.z",
-      perTexture: ee => `animDataPerTex[${ee}]`
-    };
-
-    function ry(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Gy;
-      return `\n\tlet atlasIdxIn = ${ee};\n\tlet animTick = ${He.YR};\n\tlet animTickStride = ${He.stride};\n\tlet numAnimTextures = ${He.count};\n\t${(0,de.g)(Oe.b.WGSL,He.perTexture)}\n\t${ie}animLayer;\n`
-    }
-
-    function Qy(ee) {
-      const ie = (ie, He) => {
-        const ye = ie > 0 ? `fragmentInputs.texAtlasIndex - ${ee.atlasLayers.toFixed(1)} * ${ie.toFixed(1)}` : "fragmentInputs.texAtlasIndex";
-        return `${He?"textureSampleLevel":"textureSample"}(textureAtlas${ie}, atlasSampler, fragmentInputs.vMainUV1, i32(round(${ye}))${He?", atlasLod":""})`
-      };
-      if (1 === ee.atlasCount) return `baseColor = ${ie(0,!1)};`;
-      let He = `\n\tlet atlasTexelUV = fragmentInputs.vMainUV1 * ${(0,Ii.mb)(ee.W4)};\n\tlet atlasDdx = dpdx(atlasTexelUV);\n\tlet atlasDdy = dpdy(atlasTexelUV);\n\tlet atlasLod = 0.5 * log2(max(max(dot(atlasDdx, atlasDdx), dot(atlasDdy, atlasDdy)), 1e-10));\n`;
-      for (let ye = 0; ye < ee.atlasCount; ye++) {
-        const be = ee.atlasLayers * (ye + 1) - .5;
-        He += `${ye>0?" else ":"\n\t"}if (fragmentInputs.texAtlasIndex < ${(0,Ii.mb)(be)}) {\n\t\tbaseColor = ${ie(ye,!0)};\n\t}`
-      }
-      return He
-    }
-
-    function eb(ee) {
-      return `terrain-${ee.texture}${"atlas"===ee.texture?ee.atlasCount:""}${ee.animated?"-anim":""}${ee.alphaTest?"-test":""}${ee.lighting?"-lit":""}-dir${ee.dirLightCount}${ee.packed?"-packed":""}${ay(ee)?`-sp${ee.packVariant}`:""}${ee.liquid?"-liquid":""}${ee.resting?"-rest":""}`
-    }
-
-    function ib(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
-      const ye = function(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "none";
-        const He = "none" !== ee.texture,
-          ye = "atlas" === ee.texture,
-          be = ee.dirLightCount > 0,
-          Me = ay(ee);
-        if (ee.dirLightCount > 4) throw new Error(`Terrain supports 4 directional lights, not ${ee.dirLightCount}`);
-        let Ke = 1,
-          Ue = "@group(2) @binding(0) var<uniform> material: TerrainMaterialUniforms;\n";
-        if (ye) {
-          ee.animated && (Ue += `@group(2) @binding(${Ke++}) var<storage, read> animDataPerTex: array<f32>;\n`), Ue += `@group(2) @binding(${Ke++}) var atlasSampler: sampler;\n`;
-          for (let ie = 0; ie < ee.atlasCount; ie++) Ue += `@group(2) @binding(${Ke++}) var textureAtlas${ie}: texture_2d_array<f32>;\n`
-        } else "single" === ee.texture && (Ue += `@group(2) @binding(${Ke++}) var diffuseSamplerSampler: sampler;\n`, Ue += `@group(2) @binding(${Ke++}) var diffuseSampler: texture_2d<f32>;\n`);
-        const Fe = function(ee) {
-            const ie = Sy,
-              He = "none" !== ee.texture,
-              ye = "atlas" === ee.texture,
-              be = ay(ee);
-            return ee.packed ? {
-              declarations: `\nstruct PackedVertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@builtin(vertex_index) vertexIndex: u32,\n}\nstruct VertexInputs {\n\tchunkSlot: u32,\n\tposition: vec3f,\n\tnormal: vec4f,\n\tcolor: vec4f,\n\t${He?"uv: vec2f,":""}\n\t${ye?"texAtlasIndices: f32,":""}\n\t${ee.lighting?"aPackedLightLevels: f32,":""}\n\t${be?"blockFlagWords: vec2u,":""}\n}\n${hy}\n${Ny}\n${"single"===ee.texture?"\nfn packedFaceUvOffset(r0: u32, dir: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet x = f32(r0 & 63u);\n\tlet y = f32((r0 >> 6u) & 63u);\n\tlet z = f32((r0 >> 12u) & 63u);\n\tif (axis == 0u) {\n\t\treturn vec2f(-s * z, y + f32(((r0 >> 24u) & 63u) + 1u));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(-s * x, z + f32(((r0 >> 18u) & 63u) + 1u));\n\t}\n\treturn vec2f(s * x, y + f32(((r0 >> 24u) & 63u) + 1u));\n}\n":""}\n`,
-              parameter: "packedInputs: PackedVertexInputs",
-              decode: `\n\tvar vertexInputs: VertexInputs;\n\tlet part = chunks[packedInputs.chunkSlot];\n\tlet drawn = packedInputs.vertexIndex >> 2u;\n\tlet quad = select(drawn, drawn - part.faceCount, drawn >= part.faceEnd);\n\tlet slot = packedInputs.vertexIndex & 3u;\n\tlet r2 = quads[quad * 3u + 2u];\n\tlet dir = r2 & 7u;\n\tlet corner = slotCorner(dir, (r2 >> 11u) & 1u, slot);\n\tlet position = quadCorner(quads[quad * 3u], dir >> 1u, corner);\n\tlet face = quads[quad * 3u + 1u];\n\t// A constant shift a slot, as render-shaders' terrain.wgsl decodes it\n\tlet aoBits = r2 >> 3u;\n\tlet ao = select(select(aoBits, aoBits >> 2u, slot == 1u), select(aoBits >> 4u, aoBits >> 6u, slot == 3u), slot >= 2u) & 3u;\n\tvertexInputs.chunkSlot = packedInputs.chunkSlot;\n\tvertexInputs.position = position;\n\tvertexInputs.normal = packedNormal(dir);\n\t// Packed parts are untinted, so the colour is the AO level's, as unorm8 decodes it; its alpha no program reads\n\tvertexInputs.color = vec4f(vec3f(uniforms.aoLevels[ao]), 1.0);\n\t${He?"vertexInputs.uv = packedUv(position, dir, corner);":""}\n\t${"single"===ee.texture?"vertexInputs.uv += packedFaceUvOffset(quads[quad * 3u], dir);":""}\n\t${ye?"vertexInputs.texAtlasIndices = f32(face & 0xffffu);":""}\n\t${ee.lighting?"vertexInputs.aPackedLightLevels = quadSlotLight(quad, slot);":""}\n\t${be?"vertexInputs.blockFlagWords = vec2u(face, face << 8u);":""}\n`
-            } : {
-              declarations: `\nstruct VertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@location(${ie.position}) position: vec3f,\n\t@location(${ie.normal}) normal: vec4f,\n\t@location(${ie.color}) color: vec4f,\n\t${He?`@location(${ie.uv}) uv: vec2f,`:""}\n\t${ee.lighting?`@location(${ie.packedLight}) aPackedLightLevels: f32,`:""}\n\t${be?`@location(${ie.blockFlagWords}) blockFlagWords: vec2u,`:""}\n}\n`,
-              parameter: "vertexInputs: VertexInputs",
-              decode: ""
-            }
-          }(ee),
-          Je = `\n${uy}\n${Cy}\n${vy}\n@group(1) @binding(0) var<uniform> uniforms: TerrainFrameUniforms;\n/** Per chunk part, indexed by the draw's first instance (TERRAIN_CHUNK_SLOT_WORDS words). */\nstruct TerrainChunk {\n\t/** Into the render frame. */\n\ttranslation: vec3f,\n\t/** The fade-in. */\n\tvisibility: f32,\n\t/** Quad records only: where the part's faces end in its page, in records, and how many it has. */\n\tfaceEnd: u32,\n\tfaceCount: u32,\n}\n@group(1) @binding(1) var<storage, read> chunks: array<TerrainChunk>;\n${Ue}\n${Xi}\n${Fe.declarations}\nstruct Varyings {\n\t${"none"===ie?"":"// Invariant: at 1x the scene's pass draws over the pre-pass's depth with an equal test\n\t@invariant "}@builtin(position) position: vec4f,\n\t// Centroid, as an edge pixel's centre can lie past its face and packs floor this to find the block\n\t@location(0) @interpolate(perspective, centroid) vPositionW: vec3f,\n\t@location(1) vNormalW: vec3f,\n\t@location(2) vColor: vec3f,\n\t@location(3) vFogDistance: vec3f,\n\t${ee.resting?"":"@location(4) @interpolate(flat) vVisibility: f32,"}\n\t${be?"@location(5) vTerrainLambert: f32,":""}\n\t${He?"@location(6) @interpolate(perspective, centroid) vMainUV1: vec2f,":""}\n\t${ye?"@location(7) texAtlasIndex: f32,":""}\n\t${ee.lighting?"@location(8) vLightLevels: vec4f,":""}\n\t${Me?"@location(9) @interpolate(flat) vBlockFlags: u32,":""}\n\t${Me&&ye?"@location(10) @interpolate(flat) vPackTexture: u32,":""}\n}\n\n${ee.resting?"":(0,Ii.q)(Vy)}\n${ly}\n\n@vertex\nfn mainVertex(${Fe.parameter}) -> Varyings {\n\t${Fe.decode}\n\tvar vertexOutputs: Varyings;\n\tlet chunk = chunks[vertexInputs.chunkSlot];\n\t${Me?`vertexOutputs.vBlockFlags = ((vertexInputs.blockFlagWords.x >> 24u) << 8u) | (vertexInputs.blockFlagWords.y >> 24u) | ${Yi.d.placed}u;`:""}\n\t${Me&&ye?fy("vertexInputs.texAtlasIndices").trim():""}\n\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n\tvertexOutputs.vColor = vertexInputs.color.rgb;\n\tvertexOutputs.vFogDistance = (scene.view * worldPos).xyz;\n\t${ee.resting?"":"vertexOutputs.vVisibility = chunk.visibility;"}\n\t${He?"vertexOutputs.vMainUV1 = vertexInputs.uv;":""}\n\t${ye?function(ee){return ee?ry("vertexInputs.texAtlasIndices","vertexOutputs.texAtlasIndex = "):"vertexOutputs.texAtlasIndex = vertexInputs.texAtlasIndices;"}(ee.animated):""}\n\t${"single"===ee.texture&&ee.animated?"\n\tlet frameTick = floor(material.anim.x / material.anim.z);\n\tlet animTexIndex = frameTick - material.anim.y * floor(frameTick / material.anim.y);\n\tvertexOutputs.vMainUV1.y = (vertexOutputs.vMainUV1.y + animTexIndex) / material.anim.y;\n":""}\n\t${(0,Ii._)(Vy)}\n\t${(0,Ii.E)(Vy,ee.dirLightCount)}\n\treturn vertexOutputs;\n}\n\n@fragment\nfn mainFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${ee.resting?"":my}\n\tvar baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${ye?Qy(ee):""}\n\t${"single"===ee.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${He?"alpha *= baseColor.a;\n\tbaseColor = vec4f(baseColor.rgb * material.emissiveAndLevel.w, baseColor.a);":""}\n\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n\t${ee.alphaTest?"if (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}\n\talpha = 1.0;":""}\n\tvar diffuseBase = vec3f(0.0);\n\t${be?"diffuseBase += vec3f(fragmentInputs.vTerrainLambert);":""}\n\tlet ambient = material.ambientAndCutoff.xyz * uniforms.sceneAmbient;\n\tlet finalDiffuse = clamp(diffuseBase * material.vDiffuseColor.rgb + material.emissiveAndLevel.xyz + ambient, vec3f(0.0), vec3f(1.0)) * baseColor.rgb;\n\t// Nothing past here changes alpha: light, fog and a pack's light hook keep it\n\tvar color = vec4f(finalDiffuse, select(alpha, 1.0, ${Ti}));\n\t${ay(ee)?(0,Ii.jb)(Oe.b.WGSL):(0,Ii.O)(Vy)}\n\tcolor = vec4f(max(color.rgb, vec3f(0.0)), color.a);\n\tlet fog = calcFogFactor(fragmentInputs.vFogDistance);\n\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n\treturn color;\n}\n`,
-          oe = new Set;
-        ee.lighting && oe.add("BLOXD_LIGHTING");
-        be && oe.add("BLOXD_TERRAIN_DIRECTIONAL");
-        return ni(Je, new Map([...oe].map((ee => [ee, !0]))))
-      }(ee, He);
-      if (!ay(ee)) return ye;
-      const be = Yy(ee, ye, ry, ie, He);
-      return "none" === He ? be : `${be}${function(ee){const ie="none"!==ee.texture&&ee.alphaTest;return`\n@fragment\nfn prepassFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${ee.resting?"":my}\n\t${ee.alphaTest?`var baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${ie&&"atlas"===ee.texture?Qy(ee):""}\n\t${ie&&"single"===ee.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${ie?"alpha *= baseColor.a;":""}\n\tif (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}`:""}\n\tlet emissive = (fragmentInputs.vBlockFlags & ${Yi.d.emissive}u) != 0u;\n\treturn vec4f(normalize(fragmentInputs.vNormalW) * 0.5 + 0.5, select(0.0, 1.0, emissive));\n}\n`}(ee)}`
-    }
-    const Hb = new Map([
-      ["float", {
-        wgsl: "f32",
-        align: 1,
-        floats: 1
-      }],
-      ["vec2", {
-        wgsl: "vec2f",
-        align: 2,
-        floats: 2
-      }],
-      ["vec3", {
-        wgsl: "vec3f",
-        align: 4,
-        floats: 3
-      }],
-      ["vec4", {
-        wgsl: "vec4f",
-        align: 4,
-        floats: 4
-      }],
-      ["mat4", {
-        wgsl: "mat4x4f",
-        align: 4,
-        floats: 16
-      }]
-    ]);
-
-    function yb(ee, ie) {
-      const He = new Map;
-      let ye = 0;
-      const be = [],
-        Me = [],
-        Ke = [];
-      for (const Je of ie) {
-        var Ue, Fe;
-        const ie = null !== (Ue = Je.type.trim().split(/\s+/).pop()) && void 0 !== Ue ? Ue : Je.type,
-          oe = Hb.get(ie);
-        if (!oe) throw new Error(`Lite: no uniform layout for ${Je.name}: ${Je.type}`);
-        const Re = null !== (Fe = Je.arraySize) && void 0 !== Fe ? Fe : 0,
-          ke = Re ? 4 : oe.align;
-        ye = Math.ceil(ye / ke) * ke;
-        const qe = Re ? 4 * Math.ceil(oe.floats / 4) : oe.floats;
-        if (He.set(Je.name, {
-            offset: ye,
-            floats: oe.floats,
-            arraySize: Re,
-            stride: qe
-          }), Re && oe.floats <= 2) {
-          const ie = `${ee}_${Ke.length}_strided`;
-          Me.push(`struct ${ie} {\n\t@size(16) el: ${oe.wgsl},\n}`), Ke.push(Je.name), be.push(`\t@align(16) ${Je.name}: array<${ie}, ${Re}>,`)
-        } else Re ? be.push(`\t@align(16) ${Je.name}: array<${oe.wgsl}, ${Re}>,`) : be.push(`\t${Je.name}: ${oe.wgsl},`);
-        ye += Re ? qe * Re : oe.floats
-      }
-      return {
-        slots: He,
-        floats: Math.max(4, 4 * Math.ceil(ye / 4)),
-        wgsl: `${Me.join("\n")}\nstruct ${ee} {\n${be.join("\n")}\n}\n`,
-        stridedArrays: Ke
-      }
-    }
-    const bb = [{
-        name: "vDiffuseColor",
-        type: "vec4"
-      }, {
-        name: "vDiffuseInfos",
-        type: "vec2"
-      }, {
-        name: "alphaCutOff",
-        type: "float"
-      }, {
-        name: "vEmissiveColor",
-        type: "vec3"
-      }, {
-        name: "vAmbientColor",
-        type: "vec3"
-      }, {
-        name: "vSpecularColor",
-        type: "vec4"
-      }, {
-        name: "diffuseMatrix",
-        type: "mat4"
-      }, {
-        name: "vReflectionInfos",
-        type: "vec2"
-      }, {
-        name: "reflectionMatrix",
-        type: "mat4"
-      }],
-      Mb = [{
-        name: "vOpacityInfos",
-        type: "vec2"
-      }, {
-        name: "opacityMatrix",
-        type: "mat4"
-      }],
-      Kb = [{
-        name: "vEmissiveInfos",
-        type: "vec2"
-      }, {
-        name: "emissiveMatrix",
-        type: "mat4"
-      }];
-
-    function Ub(ee, ie) {
-      return `#if defined(${ee}) && ${ee}DIRECTUV == 0\nvarying v${ie}UV: vec2f;\n#endif`
-    }
-
-    function Fb(ee, ie, He) {
-      return `#if defined(${ee}) && ${ee}DIRECTUV == 0\nif (uniforms.v${ie}Infos.x==0.)\n{vertexOutputs.v${ie}UV= (uniforms.${He}Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.v${ie}UV= (uniforms.${He}Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif`
-    }
-
-    function Jb(ee, ie, He) {
-      return `#ifdef ${ee}\n#if ${ee}DIRECTUV == 1\n#define v${ie}UV vMainUV1\n#elif ${ee}DIRECTUV == 2\n#define v${ie}UV vMainUV2\n#else\nvarying v${ie}UV: vec2f;\n#endif\nvar ${He}SamplerSampler: sampler;\nvar ${He}Sampler: texture_2d<f32>;\n#endif`
-    }
-    const ob = {
-        lights: 0,
-        lightStride: 12,
-        fogInfos: 96,
-        fogColour: 100,
-        outputHeight: 103,
-        animTick: 104,
-        timeMs: 105
-      },
-      Rb = 256,
-      kb = "\nstruct LiteLight {\n\tvLightData: vec4f,\n\tvLightDiffuse: vec4f,\n\tvLightSpecular: vec4f,\n}\nstruct LiteFrameUniforms {\n\tlights: array<LiteLight, 8>,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tanimTick: f32,\n\ttimeMs: f32,\n}\n@group(1) @binding(0) var<uniform> frame: LiteFrameUniforms;\nstruct Mesh {\n\tworld: mat4x4f,\n\tvisibility: f32,\n}\n@group(1) @binding(1) var<uniform> mesh: Mesh;\nstruct Internals {\n\tyFactor_: f32,\n\ttextureOutputHeight_: f32,\n}\nconst internals = Internals(1.0, 0.0);\n",
-      qb = "#ifdef INSTANCES\nattribute world0: vec4f;\nattribute world1: vec4f;\nattribute world2: vec4f;\nattribute world3: vec4f;\n#ifdef INSTANCESCOLOR\nattribute instanceColor: vec4f;\n#endif\n#endif",
-      fb = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#ifdef THIN_INSTANCES\nfinalWorld=mesh.world*finalWorld;\n#endif\n#else\nvar finalWorld=mesh.world;\n#endif",
-      Tb = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif",
-      pb = "#ifdef LITE_FRONT_LAYER\nvertexOutputs.position=liteFrontLayer(vertexOutputs.position);\n#else\nvertexOutputs.position=liteWorldLayer(vertexOutputs.position);\n#endif\nreturn vertexOutputs;",
-      Xb = "#ifdef FOG\nfn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;\nvar fogStart: f32=frame.vFogInfos.y;\nvar fogEnd: f32=frame.vFogInfos.z;\nvar fogDensity: f32=frame.vFogInfos.w;\nvar fogDistance: f32=length(fragmentInputs.vFogDistance);\nif (3.==frame.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);\n}\nelse if (1.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDensity);\n}\nelse if (2.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDistance*fogDensity*fogDensity);\n}\nreturn clamp(fogCoeff,0.0,1.0);\n}\n#endif",
-      zb = "const LinearEncodePowerApprox: f32=2.2;\nconst GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\nfn toLinearSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(LinearEncodePowerApprox));}\nfn toGammaSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(GammaEncodePowerApprox));}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}",
-      Bb = `\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${qb}\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nvarying vDiffuseUV: vec2f;\n#endif\n${Ub("OPACITY","Opacity")}\n${Ub("EMISSIVE","Emissive")}\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n${zb}\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n${fb}\nvar worldPos: vec4f=finalWorld*vec4f(positionUpdated,1.0);\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transpose(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\nvertexOutputs.position=scene.viewProjection*worldPos;\nvertexOutputs.vPositionW= worldPos.xyz;\n#ifndef UV1\nvar uvUpdated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nif (uniforms.vDiffuseInfos.x==0.)\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n${Fb("OPACITY","Opacity","opacity")}\n${Fb("EMISSIVE","Emissive","emissive")}\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${Tb}\n#define CUSTOM_VERTEX_MAIN_END\n${pb}\n}\n`;
-    const Eb = `\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef DIFFUSE\n#if DIFFUSEDIRECTUV == 1\n#define vDiffuseUV vMainUV1\n#elif DIFFUSEDIRECTUV == 2\n#define vDiffuseUV vMainUV2\n#else\nvarying vDiffuseUV: vec2f;\n#endif\nvar diffuseSamplerSampler: sampler;\nvar diffuseSampler: texture_2d<f32>;\n#endif\n${Jb("OPACITY","Opacity","opacity")}\n${Jb("EMISSIVE","Emissive","emissive")}\nstruct lightingInfo\n{diffuse: vec3f,\n};\nfn computeLighting(viewDirectionW: vec3f,vNormal: vec3f,lightData: vec4f,diffuseColor: vec3f,specularColor: vec3f,range: f32,glossiness: f32)->lightingInfo {var result: lightingInfo;\nvar lightVectorW: vec3f;\nvar attenuation: f32=1.0;\nif (lightData.w==0.)\n{var direction: vec3f=lightData.xyz-fragmentInputs.vPositionW;\nattenuation=max(0.,1.0-length(direction)/range);\nlightVectorW=normalize(direction);\n}\nelse\n{lightVectorW=normalize(-lightData.xyz);\n}\nvar ndl: f32=max(0.,dot(vNormal,lightVectorW));\nresult.diffuse=ndl*diffuseColor*attenuation;\nreturn result;\n}\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);\n}\n#ifdef REFLECTION\nvar reflectionCubeSamplerSampler: sampler;var reflectionCubeSampler: texture_cube<f32>;\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#else\nreturn vec3f(0.);\n#endif\n}\n#endif\n${zb}\n${Xb}\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-fragmentInputs.vPositionW);var baseColor: vec4f= vec4f(1.,1.,1.,1.);var diffuseColor: vec3f=uniforms.vDiffuseColor.rgb;var alpha: f32=uniforms.vDiffuseColor.a;\n#ifdef NORMAL\nvar normalW: vec3f=normalize(fragmentInputs.vNormalW);\n#else\nvar normalW: vec3f=normalize(cross(dpdx(fragmentInputs.vPositionW),dpdy(fragmentInputs.vPositionW)));\nnormalW=select(-normalW,normalW,dot(normalW,viewDirectionW)>=0.0);\n#endif\n#ifdef TWOSIDEDLIGHTING\nnormalW=select(-normalW,normalW,fragmentInputs.frontFacing);\n#endif\nvar uvOffset: vec2f= vec2f(0.0,0.0);\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,diffuseSamplerSampler,fragmentInputs.vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<uniforms.alphaCutOff) {discard;}\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor=vec4f(baseColor.rgb*uniforms.vDiffuseInfos.y,baseColor.a);\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor=vec4f(baseColor.rgb*fragmentInputs.vColor.rgb,baseColor.a);\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvar baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nvar glossiness: f32=uniforms.vSpecularColor.a;var specularColor: vec3f=uniforms.vSpecularColor.rgb;\nvar diffuseBase: vec3f= vec3f(0.,0.,0.);var info: lightingInfo;\nvar shadow: f32=1.;var aggShadow: f32=0.;var numLights: f32=0.;\n${Array.from({length:4},((ee,ie)=>function(ee){const ie=`
-    frame.lights[LITE_LIGHT$ {
-        ee
-      }
-      _SLOT] `;return`
-    #ifdef LIGHT$ {
-      ee
-    }\
-    nvar diffuse$ {
-      ee
-    }: vec4f = $ {
-      ie
-    }.vLightDiffuse;\
-    n #define CUSTOM_LIGHT$ {
-      ee
-    }
-    _COLOR\ ninfo = computeLighting(viewDirectionW, normalW, $ {
-      ie
-    }.vLightData, diffuse$ {
-      ee
-    }.rgb, $ {
-      ie
-    }.vLightSpecular.rgb, diffuse$ {
-      ee
-    }.a, glossiness);\
-    nshadow = 1.;\
-    naggShadow += shadow;\
-    nnumLights += 1.0;\
-    ndiffuseBase += info.diffuse * shadow;\
-    n #endif`}(ie))).join("\n")}\naggShadow=aggShadow/numLights;var refractionColor: vec4f= vec4f(0.,0.,0.,1.);\nvar reflectionColor: vec4f= vec4f(0.,0.,0.,1.);\n#ifdef REFLECTION\nvar vReflectionUVW: vec3f=computeReflectionCoords( vec4f(fragmentInputs.vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW=vec3f(vReflectionUVW.x,vReflectionUVW.y,vReflectionUVW.z*-1.0);\n#endif\n#ifdef ROUGHNESS\nvar bias: f32=uniforms.vReflectionInfos.y;\nreflectionColor=textureSampleLevel(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureSample(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW);\n#endif\n#ifdef LITE_REFLECTION_LUMINANCE\nreflectionColor=vec4f(reflectionColor.rrr,1.0);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor=vec4f(fromRGBD(reflectionColor),reflectionColor.a);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor=vec4f(toGammaSpaceVec3(reflectionColor.rgb),reflectionColor.a);\n#endif\nreflectionColor=vec4f(reflectionColor.rgb*uniforms.vReflectionInfos.x,reflectionColor.a);\n#endif\n#ifdef OPACITY\nvar opacityMap: vec4f=TEXRD(opacitySampler,opacitySamplerSampler,fragmentInputs.vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap=vec4f(opacityMap.rgb* vec3f(0.3,0.59,0.11),opacityMap.a);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* uniforms.vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*uniforms.vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=fragmentInputs.vColor.a;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<uniforms.alphaCutOff) {discard;}\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\nvar emissiveColor: vec3f=uniforms.vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,emissiveSamplerSampler,fragmentInputs.vEmissiveUV+uvOffset).rgb*uniforms.vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvar finalDiffuse: vec3f=clamp((diffuseBase+emissiveColor)*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+emissiveColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#endif\n#endif\nvar finalSpecular: vec3f= vec3f(0.0);\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb, vec3f(0.3,0.59,0.11)),0.0,1.0);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar color: vec4f= vec4f(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,vec3f(0.0),vec3f(1.0)),alpha);\n#else\nvar color: vec4f= vec4f(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor=vec4f(max(color.rgb,vec3f(0.)),color.a);\n#ifdef FOG\nvar fog: f32=CalcFogFactor();\ncolor= vec4f(mix(frame.vFogColor,color.rgb,fog),color.a);\n#endif\ncolor=vec4f(color.rgb,color.a*mesh.visibility);\n#ifdef PREMULTIPLYALPHA\ncolor=vec4f(color.rgb*color.a, color.a);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\nfragmentOutputs.color=color;\n#define CUSTOM_FRAGMENT_MAIN_END\nreturn fragmentOutputs;\n}\n`, gb = /^([gimus]+)!/, Ob = new Set;
-
-    function db(ee) {
-      Ob.has(ee) || (Ob.add(ee), console.warn(`Lite: no place for plugin code at ${ee} in the standard shader: it is left out`))
-    }
-
-    function Wb(ee, ie) {
-      let He = ee;
-      const ye = new Map;
-      for (const [Me, Ke] of ie) {
-        var be;
-        ye.set(Me, `${null!==(be=ye.get(Me))&&void 0!==be?be:""}${Ke}\n`)
-      }
-      for (const [Me, Ke] of ye) {
-        if (!Me.startsWith("!")) {
-          const ee = `#define ${Me}`;
-          if (!He.includes(ee)) {
-            db(Me);
-            continue
-          }
-          He = He.replace(ee, (() => `\n${Ke}\n${ee}`));
-          continue
-        }
-        let ee = Me.substring(1),
-          ie = "g";
-        if (ee.startsWith("!")) ie = "", ee = ee.substring(1);
-        else {
-          const He = gb.exec(ee);
-          He && (ie = He[1], ee = ee.substring(ie.length + 1))
-        }
-        const ye = new RegExp(ee, ie.includes("g") ? ie : `${ie}g`);
-        let be = ye.exec(He);
-        for (be || db(Me); be;) {
-          const ee = be,
-            ie = Ke.replace(/\$(\d+)/g, ((ie, He) => Number(He) < ee.length ? ee[Number(He)] : ""));
-          He = He.substring(0, ee.index) + ie + He.substring(ee.index + ee[0].length), ye.lastIndex = ee.index + ie.length, be = ye.exec(He)
-        }
-      }
-      return He
-    }
-    const tb = /\b(?:(attribute|uniform)|(?:(flat|linear|perspective)\s+)?(?:(center|centroid|sample)\s+)?varying)\s+(\w+)\s*:\s*([\w<>, ]+?)\s*;/g,
-      Zb = /\bvar\s+(\w+)\s*:\s*sampler\s*;/g,
-      wb = /\bvar\s+(\w+)\s*:\s*(texture_\w+(?:<\s*f32\s*>)?)\s*;/g;
-
-    function Db(ee) {
-      const ie = {
-        attributes: [],
-        varyings: [],
-        uniforms: [],
-        textures: [],
-        samplers: new Set,
-        body: ""
-      };
-      let He = ee.replace(tb, ((ee, He, ye, be, Me, Ke) => ("attribute" === He ? ie.attributes.push({
-        name: Me,
-        type: Ke
-      }) : void 0 === He ? ie.varyings.push({
-        name: Me,
-        type: Ke,
-        interpolation: Ab(Ke, ye, be)
-      }) : ie.uniforms.push({
-        name: Me,
-        type: Pb(Ke)
-      }), "")));
-      return He = He.replace(Zb, ((ee, He) => (ie.samplers.add(He), ""))), He = He.replace(wb, ((ee, He, ye) => (ie.textures.push({
-        name: He,
-        type: ye
-      }), ""))), ie.body = He, ie
-    }
-
-    function Pb(ee) {
-      const ie = ee.replace(/\s+/g, "").replace("vec2<f32>", "vec2f").replace("vec3<f32>", "vec3f").replace("vec4<f32>", "vec4f").replace("mat4x4<f32>", "mat4x4f"),
-        He = new Map([
-          ["f32", "float"],
-          ["vec2f", "vec2"],
-          ["vec3f", "vec3"],
-          ["vec4f", "vec4"],
-          ["mat4x4f", "mat4"]
-        ]).get(ie);
-      if (!He) throw new Error(`Lite: unsupported uniform type ${ee}`);
-      return He
-    }
-
-    function Ab(ee, ie, He) {
-      return void 0 === ie && void 0 === He ? /^(u32|i32|vec\du|vec\di|vec\d<[ui]32>)$/.test(ee.replace(/\s+/g, "")) ? "@interpolate(flat) " : "" : "flat" === ie ? "@interpolate(flat) " : `@interpolate(${null!==ie&&void 0!==ie?ie:"perspective"}, ${null!==He&&void 0!==He?He:"center"}) `
-    }
-
-    function Yb(ee) {
-      return xb({
-        defines: ee.defines,
-        vertex: Wb(Bb, ee.vertexCode),
-        fragment: Wb(Eb, ee.fragmentCode),
-        members: [...bb, ...ee.defines.has("OPACITY") ? Mb : [], ...ee.defines.has("EMISSIVE") ? Kb : [], ...ee.pluginUniforms],
-        structName: "StandardUniforms"
-      })
-    }
-
-    function Vb(ee) {
-      const ie = ee.replace(/\breturn\s+fragmentOutputs\s*;/g, "return canvasOutputs();");
-      if (ie === ee) throw new Error("Lite: fragment main has no return");
-      return ie
-    }
-    const ab = `\nattribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${qb}\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n${fb}\nvar worldPos: vec4f=finalWorld*vec4f(vertexInputs.position,1.0);\nvertexOutputs.position=scene.viewProjection*worldPos;\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${Tb}\n${pb}\n}\n`,
-      cb = `\nuniform color: vec4f;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n${Xb}\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvar color: vec4f=fragmentInputs.vColor;\n#else\nvar color: vec4f=uniforms.color;\n#endif\n#ifdef FOG\ncolor=vec4f(mix(frame.vFogColor,color.rgb,CalcFogFactor()),color.a);\n#endif\nfragmentOutputs.color=color;\nreturn fragmentOutputs;\n}\n`;
-
-    function xb(ee) {
-      const ie = ee.defines,
-        He = Db(ni(ee.vertex, ie)),
-        ye = Db(ni(ee.fragment, ie)),
-        be = new Map;
-      for (const Be of [...He.varyings, ...ye.varyings]) be.has(Be.name) || be.set(Be.name, Be);
-      const Me = [...be.values()].map(((ee, ie) => `\t@location(${ie}) ${ee.interpolation}${ee.name}: ${ee.type},`)),
-        Ke = [...ee.members];
-      for (const Be of [...He.uniforms, ...ye.uniforms]) Ke.some((ee => ee.name === Be.name)) || Ke.push(Be);
-      const Ue = yb(ee.structName, Ke),
-        Fe = [],
-        Je = [];
-      let oe = 1;
-      const Re = new Set;
-      for (const Be of [...He.textures, ...ye.textures]) {
-        if (Re.has(Be.name)) continue;
-        Re.add(Be.name);
-        const ee = `${Be.name}Sampler`,
-          ie = oe++,
-          He = oe++,
-          ye = Be.type.startsWith("texture_2d_array") ? "2d-array" : Be.type.startsWith("texture_cube") ? "cube" : "2d";
-        Fe.push({
-          name: Be.name,
-          binding: ie,
-          samplerBinding: He,
-          dimension: ye
-        }), Je.push(`@group(2) @binding(${ie}) var ${Be.name}: ${Be.type};`), Je.push(`@group(2) @binding(${He}) var ${ee}: sampler;`)
-      }
-      for (const Be of [...He.samplers, ...ye.samplers])
-        if (!Re.has(Be.replace(/Sampler$/, ""))) throw new Error(`Lite: sampler ${Be} has no texture`);
-      const ke = [uy, kb, Ue.wgsl, `@group(2) @binding(0) var<uniform> uniforms: ${ee.structName};`, ...Je].join("\n"),
-        qe = He.attributes,
-        fe = ["struct VertexInputs {", "\t@builtin(vertex_index) vertexIndex: u32,", "\t@builtin(instance_index) instanceIndex: u32,", ...He.attributes.map(((ee, ie) => `\t@location(${ie}) ${ee.name}: ${ee.type},`)), "}", "var<private> vertexInputs: VertexInputs;"].join("\n"),
-        Te = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...Me, "}", "var<private> vertexOutputs: FragmentInputs;"].join("\n"),
-        pe = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...ye.body.includes("fragmentInputs.frontFacing") ? ["\t@builtin(front_facing) frontFacing: bool,"] : [], ...Me, "}", "var<private> fragmentInputs: FragmentInputs;", "struct FragmentOutputs {", "\t@location(0) color: vec4f,", "}", "var<private> fragmentOutputs: FragmentOutputs;", Xi, "fn canvasOutputs() -> FragmentOutputs {", `\tif (${Ti}) {`, "\t\tfragmentOutputs.color.a = 1.0;", "\t}", "\treturn fragmentOutputs;", "}"].join("\n"),
-        Xe = ee => {
-          for (const ie of Ue.stridedArrays) ee = ee.replace(new RegExp(`\\b${ie}\\s*\\[(.*?)\\]`, "g"), `${ie}[$1].el`);
-          return ee
-        };
-      return {
-        vertex: `${ke}\n${fe}\n${Te}\n${Xe(He.body)}`,
-        fragment: `diagnostic(off, derivative_uniformity);\n${ke}\n${pe}\n${Vb((ze=Xe(ye.body),ze.includes("fragmentInputs.position")?ze.replace("fragmentInputs = input;","fragmentInputs = input;\nfragmentInputs.position.y = frame.outputHeight - fragmentInputs.position.y;"):ze))}`,
-        attributes: qe,
-        material: Ue,
-        textures: Fe
-      };
-      var ze
-    }
-    const Lb = [6, 4, 5, 7, 6, 5, 0, 2, 3, 1, 0, 3, 5, 1, 3, 7, 5, 3, 0, 4, 6, 2, 0, 6, 3, 2, 6, 7, 3, 6, 0, 1, 5, 4, 0, 5],
-      Cb = ee => ({
-        name: ee,
-        type: "vec3"
-      }),
-      vb = ee => ({
-        name: ee,
-        type: "float"
-      }),
-      ub = yb("EarthSkyUniforms", [Cb("viewFrom"), vb("exposureScale"), Cb("zenithOffset"), vb("fogOn"), Cb("up"), vb("ditherOn"), Cb("sun"), vb("turbidity"), Cb("tint"), vb("rayleigh"), Cb("sunDir"), vb("mieStrength"), Cb("inScatterR"), vb("mieFocus"), Cb("inScatterM"), vb("sunE"), Cb("extinctionBeta"), vb("sunsetMix"), vb("mieScale"), vb("mieBase"), vb("mieSlope"), vb("sunDiscE"), vb("exposure")]),
-      mb = `${uy}\n${kb}\n${ub.wgsl}\n@group(2) @binding(0) var<uniform> sky: EarthSkyUniforms;\nstruct EarthSkyVarying {\n\t@builtin(position) position: vec4f,\n\t@location(0) worldPosition: vec3f,\n\t@location(1) fogDistance: vec3f,\n\t@location(2) tint: vec3f,\n}\n`,
-      lb = `\n@vertex\nfn main(@builtin(vertex_index) index: u32) -> EarthSkyVarying {\n\tlet corners = array<u32, 36>(${Lb.join(", ")});\n\tlet corner = corners[index];\n\tlet position = vec3f(f32(corner & 1u), f32((corner >> 1u) & 1u), f32(corner >> 2u)) - 0.5;\n\tvar out: EarthSkyVarying;\n\tout.position = liteWorldLayer(scene.viewProjection * mesh.world * vec4f(position, 1.0));\n\tlet worldPosition = mesh.world * vec4f(position, 1.0);\n\tout.worldPosition = worldPosition.xyz;\n\tout.fogDistance = (scene.view * worldPosition).xyz;\n\tout.tint = sky.tint;\n\treturn out;\n}\n`,
-      Sb = `\n${Xi}\nconst PI: f32 = 3.141592653589793238462643383279502884197169;\nconst SUN_DISC_COS: f32 = 0.999956676946448443553574619906976478926848692873900859324;\n${Object.entries(ui).map((ee=>{let[ie,He]=ee;return`const TONE_${ie}: f32 = ${He};`})).join(" ")}\n\n// The rest of main's prelude, as it was, for sky pack overrides that use it; the default calls none of it\nconst WAVELENGTHS: vec3f = vec3f(680E-9, 550E-9, 450E-9);\nconst MIE_K: vec3f = vec3f(0.686, 0.678, 0.666);\nconst MIE_V: f32 = 4.0;\nconst RAYLEIGH_ZENITH_LENGTH: f32 = 8.4E3;\nconst MIE_ZENITH_LENGTH: f32 = 1.25E3;\nconst SUN_INTENSITY: f32 = 1000.0;\nconst SUN_CUTOFF: f32 = PI / 1.95;\nconst SUN_STEEPNESS: f32 = 1.5;\nconst TONE_WHITE: f32 = 1000.0;\n\nfn rayleighBeta() -> vec3f { return vec3f(0.0005) / vec3f(94, 40, 18); }\n\nfn rayleighPhase(cosTheta: f32) -> f32 { return (3.0 / (16.0 * PI)) * (1.0 + pow(cosTheta, 2.0)); }\n\nfn mieBeta(wavelengths: vec3f, k: vec3f, turbidity: f32) -> vec3f {\n\tvar c: f32 = (0.2 * turbidity) * 10E-18;\n\treturn 0.434 * c * PI * pow((2.0 * PI) / wavelengths, vec3f(MIE_V - 2.0)) * k;\n}\n\nfn henyeyGreenstein(cosTheta: f32, g: f32) -> f32 {\n\treturn (1.0 / (4.0 * PI)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0 * g * cosTheta + pow(g, 2.0), 1.5));\n}\n\nfn sunIntensity(zenithAngleCos: f32) -> f32 {\n\treturn SUN_INTENSITY * max(0.0, 1.0 - exp((-(SUN_CUTOFF - acos(zenithAngleCos)) / SUN_STEEPNESS)));\n}\n\n// A sky shader pack can replace earthSkyRadiance (the scattering, over EarthSkyInput) or earthSkyColour (the tonemap) by\n// name. The prelude, EarthSkyInput and both signatures are main's, so a pack written against main compiles unchanged.\nstruct EarthSkyInput {\n\tview: vec3f, zenithView: vec3f, sun: vec3f, up: vec3f,\n\tturbidity: f32, rayleigh: f32, mieStrength: f32, mieFocus: f32,\n}\n\nfn filmic(x: vec3f) -> vec3f {\n\treturn ((x * (TONE_A * x + TONE_C * TONE_B) + TONE_D * TONE_E) / (x * (TONE_A * x + TONE_B) + TONE_D * TONE_F)) - TONE_E / TONE_F;\n}\n\n// The default reads input's view, zenithView and up, and the terms the CPU precomputes from the frame's uniforms\n// (earthSkyDerived.ts) straight from sky: they already include input's sun, turbidity, rayleigh, mieStrength and mieFocus.\nfn earthSkyRadiance(input: EarthSkyInput) -> vec3f {\n\t// cos(acos(x)) is x: the Rayleigh and Mie optical lengths share this denominator\n\tlet cosZenith = max(0.0, dot(input.up, input.zenithView));\n\tlet zenithAngle = acos(cosZenith);\n\tlet opticalLength = 1.0 / (cosZenith + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / PI), -1.253));\n\tlet extinction = exp(-sky.extinctionBeta * opticalLength);\n\tlet cosTheta = dot(input.view, sky.sunDir);\n\tlet rCos = cosTheta * 0.5 + 0.5;\n\tlet rPhase = (3.0 / (16.0 * PI)) * (1.0 + rCos * rCos);\n\tlet mBase = sky.mieBase - sky.mieSlope * cosTheta;\n\tlet mPhase = sky.mieScale * inverseSqrt(mBase) / mBase;\n\tlet scattered = sky.inScatterR * rPhase + sky.inScatterM * mPhase;\n\tlet lit = scattered * (1.0 - extinction);\n\tlet inScattered = lit * sqrt(lit) * mix(vec3f(1.0), sqrt(scattered * extinction), vec3f(sky.sunsetMix));\n\tlet sunDisc = smoothstep(SUN_DISC_COS, SUN_DISC_COS + 0.00002, cosTheta);\n\tlet night = (0.1 + sky.sunDiscE * sunDisc) * extinction;\n\treturn (inScattered + night) * 0.04 + vec3f(0.0, 0.001, 0.0025) * 0.3;\n}\n\n// The contract for overrides: exposure is SkyMaterial's luminance (main passes sky.exposure), as Babylon's tonemap reads it.\n// The default tonemaps with the frame's precomputed sky.exposureScale, its log2(2 / exposure^4), written together with it.\nfn earthSkyColour(radiance: vec3f, exposure: f32) -> vec3f {\n\treturn filmic(sky.exposureScale * radiance) * ${mi};\n}\n\nfn ditherOffset(seed: vec2f, variance: f32) -> f32 {\n\tlet rand: f32 = fract(sin(dot(seed.xy, vec2f(12.9898, 78.233))) * 43758.5453);\n\tlet normVariance: f32 = variance / 255.0;\n\treturn mix(-normVariance, normVariance, rand);\n}\n\nfn fogFactor(fromEye: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = frame.vFogInfos.y;\n\tlet fogEnd = frame.vFogInfos.z;\n\tlet fogDensity = frame.vFogInfos.w;\n\tlet dist = length(fromEye);\n\tif (3.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (1.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (2.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n\n@fragment\nfn main(input: EarthSkyVarying) -> @location(0) vec4f {\n\tlet toSky = input.worldPosition - sky.viewFrom;\n\tlet radiance = earthSkyRadiance(EarthSkyInput(normalize(toSky), normalize(toSky + sky.zenithOffset), sky.sun, sky.up, sky.turbidity, sky.rayleigh, sky.mieStrength, sky.mieFocus));\n\t// Parity: off, the dither and fog branches are skipped, as Babylon leaves them out with its defines; the dither reads the WebGL frag coord, as in Babylon\n\tvar dither = 0.0;\n\tif (sky.ditherOn != 0.0) { dither = ditherOffset(vec2f(input.position.x, frame.outputHeight - input.position.y), 0.5); }\n\tvar colour = clamp(vec4f(earthSkyColour(radiance, sky.exposure) * input.tint + dither, 1.0), vec4f(0.0), vec4f(1.0));\n\tif (sky.fogOn != 0.0) { colour = vec4f(mix(frame.vFogColor, colour.rgb, fogFactor(input.fogDistance)), colour.a); }\n\t// The canvas's alpha on the unblended pipeline it draws in (canvasFragment)\n\tif (${Ti}) { colour.a = 1.0; }\n\treturn colour;\n}\n`;
-    var nb = He(37913);
-    const jb = new nb.rf,
-      sb = new nb.rf,
-      Ib = new nb.Quaternion,
-      hb = new Float64Array(3),
-      Nb = new class {
-        constructor() {
-          this.sunDir = new Float64Array(3), this.sunE = 0, this.inScatterR = new Float64Array(3), this.inScatterM = new Float64Array(3), this.extinctionBeta = new Float64Array(3), this.sunsetMix = 0, this.sunDiscE = 0, this.mieScale = 0, this.mieBase = 0, this.mieSlope = 0
-        }
-      },
-      Gb = new Float64Array(16);
-
-    function rb(ee, ie, He) {
-      const ye = He.worldMatrix;
-      var be;
-      ee.updateFloat3("viewFrom", ye[12], ye[13], ye[14]), ee.updateFloatsFrom("zenithOffset", ie.cameraOffset, 0, 3), ee.updateFloatsFrom("up", ie.up, 0, 3), ie.luminance > 0 && (ee.updateFloat("exposure", ie.luminance), ee.updateFloat("exposureScale", (be = ie.luminance, Math.log2(2 / Math.pow(be, 4))))), ee.updateFloat("turbidity", ie.turbidity), ee.updateFloat("rayleigh", ie.rayleigh), ee.updateFloat("mieStrength", ie.mieCoefficient), ee.updateFloat("mieFocus", ie.mieDirectionalG), ee.updateFloatsFrom("tint", ie.tint, 0, 3), ee.updateFloat("fogOn", ie.fog && He.fogEnabled && 0 !== He.fogMode ? 1 : 0), ee.updateFloat("ditherOn", ie.dithering ? 1 : 0);
-      const Me = ie.sunPosition;
-      if (jb.set(Me[0], Me[1], Me[2]), !ie.useSunPosition) {
-        const ee = Math.PI * (ie.inclination - .5),
-          He = 2 * Math.PI * (ie.azimuth - .5);
-        jb.set(ie.distance * Math.cos(He) * Math.cos(ee), ie.distance * Math.sin(-ee), ie.distance * Math.sin(He) * Math.cos(ee)), nb.Quaternion.FromUnitVectorsToRef(nb.rf.UpReadOnly, sb.set(ie.up[0], ie.up[1], ie.up[2]), Ib), jb.rotateByQuaternionToRef(Ib, jb)
-      }
-      ee.updateVector3("sun", jb), hb[0] = jb.x, hb[1] = jb.y, hb[2] = jb.z;
-      const Ke = vi(ie, hb, Nb);
-      ee.updateFloatsFrom("sunDir", Ke.sunDir, 0, 3), ee.updateFloat("sunE", Ke.sunE), ee.updateFloatsFrom("inScatterR", Ke.inScatterR, 0, 3), ee.updateFloatsFrom("inScatterM", Ke.inScatterM, 0, 3), ee.updateFloatsFrom("extinctionBeta", Ke.extinctionBeta, 0, 3), ee.updateFloat("sunsetMix", Ke.sunsetMix), ee.updateFloat("sunDiscE", Ke.sunDiscE), ee.updateFloat("mieScale", Ke.mieScale), ee.updateFloat("mieBase", Ke.mieBase), ee.updateFloat("mieSlope", Ke.mieSlope)
-    }
-
-    function Qb(ee, ie) {
-      const He = Gb;
-      He[0] = ie.far, He[5] = ie.far, He[10] = ie.far, He[15] = 1;
-      const ye = ee.infiniteDistance;
-      for (let be = 0; be < 3; be++) He[12 + be] = ee.position[be] + (ye ? ie.worldMatrix[12 + be] : 0);
-      return Gb
-    }
-    class eM {
-      constructor() {
-        this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers = [], this.vertexOffsets = [], this.indexBuffer = null
-      }
-      reset() {
-        this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers.length = 0, this.vertexOffsets.length = 0, this.indexBuffer = null
-      }
-      bind(ee, ie, He, ye, be) {
-        He !== this.pipeline && (ee.setPipeline(He), this.pipeline = He), ee.setBindGroup(1, ye, [be]);
-        const Me = ie.material.bindGroup;
-        Me !== this.materialGroup && (ee.setBindGroup(2, Me), this.materialGroup = Me);
-        const Ke = ie.program.packGroup;
-        Ke && Ke !== this.packGroup && (ee.setBindGroup(ri.f, Ke), this.packGroup = Ke);
-        const {
-          vertexBuffers: Ue,
-          vertexOffsets: Fe
-        } = this;
-        for (let Je = 0; Je < ie.vertexBuffers.length; Je++) Ue[Je] === ie.vertexBuffers[Je] && Fe[Je] === ie.vertexOffsets[Je] || (ee.setVertexBuffer(Je, ie.vertexBuffers[Je], ie.vertexOffsets[Je]), Ue[Je] = ie.vertexBuffers[Je], Fe[Je] = ie.vertexOffsets[Je]);
-        ie.indexBuffer && ie.indexBuffer !== this.indexBuffer && (ee.setIndexBuffer(ie.indexBuffer, ie.indexFormat), this.indexBuffer = ie.indexBuffer)
-      }
-    }
-    class iM {
-      constructor(ee, ie, He, ye) {
-        this.modelMeshes = ee, this.Nee = ie, this.maker = He, this.warnOnce = ye, this.skyDraws = [], this.opaqueDraws = [], this.transparentDraws = [], this.frontDraws = [], this.warnIfNotDrawn = (ee, ie) => {
-          (ie < -1 || ie > 1) && this.warnOnce(`group:${ie}`, `rendering group ${ie} is not drawn`)
-        }
-      }
-      clear() {
-        this.skyDraws.length = 0, this.opaqueDraws.length = 0, this.transparentDraws.length = 0, this.frontDraws.length = 0
-      }
-      collect(ee) {
-        this.collectGroup(ee, -1, this.skyDraws, this.skyDraws, !0), this.collectGroup(ee, 0, this.opaqueDraws, this.transparentDraws, !1), this.collectGroup(ee, 1, this.frontDraws, this.frontDraws, !0), this.modelMeshes.forEachGroup(this.warnIfNotDrawn), this.Nee.forEachGroup(this.warnIfNotDrawn), this.opaqueDraws.sort(HM), this.transparentDraws.sort(yM)
-      }
-      collectGroup(ee, ie, He, ye, be) {
-        const Me = this.modelMeshes.group(ie),
-          Ke = this.Nee.group(ie),
-          Ue = 0 === ie ? null === Ke || void 0 === Ke ? void 0 : Ke.opaque : void 0;
-        this.collectList(ee, null === Me || void 0 === Me ? void 0 : Me.opaque, Ue || null === Ke || void 0 === Ke ? void 0 : Ke.opaque, ie, !1, He, be), Ue && (this.Nee.drawn += this.maker.bundleDraws(ee, Ue, ie)), this.collectList(ee, null === Me || void 0 === Me ? void 0 : Me.alphaTest, void 0, ie, !1, He, be), this.collectList(ee, null === Me || void 0 === Me ? void 0 : Me.transparent, null === Ke || void 0 === Ke ? void 0 : Ke.transparent, ie, !0, ye, be)
-      }
-      collectList(ee, ie, He, ye, be, Me, Ke) {
-        var Ue;
-        const Fe = Me.length;
-        ie && this.maker.pushDraws(ee, ie.units, ie.units.length, ye, be, Me, ie.rows), He && (this.Nee.drawn += this.maker.pushDraws(ee, He, He.length, ye, be, Me));
-        const Je = be ? null === (Ue = this.modelMeshes.group(ye)) || void 0 === Ue ? void 0 : Ue.text : void 0;
-        Je && this.maker.pushDraws(ee, Je.units, Je.units.length, ye, !0, Me, Je.rows), Ke && bM(Me, Fe)
-      }
-    }
-
-    function HM(ee, ie) {
-      return ee.program.id - ie.program.id || ee.material.owner.uniqueId - ie.material.owner.uniqueId
-    }
-
-    function yM(ee, ie) {
-      return ee.material.owner.uniqueId - ie.material.owner.uniqueId
-    }
-
-    function bM(ee, ie) {
-      for (let He = ie + 1; He < ee.length; He++) {
-        const ye = ee[He];
-        let be = He - 1;
-        for (; be >= ie && yM(ee[be], ye) > 0; be--) ee[be + 1] = ee[be];
-        ee[be + 1] = ye
-      }
-    }
-    const MM = {};
-
-    function KM(ee) {
-      return ee.hasThinInstances ? "thin" : ee.nMe || ee._userInstancedBuffersStorage ? "instanced" : "none"
-    }
-
-    function UM(ee, ie, He) {
-      return ee ? (He._needUVs = !0, ee.optimizeUVAllocation && (0, we.E)(ee.matrix) ? (He[`${ie}DIRECTUV`] = ee.uvSet + 1, He[`MAINUV${ee.uvSet+1}`] = !0) : He[`${ie}DIRECTUV`] = 0, !0) : (He[`${ie}DIRECTUV`] = 0, !1)
-    }
-
-    function FM(ee) {
-      const ie = new Map;
-      for (const He in ee) {
-        if (95 === He.charCodeAt(0)) continue;
-        const ye = ee[He],
-          be = typeof ye;
-        "number" === be || "string" === be ? ie.set(He, String(ye)) : ye && "function" !== be && ie.set(He, !0)
-      }
-      return ie
-    }
-
-    function JM(ee) {
-      const ie = {
-        markAllAsDirty: () => {}
-      };
-      for (const {
-          defines: He
-        }
-        of ee.features)
-        for (const ee in He) ie[ee] = He[ee];
-      return ie
-    }
-
-    function oM(ee) {
-      const ie = ee.parts.geometry;
-      return null !== ie && void 0 !== ie && ie.live ? ie : null
-    }
-
-    function RM(ee) {
-      var ie;
-      return null !== (ie = oM(ee)) && void 0 !== ie ? ie : MM
-    }
-    class kM {
-      constructor(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-        this.resources = ee, this.warnOnce = ie, this.programWithModel = He, this.packFailed = ye, this.drawStates = new WeakMap, this.view = void 0, this.modelPackVariant = 0
-      }
-      programFor(ee, ie, He, ye, be) {
-        const Me = ie.owner;
-        let Ke = this.drawStates.get(ie);
-        if (!Ke) {
-          const ee = ie.parts.materials[ie.range];
-          if (!ee) return this.warnOnce("model", `${He.name} on ${Me.name} is not a model material, so it is not drawn on WebGPU (adoptModelMaterial); further ones are not reported`), null;
-          Ke = {
-            defines: JM(ee),
-            model: ee,
-            modelVersion: -1,
-            definesKey: "",
-            program: null,
-            instancing: be,
-            groupId: ye,
-            geometry: null,
-            instanceLayout: null,
-            definesBits: 0,
-            packVariant: 0
-          }, this.drawStates.set(ie, Ke)
-        }
-        if (this.programCurrent(Ke, ie, be, ye)) return Ke.program;
-        const {
-          model: Ue
-        } = Ke, Fe = RM(ie), Je = this.instanceLayout(Me, be), oe = this.definesBits(Me);
-        if (!this.prepareModelDefines(ee, Me, Ue, Ke.defines, ye, be)) return null;
-        Ke.instancing = be, Ke.groupId = ye, Ke.modelVersion = Ue.version, Ke.geometry = Fe, Ke.instanceLayout = Je, Ke.definesBits = oe;
-        const Re = function(ee) {
-          let ie = "";
-          for (const [He, ye] of ee) ie += !0 === ye ? `${He};` : `${He}=${ye};`;
-          return ie
-        }(FM(Ke.defines));
-        return Re === Ke.definesKey && Ke.packVariant === this.modelPackVariant && Ke.program && !this.packFailed(Ke.program) || (Ke.definesKey = Re, Ke.packVariant = this.modelPackVariant, Ke.program = this.programWithModel(Ue, Ke.defines, Re)), Ke.program
-      }
-      programCurrent(ee, ie, He, ye) {
-        return null !== ee.program && !this.packFailed(ee.program) && ee.instancing === He && ee.groupId === ye && this.definesHold(ee, ie, He)
-      }
-      definesHold(ee, ie, He) {
-        return ee.modelVersion === ee.model.version && ee.geometry === RM(ie) && ee.instanceLayout === this.instanceLayout(ie.owner, He) && ee.definesBits === this.definesBits(ie.owner) && ee.packVariant === this.modelPackVariant
-      }
-      modelPackKind(ee) {
-        var ie;
-        return 0 === this.modelPackVariant ? null : null !== (ie = (0, te.y)(ee, We.e.name)) && void 0 !== ie && ie.active ? "placed" : ee.item ? "item" : ee.lifeform ? "lifeform" : ee.box ? "box" : null
-      }
-      instanceLayout(ee, ie) {
-        var He, ye, be;
-        return "thin" === ie ? null !== (be = this.resources.Zee.get(ee)) && void 0 !== be ? be : null : "instanced" === ie && null !== (He = null === (ye = ee._userInstancedBuffersStorage) || void 0 === ye ? void 0 : ye.interleavedKinds) && void 0 !== He ? He : null
-      }
-      definesBits(ee) {
-        const ie = this.view;
-        return (ee.visibility < 1 ? 1 : 0) | (ee.hasVertexAlpha ? 2 : 0) | (ee.applyFog ? 4 : 0) | (ee.useVertexColors ? 8 : 0) | (ee.nonUniformScaling ? 16 : 0) | (ie.fogEnabled && 0 !== ie.fogMode ? 32 : 0) | (ie.lightsEnabled ? 64 : 0) | ie.lightCount << 7
-      }
-      prepareLightDefines(ee, ie, He) {
-        let ye = 0;
-        if (this.view.lightsEnabled && !ie) {
-          const ie = Math.min(He, 4);
-          for (; ye < this.view.lightCount && (ee[`LIGHT${ye}`] = !0, ee[`LITE_LIGHT${ye}_SLOT`] = ye, ye++, ee._needNormals = !0, ye !== ie););
-        }
-        for (let be = ye; be < 4; be++) ee[`LIGHT${be}`] = !1, ee[`LITE_LIGHT${be}_SLOT`] = void 0
-      }
-      prepareModelDefines(ee, ie, He, ye, be, Me) {
-        const {
-          features: Ke
-        } = He;
-        ye._needNormals = !1, ye._needUVs = !1;
-        const Ue = this.view;
-        this.prepareLightDefines(ye, He.disableLighting, He.maxSimultaneousLights), ye.MAINUV1 = !1, ye.MAINUV2 = !1;
-        const Fe = He.diffuseTexture;
-        Fe ? (ye._needUVs = !0, ye.DIFFUSE = !0, Fe.optimizeUVAllocation && (0, we.E)(Fe.matrix) ? (ye.DIFFUSEDIRECTUV = Fe.uvSet + 1, ye[`MAINUV${Fe.uvSet+1}`] = !0) : ye.DIFFUSEDIRECTUV = 0, Fe.uvSet > 1 && this.warnOnce(`uvset:${He.name}`, `${He.name} samples UV set ${Fe.uvSet+1}, which is not supported`)) : (ye.DIFFUSE = !1, ye.DIFFUSEDIRECTUV = 0);
-        const Je = He.opacityTexture,
-          oe = He.emissiveTexture;
-        ye.OPACITY = UM(Je, "OPACITY", ye), ye.OPACITYRGB = null !== Je && Je.getAlphaFromRGB, ye.EMISSIVE = UM(oe, "EMISSIVE", ye), (Je && Je.uvSet > 1 || oe && oe.uvSet > 1) && this.warnOnce(`uvset:${He.name}`, `${He.name} samples a UV set past 2, which is not supported`);
-        const Re = He.reflectionTexture,
-          ke = null !== Re;
-        if (ke) {
-          if (!this.resources.boundTexture(Re)) return !1;
-          ye._needNormals = !0
-        }
-        ye.REFLECTION = ke, ye.REFLECTIONMAP_3D = ke, ye.REFLECTIONMAP_SKYBOX = ke, ye.REFLECTIONMAP_OPPOSITEZ = ke && (ee.useRightHandedSystem ? !Re.invertZ : Re.invertZ), ye.ROUGHNESS = ke && He.roughness > 0, ye.REFLECTIONOVERALPHA = ke && He.useReflectionOverAlpha, ye.LITE_REFLECTION_LUMINANCE = ke && "cube" === Re.source.kind && Re.source.luminance, (ie.skeleton || ie.morphTargetManager) && this.warnOnce(`skin:${ie.name}`, `${ie.name} has bones or morph targets, which are not supported`), ye.FOG = He.fogEnabled && ie.applyFog && Ue.fogEnabled && 0 !== Ue.fogMode, ye.NONUNIFORMSCALING = ie.nonUniformScaling;
-        const {
-          visibility: qe,
-          hasVertexAlpha: fe
-        } = ie;
-        ye.ALPHATEST = (0, te.O)(He, qe, fe), ye.ALPHAFROMDIFFUSE = (0, te.db)(He), ye.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== He.transparencyMode, ye.ALPHABLEND = null === He.transparencyMode || (0, te.M)(He, qe, fe), ye.PREMULTIPLYALPHA = 7 === He.alphaMode || 8 === He.alphaMode, ye.EMISSIVEASILLUMINATION = He.useEmissiveAsIllumination, ye.LINKEMISSIVEWITHDIFFUSE = He.linkEmissiveWithDiffuse, ye.TWOSIDEDLIGHTING = !He.backFaceCulling && He.twoSidedLighting, ye.INSTANCES = "none" !== Me, ye.THIN_INSTANCES = "thin" === Me, ye.LITE_FRONT_LAYER = be >= 1;
-        for (const {
-            feature: de,
-            state: We,
-            active: te
-          }
-          of Ke) {
-          var Te, pe;
-          if (te) null === (Te = (pe = (0, ai.e)(de)).prepareDefinesBeforeAttributes) || void 0 === Te || Te.call(pe, We, ye, ee, ie)
-        }
-        this.modelPackKind(He) && (ye._needNormals = !0), ye.NORMAL = ye._needNormals && ie.isVerticesDataPresent("normal"), ye.UV1 = ye._needUVs && ie.isVerticesDataPresent("uv"), ye.UV2 = ye._needUVs && ie.isVerticesDataPresent("uv2");
-        const Xe = ie.useVertexColors && ie.isVerticesDataPresent("color");
-        ye.VERTEXCOLOR = Xe, ye.VERTEXALPHA = ie.hasVertexAlpha && Xe, ye.INSTANCESCOLOR = "none" !== Me && ie.isVerticesDataPresent("instanceColor");
-        for (const {
-            feature: de,
-            state: We,
-            active: te
-          }
-          of Ke) {
-          var ze, Be;
-          if (te) null === (ze = (Be = (0, ai.e)(de)).prepareDefines) || void 0 === ze || ze.call(Be, We, ye, ee, ie, He)
-        }
-        const Ee = ee.Nf();
-        for (const {
-            feature: de,
-            state: We,
-            active: te
-          }
-          of Ke) {
-          var ge, Oe;
-          if (te && !1 === (null === (ge = (Oe = (0, ai.e)(de)).isReadyForSubMesh) || void 0 === ge ? void 0 : ge.call(Oe, We, ye, ee, Ee))) return !1
-        }
-        return !0
-      }
-    }
-
-    function qM(ee, ie, He) {
-      return ee.codeVersion !== ie.version && function(ee, ie) {
-        const He = [],
-          ye = [];
-        for (const {
-            feature: ke,
-            state: qe,
-            active: fe
-          }
-          of ie.features) {
-          var be, Me, Ke, Ue;
-          if (fe) fM(null === (be = (Me = (0, ai.e)(ke)).getCustomCode) || void 0 === be ? void 0 : be.call(Me, qe, "vertex", Oe.b.WGSL), He), fM(null === (Ke = (Ue = (0, ai.e)(ke)).getCustomCode) || void 0 === Ke ? void 0 : Ke.call(Ue, qe, "fragment", Oe.b.WGSL), ye)
-        }
-        const Fe = [];
-        for (const {
-            feature: ke,
-            state: qe
-          }
-          of ie.features) {
-          var Je, oe;
-          const ee = null === (Je = (oe = (0, ai.e)(ke)).getUniforms) || void 0 === Je ? void 0 : Je.call(oe, qe, Oe.b.WGSL);
-          for (const ie of null !== (Re = null === ee || void 0 === ee ? void 0 : ee.ubo) && void 0 !== Re ? Re : []) {
-            var Re;
-            ie.size && ie.type && Fe.push({
-              name: ie.name,
-              type: ie.type,
-              arraySize: ie.arraySize
-            })
-          }
-        }
-        ee.vertexCode = He, ee.fragmentCode = ye, ee.pluginUniforms = Fe, ee.codeKey = JSON.stringify([He, ye, Fe]), ee.codeVersion = ie.version
-      }(ee, ie), `${He}#${ee.codeKey}`
-    }
-
-    function fM(ee, ie) {
-      if (ee)
-        for (const He in ee) ee[He] && ie.push([He, ee[He]])
-    }
-    const TM = new Map([
-      [512, "never"],
-      [513, "greater"],
-      [514, "equal"],
-      [515, "greater-equal"],
-      [516, "less"],
-      [517, "not-equal"],
-      [518, "less-equal"],
-      [519, "always"]
-    ]);
-    class pM {
-      constructor(ee) {
-        this.warnOnce = ee, this.states = new Map
-      }
-      renderState(ee, ie, He, ye) {
-        var be;
-        let Me = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "triangle-list",
-          Ke = null !== (be = ee.sideOrientation) && void 0 !== be ? be : ie.sideOrientation;
-        ie._getWorldMatrixDeterminant() < 0 && (Ke = 0 === Ke ? 1 : 0);
-        const Ue = "triangle-list" === Me,
-          Fe = He ? ee.alphaMode : 0,
-          Je = (!He || (0 === Fe || ee.forceDepthWrite)) && !ee.disableDepthWrite,
-          oe = Ue && ee.backFaceCulling ? ee.cullBackFaces ? "back" : "front" : "none",
-          Re = Ue && 0 !== Ke ? "ccw" : "cw",
-          ke = ee.depthFunction,
-          qe = Ue ? ee.zOffset : 0,
-          fe = Ue ? ee.zOffsetUnits : 0,
-          Te = !ee.disableColorWrite;
-        return ye && ye.alphaMode === Fe && ye.depthWrite === Je && ye.depthFunction === ke && ye.cullMode === oe && ye.frontFace === Re && ye.zOffset === qe && ye.zOffsetUnits === fe && ye.colourWrite === Te && ye.topology === Me ? ye : this.stateFor(Fe, Je, ke, oe, Re, qe, fe, Te, Me)
-      }
-      stateFor(ee, ie, He, ye, be, Me, Ke, Ue, Fe) {
-        const Je = `${ee}|${ie}|${He}|${ye}|${be}|${Me}|${Ke}|${Ue}|${Fe}`;
-        let oe = this.states.get(Je);
-        if (!oe) {
-          var Re;
-          const ke = ee ? Mi(ee) : null;
-          ee && !ke && this.warnOnce(`alpha:${ee}`, `alpha mode ${ee} is not supported`), oe = {
-            key: Je,
-            alphaMode: ee,
-            depthFunction: He,
-            zOffset: Me,
-            zOffsetUnits: Ke,
-            topology: Fe,
-            blend: ke,
-            depthWrite: ie,
-            depthCompare: He && null !== (Re = TM.get(He)) && void 0 !== Re ? Re : null,
-            cullMode: ye,
-            frontFace: be,
-            depthBias: -Ke,
-            depthBiasSlopeScale: -Me,
-            colourWrite: Ue
-          }, this.states.set(Je, oe)
-        }
-        return oe
-      }
-    }
-    var XM = He(38159);
-
-    function zM(ee) {
-      if (!ee.frozen) return -1;
-      let ie = ee.version;
-      for (const {
-          feature: He,
-          state: ye,
-          active: be
-        }
-        of ee.features) {
-        if (!be || !He.bind) continue;
-        const ee = (0, ai.e)(He).uniformsVersion;
-        if (!ee) return -1;
-        ie += ee(ye)
-      }
-      return ie
-    }
-    class BM {
-      constructor(ee, ie, He) {
-        this.slots = ee, this.data = ie, this.textures = He, this.useUbo = !0, this.currentEffect = null, this.expected = new Set
-      }
-      updateFloat(ee, ie) {
-        this.write4(ee, ie, 0, 0, 0, 1)
-      }
-      updateFloat2(ee, ie, He) {
-        this.write4(ee, ie, He, 0, 0, 2)
-      }
-      updateFloat3(ee, ie, He, ye) {
-        this.write4(ee, ie, He, ye, 0, 3)
-      }
-      updateFloat4(ee, ie, He, ye, be) {
-        this.write4(ee, ie, He, ye, be, 4)
-      }
-      updateVector3(ee, ie) {
-        this.write4(ee, ie.x, ie.y, ie.z, 0, 3)
-      }
-      updateVector4(ee, ie) {
-        this.write4(ee, ie.x, ie.y, ie.z, ie.w, 4)
-      }
-      updateColor3(ee, ie) {
-        this.write4(ee, ie.r, ie.g, ie.b, 0, 3)
-      }
-      updateColor4(ee, ie, He) {
-        this.write4(ee, ie.r, ie.g, ie.b, He, 4)
-      }
-      updateFloatsFrom(ee, ie, He, ye) {
-        const be = this.slots.get(ee);
-        if (!be) return;
-        const Me = this.data,
-          Ke = be.offset;
-        for (let Ue = 0; Ue < ye; Ue++) Me[Ke + Ue] = ie[He + Ue]
-      }
-      updateFloat3TimesFloats(ee, ie, He, ye) {
-        const be = this.slots.get(ee);
-        if (!be) return;
-        const Me = this.data,
-          Ke = be.offset;
-        Me[Ke] = ie[He] * ye[0], Me[Ke + 1] = ie[He + 1] * ye[1], Me[Ke + 2] = ie[He + 2] * ye[2]
-      }
-      oie(ee, ie) {
-        const He = this.slots.get(ee);
-        He && this.data.set(ie.m, He.offset)
-      }
-      updateMatrixFloats(ee, ie) {
-        const He = this.slots.get(ee);
-        He && this.data.set(ie, He.offset)
-      }
-      updateFloatArray(ee, ie) {
-        const He = this.slots.get(ee);
-        if (!He) return;
-        if (!He.arraySize || He.stride === He.floats) return void this.data.set(ie, He.offset);
-        const ye = Math.min(ie.length, He.floats * He.arraySize);
-        for (let be = 0; be < ye; be++) this.data[He.offset + Math.floor(be / He.floats) * He.stride + be % He.floats] = ie[be]
-      }
-      updateArray(ee, ie) {
-        this.updateFloatArray(ee, ie)
-      }
-      setTexture(ee, ie) {
-        this.textures.set(ee, ie), this.expected.delete(ee)
-      }
-      expectTexture(ee) {
-        this.textures.set(ee, null), this.expected.add(ee)
-      }
-      write4(ee, ie, He, ye, be, Me) {
-        const Ke = this.slots.get(ee);
-        if (!Ke) return;
-        const Ue = this.data,
-          Fe = Ke.offset;
-        Ue[Fe] = ie, Me > 1 && (Ue[Fe + 1] = He), Me > 2 && (Ue[Fe + 2] = ye), Me > 3 && (Ue[Fe + 3] = be)
-      }
-    }
-
-    function EM(ee, ie) {
-      const He = ob,
-        ye = XM.h,
-        be = ee.lights,
-        Me = Math.min(ee.lightCount, 8);
-      for (let Ke = 0; Ke < Me; Ke++) {
-        const ee = He.lights + Ke * He.lightStride,
-          Me = Ke * XM.b;
-        ie[ee] = be[Me + ye.vector], ie[ee + 1] = be[Me + ye.vector + 1], ie[ee + 2] = be[Me + ye.vector + 2], ie[ee + 3] = be[Me + ye.kind] === XM.f.directional ? 1 : 0, ie[ee + 4] = be[Me + ye.diffuse], ie[ee + 5] = be[Me + ye.diffuse + 1], ie[ee + 6] = be[Me + ye.diffuse + 2], ie[ee + 7] = be[Me + ye.range], ie[ee + 8] = be[Me + ye.specular], ie[ee + 9] = be[Me + ye.specular + 1], ie[ee + 10] = be[Me + ye.specular + 2], ie[ee + 11] = be[Me + ye.range]
-      }
-      ie[He.fogInfos] = ee.fogMode, ie[He.fogInfos + 1] = ee.fogStart, ie[He.fogInfos + 2] = ee.fogEnd, ie[He.fogInfos + 3] = ee.fogDensity, ie[He.fogColour] = ee.fogColour[0], ie[He.fogColour + 1] = ee.fogColour[1], ie[He.fogColour + 2] = ee.fogColour[2], ie[He.outputHeight] = ee.renderHeight, ie[He.animTick] = ee.animTick, ie[He.timeMs] = ee.timeMs
-    }
-    class gM {
-      constructor(ee) {
-        this.instancesOf = ee
-      }
-      refreshModelUniforms(ee, ie, He, ye) {
-        const be = zM(He);
-        if (be >= 0 && be === ie.heldVersion && ie.textures.get("diffuseSampler") === He.diffuseTexture && ie.textures.get("reflectionCubeSampler") === He.reflectionTexture && ie.textures.get("opacitySampler") === He.opacityTexture && ie.textures.get("emissiveSampler") === He.emissiveTexture) return !0;
-        if (be < 0)
-          for (const Me of this.instancesOf(He)) Me.heldVersion = -1;
-        return this.writeModelUniforms(ee, ie, He, ye), ie.heldVersion = be, !1
-      }
-      writeModelUniforms(ee, ie, He, ye) {
-        const {
-          ubo: be
-        } = ie, Me = He.diffuseTexture, Ke = He.diffuseColor;
-        be.updateFloat4("vDiffuseColor", Ke[0], Ke[1], Ke[2], He.alpha), Me && (be.updateFloat2("vDiffuseInfos", Me.uvSet, Me.level), be.updateMatrixFloats("diffuseMatrix", Me.matrix)), be.updateFloat("alphaCutOff", He.alphaCutOff), be.updateFloatsFrom("vEmissiveColor", He.emissiveColor, 0, 3), be.updateFloat3TimesFloats("vAmbientColor", ye.ambientColour, 0, He.ambientColor);
-        const Ue = He.specularColor;
-        be.updateFloat4("vSpecularColor", Ue[0], Ue[1], Ue[2], He.specularPower), be.setTexture("diffuseSampler", Me);
-        const Fe = He.opacityTexture;
-        Fe && (be.updateFloat2("vOpacityInfos", Fe.uvSet, Fe.level), be.updateMatrixFloats("opacityMatrix", Fe.matrix)), be.setTexture("opacitySampler", Fe);
-        const Je = He.emissiveTexture;
-        Je && (be.updateFloat2("vEmissiveInfos", Je.uvSet, Je.level), be.updateMatrixFloats("emissiveMatrix", Je.matrix)), be.setTexture("emissiveSampler", Je);
-        const oe = He.reflectionTexture;
-        oe && be.updateMatrixFloats("reflectionMatrix", oe.matrix), be.updateFloat2("vReflectionInfos", oe ? oe.level * ee.iblIntensity : 0, He.roughness), be.setTexture("reflectionCubeSampler", oe);
-        const Re = ee.Nf();
-        for (const {
-            feature: fe,
-            state: Te,
-            active: pe
-          }
-          of He.features) {
-          var ke, qe;
-          if (pe) null === (ke = (qe = (0, ai.e)(fe)).bind) || void 0 === ke || ke.call(qe, Te, be, ee, Re)
-        }
-      }
+    function KW(WW) {
+      const iW = WW && "host" in WW && "mode" in WW && sW.host(WW) || null;
+      return Boolean(iW && "shadowRoot" in iW && sW.shadowRoot(iW) === WW)
     }
 
-    function OM(ee) {
-      const ie = ee.replace(/\s+/g, "");
-      return /u32|^vec\du$/.test(ie) ? "u32" : /i32|^vec\di$/.test(ie) ? "i32" : "f32"
+    function SW(WW) {
+      return "[object ShadowRoot]" === Object.prototype.toString.call(WW)
     }
 
-    function dM(ee, ie) {
-      const He = ee.getSize(),
-        ye = OM(ie),
-        be = ee => 4 === He ? `${ee}x4` : 2 === He ? `${ee}x2` : null;
-      if ("f32" === ye) {
-        if (5126 === ee.type) return 1 === He ? "float32" : He >= 2 && He <= 4 ? `float32x${He}` : null;
-        if (!ee.normalized) return null;
-        switch (ee.type) {
-          case 5121:
-            return be("unorm8");
-          case 5120:
-            return be("snorm8");
-          case 5123:
-            return be("unorm16");
-          case 5122:
-            return be("snorm16")
-        }
+    function YW(WW) {
+      try {
+        const OW = WW.rules || WW.cssRules;
+        if (!OW) return null;
+        let mW = WW.href;
+        !mW && WW.ownerNode && (mW = WW.ownerNode.baseURI);
+        const EW = Array.from(OW, (WW => yW(WW, mW))).join("");
+        return (iW = EW).includes(" background-clip: text;") && !iW.includes(" -webkit-background-clip: text;") && (iW = iW.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), iW
+      } catch (OW) {
         return null
       }
-      const Me = "u32" === ye ? "uint" : "sint";
-      switch (ee.type) {
-        case 5125:
-        case 5124:
-          return 1 === He ? `${Me}32` : He <= 4 ? `${Me}32x${He}` : null;
-        case 5121:
-        case 5120:
-          return be(`${Me}8`);
-        case 5123:
-        case 5122:
-          return be(`${Me}16`)
-      }
-      return null
+      var iW
     }
 
-    function WM(ee) {
-      var ie;
-      const He = /(8|16|32)(?:x(\d))?$/.exec(ee);
-      return He ? Number(He[1]) / 8 * Number(null !== (ie = He[2]) && void 0 !== ie ? ie : 1) : 4
-    }
-    class tM {
-      constructor(ee, ie, He) {
-        this.resources = ee, this.limits = ie, this.warnOnce = He, this.layouts = new Map
-      }
-      resolveInputs(ee, ie, He, ye) {
-        const be = [],
-          Me = He.program.attributes,
-          Ke = [];
-        for (let oe = 0; oe < Me.length; oe++) {
-          const He = Me[oe],
-            Ue = He.optional ? null : this.resources.vertexInput(ee, He.name, ye);
-          if (!Ue) {
-            const ee = OM(He.type),
-              ie = "u32" === ee ? "uint32x4" : "i32" === ee ? "sint32x4" : "float32x4";
-            Ke.push(null);
-            const ye = be.find((ee => null === ee.data));
-            ye ? ye.attributes.push({
-              shaderLocation: oe,
-              offset: 0,
-              format: ie
-            }) : be.push({
-              data: null,
-              base: 0,
-              stride: 0,
-              step: "vertex",
-              attributes: [{
-                shaderLocation: oe,
-                offset: 0,
-                format: ie
-              }]
-            });
-            continue
-          }
-          const Fe = Ue.getBuffer();
-          Ke.push(Ue);
-          const Je = dM(Ue, He.type);
-          if (!Je) return this.warnOnce(`format:${ie}:${He.name}`, `${ie}'s ${He.name} (type ${Ue.type}, size ${Ue.getSize()}) has no WebGPU vertex format`), null;
-          const Re = Ue.getIsInstanced() ? "instance" : "vertex",
-            ke = Ue.byteStride,
-            qe = WM(Je),
-            fe = be.find((ee => ee.data === Fe && ee.stride === ke && ee.step === Re && Ue.byteOffset >= ee.base && Ue.byteOffset - ee.base + qe <= ke));
-          fe ? fe.attributes.push({
-            shaderLocation: oe,
-            offset: Ue.byteOffset - fe.base,
-            format: Je
-          }) : be.push({
-            data: Fe,
-            base: Ue.byteOffset,
-            stride: ke,
-            step: Re,
-            attributes: [{
-              shaderLocation: oe,
-              offset: 0,
-              format: Je
-            }]
-          })
+    function yW(WW, iW) {
+      if (function(WW) {
+          return "styleSheet" in WW
+        }(WW)) {
+        let iW;
+        try {
+          iW = YW(WW.styleSheet) || function(WW) {
+            const {
+              cssText: iW
+            } = WW;
+            if (iW.split('"').length < 3) return iW;
+            const OW = ["@import", `url(${JSON.stringify(WW.href)})`];
+            return "" === WW.layerName ? OW.push("layer") : WW.layerName && OW.push(`layer(${WW.layerName})`), WW.supportsText && OW.push(`supports(${WW.supportsText})`), WW.media.length && OW.push(WW.media.mediaText), OW.join(" ") + ";"
+          }(WW)
+        } catch (OW) {
+          iW = WW.cssText
         }
-        if (be.length > this.limits.maxVertexBuffers) return this.warnOnce(`slots:${ie}`, `${ie} needs ${be.length} vertex buffers`), null;
-        let Ue = "";
-        for (const oe of be) {
-          Ue += `${oe.stride}${"instance"===oe.step?"i":"v"}`;
-          for (const ee of oe.attributes) Ue += `,${ee.shaderLocation}:${ee.offset}:${ee.format}`;
-          Ue += ";"
-        }
-        let Fe = this.layouts.get(Ue);
-        Fe || (Fe = {
-          key: Ue,
-          buffers: be.map((ee => ({
-            arrayStride: ee.stride,
-            stepMode: ee.step,
-            attributes: ee.attributes
-          }))),
-          instanceEnds: be.map((ee => {
-            let ie = -1;
-            if ("instance" === ee.step)
-              for (const He of ee.attributes) ie = Math.max(ie, He.offset + WM(He.format));
-            return ie
-          }))
-        }, this.layouts.set(Ue, Fe));
-        const Je = be.map((ee => ee.base));
-        return {
-          program: He,
-          sources: Ke,
-          layout: Fe,
-          slotData: be.map((ee => ee.data)),
-          Qee: Je,
-          buffers: [],
-          offsets: Je,
-          ends: [],
-          state: null,
-          pipelineKey: "",
-          pipeline: null,
-          pipelineTarget: "",
-          geometry: null,
-          instanceLayout: null,
-          draw: null,
-          retained: null,
-          gpuVersion: -1,
-          fitInstances: 0
-        }
+        return WW.styleSheet.href ? DW(iW, WW.styleSheet.href) : iW
+      } {
+        let OW = WW.cssText;
+        return function(WW) {
+          return "selectorText" in WW
+        }(WW) && WW.selectorText.includes(":") && (OW = function(WW) {
+          const iW = /(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm;
+          return WW.replace(iW, "$1\\$2")
+        }(OW)), iW ? DW(OW, iW) : OW
       }
     }
-
-    function ZM(ee, ie, He, ye) {
-      const be = ie.program.program.attributes;
-      for (let Me = 0; Me < be.length; Me++) {
-        if ((be[Me].optional ? null : He.vertexInput(ee, be[Me].name, ye)) !== ie.sources[Me]) return !1
-      }
-      return !0
-    }
-    const wM = 64;
-    class DM {
-      constructor(ee, ie, He, ye) {
-        this.device = ee, this.layout = ie, this.frameBuffer = He, this.label = ye, this.data = new Float32Array(4096), this.buffer = void 0, this.bindGroup = void 0, this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup()
-      }
-      ensure(ee) {
-        if (ee * wM <= this.data.length) return !1;
-        let ie = 2 * this.data.length;
-        for (; ee * wM > ie;) ie *= 2;
-        const He = new Float32Array(ie);
-        return He.set(this.data), this.data = He, this.buffer.destroy(), this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup(), !0
-      }
-      write(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const be = this.data,
-          Me = ee * wM;
-        let Ke = be[Me + 16] !== He;
-        for (let Ue = 0; Ue < 16 && !Ke; Ue++) Ke = be[Me + Ue] !== ie[ye + Ue];
-        if (Ke) {
-          for (let ee = 0; ee < 16; ee++) be[Me + ee] = ie[ye + ee];
-          be[Me + 16] = He
-        }
-        return Ke
-      }
-      upload(ee, ie) {
-        this.device.queue.writeBuffer(this.buffer, ee * Rb, this.data, ee * wM, (ie - ee) * wM)
-      }
-      createBuffer() {
-        return this.device.createBuffer({
-          label: this.label,
-          size: this.data.byteLength,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        })
-      }
-      createBindGroup() {
-        return this.device.createBindGroup({
-          label: this.label,
-          layout: this.layout,
-          entries: [{
-            binding: 0,
-            resource: {
-              buffer: this.frameBuffer
-            }
-          }, {
-            binding: 1,
-            resource: {
-              buffer: this.buffer,
-              size: 80
-            }
-          }]
-        })
-      }
-    }
-
-    function PM(ee) {
-      return ee.gpu[we.e.lite] ??= ee.materials.map(((ie, He) => ({
-        parts: ee,
-        range: He,
-        owner: ee.owner
-      })))
-    }
-
-    function AM(ee) {
-      var ie, He, ye;
-      return null !== (ie = null !== (He = null === (ye = ee.parts.materials[ee.range]) || void 0 === ye ? void 0 : ye.mirror) && void 0 !== He ? He : ee.owner.material) && void 0 !== ie ? ie : null
-    }
-    const YM = ["opaque", "alphaTest", "transparent", "text"];
-
-    function VM(ee) {
-      for (const ie of YM) ee[ie].units.length = 0, ee[ie].rows.length = 0
-    }
-    class aM {
+    class TW {
       constructor() {
-        this.selectedCount = 0, this.model = null, this.mirror = null, this.groups = new Map, this.batches = new WeakMap, this.rows = new Int32Array(0), this.frame = 0, this.warnOnce = (0, Vi.b)("Lite: ")
+        LW(this, "idNodeMap", new Map), LW(this, "nodeMetaMap", new WeakMap)
       }
-      attach(ee, ie) {
-        this.model = ee, this.mirror = ie
+      getId(WW) {
+        var iW;
+        if (!WW) return -1;
+        return (null == (iW = this.getMeta(WW)) ? void 0 : iW.id) ?? -1
       }
-      get worlds() {
-        return this.model.nodes.xR
+      AmW(WW) {
+        return this.idNodeMap.get(WW) || null
       }
-      get visibility() {
-        return this.model.meshes.visibility
+      getIds() {
+        return Array.from(this.idNodeMap.keys())
       }
-      group(ee) {
-        return this.groups.get(ee)
+      getMeta(WW) {
+        return this.nodeMetaMap.get(WW) || null
       }
-      forEachGroup(ee) {
-        this.groups.forEach(ee)
+      removeNodeFromMap(WW) {
+        const iW = this.getId(WW);
+        this.idNodeMap.delete(iW), WW.childNodes && WW.childNodes.forEach((WW => this.removeNodeFromMap(WW)))
       }
-      forEachSelected(ee) {
-        for (const [ie, He] of this.groups)
-          for (const ye of YM)
-            for (const be of He[ye].units) ee(be.owner, "text" === ye ? "transparent" : ye, ie)
+      has(WW) {
+        return this.idNodeMap.has(WW)
       }
-      select(ee, ie) {
-        this.frame++, this.selectedCount = 0, this.groups.forEach(VM);
-        const {
-          model: He,
-          mirror: ye
-        } = this;
-        if (!He || !ye || !ee) return;
-        this.rows.length < He.nodes.bk && (this.rows = new Int32Array(He.nodes.bk));
-        const be = this.rows,
-          Me = He.meshes;
-        for (let Ue = 0; Ue < Me.looseCount; Ue++) {
-          const ee = Me.loose[Ue],
-            He = ye.nodes[ee];
-          He && !He.isBlocked && He.isEnabled() && !He.wR.hasAZeroComponent && Me.selects(ee, ie.frustum) && (this.activate(He, ee), this.selectedCount++)
+      hasNode(WW) {
+        return this.nodeMetaMap.has(WW)
+      }
+      add(WW, iW) {
+        const OW = iW.id;
+        this.idNodeMap.set(OW, WW), this.nodeMetaMap.set(WW, iW)
+      }
+      replace(WW, iW) {
+        const OW = this.AmW(WW);
+        if (OW) {
+          const WW = this.nodeMetaMap.get(OW);
+          WW && this.nodeMetaMap.set(iW, WW)
         }
-        const Ke = Me.selectTextPlanes(ie.frustum, be);
-        for (let Ue = 0; Ue < Ke; Ue++) {
-          const ie = be[Ue],
-            Me = ye.nodes[ie],
-            Ke = He.meshes.parts[ie];
-          if (!Me.isVisible || !(Me.visibility > 0) || 0 === (Me.layerMask & ee.layerMask) || !Ke) continue;
-          const Fe = this.groupOf(He.meshes.layer[ie]).text;
-          for (const ee of PM(Ke)) Fe.units.push(ee), Fe.rows.push(ie);
-          this.selectedCount++
-        }
+        this.idNodeMap.set(WW, iW)
       }
-      instanceBatch(ee) {
-        const ie = this.batchOf(ee);
-        return ie.dispatched || (ie.dispatched = ie.renderSelf = !0, ie.row = this.rowOf(ee)), ie
-      }
-      rowOf(ee) {
-        return ee.row
-      }
-      activate(ee, ie) {
-        if (!ee.Zx) {
-          const He = ee;
-          if (He.nMe) {
-            const ee = this.batchOf(He);
-            ee.dispatched = !0, ee.renderSelf = !0, ee.row = ie
-          }
-          return void this.dispatch(He, ie, ie)
-        }
-        const He = ee,
-          ye = He.jMe;
-        if (ye._getWorldMatrixDeterminant() >= 0 !== He._getWorldMatrixDeterminant() >= 0) return void this.warnOnce(`mirrored:${ye.name}`, `A mirrored InstancedMesh of ${ye.name} is not drawn yet`);
-        const be = this.batchOf(ye);
-        be.instances.push(He), be.rows.push(ie), be.dispatched || (be.dispatched = !0, this.dispatch(ye, ie, this.rowOf(ye)))
-      }
-      batchOf(ee) {
-        let ie = this.batches.get(ee);
-        return ie || (ie = {
-          frame: 0,
-          dispatched: !1,
-          renderSelf: !1,
-          row: -1,
-          instances: [],
-          rows: []
-        }, this.batches.set(ee, ie)), ie.frame !== this.frame && (ie.frame = this.frame, ie.dispatched = !1, ie.renderSelf = !1, ie.instances.length = 0, ie.rows.length = 0), ie
-      }
-      dispatch(ee, ie, He) {
-        const {
-          layer: ye,
-          parts: be
-        } = this.model.meshes;
-        if (!be[ie]) return;
-        const Me = this.groupOf(ye[ie]),
-          Ke = ee;
-        for (const Ue of PM(be[ie])) {
-          const ee = AM(Ue);
-          if (!ee) continue;
-          const ie = ee.needAlphaBlendingForMesh(Ke) ? Me.transparent : ee.needAlphaTestingForMesh(Ke) ? Me.alphaTest : Me.opaque;
-          ie.units.push(Ue), ie.rows.push(He)
-        }
-      }
-      groupOf(ee) {
-        let ie = this.groups.get(ee);
-        return ie || (ie = {
-          opaque: {
-            units: [],
-            rows: []
-          },
-          alphaTest: {
-            units: [],
-            rows: []
-          },
-          transparent: {
-            units: [],
-            rows: []
-          },
-          text: {
-            units: [],
-            rows: []
-          }
-        }, this.groups.set(ee, ie)), ie
+      reset() {
+        this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
       }
     }
 
-    function cM(ee) {
-      ee.opaque.length = 0, ee.transparent.length = 0
-    }
-    class xM {
-      constructor() {
-        this.lJ = new Map, this.enabled = [], this.groups = new Map, this.KR = [], this.warned = new Set, this.selected = 0, this.drawn = 0
-      }
-      add(ee) {
-        if (this.lJ.has(ee)) return;
-        const ie = {
-          mesh: ee,
-          observer: ee.onEffectiveEnabledStateChangedObservable.add((ee => {
-            this.JY(ie, ee)
-          })),
-          index: -1,
-          steady: null
-        };
-        this.lJ.set(ee, ie), this.JY(ie, ee.isEnabled())
-      }
-      remove(ee) {
-        const ie = this.lJ.get(ee);
-        ie && (ie.observer.remove(!0), this.JY(ie, !1), this.lJ.delete(ee))
-      }
-      dropSteady() {
-        for (const ee of this.lJ.values()) ee.steady = null
-      }
-      base(ee) {
-        return this.lJ.get(ee)
-      }
-      drawStats() {
-        return {
-          drawn: this.drawn,
-          selected: this.selected,
-          lJ: this.lJ.size
-        }
-      }
-      forEachSelected(ee) {
-        for (const [ie, He] of this.groups) {
-          for (const ye of He.opaque) ee(ye.owner, "opaque", ie);
-          for (const ye of He.transparent) ee(ye.owner, "transparent", ie)
-        }
-        for (const ie of this.KR) ee(ie.mesh, "opaque", 0)
-      }
-      group(ee) {
-        return this.groups.get(ee)
-      }
-      forEachGroup(ee) {
-        this.groups.forEach(ee)
-      }
-      select(ee, ie) {
-        if (this.drawn = 0, this.selected = 0, this.KR.length = 0, this.groups.forEach(cM), !ee) return;
-        const He = this.enabled;
-        for (let ye = 0; ye < He.length; ye++) {
-          const be = He[ye];
-          if (be.steady && ie(be, ee)) {
-            this.selected++, this.KR.push(be);
-            continue
-          }
-          const Me = be.mesh;
-          if (Me.isBlocked || Me.wR.hasAZeroComponent) continue;
-          if (!Me.isVisible || Me.visibility <= 0 || 0 === (Me.layerMask & ee.layerMask)) continue;
-          if (Me.nMe) {
-            this.warned.has(Me.name) || (this.warned.add(Me.name), console.warn(`Lite: thin instance base ${Me.name} has InstancedMeshes and is not drawn`));
-            continue
-          }
-          const {
-            parts: Ke
-          } = Me;
-          if (!Ke) continue;
-          Me.computeWorldMatrix(), this.selected++;
-          const Ue = this.listsFor(Me.renderingGroupId);
-          for (const ee of PM(Ke)) {
-            const ie = AM(ee);
-            ie && (ie.needAlphaBlendingForMesh(Me) ? Ue.transparent.push(ee) : Ue.opaque.push(ee))
-          }
-        }
-      }
-      JY(ee, ie) {
-        if (ie === ee.index >= 0) return;
-        ee.steady = null;
-        const He = this.enabled;
-        if (ie) ee.index = He.length, He.push(ee);
-        else {
-          const ie = He.pop();
-          ie !== ee && (He[ee.index] = ie, ie.index = ee.index), ee.index = -1
-        }
-      }
-      listsFor(ee) {
-        let ie = this.groups.get(ee);
-        return ie || (ie = {
-          opaque: [],
-          transparent: []
-        }, this.groups.set(ee, ie)), ie
-      }
-    }
-    var LM = He(40472);
-    class CM {
-      constructor() {
-        this.bundle = null, this.stale = !0, this.lJ = new Set
-      }
-    }
-    class vM {
-      constructor(ee, ie, He) {
-        this.device = ee, this.slots = ie, this.host = He, this.records = new Map, this.freeSlots = [], this.slotCount = 0, this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1, this.args = new Uint32Array(320), this.argsBuffer = void 0, this.argsDirty = !1, this.main = new CM, this.oV = new CM, this.rangedEpoch = -1, this.bundles = [], this.recordedTarget = "", this.recordedSceneGroup = null, this.binder = new eM, this.frame = 0, this.drawn = 0, this.direct = void 0, this.directThisFrame = !1, this.endRecordFrame = ee => {
-          ee.seen !== this.frame && (ee.draw && (ee.draw = null, this.args[5 * ee.slot + 1] = 0, this.argsDirty = !0, this.oV.stale ||= ee.oV), this.frame - ee.seen > 120 && (this.records.delete(ee.unit), this.freeSlots.push(ee.slot), ee.recorded && (this.bundleOf(ee).stale = !0)))
-        }, this.argsBuffer = this.createArgsBuffer(), this.direct = function(ee) {
-          var ie, He;
-          let ye = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (ie = null === (He = globalThis.navigator) || void 0 === He ? void 0 : He.userAgent) && void 0 !== ie ? ie : "";
-          const be = ee.adapterInfo;
-          return "intel" === (null === be || void 0 === be ? void 0 : be.vendor) && "gen-12lp" === be.architecture && ye.includes("Windows")
-        }(ee), (0, LM.D)(this.direct)
-      }
-      LO() {
-        this.frame++, this.drawn = 0, this.directThisFrame = this.direct, (0, LM.D)(this.directThisFrame)
-      }
-      add(ee, ie, He, ye) {
-        let be = this.records.get(ee);
-        return be || (be = this.createRecord(ee), this.records.set(ee, be)), be.recorded && mM(be, ie) || (this.bundleOf(be).stale = !0), this.place(be, ie, He, ye), be
-      }
-      bundleOf(ee) {
-        return ee.oV ? this.oV : this.main
-      }
-      addAgain(ee, ie, He, ye) {
-        ee.recorded || (this.bundleOf(ee).stale = !0), this.place(ee, ie, He, ye)
-      }
-      place(ee, ie, He, ye) {
-        ee.seen = this.frame, ee.oV && null === ee.draw && (this.oV.stale = !0), ee.draw = ie, this.drawn++, He && this.slots.write(ee.slot, He, ye) && (this.slotsFrom = Math.min(this.slotsFrom, ee.slot), this.slotsTo = Math.max(this.slotsTo, ee.slot));
-        const be = this.args,
-          Me = 5 * ee.slot;
-        be[Me] === ie.count && be[Me + 1] === ie.instances && be[Me + 2] === ie.first || (be[Me] = ie.count, be[Me + 1] = ie.instances, be[Me + 2] = ie.first, this.argsDirty = !0, this.oV.stale ||= ee.oV)
-      }
-      ZR() {
-        this.records.forEach(this.endRecordFrame), this.argsDirty && !this.directThisFrame && (this.device.queue.writeBuffer(this.argsBuffer, 0, this.args, 0, 5 * this.slotCount), this.argsDirty = !1), this.slotsTo >= 0 && (this.slots.upload(this.slotsFrom, this.slotsTo + 1), this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1)
-      }
-      forEachDrawn(ee) {
-        for (const ie of this.records.values()) ie.draw && ie.seen === this.frame && !ie.oV && ee(ie.draw, this.slots.data, ie.slot * Rb / 4)
-      }
-      resourceDestroyed(ee) {
-        this.main.stale ||= this.main.lJ.has(ee), this.oV.stale ||= this.oV.lJ.has(ee)
-      }
-      execute(ee, ie, He) {
-        if (0 === this.drawn) return 0;
-        if (this.directThisFrame) return this.encode(ee, ie, He, "direct"), this.drawn;
-        const ye = this.host.sceneGroup(ie);
-        if (!ye) return this.main.bundle = null, this.oV.bundle = null, this.recordedSceneGroup = null, this.encode(ee, ie, He, "direct"), this.drawn;
-        this.recordedTarget === He && this.recordedSceneGroup === ye || (this.recordedTarget = He, this.recordedSceneGroup = ye, this.main.stale = !0, this.oV.stale = !0);
-        const be = this.main,
-          Me = this.oV;
-        let Ke = !1;
-        !be.stale && be.bundle || (be.bundle = this.record(ie, He, ye, "indirect"), Ke = !0);
-        const Ue = (0, LM.n)();
-        return (Me.stale || this.rangedEpoch !== Ue) && (this.rangedEpoch = Ue, Me.bundle = this.drawsRanged() ? this.record(ie, He, ye, "oV") : this.noRangedBundle(), Ke = !0), Ke && (this.bundles = Me.bundle ? [be.bundle, Me.bundle] : [be.bundle]), ee.executeBundles(this.bundles), ee.setBindGroup(0, ye), this.drawn
-      }
-      record(ee, ie, He, ye) {
-        const be = this.device.createRenderBundleEncoder({
-          label: "oV" === ye ? "thin-bases-ranged" : "thin-bases",
-          colorFormats: ee._colorFormat ? [ee._colorFormat] : [],
-          depthStencilFormat: ee._depthStencilFormat,
-          sampleCount: ee._sampleCount
-        });
-        return be.setBindGroup(0, He), this.encode(be, ee, ie, ye), be.finish()
-      }
-      noRangedBundle() {
-        for (const ee of this.records.values()) ee.oV && (ee.recorded = !1);
-        return this.oV.lJ.clear(), this.oV.stale = !1, null
-      }
-      drawsRanged() {
-        for (const ee of this.records.values())
-          if (ee.oV && ee.draw) return !0;
-        return !1
-      }
-      encode(ee, ie, He, ye) {
-        const be = [];
-        for (const Fe of this.records.values()) "direct" !== ye && Fe.oV !== ("oV" === ye) || (Fe.recorded = !1, Fe.draw && be.push(Fe));
-        be.sort(lM);
-        const Me = "direct" === ye ? null : "oV" === ye ? this.oV : this.main;
-        null === Me || void 0 === Me || Me.lJ.clear(), this.binder.reset();
-        let Ke = !1;
-        for (const Fe of be) {
-          var Ue;
-          const be = Fe.draw,
-            Je = this.host.pipelineFor(be, ie, He);
-          if (!Je) {
-            this.host.pipelineCompiling(be, He) ? Ke = !0 : Me && this.keep(Fe, be, Me.lJ);
-            continue
-          }
-          let oe;
-          if (Fe.oV && "indirect" !== ye) {
-            const ee = Fe.unit.owner;
-            oe = "direct" === ye && (0, LM.w)(ee) || (0, LM.q)(ee) || void 0
-          }
-          if (Me && this.keep(Fe, be, Me.lJ), 0 === (null === (Ue = oe) || void 0 === Ue ? void 0 : Ue.count)) continue;
-          this.binder.bind(ee, be, Je, this.slots.bindGroup, Fe.slot * Rb);
-          const Re = 5 * Fe.slot;
-          if ("indirect" === ye) {
-            be.indexBuffer ? ee.drawIndexedIndirect(this.argsBuffer, 4 * Re) : ee.drawIndirect(this.argsBuffer, 4 * Re);
-            continue
-          }
-          const ke = this.args;
-          oe ? uM(ee, null !== be.indexBuffer, ke, Re, oe) : be.indexBuffer ? ee.drawIndexed(ke[Re], ke[Re + 1], ke[Re + 2], 0, 0) : ee.draw(ke[Re], ke[Re + 1], ke[Re + 2], 0)
-        }
-        Me && (Me.stale = Ke)
-      }
-      keep(ee, ie, He) {
-        ee.recorded = !0, ee.pipelineKey = ie.pipelineKey, ee.materialGroup = ie.material.bindGroup, ee.vertexBuffers.length = 0, ee.vertexBuffers.push(...ie.vertexBuffers), ee.vertexOffsets = ie.vertexOffsets, ee.indexBuffer = ie.indexBuffer, ee.indexFormat = ie.indexFormat;
-        for (const ye of ie.vertexBuffers) He.add(ye);
-        ie.indexBuffer && He.add(ie.indexBuffer), He.add(ie.material.buffer);
-        for (const ye of ie.material.bound) ye && He.add(ye)
-      }
-      createRecord(ee) {
-        let ie = this.freeSlots.pop();
-        return void 0 === ie && (ie = this.slotCount++, this.grow()), {
-          unit: ee,
-          slot: ie,
-          oV: void 0 !== (0, LM.q)(ee.owner),
-          seen: -1,
-          draw: null,
-          recorded: !1,
-          pipelineKey: "",
-          materialGroup: null,
-          vertexBuffers: [],
-          vertexOffsets: [],
-          indexBuffer: null,
-          indexFormat: "uint16"
-        }
-      }
-      grow() {
-        if (this.slots.ensure(this.slotCount) && (this.slotsFrom = 0, this.slotsTo = this.slotCount - 1, this.main.stale = !0, this.oV.stale = !0), 5 * this.slotCount > this.args.length) {
-          const ee = new Uint32Array(2 * this.args.length);
-          ee.set(this.args), this.args = ee, this.argsBuffer.destroy(), this.argsBuffer = this.createArgsBuffer(), this.argsDirty = !0, this.main.stale = !0
-        }
-      }
-      createArgsBuffer() {
-        return this.device.createBuffer({
-          label: "thin-bases-args",
-          size: this.args.byteLength,
-          usage: GPUBufferUsage.INDIRECT | GPUBufferUsage.COPY_DST
-        })
-      }
+    function JW() {
+      return new TW
     }
 
-    function uM(ee, ie, He, ye, be) {
-      const Me = He[ye + 1],
-        Ke = be.data;
-      for (let Ue = 0; Ue < be.count; Ue++) {
-        const be = Math.min(Ke[2 * Ue], Me),
-          Fe = Math.min(Ke[2 * Ue + 1], Me - be);
-        0 !== Fe && (ie ? ee.drawIndexed(He[ye], Fe, He[ye + 2], 0, be) : ee.draw(He[ye], Fe, He[ye + 2], be))
-      }
-    }
-
-    function mM(ee, ie) {
-      if (ee.pipelineKey !== ie.pipelineKey || ee.materialGroup !== ie.material.bindGroup || ee.indexBuffer !== ie.indexBuffer || ee.indexFormat !== ie.indexFormat || ee.vertexOffsets !== ie.vertexOffsets || ee.vertexBuffers.length !== ie.vertexBuffers.length) return !1;
-      for (let He = 0; He < ee.vertexBuffers.length; He++)
-        if (ee.vertexBuffers[He] !== ie.vertexBuffers[He]) return !1;
-      return !0
-    }
-
-    function lM(ee, ie) {
-      return HM(ee.draw, ie.draw)
-    }
-    const SM = new WeakMap,
-      nM = {
-        depth: !1,
-        sunShadow: !1
-      };
-
-    function jM(ee, ie) {
-      let He = SM.get(ee);
-      He || (He = new Map, SM.set(ee, He));
-      const ye = `${ie.depth?"-depth":""}${ie.sunShadow?"-shadow":""}${ie.shadowMask?"-mask":""}`;
-      let be = He.get(ye);
-      if (!be) {
-        const Me = [{
-          binding: ri.d,
-          visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-          buffer: {
-            type: "uniform",
-            minBindingSize: ri.j
-          }
-        }, {
-          binding: ri.u,
-          visibility: GPUShaderStage.VERTEX,
-          buffer: {
-            type: "read-only-storage"
-          }
-        }];
-        ie.depth && Me.push({
-          binding: ri.p,
-          visibility: GPUShaderStage.FRAGMENT,
-          texture: {
-            sampleType: "unfilterable-float"
-          }
-        }), ie.sunShadow && Me.push(... function() {
-          const ee = GPUShaderStage.FRAGMENT,
-            ie = ri.q;
-          return [{
-            binding: ie.uniform,
-            visibility: ee,
-            buffer: {
-              type: "uniform"
-            }
-          }, {
-            binding: ie.Uq,
-            visibility: ee,
-            buffer: {
-              type: "read-only-storage"
-            }
-          }, {
-            binding: ie.special,
-            visibility: ee,
-            buffer: {
-              type: "read-only-storage"
-            }
-          }, {
-            binding: ie.volume,
-            visibility: ee,
-            texture: {
-              sampleType: "float",
-              viewDimension: "3d"
-            }
-          }, {
-            binding: ie.sampler,
-            visibility: ee,
-            sampler: {
-              type: "filtering"
-            }
-          }, {
-            binding: ie.entities,
-            visibility: ee,
-            buffer: {
-              type: "read-only-storage"
-            }
-          }, {
-            binding: ie.entityGrids,
-            visibility: ee,
-            buffer: {
-              type: "read-only-storage"
-            }
-          }]
-        }()), ie.shadowMask && Me.push({
-          binding: ri.s,
-          visibility: GPUShaderStage.FRAGMENT,
-          texture: {
-            sampleType: "unfilterable-float"
-          }
-        }), be = ee.createBindGroupLayout({
-          label: `${ie.depth?"terrain-":""}shader-pack-inputs${ye}`,
-          entries: Me
-        }), He.set(ye, be)
-      }
-      return be
-    }
-
-    function sM(ee) {
-      return jM(ee, nM)
-    }
-
-    function IM(ee, ie) {
-      if (!ie) return !1;
-      const He = (0, Qi.c)(ee);
-      return !!He && Uy(He, ie)
-    }
-
-    function hM(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (!ay(ie)) return [];
-      return [jM(ee, {
-        depth: Dy(ie.packVariant),
-        sunShadow: IM(ie.packVariant, He),
-        shadowMask: ye
-      })]
-    }
-    class NM {
-      constructor(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.device = ee, this.sunShadow = He, this.bindGroup = void 0, this.buffer = void 0, this.textures = void 0, this.data = new ArrayBuffer(ri.j), this.groups = new Map, this.depthView = null, this.maskView = null, this.buffer = ee.createBuffer({
-          label: "shader-pack-inputs",
-          size: ri.j,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        });
-        const ye = (0, ri.x)(ie);
-        this.textures = ee.createBuffer({
-          label: "shader-pack-textures",
-          size: ye.byteLength,
-          usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), ee.queue.writeBuffer(this.textures, 0, ye), this.bindGroup = ee.createBindGroup({
-          label: "shader-pack-inputs",
-          layout: sM(ee),
-          entries: this.entries()
-        })
-      }
-      entries() {
-        return [{
-          binding: ri.d,
-          resource: {
-            buffer: this.buffer
-          }
-        }, {
-          binding: ri.u,
-          resource: {
-            buffer: this.textures
-          }
-        }]
-      }
-      write(ee, ie, He) {
-        (0, ri.C)(this.data, {
-          seconds: ee.seconds(),
-          lit: He,
-          renderOffset: ee.renderOffset(),
-          Sie: ee.Sie(),
-          eyePosition: ie,
-          shadowDirection: ee.shadowDirection()
-        }), this.device.queue.writeBuffer(this.buffer, 0, this.data)
-      }
-      bindGroupFor(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const ye = ie ? this.sunShadow : null;
-        if ((ie || He) && !ye) throw new Error("A shader pack program binds sun shadows on a page without them");
-        if (!ee && !ye) return this.bindGroup;
-        (ee && ee !== this.depthView || He && He !== this.maskView) && (this.depthView = null !== ee && void 0 !== ee ? ee : this.depthView, this.maskView = null !== He && void 0 !== He ? He : this.maskView, this.groups.clear());
-        const be = (ee ? 1 : 0) | (ye ? 2 : 0) | (He ? 4 : 0);
-        let Me = this.groups.get(be);
-        if (!Me) {
-          const ie = this.entries();
-          ee && ie.push({
-            binding: ri.p,
-            resource: ee
-          }), ye && ie.push(...ye.entries()), He && ie.push({
-            binding: ri.s,
-            resource: He
-          }), Me = this.device.createBindGroup({
-            label: `${ee||He?"terrain-":""}shader-pack-inputs${ee?"-depth":""}${ye?"-shadow":""}${He?"-mask":""}`,
-            layout: jM(this.device, {
-              depth: !!ee,
-              sunShadow: !!ye,
-              shadowMask: !!He
-            }),
-            entries: ie
-          }), this.groups.set(be, Me)
-        }
-        return Me
-      }
-      bind(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        ee.setBindGroup(ri.f, this.bindGroupFor(ie, He, ye))
-      }
-    }
-
-    function GM(ee, ie, He) {
-      if (ee.gpuVersion === ie.gpuBuffersVersion) return !0;
-      let ye;
-      do {
-        if (ye = ie.gpuBuffersVersion, !rM(ee, ie, He)) return !1
-      } while (ie.gpuBuffersVersion !== ye);
-      return ee.gpuVersion = ye, ee.fitInstances = 0, !0
-    }
-
-    function rM(ee, ie, He) {
-      let ye = null;
-      for (let Me = 0; Me < ee.slotData.length; Me++) {
-        var be;
-        const Ke = ee.slotData[Me],
-          Ue = Ke ? ie.gpuBuffer(Ke) : He;
-        if (!Ue) return !1;
-        Ke && ee.layout.instanceEnds[Me] < 0 && ie.cover(Ke, Number.POSITIVE_INFINITY), ee.buffers[Me] = Ue;
-        const Fe = ee.Qee[Me] + (Ke ? ie.gpuOffset(Ke) : 0);
-        Fe !== (null !== (be = ye) && void 0 !== be ? be : ee.offsets)[Me] && (ye ??= ee.offsets.slice(), ye[Me] = Fe), ee.ends[Me] = Ke ? ie.gpuEnd(Ke) : Ue.size
-      }
-      return ye && (ee.offsets = ye), !0
-    }
-
-    function QM(ee, ie, He, ye) {
-      if (ie <= ee.fitInstances) return null;
-      const {
-        layout: be,
-        ends: Me,
-        offsets: Ke,
-        slotData: Ue,
-        Qee: Fe
-      } = ee;
-      let Je = !1;
-      for (let oe = 0; oe < be.buffers.length; oe++) {
-        const ee = be.instanceEnds[oe];
-        if (ee < 0) continue;
-        const ye = (ie - 1) * be.buffers[oe].arrayStride + ee;
-        if (Me[oe] - Ke[oe] < ye) return {
-          index: oe,
-          needed: ye
-        };
-        const Re = Ue[oe];
-        Re && He.cover(Re, Fe[oe] + ye) && (Je = !0)
-      }
-      return Je && GM(ee, He, ye), ee.fitInstances = ie, null
-    }
-    var eK = He(38650),
-      iK = He(38685);
-    const HK = "vertexOutputs.position=scene.viewProjection*worldPos;\n",
-      yK = "var baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n",
-      bK = "color=vec4f(color.rgb,color.a*mesh.visibility);\n",
-      MK = `((vertexInputs.aPackedLightLevels >> 16u) | ${Yi.d.placed}u)`,
-      KK = "u32(vertexInputs.aShaderPackItem.x)",
-      UK = `${Yi.d.lifeform}u`;
-
-    function FK(ee) {
-      return "item" === ee.kind ? "bloxdSpItemLocalPosition(positionUpdated, vertexInputs.aShaderPackItem)" : "positionUpdated"
-    }
-    const JK = "bloxdSpEnchant",
-      oK = "floor(finalWorld[3].xyz)";
-
-    function RK(ee, ie, He) {
-      return "placed" === ie.kind && ee.reads[He].includes("bloxdFragmentBlockPosition")
-    }
-
-    function kK(ee, ie) {
-      let [He, ye] = ee;
-      return He === ie.point && ye === ie.code
-    }
-
-    function qK(ee, ie) {
-      var He, ye, be;
-      const Me = null === (He = ee.find((ee => ee.texture))) || void 0 === He ? void 0 : He.texture,
-        Ke = null === (ye = ee.find((ee => ee.enchantTier))) || void 0 === ye ? void 0 : ye.enchantTier,
-        Ue = null === (be = ee.find((ee => ee.overlay))) || void 0 === be ? void 0 : be.overlay,
-        Fe = Ue ? ie.filter((ee => kK(ee, Ue))).length : 0;
-      return Ue && 1 === Fe ? {
-        texture: Me,
-        overlay: Ue,
-        enchantTier: Ke
-      } : {
-        texture: Me,
-        enchantTier: Ke
-      }
-    }
-
-    function fK(ee) {
-      if ("item" === ee.kind) {
-        return {
-          vertexFlags: `(${KK} & 0xffffu)`,
-          varying: "vPackItem",
-          value: KK,
-          flags: "(fragmentInputs.vPackItem & 0xffffu)",
-          enchantTier: "(fragmentInputs.vPackItem >> 16u)"
-        }
-      }
-      return ee.defines.BLOXD_LIGHT_WORD ? {
-        vertexFlags: MK,
-        varying: "vPackFlags",
-        value: MK,
-        flags: "fragmentInputs.vPackFlags",
-        enchantTier: "0u"
-      } : null
-    }
-
-    function TK(ee) {
-      return "lifeform" === ee.kind ? UK : "0u"
-    }
-
-    function pK(ee) {
-      return !!ee.BLOXD_PLUGIN_ENCHANTMENT
-    }
-
-    function XK(ee, ie) {
-      const {
-        enchantTier: He
-      } = ie;
-      return He && pK(ie.defines) && "lifeform" === ie.kind && dK(ee, "enchantTier") ? He : null
-    }
-
-    function zK(ee, ie) {
-      return pK(ie.defines) && dK(ee, "enchantSpeed")
-    }
-
-    function BK(ee) {
-      const {
-        overlay: ie,
-        defines: He
-      } = ee;
-      if (!ie || !He.DIFFUSE) return null;
-      const ye = He.VERTEXCOLOR || He.INSTANCESCOLOR && He.INSTANCES;
-      return `vec4f(${ie.colour}.rgb * uniforms.vDiffuseInfos.y${ye?" * fragmentInputs.vColor.rgb":""}, ${ie.colour}.a)`
-    }
-    const EK = "fragmentInputs.vPackTexture";
-
-    function gK(ee) {
-      const {
-        atlas: ie,
-        defines: He,
-        texture: ye
-      } = ee;
-      if (ie || !He.DIFFUSE) return null;
-      if (ye) return {
-        texture: "diffuseSampler",
-        ...ye
-      };
-      const be = {
-        texture: "diffuseSampler",
-        cells: null,
-        layers: [],
-        uv: `fragmentInputs.${1===He.DIFFUSEDIRECTUV?"vMainUV1":2===He.DIFFUSEDIRECTUV?"vMainUV2":"vDiffuseUV"}`
-      };
-      if ("box" !== ee.kind) return be;
-      if (!He.BLOXD_PLUGIN_ANIMATED) return {
-        ...be,
-        id: EK
-      };
-      const Me = Oe.b.WGSL,
-        Ke = (0, Oe.zb)(Me, "uAnimStatesNum"),
-        Ue = (0, Oe.bb)(Me, (0, eK.i)(Me), Ke),
-        Fe = "fragmentInputs.vMainUV1";
-      return {
-        texture: "diffuseSampler",
-        cells: `vec2f(1.0, ${Ke})`,
-        layers: [Ue],
-        uv: `vec2f(${Fe}.x, ${Fe}.y * ${Ke} - ${Ue})`,
-        levelUv: Fe,
-        id: EK
-      }
-    }
-
-    function OK(ee, ie) {
-      return "box" === ie.kind && !!ee.hooks.surface && null !== gK(ie)
-    }
-
-    function dK(ee, ie) {
-      return ee.reads.fragment.includes(ie)
-    }
-
-    function WK(ee) {
-      return !!ee.BLOXD_LIGHTING && !ee.BLOXD_UNLIT
-    }
-
-    function tK(ee, ie, He, ye) {
-      const be = ee.filter((ee => {
-        let [He, ye] = ee;
-        return "CUSTOM_FRAGMENT_BEFORE_FOG" === He && ye === ie
-      }));
-      if (1 !== be.length) throw new Error(`A model program for shader packs has ${0===be.length?"no":"more than one"} ${ye} code before fog (lite/modelShaderPack.ts)`);
-      return ee.map((ee => ee === be[0] ? [ee[0], He] : ee))
-    }
-
-    function ZK(ee, ie, He, ye) {
-      const {
-        hooks: be
-      } = ee, {
-        kind: Me,
-        defines: Ke
-      } = ie, Ue = [...He];
-      var Fe;
-      ie.atlas && be.surface && Ue.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", fy("atlasIdxIn")]), "item" === Me && Ue.push(["CUSTOM_VERTEX_DEFINITIONS", (0, Oe.f)(Oe.b.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "\nfn bloxdSpQuarterTurns(v: vec2f, quarters: u32) -> vec2f {\n    let c = select(select(0.0, -1.0, quarters == 2u), 1.0, quarters == 0u);\n    let s = select(select(0.0, -1.0, quarters == 3u), 1.0, quarters == 1u);\n    return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);\n}\nfn bloxdSpItemLocalPosition(position: vec3f, item: vec4f) -> vec3f {\n    let p = position * item.y + vec3f(0.0, item.z, 0.0);\n    let turn = u32(item.w);\n    let yz = bloxdSpQuarterTurns(p.yz, turn >> 2u);\n    let zx = bloxdSpQuarterTurns(vec2f(yz.y, p.x), turn & 3u);\n    return vec3f(zx.y, yz.x, zx.x);\n}\n"]), OK(ee, ie) && Ue.push(["CUSTOM_VERTEX_DEFINITIONS", (0, Oe.f)(Oe.b.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", (Fe = "vertexInputs.aShaderPackItem.x", `\tvertexOutputs.vPackTexture = select(0u, ${ky}[min(u32(${Fe}) - 1u, arrayLength(&${ky}) - 1u)], ${Fe} > 0.5);\n`)]);
-      const Je = fK(ie);
-      Je && (be.surface || be.light) && Ue.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${Je.varying}: u32;`], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.${Je.varying} = ${Je.value};`]);
-      let oe = ye;
-      if (RK(ee, ie, "fragment") && (Ue.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackCell: vec3i;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackCell = vec3i(${oK});`]), oe = [...oe, ["CUSTOM_FRAGMENT_MAIN_BEGIN", "bloxdSpCell = vec3f(fragmentInputs.vPackCell);"]]), dK(ee, "localPosition") && Ue.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackLocalPosition: vec3f;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackLocalPosition = ${FK(ie)};`]), pK(Ke) && be.surface) {
-        zK(ee, ie) && Ue.push(["CUSTOM_VERTEX_DEFINITIONS", "flat varying vPackEnchantSpeed: f32;"], ["CUSTOM_VERTEX_MAIN_END", "vertexOutputs.vPackEnchantSpeed = vertexInputs.aEnchantmentSpeed;"]);
-        const He = XK(ee, ie);
-        He && Ue.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackEnchantTier: u32;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackEnchantTier = u32(${He});`]);
-        const ye = (0, Oe.mb)(Oe.b.WGSL, "color", "mix(color.xyz, bloxdSpSurface.enchantColour.rgb, bloxdSpSurface.enchantColour.a)");
-        oe = [...tK(oe, (0, iK.j)(Oe.b.WGSL), ye, "enchantment"), ["CUSTOM_FRAGMENT_DEFINITIONS", (0, iK.c)(JK)]]
-      }
-      const {
-        overlay: Re
-      } = ie;
-      Re && BK(ie) && be.surface && (oe = oe.filter((ee => !kK(ee, Re))));
-      const ke = be.light ? function(ee) {
-        return "placed" === ee.kind ? {
-          name: "terrain",
-          engine: (0, Ii.O)(Oe.b.WGSL),
-          pack: (0, Ii.jb)(Oe.b.WGSL)
-        } : ee.defines.BLOXD_PLUGIN_ENTITY_LIGHT ? {
-          name: "entity",
-          engine: (0, Ii.F)(Oe.b.WGSL),
-          pack: (0, Ii.db)(Oe.b.WGSL)
-        } : null
-      }(ie) : null;
-      if (ke && (oe = tK(oe, ke.engine, ke.pack, `${ke.name} light`), "placed" !== Me && WK(Ke))) {
-        const ee = Ke.BLOXD_UNIFORM_ENTITY_LIGHT ? (0, Oe.zb)(Oe.b.WGSL, "uEntityLightLevels") : (0, Oe.Fb)(Oe.b.WGSL, "aLightLevels");
-        Ue.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${Ii.b}: vec4f;`], ["CUSTOM_VERTEX_MAIN_END", (0, Ii.hb)(Oe.b.WGSL, ee)])
-      }
-      return {
-        vertexCode: Ue,
-        fragmentCode: oe
-      }
-    }
-
-    function wK(ee, ie, He, ye) {
-      return My(ee, ie, He, ye, "model")
-    }
-    const DK = "\t@builtin(position) position: vec4f,\n";
-
-    function PK(ee, ie) {
-      const He = /^(?:(?:diagnostic|enable|requires)\b[^;]*;\n)*/.exec(ee)[0];
-      return `${He}${ie}${ee.slice(He.length)}`
-    }
-
-    function AK(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const {
-        hooks: be
-      } = ie, Me = Uy(ie, ye), {
-        kind: Ke,
-        defines: Ue
-      } = He, Fe = function(ee, ie) {
-        var He, ye, be;
-        const {
-          defines: Me
-        } = ie, Ke = fK(ie), Ue = !!Me.FOG, Fe = pK(Me), Je = null !== (He = null === Ke || void 0 === Ke ? void 0 : Ke.enchantTier) && void 0 !== He ? He : XK(ee, ie) ? "fragmentInputs.vPackEnchantTier" : "0u", oe = "lifeform" === ie.kind && !Me.ALPHAFROMDIFFUSE;
-        return {
-          vertexFlags: null !== (ye = null === Ke || void 0 === Ke ? void 0 : Ke.vertexFlags) && void 0 !== ye ? ye : TK(ie),
-          vertexLocalPosition: FK(ie),
-          flags: null !== (be = null === Ke || void 0 === Ke ? void 0 : Ke.flags) && void 0 !== be ? be : TK(ie),
-          normal: "normalW",
-          alpha: oe ? "alpha * baseColor.a" : "alpha",
-          alphaOut: oe ? "baseColor.a" : "alpha",
-          lambert: "diffuseBase.r",
-          diffuse: "diffuseColor",
-          emissive: "emissiveColor",
-          ambient: "uniforms.vAmbientColor",
-          fogColour: Ue ? "frame.vFogColor" : "vec3f(0.0)",
-          fogAlpha: Ue ? "1.0 - fog" : "0.0",
-          enchantTier: Je,
-          enchantColour: Fe ? `${JK}(fragmentInputs.vEnchantRgbAndRotY, fragmentInputs.vPositionAndAnimTick, baseColor.rgb)` : "vec4f(0.0)",
-          enchantSpeed: zK(ee, ie) ? "fragmentInputs.vPackEnchantSpeed" : "0.0",
-          localPosition: dK(ee, "localPosition") ? "fragmentInputs.vPackLocalPosition" : "vec3f(0.0)",
-          overlayColour: BK(ie)
-        }
-      }(ie, He), Je = ee.textures.filter((ee => /^textureAtlas\d+$/.test(ee.name))).length, oe = He.atlas && Je > 0 ? {
-        count: Je,
-        layers: He.atlas.layers,
-        width: He.atlas.width,
-        sampler: "textureAtlas0Sampler",
-        frame: ee.material.slots.has("uAnimDataPerTex") ? (ie, He) => ry(ie, He, function(ee) {
-          const ie = ee.material.stridedArrays.includes("uAnimDataPerTex") ? ".el" : "";
-          return {
-            YR: "frame.animTick",
-            stride: "uniforms.uAnimData.y",
-            count: "uniforms.uAnimData.z",
-            perTexture: ee => `uniforms.uAnimDataPerTex[${ee}]${ie}`
-          }
-        }(ee)) : null
-      } : null, Re = "placed" === Ke ? "var<private> bloxdSpCell: vec3f;\nfn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\tlet bloxdSpBehind = bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0);\n\tlet bloxdSpInside = all(abs(bloxdSpBehind - bloxdSpCell - 0.5) <= vec3f(0.5 + 1.0 / 256.0));\n\treturn select(vec3i(floor(bloxdSpBehind)), vec3i(bloxdSpCell), bloxdSpInside) + bloxdRenderOffset();\n}\n" : "fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0))) + bloxdRenderOffset();\n}\n", ke = null !== oe && void 0 !== oe ? oe : gK(He), qe = function(ee, He) {
-        let ye = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        return `${(0,ri.z)()}${Jy(ie,He)}${ye}${py(ee)}${Hy}${Re}${ie.code}`
-      };
+    function hW(WW) {
       let {
-        vertex: fe,
-        fragment: Te
-      } = ee;
-      const pe = zy(be, Fe);
-      if (pe) {
-        const ee = RK(ie, He, "vertex") ? `\tbloxdSpCell = ${oK};\n` : "";
-        fe = wK(fe, HK, `${ee}${pe.slice(1)}${HK}`, "vertex")
-      }
-      const Xe = `${oy(ie,Me,function(ee,ie){return ie.TWOSIDEDLIGHTING?ee:`select(-(${ee}), ${ee}, fragmentInputs.frontFacing)`}(Fe.normal,Ue),Fe.flags)}${By(be,ie.strict,ie.program,ke,Fe)}`;
-      Xe && (Te = wK(Te, yK, `${Xe.slice(1)}${yK}`, "surface")), Me && ie.sunShadow && !Ue.TWOSIDEDLIGHTING && (Te = wK(Te, DK, `${DK}\t@builtin(front_facing) frontFacing: bool,\n`, "front facing"));
-      const ze = Oy(be);
-      if (ze) {
-        const ee = gy(be, WK(Ue), !0, Fe);
-        Te = wK(Te, bK, `${ee}${ze.slice(1)}${bK}`, "light")
-      }
-      const Be = OK(ie, He) ? qy : "";
-      return {
-        ...ee,
-        vertex: PK(fe, qe(oe, !1, Be)),
-        fragment: PK(Te, qe(ke, Me))
-      }
+        element: iW,
+        maskInputOptions: OW,
+        tagName: mW,
+        type: EW,
+        value: NW,
+        maskInputFn: PW
+      } = WW, LW = NW || "";
+      const cW = EW && HW(EW);
+      return (OW[mW.toLowerCase()] || cW && OW[cW]) && (LW = PW ? PW(LW, iW) : "*".repeat(LW.length)), LW
     }
-    const YK = {
-      name: "earthSky",
-      uniqueId: -1
-    };
-    class VK {
-      constructor(ee, ie) {
-        this.resources = ee, this.epoch = ie, this.instances = new Map, this.vertexCode = [], this.fragmentCode = [], this.pluginUniforms = [], this.codeKey = "", this.codeVersion = -1
+
+    function HW(WW) {
+      return WW.toLowerCase()
+    }
+    const nW = "__rrweb_original__";
+
+    function uW(WW) {
+      const iW = WW.type;
+      return WW.hasAttribute("data-rr-is-password") ? "password" : iW ? HW(iW) : null
+    }
+
+    function oW(WW, iW) {
+      let OW;
+      try {
+        OW = new URL(WW, iW ?? window.location.href)
+      } catch (EW) {
+        return null
       }
-      release() {
-        for (const ee of this.instances.values()) ee.released = !0, this.resources.destroyBuffer(ee.buffer);
-        this.instances.clear()
+      const mW = OW.pathname.match(/\.([0-9a-z]+)(?:$)/i);
+      return (null == mW ? void 0 : mW[1]) ?? null
+    }
+    const dW = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
+      eW = /^(?:[a-z+]+:)?\/\//i,
+      vW = /^www\..*/i,
+      gW = /^(data:)([^,]*),(.*)/i;
+
+    function DW(WW, iW) {
+      return (WW || "").replace(dW, ((WW, OW, mW, EW, NW, PW) => {
+        const LW = mW || NW || PW,
+          cW = OW || EW || "";
+        if (!LW) return WW;
+        if (eW.test(LW) || vW.test(LW)) return `url(${cW}${LW}${cW})`;
+        if (gW.test(LW)) return `url(${cW}${LW}${cW})`;
+        if ("/" === LW[0]) return `url(${cW}${function(WW){let iW="";return iW=WW.indexOf("//")>-1?WW.split("/").slice(0,3).join("/"):WW.split("/")[0],iW=iW.split("?")[0],iW}(iW)+LW}${cW})`;
+        const wW = LW.split("#")[0],
+          tW = LW.substring(wW.length),
+          ZW = iW.split("#")[0].split("/"),
+          xW = wW.split("/");
+        ZW.pop();
+        for (const iW of xW) "." !== iW && (".." === iW ? ZW.pop() : ZW.push(iW));
+        return `url(${cW}${ZW.join("/")}${tW}${cW})`
+      }))
+    }
+    const VW = "(?:/\\*[^*]*\\*/)|[\\s;]",
+      pW = new RegExp(`${VW}|\\b(0)px?`, "g"),
+      fW = new RegExp(VW, "g");
+
+    function CW(WW) {
+      return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? WW.replace(fW, "") : WW.replace(pW, "$1")
+    }
+
+    function XW(WW, iW) {
+      return function(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const mW = Array.from(iW.childNodes),
+          EW = [];
+        let NW = 0;
+        if (mW.length > 1 && WW && "string" === typeof WW) {
+          let iW = CW(WW, OW);
+          const PW = iW.length / WW.length;
+          for (let LW = 1; LW < mW.length; LW++)
+            if (mW[LW].textContent && "string" === typeof mW[LW].textContent) {
+              const cW = CW(mW[LW].textContent, OW),
+                wW = 100;
+              let tW = 3;
+              for (; tW < cW.length && (cW[tW].match(/[a-zA-Z0-9]/) || -1 !== cW.indexOf(cW.substring(0, tW), 1)); tW++);
+              for (; tW < cW.length; tW++) {
+                let ZW = cW.substring(0, tW),
+                  xW = iW.split(ZW),
+                  lW = -1;
+                if (2 === xW.length) lW = xW[0].length;
+                else if (xW.length > 2 && "" === xW[0] && "" !== mW[LW - 1].textContent) lW = iW.indexOf(ZW, 1);
+                else if (1 === xW.length) {
+                  if (ZW = ZW.substring(0, ZW.length - 1), xW = iW.split(ZW), xW.length <= 1) return EW.push(WW), EW;
+                  tW = wW + 1
+                } else tW === cW.length - 1 && (lW = iW.indexOf(ZW));
+                if (xW.length >= 2 && tW > wW) {
+                  const WW = mW[LW - 1].textContent;
+                  if (WW && "string" === typeof WW) {
+                    const OW = CW(WW).length;
+                    lW = iW.indexOf(ZW, OW)
+                  } - 1 === lW && (lW = xW[0].length)
+                }
+                if (-1 !== lW) {
+                  let LW = Math.floor(lW / PW);
+                  for (; LW > 0 && LW < WW.length;) {
+                    if (NW += 1, NW > 50 * mW.length) return EW.push(WW), EW;
+                    const cW = CW(WW.substring(0, LW), OW);
+                    if (cW.length === lW) {
+                      EW.push(WW.substring(0, LW)), WW = WW.substring(LW), iW = iW.substring(lW);
+                      break
+                    }
+                    cW.length < lW ? LW += Math.max(1, Math.floor((lW - cW.length) / PW)) : LW -= Math.max(1, Math.floor((cW.length - lW) * PW))
+                  }
+                  break
+                }
+              }
+            }
+        }
+        return EW.push(WW), EW
+      }(WW, iW).join("/* rr_split */")
+    }
+    let BW = 1;
+    const qW = new RegExp("[^a-z0-9-_:]");
+
+    function RW() {
+      return BW++
+    }
+    let GW, IW;
+    const aW = /^[^ \t\n\r\u000c]+/,
+      rW = /^[, \t\n\r\u000c]+/;
+    const zW = new WeakMap;
+
+    function FW(WW, iW) {
+      return iW && "" !== iW.trim() ? Wi(WW, iW) : iW
+    }
+
+    function QW(WW) {
+      return Boolean("svg" === WW.tagName || WW.ownerSVGElement)
+    }
+
+    function Wi(WW, iW) {
+      let OW = zW.get(WW);
+      if (OW || (OW = WW.createElement("a"), zW.set(WW, OW)), iW) {
+        if (iW.startsWith("blob:") || iW.startsWith("data:")) return iW
+      } else iW = "";
+      return OW.setAttribute("href", iW), OW.href
+    }
+
+    function ii(WW, iW, OW, mW) {
+      return mW ? "src" === OW || "href" === OW && ("use" !== iW || "#" !== mW[0]) || "xlink:href" === OW && "#" !== mW[0] || "background" === OW && ["table", "td", "th"].includes(iW) ? FW(WW, mW) : "srcset" === OW ? function(WW, iW) {
+        if ("" === iW.trim()) return iW;
+        let OW = 0;
+
+        function mW(WW) {
+          let mW;
+          const EW = WW.exec(iW.substring(OW));
+          return EW ? (mW = EW[0], OW += mW.length, mW) : ""
+        }
+        const EW = [];
+        for (; mW(rW), !(OW >= iW.length);) {
+          let NW = mW(aW);
+          if ("," === NW.slice(-1)) NW = FW(WW, NW.substring(0, NW.length - 1)), EW.push(NW);
+          else {
+            let mW = "";
+            NW = FW(WW, NW);
+            let PW = !1;
+            for (;;) {
+              const WW = iW.charAt(OW);
+              if ("" === WW) {
+                EW.push((NW + mW).trim());
+                break
+              }
+              if (PW) ")" === WW && (PW = !1);
+              else {
+                if ("," === WW) {
+                  OW += 1, EW.push((NW + mW).trim());
+                  break
+                }
+                "(" === WW && (PW = !0)
+              }
+              mW += WW, OW += 1
+            }
+          }
+        }
+        return EW.join(", ")
+      }(WW, mW) : "style" === OW ? DW(mW, Wi(WW)) : "object" === iW && "data" === OW ? FW(WW, mW) : mW : mW
+    }
+
+    function Oi(WW, iW, OW) {
+      return ["video", "audio"].includes(WW) && "autoplay" === HW(iW)
+    }
+
+    function mi(WW, iW, OW) {
+      if (!WW) return !1;
+      if (WW.nodeType !== WW.ELEMENT_NODE) return !!OW && mi(sW.parentNode(WW), iW, OW);
+      for (let mW = WW.classList.length; mW--;) {
+        const OW = WW.classList[mW];
+        if (iW.test(OW)) return !0
+      }
+      return !!OW && mi(sW.parentNode(WW), iW, OW)
+    }
+
+    function Ei(WW, iW, OW, mW) {
+      let EW;
+      if (MW(WW)) {
+        if (EW = WW, !sW.childNodes(EW).length) return !1
+      } else {
+        if (null === sW.parentElement(WW)) return !1;
+        EW = sW.parentElement(WW)
+      }
+      try {
+        if ("string" === typeof iW) {
+          if (mW) {
+            if (EW.closest(`.${iW}`)) return !0
+          } else if (EW.classList.contains(iW)) return !0
+        } else if (mi(EW, iW, mW)) return !0;
+        if (OW)
+          if (mW) {
+            if (EW.closest(OW)) return !0
+          } else if (EW.matches(OW)) return !0
+      } catch (NW) {}
+      return !1
+    }
+
+    function Ni(WW, iW) {
+      const {
+        doc: OW,
+        mirror: mW,
+        blockClass: EW,
+        blockSelector: NW,
+        needsMask: PW,
+        inlineStylesheet: LW,
+        maskInputOptions: wW = {},
+        maskTextFn: tW,
+        maskInputFn: ZW,
+        dataURLOptions: xW = {},
+        inlineImages: lW,
+        recordCanvas: AW,
+        keepIframeSrcFn: bW,
+        newlyAddedElement: jW = !1,
+        cssCaptured: UW = !1
+      } = iW, kW = function(WW, iW) {
+        if (!iW.hasNode(WW)) return;
+        const OW = iW.getId(WW);
+        return 1 === OW ? void 0 : OW
+      }(OW, mW);
+      switch (WW.nodeType) {
+        case WW.DOCUMENT_NODE:
+          return "CSS1Compat" !== WW.compatMode ? {
+            type: cW.Document,
+            childNodes: [],
+            compatMode: WW.compatMode
+          } : {
+            type: cW.Document,
+            childNodes: []
+          };
+        case WW.DOCUMENT_TYPE_NODE:
+          return {
+            type: cW.DocumentType, name: WW.name, publicId: WW.publicId, systemId: WW.systemId, rootId: kW
+          };
+        case WW.ELEMENT_NODE:
+          return function(WW, iW) {
+            const {
+              doc: OW,
+              blockClass: mW,
+              blockSelector: EW,
+              inlineStylesheet: NW,
+              maskInputOptions: PW = {},
+              maskInputFn: LW,
+              dataURLOptions: wW = {},
+              inlineImages: tW,
+              recordCanvas: ZW,
+              keepIframeSrcFn: xW,
+              newlyAddedElement: lW = !1,
+              rootId: AW
+            } = iW, bW = function(WW, iW, OW) {
+              try {
+                if ("string" === typeof iW) {
+                  if (WW.classList.contains(iW)) return !0
+                } else
+                  for (let OW = WW.classList.length; OW--;) {
+                    const mW = WW.classList[OW];
+                    if (iW.test(mW)) return !0
+                  }
+                if (OW) return WW.matches(OW)
+              } catch (mW) {}
+              return !1
+            }(WW, mW, EW), jW = function(WW) {
+              if (WW instanceof HTMLFormElement) return "form";
+              const iW = HW(WW.tagName);
+              return qW.test(iW) ? "div" : iW
+            }(WW);
+            let UW = {};
+            const kW = WW.attributes.length;
+            for (let cW = 0; cW < kW; cW++) {
+              const iW = WW.attributes[cW];
+              Oi(jW, iW.name, iW.value) || (UW[iW.name] = ii(OW, jW, HW(iW.name), iW.value))
+            }
+            if ("link" === jW && NW) {
+              const iW = Array.from(OW.styleSheets).find((iW => iW.href === WW.href));
+              let mW = null;
+              iW && (mW = YW(iW)), mW && (delete UW.rel, delete UW.href, UW._cssText = mW)
+            }
+            if ("style" === jW && WW.sheet) {
+              let iW = YW(WW.sheet);
+              iW && (WW.childNodes.length > 1 && (iW = XW(iW, WW)), UW._cssText = iW)
+            }
+            if (["input", "textarea", "select"].includes(jW)) {
+              const iW = WW.value,
+                OW = WW.checked;
+              "radio" !== UW.type && "checkbox" !== UW.type && "submit" !== UW.type && "button" !== UW.type && iW ? UW.value = hW({
+                element: WW,
+                type: uW(WW),
+                tagName: jW,
+                value: iW,
+                maskInputOptions: PW,
+                maskInputFn: LW
+              }) : OW && (UW.checked = OW)
+            }
+            "option" === jW && (WW.selected && !PW.select ? UW.selected = !0 : delete UW.selected);
+            "dialog" === jW && WW.open && (UW.rr_open_mode = WW.matches("dialog:modal") ? "modal" : "non-modal");
+            if ("canvas" === jW && ZW)
+              if ("2d" === WW.__context)(function(WW) {
+                const iW = WW.getContext("2d");
+                if (!iW) return !0;
+                for (let OW = 0; OW < WW.width; OW += 50)
+                  for (let mW = 0; mW < WW.height; mW += 50) {
+                    const EW = iW.getImageData,
+                      NW = nW in EW ? EW[nW] : EW;
+                    if (new Uint32Array(NW.call(iW, OW, mW, Math.min(50, WW.width - OW), Math.min(50, WW.height - mW)).data.buffer).some((WW => 0 !== WW))) return !1
+                  }
+                return !0
+              })(WW) || (UW.rr_dataURL = WW.toDataURL(wW.type, wW.quality));
+              else if (!("__context" in WW)) {
+              const iW = WW.toDataURL(wW.type, wW.quality),
+                mW = OW.createElement("canvas");
+              mW.width = WW.width, mW.height = WW.height;
+              iW !== mW.toDataURL(wW.type, wW.quality) && (UW.rr_dataURL = iW)
+            }
+            if ("img" === jW && tW) {
+              GW || (GW = OW.createElement("canvas"), IW = GW.getContext("2d"));
+              const iW = WW,
+                mW = iW.currentSrc || iW.getAttribute("src") || "<unknown-src>",
+                EW = iW.crossOrigin,
+                NW = () => {
+                  iW.removeEventListener("load", NW);
+                  try {
+                    GW.width = iW.naturalWidth, GW.height = iW.naturalHeight, IW.drawImage(iW, 0, 0), UW.rr_dataURL = GW.toDataURL(wW.type, wW.quality)
+                  } catch (WW) {
+                    if ("anonymous" !== iW.crossOrigin) return iW.crossOrigin = "anonymous", void(iW.complete && 0 !== iW.naturalWidth ? NW() : iW.addEventListener("load", NW));
+                    console.warn(`Cannot inline img src=${mW}! Error: ${WW}`)
+                  }
+                  "anonymous" === iW.crossOrigin && (EW ? UW.crossOrigin = EW : iW.removeAttribute("crossorigin"))
+                };
+              iW.complete && 0 !== iW.naturalWidth ? NW() : iW.addEventListener("load", NW)
+            }
+            if (["audio", "video"].includes(jW)) {
+              const iW = UW;
+              iW.rr_mediaState = WW.paused ? "paused" : "played", iW.rr_mediaCurrentTime = WW.currentTime, iW.rr_mediaPlaybackRate = WW.playbackRate, iW.rr_mediaMuted = WW.muted, iW.rr_mediaLoop = WW.loop, iW.rr_mediaVolume = WW.volume
+            }
+            lW || (WW.scrollLeft && (UW.rr_scrollLeft = WW.scrollLeft), WW.scrollTop && (UW.rr_scrollTop = WW.scrollTop));
+            if (bW) {
+              const {
+                width: iW,
+                height: OW
+              } = WW.getBoundingClientRect();
+              UW = {
+                class: UW.class,
+                rr_width: `${iW}px`,
+                rr_height: `${OW}px`
+              }
+            }
+            "iframe" !== jW || xW(UW.src) || (WW.contentDocument || (UW.rr_src = UW.src), delete UW.src);
+            let sW;
+            try {
+              customElements.get(jW) && (sW = !0)
+            } catch (MW) {}
+            return {
+              type: cW.Element,
+              tagName: jW,
+              attributes: UW,
+              childNodes: [],
+              isSVG: QW(WW) || void 0,
+              needBlock: bW,
+              rootId: AW,
+              isCustom: sW
+            }
+          }(WW, {
+            doc: OW,
+            blockClass: EW,
+            blockSelector: NW,
+            inlineStylesheet: LW,
+            maskInputOptions: wW,
+            maskInputFn: ZW,
+            dataURLOptions: xW,
+            inlineImages: lW,
+            recordCanvas: AW,
+            keepIframeSrcFn: bW,
+            newlyAddedElement: jW,
+            rootId: kW
+          });
+        case WW.TEXT_NODE:
+          return function(WW, iW) {
+            const {
+              needsMask: OW,
+              maskTextFn: mW,
+              rootId: EW,
+              cssCaptured: NW
+            } = iW, PW = sW.parentNode(WW), LW = PW && PW.tagName;
+            let wW = "";
+            const tW = "STYLE" === LW || void 0,
+              ZW = "SCRIPT" === LW || void 0;
+            ZW ? wW = "SCRIPT_PLACEHOLDER" : NW || (wW = sW.textContent(WW), tW && wW && (wW = DW(wW, Wi(iW.doc))));
+            !tW && !ZW && wW && OW && (wW = mW ? mW(wW, sW.parentElement(WW)) : wW.replace(/[\S]/g, "*"));
+            return {
+              type: cW.Text,
+              textContent: wW || "",
+              rootId: EW
+            }
+          }(WW, {
+            doc: OW,
+            needsMask: PW,
+            maskTextFn: tW,
+            rootId: kW,
+            cssCaptured: UW
+          });
+        case WW.CDATA_SECTION_NODE:
+          return {
+            type: cW.CDATA, textContent: "", rootId: kW
+          };
+        case WW.COMMENT_NODE:
+          return {
+            type: cW.Comment, textContent: sW.textContent(WW) || "", rootId: kW
+          };
+        default:
+          return !1
       }
     }
 
-    function aK(ee) {
-      return ee.failed && null !== ee.packGroup
+    function Pi(WW) {
+      return void 0 === WW || null === WW ? "" : WW.toLowerCase()
     }
-    class cK {
-      constructor(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new xM,
-          be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new aM;
-        this.device = ee, this.resources = ie, this.skyLastRenderable = void 0, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.frontRenderable = void 0, this.Nee = void 0, this.modelMeshes = void 0, this.thinBundle = void 0, this.binder = new eM, this.sceneLayout = void 0, this.frameLayout = void 0, this.frameUniforms = new Float32Array(108), this.frameBuffer = void 0, this.meshSlots = void 0, this.zeroBuffer = void 0, this.programs = new Map, this.earthSkyProgram = null, this.earthSkyUniforms = null, this.earthSkyFrom = null, this.drawDefines = void 0, this.modelUniforms = new gM((ee => this.modelSlot(ee).instances.values())), this.vertexLayouts = void 0, this.inputs = new WeakMap, this.unbuildable = new Set, this.linePrograms = new Map, this.materials = new WeakMap, this.pipelines = new Map, this.compiling = 0, this.warnOnce = (0, Vi.b)("Lite: "), this.renderStates = new pM(this.warnOnce), this.nextProgramId = 0, this.frame = 0, this.packInputs = null, this.sunShadow = null, this.caster = {}, this.casterWorlds = new Float32Array(0), this.view = void 0, this.steadyPhase = 0, this.keepSteadyBase = (ee, ie) => this.keepSteady(ee, ie), this.lists = void 0, this.slotCount = 0, this.Nee = ye, this.modelMeshes = be, this.lists = new iM(be, ye, this, this.warnOnce), this.drawDefines = new kM(ie, this.warnOnce, ((ee, ie, He) => this.programWithModel(ee, ie, He)), aK), this.vertexLayouts = new tM(ie, ee.limits, this.warnOnce), this.sceneLayout = Wi(ee), this.frameLayout = ee.createBindGroupLayout({
-          label: "meshes-frame",
-          entries: [{
-            binding: 0,
-            visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-            buffer: {
-              type: "uniform"
+
+    function Li(WW) {
+      return !0 === WW || "all" === WW ? {
+        script: !0,
+        comment: !0,
+        headFavicon: !0,
+        headWhitespace: !0,
+        headMetaSocial: !0,
+        headMetaRobots: !0,
+        headMetaHttpEquiv: !0,
+        headMetaVerification: !0,
+        headMetaAuthorship: "all" === WW,
+        headMetaDescKeywords: "all" === WW,
+        headTitleMutations: "all" === WW
+      } : WW || {}
+    }
+
+    function ci(WW, iW) {
+      const {
+        doc: OW,
+        mirror: mW,
+        blockClass: EW,
+        blockSelector: NW,
+        maskTextClass: PW,
+        maskTextSelector: LW,
+        skipChild: wW = !1,
+        inlineStylesheet: tW = !0,
+        maskInputOptions: ZW = {},
+        maskTextFn: xW,
+        maskInputFn: lW,
+        slimDOMOptions: AW,
+        dataURLOptions: bW = {},
+        inlineImages: jW = !1,
+        recordCanvas: UW = !1,
+        onSerialize: kW,
+        onIframeLoad: YW,
+        iframeLoadTimeout: yW = 5e3,
+        onStylesheetLoad: TW,
+        stylesheetLoadTimeout: JW = 5e3,
+        keepIframeSrcFn: hW = () => !1,
+        newlyAddedElement: HW = !1,
+        cssCaptured: nW = !1
+      } = iW;
+      let {
+        needsMask: uW
+      } = iW, {
+        preserveWhiteSpace: dW = !0
+      } = iW;
+      if (!uW) {
+        uW = Ei(WW, PW, LW, void 0 === uW)
+      }
+      const eW = Ni(WW, {
+        doc: OW,
+        mirror: mW,
+        blockClass: EW,
+        blockSelector: NW,
+        needsMask: uW,
+        inlineStylesheet: tW,
+        maskInputOptions: ZW,
+        maskTextFn: xW,
+        maskInputFn: lW,
+        dataURLOptions: bW,
+        inlineImages: jW,
+        recordCanvas: UW,
+        keepIframeSrcFn: hW,
+        newlyAddedElement: HW,
+        cssCaptured: nW
+      });
+      if (!eW) return console.warn(WW, "not serialized"), null;
+      let vW;
+      vW = mW.hasNode(WW) ? mW.getId(WW) : function(WW, iW) {
+        if (iW.comment && WW.type === cW.Comment) return !0;
+        if (WW.type === cW.Element) {
+          if (iW.script && ("script" === WW.tagName || "link" === WW.tagName && ("preload" === WW.attributes.rel && "script" === WW.attributes.as || "modulepreload" === WW.attributes.rel) || "link" === WW.tagName && "prefetch" === WW.attributes.rel && "string" === typeof WW.attributes.href && "js" === oW(WW.attributes.href))) return !0;
+          if (iW.headFavicon && ("link" === WW.tagName && "shortcut icon" === WW.attributes.rel || "meta" === WW.tagName && (Pi(WW.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === Pi(WW.attributes.name) || "icon" === Pi(WW.attributes.rel) || "apple-touch-icon" === Pi(WW.attributes.rel) || "shortcut icon" === Pi(WW.attributes.rel)))) return !0;
+          if ("meta" === WW.tagName) {
+            if (iW.headMetaDescKeywords && Pi(WW.attributes.name).match(/^description|keywords$/)) return !0;
+            if (iW.headMetaSocial && (Pi(WW.attributes.property).match(/^(og|twitter|fb):/) || Pi(WW.attributes.name).match(/^(og|twitter):/) || "pinterest" === Pi(WW.attributes.name))) return !0;
+            if (iW.headMetaRobots && ("robots" === Pi(WW.attributes.name) || "googlebot" === Pi(WW.attributes.name) || "bingbot" === Pi(WW.attributes.name))) return !0;
+            if (iW.headMetaHttpEquiv && void 0 !== WW.attributes["http-equiv"]) return !0;
+            if (iW.headMetaAuthorship && ("author" === Pi(WW.attributes.name) || "generator" === Pi(WW.attributes.name) || "framework" === Pi(WW.attributes.name) || "publisher" === Pi(WW.attributes.name) || "progid" === Pi(WW.attributes.name) || Pi(WW.attributes.property).match(/^article:/) || Pi(WW.attributes.property).match(/^product:/))) return !0;
+            if (iW.headMetaVerification && ("google-site-verification" === Pi(WW.attributes.name) || "yandex-verification" === Pi(WW.attributes.name) || "csrf-token" === Pi(WW.attributes.name) || "p:domain_verify" === Pi(WW.attributes.name) || "verify-v1" === Pi(WW.attributes.name) || "verification" === Pi(WW.attributes.name) || "shopify-checkout-api-token" === Pi(WW.attributes.name))) return !0
+          }
+        }
+        return !1
+      }(eW, AW) || !dW && eW.type === cW.Text && !eW.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : RW();
+      const gW = Object.assign(eW, {
+        id: vW
+      });
+      if (mW.add(WW, gW), -2 === vW) return null;
+      kW && kW(WW);
+      let DW = !wW;
+      if (gW.type === cW.Element) {
+        DW = DW && !gW.needBlock, delete gW.needBlock;
+        const iW = sW.shadowRoot(WW);
+        iW && SW(iW) && (gW.isShadowHost = !0)
+      }
+      if ((gW.type === cW.Document || gW.type === cW.Element) && DW) {
+        AW.headWhitespace && gW.type === cW.Element && "head" === gW.tagName && (dW = !1);
+        const iW = {
+          doc: OW,
+          mirror: mW,
+          blockClass: EW,
+          blockSelector: NW,
+          needsMask: uW,
+          maskTextClass: PW,
+          maskTextSelector: LW,
+          skipChild: wW,
+          inlineStylesheet: tW,
+          maskInputOptions: ZW,
+          maskTextFn: xW,
+          maskInputFn: lW,
+          slimDOMOptions: AW,
+          dataURLOptions: bW,
+          inlineImages: jW,
+          recordCanvas: UW,
+          preserveWhiteSpace: dW,
+          onSerialize: kW,
+          onIframeLoad: YW,
+          iframeLoadTimeout: yW,
+          onStylesheetLoad: TW,
+          stylesheetLoadTimeout: JW,
+          keepIframeSrcFn: hW,
+          cssCaptured: !1
+        };
+        if (gW.type === cW.Element && "textarea" === gW.tagName && void 0 !== gW.attributes.value);
+        else {
+          gW.type === cW.Element && void 0 !== gW.attributes._cssText && "string" === typeof gW.attributes._cssText && (iW.cssCaptured = !0);
+          for (const OW of Array.from(sW.childNodes(WW))) {
+            const WW = ci(OW, iW);
+            WW && gW.childNodes.push(WW)
+          }
+        }
+        let KW = null;
+        if (MW(WW) && (KW = sW.shadowRoot(WW)))
+          for (const WW of Array.from(sW.childNodes(KW))) {
+            const OW = ci(WW, iW);
+            OW && (SW(KW) && (OW.isShadow = !0), gW.childNodes.push(OW))
+          }
+      }
+      const VW = sW.parentNode(WW);
+      return VW && KW(VW) && SW(VW) && (gW.isShadow = !0), gW.type === cW.Element && "iframe" === gW.tagName && function(WW, iW, OW) {
+        const mW = WW.contentWindow;
+        if (!mW) return;
+        let EW, NW = !1;
+        try {
+          EW = mW.document.readyState
+        } catch (LW) {
+          return
+        }
+        if ("complete" !== EW) {
+          const mW = setTimeout((() => {
+            NW || (iW(), NW = !0)
+          }), OW);
+          return void WW.addEventListener("load", (() => {
+            clearTimeout(mW), NW = !0, iW()
+          }))
+        }
+        const PW = "about:blank";
+        if (mW.location.href !== PW || WW.src === PW || "" === WW.src) return setTimeout(iW, 0), WW.addEventListener("load", iW);
+        WW.addEventListener("load", iW)
+      }(WW, (() => {
+        const iW = WW.contentDocument;
+        if (iW && YW) {
+          const OW = ci(iW, {
+            doc: iW,
+            mirror: mW,
+            blockClass: EW,
+            blockSelector: NW,
+            needsMask: uW,
+            maskTextClass: PW,
+            maskTextSelector: LW,
+            skipChild: !1,
+            inlineStylesheet: tW,
+            maskInputOptions: ZW,
+            maskTextFn: xW,
+            maskInputFn: lW,
+            slimDOMOptions: AW,
+            dataURLOptions: bW,
+            inlineImages: jW,
+            recordCanvas: UW,
+            preserveWhiteSpace: dW,
+            onSerialize: kW,
+            onIframeLoad: YW,
+            iframeLoadTimeout: yW,
+            onStylesheetLoad: TW,
+            stylesheetLoadTimeout: JW,
+            keepIframeSrcFn: hW
+          });
+          OW && YW(WW, OW)
+        }
+      }), yW), gW.type === cW.Element && "link" === gW.tagName && "string" === typeof gW.attributes.rel && ("stylesheet" === gW.attributes.rel || "preload" === gW.attributes.rel && "string" === typeof gW.attributes.href && "css" === oW(gW.attributes.href)) && function(WW, iW, OW) {
+        let mW, EW = !1;
+        try {
+          mW = WW.sheet
+        } catch (PW) {
+          return
+        }
+        if (mW) return;
+        const NW = setTimeout((() => {
+          EW || (iW(), EW = !0)
+        }), OW);
+        WW.addEventListener("load", (() => {
+          clearTimeout(NW), EW = !0, iW()
+        }))
+      }(WW, (() => {
+        if (TW) {
+          const iW = ci(WW, {
+            doc: OW,
+            mirror: mW,
+            blockClass: EW,
+            blockSelector: NW,
+            needsMask: uW,
+            maskTextClass: PW,
+            maskTextSelector: LW,
+            skipChild: !1,
+            inlineStylesheet: tW,
+            maskInputOptions: ZW,
+            maskTextFn: xW,
+            maskInputFn: lW,
+            slimDOMOptions: AW,
+            dataURLOptions: bW,
+            inlineImages: jW,
+            recordCanvas: UW,
+            preserveWhiteSpace: dW,
+            onSerialize: kW,
+            onIframeLoad: YW,
+            iframeLoadTimeout: yW,
+            onStylesheetLoad: TW,
+            stylesheetLoadTimeout: JW,
+            keepIframeSrcFn: hW
+          });
+          iW && TW(WW, iW)
+        }
+      }), JW), gW
+    }
+    const wi = new RegExp(/(max|min)-device-(width|height)/.source, "g"),
+      ti = {
+        postcssPlugin: "postcss-custom-selectors",
+        prepare: () => ({
+          postcssPlugin: "postcss-custom-selectors",
+          AtRule: function(WW) {
+            WW.params.match(wi) && (WW.params = WW.params.replace(wi, "$1-$2"))
+          }
+        })
+      },
+      Zi = {
+        postcssPlugin: "postcss-hover-classes",
+        prepare: function() {
+          const WW = [];
+          return {
+            Rule: function(iW) {
+              -1 === WW.indexOf(iW) && (WW.push(iW), iW.selectors.forEach((function(WW) {
+                WW.includes(":hover") && (iW.selector += ",\n" + WW.replace(/:hover/g, ".\\:hover"))
+              })))
             }
-          }, {
-            binding: 1,
-            visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-            buffer: {
-              type: "uniform",
-              hasDynamicOffset: !0,
-              minBindingSize: 80
+          }
+        }
+      };
+
+    function xi(WW) {
+      return WW && WW.__esModule && Object.prototype.hasOwnProperty.call(WW, "default") ? WW.default : WW
+    }
+
+    function li(WW) {
+      if (WW.__esModule) return WW;
+      var iW = WW.default;
+      if ("function" == typeof iW) {
+        var OW = function WW() {
+          return this instanceof WW ? Reflect.construct(iW, arguments, this.constructor) : iW.apply(this, arguments)
+        };
+        OW.prototype = iW.prototype
+      } else OW = {};
+      return Object.defineProperty(OW, "__esModule", {
+        value: !0
+      }), Object.keys(WW).forEach((function(iW) {
+        var mW = Object.getOwnPropertyDescriptor(WW, iW);
+        Object.defineProperty(OW, iW, mW.get ? mW : {
+          enumerable: !0,
+          get: function() {
+            return WW[iW]
+          }
+        })
+      })), OW
+    }
+    var Ai, bi = {
+      exports: {}
+    };
+
+    function ji() {
+      if (Ai) return bi.exports;
+      Ai = 1;
+      var WW = String,
+        iW = function() {
+          return {
+            isColorSupported: !1,
+            reset: WW,
+            bold: WW,
+            dim: WW,
+            italic: WW,
+            underline: WW,
+            inverse: WW,
+            hidden: WW,
+            strikethrough: WW,
+            black: WW,
+            red: WW,
+            green: WW,
+            yellow: WW,
+            blue: WW,
+            magenta: WW,
+            cyan: WW,
+            white: WW,
+            gray: WW,
+            bgBlack: WW,
+            bgRed: WW,
+            bgGreen: WW,
+            bgYellow: WW,
+            bgBlue: WW,
+            bgMagenta: WW,
+            bgCyan: WW,
+            bgWhite: WW
+          }
+        };
+      return bi.exports = iW(), bi.exports.createColors = iW, bi.exports
+    }
+    const Ui = li(Object.freeze(Object.defineProperty({
+      __proto__: null,
+      default: {}
+    }, Symbol.toStringTag, {
+      value: "Module"
+    })));
+    var ki, si;
+
+    function Mi() {
+      if (si) return ki;
+      si = 1;
+      let WW = ji(),
+        iW = Ui;
+      class OW extends Error {
+        constructor(WW, iW, mW, EW, NW, PW) {
+          super(WW), this.name = "CssSyntaxError", this.reason = WW, NW && (this.file = NW), EW && (this.source = EW), PW && (this.plugin = PW), "undefined" !== typeof iW && "undefined" !== typeof mW && ("number" === typeof iW ? (this.line = iW, this.column = mW) : (this.line = iW.line, this.column = iW.column, this.endLine = mW.line, this.endColumn = mW.column)), this.setMessage(), Error.captureStackTrace && Error.captureStackTrace(this, OW)
+        }
+        setMessage() {
+          this.message = this.plugin ? this.plugin + ": " : "", this.message += this.file ? this.file : "<css input>", "undefined" !== typeof this.line && (this.message += ":" + this.line + ":" + this.column), this.message += ": " + this.reason
+        }
+        showSourceCode(OW) {
+          if (!this.source) return "";
+          let mW = this.source;
+          null == OW && (OW = WW.isColorSupported), iW && OW && (mW = iW(mW));
+          let EW, NW, PW = mW.split(/\r?\n/),
+            LW = Math.max(this.line - 3, 0),
+            cW = Math.min(this.line + 2, PW.length),
+            wW = String(cW).length;
+          if (OW) {
+            let {
+              bold: iW,
+              gray: OW,
+              red: mW
+            } = WW.createColors(!0);
+            EW = WW => iW(mW(WW)), NW = WW => OW(WW)
+          } else EW = NW = WW => WW;
+          return PW.slice(LW, cW).map(((WW, iW) => {
+            let OW = LW + 1 + iW,
+              mW = " " + (" " + OW).slice(-wW) + " | ";
+            if (OW === this.line) {
+              let iW = NW(mW.replace(/\d/g, " ")) + WW.slice(0, this.column - 1).replace(/[^\t]/g, " ");
+              return EW(">") + NW(mW) + WW + "\n " + iW + EW("^")
             }
-          }]
-        }), this.frameBuffer = ee.createBuffer({
-          label: "meshes-frame",
-          size: this.frameUniforms.byteLength,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.meshSlots = new DM(ee, this.frameLayout, this.frameBuffer, "meshes-per-draw"), this.zeroBuffer = ee.createBuffer({
-          label: "meshes-zero-attribute",
-          size: 16,
-          usage: GPUBufferUsage.VERTEX
-        }), this.thinBundle = new vM(ee, new DM(ee, this.frameLayout, this.frameBuffer, "thin-bases-slots"), {
-          pipelineFor: (ee, ie, He) => this.pipelineFor(ee, ie, He),
-          pipelineCompiling: (ee, ie) => !ee.program.failed && !1 !== this.pipelines.get(`${ee.pipelineKey}|${ie}`),
-          sceneGroup: ee => {
-            const ie = He(ee);
-            return ie || this.warnOnce("scene-group", "no render task draws to this target: thin bases are drawn without a bundle"), ie
-          }
-        }), ie.onDestroy = ee => {
-          this.thinBundle.resourceDestroyed(ee)
-        }, this.skyLastRenderable = this.renderable(1e3, !1, this.lists.skyDraws), this.opaqueRenderable = this.renderable(150, !1, this.lists.opaqueDraws, this.thinBundle), this.transparentRenderable = this.renderable(300, !0, this.lists.transparentDraws), this.frontRenderable = this.renderable(400, !0, this.lists.frontDraws)
+            return " " + NW(mW) + WW
+          })).join("\n")
+        }
+        toString() {
+          let WW = this.showSourceCode();
+          return WW && (WW = "\n\n" + WW + "\n"), this.name + ": " + this.message + WW
+        }
       }
-      renderable(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const be = {
-          order: ee,
-          isTransparent: ie,
-          _direct: !ie,
-          bind: (ee, ie) => this.createBinding(be, ie, He, ye)
-        };
-        return be
-      }
-      get pipelinesCompiling() {
-        return this.compiling
-      }
-      prepare(ee, ie, He) {
-        var ye;
-        let be = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this.frame++, this.view = ie, this.drawDefines.view = ie, this.thinBundle.LO(), this.writeFrameUniforms();
-        const Me = null !== (ye = null === be || void 0 === be ? void 0 : be.defineFor("model")) && void 0 !== ye ? ye : 0;
-        this.drawDefines.modelPackVariant = Me, be && 0 !== Me && (this.packInputs ??= new NM(this.device, be.textureLayers(), this.sunShadow), this.packInputs.write(be, ie.eye, be.GT())), this.lists.clear(), this.slotCount = 0;
-        const Ke = ee.activeCamera;
-        this.Nee.select(Ke, this.keepSteadyBase), this.modelMeshes.select(Ke, ie), He && this.pushEarthSky(He), this.lists.collect(ee), this.thinBundle.ZR(), this.uploadMeshSlots()
-      }
-      pushDraws(ee, ie, He, ye, be, Me) {
-        let Ke = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        const Ue = Me.length;
-        for (let Fe = 0; Fe < He; Fe++) {
-          const He = ie[Fe];
-          let Ue = this.retainedDraw(ee, He, ye, be);
-          if (void 0 === Ue && (Ue = this.drawFor(ee, He, ye, be), this.retain(He, Ue)), Ue) {
-            const ee = He.owner,
-              ie = Ke ? Ke[Fe] : -1;
-            Ue.slotOffset = ie < 0 ? this.writeMeshSlot(ee.getWorldMatrix().m, ee.visibility) : this.writeMeshSlot(this.modelMeshes.worlds, this.modelMeshes.visibility[ie], 16 * ie), Me.push(Ue)
+      return ki = OW, OW.default = OW, ki
+    }
+    var Ki, Si, Yi, yi, Ti, Ji, Hi, ni, ui, oi, di, ei, vi, gi, Di, Vi, fi, Ci, Xi, Bi, qi, Ri, Gi, Ii, ai, ri, zi, Fi, Qi, WO, iO, OO, mO, EO, NO, PO, LO, cO, wO, tO, ZO, xO, lO, AO, bO, jO, UO, kO, sO, MO, KO, SO, YO, yO = {};
+
+    function TO() {
+      return Ki || (Ki = 1, yO.isClean = Symbol("isClean"), yO.my = Symbol("my")), yO
+    }
+
+    function JO() {
+      if (Yi) return Si;
+      Yi = 1;
+      const WW = {
+        after: "\n",
+        beforeClose: "\n",
+        beforeComment: "\n",
+        beforeDecl: "\n",
+        beforeOpen: " ",
+        beforeRule: "\n",
+        colon: ": ",
+        commentLeft: " ",
+        commentRight: " ",
+        emptyBody: "",
+        indent: "    ",
+        semicolon: !1
+      };
+      class iW {
+        constructor(WW) {
+          this.builder = WW
+        }
+        atrule(WW, iW) {
+          let OW = "@" + WW.name,
+            mW = WW.params ? this.rawValue(WW, "params") : "";
+          if ("undefined" !== typeof WW.raws.afterName ? OW += WW.raws.afterName : mW && (OW += " "), WW.nodes) this.block(WW, OW + mW);
+          else {
+            let EW = (WW.raws.between || "") + (iW ? ";" : "");
+            this.builder(OW + mW + EW, WW)
           }
         }
-        return Me.length - Ue
-      }
-      bundleDraws(ee, ie, He) {
-        let ye = 0;
-        for (const be of ie) {
-          let ie = this.retainedDraw(ee, be, He, !1);
-          const Me = void 0 !== ie;
-          if (void 0 === ie && (ie = this.drawFor(ee, be, He, !1), this.retain(be, ie)), ie) {
-            const ee = be.owner,
-              He = this.thinBundle.add(be, ie, ee.getWorldMatrix().m, ee.visibility);
-            Me && this.steadyFrom(be, ie, He), ye++
+        beforeAfter(WW, iW) {
+          let OW;
+          OW = "decl" === WW.type ? this.raw(WW, null, "beforeDecl") : "comment" === WW.type ? this.raw(WW, null, "beforeComment") : "before" === iW ? this.raw(WW, null, "beforeRule") : this.raw(WW, null, "beforeClose");
+          let mW = WW.parent,
+            EW = 0;
+          for (; mW && "root" !== mW.type;) EW += 1, mW = mW.parent;
+          if (OW.includes("\n")) {
+            let iW = this.raw(WW, null, "indent");
+            if (iW.length)
+              for (let WW = 0; WW < EW; WW++) OW += iW
+          }
+          return OW
+        }
+        block(WW, iW) {
+          let OW, mW = this.raw(WW, "between", "beforeOpen");
+          this.builder(iW + mW + "{", WW, "start"), WW.nodes && WW.nodes.length ? (this.body(WW), OW = this.raw(WW, "after")) : OW = this.raw(WW, "after", "emptyBody"), OW && this.builder(OW), this.builder("}", WW, "end")
+        }
+        body(WW) {
+          let iW = WW.nodes.length - 1;
+          for (; iW > 0 && "comment" === WW.nodes[iW].type;) iW -= 1;
+          let OW = this.raw(WW, "semicolon");
+          for (let mW = 0; mW < WW.nodes.length; mW++) {
+            let EW = WW.nodes[mW],
+              NW = this.raw(EW, "before");
+            NW && this.builder(NW), this.stringify(EW, iW !== mW || OW)
           }
         }
-        return ye
-      }
-      steadyFrom(ee, ie, He) {
-        const ye = ee.owner,
-          be = this.Nee.base(ye),
-          Me = ye.material,
+        comment(WW) {
+          let iW = this.raw(WW, "left", "commentLeft"),
+            OW = this.raw(WW, "right", "commentRight");
+          this.builder("/*" + iW + WW.text + OW + "*/", WW)
+        }
+        decl(WW, iW) {
+          let OW = this.raw(WW, "between", "colon"),
+            mW = WW.prop + OW + this.rawValue(WW, "value");
+          WW.important && (mW += WW.raws.important || " !important"), iW && (mW += ";"), this.builder(mW, WW)
+        }
+        document(WW) {
+          this.body(WW)
+        }
+        raw(iW, OW, mW) {
+          let EW;
+          if (mW || (mW = OW), OW && (EW = iW.raws[OW], "undefined" !== typeof EW)) return EW;
+          let NW = iW.parent;
+          if ("before" === mW) {
+            if (!NW || "root" === NW.type && NW.first === iW) return "";
+            if (NW && "document" === NW.type) return ""
+          }
+          if (!NW) return WW[mW];
+          let PW = iW.root();
+          if (PW.rawCache || (PW.rawCache = {}), "undefined" !== typeof PW.rawCache[mW]) return PW.rawCache[mW];
+          if ("before" === mW || "after" === mW) return this.beforeAfter(iW, mW);
           {
-            drawState: Ke,
-            instance: Ue
-          } = ie.inputs.retained;
-        if (!be || !Me || 1 !== ee.parts.materials.length || AM(ee) !== Me) return;
-        const Fe = be.steady ??= {
-          unit: ee,
-          material: Me,
-          visibility: 1,
-          draw: ie,
-          record: He,
-          drawState: Ke,
-          instance: Ue,
-          bindGroup: null,
-          gpuVersion: -1,
-          fitInstances: 0,
-          worldFlag: -1,
-          handedFrame: -1,
-          phase: this.steadyPhase++ % 8
-        };
-        Fe.unit = ee, Fe.material = Me, Fe.visibility = ye.visibility, Fe.draw = ie, Fe.record = He, Fe.drawState = Ke, Fe.instance = Ue, Fe.bindGroup = Ue.bindGroup, Fe.gpuVersion = this.resources.gpuBuffersVersion, Fe.fitInstances = ie.inputs.fitInstances, Fe.worldFlag = ye.getWorldMatrix().updateFlag, Fe.handedFrame = this.frame
-      }
-      keepSteady(ee, ie) {
-        const He = ee.steady;
-        if (He.handedFrame !== this.frame - 1 || (this.frame + He.phase) % 8 === 0) return !1;
-        const ye = ee.mesh,
-          {
-            unit: be,
-            draw: Me,
-            instance: Ke,
-            drawState: Ue
-          } = He,
-          Fe = ye.forcedInstanceCount || ye.Hie;
-        if (!ye.isVisible || ye.nMe || ye.visibility !== He.visibility || 0 === (ye.layerMask & ie.layerMask) || ye.material !== He.material || 0 !== ye.renderingGroupId || ye.hasVertexAlpha || !this.drawDefines.definesHold(Ue, be, Ue.instancing) || He.gpuVersion !== this.resources.gpuBuffersVersion || !this.inputsStamped(Me.inputs, be, Ue.instancing, Me.program) || Me.program.failed || Ke.released || Fe <= 0 || Fe > He.fitInstances) return !1;
-        if (Ke.frame !== this.frame && this.bindMaterial(Ke, this.modelUniforms.refreshModelUniforms(ye.Xx(), Ke, Ke.model, this.view)), !Ke.bindable || Ke.bindGroup !== He.bindGroup) return !1;
-        const Je = ye.computeWorldMatrix(),
-          oe = Je.updateFlag !== He.worldFlag;
-        return He.worldFlag = Je.updateFlag, Me.instances = Fe, this.thinBundle.addAgain(He.record, Me, oe ? Je.m : null, He.visibility), He.handedFrame = this.frame, this.Nee.drawn++, !0
-      }
-      retainedDraw(ee, ie, He, ye) {
-        const be = this.inputs.get(ie),
-          Me = null === be || void 0 === be ? void 0 : be.retained;
-        if (!be || !Me) return;
-        const {
-          drawState: Ke,
-          program: Ue,
-          instance: Fe,
-          instancing: Je
-        } = Me, oe = ie.owner;
-        if (KM(oe) !== Je) return;
-        const Re = this.instanceCount(oe, Je);
-        if (Re <= 0) return null;
-        if (Fe.released || Ue.failed || Ke.program !== Ue || !this.drawDefines.programCurrent(Ke, ie, Je, He) || !this.inputsStamped(be, ie, Je, Ue) || oe.isUnIndexed !== Me.unIndexed || this.indexKey(ie) !== Me.indexData) return;
-        if (Me.indexBuffer && Me.gpuVersion !== this.resources.gpuBuffersVersion) {
-          const ee = this.resources.gpuBuffer(Me.indexData);
-          if (!ee) return;
-          Me.indexBuffer = ee, Me.gpuVersion = this.resources.gpuBuffersVersion
-        }
-        let ke = !1;
-        if (Fe.frame !== this.frame && (ke = this.modelUniforms.refreshModelUniforms(ee, Fe, Fe.model, this.view)), !this.bindMaterial(Fe, ke) || !this.withGpuBuffers(be) || !this.instanceBuffersFit(oe.name, be, Re)) return null;
-        const qe = this.makeDraw(Ue, be, this.renderStates.renderState(Ke.model, oe, ye, be.state), Fe, Re);
-        return this.setRange(qe, ie, Me.indexBuffer, Me.indexData), qe
-      }
-      retain(ee, ie) {
-        const He = this.drawDefines.drawStates.get(ee);
-        if (!ie || !He || He.program !== ie.program) {
-          const ie = this.inputs.get(ee);
-          return void(ie && (ie.retained = null))
-        }
-        const ye = ee.owner,
-          be = He.instancing,
-          Me = this.indexKey(ee),
-          Ke = ie.inputs.retained;
-        Ke ? (Ke.drawState = He, Ke.instancing = be, Ke.program = ie.program, Ke.instance = ie.material, Ke.indexData = Me, Ke.unIndexed = ye.isUnIndexed, Ke.indexBuffer = ie.indexBuffer, Ke.gpuVersion = this.resources.gpuBuffersVersion) : ie.inputs.retained = {
-          drawState: He,
-          instancing: be,
-          program: ie.program,
-          instance: ie.material,
-          indexData: Me,
-          unIndexed: ye.isUnIndexed,
-          indexBuffer: ie.indexBuffer,
-          gpuVersion: this.resources.gpuBuffersVersion
-        }
-      }
-      drawFor(ee, ie, He, ye) {
-        const be = ie.owner,
-          Me = AM(ie);
-        if (!Me) return null;
-        const Ke = Me.getClassName();
-        let Ue = null;
-        if (function(ee) {
-            return "LinesMesh" === ee.getClassName()
-          }(be)) {
-          if (! function(ee) {
-              return "ShaderMaterial" === ee.getClassName() && "color" === ee.shaderPath
-            }(Me)) return this.warnOnce(`lines:${Ke}`, `A LinesMesh with a ${Ke} is not drawn yet (${Me.name})`), null;
-          Ue = be
-        } else if ("StandardMaterial" !== Ke && "LiteMaterial" !== Ke) return this.warnOnce(`class:${Ke}`, `${Ke} is not drawn yet (${Me.name})`), null;
-        const Fe = KM(be),
-          Je = this.instanceCount(be, Fe);
-        if (Je <= 0) return null;
-        const oe = Ue ? this.lineProgramFor(be, He, Fe) : this.drawDefines.programFor(ee, ie, Me, He, Fe);
-        if (!oe || oe.failed) return null;
-        const Re = Ue ? null : this.drawDefines.drawStates.get(ie).model,
-          ke = Re ? this.modelInstance(Re, oe) : this.materialInstance(be, oe);
-        let qe = !1;
-        if (ke.frame !== this.frame && (Ue ? ze(ke.ubo, Ue) : qe = this.modelUniforms.refreshModelUniforms(ee, ke, ke.model, this.view)), !this.bindMaterial(ke, qe)) return null;
-        const fe = this.meshInputs(ie, oe, Fe);
-        if (!fe || !this.instanceBuffersFit(be.name, fe, Je)) return null;
-        const Te = this.indexKey(ie);
-        let pe = null;
-        if (Te && !be.isUnIndexed && (pe = this.resources.gpuBuffer(Te), !pe)) return null;
-        const Xe = this.renderStates.renderState(null !== Re && void 0 !== Re ? Re : Me, be, ye, fe.state, Ue ? "line-list" : "triangle-list"),
-          Be = this.makeDraw(oe, fe, Xe, ke, Je);
-        return this.setRange(Be, ie, pe, Te), Be
-      }
-      indexKey(ee) {
-        const ie = oM(ee);
-        return ie ? this.resources.modelIndex(ie) : null
-      }
-      setRange(ee, ie, He, ye) {
-        He && (ee.indexBuffer = He, ee.indexFormat = this.resources.indexFormat(ye));
-        const be = 4 * ie.range + (He ? 0 : 2);
-        ee.unit = ie, ee.first = ie.parts.zp[be], ee.count = ie.parts.zp[be + 1]
-      }
-      makeDraw(ee, ie, He, ye, be) {
-        ie.state !== He && (ie.state = He, ie.pipelineKey = `${ee.id}|${ie.layout.key}|${He.key}`, ie.pipeline = null);
-        const Me = ie.draw ??= {
-          program: ee,
-          inputs: ie,
-          pipelineKey: "",
-          layout: ie.layout,
-          state: He,
-          material: ye,
-          slotOffset: 0,
-          vertexBuffers: ie.buffers,
-          vertexOffsets: ie.offsets,
-          indexBuffer: null,
-          indexFormat: "uint16",
-          first: 0,
-          count: 0,
-          instances: be,
-          unit: null
-        };
-        return Me.program = ee, Me.pipelineKey = ie.pipelineKey, Me.state = He, Me.material = ye, Me.vertexOffsets = ie.offsets, Me.indexBuffer = null, Me.instances = be, Me
-      }
-      instanceCount(ee, ie) {
-        switch (ie) {
-          case "thin":
-            return ee.forcedInstanceCount || ee.Hie;
-          case "instanced":
-            return this.prepareInstances(ee);
-          case "none":
-            return 1
-        }
-      }
-      prepareInstances(ee) {
-        const ie = function(ee, ie) {
-          const He = ie._userInstancedBuffersStorage,
-            ye = ee.batchUploads.get(ie);
-          if (ye) {
-            var be;
-            if (ye.layout === (null !== (be = null === He || void 0 === He ? void 0 : He.interleavedKinds) && void 0 !== be ? be : null)) return ye;
-            ye.release()
+            let WW = "raw" + ((LW = mW)[0].toUpperCase() + LW.slice(1));
+            this[WW] ? EW = this[WW](PW, iW) : PW.walk((WW => {
+              if (EW = WW.raws[OW], "undefined" !== typeof EW) return !1
+            }))
           }
-          return new qi(ee, ie, He)
-        }(this.resources, ee);
-        return ie.frame !== this.frame && ie.pack(ee, this.modelMeshes.instanceBatch(ee), this.modelMeshes.worlds, this.frame), ie.count
+          var LW;
+          return "undefined" === typeof EW && (EW = WW[mW]), PW.rawCache[mW] = EW, EW
+        }
+        rawBeforeClose(WW) {
+          let iW;
+          return WW.walk((WW => {
+            if (WW.nodes && WW.nodes.length > 0 && "undefined" !== typeof WW.raws.after) return iW = WW.raws.after, iW.includes("\n") && (iW = iW.replace(/[^\n]+$/, "")), !1
+          })), iW && (iW = iW.replace(/\S/g, "")), iW
+        }
+        rawBeforeComment(WW, iW) {
+          let OW;
+          return WW.walkComments((WW => {
+            if ("undefined" !== typeof WW.raws.before) return OW = WW.raws.before, OW.includes("\n") && (OW = OW.replace(/[^\n]+$/, "")), !1
+          })), "undefined" === typeof OW ? OW = this.raw(iW, null, "beforeDecl") : OW && (OW = OW.replace(/\S/g, "")), OW
+        }
+        rawBeforeDecl(WW, iW) {
+          let OW;
+          return WW.walkDecls((WW => {
+            if ("undefined" !== typeof WW.raws.before) return OW = WW.raws.before, OW.includes("\n") && (OW = OW.replace(/[^\n]+$/, "")), !1
+          })), "undefined" === typeof OW ? OW = this.raw(iW, null, "beforeRule") : OW && (OW = OW.replace(/\S/g, "")), OW
+        }
+        rawBeforeOpen(WW) {
+          let iW;
+          return WW.walk((WW => {
+            if ("decl" !== WW.type && (iW = WW.raws.between, "undefined" !== typeof iW)) return !1
+          })), iW
+        }
+        rawBeforeRule(WW) {
+          let iW;
+          return WW.walk((OW => {
+            if (OW.nodes && (OW.parent !== WW || WW.first !== OW) && "undefined" !== typeof OW.raws.before) return iW = OW.raws.before, iW.includes("\n") && (iW = iW.replace(/[^\n]+$/, "")), !1
+          })), iW && (iW = iW.replace(/\S/g, "")), iW
+        }
+        rawColon(WW) {
+          let iW;
+          return WW.walkDecls((WW => {
+            if ("undefined" !== typeof WW.raws.between) return iW = WW.raws.between.replace(/[^\s:]/g, ""), !1
+          })), iW
+        }
+        rawEmptyBody(WW) {
+          let iW;
+          return WW.walk((WW => {
+            if (WW.nodes && 0 === WW.nodes.length && (iW = WW.raws.after, "undefined" !== typeof iW)) return !1
+          })), iW
+        }
+        rawIndent(WW) {
+          if (WW.raws.indent) return WW.raws.indent;
+          let iW;
+          return WW.walk((OW => {
+            let mW = OW.parent;
+            if (mW && mW !== WW && mW.parent && mW.parent === WW && "undefined" !== typeof OW.raws.before) {
+              let WW = OW.raws.before.split("\n");
+              return iW = WW[WW.length - 1], iW = iW.replace(/\S/g, ""), !1
+            }
+          })), iW
+        }
+        rawSemicolon(WW) {
+          let iW;
+          return WW.walk((WW => {
+            if (WW.nodes && WW.nodes.length && "decl" === WW.last.type && (iW = WW.raws.semicolon, "undefined" !== typeof iW)) return !1
+          })), iW
+        }
+        rawValue(WW, iW) {
+          let OW = WW[iW],
+            mW = WW.raws[iW];
+          return mW && mW.value === OW ? mW.raw : OW
+        }
+        root(WW) {
+          this.body(WW), WW.raws.after && this.builder(WW.raws.after)
+        }
+        rule(WW) {
+          this.block(WW, this.rawValue(WW, "selector")), WW.raws.ownSemicolon && this.builder(WW.raws.ownSemicolon, WW, "end")
+        }
+        stringify(WW, iW) {
+          if (!this[WW.type]) throw new Error("Unknown AST node type " + WW.type + ". Maybe you need to change PostCSS stringifier.");
+          this[WW.type](WW, iW)
+        }
       }
-      programWithModel(ee, ie, He) {
-        const ye = this.modelSlot(ee),
-          be = qM(ye, ee, He),
-          Me = this.drawDefines.modelPackKind(ee),
-          Ke = Me ? function(ee, ie, He, ye) {
-            const be = (0, te.y)(ee, de.k.name),
-              Me = [];
-            for (const {
-                feature: Fe,
-                state: Je,
-                active: oe
+      return Si = iW, iW.default = iW, Si
+    }
+
+    function hO() {
+      if (Ti) return yi;
+      Ti = 1;
+      let WW = JO();
+
+      function iW(iW, OW) {
+        new WW(OW).stringify(iW)
+      }
+      return yi = iW, iW.default = iW, yi
+    }
+
+    function HO() {
+      if (Hi) return Ji;
+      Hi = 1;
+      let {
+        isClean: WW,
+        my: iW
+      } = TO(), OW = Mi(), mW = JO(), EW = hO();
+
+      function NW(WW, iW) {
+        let OW = new WW.constructor;
+        for (let mW in WW) {
+          if (!Object.prototype.hasOwnProperty.call(WW, mW)) continue;
+          if ("proxyCache" === mW) continue;
+          let EW = WW[mW],
+            PW = typeof EW;
+          "parent" === mW && "object" === PW ? iW && (OW[mW] = iW) : "source" === mW ? OW[mW] = EW : Array.isArray(EW) ? OW[mW] = EW.map((WW => NW(WW, OW))) : ("object" === PW && null !== EW && (EW = NW(EW)), OW[mW] = EW)
+        }
+        return OW
+      }
+      class PW {
+        constructor() {
+          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          this.raws = {}, this[WW] = !1, this[iW] = !0;
+          for (let WW in OW)
+            if ("nodes" === WW) {
+              this.nodes = [];
+              for (let iW of OW[WW]) "function" === typeof iW.clone ? this.append(iW.clone()) : this.append(iW)
+            } else this[WW] = OW[WW]
+        }
+        addToError(WW) {
+          if (WW.postcssNode = this, WW.stack && this.source && /\n\s{4}at /.test(WW.stack)) {
+            let iW = this.source;
+            WW.stack = WW.stack.replace(/\n\s{4}at /, `$&${iW.input.from}:${iW.start.line}:${iW.start.column}$&`)
+          }
+          return WW
+        }
+        after(WW) {
+          return this.parent.insertAfter(this, WW), this
+        }
+        assign() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          for (let iW in WW) this[iW] = WW[iW];
+          return this
+        }
+        before(WW) {
+          return this.parent.insertBefore(this, WW), this
+        }
+        cleanRaws(WW) {
+          delete this.raws.before, delete this.raws.after, WW || delete this.raws.between
+        }
+        clone() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            iW = NW(this);
+          for (let OW in WW) iW[OW] = WW[OW];
+          return iW
+        }
+        cloneAfter() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            iW = this.clone(WW);
+          return this.parent.insertAfter(this, iW), iW
+        }
+        cloneBefore() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            iW = this.clone(WW);
+          return this.parent.insertBefore(this, iW), iW
+        }
+        error(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (this.source) {
+            let {
+              end: OW,
+              start: mW
+            } = this.rangeBy(iW);
+            return this.source.input.error(WW, {
+              column: mW.column,
+              line: mW.line
+            }, {
+              column: OW.column,
+              line: OW.line
+            }, iW)
+          }
+          return new OW(WW)
+        }
+        getProxyProcessor() {
+          return {
+            get: (WW, iW) => "proxyOf" === iW ? WW : "root" === iW ? () => WW.root().toProxy() : WW[iW],
+            set: (WW, iW, OW) => (WW[iW] === OW || (WW[iW] = OW, "prop" !== iW && "value" !== iW && "name" !== iW && "params" !== iW && "important" !== iW && "text" !== iW || WW.markDirty()), !0)
+          }
+        }
+        markDirty() {
+          if (this[WW]) {
+            this[WW] = !1;
+            let iW = this;
+            for (; iW = iW.parent;) iW[WW] = !1
+          }
+        }
+        next() {
+          if (!this.parent) return;
+          let WW = this.parent.index(this);
+          return this.parent.nodes[WW + 1]
+        }
+        positionBy(WW, iW) {
+          let OW = this.source.start;
+          if (WW.index) OW = this.positionInside(WW.index, iW);
+          else if (WW.word) {
+            let mW = (iW = this.toString()).indexOf(WW.word); - 1 !== mW && (OW = this.positionInside(mW, iW))
+          }
+          return OW
+        }
+        positionInside(WW, iW) {
+          let OW = iW || this.toString(),
+            mW = this.source.start.column,
+            EW = this.source.start.line;
+          for (let NW = 0; NW < WW; NW++) "\n" === OW[NW] ? (mW = 1, EW += 1) : mW += 1;
+          return {
+            column: mW,
+            line: EW
+          }
+        }
+        prev() {
+          if (!this.parent) return;
+          let WW = this.parent.index(this);
+          return this.parent.nodes[WW - 1]
+        }
+        rangeBy(WW) {
+          let iW = {
+              column: this.source.start.column,
+              line: this.source.start.line
+            },
+            OW = this.source.end ? {
+              column: this.source.end.column + 1,
+              line: this.source.end.line
+            } : {
+              column: iW.column + 1,
+              line: iW.line
+            };
+          if (WW.word) {
+            let mW = this.toString(),
+              EW = mW.indexOf(WW.word); - 1 !== EW && (iW = this.positionInside(EW, mW), OW = this.positionInside(EW + WW.word.length, mW))
+          } else WW.start ? iW = {
+            column: WW.start.column,
+            line: WW.start.line
+          } : WW.index && (iW = this.positionInside(WW.index)), WW.end ? OW = {
+            column: WW.end.column,
+            line: WW.end.line
+          } : "number" === typeof WW.endIndex ? OW = this.positionInside(WW.endIndex) : WW.index && (OW = this.positionInside(WW.index + 1));
+          return (OW.line < iW.line || OW.line === iW.line && OW.column <= iW.column) && (OW = {
+            column: iW.column + 1,
+            line: iW.line
+          }), {
+            end: OW,
+            start: iW
+          }
+        }
+        raw(WW, iW) {
+          return (new mW).raw(this, WW, iW)
+        }
+        remove() {
+          return this.parent && this.parent.removeChild(this), this.parent = void 0, this
+        }
+        replaceWith() {
+          if (this.parent) {
+            let mW = this,
+              EW = !1;
+            for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+            for (let WW of iW) WW === this ? EW = !0 : EW ? (this.parent.insertAfter(mW, WW), mW = WW) : this.parent.insertBefore(mW, WW);
+            EW || this.remove()
+          }
+          return this
+        }
+        root() {
+          let WW = this;
+          for (; WW.parent && "document" !== WW.parent.type;) WW = WW.parent;
+          return WW
+        }
+        toJSON(WW, iW) {
+          let OW = {},
+            mW = null == iW;
+          iW = iW || new Map;
+          let EW = 0;
+          for (let NW in this) {
+            if (!Object.prototype.hasOwnProperty.call(this, NW)) continue;
+            if ("parent" === NW || "proxyCache" === NW) continue;
+            let WW = this[NW];
+            if (Array.isArray(WW)) OW[NW] = WW.map((WW => "object" === typeof WW && WW.toJSON ? WW.toJSON(null, iW) : WW));
+            else if ("object" === typeof WW && WW.toJSON) OW[NW] = WW.toJSON(null, iW);
+            else if ("source" === NW) {
+              let mW = iW.get(WW.input);
+              null == mW && (mW = EW, iW.set(WW.input, EW), EW++), OW[NW] = {
+                end: WW.end,
+                inputId: mW,
+                start: WW.start
               }
-              of ee.features) {
-              var Ke, Ue;
-              const ee = oe ? null === (Ke = (Ue = (0, ai.e)(Fe)).Zf) || void 0 === Ke ? void 0 : Ke.call(Ue, Je) : void 0;
-              ee && Me.push(ee)
+            } else OW[NW] = WW
+          }
+          return mW && (OW.inputs = [...iW.keys()].map((WW => WW.toJSON()))), OW
+        }
+        toProxy() {
+          return this.proxyCache || (this.proxyCache = new Proxy(this, this.getProxyProcessor())), this.proxyCache
+        }
+        toString() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : EW;
+          WW.stringify && (WW = WW.stringify);
+          let iW = "";
+          return WW(this, (WW => {
+            iW += WW
+          })), iW
+        }
+        warn(WW, iW, OW) {
+          let mW = {
+            node: this
+          };
+          for (let EW in OW) mW[EW] = OW[EW];
+          return WW.warn(iW, mW)
+        }
+        get proxyOf() {
+          return this
+        }
+      }
+      return Ji = PW, PW.default = PW, Ji
+    }
+
+    function nO() {
+      if (ui) return ni;
+      ui = 1;
+      let WW = HO();
+      class iW extends WW {
+        constructor(WW) {
+          WW && "undefined" !== typeof WW.value && "string" !== typeof WW.value && (WW = {
+            ...WW,
+            value: String(WW.value)
+          }), super(WW), this.type = "decl"
+        }
+        get variable() {
+          return this.prop.startsWith("--") || "$" === this.prop[0]
+        }
+      }
+      return ni = iW, iW.default = iW, ni
+    }
+
+    function uO() {
+      if (di) return oi;
+      di = 1;
+      return oi = {
+        nanoid: function() {
+          let WW = "",
+            iW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 21;
+          for (; iW--;) WW += "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict" [64 * Math.random() | 0];
+          return WW
+        },
+        customAlphabet: function(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 21;
+          return function() {
+            let OW = "",
+              mW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : iW;
+            for (; mW--;) OW += WW[Math.random() * WW.length | 0];
+            return OW
+          }
+        }
+      }, oi
+    }
+
+    function oO() {
+      if (vi) return ei;
+      vi = 1;
+      let {
+        SourceMapConsumer: WW,
+        SourceMapGenerator: iW
+      } = Ui, {
+        existsSync: OW,
+        readFileSync: mW
+      } = Ui, {
+        dirname: EW,
+        join: NW
+      } = Ui;
+      class PW {
+        constructor(WW, iW) {
+          if (!1 === iW.map) return;
+          this.loadAnnotation(WW), this.inline = this.startWith(this.annotation, "data:");
+          let OW = iW.map ? iW.map.prev : void 0,
+            mW = this.loadMap(iW.from, OW);
+          !this.mapFile && iW.from && (this.mapFile = iW.from), this.mapFile && (this.root = EW(this.mapFile)), mW && (this.text = mW)
+        }
+        consumer() {
+          return this.consumerCache || (this.consumerCache = new WW(this.text)), this.consumerCache
+        }
+        decodeInline(WW) {
+          if (/^data:application\/json;charset=utf-?8,/.test(WW) || /^data:application\/json,/.test(WW)) return decodeURIComponent(WW.substr(RegExp.lastMatch.length));
+          if (/^data:application\/json;charset=utf-?8;base64,/.test(WW) || /^data:application\/json;base64,/.test(WW)) return iW = WW.substr(RegExp.lastMatch.length), Buffer ? Buffer.from(iW, "base64").toString() : window.atob(iW);
+          var iW;
+          let OW = WW.match(/data:application\/json;([^,]+),/)[1];
+          throw new Error("Unsupported source map encoding " + OW)
+        }
+        getAnnotationURL(WW) {
+          return WW.replace(/^\/\*\s*# sourceMappingURL=/, "").trim()
+        }
+        isMap(WW) {
+          return "object" === typeof WW && ("string" === typeof WW.mappings || "string" === typeof WW._mappings || Array.isArray(WW.sections))
+        }
+        loadAnnotation(WW) {
+          let iW = WW.match(/\/\*\s*# sourceMappingURL=/gm);
+          if (!iW) return;
+          let OW = WW.lastIndexOf(iW.pop()),
+            mW = WW.indexOf("*/", OW);
+          OW > -1 && mW > -1 && (this.annotation = this.getAnnotationURL(WW.substring(OW, mW)))
+        }
+        loadFile(WW) {
+          if (this.root = EW(WW), OW(WW)) return this.mapFile = WW, mW(WW, "utf-8").toString().trim()
+        }
+        loadMap(OW, mW) {
+          if (!1 === mW) return !1;
+          if (mW) {
+            if ("string" === typeof mW) return mW;
+            if ("function" !== typeof mW) {
+              if (mW instanceof WW) return iW.fromSourceMap(mW).toString();
+              if (mW instanceof iW) return mW.toString();
+              if (this.isMap(mW)) return JSON.stringify(mW);
+              throw new Error("Unsupported previous source map format: " + mW.toString())
+            } {
+              let WW = mW(OW);
+              if (WW) {
+                let iW = this.loadFile(WW);
+                if (!iW) throw new Error("Unable to load previous source map: " + WW.toString());
+                return iW
+              }
+            }
+          } else {
+            if (this.inline) return this.decodeInline(this.annotation);
+            if (this.annotation) {
+              let WW = this.annotation;
+              return OW && (WW = NW(EW(OW), WW)), this.loadFile(WW)
+            }
+          }
+        }
+        startWith(WW, iW) {
+          return !!WW && WW.substr(0, iW.length) === iW
+        }
+        withContent() {
+          return !!(this.consumer().sourcesContent && this.consumer().sourcesContent.length > 0)
+        }
+      }
+      return ei = PW, PW.default = PW, ei
+    }
+
+    function dO() {
+      if (Di) return gi;
+      Di = 1;
+      let {
+        SourceMapConsumer: WW,
+        SourceMapGenerator: iW
+      } = Ui, {
+        fileURLToPath: OW,
+        pathToFileURL: mW
+      } = Ui, {
+        isAbsolute: EW,
+        resolve: NW
+      } = Ui, {
+        nanoid: PW
+      } = uO(), LW = Ui, cW = Mi(), wW = oO(), tW = Symbol("fromOffsetCache"), ZW = Boolean(WW && iW), xW = Boolean(NW && EW);
+      class lW {
+        constructor(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (null === WW || "undefined" === typeof WW || "object" === typeof WW && !WW.toString) throw new Error(`PostCSS received ${WW} instead of CSS string`);
+          if (this.css = WW.toString(), "\ufeff" === this.css[0] || "\ufffe" === this.css[0] ? (this.hasBOM = !0, this.css = this.css.slice(1)) : this.hasBOM = !1, iW.from && (!xW || /^\w+:\/\//.test(iW.from) || EW(iW.from) ? this.file = iW.from : this.file = NW(iW.from)), xW && ZW) {
+            let WW = new wW(this.css, iW);
+            if (WW.text) {
+              this.map = WW;
+              let iW = WW.consumer().file;
+              !this.file && iW && (this.file = this.mapResolve(iW))
+            }
+          }
+          this.file || (this.id = "<input css " + PW(6) + ">"), this.map && (this.map.file = this.from)
+        }
+        error(WW, iW, OW) {
+          let EW, NW, PW, LW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+          if (iW && "object" === typeof iW) {
+            let WW = iW,
+              mW = OW;
+            if ("number" === typeof WW.offset) {
+              let mW = this.fromOffset(WW.offset);
+              iW = mW.line, OW = mW.col
+            } else iW = WW.line, OW = WW.column;
+            if ("number" === typeof mW.offset) {
+              let WW = this.fromOffset(mW.offset);
+              NW = WW.line, PW = WW.col
+            } else NW = mW.line, PW = mW.column
+          } else if (!OW) {
+            let WW = this.fromOffset(iW);
+            iW = WW.line, OW = WW.col
+          }
+          let wW = this.origin(iW, OW, NW, PW);
+          return EW = wW ? new cW(WW, void 0 === wW.endLine ? wW.line : {
+            column: wW.column,
+            line: wW.line
+          }, void 0 === wW.endLine ? wW.column : {
+            column: wW.endColumn,
+            line: wW.endLine
+          }, wW.source, wW.file, LW.plugin) : new cW(WW, void 0 === NW ? iW : {
+            column: OW,
+            line: iW
+          }, void 0 === NW ? OW : {
+            column: PW,
+            line: NW
+          }, this.css, this.file, LW.plugin), EW.input = {
+            column: OW,
+            endColumn: PW,
+            endLine: NW,
+            line: iW,
+            source: this.css
+          }, this.file && (mW && (EW.input.url = mW(this.file).toString()), EW.input.file = this.file), EW
+        }
+        fromOffset(WW) {
+          let iW, OW;
+          if (this[tW]) OW = this[tW];
+          else {
+            let WW = this.css.split("\n");
+            OW = new Array(WW.length);
+            let iW = 0;
+            for (let mW = 0, EW = WW.length; mW < EW; mW++) OW[mW] = iW, iW += WW[mW].length + 1;
+            this[tW] = OW
+          }
+          iW = OW[OW.length - 1];
+          let mW = 0;
+          if (WW >= iW) mW = OW.length - 1;
+          else {
+            let iW, EW = OW.length - 2;
+            for (; mW < EW;)
+              if (iW = mW + (EW - mW >> 1), WW < OW[iW]) EW = iW - 1;
+              else {
+                if (!(WW >= OW[iW + 1])) {
+                  mW = iW;
+                  break
+                }
+                mW = iW + 1
+              }
+          }
+          return {
+            col: WW - OW[mW] + 1,
+            line: mW + 1
+          }
+        }
+        mapResolve(WW) {
+          return /^\w+:\/\//.test(WW) ? WW : NW(this.map.consumer().sourceRoot || this.map.root || ".", WW)
+        }
+        origin(WW, iW, NW, PW) {
+          if (!this.map) return !1;
+          let LW, cW, wW = this.map.consumer(),
+            tW = wW.originalPositionFor({
+              column: iW,
+              line: WW
+            });
+          if (!tW.source) return !1;
+          "number" === typeof NW && (LW = wW.originalPositionFor({
+            column: PW,
+            line: NW
+          })), cW = EW(tW.source) ? mW(tW.source) : new URL(tW.source, this.map.consumer().sourceRoot || mW(this.map.mapFile));
+          let ZW = {
+            column: tW.column,
+            endColumn: LW && LW.column,
+            endLine: LW && LW.line,
+            line: tW.line,
+            url: cW.toString()
+          };
+          if ("file:" === cW.protocol) {
+            if (!OW) throw new Error("file: protocol is not available in this PostCSS build");
+            ZW.file = OW(cW)
+          }
+          let xW = wW.sourceContentFor(tW.source);
+          return xW && (ZW.source = xW), ZW
+        }
+        toJSON() {
+          let WW = {};
+          for (let iW of ["hasBOM", "css", "file", "id"]) null != this[iW] && (WW[iW] = this[iW]);
+          return this.map && (WW.map = {
+            ...this.map
+          }, WW.map.consumerCache && (WW.map.consumerCache = void 0)), WW
+        }
+        get from() {
+          return this.file || this.id
+        }
+      }
+      return gi = lW, lW.default = lW, LW && LW.registerInput && LW.registerInput(lW), gi
+    }
+
+    function eO() {
+      if (fi) return Vi;
+      fi = 1;
+      let {
+        SourceMapConsumer: WW,
+        SourceMapGenerator: iW
+      } = Ui, {
+        dirname: OW,
+        relative: mW,
+        resolve: EW,
+        sep: NW
+      } = Ui, {
+        pathToFileURL: PW
+      } = Ui, LW = dO(), cW = Boolean(WW && iW), wW = Boolean(OW && EW && mW && NW);
+      return Vi = class {
+        constructor(WW, iW, OW, mW) {
+          this.stringify = WW, this.mapOpts = OW.map || {}, this.root = iW, this.opts = OW, this.css = mW, this.originalCSS = mW, this.usesFileUrls = !this.mapOpts.from && this.mapOpts.absolute, this.memoizedFileURLs = new Map, this.memoizedPaths = new Map, this.memoizedURLs = new Map
+        }
+        addAnnotation() {
+          let WW;
+          WW = this.isInline() ? "data:application/json;base64," + this.toBase64(this.map.toString()) : "string" === typeof this.mapOpts.annotation ? this.mapOpts.annotation : "function" === typeof this.mapOpts.annotation ? this.mapOpts.annotation(this.opts.to, this.root) : this.outputFile() + ".map";
+          let iW = "\n";
+          this.css.includes("\r\n") && (iW = "\r\n"), this.css += iW + "/*# sourceMappingURL=" + WW + " */"
+        }
+        applyPrevMaps() {
+          for (let iW of this.previous()) {
+            let mW, EW = this.toUrl(this.path(iW.file)),
+              NW = iW.root || OW(iW.file);
+            !1 === this.mapOpts.sourcesContent ? (mW = new WW(iW.text), mW.sourcesContent && (mW.sourcesContent = null)) : mW = iW.consumer(), this.map.applySourceMap(mW, EW, this.toUrl(this.path(NW)))
+          }
+        }
+        clearAnnotation() {
+          if (!1 !== this.mapOpts.annotation)
+            if (this.root) {
+              let WW;
+              for (let iW = this.root.nodes.length - 1; iW >= 0; iW--) WW = this.root.nodes[iW], "comment" === WW.type && 0 === WW.text.indexOf("# sourceMappingURL=") && this.root.removeChild(iW)
+            } else this.css && (this.css = this.css.replace(/\n*?\/\*#[\S\s]*?\*\/$/gm, ""))
+        }
+        generate() {
+          if (this.clearAnnotation(), wW && cW && this.isMap()) return this.generateMap();
+          {
+            let WW = "";
+            return this.stringify(this.root, (iW => {
+              WW += iW
+            })), [WW]
+          }
+        }
+        generateMap() {
+          if (this.root) this.generateString();
+          else if (1 === this.previous().length) {
+            let WW = this.previous()[0].consumer();
+            WW.file = this.outputFile(), this.map = iW.fromSourceMap(WW, {
+              ignoreInvalidMapping: !0
+            })
+          } else this.map = new iW({
+            file: this.outputFile(),
+            ignoreInvalidMapping: !0
+          }), this.map.addMapping({
+            generated: {
+              column: 0,
+              line: 1
+            },
+            original: {
+              column: 0,
+              line: 1
+            },
+            source: this.opts.from ? this.toUrl(this.path(this.opts.from)) : "<no source>"
+          });
+          return this.isSourcesContent() && this.setSourcesContent(), this.root && this.previous().length > 0 && this.applyPrevMaps(), this.isAnnotation() && this.addAnnotation(), this.isInline() ? [this.css] : [this.css, this.map]
+        }
+        generateString() {
+          this.css = "", this.map = new iW({
+            file: this.outputFile(),
+            ignoreInvalidMapping: !0
+          });
+          let WW, OW, mW = 1,
+            EW = 1,
+            NW = "<no source>",
+            PW = {
+              generated: {
+                column: 0,
+                line: 0
+              },
+              original: {
+                column: 0,
+                line: 0
+              },
+              source: ""
+            };
+          this.stringify(this.root, ((iW, LW, cW) => {
+            if (this.css += iW, LW && "end" !== cW && (PW.generated.line = mW, PW.generated.column = EW - 1, LW.source && LW.source.start ? (PW.source = this.sourcePath(LW), PW.original.line = LW.source.start.line, PW.original.column = LW.source.start.column - 1, this.map.addMapping(PW)) : (PW.source = NW, PW.original.line = 1, PW.original.column = 0, this.map.addMapping(PW))), WW = iW.match(/\n/g), WW ? (mW += WW.length, OW = iW.lastIndexOf("\n"), EW = iW.length - OW) : EW += iW.length, LW && "start" !== cW) {
+              let WW = LW.parent || {
+                raws: {}
+              };
+              ("decl" === LW.type || "atrule" === LW.type && !LW.nodes) && LW === WW.last && !WW.raws.semicolon || (LW.source && LW.source.end ? (PW.source = this.sourcePath(LW), PW.original.line = LW.source.end.line, PW.original.column = LW.source.end.column - 1, PW.generated.line = mW, PW.generated.column = EW - 2, this.map.addMapping(PW)) : (PW.source = NW, PW.original.line = 1, PW.original.column = 0, PW.generated.line = mW, PW.generated.column = EW - 1, this.map.addMapping(PW)))
+            }
+          }))
+        }
+        isAnnotation() {
+          return !!this.isInline() || ("undefined" !== typeof this.mapOpts.annotation ? this.mapOpts.annotation : !this.previous().length || this.previous().some((WW => WW.annotation)))
+        }
+        isInline() {
+          if ("undefined" !== typeof this.mapOpts.inline) return this.mapOpts.inline;
+          let WW = this.mapOpts.annotation;
+          return ("undefined" === typeof WW || !0 === WW) && (!this.previous().length || this.previous().some((WW => WW.inline)))
+        }
+        isMap() {
+          return "undefined" !== typeof this.opts.map ? !!this.opts.map : this.previous().length > 0
+        }
+        isSourcesContent() {
+          return "undefined" !== typeof this.mapOpts.sourcesContent ? this.mapOpts.sourcesContent : !this.previous().length || this.previous().some((WW => WW.withContent()))
+        }
+        outputFile() {
+          return this.opts.to ? this.path(this.opts.to) : this.opts.from ? this.path(this.opts.from) : "to.css"
+        }
+        path(WW) {
+          if (this.mapOpts.absolute) return WW;
+          if (60 === WW.charCodeAt(0)) return WW;
+          if (/^\w+:\/\//.test(WW)) return WW;
+          let iW = this.memoizedPaths.get(WW);
+          if (iW) return iW;
+          let NW = this.opts.to ? OW(this.opts.to) : ".";
+          "string" === typeof this.mapOpts.annotation && (NW = OW(EW(NW, this.mapOpts.annotation)));
+          let PW = mW(NW, WW);
+          return this.memoizedPaths.set(WW, PW), PW
+        }
+        previous() {
+          if (!this.previousMaps)
+            if (this.previousMaps = [], this.root) this.root.walk((WW => {
+              if (WW.source && WW.source.input.map) {
+                let iW = WW.source.input.map;
+                this.previousMaps.includes(iW) || this.previousMaps.push(iW)
+              }
+            }));
+            else {
+              let WW = new LW(this.originalCSS, this.opts);
+              WW.map && this.previousMaps.push(WW.map)
+            } return this.previousMaps
+        }
+        setSourcesContent() {
+          let WW = {};
+          if (this.root) this.root.walk((iW => {
+            if (iW.source) {
+              let OW = iW.source.input.from;
+              if (OW && !WW[OW]) {
+                WW[OW] = !0;
+                let mW = this.usesFileUrls ? this.toFileUrl(OW) : this.toUrl(this.path(OW));
+                this.map.setSourceContent(mW, iW.source.input.css)
+              }
+            }
+          }));
+          else if (this.css) {
+            let WW = this.opts.from ? this.toUrl(this.path(this.opts.from)) : "<no source>";
+            this.map.setSourceContent(WW, this.css)
+          }
+        }
+        sourcePath(WW) {
+          return this.mapOpts.from ? this.toUrl(this.mapOpts.from) : this.usesFileUrls ? this.toFileUrl(WW.source.input.from) : this.toUrl(this.path(WW.source.input.from))
+        }
+        toBase64(WW) {
+          return Buffer ? Buffer.from(WW).toString("base64") : window.btoa(unescape(encodeURIComponent(WW)))
+        }
+        toFileUrl(WW) {
+          let iW = this.memoizedFileURLs.get(WW);
+          if (iW) return iW;
+          if (PW) {
+            let iW = PW(WW).toString();
+            return this.memoizedFileURLs.set(WW, iW), iW
+          }
+          throw new Error("`map.absolute` option is not available in this PostCSS build")
+        }
+        toUrl(WW) {
+          let iW = this.memoizedURLs.get(WW);
+          if (iW) return iW;
+          "\\" === NW && (WW = WW.replace(/\\/g, "/"));
+          let OW = encodeURI(WW).replace(/[#?]/g, encodeURIComponent);
+          return this.memoizedURLs.set(WW, OW), OW
+        }
+      }
+    }
+
+    function vO() {
+      if (Xi) return Ci;
+      Xi = 1;
+      let WW = HO();
+      class iW extends WW {
+        constructor(WW) {
+          super(WW), this.type = "comment"
+        }
+      }
+      return Ci = iW, iW.default = iW, Ci
+    }
+
+    function gO() {
+      if (qi) return Bi;
+      qi = 1;
+      let WW, iW, OW, mW, {
+          isClean: EW,
+          my: NW
+        } = TO(),
+        PW = nO(),
+        LW = vO(),
+        cW = HO();
+
+      function wW(WW) {
+        return WW.map((WW => (WW.nodes && (WW.nodes = wW(WW.nodes)), delete WW.source, WW)))
+      }
+
+      function tW(WW) {
+        if (WW[EW] = !1, WW.proxyOf.nodes)
+          for (let iW of WW.proxyOf.nodes) tW(iW)
+      }
+      class ZW extends cW {
+        append() {
+          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+          for (let mW of iW) {
+            let WW = this.normalize(mW, this.last);
+            for (let iW of WW) this.proxyOf.nodes.push(iW)
+          }
+          return this.markDirty(), this
+        }
+        cleanRaws(WW) {
+          if (super.cleanRaws(WW), this.nodes)
+            for (let iW of this.nodes) iW.cleanRaws(WW)
+        }
+        each(WW) {
+          if (!this.proxyOf.nodes) return;
+          let iW, OW, mW = this.getIterator();
+          for (; this.indexes[mW] < this.proxyOf.nodes.length && (iW = this.indexes[mW], OW = WW(this.proxyOf.nodes[iW], iW), !1 !== OW);) this.indexes[mW] += 1;
+          return delete this.indexes[mW], OW
+        }
+        every(WW) {
+          return this.nodes.every(WW)
+        }
+        getIterator() {
+          this.lastEach || (this.lastEach = 0), this.indexes || (this.indexes = {}), this.lastEach += 1;
+          let WW = this.lastEach;
+          return this.indexes[WW] = 0, WW
+        }
+        getProxyProcessor() {
+          return {
+            get: (WW, iW) => "proxyOf" === iW ? WW : WW[iW] ? "each" === iW || "string" === typeof iW && iW.startsWith("walk") ? function() {
+              for (var OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
+              return WW[iW](...mW.map((WW => "function" === typeof WW ? (iW, OW) => WW(iW.toProxy(), OW) : WW)))
+            } : "every" === iW || "some" === iW ? OW => WW[iW]((function(WW) {
+              for (var iW = arguments.length, mW = new Array(iW > 1 ? iW - 1 : 0), EW = 1; EW < iW; EW++) mW[EW - 1] = arguments[EW];
+              return OW(WW.toProxy(), ...mW)
+            })) : "root" === iW ? () => WW.root().toProxy() : "nodes" === iW ? WW.nodes.map((WW => WW.toProxy())) : "first" === iW || "last" === iW ? WW[iW].toProxy() : WW[iW] : WW[iW],
+            set: (WW, iW, OW) => (WW[iW] === OW || (WW[iW] = OW, "name" !== iW && "params" !== iW && "selector" !== iW || WW.markDirty()), !0)
+          }
+        }
+        index(WW) {
+          return "number" === typeof WW ? WW : (WW.proxyOf && (WW = WW.proxyOf), this.proxyOf.nodes.indexOf(WW))
+        }
+        insertAfter(WW, iW) {
+          let OW, mW = this.index(WW),
+            EW = this.normalize(iW, this.proxyOf.nodes[mW]).reverse();
+          mW = this.index(WW);
+          for (let NW of EW) this.proxyOf.nodes.splice(mW + 1, 0, NW);
+          for (let NW in this.indexes) OW = this.indexes[NW], mW < OW && (this.indexes[NW] = OW + EW.length);
+          return this.markDirty(), this
+        }
+        insertBefore(WW, iW) {
+          let OW, mW = this.index(WW),
+            EW = 0 === mW && "prepend",
+            NW = this.normalize(iW, this.proxyOf.nodes[mW], EW).reverse();
+          mW = this.index(WW);
+          for (let PW of NW) this.proxyOf.nodes.splice(mW, 0, PW);
+          for (let PW in this.indexes) OW = this.indexes[PW], mW <= OW && (this.indexes[PW] = OW + NW.length);
+          return this.markDirty(), this
+        }
+        normalize(mW, cW) {
+          if ("string" === typeof mW) mW = wW(WW(mW).nodes);
+          else if ("undefined" === typeof mW) mW = [];
+          else if (Array.isArray(mW)) {
+            mW = mW.slice(0);
+            for (let WW of mW) WW.parent && WW.parent.removeChild(WW, "ignore")
+          } else if ("root" === mW.type && "document" !== this.type) {
+            mW = mW.nodes.slice(0);
+            for (let WW of mW) WW.parent && WW.parent.removeChild(WW, "ignore")
+          } else if (mW.type) mW = [mW];
+          else if (mW.prop) {
+            if ("undefined" === typeof mW.value) throw new Error("Value field is missed in node creation");
+            "string" !== typeof mW.value && (mW.value = String(mW.value)), mW = [new PW(mW)]
+          } else if (mW.selector) mW = [new iW(mW)];
+          else if (mW.name) mW = [new OW(mW)];
+          else {
+            if (!mW.text) throw new Error("Unknown node type in node creation");
+            mW = [new LW(mW)]
+          }
+          return mW.map((WW => (WW[NW] || ZW.rebuild(WW), (WW = WW.proxyOf).parent && WW.parent.removeChild(WW), WW[EW] && tW(WW), "undefined" === typeof WW.raws.before && cW && "undefined" !== typeof cW.raws.before && (WW.raws.before = cW.raws.before.replace(/\S/g, "")), WW.parent = this.proxyOf, WW)))
+        }
+        prepend() {
+          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+          iW = iW.reverse();
+          for (let mW of iW) {
+            let WW = this.normalize(mW, this.first, "prepend").reverse();
+            for (let iW of WW) this.proxyOf.nodes.unshift(iW);
+            for (let iW in this.indexes) this.indexes[iW] = this.indexes[iW] + WW.length
+          }
+          return this.markDirty(), this
+        }
+        push(WW) {
+          return WW.parent = this, this.proxyOf.nodes.push(WW), this
+        }
+        removeAll() {
+          for (let WW of this.proxyOf.nodes) WW.parent = void 0;
+          return this.proxyOf.nodes = [], this.markDirty(), this
+        }
+        removeChild(WW) {
+          let iW;
+          WW = this.index(WW), this.proxyOf.nodes[WW].parent = void 0, this.proxyOf.nodes.splice(WW, 1);
+          for (let OW in this.indexes) iW = this.indexes[OW], iW >= WW && (this.indexes[OW] = iW - 1);
+          return this.markDirty(), this
+        }
+        replaceValues(WW, iW, OW) {
+          return OW || (OW = iW, iW = {}), this.walkDecls((mW => {
+            iW.props && !iW.props.includes(mW.prop) || iW.fast && !mW.value.includes(iW.fast) || (mW.value = mW.value.replace(WW, OW))
+          })), this.markDirty(), this
+        }
+        some(WW) {
+          return this.nodes.some(WW)
+        }
+        walk(WW) {
+          return this.each(((iW, OW) => {
+            let mW;
+            try {
+              mW = WW(iW, OW)
+            } catch (EW) {
+              throw iW.addToError(EW)
+            }
+            return !1 !== mW && iW.walk && (mW = iW.walk(WW)), mW
+          }))
+        }
+        walkAtRules(WW, iW) {
+          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
+            if ("atrule" === OW.type && WW.test(OW.name)) return iW(OW, mW)
+          })) : this.walk(((OW, mW) => {
+            if ("atrule" === OW.type && OW.name === WW) return iW(OW, mW)
+          })) : (iW = WW, this.walk(((WW, OW) => {
+            if ("atrule" === WW.type) return iW(WW, OW)
+          })))
+        }
+        walkComments(WW) {
+          return this.walk(((iW, OW) => {
+            if ("comment" === iW.type) return WW(iW, OW)
+          }))
+        }
+        walkDecls(WW, iW) {
+          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
+            if ("decl" === OW.type && WW.test(OW.prop)) return iW(OW, mW)
+          })) : this.walk(((OW, mW) => {
+            if ("decl" === OW.type && OW.prop === WW) return iW(OW, mW)
+          })) : (iW = WW, this.walk(((WW, OW) => {
+            if ("decl" === WW.type) return iW(WW, OW)
+          })))
+        }
+        walkRules(WW, iW) {
+          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
+            if ("rule" === OW.type && WW.test(OW.selector)) return iW(OW, mW)
+          })) : this.walk(((OW, mW) => {
+            if ("rule" === OW.type && OW.selector === WW) return iW(OW, mW)
+          })) : (iW = WW, this.walk(((WW, OW) => {
+            if ("rule" === WW.type) return iW(WW, OW)
+          })))
+        }
+        get first() {
+          if (this.proxyOf.nodes) return this.proxyOf.nodes[0]
+        }
+        get last() {
+          if (this.proxyOf.nodes) return this.proxyOf.nodes[this.proxyOf.nodes.length - 1]
+        }
+      }
+      return ZW.registerParse = iW => {
+        WW = iW
+      }, ZW.registerRule = WW => {
+        iW = WW
+      }, ZW.registerAtRule = WW => {
+        OW = WW
+      }, ZW.registerRoot = WW => {
+        mW = WW
+      }, Bi = ZW, ZW.default = ZW, ZW.rebuild = WW => {
+        "atrule" === WW.type ? Object.setPrototypeOf(WW, OW.prototype) : "rule" === WW.type ? Object.setPrototypeOf(WW, iW.prototype) : "decl" === WW.type ? Object.setPrototypeOf(WW, PW.prototype) : "comment" === WW.type ? Object.setPrototypeOf(WW, LW.prototype) : "root" === WW.type && Object.setPrototypeOf(WW, mW.prototype), WW[NW] = !0, WW.nodes && WW.nodes.forEach((WW => {
+          ZW.rebuild(WW)
+        }))
+      }, Bi
+    }
+
+    function DO() {
+      if (Gi) return Ri;
+      Gi = 1;
+      let WW, iW, OW = gO();
+      class mW extends OW {
+        constructor(WW) {
+          super({
+            type: "document",
+            ...WW
+          }), this.nodes || (this.nodes = [])
+        }
+        toResult() {
+          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return new WW(new iW, this, OW).stringify()
+        }
+      }
+      return mW.registerLazyResult = iW => {
+        WW = iW
+      }, mW.registerProcessor = WW => {
+        iW = WW
+      }, Ri = mW, mW.default = mW, Ri
+    }
+
+    function VO() {
+      if (ai) return Ii;
+      ai = 1;
+      let WW = {};
+      return Ii = function(iW) {
+        WW[iW] || (WW[iW] = !0, "undefined" !== typeof console && console.warn && console.warn(iW))
+      }
+    }
+
+    function pO() {
+      if (zi) return ri;
+      zi = 1;
+      class WW {
+        constructor(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (this.type = "warning", this.text = WW, iW.node && iW.node.source) {
+            let WW = iW.node.rangeBy(iW);
+            this.line = WW.start.line, this.column = WW.start.column, this.endLine = WW.end.line, this.endColumn = WW.end.column
+          }
+          for (let OW in iW) this[OW] = iW[OW]
+        }
+        toString() {
+          return this.node ? this.node.error(this.text, {
+            index: this.index,
+            plugin: this.plugin,
+            word: this.word
+          }).message : this.plugin ? this.plugin + ": " + this.text : this.text
+        }
+      }
+      return ri = WW, WW.default = WW, ri
+    }
+
+    function fO() {
+      if (Qi) return Fi;
+      Qi = 1;
+      let WW = pO();
+      class iW {
+        constructor(WW, iW, OW) {
+          this.processor = WW, this.messages = [], this.root = iW, this.opts = OW, this.css = void 0, this.map = void 0
+        }
+        toString() {
+          return this.css
+        }
+        warn(iW) {
+          let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          OW.plugin || this.lastPlugin && this.lastPlugin.postcssPlugin && (OW.plugin = this.lastPlugin.postcssPlugin);
+          let mW = new WW(iW, OW);
+          return this.messages.push(mW), mW
+        }
+        warnings() {
+          return this.messages.filter((WW => "warning" === WW.type))
+        }
+        get content() {
+          return this.css
+        }
+      }
+      return Fi = iW, iW.default = iW, Fi
+    }
+
+    function CO() {
+      if (mO) return OO;
+      mO = 1;
+      let WW = gO();
+      class iW extends WW {
+        constructor(WW) {
+          super(WW), this.type = "atrule"
+        }
+        append() {
+          return this.proxyOf.nodes || (this.nodes = []), super.append(...arguments)
+        }
+        prepend() {
+          return this.proxyOf.nodes || (this.nodes = []), super.prepend(...arguments)
+        }
+      }
+      return OO = iW, iW.default = iW, WW.registerAtRule(iW), OO
+    }
+
+    function XO() {
+      if (NO) return EO;
+      NO = 1;
+      let WW, iW, OW = gO();
+      class mW extends OW {
+        constructor(WW) {
+          super(WW), this.type = "root", this.nodes || (this.nodes = [])
+        }
+        normalize(WW, iW, OW) {
+          let mW = super.normalize(WW);
+          if (iW)
+            if ("prepend" === OW) this.nodes.length > 1 ? iW.raws.before = this.nodes[1].raws.before : delete iW.raws.before;
+            else if (this.first !== iW)
+            for (let EW of mW) EW.raws.before = iW.raws.before;
+          return mW
+        }
+        removeChild(WW, iW) {
+          let OW = this.index(WW);
+          return !iW && 0 === OW && this.nodes.length > 1 && (this.nodes[1].raws.before = this.nodes[OW].raws.before), super.removeChild(WW)
+        }
+        toResult() {
+          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return new WW(new iW, this, OW).stringify()
+        }
+      }
+      return mW.registerLazyResult = iW => {
+        WW = iW
+      }, mW.registerProcessor = WW => {
+        iW = WW
+      }, EO = mW, mW.default = mW, OW.registerRoot(mW), EO
+    }
+
+    function BO() {
+      if (LO) return PO;
+      LO = 1;
+      let WW = {
+        comma: iW => WW.split(iW, [","], !0),
+        space: iW => WW.split(iW, [" ", "\n", "\t"]),
+        split(WW, iW, OW) {
+          let mW = [],
+            EW = "",
+            NW = !1,
+            PW = 0,
+            LW = !1,
+            cW = "",
+            wW = !1;
+          for (let tW of WW) wW ? wW = !1 : "\\" === tW ? wW = !0 : LW ? tW === cW && (LW = !1) : '"' === tW || "'" === tW ? (LW = !0, cW = tW) : "(" === tW ? PW += 1 : ")" === tW ? PW > 0 && (PW -= 1) : 0 === PW && iW.includes(tW) && (NW = !0), NW ? ("" !== EW && mW.push(EW.trim()), EW = "", NW = !1) : EW += tW;
+          return (OW || "" !== EW) && mW.push(EW.trim()), mW
+        }
+      };
+      return PO = WW, WW.default = WW, PO
+    }
+
+    function qO() {
+      if (wO) return cO;
+      wO = 1;
+      let WW = gO(),
+        iW = BO();
+      class OW extends WW {
+        constructor(WW) {
+          super(WW), this.type = "rule", this.nodes || (this.nodes = [])
+        }
+        get selectors() {
+          return iW.comma(this.selector)
+        }
+        set selectors(WW) {
+          let iW = this.selector ? this.selector.match(/,\s*/) : null,
+            OW = iW ? iW[0] : "," + this.raw("between", "beforeOpen");
+          this.selector = WW.join(OW)
+        }
+      }
+      return cO = OW, OW.default = OW, WW.registerRule(OW), cO
+    }
+
+    function RO() {
+      if (ZO) return tO;
+      ZO = 1;
+      let WW = nO(),
+        iW = function() {
+          if (iO) return WO;
+          iO = 1;
+          const WW = "'".charCodeAt(0),
+            iW = '"'.charCodeAt(0),
+            OW = "\\".charCodeAt(0),
+            mW = "/".charCodeAt(0),
+            EW = "\n".charCodeAt(0),
+            NW = " ".charCodeAt(0),
+            PW = "\f".charCodeAt(0),
+            LW = "\t".charCodeAt(0),
+            cW = "\r".charCodeAt(0),
+            wW = "[".charCodeAt(0),
+            tW = "]".charCodeAt(0),
+            ZW = "(".charCodeAt(0),
+            xW = ")".charCodeAt(0),
+            lW = "{".charCodeAt(0),
+            AW = "}".charCodeAt(0),
+            bW = ";".charCodeAt(0),
+            jW = "*".charCodeAt(0),
+            UW = ":".charCodeAt(0),
+            kW = "@".charCodeAt(0),
+            sW = /[\t\n\f\r "#'()/;[\\\]{}]/g,
+            MW = /[\t\n\f\r !"#'():;@[\\\]{}]|\/(?=\*)/g,
+            KW = /.[\r\n"'(/\\]/,
+            SW = /[\da-f]/i;
+          return WO = function(YW) {
+            let yW, TW, JW, hW, HW, nW, uW, oW, dW, eW, vW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+              gW = YW.css.valueOf(),
+              DW = vW.ignoreErrors,
+              VW = gW.length,
+              pW = 0,
+              fW = [],
+              CW = [];
+
+            function XW(WW) {
+              throw YW.error("Unclosed " + WW, pW)
             }
             return {
-              kind: ie,
-              atlas: null !== be && void 0 !== be && be.active ? (0, de.e)(be.state) : null,
-              defines: He,
-              ...qK(Me, ye)
-            }
-          }(ee, Me, ie, ye.fragmentCode) : null;
-        if (Ke && function(ee) {
-            const ie = ee.defines;
-            return (null === ee.atlas || !!ie.DIFFUSE && 1 === ie.DIFFUSEDIRECTUV) && !!ie.NORMAL && !ie.REFLECTION && !ie.EMISSIVEASILLUMINATION && !ie.LINKEMISSIVEWITHDIFFUSE
-          }(Ke)) {
-          const He = this.modelPackProgram(ee, ie, `${be}#${Me}#sp${this.drawDefines.modelPackVariant}`, ye, Ke);
-          if (He && !He.failed) return He
-        }
-        const Ue = this.programs.get(be);
-        if (Ue || this.unbuildable.has(be)) return null !== Ue && void 0 !== Ue ? Ue : null;
-        let Fe;
-        try {
-          Fe = Yb({
-            defines: FM(ie),
-            vertexCode: ye.vertexCode,
-            fragmentCode: ye.fragmentCode,
-            pluginUniforms: ye.pluginUniforms
-          })
-        } catch (Je) {
-          return this.unbuildable.add(be), this.warnOnce(`build:${be}`, `could not build a program for ${ee.name}: ${String(Je)}`), null
-        }
-        return this.createProgram(be, Fe, "standard")
-      }
-      modelPackProgram(ee, ie, He, ye, be) {
-        const Me = this.programs.get(He);
-        if (Me || this.unbuildable.has(He)) return null !== Me && void 0 !== Me ? Me : null;
-        const Ke = this.drawDefines.modelPackVariant;
-        let Ue;
-        try {
-          const ee = function(ee) {
-              return (0, Qi.b)(ee, "model")
-            }(Ke),
-            He = ZK(ee, be, ye.vertexCode, ye.fragmentCode);
-          Ue = AK(Yb({
-            defines: FM(ie),
-            ...He,
-            pluginUniforms: ye.pluginUniforms
-          }), ee, be, !!this.sunShadow)
-        } catch (oe) {
-          return this.unbuildable.add(He), this.warnOnce(`build:${He}`, `could not build a shader pack program for ${ee.name}, which draws without the pack: ${String(oe)}`), null
-        }
-        const Fe = IM(Ke, !!this.sunShadow),
-          Je = {
-            group: this.packInputs.bindGroupFor(null, Fe),
-            layout: jM(this.device, {
-              depth: !1,
-              sunShadow: Fe
-            })
-          };
-        return this.createProgram(He, Ue, function(ee) {
-          return `standard-sp${ee}`
-        }(Ke), Je)
-      }
-      lineProgramFor(ee, ie, He) {
-        const ye = Xe(ee, He, ie, this.view);
-        let be = this.linePrograms.get(ye);
-        var Me;
-        return be || (be = this.createProgram(`lines#${ye}`, (Me = function(ee) {
-          const ie = new Map;
-          for (let He = 0; He < Je.length; He++) ee & 1 << He && ie.set(Je[He], !0);
-          return ie
-        }(ye), xb({
-          defines: Me,
-          vertex: ab,
-          fragment: cb,
-          members: [],
-          structName: "MaterialUniforms"
-        })), "color"), this.linePrograms.set(ye, be)), be
-      }
-      createProgram(ee, ie, He) {
-        var ye;
-        let be = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const Me = this.nextProgramId++,
-          Ke = `${He}-${Me}`,
-          Ue = GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-          Fe = [{
-            binding: 0,
-            visibility: Ue,
-            buffer: {
-              type: "uniform"
-            }
-          }];
-        for (const Re of ie.textures) Fe.push({
-          binding: Re.binding,
-          visibility: Ue,
-          texture: {
-            viewDimension: Re.dimension
-          }
-        }), Fe.push({
-          binding: Re.samplerBinding,
-          visibility: Ue,
-          sampler: {}
-        });
-        const Je = this.device.createBindGroupLayout({
-            label: Ke,
-            entries: Fe
-          }),
-          oe = {
-            key: ee,
-            id: Me,
-            kind: He,
-            program: ie,
-            vertex: this.device.createShaderModule({
-              label: `${Ke}-vertex`,
-              code: ie.vertex
-            }),
-            fragment: this.device.createShaderModule({
-              label: `${Ke}-fragment`,
-              code: ie.fragment
-            }),
-            materialLayout: Je,
-            pipelineLayout: this.device.createPipelineLayout({
-              label: Ke,
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, Je, ...be ? [be.layout] : []]
-            }),
-            packGroup: null !== (ye = null === be || void 0 === be ? void 0 : be.group) && void 0 !== ye ? ye : null,
-            failed: !1
-          };
-        return this.programs.set(ee, oe), oe
-      }
-      writeFrameUniforms() {
-        const ee = this.frameUniforms;
-        EM(this.view, ee), this.device.queue.writeBuffer(this.frameBuffer, 0, ee)
-      }
-      materialInstance(ee, ie) {
-        let He = this.materials.get(ee);
-        if (!He) {
-          const ie = new Map;
-          this.materials.set(ee, ie);
-          const {
-            resources: ye,
-            materials: be
-          } = this;
-          ee.Bx.addOnce((() => {
-            for (const ee of ie.values()) ee.released = !0, ye.destroyBuffer(ee.buffer);
-            be.delete(ee)
-          })), He = ie
-        }
-        let ye = He.get(ie.key);
-        return ye || (ye = this.newMaterialInstance(ee, null, ie), He.set(ie.key, ye)), ye
-      }
-      modelInstance(ee, ie) {
-        const He = this.modelSlot(ee);
-        let ye = He.instances.get(ie.key);
-        return ye || (ye = this.newMaterialInstance(ee, ee, ie), He.instances.set(ie.key, ye)), ye
-      }
-      modelSlot(ee) {
-        var ie;
-        let He = ee.gpu[we.e.lite];
-        return (null === (ie = He) || void 0 === ie ? void 0 : ie.epoch) !== this.resources.epoch && (He = new VK(this.resources, this.resources.epoch), ee.gpu[we.e.lite] = He), He
-      }
-      newMaterialInstance(ee, ie, He) {
-        const ye = He.program.material.floats,
-          be = new Float32Array(ye),
-          Me = new Map;
-        return {
-          owner: ee,
-          model: ie,
-          program: He,
-          data: be,
-          uploaded: new Float32Array(ye).fill(Number.NaN),
-          buffer: this.device.createBuffer({
-            label: `${ee.name}-uniforms`,
-            size: Math.max(16, 4 * ye),
-            usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-          }),
-          textures: Me,
-          ubo: new BM(He.program.material.slots, be, Me),
-          bindGroup: null,
-          bound: new Array(2 * He.program.textures.length).fill(null),
-          frame: -1,
-          bindable: !1,
-          released: !1,
-          heldVersion: -1
-        }
-      }
-      pushEarthSky(ee) {
-        var ie;
-        const He = this.earthSkyProgram ??= this.createProgram("earthSky", {
-            vertex: mb + lb,
-            fragment: mb + Sb,
-            attributes: [],
-            material: ub,
-            textures: []
-          }, "earthSky"),
-          ye = this.earthSkyUniforms ??= this.newMaterialInstance(YK, null, He);
-        this.earthSkyFrom !== ee && (this.earthSkyFrom = ee, ye.data.fill(0)), rb(ye.ubo, ee, this.view);
-        const be = this.vertexInputs(He, YK, "earthSky", He, null);
-        if (He.failed || !be || !this.bindMaterial(ye, !1)) return;
-        const Me = null !== (ie = be.state) && void 0 !== ie ? ie : this.renderStates.stateFor(0, !1, 0, "none", "cw", 0, 0, !0, "triangle-list"),
-          Ke = this.makeDraw(He, be, Me, ye, 1);
-        Ke.count = Lb.length;
-        const Ue = Qb(ee, this.view);
-        Ke.slotOffset = this.writeMeshSlot(Ue, 1), this.lists.skyDraws.push(Ke)
-      }
-      uploadIfChanged(ee) {
-        const {
-          data: ie,
-          uploaded: He
-        } = ee;
-        for (let ye = 0; ye < ie.length; ye++)
-          if (ie[ye] !== He[ye]) return He.set(ie), void this.device.queue.writeBuffer(ee.buffer, 0, ie)
-      }
-      bindMaterial(ee, ie) {
-        return ee.frame !== this.frame && (ee.frame = this.frame, ie || this.uploadIfChanged(ee), ee.bindable = this.bindTextures(ee)), ee.bindable
-      }
-      bindTextures(ee) {
-        const {
-          program: ie,
-          bound: He
-        } = ee, ye = ie.program.textures;
-        let be = !ee.bindGroup,
-          Me = !0;
-        for (let Ke = 0; Ke < ye.length; Ke++) {
-          const ie = ee.textures.get(ye[Ke].name),
-            Ue = ie ? this.resources.boundTexture(ie) : null;
-          Ue ? He[2 * Ke] === Ue.view && He[2 * Ke + 1] === Ue.sampler || (He[2 * Ke] = Ue.view, He[2 * Ke + 1] = Ue.sampler, be = !0) : (ie || ee.ubo.expected.has(ye[Ke].name) || this.warnOnce(`texture:${ee.owner.name}:${ye[Ke].name}`, `${ee.owner.name} has no ${ye[Ke].name}`), Me = !1)
-        }
-        if (!Me) return be && (ee.bindGroup = null), !1;
-        if (be) {
-          const be = [{
-            binding: 0,
-            resource: {
-              buffer: ee.buffer
-            }
-          }];
-          for (let ee = 0; ee < ye.length; ee++) be.push({
-            binding: ye[ee].binding,
-            resource: He[2 * ee]
-          }), be.push({
-            binding: ye[ee].samplerBinding,
-            resource: He[2 * ee + 1]
-          });
-          ee.bindGroup = this.device.createBindGroup({
-            label: `${ee.owner.name}-material`,
-            layout: ie.materialLayout,
-            entries: be
-          })
-        }
-        return !0
-      }
-      writeMeshSlot(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return this.meshSlots.ensure(this.slotCount + 1), this.meshSlots.write(this.slotCount, ee, ie, He), this.slotCount++ * Rb
-      }
-      uploadMeshSlots() {
-        this.slotCount > 0 && this.meshSlots.upload(0, this.slotCount)
-      }
-      vertexInputs(ee, ie, He, ye, be) {
-        let Me = this.inputs.get(ee);
-        if (!Me || Me.program !== ye || !ZM(ie, Me, this.resources, be)) {
-          var Ke;
-          if (Me = null !== (Ke = this.vertexLayouts.resolveInputs(ie, He, ye, be)) && void 0 !== Ke ? Ke : void 0, !Me) return null;
-          this.inputs.set(ee, Me)
-        }
-        return this.withGpuBuffers(Me)
-      }
-      meshInputs(ee, ie, He) {
-        const ye = this.inputs.get(ee);
-        if (ye && this.inputsStamped(ye, ee, He, ie)) return this.withGpuBuffers(ye);
-        const be = ee.owner,
-          Me = oM(ee),
-          Ke = this.vertexInputs(ee, be, be.name, ie, Me);
-        return Ke && (Ke.geometry = RM(ee), Ke.instanceLayout = this.drawDefines.instanceLayout(be, He)), Ke
-      }
-      inputsStamped(ee, ie, He, ye) {
-        return function(ee, ie, He, ye) {
-          return ee.program === He && ee.geometry === RM(ie) && ee.instanceLayout === ye
-        }(ee, ie, ye, this.drawDefines.instanceLayout(ie.owner, He))
-      }
-      withGpuBuffers(ee) {
-        return GM(ee, this.resources, this.zeroBuffer) ? ee : null
-      }
-      instanceBuffersFit(ee, ie, He) {
-        const ye = QM(ie, He, this.resources, this.zeroBuffer);
-        if (ye) {
-          const be = ie.ends[ye.index] - ie.offsets[ye.index] + ie.Qee[ye.index];
-          return this.warnOnce(`overrun:${ee}`, `${ee} draws ${He} instances from a ${be}-byte buffer (${ye.needed} needed)`), !1
-        }
-        return !0
-      }
-      createBinding(ee, ie, He, ye) {
-        const be = `${ie._colorFormat}|${ie._depthStencilFormat}|${ie._depthCompare}|${ie._sampleCount}`,
-          Me = Pi(this.device, ie);
-        if (ee === this.skyLastRenderable) {
-          let He = null;
-          return {
-            renderable: ee,
-            pipeline: Me,
-            draw: ee => He ? this.drawSky(ee, ie, be, He) : 0,
-            update: ee => {
-              He = ee
-            }
-          }
-        }
-        return {
-          renderable: ee,
-          pipeline: Me,
-          draw: ee => (ye ? ye.execute(ee, ie, be) : 0) + this.drawList(ee, ie, be, He)
-        }
-      }
-      drawSky(ee, ie, He, ye) {
-        const be = this.lists.skyDraws,
-          Me = be.length > 0;
-        if (Me) {
-          var Ke;
-          const He = (null !== (Ke = ie._depthCompare) && void 0 !== Ke ? Ke : ti).startsWith("greater") ? 0 : 1;
-          ee.setViewport(0, 0, ye.targetWidth, ye.targetHeight, He, He)
-        }
-        const Ue = this.drawList(ee, ie, He, be);
-        return Me && ee.setViewport(0, 0, ye.targetWidth, ye.targetHeight, 0, 1), Ue
-      }
-      drawList(ee, ie, He, ye) {
-        let be = 0;
-        const Me = this.binder;
-        Me.reset();
-        for (const Ke of ye) {
-          const ye = this.pipelineFor(Ke, ie, He);
-          ye && (Me.bind(ee, Ke, ye, this.meshSlots.bindGroup, Ke.slotOffset), Ke.indexBuffer ? ee.drawIndexed(Ke.count, Ke.instances, Ke.first, 0, 0) : ee.draw(Ke.count, Ke.instances, Ke.first, 0), be++)
-        }
-        return be
-      }
-      pipelineFor(ee, ie, He) {
-        var ye, be;
-        if (ee.program.failed) return null;
-        const Me = ee.inputs;
-        if (Me.pipeline && Me.pipelineTarget === He) return Me.pipeline;
-        const Ke = `${ee.pipelineKey}|${He}`,
-          Ue = this.pipelines.get(Ke);
-        if (void 0 !== Ue) return Ue && (Me.pipeline = Ue, Me.pipelineTarget = He), Ue || null;
-        this.pipelines.set(Ke, null);
-        const {
-          program: Fe,
-          layout: Je,
-          state: oe
-        } = ee, Re = {
-          label: `standard-${Fe.id}`,
-          layout: Fe.pipelineLayout,
-          vertex: {
-            module: Fe.vertex,
-            entryPoint: "main",
-            buffers: Je.buffers
-          },
-          fragment: Bi({
-            module: Fe.fragment,
-            entryPoint: "main"
-          }, ie, oe.blend, oe.colourWrite),
-          depthStencil: ie._depthStencilFormat ? {
-            format: ie._depthStencilFormat,
-            depthCompare: null !== (ye = null !== (be = oe.depthCompare) && void 0 !== be ? be : ie._depthCompare) && void 0 !== ye ? ye : ti,
-            depthWriteEnabled: oe.depthWrite,
-            depthBias: oe.depthBias,
-            depthBiasSlopeScale: oe.depthBiasSlopeScale
-          } : void 0,
-          multisample: {
-            count: ie._sampleCount
-          },
-          primitive: {
-            topology: oe.topology,
-            frontFace: oe.frontFace,
-            cullMode: oe.cullMode
-          }
-        };
-        return this.compiling++, this.device.createRenderPipelineAsync(Re).then((ee => {
-          this.compiling--, this.pipelines.set(Ke, ee)
-        }), (ee => {
-          this.compiling--, this.reportFailure(Fe, Ke, ee)
-        })), null
-      }
-      forEachSunShadowCaster(ee) {
-        const ie = this.caster,
-          He = (He, ye, be) => {
-            const Me = He.unit && function(ee) {
-              const ie = ee.material.model;
-              return null !== ie && (ie.lifeform || ie.item) && ie.castsSunShadow && "triangle-list" === ee.state.topology
-            }(He) ? oM(He.unit) : null;
-            if (!Me) return;
-            const Ke = He.unit.owner;
-            switch (ie.geometry = Me, ie.skip = Ke.noSunShadowVertices, ie.indexed = null !== He.indexBuffer, ie.first = He.first, ie.count = He.count, ie.xR = ye, ie.worldAt = be, ie.instances = null, ie.instanceCount = 1, ie.thin = !1, KM(Ke)) {
-              case "thin": {
-                const ee = Ke._thinInstanceDataStorage.matrixData;
-                if (!ee) return;
-                ie.instances = ee, ie.instanceCount = Math.min(He.instances, ee.length / 16), ie.thin = !0;
-                break
-              }
-              case "instanced": {
-                const ee = this.resources.batchUploads.get(Ke);
-                if (!ee || ee.frame !== this.frame || !this.writeBatchCasters(ee)) return;
-                break
-              }
-            }
-            ee(ie)
-          };
-        for (const ye of this.lists.opaqueDraws) He(ye, this.meshSlots.data, ye.slotOffset / 4);
-        this.thinBundle.forEachDrawn(He)
-      }
-      writeBatchCasters(ee) {
-        const {
-          caster: ie
-        } = this, He = ee.packedMatrices, ye = ee.count;
-        ie.instances = He, ie.instanceCount = ye;
-        let be = -1;
-        for (let Me = 0; Me < ye; Me++) {
-          const ie = xK(ee.packedRowMesh(Me));
-          ie && be < 0 ? (this.casterWorlds.length < 16 * ye && (this.casterWorlds = new Float32Array(He.length)), this.casterWorlds.set(He.subarray(0, 16 * Me)), be = Me) : !ie && be >= 0 && (this.casterWorlds.set(He.subarray(16 * Me, 16 * Me + 16), 16 * be), be++)
-        }
-        return be >= 0 && (ie.instances = this.casterWorlds, ie.instanceCount = be), ie.instanceCount > 0
-      }
-      async reportFailure(ee, ie, He) {
-        const ye = [];
-        let be = !0;
-        for (const [Me, Ke] of [
-            ["vertex", ee.vertex],
-            ["fragment", ee.fragment]
-          ]) {
-          const ee = await Ke.getCompilationInfo();
-          for (const ie of ee.messages) be &&= "error" !== ie.type, ye.push(`${Me}:${ie.lineNum}:${ie.linePos} ${ie.type}: ${ie.message}`)
-        }
-        if (be && !ee.packGroup) return this.pipelines.set(ie, !1), console.error(`Lite: pipeline ${ie} failed`, He), void oi(this.device, "mesh", ee.kind, He);
-        ee.failed || (ee.failed = !0, console.error(`Lite: program ${ee.id} failed`, He, ye.join("\n"), {
-          program: ee.program,
-          key: ee.key
-        }), oi(this.device, "mesh", ee.kind, He, be ? null : ye[0]))
-      }
-    }
-
-    function xK(ee) {
-      var ie, He;
-      const ye = null === (ie = ee.pC) || void 0 === ie || null === (He = ie.aShaderPackItem) || void 0 === He ? void 0 : He.x;
-      return void 0 !== ye && 0 !== (ye & Yi.h)
-    }
-    var LK = He(44873),
-      CK = He(44880),
-      vK = He(44882),
-      uK = He(44842);
-    const mK = [0, 3, 1, 4, 2, 5];
-
-    function lK(ee, ie, He, ye, be) {
-      const Me = He[0].width;
-      try {
-        return be ? function(ee, ie, He) {
-          const ye = (0, uK.d)(ee, He, He, 6);
-          for (let be = 0; be < 6; be++)(0, uK.g)(ee, ye, be, ie[mK[be]], {
-            invertY: !1
-          });
-          return ye.texture
-        }(ee, He, Me) : function(ee, ie, He, ye) {
-          const be = ee.createTexture({
-            label: "sink-cube",
-            size: {
-              width: He,
-              height: He,
-              depthOrArrayLayers: 6
-            },
-            format: ye,
-            usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST | GPUTextureUsage.RENDER_ATTACHMENT
-          });
-          for (let Me = 0; Me < 6; Me++) ee.queue.copyExternalImageToTexture({
-            source: ie[mK[Me]]
-          }, {
-            texture: be,
-            origin: {
-              x: 0,
-              y: 0,
-              z: Me
-            }
-          }, {
-            width: He,
-            height: He
-          });
-          return be
-        }(ie, He, Me, 1 === ye ? "r8unorm" : "rgba8unorm")
-      } finally {
-        SK(He)
-      }
-    }
-
-    function SK(ee) {
-      for (const ie of null !== ee && void 0 !== ee ? ee : []) null === ie || void 0 === ie || ie.close()
-    }
-    async function nK(ee) {
-      const ie = [],
-        He = [];
-      if (await Promise.all(ee.map(((ee, ye) => (ie[ye] = null, ee.then((ee => {
-          ie[ye] = ee
-        }), (ee => {
-          He.push(ee)
-        })))))), He.length > 0) throw SK(ie), He[0];
-      return ie
-    }
-    class jK {
-      constructor(ee) {
-        this.bk = ee, this.starts = [], this.lengths = [], this.used = 0, ee > 0 && (this.starts.push(0), this.lengths.push(ee))
-      }
-      allocate(ee) {
-        const {
-          starts: ie,
-          lengths: He
-        } = this;
-        for (let ye = 0; ye < ie.length; ye++) {
-          if (He[ye] < ee) continue;
-          const be = ie[ye];
-          return He[ye] === ee ? (ie.splice(ye, 1), He.splice(ye, 1)) : (ie[ye] += ee, He[ye] -= ee), this.used += ee, be
-        }
-        return -1
-      }
-      free(ee, ie) {
-        this.used -= ie;
-        const He = Math.min(ee + ie, this.bk);
-        He > ee && this.release(ee, He - ee)
-      }
-      grow(ee) {
-        const ie = this.bk;
-        this.bk = ee, this.release(ie, ee - ie)
-      }
-      truncate(ee) {
-        const {
-          starts: ie,
-          lengths: He
-        } = this;
-        for (let ye = ie.length - 1; ye >= 0 && ie[ye] + He[ye] > ee; ye--) ie[ye] >= ee ? (ie.splice(ye, 1), He.splice(ye, 1)) : He[ye] = ee - ie[ye];
-        this.bk = ee
-      }
-      release(ee, ie) {
-        const {
-          starts: He,
-          lengths: ye
-        } = this;
-        let be = 0,
-          Me = He.length;
-        for (; be < Me;) {
-          const ie = be + Me >> 1;
-          He[ie] < ee ? be = ie + 1 : Me = ie
-        }
-        const Ke = be,
-          Ue = Ke > 0 && He[Ke - 1] + ye[Ke - 1] === ee,
-          Fe = Ke < He.length && ee + ie === He[Ke];
-        Ue && Fe ? (ye[Ke - 1] += ie + ye[Ke], He.splice(Ke, 1), ye.splice(Ke, 1)) : Ue ? ye[Ke - 1] += ie : Fe ? (He[Ke] = ee, ye[Ke] += ie) : (He.splice(Ke, 0, ee), ye.splice(Ke, 0, ie))
-      }
-    }
-    const sK = 256;
-    class IK {
-      constructor(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16384,
-          ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1048576;
-        this.device = ee, this.onReplaced = ie, this.mergeGap = He, this.gpu = null, this.bytes = void 0, this.words = void 0, this.sourceWords = new WeakMap, this.zp = void 0, this.dirtyStarts = [], this.dirtyEnds = [], this.order = [], this.replaced = [], this.retired = [], this.freed = [], this.holding = !0;
-        const be = Math.max(sK, Math.ceil(ye / sK) * sK);
-        this.bytes = new Uint8Array(be), this.words = new Uint32Array(this.bytes.buffer), this.zp = new jK(be / sK)
-      }
-      get buffer() {
-        return this.gpu ??= this.createGpu(this.bytes.byteLength)
-      }
-      static slotBytes(ee) {
-        return Math.max(1, Math.ceil(ee / sK)) * sK
-      }
-      allocate(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ee;
-        const ye = IK.slotBytes(ee),
-          be = ye / sK;
-        let Me = this.zp.allocate(be);
-        Me < 0 && (this.grow(this.zp.bk + be), Me = this.zp.allocate(be));
-        const Ke = Me * sK;
-        return this.growTo(Ke + Math.max(He, ye)), this.gpu ??= this.createGpu(this.bytes.byteLength), this.bytes.fill(0, Ke, Ke + ye), ie && this.bytes.set(new Uint8Array(ie.buffer, ie.byteOffset, Math.min(ie.byteLength, ye)), Ke), this.markDirty(Ke, Ke + ye), Ke
-      }
-      growTo(ee) {
-        const ie = Math.ceil(ee / sK);
-        ie > this.zp.bk && this.grow(ie)
-      }
-      free(ee, ie) {
-        this.freed.push(ee, ie)
-      }
-      write(ee, ie, He, ye) {
-        let be = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (ye <= 0) return;
-        ye <= 1024 && 0 === (3 & (ee | He | ye)) ? this.copyWords(ee >> 2, ie.buffer, He >> 2, ye >> 2) : this.bytes.set(new Uint8Array(ie.buffer, He, ye), ee);
-        let Me = ee + ye;
-        if (be) {
-          const ie = ee + 4 * Math.ceil(ye / 4);
-          this.bytes.fill(0, Me, ie), Me = ie
-        }
-        this.markDirty(ee, Me)
-      }
-      copyWords(ee, ie, He, ye) {
-        let be = this.sourceWords.get(ie);
-        be || (be = new Uint32Array(ie, 0, ie.byteLength >> 2), this.sourceWords.set(ie, be));
-        const Me = this.words;
-        for (let Ke = 0; Ke < ye; Ke++) Me[ee + Ke] = be[He + Ke]
-      }
-      move(ee, ie, He) {
-        this.bytes.copyWithin(ie, ee, ee + He), this.markDirty(ie, ie + He)
-      }
-      flush() {
-        for (const ie of this.retired) this.onReplaced(ie), ie.destroy();
-        this.retired.length = 0;
-        const ee = this.dirtyStarts.length;
-        if (ee > 0) {
-          const {
-            dirtyStarts: ie,
-            dirtyEnds: He,
-            order: ye
-          } = this;
-          ye.length = ee;
-          for (let Ue = 0; Ue < ee; Ue++) ye[Ue] = Ue;
-          ee > 1 && ye.sort(((ee, He) => ie[ee] - ie[He]));
-          const be = this.mergeGap;
-          let Me = ie[ye[0]],
-            Ke = He[ye[0]];
-          for (let Ue = 1; Ue < ee; Ue++) {
-            const ee = ye[Ue];
-            ie[ee] - Ke <= be ? Ke = Math.max(Ke, He[ee]) : (this.send(Me, Ke), Me = ie[ee], Ke = He[ee])
-          }
-          this.send(Me, Ke), ie.length = 0, He.length = 0
-        }
-        this.holding = !1
-      }
-      ZR() {
-        this.holding = !0, this.retired.push(...this.replaced), this.replaced.length = 0;
-        const ee = this.freed;
-        for (let ie = 0; ie < ee.length; ie += 2) this.zp.free(ee[ie] / sK, ee[ie + 1] / sK);
-        ee.length = 0
-      }
-      send(ee, ie) {
-        this.device.queue.writeBuffer(this.gpu, ee, this.bytes.buffer, ee, ie - ee);
-        for (const He of this.replaced) {
-          const ye = Math.min(ie, He.size);
-          ye > ee && this.device.queue.writeBuffer(He, ee, this.bytes.buffer, ee, ye - ee)
-        }
-      }
-      markDirty(ee, ie) {
-        ee &= -4, ie = ie + 3 & -4, this.holding ? (this.dirtyStarts.push(ee), this.dirtyEnds.push(ie)) : this.send(ee, ie)
-      }
-      grow(ee) {
-        const ie = this.zp.bk,
-          He = Math.max(2 * ie, ee),
-          ye = new Uint8Array(He * sK);
-        ye.set(this.bytes);
-        const be = this.gpu;
-        this.gpu = this.createGpu(ye.byteLength), this.bytes = ye, this.words = new Uint32Array(ye.buffer), this.zp.grow(He), be && (this.replaced.push(be), this.onReplaced(be)), this.dirtyStarts.length = 0, this.dirtyEnds.length = 0, this.markDirty(0, ie * sK)
-      }
-      createGpu(ee) {
-        return this.device.createBuffer({
-          label: "sink-dynamic-arena",
-          size: ee,
-          usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST
-        })
-      }
-    }
-
-    function hK(ee) {
-      return Array.isArray(ee) ? new Float32Array(ee) : ee
-    }
-
-    function NK(ee, ie, He, ye, be) {
-      const Me = se(be),
-        Ke = Math.min(be, ye.byteLength);
-      if (Me === Ke && ye.byteOffset % 4 === 0) return void ee.queue.writeBuffer(ie, He, ye.buffer, ye.byteOffset, Me);
-      const Ue = new Uint8Array(Me);
-      Ue.set(new Uint8Array(ye.buffer, ye.byteOffset, Ke)), ee.queue.writeBuffer(ie, He, Ue)
-    }
-
-    function GK(ee, ie, He) {
-      const ye = "linear",
-        be = "nearest";
-      let Me = be,
-        Ke = be,
-        Ue = "nearest",
-        Fe = !ie;
-      switch (ee) {
-        case 11:
-          Me = ye, Ke = ye;
-          break;
-        case 3:
-          Me = ye, Ke = ye, Ue = ie ? "linear" : "nearest";
-          break;
-        case 8:
-          Ue = ie ? "linear" : "nearest";
-          break;
-        case 4:
-          break;
-        case 5:
-          Ke = ye;
-          break;
-        case 6:
-          Ke = ye, Ue = ie ? "linear" : "nearest";
-          break;
-        case 7:
-          Ke = ye, Fe = !0;
-          break;
-        case 9:
-          Me = ye;
-          break;
-        case 10:
-          Me = ye, Ue = ie ? "linear" : "nearest";
-          break;
-        case 2:
-          Me = ye, Ke = ye, He > 1 ? (Ue = "linear", Fe = !1) : Fe = !0;
-          break;
-        case 12:
-          Me = ye, Fe = !0;
-          break;
-        default:
-          Fe = !0
-      }
-      return He > 1 && !Fe ? {
-        magFilter: ye,
-        minFilter: ye,
-        mipmapFilter: "linear",
-        maxAnisotropy: He
-      } : {
-        magFilter: Me,
-        minFilter: Ke,
-        mipmapFilter: Ue,
-        ...Fe ? {
-          lodMinClamp: 0,
-          lodMaxClamp: 0
-        } : {}
-      }
-    }
-
-    function rK(ee) {
-      return 0 === ee ? "clamp-to-edge" : 2 === ee ? "mirror-repeat" : "repeat"
-    }
-    class QK {
-      constructor(ee, ie) {
-        let {
-          vertexArena: He = !0
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.engine = ee, this.device = ie, this.buffers = new WeakMap, this.Zee = new WeakMap, this.batchUploads = new WeakMap, this.textures = new Map, this.samplers = new Map, this.atlasBindings = new WeakMap, this.atlasSources = new WeakMap, this.atlasRebuilds = new WeakSet, this.rebindWaiters = [], this.epoch = 0, this.liveUploads = new Set, this.gpuBuffersVersion = 0, this.onDestroy = null, this.pending = 0, this.firstBindDecodes = 0, this.arena = void 0, this.arena = He ? this.createArena() : null
-      }
-      createArena() {
-        return new IK(this.device, (ee => {
-          var ie;
-          null === (ie = this.onDestroy) || void 0 === ie || ie.call(this, ee), this.gpuBuffersVersion++
-        }))
-      }
-      rebind(ee, ie) {
-        this.engine = ee, this.device = ie, this.epoch++, this.buffers = new WeakMap, this.textures.clear(), this.samplers.clear(), this.atlasBindings = new WeakMap, this.atlasRebuilds = new WeakSet, this.arena &&= this.createArena(), this.pending = 0, this.gpuBuffersVersion++;
-        for (const He of this.liveUploads) He.rebind();
-        for (const He of this.rebindWaiters.splice(0)) He()
-      }
-      flushUploads() {
-        var ee;
-        null === (ee = this.arena) || void 0 === ee || ee.flush()
-      }
-      endUploadFrame() {
-        var ee;
-        null === (ee = this.arena) || void 0 === ee || ee.ZR()
-      }
-      vertexBufferCreated(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : He ? "sink-dynamic-vertices" : "sink-vertices";
-        this.bufferDeleted(ee);
-        const be = hK(ie);
-        ee.bk = be.byteLength, this.buffers.set(ee, {
-          gpu: null,
-          slot: -1,
-          slotBytes: 0,
-          size: 0,
-          arena: He && null !== this.arena,
-          pending: be,
-          ownsPending: !1,
-          usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: ye
-        })
-      }
-      vertexBufferUpdated(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          ye = arguments.length > 3 ? arguments[3] : void 0;
-        const be = this.buffers.get(ee);
-        if (!be) return;
-        const Me = hK(ie),
-          Ke = void 0 === ye ? Me.byteLength : Math.min(ye, Me.byteLength);
-        this.update(be, Me, He, Ke)
-      }
-      vertexBufferFloatsUpdated(ee, ie, He, ye) {
-        const be = this.buffers.get(ee);
-        if (!be) return;
-        const Me = He * Float32Array.BYTES_PER_ELEMENT,
-          Ke = (ye - He) * Float32Array.BYTES_PER_ELEMENT;
-        be.slot >= 0 && Ke > 0 && Me + Ke <= be.size ? this.writeSlot(be, Me, ie, ie.byteOffset + Me, Ke, !1) : be.gpu && Ke > 0 && Me + Ke <= be.gpu.size ? this.device.queue.writeBuffer(be.gpu, Me, ie.buffer, ie.byteOffset + Me, Ke) : this.update(be, ie.subarray(He, ye), Me, Ke)
-      }
-      indexBufferCreated(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "sink-indices";
-        this.bufferDeleted(ee);
-        const ye = function(ee) {
-          if (ee instanceof Uint16Array || ee instanceof Uint32Array) return ee;
-          for (let ie = 0; ie < ee.length; ie++)
-            if (ee[ie] >= 65535) return new Uint32Array(ee);
-          return new Uint16Array(ee)
-        }(ie);
-        ee.is32Bits = 4 === ye.BYTES_PER_ELEMENT, ee.bk = ye.byteLength, this.buffers.set(ee, {
-          gpu: null,
-          slot: -1,
-          slotBytes: 0,
-          size: 0,
-          arena: !1,
-          pending: ye,
-          ownsPending: ye !== ie,
-          usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: He
-        })
-      }
-      bufferDeleted(ee) {
-        const ie = this.buffers.get(ee);
-        null !== ie && void 0 !== ie && ie.gpu ? (this.destroyBuffer(ie.gpu), this.gpuBuffersVersion++) : ie && ie.slot >= 0 && (this.arena.free(ie.slot, ie.slotBytes), this.gpuBuffersVersion++), this.buffers.delete(ee)
-      }
-      update(ee, ie, He, ye) {
-        if (ee.slot >= 0) this.updateSlot(ee, ie, He, ye);
-        else if (ee.gpu) {
-          if (He + se(ye) > ee.gpu.size) {
-            const ie = this.device.createBuffer({
-                label: ee.label,
-                size: se(Math.max(2 * ee.gpu.size, He + ye)),
-                usage: ee.usage | GPUBufferUsage.COPY_SRC
-              }),
-              be = this.device.createCommandEncoder();
-            be.copyBufferToBuffer(ee.gpu, 0, ie, 0, ee.gpu.size), this.device.queue.submit([be.finish()]), this.destroyBuffer(ee.gpu), this.gpuBuffersVersion++, ee.gpu = ie
-          }
-          NK(this.device, ee.gpu, He, ie, ye)
-        } else {
-          const Me = new Uint8Array(ie.buffer, ie.byteOffset, ye),
-            Ke = ee.pending;
-          if (Ke && ee.ownsPending && He + ye <= Ke.byteLength) new Uint8Array(Ke.buffer, Ke.byteOffset, Ke.byteLength).set(Me, He);
-          else if (Ke && 0 === He && ye === Ke.byteLength && ie.byteLength === ye) ee.pending = ie, ee.ownsPending = !1;
-          else {
-            var be;
-            const ie = new Uint8Array(Math.max(null !== (be = null === Ke || void 0 === Ke ? void 0 : Ke.byteLength) && void 0 !== be ? be : 0, He + ye));
-            Ke && ie.set(new Uint8Array(Ke.buffer, Ke.byteOffset, Ke.byteLength)), ie.set(Me, He), ee.pending = ie, ee.ownsPending = !0
-          }
-        }
-      }
-      updateSlot(ee, ie, He, ye) {
-        const be = this.arena;
-        He + se(ye) > ee.size && (ee.size = se(Math.max(2 * ee.size, He + ye)), be.growTo(ee.slot + ee.size), this.gpuBuffersVersion++), 0 === ye ? this.writeSlot(ee, He, iU, 0, 4, !1) : this.writeSlot(ee, He, ie, ie.byteOffset, ye, !0)
-      }
-      writeSlot(ee, ie, He, ye, be, Me) {
-        const Ke = ie + (Me ? se(be) : be);
-        Ke > ee.slotBytes && this.moveSlot(ee, Ke), this.arena.write(ee.slot + ie, He, ye, be, Me)
-      }
-      moveSlot(ee, ie) {
-        const He = this.arena,
-          ye = IK.slotBytes(Math.max(ie, Math.min(2 * ee.slotBytes, ee.size))),
-          be = He.allocate(ye, null, ee.size);
-        He.move(ee.slot, be, ee.slotBytes), He.free(ee.slot, ee.slotBytes), ee.slot = be, ee.slotBytes = ye, this.gpuBuffersVersion++
-      }
-      cover(ee, ie) {
-        const He = this.buffers.get(ee);
-        if (!He || He.slot < 0) return !1;
-        const ye = Math.min(ie, He.size);
-        return !(ye <= He.slotBytes) && (this.moveSlot(He, ye), !0)
-      }
-      destroyBuffer(ee) {
-        var ie;
-        null === (ie = this.onDestroy) || void 0 === ie || ie.call(this, ee), ee.destroy()
-      }
-      gpuBuffer(ee) {
-        const ie = this.buffers.get(ee);
-        if (!ie) return null;
-        if (ie.slot >= 0) return this.arena.buffer;
-        if (ie.arena && ie.pending) {
-          const ee = ie.pending,
-            He = this.arena;
-          return ie.size = se(ee.byteLength), ie.slotBytes = IK.slotBytes(function(ee) {
-            const ie = new Uint8Array(ee.buffer, ee.byteOffset, ee.byteLength);
-            let He = ie.length;
-            if (ee.byteOffset % 4 === 0) {
-              for (; He % 4 !== 0 && 0 === ie[He - 1];) He--;
-              if (He % 4 === 0) {
-                const ie = new Uint32Array(ee.buffer, ee.byteOffset, He / 4);
-                let ye = ie.length;
-                for (; ye > 0 && 0 === ie[ye - 1];) ye--;
-                He = 4 * ye
-              }
-            }
-            for (; He > 0 && 0 === ie[He - 1];) He--;
-            return He
-          }(ee)), ie.slot = He.allocate(ie.slotBytes, ee, ie.size), ie.pending = null, He.buffer
-        }
-        if (!ie.gpu && ie.pending) {
-          const ee = ie.pending;
-          ie.gpu = this.device.createBuffer({
-            label: ie.label,
-            size: se(ee.byteLength),
-            usage: ie.usage
-          }), NK(this.device, ie.gpu, 0, ee, ee.byteLength), ie.pending = null
-        }
-        return ie.gpu
-      }
-      gpuOffset(ee) {
-        var ie, He;
-        const ye = null !== (ie = null === (He = this.buffers.get(ee)) || void 0 === He ? void 0 : He.slot) && void 0 !== ie ? ie : -1;
-        return ye < 0 ? 0 : ye
-      }
-      gpuEnd(ee) {
-        var ie, He;
-        const ye = this.buffers.get(ee);
-        return ye ? ye.slot >= 0 ? ye.slot + ye.size : null !== (ie = null === (He = ye.gpu) || void 0 === He ? void 0 : He.size) && void 0 !== ie ? ie : 0 : 0
-      }
-      vertexInput(ee, ie, He) {
-        var ye, be, Me, Ke;
-        return null !== (ye = null !== (be = He && this.modelInput(He, ie)) && void 0 !== be ? be : null === (Me = null !== (Ke = this.Zee.get(ee)) && void 0 !== Ke ? Ke : this.batchUploads.get(ee)) || void 0 === Me ? void 0 : Me.inputs[ie]) && void 0 !== ye ? ye : null
-      }
-      modelInput(ee, ie) {
-        const He = this.geometrySlot(ee);
-        let ye = He.inputs.get(ie);
-        if (void 0 === ye) {
-          const be = ee.vertexAttributes.find((ee => ee.kind === ie));
-          ye = be ? new fi(this.modelKey(He, be.data, !1), be.offset, be.stride, be.components, !1, be.glType, be.isNormalized) : null, He.inputs.set(ie, ye)
-        }
-        return ye
-      }
-      modelIndex(ee) {
-        return ee.indexData && this.modelKey(this.geometrySlot(ee), ee.indexData, !0)
-      }
-      geometrySlot(ee) {
-        var ie;
-        let He = ee.gpu[we.e.lite];
-        if ((null === (ie = He) || void 0 === ie ? void 0 : ie.epoch) !== this.epoch) {
-          const ie = new Map,
-            ye = () => {
-              for (const ee of ie.values()) this.bufferDeleted(ee)
-            },
-            be = ee => {
-              const He = ie.get(ee);
-              He && this.vertexBufferUpdated(He, ee)
-            };
-          He = {
-            keys: ie,
-            inputs: new Map,
-            release: ye,
-            updated: be,
-            epoch: this.epoch
-          }, ee.gpu[we.e.lite] = He
-        }
-        return He
-      }
-      modelKey(ee, ie, He) {
-        let ye = ee.keys.get(ie);
-        if (!ye) {
-          if (He) {
-            const ee = {
-              bk: 0,
-              is32Bits: !1
-            };
-            this.indexBufferCreated(ee, ie, "model-indices"), ye = ee
-          } else ye = {
-            bk: 0
-          }, this.vertexBufferCreated(ye, ie, !1, "model-vertices");
-          ee.keys.set(ie, ye)
-        }
-        return ye
-      }
-      indexFormat(ee) {
-        return ee.is32Bits ? "uint32" : "uint16"
-      }
-      get texturesLoading() {
-        return this.pending
-      }
-      releaseSlot(ee, ie) {
-        --ee.refs > 0 || (this.releaseTexture(ee), SK(ee.images), null !== ie && this.textures.delete(ie))
-      }
-      load(ee, ie) {
-        const {
-          epoch: He
-        } = this, ye = ie.decoded = async function(ee) {
-          if ("cube" === ee.kind) return async function(ee) {
-            if (6 !== ee.length) throw new Error(`${ee.length} files where six faces were expected`);
-            const ie = await nK(ee.map((ee => Qe(ee)))),
-              He = ie[0].width;
-            return nK(ie.map((async ee => {
-              if (ee.width === He && ee.height === He) return ee;
-              try {
-                return await createImageBitmap(ee, {
-                  ...Ge,
-                  resizeWidth: He,
-                  resizeHeight: He
-                })
-              } finally {
-                ee.close()
-              }
-            })))
-          }(ee.files);
-          if ("data" === ee.kind && ee.data) return [await createImageBitmap(new Blob([ee.data]), Ge)];
-          return [await Qe(eU(ee))]
-        }(ee.source).then((ee => {
-          0 === ie.refs || He !== this.epoch ? SK(ee) : ie.images = ee
-        }));
-        this.track(ie, eU(ee.source), ye, (() => {
-          ie.wanted && !ie.failed && ie.refs > 0 && this.upload(ee, ie)
-        }))
-      }
-      canvasUpdated(ee, ie, He) {
-        const {
-          state: ye
-        } = this.textureSlot(ee);
-        ye.dynamicSource = {
-          invertY: ie,
-          premultiplied: He
-        }, ye.dynamic && this.pushDynamic(ee.source, ye)
-      }
-      async atlasArrays(ee) {
-        const {
-          device: ie,
-          epoch: He
-        } = this;
-        let ye;
-        try {
-          ye = await ii(ie, ee)
-        } catch (Me) {
-          if (He === this.epoch) {
-            if (!Ji(ie)) throw Me;
-            await new Promise((ee => {
-              this.rebindWaiters.push(ee)
-            }))
-          }
-          return this.atlasArrays(ee)
-        }
-        if (ye.forEach(((ie, He) => {
-            this.atlasSources.has(ie) || this.atlasSources.set(ie, {
-              sources: ee,
-              index: He,
-              stride: ye[0].layers
-            })
-          })), He !== this.epoch) return ye;
-        const be = (0, LK.b)(this.engine, {
-          magFilter: "nearest",
-          minFilter: "nearest",
-          mipmapFilter: "linear",
-          addressModeU: "repeat",
-          addressModeV: "repeat"
-        });
-        for (const Ke of ye) this.atlasBindings.has(Ke) || this.atlasBindings.set(Ke, {
-          view: Ke.texture.createView({
-            dimension: "2d-array"
-          }),
-          sampler: be
-        });
-        return ye
-      }
-      boundTexture(ee) {
-        const ie = this.atlasBindings.get(ee);
-        if (ie) return ie;
-        const He = this.atlasSources.get(ee);
-        if (He) return this.rebuildAtlas(ee, He), null;
-        const ye = ee;
-        if (ye.released) return null;
-        const be = this.textureSlot(ye, !0),
-          {
-            state: Me
-          } = be;
-        if (!Me.view && (Me.wanted = !0, Me.loading || Me.failed || this.upload(ye, Me), !Me.view)) return null;
-        const Ke = this.chosenSampler(ye, be),
-          Ue = be.bound;
-        return Ue && Ue.view === Me.view && Ue.sampler === Ke ? Ue : (be.bound = {
-          view: Me.view,
-          sampler: Ke
-        }, be.bound)
-      }
-      rebuildAtlas(ee, ie) {
-        let {
-          sources: He,
-          index: ye,
-          stride: be
-        } = ie;
-        if (this.atlasRebuilds.has(ee)) return;
-        this.atlasRebuilds.add(ee);
-        const {
-          epoch: Me
-        } = this;
-        this.atlasArrays(He).then((ie => {
-          ie[0].layers === be && ie[ye] ? Me === this.epoch && this.atlasBindings.set(ee, this.atlasBindings.get(ie[ye])) : console.error(`Lite: the new device splits the atlas ${re(He.urls[0])} into other arrays than its materials read`)
-        }), (ee => {
-          console.error(`Lite: could not build the atlas ${re(He.urls[0])} again on a new device`, ee)
-        }))
-      }
-      textureLoaded(ee) {
-        var ie, He;
-        return null !== (ie = null === (He = this.heldSlot(ee)) || void 0 === He ? void 0 : He.state.decoded) && void 0 !== ie ? ie : null
-      }
-      textureFailed(ee) {
-        var ie;
-        return !0 === (null === (ie = this.heldSlot(ee)) || void 0 === ie ? void 0 : ie.state.failed)
-      }
-      heldSlot(ee) {
-        const ie = ee.gpu[we.e.lite];
-        return (null === ie || void 0 === ie ? void 0 : ie.epoch) === this.epoch ? ie : void 0
-      }
-      chosenSampler(ee, ie) {
-        const {
-          samplingMode: He,
-          wrapU: ye,
-          wrapV: be
-        } = ee.sampler, Me = ie.state.hasMips, Ke = function(ee, ie) {
-          const {
-            bilinear: He,
-            trilinear: ye
-          } = we.h;
-          return !ie && ee !== He || 11 !== ee && ee !== ye && ee !== He ? 1 : 4
-        }(He, Me), Ue = ie.sampler;
-        if (Ue && Ue.samplingMode === He && Ue.hasMips === Me && Ue.anisotropy === Ke && Ue.wrapU === ye && Ue.wrapV === be) return Ue.sampler;
-        const Fe = this.samplerFor(He, Me, Ke, ye, be);
-        return ie.sampler = {
-          samplingMode: He,
-          hasMips: Me,
-          anisotropy: Ke,
-          wrapU: ye,
-          wrapV: be,
-          sampler: Fe
-        }, Fe
-      }
-      releaseTexture(ee) {
-        var ie, He;
-        ee.view && (null === (He = this.onDestroy) || void 0 === He || He.call(this, ee.view));
-        null === (ie = ee.destroy) || void 0 === ie || ie.call(ee)
-      }
-      textureSlot(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const He = ee.gpu[we.e.lite];
-        if ((null === He || void 0 === He ? void 0 : He.epoch) === this.epoch) return He;
-        const ye = function(ee) {
-          let {
-            source: ie,
-            sampler: He
-          } = ee;
-          return "canvas" === ie.kind ? null : `${ie.kind}|${eU(ie)}|${He.noMipmap}|${He.samplingMode}|${He.invertY}`
-        }(ee);
-        let be = null === ye ? void 0 : this.textures.get(ye);
-        var Me;
-        be || (be = {
-          refs: 0,
-          view: null,
-          destroy: null,
-          loading: !1,
-          decoded: null,
-          failed: !1,
-          wanted: !1,
-          hasMips: !1,
-          images: null,
-          dynamic: null,
-          dynamicSource: null !== (Me = null === He || void 0 === He ? void 0 : He.state.dynamicSource) && void 0 !== Me ? Me : null
-        }, null !== ye && (this.textures.set(ye, be), this.load(ee, be), ie && !He && this.firstBindDecodes++));
-        be.refs++;
-        const Ke = be,
-          {
-            epoch: Ue
-          } = this,
-          Fe = {
-            state: be,
-            bound: null,
-            sampler: null,
-            release: () => {
-              Ue === this.epoch && this.releaseSlot(Ke, ye)
-            },
-            epoch: Ue
-          };
-        return ee.gpu[we.e.lite] = Fe, Fe
-      }
-      samplerFor(ee, ie, He, ye, be) {
-        const Me = `${ee}|${ie}|${He}|${ye}|${be}`;
-        let Ke = this.samplers.get(Me);
-        if (!Ke) {
-          const Ue = {
-            ...GK(ee, ie, He),
-            addressModeU: rK(ye),
-            addressModeV: rK(be)
-          };
-          Ke = (0, LK.b)(this.engine, Ue), this.samplers.set(Me, Ke)
-        }
-        return Ke
-      }
-      upload(ee, ie) {
-        const {
-          source: He,
-          sampler: ye
-        } = ee;
-        ie.hasMips = !ye.noMipmap, "canvas" === He.kind ? this.createDynamic(He, ie) : "cube" === He.kind ? this.uploadCube(ie, He.luminance) : this.uploadImage(ie, !0 === ye.invertY, He.url)
-      }
-      uploadImage(ee, ie, He) {
-        const [ye] = ee.images;
-        ee.images = null;
-        const {
-          epoch: be
-        } = this, Me = (0, CK.b)(this.engine, ye, {
-          mipMaps: ee.hasMips,
-          invertY: ie,
-          srgb: !1
-        }).then((ie => {
-          ye.close(), 0 !== ee.refs && be === this.epoch ? (ee.view = ie.view, ee.destroy = ie.texture.destroy.bind(ie.texture)) : ie.texture.destroy()
-        }));
-        this.track(ee, He, Me)
-      }
-      track(ee, ie, He, ye) {
-        const {
-          epoch: be
-        } = this;
-        ee.loading = !0, this.pending++, He.catch((He => {
-          be === this.epoch && (ee.failed = !0, console.warn(`Lite: could not load texture ${re(ie)}`, He))
-        })).finally((() => {
-          be === this.epoch && (ee.loading = !1, this.pending--, null === ye || void 0 === ye || ye())
-        }))
-      }
-      uploadCube(ee, ie) {
-        const He = ee.images;
-        ee.images = null;
-        const ye = lK(this.engine, this.device, He, (0, we.u)(ie), ee.hasMips);
-        ee.view = ye.createView({
-          dimension: "cube"
-        }), ee.destroy = () => {
-          ye.destroy()
-        }
-      }
-      createDynamic(ee, ie) {
-        const {
-          canvas: He
-        } = ee, ye = (0, vK.c)(this.engine, Math.max(1, He.width), Math.max(1, He.height), {
-          mipMaps: ie.hasMips,
-          srgb: !1
-        });
-        ie.dynamic = ye, ie.view = ye.view, ie.destroy = () => {
-          ye.texture.destroy()
-        }, this.pushDynamic(ee, ie)
-      }
-      pushDynamic(ee, ie) {
-        const He = ie.dynamicSource,
-          ye = ie.dynamic,
-          {
-            canvas: be
-          } = ee;
-        if (He && ye && 0 !== be.width && 0 !== be.height) return be.width !== ye.width || be.height !== ye.height ? (this.releaseTexture(ie), ie.dynamic = null, ie.view = null, void this.createDynamic(ee, ie)) : void(0, vK.d)(this.engine, ye, be, {
-          invertY: He.invertY,
-          premultiplyAlpha: He.premultiplied
-        })
-      }
-    }
-
-    function eU(ee) {
-      return "cube" === ee.kind ? ee.rootUrl : "canvas" === ee.kind ? "canvas" : ee.url
-    }
-    const iU = new Uint8Array(4);
-    var HU = He(39540);
-
-    function yU(ee) {
-      const ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "store" : "discard";
-      ee._colorAttachment.storeOp = ee._targetSignature._sampleCount > 1 ? ie : "store";
-      const He = ee._renderPassDescriptor.depthStencilAttachment;
-      He && (He.depthStoreOp = ie, He.stencilStoreOp && (He.stencilStoreOp = ie))
-    }
-    var bU = He(38590),
-      MU = He(38657),
-      KU = He(38185),
-      UU = He(40477);
-    const FU = new Float64Array([1, 1, 1]),
-      JU = new Float64Array([0, 1, 0]),
-      oU = new Float64Array(4),
-      RU = new Float32Array(16),
-      kU = new Float64Array(3),
-      qU = new Float64Array(4);
-
-    function fU(ee, ie, He) {
-      ee.fov = ie.fov, ee.near = ie.near, ee.far = ie.far, ee.renderWidth = He.renderWidth, ee.renderHeight = He.renderHeight, (0, KU.p)(ie.holderRotation, 0, oU, 0), (0, KU.b)(FU, 0, oU, 0, ie.holderPosition, 0, RU);
-      const ye = ie.Z8;
-      kU[0] = ye[0], kU[1] = ye[1], kU[2] = ye[2] + 1;
-      const be = ee.viewMatrix;
-      (0, KU.i)(ye, kU, JU, be), (0, KU.g)(be, 0, be), (0, KU.k)(be, RU, 0, be), (0, KU.g)(be, 0, be);
-      const Me = ee.worldMatrix;
-      (0, KU.g)(be, 0, Me), ee.eye[0] = Me[12], ee.eye[1] = Me[13], ee.eye[2] = Me[14], qU[0] = ee.fov, qU[1] = ee.renderWidth / ee.renderHeight, qU[2] = ee.near, qU[3] = ee.far, (0, KU.m)(qU, ee.projectionMatrix), (0, KU.k)(be, ee.projectionMatrix, 0, ee.viewProjectionMatrix), (0, UU.e)(ee.viewProjectionMatrix, ee.frustum)
-    }
-
-    function TU(ee, ie) {
-      let He = ee.frustumPlanes;
-      He || (He = ee.frustumPlanes = Array.from({
-        length: 6
-      }, (() => new bU.c(0, 0, 0, 0))));
-      for (let ye = 0; ye < 6; ye++) {
-        const ee = He[ye].normal;
-        ee._x = ie[4 * ye], ee._y = ie[4 * ye + 1], ee._z = ie[4 * ye + 2], ee._isDirty = !0, He[ye].d = ie[4 * ye + 3]
-      }
-    }
-
-    function pU(ee, ie) {
-      const He = ie.clearColor;
-      ee.clearColour[0] = He.r, ee.clearColour[1] = He.g, ee.clearColour[2] = He.b, ee.clearColour[3] = He.a;
-      const ye = ie.ambientColor;
-      ee.ambientColour[0] = ye.r, ee.ambientColour[1] = ye.g, ee.ambientColour[2] = ye.b, ee.animationRatio = ie.animationRatio, ee.frameId = ie.frameId, ee.version++
-    }
-
-    function XU(ee) {
-      const ie = ee.model.view;
-      return ie.animTick = (0, MU.e)(), ie.timeMs = performance.now(), pU(ie, ee.yp), ee.model.update(ie.frameId), ie
-    }
-
-    function zU(ee) {
-      const ie = ee.yp,
-        {
-          view: He,
-          W8: ye
-        } = ee.model;
-      return fU(He, ye, ie.Nf()), ie.onBeforeRenderObservable.notifyObservers(ie), TU(ie, He.frustum), ie.onBeforeCameraRenderObservable.notifyObservers(ie.activeCamera), XU(ee)
-    }
-    var BU = He(38154),
-      EU = He(38254),
-      gU = He(38648);
-
-    function OU(ee) {
-      var ie, He;
-      const ye = (0, te.V)(ee);
-      if (!ye || ye.diffuseTexture && (0, gU.i)(ee)) return null;
-      const be = null === (ie = (0, te.y)(ye, de.k.name)) || void 0 === ie ? void 0 : ie.state,
-        Me = null === (He = (0, te.y)(ye, eK.e.name)) || void 0 === He ? void 0 : He.state,
-        Ke = new Float32Array(16);
-      return function(ee, ie, He, ye) {
-        var be, Me;
-        const Ke = Ly;
-        ye.set(ee.diffuseColor, Ke.diffuse), ye[Ke.diffuse + 3] = ee.alpha, ye.set(ee.ambientColor, Ke.ambientAndCutoff), ye[Ke.ambientAndCutoff + 3] = ee.alphaCutOff, ye.set(ee.emissiveColor, Ke.emissiveAndLevel), ye[Ke.emissiveAndLevel + 3] = null !== (be = null === (Me = ee.diffuseTexture) || void 0 === Me ? void 0 : Me.level) && void 0 !== be ? be : 1, null !== ie && void 0 !== ie && ie.animDataPerTex ? (ye[Ke.anim + 1] = MU.b, ye[Ke.anim + 2] = ie.animDataPerTex.length / 3 - 1) : He && (ye[Ke.anim + 1] = He.numAnimStates, ye[Ke.anim + 2] = He.ticksPerAnimState)
-      }(ye, be, Me, Ke), {
-        model: ye,
-        atlas: be,
-        texture: be ? "atlas" : ye.diffuseTexture ? "single" : "none",
-        animated: be ? !!be.animDataPerTex : !!Me,
-        liquid: (0, gU.l)(ee),
-        customRenderMat: (0, gU.i)(ee),
-        uniformData: Ke
-      }
-    }
-    var dU = He(3090);
-    class WU {
-      constructor(ee) {
-        this.units = ee, this.buffer = void 0, this.twin = null, this.bufferReady = !1, this.twinReady = !1
-      }
-      get ready() {
-        return this.bufferReady && (!this.twin || this.twinReady)
-      }
-      destroy() {
-        var ee;
-        this.buffer.destroy(), null === (ee = this.twin) || void 0 === ee || ee.destroy()
-      }
-    }
-    class tU {
-      constructor(ee, ie) {
-        this.arena = ee, this.zp = void 0, this.buffer = void 0, this.twin = null, this.usable = 0, this.backings = [], this.growable = !0, this.dropped = !1, this.zp = new jK(ie);
-        const He = new WU(ie);
-        He.buffer = this.createBuffer(He, !1), this.backings.push(He), this.refresh()
-      }
-      get bk() {
-        return this.zp.bk
-      }
-      get canGrow() {
-        return this.growable && !this.dropped
-      }
-      get live() {
-        return !this.dropped
-      }
-      get hasTwin() {
-        return null !== this.backings[this.backings.length - 1].twin
-      }
-      get allocatedBytes() {
-        let ee = 0;
-        for (const ie of this.backings) ee += ie.units * (this.arena.unitBytes + (ie.twin ? this.arena.twinUnitBytes : 0));
-        return ee
-      }
-      holds(ee) {
-        return ee.start + ee.length <= this.usable
-      }
-      lost(ee) {
-        return this.dropped || ee.start + ee.length > this.bk
-      }
-      write(ee, ie) {
-        const {
-          device: He,
-          unitBytes: ye
-        } = this.arena;
-        for (const be of this.backings) {
-          const Me = (be.units - ee.start) * ye;
-          Me > 0 && He.queue.writeBuffer(be.buffer, ee.start * ye, ie, 0, Math.min(ie.byteLength, Me))
-        }
-      }
-      writeLight(ee, ie) {
-        const {
-          device: He,
-          twinUnitBytes: ye,
-          verticesPerUnit: be
-        } = this.arena, {
-          light: Me,
-          count: Ke
-        } = this.arena.twinLight(ie, Math.min(ie.length, ee.length * be));
-        for (const Ue of this.backings) {
-          Ue.twin || (Ue.twin = this.createBuffer(Ue, !0));
-          const ie = (Ue.units - ee.start) * be;
-          ie > 0 && He.queue.writeBuffer(Ue.twin, ee.start * ye, Me, 0, Math.min(Ke, ie))
-        }
-      }
-      grow(ee) {
-        this.arena.assertNotDrawing();
-        const {
-          device: ie,
-          unitBytes: He,
-          label: ye
-        } = this.arena, be = this.backings[this.backings.length - 1], Me = new WU(ee), Ke = ie.createCommandEncoder({
-          label: `${ye}-grow`
-        });
-        Me.buffer = this.createBuffer(Me, !1), Ke.copyBufferToBuffer(be.buffer, 0, Me.buffer, 0, be.units * He), be.twin && (Me.twin = this.createBuffer(Me, !0), Ke.copyBufferToBuffer(be.twin, 0, Me.twin, 0, be.units * this.arena.twinUnitBytes)), ie.queue.submit([Ke.finish()]), this.backings.push(Me), this.zp.grow(ee)
-      }
-      retire() {
-        this.dropped = !0, this.refresh()
-      }
-      drop() {
-        if (!this.dropped) {
-          this.dropped = !0;
-          for (const ee of this.backings) ee.destroy();
-          this.refresh(), this.arena.remove(this)
-        }
-      }
-      createBuffer(ee, ie) {
-        const {
-          device: He,
-          unitBytes: ye,
-          twinUnitBytes: be,
-          usage: Me,
-          label: Ke
-        } = this.arena;
-        He.pushErrorScope("out-of-memory");
-        const Ue = He.createBuffer({
-          label: ie ? `${Ke}-light` : Ke,
-          size: ee.units * (ie ? be : ye),
-          usage: (ie ? this.arena.twinUsage : Me) | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
-        });
-        return this.arena.awaitingVerdict++, He.popErrorScope().then((He => {
-          this.arena.awaitingVerdict--, this.settle(ee, ie, !He, !0)
-        }), (He => {
-          this.arena.awaitingVerdict--, this.arena.warnOnce("noVerdict", `no out-of-memory verdict for a ${Ke} buffer, taken as failed: ${String(He)}`), this.settle(ee, ie, !1, !1)
-        })), Ue
-      }
-      settle(ee, ie, He, ye) {
-        const be = this.backings.indexOf(ee);
-        if (!(this.dropped || be < 0)) {
-          if (!He) {
-            if (ye && this.arena.ranOutOfMemory(ee.units, ee.units * (ie ? this.arena.twinUnitBytes : this.arena.unitBytes)), 0 === be) return void this.drop();
-            for (const ee of this.backings.splice(be)) ee.destroy();
-            return this.zp.truncate(this.backings[be - 1].units), this.growable = !1, void this.promote()
-          }
-          ie ? ee.twinReady = !0 : (ee.bufferReady = !0, this.arena.allocatedBuffer(ee.units)), this.promote()
-        }
-      }
-      promote() {
-        const {
-          backings: ee
-        } = this;
-        let ie = 0;
-        for (; ie + 1 < ee.length && ee[ie].ready && ee[ie + 1].ready;) ie++;
-        for (const He of ee.splice(0, ie)) He.destroy();
-        this.refresh()
-      }
-      refresh() {
-        const ee = this.backings[0];
-        this.buffer = ee.buffer, this.twin = ee.twinReady ? ee.twin : null, this.usable = !this.dropped && ee.bufferReady ? ee.units : 0
-      }
-    }
-    class ZU {
-      constructor(ee, ie, He, ye) {
-        let {
-          verticesPerUnit: be = 1,
-          twinUsage: Me = GPUBufferUsage.VERTEX
-        } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-        if (this.device = ee, this.unitBytes = ie, this.usage = He, this.label = ye, this.pages = [], this.tR = !1, this.awaitingVerdict = 0, this.verticesPerUnit = void 0, this.twinUsage = void 0, this.twinValueBytes = void 0, this.twinUnitBytes = void 0, this.limit = -1, this.ceiling = -1, this.failed = 1 / 0, this.shortages = 0, this.forgetFailedAt = 0, this.shortageUntil = -1 / 0, this.warnOnce = (0, Vi.b)("Lite terrain: "), this.padded = new Uint16Array(0), this.widened = new Float32Array(0), ie % 4 !== 0) throw new Error(`${ye}: ${ie}-byte units cannot keep every range four-byte aligned`);
-        this.verticesPerUnit = be, this.twinUsage = Me, this.twinValueBytes = be > 1 ? 2 : 4, this.twinUnitBytes = this.twinValueBytes * be
-      }
-      twinLight(ee, ie) {
-        if (4 === this.twinValueBytes) return this.widened.length < ie && (this.widened = new Float32Array(Math.max(ie, 2 * this.widened.length))), this.widened.set(ee.subarray(0, ie)), {
-          light: this.widened,
-          count: ie
-        };
-        const He = ie % this.verticesPerUnit;
-        if (0 === He) return {
-          light: ee,
-          count: ie
-        };
-        const ye = ie - He + this.verticesPerUnit;
-        return this.padded.length < ye && (this.padded = new Uint16Array(Math.max(ye, 2 * this.padded.length))), this.padded.set(ee.subarray(0, ie)), this.padded.fill(0, ie, ye), {
-          light: this.padded,
-          count: ye
-        }
-      }
-      allocate(ee) {
-        if (this.assertNotDrawing(), this.limit < 0 && (this.limit = this.ceiling = this.pageLimit()), ee > this.limit) return null;
-        this.failed !== 1 / 0 && performance.now() >= this.forgetFailedAt && (this.failed = 1 / 0, this.ceiling = this.limit);
-        for (const be of this.pages) {
-          const ie = be.zp.allocate(ee);
-          if (ie >= 0) return {
-            page: be,
-            start: ie,
-            length: ee
-          }
-        }
-        const ie = this.pages[this.pages.length - 1];
-        if (null !== ie && void 0 !== ie && ie.canGrow) {
-          const He = Math.min(this.ceiling, Math.max(2 * ie.bk, ie.bk + ee));
-          if (He - ie.bk >= ee) return ie.grow(He), {
-            page: ie,
-            start: ie.zp.allocate(ee),
-            length: ee
-          }
-        }
-        ie && ie !== this.pages[0] && 0 === ie.zp.used && ie.drop();
-        const He = Math.floor(1048576 / this.unitBytes),
-          ye = new tU(this, Math.max(ee, Math.min(this.ceiling, He)));
-        return this.pages.push(ye), {
-          page: ye,
-          start: ye.zp.allocate(ee),
-          length: ee
-        }
-      }
-      free(ee) {
-        this.assertNotDrawing();
-        const {
-          page: ie
-        } = ee;
-        ie.zp.free(ee.start, ee.length), 0 === ie.zp.used && ie !== this.pages[0] && ie !== this.pages[this.pages.length - 1] && ie.drop()
-      }
-      retire() {
-        for (const ee of this.pages) ee.retire()
-      }
-      remove(ee) {
-        const ie = this.pages.indexOf(ee);
-        ie >= 0 && this.pages.splice(ie, 1)
-      }
-      ranOutOfMemory(ee, ie) {
-        this.warnOnce("outOfMemory", `out of GPU memory for a ${ie}-byte ${this.label} buffer; its chunks are meshed again`), this.failed = Math.min(this.failed, ee), this.ceiling = Math.max(1, Math.floor(Math.min(this.ceiling, ee) / 2));
-        const He = performance.now();
-        He >= this.shortageUntil && (this.forgetFailedAt = He + Math.min(6e5, 3e4 * 2 ** this.shortages++), this.shortageUntil = He + 1e3)
-      }
-      allocatedBuffer(ee) {
-        ee >= this.failed && (this.failed = 1 / 0);
-        const ie = Math.min(2 * ee, Math.floor((ee + this.failed) / 2));
-        this.ceiling = Math.min(this.limit, Math.max(this.ceiling, ie))
-      }
-      stats() {
-        let ee = 0,
-          ie = 0,
-          He = 0,
-          ye = 0;
-        for (const be of this.pages) ee += be.bk, ie += be.zp.used, He += be.hasTwin ? be.bk * this.twinUnitBytes : 0, ye += be.allocatedBytes;
-        return {
-          pages: this.pages.length,
-          capacityBytes: ee * this.unitBytes,
-          usedBytes: ie * this.unitBytes,
-          twinBytes: He,
-          allocatedBytes: ye
-        }
-      }
-      assertNotDrawing() {}
-      pageLimit() {
-        const {
-          maxBufferSize: ee,
-          maxStorageBufferBindingSize: ie
-        } = this.device.limits;
-        let He = Math.floor(Math.min(67108864, ee) / this.unitBytes);
-        return this.usage & GPUBufferUsage.STORAGE && (He = Math.min(He, Math.floor(ie / this.unitBytes))), this.twinUsage & GPUBufferUsage.STORAGE && (He = Math.min(He, Math.floor(ie / this.twinUnitBytes))), He
-      }
-    }
-    const wU = 16383;
-
-    function DU(ee, ie, He, ye, be) {
-      let Me = 0;
-      for (let Ke = He; Ke < ye; Ke += wU) ee.drawIndexed(6 * Math.min(wU, ye - Ke), 1, 0, ie + 4 * Ke, be), Me++;
-      return Me
-    }
-    class PU {
-      constructor(ee, ie) {
-        this.recordsGroup = ie, this.vertexArena = void 0, this.quadArena = void 0, this.quadPattern = void 0, this.fullSky = new Uint16Array(0), this.boundVertices = null, this.boundLight = null, this.boundRecords = null, this.boundRecordsLight = null, this.boundPattern = !1;
-        const He = Ni.f.strideWithoutAtlas;
-        this.vertexArena = new ZU(ee, He, GPUBufferUsage.VERTEX, `terrain-vertices-${He}`), this.quadArena = new ZU(ee, EU.c, GPUBufferUsage.STORAGE, "terrain-quads", {
-          verticesPerUnit: 4,
-          twinUsage: GPUBufferUsage.STORAGE
-        });
-        const ye = (0, Gi.f)(new Uint16Array(98298), wU);
-        this.quadPattern = ee.createBuffer({
-          label: "terrain-quad-pattern",
-          size: ye.byteLength,
-          usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST
-        }), ee.queue.writeBuffer(this.quadPattern, 0, ye)
-      }
-      retire() {
-        this.vertexArena.retire(), this.quadArena.retire()
-      }
-      set(ee, ie) {
-        const He = ie.packedVertices,
-          ye = He ? this.quadArena.allocate(ee.faceCount) : this.vertexArena.allocate(ee.vertexCount);
-        if (!ye) return !1;
-        ee.vertices = ye;
-        const be = He ? new Uint8Array(He.buffer, He.byteOffset, He.byteLength) : new Uint8Array(ie.vertices);
-        return ye.page.write(ye, be), !0
-      }
-      setLight(ee, ie) {
-        const {
-          vertices: He
-        } = ee;
-        He && 0 !== ie.length && He.page.live && (ie.length < ee.vertexCount ? He.page.arena.warnOnce("shortLight", `a part's ${ie.length} light values are fewer than its ${ee.vertexCount} vertices, so its light is left as it was`) : (He.page.writeLight(He, ie), ee.lit = !0))
-      }
-      lightFullSky(ee, ie) {
-        this.fullSky.length < ie && (this.fullSky = new Uint16Array(Math.max(ie, 4096)).fill(dU.h));
-        for (const He of ee) {
-          const ee = He.vertices;
-          ee.page.live && (ee.page.writeLight(ee, this.fullSky), He.lit = !0)
-        }
-      }
-      backed(ee) {
-        const {
-          vertices: ie
-        } = ee;
-        return !!ie && ie.page.holds(ie)
-      }
-      lost(ee) {
-        const {
-          vertices: ie
-        } = ee;
-        return !!ie && ie.page.lost(ie)
-      }
-      release(ee) {
-        ee.vertices && ee.vertices.page.arena.free(ee.vertices), ee.vertices = null, ee.lit = !1
-      }
-      setDrawing(ee) {
-        this.forgetBound()
-      }
-      draw(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : ie.faceCount;
-        const Me = ie.vertices,
-          Ke = Me.page,
-          Ue = He ? Ke.twin : null;
-        if (!Ke.holds(Me) || He && !Ue) return 0;
-        const {
-          verticesPerUnit: Fe
-        } = Ke.arena;
-        let Je = Me.start * Fe;
-        this.boundPattern || (ee.setIndexBuffer(this.quadPattern, "uint16"), this.boundPattern = !0);
-        const oe = ye + be;
-        if (Fe > 1) return Ke.buffer === this.boundRecords && Ue === this.boundRecordsLight || (ee.setBindGroup(1, this.recordsGroup(Ke.buffer, Ue)), this.boundRecords = Ke.buffer, this.boundRecordsLight = Ue), DU(ee, Je, ye, oe, ie.slot);
-        Ke.buffer !== this.boundVertices && (ee.setVertexBuffer(0, Ke.buffer), this.boundVertices = Ke.buffer), Ue && Ue !== this.boundLight && (ee.setVertexBuffer(1, Ue), this.boundLight = Ue);
-        const Re = ie.faceCount;
-        return oe <= Re ? DU(ee, Je, ye, oe, ie.slot) : DU(ee, Je, ye, Re, ie.slot) + DU(ee, Je, Math.max(ye, Re) - Re, oe - Re, ie.slot)
-      }
-      get buffersAwaitingVerdict() {
-        let ee = 0;
-        for (const ie of this.arenas()) ee += ie.awaitingVerdict;
-        return ee
-      }* arenas() {
-        yield this.vertexArena, yield this.quadArena
-      }
-      forgetBound() {
-        this.boundVertices = this.boundLight = this.boundRecords = this.boundRecordsLight = null, this.boundPattern = !1
-      }
-    }
-    class AU {
-      constructor(ee, ie, He, ye) {
-        this.device = ee, this.splitBefore = ie, this.wanted = !1, this.pipeline = null, this.building = !0, this.unprojectBuffer = void 0, this.unproject = new Float32Array(2), this.near = 0, this.far = 0, this.copy = null, this.retired = null, this.unprojectBuffer = ee.createBuffer({
-          label: "scene-depth-unproject",
-          size: 8,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        });
-        const be = ee.createShaderModule({
-          label: "scene-depth-copy",
-          code: (Me = He._targetSignature._sampleCount > 1, `\n@group(0) @binding(0) var depth: ${Me?"texture_depth_multisampled_2d":"texture_depth_2d"};\n@group(0) @binding(1) var<uniform> unproject: vec2f;\n\n@vertex\nfn copyVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn copyFragment(@builtin(position) pixel: vec4f) -> @location(0) f32 {\n\tlet d = textureLoad(depth, vec2i(pixel.xy), 0);\n\tif (d <= 0.0) {\n\t\treturn 0.0;\n\t}\n\treturn unproject.y / (2.0 * d + unproject.x);\n}\n`)
-        });
-        var Me;
-        ee.createRenderPipelineAsync({
-          label: "scene-depth-copy",
-          layout: "auto",
-          vertex: {
-            module: be,
-            entryPoint: "copyVertex"
-          },
-          fragment: {
-            module: be,
-            entryPoint: "copyFragment",
-            targets: [{
-              format: "r32float"
-            }]
-          }
-        }).then((ee => {
-          this.pipeline = ee, this.building = !1
-        }), (ee => {
-          this.building = !1, console.error("Lite: the scene depth copy failed to build, so liquids find nothing behind them", ee)
-        })), He._executeWithTransmission = () => this.execute(He, ye)
-      }
-      get compiling() {
-        return this.building
-      }
-      setWanted(ee) {
-        this.wanted = ee
-      }
-      setPlanes(ee, ie) {
-        ee === this.near && ie === this.far || (this.near = ee, this.far = ie, this.unproject[0] = ee / (ie - ee), this.unproject[1] = ie * ee / (ie - ee), this.device.queue.writeBuffer(this.unprojectBuffer, 0, this.unproject))
-      }
-      get view() {
-        var ee, ie;
-        return null !== (ee = null === (ie = this.copy) || void 0 === ie ? void 0 : ie.view) && void 0 !== ee ? ee : null
-      }
-      execute(ee, ie) {
-        var He;
-        null === (He = this.retired) || void 0 === He || He.destroy(), this.retired = null;
-        const ye = di(ie),
-          be = ee._transparentBindings,
-          Me = this.wanted && this.pipeline ? this.splitIndex(be) : -1,
-          Ke = ee._colorAttachment,
-          Ue = Ke.resolveTarget;
-        Me >= 0 && (Ke.resolveTarget = void 0, yU(ee, !0));
-        let Fe = ye.beginRenderPass(ee._renderPassDescriptor);
-        Fe.setBindGroup(0, ee._sceneBG);
-        let Je = this.drawList(Fe, ie, ee._opaqueBindings, 0, ee._opaqueBindings.length);
-        if (Je += this.drawList(Fe, ie, ee._directBindings, 0, ee._directBindings.length), Je += this.drawList(Fe, ie, be, 0, Me >= 0 ? Me : be.length), Fe.end(), Me < 0) return Je;
-        yU(ee);
-        const oe = ee._renderPassDescriptor.depthStencilAttachment,
-          {
-            depthLoadOp: Re,
-            stencilLoadOp: ke
-          } = oe,
-          qe = Ke.loadOp;
-        Ke.resolveTarget = Ue;
-        try {
-          this.copyDepth(ye, ee), Ke.loadOp = "load", oe.depthLoadOp = "load", ke && (oe.stencilLoadOp = "load"), Fe = ye.beginRenderPass(ee._renderPassDescriptor), Fe.setBindGroup(0, ee._sceneBG), Je += this.drawList(Fe, ie, be, Me, be.length), Fe.end()
-        } finally {
-          Ke.loadOp = qe, oe.depthLoadOp = Re, oe.stencilLoadOp = ke
-        }
-        return Je
-      }
-      splitIndex(ee) {
-        for (let ie = 0; ie < ee.length; ie++)
-          if (ee[ie].renderable === this.splitBefore) return ie;
-        return -1
-      }
-      drawList(ee, ie, He, ye, be) {
-        let Me = null,
-          Ke = 0;
-        for (let Ue = ye; Ue < be; Ue++) {
-          const ye = He[Ue],
-            be = ye.renderable.mesh;
-          be && !1 === be.visible || (ye.pipeline !== Me && (ee.setPipeline(ye.pipeline), Me = ye.pipeline), Ke += ye.draw(ee, ie))
-        }
-        return Ke
-      }
-      copyDepth(ee, ie) {
-        var He, ye;
-        const be = (null !== (He = ie._config.depth) && void 0 !== He ? He : ie._config.rt)._depthTexture,
-          Me = (null === (ye = this.copy) || void 0 === ye ? void 0 : ye.source) === be ? this.copy : this.remakeCopy(be),
-          Ke = ee.beginRenderPass(Me.pass);
-        Ke.setPipeline(this.pipeline), Ke.setBindGroup(0, Me.bindGroup), Ke.draw(3), Ke.end()
-      }
-      remakeCopy(ee) {
-        var ie, He;
-        this.retired = null !== (ie = null === (He = this.copy) || void 0 === He ? void 0 : He.texture) && void 0 !== ie ? ie : null;
-        const ye = this.device.createTexture({
-            label: "scene-depth",
-            size: [ee.width, ee.height],
-            format: "r32float",
-            usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
-          }),
-          be = ye.createView(),
-          Me = this.device.createBindGroup({
-            label: "scene-depth-copy",
-            layout: this.pipeline.getBindGroupLayout(0),
-            entries: [{
-              binding: 0,
-              resource: ee.createView({
-                aspect: "depth-only"
-              })
-            }, {
-              binding: 1,
-              resource: {
-                buffer: this.unprojectBuffer
-              }
-            }]
-          }),
-          Ke = {
-            label: "scene-depth-copy",
-            colorAttachments: [{
-              view: be,
-              loadOp: "clear",
-              storeOp: "store",
-              clearValue: [0, 0, 0, 0]
-            }]
-          };
-        return this.copy = {
-          source: ee,
-          texture: ye,
-          view: be,
-          bindGroup: Me,
-          pass: Ke
-        }, this.copy
-      }
-    }
-    const YU = "rgba8unorm";
-
-    function VU(ee) {
-      return ee ? 15 : 1
-    }
-    class aU {
-      constructor(ee, ie, He, ye) {
-        this.device = ee, this.terrain = ye, this.pipeline = null, this.building = !0, this.edge = void 0, this.layout = void 0, this.empty = void 0, this.cameraBuffer = void 0, this.camera = new Float32Array(16), this.targets = null, this.retired = null, this.edge = ie._targetSignature._sampleCount > 1, this.cameraBuffer = ee.createBuffer({
-          label: "sun-shadow-mask-camera",
-          size: 64,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.layout = ee.createBindGroupLayout({
-          label: "sun-shadow-mask",
-          entries: [{
-            binding: 0,
-            visibility: GPUShaderStage.FRAGMENT,
-            texture: {
-              sampleType: "unfilterable-float"
-            }
-          }, {
-            binding: 1,
-            visibility: GPUShaderStage.FRAGMENT,
-            buffer: {
-              type: "uniform"
-            }
-          }, {
-            binding: 2,
-            visibility: GPUShaderStage.FRAGMENT,
-            texture: {
-              sampleType: "float"
-            }
-          }]
-        });
-        const be = ee.createBindGroupLayout({
-          label: "sun-shadow-mask-empty",
-          entries: []
-        });
-        this.empty = ee.createBindGroup({
-          label: "sun-shadow-mask-empty",
-          layout: be,
-          entries: []
-        });
-        const Me = ee.createShaderModule({
-          label: "sun-shadow-mask",
-          code: (Ke = this.edge, `${(0,ri.z)()}${Jy({sunShadow:!0,airShadow:!1},!0,"lit")}\n@group(0) @binding(0) var bloxdSmDepth: texture_2d<f32>;\nstruct BloxdSmCamera {\n\teye: vec3f,\n\ttolerance: f32,\n\tright: vec3f,\n\tdepthScale: f32,\n\tup: vec3f,\n\tdepthBias: f32,\n\tforward: vec3f,\n}\n@group(0) @binding(1) var<uniform> bloxdSmCamera: BloxdSmCamera;\n@group(0) @binding(2) var bloxdSmNormal: texture_2d<f32>;\n${Ke?rH:""}\n@vertex\nfn maskVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn maskFragment(@builtin(position) pixel: vec4f) -> @location(0) vec4f {\n\tlet at = vec2i(pixel.xy);\n\tlet d = textureLoad(bloxdSmDepth, at, 0).x;\n\tif (d <= 0.0) {\n\t\treturn vec4f(${VU(Ke)}.0, 0.0, 0.0, 0.0);\n\t}\n\t// View z from the depth as it is, then along the pixel's ray: an inverse view-projection would round d against 1\n\tlet size = vec2f(textureDimensions(bloxdSmDepth));\n\tlet ndc = vec2f(pixel.x / size.x * 2.0 - 1.0, 1.0 - pixel.y / size.y * 2.0);\n\tlet z = bloxdSmCamera.depthScale / (2.0 * d + bloxdSmCamera.depthBias);\n\tlet packed = textureLoad(bloxdSmNormal, at, 0);\n\tbloxdSpShadowPosition = bloxdSmCamera.eye + z * (bloxdSmCamera.forward + ndc.x * bloxdSmCamera.right + ndc.y * bloxdSmCamera.up);\n\t// Capped well inside the quarter block origins start off their face: past it, a few pixels\n\tbloxdSpPlaneTolerance = min(z * z * bloxdSmCamera.tolerance, 0.125);\n\tbloxdSpShadowNormal = normalize(packed.xyz * 2.0 - 1.0);\n\tbloxdSpShadowEmissive = packed.w > 0.5;\n\treturn ${Ke?"vec4f(bloxdSpNormalCode(bloxdSpShadowNormal) * 2.0 + bloxdShadow(), d, 0.0, 0.0)":"vec4f(bloxdShadow())"};\n}\n`)
-        });
-        var Ke;
-        ee.createRenderPipelineAsync({
-          label: "sun-shadow-mask",
-          layout: ee.createPipelineLayout({
-            bindGroupLayouts: [this.layout, be, be, jM(ee, {
-              depth: !1,
-              sunShadow: !0
-            })]
-          }),
-          vertex: {
-            module: Me,
-            entryPoint: "maskVertex"
-          },
-          fragment: {
-            module: Me,
-            entryPoint: "maskFragment",
-            targets: [{
-              format: this.maskFormat
-            }]
-          }
-        }).then((ee => {
-          this.pipeline = ee, this.building = !1
-        }), (ee => {
-          this.building = !1, console.error("Lite: the sun shadow mask's trace failed to build, so terrain reading it is lit", ee)
-        }));
-        const Ue = ie._executeWithTransmission;
-        ie._executeWithTransmission = ee => this.execute(ie, He, (() => Ue ? Ue(ee) : function(ee, ie) {
-          const He = di(ie).beginRenderPass(ee._renderPassDescriptor);
-          He.setBindGroup(0, ee._sceneBG);
-          let ye = cU(He, ie, ee._opaqueBindings);
-          return ye += cU(He, ie, ee._directBindings), ye += cU(He, ie, ee._transparentBindings), He.end(), ye
-        }(ie, He)))
-      }
-      get compiling() {
-        return this.building
-      }
-      get view() {
-        var ee, ie;
-        return null !== (ee = null === (ie = this.targets) || void 0 === ie ? void 0 : ie.maskView) && void 0 !== ee ? ee : null
-      }
-      get maskFormat() {
-        return this.edge ? "rg32float" : "r8unorm"
-      }
-      prepare(ee) {
-        ! function(ee, ie) {
-          const He = ee.worldMatrix,
-            ye = ee.projectionMatrix,
-            be = 1 / ye[0],
-            Me = 1 / ye[5],
-            Ke = ee.far * ee.near / (ee.far - ee.near);
-          ie[0] = ee.eye[0], ie[1] = ee.eye[1], ie[2] = ee.eye[2], ie[3] = 2 ** -23 / Ke, ie[4] = He[0] * be, ie[5] = He[1] * be, ie[6] = He[2] * be, ie[7] = Ke, ie[8] = He[4] * Me, ie[9] = He[5] * Me, ie[10] = He[6] * Me, ie[11] = ee.near / (ee.far - ee.near), ie[12] = He[8], ie[13] = He[9], ie[14] = He[10], ie[15] = 0
-        }(ee, this.camera), this.device.queue.writeBuffer(this.cameraBuffer, 0, this.camera)
-      }
-      execute(ee, ie, He) {
-        if (this.retire(), !this.terrain.readsMask) return He();
-        const ye = this.targetsFor(ee),
-          be = di(ie),
-          Me = ee._renderPassDescriptor.depthStencilAttachment;
-        this.edge || (ye.prepass.depthStencilAttachment.view = Me.view);
-        const Ke = this.terrain.drawPrepass(be, ye.prepass, ee._sceneBG);
-        if (0 === Ke) return He();
-        if (this.trace(be, ye), this.edge) return Ke + 1 + He();
-        const {
-          depthLoadOp: Ue,
-          stencilLoadOp: Fe
-        } = Me;
-        Me.depthLoadOp = "load", Fe && (Me.stencilLoadOp = "load");
-        try {
-          return Ke + 1 + He()
-        } finally {
-          Me.depthLoadOp = Ue, Me.stencilLoadOp = Fe
-        }
-      }
-      trace(ee, ie) {
-        const He = this.terrain.sunShadowGroup(),
-          ye = ee.beginRenderPass(ie.trace);
-        this.pipeline && He && (ye.setPipeline(this.pipeline), ye.setBindGroup(0, ie.bindGroup), ye.setBindGroup(1, this.empty), ye.setBindGroup(2, this.empty), ye.setBindGroup(3, He), ye.draw(3)), ye.end()
-      }
-      retire() {
-        const ee = this.retired;
-        var ie;
-        ee && (ee.mask.destroy(), ee.normals.destroy(), null === (ie = ee.depth) || void 0 === ie || ie.destroy(), this.retired = null)
-      }
-      targetsFor(ee) {
-        var ie, He;
-        const ye = (null !== (ie = ee._config.depth) && void 0 !== ie ? ie : ee._config.rt)._depthTexture;
-        return (null === (He = this.targets) || void 0 === He ? void 0 : He.source) === ye ? this.targets : this.remake(ee, ye)
-      }
-      remake(ee, ie) {
-        var He;
-        this.retired = this.targets;
-        const ye = [ie.width, ie.height],
-          be = this.device.createTexture({
-            label: "sun-shadow-mask",
-            size: ye,
-            format: this.maskFormat,
-            usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
-          }),
-          Me = this.device.createTexture({
-            label: "sun-shadow-prepass-normals",
-            size: ye,
-            format: YU,
-            usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
-          }),
-          Ke = null !== (He = ee._targetSignature._depthStencilFormat) && void 0 !== He ? He : ie.format,
-          Ue = this.edge ? this.device.createTexture({
-            label: "sun-shadow-prepass-depth",
-            size: ye,
-            format: Ke,
-            usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
-          }) : null,
-          Fe = ee._renderPassDescriptor.depthStencilAttachment,
-          Je = Ke.includes("stencil"),
-          oe = {
-            label: "sun-shadow-prepass",
-            colorAttachments: [{
-              view: Me.createView(),
-              loadOp: "clear",
-              storeOp: "store",
-              clearValue: [.5, 1, .5, 0]
-            }],
-            depthStencilAttachment: {
-              view: Ue ? Ue.createView() : Fe.view,
-              depthClearValue: Fe.depthClearValue,
-              depthLoadOp: "clear",
-              depthStoreOp: "store",
-              ...Je ? {
-                stencilClearValue: Fe.stencilClearValue,
-                stencilLoadOp: "clear",
-                stencilStoreOp: "store"
-              } : {}
-            }
-          },
-          Re = this.device.createBindGroup({
-            label: "sun-shadow-mask",
-            layout: this.layout,
-            entries: [{
-              binding: 0,
-              resource: (null !== Ue && void 0 !== Ue ? Ue : ie).createView({
-                aspect: "depth-only"
-              })
-            }, {
-              binding: 1,
-              resource: {
-                buffer: this.cameraBuffer
-              }
-            }, {
-              binding: 2,
-              resource: Me.createView()
-            }]
-          }),
-          ke = {
-            label: "sun-shadow-mask",
-            colorAttachments: [{
-              view: be.createView(),
-              loadOp: "clear",
-              storeOp: "store",
-              clearValue: [VU(this.edge), 0, 0, 0]
-            }]
-          };
-        return this.targets = {
-          source: ie,
-          mask: be,
-          maskView: be.createView(),
-          normals: Me,
-          depth: Ue,
-          bindGroup: Re,
-          prepass: oe,
-          trace: ke
-        }, this.targets
-      }
-    }
-
-    function cU(ee, ie, He) {
-      let ye = null,
-        be = 0;
-      for (const Me of He) {
-        const He = Me.renderable.mesh;
-        He && !1 === He.visible || (Me.pipeline !== ye && (ee.setPipeline(Me.pipeline), ye = Me.pipeline), be += Me.draw(ee, ie))
-      }
-      return be
-    }
-    const xU = 6e4,
-      LU = {
-        status: "ok"
-      },
-      CU = {
-        status: "skipped"
-      };
-    async function vU(ee, ie) {
-      const {
-        isCancelled: He
-      } = ee;
-      if (He()) return {
-        status: "Ce"
-      };
-      const {
-        target: ye
-      } = ie;
-      if (!ye) return console.warn("Shader pack: skipped the compile check, as Lite hasn't bound terrain yet"), {
-        status: "skipped"
-      };
-      const be = [],
-        Me = Promise.all(Array.from(new Set(ee.materials), (async He => {
-          be.push(await async function(ee, ie, He, ye) {
-            const be = {
-              lighting: ee.lighting,
-              dirLightCount: Math.min(ee.dirLightCount, 4),
-              Zf: ee.runtime
-            };
-            try {
-              const Me = ie.material(ye);
-              return Me && ay(ie.programKey(Me, !1, be)) ? (await Me.ready, ee.isCancelled() ? LU : Me.bindGroupLayout ? await async function(ee, ie, He, ye) {
-                const {
-                  device: be
-                } = ee;
-                let Me, Ke;
-                be.pushErrorScope("validation");
-                try {
-                  Me = ee.pipelineBuild(ie, He, ye)
-                } finally {
-                  Ke = be.popErrorScope().catch((() => null))
-                }
-                const [Ue, Fe] = await Promise.all([Ke, Me.built.then((() => null), (ee => null !== ee && void 0 !== ee ? ee : new Error("pipeline failed")))]);
-                if (!Ue && !Fe) return LU;
-                const Je = await uU(Me.module),
-                  oe = Je.length > 0 ? Je.map((ee => `${Me.name} ${ee.lineNum}:${ee.linePos}: ${ee.message}`)).join("\n") : `${Me.name}: ${mU(null!==Fe&&void 0!==Fe?Fe:Ue)}`;
-                return {
-                  status: "failed",
-                  material: ie.model.name,
-                  message: oe
-                }
-              }(ie, Me, ie.programKey(Me, "none" !== Me.texture, be), He): (console.warn(`Shader pack: skipped the compile check for "${ye.name}", whose textures failed to load`), CU)) : LU
-            } catch (Me) {
-              return {
-                status: "failed",
-                material: ye.name,
-                message: mU(Me)
-              }
-            }
-          }(ee, ie, ye, He))
-        }))),
-        Ke = function(ee, ie) {
-          let He, ye, be = !1;
-          const Me = new Promise((Me => {
-            var Ke;
-            He = setTimeout((() => {
-              Me("timeout")
-            }), null !== (Ke = ie.timeoutMs) && void 0 !== Ke ? Ke : xU), ye = setInterval((() => {
-              ie.isCancelled() && Me("Ce")
-            }), 50), ee.lost.then((() => {
-              be = !0, Me("lost")
-            }))
-          }));
-          return {
-            signal: Me,
-            lost: () => be,
-            dispose: () => {
-              clearTimeout(He), clearInterval(ye)
-            }
-          }
-        }(ie.device, ee);
-      let Ue;
-      try {
-        Ue = await Promise.race([Me.then((() => "done")), Ke.signal])
-      } finally {
-        Ke.dispose()
-      }
-      if ("Ce" === Ue || He()) return {
-        status: "Ce"
-      };
-      const Fe = be.find((ee => "failed" === ee.status));
-      return Fe && "lost" !== Ue && !Ke.lost() && await new Promise((ee => {
-        setTimeout(ee, 0)
-      })), "lost" === Ue || Ke.lost() ? (console.warn("Shader pack: skipped the compile check, as the GPU device was lost"), {
-        status: "skipped"
-      }) : Fe ? {
-        status: "failed",
-        failure: {
-          material: Fe.material,
-          message: Fe.message
-        }
-      } : "timeout" === Ue ? (console.warn(`Shader pack: skipped the compile check, which didn't finish in ${(null!==(Je=ee.timeoutMs)&&void 0!==Je?Je:xU)/1e3} s`), {
-        status: "skipped"
-      }) : be.some((ee => "skipped" === ee.status)) ? {
-        status: "skipped"
-      } : {
-        status: "ok"
-      };
-      var Je
-    }
-    async function uU(ee) {
-      if (!ee) return [];
-      try {
-        return (await ee.getCompilationInfo()).messages.filter((ee => "error" === ee.type))
-      } catch {
-        return []
-      }
-    }
-
-    function mU(ee) {
-      var ie;
-      return null !== (ie = null === ee || void 0 === ee ? void 0 : ee.message) && void 0 !== ie ? ie : String(ee)
-    }
-
-    function lU(ee, ie, He, ye, be) {
-      ay(ie) ? uU(ye).then((ie => {
-        const [ye] = ie;
-        oi(ee, "terrain", He, be, ye ? `${ye.lineNum}:${ye.linePos} error: ${ye.message}` : null)
-      })) : oi(ee, "terrain", He, be)
-    }
-    var SU = He(38258),
-      nU = He(38273),
-      jU = He(38284),
-      sU = He(3084);
-
-    function IU(ee, ie, He, ye, be) {
-      const Me = Math.hypot(He[0], He[1], He[2]);
-      if (!(Me > 0)) return;
-      const Ke = [He[0] / Me, He[1] / Me, He[2] / Me],
-        Ue = [Math.floor(ie[0]), Math.floor(ie[1]), Math.floor(ie[2])],
-        Fe = [0, 0, 0],
-        Je = [1 / 0, 1 / 0, 1 / 0],
-        oe = [1 / 0, 1 / 0, 1 / 0];
-      for (let qe = 0; qe < 3; qe++) Ke[qe] > 0 ? (Fe[qe] = 1, Je[qe] = (Ue[qe] + 1 - ie[qe]) / Ke[qe], oe[qe] = 1 / Ke[qe]) : Ke[qe] < 0 && (Fe[qe] = -1, Je[qe] = (Ue[qe] - ie[qe]) / Ke[qe], oe[qe] = -1 / Ke[qe]);
-      const {
-        BR: Re
-      } = ee;
-      let ke = ee.sG(Ue[0], Ue[1], Ue[2]);
-      for (;;) {
-        const ie = Je[0] < Je[1] ? Je[0] < Je[2] ? 0 : 2 : Je[1] < Je[2] ? 1 : 2;
-        if (Je[ie] > ye) return;
-        const He = Fe[ie] > 0 ? Ue[ie] + 1 : Ue[ie];
-        Ue[ie] += Fe[ie], Je[ie] += oe[ie];
-        const Me = ee.sG(Ue[0], Ue[1], Ue[2]),
-          Ke = Me !== ke && !(ee.opaque[ke] && ee.opaque[Me]);
-        if (Ke) {
-          const ye = [Ue[0], Ue[1], Ue[2]];
-          ye[ie] = He;
-          const Me = Math.floor(ye[0] / Re),
-            Ke = Math.floor(ye[1] / Re),
-            Fe = Math.floor(ye[2] / Re);
-          !ee.isDrawn(Me, Ke, Fe) && ee.hasParts(Me, Ke, Fe) && be.add(`${Me},${Ke},${Fe}`)
-        }
-        if (Ke && ee.occluders[Me]) return;
-        ke = Me
-      }
-    }
-
-    function hU(ee, ie) {
-      return ee.group - ie.group || ee.nearest - ie.nearest
-    }
-    class NU {
-      constructor(ee, ie) {
-        this.device = ee, this.jB = ie, this.data = new Float32Array(2048), this.words = new Uint32Array(this.data.buffer), this.buffer = void 0, this.free = [], this.next = 0, this.dirtyMin = 1 / 0, this.dirtyMax = -1, this.buffer = this.createBuffer()
-      }
-      createBuffer() {
-        return this.device.createBuffer({
-          label: "terrain-chunk-slots",
-          size: this.data.byteLength,
-          usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        })
-      }
-      allocate() {
-        var ee;
-        const ie = null !== (ee = this.free.pop()) && void 0 !== ee ? ee : this.next++;
-        if (8 * ie >= this.data.length) {
-          const ee = new Float32Array(2 * this.data.length);
-          ee.set(this.data), this.data = ee, this.words = new Uint32Array(ee.buffer), this.buffer.destroy(), this.buffer = this.createBuffer(), this.markDirty(0, this.next - 1), this.jB()
-        }
-        return ie
-      }
-      release(ee) {
-        this.free.push(ee)
-      }
-      set(ee, ie, He, ye, be) {
-        const Me = 8 * ee + ny;
-        this.data[Me] = ie, this.data[Me + 1] = He, this.data[Me + 2] = ye, this.setVisibility(ee, be)
-      }
-      setVisibility(ee, ie) {
-        this.data[8 * ee + jy] = ie, this.markDirty(ee, ee)
-      }
-      setFaces(ee, ie, He) {
-        const ye = 8 * ee;
-        this.words[ye + sy] = ie, this.words[ye + Iy] = He, this.markDirty(ee, ee)
-      }
-      markDirty(ee, ie) {
-        this.dirtyMin = Math.min(this.dirtyMin, ee), this.dirtyMax = Math.max(this.dirtyMax, ie)
-      }
-      flush() {
-        if (this.dirtyMax < this.dirtyMin) return;
-        this.device.queue.writeBuffer(this.buffer, 8 * this.dirtyMin * 4, this.data, 8 * this.dirtyMin, 8 * (this.dirtyMax - this.dirtyMin + 1)), this.dirtyMin = 1 / 0, this.dirtyMax = -1
-      }
-    }
-    const GU = Sy,
-      rU = !0;
-    const QU = {
-        arrayStride: 4,
-        stepMode: "vertex",
-        attributes: [{
-          shaderLocation: GU.packedLight,
-          offset: 0,
-          format: "float32"
-        }]
-      },
-      eF = {
-        srcFactor: "src-alpha",
-        dstFactor: "one-minus-src-alpha",
-        operation: "add"
-      };
-    class iF {
-      constructor(ee) {
-        this.device = ee, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.sceneDepth = null, this.sunShadow = null, this.shadowMask = null, this.chunks = new Map, this.materials = new Map, this.slots = void 0, this.sceneLayout = void 0, this.frameLayout = void 0, this.materialLayouts = new Map, this.frameUniforms = new Float32Array(xy), this.dirLightUniforms = this.frameUniforms.subarray(cy.dirLights, cy.aoLevels), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.recordsGroups = new WeakMap, this.modules = new Map, this.pipelines = new Map, this.prepassOf = new WeakMap, this.maskPipelines = 0, this.builds = new Map, this.target = null, this.compiling = 0, this.sampler = void 0, this.geometry = void 0, this.warnOnce = (0, Vi.b)(), this.faceGroups = !0, this.visibilityGraph = rU, this.visCull = rU, this.visCheck = !1, this.visCullMinDistance = jU.f, this.visCheckFrame = 0, this.visCandidates = [], this.visCandidateBatches = [], this.visPassable = new Set, this.visBatchDraws = new Map, this.visDrawsMaterial = null, this.visDrawsBits = 0, this.visCulledParts = 0, this.visCulledTriangles = 0, this.visViolations = 0, this.visSweeps = 0, this.submittedTriangles = 0, this.chunkSorter = new MF, this.opaqueBatches = [], this.transparent = [], this.unlit = [], this.lighting = !1, this.dirLightCount = 0, this.aoLevelsWritten = !1, this.originOffset = [0, 0, 0], this.eye = [0, 0, 0], this.faceRanges = new Int32Array(4), this.faceEpoch = 0, this.faceEye = [NaN, NaN, NaN], this.faceFocalPx = NaN, this.Zf = null, this.shaderPackInputs = null, this.depthStandIn = null, this.geometry = new PU(ee, ((ee, ie) => this.recordsGroup(ee, ie))), this.slots = new NU(ee, (() => {
-          this.frameBindGroup = this.createFrameBindGroup(), this.recordsGroups = new WeakMap
-        })), this.sceneLayout = Wi(ee), this.frameLayout = ee.createBindGroupLayout({
-          label: "terrain-frame",
-          entries: [{
-            binding: 0,
-            visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-            buffer: {
-              type: "uniform"
-            }
-          }, {
-            binding: 1,
-            visibility: GPUShaderStage.VERTEX,
-            buffer: {
-              type: "read-only-storage"
-            }
-          }, {
-            binding: 2,
-            visibility: GPUShaderStage.VERTEX,
-            buffer: {
-              type: "read-only-storage"
-            }
-          }, {
-            binding: 3,
-            visibility: GPUShaderStage.VERTEX,
-            buffer: {
-              type: "read-only-storage"
-            }
-          }]
-        }), this.frameBuffer = ee.createBuffer({
-          label: "terrain-frame",
-          size: this.frameUniforms.byteLength,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.frameBindGroup = this.createFrameBindGroup(), this.sampler = ee.createSampler({
-          label: "terrain",
-          magFilter: "nearest",
-          minFilter: "nearest",
-          mipmapFilter: "linear",
-          addressModeU: "repeat",
-          addressModeV: "repeat"
-        }), this.opaqueRenderable = {
-          order: 100,
-          isTransparent: !1,
-          _direct: !0,
-          bind: (ee, ie) => this.createBinding(this.opaqueRenderable, ie, !1)
-        }, this.transparentRenderable = {
-          order: 200,
-          isTransparent: !0,
-          _worldCenter: [0, 0, 0],
-          bind: (ee, ie) => this.createBinding(this.transparentRenderable, ie, !0)
-        }
-      }
-      retire() {
-        this.geometry.retire()
-      }
-      installSceneDepth(ee, ie) {
-        this.sceneDepth = new AU(this.device, this.transparentRenderable, ee, ie)
-      }
-      createFrameBindGroup() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return this.device.createBindGroup({
-          label: "terrain-frame",
-          layout: this.frameLayout,
-          entries: [{
-            binding: 0,
-            resource: {
-              buffer: this.frameBuffer
-            }
-          }, {
-            binding: 1,
-            resource: {
-              buffer: this.slots.buffer
-            }
-          }, {
-            binding: 2,
-            resource: {
-              buffer: null !== ee && void 0 !== ee ? ee : this.slots.buffer
-            }
-          }, {
-            binding: 3,
-            resource: {
-              buffer: null !== ie && void 0 !== ie ? ie : this.slots.buffer
-            }
-          }]
-        })
-      }
-      recordsGroup(ee, ie) {
-        const He = null !== ie && void 0 !== ie ? ie : ee;
-        let ye = this.recordsGroups.get(He);
-        return ye || (ye = this.createFrameBindGroup(ee, ie), this.recordsGroups.set(He, ye)), ye
-      }
-      setChunkMesh(ee, ie, He) {
-        var ye;
-        let be = this.chunks.get(ee);
-        be ? this.geometry.release(be) : (be = {
-          mesh: ee,
-          slot: this.slots.allocate(),
-          origin: [He[0], He[1], He[2]],
-          material: null,
-          vertices: null,
-          lit: !1,
-          faceCount: 0,
-          vertexCount: 0,
-          packed: !1,
-          lostRemeshes: 0,
-          lostRetryAt: 0,
-          visibility: ee.visibility,
-          distance: 0,
-          faceGroups: null,
-          planePX: 0,
-          planeNX: 0,
-          planePY: 0,
-          planeNY: 0,
-          planePZ: 0,
-          planeNZ: 0,
-          faceMask: -1,
-          faceEpoch: -1,
-          rangeCount: 1,
-          first0: 0,
-          count0: 0,
-          first1: 0,
-          count1: 0,
-          ci: NaN,
-          cj: NaN,
-          ck: NaN,
-          key: NaN
-        }, this.chunks.set(ee, be), this.writeSlot(be)), be.material = ee.material ? this.materialFor(ee.material) : null, be.packed = !!ie.packedVertices, be.vertexCount = (0, EU.g)(ie), be.faceCount = be.vertexCount / 4;
-        const Me = null !== (ye = ie.faceGroups) && void 0 !== ye ? ye : null;
-        if (be.faceGroups = Me, Me) {
-          const ee = SU.n;
-          be.planePX = Me[ee], be.planeNX = Me[ee + 1], be.planePY = Me[ee + 2], be.planeNY = Me[ee + 3], be.planePZ = Me[ee + 4], be.planeNZ = Me[ee + 5]
-        }
-        this.drawWhole(be), 0 !== be.faceCount && (this.geometry.set(be, ie) ? (be.packed && this.slots.setFaces(be.slot, be.vertices.start + be.faceCount, be.faceCount), ie.Pf && this.setChunkMeshLight(ee, ie.Pf)) : this.warnOnce("tooBig", `Lite terrain: a chunk of ${be.vertexCount} vertices is more than a buffer may hold, and is left out.`))
-      }
-      setChunkMeshLight(ee, ie) {
-        const He = this.chunks.get(ee);
-        He && this.geometry.setLight(He, ie)
-      }
-      drawStats() {
-        let ee = this.transparent.length;
-        for (const ie of this.opaqueBatches) ee += ie.meshes.length;
-        return {
-          drawn: ee,
-          loaded: this.chunks.size,
-          triangles: this.submittedTriangles,
-          visCulled: this.visCulledParts,
-          visCulledTriangles: this.visCulledTriangles,
-          visViolations: this.visViolations,
-          visSweeps: this.visSweeps,
-          visPassable: this.visPassable.size
-        }
-      }
-      get pipelinesCompiling() {
-        return this.compiling
-      }
-      get buffersAwaitingVerdict() {
-        return this.geometry.buffersAwaitingVerdict
-      }
-      removeChunkMesh(ee) {
-        const ie = this.chunks.get(ee);
-        ie && (this.geometry.release(ie), this.slots.release(ie.slot), this.chunks.delete(ee))
-      }
-      remeshLost(ee, ie) {
-        this.geometry.release(ie), ie.lostRetryAt = performance.now() + Math.min(6e4, 1e3 * 2 ** ie.lostRemeshes++);
-        const He = ee.xR,
-          [ye, be, Me] = He.ube(ie.origin[0], ie.origin[1], ie.origin[2]),
-          Ke = He.aT.cT(ye, be, Me);
-        Ke && (Ke.YT = !0, Ke.LT = !0, He.VT(Ke, !1))
-      }
-      chooseFaceRanges(ee, ie, He) {
-        const ye = this.faceRanges;
-        ee.faceMask = He, ee.rangeCount = (0, nU.n)(ie, He, ye), ee.first0 = ye[0], ee.count0 = ye[1], ee.first1 = ye[2], ee.count1 = ye[3]
-      }
-      drawWhole(ee) {
-        ee.faceMask = -1, ee.faceEpoch = -1, ee.rangeCount = 1, ee.first0 = 0, ee.count0 = ee.faceCount
-      }
-      writeSlot(ee) {
-        const [ie, He, ye] = this.originOffset;
-        this.slots.set(ee.slot, ee.origin[0] - ie, ee.origin[1] - He, ee.origin[2] - ye, ee.visibility)
-      }
-      materialFor(ee) {
-        const ie = this.materials.get(ee);
-        if (ie) return ie;
-        const He = OU(ee);
-        if (!He) return this.warnOnce(`material:${ee.name}`, `Lite terrain cannot draw material "${ee.name}"; its chunks are skipped.`), null;
-        const {
-          model: ye,
-          atlas: be,
-          texture: Me,
-          animated: Ke,
-          uniformData: Ue
-        } = He, Fe = {
-          id: this.materials.size,
-          model: ye,
-          texture: Me,
-          animated: Ke,
-          uniformData: Ue,
-          uniformBuffer: this.device.createBuffer({
-            label: `terrain-material-${ee.name}`,
-            size: Ue.byteLength,
-            usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-          }),
-          liquid: He.liquid,
-          customRenderMat: He.customRenderMat,
-          atlasCount: 0,
-          W4: 0,
-          atlasLayers: 0,
-          bindGroup: null,
-          bindGroupLayout: null,
-          ready: Promise.resolve(),
-          pipelineIds: [null, null, null, null]
-        };
-        return this.materials.set(ee, Fe), this.device.queue.writeBuffer(Fe.uniformBuffer, 0, Ue), Fe.ready = this.createMaterialBindGroup(Fe, be).catch((ie => {
-          console.error(`Lite terrain failed to load the textures of material "${ee.name}"`, ie)
-        })), Fe
-      }
-      materialLayout(ee) {
-        const ie = function(ee) {
-            const ie = ["uniforms"];
-            if ("atlas" === ee.texture) {
-              ee.animated && ie.push("animData"), ie.push("sampler");
-              for (let He = 0; He < ee.atlasCount; He++) ie.push("textureArray")
-            } else "single" === ee.texture && ie.push("sampler", "texture");
-            return ie
-          }(ee),
-          He = ie.join(",");
-        let ye = this.materialLayouts.get(He);
-        if (!ye) {
-          const ee = GPUShaderStage.FRAGMENT;
-          ye = this.device.createBindGroupLayout({
-            label: `terrain-material-${He}`,
-            entries: ie.map(((ie, He) => {
-              switch (ie) {
-                case "uniforms":
-                  return {
-                    binding: He, visibility: GPUShaderStage.VERTEX | ee, buffer: {
-                      type: "uniform"
-                    }
-                  };
-                case "animData":
-                  return {
-                    binding: He, visibility: GPUShaderStage.VERTEX | ee, buffer: {
-                      type: "read-only-storage"
-                    }
-                  };
-                case "sampler":
-                  return {
-                    binding: He, visibility: ee, sampler: {
-                      type: "filtering"
-                    }
-                  };
-                case "texture":
-                  return {
-                    binding: He, visibility: ee, texture: {
-                      sampleType: "float",
-                      viewDimension: "2d"
-                    }
-                  };
-                case "textureArray":
-                  return {
-                    binding: He, visibility: ee, texture: {
-                      sampleType: "float",
-                      viewDimension: "2d-array"
-                    }
+              back: function(WW) {
+                CW.push(WW)
+              },
+              endOfFile: function() {
+                return 0 === CW.length && pW >= VW
+              },
+              nextToken: function(YW) {
+                if (CW.length) return CW.pop();
+                if (pW >= VW) return;
+                let vW = !!YW && YW.ignoreUnclosed;
+                switch (yW = gW.charCodeAt(pW), yW) {
+                  case EW:
+                  case NW:
+                  case LW:
+                  case cW:
+                  case PW:
+                    TW = pW;
+                    do {
+                      TW += 1, yW = gW.charCodeAt(TW)
+                    } while (yW === NW || yW === EW || yW === LW || yW === cW || yW === PW);
+                    eW = ["space", gW.slice(pW, TW)], pW = TW - 1;
+                    break;
+                  case wW:
+                  case tW:
+                  case lW:
+                  case AW:
+                  case UW:
+                  case bW:
+                  case xW: {
+                    let WW = String.fromCharCode(yW);
+                    eW = [WW, WW, pW];
+                    break
                   }
+                  case ZW:
+                    if (oW = fW.length ? fW.pop()[1] : "", dW = gW.charCodeAt(pW + 1), "url" === oW && dW !== WW && dW !== iW && dW !== NW && dW !== EW && dW !== LW && dW !== PW && dW !== cW) {
+                      TW = pW;
+                      do {
+                        if (nW = !1, TW = gW.indexOf(")", TW + 1), -1 === TW) {
+                          if (DW || vW) {
+                            TW = pW;
+                            break
+                          }
+                          XW("bracket")
+                        }
+                        for (uW = TW; gW.charCodeAt(uW - 1) === OW;) uW -= 1, nW = !nW
+                      } while (nW);
+                      eW = ["brackets", gW.slice(pW, TW + 1), pW, TW], pW = TW
+                    } else TW = gW.indexOf(")", pW + 1), hW = gW.slice(pW, TW + 1), -1 === TW || KW.test(hW) ? eW = ["(", "(", pW] : (eW = ["brackets", hW, pW, TW], pW = TW);
+                    break;
+                  case WW:
+                  case iW:
+                    JW = yW === WW ? "'" : '"', TW = pW;
+                    do {
+                      if (nW = !1, TW = gW.indexOf(JW, TW + 1), -1 === TW) {
+                        if (DW || vW) {
+                          TW = pW + 1;
+                          break
+                        }
+                        XW("string")
+                      }
+                      for (uW = TW; gW.charCodeAt(uW - 1) === OW;) uW -= 1, nW = !nW
+                    } while (nW);
+                    eW = ["string", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                    break;
+                  case kW:
+                    sW.lastIndex = pW + 1, sW.test(gW), TW = 0 === sW.lastIndex ? gW.length - 1 : sW.lastIndex - 2, eW = ["at-word", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                    break;
+                  case OW:
+                    for (TW = pW, HW = !0; gW.charCodeAt(TW + 1) === OW;) TW += 1, HW = !HW;
+                    if (yW = gW.charCodeAt(TW + 1), HW && yW !== mW && yW !== NW && yW !== EW && yW !== LW && yW !== cW && yW !== PW && (TW += 1, SW.test(gW.charAt(TW)))) {
+                      for (; SW.test(gW.charAt(TW + 1));) TW += 1;
+                      gW.charCodeAt(TW + 1) === NW && (TW += 1)
+                    }
+                    eW = ["word", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                    break;
+                  default:
+                    yW === mW && gW.charCodeAt(pW + 1) === jW ? (TW = gW.indexOf("*/", pW + 2) + 1, 0 === TW && (DW || vW ? TW = gW.length : XW("comment")), eW = ["comment", gW.slice(pW, TW + 1), pW, TW], pW = TW) : (MW.lastIndex = pW + 1, MW.test(gW), TW = 0 === MW.lastIndex ? gW.length - 1 : MW.lastIndex - 2, eW = ["word", gW.slice(pW, TW + 1), pW, TW], fW.push(eW), pW = TW)
+                }
+                return pW++, eW
+              },
+              position: function() {
+                return pW
               }
-            }))
-          }), this.materialLayouts.set(He, ye)
-        }
-        return ye
-      }
-      async createMaterialBindGroup(ee, ie) {
-        const He = [{
-          buffer: ee.uniformBuffer
-        }];
-        if (ie) {
-          const ye = await ii(this.device, ie.sources);
-          ee.atlasCount = ye.length, ee.W4 = ye[0].layerWidth, ee.atlasLayers = ye[0].layers, ie.animDataPerTex && He.push({
-            buffer: Ie(this.device, Float32Array.from(ie.animDataPerTex), GPUBufferUsage.STORAGE, "terrain-anim")
-          }), He.push(this.sampler);
-          for (const ee of ye) He.push(ee.texture.createView({
-            dimension: "2d-array"
-          }))
-        } else if ("single" === ee.texture) {
-          const {
-            url: ie
-          } = ee.model.diffuseTexture.source, {
-            pixels: ye,
-            width: be,
-            height: Me
-          } = await ei(ie);
-          He.push(this.sampler), He.push(Ne(this.device, ye, be, Me, 1, `terrain-${ie}`).createView({
-            dimension: "2d"
-          }))
-        }
-        const ye = this.materialLayout(this.programKey(ee, !1));
-        ee.bindGroupLayout = ye, ee.bindGroup = this.device.createBindGroup({
-          label: `terrain-material-${ee.model.name}`,
-          layout: ye,
-          entries: He.map(((ee, ie) => ({
-            binding: ie,
-            resource: ee
-          })))
-        })
-      }
-      programKey(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const ye = He ? He.lighting : this.lighting,
-          be = He ? He.Zf : this.Zf,
-          Me = {
-            texture: ee.texture,
-            atlasCount: ee.atlasCount,
-            W4: ee.W4,
-            atlasLayers: ee.atlasLayers,
-            animated: ee.animated,
-            alphaTest: ee.model.transparencyMode === te.s.alphaTest,
-            lighting: ye,
-            dirLightCount: He ? He.dirLightCount : this.dirLightCount,
-            packed: ie
-          };
-        if (!be) return Me;
-        const Ke = this.shaderPackFields(ee, be),
-          Ue = "atlas" === ee.texture && ee.model.transparencyMode === te.s.opaque && Py(Ke.packVariant);
-        return {
-          ...Me,
-          ...Ke,
-          alphaTest: Me.alphaTest || Ue
-        }
-      }
-      shaderPackFields(ee, ie) {
-        const He = this.packVariant(ee, ie);
-        return void 0 === He ? wy : {
-          packVariant: He,
-          liquid: ee.liquid
-        }
-      }
-      packVariant(ee, ie) {
-        return ee.customRenderMat ? void 0 : function(ee, ie) {
-          const He = ee ? ee.defineFor(ie ? "liquid" : "terrain") : 0;
-          return 0 === He ? void 0 : He
-        }(ie, ee.liquid)
-      }
-      isBlended(ee) {
-        return ee.model.transparencyMode === te.s.alphaBlend
-      }
-      shaderModule(ee, ie) {
-        let He = this.modules.get(ee);
-        return He || (He = this.device.createShaderModule({
-          label: ie,
-          code: ee
-        }), this.modules.set(ee, He)), He
-      }
-      pipelineFor(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (!ee.bindGroupLayout) return null;
-        if (!ye) return this.pipelineOf(ee, ie, He);
-        const be = this.pipelineIdNow(ee, ie, !0, He),
-          Me = this.pipelines.get(be);
-        if (Me) return Me;
-        const Ke = this.pipelineOf(ee, ie, He);
-        return Ke && void 0 === Me && this.startPipeline(be, ee, {
-          ...this.programKey(ee, ie),
-          resting: ye
-        }, He), Ke
-      }
-      pipelineOf(ee, ie, He) {
-        const ye = this.pipelineIdNow(ee, ie, !1, He),
-          be = this.pipelines.get(ye);
-        return void 0 !== be ? be : (this.startPipeline(ye, ee, this.programKey(ee, ie), He), null)
-      }
-      pipelineIdNow(ee, ie, He, ye) {
-        const {
-          lighting: be,
-          dirLightCount: Me
-        } = this, {
-          transparencyMode: Ke,
-          backFaceCulling: Ue
-        } = ee.model, Fe = this.packVariant(ee, this.Zf), Je = (ie ? 2 : 0) + (He ? 1 : 0), oe = ee.pipelineIds[Je];
-        if (null !== oe && oe.lighting === be && oe.dirLightCount === Me && oe.packVariant === Fe && oe.transparencyMode === Ke && oe.cull === Ue && oe.atlasCount === ee.atlasCount && oe.W4 === ee.W4 && oe.atlasLayers === ee.atlasLayers && oe.colorFormat === ye._colorFormat && oe.depthStencilFormat === ye._depthStencilFormat && oe.sampleCount === ye._sampleCount) return oe.id;
-        const Re = this.programKey(ee, ie),
-          ke = this.pipelineId(ee, He ? {
-            ...Re,
-            resting: He
-          } : Re, ye);
-        return ee.pipelineIds[Je] = {
-          id: ke,
-          lighting: be,
-          dirLightCount: Me,
-          packVariant: Fe,
-          transparencyMode: Ke,
-          cull: Ue,
-          atlasCount: ee.atlasCount,
-          W4: ee.W4,
-          atlasLayers: ee.atlasLayers,
-          colorFormat: ye._colorFormat,
-          depthStencilFormat: ye._depthStencilFormat,
-          sampleCount: ye._sampleCount
-        }, ke
-      }
-      pipelineId(ee, ie, He) {
-        return HF(ie, this.isBlended(ee), ee.model.backFaceCulling, He)
-      }
-      pipelineBuild(ee, ie, He) {
-        var ye;
-        const be = this.pipelineId(ee, ie, He);
-        return null !== (ye = this.builds.get(be)) && void 0 !== ye ? ye : this.startPipeline(be, ee, ie, He)
-      }
-      startPipeline(ee, ie, He, ye) {
-        var be;
-        this.pipelines.set(ee, null);
-        const Me = eb(He),
-          Ke = this.isBlended(ie),
-          Ue = this.shadowMask && ye._depthStencilFormat ? function(ee, ie, He, ye) {
-            if (void 0 === ee.packVariant || ee.liquid || ie) return "none";
-            const be = (0, Qi.c)(ee.packVariant);
-            return null === be || void 0 === be || !be.sunShadow || !Uy(be, He) || be.discards || ee.alphaTest && Py(ee.packVariant) ? "none" : ye ? "edge" : "plain"
-          }(He, Ke, !!this.sunShadow, ye._sampleCount > 1) : "none";
-        let Fe;
-        try {
-          Fe = ib(He, !!this.sunShadow, Ue)
-        } catch (pe) {
-          if (!ay(He)) throw pe;
-          return this.failedPackBuild(ee, He, Me, pe)
-        }
-        const Je = this.shaderModule(Fe, Me),
-          oe = [];
-        He.packed || (oe.push(function(ee, ie) {
-          const He = [{
-            shaderLocation: GU.position,
-            offset: Ni.f.sM,
-            format: "float32x3"
-          }, {
-            shaderLocation: GU.normal,
-            offset: Ni.f.normalOffset,
-            format: "snorm8x4"
-          }, {
-            shaderLocation: GU.color,
-            offset: Ni.f.colorOffset,
-            format: "unorm8x4"
-          }];
-          return ee && He.push({
-            shaderLocation: GU.uv,
-            offset: Ni.f.uvOffset,
-            format: "float32x2"
-          }), ie && He.push({
-            shaderLocation: GU.blockFlagWords,
-            offset: Ni.f.normalOffset,
-            format: "uint32x2"
-          }), {
-            arrayStride: Ni.f.strideWithoutAtlas,
-            stepMode: "vertex",
-            attributes: He
-          }
-        }("none" !== He.texture, ay(He))), He.lighting && oe.push(QU));
-        const Re = ie.model.backFaceCulling,
-          ke = {
-            label: Me,
-            layout: this.device.createPipelineLayout({
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, ie.bindGroupLayout, ...hM(this.device, He, !!this.sunShadow, "none" !== Ue)]
-            }),
-            vertex: {
-              module: Je,
-              entryPoint: "mainVertex",
-              buffers: oe
-            },
-            fragment: Bi({
-              module: Je,
-              entryPoint: "mainFragment"
-            }, ye, Ke ? eF : null),
-            depthStencil: ye._depthStencilFormat ? {
-              format: ye._depthStencilFormat,
-              depthCompare: null !== (be = ye._depthCompare) && void 0 !== be ? be : ti,
-              depthWriteEnabled: !0
-            } : void 0,
-            multisample: {
-              count: ye._sampleCount
-            },
-            primitive: {
-              topology: "triangle-list",
-              frontFace: "ccw",
-              cullMode: Re ? "back" : "none"
             }
-          },
-          qe = He.resting ? 0 : 1;
-        this.compiling += qe;
-        const fe = "none" === Ue ? this.device.createRenderPipelineAsync(ke) : this.startMaskPipelines(Je, ke, "edge" === Ue);
-        fe.then((ie => {
-          this.compiling -= qe, this.pipelines.set(ee, ie)
-        }), (ee => {
-          this.compiling -= qe, console.error(`Lite terrain pipeline ${Me} failed`, ee), lU(this.device, He, Me, Je, ee)
-        }));
-        const Te = {
-          name: Me,
-          module: Je,
-          built: fe
-        };
-        return this.builds.set(ee, Te), Te
-      }
-      startMaskPipelines(ee, ie, He) {
-        const ye = ie.depthStencil,
-          be = this.device.createRenderPipelineAsync(He ? ie : {
-            ...ie,
-            depthStencil: {
-              ...ye,
-              depthCompare: "equal",
-              depthWriteEnabled: !1
-            }
-          }),
-          Me = this.device.createRenderPipelineAsync({
-            ...ie,
-            label: `${ie.label}-prepass`,
-            fragment: {
-              module: ee,
-              entryPoint: "prepassFragment",
-              targets: [{
-                format: YU
-              }]
-            },
-            multisample: {
-              count: 1
-            }
-          });
-        return Promise.all([be, Me]).then((ee => {
-          let [ie, He] = ee;
-          return this.prepassOf.set(ie, He), this.maskPipelines++, ie
-        }))
-      }
-      failedPackBuild(ee, ie, He, ye) {
-        console.error(`Lite terrain pipeline ${He} failed`, ye), lU(this.device, ie, He, null, ye);
-        const be = Promise.reject(ye);
-        be.catch((() => {}));
-        const Me = {
-          name: He,
-          module: null,
-          built: be
-        };
-        return this.builds.set(ee, Me), Me
-      }
-      checkShaderPack(ee) {
-        return vU(ee, {
-          device: this.device,
-          target: this.target,
-          material: ee => this.materialFor(ee),
-          programKey: (ee, ie, He) => this.programKey(ee, ie, He),
-          pipelineBuild: (ee, ie, He) => this.pipelineBuild(ee, ie, He)
-        })
-      }
-      createBinding(ee, ie, He) {
-        return this.target = ie, {
-          renderable: ee,
-          pipeline: Pi(this.device, ie),
-          draw: ee => {
-            this.geometry.setDrawing(!0);
-            try {
-              return He ? this.drawTransparent(ee, ie) : this.drawOpaque(ee, ie)
-            } finally {
-              this.geometry.setDrawing(!1)
+          }, WO
+        }(),
+        OW = vO(),
+        mW = CO(),
+        EW = XO(),
+        NW = qO();
+      const PW = {
+        empty: !0,
+        space: !0
+      };
+      return tO = class {
+        constructor(WW) {
+          this.input = WW, this.root = new EW, this.current = this.root, this.spaces = "", this.semicolon = !1, this.createTokenizer(), this.root.source = {
+            input: WW,
+            start: {
+              column: 1,
+              line: 1,
+              offset: 0
             }
           }
         }
-      }
-      prepare(ee, ie) {
-        var He, ye, be, Me;
-        const {
-          uk: Ke
-        } = ee;
-        this.lighting = ee.GT;
-        const Ue = (0, BU.x)(ie);
-        this.dirLightCount = Math.min(Ue, 4), this.Zf = null !== (He = Ke.Zf) && void 0 !== He ? He : null, Ue > 4 && this.warnOnce("dirLights", "Lite terrain lights with the first 4 directional lights only."), this.writeFrameUniforms(ee, ie), this.animateMaterials(ie.animTick);
-        const Fe = Ke.yq,
-          Je = Fe[0] !== this.originOffset[0] || Fe[1] !== this.originOffset[1] || Fe[2] !== this.originOffset[2];
-        Je && (this.originOffset[0] = Fe[0], this.originOffset[1] = Fe[1], this.originOffset[2] = Fe[2]);
-        const oe = ie.eye;
-        this.eye[0] = oe[0], this.eye[1] = oe[1], this.eye[2] = oe[2], this.writeShaderPackInputs();
-        const Re = ie.projectionMatrix,
-          ke = 0 === Re[15];
-        let qe = 0;
-        (Je || this.eye[0] !== this.faceEye[0] || this.eye[1] !== this.faceEye[1] || this.eye[2] !== this.faceEye[2]) && (this.faceEpoch++, this.faceEye[0] = this.eye[0], this.faceEye[1] = this.eye[1], this.faceEye[2] = this.eye[2]);
-        let {
-          faceEpoch: fe
-        } = this;
-        Ai(this.transparentRenderable._worldCenter, ie, wi), this.resetBatches(ke), this.transparent.length = 0, this.unlit.length = 0;
-        const Te = Ke.xR.ER,
-          pe = Te / 2 * Math.sqrt(3);
-        let Xe = 0;
-        const ze = !!this.Zf && Dy(this.Zf.defineFor("liquid"));
-        let Be = !1;
-        const Ee = null !== (ye = null === (be = Ke.iW) || void 0 === be ? void 0 : be.visibility) && void 0 !== ye ? ye : null,
-          ge = this.visCull && ke && 0 === this.compiling && null !== Ee && Ke.xR.KMe[0] >= this.visCullMinDistance ? this.target : null,
-          Oe = this.visPassable,
-          de = this.visCandidates,
-          We = this.visCandidateBatches;
-        Oe.clear(), this.visBatchDraws.clear(), this.visDrawsMaterial = null;
-        let te = 0;
-        this.visCulledParts = 0, this.visCulledTriangles = 0;
-        let Ze = 0;
-        const we = (ee, He) => {
-          if (!He) return this.transparent.push(ee), void(Ze += 2 * ee.faceCount);
-          if (null !== ee.faceGroups && He.faceCull) {
-            if (0 === qe && (qe = (0, nU.c)(Re, ie.renderWidth, ie.renderHeight), qe !== this.faceFocalPx && (this.faceFocalPx = qe, fe = ++this.faceEpoch)), ee.faceEpoch !== fe) {
-              ee.faceEpoch = fe;
-              const ie = Math.sqrt(ee.distance) + pe,
-                He = (0, nU.j)(ee.planePX, ee.planeNX, ee.planePY, ee.planeNY, ee.planePZ, ee.planeNZ, this.eye[0] - (ee.origin[0] - this.originOffset[0]), this.eye[1] - (ee.origin[1] - this.originOffset[1]), this.eye[2] - (ee.origin[2] - this.originOffset[2]), (0, nU.g)(ie, qe));
-              He !== ee.faceMask && this.chooseFaceRanges(ee, ee.faceGroups, He)
-            }
-            if (0 === ee.rangeCount) return
-          } else - 1 !== ee.faceMask && this.drawWhole(ee);
-          He.meshes.push(ee), Ze += 2 * ((ee.rangeCount > 0 ? ee.count0 : 0) + (ee.rangeCount > 1 ? ee.count1 : 0))
-        };
-        for (const Pe of this.chunks.values()) {
-          Je && this.writeSlot(Pe);
-          const ee = Pe.mesh.visibility;
-          ee !== Pe.visibility && (Pe.visibility = ee, this.slots.setVisibility(Pe.slot, ee));
-          const {
-            material: He
-          } = Pe;
-          this.geometry.lost(Pe) && performance.now() >= Pe.lostRetryAt && this.remeshLost(Ke, Pe);
-          const ye = !(null === He || void 0 === He || !He.bindGroup) && this.geometry.backed(Pe),
-            be = ye && this.lighting && !Pe.vertices.page.twin;
-          if (ge && (Number.isNaN(Pe.key) && (Pe.ci = Math.floor(Pe.origin[0] / Te), Pe.cj = Math.floor(Pe.origin[1] / Te), Pe.ck = Math.floor(Pe.origin[2] / Te), Pe.key = (0, sU.f)(Pe.ci, Pe.cj, Pe.ck)), (!ye || ee < 1 || be || !this.batchDraws(He, Pe.packed, ge)) && this.visSeeThrough(Pe, ge) && Oe.add(Pe.key)), !ye) continue;
-          be || (Pe.lostRemeshes = 0);
-          const Me = Pe.origin[0] - this.originOffset[0],
-            Ue = Pe.origin[1] - this.originOffset[1],
-            Fe = Pe.origin[2] - this.originOffset[2];
-          if (!(0, UU.b)(ie.frustum, Me, Ue, Fe, Te)) continue;
-          const oe = Me + Te / 2 - this.eye[0],
-            Re = Ue + Te / 2 - this.eye[1],
-            qe = Fe + Te / 2 - this.eye[2];
-          if (Pe.distance = oe * oe + Re * Re + qe * qe, this.lighting && !Pe.lit && (Xe = Math.max(Xe, Pe.vertexCount), this.unlit.push(Pe)), be) continue;
-          const fe = this.isBlended(He) ? null : this.batchFor(He, Pe.packed, Pe.vertices.page, 1 === ee, ke);
-          ge ? (de[te] = Pe, We[te++] = fe) : we(Pe, fe)
-        }
-        const De = ge ? this.sweepVisibility(ee, ie, Ee) : null;
-        null === (Me = (0, LM.y)(Ke)) || void 0 === Me || Me.update(ie.frustum, this.originOffset, Te, De);
-        for (let Pe = 0; Pe < te; Pe++) {
-          const ee = de[Pe];
-          !De || De.isDrawn(ee.ci, ee.cj, ee.ck) ? we(ee, We[Pe]) : (this.visCulledParts++, this.visCulledTriangles += 2 * ee.faceCount)
-        }
-        for (const Pe of this.transparent) Be ||= ze && Pe.material.liquid && !Pe.material.customRenderMat;
-        this.submittedTriangles = Ze, De && this.visCheck && ++this.visCheckFrame >= 60 && (this.visCheckFrame = 0, this.runVisCheck(ee, ie, De)), this.slots.flush(), this.sceneDepth ? this.sceneDepth.setWanted(Be) : Be && this.warnOnce("sceneDepth", "Lite: a shader pack reads scene depth on a page that didn't turn it on, so liquids find nothing behind them"), this.lighting && Xe > 0 && this.geometry.lightFullSky(this.unlit, Xe);
-        for (const Pe of this.opaqueBatches) this.chunkSorter.sort(Pe.meshes, 1) || Pe.meshes.sort(yF);
-        this.orderBatches(), this.chunkSorter.sort(this.transparent, -1) || this.transparent.sort(bF)
-      }
-      sweepVisibility(ee, ie, He) {
-        const {
-          xR: ye
-        } = ee.uk, be = ye.ER, Me = this.visPassable, Ke = this.eye[0] + this.originOffset[0], Ue = this.eye[1] + this.originOffset[1], Fe = this.eye[2] + this.originOffset[2];
-        if (!He.eyeClear(Ke, Ue, Fe, ie.near, ie.projectionMatrix, ye)) return null;
-        const [Je, oe] = ye.KMe, Re = He.update(Ke, Ue, Fe, be, Je, oe, Me);
-        return this.visSweeps = He.sweeps, Re ? He : null
-      }
-      visSeeThrough(ee, ie) {
-        const {
-          material: He
-        } = ee;
-        return (!He || !this.isBlended(He)) && (ee.mesh.visibility < 1 || !(null !== He && void 0 !== He && He.bindGroup) || ee.faceCount > 0 && (!this.geometry.backed(ee) || this.lighting && !ee.vertices.page.twin) || !this.batchDraws(He, ee.packed, ie))
-      }
-      batchDraws(ee, ie, He) {
-        var ye;
-        const be = ie ? 2 : 0;
-        if (ee === this.visDrawsMaterial && function(ee, ie) {
-            return 0 !== (ee & 1 << ie)
-          }(this.visDrawsBits, be)) return 0 !== (this.visDrawsBits & 2 << be);
-        let Me = null !== (ye = this.visBatchDraws.get(ee)) && void 0 !== ye ? ye : 0;
-        if (!(Me & 1 << be)) {
-          Me |= 1 << be | (!!ee.bindGroupLayout && this.canDraw(ee, ie) && !!this.pipelines.get(this.pipelineIdNow(ee, ie, !1, He)) ? 2 << be : 0), this.visBatchDraws.set(ee, Me)
-        }
-        return this.visDrawsMaterial = ee, this.visDrawsBits = Me, 0 !== (Me & 2 << be)
-      }
-      runVisCheck(ee, ie, He) {
-        const {
-          uk: ye
-        } = ee, {
-          xR: be
-        } = ye, Me = be.ER, Ke = new Set;
-        for (const qe of this.chunks.values()) Ke.add(qe.key);
-        const Ue = nb.Matrix.FromArray(ie.viewProjectionMatrix).invert(),
-          [Fe, Je, oe] = this.originOffset,
-          Re = new nb.rf,
-          ke = function(ee, ie, He, ye) {
-            const be = new Set;
-            for (let Me = 0; Me < 27; Me++)
-              for (let Ke = 0; Ke < 48; Ke++) {
-                const Ue = He((Ke + .5) / 48 * 2 - 1, (Me + .5) / 27 * 2 - 1);
-                IU(ee, ie, [Ue[0] - ie[0], Ue[1] - ie[1], Ue[2] - ie[2]], ye, be)
+        atrule(WW) {
+          let iW, OW, EW, NW = new mW;
+          NW.name = WW[1].slice(1), "" === NW.name && this.unnamedAtrule(NW, WW), this.init(NW, WW[2]);
+          let PW = !1,
+            LW = !1,
+            cW = [],
+            wW = [];
+          for (; !this.tokenizer.endOfFile();) {
+            if (iW = (WW = this.tokenizer.nextToken())[0], "(" === iW || "[" === iW ? wW.push("(" === iW ? ")" : "]") : "{" === iW && wW.length > 0 ? wW.push("}") : iW === wW[wW.length - 1] && wW.pop(), 0 === wW.length) {
+              if (";" === iW) {
+                NW.source.end = this.Vk(WW[2]), NW.source.end.offset++, this.semicolon = !0;
+                break
               }
-            return be
-          }({
-            sG: (ee, ie, He) => be.sG(ee, ie, He),
-            occluders: He.occluders,
-            opaque: He.opaque,
-            BR: Me,
-            isDrawn: (ee, ie, ye) => He.isDrawn(ee, ie, ye),
-            hasParts: (ee, ie, He) => Ke.has((0, sU.f)(ee, ie, He))
-          }, [this.eye[0] + Fe, this.eye[1] + Je, this.eye[2] + oe], ((ee, ie) => (nb.rf.TransformCoordinatesFromFloatsToRef(ee, ie, .5, Ue, Re), [Re.x + Fe, Re.y + Je, Re.z + oe])), (be.KMe[0] + 1) * Me);
-        this.visViolations = ke.size;
-        for (const qe of ke) this.warnOnce(`vis:${qe}`, `Lite terrain cave culling skipped chunk ${qe}, which a ray from the eye reaches.`)
-      }
-      writeShaderPackInputs() {
-        var ee;
-        null !== (ee = this.Zf) && void 0 !== ee && ee.isRunning() && (this.shaderPackInputs ??= new NM(this.device, this.Zf.textureLayers(), this.sunShadow), this.shaderPackInputs.write(this.Zf, this.eye, this.lighting))
-      }
-      bindShaderPackInputs(ee, ie, He) {
-        var ye, be, Me, Ke;
-        let Ue = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const Fe = this.packVariant(ie, He);
-        if (void 0 === Fe) return;
-        this.shaderPackInputs || (this.shaderPackInputs = new NM(this.device, He.textureLayers(), this.sunShadow), this.shaderPackInputs.write(He, this.eye, this.lighting));
-        const Je = Dy(Fe) ? null !== (ye = null === (be = this.sceneDepth) || void 0 === be ? void 0 : be.view) && void 0 !== ye ? ye : this.standIn() : null,
-          oe = Ue ? null !== (Me = null === (Ke = this.shadowMask) || void 0 === Ke ? void 0 : Ke.view) && void 0 !== Me ? Me : this.standIn() : null;
-        this.shaderPackInputs.bind(ee, Je, IM(Fe, !!this.sunShadow), oe)
-      }
-      standIn() {
-        return this.depthStandIn ??= this.device.createTexture({
-          label: "scene-depth-stand-in",
-          size: [1, 1],
-          format: "r32float",
-          usage: GPUTextureUsage.TEXTURE_BINDING
-        }).createView()
-      }
-      sunShadowGroup() {
-        var ee, ie;
-        return null !== (ee = null === (ie = this.shaderPackInputs) || void 0 === ie ? void 0 : ie.bindGroupFor(null, !0)) && void 0 !== ee ? ee : null
-      }
-      resetBatches(ee) {
-        const ie = this.opaqueBatches;
-        let He = 0;
-        for (const ye of ie) ye.meshes.length > 0 && (ye.meshes.length = 0, ye.faceCull = this.batchFaceCull(ye.material, ee), ie[He++] = ye);
-        ie.length = He
-      }
-      orderBatches() {
-        const ee = this.opaqueBatches;
-        for (let ie = 0; ie < ee.length; ie++) {
-          const He = ee[ie];
-          He.group = ie;
-          for (let ye = 0; ye < ie; ye++) {
-            const ie = ee[ye];
-            if (ie.material === He.material && ie.packed === He.packed) {
-              He.group = ie.group;
+              if ("{" === iW) {
+                LW = !0;
+                break
+              }
+              if ("}" === iW) {
+                if (cW.length > 0) {
+                  for (EW = cW.length - 1, OW = cW[EW]; OW && "space" === OW[0];) OW = cW[--EW];
+                  OW && (NW.source.end = this.Vk(OW[3] || OW[2]), NW.source.end.offset++)
+                }
+                this.end(WW);
+                break
+              }
+              cW.push(WW)
+            } else cW.push(WW);
+            if (this.tokenizer.endOfFile()) {
+              PW = !0;
               break
             }
           }
-          He.nearest = He.meshes.length > 0 ? He.meshes[0].distance : 1 / 0
+          NW.raws.between = this.spacesAndCommentsFromEnd(cW), cW.length ? (NW.raws.afterName = this.spacesAndCommentsFromStart(cW), this.raw(NW, "params", cW), PW && (WW = cW[cW.length - 1], NW.source.end = this.Vk(WW[3] || WW[2]), NW.source.end.offset++, this.spaces = NW.raws.between, NW.raws.between = "")) : (NW.raws.afterName = "", NW.params = ""), LW && (NW.nodes = [], this.current = NW)
         }
-        ee.sort(hU)
-      }
-      batchFor(ee, ie, He, ye, be) {
-        for (const Ke of this.opaqueBatches)
-          if (Ke.material === ee && Ke.packed === ie && Ke.page === He && Ke.resting === ye) return Ke;
-        const Me = {
-          material: ee,
-          packed: ie,
-          page: He,
-          resting: ye,
-          meshes: [],
-          group: 0,
-          nearest: 0,
-          faceCull: this.batchFaceCull(ee, be)
-        };
-        return this.opaqueBatches.push(Me), Me
-      }
-      batchFaceCull(ee, ie) {
-        return !(!ie || !(0, SU.v)(ee.model)) && (!this.Zf || ! function(ee) {
-          var ie;
-          return !(null === (ie = (0, Qi.c)(ee)) || void 0 === ie || !ie.movesVertices)
-        }(this.packVariant(ee, this.Zf)))
-      }
-      writeFrameUniforms(ee, ie) {
-        const He = this.frameUniforms,
-          ye = cy;
-        if ((0, BU.A)(ee, He), He[ye.fogInfos] = ie.fogEnabled ? ie.fogMode : 0, He[ye.fogInfos + 1] = ie.fogStart, He[ye.fogInfos + 2] = ie.fogEnd, He[ye.fogInfos + 3] = ie.fogDensity, He.set(ie.fogColour, ye.fogColour), He[ye.outputHeight] = ie.renderHeight, He.set(ie.ambientColour, ye.sceneAmbient), (0, BU.v)(ie, this.dirLightCount, this.dirLightUniforms), !this.aoLevelsWritten) {
-          const ie = (0, EU.i)(ee.XT, ee.Sf, ee.jf);
-          for (let ee = 0; ee < 4; ee++) He[ye.aoLevels + ee] = ie[ee] / 255;
-          this.aoLevelsWritten = !0
+        checkMissedSemicolon(WW) {
+          let iW = this.colon(WW);
+          if (!1 === iW) return;
+          let OW, mW = 0;
+          for (let EW = iW - 1; EW >= 0 && (OW = WW[EW], "space" === OW[0] || (mW += 1, 2 !== mW)); EW--);
+          throw this.input.error("Missed semicolon", "word" === OW[0] ? OW[3] + 1 : OW[2])
         }
-        this.device.queue.writeBuffer(this.frameBuffer, 0, He)
-      }
-      animateMaterials(ee) {
-        const ie = Ly.anim;
-        for (const He of this.materials.values()) He.animated && (He.uniformData[ie] = ee, this.device.queue.writeBuffer(He.uniformBuffer, 4 * ie, He.uniformData, ie, 1))
-      }
-      canDraw(ee, ie) {
-        return !("atlas" === ee.texture && !ie) || (this.warnOnce(`stride:${ee.id}`, `Lite terrain: material "${ee.model.name}" samples the atlas but its mesh has no quad records, which hold its atlas indices.`), !1)
-      }
-      drawOpaque(ee, ie) {
-        let He = 0;
-        ee.setBindGroup(1, this.frameBindGroup);
-        for (const ye of this.opaqueBatches) {
-          if (!ye.meshes.length || !this.canDraw(ye.material, ye.packed)) continue;
-          const be = this.pipelineFor(ye.material, ye.packed, ie, ye.resting);
-          be && (ee.setPipeline(be), ee.setBindGroup(2, ye.material.bindGroup), this.Zf && this.bindShaderPackInputs(ee, ye.material, this.Zf, this.prepassOf.has(be)), He += this.drawBatch(ee, ye))
-        }
-        return He
-      }
-      get readsMask() {
-        return this.maskPipelines > 0
-      }
-      drawPrepass(ee, ie, He) {
-        const ye = this.target,
-          be = this.Zf;
-        if (!ye || !be || 0 === this.maskPipelines) return 0;
-        let Me = 0,
-          Ke = null;
-        this.geometry.setDrawing(!0);
-        try {
-          for (const Ue of this.opaqueBatches) {
-            if (!Ue.meshes.length || !this.canDraw(Ue.material, Ue.packed)) continue;
-            const Fe = this.pipelineFor(Ue.material, Ue.packed, ye, Ue.resting),
-              Je = Fe && this.prepassOf.get(Fe);
-            Je && (Ke || (Ke = ee.beginRenderPass(ie), Ke.setBindGroup(0, He), Ke.setBindGroup(1, this.frameBindGroup)), Ke.setPipeline(Je), Ke.setBindGroup(2, Ue.material.bindGroup), this.bindShaderPackInputs(Ke, Ue.material, be, !0), Me += this.drawBatch(Ke, Ue))
+        colon(WW) {
+          let iW, OW, mW, EW = 0;
+          for (let [NW, PW] of WW.entries()) {
+            if (iW = PW, OW = iW[0], "(" === OW && (EW += 1), ")" === OW && (EW -= 1), 0 === EW && ":" === OW) {
+              if (mW) {
+                if ("word" === mW[0] && "progid" === mW[1]) continue;
+                return NW
+              }
+              this.doubleColon(iW)
+            }
+            mW = iW
           }
-        } finally {
-          var Ue;
-          null === (Ue = Ke) || void 0 === Ue || Ue.end(), this.geometry.setDrawing(!1)
+          return !1
         }
-        return Me
-      }
-      drawBatch(ee, ie) {
-        let He = 0;
-        for (const ye of ie.meshes) {
-          const {
-            rangeCount: ie
-          } = ye;
-          ie > 0 && (He += this.geometry.draw(ee, ye, this.lighting, ye.first0, ye.count0), ie > 1 && (He += this.geometry.draw(ee, ye, this.lighting, ye.first1, ye.count1)))
+        comment(WW) {
+          let iW = new OW;
+          this.init(iW, WW[2]), iW.source.end = this.Vk(WW[3] || WW[2]), iW.source.end.offset++;
+          let mW = WW[1].slice(2, -2);
+          if (/^\s*$/.test(mW)) iW.text = "", iW.raws.left = mW, iW.raws.right = "";
+          else {
+            let WW = mW.match(/^(\s*)([^]*\S)(\s*)$/);
+            iW.text = WW[2], iW.raws.left = WW[1], iW.raws.right = WW[3]
+          }
         }
-        return He
-      }
-      drawTransparent(ee, ie) {
-        let He = 0,
-          ye = null,
-          be = null;
-        ee.setBindGroup(1, this.frameBindGroup);
-        for (const Me of this.transparent) {
-          const Ke = Me.material;
-          if (!this.canDraw(Ke, Me.packed)) continue;
-          const Ue = this.pipelineFor(Ke, Me.packed, ie);
-          Ue && (Ue !== ye && (ee.setPipeline(Ue), ye = Ue, this.Zf && this.bindShaderPackInputs(ee, Ke, this.Zf)), Ke !== be && (ee.setBindGroup(2, Ke.bindGroup), be = Ke), He += this.geometry.draw(ee, Me, this.lighting))
+        createTokenizer() {
+          this.tokenizer = iW(this.input)
         }
-        return He
+        decl(iW, OW) {
+          let mW = new WW;
+          this.init(mW, iW[0][2]);
+          let EW, NW = iW[iW.length - 1];
+          for (";" === NW[0] && (this.semicolon = !0, iW.pop()), mW.source.end = this.Vk(NW[3] || NW[2] || function(WW) {
+              for (let iW = WW.length - 1; iW >= 0; iW--) {
+                let OW = WW[iW],
+                  mW = OW[3] || OW[2];
+                if (mW) return mW
+              }
+            }(iW)), mW.source.end.offset++;
+            "word" !== iW[0][0];) 1 === iW.length && this.unknownWord(iW), mW.raws.before += iW.shift()[1];
+          for (mW.source.start = this.Vk(iW[0][2]), mW.prop = ""; iW.length;) {
+            let WW = iW[0][0];
+            if (":" === WW || "space" === WW || "comment" === WW) break;
+            mW.prop += iW.shift()[1]
+          }
+          for (mW.raws.between = ""; iW.length;) {
+            if (EW = iW.shift(), ":" === EW[0]) {
+              mW.raws.between += EW[1];
+              break
+            }
+            "word" === EW[0] && /\w/.test(EW[1]) && this.unknownWord([EW]), mW.raws.between += EW[1]
+          }
+          "_" !== mW.prop[0] && "*" !== mW.prop[0] || (mW.raws.before += mW.prop[0], mW.prop = mW.prop.slice(1));
+          let PW, LW = [];
+          for (; iW.length && (PW = iW[0][0], "space" === PW || "comment" === PW);) LW.push(iW.shift());
+          this.precheckMissedSemicolon(iW);
+          for (let WW = iW.length - 1; WW >= 0; WW--) {
+            if (EW = iW[WW], "!important" === EW[1].toLowerCase()) {
+              mW.important = !0;
+              let OW = this.stringFrom(iW, WW);
+              OW = this.spacesFromEnd(iW) + OW, " !important" !== OW && (mW.raws.important = OW);
+              break
+            }
+            if ("important" === EW[1].toLowerCase()) {
+              let OW = iW.slice(0),
+                EW = "";
+              for (let iW = WW; iW > 0; iW--) {
+                let WW = OW[iW][0];
+                if (0 === EW.trim().indexOf("!") && "space" !== WW) break;
+                EW = OW.pop()[1] + EW
+              }
+              0 === EW.trim().indexOf("!") && (mW.important = !0, mW.raws.important = EW, iW = OW)
+            }
+            if ("space" !== EW[0] && "comment" !== EW[0]) break
+          }
+          iW.some((WW => "space" !== WW[0] && "comment" !== WW[0])) && (mW.raws.between += LW.map((WW => WW[1])).join(""), LW = []), this.raw(mW, "value", LW.concat(iW), OW), mW.value.includes(":") && !OW && this.checkMissedSemicolon(iW)
+        }
+        doubleColon(WW) {
+          throw this.input.error("Double colon", {
+            offset: WW[2]
+          }, {
+            offset: WW[2] + WW[1].length
+          })
+        }
+        emptyRule(WW) {
+          let iW = new NW;
+          this.init(iW, WW[2]), iW.selector = "", iW.raws.between = "", this.current = iW
+        }
+        end(WW) {
+          this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.semicolon = !1, this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.spaces = "", this.current.parent ? (this.current.source.end = this.Vk(WW[2]), this.current.source.end.offset++, this.current = this.current.parent) : this.unexpectedClose(WW)
+        }
+        endFile() {
+          this.current.parent && this.unclosedBlock(), this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.root.source.end = this.Vk(this.tokenizer.position())
+        }
+        freeSemicolon(WW) {
+          if (this.spaces += WW[1], this.current.nodes) {
+            let WW = this.current.nodes[this.current.nodes.length - 1];
+            WW && "rule" === WW.type && !WW.raws.ownSemicolon && (WW.raws.ownSemicolon = this.spaces, this.spaces = "")
+          }
+        }
+        Vk(WW) {
+          let iW = this.input.fromOffset(WW);
+          return {
+            column: iW.col,
+            line: iW.line,
+            offset: WW
+          }
+        }
+        init(WW, iW) {
+          this.current.push(WW), WW.source = {
+            input: this.input,
+            start: this.Vk(iW)
+          }, WW.raws.before = this.spaces, this.spaces = "", "comment" !== WW.type && (this.semicolon = !1)
+        }
+        other(WW) {
+          let iW = !1,
+            OW = null,
+            mW = !1,
+            EW = null,
+            NW = [],
+            PW = WW[1].startsWith("--"),
+            LW = [],
+            cW = WW;
+          for (; cW;) {
+            if (OW = cW[0], LW.push(cW), "(" === OW || "[" === OW) EW || (EW = cW), NW.push("(" === OW ? ")" : "]");
+            else if (PW && mW && "{" === OW) EW || (EW = cW), NW.push("}");
+            else if (0 === NW.length) {
+              if (";" === OW) {
+                if (mW) return void this.decl(LW, PW);
+                break
+              }
+              if ("{" === OW) return void this.rule(LW);
+              if ("}" === OW) {
+                this.tokenizer.back(LW.pop()), iW = !0;
+                break
+              }
+              ":" === OW && (mW = !0)
+            } else OW === NW[NW.length - 1] && (NW.pop(), 0 === NW.length && (EW = null));
+            cW = this.tokenizer.nextToken()
+          }
+          if (this.tokenizer.endOfFile() && (iW = !0), NW.length > 0 && this.unclosedBracket(EW), iW && mW) {
+            if (!PW)
+              for (; LW.length && (cW = LW[LW.length - 1][0], "space" === cW || "comment" === cW);) this.tokenizer.back(LW.pop());
+            this.decl(LW, PW)
+          } else this.unknownWord(LW)
+        }
+        parse() {
+          let WW;
+          for (; !this.tokenizer.endOfFile();) switch (WW = this.tokenizer.nextToken(), WW[0]) {
+            case "space":
+              this.spaces += WW[1];
+              break;
+            case ";":
+              this.freeSemicolon(WW);
+              break;
+            case "}":
+              this.end(WW);
+              break;
+            case "comment":
+              this.comment(WW);
+              break;
+            case "at-word":
+              this.atrule(WW);
+              break;
+            case "{":
+              this.emptyRule(WW);
+              break;
+            default:
+              this.other(WW)
+          }
+          this.endFile()
+        }
+        precheckMissedSemicolon() {}
+        raw(WW, iW, OW, mW) {
+          let EW, NW, LW, cW, wW = OW.length,
+            tW = "",
+            ZW = !0;
+          for (let xW = 0; xW < wW; xW += 1) EW = OW[xW], NW = EW[0], "space" !== NW || xW !== wW - 1 || mW ? "comment" === NW ? (cW = OW[xW - 1] ? OW[xW - 1][0] : "empty", LW = OW[xW + 1] ? OW[xW + 1][0] : "empty", PW[cW] || PW[LW] || "," === tW.slice(-1) ? ZW = !1 : tW += EW[1]) : tW += EW[1] : ZW = !1;
+          if (!ZW) {
+            let mW = OW.reduce(((WW, iW) => WW + iW[1]), "");
+            WW.raws[iW] = {
+              raw: mW,
+              value: tW
+            }
+          }
+          WW[iW] = tW
+        }
+        rule(WW) {
+          WW.pop();
+          let iW = new NW;
+          this.init(iW, WW[0][2]), iW.raws.between = this.spacesAndCommentsFromEnd(WW), this.raw(iW, "selector", WW), this.current = iW
+        }
+        spacesAndCommentsFromEnd(WW) {
+          let iW, OW = "";
+          for (; WW.length && (iW = WW[WW.length - 1][0], "space" === iW || "comment" === iW);) OW = WW.pop()[1] + OW;
+          return OW
+        }
+        spacesAndCommentsFromStart(WW) {
+          let iW, OW = "";
+          for (; WW.length && (iW = WW[0][0], "space" === iW || "comment" === iW);) OW += WW.shift()[1];
+          return OW
+        }
+        spacesFromEnd(WW) {
+          let iW, OW = "";
+          for (; WW.length && (iW = WW[WW.length - 1][0], "space" === iW);) OW = WW.pop()[1] + OW;
+          return OW
+        }
+        stringFrom(WW, iW) {
+          let OW = "";
+          for (let mW = iW; mW < WW.length; mW++) OW += WW[mW][1];
+          return WW.splice(iW, WW.length - iW), OW
+        }
+        unclosedBlock() {
+          let WW = this.current.source.start;
+          throw this.input.error("Unclosed block", WW.line, WW.column)
+        }
+        unclosedBracket(WW) {
+          throw this.input.error("Unclosed bracket", {
+            offset: WW[2]
+          }, {
+            offset: WW[2] + 1
+          })
+        }
+        unexpectedClose(WW) {
+          throw this.input.error("Unexpected }", {
+            offset: WW[2]
+          }, {
+            offset: WW[2] + 1
+          })
+        }
+        unknownWord(WW) {
+          throw this.input.error("Unknown word", {
+            offset: WW[0][2]
+          }, {
+            offset: WW[0][2] + WW[0][1].length
+          })
+        }
+        unnamedAtrule(WW, iW) {
+          throw this.input.error("At-rule without name", {
+            offset: iW[2]
+          }, {
+            offset: iW[2] + iW[1].length
+          })
+        }
       }
     }
 
-    function HF(ee, ie, He, ye) {
-      return `${eb(ee)}|${ee.atlasLayers}|${ee.W4}|${ie}|${He}|${ye._colorFormat}|${ye._depthStencilFormat}|${ye._sampleCount}`
+    function GO() {
+      if (lO) return xO;
+      lO = 1;
+      let WW = gO(),
+        iW = RO(),
+        OW = dO();
+
+      function mW(WW, mW) {
+        let EW = new OW(WW, mW),
+          NW = new iW(EW);
+        try {
+          NW.parse()
+        } catch (PW) {
+          throw PW
+        }
+        return NW.root
+      }
+      return xO = mW, mW.default = mW, WW.registerParse(mW), xO
     }
 
-    function yF(ee, ie) {
-      return ee.distance - ie.distance
+    function IO() {
+      if (bO) return AO;
+      bO = 1;
+      let {
+        isClean: WW,
+        my: iW
+      } = TO(), OW = eO(), mW = hO(), EW = gO(), NW = DO(), PW = (VO(), fO()), LW = GO(), cW = XO();
+      const wW = {
+          atrule: "AtRule",
+          comment: "Comment",
+          decl: "Declaration",
+          document: "Document",
+          root: "Root",
+          rule: "Rule"
+        },
+        tW = {
+          AtRule: !0,
+          AtRuleExit: !0,
+          Comment: !0,
+          CommentExit: !0,
+          Declaration: !0,
+          DeclarationExit: !0,
+          Document: !0,
+          DocumentExit: !0,
+          Once: !0,
+          OnceExit: !0,
+          postcssPlugin: !0,
+          prepare: !0,
+          Root: !0,
+          RootExit: !0,
+          Rule: !0,
+          RuleExit: !0
+        },
+        ZW = {
+          Once: !0,
+          postcssPlugin: !0,
+          prepare: !0
+        };
+
+      function xW(WW) {
+        return "object" === typeof WW && "function" === typeof WW.then
+      }
+
+      function lW(WW) {
+        let iW = !1,
+          OW = wW[WW.type];
+        return "decl" === WW.type ? iW = WW.prop.toLowerCase() : "atrule" === WW.type && (iW = WW.name.toLowerCase()), iW && WW.append ? [OW, OW + "-" + iW, 0, OW + "Exit", OW + "Exit-" + iW] : iW ? [OW, OW + "-" + iW, OW + "Exit", OW + "Exit-" + iW] : WW.append ? [OW, 0, OW + "Exit"] : [OW, OW + "Exit"]
+      }
+
+      function AW(WW) {
+        let iW;
+        return iW = "document" === WW.type ? ["Document", 0, "DocumentExit"] : "root" === WW.type ? ["Root", 0, "RootExit"] : lW(WW), {
+          eventIndex: 0,
+          events: iW,
+          iterator: 0,
+          node: WW,
+          visitorIndex: 0,
+          visitors: []
+        }
+      }
+
+      function bW(iW) {
+        return iW[WW] = !1, iW.nodes && iW.nodes.forEach((WW => bW(WW))), iW
+      }
+      let jW = {};
+      class UW {
+        constructor(WW, OW, mW) {
+          let NW;
+          if (this.stringified = !1, this.processed = !1, "object" !== typeof OW || null === OW || "root" !== OW.type && "document" !== OW.type)
+            if (OW instanceof UW || OW instanceof PW) NW = bW(OW.root), OW.map && ("undefined" === typeof mW.map && (mW.map = {}), mW.map.inline || (mW.map.inline = !1), mW.map.prev = OW.map);
+            else {
+              let WW = LW;
+              mW.syntax && (WW = mW.syntax.parse), mW.parser && (WW = mW.parser), WW.parse && (WW = WW.parse);
+              try {
+                NW = WW(OW, mW)
+              } catch (cW) {
+                this.processed = !0, this.error = cW
+              }
+              NW && !NW[iW] && EW.rebuild(NW)
+            }
+          else NW = bW(OW);
+          this.result = new PW(WW, NW, mW), this.helpers = {
+            ...jW,
+            postcss: jW,
+            result: this.result
+          }, this.plugins = this.processor.plugins.map((WW => "object" === typeof WW && WW.prepare ? {
+            ...WW,
+            ...WW.prepare(this.result)
+          } : WW))
+        }
+        async () {
+          return this.error ? Promise.reject(this.error) : this.processed ? Promise.resolve(this.result) : (this.processing || (this.processing = this.runAsync()), this.processing)
+        } catch (WW) {
+          return this.async().catch(WW)
+        } finally(WW) {
+          return this.async().then(WW, WW)
+        }
+        getAsyncError() {
+          throw new Error("Use process(css).then(cb) to work with async plugins")
+        }
+        handleError(WW, iW) {
+          let OW = this.result.lastPlugin;
+          try {
+            iW && iW.addToError(WW), this.error = WW, "CssSyntaxError" !== WW.name || WW.plugin ? OW.postcssVersion : (WW.plugin = OW.postcssPlugin, WW.setMessage())
+          } catch (mW) {
+            console && console.error && console.error(mW)
+          }
+          return WW
+        }
+        prepareVisitors() {
+          this.listeners = {};
+          let WW = (WW, iW, OW) => {
+            this.listeners[iW] || (this.listeners[iW] = []), this.listeners[iW].push([WW, OW])
+          };
+          for (let iW of this.plugins)
+            if ("object" === typeof iW)
+              for (let OW in iW) {
+                if (!tW[OW] && /^[A-Z]/.test(OW)) throw new Error(`Unknown event ${OW} in ${iW.postcssPlugin}. Try to update PostCSS (${this.processor.version} now).`);
+                if (!ZW[OW])
+                  if ("object" === typeof iW[OW])
+                    for (let mW in iW[OW]) WW(iW, "*" === mW ? OW : OW + "-" + mW.toLowerCase(), iW[OW][mW]);
+                  else "function" === typeof iW[OW] && WW(iW, OW, iW[OW])
+              }
+          this.hasListener = Object.keys(this.listeners).length > 0
+        }
+        async runAsync() {
+          this.plugin = 0;
+          for (let WW = 0; WW < this.plugins.length; WW++) {
+            let OW = this.plugins[WW],
+              mW = this.runOnRoot(OW);
+            if (xW(mW)) try {
+              await mW
+            } catch (iW) {
+              throw this.handleError(iW)
+            }
+          }
+          if (this.prepareVisitors(), this.hasListener) {
+            let iW = this.result.root;
+            for (; !iW[WW];) {
+              iW[WW] = !0;
+              let mW = [AW(iW)];
+              for (; mW.length > 0;) {
+                let WW = this.visitTick(mW);
+                if (xW(WW)) try {
+                  await WW
+                } catch (OW) {
+                  let WW = mW[mW.length - 1].node;
+                  throw this.handleError(OW, WW)
+                }
+              }
+            }
+            if (this.listeners.OnceExit)
+              for (let [WW, mW] of this.listeners.OnceExit) {
+                this.result.lastPlugin = WW;
+                try {
+                  if ("document" === iW.type) {
+                    let WW = iW.nodes.map((WW => mW(WW, this.helpers)));
+                    await Promise.all(WW)
+                  } else await mW(iW, this.helpers)
+                } catch (OW) {
+                  throw this.handleError(OW)
+                }
+              }
+          }
+          return this.processed = !0, this.stringify()
+        }
+        runOnRoot(WW) {
+          this.result.lastPlugin = WW;
+          try {
+            if ("object" === typeof WW && WW.Once) {
+              if ("document" === this.result.root.type) {
+                let iW = this.result.root.nodes.map((iW => WW.Once(iW, this.helpers)));
+                return xW(iW[0]) ? Promise.all(iW) : iW
+              }
+              return WW.Once(this.result.root, this.helpers)
+            }
+            if ("function" === typeof WW) return WW(this.result.root, this.result)
+          } catch (iW) {
+            throw this.handleError(iW)
+          }
+        }
+        stringify() {
+          if (this.error) throw this.error;
+          if (this.stringified) return this.result;
+          this.stringified = !0, this.sync();
+          let WW = this.result.opts,
+            iW = mW;
+          WW.syntax && (iW = WW.syntax.stringify), WW.stringifier && (iW = WW.stringifier), iW.stringify && (iW = iW.stringify);
+          let EW = new OW(iW, this.result.root, this.result.opts).generate();
+          return this.result.css = EW[0], this.result.map = EW[1], this.result
+        }
+        sync() {
+          if (this.error) throw this.error;
+          if (this.processed) return this.result;
+          if (this.processed = !0, this.processing) throw this.getAsyncError();
+          for (let WW of this.plugins) {
+            if (xW(this.runOnRoot(WW))) throw this.getAsyncError()
+          }
+          if (this.prepareVisitors(), this.hasListener) {
+            let iW = this.result.root;
+            for (; !iW[WW];) iW[WW] = !0, this.walkSync(iW);
+            if (this.listeners.OnceExit)
+              if ("document" === iW.type)
+                for (let WW of iW.nodes) this.visitSync(this.listeners.OnceExit, WW);
+              else this.visitSync(this.listeners.OnceExit, iW)
+          }
+          return this.result
+        }
+        then(WW, iW) {
+          return this.async().then(WW, iW)
+        }
+        toString() {
+          return this.css
+        }
+        visitSync(WW, iW) {
+          for (let [mW, EW] of WW) {
+            let WW;
+            this.result.lastPlugin = mW;
+            try {
+              WW = EW(iW, this.helpers)
+            } catch (OW) {
+              throw this.handleError(OW, iW.proxyOf)
+            }
+            if ("root" !== iW.type && "document" !== iW.type && !iW.parent) return !0;
+            if (xW(WW)) throw this.getAsyncError()
+          }
+        }
+        visitTick(iW) {
+          let OW = iW[iW.length - 1],
+            {
+              node: mW,
+              visitors: EW
+            } = OW;
+          if ("root" !== mW.type && "document" !== mW.type && !mW.parent) return void iW.pop();
+          if (EW.length > 0 && OW.visitorIndex < EW.length) {
+            let [WW, iW] = EW[OW.visitorIndex];
+            OW.visitorIndex += 1, OW.visitorIndex === EW.length && (OW.visitors = [], OW.visitorIndex = 0), this.result.lastPlugin = WW;
+            try {
+              return iW(mW.toProxy(), this.helpers)
+            } catch (PW) {
+              throw this.handleError(PW, mW)
+            }
+          }
+          if (0 !== OW.iterator) {
+            let EW, NW = OW.iterator;
+            for (; EW = mW.nodes[mW.indexes[NW]];)
+              if (mW.indexes[NW] += 1, !EW[WW]) return EW[WW] = !0, void iW.push(AW(EW));
+            OW.iterator = 0, delete mW.indexes[NW]
+          }
+          let NW = OW.events;
+          for (; OW.eventIndex < NW.length;) {
+            let iW = NW[OW.eventIndex];
+            if (OW.eventIndex += 1, 0 === iW) return void(mW.nodes && mW.nodes.length && (mW[WW] = !0, OW.iterator = mW.getIterator()));
+            if (this.listeners[iW]) return void(OW.visitors = this.listeners[iW])
+          }
+          iW.pop()
+        }
+        walkSync(iW) {
+          iW[WW] = !0;
+          let OW = lW(iW);
+          for (let mW of OW)
+            if (0 === mW) iW.nodes && iW.each((iW => {
+              iW[WW] || this.walkSync(iW)
+            }));
+            else {
+              let WW = this.listeners[mW];
+              if (WW && this.visitSync(WW, iW.toProxy())) return
+            }
+        }
+        warnings() {
+          return this.sync().warnings()
+        }
+        get content() {
+          return this.stringify().content
+        }
+        get css() {
+          return this.stringify().css
+        }
+        get map() {
+          return this.stringify().map
+        }
+        get messages() {
+          return this.sync().messages
+        }
+        get opts() {
+          return this.result.opts
+        }
+        get processor() {
+          return this.result.processor
+        }
+        get root() {
+          return this.sync().root
+        }
+        get[Symbol.toStringTag]() {
+          return "LazyResult"
+        }
+      }
+      return UW.registerPostcss = WW => {
+        jW = WW
+      }, AO = UW, UW.default = UW, cW.registerLazyResult(UW), NW.registerLazyResult(UW), AO
     }
 
-    function bF(ee, ie) {
-      return ie.distance - ee.distance
+    function aO() {
+      if (sO) return kO;
+      sO = 1;
+      let WW = function() {
+          if (UO) return jO;
+          UO = 1;
+          let WW = eO(),
+            iW = hO(),
+            OW = (VO(), GO());
+          const mW = fO();
+          class EW {
+            constructor(OW, EW, NW) {
+              let PW;
+              EW = EW.toString(), this.stringified = !1, this._processor = OW, this._css = EW, this._opts = NW, this._map = void 0;
+              let LW = iW;
+              this.result = new mW(this._processor, PW, this._opts), this.result.css = EW;
+              let cW = this;
+              Object.defineProperty(this.result, "root", {
+                get: () => cW.root
+              });
+              let wW = new WW(LW, PW, this._opts, EW);
+              if (wW.isMap()) {
+                let [WW, iW] = wW.generate();
+                WW && (this.result.css = WW), iW && (this.result.map = iW)
+              } else wW.clearAnnotation(), this.result.css = wW.css
+            }
+            async () {
+              return this.error ? Promise.reject(this.error) : Promise.resolve(this.result)
+            } catch (WW) {
+              return this.async().catch(WW)
+            } finally(WW) {
+              return this.async().then(WW, WW)
+            }
+            sync() {
+              if (this.error) throw this.error;
+              return this.result
+            }
+            then(WW, iW) {
+              return this.async().then(WW, iW)
+            }
+            toString() {
+              return this._css
+            }
+            warnings() {
+              return []
+            }
+            get content() {
+              return this.result.css
+            }
+            get css() {
+              return this.result.css
+            }
+            get map() {
+              return this.result.map
+            }
+            get messages() {
+              return []
+            }
+            get opts() {
+              return this.result.opts
+            }
+            get processor() {
+              return this.result.processor
+            }
+            get root() {
+              if (this._root) return this._root;
+              let WW, iW = OW;
+              try {
+                WW = iW(this._css, this._opts)
+              } catch (mW) {
+                this.error = mW
+              }
+              if (this.error) throw this.error;
+              return this._root = WW, WW
+            }
+            get[Symbol.toStringTag]() {
+              return "NoWorkResult"
+            }
+          }
+          return jO = EW, EW.default = EW, jO
+        }(),
+        iW = IO(),
+        OW = DO(),
+        mW = XO();
+      class EW {
+        constructor() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+          this.version = "8.4.38", this.plugins = this.normalize(WW)
+        }
+        normalize(WW) {
+          let iW = [];
+          for (let OW of WW)
+            if (!0 === OW.postcss ? OW = OW() : OW.postcss && (OW = OW.postcss), "object" === typeof OW && Array.isArray(OW.plugins)) iW = iW.concat(OW.plugins);
+            else if ("object" === typeof OW && OW.postcssPlugin) iW.push(OW);
+          else if ("function" === typeof OW) iW.push(OW);
+          else {
+            if ("object" !== typeof OW || !OW.parse && !OW.stringify) throw new Error(OW + " is not a PostCSS plugin")
+          }
+          return iW
+        }
+        process(OW) {
+          let mW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return this.plugins.length || mW.parser || mW.stringifier || mW.syntax ? new iW(this, OW, mW) : new WW(this, OW, mW)
+        }
+        use(WW) {
+          return this.plugins = this.plugins.concat(this.normalize([WW])), this
+        }
+      }
+      return kO = EW, EW.default = EW, mW.registerProcessor(EW), OW.registerProcessor(EW), kO
     }
-    class MF {
+    const rO = xi(function() {
+      if (YO) return SO;
+      YO = 1;
+      let WW = Mi(),
+        iW = nO(),
+        OW = IO(),
+        mW = gO(),
+        EW = aO(),
+        NW = hO(),
+        PW = function() {
+          if (KO) return MO;
+          KO = 1;
+          let WW = nO(),
+            iW = oO(),
+            OW = vO(),
+            mW = CO(),
+            EW = dO(),
+            NW = XO(),
+            PW = qO();
+
+          function LW(cW, wW) {
+            if (Array.isArray(cW)) return cW.map((WW => LW(WW)));
+            let {
+              inputs: tW,
+              ...ZW
+            } = cW;
+            if (tW) {
+              wW = [];
+              for (let WW of tW) {
+                let OW = {
+                  ...WW,
+                  __proto__: EW.prototype
+                };
+                OW.map && (OW.map = {
+                  ...OW.map,
+                  __proto__: iW.prototype
+                }), wW.push(OW)
+              }
+            }
+            if (ZW.nodes && (ZW.nodes = cW.nodes.map((WW => LW(WW, wW)))), ZW.source) {
+              let {
+                inputId: WW,
+                ...iW
+              } = ZW.source;
+              ZW.source = iW, null != WW && (ZW.source.input = wW[WW])
+            }
+            if ("root" === ZW.type) return new NW(ZW);
+            if ("decl" === ZW.type) return new WW(ZW);
+            if ("rule" === ZW.type) return new PW(ZW);
+            if ("comment" === ZW.type) return new OW(ZW);
+            if ("atrule" === ZW.type) return new mW(ZW);
+            throw new Error("Unknown node type: " + cW.type)
+          }
+          return MO = LW, LW.default = LW, MO
+        }(),
+        LW = DO(),
+        cW = pO(),
+        wW = vO(),
+        tW = CO(),
+        ZW = fO(),
+        xW = dO(),
+        lW = GO(),
+        AW = BO(),
+        bW = qO(),
+        jW = XO(),
+        UW = HO();
+
+      function kW() {
+        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+        return 1 === iW.length && Array.isArray(iW[0]) && (iW = iW[0]), new EW(iW)
+      }
+      return kW.plugin = function(WW, iW) {
+        let OW, mW = !1;
+
+        function NW() {
+          console && console.warn && !mW && (mW = !0, console.warn(WW + ": postcss.plugin was deprecated. Migration guide:\nhttps://evilmartians.com/chronicles/postcss-8-plugin-migration"), {
+            NODE_ENV: "production",
+            PUBLIC_URL: "",
+            WDS_SOCKET_HOST: void 0,
+            WDS_SOCKET_PATH: void 0,
+            WDS_SOCKET_PORT: void 0,
+            FAST_REFRESH: !0,
+            REACT_APP_DEV_URLS: "false"
+          }.LANG && {
+            NODE_ENV: "production",
+            PUBLIC_URL: "",
+            WDS_SOCKET_HOST: void 0,
+            WDS_SOCKET_PATH: void 0,
+            WDS_SOCKET_PORT: void 0,
+            FAST_REFRESH: !0,
+            REACT_APP_DEV_URLS: "false"
+          }.LANG.startsWith("cn") && console.warn(WW + ": \u91cc\u9762 postcss.plugin \u88ab\u5f03\u7528. \u8fc1\u79fb\u6307\u5357:\nhttps://www.w3ctech.com/topic/2226"));
+          let OW = iW(...arguments);
+          return OW.postcssPlugin = WW, OW.postcssVersion = (new EW).version, OW
+        }
+        return Object.defineProperty(NW, "postcss", {
+          get: () => (OW || (OW = NW()), OW)
+        }), NW.process = function(WW, iW, OW) {
+          return kW([NW(OW)]).process(WW, iW)
+        }, NW
+      }, kW.stringify = NW, kW.parse = lW, kW.fromJSON = PW, kW.list = AW, kW.comment = WW => new wW(WW), kW.atRule = WW => new tW(WW), kW.decl = WW => new iW(WW), kW.rule = WW => new bW(WW), kW.root = WW => new jW(WW), kW.document = WW => new LW(WW), kW.CssSyntaxError = WW, kW.Declaration = iW, kW.yV = mW, kW.Processor = EW, kW.Document = LW, kW.Comment = wW, kW.Warning = cW, kW.AtRule = tW, kW.Result = ZW, kW.Input = xW, kW.Rule = bW, kW.Root = jW, kW.Node = UW, OW.registerPostcss(kW), SO = kW, kW.default = kW, SO
+    }());
+    rO.stringify, rO.fromJSON, rO.plugin, rO.parse, rO.list, rO.document, rO.comment, rO.atRule, rO.rule, rO.decl, rO.root, rO.CssSyntaxError, rO.Declaration, rO.yV, rO.Processor, rO.Document, rO.Comment, rO.Warning, rO.AtRule, rO.Result, rO.Input, rO.Rule, rO.Root, rO.Node;
+    const zO = {
+      script: "noscript",
+      altglyph: "altGlyph",
+      altglyphdef: "altGlyphDef",
+      altglyphitem: "altGlyphItem",
+      animatecolor: "animateColor",
+      animatemotion: "animateMotion",
+      animatetransform: "animateTransform",
+      clippath: "clipPath",
+      feblend: "feBlend",
+      fecolormatrix: "feColorMatrix",
+      fecomponenttransfer: "feComponentTransfer",
+      fecomposite: "feComposite",
+      feconvolvematrix: "feConvolveMatrix",
+      fediffuselighting: "feDiffuseLighting",
+      fedisplacementmap: "feDisplacementMap",
+      fedistantlight: "feDistantLight",
+      fedropshadow: "feDropShadow",
+      feflood: "feFlood",
+      fefunca: "feFuncA",
+      fefuncb: "feFuncB",
+      fefuncg: "feFuncG",
+      fefuncr: "feFuncR",
+      fegaussianblur: "feGaussianBlur",
+      feimage: "feImage",
+      femerge: "feMerge",
+      femergenode: "feMergeNode",
+      femorphology: "feMorphology",
+      feoffset: "feOffset",
+      fepointlight: "fePointLight",
+      fespecularlighting: "feSpecularLighting",
+      fespotlight: "feSpotLight",
+      fetile: "feTile",
+      feturbulence: "feTurbulence",
+      foreignobject: "foreignObject",
+      glyphref: "glyphRef",
+      lineargradient: "linearGradient",
+      radialgradient: "radialGradient"
+    };
+
+    function FO(WW, iW) {
+      const OW = null == iW ? void 0 : iW.stylesWithHoverClass.get(WW);
+      if (OW) return OW;
+      let mW = WW;
+      try {
+        mW = rO([ti, Zi]).process(WW).css
+      } catch (EW) {
+        console.warn("Failed to adapt css for replay", EW)
+      }
+      return null == iW || iW.stylesWithHoverClass.set(WW, mW), mW
+    }
+
+    function QO() {
+      return {
+        stylesWithHoverClass: new Map
+      }
+    }
+    const Wm = "rrweb-snapshot.createSandboxedIframe() requires root to be connected to a document before creating a sandboxed iframe.",
+      im = new WeakSet;
+
+    function Om(WW) {
+      if (WW.UNSAFE_allowUnprotectedRebuild) return;
+      const iW = WW.doc.defaultView;
+      if (iW && (!im.has(WW.doc) || ! function(WW) {
+          if (!WW || "IFRAME" !== WW.tagName) return !1;
+          if (!("sandbox" in WW)) return !1;
+          const iW = Array.from(WW.sandbox);
+          return 1 === iW.length && "allow-same-origin" === iW[0]
+        }(iW.frameElement))) throw new Error("rrweb-snapshot.rebuild() cannot rebuild into an unprotected browser document. Use rebuildIntoSandboxedIframe() or set UNSAFE_allowUnprotectedRebuild: true only when you accept the script-execution risk.")
+    }
+
+    function mm(WW, iW, OW, mW) {
+      const {
+        doc: EW,
+        hackCss: NW,
+        cache: PW
+      } = mW;
+      WW.childNodes.length ? function(WW, iW, OW, mW) {
+        const EW = [];
+        for (const tW of WW.childNodes) tW.type === cW.Text && EW.push(tW);
+        const NW = iW.split("/* rr_split */");
+        for (; NW.length > 1 && NW.length > EW.length;) NW.splice(-2, 2, NW.slice(-2).join(""));
+        let PW = "";
+        OW && (PW = FO(NW.join(""), mW));
+        let LW = 0,
+          wW = -1;
+        for (let cW = 0; cW < EW.length && cW !== NW.length; cW++) {
+          const WW = EW[cW];
+          let iW = NW[cW];
+          const mW = cW < NW.length - 1 ? NW[cW + 1] : null;
+          if (OW && mW) {
+            let WW = LW,
+              OW = mW.length;
+            OW = Math.min(OW, 30);
+            let EW = !1;
+            for (; OW > 2; OW--) {
+              const iW = mW.substring(0, OW),
+                NW = PW.substring(LW).indexOf(iW);
+              if (EW = -1 !== NW, EW) {
+                WW += NW;
+                break
+              }
+            }
+            EW || (WW += iW.length), iW = PW.substring(LW, WW), LW = WW
+          } else OW && (iW = PW.substring(LW)); - 1 !== wW && (iW = iW.substring(wW)), mW && (-1 !== wW || iW.endsWith("0p") && mW.startsWith("x")) && (wW = mW.indexOf("}"), -1 !== wW && (wW += 1, iW += mW.substring(0, wW))), WW.textContent = iW
+        }
+      }(WW, OW, NW, PW) : (NW && (OW = FO(OW, PW)), iW.appendChild(EW.createTextNode(OW)))
+    }
+
+    function Em(WW, iW) {
+      var OW;
+      const {
+        doc: mW,
+        hackCss: EW,
+        cache: NW
+      } = iW;
+      switch (WW.type) {
+        case cW.Document:
+          return mW.implementation.createDocument(null, "", null);
+        case cW.DocumentType:
+          return mW.implementation.createDocumentType(WW.name || "html", WW.publicId, WW.systemId);
+        case cW.Element: {
+          const EW = function(WW) {
+            let iW = zO[WW.tagName] ? zO[WW.tagName] : WW.tagName;
+            return "link" === iW && WW.attributes._cssText && (iW = "style"), iW
+          }(WW);
+          let NW;
+          WW.isSVG ? NW = mW.createElementNS("http://www.w3.org/2000/svg", EW) : (WW.isCustom && (null == (OW = mW.defaultView) ? void 0 : OW.customElements) && !mW.defaultView.customElements.get(WW.tagName) && mW.defaultView.customElements.define(WW.tagName, class extends mW.defaultView.HTMLElement {}), NW = mW.createElement(EW));
+          const LW = {};
+          for (const OW in WW.attributes) {
+            if (!Object.prototype.hasOwnProperty.call(WW.attributes, OW)) continue;
+            let cW = WW.attributes[OW];
+            if (("option" !== EW || "selected" !== OW || !1 !== cW) && null !== cW)
+              if (!0 === cW && (cW = ""), OW.startsWith("rr_")) LW[OW] = cW;
+              else {
+                if ("string" !== typeof cW);
+                else {
+                  if ("style" === EW && "_cssText" === OW) {
+                    mm(WW, NW, cW, iW);
+                    continue
+                  }
+                  if ("textarea" === EW && "value" === OW) {
+                    NW.appendChild(mW.createTextNode(cW)), WW.childNodes = [];
+                    continue
+                  }
+                }
+                try {
+                  if (WW.isSVG && "xlink:href" === OW) NW.setAttributeNS("http://www.w3.org/1999/xlink", OW, cW.toString());
+                  else if ("onload" === OW || "onclick" === OW || "onmouse" === OW.substring(0, 7)) NW.setAttribute("_" + OW, cW.toString());
+                  else {
+                    if ("meta" === EW && "Content-Security-Policy" === WW.attributes["http-equiv"] && "content" === OW) {
+                      NW.setAttribute("csp-content", cW.toString());
+                      continue
+                    }
+                    "link" === EW && ("preload" === WW.attributes.rel && "script" === WW.attributes.as || "modulepreload" === WW.attributes.rel) || "link" === EW && "prefetch" === WW.attributes.rel && "string" === typeof WW.attributes.href && "js" === oW(WW.attributes.href) || ("img" === EW && WW.attributes.srcset && WW.attributes.rr_dataURL ? NW.setAttribute("rrweb-original-srcset", WW.attributes.srcset) : NW.setAttribute(OW, cW.toString()))
+                  }
+                } catch (PW) {}
+              }
+          }
+          for (const iW in LW) {
+            const OW = LW[iW];
+            if ("canvas" === EW && "rr_dataURL" === iW) {
+              const WW = mW.createElement("img");
+              WW.onload = () => {
+                const iW = NW.getContext("2d");
+                iW && iW.drawImage(WW, 0, 0, WW.width, WW.height)
+              }, WW.src = OW.toString(), NW.RRNodeType && (NW.rr_dataURL = OW.toString())
+            } else if ("img" === EW && "rr_dataURL" === iW) {
+              const iW = NW;
+              iW.currentSrc.startsWith("data:") || (iW.setAttribute("rrweb-original-src", WW.attributes.src), iW.src = OW.toString())
+            }
+            if ("rr_width" === iW) NW.style.setProperty("width", OW.toString());
+            else if ("rr_height" === iW) NW.style.setProperty("height", OW.toString());
+            else if ("rr_mediaCurrentTime" === iW && "number" === typeof OW) NW.currentTime = OW;
+            else if ("rr_mediaState" === iW) switch (OW) {
+              case "played":
+                NW.play().catch((WW => console.warn("media playback error", WW)));
+                break;
+              case "paused":
+                NW.pause()
+            } else "rr_mediaPlaybackRate" === iW && "number" === typeof OW ? NW.playbackRate = OW : "rr_mediaMuted" === iW && "boolean" === typeof OW ? NW.muted = OW : "rr_mediaLoop" === iW && "boolean" === typeof OW ? NW.loop = OW : "rr_mediaVolume" === iW && "number" === typeof OW ? NW.volume = OW : "rr_open_mode" === iW && NW.setAttribute("rr_open_mode", OW)
+          }
+          if (WW.isShadowHost)
+            if (NW.shadowRoot)
+              for (; NW.shadowRoot.firstChild;) NW.shadowRoot.removeChild(NW.shadowRoot.firstChild);
+            else NW.attachShadow({
+              mode: "open"
+            });
+          return "input" !== EW && "textarea" !== EW || NW.setAttribute("autocomplete", "off"), NW
+        }
+        case cW.Text:
+          return WW.isStyle && EW ? mW.createTextNode(FO(WW.textContent, NW)) : mW.createTextNode(WW.textContent);
+        case cW.CDATA:
+          return mW.createCDATASection(WW.textContent);
+        case cW.Comment:
+          return mW.createComment(WW.textContent);
+        default:
+          return null
+      }
+    }
+
+    function Nm(WW, iW) {
+      const {
+        doc: OW,
+        mirror: mW,
+        skipChild: EW = !1,
+        hackCss: NW = !0,
+        afterAppend: PW,
+        cache: LW
+      } = iW;
+      if (mW.has(WW.id)) {
+        const iW = mW.AmW(WW.id),
+          OW = mW.getMeta(iW);
+        if (tW = WW, (wW = OW) && tW && wW.type === tW.type && (wW.type === cW.Document ? wW.compatMode === tW.compatMode : wW.type === cW.DocumentType ? wW.name === tW.name && wW.publicId === tW.publicId && wW.systemId === tW.systemId : wW.type === cW.Comment || wW.type === cW.Text || wW.type === cW.CDATA ? wW.textContent === tW.textContent : wW.type === cW.Element && wW.tagName === tW.tagName && JSON.stringify(wW.attributes) === JSON.stringify(tW.attributes) && wW.isSVG === tW.isSVG && wW.needBlock === tW.needBlock)) return mW.AmW(WW.id)
+      }
+      var wW, tW;
+      let ZW = Em(WW, {
+        doc: OW,
+        hackCss: NW,
+        cache: LW
+      });
+      if (!ZW) return null;
+      if (WW.rootId && mW.AmW(WW.rootId) !== OW && mW.replace(WW.rootId, OW), WW.type === cW.Document && (OW.close(), OW.open(), "BackCompat" === WW.compatMode && WW.childNodes && WW.childNodes[0].type !== cW.DocumentType && (WW.childNodes[0].type === cW.Element && "xmlns" in WW.childNodes[0].attributes && "http://www.w3.org/1999/xhtml" === WW.childNodes[0].attributes.xmlns ? OW.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">') : OW.write('<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "">')), ZW = OW), mW.add(ZW, WW), (WW.type === cW.Document || WW.type === cW.Element) && !EW)
+        for (const xW of WW.childNodes) {
+          const iW = Nm(xW, {
+            doc: OW,
+            mirror: mW,
+            skipChild: !1,
+            hackCss: NW,
+            afterAppend: PW,
+            cache: LW
+          });
+          if (iW) {
+            if (xW.isShadow && MW(ZW) && ZW.shadowRoot) ZW.shadowRoot.appendChild(iW);
+            else if (WW.type === cW.Document && xW.type == cW.Element) {
+              const WW = iW;
+              let OW = null;
+              WW.childNodes.forEach((WW => {
+                "BODY" === WW.nodeName && (OW = WW)
+              })), OW ? (WW.removeChild(OW), ZW.appendChild(iW), WW.appendChild(OW)) : ZW.appendChild(iW)
+            } else ZW.appendChild(iW);
+            PW && PW(iW, xW.id)
+          } else console.warn("Failed to rebuild", xW)
+        }
+      return ZW
+    }
+
+    function Pm(WW, iW) {
+      Om(iW);
+      const {
+        doc: OW,
+        onVisit: mW,
+        hackCss: EW = !0,
+        afterAppend: NW,
+        cache: PW,
+        mirror: LW = new TW
+      } = iW, wW = Nm(WW, {
+        doc: OW,
+        mirror: LW,
+        skipChild: !1,
+        hackCss: EW,
+        afterAppend: NW,
+        cache: PW
+      });
+      return function(WW, iW) {
+        for (const mW of WW.getIds()) WW.has(mW) && (OW = WW.AmW(mW), iW(OW));
+        var OW
+      }(LW, (WW => {
+        mW && mW(WW),
+          function(WW, iW) {
+            const OW = iW.getMeta(WW);
+            if ((null == OW ? void 0 : OW.type) !== cW.Element) return;
+            const mW = WW;
+            for (const EW in OW.attributes) {
+              if (!Object.prototype.hasOwnProperty.call(OW.attributes, EW) || !EW.startsWith("rr_")) continue;
+              const WW = OW.attributes[EW];
+              "rr_scrollLeft" === EW && (mW.scrollLeft = WW), "rr_scrollTop" === EW && (mW.scrollTop = WW)
+            }
+          }(WW, LW)
+      })), wW
+    }
+    var Lm = Object.defineProperty,
+      cm = (WW, iW, OW) => ((WW, iW, OW) => iW in WW ? Lm(WW, iW, {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: OW
+      }) : WW[iW] = OW)(WW, "symbol" !== typeof iW ? iW + "" : iW, OW),
+      wm = Object.defineProperty,
+      tm = (WW, iW, OW) => ((WW, iW, OW) => iW in WW ? wm(WW, iW, {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: OW
+      }) : WW[iW] = OW)(WW, "symbol" !== typeof iW ? iW + "" : iW, OW);
+    Date.now().toString();
+    let Zm = class {
       constructor() {
-        this.left = []
+        tm(this, "idNodeMap", new Map), tm(this, "nodeMetaMap", new WeakMap)
       }
-      sort(ee, ie) {
-        for (let He = 0; He < ee.length; He++) {
-          const ie = ee[He].distance;
-          if (ie - ie !== 0) return !1
+      getId(WW) {
+        var iW;
+        if (!WW) return -1;
+        return (null == (iW = this.getMeta(WW)) ? void 0 : iW.id) ?? -1
+      }
+      AmW(WW) {
+        return this.idNodeMap.get(WW) || null
+      }
+      getIds() {
+        return Array.from(this.idNodeMap.keys())
+      }
+      getMeta(WW) {
+        return this.nodeMetaMap.get(WW) || null
+      }
+      removeNodeFromMap(WW) {
+        const iW = this.getId(WW);
+        this.idNodeMap.delete(iW), WW.childNodes && WW.childNodes.forEach((WW => this.removeNodeFromMap(WW)))
+      }
+      has(WW) {
+        return this.idNodeMap.has(WW)
+      }
+      hasNode(WW) {
+        return this.nodeMetaMap.has(WW)
+      }
+      add(WW, iW) {
+        const OW = iW.id;
+        this.idNodeMap.set(OW, WW), this.nodeMetaMap.set(WW, iW)
+      }
+      replace(WW, iW) {
+        const OW = this.AmW(WW);
+        if (OW) {
+          const WW = this.nodeMetaMap.get(OW);
+          WW && this.nodeMetaMap.set(iW, WW)
         }
-        return this.sortRange(ee, 0, ee.length, ie), !0
+        this.idNodeMap.set(WW, iW)
       }
-      sortRange(ee, ie, He, ye) {
-        if (He - ie <= 16) {
-          for (let be = ie + 1; be < He; be++) {
-            const He = ee[be],
-              Me = ye * He.distance;
-            let Ke = be - 1;
-            for (; Ke >= ie && ye * ee[Ke].distance > Me; Ke--) ee[Ke + 1] = ee[Ke];
-            ee[Ke + 1] = He
+      reset() {
+        this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
+      }
+    };
+
+    function xm(WW) {
+      return WW && WW.__esModule && Object.prototype.hasOwnProperty.call(WW, "default") ? WW.default : WW
+    }
+
+    function lm(WW) {
+      if (WW.__esModule) return WW;
+      var iW = WW.default;
+      if ("function" == typeof iW) {
+        var OW = function WW() {
+          return this instanceof WW ? Reflect.construct(iW, arguments, this.constructor) : iW.apply(this, arguments)
+        };
+        OW.prototype = iW.prototype
+      } else OW = {};
+      return Object.defineProperty(OW, "__esModule", {
+        value: !0
+      }), Object.keys(WW).forEach((function(iW) {
+        var mW = Object.getOwnPropertyDescriptor(WW, iW);
+        Object.defineProperty(OW, iW, mW.get ? mW : {
+          enumerable: !0,
+          get: function() {
+            return WW[iW]
+          }
+        })
+      })), OW
+    }
+    var Am, bm = {
+      exports: {}
+    };
+
+    function jm() {
+      if (Am) return bm.exports;
+      Am = 1;
+      var WW = String,
+        iW = function() {
+          return {
+            isColorSupported: !1,
+            reset: WW,
+            bold: WW,
+            dim: WW,
+            italic: WW,
+            underline: WW,
+            inverse: WW,
+            hidden: WW,
+            strikethrough: WW,
+            black: WW,
+            red: WW,
+            green: WW,
+            yellow: WW,
+            blue: WW,
+            magenta: WW,
+            cyan: WW,
+            white: WW,
+            gray: WW,
+            bgBlack: WW,
+            bgRed: WW,
+            bgGreen: WW,
+            bgYellow: WW,
+            bgBlue: WW,
+            bgMagenta: WW,
+            bgCyan: WW,
+            bgWhite: WW
+          }
+        };
+      return bm.exports = iW(), bm.exports.createColors = iW, bm.exports
+    }
+    const Um = lm(Object.freeze(Object.defineProperty({
+      __proto__: null,
+      default: {}
+    }, Symbol.toStringTag, {
+      value: "Module"
+    })));
+    var km, sm;
+
+    function Mm() {
+      if (sm) return km;
+      sm = 1;
+      let WW = jm(),
+        iW = Um;
+      class OW extends Error {
+        constructor(WW, iW, mW, EW, NW, PW) {
+          super(WW), this.name = "CssSyntaxError", this.reason = WW, NW && (this.file = NW), EW && (this.source = EW), PW && (this.plugin = PW), "undefined" !== typeof iW && "undefined" !== typeof mW && ("number" === typeof iW ? (this.line = iW, this.column = mW) : (this.line = iW.line, this.column = iW.column, this.endLine = mW.line, this.endColumn = mW.column)), this.setMessage(), Error.captureStackTrace && Error.captureStackTrace(this, OW)
+        }
+        setMessage() {
+          this.message = this.plugin ? this.plugin + ": " : "", this.message += this.file ? this.file : "<css input>", "undefined" !== typeof this.line && (this.message += ":" + this.line + ":" + this.column), this.message += ": " + this.reason
+        }
+        showSourceCode(OW) {
+          if (!this.source) return "";
+          let mW = this.source;
+          null == OW && (OW = WW.isColorSupported), iW && OW && (mW = iW(mW));
+          let EW, NW, PW = mW.split(/\r?\n/),
+            LW = Math.max(this.line - 3, 0),
+            cW = Math.min(this.line + 2, PW.length),
+            wW = String(cW).length;
+          if (OW) {
+            let {
+              bold: iW,
+              gray: OW,
+              red: mW
+            } = WW.createColors(!0);
+            EW = WW => iW(mW(WW)), NW = WW => OW(WW)
+          } else EW = NW = WW => WW;
+          return PW.slice(LW, cW).map(((WW, iW) => {
+            let OW = LW + 1 + iW,
+              mW = " " + (" " + OW).slice(-wW) + " | ";
+            if (OW === this.line) {
+              let iW = NW(mW.replace(/\d/g, " ")) + WW.slice(0, this.column - 1).replace(/[^\t]/g, " ");
+              return EW(">") + NW(mW) + WW + "\n " + iW + EW("^")
+            }
+            return " " + NW(mW) + WW
+          })).join("\n")
+        }
+        toString() {
+          let WW = this.showSourceCode();
+          return WW && (WW = "\n\n" + WW + "\n"), this.name + ": " + this.message + WW
+        }
+      }
+      return km = OW, OW.default = OW, km
+    }
+    var Km, Sm, Ym, ym, Tm, Jm, hm, Hm, nm, um, om, dm, em, gm, Dm, Vm, pm, fm, Cm, Xm, Bm, qm, Rm, Gm, Im, am, rm, zm, Fm, Qm, WE, iE, OE, mE, EE, NE, PE, LE, cE, wE, tE, ZE, xE, lE, AE, bE, jE, UE, kE, sE, ME, KE, SE, YE = {};
+
+    function yE() {
+      return Km || (Km = 1, YE.isClean = Symbol("isClean"), YE.my = Symbol("my")), YE
+    }
+
+    function TE() {
+      if (Ym) return Sm;
+      Ym = 1;
+      const WW = {
+        after: "\n",
+        beforeClose: "\n",
+        beforeComment: "\n",
+        beforeDecl: "\n",
+        beforeOpen: " ",
+        beforeRule: "\n",
+        colon: ": ",
+        commentLeft: " ",
+        commentRight: " ",
+        emptyBody: "",
+        indent: "    ",
+        semicolon: !1
+      };
+      class iW {
+        constructor(WW) {
+          this.builder = WW
+        }
+        atrule(WW, iW) {
+          let OW = "@" + WW.name,
+            mW = WW.params ? this.rawValue(WW, "params") : "";
+          if ("undefined" !== typeof WW.raws.afterName ? OW += WW.raws.afterName : mW && (OW += " "), WW.nodes) this.block(WW, OW + mW);
+          else {
+            let EW = (WW.raws.between || "") + (iW ? ";" : "");
+            this.builder(OW + mW + EW, WW)
+          }
+        }
+        beforeAfter(WW, iW) {
+          let OW;
+          OW = "decl" === WW.type ? this.raw(WW, null, "beforeDecl") : "comment" === WW.type ? this.raw(WW, null, "beforeComment") : "before" === iW ? this.raw(WW, null, "beforeRule") : this.raw(WW, null, "beforeClose");
+          let mW = WW.parent,
+            EW = 0;
+          for (; mW && "root" !== mW.type;) EW += 1, mW = mW.parent;
+          if (OW.includes("\n")) {
+            let iW = this.raw(WW, null, "indent");
+            if (iW.length)
+              for (let WW = 0; WW < EW; WW++) OW += iW
+          }
+          return OW
+        }
+        block(WW, iW) {
+          let OW, mW = this.raw(WW, "between", "beforeOpen");
+          this.builder(iW + mW + "{", WW, "start"), WW.nodes && WW.nodes.length ? (this.body(WW), OW = this.raw(WW, "after")) : OW = this.raw(WW, "after", "emptyBody"), OW && this.builder(OW), this.builder("}", WW, "end")
+        }
+        body(WW) {
+          let iW = WW.nodes.length - 1;
+          for (; iW > 0 && "comment" === WW.nodes[iW].type;) iW -= 1;
+          let OW = this.raw(WW, "semicolon");
+          for (let mW = 0; mW < WW.nodes.length; mW++) {
+            let EW = WW.nodes[mW],
+              NW = this.raw(EW, "before");
+            NW && this.builder(NW), this.stringify(EW, iW !== mW || OW)
+          }
+        }
+        comment(WW) {
+          let iW = this.raw(WW, "left", "commentLeft"),
+            OW = this.raw(WW, "right", "commentRight");
+          this.builder("/*" + iW + WW.text + OW + "*/", WW)
+        }
+        decl(WW, iW) {
+          let OW = this.raw(WW, "between", "colon"),
+            mW = WW.prop + OW + this.rawValue(WW, "value");
+          WW.important && (mW += WW.raws.important || " !important"), iW && (mW += ";"), this.builder(mW, WW)
+        }
+        document(WW) {
+          this.body(WW)
+        }
+        raw(iW, OW, mW) {
+          let EW;
+          if (mW || (mW = OW), OW && (EW = iW.raws[OW], "undefined" !== typeof EW)) return EW;
+          let NW = iW.parent;
+          if ("before" === mW) {
+            if (!NW || "root" === NW.type && NW.first === iW) return "";
+            if (NW && "document" === NW.type) return ""
+          }
+          if (!NW) return WW[mW];
+          let PW = iW.root();
+          if (PW.rawCache || (PW.rawCache = {}), "undefined" !== typeof PW.rawCache[mW]) return PW.rawCache[mW];
+          if ("before" === mW || "after" === mW) return this.beforeAfter(iW, mW);
+          {
+            let WW = "raw" + ((LW = mW)[0].toUpperCase() + LW.slice(1));
+            this[WW] ? EW = this[WW](PW, iW) : PW.walk((WW => {
+              if (EW = WW.raws[OW], "undefined" !== typeof EW) return !1
+            }))
+          }
+          var LW;
+          return "undefined" === typeof EW && (EW = WW[mW]), PW.rawCache[mW] = EW, EW
+        }
+        rawBeforeClose(WW) {
+          let iW;
+          return WW.walk((WW => {
+            if (WW.nodes && WW.nodes.length > 0 && "undefined" !== typeof WW.raws.after) return iW = WW.raws.after, iW.includes("\n") && (iW = iW.replace(/[^\n]+$/, "")), !1
+          })), iW && (iW = iW.replace(/\S/g, "")), iW
+        }
+        rawBeforeComment(WW, iW) {
+          let OW;
+          return WW.walkComments((WW => {
+            if ("undefined" !== typeof WW.raws.before) return OW = WW.raws.before, OW.includes("\n") && (OW = OW.replace(/[^\n]+$/, "")), !1
+          })), "undefined" === typeof OW ? OW = this.raw(iW, null, "beforeDecl") : OW && (OW = OW.replace(/\S/g, "")), OW
+        }
+        rawBeforeDecl(WW, iW) {
+          let OW;
+          return WW.walkDecls((WW => {
+            if ("undefined" !== typeof WW.raws.before) return OW = WW.raws.before, OW.includes("\n") && (OW = OW.replace(/[^\n]+$/, "")), !1
+          })), "undefined" === typeof OW ? OW = this.raw(iW, null, "beforeRule") : OW && (OW = OW.replace(/\S/g, "")), OW
+        }
+        rawBeforeOpen(WW) {
+          let iW;
+          return WW.walk((WW => {
+            if ("decl" !== WW.type && (iW = WW.raws.between, "undefined" !== typeof iW)) return !1
+          })), iW
+        }
+        rawBeforeRule(WW) {
+          let iW;
+          return WW.walk((OW => {
+            if (OW.nodes && (OW.parent !== WW || WW.first !== OW) && "undefined" !== typeof OW.raws.before) return iW = OW.raws.before, iW.includes("\n") && (iW = iW.replace(/[^\n]+$/, "")), !1
+          })), iW && (iW = iW.replace(/\S/g, "")), iW
+        }
+        rawColon(WW) {
+          let iW;
+          return WW.walkDecls((WW => {
+            if ("undefined" !== typeof WW.raws.between) return iW = WW.raws.between.replace(/[^\s:]/g, ""), !1
+          })), iW
+        }
+        rawEmptyBody(WW) {
+          let iW;
+          return WW.walk((WW => {
+            if (WW.nodes && 0 === WW.nodes.length && (iW = WW.raws.after, "undefined" !== typeof iW)) return !1
+          })), iW
+        }
+        rawIndent(WW) {
+          if (WW.raws.indent) return WW.raws.indent;
+          let iW;
+          return WW.walk((OW => {
+            let mW = OW.parent;
+            if (mW && mW !== WW && mW.parent && mW.parent === WW && "undefined" !== typeof OW.raws.before) {
+              let WW = OW.raws.before.split("\n");
+              return iW = WW[WW.length - 1], iW = iW.replace(/\S/g, ""), !1
+            }
+          })), iW
+        }
+        rawSemicolon(WW) {
+          let iW;
+          return WW.walk((WW => {
+            if (WW.nodes && WW.nodes.length && "decl" === WW.last.type && (iW = WW.raws.semicolon, "undefined" !== typeof iW)) return !1
+          })), iW
+        }
+        rawValue(WW, iW) {
+          let OW = WW[iW],
+            mW = WW.raws[iW];
+          return mW && mW.value === OW ? mW.raw : OW
+        }
+        root(WW) {
+          this.body(WW), WW.raws.after && this.builder(WW.raws.after)
+        }
+        rule(WW) {
+          this.block(WW, this.rawValue(WW, "selector")), WW.raws.ownSemicolon && this.builder(WW.raws.ownSemicolon, WW, "end")
+        }
+        stringify(WW, iW) {
+          if (!this[WW.type]) throw new Error("Unknown AST node type " + WW.type + ". Maybe you need to change PostCSS stringifier.");
+          this[WW.type](WW, iW)
+        }
+      }
+      return Sm = iW, iW.default = iW, Sm
+    }
+
+    function JE() {
+      if (Tm) return ym;
+      Tm = 1;
+      let WW = TE();
+
+      function iW(iW, OW) {
+        new WW(OW).stringify(iW)
+      }
+      return ym = iW, iW.default = iW, ym
+    }
+
+    function hE() {
+      if (hm) return Jm;
+      hm = 1;
+      let {
+        isClean: WW,
+        my: iW
+      } = yE(), OW = Mm(), mW = TE(), EW = JE();
+
+      function NW(WW, iW) {
+        let OW = new WW.constructor;
+        for (let mW in WW) {
+          if (!Object.prototype.hasOwnProperty.call(WW, mW)) continue;
+          if ("proxyCache" === mW) continue;
+          let EW = WW[mW],
+            PW = typeof EW;
+          "parent" === mW && "object" === PW ? iW && (OW[mW] = iW) : "source" === mW ? OW[mW] = EW : Array.isArray(EW) ? OW[mW] = EW.map((WW => NW(WW, OW))) : ("object" === PW && null !== EW && (EW = NW(EW)), OW[mW] = EW)
+        }
+        return OW
+      }
+      class PW {
+        constructor() {
+          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          this.raws = {}, this[WW] = !1, this[iW] = !0;
+          for (let WW in OW)
+            if ("nodes" === WW) {
+              this.nodes = [];
+              for (let iW of OW[WW]) "function" === typeof iW.clone ? this.append(iW.clone()) : this.append(iW)
+            } else this[WW] = OW[WW]
+        }
+        addToError(WW) {
+          if (WW.postcssNode = this, WW.stack && this.source && /\n\s{4}at /.test(WW.stack)) {
+            let iW = this.source;
+            WW.stack = WW.stack.replace(/\n\s{4}at /, `$&${iW.input.from}:${iW.start.line}:${iW.start.column}$&`)
+          }
+          return WW
+        }
+        after(WW) {
+          return this.parent.insertAfter(this, WW), this
+        }
+        assign() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          for (let iW in WW) this[iW] = WW[iW];
+          return this
+        }
+        before(WW) {
+          return this.parent.insertBefore(this, WW), this
+        }
+        cleanRaws(WW) {
+          delete this.raws.before, delete this.raws.after, WW || delete this.raws.between
+        }
+        clone() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            iW = NW(this);
+          for (let OW in WW) iW[OW] = WW[OW];
+          return iW
+        }
+        cloneAfter() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            iW = this.clone(WW);
+          return this.parent.insertAfter(this, iW), iW
+        }
+        cloneBefore() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            iW = this.clone(WW);
+          return this.parent.insertBefore(this, iW), iW
+        }
+        error(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (this.source) {
+            let {
+              end: OW,
+              start: mW
+            } = this.rangeBy(iW);
+            return this.source.input.error(WW, {
+              column: mW.column,
+              line: mW.line
+            }, {
+              column: OW.column,
+              line: OW.line
+            }, iW)
+          }
+          return new OW(WW)
+        }
+        getProxyProcessor() {
+          return {
+            get: (WW, iW) => "proxyOf" === iW ? WW : "root" === iW ? () => WW.root().toProxy() : WW[iW],
+            set: (WW, iW, OW) => (WW[iW] === OW || (WW[iW] = OW, "prop" !== iW && "value" !== iW && "name" !== iW && "params" !== iW && "important" !== iW && "text" !== iW || WW.markDirty()), !0)
+          }
+        }
+        markDirty() {
+          if (this[WW]) {
+            this[WW] = !1;
+            let iW = this;
+            for (; iW = iW.parent;) iW[WW] = !1
+          }
+        }
+        next() {
+          if (!this.parent) return;
+          let WW = this.parent.index(this);
+          return this.parent.nodes[WW + 1]
+        }
+        positionBy(WW, iW) {
+          let OW = this.source.start;
+          if (WW.index) OW = this.positionInside(WW.index, iW);
+          else if (WW.word) {
+            let mW = (iW = this.toString()).indexOf(WW.word); - 1 !== mW && (OW = this.positionInside(mW, iW))
+          }
+          return OW
+        }
+        positionInside(WW, iW) {
+          let OW = iW || this.toString(),
+            mW = this.source.start.column,
+            EW = this.source.start.line;
+          for (let NW = 0; NW < WW; NW++) "\n" === OW[NW] ? (mW = 1, EW += 1) : mW += 1;
+          return {
+            column: mW,
+            line: EW
+          }
+        }
+        prev() {
+          if (!this.parent) return;
+          let WW = this.parent.index(this);
+          return this.parent.nodes[WW - 1]
+        }
+        rangeBy(WW) {
+          let iW = {
+              column: this.source.start.column,
+              line: this.source.start.line
+            },
+            OW = this.source.end ? {
+              column: this.source.end.column + 1,
+              line: this.source.end.line
+            } : {
+              column: iW.column + 1,
+              line: iW.line
+            };
+          if (WW.word) {
+            let mW = this.toString(),
+              EW = mW.indexOf(WW.word); - 1 !== EW && (iW = this.positionInside(EW, mW), OW = this.positionInside(EW + WW.word.length, mW))
+          } else WW.start ? iW = {
+            column: WW.start.column,
+            line: WW.start.line
+          } : WW.index && (iW = this.positionInside(WW.index)), WW.end ? OW = {
+            column: WW.end.column,
+            line: WW.end.line
+          } : "number" === typeof WW.endIndex ? OW = this.positionInside(WW.endIndex) : WW.index && (OW = this.positionInside(WW.index + 1));
+          return (OW.line < iW.line || OW.line === iW.line && OW.column <= iW.column) && (OW = {
+            column: iW.column + 1,
+            line: iW.line
+          }), {
+            end: OW,
+            start: iW
+          }
+        }
+        raw(WW, iW) {
+          return (new mW).raw(this, WW, iW)
+        }
+        remove() {
+          return this.parent && this.parent.removeChild(this), this.parent = void 0, this
+        }
+        replaceWith() {
+          if (this.parent) {
+            let mW = this,
+              EW = !1;
+            for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+            for (let WW of iW) WW === this ? EW = !0 : EW ? (this.parent.insertAfter(mW, WW), mW = WW) : this.parent.insertBefore(mW, WW);
+            EW || this.remove()
+          }
+          return this
+        }
+        root() {
+          let WW = this;
+          for (; WW.parent && "document" !== WW.parent.type;) WW = WW.parent;
+          return WW
+        }
+        toJSON(WW, iW) {
+          let OW = {},
+            mW = null == iW;
+          iW = iW || new Map;
+          let EW = 0;
+          for (let NW in this) {
+            if (!Object.prototype.hasOwnProperty.call(this, NW)) continue;
+            if ("parent" === NW || "proxyCache" === NW) continue;
+            let WW = this[NW];
+            if (Array.isArray(WW)) OW[NW] = WW.map((WW => "object" === typeof WW && WW.toJSON ? WW.toJSON(null, iW) : WW));
+            else if ("object" === typeof WW && WW.toJSON) OW[NW] = WW.toJSON(null, iW);
+            else if ("source" === NW) {
+              let mW = iW.get(WW.input);
+              null == mW && (mW = EW, iW.set(WW.input, EW), EW++), OW[NW] = {
+                end: WW.end,
+                inputId: mW,
+                start: WW.start
+              }
+            } else OW[NW] = WW
+          }
+          return mW && (OW.inputs = [...iW.keys()].map((WW => WW.toJSON()))), OW
+        }
+        toProxy() {
+          return this.proxyCache || (this.proxyCache = new Proxy(this, this.getProxyProcessor())), this.proxyCache
+        }
+        toString() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : EW;
+          WW.stringify && (WW = WW.stringify);
+          let iW = "";
+          return WW(this, (WW => {
+            iW += WW
+          })), iW
+        }
+        warn(WW, iW, OW) {
+          let mW = {
+            node: this
+          };
+          for (let EW in OW) mW[EW] = OW[EW];
+          return WW.warn(iW, mW)
+        }
+        get proxyOf() {
+          return this
+        }
+      }
+      return Jm = PW, PW.default = PW, Jm
+    }
+
+    function HE() {
+      if (nm) return Hm;
+      nm = 1;
+      let WW = hE();
+      class iW extends WW {
+        constructor(WW) {
+          WW && "undefined" !== typeof WW.value && "string" !== typeof WW.value && (WW = {
+            ...WW,
+            value: String(WW.value)
+          }), super(WW), this.type = "decl"
+        }
+        get variable() {
+          return this.prop.startsWith("--") || "$" === this.prop[0]
+        }
+      }
+      return Hm = iW, iW.default = iW, Hm
+    }
+
+    function nE() {
+      if (om) return um;
+      om = 1;
+      return um = {
+        nanoid: function() {
+          let WW = "",
+            iW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 21;
+          for (; iW--;) WW += "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict" [64 * Math.random() | 0];
+          return WW
+        },
+        customAlphabet: function(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 21;
+          return function() {
+            let OW = "",
+              mW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : iW;
+            for (; mW--;) OW += WW[Math.random() * WW.length | 0];
+            return OW
+          }
+        }
+      }, um
+    }
+
+    function uE() {
+      if (em) return dm;
+      em = 1;
+      let {
+        SourceMapConsumer: WW,
+        SourceMapGenerator: iW
+      } = Um, {
+        existsSync: OW,
+        readFileSync: mW
+      } = Um, {
+        dirname: EW,
+        join: NW
+      } = Um;
+      class PW {
+        constructor(WW, iW) {
+          if (!1 === iW.map) return;
+          this.loadAnnotation(WW), this.inline = this.startWith(this.annotation, "data:");
+          let OW = iW.map ? iW.map.prev : void 0,
+            mW = this.loadMap(iW.from, OW);
+          !this.mapFile && iW.from && (this.mapFile = iW.from), this.mapFile && (this.root = EW(this.mapFile)), mW && (this.text = mW)
+        }
+        consumer() {
+          return this.consumerCache || (this.consumerCache = new WW(this.text)), this.consumerCache
+        }
+        decodeInline(WW) {
+          if (/^data:application\/json;charset=utf-?8,/.test(WW) || /^data:application\/json,/.test(WW)) return decodeURIComponent(WW.substr(RegExp.lastMatch.length));
+          if (/^data:application\/json;charset=utf-?8;base64,/.test(WW) || /^data:application\/json;base64,/.test(WW)) return iW = WW.substr(RegExp.lastMatch.length), Buffer ? Buffer.from(iW, "base64").toString() : window.atob(iW);
+          var iW;
+          let OW = WW.match(/data:application\/json;([^,]+),/)[1];
+          throw new Error("Unsupported source map encoding " + OW)
+        }
+        getAnnotationURL(WW) {
+          return WW.replace(/^\/\*\s*# sourceMappingURL=/, "").trim()
+        }
+        isMap(WW) {
+          return "object" === typeof WW && ("string" === typeof WW.mappings || "string" === typeof WW._mappings || Array.isArray(WW.sections))
+        }
+        loadAnnotation(WW) {
+          let iW = WW.match(/\/\*\s*# sourceMappingURL=/gm);
+          if (!iW) return;
+          let OW = WW.lastIndexOf(iW.pop()),
+            mW = WW.indexOf("*/", OW);
+          OW > -1 && mW > -1 && (this.annotation = this.getAnnotationURL(WW.substring(OW, mW)))
+        }
+        loadFile(WW) {
+          if (this.root = EW(WW), OW(WW)) return this.mapFile = WW, mW(WW, "utf-8").toString().trim()
+        }
+        loadMap(OW, mW) {
+          if (!1 === mW) return !1;
+          if (mW) {
+            if ("string" === typeof mW) return mW;
+            if ("function" !== typeof mW) {
+              if (mW instanceof WW) return iW.fromSourceMap(mW).toString();
+              if (mW instanceof iW) return mW.toString();
+              if (this.isMap(mW)) return JSON.stringify(mW);
+              throw new Error("Unsupported previous source map format: " + mW.toString())
+            } {
+              let WW = mW(OW);
+              if (WW) {
+                let iW = this.loadFile(WW);
+                if (!iW) throw new Error("Unable to load previous source map: " + WW.toString());
+                return iW
+              }
+            }
+          } else {
+            if (this.inline) return this.decodeInline(this.annotation);
+            if (this.annotation) {
+              let WW = this.annotation;
+              return OW && (WW = NW(EW(OW), WW)), this.loadFile(WW)
+            }
+          }
+        }
+        startWith(WW, iW) {
+          return !!WW && WW.substr(0, iW.length) === iW
+        }
+        withContent() {
+          return !!(this.consumer().sourcesContent && this.consumer().sourcesContent.length > 0)
+        }
+      }
+      return dm = PW, PW.default = PW, dm
+    }
+
+    function oE() {
+      if (Dm) return gm;
+      Dm = 1;
+      let {
+        SourceMapConsumer: WW,
+        SourceMapGenerator: iW
+      } = Um, {
+        fileURLToPath: OW,
+        pathToFileURL: mW
+      } = Um, {
+        isAbsolute: EW,
+        resolve: NW
+      } = Um, {
+        nanoid: PW
+      } = nE(), LW = Um, cW = Mm(), wW = uE(), tW = Symbol("fromOffsetCache"), ZW = Boolean(WW && iW), xW = Boolean(NW && EW);
+      class lW {
+        constructor(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (null === WW || "undefined" === typeof WW || "object" === typeof WW && !WW.toString) throw new Error(`PostCSS received ${WW} instead of CSS string`);
+          if (this.css = WW.toString(), "\ufeff" === this.css[0] || "\ufffe" === this.css[0] ? (this.hasBOM = !0, this.css = this.css.slice(1)) : this.hasBOM = !1, iW.from && (!xW || /^\w+:\/\//.test(iW.from) || EW(iW.from) ? this.file = iW.from : this.file = NW(iW.from)), xW && ZW) {
+            let WW = new wW(this.css, iW);
+            if (WW.text) {
+              this.map = WW;
+              let iW = WW.consumer().file;
+              !this.file && iW && (this.file = this.mapResolve(iW))
+            }
+          }
+          this.file || (this.id = "<input css " + PW(6) + ">"), this.map && (this.map.file = this.from)
+        }
+        error(WW, iW, OW) {
+          let EW, NW, PW, LW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+          if (iW && "object" === typeof iW) {
+            let WW = iW,
+              mW = OW;
+            if ("number" === typeof WW.offset) {
+              let mW = this.fromOffset(WW.offset);
+              iW = mW.line, OW = mW.col
+            } else iW = WW.line, OW = WW.column;
+            if ("number" === typeof mW.offset) {
+              let WW = this.fromOffset(mW.offset);
+              NW = WW.line, PW = WW.col
+            } else NW = mW.line, PW = mW.column
+          } else if (!OW) {
+            let WW = this.fromOffset(iW);
+            iW = WW.line, OW = WW.col
+          }
+          let wW = this.origin(iW, OW, NW, PW);
+          return EW = wW ? new cW(WW, void 0 === wW.endLine ? wW.line : {
+            column: wW.column,
+            line: wW.line
+          }, void 0 === wW.endLine ? wW.column : {
+            column: wW.endColumn,
+            line: wW.endLine
+          }, wW.source, wW.file, LW.plugin) : new cW(WW, void 0 === NW ? iW : {
+            column: OW,
+            line: iW
+          }, void 0 === NW ? OW : {
+            column: PW,
+            line: NW
+          }, this.css, this.file, LW.plugin), EW.input = {
+            column: OW,
+            endColumn: PW,
+            endLine: NW,
+            line: iW,
+            source: this.css
+          }, this.file && (mW && (EW.input.url = mW(this.file).toString()), EW.input.file = this.file), EW
+        }
+        fromOffset(WW) {
+          let iW, OW;
+          if (this[tW]) OW = this[tW];
+          else {
+            let WW = this.css.split("\n");
+            OW = new Array(WW.length);
+            let iW = 0;
+            for (let mW = 0, EW = WW.length; mW < EW; mW++) OW[mW] = iW, iW += WW[mW].length + 1;
+            this[tW] = OW
+          }
+          iW = OW[OW.length - 1];
+          let mW = 0;
+          if (WW >= iW) mW = OW.length - 1;
+          else {
+            let iW, EW = OW.length - 2;
+            for (; mW < EW;)
+              if (iW = mW + (EW - mW >> 1), WW < OW[iW]) EW = iW - 1;
+              else {
+                if (!(WW >= OW[iW + 1])) {
+                  mW = iW;
+                  break
+                }
+                mW = iW + 1
+              }
+          }
+          return {
+            col: WW - OW[mW] + 1,
+            line: mW + 1
+          }
+        }
+        mapResolve(WW) {
+          return /^\w+:\/\//.test(WW) ? WW : NW(this.map.consumer().sourceRoot || this.map.root || ".", WW)
+        }
+        origin(WW, iW, NW, PW) {
+          if (!this.map) return !1;
+          let LW, cW, wW = this.map.consumer(),
+            tW = wW.originalPositionFor({
+              column: iW,
+              line: WW
+            });
+          if (!tW.source) return !1;
+          "number" === typeof NW && (LW = wW.originalPositionFor({
+            column: PW,
+            line: NW
+          })), cW = EW(tW.source) ? mW(tW.source) : new URL(tW.source, this.map.consumer().sourceRoot || mW(this.map.mapFile));
+          let ZW = {
+            column: tW.column,
+            endColumn: LW && LW.column,
+            endLine: LW && LW.line,
+            line: tW.line,
+            url: cW.toString()
+          };
+          if ("file:" === cW.protocol) {
+            if (!OW) throw new Error("file: protocol is not available in this PostCSS build");
+            ZW.file = OW(cW)
+          }
+          let xW = wW.sourceContentFor(tW.source);
+          return xW && (ZW.source = xW), ZW
+        }
+        toJSON() {
+          let WW = {};
+          for (let iW of ["hasBOM", "css", "file", "id"]) null != this[iW] && (WW[iW] = this[iW]);
+          return this.map && (WW.map = {
+            ...this.map
+          }, WW.map.consumerCache && (WW.map.consumerCache = void 0)), WW
+        }
+        get from() {
+          return this.file || this.id
+        }
+      }
+      return gm = lW, lW.default = lW, LW && LW.registerInput && LW.registerInput(lW), gm
+    }
+
+    function dE() {
+      if (pm) return Vm;
+      pm = 1;
+      let {
+        SourceMapConsumer: WW,
+        SourceMapGenerator: iW
+      } = Um, {
+        dirname: OW,
+        relative: mW,
+        resolve: EW,
+        sep: NW
+      } = Um, {
+        pathToFileURL: PW
+      } = Um, LW = oE(), cW = Boolean(WW && iW), wW = Boolean(OW && EW && mW && NW);
+      return Vm = class {
+        constructor(WW, iW, OW, mW) {
+          this.stringify = WW, this.mapOpts = OW.map || {}, this.root = iW, this.opts = OW, this.css = mW, this.originalCSS = mW, this.usesFileUrls = !this.mapOpts.from && this.mapOpts.absolute, this.memoizedFileURLs = new Map, this.memoizedPaths = new Map, this.memoizedURLs = new Map
+        }
+        addAnnotation() {
+          let WW;
+          WW = this.isInline() ? "data:application/json;base64," + this.toBase64(this.map.toString()) : "string" === typeof this.mapOpts.annotation ? this.mapOpts.annotation : "function" === typeof this.mapOpts.annotation ? this.mapOpts.annotation(this.opts.to, this.root) : this.outputFile() + ".map";
+          let iW = "\n";
+          this.css.includes("\r\n") && (iW = "\r\n"), this.css += iW + "/*# sourceMappingURL=" + WW + " */"
+        }
+        applyPrevMaps() {
+          for (let iW of this.previous()) {
+            let mW, EW = this.toUrl(this.path(iW.file)),
+              NW = iW.root || OW(iW.file);
+            !1 === this.mapOpts.sourcesContent ? (mW = new WW(iW.text), mW.sourcesContent && (mW.sourcesContent = null)) : mW = iW.consumer(), this.map.applySourceMap(mW, EW, this.toUrl(this.path(NW)))
+          }
+        }
+        clearAnnotation() {
+          if (!1 !== this.mapOpts.annotation)
+            if (this.root) {
+              let WW;
+              for (let iW = this.root.nodes.length - 1; iW >= 0; iW--) WW = this.root.nodes[iW], "comment" === WW.type && 0 === WW.text.indexOf("# sourceMappingURL=") && this.root.removeChild(iW)
+            } else this.css && (this.css = this.css.replace(/\n*?\/\*#[\S\s]*?\*\/$/gm, ""))
+        }
+        generate() {
+          if (this.clearAnnotation(), wW && cW && this.isMap()) return this.generateMap();
+          {
+            let WW = "";
+            return this.stringify(this.root, (iW => {
+              WW += iW
+            })), [WW]
+          }
+        }
+        generateMap() {
+          if (this.root) this.generateString();
+          else if (1 === this.previous().length) {
+            let WW = this.previous()[0].consumer();
+            WW.file = this.outputFile(), this.map = iW.fromSourceMap(WW, {
+              ignoreInvalidMapping: !0
+            })
+          } else this.map = new iW({
+            file: this.outputFile(),
+            ignoreInvalidMapping: !0
+          }), this.map.addMapping({
+            generated: {
+              column: 0,
+              line: 1
+            },
+            original: {
+              column: 0,
+              line: 1
+            },
+            source: this.opts.from ? this.toUrl(this.path(this.opts.from)) : "<no source>"
+          });
+          return this.isSourcesContent() && this.setSourcesContent(), this.root && this.previous().length > 0 && this.applyPrevMaps(), this.isAnnotation() && this.addAnnotation(), this.isInline() ? [this.css] : [this.css, this.map]
+        }
+        generateString() {
+          this.css = "", this.map = new iW({
+            file: this.outputFile(),
+            ignoreInvalidMapping: !0
+          });
+          let WW, OW, mW = 1,
+            EW = 1,
+            NW = "<no source>",
+            PW = {
+              generated: {
+                column: 0,
+                line: 0
+              },
+              original: {
+                column: 0,
+                line: 0
+              },
+              source: ""
+            };
+          this.stringify(this.root, ((iW, LW, cW) => {
+            if (this.css += iW, LW && "end" !== cW && (PW.generated.line = mW, PW.generated.column = EW - 1, LW.source && LW.source.start ? (PW.source = this.sourcePath(LW), PW.original.line = LW.source.start.line, PW.original.column = LW.source.start.column - 1, this.map.addMapping(PW)) : (PW.source = NW, PW.original.line = 1, PW.original.column = 0, this.map.addMapping(PW))), WW = iW.match(/\n/g), WW ? (mW += WW.length, OW = iW.lastIndexOf("\n"), EW = iW.length - OW) : EW += iW.length, LW && "start" !== cW) {
+              let WW = LW.parent || {
+                raws: {}
+              };
+              ("decl" === LW.type || "atrule" === LW.type && !LW.nodes) && LW === WW.last && !WW.raws.semicolon || (LW.source && LW.source.end ? (PW.source = this.sourcePath(LW), PW.original.line = LW.source.end.line, PW.original.column = LW.source.end.column - 1, PW.generated.line = mW, PW.generated.column = EW - 2, this.map.addMapping(PW)) : (PW.source = NW, PW.original.line = 1, PW.original.column = 0, PW.generated.line = mW, PW.generated.column = EW - 1, this.map.addMapping(PW)))
+            }
+          }))
+        }
+        isAnnotation() {
+          return !!this.isInline() || ("undefined" !== typeof this.mapOpts.annotation ? this.mapOpts.annotation : !this.previous().length || this.previous().some((WW => WW.annotation)))
+        }
+        isInline() {
+          if ("undefined" !== typeof this.mapOpts.inline) return this.mapOpts.inline;
+          let WW = this.mapOpts.annotation;
+          return ("undefined" === typeof WW || !0 === WW) && (!this.previous().length || this.previous().some((WW => WW.inline)))
+        }
+        isMap() {
+          return "undefined" !== typeof this.opts.map ? !!this.opts.map : this.previous().length > 0
+        }
+        isSourcesContent() {
+          return "undefined" !== typeof this.mapOpts.sourcesContent ? this.mapOpts.sourcesContent : !this.previous().length || this.previous().some((WW => WW.withContent()))
+        }
+        outputFile() {
+          return this.opts.to ? this.path(this.opts.to) : this.opts.from ? this.path(this.opts.from) : "to.css"
+        }
+        path(WW) {
+          if (this.mapOpts.absolute) return WW;
+          if (60 === WW.charCodeAt(0)) return WW;
+          if (/^\w+:\/\//.test(WW)) return WW;
+          let iW = this.memoizedPaths.get(WW);
+          if (iW) return iW;
+          let NW = this.opts.to ? OW(this.opts.to) : ".";
+          "string" === typeof this.mapOpts.annotation && (NW = OW(EW(NW, this.mapOpts.annotation)));
+          let PW = mW(NW, WW);
+          return this.memoizedPaths.set(WW, PW), PW
+        }
+        previous() {
+          if (!this.previousMaps)
+            if (this.previousMaps = [], this.root) this.root.walk((WW => {
+              if (WW.source && WW.source.input.map) {
+                let iW = WW.source.input.map;
+                this.previousMaps.includes(iW) || this.previousMaps.push(iW)
+              }
+            }));
+            else {
+              let WW = new LW(this.originalCSS, this.opts);
+              WW.map && this.previousMaps.push(WW.map)
+            } return this.previousMaps
+        }
+        setSourcesContent() {
+          let WW = {};
+          if (this.root) this.root.walk((iW => {
+            if (iW.source) {
+              let OW = iW.source.input.from;
+              if (OW && !WW[OW]) {
+                WW[OW] = !0;
+                let mW = this.usesFileUrls ? this.toFileUrl(OW) : this.toUrl(this.path(OW));
+                this.map.setSourceContent(mW, iW.source.input.css)
+              }
+            }
+          }));
+          else if (this.css) {
+            let WW = this.opts.from ? this.toUrl(this.path(this.opts.from)) : "<no source>";
+            this.map.setSourceContent(WW, this.css)
+          }
+        }
+        sourcePath(WW) {
+          return this.mapOpts.from ? this.toUrl(this.mapOpts.from) : this.usesFileUrls ? this.toFileUrl(WW.source.input.from) : this.toUrl(this.path(WW.source.input.from))
+        }
+        toBase64(WW) {
+          return Buffer ? Buffer.from(WW).toString("base64") : window.btoa(unescape(encodeURIComponent(WW)))
+        }
+        toFileUrl(WW) {
+          let iW = this.memoizedFileURLs.get(WW);
+          if (iW) return iW;
+          if (PW) {
+            let iW = PW(WW).toString();
+            return this.memoizedFileURLs.set(WW, iW), iW
+          }
+          throw new Error("`map.absolute` option is not available in this PostCSS build")
+        }
+        toUrl(WW) {
+          let iW = this.memoizedURLs.get(WW);
+          if (iW) return iW;
+          "\\" === NW && (WW = WW.replace(/\\/g, "/"));
+          let OW = encodeURI(WW).replace(/[#?]/g, encodeURIComponent);
+          return this.memoizedURLs.set(WW, OW), OW
+        }
+      }
+    }
+
+    function eE() {
+      if (Cm) return fm;
+      Cm = 1;
+      let WW = hE();
+      class iW extends WW {
+        constructor(WW) {
+          super(WW), this.type = "comment"
+        }
+      }
+      return fm = iW, iW.default = iW, fm
+    }
+
+    function vE() {
+      if (Bm) return Xm;
+      Bm = 1;
+      let WW, iW, OW, mW, {
+          isClean: EW,
+          my: NW
+        } = yE(),
+        PW = HE(),
+        LW = eE(),
+        cW = hE();
+
+      function wW(WW) {
+        return WW.map((WW => (WW.nodes && (WW.nodes = wW(WW.nodes)), delete WW.source, WW)))
+      }
+
+      function tW(WW) {
+        if (WW[EW] = !1, WW.proxyOf.nodes)
+          for (let iW of WW.proxyOf.nodes) tW(iW)
+      }
+      class ZW extends cW {
+        append() {
+          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+          for (let mW of iW) {
+            let WW = this.normalize(mW, this.last);
+            for (let iW of WW) this.proxyOf.nodes.push(iW)
+          }
+          return this.markDirty(), this
+        }
+        cleanRaws(WW) {
+          if (super.cleanRaws(WW), this.nodes)
+            for (let iW of this.nodes) iW.cleanRaws(WW)
+        }
+        each(WW) {
+          if (!this.proxyOf.nodes) return;
+          let iW, OW, mW = this.getIterator();
+          for (; this.indexes[mW] < this.proxyOf.nodes.length && (iW = this.indexes[mW], OW = WW(this.proxyOf.nodes[iW], iW), !1 !== OW);) this.indexes[mW] += 1;
+          return delete this.indexes[mW], OW
+        }
+        every(WW) {
+          return this.nodes.every(WW)
+        }
+        getIterator() {
+          this.lastEach || (this.lastEach = 0), this.indexes || (this.indexes = {}), this.lastEach += 1;
+          let WW = this.lastEach;
+          return this.indexes[WW] = 0, WW
+        }
+        getProxyProcessor() {
+          return {
+            get: (WW, iW) => "proxyOf" === iW ? WW : WW[iW] ? "each" === iW || "string" === typeof iW && iW.startsWith("walk") ? function() {
+              for (var OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
+              return WW[iW](...mW.map((WW => "function" === typeof WW ? (iW, OW) => WW(iW.toProxy(), OW) : WW)))
+            } : "every" === iW || "some" === iW ? OW => WW[iW]((function(WW) {
+              for (var iW = arguments.length, mW = new Array(iW > 1 ? iW - 1 : 0), EW = 1; EW < iW; EW++) mW[EW - 1] = arguments[EW];
+              return OW(WW.toProxy(), ...mW)
+            })) : "root" === iW ? () => WW.root().toProxy() : "nodes" === iW ? WW.nodes.map((WW => WW.toProxy())) : "first" === iW || "last" === iW ? WW[iW].toProxy() : WW[iW] : WW[iW],
+            set: (WW, iW, OW) => (WW[iW] === OW || (WW[iW] = OW, "name" !== iW && "params" !== iW && "selector" !== iW || WW.markDirty()), !0)
+          }
+        }
+        index(WW) {
+          return "number" === typeof WW ? WW : (WW.proxyOf && (WW = WW.proxyOf), this.proxyOf.nodes.indexOf(WW))
+        }
+        insertAfter(WW, iW) {
+          let OW, mW = this.index(WW),
+            EW = this.normalize(iW, this.proxyOf.nodes[mW]).reverse();
+          mW = this.index(WW);
+          for (let NW of EW) this.proxyOf.nodes.splice(mW + 1, 0, NW);
+          for (let NW in this.indexes) OW = this.indexes[NW], mW < OW && (this.indexes[NW] = OW + EW.length);
+          return this.markDirty(), this
+        }
+        insertBefore(WW, iW) {
+          let OW, mW = this.index(WW),
+            EW = 0 === mW && "prepend",
+            NW = this.normalize(iW, this.proxyOf.nodes[mW], EW).reverse();
+          mW = this.index(WW);
+          for (let PW of NW) this.proxyOf.nodes.splice(mW, 0, PW);
+          for (let PW in this.indexes) OW = this.indexes[PW], mW <= OW && (this.indexes[PW] = OW + NW.length);
+          return this.markDirty(), this
+        }
+        normalize(mW, cW) {
+          if ("string" === typeof mW) mW = wW(WW(mW).nodes);
+          else if ("undefined" === typeof mW) mW = [];
+          else if (Array.isArray(mW)) {
+            mW = mW.slice(0);
+            for (let WW of mW) WW.parent && WW.parent.removeChild(WW, "ignore")
+          } else if ("root" === mW.type && "document" !== this.type) {
+            mW = mW.nodes.slice(0);
+            for (let WW of mW) WW.parent && WW.parent.removeChild(WW, "ignore")
+          } else if (mW.type) mW = [mW];
+          else if (mW.prop) {
+            if ("undefined" === typeof mW.value) throw new Error("Value field is missed in node creation");
+            "string" !== typeof mW.value && (mW.value = String(mW.value)), mW = [new PW(mW)]
+          } else if (mW.selector) mW = [new iW(mW)];
+          else if (mW.name) mW = [new OW(mW)];
+          else {
+            if (!mW.text) throw new Error("Unknown node type in node creation");
+            mW = [new LW(mW)]
+          }
+          return mW.map((WW => (WW[NW] || ZW.rebuild(WW), (WW = WW.proxyOf).parent && WW.parent.removeChild(WW), WW[EW] && tW(WW), "undefined" === typeof WW.raws.before && cW && "undefined" !== typeof cW.raws.before && (WW.raws.before = cW.raws.before.replace(/\S/g, "")), WW.parent = this.proxyOf, WW)))
+        }
+        prepend() {
+          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+          iW = iW.reverse();
+          for (let mW of iW) {
+            let WW = this.normalize(mW, this.first, "prepend").reverse();
+            for (let iW of WW) this.proxyOf.nodes.unshift(iW);
+            for (let iW in this.indexes) this.indexes[iW] = this.indexes[iW] + WW.length
+          }
+          return this.markDirty(), this
+        }
+        push(WW) {
+          return WW.parent = this, this.proxyOf.nodes.push(WW), this
+        }
+        removeAll() {
+          for (let WW of this.proxyOf.nodes) WW.parent = void 0;
+          return this.proxyOf.nodes = [], this.markDirty(), this
+        }
+        removeChild(WW) {
+          let iW;
+          WW = this.index(WW), this.proxyOf.nodes[WW].parent = void 0, this.proxyOf.nodes.splice(WW, 1);
+          for (let OW in this.indexes) iW = this.indexes[OW], iW >= WW && (this.indexes[OW] = iW - 1);
+          return this.markDirty(), this
+        }
+        replaceValues(WW, iW, OW) {
+          return OW || (OW = iW, iW = {}), this.walkDecls((mW => {
+            iW.props && !iW.props.includes(mW.prop) || iW.fast && !mW.value.includes(iW.fast) || (mW.value = mW.value.replace(WW, OW))
+          })), this.markDirty(), this
+        }
+        some(WW) {
+          return this.nodes.some(WW)
+        }
+        walk(WW) {
+          return this.each(((iW, OW) => {
+            let mW;
+            try {
+              mW = WW(iW, OW)
+            } catch (EW) {
+              throw iW.addToError(EW)
+            }
+            return !1 !== mW && iW.walk && (mW = iW.walk(WW)), mW
+          }))
+        }
+        walkAtRules(WW, iW) {
+          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
+            if ("atrule" === OW.type && WW.test(OW.name)) return iW(OW, mW)
+          })) : this.walk(((OW, mW) => {
+            if ("atrule" === OW.type && OW.name === WW) return iW(OW, mW)
+          })) : (iW = WW, this.walk(((WW, OW) => {
+            if ("atrule" === WW.type) return iW(WW, OW)
+          })))
+        }
+        walkComments(WW) {
+          return this.walk(((iW, OW) => {
+            if ("comment" === iW.type) return WW(iW, OW)
+          }))
+        }
+        walkDecls(WW, iW) {
+          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
+            if ("decl" === OW.type && WW.test(OW.prop)) return iW(OW, mW)
+          })) : this.walk(((OW, mW) => {
+            if ("decl" === OW.type && OW.prop === WW) return iW(OW, mW)
+          })) : (iW = WW, this.walk(((WW, OW) => {
+            if ("decl" === WW.type) return iW(WW, OW)
+          })))
+        }
+        walkRules(WW, iW) {
+          return iW ? WW instanceof RegExp ? this.walk(((OW, mW) => {
+            if ("rule" === OW.type && WW.test(OW.selector)) return iW(OW, mW)
+          })) : this.walk(((OW, mW) => {
+            if ("rule" === OW.type && OW.selector === WW) return iW(OW, mW)
+          })) : (iW = WW, this.walk(((WW, OW) => {
+            if ("rule" === WW.type) return iW(WW, OW)
+          })))
+        }
+        get first() {
+          if (this.proxyOf.nodes) return this.proxyOf.nodes[0]
+        }
+        get last() {
+          if (this.proxyOf.nodes) return this.proxyOf.nodes[this.proxyOf.nodes.length - 1]
+        }
+      }
+      return ZW.registerParse = iW => {
+        WW = iW
+      }, ZW.registerRule = WW => {
+        iW = WW
+      }, ZW.registerAtRule = WW => {
+        OW = WW
+      }, ZW.registerRoot = WW => {
+        mW = WW
+      }, Xm = ZW, ZW.default = ZW, ZW.rebuild = WW => {
+        "atrule" === WW.type ? Object.setPrototypeOf(WW, OW.prototype) : "rule" === WW.type ? Object.setPrototypeOf(WW, iW.prototype) : "decl" === WW.type ? Object.setPrototypeOf(WW, PW.prototype) : "comment" === WW.type ? Object.setPrototypeOf(WW, LW.prototype) : "root" === WW.type && Object.setPrototypeOf(WW, mW.prototype), WW[NW] = !0, WW.nodes && WW.nodes.forEach((WW => {
+          ZW.rebuild(WW)
+        }))
+      }, Xm
+    }
+
+    function gE() {
+      if (Rm) return qm;
+      Rm = 1;
+      let WW, iW, OW = vE();
+      class mW extends OW {
+        constructor(WW) {
+          super({
+            type: "document",
+            ...WW
+          }), this.nodes || (this.nodes = [])
+        }
+        toResult() {
+          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return new WW(new iW, this, OW).stringify()
+        }
+      }
+      return mW.registerLazyResult = iW => {
+        WW = iW
+      }, mW.registerProcessor = WW => {
+        iW = WW
+      }, qm = mW, mW.default = mW, qm
+    }
+
+    function DE() {
+      if (Im) return Gm;
+      Im = 1;
+      let WW = {};
+      return Gm = function(iW) {
+        WW[iW] || (WW[iW] = !0, "undefined" !== typeof console && console.warn && console.warn(iW))
+      }
+    }
+
+    function VE() {
+      if (rm) return am;
+      rm = 1;
+      class WW {
+        constructor(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          if (this.type = "warning", this.text = WW, iW.node && iW.node.source) {
+            let WW = iW.node.rangeBy(iW);
+            this.line = WW.start.line, this.column = WW.start.column, this.endLine = WW.end.line, this.endColumn = WW.end.column
+          }
+          for (let OW in iW) this[OW] = iW[OW]
+        }
+        toString() {
+          return this.node ? this.node.error(this.text, {
+            index: this.index,
+            plugin: this.plugin,
+            word: this.word
+          }).message : this.plugin ? this.plugin + ": " + this.text : this.text
+        }
+      }
+      return am = WW, WW.default = WW, am
+    }
+
+    function pE() {
+      if (Fm) return zm;
+      Fm = 1;
+      let WW = VE();
+      class iW {
+        constructor(WW, iW, OW) {
+          this.processor = WW, this.messages = [], this.root = iW, this.opts = OW, this.css = void 0, this.map = void 0
+        }
+        toString() {
+          return this.css
+        }
+        warn(iW) {
+          let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          OW.plugin || this.lastPlugin && this.lastPlugin.postcssPlugin && (OW.plugin = this.lastPlugin.postcssPlugin);
+          let mW = new WW(iW, OW);
+          return this.messages.push(mW), mW
+        }
+        warnings() {
+          return this.messages.filter((WW => "warning" === WW.type))
+        }
+        get content() {
+          return this.css
+        }
+      }
+      return zm = iW, iW.default = iW, zm
+    }
+
+    function fE() {
+      if (OE) return iE;
+      OE = 1;
+      let WW = vE();
+      class iW extends WW {
+        constructor(WW) {
+          super(WW), this.type = "atrule"
+        }
+        append() {
+          return this.proxyOf.nodes || (this.nodes = []), super.append(...arguments)
+        }
+        prepend() {
+          return this.proxyOf.nodes || (this.nodes = []), super.prepend(...arguments)
+        }
+      }
+      return iE = iW, iW.default = iW, WW.registerAtRule(iW), iE
+    }
+
+    function CE() {
+      if (EE) return mE;
+      EE = 1;
+      let WW, iW, OW = vE();
+      class mW extends OW {
+        constructor(WW) {
+          super(WW), this.type = "root", this.nodes || (this.nodes = [])
+        }
+        normalize(WW, iW, OW) {
+          let mW = super.normalize(WW);
+          if (iW)
+            if ("prepend" === OW) this.nodes.length > 1 ? iW.raws.before = this.nodes[1].raws.before : delete iW.raws.before;
+            else if (this.first !== iW)
+            for (let EW of mW) EW.raws.before = iW.raws.before;
+          return mW
+        }
+        removeChild(WW, iW) {
+          let OW = this.index(WW);
+          return !iW && 0 === OW && this.nodes.length > 1 && (this.nodes[1].raws.before = this.nodes[OW].raws.before), super.removeChild(WW)
+        }
+        toResult() {
+          let OW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return new WW(new iW, this, OW).stringify()
+        }
+      }
+      return mW.registerLazyResult = iW => {
+        WW = iW
+      }, mW.registerProcessor = WW => {
+        iW = WW
+      }, mE = mW, mW.default = mW, OW.registerRoot(mW), mE
+    }
+
+    function XE() {
+      if (PE) return NE;
+      PE = 1;
+      let WW = {
+        comma: iW => WW.split(iW, [","], !0),
+        space: iW => WW.split(iW, [" ", "\n", "\t"]),
+        split(WW, iW, OW) {
+          let mW = [],
+            EW = "",
+            NW = !1,
+            PW = 0,
+            LW = !1,
+            cW = "",
+            wW = !1;
+          for (let tW of WW) wW ? wW = !1 : "\\" === tW ? wW = !0 : LW ? tW === cW && (LW = !1) : '"' === tW || "'" === tW ? (LW = !0, cW = tW) : "(" === tW ? PW += 1 : ")" === tW ? PW > 0 && (PW -= 1) : 0 === PW && iW.includes(tW) && (NW = !0), NW ? ("" !== EW && mW.push(EW.trim()), EW = "", NW = !1) : EW += tW;
+          return (OW || "" !== EW) && mW.push(EW.trim()), mW
+        }
+      };
+      return NE = WW, WW.default = WW, NE
+    }
+
+    function BE() {
+      if (cE) return LE;
+      cE = 1;
+      let WW = vE(),
+        iW = XE();
+      class OW extends WW {
+        constructor(WW) {
+          super(WW), this.type = "rule", this.nodes || (this.nodes = [])
+        }
+        get selectors() {
+          return iW.comma(this.selector)
+        }
+        set selectors(WW) {
+          let iW = this.selector ? this.selector.match(/,\s*/) : null,
+            OW = iW ? iW[0] : "," + this.raw("between", "beforeOpen");
+          this.selector = WW.join(OW)
+        }
+      }
+      return LE = OW, OW.default = OW, WW.registerRule(OW), LE
+    }
+
+    function qE() {
+      if (tE) return wE;
+      tE = 1;
+      let WW = HE(),
+        iW = function() {
+          if (WE) return Qm;
+          WE = 1;
+          const WW = "'".charCodeAt(0),
+            iW = '"'.charCodeAt(0),
+            OW = "\\".charCodeAt(0),
+            mW = "/".charCodeAt(0),
+            EW = "\n".charCodeAt(0),
+            NW = " ".charCodeAt(0),
+            PW = "\f".charCodeAt(0),
+            LW = "\t".charCodeAt(0),
+            cW = "\r".charCodeAt(0),
+            wW = "[".charCodeAt(0),
+            tW = "]".charCodeAt(0),
+            ZW = "(".charCodeAt(0),
+            xW = ")".charCodeAt(0),
+            lW = "{".charCodeAt(0),
+            AW = "}".charCodeAt(0),
+            bW = ";".charCodeAt(0),
+            jW = "*".charCodeAt(0),
+            UW = ":".charCodeAt(0),
+            kW = "@".charCodeAt(0),
+            sW = /[\t\n\f\r "#'()/;[\\\]{}]/g,
+            MW = /[\t\n\f\r !"#'():;@[\\\]{}]|\/(?=\*)/g,
+            KW = /.[\r\n"'(/\\]/,
+            SW = /[\da-f]/i;
+          return Qm = function(YW) {
+            let yW, TW, JW, hW, HW, nW, uW, oW, dW, eW, vW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+              gW = YW.css.valueOf(),
+              DW = vW.ignoreErrors,
+              VW = gW.length,
+              pW = 0,
+              fW = [],
+              CW = [];
+
+            function XW(WW) {
+              throw YW.error("Unclosed " + WW, pW)
+            }
+            return {
+              back: function(WW) {
+                CW.push(WW)
+              },
+              endOfFile: function() {
+                return 0 === CW.length && pW >= VW
+              },
+              nextToken: function(YW) {
+                if (CW.length) return CW.pop();
+                if (pW >= VW) return;
+                let vW = !!YW && YW.ignoreUnclosed;
+                switch (yW = gW.charCodeAt(pW), yW) {
+                  case EW:
+                  case NW:
+                  case LW:
+                  case cW:
+                  case PW:
+                    TW = pW;
+                    do {
+                      TW += 1, yW = gW.charCodeAt(TW)
+                    } while (yW === NW || yW === EW || yW === LW || yW === cW || yW === PW);
+                    eW = ["space", gW.slice(pW, TW)], pW = TW - 1;
+                    break;
+                  case wW:
+                  case tW:
+                  case lW:
+                  case AW:
+                  case UW:
+                  case bW:
+                  case xW: {
+                    let WW = String.fromCharCode(yW);
+                    eW = [WW, WW, pW];
+                    break
+                  }
+                  case ZW:
+                    if (oW = fW.length ? fW.pop()[1] : "", dW = gW.charCodeAt(pW + 1), "url" === oW && dW !== WW && dW !== iW && dW !== NW && dW !== EW && dW !== LW && dW !== PW && dW !== cW) {
+                      TW = pW;
+                      do {
+                        if (nW = !1, TW = gW.indexOf(")", TW + 1), -1 === TW) {
+                          if (DW || vW) {
+                            TW = pW;
+                            break
+                          }
+                          XW("bracket")
+                        }
+                        for (uW = TW; gW.charCodeAt(uW - 1) === OW;) uW -= 1, nW = !nW
+                      } while (nW);
+                      eW = ["brackets", gW.slice(pW, TW + 1), pW, TW], pW = TW
+                    } else TW = gW.indexOf(")", pW + 1), hW = gW.slice(pW, TW + 1), -1 === TW || KW.test(hW) ? eW = ["(", "(", pW] : (eW = ["brackets", hW, pW, TW], pW = TW);
+                    break;
+                  case WW:
+                  case iW:
+                    JW = yW === WW ? "'" : '"', TW = pW;
+                    do {
+                      if (nW = !1, TW = gW.indexOf(JW, TW + 1), -1 === TW) {
+                        if (DW || vW) {
+                          TW = pW + 1;
+                          break
+                        }
+                        XW("string")
+                      }
+                      for (uW = TW; gW.charCodeAt(uW - 1) === OW;) uW -= 1, nW = !nW
+                    } while (nW);
+                    eW = ["string", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                    break;
+                  case kW:
+                    sW.lastIndex = pW + 1, sW.test(gW), TW = 0 === sW.lastIndex ? gW.length - 1 : sW.lastIndex - 2, eW = ["at-word", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                    break;
+                  case OW:
+                    for (TW = pW, HW = !0; gW.charCodeAt(TW + 1) === OW;) TW += 1, HW = !HW;
+                    if (yW = gW.charCodeAt(TW + 1), HW && yW !== mW && yW !== NW && yW !== EW && yW !== LW && yW !== cW && yW !== PW && (TW += 1, SW.test(gW.charAt(TW)))) {
+                      for (; SW.test(gW.charAt(TW + 1));) TW += 1;
+                      gW.charCodeAt(TW + 1) === NW && (TW += 1)
+                    }
+                    eW = ["word", gW.slice(pW, TW + 1), pW, TW], pW = TW;
+                    break;
+                  default:
+                    yW === mW && gW.charCodeAt(pW + 1) === jW ? (TW = gW.indexOf("*/", pW + 2) + 1, 0 === TW && (DW || vW ? TW = gW.length : XW("comment")), eW = ["comment", gW.slice(pW, TW + 1), pW, TW], pW = TW) : (MW.lastIndex = pW + 1, MW.test(gW), TW = 0 === MW.lastIndex ? gW.length - 1 : MW.lastIndex - 2, eW = ["word", gW.slice(pW, TW + 1), pW, TW], fW.push(eW), pW = TW)
+                }
+                return pW++, eW
+              },
+              position: function() {
+                return pW
+              }
+            }
+          }, Qm
+        }(),
+        OW = eE(),
+        mW = fE(),
+        EW = CE(),
+        NW = BE();
+      const PW = {
+        empty: !0,
+        space: !0
+      };
+      return wE = class {
+        constructor(WW) {
+          this.input = WW, this.root = new EW, this.current = this.root, this.spaces = "", this.semicolon = !1, this.createTokenizer(), this.root.source = {
+            input: WW,
+            start: {
+              column: 1,
+              line: 1,
+              offset: 0
+            }
+          }
+        }
+        atrule(WW) {
+          let iW, OW, EW, NW = new mW;
+          NW.name = WW[1].slice(1), "" === NW.name && this.unnamedAtrule(NW, WW), this.init(NW, WW[2]);
+          let PW = !1,
+            LW = !1,
+            cW = [],
+            wW = [];
+          for (; !this.tokenizer.endOfFile();) {
+            if (iW = (WW = this.tokenizer.nextToken())[0], "(" === iW || "[" === iW ? wW.push("(" === iW ? ")" : "]") : "{" === iW && wW.length > 0 ? wW.push("}") : iW === wW[wW.length - 1] && wW.pop(), 0 === wW.length) {
+              if (";" === iW) {
+                NW.source.end = this.Vk(WW[2]), NW.source.end.offset++, this.semicolon = !0;
+                break
+              }
+              if ("{" === iW) {
+                LW = !0;
+                break
+              }
+              if ("}" === iW) {
+                if (cW.length > 0) {
+                  for (EW = cW.length - 1, OW = cW[EW]; OW && "space" === OW[0];) OW = cW[--EW];
+                  OW && (NW.source.end = this.Vk(OW[3] || OW[2]), NW.source.end.offset++)
+                }
+                this.end(WW);
+                break
+              }
+              cW.push(WW)
+            } else cW.push(WW);
+            if (this.tokenizer.endOfFile()) {
+              PW = !0;
+              break
+            }
+          }
+          NW.raws.between = this.spacesAndCommentsFromEnd(cW), cW.length ? (NW.raws.afterName = this.spacesAndCommentsFromStart(cW), this.raw(NW, "params", cW), PW && (WW = cW[cW.length - 1], NW.source.end = this.Vk(WW[3] || WW[2]), NW.source.end.offset++, this.spaces = NW.raws.between, NW.raws.between = "")) : (NW.raws.afterName = "", NW.params = ""), LW && (NW.nodes = [], this.current = NW)
+        }
+        checkMissedSemicolon(WW) {
+          let iW = this.colon(WW);
+          if (!1 === iW) return;
+          let OW, mW = 0;
+          for (let EW = iW - 1; EW >= 0 && (OW = WW[EW], "space" === OW[0] || (mW += 1, 2 !== mW)); EW--);
+          throw this.input.error("Missed semicolon", "word" === OW[0] ? OW[3] + 1 : OW[2])
+        }
+        colon(WW) {
+          let iW, OW, mW, EW = 0;
+          for (let [NW, PW] of WW.entries()) {
+            if (iW = PW, OW = iW[0], "(" === OW && (EW += 1), ")" === OW && (EW -= 1), 0 === EW && ":" === OW) {
+              if (mW) {
+                if ("word" === mW[0] && "progid" === mW[1]) continue;
+                return NW
+              }
+              this.doubleColon(iW)
+            }
+            mW = iW
+          }
+          return !1
+        }
+        comment(WW) {
+          let iW = new OW;
+          this.init(iW, WW[2]), iW.source.end = this.Vk(WW[3] || WW[2]), iW.source.end.offset++;
+          let mW = WW[1].slice(2, -2);
+          if (/^\s*$/.test(mW)) iW.text = "", iW.raws.left = mW, iW.raws.right = "";
+          else {
+            let WW = mW.match(/^(\s*)([^]*\S)(\s*)$/);
+            iW.text = WW[2], iW.raws.left = WW[1], iW.raws.right = WW[3]
+          }
+        }
+        createTokenizer() {
+          this.tokenizer = iW(this.input)
+        }
+        decl(iW, OW) {
+          let mW = new WW;
+          this.init(mW, iW[0][2]);
+          let EW, NW = iW[iW.length - 1];
+          for (";" === NW[0] && (this.semicolon = !0, iW.pop()), mW.source.end = this.Vk(NW[3] || NW[2] || function(WW) {
+              for (let iW = WW.length - 1; iW >= 0; iW--) {
+                let OW = WW[iW],
+                  mW = OW[3] || OW[2];
+                if (mW) return mW
+              }
+            }(iW)), mW.source.end.offset++;
+            "word" !== iW[0][0];) 1 === iW.length && this.unknownWord(iW), mW.raws.before += iW.shift()[1];
+          for (mW.source.start = this.Vk(iW[0][2]), mW.prop = ""; iW.length;) {
+            let WW = iW[0][0];
+            if (":" === WW || "space" === WW || "comment" === WW) break;
+            mW.prop += iW.shift()[1]
+          }
+          for (mW.raws.between = ""; iW.length;) {
+            if (EW = iW.shift(), ":" === EW[0]) {
+              mW.raws.between += EW[1];
+              break
+            }
+            "word" === EW[0] && /\w/.test(EW[1]) && this.unknownWord([EW]), mW.raws.between += EW[1]
+          }
+          "_" !== mW.prop[0] && "*" !== mW.prop[0] || (mW.raws.before += mW.prop[0], mW.prop = mW.prop.slice(1));
+          let PW, LW = [];
+          for (; iW.length && (PW = iW[0][0], "space" === PW || "comment" === PW);) LW.push(iW.shift());
+          this.precheckMissedSemicolon(iW);
+          for (let WW = iW.length - 1; WW >= 0; WW--) {
+            if (EW = iW[WW], "!important" === EW[1].toLowerCase()) {
+              mW.important = !0;
+              let OW = this.stringFrom(iW, WW);
+              OW = this.spacesFromEnd(iW) + OW, " !important" !== OW && (mW.raws.important = OW);
+              break
+            }
+            if ("important" === EW[1].toLowerCase()) {
+              let OW = iW.slice(0),
+                EW = "";
+              for (let iW = WW; iW > 0; iW--) {
+                let WW = OW[iW][0];
+                if (0 === EW.trim().indexOf("!") && "space" !== WW) break;
+                EW = OW.pop()[1] + EW
+              }
+              0 === EW.trim().indexOf("!") && (mW.important = !0, mW.raws.important = EW, iW = OW)
+            }
+            if ("space" !== EW[0] && "comment" !== EW[0]) break
+          }
+          iW.some((WW => "space" !== WW[0] && "comment" !== WW[0])) && (mW.raws.between += LW.map((WW => WW[1])).join(""), LW = []), this.raw(mW, "value", LW.concat(iW), OW), mW.value.includes(":") && !OW && this.checkMissedSemicolon(iW)
+        }
+        doubleColon(WW) {
+          throw this.input.error("Double colon", {
+            offset: WW[2]
+          }, {
+            offset: WW[2] + WW[1].length
+          })
+        }
+        emptyRule(WW) {
+          let iW = new NW;
+          this.init(iW, WW[2]), iW.selector = "", iW.raws.between = "", this.current = iW
+        }
+        end(WW) {
+          this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.semicolon = !1, this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.spaces = "", this.current.parent ? (this.current.source.end = this.Vk(WW[2]), this.current.source.end.offset++, this.current = this.current.parent) : this.unexpectedClose(WW)
+        }
+        endFile() {
+          this.current.parent && this.unclosedBlock(), this.current.nodes && this.current.nodes.length && (this.current.raws.semicolon = this.semicolon), this.current.raws.after = (this.current.raws.after || "") + this.spaces, this.root.source.end = this.Vk(this.tokenizer.position())
+        }
+        freeSemicolon(WW) {
+          if (this.spaces += WW[1], this.current.nodes) {
+            let WW = this.current.nodes[this.current.nodes.length - 1];
+            WW && "rule" === WW.type && !WW.raws.ownSemicolon && (WW.raws.ownSemicolon = this.spaces, this.spaces = "")
+          }
+        }
+        Vk(WW) {
+          let iW = this.input.fromOffset(WW);
+          return {
+            column: iW.col,
+            line: iW.line,
+            offset: WW
+          }
+        }
+        init(WW, iW) {
+          this.current.push(WW), WW.source = {
+            input: this.input,
+            start: this.Vk(iW)
+          }, WW.raws.before = this.spaces, this.spaces = "", "comment" !== WW.type && (this.semicolon = !1)
+        }
+        other(WW) {
+          let iW = !1,
+            OW = null,
+            mW = !1,
+            EW = null,
+            NW = [],
+            PW = WW[1].startsWith("--"),
+            LW = [],
+            cW = WW;
+          for (; cW;) {
+            if (OW = cW[0], LW.push(cW), "(" === OW || "[" === OW) EW || (EW = cW), NW.push("(" === OW ? ")" : "]");
+            else if (PW && mW && "{" === OW) EW || (EW = cW), NW.push("}");
+            else if (0 === NW.length) {
+              if (";" === OW) {
+                if (mW) return void this.decl(LW, PW);
+                break
+              }
+              if ("{" === OW) return void this.rule(LW);
+              if ("}" === OW) {
+                this.tokenizer.back(LW.pop()), iW = !0;
+                break
+              }
+              ":" === OW && (mW = !0)
+            } else OW === NW[NW.length - 1] && (NW.pop(), 0 === NW.length && (EW = null));
+            cW = this.tokenizer.nextToken()
+          }
+          if (this.tokenizer.endOfFile() && (iW = !0), NW.length > 0 && this.unclosedBracket(EW), iW && mW) {
+            if (!PW)
+              for (; LW.length && (cW = LW[LW.length - 1][0], "space" === cW || "comment" === cW);) this.tokenizer.back(LW.pop());
+            this.decl(LW, PW)
+          } else this.unknownWord(LW)
+        }
+        parse() {
+          let WW;
+          for (; !this.tokenizer.endOfFile();) switch (WW = this.tokenizer.nextToken(), WW[0]) {
+            case "space":
+              this.spaces += WW[1];
+              break;
+            case ";":
+              this.freeSemicolon(WW);
+              break;
+            case "}":
+              this.end(WW);
+              break;
+            case "comment":
+              this.comment(WW);
+              break;
+            case "at-word":
+              this.atrule(WW);
+              break;
+            case "{":
+              this.emptyRule(WW);
+              break;
+            default:
+              this.other(WW)
+          }
+          this.endFile()
+        }
+        precheckMissedSemicolon() {}
+        raw(WW, iW, OW, mW) {
+          let EW, NW, LW, cW, wW = OW.length,
+            tW = "",
+            ZW = !0;
+          for (let xW = 0; xW < wW; xW += 1) EW = OW[xW], NW = EW[0], "space" !== NW || xW !== wW - 1 || mW ? "comment" === NW ? (cW = OW[xW - 1] ? OW[xW - 1][0] : "empty", LW = OW[xW + 1] ? OW[xW + 1][0] : "empty", PW[cW] || PW[LW] || "," === tW.slice(-1) ? ZW = !1 : tW += EW[1]) : tW += EW[1] : ZW = !1;
+          if (!ZW) {
+            let mW = OW.reduce(((WW, iW) => WW + iW[1]), "");
+            WW.raws[iW] = {
+              raw: mW,
+              value: tW
+            }
+          }
+          WW[iW] = tW
+        }
+        rule(WW) {
+          WW.pop();
+          let iW = new NW;
+          this.init(iW, WW[0][2]), iW.raws.between = this.spacesAndCommentsFromEnd(WW), this.raw(iW, "selector", WW), this.current = iW
+        }
+        spacesAndCommentsFromEnd(WW) {
+          let iW, OW = "";
+          for (; WW.length && (iW = WW[WW.length - 1][0], "space" === iW || "comment" === iW);) OW = WW.pop()[1] + OW;
+          return OW
+        }
+        spacesAndCommentsFromStart(WW) {
+          let iW, OW = "";
+          for (; WW.length && (iW = WW[0][0], "space" === iW || "comment" === iW);) OW += WW.shift()[1];
+          return OW
+        }
+        spacesFromEnd(WW) {
+          let iW, OW = "";
+          for (; WW.length && (iW = WW[WW.length - 1][0], "space" === iW);) OW = WW.pop()[1] + OW;
+          return OW
+        }
+        stringFrom(WW, iW) {
+          let OW = "";
+          for (let mW = iW; mW < WW.length; mW++) OW += WW[mW][1];
+          return WW.splice(iW, WW.length - iW), OW
+        }
+        unclosedBlock() {
+          let WW = this.current.source.start;
+          throw this.input.error("Unclosed block", WW.line, WW.column)
+        }
+        unclosedBracket(WW) {
+          throw this.input.error("Unclosed bracket", {
+            offset: WW[2]
+          }, {
+            offset: WW[2] + 1
+          })
+        }
+        unexpectedClose(WW) {
+          throw this.input.error("Unexpected }", {
+            offset: WW[2]
+          }, {
+            offset: WW[2] + 1
+          })
+        }
+        unknownWord(WW) {
+          throw this.input.error("Unknown word", {
+            offset: WW[0][2]
+          }, {
+            offset: WW[0][2] + WW[0][1].length
+          })
+        }
+        unnamedAtrule(WW, iW) {
+          throw this.input.error("At-rule without name", {
+            offset: iW[2]
+          }, {
+            offset: iW[2] + iW[1].length
+          })
+        }
+      }
+    }
+
+    function RE() {
+      if (xE) return ZE;
+      xE = 1;
+      let WW = vE(),
+        iW = qE(),
+        OW = oE();
+
+      function mW(WW, mW) {
+        let EW = new OW(WW, mW),
+          NW = new iW(EW);
+        try {
+          NW.parse()
+        } catch (PW) {
+          throw PW
+        }
+        return NW.root
+      }
+      return ZE = mW, mW.default = mW, WW.registerParse(mW), ZE
+    }
+
+    function GE() {
+      if (AE) return lE;
+      AE = 1;
+      let {
+        isClean: WW,
+        my: iW
+      } = yE(), OW = dE(), mW = JE(), EW = vE(), NW = gE(), PW = (DE(), pE()), LW = RE(), cW = CE();
+      const wW = {
+          atrule: "AtRule",
+          comment: "Comment",
+          decl: "Declaration",
+          document: "Document",
+          root: "Root",
+          rule: "Rule"
+        },
+        tW = {
+          AtRule: !0,
+          AtRuleExit: !0,
+          Comment: !0,
+          CommentExit: !0,
+          Declaration: !0,
+          DeclarationExit: !0,
+          Document: !0,
+          DocumentExit: !0,
+          Once: !0,
+          OnceExit: !0,
+          postcssPlugin: !0,
+          prepare: !0,
+          Root: !0,
+          RootExit: !0,
+          Rule: !0,
+          RuleExit: !0
+        },
+        ZW = {
+          Once: !0,
+          postcssPlugin: !0,
+          prepare: !0
+        };
+
+      function xW(WW) {
+        return "object" === typeof WW && "function" === typeof WW.then
+      }
+
+      function lW(WW) {
+        let iW = !1,
+          OW = wW[WW.type];
+        return "decl" === WW.type ? iW = WW.prop.toLowerCase() : "atrule" === WW.type && (iW = WW.name.toLowerCase()), iW && WW.append ? [OW, OW + "-" + iW, 0, OW + "Exit", OW + "Exit-" + iW] : iW ? [OW, OW + "-" + iW, OW + "Exit", OW + "Exit-" + iW] : WW.append ? [OW, 0, OW + "Exit"] : [OW, OW + "Exit"]
+      }
+
+      function AW(WW) {
+        let iW;
+        return iW = "document" === WW.type ? ["Document", 0, "DocumentExit"] : "root" === WW.type ? ["Root", 0, "RootExit"] : lW(WW), {
+          eventIndex: 0,
+          events: iW,
+          iterator: 0,
+          node: WW,
+          visitorIndex: 0,
+          visitors: []
+        }
+      }
+
+      function bW(iW) {
+        return iW[WW] = !1, iW.nodes && iW.nodes.forEach((WW => bW(WW))), iW
+      }
+      let jW = {};
+      class UW {
+        constructor(WW, OW, mW) {
+          let NW;
+          if (this.stringified = !1, this.processed = !1, "object" !== typeof OW || null === OW || "root" !== OW.type && "document" !== OW.type)
+            if (OW instanceof UW || OW instanceof PW) NW = bW(OW.root), OW.map && ("undefined" === typeof mW.map && (mW.map = {}), mW.map.inline || (mW.map.inline = !1), mW.map.prev = OW.map);
+            else {
+              let WW = LW;
+              mW.syntax && (WW = mW.syntax.parse), mW.parser && (WW = mW.parser), WW.parse && (WW = WW.parse);
+              try {
+                NW = WW(OW, mW)
+              } catch (cW) {
+                this.processed = !0, this.error = cW
+              }
+              NW && !NW[iW] && EW.rebuild(NW)
+            }
+          else NW = bW(OW);
+          this.result = new PW(WW, NW, mW), this.helpers = {
+            ...jW,
+            postcss: jW,
+            result: this.result
+          }, this.plugins = this.processor.plugins.map((WW => "object" === typeof WW && WW.prepare ? {
+            ...WW,
+            ...WW.prepare(this.result)
+          } : WW))
+        }
+        async () {
+          return this.error ? Promise.reject(this.error) : this.processed ? Promise.resolve(this.result) : (this.processing || (this.processing = this.runAsync()), this.processing)
+        } catch (WW) {
+          return this.async().catch(WW)
+        } finally(WW) {
+          return this.async().then(WW, WW)
+        }
+        getAsyncError() {
+          throw new Error("Use process(css).then(cb) to work with async plugins")
+        }
+        handleError(WW, iW) {
+          let OW = this.result.lastPlugin;
+          try {
+            iW && iW.addToError(WW), this.error = WW, "CssSyntaxError" !== WW.name || WW.plugin ? OW.postcssVersion : (WW.plugin = OW.postcssPlugin, WW.setMessage())
+          } catch (mW) {
+            console && console.error && console.error(mW)
+          }
+          return WW
+        }
+        prepareVisitors() {
+          this.listeners = {};
+          let WW = (WW, iW, OW) => {
+            this.listeners[iW] || (this.listeners[iW] = []), this.listeners[iW].push([WW, OW])
+          };
+          for (let iW of this.plugins)
+            if ("object" === typeof iW)
+              for (let OW in iW) {
+                if (!tW[OW] && /^[A-Z]/.test(OW)) throw new Error(`Unknown event ${OW} in ${iW.postcssPlugin}. Try to update PostCSS (${this.processor.version} now).`);
+                if (!ZW[OW])
+                  if ("object" === typeof iW[OW])
+                    for (let mW in iW[OW]) WW(iW, "*" === mW ? OW : OW + "-" + mW.toLowerCase(), iW[OW][mW]);
+                  else "function" === typeof iW[OW] && WW(iW, OW, iW[OW])
+              }
+          this.hasListener = Object.keys(this.listeners).length > 0
+        }
+        async runAsync() {
+          this.plugin = 0;
+          for (let WW = 0; WW < this.plugins.length; WW++) {
+            let OW = this.plugins[WW],
+              mW = this.runOnRoot(OW);
+            if (xW(mW)) try {
+              await mW
+            } catch (iW) {
+              throw this.handleError(iW)
+            }
+          }
+          if (this.prepareVisitors(), this.hasListener) {
+            let iW = this.result.root;
+            for (; !iW[WW];) {
+              iW[WW] = !0;
+              let mW = [AW(iW)];
+              for (; mW.length > 0;) {
+                let WW = this.visitTick(mW);
+                if (xW(WW)) try {
+                  await WW
+                } catch (OW) {
+                  let WW = mW[mW.length - 1].node;
+                  throw this.handleError(OW, WW)
+                }
+              }
+            }
+            if (this.listeners.OnceExit)
+              for (let [WW, mW] of this.listeners.OnceExit) {
+                this.result.lastPlugin = WW;
+                try {
+                  if ("document" === iW.type) {
+                    let WW = iW.nodes.map((WW => mW(WW, this.helpers)));
+                    await Promise.all(WW)
+                  } else await mW(iW, this.helpers)
+                } catch (OW) {
+                  throw this.handleError(OW)
+                }
+              }
+          }
+          return this.processed = !0, this.stringify()
+        }
+        runOnRoot(WW) {
+          this.result.lastPlugin = WW;
+          try {
+            if ("object" === typeof WW && WW.Once) {
+              if ("document" === this.result.root.type) {
+                let iW = this.result.root.nodes.map((iW => WW.Once(iW, this.helpers)));
+                return xW(iW[0]) ? Promise.all(iW) : iW
+              }
+              return WW.Once(this.result.root, this.helpers)
+            }
+            if ("function" === typeof WW) return WW(this.result.root, this.result)
+          } catch (iW) {
+            throw this.handleError(iW)
+          }
+        }
+        stringify() {
+          if (this.error) throw this.error;
+          if (this.stringified) return this.result;
+          this.stringified = !0, this.sync();
+          let WW = this.result.opts,
+            iW = mW;
+          WW.syntax && (iW = WW.syntax.stringify), WW.stringifier && (iW = WW.stringifier), iW.stringify && (iW = iW.stringify);
+          let EW = new OW(iW, this.result.root, this.result.opts).generate();
+          return this.result.css = EW[0], this.result.map = EW[1], this.result
+        }
+        sync() {
+          if (this.error) throw this.error;
+          if (this.processed) return this.result;
+          if (this.processed = !0, this.processing) throw this.getAsyncError();
+          for (let WW of this.plugins) {
+            if (xW(this.runOnRoot(WW))) throw this.getAsyncError()
+          }
+          if (this.prepareVisitors(), this.hasListener) {
+            let iW = this.result.root;
+            for (; !iW[WW];) iW[WW] = !0, this.walkSync(iW);
+            if (this.listeners.OnceExit)
+              if ("document" === iW.type)
+                for (let WW of iW.nodes) this.visitSync(this.listeners.OnceExit, WW);
+              else this.visitSync(this.listeners.OnceExit, iW)
+          }
+          return this.result
+        }
+        then(WW, iW) {
+          return this.async().then(WW, iW)
+        }
+        toString() {
+          return this.css
+        }
+        visitSync(WW, iW) {
+          for (let [mW, EW] of WW) {
+            let WW;
+            this.result.lastPlugin = mW;
+            try {
+              WW = EW(iW, this.helpers)
+            } catch (OW) {
+              throw this.handleError(OW, iW.proxyOf)
+            }
+            if ("root" !== iW.type && "document" !== iW.type && !iW.parent) return !0;
+            if (xW(WW)) throw this.getAsyncError()
+          }
+        }
+        visitTick(iW) {
+          let OW = iW[iW.length - 1],
+            {
+              node: mW,
+              visitors: EW
+            } = OW;
+          if ("root" !== mW.type && "document" !== mW.type && !mW.parent) return void iW.pop();
+          if (EW.length > 0 && OW.visitorIndex < EW.length) {
+            let [WW, iW] = EW[OW.visitorIndex];
+            OW.visitorIndex += 1, OW.visitorIndex === EW.length && (OW.visitors = [], OW.visitorIndex = 0), this.result.lastPlugin = WW;
+            try {
+              return iW(mW.toProxy(), this.helpers)
+            } catch (PW) {
+              throw this.handleError(PW, mW)
+            }
+          }
+          if (0 !== OW.iterator) {
+            let EW, NW = OW.iterator;
+            for (; EW = mW.nodes[mW.indexes[NW]];)
+              if (mW.indexes[NW] += 1, !EW[WW]) return EW[WW] = !0, void iW.push(AW(EW));
+            OW.iterator = 0, delete mW.indexes[NW]
+          }
+          let NW = OW.events;
+          for (; OW.eventIndex < NW.length;) {
+            let iW = NW[OW.eventIndex];
+            if (OW.eventIndex += 1, 0 === iW) return void(mW.nodes && mW.nodes.length && (mW[WW] = !0, OW.iterator = mW.getIterator()));
+            if (this.listeners[iW]) return void(OW.visitors = this.listeners[iW])
+          }
+          iW.pop()
+        }
+        walkSync(iW) {
+          iW[WW] = !0;
+          let OW = lW(iW);
+          for (let mW of OW)
+            if (0 === mW) iW.nodes && iW.each((iW => {
+              iW[WW] || this.walkSync(iW)
+            }));
+            else {
+              let WW = this.listeners[mW];
+              if (WW && this.visitSync(WW, iW.toProxy())) return
+            }
+        }
+        warnings() {
+          return this.sync().warnings()
+        }
+        get content() {
+          return this.stringify().content
+        }
+        get css() {
+          return this.stringify().css
+        }
+        get map() {
+          return this.stringify().map
+        }
+        get messages() {
+          return this.sync().messages
+        }
+        get opts() {
+          return this.result.opts
+        }
+        get processor() {
+          return this.result.processor
+        }
+        get root() {
+          return this.sync().root
+        }
+        get[Symbol.toStringTag]() {
+          return "LazyResult"
+        }
+      }
+      return UW.registerPostcss = WW => {
+        jW = WW
+      }, lE = UW, UW.default = UW, cW.registerLazyResult(UW), NW.registerLazyResult(UW), lE
+    }
+
+    function IE() {
+      if (kE) return UE;
+      kE = 1;
+      let WW = function() {
+          if (jE) return bE;
+          jE = 1;
+          let WW = dE(),
+            iW = JE(),
+            OW = (DE(), RE());
+          const mW = pE();
+          class EW {
+            constructor(OW, EW, NW) {
+              let PW;
+              EW = EW.toString(), this.stringified = !1, this._processor = OW, this._css = EW, this._opts = NW, this._map = void 0;
+              let LW = iW;
+              this.result = new mW(this._processor, PW, this._opts), this.result.css = EW;
+              let cW = this;
+              Object.defineProperty(this.result, "root", {
+                get: () => cW.root
+              });
+              let wW = new WW(LW, PW, this._opts, EW);
+              if (wW.isMap()) {
+                let [WW, iW] = wW.generate();
+                WW && (this.result.css = WW), iW && (this.result.map = iW)
+              } else wW.clearAnnotation(), this.result.css = wW.css
+            }
+            async () {
+              return this.error ? Promise.reject(this.error) : Promise.resolve(this.result)
+            } catch (WW) {
+              return this.async().catch(WW)
+            } finally(WW) {
+              return this.async().then(WW, WW)
+            }
+            sync() {
+              if (this.error) throw this.error;
+              return this.result
+            }
+            then(WW, iW) {
+              return this.async().then(WW, iW)
+            }
+            toString() {
+              return this._css
+            }
+            warnings() {
+              return []
+            }
+            get content() {
+              return this.result.css
+            }
+            get css() {
+              return this.result.css
+            }
+            get map() {
+              return this.result.map
+            }
+            get messages() {
+              return []
+            }
+            get opts() {
+              return this.result.opts
+            }
+            get processor() {
+              return this.result.processor
+            }
+            get root() {
+              if (this._root) return this._root;
+              let WW, iW = OW;
+              try {
+                WW = iW(this._css, this._opts)
+              } catch (mW) {
+                this.error = mW
+              }
+              if (this.error) throw this.error;
+              return this._root = WW, WW
+            }
+            get[Symbol.toStringTag]() {
+              return "NoWorkResult"
+            }
+          }
+          return bE = EW, EW.default = EW, bE
+        }(),
+        iW = GE(),
+        OW = gE(),
+        mW = CE();
+      class EW {
+        constructor() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+          this.version = "8.4.38", this.plugins = this.normalize(WW)
+        }
+        normalize(WW) {
+          let iW = [];
+          for (let OW of WW)
+            if (!0 === OW.postcss ? OW = OW() : OW.postcss && (OW = OW.postcss), "object" === typeof OW && Array.isArray(OW.plugins)) iW = iW.concat(OW.plugins);
+            else if ("object" === typeof OW && OW.postcssPlugin) iW.push(OW);
+          else if ("function" === typeof OW) iW.push(OW);
+          else {
+            if ("object" !== typeof OW || !OW.parse && !OW.stringify) throw new Error(OW + " is not a PostCSS plugin")
+          }
+          return iW
+        }
+        process(OW) {
+          let mW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return this.plugins.length || mW.parser || mW.stringifier || mW.syntax ? new iW(this, OW, mW) : new WW(this, OW, mW)
+        }
+        use(WW) {
+          return this.plugins = this.plugins.concat(this.normalize([WW])), this
+        }
+      }
+      return UE = EW, EW.default = EW, mW.registerProcessor(EW), OW.registerProcessor(EW), UE
+    }
+    const aE = xm(function() {
+      if (SE) return KE;
+      SE = 1;
+      let WW = Mm(),
+        iW = HE(),
+        OW = GE(),
+        mW = vE(),
+        EW = IE(),
+        NW = JE(),
+        PW = function() {
+          if (ME) return sE;
+          ME = 1;
+          let WW = HE(),
+            iW = uE(),
+            OW = eE(),
+            mW = fE(),
+            EW = oE(),
+            NW = CE(),
+            PW = BE();
+
+          function LW(cW, wW) {
+            if (Array.isArray(cW)) return cW.map((WW => LW(WW)));
+            let {
+              inputs: tW,
+              ...ZW
+            } = cW;
+            if (tW) {
+              wW = [];
+              for (let WW of tW) {
+                let OW = {
+                  ...WW,
+                  __proto__: EW.prototype
+                };
+                OW.map && (OW.map = {
+                  ...OW.map,
+                  __proto__: iW.prototype
+                }), wW.push(OW)
+              }
+            }
+            if (ZW.nodes && (ZW.nodes = cW.nodes.map((WW => LW(WW, wW)))), ZW.source) {
+              let {
+                inputId: WW,
+                ...iW
+              } = ZW.source;
+              ZW.source = iW, null != WW && (ZW.source.input = wW[WW])
+            }
+            if ("root" === ZW.type) return new NW(ZW);
+            if ("decl" === ZW.type) return new WW(ZW);
+            if ("rule" === ZW.type) return new PW(ZW);
+            if ("comment" === ZW.type) return new OW(ZW);
+            if ("atrule" === ZW.type) return new mW(ZW);
+            throw new Error("Unknown node type: " + cW.type)
+          }
+          return sE = LW, LW.default = LW, sE
+        }(),
+        LW = gE(),
+        cW = VE(),
+        wW = eE(),
+        tW = fE(),
+        ZW = pE(),
+        xW = oE(),
+        lW = RE(),
+        AW = XE(),
+        bW = BE(),
+        jW = CE(),
+        UW = hE();
+
+      function kW() {
+        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+        return 1 === iW.length && Array.isArray(iW[0]) && (iW = iW[0]), new EW(iW)
+      }
+      return kW.plugin = function(WW, iW) {
+        let OW, mW = !1;
+
+        function NW() {
+          console && console.warn && !mW && (mW = !0, console.warn(WW + ": postcss.plugin was deprecated. Migration guide:\nhttps://evilmartians.com/chronicles/postcss-8-plugin-migration"), {
+            NODE_ENV: "production",
+            PUBLIC_URL: "",
+            WDS_SOCKET_HOST: void 0,
+            WDS_SOCKET_PATH: void 0,
+            WDS_SOCKET_PORT: void 0,
+            FAST_REFRESH: !0,
+            REACT_APP_DEV_URLS: "false"
+          }.LANG && {
+            NODE_ENV: "production",
+            PUBLIC_URL: "",
+            WDS_SOCKET_HOST: void 0,
+            WDS_SOCKET_PATH: void 0,
+            WDS_SOCKET_PORT: void 0,
+            FAST_REFRESH: !0,
+            REACT_APP_DEV_URLS: "false"
+          }.LANG.startsWith("cn") && console.warn(WW + ": \u91cc\u9762 postcss.plugin \u88ab\u5f03\u7528. \u8fc1\u79fb\u6307\u5357:\nhttps://www.w3ctech.com/topic/2226"));
+          let OW = iW(...arguments);
+          return OW.postcssPlugin = WW, OW.postcssVersion = (new EW).version, OW
+        }
+        return Object.defineProperty(NW, "postcss", {
+          get: () => (OW || (OW = NW()), OW)
+        }), NW.process = function(WW, iW, OW) {
+          return kW([NW(OW)]).process(WW, iW)
+        }, NW
+      }, kW.stringify = NW, kW.parse = lW, kW.fromJSON = PW, kW.list = AW, kW.comment = WW => new wW(WW), kW.atRule = WW => new tW(WW), kW.decl = WW => new iW(WW), kW.rule = WW => new bW(WW), kW.root = WW => new jW(WW), kW.document = WW => new LW(WW), kW.CssSyntaxError = WW, kW.Declaration = iW, kW.yV = mW, kW.Processor = EW, kW.Document = LW, kW.Comment = wW, kW.Warning = cW, kW.AtRule = tW, kW.Result = ZW, kW.Input = xW, kW.Rule = bW, kW.Root = jW, kW.Node = UW, OW.registerPostcss(kW), KE = kW, kW.default = kW, KE
+    }());
+    aE.stringify, aE.fromJSON, aE.plugin, aE.parse, aE.list, aE.document, aE.comment, aE.atRule, aE.rule, aE.decl, aE.root, aE.CssSyntaxError, aE.Declaration, aE.yV, aE.Processor, aE.Document, aE.Comment, aE.Warning, aE.AtRule, aE.Result, aE.Input, aE.Rule, aE.Root, aE.Node;
+    var rE = (WW => (WW[WW.Document = 0] = "Document", WW[WW.DocumentType = 1] = "DocumentType", WW[WW.Element = 2] = "Element", WW[WW.Text = 3] = "Text", WW[WW.CDATA = 4] = "CDATA", WW[WW.Comment = 5] = "Comment", WW))(rE || {});
+
+    function zE(WW) {
+      const iW = [];
+      for (const OW in WW) {
+        const mW = WW[OW];
+        if ("string" !== typeof mW) continue;
+        const EW = ON(OW);
+        iW.push(`${EW}: ${mW};`)
+      }
+      return iW.join(" ")
+    }
+    const FE = /-([a-z])/g,
+      QE = /^--[a-zA-Z0-9-]+$/,
+      WN = WW => QE.test(WW) ? WW : WW.replace(FE, ((WW, iW) => iW ? iW.toUpperCase() : "")),
+      iN = /\B([A-Z])/g,
+      ON = WW => WW.replace(iN, "-$1").toLowerCase();
+    class mN {
+      constructor() {
+        cm(this, "parentElement", null), cm(this, "parentNode", null), cm(this, "ownerDocument"), cm(this, "firstChild", null), cm(this, "lastChild", null), cm(this, "previousSibling", null), cm(this, "nextSibling", null), cm(this, "ELEMENT_NODE", 1), cm(this, "TEXT_NODE", 3), cm(this, "nodeType"), cm(this, "nodeName"), cm(this, "RRNodeType")
+      }
+      get childNodes() {
+        const WW = [];
+        let iW = this.firstChild;
+        for (; iW;) WW.push(iW), iW = iW.nextSibling;
+        return WW
+      }
+      contains(WW) {
+        if (!(WW instanceof mN)) return !1;
+        if (WW.ownerDocument !== this.ownerDocument) return !1;
+        if (WW === this) return !0;
+        for (; WW.parentNode;) {
+          if (WW.parentNode === this) return !0;
+          WW = WW.parentNode
+        }
+        return !1
+      }
+      appendChild(WW) {
+        throw new Error("RRDomException: Failed to execute 'appendChild' on 'RRNode': This RRNode type does not support this method.")
+      }
+      insertBefore(WW, iW) {
+        throw new Error("RRDomException: Failed to execute 'insertBefore' on 'RRNode': This RRNode type does not support this method.")
+      }
+      removeChild(WW) {
+        throw new Error("RRDomException: Failed to execute 'removeChild' on 'RRNode': This RRNode type does not support this method.")
+      }
+      toString() {
+        return "RRNode"
+      }
+    }
+    class EN extends mN {
+      constructor() {
+        for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+        super(iW), cm(this, "nodeType", 9), cm(this, "nodeName", "#document"), cm(this, "compatMode", "CSS1Compat"), cm(this, "RRNodeType", rE.Document), cm(this, "textContent", null), this.ownerDocument = this
+      }
+      get documentElement() {
+        return this.childNodes.find((WW => WW.RRNodeType === rE.Element && "HTML" === WW.tagName)) || null
+      }
+      get body() {
+        var WW;
+        return (null == (WW = this.documentElement) ? void 0 : WW.childNodes.find((WW => WW.RRNodeType === rE.Element && "BODY" === WW.tagName))) || null
+      }
+      get head() {
+        var WW;
+        return (null == (WW = this.documentElement) ? void 0 : WW.childNodes.find((WW => WW.RRNodeType === rE.Element && "HEAD" === WW.tagName))) || null
+      }
+      get implementation() {
+        return this
+      }
+      get firstElementChild() {
+        return this.documentElement
+      }
+      appendChild(WW) {
+        const iW = WW.RRNodeType;
+        if ((iW === rE.Element || iW === rE.DocumentType) && this.childNodes.some((WW => WW.RRNodeType === iW))) throw new Error(`RRDomException: Failed to execute 'appendChild' on 'RRNode': Only one ${iW===rE.Element?"RRElement":"RRDoctype"} on RRDocument allowed.`);
+        const OW = lN(this, WW);
+        return OW.parentElement = null, OW
+      }
+      insertBefore(WW, iW) {
+        const OW = WW.RRNodeType;
+        if ((OW === rE.Element || OW === rE.DocumentType) && this.childNodes.some((WW => WW.RRNodeType === OW))) throw new Error(`RRDomException: Failed to execute 'insertBefore' on 'RRNode': Only one ${OW===rE.Element?"RRElement":"RRDoctype"} on RRDocument allowed.`);
+        const mW = AN(this, WW, iW);
+        return mW.parentElement = null, mW
+      }
+      removeChild(WW) {
+        return bN(this, WW)
+      }
+      open() {
+        this.firstChild = null, this.lastChild = null
+      }
+      close() {}
+      write(WW) {
+        let iW;
+        if ('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">' === WW ? iW = "-//W3C//DTD XHTML 1.0 Transitional//EN" : '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "">' === WW && (iW = "-//W3C//DTD HTML 4.0 Transitional//EN"), iW) {
+          const WW = this.createDocumentType("html", iW, "");
+          this.open(), this.appendChild(WW)
+        }
+      }
+      createDocument(WW, iW, OW) {
+        return new EN
+      }
+      createDocumentType(WW, iW, OW) {
+        const mW = new NN(WW, iW, OW);
+        return mW.ownerDocument = this, mW
+      }
+      createElement(WW) {
+        const iW = new PN(WW);
+        return iW.ownerDocument = this, iW
+      }
+      createElementNS(WW, iW) {
+        return this.createElement(iW)
+      }
+      createTextNode(WW) {
+        const iW = new wN(WW);
+        return iW.ownerDocument = this, iW
+      }
+      createComment(WW) {
+        const iW = new tN(WW);
+        return iW.ownerDocument = this, iW
+      }
+      createCDATASection(WW) {
+        const iW = new ZN(WW);
+        return iW.ownerDocument = this, iW
+      }
+      toString() {
+        return "RRDocument"
+      }
+    }
+    class NN extends mN {
+      constructor(WW, iW, OW) {
+        super(), cm(this, "nodeType", 10), cm(this, "RRNodeType", rE.DocumentType), cm(this, "name"), cm(this, "publicId"), cm(this, "systemId"), cm(this, "textContent", null), this.name = WW, this.publicId = iW, this.systemId = OW, this.nodeName = WW
+      }
+      toString() {
+        return "RRDocumentType"
+      }
+    }
+    class PN extends mN {
+      constructor(WW) {
+        super(), cm(this, "nodeType", 1), cm(this, "RRNodeType", rE.Element), cm(this, "tagName"), cm(this, "attributes", {}), cm(this, "shadowRoot", null), cm(this, "scrollLeft"), cm(this, "scrollTop"), this.tagName = WW.toUpperCase(), this.nodeName = WW.toUpperCase()
+      }
+      get textContent() {
+        let WW = "";
+        return this.childNodes.forEach((iW => WW += iW.textContent)), WW
+      }
+      set textContent(WW) {
+        this.firstChild = null, this.lastChild = null, this.appendChild(this.ownerDocument.createTextNode(WW))
+      }
+      get classList() {
+        return new xN(this.attributes.class, (WW => {
+          this.attributes.class = WW
+        }))
+      }
+      get id() {
+        return this.attributes.id || ""
+      }
+      get className() {
+        return this.attributes.class || ""
+      }
+      get style() {
+        const WW = this.attributes.style ? function(WW) {
+            const iW = {},
+              OW = /:(.+)/;
+            return WW.replace(/\/\*.*?\*\//g, "").split(/;(?![^(]*\))/g).forEach((function(WW) {
+              if (WW) {
+                const mW = WW.split(OW);
+                mW.length > 1 && (iW[WN(mW[0].trim())] = mW[1].trim())
+              }
+            })), iW
+          }(this.attributes.style) : {},
+          iW = /\B([A-Z])/g;
+        return WW.setProperty = (OW, mW, EW) => {
+          if (iW.test(OW)) return;
+          const NW = WN(OW);
+          mW ? WW[NW] = mW : delete WW[NW], "important" === EW && (WW[NW] += " !important"), this.attributes.style = zE(WW)
+        }, WW.removeProperty = OW => {
+          if (iW.test(OW)) return "";
+          const mW = WN(OW),
+            EW = WW[mW] || "";
+          return delete WW[mW], this.attributes.style = zE(WW), EW
+        }, WW
+      }
+      getAttribute(WW) {
+        return void 0 === this.attributes[WW] ? null : this.attributes[WW]
+      }
+      setAttribute(WW, iW) {
+        this.attributes[WW] = iW
+      }
+      setAttributeNS(WW, iW, OW) {
+        this.setAttribute(iW, OW)
+      }
+      removeAttribute(WW) {
+        delete this.attributes[WW]
+      }
+      appendChild(WW) {
+        return lN(this, WW)
+      }
+      insertBefore(WW, iW) {
+        return AN(this, WW, iW)
+      }
+      removeChild(WW) {
+        return bN(this, WW)
+      }
+      attachShadow(WW) {
+        const iW = this.ownerDocument.createElement("SHADOWROOT");
+        return this.shadowRoot = iW, iW
+      }
+      dispatchEvent(WW) {
+        return !0
+      }
+      toString() {
+        let WW = "";
+        for (const iW in this.attributes) WW += `${iW}="${this.attributes[iW]}" `;
+        return `${this.tagName} ${WW}`
+      }
+    }
+    class LN extends PN {
+      constructor() {
+        super(...arguments), cm(this, "currentTime"), cm(this, "volume"), cm(this, "paused"), cm(this, "muted"), cm(this, "playbackRate"), cm(this, "loop")
+      }
+      attachShadow(WW) {
+        throw new Error("RRDomException: Failed to execute 'attachShadow' on 'RRElement': This RRElement does not support attachShadow")
+      }
+      play() {
+        this.paused = !1
+      }
+      pause() {
+        this.paused = !0
+      }
+    }
+    class cN extends PN {
+      constructor() {
+        super(...arguments), cm(this, "tagName", "DIALOG"), cm(this, "nodeName", "DIALOG")
+      }
+      get isModal() {
+        return "modal" === this.getAttribute("rr_open_mode")
+      }
+      get open() {
+        return null !== this.getAttribute("open")
+      }
+      close() {
+        this.removeAttribute("open"), this.removeAttribute("rr_open_mode")
+      }
+      show() {
+        this.setAttribute("open", ""), this.setAttribute("rr_open_mode", "non-modal")
+      }
+      showModal() {
+        this.setAttribute("open", ""), this.setAttribute("rr_open_mode", "modal")
+      }
+    }
+    class wN extends mN {
+      constructor(WW) {
+        super(), cm(this, "nodeType", 3), cm(this, "nodeName", "#text"), cm(this, "RRNodeType", rE.Text), cm(this, "data"), this.data = WW
+      }
+      get textContent() {
+        return this.data
+      }
+      set textContent(WW) {
+        this.data = WW
+      }
+      toString() {
+        return `RRText text=${JSON.stringify(this.data)}`
+      }
+    }
+    class tN extends mN {
+      constructor(WW) {
+        super(), cm(this, "nodeType", 8), cm(this, "nodeName", "#comment"), cm(this, "RRNodeType", rE.Comment), cm(this, "data"), this.data = WW
+      }
+      get textContent() {
+        return this.data
+      }
+      set textContent(WW) {
+        this.data = WW
+      }
+      toString() {
+        return `RRComment text=${JSON.stringify(this.data)}`
+      }
+    }
+    class ZN extends mN {
+      constructor(WW) {
+        super(), cm(this, "nodeName", "#cdata-section"), cm(this, "nodeType", 4), cm(this, "RRNodeType", rE.CDATA), cm(this, "data"), this.data = WW
+      }
+      get textContent() {
+        return this.data
+      }
+      set textContent(WW) {
+        this.data = WW
+      }
+      toString() {
+        return `RRCDATASection data=${JSON.stringify(this.data)}`
+      }
+    }
+    class xN {
+      constructor(WW, iW) {
+        var OW = this;
+        if (cm(this, "onChange"), cm(this, "classes", []), cm(this, "add", (function() {
+            for (var WW = arguments.length, iW = new Array(WW), mW = 0; mW < WW; mW++) iW[mW] = arguments[mW];
+            for (const EW of iW) {
+              const WW = String(EW);
+              OW.classes.indexOf(WW) >= 0 || OW.classes.push(WW)
+            }
+            OW.onChange && OW.onChange(OW.classes.join(" "))
+          })), cm(this, "remove", (function() {
+            for (var WW = arguments.length, iW = new Array(WW), mW = 0; mW < WW; mW++) iW[mW] = arguments[mW];
+            OW.classes = OW.classes.filter((WW => -1 === iW.indexOf(WW))), OW.onChange && OW.onChange(OW.classes.join(" "))
+          })), WW) {
+          const iW = WW.trim().split(/\s+/);
+          this.classes.push(...iW)
+        }
+        this.onChange = iW
+      }
+    }
+
+    function lN(WW, iW) {
+      return iW.parentNode && iW.parentNode.removeChild(iW), WW.lastChild ? (WW.lastChild.nextSibling = iW, iW.previousSibling = WW.lastChild) : (WW.firstChild = iW, iW.previousSibling = null), WW.lastChild = iW, iW.nextSibling = null, iW.parentNode = WW, iW.parentElement = WW, iW.ownerDocument = WW.ownerDocument, iW
+    }
+
+    function AN(WW, iW, OW) {
+      if (!OW) return lN(WW, iW);
+      if (OW.parentNode !== WW) throw new Error("Failed to execute 'insertBefore' on 'RRNode': The RRNode before which the new node is to be inserted is not a child of this RRNode.");
+      return iW === OW || (iW.parentNode && iW.parentNode.removeChild(iW), iW.previousSibling = OW.previousSibling, OW.previousSibling = iW, iW.nextSibling = OW, iW.previousSibling ? iW.previousSibling.nextSibling = iW : WW.firstChild = iW, iW.parentElement = WW, iW.parentNode = WW, iW.ownerDocument = WW.ownerDocument), iW
+    }
+
+    function bN(WW, iW) {
+      if (iW.parentNode !== WW) throw new Error("Failed to execute 'removeChild' on 'RRNode': The RRNode to be removed is not a child of this RRNode.");
+      return iW.previousSibling ? iW.previousSibling.nextSibling = iW.nextSibling : WW.firstChild = iW.nextSibling, iW.nextSibling ? iW.nextSibling.previousSibling = iW.previousSibling : WW.lastChild = iW.previousSibling, iW.previousSibling = null, iW.nextSibling = null, iW.parentElement = null, iW.parentNode = null, iW
+    }
+    var jN = (WW => (WW[WW.PLACEHOLDER = 0] = "PLACEHOLDER", WW[WW.ELEMENT_NODE = 1] = "ELEMENT_NODE", WW[WW.ATTRIBUTE_NODE = 2] = "ATTRIBUTE_NODE", WW[WW.TEXT_NODE = 3] = "TEXT_NODE", WW[WW.CDATA_SECTION_NODE = 4] = "CDATA_SECTION_NODE", WW[WW.ENTITY_REFERENCE_NODE = 5] = "ENTITY_REFERENCE_NODE", WW[WW.ENTITY_NODE = 6] = "ENTITY_NODE", WW[WW.PROCESSING_INSTRUCTION_NODE = 7] = "PROCESSING_INSTRUCTION_NODE", WW[WW.COMMENT_NODE = 8] = "COMMENT_NODE", WW[WW.DOCUMENT_NODE = 9] = "DOCUMENT_NODE", WW[WW.DOCUMENT_TYPE_NODE = 10] = "DOCUMENT_TYPE_NODE", WW[WW.DOCUMENT_FRAGMENT_NODE = 11] = "DOCUMENT_FRAGMENT_NODE", WW))(jN || {});
+    const UN = {
+        svg: "http://www.w3.org/2000/svg",
+        "xlink:href": "http://www.w3.org/1999/xlink",
+        xmlns: "http://www.w3.org/2000/xmlns/"
+      },
+      kN = {
+        altglyph: "altGlyph",
+        altglyphdef: "altGlyphDef",
+        altglyphitem: "altGlyphItem",
+        animatecolor: "animateColor",
+        animatemotion: "animateMotion",
+        animatetransform: "animateTransform",
+        clippath: "clipPath",
+        feblend: "feBlend",
+        fecolormatrix: "feColorMatrix",
+        fecomponenttransfer: "feComponentTransfer",
+        fecomposite: "feComposite",
+        feconvolvematrix: "feConvolveMatrix",
+        fediffuselighting: "feDiffuseLighting",
+        fedisplacementmap: "feDisplacementMap",
+        fedistantlight: "feDistantLight",
+        fedropshadow: "feDropShadow",
+        feflood: "feFlood",
+        fefunca: "feFuncA",
+        fefuncb: "feFuncB",
+        fefuncg: "feFuncG",
+        fefuncr: "feFuncR",
+        fegaussianblur: "feGaussianBlur",
+        feimage: "feImage",
+        femerge: "feMerge",
+        femergenode: "feMergeNode",
+        femorphology: "feMorphology",
+        feoffset: "feOffset",
+        fepointlight: "fePointLight",
+        fespecularlighting: "feSpecularLighting",
+        fespotlight: "feSpotLight",
+        fetile: "feTile",
+        feturbulence: "feTurbulence",
+        foreignobject: "foreignObject",
+        glyphref: "glyphRef",
+        lineargradient: "linearGradient",
+        radialgradient: "radialGradient"
+      };
+    let sN = null;
+
+    function MN(WW, iW, OW) {
+      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : iW.mirror || iW.ownerDocument.mirror;
+      WW = function(WW, iW, OW, mW) {
+          var EW;
+          OW.afterAppend && !sN && (sN = new WeakSet, setTimeout((() => {
+            sN = null
+          }), 0));
+          if (!YN(WW, iW)) {
+            const NW = SN(iW, OW.mirror, mW);
+            null == (EW = WW.parentNode) || EW.replaceChild(NW, WW), WW = NW
+          }
+          switch (iW.RRNodeType) {
+            case rE.Document:
+              if (!yN(WW, iW, OW.mirror, mW)) {
+                const EW = mW.getMeta(iW);
+                EW && (OW.mirror.removeNodeFromMap(WW), WW.close(), WW.open(), OW.mirror.add(WW, EW), null == sN || sN.add(WW))
+              }
+              break;
+            case rE.Element: {
+              const EW = WW,
+                NW = iW;
+              switch (NW.tagName) {
+                case "IFRAME": {
+                  const EW = WW.contentDocument;
+                  if (!EW) break;
+                  MN(EW, iW.contentDocument, OW, mW);
+                  break
+                }
+              }
+              NW.shadowRoot && (EW.shadowRoot || EW.attachShadow({
+                  mode: "open"
+                }), KN(EW.shadowRoot, NW.shadowRoot, OW, mW)),
+                function(WW, iW, OW) {
+                  const mW = WW.attributes,
+                    EW = iW.attributes;
+                  for (const PW in EW) {
+                    const mW = EW[PW],
+                      LW = OW.getMeta(iW);
+                    if ((null == LW ? void 0 : LW.isSVG) && UN[PW]) WW.setAttributeNS(UN[PW], PW, mW);
+                    else if ("CANVAS" === iW.tagName && "rr_dataURL" === PW) {
+                      const iW = document.createElement("img");
+                      iW.src = mW, iW.onload = () => {
+                        const OW = WW.getContext("2d");
+                        OW && OW.drawImage(iW, 0, 0, iW.width, iW.height)
+                      }
+                    } else {
+                      if ("IFRAME" === iW.tagName && "srcdoc" === PW) continue;
+                      try {
+                        WW.setAttribute(PW, mW)
+                      } catch (NW) {
+                        console.warn(NW)
+                      }
+                    }
+                  }
+                  for (const {
+                      name: PW
+                    }
+                    of Array.from(mW)) PW in EW || WW.removeAttribute(PW);
+                  iW.scrollLeft && (WW.scrollLeft = iW.scrollLeft), iW.scrollTop && (WW.scrollTop = iW.scrollTop)
+                }(EW, NW, mW);
+              break
+            }
+          }
+          return WW
+        }(WW, iW, OW, mW), KN(WW, iW, OW, mW),
+        function(WW, iW, OW) {
+          var mW;
+          switch (iW.RRNodeType) {
+            case rE.Document: {
+              const WW = iW.scrollData;
+              WW && OW.applyScroll(WW, !0);
+              break
+            }
+            case rE.Element: {
+              const mW = WW,
+                NW = iW;
+              switch (NW.scrollData && OW.applyScroll(NW.scrollData, !0), NW.inputData && OW.applyInput(NW.inputData), NW.tagName) {
+                case "AUDIO":
+                case "VIDEO": {
+                  const iW = WW,
+                    OW = NW;
+                  void 0 !== OW.paused && (OW.paused ? iW.pause() : iW.play()), void 0 !== OW.muted && (iW.muted = OW.muted), void 0 !== OW.volume && (iW.volume = OW.volume), void 0 !== OW.currentTime && (iW.currentTime = OW.currentTime), void 0 !== OW.playbackRate && (iW.playbackRate = OW.playbackRate), void 0 !== OW.loop && (iW.loop = OW.loop);
+                  break
+                }
+                case "CANVAS": {
+                  const EW = iW;
+                  if (null !== EW.rr_dataURL) {
+                    const WW = document.createElement("img");
+                    WW.onload = () => {
+                      const iW = mW.getContext("2d");
+                      iW && iW.drawImage(WW, 0, 0, WW.width, WW.height)
+                    }, WW.src = EW.rr_dataURL
+                  }
+                  EW.canvasMutations.forEach((iW => OW.applyCanvas(iW.event, iW.mutation, WW)));
+                  break
+                }
+                case "STYLE": {
+                  const WW = mW.sheet;
+                  WW && iW.rules.forEach((iW => OW.applyStyleSheetMutation(iW, WW)));
+                  break
+                }
+                case "DIALOG": {
+                  const WW = mW,
+                    iW = NW,
+                    OW = WW.open,
+                    PW = WW.matches("dialog:modal"),
+                    LW = iW.open,
+                    cW = iW.isModal,
+                    wW = PW !== cW,
+                    tW = OW !== LW;
+                  if ((wW || OW && tW) && WW.close(), LW && (tW || wW)) try {
+                    cW ? WW.showModal() : WW.show()
+                  } catch (EW) {
+                    console.warn(EW)
+                  }
+                  break
+                }
+              }
+              break
+            }
+            case rE.Text:
+            case rE.Comment:
+            case rE.CDATA:
+              WW.textContent !== iW.data && (WW.textContent = iW.data)
+          }(null == sN ? void 0 : sN.has(WW)) && (sN.delete(WW), null == (mW = OW.afterAppend) || mW.call(OW, WW, OW.mirror.getId(WW)))
+        }(WW, iW, OW)
+    }
+
+    function KN(WW, iW, OW, mW) {
+      const EW = Array.from(WW.childNodes),
+        NW = iW.childNodes;
+      if (0 === EW.length && 0 === NW.length) return;
+      let PW, LW, cW = 0,
+        wW = EW.length - 1,
+        tW = 0,
+        ZW = NW.length - 1,
+        xW = EW[cW],
+        lW = EW[wW],
+        AW = NW[tW],
+        bW = NW[ZW];
+      for (; cW <= wW && tW <= ZW;)
+        if (void 0 === xW) xW = EW[++cW];
+        else if (void 0 === lW) lW = EW[--wW];
+      else if (yN(xW, AW, OW.mirror, mW)) xW = EW[++cW], AW = NW[++tW];
+      else if (yN(lW, bW, OW.mirror, mW)) lW = EW[--wW], bW = NW[--ZW];
+      else if (yN(xW, bW, OW.mirror, mW)) {
+        try {
+          WW.insertBefore(xW, lW.nextSibling)
+        } catch (kW) {
+          console.warn(kW)
+        }
+        xW = EW[++cW], bW = NW[--ZW]
+      } else if (yN(lW, AW, OW.mirror, mW)) {
+        try {
+          WW.insertBefore(lW, xW)
+        } catch (kW) {
+          console.warn(kW)
+        }
+        lW = EW[--wW], AW = NW[++tW]
+      } else {
+        if (!PW) {
+          PW = {};
+          for (let WW = cW; WW <= wW; WW++) {
+            const iW = EW[WW];
+            iW && OW.mirror.hasNode(iW) && (PW[OW.mirror.getId(iW)] = WW)
+          }
+        }
+        LW = PW[mW.getId(AW)];
+        const iW = EW[LW];
+        if (void 0 !== LW && iW && yN(iW, AW, OW.mirror, mW)) {
+          try {
+            WW.insertBefore(iW, xW)
+          } catch (kW) {
+            console.warn(kW)
+          }
+          EW[LW] = void 0
+        } else {
+          const iW = SN(AW, OW.mirror, mW);
+          "#document" === WW.nodeName && xW && (iW.nodeType === iW.DOCUMENT_TYPE_NODE && xW.nodeType === xW.DOCUMENT_TYPE_NODE || iW.nodeType === iW.ELEMENT_NODE && xW.nodeType === xW.ELEMENT_NODE) && (WW.removeChild(xW), OW.mirror.removeNodeFromMap(xW), xW = EW[++cW]);
+          try {
+            WW.insertBefore(iW, xW || null)
+          } catch (kW) {
+            console.warn(kW)
+          }
+        }
+        AW = NW[++tW]
+      }
+      if (cW > wW) {
+        const iW = NW[ZW + 1];
+        let EW = null;
+        for (iW && (EW = OW.mirror.AmW(mW.getId(iW))); tW <= ZW; ++tW) {
+          const iW = SN(NW[tW], OW.mirror, mW);
+          try {
+            WW.insertBefore(iW, EW)
+          } catch (kW) {
+            console.warn(kW)
+          }
+        }
+      } else if (tW > ZW)
+        for (; cW <= wW; cW++) {
+          const iW = EW[cW];
+          if (iW && iW.parentNode === WW) try {
+            WW.removeChild(iW), OW.mirror.removeNodeFromMap(iW)
+          } catch (kW) {
+            console.warn(kW)
+          }
+        }
+      let jW = WW.firstChild,
+        UW = iW.firstChild;
+      for (; null !== jW && null !== UW;) MN(jW, UW, OW, mW), jW = jW.nextSibling, UW = UW.nextSibling
+    }
+
+    function SN(WW, iW, OW) {
+      const mW = OW.getId(WW),
+        EW = OW.getMeta(WW);
+      let NW = null;
+      if (mW > -1 && (NW = iW.AmW(mW)), null !== NW && YN(NW, WW)) return NW;
+      switch (WW.RRNodeType) {
+        case rE.Document:
+          NW = new Document;
+          break;
+        case rE.DocumentType:
+          NW = document.implementation.createDocumentType(WW.name, WW.publicId, WW.systemId);
+          break;
+        case rE.Element: {
+          let iW = WW.tagName.toLowerCase();
+          iW = kN[iW] || iW, NW = EW && "isSVG" in EW && (null == EW ? void 0 : EW.isSVG) ? document.createElementNS(UN.svg, iW) : document.createElement(WW.tagName);
+          break
+        }
+        case rE.Text:
+          NW = document.createTextNode(WW.data);
+          break;
+        case rE.Comment:
+          NW = document.createComment(WW.data);
+          break;
+        case rE.CDATA:
+          NW = document.createCDATASection(WW.data)
+      }
+      EW && iW.add(NW, {
+        ...EW
+      });
+      try {
+        null == sN || sN.add(NW)
+      } catch (PW) {}
+      return NW
+    }
+
+    function YN(WW, iW) {
+      return WW.nodeType === iW.nodeType && (WW.nodeType !== WW.ELEMENT_NODE || WW.tagName.toUpperCase() === iW.tagName)
+    }
+
+    function yN(WW, iW, OW, mW) {
+      const EW = OW.getId(WW),
+        NW = mW.getId(iW);
+      return -1 !== EW && EW === NW && YN(WW, iW)
+    }
+    class TN extends EN {
+      constructor(WW) {
+        super(), cm(this, "UNSERIALIZED_STARTING_ID", -2), cm(this, "_unserializedId", this.UNSERIALIZED_STARTING_ID), cm(this, "mirror", new pN), cm(this, "scrollData", null), WW && (this.mirror = WW)
+      }
+      get unserializedId() {
+        return this._unserializedId--
+      }
+      createDocument(WW, iW, OW) {
+        return new TN
+      }
+      createDocumentType(WW, iW, OW) {
+        const mW = new JN(WW, iW, OW);
+        return mW.ownerDocument = this, mW
+      }
+      createElement(WW) {
+        const iW = WW.toUpperCase();
+        let OW;
+        switch (iW) {
+          case "AUDIO":
+          case "VIDEO":
+            OW = new HN(iW);
+            break;
+          case "IFRAME":
+            OW = new dN(iW, this.mirror);
+            break;
+          case "CANVAS":
+            OW = new uN(iW);
+            break;
+          case "STYLE":
+            OW = new oN(iW);
+            break;
+          case "DIALOG":
+            OW = new nN(iW);
+            break;
+          default:
+            OW = new hN(iW)
+        }
+        return OW.ownerDocument = this, OW
+      }
+      createComment(WW) {
+        const iW = new vN(WW);
+        return iW.ownerDocument = this, iW
+      }
+      createCDATASection(WW) {
+        const iW = new gN(WW);
+        return iW.ownerDocument = this, iW
+      }
+      createTextNode(WW) {
+        const iW = new eN(WW);
+        return iW.ownerDocument = this, iW
+      }
+      destroyTree() {
+        this.firstChild = null, this.lastChild = null, this.mirror.reset()
+      }
+      open() {
+        super.open(), this._unserializedId = this.UNSERIALIZED_STARTING_ID
+      }
+    }
+    const JN = NN;
+    class hN extends PN {
+      constructor() {
+        super(...arguments), cm(this, "inputData", null), cm(this, "scrollData", null)
+      }
+    }
+    class HN extends LN {}
+    class nN extends cN {}
+    class uN extends hN {
+      constructor() {
+        super(...arguments), cm(this, "rr_dataURL", null), cm(this, "canvasMutations", [])
+      }
+      getContext() {
+        return null
+      }
+    }
+    class oN extends hN {
+      constructor() {
+        super(...arguments), cm(this, "rules", [])
+      }
+    }
+    class dN extends hN {
+      constructor(WW, iW) {
+        super(WW), cm(this, "contentDocument", new TN), this.contentDocument.mirror = iW
+      }
+    }
+    const eN = wN,
+      vN = tN,
+      gN = ZN;
+
+    function DN(WW, iW, OW, mW) {
+      let EW;
+      switch (WW.nodeType) {
+        case jN.DOCUMENT_NODE:
+          mW && "IFRAME" === mW.nodeName ? EW = mW.contentDocument : (EW = iW, EW.compatMode = WW.compatMode);
+          break;
+        case jN.DOCUMENT_TYPE_NODE: {
+          const OW = WW;
+          EW = iW.createDocumentType(OW.name, OW.publicId, OW.systemId);
+          break
+        }
+        case jN.ELEMENT_NODE: {
+          const OW = WW,
+            mW = (NW = OW) instanceof HTMLFormElement ? "FORM" : NW.tagName.toUpperCase();
+          EW = iW.createElement(mW);
+          const PW = EW;
+          for (const {
+              name: WW,
+              value: iW
+            }
+            of Array.from(OW.attributes)) PW.attributes[WW] = iW;
+          OW.scrollLeft && (PW.scrollLeft = OW.scrollLeft), OW.scrollTop && (PW.scrollTop = OW.scrollTop);
+          break
+        }
+        case jN.TEXT_NODE:
+          EW = iW.createTextNode(WW.textContent || "");
+          break;
+        case jN.CDATA_SECTION_NODE:
+          EW = iW.createCDATASection(WW.data);
+          break;
+        case jN.COMMENT_NODE:
+          EW = iW.createComment(WW.textContent || "");
+          break;
+        case jN.DOCUMENT_FRAGMENT_NODE:
+          EW = mW.attachShadow({
+            mode: "open"
+          });
+          break;
+        default:
+          return null
+      }
+      var NW;
+      let PW = OW.getMeta(WW);
+      return iW instanceof TN && (PW || (PW = fN(EW, iW.unserializedId), OW.add(WW, PW)), iW.mirror.add(EW, {
+        ...PW
+      })), EW
+    }
+
+    function VN(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Zm,
+        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new TN;
+      return function WW(mW, EW) {
+        const NW = DN(mW, OW, iW, EW);
+        if (null !== NW)
+          if ("IFRAME" !== (null == EW ? void 0 : EW.nodeName) && mW.nodeType !== jN.DOCUMENT_FRAGMENT_NODE && (null == EW || EW.appendChild(NW), NW.parentNode = EW, NW.parentElement = EW), "IFRAME" === mW.nodeName) {
+            const iW = mW.contentDocument;
+            iW && WW(iW, NW)
+          } else mW.nodeType !== jN.DOCUMENT_NODE && mW.nodeType !== jN.ELEMENT_NODE && mW.nodeType !== jN.DOCUMENT_FRAGMENT_NODE || (mW.nodeType === jN.ELEMENT_NODE && mW.shadowRoot && WW(mW.shadowRoot, NW), mW.childNodes.forEach((iW => WW(iW, NW))))
+      }(WW, null), OW
+    }
+    class pN {
+      constructor() {
+        cm(this, "idNodeMap", new Map), cm(this, "nodeMetaMap", new WeakMap)
+      }
+      getId(WW) {
+        var iW;
+        if (!WW) return -1;
+        return (null == (iW = this.getMeta(WW)) ? void 0 : iW.id) ?? -1
+      }
+      AmW(WW) {
+        return this.idNodeMap.get(WW) || null
+      }
+      getIds() {
+        return Array.from(this.idNodeMap.keys())
+      }
+      getMeta(WW) {
+        return this.nodeMetaMap.get(WW) || null
+      }
+      removeNodeFromMap(WW) {
+        const iW = this.getId(WW);
+        this.idNodeMap.delete(iW), WW.childNodes && WW.childNodes.forEach((WW => this.removeNodeFromMap(WW)))
+      }
+      has(WW) {
+        return this.idNodeMap.has(WW)
+      }
+      hasNode(WW) {
+        return this.nodeMetaMap.has(WW)
+      }
+      add(WW, iW) {
+        const OW = iW.id;
+        this.idNodeMap.set(OW, WW), this.nodeMetaMap.set(WW, iW)
+      }
+      replace(WW, iW) {
+        const OW = this.AmW(WW);
+        if (OW) {
+          const WW = this.nodeMetaMap.get(OW);
+          WW && this.nodeMetaMap.set(iW, WW)
+        }
+        this.idNodeMap.set(WW, iW)
+      }
+      reset() {
+        this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
+      }
+    }
+
+    function fN(WW, iW) {
+      switch (WW.RRNodeType) {
+        case rE.Document:
+          return {
+            id: iW, type: WW.RRNodeType, childNodes: []
+          };
+        case rE.DocumentType: {
+          const OW = WW;
+          return {
+            id: iW,
+            type: WW.RRNodeType,
+            name: OW.name,
+            publicId: OW.publicId,
+            systemId: OW.systemId
+          }
+        }
+        case rE.Element:
+          return {
+            id: iW, type: WW.RRNodeType, tagName: WW.tagName.toLowerCase(), attributes: {}, childNodes: []
+          };
+        case rE.Text:
+        case rE.Comment:
+          return {
+            id: iW, type: WW.RRNodeType, textContent: WW.textContent || ""
+          };
+        case rE.CDATA:
+          return {
+            id: iW, type: WW.RRNodeType, textContent: ""
+          }
+      }
+    }
+    const CN = {
+        Node: ["childNodes", "parentNode", "parentElement", "textContent", "ownerDocument", "firstChild", "lastChild", "nextSibling", "previousSibling"],
+        ShadowRoot: ["host", "styleSheets"],
+        Element: ["shadowRoot", "querySelector", "querySelectorAll"],
+        MutationObserver: []
+      },
+      XN = {
+        Node: ["contains", "getRootNode"],
+        ShadowRoot: ["getSelection"],
+        Element: [],
+        MutationObserver: ["constructor"]
+      },
+      BN = {},
+      qN = {};
+
+    function RN(WW) {
+      if (BN[WW]) return BN[WW];
+      const iW = globalThis[WW],
+        OW = iW.prototype,
+        mW = WW in CN ? CN[WW] : void 0,
+        EW = Boolean(mW && mW.every((WW => {
+          var iW, mW;
+          return Boolean(null == (mW = null == (iW = Object.getOwnPropertyDescriptor(OW, WW)) ? void 0 : iW.get) ? void 0 : mW.toString().includes("[native code]"))
+        }))),
+        NW = WW in XN ? XN[WW] : void 0,
+        PW = Boolean(NW && NW.every((WW => {
+          var iW;
+          return "function" === typeof OW[WW] && (null == (iW = OW[WW]) ? void 0 : iW.toString().includes("[native code]"))
+        })));
+      if (EW && PW && !globalThis.Zone) return BN[WW] = iW.prototype, iW.prototype;
+      try {
+        const mW = document.createElement("iframe");
+        mW.style.display = "none", document.body.appendChild(mW);
+        const EW = mW.contentWindow;
+        if (!EW) return iW.prototype;
+        const NW = EW[WW].prototype;
+        if (!NW) return mW.remove(), OW;
+        const PW = navigator.userAgent;
+        return PW.includes("Safari") && !PW.includes("Chrome") ? (mW.classList.add("rr-block"), mW.setAttribute("__rrwebUntaintedMutationObserver", ""), qN[WW] = () => mW.remove()) : mW.remove(), BN[WW] = NW
+      } catch {
+        return OW
+      }
+    }
+    const GN = {};
+
+    function IN(WW, iW, OW) {
+      var mW, EW;
+      const NW = null == (mW = GN[WW]) ? void 0 : mW[OW];
+      if (NW) return NW.call(iW);
+      const PW = RN(WW),
+        LW = null == (EW = Object.getOwnPropertyDescriptor(PW, OW)) ? void 0 : EW.get;
+      return LW ? ((GN[WW] || (GN[WW] = {}))[OW] = LW, LW.call(iW)) : iW[OW]
+    }
+    const aN = {};
+
+    function rN(WW, iW, OW) {
+      const mW = `${WW}.${String(OW)}`;
+      if (aN[mW]) return aN[mW].bind(iW);
+      const EW = RN(WW)[OW];
+      return "function" !== typeof EW ? iW[OW] : (aN[mW] = EW, EW.bind(iW))
+    }
+
+    function zN() {
+      return [RN("MutationObserver").constructor, qN.MutationObserver ?? (() => {})]
+    }
+    let FN = Date.now;
+
+    function QN(WW, iW, OW) {
+      try {
+        if (!(iW in WW)) return () => {};
+        const mW = WW[iW],
+          EW = OW(mW);
+        return "function" === typeof EW && (EW.prototype = EW.prototype || {}, Object.defineProperties(EW, {
+          __rrweb_original__: {
+            enumerable: !1,
+            value: mW
+          }
+        })), WW[iW] = EW, () => {
+          WW[iW] = mW
+        }
+      } catch {
+        return () => {}
+      }
+    }
+    /[1-9][0-9]{12}/.test(Date.now().toString()) || (FN = () => (new Date).getTime());
+    const WP = {
+      ownerDocument: function(WW) {
+        return IN("Node", WW, "ownerDocument")
+      },
+      childNodes: function(WW) {
+        return IN("Node", WW, "childNodes")
+      },
+      parentNode: function(WW) {
+        return IN("Node", WW, "parentNode")
+      },
+      parentElement: function(WW) {
+        return IN("Node", WW, "parentElement")
+      },
+      textContent: function(WW) {
+        return IN("Node", WW, "textContent")
+      },
+      firstChild: function(WW) {
+        return IN("Node", WW, "firstChild")
+      },
+      lastChild: function(WW) {
+        return IN("Node", WW, "lastChild")
+      },
+      nextSibling: function(WW) {
+        return IN("Node", WW, "nextSibling")
+      },
+      previousSibling: function(WW) {
+        return IN("Node", WW, "previousSibling")
+      },
+      contains: function(WW, iW) {
+        return rN("Node", WW, "contains")(iW)
+      },
+      getRootNode: function(WW) {
+        return rN("Node", WW, "getRootNode")()
+      },
+      host: function(WW) {
+        return WW && "host" in WW ? IN("ShadowRoot", WW, "host") : null
+      },
+      styleSheets: function(WW) {
+        return WW.styleSheets
+      },
+      shadowRoot: function(WW) {
+        return WW && "shadowRoot" in WW ? IN("Element", WW, "shadowRoot") : null
+      },
+      querySelector: function(WW, iW) {
+        return IN("Element", WW, "querySelector")(iW)
+      },
+      querySelectorAll: function(WW, iW) {
+        return IN("Element", WW, "querySelectorAll")(iW)
+      },
+      nowTimestamp: FN,
+      mutationObserverCtor: zN,
+      patch: QN
+    };
+
+    function iP(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
+      const mW = {
+        capture: !0,
+        passive: !0
+      };
+      return OW.addEventListener(WW, iW, mW), () => OW.removeEventListener(WW, iW, mW)
+    }
+    const OP = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.";
+    let mP = {
+      map: {},
+      getId: () => (console.error(OP), -1),
+      AmW: () => (console.error(OP), null),
+      removeNodeFromMap() {
+        console.error(OP)
+      },
+      has: () => (console.error(OP), !1),
+      reset() {
+        console.error(OP)
+      }
+    };
+
+    function EP(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        mW = null,
+        EW = 0;
+      return function() {
+        for (var NW = arguments.length, PW = new Array(NW), LW = 0; LW < NW; LW++) PW[LW] = arguments[LW];
+        const cW = Date.now();
+        EW || !1 !== OW.leading || (EW = cW);
+        const wW = iW - (cW - EW),
+          tW = this;
+        wW <= 0 || wW > iW ? (mW && (clearTimeout(mW), mW = null), EW = cW, WW.apply(tW, PW)) : mW || !1 === OW.trailing || (mW = setTimeout((() => {
+          EW = !1 === OW.leading ? 0 : Date.now(), mW = null, WW.apply(tW, PW)
+        }), wW))
+      }
+    }
+
+    function NP(WW, iW, OW, mW) {
+      let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
+      const NW = EW.Object.getOwnPropertyDescriptor(WW, iW);
+      return EW.Object.defineProperty(WW, iW, mW ? OW : {
+        set(WW) {
+          setTimeout((() => {
+            OW.set.call(this, WW)
+          }), 0), NW && NW.set && NW.set.call(this, WW)
+        }
+      }), () => NP(WW, iW, NW || {}, !0)
+    }
+
+    function PP(WW) {
+      var iW, OW, mW, EW;
+      const NW = WW.document;
+      return {
+        left: NW.scrollingElement ? NW.scrollingElement.scrollLeft : void 0 !== WW.pageXOffset ? WW.pageXOffset : NW.documentElement.scrollLeft || (null == NW ? void 0 : NW.body) && (null == (iW = WP.parentElement(NW.body)) ? void 0 : iW.scrollLeft) || (null == (OW = null == NW ? void 0 : NW.body) ? void 0 : OW.scrollLeft) || 0,
+        top: NW.scrollingElement ? NW.scrollingElement.scrollTop : void 0 !== WW.pageYOffset ? WW.pageYOffset : (null == NW ? void 0 : NW.documentElement.scrollTop) || (null == NW ? void 0 : NW.body) && (null == (mW = WP.parentElement(NW.body)) ? void 0 : mW.scrollTop) || (null == (EW = null == NW ? void 0 : NW.body) ? void 0 : EW.scrollTop) || 0
+      }
+    }
+
+    function LP() {
+      return window.innerHeight || document.documentElement && document.documentElement.clientHeight || document.body && document.body.clientHeight
+    }
+
+    function cP() {
+      return window.innerWidth || document.documentElement && document.documentElement.clientWidth || document.body && document.body.clientWidth
+    }
+
+    function wP(WW) {
+      if (!WW) return null;
+      return WW.nodeType === WW.ELEMENT_NODE ? WW : WP.parentElement(WW)
+    }
+
+    function tP(WW, iW, OW, mW) {
+      if (!WW) return !1;
+      const EW = wP(WW);
+      if (!EW) return !1;
+      try {
+        if ("string" === typeof iW) {
+          if (EW.classList.contains(iW)) return !0;
+          if (mW && null !== EW.closest("." + iW)) return !0
+        } else if (mi(EW, iW, mW)) return !0
+      } catch (NW) {}
+      if (OW) {
+        if (EW.matches(OW)) return !0;
+        if (mW && null !== EW.closest(OW)) return !0
+      }
+      return !1
+    }
+
+    function ZP(WW, iW) {
+      return -1 !== iW.getId(WW)
+    }
+
+    function xP(WW, iW, OW) {
+      return !("TITLE" !== WW.tagName || !OW.headTitleMutations) || -2 === iW.getId(WW)
+    }
+
+    function lP(WW, iW) {
+      if (KW(WW)) return !1;
+      const OW = iW.getId(WW);
+      if (!iW.has(OW)) return !0;
+      const mW = WP.parentNode(WW);
+      return (!mW || mW.nodeType !== WW.DOCUMENT_NODE) && (!mW || lP(mW, iW))
+    }
+
+    function AP(WW) {
+      return Boolean(WW.changedTouches)
+    }
+
+    function bP() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
+      "NodeList" in WW && !WW.NodeList.prototype.forEach && (WW.NodeList.prototype.forEach = Array.prototype.forEach), "DOMTokenList" in WW && !WW.DOMTokenList.prototype.forEach && (WW.DOMTokenList.prototype.forEach = Array.prototype.forEach)
+    }
+
+    function jP(WW) {
+      const iW = {},
+        OW = (WW, OW) => {
+          const mW = {
+            value: WW,
+            parent: OW,
+            children: []
+          };
+          return iW[WW.node.id] = mW, mW
+        },
+        mW = [];
+      for (const EW of WW) {
+        const {
+          nextId: WW,
+          parentId: NW
+        } = EW;
+        if (WW && WW in iW) {
+          const NW = iW[WW];
+          if (NW.parent) {
+            const WW = NW.parent.children.indexOf(NW);
+            NW.parent.children.splice(WW, 0, OW(EW, NW.parent))
+          } else {
+            const WW = mW.indexOf(NW);
+            mW.splice(WW, 0, OW(EW, null))
+          }
+        } else if (NW in iW) {
+          const WW = iW[NW];
+          WW.children.push(OW(EW, WW))
+        } else mW.push(OW(EW, null))
+      }
+      return mW
+    }
+
+    function UP(WW, iW) {
+      iW(WW.value);
+      for (let OW = WW.children.length - 1; OW >= 0; OW--) UP(WW.children[OW], iW)
+    }
+
+    function kP(WW, iW) {
+      return Boolean("IFRAME" === WW.nodeName && iW.getMeta(WW))
+    }
+
+    function sP(WW, iW) {
+      return Boolean("LINK" === WW.nodeName && WW.nodeType === WW.ELEMENT_NODE && WW.getAttribute && "stylesheet" === WW.getAttribute("rel") && iW.getMeta(WW))
+    }
+
+    function MP(WW, iW) {
+      var OW, mW;
+      const EW = null == (mW = null == (OW = WW.ownerDocument) ? void 0 : OW.defaultView) ? void 0 : mW.frameElement;
+      if (!EW || EW === iW) return {
+        x: 0,
+        y: 0,
+        relativeScale: 1,
+        absoluteScale: 1
+      };
+      const NW = EW.getBoundingClientRect(),
+        PW = MP(EW, iW),
+        LW = NW.height / EW.clientHeight;
+      return {
+        x: NW.x * PW.relativeScale + PW.x,
+        y: NW.y * PW.relativeScale + PW.y,
+        relativeScale: LW,
+        absoluteScale: PW.absoluteScale * LW
+      }
+    }
+
+    function KP(WW) {
+      return !!WW && (WW instanceof mN && "shadowRoot" in WW ? Boolean(WW.shadowRoot) : Boolean(WP.shadowRoot(WW)))
+    }
+
+    function SP(WW, iW) {
+      const OW = null == WW ? void 0 : WW[iW[0]];
+      return OW ? 1 === iW.length ? OW : SP(OW.cssRules, iW.slice(1)) : null
+    }
+
+    function YP(WW) {
+      const iW = [...WW],
+        OW = iW.pop();
+      return {
+        positions: iW,
+        index: OW
+      }
+    }
+
+    function yP(WW) {
+      const iW = new Set,
+        OW = [];
+      for (let mW = WW.length; mW--;) {
+        const EW = WW[mW];
+        iW.has(EW.id) || (OW.push(EW), iW.add(EW.id))
+      }
+      return OW
+    }
+    "undefined" !== typeof window && window.Proxy && window.Reflect && (mP = new Proxy(mP, {
+      get: (WW, iW, OW) => ("map" === iW && console.error(OP), Reflect.get(WW, iW, OW))
+    }));
+    class TP {
+      constructor() {
+        NW(this, "id", 1), NW(this, "styleIDMap", new WeakMap), NW(this, "idStyleMap", new Map)
+      }
+      getId(WW) {
+        return this.styleIDMap.get(WW) ?? -1
+      }
+      has(WW) {
+        return this.styleIDMap.has(WW)
+      }
+      add(WW, iW) {
+        if (this.has(WW)) return this.getId(WW);
+        let OW;
+        return OW = void 0 === iW ? this.id++ : iW, this.styleIDMap.set(WW, OW), this.idStyleMap.set(OW, WW), OW
+      }
+      getStyle(WW) {
+        return this.idStyleMap.get(WW) || null
+      }
+      reset() {
+        this.styleIDMap = new WeakMap, this.idStyleMap = new Map, this.id = 1
+      }
+      generateId() {
+        return this.id++
+      }
+    }
+
+    function JP(WW) {
+      var iW;
+      let OW = null;
+      return "getRootNode" in WW && (null == (iW = WP.getRootNode(WW)) ? void 0 : iW.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && WP.host(WP.getRootNode(WW)) && (OW = WP.host(WP.getRootNode(WW))), OW
+    }
+
+    function hP(WW) {
+      let iW, OW = WW;
+      for (; iW = JP(OW);) OW = iW;
+      return OW
+    }
+
+    function HP(WW) {
+      const iW = WP.ownerDocument(WW);
+      if (!iW) return !1;
+      const OW = hP(WW);
+      return WP.contains(iW, OW)
+    }
+
+    function nP(WW) {
+      const iW = WP.ownerDocument(WW);
+      return !!iW && (WP.contains(iW, WW) || HP(WW))
+    }
+    Symbol.toStringTag;
+    var uP = (WW => (WW[WW.DomContentLoaded = 0] = "DomContentLoaded", WW[WW.Load = 1] = "Load", WW[WW.FullSnapshot = 2] = "FullSnapshot", WW[WW.IncrementalSnapshot = 3] = "IncrementalSnapshot", WW[WW.Meta = 4] = "Meta", WW[WW.Custom = 5] = "Custom", WW[WW.Plugin = 6] = "Plugin", WW[WW.Asset = 7] = "Asset", WW))(uP || {}),
+      oP = (WW => (WW[WW.Mutation = 0] = "Mutation", WW[WW.MouseMove = 1] = "MouseMove", WW[WW.MouseInteraction = 2] = "MouseInteraction", WW[WW.Scroll = 3] = "Scroll", WW[WW.ViewportResize = 4] = "ViewportResize", WW[WW.Input = 5] = "Input", WW[WW.TouchMove = 6] = "TouchMove", WW[WW.MediaInteraction = 7] = "MediaInteraction", WW[WW.StyleSheetRule = 8] = "StyleSheetRule", WW[WW.CanvasMutation = 9] = "CanvasMutation", WW[WW.Font = 10] = "Font", WW[WW.Log = 11] = "Log", WW[WW.Drag = 12] = "Drag", WW[WW.StyleDeclaration = 13] = "StyleDeclaration", WW[WW.Selection = 14] = "Selection", WW[WW.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", WW[WW.CustomElement = 16] = "CustomElement", WW))(oP || {}),
+      dP = (WW => (WW[WW.MouseUp = 0] = "MouseUp", WW[WW.MouseDown = 1] = "MouseDown", WW[WW.Click = 2] = "Click", WW[WW.ContextMenu = 3] = "ContextMenu", WW[WW.DblClick = 4] = "DblClick", WW[WW.Focus = 5] = "Focus", WW[WW.Blur = 6] = "Blur", WW[WW.TouchStart = 7] = "TouchStart", WW[WW.TouchMove_Departed = 8] = "TouchMove_Departed", WW[WW.TouchEnd = 9] = "TouchEnd", WW[WW.TouchCancel = 10] = "TouchCancel", WW))(dP || {}),
+      eP = (WW => (WW[WW.Mouse = 0] = "Mouse", WW[WW.Pen = 1] = "Pen", WW[WW.Touch = 2] = "Touch", WW))(eP || {}),
+      vP = (WW => (WW[WW["2D"] = 0] = "2D", WW[WW.WebGL = 1] = "WebGL", WW[WW.WebGL2 = 2] = "WebGL2", WW))(vP || {}),
+      gP = (WW => (WW[WW.Play = 0] = "Play", WW[WW.Pause = 1] = "Pause", WW[WW.Seeked = 2] = "Seeked", WW[WW.VolumeChange = 3] = "VolumeChange", WW[WW.RateChange = 4] = "RateChange", WW))(gP || {}),
+      DP = (WW => (WW.Start = "start", WW.Pause = "pause", WW.Resume = "resume", WW.Resize = "resize", WW.Finish = "finish", WW.FullsnapshotRebuilded = "fullsnapshot-rebuilded", WW.LoadStylesheetStart = "load-stylesheet-start", WW.LoadStylesheetEnd = "load-stylesheet-end", WW.SkipStart = "skip-start", WW.SkipEnd = "skip-end", WW.MouseInteraction = "mouse-interaction", WW.EventCast = "event-cast", WW.CustomEvent = "custom-event", WW.Flush = "flush", WW.StateChange = "state-change", WW.PlayBack = "play-back", WW.Destroy = "destroy", WW))(DP || {}),
+      VP = (WW => (WW[WW.Document = 0] = "Document", WW[WW.DocumentType = 1] = "DocumentType", WW[WW.Element = 2] = "Element", WW[WW.Text = 3] = "Text", WW[WW.CDATA = 4] = "CDATA", WW[WW.Comment = 5] = "Comment", WW))(VP || {});
+    const pP = (WW, iW) => `${WW}@${iW}`;
+    class fP {
+      constructor() {
+        NW(this, "frozen", !1), NW(this, "locked", !1), NW(this, "texts", []), NW(this, "attributes", []), NW(this, "attributeMap", new WeakMap), NW(this, "removes", []), NW(this, "mapRemoves", []), NW(this, "movedMap", {}), NW(this, "addedSet", new Set), NW(this, "movedSet", new Set), NW(this, "droppedSet", new Set), NW(this, "removesSubTreeCache", new Set), NW(this, "mutationCb"), NW(this, "blockClass"), NW(this, "blockSelector"), NW(this, "maskTextClass"), NW(this, "maskTextSelector"), NW(this, "inlineStylesheet"), NW(this, "maskInputOptions"), NW(this, "maskTextFn"), NW(this, "maskInputFn"), NW(this, "keepIframeSrcFn"), NW(this, "recordCanvas"), NW(this, "inlineImages"), NW(this, "slimDOMOptions"), NW(this, "dataURLOptions"), NW(this, "doc"), NW(this, "mirror"), NW(this, "iframeManager"), NW(this, "stylesheetManager"), NW(this, "shadowDomManager"), NW(this, "canvasManager"), NW(this, "processedNodeManager"), NW(this, "unattachedDoc"), NW(this, "processMutations", (WW => {
+          WW.forEach(this.processMutation), this.emit()
+        })), NW(this, "emit", (() => {
+          if (this.frozen || this.locked) return;
+          const WW = [],
+            iW = new Set;
+          for (; this.mapRemoves.length;) this.mirror.removeNodeFromMap(this.mapRemoves.shift());
+          for (const ZW of this.movedSet) {
+            const WW = WP.parentNode(ZW);
+            this.removesSubTreeCache.has(WW) && !this.movedSet.has(WW) || this.addedSet.add(ZW)
+          }
+          let OW = null,
+            mW = null,
+            EW = -1,
+            NW = null,
+            PW = !1;
+          const LW = new Set,
+            cW = this.addedSet.values();
+          let wW = cW.next();
+          for (; this.addedSet.size;) {
+            if (null !== OW && this.addedSet.has(WP.previousSibling(OW))) NW = OW, OW = WP.previousSibling(OW);
+            else {
+              for (this.addedSet.has(wW.value) || (wW = cW.next()), OW = wW.value; mW = WP.parentNode(OW), this.addedSet.has(mW);) OW = mW;
+              if (LW.has(mW)) mW = null;
+              else if (mW) {
+                if (nP(mW) ? (PW = XP(this.droppedSet, mW) || this.removesSubTreeCache.has(mW), PW && XP(this.movedSet, OW) && (PW = !1)) : PW = !0, this.addedSet.has(WP.lastChild(mW))) OW = WP.lastChild(mW), NW = null;
+                else
+                  for (; NW = WP.nextSibling(OW), this.addedSet.has(NW);) OW = NW;
+                if (EW = KW(mW) ? this.mirror.getId(JP(OW)) : this.mirror.getId(mW), -1 === EW && mW.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+                  const WW = WP.host(mW);
+                  EW = this.mirror.getId(WW)
+                }
+              }
+            }
+            if (this.addedSet.delete(OW), !mW || -1 === EW) {
+              LW.add(OW);
+              continue
+            }
+            if (PW) {
+              this.droppedSet.add(OW);
+              continue
+            }
+            let tW = !1;
+            if (OW.nodeType === Node.TEXT_NODE) {
+              const WW = mW.tagName;
+              if ("TEXTAREA" === WW) continue;
+              "STYLE" === WW && iW.has(EW) && (tW = !0)
+            }
+            let ZW = NW ? this.mirror.getId(NW) : null;
+            for (; - 2 === ZW;) NW = NW && WP.nextSibling(NW), ZW = NW && this.mirror.getId(NW);
+            if (-1 === ZW) {
+              console.warn("Couldn't record new node. Couldn't find mirror id for nextSibling:", NW), OW = null;
+              continue
+            }
+            const xW = ci(OW, {
+              doc: this.doc,
+              mirror: this.mirror,
+              blockClass: this.blockClass,
+              blockSelector: this.blockSelector,
+              maskTextClass: this.maskTextClass,
+              maskTextSelector: this.maskTextSelector,
+              skipChild: !0,
+              newlyAddedElement: !0,
+              inlineStylesheet: this.inlineStylesheet,
+              maskInputOptions: this.maskInputOptions,
+              maskTextFn: this.maskTextFn,
+              maskInputFn: this.maskInputFn,
+              slimDOMOptions: this.slimDOMOptions,
+              dataURLOptions: this.dataURLOptions,
+              recordCanvas: this.recordCanvas,
+              inlineImages: this.inlineImages,
+              onSerialize: WW => {
+                kP(WW, this.mirror) && this.iframeManager.addIframe(WW), sP(WW, this.mirror) && this.stylesheetManager.trackLinkElement(WW), KP(OW) && this.shadowDomManager.addShadowRoot(WP.shadowRoot(OW), this.doc)
+              },
+              onIframeLoad: (WW, iW) => {
+                this.iframeManager.attachIframe(WW, iW), this.shadowDomManager.observeAttachShadow(WW)
+              },
+              onStylesheetLoad: (WW, iW) => {
+                this.stylesheetManager.attachLinkElement(WW, iW)
+              },
+              cssCaptured: tW
+            });
+            xW && (WW.push({
+              parentId: EW,
+              nextId: ZW,
+              node: xW
+            }), iW.add(xW.id))
+          }
+          const tW = {
+            texts: this.texts.map((WW => {
+              const iW = WW.node,
+                OW = WP.parentNode(iW);
+              return OW && "TEXTAREA" === OW.tagName && this.genTextAreaValueMutation(OW), {
+                id: this.mirror.getId(iW),
+                value: WW.value
+              }
+            })).filter((WW => !iW.has(WW.id))).filter((WW => this.mirror.has(WW.id))),
+            attributes: this.attributes.map((WW => {
+              const {
+                attributes: iW
+              } = WW;
+              if ("string" === typeof iW.style) {
+                const OW = JSON.stringify(WW.styleDiff),
+                  mW = JSON.stringify(WW._unchangedStyles);
+                OW.length < iW.style.length && (OW + mW).split("var(").length === iW.style.split("var(").length && (iW.style = WW.styleDiff)
+              }
+              return {
+                id: this.mirror.getId(WW.node),
+                attributes: iW
+              }
+            })).filter((WW => !iW.has(WW.id))).filter((WW => this.mirror.has(WW.id))),
+            removes: this.removes,
+            adds: WW
+          };
+          (tW.texts.length || tW.attributes.length || tW.removes.length || tW.adds.length) && (this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, this.mutationCb(tW))
+        })), NW(this, "genTextAreaValueMutation", (WW => {
+          let iW = this.attributeMap.get(WW);
+          iW || (iW = {
+            node: WW,
+            attributes: {},
+            styleDiff: {},
+            _unchangedStyles: {}
+          }, this.attributes.push(iW), this.attributeMap.set(WW, iW));
+          const OW = Array.from(WP.childNodes(WW), (WW => WP.textContent(WW) || "")).join("");
+          iW.attributes.value = hW({
+            element: WW,
+            maskInputOptions: this.maskInputOptions,
+            tagName: WW.tagName,
+            type: uW(WW),
+            value: OW,
+            maskInputFn: this.maskInputFn
+          })
+        })), NW(this, "processMutation", (WW => {
+          if (!xP(WW.target, this.mirror, this.slimDOMOptions)) switch (WW.type) {
+            case "characterData": {
+              const iW = WP.textContent(WW.target);
+              tP(WW.target, this.blockClass, this.blockSelector, !1) || iW === WW.oldValue || this.texts.push({
+                value: Ei(WW.target, this.maskTextClass, this.maskTextSelector, !0) && iW ? this.maskTextFn ? this.maskTextFn(iW, wP(WW.target)) : iW.replace(/[\S]/g, "*") : iW,
+                node: WW.target
+              });
+              break
+            }
+            case "attributes": {
+              const OW = WW.target,
+                mW = HW(OW.tagName);
+              let EW = WW.attributeName,
+                NW = WW.target.getAttribute(EW);
+              if ("value" === EW) {
+                const WW = uW(OW);
+                NW = hW({
+                  element: OW,
+                  maskInputOptions: this.maskInputOptions,
+                  tagName: OW.tagName,
+                  type: WW,
+                  value: NW,
+                  maskInputFn: this.maskInputFn
+                })
+              }
+              if (tP(WW.target, this.blockClass, this.blockSelector, !1) || NW === WW.oldValue) return;
+              let PW = this.attributeMap.get(WW.target);
+              if ("iframe" === mW && "src" === EW && !this.keepIframeSrcFn(NW)) {
+                if (OW.contentDocument) return;
+                EW = "rr_src"
+              }
+              if (PW || (PW = {
+                  node: WW.target,
+                  attributes: {},
+                  styleDiff: {},
+                  _unchangedStyles: {}
+                }, this.attributes.push(PW), this.attributeMap.set(WW.target, PW)), "type" === EW && "input" === mW && "password" === (WW.oldValue || "").toLowerCase() && OW.setAttribute("data-rr-is-password", "true"), !Oi(mW, EW))
+                if (PW.attributes[EW] = ii(this.doc, mW, HW(EW), NW), "style" === EW) {
+                  if (!this.unattachedDoc) try {
+                    this.unattachedDoc = document.implementation.createHTMLDocument()
+                  } catch (iW) {
+                    this.unattachedDoc = this.doc
+                  }
+                  const mW = this.unattachedDoc.createElement("span");
+                  WW.oldValue && mW.setAttribute("style", WW.oldValue);
+                  for (const WW of Array.from(OW.style)) {
+                    const iW = OW.style.getPropertyValue(WW),
+                      EW = OW.style.getPropertyPriority(WW);
+                    iW !== mW.style.getPropertyValue(WW) || EW !== mW.style.getPropertyPriority(WW) ? PW.styleDiff[WW] = "" === EW ? iW : [iW, EW] : PW._unchangedStyles[WW] = [iW, EW]
+                  }
+                  for (const WW of Array.from(mW.style)) "" === OW.style.getPropertyValue(WW) && (PW.styleDiff[WW] = !1)
+                } else "open" === EW && "DIALOG" === OW.tagName && (OW.matches("dialog:modal") ? PW.attributes.rr_open_mode = "modal" : PW.attributes.rr_open_mode = "non-modal");
+              break
+            }
+            case "childList":
+              if (tP(WW.target, this.blockClass, this.blockSelector, !0)) return;
+              if ("TEXTAREA" === WW.target.tagName) return void this.genTextAreaValueMutation(WW.target);
+              WW.addedNodes.forEach((iW => this.genAdds(iW, WW.target))), WW.removedNodes.forEach((iW => {
+                const OW = this.mirror.getId(iW),
+                  mW = KW(WW.target) ? this.mirror.getId(WP.host(WW.target)) : this.mirror.getId(WW.target);
+                tP(WW.target, this.blockClass, this.blockSelector, !1) || xP(iW, this.mirror, this.slimDOMOptions) || !ZP(iW, this.mirror) || (this.addedSet.has(iW) ? (CP(this.addedSet, iW), this.droppedSet.add(iW)) : this.addedSet.has(WW.target) && -1 === OW || lP(WW.target, this.mirror) || (this.movedSet.has(iW) && this.movedMap[pP(OW, mW)] ? CP(this.movedSet, iW) : (this.removes.push({
+                  parentId: mW,
+                  id: OW,
+                  isShadow: !(!KW(WW.target) || !SW(WW.target)) || void 0
+                }), function(WW, iW) {
+                  const OW = [WW];
+                  for (; OW.length;) {
+                    const WW = OW.pop();
+                    iW.has(WW) || (iW.add(WW), WP.childNodes(WW).forEach((WW => OW.push(WW))))
+                  }
+                }(iW, this.removesSubTreeCache))), this.mapRemoves.push(iW))
+              }))
+          }
+        })), NW(this, "genAdds", ((WW, iW) => {
+          if (!this.processedNodeManager.inOtherBuffer(WW, this) && !this.addedSet.has(WW) && !this.movedSet.has(WW)) {
+            if (this.mirror.hasNode(WW)) {
+              if (xP(WW, this.mirror, this.slimDOMOptions)) return;
+              this.movedSet.add(WW);
+              let OW = null;
+              iW && this.mirror.hasNode(iW) && (OW = this.mirror.getId(iW)), OW && -1 !== OW && (this.movedMap[pP(this.mirror.getId(WW), OW)] = !0)
+            } else this.addedSet.add(WW), this.droppedSet.delete(WW);
+            tP(WW, this.blockClass, this.blockSelector, !1) || (WP.childNodes(WW).forEach((WW => this.genAdds(WW))), KP(WW) && WP.childNodes(WP.shadowRoot(WW)).forEach((iW => {
+              this.processedNodeManager.add(iW, this), this.genAdds(iW, WW)
+            })))
+          }
+        }))
+      }
+      init(WW) {
+        ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "keepIframeSrcFn", "recordCanvas", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((iW => {
+          this[iW] = WW[iW]
+        }))
+      }
+      freeze() {
+        this.frozen = !0, this.canvasManager.freeze()
+      }
+      unfreeze() {
+        this.frozen = !1, this.canvasManager.unfreeze(), this.emit()
+      }
+      isFrozen() {
+        return this.frozen
+      }
+      lock() {
+        this.locked = !0, this.canvasManager.lock()
+      }
+      unlock() {
+        this.locked = !1, this.canvasManager.unlock(), this.emit()
+      }
+      reset() {
+        this.shadowDomManager.reset(), this.canvasManager.reset()
+      }
+    }
+
+    function CP(WW, iW) {
+      WW.delete(iW), WP.childNodes(iW).forEach((iW => CP(WW, iW)))
+    }
+
+    function XP(WW, iW) {
+      return 0 !== WW.size && BP(WW, iW)
+    }
+
+    function BP(WW, iW) {
+      if (WW.has(iW)) return !0;
+      const OW = WP.parentNode(iW);
+      return !!OW && BP(WW, OW)
+    }
+    let qP;
+    const RP = WW => {
+        if (!qP) return WW;
+        return function() {
+          try {
+            return WW(...arguments)
+          } catch (iW) {
+            if (qP && !0 === qP(iW)) return;
+            throw iW
+          }
+        }
+      },
+      GP = [];
+
+    function IP(WW) {
+      try {
+        if ("composedPath" in WW) {
+          const iW = WW.composedPath();
+          if (iW.length) return iW[0]
+        } else if ("path" in WW && WW.path.length) return WW.path[0]
+      } catch {}
+      return WW && WW.target
+    }
+
+    function aP(WW, iW) {
+      const OW = new fP;
+      GP.push(OW), OW.init(WW);
+      const [mW, EW] = zN(), NW = new mW(RP(OW.processMutations.bind(OW)));
+      return NW.observe(iW, {
+        attributes: !0,
+        attributeOldValue: !0,
+        characterData: !0,
+        characterDataOldValue: !0,
+        childList: !0,
+        subtree: !0
+      }), [NW, EW]
+    }
+
+    function rP(WW) {
+      let {
+        mouseInteractionCb: iW,
+        doc: OW,
+        mirror: mW,
+        blockClass: EW,
+        blockSelector: NW,
+        sampling: PW
+      } = WW;
+      if (!1 === PW.mouseInteraction) return () => {};
+      const LW = !0 === PW.mouseInteraction || void 0 === PW.mouseInteraction ? {} : PW.mouseInteraction,
+        cW = [];
+      let wW = null;
+      return Object.keys(dP).filter((WW => Number.isNaN(Number(WW)) && !WW.endsWith("_Departed") && !1 !== LW[WW])).forEach((WW => {
+        let PW = HW(WW);
+        const LW = (WW => OW => {
+          const PW = IP(OW);
+          if (tP(PW, EW, NW, !0)) return;
+          let LW = null,
+            cW = WW;
+          if ("pointerType" in OW) {
+            switch (OW.pointerType) {
+              case "mouse":
+                LW = eP.Mouse;
+                break;
+              case "touch":
+                LW = eP.Touch;
+                break;
+              case "pen":
+                LW = eP.Pen
+            }
+            LW === eP.Touch ? dP[WW] === dP.MouseDown ? cW = "TouchStart" : dP[WW] === dP.MouseUp && (cW = "TouchEnd") : eP.Pen
+          } else AP(OW) && (LW = eP.Touch);
+          null !== LW ? (wW = LW, (cW.startsWith("Touch") && LW === eP.Touch || cW.startsWith("Mouse") && LW === eP.Mouse) && (LW = null)) : dP[WW] === dP.Click && (LW = wW, wW = null);
+          const tW = AP(OW) ? OW.changedTouches[0] : OW;
+          if (!tW) return;
+          const ZW = mW.getId(PW),
+            {
+              clientX: xW,
+              clientY: lW
+            } = tW;
+          RP(iW)({
+            type: dP[cW],
+            id: ZW,
+            x: xW,
+            y: lW,
+            ...null !== LW && {
+              pointerType: LW
+            }
+          })
+        })(WW);
+        if (window.PointerEvent) switch (dP[WW]) {
+          case dP.MouseDown:
+          case dP.MouseUp:
+            PW = PW.replace("mouse", "pointer");
+            break;
+          case dP.TouchStart:
+          case dP.TouchEnd:
+            return
+        }
+        cW.push(iP(PW, LW, OW))
+      })), RP((() => {
+        cW.forEach((WW => WW()))
+      }))
+    }
+
+    function zP(WW) {
+      let {
+        scrollCb: iW,
+        doc: OW,
+        mirror: mW,
+        blockClass: EW,
+        blockSelector: NW,
+        sampling: PW
+      } = WW;
+      const LW = RP(EP(RP((WW => {
+        const PW = IP(WW);
+        if (!PW || tP(PW, EW, NW, !0)) return;
+        const LW = mW.getId(PW);
+        if (PW === OW && OW.defaultView) {
+          const WW = PP(OW.defaultView);
+          iW({
+            id: LW,
+            x: WW.left,
+            y: WW.top
+          })
+        } else iW({
+          id: LW,
+          x: PW.scrollLeft,
+          y: PW.scrollTop
+        })
+      })), PW.scroll || 100));
+      return iP("scroll", LW, OW)
+    }
+    const FP = ["INPUT", "TEXTAREA", "SELECT"],
+      QP = new WeakMap;
+
+    function WL(WW) {
+      return function WW(iW, OW) {
+        if (EL("CSSGroupingRule") && iW.parentRule instanceof CSSGroupingRule || EL("CSSMediaRule") && iW.parentRule instanceof CSSMediaRule || EL("CSSSupportsRule") && iW.parentRule instanceof CSSSupportsRule || EL("CSSConditionRule") && iW.parentRule instanceof CSSConditionRule) {
+          const mW = Array.from(iW.parentRule.cssRules).indexOf(iW);
+          return OW.unshift(mW), WW(iW.parentRule, OW)
+        }
+        if (iW.parentStyleSheet) {
+          const WW = Array.from(iW.parentStyleSheet.cssRules).indexOf(iW);
+          OW.unshift(WW)
+        }
+        return OW
+      }(WW, [])
+    }
+
+    function iL(WW, iW, OW) {
+      let mW, EW;
+      return WW ? (WW.ownerNode ? mW = iW.getId(WW.ownerNode) : EW = OW.getId(WW), {
+        styleId: EW,
+        id: mW
+      }) : {}
+    }
+
+    function OL(WW, iW) {
+      let {
+        mirror: OW,
+        stylesheetManager: mW
+      } = WW;
+      var EW, NW, PW;
+      let LW = null;
+      LW = "#document" === iW.nodeName ? OW.getId(iW) : OW.getId(WP.host(iW));
+      const cW = "#document" === iW.nodeName ? null == (EW = iW.defaultView) ? void 0 : EW.Document : null == (PW = null == (NW = iW.ownerDocument) ? void 0 : NW.defaultView) ? void 0 : PW.ShadowRoot,
+        wW = (null == cW ? void 0 : cW.prototype) ? Object.getOwnPropertyDescriptor(null == cW ? void 0 : cW.prototype, "adoptedStyleSheets") : void 0;
+      return null !== LW && -1 !== LW && cW && wW ? (Object.defineProperty(iW, "adoptedStyleSheets", {
+        configurable: wW.configurable,
+        enumerable: wW.enumerable,
+        get() {
+          var WW;
+          return null == (WW = wW.get) ? void 0 : WW.call(this)
+        },
+        set(WW) {
+          var iW;
+          const OW = null == (iW = wW.set) ? void 0 : iW.call(this, WW);
+          if (null !== LW && -1 !== LW) try {
+            mW.adoptStyleSheets(WW, LW)
+          } catch (EW) {}
+          return OW
+        }
+      }), RP((() => {
+        Object.defineProperty(iW, "adoptedStyleSheets", {
+          configurable: wW.configurable,
+          enumerable: wW.enumerable,
+          get: wW.get,
+          set: wW.set
+        })
+      }))) : () => {}
+    }
+
+    function mL(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const OW = WW.doc.defaultView;
+      if (!OW) return () => {};
+      let mW;
+      ! function(WW, iW) {
+        const {
+          mutationCb: OW,
+          mousemoveCb: mW,
+          mouseInteractionCb: EW,
+          scrollCb: NW,
+          viewportResizeCb: PW,
+          inputCb: LW,
+          mediaInteractionCb: cW,
+          styleSheetRuleCb: wW,
+          styleDeclarationCb: tW,
+          canvasMutationCb: ZW,
+          fontCb: xW,
+          selectionCb: lW,
+          customElementCb: AW
+        } = WW;
+        WW.mutationCb = function() {
+          iW.mutation && iW.mutation(...arguments), OW(...arguments)
+        }, WW.mousemoveCb = function() {
+          iW.mousemove && iW.mousemove(...arguments), mW(...arguments)
+        }, WW.mouseInteractionCb = function() {
+          iW.mouseInteraction && iW.mouseInteraction(...arguments), EW(...arguments)
+        }, WW.scrollCb = function() {
+          iW.scroll && iW.scroll(...arguments), NW(...arguments)
+        }, WW.viewportResizeCb = function() {
+          iW.viewportResize && iW.viewportResize(...arguments), PW(...arguments)
+        }, WW.inputCb = function() {
+          iW.input && iW.input(...arguments), LW(...arguments)
+        }, WW.mediaInteractionCb = function() {
+          iW.mediaInteaction && iW.mediaInteaction(...arguments), cW(...arguments)
+        }, WW.styleSheetRuleCb = function() {
+          iW.styleSheetRule && iW.styleSheetRule(...arguments), wW(...arguments)
+        }, WW.styleDeclarationCb = function() {
+          iW.styleDeclaration && iW.styleDeclaration(...arguments), tW(...arguments)
+        }, WW.canvasMutationCb = function() {
+          iW.canvasMutation && iW.canvasMutation(...arguments), ZW(...arguments)
+        }, WW.fontCb = function() {
+          iW.font && iW.font(...arguments), xW(...arguments)
+        }, WW.selectionCb = function() {
+          iW.selection && iW.selection(...arguments), lW(...arguments)
+        }, WW.customElementCb = function() {
+          iW.customElement && iW.customElement(...arguments), AW(...arguments)
+        }
+      }(WW, iW);
+      let EW = () => {};
+      WW.recordDOM && ([mW, EW] = aP(WW, WW.doc));
+      const NW = function(WW) {
+          let {
+            mousemoveCb: iW,
+            sampling: OW,
+            doc: mW,
+            mirror: EW
+          } = WW;
+          if (!1 === OW.mousemove) return () => {};
+          const NW = "number" === typeof OW.mousemove ? OW.mousemove : 50,
+            PW = "number" === typeof OW.mousemoveCallback ? OW.mousemoveCallback : 500;
+          let LW, cW = [];
+          const wW = EP(RP((WW => {
+              const OW = Date.now() - LW;
+              iW(cW.map((WW => (WW.timeOffset -= OW, WW))), WW), cW = [], LW = null
+            })), PW),
+            tW = RP(EP(RP((WW => {
+              const iW = IP(WW),
+                {
+                  clientX: OW,
+                  clientY: mW
+                } = AP(WW) ? WW.changedTouches[0] : WW;
+              LW || (LW = FN()), cW.push({
+                x: OW,
+                y: mW,
+                id: EW.getId(iW),
+                timeOffset: FN() - LW
+              }), wW("undefined" !== typeof DragEvent && WW instanceof DragEvent ? oP.Drag : WW instanceof MouseEvent ? oP.MouseMove : oP.TouchMove)
+            })), NW, {
+              trailing: !1
+            })),
+            ZW = [iP("mousemove", tW, mW), iP("touchmove", tW, mW), iP("drag", tW, mW)];
+          return RP((() => {
+            ZW.forEach((WW => WW()))
+          }))
+        }(WW),
+        PW = rP(WW),
+        LW = zP(WW),
+        cW = function(WW, iW) {
+          let {
+            viewportResizeCb: OW
+          } = WW, {
+            win: mW
+          } = iW, EW = -1, NW = -1;
+          return iP("resize", RP(EP(RP((() => {
+            const WW = LP(),
+              iW = cP();
+            EW === WW && NW === iW || (OW({
+              width: Number(iW),
+              height: Number(WW)
+            }), EW = WW, NW = iW)
+          })), 200)), mW)
+        }(WW, {
+          win: OW
+        }),
+        wW = function(WW) {
+          let {
+            inputCb: iW,
+            doc: OW,
+            mirror: mW,
+            blockClass: EW,
+            blockSelector: NW,
+            ignoreClass: PW,
+            ignoreSelector: LW,
+            maskInputOptions: cW,
+            maskInputFn: wW,
+            sampling: tW,
+            userTriggeredOnInput: ZW
+          } = WW;
+
+          function xW(WW) {
+            let iW = IP(WW);
+            const mW = WW.isTrusted,
+              tW = iW && iW.tagName;
+            if (iW && "OPTION" === tW && (iW = WP.parentElement(iW)), !iW || !tW || FP.indexOf(tW) < 0 || tP(iW, EW, NW, !0)) return;
+            if (iW.classList.contains(PW) || LW && iW.matches(LW)) return;
+            let xW = iW.value,
+              AW = !1;
+            const bW = uW(iW) || "";
+            "radio" === bW || "checkbox" === bW ? AW = iW.checked : (cW[tW.toLowerCase()] || cW[bW]) && (xW = hW({
+              element: iW,
+              maskInputOptions: cW,
+              tagName: tW,
+              type: bW,
+              value: xW,
+              maskInputFn: wW
+            })), lW(iW, ZW ? {
+              text: xW,
+              isChecked: AW,
+              userTriggered: mW
+            } : {
+              text: xW,
+              isChecked: AW
+            });
+            const jW = iW.name;
+            "radio" === bW && jW && AW && OW.querySelectorAll(`input[type="radio"][name="${jW}"]`).forEach((WW => {
+              if (WW !== iW) {
+                const iW = WW.value;
+                lW(WW, ZW ? {
+                  text: iW,
+                  isChecked: !AW,
+                  userTriggered: !1
+                } : {
+                  text: iW,
+                  isChecked: !AW
+                })
+              }
+            }))
+          }
+
+          function lW(WW, OW) {
+            const EW = QP.get(WW);
+            if (!EW || EW.text !== OW.text || EW.isChecked !== OW.isChecked) {
+              QP.set(WW, OW);
+              const EW = mW.getId(WW);
+              RP(iW)({
+                ...OW,
+                id: EW
+              })
+            }
+          }
+          const AW = ("last" === tW.input ? ["change"] : ["input", "change"]).map((WW => iP(WW, RP(xW), OW))),
+            bW = OW.defaultView;
+          if (!bW) return () => {
+            AW.forEach((WW => WW()))
+          };
+          const jW = bW.Object.getOwnPropertyDescriptor(bW.HTMLInputElement.prototype, "value"),
+            UW = [
+              [bW.HTMLInputElement.prototype, "value"],
+              [bW.HTMLInputElement.prototype, "checked"],
+              [bW.HTMLSelectElement.prototype, "value"],
+              [bW.HTMLTextAreaElement.prototype, "value"],
+              [bW.HTMLSelectElement.prototype, "selectedIndex"],
+              [bW.HTMLOptionElement.prototype, "selected"]
+            ];
+          return jW && jW.set && AW.push(...UW.map((WW => NP(WW[0], WW[1], {
+            set() {
+              RP(xW)({
+                target: this,
+                isTrusted: !1
+              })
+            }
+          }, !1, bW)))), RP((() => {
+            AW.forEach((WW => WW()))
+          }))
+        }(WW),
+        tW = function(WW) {
+          let {
+            mediaInteractionCb: iW,
+            blockClass: OW,
+            blockSelector: mW,
+            mirror: EW,
+            sampling: NW,
+            doc: PW
+          } = WW;
+          const LW = RP((WW => EP(RP((NW => {
+              const PW = IP(NW);
+              if (!PW || tP(PW, OW, mW, !0)) return;
+              const {
+                currentTime: LW,
+                volume: cW,
+                muted: wW,
+                playbackRate: tW,
+                loop: ZW
+              } = PW;
+              iW({
+                type: WW,
+                id: EW.getId(PW),
+                currentTime: LW,
+                volume: cW,
+                muted: wW,
+                playbackRate: tW,
+                loop: ZW
+              })
+            })), NW.media || 500))),
+            cW = [iP("play", LW(gP.Play), PW), iP("pause", LW(gP.Pause), PW), iP("seeked", LW(gP.Seeked), PW), iP("volumechange", LW(gP.VolumeChange), PW), iP("ratechange", LW(gP.RateChange), PW)];
+          return RP((() => {
+            cW.forEach((WW => WW()))
+          }))
+        }(WW);
+      let ZW = () => {},
+        xW = () => {},
+        lW = () => {},
+        AW = () => {};
+      WW.recordDOM && (ZW = function(WW, iW) {
+        let {
+          styleSheetRuleCb: OW,
+          mirror: mW,
+          stylesheetManager: EW
+        } = WW, {
+          win: NW
+        } = iW;
+        if (!NW.CSSStyleSheet || !NW.CSSStyleSheet.prototype) return () => {};
+        const PW = NW.CSSStyleSheet.prototype.insertRule;
+        NW.CSSStyleSheet.prototype.insertRule = new Proxy(PW, {
+          apply: RP(((WW, iW, NW) => {
+            const [PW, LW] = NW, {
+              id: cW,
+              styleId: wW
+            } = iL(iW, mW, EW.styleMirror);
+            return (cW && -1 !== cW || wW && -1 !== wW) && OW({
+              id: cW,
+              styleId: wW,
+              adds: [{
+                rule: PW,
+                index: LW
+              }]
+            }), WW.apply(iW, NW)
+          }))
+        }), NW.CSSStyleSheet.prototype.addRule = function(WW, iW) {
+          let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
+          const mW = `${WW} { ${iW} }`;
+          return NW.CSSStyleSheet.prototype.insertRule.apply(this, [mW, OW])
+        };
+        const LW = NW.CSSStyleSheet.prototype.deleteRule;
+        let cW, wW;
+        NW.CSSStyleSheet.prototype.deleteRule = new Proxy(LW, {
+          apply: RP(((WW, iW, NW) => {
+            const [PW] = NW, {
+              id: LW,
+              styleId: cW
+            } = iL(iW, mW, EW.styleMirror);
+            return (LW && -1 !== LW || cW && -1 !== cW) && OW({
+              id: LW,
+              styleId: cW,
+              removes: [{
+                index: PW
+              }]
+            }), WW.apply(iW, NW)
+          }))
+        }), NW.CSSStyleSheet.prototype.removeRule = function(WW) {
+          return NW.CSSStyleSheet.prototype.deleteRule.apply(this, [WW])
+        }, NW.CSSStyleSheet.prototype.replace && (cW = NW.CSSStyleSheet.prototype.replace, NW.CSSStyleSheet.prototype.replace = new Proxy(cW, {
+          apply: RP(((WW, iW, NW) => {
+            const [PW] = NW, {
+              id: LW,
+              styleId: cW
+            } = iL(iW, mW, EW.styleMirror);
+            return (LW && -1 !== LW || cW && -1 !== cW) && OW({
+              id: LW,
+              styleId: cW,
+              replace: PW
+            }), WW.apply(iW, NW)
+          }))
+        })), NW.CSSStyleSheet.prototype.replaceSync && (wW = NW.CSSStyleSheet.prototype.replaceSync, NW.CSSStyleSheet.prototype.replaceSync = new Proxy(wW, {
+          apply: RP(((WW, iW, NW) => {
+            const [PW] = NW, {
+              id: LW,
+              styleId: cW
+            } = iL(iW, mW, EW.styleMirror);
+            return (LW && -1 !== LW || cW && -1 !== cW) && OW({
+              id: LW,
+              styleId: cW,
+              replaceSync: PW
+            }), WW.apply(iW, NW)
+          }))
+        }));
+        const tW = {};
+        NL("CSSGroupingRule") ? tW.CSSGroupingRule = NW.CSSGroupingRule : (NL("CSSMediaRule") && (tW.CSSMediaRule = NW.CSSMediaRule), NL("CSSConditionRule") && (tW.CSSConditionRule = NW.CSSConditionRule), NL("CSSSupportsRule") && (tW.CSSSupportsRule = NW.CSSSupportsRule));
+        const ZW = {};
+        return Object.entries(tW).forEach((WW => {
+          let [iW, NW] = WW;
+          ZW[iW] = {
+            insertRule: NW.prototype.insertRule,
+            deleteRule: NW.prototype.deleteRule
+          }, NW.prototype.insertRule = new Proxy(ZW[iW].insertRule, {
+            apply: RP(((WW, iW, NW) => {
+              const [PW, LW] = NW, {
+                id: cW,
+                styleId: wW
+              } = iL(iW.parentStyleSheet, mW, EW.styleMirror);
+              return (cW && -1 !== cW || wW && -1 !== wW) && OW({
+                id: cW,
+                styleId: wW,
+                adds: [{
+                  rule: PW,
+                  index: [...WL(iW), LW || 0]
+                }]
+              }), WW.apply(iW, NW)
+            }))
+          }), NW.prototype.deleteRule = new Proxy(ZW[iW].deleteRule, {
+            apply: RP(((WW, iW, NW) => {
+              const [PW] = NW, {
+                id: LW,
+                styleId: cW
+              } = iL(iW.parentStyleSheet, mW, EW.styleMirror);
+              return (LW && -1 !== LW || cW && -1 !== cW) && OW({
+                id: LW,
+                styleId: cW,
+                removes: [{
+                  index: [...WL(iW), PW]
+                }]
+              }), WW.apply(iW, NW)
+            }))
+          })
+        })), RP((() => {
+          NW.CSSStyleSheet.prototype.insertRule = PW, NW.CSSStyleSheet.prototype.deleteRule = LW, cW && (NW.CSSStyleSheet.prototype.replace = cW), wW && (NW.CSSStyleSheet.prototype.replaceSync = wW), Object.entries(tW).forEach((WW => {
+            let [iW, OW] = WW;
+            OW.prototype.insertRule = ZW[iW].insertRule, OW.prototype.deleteRule = ZW[iW].deleteRule
+          }))
+        }))
+      }(WW, {
+        win: OW
+      }), xW = OL(WW, WW.doc), lW = function(WW, iW) {
+        let {
+          styleDeclarationCb: OW,
+          mirror: mW,
+          ignoreCSSAttributes: EW,
+          stylesheetManager: NW
+        } = WW, {
+          win: PW
+        } = iW;
+        const LW = PW.CSSStyleDeclaration.prototype.setProperty;
+        PW.CSSStyleDeclaration.prototype.setProperty = new Proxy(LW, {
+          apply: RP(((WW, iW, PW) => {
+            var cW;
+            const [wW, tW, ZW] = PW;
+            if (EW.has(wW)) return LW.apply(iW, [wW, tW, ZW]);
+            const {
+              id: xW,
+              styleId: lW
+            } = iL(null == (cW = iW.parentRule) ? void 0 : cW.parentStyleSheet, mW, NW.styleMirror);
+            return (xW && -1 !== xW || lW && -1 !== lW) && OW({
+              id: xW,
+              styleId: lW,
+              set: {
+                property: wW,
+                value: tW,
+                priority: ZW
+              },
+              index: WL(iW.parentRule)
+            }), WW.apply(iW, PW)
+          }))
+        });
+        const cW = PW.CSSStyleDeclaration.prototype.removeProperty;
+        return PW.CSSStyleDeclaration.prototype.removeProperty = new Proxy(cW, {
+          apply: RP(((WW, iW, PW) => {
+            var LW;
+            const [wW] = PW;
+            if (EW.has(wW)) return cW.apply(iW, [wW]);
+            const {
+              id: tW,
+              styleId: ZW
+            } = iL(null == (LW = iW.parentRule) ? void 0 : LW.parentStyleSheet, mW, NW.styleMirror);
+            return (tW && -1 !== tW || ZW && -1 !== ZW) && OW({
+              id: tW,
+              styleId: ZW,
+              remove: {
+                property: wW
+              },
+              index: WL(iW.parentRule)
+            }), WW.apply(iW, PW)
+          }))
+        }), RP((() => {
+          PW.CSSStyleDeclaration.prototype.setProperty = LW, PW.CSSStyleDeclaration.prototype.removeProperty = cW
+        }))
+      }(WW, {
+        win: OW
+      }), WW.collectFonts && (AW = function(WW) {
+        let {
+          fontCb: iW,
+          doc: OW
+        } = WW;
+        const mW = OW.defaultView;
+        if (!mW) return () => {};
+        const EW = [],
+          NW = new WeakMap,
+          PW = mW.FontFace;
+        mW.FontFace = function(WW, iW, OW) {
+          const mW = new PW(WW, iW, OW);
+          return NW.set(mW, {
+            family: WW,
+            buffer: "string" !== typeof iW,
+            descriptors: OW,
+            fontSource: "string" === typeof iW ? iW : JSON.stringify(Array.from(new Uint8Array(iW)))
+          }), mW
+        };
+        const LW = QN(OW.fonts, "add", (function(WW) {
+          return function(OW) {
+            return setTimeout(RP((() => {
+              const WW = NW.get(OW);
+              WW && (iW(WW), NW.delete(OW))
+            })), 0), WW.apply(this, [OW])
+          }
+        }));
+        return EW.push((() => {
+          mW.FontFace = PW
+        })), EW.push(LW), RP((() => {
+          EW.forEach((WW => WW()))
+        }))
+      }(WW)));
+      const bW = function(WW) {
+          const {
+            doc: iW,
+            mirror: OW,
+            blockClass: mW,
+            blockSelector: EW,
+            selectionCb: NW
+          } = WW;
+          let PW = !0;
+          const LW = RP((() => {
+            const WW = iW.getSelection();
+            if (!WW || PW && (null == WW ? void 0 : WW.isCollapsed)) return;
+            PW = WW.isCollapsed || !1;
+            const LW = [],
+              cW = WW.rangeCount || 0;
+            for (let iW = 0; iW < cW; iW++) {
+              const NW = WW.getRangeAt(iW),
+                {
+                  startContainer: PW,
+                  startOffset: cW,
+                  endContainer: wW,
+                  endOffset: tW
+                } = NW;
+              tP(PW, mW, EW, !0) || tP(wW, mW, EW, !0) || LW.push({
+                start: OW.getId(PW),
+                startOffset: cW,
+                end: OW.getId(wW),
+                endOffset: tW
+              })
+            }
+            NW({
+              kj: LW
+            })
+          }));
+          return LW(), iP("selectionchange", LW)
+        }(WW),
+        jW = function(WW) {
+          let {
+            doc: iW,
+            customElementCb: OW
+          } = WW;
+          const mW = iW.defaultView;
+          return mW && mW.customElements ? QN(mW.customElements, "define", (function(WW) {
+            return function(iW, mW, EW) {
+              try {
+                OW({
+                  define: {
+                    name: iW
+                  }
+                })
+              } catch (NW) {
+                console.warn(`Custom element callback failed for ${iW}`)
+              }
+              return WW.apply(this, [iW, mW, EW])
+            }
+          })) : () => {}
+        }(WW),
+        UW = [];
+      for (const kW of WW.plugins) UW.push(kW.observer(kW.callback, OW, kW.options));
+      return RP((() => {
+        GP.forEach((WW => WW.reset())), null == mW || mW.disconnect(), EW(), NW(), PW(), LW(), cW(), wW(), tW(), ZW(), xW(), lW(), AW(), bW(), jW(), UW.forEach((WW => WW()))
+      }))
+    }
+
+    function EL(WW) {
+      return "undefined" !== typeof window[WW]
+    }
+
+    function NL(WW) {
+      return Boolean("undefined" !== typeof window[WW] && window[WW].prototype && "insertRule" in window[WW].prototype && "deleteRule" in window[WW].prototype)
+    }
+    class PL {
+      constructor(WW) {
+        NW(this, "iframeIdToRemoteIdMap", new WeakMap), NW(this, "iframeRemoteIdToIdMap", new WeakMap), this.generateIdFn = WW
+      }
+      getId(WW, iW, OW, mW) {
+        const EW = OW || this.getIdToRemoteIdMap(WW),
+          NW = mW || this.getRemoteIdToIdMap(WW);
+        let PW = EW.get(iW);
+        return PW || (PW = this.generateIdFn(), EW.set(iW, PW), NW.set(PW, iW)), PW
+      }
+      getIds(WW, iW) {
+        const OW = this.getIdToRemoteIdMap(WW),
+          mW = this.getRemoteIdToIdMap(WW);
+        return iW.map((iW => this.getId(WW, iW, OW, mW)))
+      }
+      getRemoteId(WW, iW, OW) {
+        const mW = OW || this.getRemoteIdToIdMap(WW);
+        if ("number" !== typeof iW) return iW;
+        const EW = mW.get(iW);
+        return EW || -1
+      }
+      getRemoteIds(WW, iW) {
+        const OW = this.getRemoteIdToIdMap(WW);
+        return iW.map((iW => this.getRemoteId(WW, iW, OW)))
+      }
+      reset(WW) {
+        if (!WW) return this.iframeIdToRemoteIdMap = new WeakMap, void(this.iframeRemoteIdToIdMap = new WeakMap);
+        this.iframeIdToRemoteIdMap.delete(WW), this.iframeRemoteIdToIdMap.delete(WW)
+      }
+      getIdToRemoteIdMap(WW) {
+        let iW = this.iframeIdToRemoteIdMap.get(WW);
+        return iW || (iW = new Map, this.iframeIdToRemoteIdMap.set(WW, iW)), iW
+      }
+      getRemoteIdToIdMap(WW) {
+        let iW = this.iframeRemoteIdToIdMap.get(WW);
+        return iW || (iW = new Map, this.iframeRemoteIdToIdMap.set(WW, iW)), iW
+      }
+    }
+    class LL {
+      constructor(WW) {
+        NW(this, "iframes", new WeakMap), NW(this, "crossOriginIframeMap", new WeakMap), NW(this, "crossOriginIframeMirror", new PL(RW)), NW(this, "crossOriginIframeStyleMirror"), NW(this, "crossOriginIframeRootIdMap", new WeakMap), NW(this, "mirror"), NW(this, "mutationCb"), NW(this, "wrappedEmit"), NW(this, "loadListener"), NW(this, "stylesheetManager"), NW(this, "recordCrossOriginIframes"), this.mutationCb = WW.mutationCb, this.wrappedEmit = WW.wrappedEmit, this.stylesheetManager = WW.stylesheetManager, this.recordCrossOriginIframes = WW.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new PL(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = WW.mirror, this.recordCrossOriginIframes && window.addEventListener("message", this.handleMessage.bind(this))
+      }
+      addIframe(WW) {
+        this.iframes.set(WW, !0), WW.contentWindow && this.crossOriginIframeMap.set(WW.contentWindow, WW)
+      }
+      addLoadListener(WW) {
+        this.loadListener = WW
+      }
+      attachIframe(WW, iW) {
+        var OW, mW;
+        this.mutationCb({
+          adds: [{
+            parentId: this.mirror.getId(WW),
+            nextId: null,
+            node: iW
+          }],
+          removes: [],
+          texts: [],
+          attributes: [],
+          isAttachIframe: !0
+        }), this.recordCrossOriginIframes && (null == (OW = WW.contentWindow) || OW.addEventListener("message", this.handleMessage.bind(this))), null == (mW = this.loadListener) || mW.call(this, WW), WW.contentDocument && WW.contentDocument.adoptedStyleSheets && WW.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(WW.contentDocument.adoptedStyleSheets, this.mirror.getId(WW.contentDocument))
+      }
+      handleMessage(WW) {
+        const iW = WW;
+        if ("rrweb" !== iW.data.type || iW.origin !== iW.data.origin) return;
+        if (!WW.source) return;
+        const OW = this.crossOriginIframeMap.get(WW.source);
+        if (!OW) return;
+        const mW = this.transformCrossOriginEvent(OW, iW.data.event);
+        mW && this.wrappedEmit(mW, iW.data.isCheckout)
+      }
+      transformCrossOriginEvent(WW, iW) {
+        var OW;
+        switch (iW.type) {
+          case uP.FullSnapshot: {
+            this.crossOriginIframeMirror.reset(WW), this.crossOriginIframeStyleMirror.reset(WW), this.replaceIdOnNode(iW.data.node, WW);
+            const OW = iW.data.node.id;
+            return this.crossOriginIframeRootIdMap.set(WW, OW), this.patchRootIdOnNode(iW.data.node, OW), {
+              timestamp: iW.timestamp,
+              type: uP.IncrementalSnapshot,
+              data: {
+                source: oP.Mutation,
+                adds: [{
+                  parentId: this.mirror.getId(WW),
+                  nextId: null,
+                  node: iW.data.node
+                }],
+                removes: [],
+                texts: [],
+                attributes: [],
+                isAttachIframe: !0
+              }
+            }
+          }
+          case uP.Meta:
+          case uP.Load:
+          case uP.DomContentLoaded:
+            return !1;
+          case uP.Plugin:
+            return iW;
+          case uP.Custom:
+            return this.replaceIds(iW.data.payload, WW, ["id", "parentId", "previousId", "nextId"]), iW;
+          case uP.IncrementalSnapshot:
+            switch (iW.data.source) {
+              case oP.Mutation:
+                return iW.data.adds.forEach((iW => {
+                  this.replaceIds(iW, WW, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(iW.node, WW);
+                  const OW = this.crossOriginIframeRootIdMap.get(WW);
+                  OW && this.patchRootIdOnNode(iW.node, OW)
+                })), iW.data.removes.forEach((iW => {
+                  this.replaceIds(iW, WW, ["parentId", "id"])
+                })), iW.data.attributes.forEach((iW => {
+                  this.replaceIds(iW, WW, ["id"])
+                })), iW.data.texts.forEach((iW => {
+                  this.replaceIds(iW, WW, ["id"])
+                })), iW;
+              case oP.Drag:
+              case oP.TouchMove:
+              case oP.MouseMove:
+                return iW.data.positions.forEach((iW => {
+                  this.replaceIds(iW, WW, ["id"])
+                })), iW;
+              case oP.ViewportResize:
+                return !1;
+              case oP.MediaInteraction:
+              case oP.MouseInteraction:
+              case oP.Scroll:
+              case oP.CanvasMutation:
+              case oP.Input:
+                return this.replaceIds(iW.data, WW, ["id"]), iW;
+              case oP.StyleSheetRule:
+              case oP.StyleDeclaration:
+                return this.replaceIds(iW.data, WW, ["id"]), this.replaceStyleIds(iW.data, WW, ["styleId"]), iW;
+              case oP.Font:
+                return iW;
+              case oP.Selection:
+                return iW.data.kj.forEach((iW => {
+                  this.replaceIds(iW, WW, ["start", "end"])
+                })), iW;
+              case oP.AdoptedStyleSheet:
+                return this.replaceIds(iW.data, WW, ["id"]), this.replaceStyleIds(iW.data, WW, ["styleIds"]), null == (OW = iW.data.styles) || OW.forEach((iW => {
+                  this.replaceStyleIds(iW, WW, ["styleId"])
+                })), iW
+            }
+        }
+        return !1
+      }
+      replace(WW, iW, OW, mW) {
+        for (const EW of mW)(Array.isArray(iW[EW]) || "number" === typeof iW[EW]) && (Array.isArray(iW[EW]) ? iW[EW] = WW.getIds(OW, iW[EW]) : iW[EW] = WW.getId(OW, iW[EW]));
+        return iW
+      }
+      replaceIds(WW, iW, OW) {
+        return this.replace(this.crossOriginIframeMirror, WW, iW, OW)
+      }
+      replaceStyleIds(WW, iW, OW) {
+        return this.replace(this.crossOriginIframeStyleMirror, WW, iW, OW)
+      }
+      replaceIdOnNode(WW, iW) {
+        this.replaceIds(WW, iW, ["id", "rootId"]), "childNodes" in WW && WW.childNodes.forEach((WW => {
+          this.replaceIdOnNode(WW, iW)
+        }))
+      }
+      patchRootIdOnNode(WW, iW) {
+        WW.type === VP.Document || WW.rootId || (WW.rootId = iW), "childNodes" in WW && WW.childNodes.forEach((WW => {
+          this.patchRootIdOnNode(WW, iW)
+        }))
+      }
+    }
+    class cL {
+      constructor(WW) {
+        NW(this, "shadowDoms", new WeakSet), NW(this, "mutationCb"), NW(this, "scrollCb"), NW(this, "bypassOptions"), NW(this, "mirror"), NW(this, "restoreHandlers", []), this.mutationCb = WW.mutationCb, this.scrollCb = WW.scrollCb, this.bypassOptions = WW.bypassOptions, this.mirror = WW.mirror, this.init()
+      }
+      init() {
+        this.reset(), this.patchAttachShadow(Element, document)
+      }
+      addShadowRoot(WW, iW) {
+        if (!SW(WW)) return;
+        if (this.shadowDoms.has(WW)) return;
+        this.shadowDoms.add(WW);
+        const [OW] = aP({
+          ...this.bypassOptions,
+          doc: iW,
+          mutationCb: this.mutationCb,
+          mirror: this.mirror,
+          shadowDomManager: this
+        }, WW);
+        this.restoreHandlers.push((() => OW.disconnect())), this.restoreHandlers.push(zP({
+          ...this.bypassOptions,
+          scrollCb: this.scrollCb,
+          doc: WW,
+          mirror: this.mirror
+        })), setTimeout((() => {
+          WW.adoptedStyleSheets && WW.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(WW.adoptedStyleSheets, this.mirror.getId(WP.host(WW))), this.restoreHandlers.push(OL({
+            mirror: this.mirror,
+            stylesheetManager: this.bypassOptions.stylesheetManager
+          }, WW))
+        }), 0)
+      }
+      observeAttachShadow(WW) {
+        WW.contentWindow && WW.contentDocument && this.patchAttachShadow(WW.contentWindow.Element, WW.contentDocument)
+      }
+      patchAttachShadow(WW, iW) {
+        const OW = this;
+        this.restoreHandlers.push(QN(WW.prototype, "attachShadow", (function(WW) {
+          return function(mW) {
+            const EW = WW.call(this, mW),
+              NW = WP.shadowRoot(this);
+            return NW && nP(this) && OW.addShadowRoot(NW, iW), EW
+          }
+        })))
+      }
+      reset() {
+        this.restoreHandlers.forEach((WW => {
+          try {
+            WW()
+          } catch (iW) {}
+        })), this.restoreHandlers = [], this.shadowDoms = new WeakSet
+      }
+    }
+    for (var wL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", tL = "undefined" === typeof Uint8Array ? [] : new Uint8Array(256), ZL = 0; ZL < 64; ZL++) tL[wL.charCodeAt(ZL)] = ZL;
+    const xL = new Map;
+    const lL = (WW, iW, OW) => {
+      if (!WW || !jL(WW, iW) && "object" !== typeof WW) return;
+      const mW = function(WW, iW) {
+        let OW = xL.get(WW);
+        return OW || (OW = new Map, xL.set(WW, OW)), OW.has(iW) || OW.set(iW, []), OW.get(iW)
+      }(OW, WW.constructor.name);
+      let EW = mW.indexOf(WW);
+      return -1 === EW && (EW = mW.length, mW.push(WW)), EW
+    };
+
+    function AL(WW, iW, OW) {
+      if (WW instanceof Array) return WW.map((WW => AL(WW, iW, OW)));
+      if (null === WW) return WW;
+      if (WW instanceof Float32Array || WW instanceof Float64Array || WW instanceof Int32Array || WW instanceof Uint32Array || WW instanceof Uint8Array || WW instanceof Uint16Array || WW instanceof Int16Array || WW instanceof Int8Array || WW instanceof Uint8ClampedArray) {
+        return {
+          rr_type: WW.constructor.name,
+          args: [Object.values(WW)]
+        }
+      }
+      if (WW instanceof ArrayBuffer) {
+        return {
+          rr_type: WW.constructor.name,
+          base64: function(WW) {
+            var iW, OW = new Uint8Array(WW),
+              mW = OW.length,
+              EW = "";
+            for (iW = 0; iW < mW; iW += 3) EW += wL[OW[iW] >> 2], EW += wL[(3 & OW[iW]) << 4 | OW[iW + 1] >> 4], EW += wL[(15 & OW[iW + 1]) << 2 | OW[iW + 2] >> 6], EW += wL[63 & OW[iW + 2]];
+            return mW % 3 === 2 ? EW = EW.substring(0, EW.length - 1) + "=" : mW % 3 === 1 && (EW = EW.substring(0, EW.length - 2) + "=="), EW
+          }(WW)
+        }
+      }
+      if (WW instanceof DataView) {
+        return {
+          rr_type: WW.constructor.name,
+          args: [AL(WW.buffer, iW, OW), WW.byteOffset, WW.byteLength]
+        }
+      }
+      if (WW instanceof HTMLImageElement) {
+        const iW = WW.constructor.name,
+          {
+            src: OW
+          } = WW;
+        return {
+          rr_type: iW,
+          src: OW
+        }
+      }
+      if (WW instanceof HTMLCanvasElement) {
+        return {
+          rr_type: "HTMLImageElement",
+          src: WW.toDataURL()
+        }
+      }
+      if (WW instanceof ImageData) {
+        return {
+          rr_type: WW.constructor.name,
+          args: [AL(WW.data, iW, OW), WW.width, WW.height]
+        }
+      }
+      if (jL(WW, iW) || "object" === typeof WW) {
+        return {
+          rr_type: WW.constructor.name,
+          index: lL(WW, iW, OW)
+        }
+      }
+      return WW
+    }
+    const bL = (WW, iW, OW) => WW.map((WW => AL(WW, iW, OW))),
+      jL = (WW, iW) => {
+        const OW = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((WW => "function" === typeof iW[WW]));
+        return Boolean(OW.find((OW => WW instanceof iW[OW])))
+      };
+
+    function UL(WW, iW, OW, mW) {
+      const EW = [];
+      try {
+        const NW = QN(WW.HTMLCanvasElement.prototype, "getContext", (function(WW) {
+          return function(EW) {
+            for (var NW = arguments.length, PW = new Array(NW > 1 ? NW - 1 : 0), LW = 1; LW < NW; LW++) PW[LW - 1] = arguments[LW];
+            if (!tP(this, iW, OW, !0)) {
+              const WW = function(WW) {
+                return "experimental-webgl" === WW ? "webgl" : WW
+              }(EW);
+              if ("__context" in this || (this.__context = WW), mW && ["webgl", "webgl2"].includes(WW))
+                if (PW[0] && "object" === typeof PW[0]) {
+                  const WW = PW[0];
+                  WW.preserveDrawingBuffer || (WW.preserveDrawingBuffer = !0)
+                } else PW.splice(0, 1, {
+                  preserveDrawingBuffer: !0
+                })
+            }
+            return WW.apply(this, [EW, ...PW])
+          }
+        }));
+        EW.push(NW)
+      } catch {
+        console.error("failed to patch HTMLCanvasElement.prototype.getContext")
+      }
+      return () => {
+        EW.forEach((WW => WW()))
+      }
+    }
+
+    function kL(WW, iW, OW, mW, EW, NW) {
+      const PW = [],
+        LW = Object.getOwnPropertyNames(WW);
+      for (const cW of LW)
+        if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(cW)) try {
+          if ("function" !== typeof WW[cW]) continue;
+          const LW = QN(WW, cW, (function(WW) {
+            return function() {
+              for (var PW = arguments.length, LW = new Array(PW), wW = 0; wW < PW; wW++) LW[wW] = arguments[wW];
+              const tW = WW.apply(this, LW);
+              if (lL(tW, NW, this), "tagName" in this.canvas && !tP(this.canvas, mW, EW, !0)) {
+                const WW = bL(LW, NW, this),
+                  mW = {
+                    type: iW,
+                    property: cW,
+                    args: WW
+                  };
+                OW(this.canvas, mW)
+              }
+              return tW
+            }
+          }));
+          PW.push(LW)
+        } catch {
+          const mW = NP(WW, cW, {
+            set(WW) {
+              OW(this.canvas, {
+                type: iW,
+                property: cW,
+                args: [WW],
+                setter: !0
+              })
+            }
+          });
+          PW.push(mW)
+        }
+      return PW
+    }
+    const sL = '(function() {\n  "use strict";\n  var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n  var lookup = typeof Uint8Array === "undefined" ? [] : new Uint8Array(256);\n  for (var i = 0; i < chars.length; i++) {\n    lookup[chars.charCodeAt(i)] = i;\n  }\n  var encode = function(arraybuffer) {\n    var bytes = new Uint8Array(arraybuffer), i2, len = bytes.length, base64 = "";\n    for (i2 = 0; i2 < len; i2 += 3) {\n      base64 += chars[bytes[i2] >> 2];\n      base64 += chars[(bytes[i2] & 3) << 4 | bytes[i2 + 1] >> 4];\n      base64 += chars[(bytes[i2 + 1] & 15) << 2 | bytes[i2 + 2] >> 6];\n      base64 += chars[bytes[i2 + 2] & 63];\n    }\n    if (len % 3 === 2) {\n      base64 = base64.substring(0, base64.length - 1) + "=";\n    } else if (len % 3 === 1) {\n      base64 = base64.substring(0, base64.length - 2) + "==";\n    }\n    return base64;\n  };\n  const lastBlobMap = /* @__PURE__ */ new Map();\n  const transparentBlobMap = /* @__PURE__ */ new Map();\n  async function getTransparentBlobFor(width, height, dataURLOptions) {\n    const id = `${width}-${height}`;\n    if ("OffscreenCanvas" in globalThis) {\n      if (transparentBlobMap.has(id)) return transparentBlobMap.get(id);\n      const offscreen = new OffscreenCanvas(width, height);\n      offscreen.getContext("2d");\n      const blob = await offscreen.convertToBlob(dataURLOptions);\n      const arrayBuffer = await blob.arrayBuffer();\n      const base64 = encode(arrayBuffer);\n      transparentBlobMap.set(id, base64);\n      return base64;\n    } else {\n      return "";\n    }\n  }\n  const worker = self;\n  worker.onmessage = async function(e) {\n    if ("OffscreenCanvas" in globalThis) {\n      const { id, bitmap, width, height, dataURLOptions } = e.data;\n      const transparentBase64 = getTransparentBlobFor(\n        width,\n        height,\n        dataURLOptions\n      );\n      const offscreen = new OffscreenCanvas(width, height);\n      const ctx = offscreen.getContext("2d");\n      ctx.drawImage(bitmap, 0, 0);\n      bitmap.close();\n      const blob = await offscreen.convertToBlob(dataURLOptions);\n      const type = blob.type;\n      const arrayBuffer = await blob.arrayBuffer();\n      const base64 = encode(arrayBuffer);\n      if (!lastBlobMap.has(id) && await transparentBase64 === base64) {\n        lastBlobMap.set(id, base64);\n        return worker.postMessage({ id });\n      }\n      if (lastBlobMap.get(id) === base64) return worker.postMessage({ id });\n      worker.postMessage({\n        id,\n        type,\n        base64,\n        width,\n        height\n      });\n      lastBlobMap.set(id, base64);\n    } else {\n      return worker.postMessage({ id: e.data.id });\n    }\n  };\n})();\n//# sourceMappingURL=image-bitmap-data-url-worker-IJpC7g_b.js.map\n',
+      ML = "undefined" !== typeof self && self.Blob && new Blob([sL], {
+        type: "text/javascript;charset=utf-8"
+      });
+
+    function KL(WW) {
+      let iW;
+      try {
+        if (iW = ML && (self.URL || self.webkitURL).createObjectURL(ML), !iW) throw "";
+        const OW = new Worker(iW, {
+          name: null == WW ? void 0 : WW.name
+        });
+        return OW.addEventListener("error", (() => {
+          (self.URL || self.webkitURL).revokeObjectURL(iW)
+        })), OW
+      } catch (OW) {
+        return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(sL), {
+          name: null == WW ? void 0 : WW.name
+        })
+      } finally {
+        iW && (self.URL || self.webkitURL).revokeObjectURL(iW)
+      }
+    }
+    class SL {
+      constructor(WW) {
+        NW(this, "pendingCanvasMutations", new Map), NW(this, "rafStamps", {
+          latestId: 0,
+          invokeId: null
+        }), NW(this, "mirror"), NW(this, "mutationCb"), NW(this, "resetObservers"), NW(this, "frozen", !1), NW(this, "locked", !1), NW(this, "processMutation", ((WW, iW) => {
+          !(this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId) && this.rafStamps.invokeId || (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(WW) || this.pendingCanvasMutations.set(WW, []), this.pendingCanvasMutations.get(WW).push(iW)
+        }));
+        const {
+          sampling: iW = "all",
+          win: OW,
+          blockClass: mW,
+          blockSelector: EW,
+          recordCanvas: PW,
+          dataURLOptions: LW
+        } = WW;
+        this.mutationCb = WW.mutationCb, this.mirror = WW.mirror, PW && "all" === iW && this.initCanvasMutationObserver(OW, mW, EW), PW && "number" === typeof iW && this.initCanvasFPSObserver(iW, OW, mW, EW, {
+          dataURLOptions: LW
+        })
+      }
+      reset() {
+        this.pendingCanvasMutations.clear(), this.resetObservers && this.resetObservers()
+      }
+      freeze() {
+        this.frozen = !0
+      }
+      unfreeze() {
+        this.frozen = !1
+      }
+      lock() {
+        this.locked = !0
+      }
+      unlock() {
+        this.locked = !1
+      }
+      initCanvasFPSObserver(WW, iW, OW, mW, EW) {
+        const NW = UL(iW, OW, mW, !0),
+          PW = new Map,
+          LW = new KL;
+        LW.onmessage = WW => {
+          const {
+            id: iW
+          } = WW.data;
+          if (PW.set(iW, !1), !("base64" in WW.data)) return;
+          const {
+            base64: OW,
+            type: mW,
+            width: EW,
+            height: NW
+          } = WW.data;
+          this.mutationCb({
+            id: iW,
+            type: vP["2D"],
+            commands: [{
+              property: "clearRect",
+              args: [0, 0, EW, NW]
+            }, {
+              property: "drawImage",
+              args: [{
+                rr_type: "ImageBitmap",
+                args: [{
+                  rr_type: "Blob",
+                  data: [{
+                    rr_type: "ArrayBuffer",
+                    base64: OW
+                  }],
+                  type: mW
+                }]
+              }, 0, 0]
+            }]
+          })
+        };
+        const cW = 1e3 / WW;
+        let wW, tW = 0;
+        const ZW = WW => {
+          tW && WW - tW < cW || (tW = WW, (() => {
+            const WW = [];
+            return iW.document.querySelectorAll("canvas").forEach((iW => {
+              tP(iW, OW, mW, !0) || WW.push(iW)
+            })), WW
+          })().forEach((async WW => {
+            var iW;
+            const OW = this.mirror.getId(WW);
+            if (PW.get(OW)) return;
+            if (0 === WW.width || 0 === WW.height) return;
+            if (PW.set(OW, !0), ["webgl", "webgl2"].includes(WW.__context)) {
+              const OW = WW.getContext(WW.__context);
+              !1 === (null == (iW = null == OW ? void 0 : OW.getContextAttributes()) ? void 0 : iW.preserveDrawingBuffer) && OW.clear(OW.COLOR_BUFFER_BIT)
+            }
+            const mW = await createImageBitmap(WW);
+            LW.postMessage({
+              id: OW,
+              bitmap: mW,
+              width: WW.width,
+              height: WW.height,
+              dataURLOptions: EW.dataURLOptions
+            }, [mW])
+          }))), wW = requestAnimationFrame(ZW)
+        };
+        wW = requestAnimationFrame(ZW), this.resetObservers = () => {
+          NW(), cancelAnimationFrame(wW)
+        }
+      }
+      initCanvasMutationObserver(WW, iW, OW) {
+        this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher();
+        const mW = UL(WW, iW, OW, !1),
+          EW = function(WW, iW, OW, mW) {
+            const EW = [],
+              NW = Object.getOwnPropertyNames(iW.CanvasRenderingContext2D.prototype);
+            for (const PW of NW) try {
+              if ("function" !== typeof iW.CanvasRenderingContext2D.prototype[PW]) continue;
+              const NW = QN(iW.CanvasRenderingContext2D.prototype, PW, (function(EW) {
+                return function() {
+                  for (var NW = arguments.length, LW = new Array(NW), cW = 0; cW < NW; cW++) LW[cW] = arguments[cW];
+                  return tP(this.canvas, OW, mW, !0) || setTimeout((() => {
+                    const OW = bL(LW, iW, this);
+                    WW(this.canvas, {
+                      type: vP["2D"],
+                      property: PW,
+                      args: OW
+                    })
+                  }), 0), EW.apply(this, LW)
+                }
+              }));
+              EW.push(NW)
+            } catch {
+              const OW = NP(iW.CanvasRenderingContext2D.prototype, PW, {
+                set(iW) {
+                  WW(this.canvas, {
+                    type: vP["2D"],
+                    property: PW,
+                    args: [iW],
+                    setter: !0
+                  })
+                }
+              });
+              EW.push(OW)
+            }
+            return () => {
+              EW.forEach((WW => WW()))
+            }
+          }(this.processMutation.bind(this), WW, iW, OW),
+          NW = function(WW, iW, OW, mW) {
+            const EW = [];
+            return "undefined" !== typeof iW.WebGLRenderingContext && EW.push(...kL(iW.WebGLRenderingContext.prototype, vP.WebGL, WW, OW, mW, iW)), "undefined" !== typeof iW.WebGL2RenderingContext && EW.push(...kL(iW.WebGL2RenderingContext.prototype, vP.WebGL2, WW, OW, mW, iW)), () => {
+              EW.forEach((WW => WW()))
+            }
+          }(this.processMutation.bind(this), WW, iW, OW);
+        this.resetObservers = () => {
+          mW(), EW(), NW()
+        }
+      }
+      startPendingCanvasMutationFlusher() {
+        requestAnimationFrame((() => this.flushPendingCanvasMutations()))
+      }
+      startRAFTimestamping() {
+        const WW = iW => {
+          this.rafStamps.latestId = iW, requestAnimationFrame(WW)
+        };
+        requestAnimationFrame(WW)
+      }
+      flushPendingCanvasMutations() {
+        this.pendingCanvasMutations.forEach(((WW, iW) => {
+          const OW = this.mirror.getId(iW);
+          this.flushPendingCanvasMutationFor(iW, OW)
+        })), requestAnimationFrame((() => this.flushPendingCanvasMutations()))
+      }
+      flushPendingCanvasMutationFor(WW, iW) {
+        if (this.frozen || this.locked) return;
+        const OW = this.pendingCanvasMutations.get(WW);
+        if (!OW || -1 === iW) return;
+        const mW = OW.map((WW => {
+            const {
+              type: iW,
+              ...OW
+            } = WW;
+            return OW
+          })),
+          {
+            type: EW
+          } = OW[0];
+        this.mutationCb({
+          id: iW,
+          type: EW,
+          commands: mW
+        }), this.pendingCanvasMutations.delete(WW)
+      }
+    }
+    class YL {
+      constructor(WW) {
+        NW(this, "trackedLinkElements", new WeakSet), NW(this, "mutationCb"), NW(this, "adoptedStyleSheetCb"), NW(this, "styleMirror", new TP), this.mutationCb = WW.mutationCb, this.adoptedStyleSheetCb = WW.adoptedStyleSheetCb
+      }
+      attachLinkElement(WW, iW) {
+        "_cssText" in iW.attributes && this.mutationCb({
+          adds: [],
+          removes: [],
+          texts: [],
+          attributes: [{
+            id: iW.id,
+            attributes: iW.attributes
+          }]
+        }), this.trackLinkElement(WW)
+      }
+      trackLinkElement(WW) {
+        this.trackedLinkElements.has(WW) || (this.trackedLinkElements.add(WW), this.trackStylesheetInLinkElement(WW))
+      }
+      adoptStyleSheets(WW, iW) {
+        if (0 === WW.length) return;
+        const OW = {
+            id: iW,
+            styleIds: []
+          },
+          mW = [];
+        for (const EW of WW) {
+          let WW;
+          this.styleMirror.has(EW) ? WW = this.styleMirror.getId(EW) : (WW = this.styleMirror.add(EW), mW.push({
+            styleId: WW,
+            rules: Array.from(EW.rules || CSSRule, ((WW, iW) => ({
+              rule: yW(WW, EW.href),
+              index: iW
+            })))
+          })), OW.styleIds.push(WW)
+        }
+        mW.length > 0 && (OW.styles = mW), this.adoptedStyleSheetCb(OW)
+      }
+      reset() {
+        this.styleMirror.reset(), this.trackedLinkElements = new WeakSet
+      }
+      trackStylesheetInLinkElement(WW) {}
+    }
+    class yL {
+      constructor() {
+        NW(this, "nodeMap", new WeakMap), NW(this, "active", !1)
+      }
+      inOtherBuffer(WW, iW) {
+        const OW = this.nodeMap.get(WW);
+        return OW && Array.from(OW).some((WW => WW !== iW))
+      }
+      add(WW, iW) {
+        this.active || (this.active = !0, requestAnimationFrame((() => {
+          this.nodeMap = new WeakMap, this.active = !1
+        }))), this.nodeMap.set(WW, (this.nodeMap.get(WW) || new Set).add(iW))
+      }
+      destroy() {}
+    }
+    let TL, JL, hL, HL = !1;
+    try {
+      if (2 !== Array.from([1], (WW => 2 * WW))[0]) {
+        const WW = document.createElement("iframe");
+        document.body.appendChild(WW), Array.from = (null == (mW = WW.contentWindow) ? void 0 : mW.Array.from) || Array.from, document.body.removeChild(WW)
+      }
+    } catch (Ac) {
+      console.debug("Unable to override Array.from", Ac)
+    }
+    const nL = JW();
+
+    function uL() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const {
+        emit: iW,
+        checkoutEveryNms: OW,
+        checkoutEveryNth: mW,
+        blockClass: EW = "rr-block",
+        blockSelector: NW = null,
+        ignoreClass: PW = "rr-ignore",
+        ignoreSelector: LW = null,
+        maskTextClass: cW = "rr-mask",
+        maskTextSelector: wW = null,
+        inlineStylesheet: tW = !0,
+        maskAllInputs: ZW,
+        maskInputOptions: xW,
+        slimDOMOptions: lW,
+        maskInputFn: AW,
+        maskTextFn: bW,
+        hooks: jW,
+        packFn: UW,
+        sampling: kW = {},
+        dataURLOptions: sW = {},
+        mousemoveWait: MW,
+        recordDOM: KW = !0,
+        recordCanvas: SW = !1,
+        recordCrossOriginIframes: YW = !1,
+        recordAfter: yW = ("DOMContentLoaded" === WW.recordAfter ? WW.recordAfter : "load"),
+        userTriggeredOnInput: JW = !1,
+        collectFonts: hW = !1,
+        inlineImages: HW = !1,
+        plugins: nW,
+        keepIframeSrcFn: uW = () => !1,
+        ignoreCSSAttributes: oW = new Set([]),
+        errorHandler: dW
+      } = WW;
+      qP = dW;
+      const eW = !YW || window.parent === window;
+      let vW = !1;
+      if (!eW) try {
+        window.parent.document && (vW = !1)
+      } catch (aW) {
+        vW = !0
+      }
+      if (eW && !iW) throw new Error("emit function is required");
+      if (!eW && !vW) return () => {};
+      void 0 !== MW && void 0 === kW.mousemove && (kW.mousemove = MW), nL.reset();
+      const gW = !0 === ZW ? {
+          color: !0,
+          date: !0,
+          "datetime-local": !0,
+          email: !0,
+          month: !0,
+          number: !0,
+          range: !0,
+          search: !0,
+          tel: !0,
+          text: !0,
+          time: !0,
+          url: !0,
+          week: !0,
+          textarea: !0,
+          select: !0,
+          password: !0
+        } : void 0 !== xW ? xW : {
+          password: !0
+        },
+        DW = Li(lW);
+      let VW;
+      bP();
+      let pW = 0;
+      const fW = WW => {
+        for (const iW of nW || []) iW.eventProcessor && (WW = iW.eventProcessor(WW));
+        return UW && !vW && (WW = UW(WW)), WW
+      };
+      TL = (WW, EW) => {
+        var NW;
+        const PW = WW;
+        if (PW.timestamp = FN(), !(null == (NW = GP[0]) ? void 0 : NW.isFrozen()) || PW.type === uP.FullSnapshot || PW.type === uP.IncrementalSnapshot && PW.data.source === oP.Mutation || GP.forEach((WW => WW.unfreeze())), eW) null == iW || iW(fW(PW), EW);
+        else if (vW) {
+          const WW = {
+            type: "rrweb",
+            event: fW(PW),
+            origin: window.location.origin,
+            isCheckout: EW
+          };
+          window.parent.postMessage(WW, "*")
+        }
+        if (PW.type === uP.FullSnapshot) VW = PW, pW = 0;
+        else if (PW.type === uP.IncrementalSnapshot) {
+          if (PW.data.source === oP.Mutation && PW.data.isAttachIframe) return;
+          pW++;
+          const WW = mW && pW >= mW,
+            iW = OW && PW.timestamp - VW.timestamp > OW;
+          (WW || iW) && JL(!0)
+        }
+      };
+      const CW = WW => {
+          TL({
+            type: uP.IncrementalSnapshot,
+            data: {
+              source: oP.Mutation,
+              ...WW
+            }
+          })
+        },
+        XW = WW => TL({
+          type: uP.IncrementalSnapshot,
+          data: {
+            source: oP.Scroll,
+            ...WW
+          }
+        }),
+        BW = WW => TL({
+          type: uP.IncrementalSnapshot,
+          data: {
+            source: oP.CanvasMutation,
+            ...WW
+          }
+        }),
+        qW = new YL({
+          mutationCb: CW,
+          adoptedStyleSheetCb: WW => TL({
+            type: uP.IncrementalSnapshot,
+            data: {
+              source: oP.AdoptedStyleSheet,
+              ...WW
+            }
+          })
+        }),
+        RW = new LL({
+          mirror: nL,
+          mutationCb: CW,
+          stylesheetManager: qW,
+          recordCrossOriginIframes: YW,
+          wrappedEmit: TL
+        });
+      for (const TW of nW || []) TW.getMirror && TW.getMirror({
+        nodeMirror: nL,
+        crossOriginIframeMirror: RW.crossOriginIframeMirror,
+        crossOriginIframeStyleMirror: RW.crossOriginIframeStyleMirror
+      });
+      const GW = new yL;
+      hL = new SL({
+        recordCanvas: SW,
+        mutationCb: BW,
+        win: window,
+        blockClass: EW,
+        blockSelector: NW,
+        mirror: nL,
+        sampling: kW.canvas,
+        dataURLOptions: sW
+      });
+      const IW = new cL({
+        mutationCb: CW,
+        scrollCb: XW,
+        bypassOptions: {
+          blockClass: EW,
+          blockSelector: NW,
+          maskTextClass: cW,
+          maskTextSelector: wW,
+          inlineStylesheet: tW,
+          maskInputOptions: gW,
+          dataURLOptions: sW,
+          maskTextFn: bW,
+          maskInputFn: AW,
+          recordCanvas: SW,
+          inlineImages: HW,
+          sampling: kW,
+          slimDOMOptions: DW,
+          iframeManager: RW,
+          stylesheetManager: qW,
+          canvasManager: hL,
+          keepIframeSrcFn: uW,
+          processedNodeManager: GW
+        },
+        mirror: nL
+      });
+      JL = function() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (!KW) return;
+        TL({
+          type: uP.Meta,
+          data: {
+            href: window.location.href,
+            width: cP(),
+            height: LP()
+          }
+        }, WW), qW.reset(), IW.init(), GP.forEach((WW => WW.lock()));
+        const iW = function(WW, iW) {
+          const {
+            mirror: OW = new TW,
+            blockClass: mW = "rr-block",
+            blockSelector: EW = null,
+            maskTextClass: NW = "rr-mask",
+            maskTextSelector: PW = null,
+            inlineStylesheet: LW = !0,
+            inlineImages: cW = !1,
+            recordCanvas: wW = !1,
+            maskAllInputs: tW = !1,
+            maskTextFn: ZW,
+            maskInputFn: xW,
+            slimDOM: lW = !1,
+            dataURLOptions: AW,
+            preserveWhiteSpace: bW,
+            onSerialize: jW,
+            onIframeLoad: UW,
+            iframeLoadTimeout: kW,
+            onStylesheetLoad: sW,
+            stylesheetLoadTimeout: MW,
+            keepIframeSrcFn: KW = () => !1
+          } = iW;
+          return ci(WW, {
+            doc: WW,
+            mirror: OW,
+            blockClass: mW,
+            blockSelector: EW,
+            maskTextClass: NW,
+            maskTextSelector: PW,
+            skipChild: !1,
+            inlineStylesheet: LW,
+            maskInputOptions: !0 === tW ? {
+              color: !0,
+              date: !0,
+              "datetime-local": !0,
+              email: !0,
+              month: !0,
+              number: !0,
+              range: !0,
+              search: !0,
+              tel: !0,
+              text: !0,
+              time: !0,
+              url: !0,
+              week: !0,
+              textarea: !0,
+              select: !0,
+              password: !0
+            } : !1 === tW ? {
+              password: !0
+            } : tW,
+            maskTextFn: ZW,
+            maskInputFn: xW,
+            slimDOMOptions: Li(lW),
+            dataURLOptions: AW,
+            inlineImages: cW,
+            recordCanvas: wW,
+            preserveWhiteSpace: bW,
+            onSerialize: jW,
+            onIframeLoad: UW,
+            iframeLoadTimeout: kW,
+            onStylesheetLoad: sW,
+            stylesheetLoadTimeout: MW,
+            keepIframeSrcFn: KW,
+            newlyAddedElement: !1
+          })
+        }(document, {
+          mirror: nL,
+          blockClass: EW,
+          blockSelector: NW,
+          maskTextClass: cW,
+          maskTextSelector: wW,
+          inlineStylesheet: tW,
+          maskAllInputs: gW,
+          maskTextFn: bW,
+          maskInputFn: AW,
+          slimDOM: DW,
+          dataURLOptions: sW,
+          recordCanvas: SW,
+          inlineImages: HW,
+          onSerialize: WW => {
+            kP(WW, nL) && RW.addIframe(WW), sP(WW, nL) && qW.trackLinkElement(WW), KP(WW) && IW.addShadowRoot(WP.shadowRoot(WW), document)
+          },
+          onIframeLoad: (WW, iW) => {
+            RW.attachIframe(WW, iW), IW.observeAttachShadow(WW)
+          },
+          onStylesheetLoad: (WW, iW) => {
+            qW.attachLinkElement(WW, iW)
+          },
+          keepIframeSrcFn: uW
+        });
+        if (!iW) return console.warn("Failed to snapshot the document");
+        TL({
+          type: uP.FullSnapshot,
+          data: {
+            node: iW,
+            initialOffset: PP(window)
+          }
+        }, WW), GP.forEach((WW => WW.unlock())), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && qW.adoptStyleSheets(document.adoptedStyleSheets, nL.getId(document))
+      };
+      try {
+        const WW = [],
+          iW = WW => {
+            var iW;
+            return RP(mL)({
+              mutationCb: CW,
+              mousemoveCb: (WW, iW) => TL({
+                type: uP.IncrementalSnapshot,
+                data: {
+                  source: iW,
+                  positions: WW
+                }
+              }),
+              mouseInteractionCb: WW => TL({
+                type: uP.IncrementalSnapshot,
+                data: {
+                  source: oP.MouseInteraction,
+                  ...WW
+                }
+              }),
+              scrollCb: XW,
+              viewportResizeCb: WW => TL({
+                type: uP.IncrementalSnapshot,
+                data: {
+                  source: oP.ViewportResize,
+                  ...WW
+                }
+              }),
+              inputCb: WW => TL({
+                type: uP.IncrementalSnapshot,
+                data: {
+                  source: oP.Input,
+                  ...WW
+                }
+              }),
+              mediaInteractionCb: WW => TL({
+                type: uP.IncrementalSnapshot,
+                data: {
+                  source: oP.MediaInteraction,
+                  ...WW
+                }
+              }),
+              styleSheetRuleCb: WW => TL({
+                type: uP.IncrementalSnapshot,
+                data: {
+                  source: oP.StyleSheetRule,
+                  ...WW
+                }
+              }),
+              styleDeclarationCb: WW => TL({
+                type: uP.IncrementalSnapshot,
+                data: {
+                  source: oP.StyleDeclaration,
+                  ...WW
+                }
+              }),
+              canvasMutationCb: BW,
+              fontCb: WW => TL({
+                type: uP.IncrementalSnapshot,
+                data: {
+                  source: oP.Font,
+                  ...WW
+                }
+              }),
+              selectionCb: WW => {
+                TL({
+                  type: uP.IncrementalSnapshot,
+                  data: {
+                    source: oP.Selection,
+                    ...WW
+                  }
+                })
+              },
+              customElementCb: WW => {
+                TL({
+                  type: uP.IncrementalSnapshot,
+                  data: {
+                    source: oP.CustomElement,
+                    ...WW
+                  }
+                })
+              },
+              blockClass: EW,
+              ignoreClass: PW,
+              ignoreSelector: LW,
+              maskTextClass: cW,
+              maskTextSelector: wW,
+              maskInputOptions: gW,
+              inlineStylesheet: tW,
+              sampling: kW,
+              recordDOM: KW,
+              recordCanvas: SW,
+              inlineImages: HW,
+              userTriggeredOnInput: JW,
+              collectFonts: hW,
+              doc: WW,
+              maskInputFn: AW,
+              maskTextFn: bW,
+              keepIframeSrcFn: uW,
+              blockSelector: NW,
+              slimDOMOptions: DW,
+              dataURLOptions: sW,
+              mirror: nL,
+              iframeManager: RW,
+              stylesheetManager: qW,
+              shadowDomManager: IW,
+              processedNodeManager: GW,
+              canvasManager: hL,
+              ignoreCSSAttributes: oW,
+              plugins: (null == (iW = null == nW ? void 0 : nW.filter((WW => WW.observer))) ? void 0 : iW.map((WW => ({
+                observer: WW.observer,
+                options: WW.options,
+                callback: iW => TL({
+                  type: uP.Plugin,
+                  data: {
+                    plugin: WW.name,
+                    payload: iW
+                  }
+                })
+              })))) || []
+            }, jW)
+          };
+        RW.addLoadListener((OW => {
+          try {
+            WW.push(iW(OW.contentDocument))
+          } catch (mW) {
+            console.warn(mW)
+          }
+        }));
+        const OW = () => {
+          JL(), WW.push(iW(document)), HL = !0
+        };
+        return ["interactive", "complete"].includes(document.readyState) ? OW() : (WW.push(iP("DOMContentLoaded", (() => {
+          TL({
+            type: uP.DomContentLoaded,
+            data: {}
+          }), "DOMContentLoaded" === yW && OW()
+        }))), WW.push(iP("load", (() => {
+          TL({
+            type: uP.Load,
+            data: {}
+          }), "load" === yW && OW()
+        }), window))), () => {
+          WW.forEach((WW => {
+            try {
+              WW()
+            } catch (iW) {
+              String(iW).toLowerCase().includes("cross-origin") || console.warn(iW)
+            }
+          })), GW.destroy(), HL = !1, qP = void 0
+        }
+      } catch (rW) {
+        console.warn(rW)
+      }
+    }
+
+    function oL() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
+        iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : document;
+      if ("scrollBehavior" in iW.documentElement.style && !0 !== WW.__forceSmoothScrollPolyfill__) return;
+      const OW = WW.HTMLElement || WW.Element,
+        mW = {
+          scroll: WW.scroll || WW.scrollTo,
+          scrollBy: WW.scrollBy,
+          elementScroll: OW.prototype.scroll || LW,
+          scrollIntoView: OW.prototype.scrollIntoView
+        },
+        EW = WW.performance && WW.performance.now ? WW.performance.now.bind(WW.performance) : Date.now;
+      const NW = (PW = WW.navigator.userAgent, new RegExp(["MSIE ", "Trident/", "Edge/"].join("|")).test(PW) ? 1 : 0);
+      var PW;
+
+      function LW(WW, iW) {
+        this.scrollLeft = WW, this.scrollTop = iW
+      }
+
+      function cW(WW) {
+        if (null === WW || "object" !== typeof WW || void 0 === WW.behavior || "auto" === WW.behavior || "instant" === WW.behavior) return !0;
+        if ("object" === typeof WW && "smooth" === WW.behavior) return !1;
+        throw new TypeError("behavior member of ScrollOptions " + WW.behavior + " is not a valid value for enumeration ScrollBehavior.")
+      }
+
+      function wW(WW, iW) {
+        return "Y" === iW ? WW.clientHeight + NW < WW.scrollHeight : "X" === iW ? WW.clientWidth + NW < WW.scrollWidth : void 0
+      }
+
+      function tW(iW, OW) {
+        const mW = WW.getComputedStyle(iW, null)["overflow" + OW];
+        return "auto" === mW || "scroll" === mW
+      }
+
+      function ZW(WW) {
+        const iW = wW(WW, "Y") && tW(WW, "Y"),
+          OW = wW(WW, "X") && tW(WW, "X");
+        return iW || OW
+      }
+
+      function xW(iW) {
+        let OW, mW, NW, PW = (EW() - iW.startTime) / 468;
+        var LW;
+        PW = PW > 1 ? 1 : PW, LW = PW, OW = .5 * (1 - Math.cos(Math.PI * LW)), mW = iW.startX + (iW.x - iW.startX) * OW, NW = iW.startY + (iW.y - iW.startY) * OW, iW.method.call(iW.scrollable, mW, NW), mW === iW.x && NW === iW.y || WW.requestAnimationFrame(xW.bind(WW, iW))
+      }
+
+      function lW(OW, NW, PW) {
+        let cW, wW, tW, ZW;
+        const lW = EW();
+        OW === iW.body ? (cW = WW, wW = WW.scrollX || WW.pageXOffset, tW = WW.scrollY || WW.pageYOffset, ZW = mW.scroll) : (cW = OW, wW = OW.scrollLeft, tW = OW.scrollTop, ZW = LW), xW({
+          scrollable: cW,
+          method: ZW,
+          startTime: lW,
+          startX: wW,
+          startY: tW,
+          x: NW,
+          y: PW
+        })
+      }
+      WW.scroll = WW.scrollTo = function() {
+        void 0 !== arguments[0] && (!0 !== cW(arguments[0]) ? lW.call(WW, iW.body, void 0 !== arguments[0].left ? ~~arguments[0].left : WW.scrollX || WW.pageXOffset, void 0 !== arguments[0].top ? ~~arguments[0].top : WW.scrollY || WW.pageYOffset) : mW.scroll.call(WW, void 0 !== arguments[0].left ? arguments[0].left : "object" !== typeof arguments[0] ? arguments[0] : WW.scrollX || WW.pageXOffset, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : WW.scrollY || WW.pageYOffset))
+      }, WW.scrollBy = function() {
+        void 0 !== arguments[0] && (cW(arguments[0]) ? mW.scrollBy.call(WW, void 0 !== arguments[0].left ? arguments[0].left : "object" !== typeof arguments[0] ? arguments[0] : 0, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : 0) : lW.call(WW, iW.body, ~~arguments[0].left + (WW.scrollX || WW.pageXOffset), ~~arguments[0].top + (WW.scrollY || WW.pageYOffset)))
+      }, OW.prototype.scroll = OW.prototype.scrollTo = function() {
+        if (void 0 === arguments[0]) return;
+        if (!0 === cW(arguments[0])) {
+          if ("number" === typeof arguments[0] && void 0 === arguments[1]) throw new SyntaxError("Value could not be converted");
+          return void mW.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left : "object" !== typeof arguments[0] ? ~~arguments[0] : this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top : void 0 !== arguments[1] ? ~~arguments[1] : this.scrollTop)
+        }
+        const WW = arguments[0].left,
+          iW = arguments[0].top;
+        lW.call(this, this, "undefined" === typeof WW ? this.scrollLeft : ~~WW, "undefined" === typeof iW ? this.scrollTop : ~~iW)
+      }, OW.prototype.scrollBy = function() {
+        void 0 !== arguments[0] && (!0 !== cW(arguments[0]) ? this.scroll({
+          left: ~~arguments[0].left + this.scrollLeft,
+          top: ~~arguments[0].top + this.scrollTop,
+          behavior: arguments[0].behavior
+        }) : mW.elementScroll.call(this, void 0 !== arguments[0].left ? ~~arguments[0].left + this.scrollLeft : ~~arguments[0] + this.scrollLeft, void 0 !== arguments[0].top ? ~~arguments[0].top + this.scrollTop : ~~arguments[1] + this.scrollTop))
+      }, OW.prototype.scrollIntoView = function() {
+        if (!0 === cW(arguments[0])) return void mW.scrollIntoView.call(this, void 0 === arguments[0] || arguments[0]);
+        const OW = function(WW) {
+            for (; WW !== iW.body && !1 === ZW(WW);) WW = WW.parentNode || WW.host;
+            return WW
+          }(this),
+          EW = OW.getBoundingClientRect(),
+          NW = this.getBoundingClientRect();
+        OW !== iW.body ? (lW.call(this, OW, OW.scrollLeft + NW.left - EW.left, OW.scrollTop + NW.top - EW.top), "fixed" !== WW.getComputedStyle(OW).position && WW.scrollBy({
+          left: EW.left,
+          top: EW.top,
+          behavior: "smooth"
+        })) : WW.scrollBy({
+          left: NW.left,
+          top: NW.top,
+          behavior: "smooth"
+        })
+      }
+    }
+    uL.addCustomEvent = (WW, iW) => {
+      if (!HL) throw new Error("please add custom event after start recording");
+      TL({
+        type: uP.Custom,
+        data: {
+          tag: WW,
+          payload: iW
+        }
+      })
+    }, uL.freezePage = () => {
+      GP.forEach((WW => WW.freeze()))
+    }, uL.takeFullSnapshot = WW => {
+      if (!HL) throw new Error("please take full snapshot after start recording");
+      JL(WW)
+    }, uL.mirror = nL;
+    class dL {
+      constructor() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          iW = arguments.length > 1 ? arguments[1] : void 0;
+        NW(this, "timeOffset", 0), NW(this, "speed"), NW(this, "actions"), NW(this, "raf", null), NW(this, "lastTimestamp"), this.actions = WW, this.speed = iW.speed
+      }
+      addAction(WW) {
+        const iW = !0 === this.raf;
+        if (!this.actions.length || this.actions[this.actions.length - 1].delay <= WW.delay) this.actions.push(WW);
+        else {
+          const iW = this.findActionIndex(WW);
+          this.actions.splice(iW, 0, WW)
+        }
+        iW && (this.raf = requestAnimationFrame(this.rafCheck.bind(this)))
+      }
+      start() {
+        this.timeOffset = 0, this.lastTimestamp = performance.now(), this.raf = requestAnimationFrame(this.rafCheck.bind(this))
+      }
+      updateLiveTime() {
+        !0 === this.raf && this.rafCheck()
+      }
+      rafCheck() {
+        const WW = performance.now();
+        for (this.timeOffset += (WW - this.lastTimestamp) * this.speed, this.lastTimestamp = WW; this.actions.length;) {
+          const WW = this.actions[0];
+          if (!(this.timeOffset >= WW.delay)) break;
+          this.actions.shift(), WW.doAction()
+        }
+        this.actions.length > 0 ? this.raf = requestAnimationFrame(this.rafCheck.bind(this)) : this.raf = !0
+      }
+      clear() {
+        this.raf && (!0 !== this.raf && cancelAnimationFrame(this.raf), this.raf = null), this.actions.length = 0
+      }
+      setSpeed(WW) {
+        this.speed = WW
+      }
+      isActive() {
+        return null !== this.raf
+      }
+      findActionIndex(WW) {
+        let iW = 0,
+          OW = this.actions.length - 1;
+        for (; iW <= OW;) {
+          const mW = Math.floor((iW + OW) / 2);
+          if (this.actions[mW].delay < WW.delay) iW = mW + 1;
+          else {
+            if (!(this.actions[mW].delay > WW.delay)) return mW + 1;
+            OW = mW - 1
+          }
+        }
+        return iW
+      }
+    }
+
+    function eL(WW, iW) {
+      if (WW.type === uP.IncrementalSnapshot && WW.data.source === oP.MouseMove && WW.data.positions && WW.data.positions.length) {
+        const OW = WW.data.positions[0].timeOffset,
+          mW = WW.timestamp + OW;
+        return WW.delay = mW - iW, mW - iW
+      }
+      return WW.delay = WW.timestamp - iW, WW.delay
+    }
+
+    function vL(WW, iW) {
+      var OW = "function" == typeof Symbol && WW[Symbol.iterator];
+      if (!OW) return WW;
+      var mW, EW, NW = OW.call(WW),
+        PW = [];
+      try {
+        for (;
+          (void 0 === iW || iW-- > 0) && !(mW = NW.next()).done;) PW.push(mW.value)
+      } catch (LW) {
+        EW = {
+          error: LW
+        }
+      } finally {
+        try {
+          mW && !mW.done && (OW = NW.return) && OW.call(NW)
+        } finally {
+          if (EW) throw EW.error
+        }
+      }
+      return PW
+    }
+    var gL, DL;
+    (DL = gL || (gL = {}))[DL.NotStarted = 0] = "NotStarted", DL[DL.Running = 1] = "Running", DL[DL.Stopped = 2] = "Stopped";
+    var VL = {
+      type: "xstate.init"
+    };
+
+    function pL(WW) {
+      return void 0 === WW ? [] : [].concat(WW)
+    }
+
+    function fL(WW) {
+      return {
+        type: "xstate.assign",
+        assignment: WW
+      }
+    }
+
+    function CL(WW, iW) {
+      return "string" == typeof(WW = "string" == typeof WW && iW && iW[WW] ? iW[WW] : WW) ? {
+        type: WW
+      } : "function" == typeof WW ? {
+        type: WW.name,
+        exec: WW
+      } : WW
+    }
+
+    function XL(WW) {
+      return function(iW) {
+        return WW === iW
+      }
+    }
+
+    function BL(WW) {
+      return "string" == typeof WW ? {
+        type: WW
+      } : WW
+    }
+
+    function qL(WW, iW) {
+      return {
+        value: WW,
+        context: iW,
+        actions: [],
+        changed: !1,
+        matches: XL(WW)
+      }
+    }
+
+    function RL(WW, iW, OW) {
+      var mW = iW,
+        EW = !1;
+      return [WW.filter((function(WW) {
+        if ("xstate.assign" === WW.type) {
+          EW = !0;
+          var iW = Object.assign({}, mW);
+          return "function" == typeof WW.assignment ? iW = WW.assignment(mW, OW) : Object.keys(WW.assignment).forEach((function(EW) {
+            iW[EW] = "function" == typeof WW.assignment[EW] ? WW.assignment[EW](mW, OW) : WW.assignment[EW]
+          })), mW = iW, !1
+        }
+        return !0
+      })), mW, EW]
+    }
+
+    function GL(WW, iW) {
+      void 0 === iW && (iW = {});
+      var OW = vL(RL(pL(WW.states[WW.initial].entry).map((function(WW) {
+          return CL(WW, iW.actions)
+        })), WW.context, VL), 2),
+        mW = OW[0],
+        EW = OW[1],
+        NW = {
+          config: WW,
+          _options: iW,
+          initialState: {
+            value: WW.initial,
+            actions: mW,
+            context: EW,
+            matches: XL(WW.initial)
+          },
+          transition: function(iW, OW) {
+            var mW, EW, PW = "string" == typeof iW ? {
+                value: iW,
+                context: WW.context
+              } : iW,
+              LW = PW.value,
+              cW = PW.context,
+              wW = BL(OW),
+              tW = WW.states[LW];
+            if (tW.on) {
+              var ZW = pL(tW.on[wW.type]);
+              try {
+                for (var xW = function(WW) {
+                    var iW = "function" == typeof Symbol && Symbol.iterator,
+                      OW = iW && WW[iW],
+                      mW = 0;
+                    if (OW) return OW.call(WW);
+                    if (WW && "number" == typeof WW.length) return {
+                      next: function() {
+                        return WW && mW >= WW.length && (WW = void 0), {
+                          value: WW && WW[mW++],
+                          done: !WW
+                        }
+                      }
+                    };
+                    throw new TypeError(iW ? "Object is not iterable." : "Symbol.iterator is not defined.")
+                  }(ZW), lW = xW.next(); !lW.done; lW = xW.next()) {
+                  var AW = lW.value;
+                  if (void 0 === AW) return qL(LW, cW);
+                  var bW = "string" == typeof AW ? {
+                      target: AW
+                    } : AW,
+                    jW = bW.target,
+                    UW = bW.actions,
+                    kW = void 0 === UW ? [] : UW,
+                    sW = bW.cond,
+                    MW = void 0 === sW ? function() {
+                      return !0
+                    } : sW,
+                    KW = void 0 === jW,
+                    SW = null != jW ? jW : LW,
+                    YW = WW.states[SW];
+                  if (MW(cW, wW)) {
+                    var yW = vL(RL((KW ? pL(kW) : [].concat(tW.exit, kW, YW.entry).filter((function(WW) {
+                        return WW
+                      }))).map((function(WW) {
+                        return CL(WW, NW._options.actions)
+                      })), cW, wW), 3),
+                      TW = yW[0],
+                      JW = yW[1],
+                      hW = yW[2],
+                      HW = null != jW ? jW : LW;
+                    return {
+                      value: HW,
+                      context: JW,
+                      actions: TW,
+                      changed: jW !== LW || TW.length > 0 || hW,
+                      matches: XL(HW)
+                    }
+                  }
+                }
+              } catch (DL) {
+                mW = {
+                  error: DL
+                }
+              } finally {
+                try {
+                  lW && !lW.done && (EW = xW.return) && EW.call(xW)
+                } finally {
+                  if (mW) throw mW.error
+                }
+              }
+            }
+            return qL(LW, cW)
+          }
+        };
+      return NW
+    }
+    var IL = function(WW, iW) {
+      return WW.actions.forEach((function(OW) {
+        var mW = OW.exec;
+        return mW && mW(WW.context, iW)
+      }))
+    };
+
+    function aL(WW) {
+      var iW = WW.initialState,
+        OW = gL.NotStarted,
+        mW = new Set,
+        EW = {
+          _machine: WW,
+          send: function(EW) {
+            OW === gL.Running && (iW = WW.transition(iW, EW), IL(iW, BL(EW)), mW.forEach((function(WW) {
+              return WW(iW)
+            })))
+          },
+          subscribe: function(WW) {
+            return mW.add(WW), WW(iW), {
+              unsubscribe: function() {
+                return mW.delete(WW)
+              }
+            }
+          },
+          start: function(mW) {
+            if (mW) {
+              var NW = "object" == typeof mW ? mW : {
+                context: WW.config.context,
+                value: mW
+              };
+              iW = {
+                value: NW.value,
+                actions: [],
+                context: NW.context,
+                matches: XL(NW.value)
+              }
+            }
+            return OW = gL.Running, IL(iW, VL), EW
+          },
+          stop: function() {
+            return OW = gL.Stopped, mW.clear(), EW
+          },
+          get state() {
+            return iW
+          },
+          get status() {
+            return OW
+          }
+        };
+      return EW
+    }
+
+    function rL(WW, iW) {
+      let {
+        getCastFn: OW,
+        applyEventsSynchronously: mW,
+        emitter: EW
+      } = iW;
+      return aL(GL({
+        id: "player",
+        context: WW,
+        initial: "paused",
+        states: {
+          playing: {
+            on: {
+              PAUSE: {
+                target: "paused",
+                actions: ["pause"]
+              },
+              CAST_EVENT: {
+                target: "playing",
+                actions: "castEvent"
+              },
+              END: {
+                target: "paused",
+                actions: ["resetLastPlayedEvent", "pause"]
+              },
+              ADD_EVENT: {
+                target: "playing",
+                actions: ["addEvent"]
+              }
+            }
+          },
+          paused: {
+            on: {
+              PLAY: {
+                target: "playing",
+                actions: ["recordTimeOffset", "play"]
+              },
+              CAST_EVENT: {
+                target: "paused",
+                actions: "castEvent"
+              },
+              TO_LIVE: {
+                target: "live",
+                actions: ["startLive"]
+              },
+              ADD_EVENT: {
+                target: "paused",
+                actions: ["addEvent"]
+              }
+            }
+          },
+          live: {
+            on: {
+              ADD_EVENT: {
+                target: "live",
+                actions: ["addEvent"]
+              },
+              CAST_EVENT: {
+                target: "live",
+                actions: ["castEvent"]
+              }
+            }
+          }
+        }
+      }, {
+        actions: {
+          castEvent: fL({
+            lastPlayedEvent: (WW, iW) => "CAST_EVENT" === iW.type ? iW.payload.event : WW.lastPlayedEvent
+          }),
+          recordTimeOffset: fL(((WW, iW) => {
+            let OW = WW.timeOffset;
+            return "payload" in iW && "timeOffset" in iW.payload && (OW = iW.payload.timeOffset), {
+              ...WW,
+              timeOffset: OW,
+              baselineTime: WW.events[0].timestamp + OW
+            }
+          })),
+          play(WW) {
+            var iW;
+            const {
+              timer: NW,
+              events: PW,
+              baselineTime: LW,
+              lastPlayedEvent: cW
+            } = WW;
+            NW.clear();
+            for (const OW of PW) eL(OW, LW);
+            const wW = function(WW, iW) {
+              for (let OW = WW.length - 1; OW >= 0; OW--) {
+                const mW = WW[OW];
+                if (mW.type === uP.Meta && mW.timestamp <= iW) return WW.slice(OW)
+              }
+              return WW
+            }(PW, LW);
+            let tW = null == cW ? void 0 : cW.timestamp;
+            (null == cW ? void 0 : cW.type) === uP.IncrementalSnapshot && cW.data.source === oP.MouseMove && (tW = cW.timestamp + (null == (iW = cW.data.positions[0]) ? void 0 : iW.timeOffset)), LW < (tW || 0) && EW.emit(DP.PlayBack);
+            const ZW = new Array;
+            for (const mW of wW)
+              if (!(tW && tW < LW && (mW.timestamp <= tW || mW === cW)))
+                if (mW.timestamp < LW) ZW.push(mW);
+                else {
+                  const WW = OW(mW, !1);
+                  NW.addAction({
+                    doAction: () => {
+                      WW()
+                    },
+                    delay: mW.delay
+                  })
+                } mW(ZW), EW.emit(DP.Flush), NW.start()
+          },
+          pause(WW) {
+            WW.timer.clear()
+          },
+          resetLastPlayedEvent: fL((WW => ({
+            ...WW,
+            lastPlayedEvent: null
+          }))),
+          startLive: fL({
+            baselineTime: (WW, iW) => (WW.timer.start(), "TO_LIVE" === iW.type && iW.payload.baselineTime ? iW.payload.baselineTime : Date.now())
+          }),
+          addEvent: fL(((WW, iW) => {
+            const {
+              baselineTime: mW,
+              timer: EW,
+              events: NW
+            } = WW;
+            if ("ADD_EVENT" === iW.type) {
+              const {
+                event: WW
+              } = iW.payload;
+              eL(WW, mW);
+              let PW = NW.length - 1;
+              if (!NW[PW] || NW[PW].timestamp <= WW.timestamp) NW.push(WW);
+              else {
+                let iW = -1,
+                  OW = 0;
+                for (; OW <= PW;) {
+                  const iW = Math.floor((OW + PW) / 2);
+                  NW[iW].timestamp <= WW.timestamp ? OW = iW + 1 : PW = iW - 1
+                } - 1 === iW && (iW = OW), NW.splice(iW, 0, WW)
+              }
+              const LW = WW.timestamp < mW,
+                cW = OW(WW, LW);
+              LW ? cW() : EW.isActive() && EW.addAction({
+                doAction: () => {
+                  cW()
+                },
+                delay: WW.delay
+              })
+            }
+            return {
+              ...WW,
+              events: NW
+            }
+          }))
+        }
+      }))
+    }
+    const zL = new Map;
+
+    function FL(WW, iW) {
+      let OW = zL.get(WW);
+      return OW || (OW = new Map, zL.set(WW, OW)), OW.has(iW) || OW.set(iW, []), OW.get(iW)
+    }
+
+    function QL(WW, iW, OW) {
+      return async mW => {
+        if (mW && "object" === typeof mW && "rr_type" in mW) {
+          if (OW && (OW.isUnchanged = !1), "ImageBitmap" === mW.rr_type && "args" in mW) {
+            const EW = await QL(WW, iW, OW)(mW.args);
+            return await createImageBitmap.apply(null, EW)
+          }
+          if ("index" in mW) {
+            if (OW || null === iW) return mW;
+            const {
+              rr_type: WW,
+              index: EW
+            } = mW;
+            return FL(iW, WW)[EW]
+          }
+          if ("args" in mW) {
+            const {
+              rr_type: EW,
+              args: NW
+            } = mW;
+            return new(0, window[EW])(...await Promise.all(NW.map(QL(WW, iW, OW))))
+          }
+          if ("base64" in mW) return function(WW) {
+            var iW, OW, mW, EW, NW, PW = .75 * WW.length,
+              LW = WW.length,
+              cW = 0;
+            "=" === WW[WW.length - 1] && (PW--, "=" === WW[WW.length - 2] && PW--);
+            var wW = new ArrayBuffer(PW),
+              tW = new Uint8Array(wW);
+            for (iW = 0; iW < LW; iW += 4) OW = tL[WW.charCodeAt(iW)], mW = tL[WW.charCodeAt(iW + 1)], EW = tL[WW.charCodeAt(iW + 2)], NW = tL[WW.charCodeAt(iW + 3)], tW[cW++] = OW << 2 | mW >> 4, tW[cW++] = (15 & mW) << 4 | EW >> 2, tW[cW++] = (3 & EW) << 6 | 63 & NW;
+            return wW
+          }(mW.base64);
+          if ("src" in mW) {
+            const iW = WW.get(mW.src);
+            if (iW) return iW;
+            {
+              const iW = new Image;
+              return iW.src = mW.src, WW.set(mW.src, iW), iW
+            }
+          }
+          if ("data" in mW && "Blob" === mW.rr_type) {
+            const EW = await Promise.all(mW.data.map(QL(WW, iW, OW)));
+            return new Blob(EW, {
+              type: mW.type
+            })
+          }
+        } else if (Array.isArray(mW)) {
+          return await Promise.all(mW.map(QL(WW, iW, OW)))
+        }
+        return mW
+      }
+    }
+    const Wc = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject"];
+    async function ic(WW) {
+      let {
+        mutation: iW,
+        target: OW,
+        type: mW,
+        imageMap: EW,
+        errorHandler: NW
+      } = WW;
+      try {
+        const WW = function(WW, iW) {
+          try {
+            return iW === vP.WebGL ? WW.getContext("webgl") || WW.getContext("experimental-webgl") : WW.getContext("webgl2")
+          } catch (OW) {
+            return null
+          }
+        }(OW, mW);
+        if (!WW) return;
+        if (iW.setter) return void(WW[iW.property] = iW.args[0]);
+        const NW = WW[iW.property],
+          PW = await Promise.all(iW.args.map(QL(EW, WW)));
+        ! function(WW, iW) {
+          if (!(null == iW ? void 0 : iW.constructor)) return;
+          const {
+            name: OW
+          } = iW.constructor;
+          if (!Wc.includes(OW)) return;
+          const mW = FL(WW, OW);
+          mW.includes(iW) || mW.push(iW)
+        }(WW, NW.apply(WW, PW))
+      } catch (PW) {
+        NW(iW, PW)
+      }
+    }
+    async function Oc(WW) {
+      let {
+        event: iW,
+        mutation: OW,
+        target: mW,
+        imageMap: EW,
+        canvasEventMap: NW,
+        errorHandler: PW
+      } = WW;
+      try {
+        const WW = NW.get(iW) || OW,
+          LW = "commands" in WW ? WW.commands : [WW];
+        if ([vP.WebGL, vP.WebGL2].includes(OW.type)) {
+          for (let WW = 0; WW < LW.length; WW++) {
+            const iW = LW[WW];
+            await ic({
+              mutation: iW,
+              type: OW.type,
+              target: mW,
+              imageMap: EW,
+              errorHandler: PW
+            })
           }
           return
         }
-        const be = ie + He >>> 1;
-        if (this.sortRange(ee, ie, be, ye), this.sortRange(ee, be, He, ye), ye * ee[be - 1].distance <= ye * ee[be].distance) return;
-        const {
-          left: Me
-        } = this, Ke = be - ie;
-        for (let oe = 0; oe < Ke; oe++) Me[oe] = ee[ie + oe];
-        let Ue = 0,
-          Fe = be,
-          Je = ie;
-        for (; Ue < Ke && Fe < He;) ee[Je++] = ye * ee[Fe].distance < ye * Me[Ue].distance ? ee[Fe++] : Me[Ue++];
-        for (; Ue < Ke;) ee[Je++] = Me[Ue++]
-      }
-    }
-    const KF = Math.ceil(102);
-
-    function UF(ee, ie, He, ye) {
-      let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : ie;
-      const Me = Math.min(ie, He),
-        Ke = new Uint32Array(WH(ye));
-      for (let Ue = 0; Ue < ye; Ue++) {
-        const ie = Math.floor(Ue * Me / ye),
-          He = Math.max(ie + 1, Math.floor((Ue + 1) * Me / ye));
-        for (let Fe = 0; Fe < ye; Fe++) {
-          const Je = Math.floor(Fe * Me / ye),
-            oe = Math.max(Je + 1, Math.floor((Fe + 1) * Me / ye));
-          let Re = 0;
-          for (let ye = ie; ye < He; ye++)
-            for (let ie = Je; ie < oe; ie++) ee[ye * be + ie] >= KF && Re++;
-          if (2 * Re >= (He - ie) * (oe - Je)) {
-            const ee = Fe + ye * Ue;
-            Ke[ee >>> 5] |= 1 << (31 & ee)
-          }
-        }
-      }
-      return Ke
-    }
-
-    function FF(ee) {
-      return Math.max(1, Math.min(16, ee))
-    }
-    class JF {
-      constructor(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : console.warn;
-        this.sink = ee, this.loadTexture = ie, this.warn = He, this.blockCaster = new Uint16Array(1), this.builtVersion = -1, this.byKey = new Map, this.nextCaster = 1, this.nextMaskWord = 0, this.warned = new Set, this.textures = new Map, this.loads = [], this.pending = Promise.resolve(), this.planesLoading = 0
-      }
-      update(ee, ie) {
-        return (ee.iN !== this.builtVersion || this.blockCaster.length !== ie) && (this.build(ee, ie), !0)
-      }
-      build(ee, ie) {
-        this.builtVersion = ee.iN;
-        const He = new Uint16Array(ie),
-          ye = new Map;
-        for (let be = 1; be < ie; be++) {
-          const ie = this.classify(ee, be, ye);
-          if (null === ie || ie === BH) {
-            He[be] = null === ie ? 0 : BH;
-            continue
-          }
-          let Me = this.byKey.get(ie.key);
-          void 0 === Me && (Me = this.allocate(ie), this.byKey.set(ie.key, Me)), He[be] = Me
-        }
-        this.blockCaster = He, this.pending = Promise.all(this.loads).then((() => {}))
-      }
-      option(ee, ie) {
-        const He = ee.Tee[ie];
-        if ("function" !== typeof He) return He;
-        try {
-          return He()
-        } catch (ye) {
-          return this.warnOnce(`Sun shadows: no caster option for block ${ie}: ${ye instanceof Error?ye.message:String(ye)}`), null
-        }
-      }
-      classify(ee, ie, He) {
-        const ye = this.option(ee, ie);
-        if ("none" === ye) return null;
-        if (ye && ye.planes.length > 0) {
-          const ee = ye.planes.slice(0, 4);
-          return {
-            kind: "planes",
-            key: `planes:${JSON.stringify(ee)}`,
-            planes: ee
-          }
-        }
-        if (ee.xq[ie]) return null;
-        const be = ee.Cq[ie] ? ee.FN(ie) : null;
-        if (be && be.length >= 6) {
-          const ee = function(ee) {
-            const ie = new Uint32Array(16);
-            for (let He = 0; He + 6 <= ee.length; He += 6) {
-              const ye = [0, 1, 2].map((ie => Math.max(0, Math.ceil(8 * ee[He + ie] - .5)))),
-                be = [0, 1, 2].map((ie => Math.min(7, Math.floor(8 * ee[He + ie + 3] - .5))));
-              for (let ee = ye[2]; ee <= be[2]; ee++)
-                for (let He = ye[1]; He <= be[1]; He++)
-                  for (let Me = ye[0]; Me <= be[0]; Me++) {
-                    const ye = Me + 8 * (He + 8 * ee);
-                    ie[ye >>> 5] |= 1 << (31 & ye)
-                  }
+        await async function(WW) {
+          let {
+            event: iW,
+            mutations: OW,
+            target: mW,
+            imageMap: EW,
+            errorHandler: NW
+          } = WW;
+          const PW = mW.getContext("2d");
+          if (!PW) return void NW(OW[0], new Error("Canvas context is null"));
+          const LW = OW.map((async WW => Promise.all(WW.args.map(QL(EW, PW)))));
+          (await Promise.all(LW)).forEach(((WW, mW) => {
+            const LW = OW[mW];
+            try {
+              if (LW.setter) return void(PW[LW.property] = LW.args[0]);
+              const OW = PW[LW.property];
+              "drawImage" === LW.property && "string" === typeof LW.args[0] ? (EW.get(iW), OW.apply(PW, LW.args)) : OW.apply(PW, WW)
+            } catch (cW) {
+              NW(LW, cW)
             }
-            return ie
-          }(be);
-          return function(ee) {
-            return ee.every((ee => 4294967295 === ee))
-          }(ee) ? BH : ee.every((ee => 0 === ee)) ? null : {
-            kind: "shape",
-            key: `shape:${ee.join(",")}`,
-            mask: ee
-          }
-        }
-        if (ee.Cw[ie] || !ee.zT[ie]) return null;
-        const Me = [0, 1, 2, 3, 4, 5].map((ye => {
-          const be = ee.BT[6 * ie + ye];
-          let Me = He.get(be);
-          return void 0 === Me && (Me = function(ee) {
-            if (!ee || ee.PT) return null;
-            const {
-              O4: ie,
-              W4: He,
-              f4: ye
-            } = ee;
-            if (!ie || !He || !(He > 0) || void 0 === ye || !(ye >= 0)) return null;
-            const be = ie[0],
-              Me = He * He * 4;
-            if (!be || be.byteLength < Me) return null;
-            const Ke = Math.floor(be.byteLength / Me),
-              Ue = ie[Math.floor(ye / Ke)];
-            if (!Ue) return null;
-            const Fe = new Uint8Array(Ue.buffer, Ue.byteOffset, Ue.byteLength),
-              Je = ye % Ke * Me;
-            if (Je + Me > Fe.length) return null;
-            const oe = new Uint8Array(He * He);
-            let Re = !1;
-            for (let ke = 0; ke < oe.length; ke++) oe[ke] = Fe[Je + 4 * ke + 3], Re ||= oe[ke] < KF;
-            return Re ? {
-              alpha: oe,
-              width: He
-            } : null
-          }(ee.DT(be)), He.set(be, Me)), Me
-        }));
-        if (Me.every((ee => null === ee))) return BH;
-        const Ke = FF(Math.max(...Me.map((ee => {
-            var ie;
-            return null !== (ie = null === ee || void 0 === ee ? void 0 : ee.width) && void 0 !== ie ? ie : 1
-          })))),
-          Ue = new Uint32Array(WH(Ke)).fill(4294967295),
-          Fe = Me.map((ee => null === ee ? Ue : UF(ee.alpha, ee.width, ee.width, Ke)));
-        return {
-          kind: "cutout",
-          key: `cutout:${Ke}:${Fe.map((ee=>ee.join(","))).join("|")}`,
-          size: Ke,
-          faces: Fe
-        }
-      }
-      allocate(ee) {
-        if (this.nextCaster >= tH) return this.warnOnce("Sun shadows: more than 8191 casters; the rest cast nothing."), 0;
-        const ie = this.nextCaster++;
-        if (this.writeCaster(ie, EH, 0, 0, 0), "shape" === ee.kind) {
-          const He = this.allocateMask(ee.mask.length);
-          He >= 0 && (this.sink(He, ee.mask), this.writeCaster(ie, gH, He, 0, 8))
-        } else if ("cutout" === ee.kind) {
-          const He = WH(ee.size),
-            ye = this.allocateMask(6 * He);
-          if (ye >= 0) {
-            const be = new Uint32Array(6 * He);
-            ee.faces.forEach(((ee, ie) => {
-              be.set(ee, ie * He)
-            })), this.sink(ye, be), this.writeCaster(ie, dH, ye, 0, ee.size)
-          }
-        } else this.planesLoading++, this.loads.push(this.loadPlanes(ie, ee.planes).finally((() => {
-          this.planesLoading--
-        })));
-        return ie
-      }
-      async loadPlanes(ee, ie) {
-        const He = await Promise.all(ie.map((ee => this.texture(ee.texture))));
-        if (He.some((ee => null === ee))) return;
-        const ye = He,
-          be = FF(Math.max(...ye.map((ee => Math.min(ee.width, ee.height))))),
-          Me = WH(be),
-          Ke = this.allocateMask(ie.length * (4 + Me));
-        if (Ke < 0) return;
-        const Ue = new Uint32Array(ie.length * (4 + Me)),
-          Fe = 4 * ie.length;
-        ie.forEach(((ee, ie) => {
-          const He = Ke + Fe + ie * Me;
-          Ue.set(function(ee, ie) {
-            const [He, ye] = ee.tangent, be = Math.hypot(He, ye) || 1, Me = He / be, Ke = ye / be, Ue = ee.centre[0] * Ke - ee.centre[1] * Me, Fe = new Uint32Array(4);
-            return new Float32Array(Fe.buffer, 0, 3).set([Me, Ke, Ue]), Fe[3] = ie, Fe
-          }(ee, He), 4 * ie), Ue.set(UF(ye[ie].alpha, ye[ie].width, ye[ie].height, be), Fe + ie * Me)
-        })), this.sink(Ke, Ue), this.writeCaster(ee, OH, Ke, ie.length, be)
-      }
-      texture(ee) {
-        let ie = this.textures.get(ee);
-        return ie || (ie = this.loadTexture(ee).catch((ie => (this.warn(`Sun shadows: no mask for ${ee}: ${ie instanceof Error?ie.message:String(ie)}`), null))), this.textures.set(ee, ie)), ie
-      }
-      allocateMask(ee) {
-        if (this.nextMaskWord + ee > ZH) return this.warnOnce("Sun shadows: casters' masks are over 262144 words; the rest cast nothing."), -1;
-        const ie = 32768 + this.nextMaskWord;
-        return this.nextMaskWord += ee, ie
-      }
-      writeCaster(ee, ie, He, ye, be) {
-        this.sink(0 + 4 * ee, Uint32Array.of(ie, He, ye, be))
-      }
-      warnOnce(ee) {
-        this.warned.has(ee) || (this.warned.add(ee), this.warn(ee))
-      }
-    }
-    var oF = He(3061);
-
-    function RF(ee) {
-      return !ee.YT && !ee.wZ && !ee.JT
-    }
-
-    function kF() {
-      return {
-        bricks: new Uint32Array(RH),
-        cells: new Uint16Array(32768),
-        special: new Uint8Array(JH)
-      }
-    }
-    class qF {
-      constructor(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : console.warn;
-        this.casters = ee, this.writeVoxels = ie, this.writePool = He, this.warn = ye, this.eyeChunk = null, this.slotChunk = new Array(yH).fill(null), this.slotVersion = new Float64Array(yH).fill(-1), this.slotPool = new Array(yH).fill(null), this.starved = new Uint8Array(yH), this.queue = [], this.queued = new Uint8Array(yH), this.queueSorted = !0, this.freePool = new Uint32Array(wH), this.freeCount = wH, this.casterTable = null, this.warnedPool = !1, this.scratch = kF(), this.victimScratch = kF(), this.record = new Uint32Array(4), this.entry = new Uint32Array(32), this.records = new Int32Array(4 * yH), this.windowTopStale = !0, this.windowTop = new Uint32Array(1), this.encoded = null;
-        for (let be = 0; be < wH; be++) this.freePool[be] = 65535 - be
-      }
-      get queuedCount() {
-        return this.queue.length
-      }
-      get poolInUse() {
-        return wH - this.freeCount
-      }
-      chunkAdded(ee) {
-        if (null === this.eyeChunk || !this.inRadius(ee.i, ee.j, ee.k)) return;
-        const ie = pH(ee.i, ee.j, ee.k);
-        this.slotChunk[ie] = ee, this.slotVersion[ie] = -1, this.enqueue(ie)
-      }
-      update(ee, ie, He) {
-        const ye = this.casters.blockCaster;
-        if (ye !== this.casterTable) {
-          this.casterTable = ye;
-          for (let ee = 0; ee < yH; ee++) this.slotVersion[ee] = -1, this.slotChunk[ee] && this.enqueue(ee)
-        }
-        const be = Math.floor(ee[0] / 32),
-          Me = Math.floor(ee[1] / 32),
-          Ke = Math.floor(ee[2] / 32);
-        (null === this.eyeChunk || this.eyeChunk[0] !== be || this.eyeChunk[1] !== Me || this.eyeChunk[2] !== Ke) && (this.eyeChunk = [be, Me, Ke], this.follow(ie), this.queueSorted = !1, this.requeueStarved(), this.windowTopStale = !0);
-        for (let Ue = 0; Ue < yH; Ue++) {
-          const ee = this.slotChunk[Ue];
-          ee && (ee.RZ || ee.kT !== this.slotVersion[Ue]) && this.enqueue(Ue)
-        }
-        this.drain(He), this.windowTopStale && this.writeWindowTop()
-      }
-      writeRecord(ee, ie) {
-        this.records.set(ie, 4 * ee), this.windowTopStale = !0, this.writeVoxels(4 * ee, ie)
-      }
-      writeWindowTop() {
-        this.windowTopStale = !1;
-        const ee = this.records;
-        let ie = -1 / 0;
-        for (let ye = 0; ye < ee.length; ye += 4) {
-          const He = 255 & ee[ye + 3];
-          He !== KH && He !== UH || !this.inRadius(ee[ye], ee[ye + 1], ee[ye + 2]) || (ie = Math.max(ie, ee[ye + 1] * eH + (ee[ye + 3] >>> 8)))
-        }
-        const He = ie === -1 / 0 ? 1 : ie + qH;
-        He !== this.windowTop[0] && (this.windowTop[0] = He, this.writeVoxels(kH, this.windowTop))
-      }
-      follow(ee) {
-        const ie = this.eyeChunk,
-          [He, ye, be] = iH;
-        for (let Ke = -be; Ke <= be; Ke++)
-          for (let be = -ye; be <= ye; be++)
-            for (let ye = -He; ye <= He; ye++) {
-              var Me;
-              const He = ie[0] + ye,
-                Ue = ie[1] + be,
-                Fe = ie[2] + Ke,
-                Je = pH(He, Ue, Fe),
-                oe = this.slotChunk[Je];
-              if (oe && !oe.RZ && oe.i === He && oe.j === Ue && oe.k === Fe) continue;
-              const Re = null !== (Me = ee(He, Ue, Fe)) && void 0 !== Me ? Me : null;
-              oe && (oe.i !== He || oe.j !== Ue || oe.k !== Fe) && this.slotPool[Je] && (this.release(Je), this.record.fill(0), this.writeRecord(Je, this.record)), this.slotChunk[Je] = Re, this.slotVersion[Je] = -1, (Re || oe) && this.enqueue(Je)
-            }
-      }
-      requeueStarved() {
-        for (let ee = 0; ee < yH; ee++) this.starved[ee] && this.slotChunk[ee] && this.enqueue(ee)
-      }
-      enqueue(ee) {
-        this.queued[ee] || (this.queued[ee] = 1, this.queue.push(ee), this.queueSorted = !1)
-      }
-      drain(ee) {
-        if (0 === this.queue.length) return;
-        if (!this.queueSorted) {
-          const ee = new Map;
-          for (const ie of this.queue) ee.set(ie, this.slotDistance(ie));
-          this.queue.sort(((ie, He) => ee.get(He) - ee.get(ie))), this.queueSorted = !0
-        }
-        const ie = performance.now();
-        let He = 0;
-        const ye = [];
-        for (; this.queue.length > 0 && (0 === He || performance.now() - ie < ee);) {
-          const ee = this.queue.pop(),
-            ie = this.slotChunk[ee];
-          !ie || ie.RZ || RF(ie) ? (this.queued[ee] = 0, this.encodeSlot(ee), He++) : ye.push(ee)
-        }
-        for (let be = ye.length - 1; be >= 0; be--) this.queue.push(ye[be])
-      }
-      slotDistance(ee) {
-        const ie = this.slotChunk[ee],
-          He = this.eyeChunk;
-        return ie ? Math.max(Math.abs(ie.i - He[0]), Math.abs(ie.j - He[1]), Math.abs(ie.k - He[2])) : 0
-      }
-      inRadius(ee, ie, He) {
-        const ye = this.eyeChunk,
-          [be, Me, Ke] = iH;
-        return Math.abs(ee - ye[0]) <= be && Math.abs(ie - ye[1]) <= Me && Math.abs(He - ye[2]) <= Ke
-      }
-      release(ee) {
-        const ie = this.slotPool[ee];
-        if (ie) {
-          for (let ee = ie.length - 1; ee >= 0; ee--) this.freePool[this.freeCount++] = ie[ee];
-          this.slotPool[ee] = null
-        }
-      }
-      encodeSlot(ee) {
-        var ie, He, ye, be, Me;
-        let Ke = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.scratch,
-          Ue = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        const Fe = null !== (ie = null === (He = this.slotPool[ee]) || void 0 === He ? void 0 : He.length) && void 0 !== ie ? ie : 0;
-        this.release(ee), this.starved[ee] = 0;
-        const Je = this.slotChunk[ee],
-          oe = this.record;
-        if (!Je || Je.RZ || !Je.Uq) return this.slotChunk[ee] = null, this.slotVersion[ee] = -1, oe.fill(0), this.writeRecord(ee, oe), void(Fe > 0 && this.requeueStarved());
-        this.slotVersion[ee] = Je.kT;
-        const Re = this.encodeBricks(Je, ee, Ke, Ue);
-        oe[0] = Je.i, oe[1] = Je.j, oe[2] = Je.k, oe[3] = Re, this.writeRecord(ee, oe), null === (ye = this.encoded) || void 0 === ye || ye.call(this, Je), Ue && (null !== (be = null === (Me = this.slotPool[ee]) || void 0 === Me ? void 0 : Me.length) && void 0 !== be ? be : 0) < Fe && this.requeueStarved()
-      }
-      encodeBricks(ee, ie, He, ye) {
-        if (ee.Yf) return MH;
-        const be = this.casters.blockCaster,
-          {
-            data: Me,
-            stride: Ke,
-            offset: Ue
-          } = ee.Uq,
-          [Fe, Je, oe] = Ke,
-          Re = eH,
-          {
-            bricks: ke,
-            cells: qe,
-            special: fe
-          } = He;
-        ke.fill(0), fe.fill(0);
-        let Te = 0,
-          pe = 0,
-          Xe = 0;
-        for (let ze = 0; ze < Re; ze++) {
-          const ie = ze >> 2,
-            He = 3 & ze,
-            ye = ee.yf[ze],
-            Ke = ye === oF.e ? -1 : ye < be.length ? be[ye] : 0;
-          if (0 !== Ke)
-            for (let ee = 0; ee < Re; ee++) {
-              const ye = ee >> 2,
-                Be = 3 & ee;
-              let Ee = Ue + ee * Fe + ze * Je;
-              for (let ee = 0; ee < Re; ee++, Ee += oe) {
-                let Ue = Ke;
-                if (Ue < 0) {
-                  const ee = Me[Ee];
-                  if (Ue = ee < be.length ? be[ee] : 0, 0 === Ue) continue
-                }
-                const Fe = XH(ye, ie, ee >> 2),
-                  Je = zH(Be, He, 3 & ee);
-                ke[3 * Fe + (Je >>> 5)] |= 1 << (31 & Je), qe[Fe * FH + Je] = Ue, Te++, Xe = ze, Ue === BH ? pe++ : fe[Fe] = 1
-              }
-            }
-        }
-        return 0 === Te ? MH : 32768 === pe ? KH | Xe << 8 : (this.writePoolEntries(ie, He, ye), this.writeVoxels(oH + ie * RH, ke), UH | Xe << 8)
-      }
-      writePoolEntries(ee, ie, He) {
-        const {
-          bricks: ye,
-          cells: be,
-          special: Me
-        } = ie, Ke = this.entry;
-        let Ue = 0;
-        for (let oe = 0; oe < JH; oe++) Ue += Me[oe];
-        if (0 === Ue) return;
-        He && this.freeCount < Ue && this.evictBeyond(ee, Ue);
-        const Fe = new Uint32Array(He ? Math.min(Ue, this.freeCount) : 0);
-        let Je = 0;
-        for (let oe = 0; oe < JH; oe++) {
-          if (!Me[oe]) continue;
-          const He = 3 * oe;
-          if (Je === Fe.length) {
-            this.dropSpecials(ie, oe), this.starved[ee] = 1;
-            continue
-          }
-          const Ue = this.freePool[--this.freeCount];
-          Fe[Je++] = Ue;
-          for (let ee = 0; ee < FH; ee++) {
-            const ie = ye[He + (ee >>> 5)] >>> (31 & ee) & 1 ? be[oe * FH + ee] : 0;
-            1 & ee ? Ke[ee >> 1] |= ie << 16 : Ke[ee >> 1] = ie
-          }
-          ye[He + 2] = Ue + 1, this.writePool(DH + 32 * Ue, Ke)
-        }
-        Fe.length > 0 && (this.slotPool[ee] = Fe)
-      }
-      evictBeyond(ee, ie) {
-        const He = this.slotDistance(ee),
-          ye = [];
-        for (let be = 0; be < yH; be++) be !== ee && this.slotPool[be] && this.slotDistance(be) > He && ye.push(be);
-        ye.sort(((ee, ie) => this.slotDistance(ie) - this.slotDistance(ee)));
-        for (const be of ye) {
-          if (this.freeCount >= ie) return;
-          const ee = this.slotChunk[be];
-          ee && !ee.RZ && ee.Uq && (ee.kT === this.slotVersion[be] || RF(ee)) && this.encodeSlot(be, this.victimScratch, !1)
-        }
-      }
-      dropSpecials(ee, ie) {
-        this.warnedPool || (this.warnedPool = !0, this.warn("Sun shadows: the special pool's 65536 entries are in use; plants and shapes in the furthest chunks cast nothing."));
-        const He = 3 * ie;
-        for (let ye = 0; ye < FH; ye++) ee.cells[ie * FH + ye] !== BH && (ee.bricks[He + (ye >>> 5)] &= ~(1 << (31 & ye)))
-      }
-    }
-    var fF = He(38195);
-    class TF {
-      constructor(ee) {
-        this.device = ee, this.frameBuffer = void 0, this.gridBuffer = void 0, this.frame = new uH, this.grids = new WeakMap, this.gridTop = 0, this.gridsFull = !1, this.uploadedEmpty = !1, this.xR = new Float64Array(16), this.bakeDeadline = 0, this.frameBuffer = ee.createBuffer({
-          label: "sun-shadow-entities",
-          size: 589828,
-          usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.gridBuffer = ee.createBuffer({
-          label: "sun-shadow-entity-grids",
-          size: 16777216,
-          usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
+          }))
+        }({
+          event: iW,
+          mutations: LW,
+          target: mW,
+          imageMap: EW,
+          errorHandler: PW
         })
-      }
-      update(ee, ie, He) {
-        this.gridsFull && (this.gridsFull = !1, this.grids = new WeakMap, this.gridTop = 0), this.bakeDeadline = -1;
-        const {
-          frame: ye
-        } = this;
-        ye.gR(ee, ie), He.forEachSunShadowCaster((ee => {
-          this.add(ee)
-        })), ye.finish();
-        const be = 0 === ye.parts;
-        if (be && this.uploadedEmpty) return;
-        this.uploadedEmpty = be;
-        const {
-          queue: Me
-        } = this.device, {
-          words: Ke
-        } = ye;
-        Me.writeBuffer(this.frameBuffer, 0, Ke, 0, 16385), ye.refs > 0 && Me.writeBuffer(this.frameBuffer, 65540, Ke, VH, ye.refs), be || Me.writeBuffer(this.frameBuffer, 327684, Ke, aH, ye.parts * YH)
-      }
-      add(ee) {
-        const ie = this.gridFor(ee);
-        if (!ie) return;
-        const {
-          frame: He
-        } = this, {
-          xR: ye,
-          worldAt: be,
-          instances: Me,
-          instanceCount: Ke,
-          thin: Ue
-        } = ee;
-        if (Me)
-          for (let Fe = 0; Fe < Ke; Fe++) Ue ? (lH(Me, 16 * Fe, ye, be, this.xR), He.add(ie, this.xR)) : He.add(ie, Me, 16 * Fe);
-        else He.add(ie, ye, be)
-      }
-      gridFor(ee) {
-        let {
-          geometry: ie,
-          indexed: He,
-          first: ye,
-          count: be,
-          skip: Me
-        } = ee, Ke = this.grids.get(ie);
-        Ke || (Ke = new Map, this.grids.set(ie, Ke));
-        const Ue = `${He?ye:-1-ye}:${be}:${null!==Me&&void 0!==Me?Me:""}`;
-        let Fe = Ke.get(Ue);
-        if (void 0 !== Fe || this.gridsFull) return Fe;
-        const Je = performance.now();
-        if (this.bakeDeadline < 0) this.bakeDeadline = Je + 2;
-        else if (Je > this.bakeDeadline) return;
-        return Fe = this.bake(ie, He, ye, be, Me), void 0 !== Fe && Ke.set(Ue, Fe), Fe
-      }
-      bake(ee, ie, He, ye, be) {
-        const Me = ee.vertexAttributes.find((ee => "position" === ee.kind)),
-          Ke = Me ? function(ee, ie, He, ye) {
-            let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-            const Me = ee => ie ? ie[He + ee] : He + ee,
-              Ke = ee => null !== be && [0, 1, 2].some((ie => {
-                const He = Me(ee + ie);
-                return He >= be[0] && He < be[1]
-              })),
-              Ue = [1 / 0, 1 / 0, 1 / 0],
-              Fe = [-1 / 0, -1 / 0, -1 / 0];
-            for (let ze = 0; ze + 2 < ye; ze += 3)
-              if (!Ke(ze))
-                for (let ie = 0; ie < 3; ie++) {
-                  const He = Me(ze + ie);
-                  for (let ie = 0; ie < 3; ie++) Ue[ie] = Math.min(Ue[ie], ee[3 * He + ie]), Fe[ie] = Math.max(Fe[ie], ee[3 * He + ie])
-                }
-            const Je = Math.max(Fe[0] - Ue[0], Fe[1] - Ue[1], Fe[2] - Ue[2]);
-            if (!(Je > 0)) return null;
-            const oe = Je / 64,
-              Re = [0, 0, 0],
-              ke = [0, 0, 0],
-              qe = [0, 0, 0];
-            for (let ze = 0; ze < 3; ze++) Re[ze] = Math.min(65, Math.ceil((Fe[ze] - Ue[ze]) / oe) + 1), ke[ze] = Ue[ze] - oe / 2, qe[ze] = ke[ze] + Re[ze] * oe;
-            const fe = new Uint32Array(Math.ceil(Re[0] * Re[1] * Re[2] / 32)),
-              Te = new Float64Array(9),
-              pe = [0, 0, 0],
-              Xe = [0, 0, 0];
-            for (let ze = 0; ze + 2 < ye; ze += 3)
-              if (!Ke(ze)) {
-                for (let ie = 0; ie < 3; ie++) {
-                  const He = Me(ze + ie);
-                  for (let ye = 0; ye < 3; ye++) Te[3 * ie + ye] = ee[3 * He + ye]
-                }
-                for (let ee = 0; ee < 3; ee++) {
-                  const ie = Math.min(Te[ee], Te[3 + ee], Te[6 + ee]),
-                    He = Math.max(Te[ee], Te[3 + ee], Te[6 + ee]);
-                  pe[ee] = Math.max(0, Math.floor((ie - ke[ee]) / oe - 1e-6)), Xe[ee] = Math.min(Re[ee] - 1, Math.floor((He - ke[ee]) / oe + 1e-6))
-                }
-                for (let ee = pe[2]; ee <= Xe[2]; ee++)
-                  for (let ie = pe[1]; ie <= Xe[1]; ie++)
-                    for (let He = pe[0]; He <= Xe[0]; He++)
-                      if (SH(Te, ke[0] + (He + .5) * oe, ke[1] + (ie + .5) * oe, ke[2] + (ee + .5) * oe, oe / 2)) {
-                        const ye = He + Re[0] * (ie + Re[1] * ee);
-                        fe[ye >>> 5] |= 1 << (31 & ye)
-                      }
-              } return {
-              words: fe,
-              lo: ke,
-              hi: qe,
-              cell: oe,
-              dims: Re
-            }
-          }((0, fF.e)(Me, ee.vertexCount), ie ? ee.indexData : null, He, ye, be) : null;
-        if (!Ke) return null;
-        const {
-          words: Ue,
-          ...Fe
-        } = Ke;
-        if (this.gridTop + Ue.length > xH) return void(this.gridsFull = !0);
-        const Je = this.gridTop;
-        return this.gridTop += Ue.length, this.device.queue.writeBuffer(this.gridBuffer, 4 * Je, Ue), {
-          ...Fe,
-          at: Je
-        }
+      } catch (LW) {
+        PW(OW, LW)
       }
     }
-    const pF = Math.cos(1 * Math.PI / 180);
-
-    function XF(ee, ie) {
-      return ee[0] * ie[0] + ee[1] * ie[1] + ee[2] * ie[2] < pF
-    }
-    async function zF(ee) {
-      const {
-        pixels: ie,
-        width: He,
-        height: ye
-      } = await ei(ee), be = new Uint8Array(He * ye);
-      for (let Me = 0; Me < be.length; Me++) be[Me] = ie[4 * Me + 3];
-      return {
-        width: He,
-        height: ye,
-        alpha: be
-      }
-    }
-    class BF {
-      constructor(ee, ie) {
-        this.device = ee, this.uniform = void 0, this.voxelBuffer = void 0, this.special = void 0, this.volume = void 0, this.volumeView = void 0, this.volumeSampler = void 0, this.work = void 0, this.workData = new ArrayBuffer(jH.n), this.entities = void 0, this.entityStandIn = void 0, this.entitiesThisFrame = !1, this.window = null, this.stopWindow = null, this.casters = null, this.uniformData = new ArrayBuffer(128), this.uniformInts = new Int32Array(this.uniformData), this.uniformFloats = new Float32Array(this.uniformData), this.uniformWritten = null, this.eye = [0, 0, 0], this.warned = !1, this.volumePass = null, this.volumePassStarted = !1, this.volumePassFailed = !1, this.volumeHolds = null, this.slice = 0, this.sweepLeft = 0, this.written = !1, this.sweptChunk = [0, 0, 0], this.sweptLight = [0, 0, 0], this.stale = [], this.staleAll = !1, this.staleAllSwept = 0, this.castersWritten = !1, this.swept = 0, this.fastLeft = 0, this.paced = 0, this.staleNear = [0, 0, 0], this.uniform = ee.createBuffer({
-          label: "sun-shadow",
-          size: 128,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.voxelBuffer = ee.createBuffer({
-          label: "sun-shadow-voxels",
-          size: 4 * fH,
-          usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.special = ee.createBuffer({
-          label: "sun-shadow-special",
-          size: 9568256,
-          usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        });
-        const [He, ye, be] = jH.p;
-        this.volume = ee.createTexture({
-          label: "sun-shadow-volume",
-          size: {
-            width: He,
-            height: ye,
-            depthOrArrayLayers: be
-          },
-          dimension: "3d",
-          format: "rgba8unorm",
-          usage: GPUTextureUsage.STORAGE_BINDING | GPUTextureUsage.TEXTURE_BINDING
-        }), this.volumeView = this.volume.createView({
-          label: "sun-shadow-volume"
-        }), this.volumeSampler = ee.createSampler({
-          label: "sun-shadow-volume",
-          magFilter: "linear",
-          minFilter: "linear",
-          addressModeU: "repeat",
-          addressModeV: "repeat",
-          addressModeW: "repeat"
-        }), this.work = ee.createBuffer({
-          label: "sun-shadow-volume-work",
-          size: jH.n,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.entities = ie ? new TF(ee) : null, this.entityStandIn = ie ? null : ee.createBuffer({
-          label: "sun-shadow-entities-stand-in",
-          size: 16,
-          usage: GPUBufferUsage.STORAGE
-        })
-      }
-      dispose() {
-        var ee;
-        null === (ee = this.stopWindow) || void 0 === ee || ee.call(this)
-      }
-      get tracesEntities() {
-        return null !== this.entities
-      }
-      describePendingWork() {
-        var ee, ie;
-        const He = [];
-        !this.volumePassStarted || this.volumePass || this.volumePassFailed || He.push("Lite sun shadow volume pipeline compiling");
-        const ye = null !== (ee = null === (ie = this.casters) || void 0 === ie ? void 0 : ie.planesLoading) && void 0 !== ee ? ee : 0;
-        return ye > 0 && He.push(`${ye} Lite sun shadow plane casters loading their textures`), He
-      }
-      entries() {
-        var ee, ie, He, ye;
-        const be = ri.q;
-        return [{
-          binding: be.uniform,
-          resource: {
-            buffer: this.uniform
-          }
-        }, {
-          binding: be.Uq,
-          resource: {
-            buffer: this.voxelBuffer
-          }
-        }, {
-          binding: be.special,
-          resource: {
-            buffer: this.special
-          }
-        }, {
-          binding: be.volume,
-          resource: this.volumeView
-        }, {
-          binding: be.sampler,
-          resource: this.volumeSampler
-        }, {
-          binding: be.entities,
-          resource: {
-            buffer: null !== (ee = null === (ie = this.entities) || void 0 === ie ? void 0 : ie.frameBuffer) && void 0 !== ee ? ee : this.entityStandIn
-          }
-        }, {
-          binding: be.entityGrids,
-          resource: {
-            buffer: null !== (He = null === (ye = this.entities) || void 0 === ye ? void 0 : ye.gridBuffer) && void 0 !== He ? He : this.entityStandIn
-          }
-        }]
-      }
-      prepare(ee, ie, He) {
-        var ye;
-        this.entitiesThisFrame = !1;
-        const be = null !== (ye = null === He || void 0 === He ? void 0 : He.sunShadowReach()) && void 0 !== ye ? ye : {
-          sunShadow: !1,
-          airShadow: !1
-        };
-        if (!He || !be.sunShadow && !be.airShadow) return void(this.volumeHolds = null);
-        if (ee.xR.ER !== eH) return void(this.warned || (this.warned = !0, console.warn(`Lite: sun shadows need chunks of 32 blocks, not ${ee.xR.ER}; everything is lit.`)));
-        const Me = this.start(ee);
-        this.casters.update(ee.qR, ee.qR.Cq.length);
-        const Ke = ee.yq;
-        for (let ke = 0; ke < 3; ke++) this.eye[ke] = ie[ke] + Ke[ke];
-        const Ue = (0, jH.y)(this.eye);
-        this.staleNear = Ue;
-        const Fe = ee.xR.aT;
-        Me.update(this.eye, ((ee, ie, He) => Fe.cT(ee, ie, He)), 1);
-        const Je = (0, jH.r)(He.Sie()),
-          oe = Me.eyeChunk,
-          Re = this.uniformInts;
-        for (let ke = 0; ke < 3; ke++) Re[ke] = oe[ke], Re[4 + ke] = Ue[ke];
-        this.entitiesThisFrame = null !== this.entities && be.sunShadow, this.entitiesThisFrame && vH(this.uniformFloats, 8, ie, Je), null !== this.volumeHolds && (this.castersWritten || XF(Je, this.sweptLight)) && (this.staleAll = !0, this.staleAllSwept = this.swept), this.castersWritten = !1, this.writeStale(), this.writeUniform(), this.computeVolume(Ue, Je, oe)
-      }
-      markStale(ee) {
-        const ie = this.staleNear,
-          He = eH,
-          ye = [ee.i * He, ee.j * He, ee.k * He];
-        for (let Me = 0; Me < 3; Me++)
-          if (ye[Me] + He <= ie[Me] - He || ye[Me] >= ie[Me] + jH.p[Me] + He) return;
-        if (this.staleAll) return void(this.staleAllSwept = this.swept);
-        const be = this.stale;
-        for (let Me = 0; Me < be.length; Me += 4)
-          if (be[Me] === ee.i && be[Me + 1] === ee.j && be[Me + 2] === ee.k) return void(be[Me + 3] = this.swept);
-        if (16 === be.length) return this.staleAll = !0, void(this.staleAllSwept = this.swept);
-        be.push(ee.i, ee.j, ee.k, this.swept)
-      }
-      writeStale() {
-        const ee = this.swept,
-          ie = this.stale;
-        this.staleAll && ee - this.staleAllSwept >= jH.i && (this.staleAll = !1, ie.length = 0);
-        let He = 0;
-        for (let be = 0; be < ie.length; be += 4)
-          if (ee - ie[be + 3] < jH.i) {
-            for (let ee = 0; ee < 4; ee++) ie[He + ee] = ie[be + ee];
-            He += 4
-          } ie.length = He;
-        const ye = this.uniformInts;
-        ye[3] = this.staleAll ? 5 : He / 4;
-        for (let be = 0; be < 4; be++)
-          for (let ee = 0; ee < 3; ee++) ye[16 + 4 * be + ee] = 4 * be < He ? ie[4 * be + ee] * eH : 0
-      }
-      writeUniform() {
-        const ee = this.uniformInts;
-        let ie = this.uniformWritten;
-        if (ie) {
-          let He = !0;
-          for (let ye = 0; ye < ee.length && He; ye++) He = ee[ye] === ie[ye];
-          if (He) return
-        }
-        ie ??= this.uniformWritten = new Int32Array(ee.length), ie.set(ee), this.device.queue.writeBuffer(this.uniform, 0, this.uniformData)
-      }
-      traceEntities(ee) {
-        this.entitiesThisFrame && this.entities.update(this.uniformFloats, 8, ee)
-      }
-      computeVolume(ee, ie, He) {
-        const ye = this.buildVolumePass();
-        if (!ye) return void(this.volumeHolds = null);
-        const be = (0, jH.u)(this.volumeHolds, ee);
-        this.volumeHolds = ee;
-        const Me = 1 === be.length && be[0].size.every(((ee, ie) => ee === jH.p[ie])),
-          Ke = this.sweptChunk,
-          Ue = this.sweptLight,
-          Fe = ie[0] !== Ue[0] || ie[1] !== Ue[1] || ie[2] !== Ue[2],
-          Je = He[0] !== Ke[0] || He[1] !== Ke[1] || He[2] !== Ke[2],
-          oe = Fe && XF(ie, Ue);
-        if ((Me || this.written || Je || oe) && (this.fastLeft = jH.i), Me || this.written || Fe || Je) {
-          this.written = !1;
-          for (let ee = 0; ee < 3; ee++) Ke[ee] = He[ee], Ue[ee] = ie[ee];
-          this.sweepLeft = Me ? 0 : jH.i
-        }
-        if (Me ? this.swept += jH.i : this.sweepLeft > 0 && (this.fastLeft > 0 || ++this.paced % 2 === 0) && (this.fastLeft = Math.max(this.fastLeft - 1, 0), this.sweepLeft--, be.push(...(0, jH.B)(ee, this.slice)), this.slice = (this.slice + 1) % jH.i, this.swept++), 0 === be.length) return;
-        const Re = (0, jH.F)(this.workData, ie, be);
-        this.device.queue.writeBuffer(this.work, 0, this.workData);
-        const ke = this.device.createCommandEncoder({
-            label: "sun-shadow-volume"
-          }),
-          qe = ke.beginComputePass({
-            label: "sun-shadow-volume"
-          });
-        qe.setPipeline(ye.pipeline), qe.setBindGroup(hH.group, ye.bindGroup), qe.dispatchWorkgroups(Math.ceil(Re / jH.m)), qe.end(), this.device.queue.submit([ke.finish()])
-      }
-      buildVolumePass() {
-        if (this.volumePass || this.volumePassStarted) return this.volumePass;
-        this.volumePassStarted = !0;
-        const ee = hH,
-          ie = GPUShaderStage.COMPUTE,
-          He = this.device.createBindGroupLayout({
-            label: "sun-shadow-volume",
-            entries: [{
-              binding: ee.uniform,
-              visibility: ie,
-              buffer: {
-                type: "uniform"
-              }
-            }, {
-              binding: ee.Uq,
-              visibility: ie,
-              buffer: {
-                type: "read-only-storage"
-              }
-            }, {
-              binding: ee.special,
-              visibility: ie,
-              buffer: {
-                type: "read-only-storage"
-              }
-            }, {
-              binding: ee.work,
-              visibility: ie,
-              buffer: {
-                type: "uniform"
-              }
-            }, {
-              binding: ee.volume,
-              visibility: ie,
-              storageTexture: {
-                access: "write-only",
-                format: "rgba8unorm",
-                viewDimension: "3d"
-              }
-            }]
-          }),
-          ye = this.device.createBindGroup({
-            label: "sun-shadow-volume",
-            layout: He,
-            entries: [{
-              binding: ee.uniform,
-              resource: {
-                buffer: this.uniform
-              }
-            }, {
-              binding: ee.Uq,
-              resource: {
-                buffer: this.voxelBuffer
-              }
-            }, {
-              binding: ee.special,
-              resource: {
-                buffer: this.special
-              }
-            }, {
-              binding: ee.work,
-              resource: {
-                buffer: this.work
-              }
-            }, {
-              binding: ee.volume,
-              resource: this.volumeView
-            }]
-          });
-        return this.device.createComputePipelineAsync({
-          label: "sun-shadow-volume",
-          layout: this.device.createPipelineLayout({
-            label: "sun-shadow-volume",
-            bindGroupLayouts: [He]
-          }),
-          compute: {
-            module: this.device.createShaderModule({
-              label: "sun-shadow-volume",
-              code: NH()
-            }),
-            entryPoint: "main"
-          }
-        }).then((ee => {
-          this.volumePass = {
-            pipeline: ee,
-            bindGroup: ye
-          }
-        }), (ee => {
-          this.volumePassFailed = !0, console.warn(`Lite: sun shadows' visibility volume didn't build, so air shadows and far traces are lit: ${String(ee)}`)
-        })), null
-      }
-      start(ee) {
-        if (this.window) return this.window;
-        const ie = (ee, ie) => {
-          this.written = !0, this.device.queue.writeBuffer(this.special, 4 * ee, ie)
-        };
-        this.casters = new JF(((ee, He) => {
-          this.castersWritten = !0, ie(ee, He)
-        }), zF);
-        const He = new qF(this.casters, ((ee, ie) => {
-          this.written = !0, this.device.queue.writeBuffer(this.voxelBuffer, 4 * ee, ie)
-        }), ie);
-        He.encoded = ee => {
-          this.markStale(ee)
-        };
-        const ye = ee => {
-          He.chunkAdded(ee)
-        };
-        return ee.xR.on("chunkAdded", ye), this.stopWindow = () => {
-          ee.xR.removeListener("chunkAdded", ye)
-        }, this.window = He, He
-      }
-    }
-    var EF = He(39488),
-      gF = He(39492);
-    const OF = 0,
-      dF = 3,
-      WF = 4,
-      tF = 5;
-
-    function ZF(ee, ie, He, ye) {
-      ee.drawOffset(ie, ye + OF), ie[ye + dF] = ee.drawTime(), He[ye + WF] = ee.ring.drawStart(), He[ye + tF] = ee.ring.drawCount()
-    }
-    const wF = `\n${uy}\n\nconst MAX_STOPS = ${gF.b}u;\n\nstruct SystemUniforms {\n\tgravity: vec3f,\n\tcolorCount: u32,\n\tcolorDead: vec4f,\n\tvelocityCount: u32,\n\tremapCount: u32,\n\tramp: u32,\n\tcolorPositions: array<vec4f, ${gF.b/4}>,\n\tcolor1: array<vec4f, ${gF.b}>,\n\tcolor2: array<vec4f, ${gF.b}>,\n\t// Position, factor and factor2 per stop.\n\tvelocity: array<vec4f, ${gF.b}>,\n\t// Position, min and max per stop.\n\tremap: array<vec4f, ${gF.b}>,\n}\n\n// A particle as spawned: position relative to the frame offset and spawn time; direction times emit power and\n// lifetime; size, random seed and colour.\nstruct Particle {\n\tspawn: vec4f,\n\tvelocity: vec4f,\n\tsize: f32,\n\tseed: u32,\n\tcolour: vec4f,\n}\n\nstruct SystemFrame {\n\toffset: vec3f,\n\tnow: f32,\n\t// The slot drawn first (the oldest), and the slots in use.\n\tstart: u32,\n\tcount: u32,\n}\n\n@group(1) @binding(0) var<uniform> system: SystemUniforms;\n@group(1) @binding(1) var<storage, read> particles: array<Particle>;\n@group(1) @binding(2) var diffuseSampler: sampler;\n@group(1) @binding(3) var diffuseTexture: texture_2d<f32>;\n@group(1) @binding(4) var rampSampler: sampler;\n@group(1) @binding(5) var rampTexture: texture_2d<f32>;\n@group(2) @binding(0) var<uniform> frame: SystemFrame;\n\n// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\noverride MULTIPLY_PASS: bool = false;\n\nstruct VertexOutput {\n\t@builtin(position) position: vec4f,\n\t@location(0) uv: vec2f,\n\t@location(1) colour: vec4f,\n\t@location(2) remap: vec4f,\n}\n\nfn hash(v: u32) -> u32 {\n\tlet state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tlet top = state >> 28u;\n\tlet bits0 = state >> 4u;\n\tlet bits1 = select(bits0, bits0 >> 1u, (top & 1u) != 0u);\n\tlet bits2 = select(bits1, bits1 >> 2u, (top & 2u) != 0u);\n\tlet bits3 = select(bits2, bits2 >> 4u, (top & 4u) != 0u);\n\tlet word = (select(bits3, bits3 >> 8u, (top & 8u) != 0u) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfn random(seed: u32, stop: u32) -> f32 {\n\treturn f32(hash(seed ^ (stop * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfn colourPosition(i: u32) -> f32 {\n\treturn system.colorPositions[i / 4u][i % 4u];\n}\n\nfn stopColour(i: u32, seed: u32) -> vec4f {\n\treturn mix(system.color1[i], system.color2[i], random(seed, i));\n}\n\nfn velocityFactor(i: u32, seed: u32) -> f32 {\n\tlet stop = system.velocity[i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\n// _ProcessColorGradients / _ProcessColor at the particle's age. Babylon's GetCurrentGradient picks stop 0's pair\n// below the first stop, where a particle keeps the colour it was given for the next stop (stop 1's pick); the first\n// segment containing the ratio; or else the last stop.\nfn colourAt(p: Particle, age: f32, ratio: f32, seed: u32) -> vec4f {\n\tlet n = system.colorCount;\n\tvar colour: vec4f;\n\tif (n == 0u) {\n\t\tcolour = mix(p.colour, system.colorDead, ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0u, seed);\n\t} else if (ratio < colourPosition(0u)) {\n\t\tcolour = stopColour(min(1u, n - 1u), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1u, seed);\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = colourPosition(i);\n\t\t\tlet b = colourPosition(i + 1u);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tlet scale = select(0.0, (ratio - a) / (b - a), b > a);\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1u, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\n// The integral of (alpha + beta s)(d + g s) over s0..s1: the distance travelled while the velocity factor is\n// alpha + beta s at age s and the direction d + g s.\nfn travel(alpha: f32, beta: f32, d: vec3f, g: vec3f, s0: f32, s1: f32) -> vec3f {\n\tlet ds = s1 - s0;\n\tlet ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tlet ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\n// Where the particle has moved by its age: each frame Babylon moves it by its direction times the step and the\n// velocity factor, then adds gravity times the step to the direction. The factor is piecewise linear in the age,\n// picked as colourAt picks colours.\nfn displacement(d: vec3f, age: f32, life: f32, seed: u32) -> vec3f {\n\tlet g = system.gravity;\n\tlet n = system.velocityCount;\n\tif (n == 0u) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvar total = vec3f(0.0);\n\tlet first = system.velocity[0u].x * life;\n\tlet beforeFirst = min(age, first);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1u, n - 1u), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (var i = 0u; i + 1u < n; i++) {\n\t\tlet a = system.velocity[i].x * life;\n\t\tlet b = system.velocity[i + 1u].x * life;\n\t\tlet lo = max(a, 0.0);\n\t\tlet hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tlet fa = velocityFactor(i, seed);\n\t\t\tlet beta = (velocityFactor(i + 1u, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tlet afterLast = max(system.velocity[n - 1u].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1u, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\n// _ProcessRemapGradients: the colour remap's min and range at the ratio; a new particle has (0, 1, 0, 1).\nfn remapAt(age: f32, ratio: f32) -> vec4f {\n\tlet n = system.remapCount;\n\tif (n == 0u || age == 0.0) {\n\t\treturn vec4f(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvar stop = system.remap[n - 1u].yz;\n\tif (ratio < system.remap[0u].x) {\n\t\tstop = system.remap[0u].yz;\n\t} else {\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = system.remap[i];\n\t\t\tlet b = system.remap[i + 1u];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, select(0.0, (ratio - a.x) / (b.x - a.x), b.x > a.x));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4f(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\n@vertex\nfn mainVertex(@builtin(vertex_index) vertexIndex: u32, @builtin(instance_index) instanceIndex: u32) -> VertexOutput {\n\tvar out: VertexOutput;\n\t// One wrap, not %, as glParticleShader.ts picks the slot, since start < count and a draw's instances are count\n\t// (gpuParticleRing.ts)\n\tlet count = frame.count;\n\tlet unwrapped = frame.start + instanceIndex;\n\tlet p = particles[select(unwrapped, unwrapped - count, unwrapped >= count)];\n\tlet age = frame.now - p.spawn.w;\n\tlet life = p.velocity.w;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tout.position = vec4f(0.0, 0.0, 2.0, 1.0);\n\t\treturn out;\n\t}\n\tlet ratio = age / life;\n\tlet seed = p.seed;\n\tlet centre = frame.offset + p.spawn.xyz + displacement(p.velocity.xyz, age, life, seed);\n\t// ThinParticleSystem's billboard: the corner offset in view space, here along the camera's right and up.\n\tlet corner = vec2f(f32(vertexIndex & 1u), f32(vertexIndex >> 1u));\n\tlet offset = (corner - 0.5) * p.size;\n\tlet right = vec3f(scene.view[0][0], scene.view[1][0], scene.view[2][0]);\n\tlet up = vec3f(scene.view[0][1], scene.view[1][1], scene.view[2][1]);\n\tout.position = liteWorldLayer(scene.viewProjection * vec4f(centre + right * offset.x + up * offset.y, 1.0));\n\tout.uv = corner;\n\tout.colour = colourAt(p, age, ratio, seed);\n\tout.remap = remapAt(age, ratio);\n\treturn out;\n}\n\n// Babylon's particles.fragment with the default texture mask, without fog or image processing.\n@fragment\nfn mainFragment(in: VertexOutput) -> @location(0) vec4f {\n\tlet textureColour = textureSample(diffuseTexture, diffuseSampler, in.uv);\n\tvar colour = textureColour * in.colour;\n\tif (system.ramp != 0u) {\n\t\tlet index = clamp((colour.a - in.remap.x) / in.remap.y, 0.0, 1.0);\n\t\tlet rampColour = textureSample(rampTexture, rampSampler, vec2f(1.0 - index, 0.0));\n\t\tcolour = vec4f(colour.rgb * rampColour.rgb, clamp((colour.a * rampColour.a - in.remap.z) / in.remap.w, 0.0, 1.0));\n\t}\n\tif (MULTIPLY_PASS) {\n\t\tlet sourceAlpha = in.colour.a * textureColour.a;\n\t\tcolour = vec4f(colour.rgb * sourceAlpha + vec3f(1.0 - sourceAlpha), colour.a);\n\t}\n\treturn colour;\n}\n`;
-    var DF = He(44799);
-    class PF {
-      constructor(ee, ie, He, ye) {
-        this.device = ee, this.system = ie, this.frameIndex = He, this.bindings = ye, this.ring = void 0, this.uniforms = void 0, this.uniformBits = null, this.rampTexels = (0, DF.g)(), this.ramp = null, this.rampView = null, this.bindGroup = null, this.boundView = null, this.boundSampler = null, this.boundRamp = null, this.texture = null, this.pipelines = [], this.count = 0, this.upload = (ee, ie) => {
-          this.device.queue.writeBuffer(this.ring, ee * gF.c * 4, this.system.ring.records, ee * gF.c, (ie - ee) * gF.c)
-        };
-        const {
-          name: be
-        } = ie;
-        this.ring = ee.createBuffer({
-          label: `particles-${be}`,
-          size: ie.ring.records.byteLength,
-          usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.uniforms = ee.createBuffer({
-          label: `particles-uniforms-${be}`,
-          size: 4 * gF.n,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        })
-      }
-      writeUniforms(ee) {
-        const ie = (0, DF.c)(this.system, this.uniformBits, ee);
-        ie && (this.uniformBits = ie, this.device.queue.writeBuffer(this.uniforms, 0, ie))
-      }
-      bind() {
-        const {
-          system: ee
-        } = this, ie = this.texture;
-        (0, DF.l)(ee, this.rampTexels) && this.rampTexels.key.length > 0 && (this.ramp || (this.ramp = this.device.createTexture({
-          label: `particles-ramp-${ee.name}`,
-          size: [gF.i, 1],
-          format: "rgba8unorm",
-          usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
-        }), this.rampView = this.ramp.createView()), this.device.queue.writeTexture({
-          texture: this.ramp
-        }, this.rampTexels.texels, {
-          bytesPerRow: 4 * gF.i
-        }, [gF.i, 1]));
-        const He = this.rampTexels.key.length > 0 && this.rampView ? this.rampView : this.bindings.whiteRamp;
-        this.bindGroup && this.boundView === ie.view && this.boundSampler === ie.sampler && this.boundRamp === He || (this.boundView = ie.view, this.boundSampler = ie.sampler, this.boundRamp = He, this.bindGroup = this.device.createBindGroup({
-          label: `particles-${ee.name}`,
-          layout: this.bindings.layout,
-          entries: [{
-            binding: 0,
-            resource: {
-              buffer: this.uniforms
-            }
-          }, {
-            binding: 1,
-            resource: {
-              buffer: this.ring
-            }
-          }, {
-            binding: 2,
-            resource: ie.sampler
-          }, {
-            binding: 3,
-            resource: ie.view
-          }, {
-            binding: 4,
-            resource: this.bindings.rampSampler
-          }, {
-            binding: 5,
-            resource: He
-          }]
+    class mc {
+      constructor(WW) {
+        NW(this, "mediaMap", new Map), NW(this, "warn"), NW(this, "service"), NW(this, "speedService"), NW(this, "emitter"), NW(this, "getCurrentTime"), NW(this, "metadataCallbackMap", new Map), this.warn = WW.warn, this.service = WW.service, this.speedService = WW.speedService, this.emitter = WW.emitter, this.getCurrentTime = WW.getCurrentTime, this.emitter.on(DP.Start, this.start.bind(this)), this.emitter.on(DP.SkipStart, this.start.bind(this)), this.emitter.on(DP.Pause, this.pause.bind(this)), this.emitter.on(DP.Finish, this.pause.bind(this)), this.speedService.subscribe((() => {
+          this.syncAllMediaElements()
         }))
       }
-      destroy() {
-        var ee;
-        this.ring.destroy(), this.uniforms.destroy(), null === (ee = this.ramp) || void 0 === ee || ee.destroy()
+      syncAllMediaElements() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+          pause: !1
+        };
+        this.mediaMap.forEach(((iW, OW) => {
+          this.syncTargetWithState(OW), WW.pause && OW.pause()
+        }))
       }
-    }
-    class AF {
-      constructor(ee, ie) {
-        this.device = ee, this.resources = ie, this.renderable = void 0, this.systems = new Map, this.draws = [], this.bindings = void 0, this.frameLayout = void 0, this.pipelineLayout = void 0, this.module = void 0, this.pipelines = new Map, this.frameData = new Float32Array(4096), this.frameBits = new Uint32Array(this.frameData.buffer), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.freeFrameIndices = [], this.nextFrameIndex = 0, this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.warnOnce = (0, Vi.b)(), this.build(), this.renderable = {
-          order: 251,
-          isTransparent: !0,
-          _worldCenter: [0, 0, 0],
-          bind: (ee, ie) => (this.bindTarget(ie), {
-            renderable: this.renderable,
-            pipeline: Pi(this.device, ie),
-            draw: ee => ie === this.preparedTarget ? this.draw(ee) : 0
+      start() {
+        this.syncAllMediaElements()
+      }
+      pause() {
+        this.syncAllMediaElements({
+          pause: !0
+        })
+      }
+      seekTo(WW) {
+        let {
+          time: iW,
+          target: OW,
+          mediaState: mW
+        } = WW;
+        if (mW.isPlaying) {
+          const WW = (iW - mW.lastInteractionTimeOffset) / 1e3 * mW.playbackRate,
+            EW = "duration" in OW && OW.duration;
+          if (Number.isNaN(EW)) return void this.waitForMetadata(OW);
+          let NW = mW.currentTimeAtLastInteraction + WW;
+          OW.loop && !1 !== EW && (NW %= EW), OW.currentTime = NW
+        } else OW.pause(), OW.currentTime = mW.currentTimeAtLastInteraction
+      }
+      waitForMetadata(WW) {
+        if (this.metadataCallbackMap.has(WW)) return;
+        if (!("addEventListener" in WW)) return;
+        const iW = () => {
+          this.metadataCallbackMap.delete(WW);
+          const iW = this.mediaMap.get(WW);
+          iW && this.seekTo({
+            time: this.getCurrentTime(),
+            target: WW,
+            mediaState: iW
           })
+        };
+        this.metadataCallbackMap.set(WW, iW), WW.addEventListener("loadedmetadata", iW, {
+          once: !0
+        })
+      }
+      getMediaStateFromMutation(WW) {
+        let {
+          target: iW,
+          timeOffset: OW,
+          mutation: mW
+        } = WW;
+        const EW = this.mediaMap.get(iW),
+          {
+            type: NW,
+            playbackRate: PW,
+            currentTime: LW,
+            muted: cW,
+            volume: wW,
+            loop: tW
+          } = mW;
+        return {
+          isPlaying: NW === gP.Play || NW !== gP.Pause && ((null == EW ? void 0 : EW.isPlaying) || null !== iW.getAttribute("autoplay")),
+          currentTimeAtLastInteraction: LW ?? (null == EW ? void 0 : EW.currentTimeAtLastInteraction) ?? 0,
+          lastInteractionTimeOffset: OW,
+          playbackRate: PW ?? (null == EW ? void 0 : EW.playbackRate) ?? 1,
+          volume: wW ?? (null == EW ? void 0 : EW.volume) ?? 1,
+          muted: cW ?? (null == EW ? void 0 : EW.muted) ?? null === iW.getAttribute("muted"),
+          loop: tW ?? (null == EW ? void 0 : EW.loop) ?? null === iW.getAttribute("loop")
         }
       }
-      rebind(ee) {
-        this.device = ee, this.build(), this.pipelines.clear(), this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.draws.length = 0;
-        for (const [ie, He] of this.systems) {
-          const ye = new PF(ee, ie, He.frameIndex, this.bindings),
-            be = ie.ring.drawCount();
-          be > 0 && ye.upload(0, be), this.systems.set(ie, ye)
-        }
-      }
-      build() {
+      syncTargetWithState(WW) {
+        const iW = this.mediaMap.get(WW);
+        if (!iW) return;
         const {
-          device: ee
-        } = this, ie = ee.createBindGroupLayout({
-          label: "particles-system",
-          entries: [{
-            binding: 0,
-            visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-            buffer: {
-              type: "uniform"
-            }
-          }, {
-            binding: 1,
-            visibility: GPUShaderStage.VERTEX,
-            buffer: {
-              type: "read-only-storage"
-            }
-          }, {
-            binding: 2,
-            visibility: GPUShaderStage.FRAGMENT,
-            sampler: {
-              type: "filtering"
-            }
-          }, {
-            binding: 3,
-            visibility: GPUShaderStage.FRAGMENT,
-            texture: {
-              sampleType: "float"
-            }
-          }, {
-            binding: 4,
-            visibility: GPUShaderStage.FRAGMENT,
-            sampler: {
-              type: "filtering"
-            }
-          }, {
-            binding: 5,
-            visibility: GPUShaderStage.FRAGMENT,
-            texture: {
-              sampleType: "float"
-            }
-          }]
-        });
-        this.frameLayout = ee.createBindGroupLayout({
-          label: "particles-frame",
-          entries: [{
-            binding: 0,
-            visibility: GPUShaderStage.VERTEX,
-            buffer: {
-              type: "uniform",
-              hasDynamicOffset: !0
-            }
-          }]
-        }), this.pipelineLayout = ee.createPipelineLayout({
-          bindGroupLayouts: [Wi(ee), ie, this.frameLayout]
-        }), this.module = ee.createShaderModule({
-          label: "particles",
-          code: wF
-        });
-        const He = ee.createTexture({
-          label: "particles-no-ramp",
-          size: [1, 1],
-          format: "rgba8unorm",
-          usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
-        });
-        ee.queue.writeTexture({
-          texture: He
-        }, new Uint8Array([255, 255, 255, 255]), {
-          bytesPerRow: 4
-        }, [1, 1]), this.bindings = {
-          layout: ie,
-          rampSampler: ee.createSampler({
-            label: "particles-ramp",
-            magFilter: "nearest",
-            minFilter: "nearest",
-            addressModeU: "repeat",
-            addressModeV: "repeat"
-          }),
-          whiteRamp: He.createView()
-        }, this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
+          muted: OW,
+          loop: mW,
+          volume: EW,
+          isPlaying: NW
+        } = iW, PW = this.service.state.matches("paused"), LW = iW.playbackRate * this.speedService.state.context.timer.speed;
+        try {
+          this.seekTo({
+            time: this.getCurrentTime(),
+            target: WW,
+            mediaState: iW
+          }), WW.volume !== EW && (WW.volume = EW), WW.muted = OW, WW.loop = mW, WW.playbackRate !== LW && (WW.playbackRate = LW), NW && !PW ? WW.play() : WW.pause()
+        } catch (cW) {
+          this.warn(`Failed to replay media interactions: ${cW.message||cW}`)
+        }
       }
-      get IMe() {
-        return this.systems.size
+      addMediaElements(WW, iW, OW) {
+        if (!["AUDIO", "VIDEO"].includes(WW.nodeName)) return;
+        const mW = WW,
+          EW = OW.getMeta(mW);
+        if (!EW || !("attributes" in EW)) return;
+        const NW = this.service.state.matches("paused"),
+          PW = EW.attributes;
+        let LW = !1;
+        LW = PW.rr_mediaState ? "played" === PW.rr_mediaState : null !== mW.getAttribute("autoplay"), LW && NW && mW.pause();
+        let cW = 1;
+        "number" === typeof PW.rr_mediaPlaybackRate && (cW = PW.rr_mediaPlaybackRate);
+        let wW = !1;
+        wW = "boolean" === typeof PW.rr_mediaMuted ? PW.rr_mediaMuted : null !== mW.getAttribute("muted");
+        let tW = !1;
+        tW = "boolean" === typeof PW.rr_mediaLoop ? PW.rr_mediaLoop : null !== mW.getAttribute("loop");
+        let ZW = 1;
+        "number" === typeof PW.rr_mediaVolume && (ZW = PW.rr_mediaVolume);
+        let xW = 0;
+        "number" === typeof PW.rr_mediaCurrentTime && (xW = PW.rr_mediaCurrentTime), this.mediaMap.set(mW, {
+          isPlaying: LW,
+          currentTimeAtLastInteraction: xW,
+          lastInteractionTimeOffset: iW,
+          playbackRate: cW,
+          volume: ZW,
+          muted: wW,
+          loop: tW
+        }), this.syncTargetWithState(mW)
+      }
+      mediaMutation(WW) {
+        let {
+          target: iW,
+          timeOffset: OW,
+          mutation: mW
+        } = WW;
+        this.mediaMap.set(iW, this.getMediaStateFromMutation({
+          target: iW,
+          timeOffset: OW,
+          mutation: mW
+        })), this.syncTargetWithState(iW)
+      }
+      isSupportedMediaElement(WW) {
+        return ["AUDIO", "VIDEO"].includes(WW.nodeName)
       }
       reset() {
-        for (const ee of this.systems.keys()) ee.reset()
-      }
-      describePendingWork() {
-        return (0, EF.f)(this.systems.keys(), "Lite")
-      }
-      bC(ee, ie) {
-        const He = new EF.d(ee, ie, this);
-        return this.systems.set(He, new PF(this.device, He, this.allocateFrameIndex(), this.bindings)), He
-      }
-      Zie(ee, ie) {
-        for (const He of this.systems.keys()) He.Zie(ee, ie)
-      }
-      canDraw(ee) {
-        const ie = this.systems.get(ee),
-          He = ee.texture ? this.resources.boundTexture(ee.texture) : null;
-        if (!ie || !He || !this.targetPipelines) return !1;
-        if (ie.texture = He, ie.pipelines.length = 0, !bi(ee.blendMode)) return this.warnOnce(`blend:${ee.blendMode}`, `particle blend mode ${ee.blendMode} is not drawn (${ee.name})`), !0;
-        const ye = (0, je.p)(ee.blendMode);
-        for (const be of ye) {
-          const ee = this.pipelineFor(be);
-          if (!1 === ee) return ie.pipelines.length = 0, !0;
-          ee && ie.pipelines.push(ee)
-        }
-        return ie.pipelines.length === ye.length
-      }
-      disposeStopped(ee) {
-        ee.dispose()
-      }
-      remove(ee) {
-        const ie = this.systems.get(ee);
-        ie && (this.systems.delete(ee), ie.destroy(), this.freeFrameIndices.push(ie.frameIndex))
-      }
-      prepare(ee) {
-        const ie = ee.animationRatio || 1;
-        Ai(this.renderable._worldCenter, ee, Zi), this.preparedTarget = this.target, this.draws.length = 0;
-        let He = 0;
-        for (const ye of this.systems.values()) {
-          const ee = ye.system;
-          if (!ee.animateIfActive(ie)) continue;
-          if (ee.ring.takeUploads(ye.upload), !ee.hasLiveParticles() || 0 === ye.pipelines.length) continue;
-          ye.writeUniforms(this.warnOnce), ye.bind();
-          const be = 64 * ye.frameIndex;
-          ye.count = ee.ring.drawCount(), ZF(ee, this.frameData, this.frameBits, be), He = Math.max(He, be + 64), this.draws.push(ye)
-        }
-        He > 0 && this.device.queue.writeBuffer(this.frameBuffer, 0, this.frameData, 0, He)
-      }
-      draw(ee) {
-        let ie = 0,
-          He = null;
-        for (const ye of this.draws) {
-          ee.setBindGroup(1, ye.bindGroup), ee.setBindGroup(2, this.frameBindGroup, [256 * ye.frameIndex]);
-          for (const be of ye.pipelines) be !== He && (ee.setPipeline(be), He = be), ee.draw(4, ye.count), ie++
-        }
-        return ie
-      }
-      bindTarget(ee) {
-        this.target = ee;
-        const ie = `${ee._colorFormat}|${ee._depthStencilFormat}|${ee._depthCompare}|${ee._sampleCount}`;
-        let He = this.pipelines.get(ie);
-        He || (He = new Map, this.pipelines.set(ie, He)), this.targetPipelines = He
-      }
-      pipelineFor(ee) {
-        var ie;
-        const He = this.targetPipelines,
-          ye = He.get(ee);
-        if (void 0 !== ye) return ye;
-        He.set(ee, null);
-        const be = this.target,
-          Me = ee === je.d,
-          Ke = null !== (ie = be._depthCompare) && void 0 !== ie ? ie : ti,
-          {
-            device: Ue
-          } = this;
-        return Ue.createRenderPipelineAsync({
-          label: `particles-${ee}`,
-          layout: this.pipelineLayout,
-          vertex: {
-            module: this.module,
-            entryPoint: "mainVertex"
-          },
-          fragment: Bi({
-            module: this.module,
-            entryPoint: "mainFragment",
-            constants: {
-              MULTIPLY_PASS: Me ? 1 : 0
-            }
-          }, be, Mi((0, je.l)(ee))),
-          primitive: {
-            topology: "triangle-strip",
-            cullMode: "none"
-          },
-          depthStencil: be._depthStencilFormat ? {
-            format: be._depthStencilFormat,
-            depthCompare: Ke,
-            depthWriteEnabled: !1
-          } : void 0,
-          multisample: {
-            count: be._sampleCount
-          }
-        }).then((ie => {
-          He.set(ee, ie)
-        }), (ie => {
-          He.set(ee, !1), console.error("Lite particle pipeline failed", ie), oi(Ue, "particles", `blend-${ee}`, ie)
-        })), null
-      }
-      allocateFrameIndex() {
-        const ee = this.freeFrameIndices.pop();
-        if (void 0 !== ee) return ee;
-        const ie = this.nextFrameIndex++;
-        if (64 * (ie + 1) > this.frameData.length) {
-          const ee = new Float32Array(2 * this.frameData.length);
-          ee.set(this.frameData), this.frameData = ee, this.frameBits = new Uint32Array(ee.buffer), this.frameBuffer.destroy(), this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
-        }
-        return ie
-      }
-      createFrameBuffer() {
-        return this.device.createBuffer({
-          label: "particles-frames",
-          size: this.frameData.byteLength,
-          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        })
-      }
-      createFrameBindGroup() {
-        return this.device.createBindGroup({
-          label: "particles-frames",
-          layout: this.frameLayout,
-          entries: [{
-            binding: 0,
-            resource: {
-              buffer: this.frameBuffer,
-              size: 32
-            }
-          }]
-        })
-      }
-    }
-    class YF {
-      constructor(ee, ie, He, ye, be) {
-        this.lite = ee, this.canvas = ie, this.info = He, this.resources = be, this.Gbe = !1, this.needPOTTextures = !1, this.Eee = !0, this.renderWidth = void 0, this.renderHeight = void 0, this.performanceMonitor = {
-          reset: () => {
-            this.lastFrameTime = null
-          }
-        }, this.caps = void 0, this.deltaTime = 0, this.lastFrameTime = null, this.renderWidth = ie.width, this.renderHeight = ie.height, this.caps = {
-          maxTextureSize: ye.maxTextureDimension2D,
-          texture2DArrayMaxLayerCount: ye.maxTextureArrayLayers
-        }
-      }
-      getCaps() {
-        return this.caps
-      }
-      detach() {
-        this.lite = null
-      }
-      rebind(ee) {
-        this.lite = ee, (0, ue.r)(ee, this.renderWidth, this.renderHeight)
-      }
-      getRenderWidth() {
-        return this.renderWidth
-      }
-      getRenderHeight() {
-        return this.renderHeight
-      }
-      getHardwareScalingLevel() {
-        return 1
-      }
-      setSize(ee, ie) {
-        if (this.renderWidth === ee && this.renderHeight === ie) return !1;
-        const He = this.renderWidth,
-          ye = this.renderHeight;
-        this.renderWidth = ee, this.renderHeight = ie;
-        const be = this.lite;
-        if (null === be) return !0;
-        try {
-          (0, ue.r)(be, ee, ie)
-        } catch (Me) {
-          if (Me instanceof DOMException && "InvalidStateError" === Me.name) {
-            this.renderWidth = He, this.renderHeight = ye;
-            try {
-              (0, ue.r)(be, He, ye)
-            } catch {
-              this.canvas.width = He, this.canvas.height = ye
-            }
-            return console.warn("WebGPU could not allocate render targets for resize", ee, ie, Me.message), !1
-          }
-          throw Me
-        }
-        return !0
-      }
-      resize() {}
-      getRenderingCanvas() {
-        return this.canvas
-      }
-      getInfo() {
-        return this.info
-      }
-      LO() {
-        const ee = performance.now();
-        this.deltaTime = null === this.lastFrameTime ? 0 : ee - this.lastFrameTime, this.lastFrameTime = ee
-      }
-      getDeltaTime() {
-        return this.deltaTime
-      }
-      createCanvas(ee, ie) {
-        const He = document.createElement("canvas");
-        return He.width = ee, He.height = ie, He
-      }
-      Zee(ee, ie) {
-        var He;
-        return null !== (He = this.resources.Zee.get(ee)) && void 0 !== He ? He : new ki(this.resources, ee, ie)
-      }
-      atlasArrays(ee) {
-        return this.resources.atlasArrays(ee)
-      }
-    }
-    class VF {
-      constructor() {
-        this.fov = .8, this.nearPlane = 1, this.farPlane = 1e3, this.children = [], this.worldMatrix = new Float32Array(16), this.worldMatrixVersion = 0, this._viewCache = new Float32Array(16), this._projCache = new Float32Array(16), this._vpCache = new Float32Array(16)
-      }
-      copyFromView(ee) {
-        this.fov = ee.fov, this.nearPlane = ee.near, this.farPlane = ee.far;
-        const ie = ee.worldMatrix;
-        for (let He = 0; He < 16; He++)
-          if (this.worldMatrix[He] !== ie[He]) return this.worldMatrix.set(ie), void this.worldMatrixVersion++
-      }
-    }
-    class aF {
-      constructor(ee, ie, He, ye) {
-        this.canvas = ie, this.options = He, this.Dye = void 0, this.backendName = "WebGPU (Lite)", this.Nee = void 0, this.modelMeshes = void 0, this.particles = void 0, this.resources = void 0, this.camera = new VF, this.lastFrameTime = 0, this.engine = void 0, this.yp = void 0, this.sceneTask = void 0, this.device = void 0, this.liteTerrain = void 0, this.meshes = void 0, this.sunShadow = void 0, this.refusals = void 0, this.halted = !1, this.PR = null, this.firstTerrain = null, this.trialFrames = 0, this.install(ee);
-        const {
-          resources: be,
-          meshes: Me
-        } = ee;
-        this.resources = be, this.particles = ee.particles, this.Dye = new YF(ee.engine, ie, ye, ee.device.limits, be), (0, we.D)({
-          lJ: ee => {
-            Ye(ee) && be.textureSlot(ee)
-          },
-          loaded: ee => Ye(ee) ? be.textureLoaded(ee) : null,
-          canvasUpdated: (ee, ie, He) => {
-            Ye(ee) && be.canvasUpdated(ee, ie, He)
-          }
-        }), this.Nee = Me.Nee, this.modelMeshes = Me.modelMeshes
-      }
-      get gpuDevice() {
-        return this.device
-      }
-      get deviceLost() {
-        return this.refusals.deviceLost
-      }
-      get terrain() {
-        return this.liteTerrain
-      }
-      install(ee) {
-        this.engine = ee.engine, this.yp = ee.yp, this.sceneTask = ee.sceneTask, this.device = ee.device, this.liteTerrain = ee.terrain, this.meshes = ee.meshes, this.sunShadow = ee.sunShadow;
-        const ie = new Se(ee.device.lost);
-        this.refusals = ie, ie.deviceLost.then((() => {
-          var ie;
-          ie = ee.device, Fi.add(ie)
-        })), ee.yp.camera = this.camera
-      }
-      async rebuild() {
-        var ee, ie, He, ye, be;
-        const Me = await CF();
-        this.halted = !0, this.liteTerrain.retire(), null === (ee = this.sunShadow) || void 0 === ee || ee.dispose(), this.Dye.detach();
-        try {
-          (0, me.d)(this.engine)
-        } catch (oe) {
-          console.warn("Lite: disposing the lost device's engine threw", oe)
-        }
-        const Ke = {
-            width: this.Dye.renderWidth,
-            height: this.Dye.renderHeight
-          },
-          Ue = await vF(this.canvas, this.options, Ke, Me),
-          Fe = gi(Ue),
-          Je = uF(Fe);
-        try {
-          this.resources.rebind(Ue, Fe), this.particles.rebind(Fe), this.Nee.dropSteady();
-          const ee = {
-              resources: this.resources,
-              particles: this.particles,
-              Nee: this.Nee,
-              modelMeshes: this.modelMeshes
-            },
-            ie = await mF(Ue, Fe, this.options, ee),
-            He = Je();
-          if (null !== He) throw new Error(`WebGPU device lost while Lite was rebuilding (${He.reason}): ${He.message}`);
-          const {
-            r: ye,
-            g: be,
-            b: Me
-          } = this.yp.clearColor;
-          this.install(ie), this.setClearColour(ye, be, Me), this.Dye.rebind(Ue)
-        } catch (oe) {
-          throw Fe.destroy(), oe
-        }
-        return this.lastFrameTime = 0, this.halted = !1, this.trialFrames = 30, null === (ie = this.PR) || void 0 === ie || ie.resize(), null === (He = this.PR) || void 0 === He || null === (ye = He.uk) || void 0 === ye || null === (be = ye.iW) || void 0 === be || be.remeshForRendererRebuild(), {
-          terrainDrawn: this.whenTerrainDrawn()
-        }
-      }
-      whenTerrainDrawn() {
-        return new Promise(((ee, ie) => {
-          this.firstTerrain = {
-            drawn: ee,
-            failed: ie
-          }
-        }))
-      }
-      get castsEntitySunShadows() {
-        var ee, ie;
-        return null !== (ee = null === (ie = this.sunShadow) || void 0 === ie ? void 0 : ie.tracesEntities) && void 0 !== ee && ee
-      }
-      get sampleCount() {
-        return this.engine.msaaSamples
-      }
-      attach(ee) {
-        this.PR = ee, this.modelMeshes.attach(ee.model, ee.sceneMirror);
-        const ie = ee.yp;
-        this.setClearColour(ie.clearColor.r, ie.clearColor.g, ie.clearColor.b), ie.draw = () => {
-          this.drawFrame(ee, ie)
-        }
-      }
-      get tR() {
-        return !this.refusals.lost && !this.halted
-      }
-      render(ee) {
-        if (this.tR) {
-          try {
-            this.Dye.LO(), ee.yp.render()
-          } catch (ie) {
-            throw this.refusals.frameFailed(ie), this.firstTerrain && this.trialFrames > 0 && (this.halted = !0, this.firstTerrain.failed(ie), this.firstTerrain = null), ie
-          }
-          this.refusals.frameDrawn(), this.trialFrames > 0 && this.trialFrames--
-        }
-      }
-      lastFrameDrawCalls() {
-        return this.engine.drawCallCount
-      }
-      describePendingWork() {
-        var ee, ie, He, ye;
-        const be = [...this.particles.describePendingWork(), ...null !== (ee = null === (ie = this.sunShadow) || void 0 === ie ? void 0 : ie.describePendingWork()) && void 0 !== ee ? ee : []],
-          Me = this.meshes.pipelinesCompiling + this.terrain.pipelinesCompiling + (null !== (He = this.terrain.sceneDepth) && void 0 !== He && He.compiling ? 1 : 0) + (null !== (ye = this.terrain.shadowMask) && void 0 !== ye && ye.compiling ? 1 : 0);
-        Me > 0 && be.push(`${Me} Lite pipelines compiling`);
-        const Ke = this.terrain.buffersAwaitingVerdict;
-        Ke > 0 && be.push(`${Ke} Lite terrain buffers awaiting their out-of-memory verdict`);
-        const Ue = this.resources.texturesLoading;
-        return Ue > 0 && be.push(`${Ue} Lite textures loading`), be
-      }
-      prepareTexture(ee) {
-        return null !== this.resources.boundTexture(ee) || this.resources.textureFailed(ee)
-      }
-      drawFrame(ee, ie) {
-        var He, ye, be, Me, Ke, Ue;
-        const Fe = zU(ee);
-        this.camera.copyFromView(Fe), this.setClearColour(Fe.clearColour[0], Fe.clearColour[1], Fe.clearColour[2]), null === (He = this.sunShadow) || void 0 === He || He.prepare(ee.uk, Fe.eye, null !== (ye = ee.uk.Zf) && void 0 !== ye ? ye : null), this.terrain.prepare(ee, Fe), null === (be = this.terrain.sceneDepth) || void 0 === be || be.setPlanes(Fe.near, Fe.far), null === (Me = this.terrain.shadowMask) || void 0 === Me || Me.prepare(Fe), yU(this.sceneTask), this.meshes.prepare(ie, Fe, ee.model.earthSky, null !== (Ke = ee.uk.Zf) && void 0 !== Ke ? Ke : null), this.particles.prepare(Fe);
-        const Je = performance.now();
-        this.resources.flushUploads(), null === (Ue = this.sunShadow) || void 0 === Ue || Ue.traceEntities(this.meshes);
-        try {
-          (0, ue.o)(this.engine, this.lastFrameTime > 0 ? Je - this.lastFrameTime : 0)
-        } finally {
-          this.resources.endUploadFrame()
-        }
-        this.lastFrameTime = Je, this.firstTerrain && this.liteTerrain.drawStats().drawn > 0 && (this.firstTerrain.drawn(Je), this.firstTerrain = null)
-      }
-      setClearColour(ee, ie, He) {
-        const ye = this.yp.clearColor;
-        ye.r = ee, ye.g = ie, ye.b = He, ye.a = 1
+        this.mediaMap.clear()
       }
     }
 
-    function cF(ee) {
-      const ie = {};
-      for (const He in ee.limits) {
-        const ye = ee.limits[He];
-        "number" === typeof ye && (ie[He] = ye)
-      }
-      return ie
+    function Ec(WW, iW) {
+      if ("DIALOG" !== WW.nodeName || WW instanceof mN) return;
+      const OW = WW,
+        mW = OW.open,
+        EW = mW && OW.matches("dialog:modal"),
+        NW = OW.getAttribute("rr_open_mode"),
+        PW = "string" === typeof(null == iW ? void 0 : iW.attributes.open) || "string" === typeof OW.getAttribute("open"),
+        LW = "modal" === NW;
+      mW && !(EW && "non-modal" === NW || !EW && LW) || (OW.isConnected ? (mW && OW.close(), PW && (LW ? OW.showModal() : OW.show())) : console.warn("dialog is not attached to the dom", OW))
     }
-    const xF = "WebGPU device lost while Lite was starting";
-    async function LF(ee, ie) {
-      const He = await CF(),
-        ye = He.info,
-        be = {
-          vendor: (null === ye || void 0 === ye ? void 0 : ye.vendor) || "unknown vendor",
-          renderer: (null === ye || void 0 === ye ? void 0 : ye.architecture) || "unknown renderer",
-          version: (null === ye || void 0 === ye ? void 0 : ye.description) || "unknown version"
+
+    function Nc(WW, iW) {
+      if ("DIALOG" !== WW.nodeName || WW instanceof mN) return;
+      const OW = WW;
+      OW.isConnected ? null === iW.attributes.open && (OW.removeAttribute("open"), OW.removeAttribute("rr_open_mode")) : console.warn("dialog is not attached to the dom", OW)
+    }
+    const Pc = function(WW) {
+        return {
+          all: WW = WW || new Map,
+          on: function(iW, OW) {
+            var mW = WW.get(iW);
+            mW ? mW.push(OW) : WW.set(iW, [OW])
+          },
+          off: function(iW, OW) {
+            var mW = WW.get(iW);
+            mW && (OW ? mW.splice(mW.indexOf(OW) >>> 0, 1) : WW.set(iW, []))
+          },
+          emit: function(iW, OW) {
+            var mW = WW.get(iW);
+            mW && mW.slice().map((function(WW) {
+              WW(OW)
+            })), (mW = WW.get("*")) && mW.slice().map((function(WW) {
+              WW(iW, OW)
+            }))
+          }
+        }
+      },
+      Lc = "[replayer]",
+      cc = {
+        duration: 500,
+        lineCap: "round",
+        lineWidth: 3,
+        strokeStyle: "red"
+      };
+
+    function wc(WW) {
+      return WW.type == uP.IncrementalSnapshot && (WW.data.source == oP.TouchMove || WW.data.source == oP.MouseInteraction && WW.data.type == dP.TouchStart)
+    }
+    class tc {
+      constructor(WW, iW) {
+        var OW = this;
+        if (NW(this, "wrapper"), NW(this, "iframe"), NW(this, "UNSAFE_replayCanvas", !1), NW(this, "service"), NW(this, "speedService"), NW(this, "config"), NW(this, "usingVirtualDom", !1), NW(this, "virtualDom", new TN), NW(this, "mouse"), NW(this, "mouseTail", null), NW(this, "tailPositions", []), NW(this, "emitter", Pc()), NW(this, "nextUserInteractionEvent"), NW(this, "legacy_missingNodeRetryMap", {}), NW(this, "cache", QO()), NW(this, "imageMap", new Map), NW(this, "canvasEventMap", new Map), NW(this, "mirror", JW()), NW(this, "styleMirror", new TP), NW(this, "mediaManager"), NW(this, "firstFullSnapshot", null), NW(this, "newDocumentQueue", []), NW(this, "mousePos", null), NW(this, "touchActive", null), NW(this, "lastMouseDownEvent", null), NW(this, "lastHoveredRootNode"), NW(this, "lastSelectionData", null), NW(this, "constructedStyleMutations", []), NW(this, "adoptedStyleSheets", []), NW(this, "handleResize", (WW => {
+            this.iframe.style.display = "inherit";
+            for (const iW of [this.mouseTail, this.iframe]) iW && (iW.setAttribute("width", String(WW.width)), iW.setAttribute("height", String(WW.height)))
+          })), NW(this, "applyEventsSynchronously", (WW => {
+            for (const iW of WW) {
+              switch (iW.type) {
+                case uP.DomContentLoaded:
+                case uP.Load:
+                  continue;
+                case uP.FullSnapshot:
+                case uP.Meta:
+                case uP.Plugin:
+                case uP.IncrementalSnapshot:
+              }
+              this.getCastFn(iW, !0)()
+            }
+          })), NW(this, "getCastFn", (function(WW) {
+            let iW, mW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            switch (WW.type) {
+              case uP.DomContentLoaded:
+              case uP.Load:
+                break;
+              case uP.Custom:
+                iW = () => {
+                  OW.emitter.emit(DP.CustomEvent, WW)
+                };
+                break;
+              case uP.Meta:
+                iW = () => OW.emitter.emit(DP.Resize, {
+                  width: WW.data.width,
+                  height: WW.data.height
+                });
+                break;
+              case uP.FullSnapshot:
+                iW = () => {
+                  var iW;
+                  if (OW.firstFullSnapshot) {
+                    if (OW.firstFullSnapshot === WW) return void(OW.firstFullSnapshot = !0)
+                  } else OW.firstFullSnapshot = !0;
+                  OW.mediaManager.reset(), OW.styleMirror.reset(), OW.rebuildFullSnapshot(WW, mW), null == (iW = OW.iframe.contentWindow) || iW.scrollTo(WW.data.initialOffset)
+                };
+                break;
+              case uP.IncrementalSnapshot:
+                iW = () => {
+                  if (OW.applyIncremental(WW, mW), !mW && (WW === OW.nextUserInteractionEvent && (OW.nextUserInteractionEvent = null, OW.backToNormal()), OW.config.skipInactive && !OW.nextUserInteractionEvent)) {
+                    for (const iW of OW.service.state.context.events)
+                      if (!(iW.timestamp <= WW.timestamp) && OW.isUserInteraction(iW)) {
+                        iW.delay - WW.delay > OW.config.inactivePeriodThreshold * OW.speedService.state.context.timer.speed && (OW.nextUserInteractionEvent = iW);
+                        break
+                      } if (OW.nextUserInteractionEvent) {
+                      const iW = OW.nextUserInteractionEvent.delay - WW.delay,
+                        mW = {
+                          speed: Math.min(Math.round(iW / 5e3), OW.config.maxSpeed)
+                        };
+                      OW.speedService.send({
+                        type: "FAST_FORWARD",
+                        payload: mW
+                      }), OW.emitter.emit(DP.SkipStart, mW)
+                    }
+                  }
+                }
+            }
+            return () => {
+              iW && iW();
+              for (const iW of OW.config.plugins || []) iW.handler && iW.handler(WW, mW, {
+                replayer: OW
+              });
+              OW.service.send({
+                type: "CAST_EVENT",
+                payload: {
+                  event: WW
+                }
+              });
+              const EW = OW.service.state.context.events.length - 1;
+              if (!OW.config.liveMode && WW === OW.service.state.context.events[EW]) {
+                const iW = () => {
+                  EW < OW.service.state.context.events.length - 1 || (OW.backToNormal(), OW.service.send("END"), OW.emitter.emit(DP.Finish))
+                };
+                let mW = 50;
+                WW.type === uP.IncrementalSnapshot && WW.data.source === oP.MouseMove && WW.data.positions.length && (mW += Math.max(0, -WW.data.positions[0].timeOffset)), setTimeout(iW, mW)
+              }
+              OW.emitter.emit(DP.EventCast, WW)
+            }
+          })), !(null == iW ? void 0 : iW.liveMode) && WW.length < 2) throw new Error("Replayer need at least 2 events.");
+        const mW = {
+          speed: 1,
+          maxSpeed: 360,
+          root: document.body,
+          loadTimeout: 0,
+          skipInactive: !1,
+          inactivePeriodThreshold: 1e4,
+          showWarning: !0,
+          showDebug: !1,
+          blockClass: "rr-block",
+          liveMode: !1,
+          insertStyleRules: [],
+          triggerFocus: !0,
+          UNSAFE_replayCanvas: !1,
+          pauseAnimation: !0,
+          mouseTail: cc,
+          useVirtualDom: !0,
+          logger: console
         };
-      ee.style.background = "black";
-      const Me = await vF(ee, ie, ie.bufferSize, He),
-        Ke = gi(Me),
-        Ue = uF(Ke);
-      try {
-        const He = new aF(await mF(Me, Ke, ie, null), ee, ie, be),
-          ye = Ue();
-        if (null !== ye) {
+        this.config = Object.assign({}, mW, iW), this.handleResize = this.handleResize.bind(this), this.getCastFn = this.getCastFn.bind(this), this.applyEventsSynchronously = this.applyEventsSynchronously.bind(this), this.emitter.on(DP.Resize, this.handleResize), this.setupDom();
+        for (const NW of this.config.plugins || []) NW.getMirror && NW.getMirror({
+          nodeMirror: this.mirror
+        });
+        this.emitter.on(DP.Flush, (() => {
+          if (this.usingVirtualDom) {
+            const OW = {
+              mirror: this.mirror,
+              applyCanvas: (WW, iW, OW) => {
+                Oc({
+                  event: WW,
+                  mutation: iW,
+                  target: OW,
+                  imageMap: this.imageMap,
+                  canvasEventMap: this.canvasEventMap,
+                  errorHandler: this.warnCanvasMutationFailed.bind(this)
+                })
+              },
+              applyInput: this.applyInput.bind(this),
+              applyScroll: this.applyScroll.bind(this),
+              applyStyleSheetMutation: (WW, iW) => {
+                WW.source === oP.StyleSheetRule ? this.applyStyleSheetRule(WW, iW) : WW.source === oP.StyleDeclaration && this.applyStyleDeclaration(WW, iW)
+              },
+              afterAppend: (WW, iW) => {
+                for (const OW of this.config.plugins || []) OW.onBuild && OW.onBuild(WW, {
+                  id: iW,
+                  replayer: this
+                })
+              }
+            };
+            if (this.iframe.contentDocument) try {
+              MN(this.iframe.contentDocument, this.virtualDom, OW, this.virtualDom.mirror)
+            } catch (WW) {
+              this.warn(WW)
+            }
+            if (this.virtualDom.destroyTree(), this.usingVirtualDom = !1, Object.keys(this.legacy_missingNodeRetryMap).length)
+              for (const WW in this.legacy_missingNodeRetryMap) try {
+                const iW = this.legacy_missingNodeRetryMap[WW],
+                  mW = SN(iW.node, this.mirror, this.virtualDom.mirror);
+                MN(mW, iW.node, OW, this.virtualDom.mirror), iW.node = mW
+              } catch (iW) {
+                this.warn(iW)
+              }
+            this.constructedStyleMutations.forEach((WW => {
+              this.applyStyleSheetMutation(WW)
+            })), this.constructedStyleMutations = [], this.adoptedStyleSheets.forEach((WW => {
+              this.applyAdoptedStyleSheet(WW)
+            })), this.adoptedStyleSheets = []
+          }
+          if (this.mousePos && (this.moveAndHover(this.mousePos.x, this.mousePos.y, this.mousePos.id, !0, this.mousePos.debugData), this.mousePos = null), !0 === this.touchActive ? this.mouse.classList.add("touch-active") : !1 === this.touchActive && this.mouse.classList.remove("touch-active"), this.touchActive = null, this.lastMouseDownEvent) {
+            const [WW, iW] = this.lastMouseDownEvent;
+            WW.dispatchEvent(iW)
+          }
+          this.lastMouseDownEvent = null, this.lastSelectionData && (this.applySelection(this.lastSelectionData), this.lastSelectionData = null)
+        })), this.emitter.on(DP.PlayBack, (() => {
+          this.firstFullSnapshot = null, this.mirror.reset(), this.styleMirror.reset(), this.mediaManager.reset()
+        }));
+        const EW = new dL([], {
+          speed: this.config.speed
+        });
+        this.service = rL({
+          events: WW.map((WW => iW && iW.unpackFn ? iW.unpackFn(WW) : WW)).sort(((WW, iW) => WW.timestamp - iW.timestamp)),
+          timer: EW,
+          timeOffset: 0,
+          baselineTime: 0,
+          lastPlayedEvent: null
+        }, {
+          getCastFn: this.getCastFn,
+          applyEventsSynchronously: this.applyEventsSynchronously,
+          emitter: this.emitter
+        }), this.service.start(), this.service.subscribe((WW => {
+          this.emitter.emit(DP.StateChange, {
+            player: WW
+          })
+        })), this.speedService = aL(GL({
+          id: "speed",
+          context: {
+            normalSpeed: -1,
+            timer: EW
+          },
+          initial: "normal",
+          states: {
+            normal: {
+              on: {
+                FAST_FORWARD: {
+                  target: "skipping",
+                  actions: ["recordSpeed", "setSpeed"]
+                },
+                SET_SPEED: {
+                  target: "normal",
+                  actions: ["setSpeed"]
+                }
+              }
+            },
+            skipping: {
+              on: {
+                BACK_TO_NORMAL: {
+                  target: "normal",
+                  actions: ["restoreSpeed"]
+                },
+                SET_SPEED: {
+                  target: "normal",
+                  actions: ["setSpeed"]
+                }
+              }
+            }
+          }
+        }, {
+          actions: {
+            setSpeed: (WW, iW) => {
+              "payload" in iW && WW.timer.setSpeed(iW.payload.speed)
+            },
+            recordSpeed: fL({
+              normalSpeed: WW => WW.timer.speed
+            }),
+            restoreSpeed: WW => {
+              WW.timer.setSpeed(WW.normalSpeed)
+            }
+          }
+        })), this.speedService.start(), this.speedService.subscribe((WW => {
+          this.emitter.emit(DP.StateChange, {
+            speed: WW
+          })
+        })), this.mediaManager = new mc({
+          warn: this.warn.bind(this),
+          service: this.service,
+          speedService: this.speedService,
+          emitter: this.emitter,
+          getCurrentTime: this.getCurrentTime.bind(this)
+        });
+        const PW = this.service.state.context.events.find((WW => WW.type === uP.Meta)),
+          LW = this.service.state.context.events.find((WW => WW.type === uP.FullSnapshot));
+        if (PW) {
           const {
-            reason: ee,
-            message: ie
-          } = ye;
-          throw Object.assign(new Error(`${xF} (${ee}): ${ie}`), {
-            fallbackReason: xF
+            width: WW,
+            height: iW
+          } = PW.data;
+          setTimeout((() => {
+            this.emitter.emit(DP.Resize, {
+              width: WW,
+              height: iW
+            })
+          }), 0)
+        }
+        LW && setTimeout((() => {
+          var WW;
+          this.firstFullSnapshot || (this.firstFullSnapshot = LW, this.rebuildFullSnapshot(LW), null == (WW = this.iframe.contentWindow) || WW.scrollTo(LW.data.initialOffset))
+        }), 1), this.service.state.context.events.find(wc) && this.mouse.classList.add("touch-device")
+      }
+      get timer() {
+        return this.service.state.context.timer
+      }
+      on(WW, iW) {
+        return this.emitter.on(WW, iW), this
+      }
+      off(WW, iW) {
+        return this.emitter.off(WW, iW), this
+      }
+      setConfig(WW) {
+        Object.keys(WW).forEach((iW => {
+          WW[iW], this.config[iW] = WW[iW]
+        })), this.config.skipInactive || this.backToNormal(), "undefined" !== typeof WW.speed && this.speedService.send({
+          type: "SET_SPEED",
+          payload: {
+            speed: WW.speed
+          }
+        }), "undefined" !== typeof WW.mouseTail && (!1 === WW.mouseTail ? this.mouseTail && (this.mouseTail.style.display = "none") : (this.mouseTail || (this.mouseTail = document.createElement("canvas"), this.mouseTail.width = Number.parseFloat(this.iframe.width), this.mouseTail.height = Number.parseFloat(this.iframe.height), this.mouseTail.classList.add("replayer-mouse-tail"), this.wrapper.insertBefore(this.mouseTail, this.iframe)), this.mouseTail.style.display = "inherit"))
+      }
+      getMetaData() {
+        const WW = this.service.state.context.events[0],
+          iW = this.service.state.context.events[this.service.state.context.events.length - 1];
+        return {
+          startTime: WW.timestamp,
+          endTime: iW.timestamp,
+          totalTime: iW.timestamp - WW.timestamp
+        }
+      }
+      getCurrentTime() {
+        return this.config.liveMode && this.timer.updateLiveTime(), this.timer.timeOffset + this.getTimeOffset()
+      }
+      getTimeOffset() {
+        const {
+          baselineTime: WW,
+          events: iW
+        } = this.service.state.context;
+        return WW - iW[0].timestamp
+      }
+      getMirror() {
+        return this.mirror
+      }
+      play() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        var iW, OW;
+        this.service.state.matches("paused") || this.service.send({
+          type: "PAUSE"
+        }), this.service.send({
+          type: "PLAY",
+          payload: {
+            timeOffset: WW
+          }
+        }), null == (OW = null == (iW = this.iframe.contentDocument) ? void 0 : iW.getElementsByTagName("html")[0]) || OW.classList.remove("rrweb-paused"), this.emitter.emit(DP.Start)
+      }
+      pause(WW) {
+        var iW, OW;
+        void 0 === WW && this.service.state.matches("playing") && this.service.send({
+          type: "PAUSE"
+        }), "number" === typeof WW && (this.play(WW), this.service.send({
+          type: "PAUSE"
+        })), null == (OW = null == (iW = this.iframe.contentDocument) ? void 0 : iW.getElementsByTagName("html")[0]) || OW.classList.add("rrweb-paused"), this.emitter.emit(DP.Pause)
+      }
+      resume() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        this.warn("The 'resume' was deprecated in 1.0. Please use 'play' method which has the same interface."), this.play(WW), this.emitter.emit(DP.Resume)
+      }
+      destroy() {
+        this.pause(), this.mirror.reset(), this.styleMirror.reset(), this.mediaManager.reset(), this.config.root.removeChild(this.wrapper), this.emitter.emit(DP.Destroy)
+      }
+      startLive(WW) {
+        this.service.send({
+          type: "TO_LIVE",
+          payload: {
+            baselineTime: WW
+          }
+        })
+      }
+      addEvent(WW) {
+        const iW = this.config.unpackFn ? this.config.unpackFn(WW) : WW;
+        wc(iW) && this.mouse.classList.add("touch-device"), Promise.resolve().then((() => this.service.send({
+          type: "ADD_EVENT",
+          payload: {
+            event: iW
+          }
+        })))
+      }
+      enableInteract() {
+        this.iframe.setAttribute("scrolling", "auto"), this.iframe.style.pointerEvents = "auto"
+      }
+      disableInteract() {
+        this.iframe.setAttribute("scrolling", "no"), this.iframe.style.pointerEvents = "none"
+      }
+      resetCache() {
+        this.cache = QO()
+      }
+      setupDom() {
+        this.wrapper = document.createElement("div"), this.wrapper.classList.add("replayer-wrapper"), this.config.root.appendChild(this.wrapper), this.mouse = document.createElement("div"), this.mouse.classList.add("replayer-mouse"), this.wrapper.appendChild(this.mouse), !1 !== this.config.mouseTail && (this.mouseTail = document.createElement("canvas"), this.mouseTail.classList.add("replayer-mouse-tail"), this.mouseTail.style.display = "inherit", this.wrapper.appendChild(this.mouseTail)), this.config.UNSAFE_replayCanvas ? (this.iframe = document.createElement("iframe"), this.iframe.setAttribute("sandbox", "allow-same-origin allow-scripts"), this.wrapper.appendChild(this.iframe), this.UNSAFE_replayCanvas = !0) : (this.iframe = function(WW) {
+          var iW;
+          if (!WW.root.isConnected) throw new Error(Wm);
+          const OW = WW.root.ownerDocument.createElement("iframe");
+          for (const [EW, NW] of Object.entries(WW.iframeAttributes || {})) "sandbox" !== EW && OW.setAttribute(EW, NW);
+          OW.setAttribute("sandbox", "allow-same-origin"), WW.root.appendChild(OW);
+          const mW = OW.contentDocument;
+          if (!mW || !OW.contentWindow) throw null == (iW = OW.parentNode) || iW.removeChild(OW), new Error(Wm);
+          return im.add(mW), OW
+        }({
+          root: this.wrapper
+        }), this.UNSAFE_replayCanvas = !1), this.iframe.style.display = "none", this.disableInteract(), this.iframe.contentWindow && this.iframe.contentDocument && (oL(this.iframe.contentWindow, this.iframe.contentDocument), bP(this.iframe.contentWindow))
+      }
+      rebuildFullSnapshot(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (!this.iframe.contentDocument) return this.warn("Looks like your replayer has been destroyed.");
+        Object.keys(this.legacy_missingNodeRetryMap).length && this.warn("Found unresolved missing node map", this.legacy_missingNodeRetryMap), this.legacy_missingNodeRetryMap = {};
+        const OW = [],
+          mW = new Set,
+          EW = (iW, EW) => {
+            if ("DIALOG" === iW.nodeName && mW.add(iW), this.collectIframeAndAttachDocument(OW, iW), this.mediaManager.isSupportedMediaElement(iW)) {
+              const {
+                events: OW
+              } = this.service.state.context;
+              this.mediaManager.addMediaElements(iW, WW.timestamp - OW[0].timestamp, this.mirror)
+            }
+            for (const WW of this.config.plugins || []) WW.onBuild && WW.onBuild(iW, {
+              id: EW,
+              replayer: this
+            })
+          };
+        this.usingVirtualDom && (this.virtualDom.destroyTree(), this.usingVirtualDom = !1), this.mirror.reset(), Pm(WW.data.node, {
+          doc: this.iframe.contentDocument,
+          afterAppend: EW,
+          cache: this.cache,
+          mirror: this.mirror,
+          UNSAFE_allowUnprotectedRebuild: this.UNSAFE_replayCanvas
+        }), EW(this.iframe.contentDocument, WW.data.node.id);
+        for (const {
+            mutationInQueue: LW,
+            builtNode: cW
+          }
+          of OW) this.attachDocumentToIframe(LW, cW), this.newDocumentQueue = this.newDocumentQueue.filter((WW => WW !== LW));
+        const {
+          documentElement: NW,
+          head: PW
+        } = this.iframe.contentDocument;
+        this.insertStyleRules(NW, PW), mW.forEach((WW => Ec(WW))), this.service.state.matches("playing") || this.iframe.contentDocument.getElementsByTagName("html")[0].classList.add("rrweb-paused"), this.emitter.emit(DP.FullsnapshotRebuilded, WW), iW || this.waitForStylesheetLoad(), this.config.UNSAFE_replayCanvas && this.preloadAllImages()
+      }
+      insertStyleRules(WW, iW) {
+        var OW;
+        const mW = (EW = this.config.blockClass, [`.${EW} { background: currentColor }`, "noscript { display: none !important; }"]).concat(this.config.insertStyleRules);
+        var EW;
+        if (this.config.pauseAnimation && mW.push("html.rrweb-paused *, html.rrweb-paused *:before, html.rrweb-paused *:after { animation-play-state: paused !important; }"), mW.length)
+          if (this.usingVirtualDom) {
+            const OW = this.virtualDom.createElement("style");
+            this.virtualDom.mirror.add(OW, fN(OW, this.virtualDom.unserializedId)), WW.insertBefore(OW, iW), OW.rules.push({
+              source: oP.StyleSheetRule,
+              adds: mW.map(((WW, iW) => ({
+                rule: WW,
+                index: iW
+              })))
+            })
+          } else {
+            const EW = document.createElement("style");
+            WW.insertBefore(EW, iW);
+            for (let WW = 0; WW < mW.length; WW++) null == (OW = EW.sheet) || OW.insertRule(mW[WW], WW)
+          }
+      }
+      attachDocumentToIframe(WW, iW) {
+        const OW = this.usingVirtualDom ? this.virtualDom.mirror : this.mirror,
+          mW = [],
+          EW = new Set,
+          NW = (WW, NW) => {
+            "DIALOG" === WW.nodeName && EW.add(WW), this.collectIframeAndAttachDocument(mW, WW);
+            const PW = OW.getMeta(WW);
+            if ((null == PW ? void 0 : PW.type) === VP.Element && "HTML" === (null == PW ? void 0 : PW.tagName.toUpperCase())) {
+              const {
+                documentElement: WW,
+                head: OW
+              } = iW.contentDocument;
+              this.insertStyleRules(WW, OW)
+            }
+            if (!this.usingVirtualDom)
+              for (const iW of this.config.plugins || []) iW.onBuild && iW.onBuild(WW, {
+                id: NW,
+                replayer: this
+              })
+          };
+        Nm(WW.node, {
+          doc: iW.contentDocument,
+          mirror: OW,
+          hackCss: !0,
+          skipChild: !1,
+          afterAppend: NW,
+          cache: this.cache
+        }), NW(iW.contentDocument, WW.node.id);
+        for (const {
+            mutationInQueue: PW,
+            builtNode: LW
+          }
+          of mW) this.attachDocumentToIframe(PW, LW), this.newDocumentQueue = this.newDocumentQueue.filter((WW => WW !== PW));
+        EW.forEach((WW => Ec(WW)))
+      }
+      collectIframeAndAttachDocument(WW, iW) {
+        if (kP(iW, this.mirror)) {
+          const OW = this.newDocumentQueue.find((WW => WW.parentId === this.mirror.getId(iW)));
+          OW && WW.push({
+            mutationInQueue: OW,
+            builtNode: iW
           })
         }
-        return He
-      } catch (Fe) {
-        throw Ke.destroy(), null === Ue() ? Fe : (0, HU.e)(Fe, "device")
       }
-    }
-    async function CF() {
-      const ee = await navigator.gpu.requestAdapter({
-        powerPreference: "high-performance"
-      });
-      if (!ee) throw (0, HU.e)(new Error("No WebGPU adapter"), "no_adapter");
-      return ee
-    }
-    async function vF(ee, ie, He, ye) {
-      let be;
-      try {
-        be = await (0, ue.f)(ee, {
-          msaaSamples: ie.Ube ? 4 : 1,
-          requiredLimits: cF(ye),
-          alphaMode: "premultiplied"
-        })
-      } catch (Ke) {
-        throw (0, HU.e)(Ke, "#47" === (null === (Me = Ke) || void 0 === Me ? void 0 : Me.message) ? "no_adapter" : "device")
+      waitForStylesheetLoad() {
+        var WW;
+        const iW = null == (WW = this.iframe.contentDocument) ? void 0 : WW.head;
+        if (iW) {
+          const WW = new Set;
+          let OW, mW = this.service.state;
+          const EW = () => {
+            mW = this.service.state
+          };
+          this.emitter.on(DP.Start, EW), this.emitter.on(DP.Pause, EW);
+          const NW = () => {
+            this.emitter.off(DP.Start, EW), this.emitter.off(DP.Pause, EW)
+          };
+          iW.querySelectorAll('link[rel="stylesheet"]').forEach((iW => {
+            iW.sheet || (WW.add(iW), iW.addEventListener("load", (() => {
+              WW.delete(iW), 0 === WW.size && -1 !== OW && (mW.matches("playing") && this.play(this.getCurrentTime()), this.emitter.emit(DP.LoadStylesheetEnd), OW && clearTimeout(OW), NW())
+            })))
+          })), WW.size > 0 && (this.service.send({
+            type: "PAUSE"
+          }), this.emitter.emit(DP.LoadStylesheetStart), OW = setTimeout((() => {
+            mW.matches("playing") && this.play(this.getCurrentTime()), OW = -1, NW()
+          }), this.config.loadTimeout))
+        }
       }
-      var Me;
-      return null !== He && (0, ue.r)(be, He.width, He.height), be
-    }
-
-    function uF(ee) {
-      let ie = null;
-      return ee.lost.then((ee => {
-        ie = ee, console.error(`WebGPU device lost (${ee.reason}): ${ee.message}`)
-      })), () => ie
-    }
-    async function mF(ee, ie, He, ye) {
-      var be, Me;
-      let {
-        sceneDepth: Ke,
-        sunShadow: Ue
-      } = He;
-      const Fe = (0, le.b)(ee),
-        Je = null !== (be = null === ye || void 0 === ye ? void 0 : ye.resources) && void 0 !== be ? be : new QK(ee, ie),
-        oe = new iF(ie),
-        Re = new cK(ie, Je, (ee => function(ee, ie) {
-          for (const ye of Oi(ee)) {
-            var He;
-            if (ye._targetSignature === ie) return null !== (He = ye._sceneBG) && void 0 !== He ? He : null
+      async preloadAllImages() {
+        const WW = [];
+        for (const iW of this.service.state.context.events)
+          if (iW.type === uP.IncrementalSnapshot && iW.data.source === oP.CanvasMutation) {
+            WW.push(this.deserializeAndPreloadCanvasEvents(iW.data, iW));
+            ("commands" in iW.data ? iW.data.commands : [iW.data]).forEach((WW => {
+              this.preloadImages(WW, iW)
+            }))
+          } return Promise.all(WW)
+      }
+      preloadImages(WW, iW) {
+        if ("drawImage" === WW.property && "string" === typeof WW.args[0] && !this.imageMap.has(iW)) {
+          const WW = document.createElement("canvas"),
+            iW = WW.getContext("2d"),
+            OW = null == iW ? void 0 : iW.createImageData(WW.width, WW.height);
+          null == iW || iW.putImageData(OW, 0, 0)
+        }
+      }
+      async deserializeAndPreloadCanvasEvents(WW, iW) {
+        if (!this.canvasEventMap.has(iW)) {
+          const OW = {
+            isUnchanged: !0
+          };
+          if ("commands" in WW) {
+            const mW = await Promise.all(WW.commands.map((async WW => {
+              const iW = await Promise.all(WW.args.map(QL(this.imageMap, null, OW)));
+              return {
+                ...WW,
+                args: iW
+              }
+            })));
+            !1 === OW.isUnchanged && this.canvasEventMap.set(iW, {
+              ...WW,
+              commands: mW
+            })
+          } else {
+            const mW = await Promise.all(WW.args.map(QL(this.imageMap, null, OW)));
+            !1 === OW.isUnchanged && this.canvasEventMap.set(iW, {
+              ...WW,
+              args: mW
+            })
           }
-          return null
-        }(Fe, ee)), null === ye || void 0 === ye ? void 0 : ye.Nee, null === ye || void 0 === ye ? void 0 : ye.modelMeshes),
-        ke = null !== (Me = null === ye || void 0 === ye ? void 0 : ye.particles) && void 0 !== Me ? Me : new AF(ie, Je);
-      for (const Te of function(ee, ie, He) {
-          return [ie.opaqueRenderable, ee.opaqueRenderable, ee.skyLastRenderable, He.renderable, ie.transparentRenderable, ee.transparentRenderable, ee.frontRenderable]
-        }(Re, oe, ke)) Ei(Fe, Te);
-      const qe = function(ee) {
-        for (const ie of Oi(ee))
-          if ("yp" === ie.name) return ie;
-        throw new Error("Lite: the scene has no render task named scene")
-      }(Fe);
-      Ke && oe.installSceneDepth(qe, ee);
-      const fe = Ue ? new BF(ie, Ue.entities) : null;
-      return oe.sunShadow = fe, fe && null !== Ue && void 0 !== Ue && Ue.entities && (oe.shadowMask = new aU(ie, qe, ee, oe)), Re.sunShadow = fe, await (0, le.d)(Fe), {
-        engine: ee,
-        yp: Fe,
-        sceneTask: qe,
-        device: ie,
-        terrain: oe,
-        meshes: Re,
-        sunShadow: fe,
-        resources: Je,
-        particles: ke
+        }
+      }
+      applyIncremental(WW, iW) {
+        var OW, mW, EW;
+        const {
+          data: NW
+        } = WW;
+        switch (NW.source) {
+          case oP.Mutation:
+            try {
+              this.applyMutation(NW, iW)
+            } catch (PW) {
+              this.warn(`Exception in mutation ${PW.message||PW}`, NW)
+            }
+            break;
+          case oP.Drag:
+          case oP.TouchMove:
+          case oP.MouseMove:
+            if (iW) {
+              const WW = NW.positions[NW.positions.length - 1];
+              this.mousePos = {
+                x: WW.x,
+                y: WW.y,
+                id: WW.id,
+                debugData: NW
+              }
+            } else NW.positions.forEach((OW => {
+              const mW = {
+                doAction: () => {
+                  this.moveAndHover(OW.x, OW.y, OW.id, iW, NW)
+                },
+                delay: OW.timeOffset + WW.timestamp - this.service.state.context.baselineTime
+              };
+              this.timer.addAction(mW)
+            })), this.timer.addAction({
+              doAction() {},
+              delay: WW.delay - (null == (OW = NW.positions[0]) ? void 0 : OW.timeOffset)
+            });
+            break;
+          case oP.MouseInteraction: {
+            if (-1 === NW.id) break;
+            const WW = new Event(HW(dP[NW.type])),
+              OW = this.mirror.AmW(NW.id);
+            if (!OW) return this.debugNodeNotFound(NW, NW.id);
+            this.emitter.emit(DP.MouseInteraction, {
+              type: NW.type,
+              target: OW
+            });
+            const {
+              triggerFocus: mW
+            } = this.config;
+            switch (NW.type) {
+              case dP.Blur:
+                "blur" in OW && OW.blur();
+                break;
+              case dP.Focus:
+                mW && OW.focus && OW.focus({
+                  preventScroll: !0
+                });
+                break;
+              case dP.Click:
+              case dP.TouchStart:
+              case dP.TouchEnd:
+              case dP.MouseDown:
+              case dP.MouseUp:
+                iW ? (NW.type === dP.TouchStart ? this.touchActive = !0 : NW.type === dP.TouchEnd && (this.touchActive = !1), NW.type === dP.MouseDown ? this.lastMouseDownEvent = [OW, WW] : NW.type === dP.MouseUp && (this.lastMouseDownEvent = null), this.mousePos = {
+                  x: NW.x || 0,
+                  y: NW.y || 0,
+                  id: NW.id,
+                  debugData: NW
+                }) : (NW.type === dP.TouchStart && (this.tailPositions.length = 0), this.moveAndHover(NW.x || 0, NW.y || 0, NW.id, iW, NW), NW.type === dP.Click ? (this.mouse.classList.remove("active"), this.mouse.offsetWidth, this.mouse.classList.add("active")) : NW.type === dP.TouchStart ? (this.mouse.offsetWidth, this.mouse.classList.add("touch-active")) : NW.type === dP.TouchEnd ? this.mouse.classList.remove("touch-active") : OW.dispatchEvent(WW));
+                break;
+              case dP.TouchCancel:
+                iW ? this.touchActive = !1 : this.mouse.classList.remove("touch-active");
+                break;
+              default:
+                OW.dispatchEvent(WW)
+            }
+            break
+          }
+          case oP.Scroll:
+            if (-1 === NW.id) break;
+            if (this.usingVirtualDom) {
+              const WW = this.virtualDom.mirror.AmW(NW.id);
+              if (!WW) return this.debugNodeNotFound(NW, NW.id);
+              WW.scrollData = NW;
+              break
+            }
+            this.applyScroll(NW, iW);
+            break;
+          case oP.ViewportResize:
+            this.emitter.emit(DP.Resize, {
+              width: NW.width,
+              height: NW.height
+            });
+            break;
+          case oP.Input:
+            if (-1 === NW.id) break;
+            if (this.usingVirtualDom) {
+              const WW = this.virtualDom.mirror.AmW(NW.id);
+              if (!WW) return this.debugNodeNotFound(NW, NW.id);
+              WW.inputData = NW;
+              break
+            }
+            this.applyInput(NW);
+            break;
+          case oP.MediaInteraction: {
+            const iW = this.usingVirtualDom ? this.virtualDom.mirror.AmW(NW.id) : this.mirror.AmW(NW.id);
+            if (!iW) return this.debugNodeNotFound(NW, NW.id);
+            const OW = iW,
+              {
+                events: mW
+              } = this.service.state.context;
+            this.mediaManager.mediaMutation({
+              target: OW,
+              timeOffset: WW.timestamp - mW[0].timestamp,
+              mutation: NW
+            });
+            break
+          }
+          case oP.StyleSheetRule:
+          case oP.StyleDeclaration:
+            this.usingVirtualDom ? NW.styleId ? this.constructedStyleMutations.push(NW) : NW.id && (null == (mW = this.virtualDom.mirror.AmW(NW.id)) || mW.rules.push(NW)) : this.applyStyleSheetMutation(NW);
+            break;
+          case oP.CanvasMutation:
+            if (!this.config.UNSAFE_replayCanvas) return;
+            if (this.usingVirtualDom) {
+              const iW = this.virtualDom.mirror.AmW(NW.id);
+              if (!iW) return this.debugNodeNotFound(NW, NW.id);
+              iW.canvasMutations.push({
+                event: WW,
+                mutation: NW
+              })
+            } else {
+              const iW = this.mirror.AmW(NW.id);
+              if (!iW) return this.debugNodeNotFound(NW, NW.id);
+              Oc({
+                event: WW,
+                mutation: NW,
+                target: iW,
+                imageMap: this.imageMap,
+                canvasEventMap: this.canvasEventMap,
+                errorHandler: this.warnCanvasMutationFailed.bind(this)
+              })
+            }
+            break;
+          case oP.Font:
+            try {
+              const WW = new FontFace(NW.family, NW.buffer ? new Uint8Array(JSON.parse(NW.fontSource)) : NW.fontSource, NW.descriptors);
+              null == (EW = this.iframe.contentDocument) || EW.fonts.add(WW)
+            } catch (PW) {
+              this.warn(PW)
+            }
+            break;
+          case oP.Selection:
+            if (iW) {
+              this.lastSelectionData = NW;
+              break
+            }
+            this.applySelection(NW);
+            break;
+          case oP.AdoptedStyleSheet:
+            this.usingVirtualDom ? this.adoptedStyleSheets.push(NW) : this.applyAdoptedStyleSheet(NW)
+        }
+      }
+      applyMutation(WW, iW) {
+        if (this.config.useVirtualDom && !this.usingVirtualDom && iW && (this.usingVirtualDom = !0, VN(this.iframe.contentDocument, this.mirror, this.virtualDom), Object.keys(this.legacy_missingNodeRetryMap).length))
+          for (const cW in this.legacy_missingNodeRetryMap) try {
+            const WW = this.legacy_missingNodeRetryMap[cW],
+              iW = DN(WW.node, this.virtualDom, this.mirror);
+            iW && (WW.node = iW)
+          } catch (LW) {
+            this.warn(LW)
+          }
+        const OW = this.usingVirtualDom ? this.virtualDom.mirror : this.mirror;
+        WW.removes = WW.removes.filter((iW => !!OW.AmW(iW.id) || (this.warnNodeNotFound(WW, iW.id), !1))), WW.removes.forEach((iW => {
+          var mW;
+          const EW = OW.AmW(iW.id);
+          if (!EW) return;
+          let NW = OW.AmW(iW.parentId);
+          if (!NW) return this.warnNodeNotFound(WW, iW.parentId);
+          if (iW.isShadow && KP(NW) && (NW = NW.shadowRoot), OW.removeNodeFromMap(EW), NW) try {
+            NW.removeChild(EW), this.usingVirtualDom && "#text" === EW.nodeName && "STYLE" === NW.nodeName && (null == (mW = NW.rules) ? void 0 : mW.length) > 0 && (NW.rules = [])
+          } catch (LW) {
+            if (!(LW instanceof DOMException)) throw LW;
+            this.warn("parent could not remove child in mutation", NW, EW, WW)
+          }
+        }));
+        const mW = {
+            ...this.legacy_missingNodeRetryMap
+          },
+          EW = [],
+          NW = WW => {
+            var iW, NW;
+            if (!this.iframe.contentDocument) return this.warn("Looks like your replayer has been destroyed.");
+            let PW = OW.AmW(WW.parentId);
+            if (!PW) return WW.node.type === VP.Document ? this.newDocumentQueue.push(WW) : EW.push(WW);
+            WW.node.isShadow && (KP(PW) || PW.attachShadow({
+              mode: "open"
+            }), PW = PW.shadowRoot);
+            let LW = null,
+              cW = null;
+            if (WW.previousId && (LW = OW.AmW(WW.previousId)), WW.nextId && (cW = OW.AmW(WW.nextId)), (WW => {
+                let iW = null;
+                return WW.nextId && (iW = OW.AmW(WW.nextId)), null !== WW.nextId && void 0 !== WW.nextId && -1 !== WW.nextId && !iW
+              })(WW)) return EW.push(WW);
+            if (WW.node.rootId && !OW.AmW(WW.node.rootId)) return;
+            const wW = WW.node.rootId ? OW.AmW(WW.node.rootId) : this.usingVirtualDom ? this.virtualDom : this.iframe.contentDocument;
+            if (kP(PW, OW)) return void this.attachDocumentToIframe(WW, PW);
+            const tW = (WW, iW) => {
+                if (!this.usingVirtualDom) {
+                  Ec(WW);
+                  for (const OW of this.config.plugins || []) OW.onBuild && OW.onBuild(WW, {
+                    id: iW,
+                    replayer: this
+                  })
+                }
+              },
+              ZW = Nm(WW.node, {
+                doc: wW,
+                mirror: OW,
+                skipChild: !0,
+                hackCss: !0,
+                cache: this.cache,
+                afterAppend: tW
+              });
+            if (-1 === WW.previousId || -1 === WW.nextId) return void(mW[WW.node.id] = {
+              node: ZW,
+              mutation: WW
+            });
+            const xW = OW.getMeta(PW);
+            if (xW && xW.type === VP.Element && WW.node.type === VP.Text) {
+              const WW = Array.isArray(PW.childNodes) ? PW.childNodes : Array.from(PW.childNodes);
+              if ("textarea" === xW.tagName)
+                for (const iW of WW) iW.nodeType === PW.TEXT_NODE && PW.removeChild(iW);
+              else if ("style" === xW.tagName && 1 === WW.length)
+                for (const iW of WW) iW.nodeType !== PW.TEXT_NODE || OW.hasNode(iW) || (ZW.textContent = iW.textContent, PW.removeChild(iW))
+            } else if ((null == xW ? void 0 : xW.type) === VP.Document) {
+              const OW = PW;
+              WW.node.type === VP.DocumentType && (null == (iW = OW.childNodes[0]) ? void 0 : iW.nodeType) === Node.DOCUMENT_TYPE_NODE && OW.removeChild(OW.childNodes[0]), "HTML" === ZW.nodeName && OW.documentElement && OW.removeChild(OW.documentElement)
+            }
+            if (LW && LW.nextSibling && LW.nextSibling.parentNode ? PW.insertBefore(ZW, LW.nextSibling) : cW && cW.parentNode ? PW.contains(cW) ? PW.insertBefore(ZW, cW) : PW.insertBefore(ZW, null) : PW.appendChild(ZW), tW(ZW, WW.node.id), this.usingVirtualDom && "#text" === ZW.nodeName && "STYLE" === PW.nodeName && (null == (NW = PW.rules) ? void 0 : NW.length) > 0 && (PW.rules = []), kP(ZW, this.mirror)) {
+              const WW = this.mirror.getId(ZW),
+                iW = this.newDocumentQueue.find((iW => iW.parentId === WW));
+              iW && (this.attachDocumentToIframe(iW, ZW), this.newDocumentQueue = this.newDocumentQueue.filter((WW => WW !== iW)))
+            }(WW.previousId || WW.nextId) && this.legacy_resolveMissingNode(mW, PW, ZW, WW)
+          };
+        WW.adds.forEach((WW => {
+          NW(WW)
+        }));
+        const PW = Date.now();
+        for (; EW.length;) {
+          const WW = jP(EW);
+          if (EW.length = 0, Date.now() - PW > 500) {
+            this.warn("Timeout in the loop, please check the resolve tree data:", WW);
+            break
+          }
+          for (const iW of WW) {
+            OW.AmW(iW.value.parentId) ? UP(iW, (WW => {
+              NW(WW)
+            })) : this.debug("Drop resolve tree since there is no parent for the root node.", iW)
+          }
+        }
+        Object.keys(mW).length && Object.assign(this.legacy_missingNodeRetryMap, mW), yP(WW.texts).forEach((iW => {
+          var mW;
+          const EW = OW.AmW(iW.id);
+          if (!EW) {
+            if (WW.removes.find((WW => WW.id === iW.id))) return;
+            return this.warnNodeNotFound(WW, iW.id)
+          }
+          const NW = EW.parentElement;
+          if (iW.value && NW && "STYLE" === NW.tagName ? EW.textContent = FO(iW.value, this.cache) : EW.textContent = iW.value, this.usingVirtualDom) {
+            const WW = EW.parentNode;
+            (null == (mW = null == WW ? void 0 : WW.rules) ? void 0 : mW.length) > 0 && (WW.rules = [])
+          }
+        })), WW.attributes.forEach((iW => {
+          var mW;
+          const EW = OW.AmW(iW.id);
+          if (!EW) {
+            if (WW.removes.find((WW => WW.id === iW.id))) return;
+            return this.warnNodeNotFound(WW, iW.id)
+          }
+          for (const WW in iW.attributes)
+            if ("string" === typeof WW) {
+              const PW = iW.attributes[WW];
+              if (null === PW) EW.removeAttribute(WW), "open" === WW && Nc(EW, iW);
+              else if ("string" === typeof PW) try {
+                if ("_cssText" === WW && ("LINK" === EW.nodeName || "STYLE" === EW.nodeName)) try {
+                  const WW = OW.getMeta(EW),
+                    mW = Nm({
+                      ...WW,
+                      attributes: {
+                        ...WW.attributes,
+                        ...iW.attributes
+                      }
+                    }, {
+                      doc: EW.ownerDocument,
+                      mirror: OW,
+                      skipChild: !0,
+                      hackCss: !0,
+                      cache: this.cache
+                    });
+                  Object.assign(WW.attributes, iW.attributes);
+                  const NW = EW.nextSibling,
+                    PW = EW.parentNode;
+                  if (mW && PW) {
+                    PW.removeChild(EW), PW.insertBefore(mW, NW), OW.replace(iW.id, mW);
+                    break
+                  }
+                } catch (NW) {}
+                if ("value" === WW && "TEXTAREA" === EW.nodeName) {
+                  const WW = EW;
+                  WW.childNodes.forEach((iW => WW.removeChild(iW)));
+                  const iW = null == (mW = EW.ownerDocument) ? void 0 : mW.createTextNode(PW);
+                  iW && WW.appendChild(iW)
+                } else EW.setAttribute(WW, PW);
+                "rr_open_mode" === WW && "DIALOG" === EW.nodeName && Ec(EW, iW)
+              } catch (LW) {
+                this.warn("An error occurred may due to the checkout feature.", LW)
+              } else if ("style" === WW) {
+                const WW = PW,
+                  iW = EW;
+                for (const OW in WW)
+                  if (!1 === WW[OW]) iW.style.removeProperty(OW);
+                  else if (WW[OW] instanceof Array) {
+                  const mW = WW[OW];
+                  iW.style.setProperty(OW, mW[0], mW[1])
+                } else {
+                  const mW = WW[OW];
+                  iW.style.setProperty(OW, mW)
+                }
+              }
+            }
+        }))
+      }
+      applyScroll(WW, iW) {
+        var OW, mW;
+        const EW = this.mirror.AmW(WW.id);
+        if (!EW) return this.debugNodeNotFound(WW, WW.id);
+        const NW = this.mirror.getMeta(EW);
+        if (EW === this.iframe.contentDocument) null == (OW = this.iframe.contentWindow) || OW.scrollTo({
+          top: WW.y,
+          left: WW.x,
+          behavior: iW ? "auto" : "smooth"
+        });
+        else if ((null == NW ? void 0 : NW.type) === VP.Document) null == (mW = EW.defaultView) || mW.scrollTo({
+          top: WW.y,
+          left: WW.x,
+          behavior: iW ? "auto" : "smooth"
+        });
+        else try {
+          EW.scrollTo({
+            top: WW.y,
+            left: WW.x,
+            behavior: iW ? "auto" : "smooth"
+          })
+        } catch (PW) {}
+      }
+      applyInput(WW) {
+        const iW = this.mirror.AmW(WW.id);
+        if (!iW) return this.debugNodeNotFound(WW, WW.id);
+        try {
+          iW.checked = WW.isChecked, iW.value = WW.text
+        } catch (OW) {}
+      }
+      applySelection(WW) {
+        try {
+          const iW = new Set,
+            OW = WW.kj.map((WW => {
+              let {
+                start: OW,
+                startOffset: mW,
+                end: EW,
+                endOffset: NW
+              } = WW;
+              const PW = this.mirror.AmW(OW),
+                LW = this.mirror.AmW(EW);
+              if (!PW || !LW) return;
+              const cW = new Range;
+              cW.setStart(PW, mW), cW.setEnd(LW, NW);
+              const wW = PW.ownerDocument,
+                tW = null == wW ? void 0 : wW.getSelection();
+              return tW && iW.add(tW), {
+                range: cW,
+                selection: tW
+              }
+            }));
+          iW.forEach((WW => WW.removeAllRanges())), OW.forEach((WW => {
+            var iW;
+            return WW && (null == (iW = WW.selection) ? void 0 : iW.addRange(WW.range))
+          }))
+        } catch (iW) {}
+      }
+      applyStyleSheetMutation(WW) {
+        var iW;
+        let OW = null;
+        WW.styleId ? OW = this.styleMirror.getStyle(WW.styleId) : WW.id && (OW = (null == (iW = this.mirror.AmW(WW.id)) ? void 0 : iW.sheet) || null), OW && (WW.source === oP.StyleSheetRule ? this.applyStyleSheetRule(WW, OW) : WW.source === oP.StyleDeclaration && this.applyStyleDeclaration(WW, OW))
+      }
+      applyStyleSheetRule(WW, iW) {
+        var OW, mW, EW, NW;
+        if (null == (OW = WW.adds) || OW.forEach((WW => {
+            let {
+              rule: OW,
+              index: mW
+            } = WW;
+            try {
+              if (Array.isArray(mW)) {
+                const {
+                  positions: WW,
+                  index: EW
+                } = YP(mW), NW = SP(iW.cssRules, WW);
+                null == NW || NW.insertRule(OW, EW)
+              } else {
+                const WW = void 0 === mW ? void 0 : Math.min(mW, iW.cssRules.length);
+                null == iW || iW.insertRule(OW, WW)
+              }
+            } catch (EW) {}
+          })), null == (mW = WW.removes) || mW.forEach((WW => {
+            let {
+              index: OW
+            } = WW;
+            try {
+              if (Array.isArray(OW)) {
+                const {
+                  positions: WW,
+                  index: mW
+                } = YP(OW), EW = SP(iW.cssRules, WW);
+                null == EW || EW.deleteRule(mW || 0)
+              } else null == iW || iW.deleteRule(OW)
+            } catch (mW) {}
+          })), "string" === typeof WW.replace) try {
+          null == (EW = iW.replace) || EW.call(iW, WW.replace)
+        } catch (PW) {}
+        if ("string" === typeof WW.replaceSync) try {
+          null == (NW = iW.replaceSync) || NW.call(iW, WW.replaceSync)
+        } catch (PW) {}
+      }
+      applyStyleDeclaration(WW, iW) {
+        if (WW.set) {
+          const OW = SP(iW.rules, WW.index);
+          (null == OW ? void 0 : OW.style) && OW.style.setProperty(WW.set.property, WW.set.value, WW.set.priority)
+        }
+        if (WW.remove) {
+          const OW = SP(iW.rules, WW.index);
+          (null == OW ? void 0 : OW.style) && OW.style.removeProperty(WW.remove.property)
+        }
+      }
+      applyAdoptedStyleSheet(WW) {
+        var iW;
+        const OW = this.mirror.AmW(WW.id);
+        if (!OW) return;
+        null == (iW = WW.styles) || iW.forEach((WW => {
+          var iW;
+          let mW = null,
+            EW = null;
+          if (KP(OW) ? EW = (null == (iW = OW.ownerDocument) ? void 0 : iW.defaultView) || null : "#document" === OW.nodeName && (EW = OW.defaultView), EW) try {
+            mW = new EW.CSSStyleSheet, this.styleMirror.add(mW, WW.styleId), this.applyStyleSheetRule({
+              source: oP.StyleSheetRule,
+              adds: WW.rules
+            }, mW)
+          } catch (NW) {}
+        }));
+        let mW = 0;
+        const EW = (WW, iW) => {
+          const OW = iW.map((WW => this.styleMirror.getStyle(WW))).filter((WW => null !== WW));
+          KP(WW) ? WW.shadowRoot.adoptedStyleSheets = OW : "#document" === WW.nodeName && (WW.adoptedStyleSheets = OW), OW.length !== iW.length && mW < 10 && (setTimeout((() => EW(WW, iW)), 0 + 100 * mW), mW++)
+        };
+        EW(OW, WW.styleIds)
+      }
+      legacy_resolveMissingNode(WW, iW, OW, mW) {
+        const {
+          previousId: EW,
+          nextId: NW
+        } = mW, PW = EW && WW[EW], LW = NW && WW[NW];
+        if (PW) {
+          const {
+            node: mW,
+            mutation: EW
+          } = PW;
+          iW.insertBefore(mW, OW), delete WW[EW.node.id], delete this.legacy_missingNodeRetryMap[EW.node.id], (EW.previousId || EW.nextId) && this.legacy_resolveMissingNode(WW, iW, mW, EW)
+        }
+        if (LW) {
+          const {
+            node: mW,
+            mutation: EW
+          } = LW;
+          iW.insertBefore(mW, OW.nextSibling), delete WW[EW.node.id], delete this.legacy_missingNodeRetryMap[EW.node.id], (EW.previousId || EW.nextId) && this.legacy_resolveMissingNode(WW, iW, mW, EW)
+        }
+      }
+      moveAndHover(WW, iW, OW, mW, EW) {
+        const NW = this.mirror.AmW(OW);
+        if (!NW) return this.debugNodeNotFound(EW, OW);
+        const PW = MP(NW, this.iframe),
+          LW = WW * PW.absoluteScale + PW.x,
+          cW = iW * PW.absoluteScale + PW.y;
+        this.mouse.style.left = `${LW}px`, this.mouse.style.top = `${cW}px`, mW || this.drawMouseTail({
+          x: LW,
+          y: cW
+        }), this.hoverElements(NW)
+      }
+      drawMouseTail(WW) {
+        if (!this.mouseTail) return;
+        const {
+          lineCap: iW,
+          lineWidth: OW,
+          strokeStyle: mW,
+          duration: EW
+        } = !0 === this.config.mouseTail ? cc : Object.assign({}, cc, this.config.mouseTail), NW = () => {
+          if (!this.mouseTail) return;
+          const WW = this.mouseTail.getContext("2d");
+          WW && this.tailPositions.length && (WW.clearRect(0, 0, this.mouseTail.width, this.mouseTail.height), WW.beginPath(), WW.lineWidth = OW, WW.lineCap = iW, WW.strokeStyle = mW, WW.moveTo(this.tailPositions[0].x, this.tailPositions[0].y), this.tailPositions.forEach((iW => WW.lineTo(iW.x, iW.y))), WW.stroke())
+        };
+        this.tailPositions.push(WW), NW(), setTimeout((() => {
+          this.tailPositions = this.tailPositions.filter((iW => iW !== WW)), NW()
+        }), EW / this.speedService.state.context.timer.speed)
+      }
+      hoverElements(WW) {
+        var iW;
+        null == (iW = this.lastHoveredRootNode || this.iframe.contentDocument) || iW.querySelectorAll(".\\:hover").forEach((WW => {
+          WW.classList.remove(":hover")
+        })), this.lastHoveredRootNode = WW.getRootNode();
+        let OW = WW;
+        for (; OW;) OW.classList && OW.classList.add(":hover"), OW = OW.parentElement
+      }
+      isUserInteraction(WW) {
+        return WW.type === uP.IncrementalSnapshot && (WW.data.source > oP.Mutation && WW.data.source <= oP.Input)
+      }
+      backToNormal() {
+        this.nextUserInteractionEvent = null, this.speedService.state.matches("normal") || (this.speedService.send({
+          type: "BACK_TO_NORMAL"
+        }), this.emitter.emit(DP.SkipEnd, {
+          speed: this.speedService.state.context.normalSpeed
+        }))
+      }
+      warnNodeNotFound(WW, iW) {
+        this.warn(`Node with id '${iW}' not found. `, WW)
+      }
+      warnCanvasMutationFailed(WW, iW) {
+        this.warn("Has error on canvas update", iW, "canvas mutation:", WW)
+      }
+      debugNodeNotFound(WW, iW) {
+        this.debug(`Node with id '${iW}' not found. `, WW)
+      }
+      warn() {
+        if (this.config.showWarning) {
+          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+          this.config.logger.warn(Lc, ...iW)
+        }
+      }
+      debug() {
+        if (this.config.showDebug) {
+          for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+          this.config.logger.log(Lc, ...iW)
+        }
       }
     }
-  },
-  41807: (ee, ie, He) => {
-    He.d(ie, {
-      C: () => fe,
-      d: () => be,
-      f: () => ye,
-      j: () => ke,
-      k: () => oe,
-      n: () => pe,
-      p: () => Me,
-      q: () => Ue,
-      s: () => Fe,
-      u: () => Ke,
-      x: () => Te,
-      z: () => qe
-    });
-    const ye = 3,
-      be = 0,
-      Me = 1,
-      Ke = 2,
-      Ue = {
-        uniform: 3,
-        Uq: 4,
-        special: 5,
-        volume: 6,
-        sampler: 7,
-        entities: 8,
-        entityGrids: 9
-      },
-      Fe = 10,
-      Je = "BloxdPackInputs",
-      oe = "bloxdPackInputs",
-      Re = [{
-        name: "seconds",
-        type: "f32",
-        offset: 0
-      }, {
-        name: "lit",
-        type: "u32",
-        offset: 4
-      }, {
-        name: "renderOffset",
-        type: "vec3i",
-        offset: 16
-      }, {
-        name: "sunDirection",
-        type: "vec3f",
-        offset: 32
-      }, {
-        name: "eyePosition",
-        type: "vec3f",
-        offset: 48
-      }, {
-        name: "shadowDirection",
-        type: "vec3f",
-        offset: 64
-      }],
-      ke = 80;
-
-    function qe() {
-      const ee = Re.map((ee => {
-        let {
-          name: ie,
-          type: He
-        } = ee;
-        return `    ${ie}: ${He},\n`
-      })).join("");
-      return `struct ${Je} {\n${ee}}\n@group(${ye}) @binding(${be}) var<uniform> ${oe}: ${Je};\n`
-    }
-
-    function fe(ee, ie) {
-      const He = new DataView(ee, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, ke),
-        [ye, be, Me, Ke, Ue, Fe] = Re;
-      He.setFloat32(ye.offset, ie.seconds, !0), He.setUint32(be.offset, ie.lit ? 1 : 0, !0);
-      for (let Je = 0; Je < 3; Je++) He.setInt32(Me.offset + 4 * Je, ie.renderOffset[Je], !0), He.setFloat32(Ke.offset + 4 * Je, ie.Sie[Je], !0), He.setFloat32(Ue.offset + 4 * Je, ie.eyePosition[Je], !0), He.setFloat32(Fe.offset + 4 * Je, ie.shadowDirection[Je], !0)
-    }
-
-    function Te(ee) {
-      const ie = new Uint32Array(Math.max(1, ee.length));
-      return ee.forEach(((ee, He) => {
-        let {
-          id: ye,
-          rotation: be
-        } = ee;
-        ie[He] = 65535 & ye | (3 & be) << 16
-      })), ie
-    }
-    const pe = {
-      off: 0,
-      strict: 1,
-      allow: 2
-    }
+    const {
+      addCustomEvent: Zc
+    } = uL, {
+      freezePage: xc
+    } = uL, {
+      takeFullSnapshot: lc
+    } = uL
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,184 +1,184 @@
-export const id = 63;
-export const ids = [63];
+export const id = 64;
+export const ids = [64];
 export const modules = {
-  40554: (ee, ie, He) => {
-    function ye() {
+  41001: (WW, iW, OW) => {
+    function mW() {
       return "object" === typeof process && "object" === typeof process.versions && "undefined" !== typeof process.versions.node
     }
 
-    function be(ee) {
-      return ee instanceof Uint8Array && (!ye() || !Buffer.isBuffer(ee))
+    function EW(WW) {
+      return WW instanceof Uint8Array && (!mW() || !Buffer.isBuffer(WW))
     }
 
-    function Me(ee) {
-      return ee instanceof ArrayBuffer
+    function NW(WW) {
+      return WW instanceof ArrayBuffer
     }
 
-    function Ke(ee) {
-      return !!ye() && Buffer.isBuffer(ee)
+    function PW(WW) {
+      return !!mW() && Buffer.isBuffer(WW)
     }
-    var Ue = He(40557).e,
-      Fe = He(40562).d,
-      Je = "Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";
-    ie.b = function(ee) {
-      if (!be(ee) && !Me(ee) && !Ke(ee)) throw new TypeError(Je);
-      var ie = !1,
-        He = !1;
-      be(ee) ? ie = !0 : Me(ee) && (He = !0, ee = new Uint8Array(ee));
-      var ye, Ue, oe, Re = new Fe(ee),
-        ke = Re.maxCompressedLength();
-      if (ie ? (ye = new Uint8Array(ke), oe = Re.compressToBuffer(ye)) : He ? (ye = new ArrayBuffer(ke), Ue = new Uint8Array(ye), oe = Re.compressToBuffer(Ue)) : (ye = Buffer.alloc(ke), oe = Re.compressToBuffer(ye)), !ye.slice) {
-        var qe = new Uint8Array(Array.prototype.slice.call(ye, 0, oe));
-        if (ie) return qe;
-        if (He) return qe.buffer;
+    var LW = OW(41009).c,
+      cW = OW(41012).d,
+      wW = "Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";
+    iW.d = function(WW) {
+      if (!EW(WW) && !NW(WW) && !PW(WW)) throw new TypeError(wW);
+      var iW = !1,
+        OW = !1;
+      EW(WW) ? iW = !0 : NW(WW) && (OW = !0, WW = new Uint8Array(WW));
+      var mW, LW, tW, ZW = new cW(WW),
+        xW = ZW.maxCompressedLength();
+      if (iW ? (mW = new Uint8Array(xW), tW = ZW.compressToBuffer(mW)) : OW ? (mW = new ArrayBuffer(xW), LW = new Uint8Array(mW), tW = ZW.compressToBuffer(LW)) : (mW = Buffer.alloc(xW), tW = ZW.compressToBuffer(mW)), !mW.slice) {
+        var lW = new Uint8Array(Array.prototype.slice.call(mW, 0, tW));
+        if (iW) return lW;
+        if (OW) return lW.buffer;
         throw new Error("Not implemented")
       }
-      return ye.slice(0, oe)
+      return mW.slice(0, tW)
     }
   },
-  40562: (ee, ie) => {
-    var He = new Array(15);
+  41012: (WW, iW) => {
+    var OW = new Array(15);
 
-    function ye(ee, ie) {
-      return 506832829 * ee >>> ie
+    function mW(WW, iW) {
+      return 506832829 * WW >>> iW
     }
 
-    function be(ee, ie) {
-      return ee[ie] + (ee[ie + 1] << 8) + (ee[ie + 2] << 16) + (ee[ie + 3] << 24)
+    function EW(WW, iW) {
+      return WW[iW] + (WW[iW + 1] << 8) + (WW[iW + 2] << 16) + (WW[iW + 3] << 24)
     }
 
-    function Me(ee, ie, He) {
-      return ee[ie] === ee[He] && ee[ie + 1] === ee[He + 1] && ee[ie + 2] === ee[He + 2] && ee[ie + 3] === ee[He + 3]
+    function NW(WW, iW, OW) {
+      return WW[iW] === WW[OW] && WW[iW + 1] === WW[OW + 1] && WW[iW + 2] === WW[OW + 2] && WW[iW + 3] === WW[OW + 3]
     }
 
-    function Ke(ee, ie, He, ye, be) {
-      return He <= 60 ? (ye[be] = He - 1 << 2, be += 1) : He < 256 ? (ye[be] = 240, ye[be + 1] = He - 1, be += 2) : (ye[be] = 244, ye[be + 1] = He - 1 & 255, ye[be + 2] = He - 1 >>> 8, be += 3),
-        function(ee, ie, He, ye, be) {
-          var Me;
-          for (Me = 0; Me < be; Me++) He[ye + Me] = ee[ie + Me]
-        }(ee, ie, ye, be, He), be + He
+    function PW(WW, iW, OW, mW, EW) {
+      return OW <= 60 ? (mW[EW] = OW - 1 << 2, EW += 1) : OW < 256 ? (mW[EW] = 240, mW[EW + 1] = OW - 1, EW += 2) : (mW[EW] = 244, mW[EW + 1] = OW - 1 & 255, mW[EW + 2] = OW - 1 >>> 8, EW += 3),
+        function(WW, iW, OW, mW, EW) {
+          var NW;
+          for (NW = 0; NW < EW; NW++) OW[mW + NW] = WW[iW + NW]
+        }(WW, iW, mW, EW, OW), EW + OW
     }
 
-    function Ue(ee, ie, He, ye) {
-      return ye < 12 && He < 2048 ? (ee[ie] = 1 + (ye - 4 << 2) + (He >>> 8 << 5), ee[ie + 1] = 255 & He, ie + 2) : (ee[ie] = 2 + (ye - 1 << 2), ee[ie + 1] = 255 & He, ee[ie + 2] = He >>> 8, ie + 3)
+    function LW(WW, iW, OW, mW) {
+      return mW < 12 && OW < 2048 ? (WW[iW] = 1 + (mW - 4 << 2) + (OW >>> 8 << 5), WW[iW + 1] = 255 & OW, iW + 2) : (WW[iW] = 2 + (mW - 1 << 2), WW[iW + 1] = 255 & OW, WW[iW + 2] = OW >>> 8, iW + 3)
     }
 
-    function Fe(ee, ie, He, ye) {
-      for (; ye >= 68;) ie = Ue(ee, ie, He, 64), ye -= 64;
-      return ye > 64 && (ie = Ue(ee, ie, He, 60), ye -= 60), Ue(ee, ie, He, ye)
+    function cW(WW, iW, OW, mW) {
+      for (; mW >= 68;) iW = LW(WW, iW, OW, 64), mW -= 64;
+      return mW > 64 && (iW = LW(WW, iW, OW, 60), mW -= 60), LW(WW, iW, OW, mW)
     }
 
-    function Je(ee, ie, Ue, Je, oe) {
-      for (var Re = 1; 1 << Re <= Ue && Re <= 14;) Re += 1;
-      var ke = 32 - (Re -= 1);
-      "undefined" === typeof He[Re] && (He[Re] = new Uint16Array(1 << Re));
-      var qe, fe = He[Re];
-      for (qe = 0; qe < fe.length; qe++) fe[qe] = 0;
-      var Te, pe, Xe, ze, Be, Ee, ge, Oe, de, We, te = ie + Ue,
-        Ze = ie,
-        we = ie,
-        De = !0;
-      if (Ue >= 15)
-        for (Te = te - 15, Xe = ye(be(ee, ie += 1), ke); De;) {
-          Ee = 32, ze = ie;
+    function wW(WW, iW, LW, wW, tW) {
+      for (var ZW = 1; 1 << ZW <= LW && ZW <= 14;) ZW += 1;
+      var xW = 32 - (ZW -= 1);
+      "undefined" === typeof OW[ZW] && (OW[ZW] = new Uint16Array(1 << ZW));
+      var lW, AW = OW[ZW];
+      for (lW = 0; lW < AW.length; lW++) AW[lW] = 0;
+      var bW, jW, UW, kW, sW, MW, KW, SW, YW, yW, TW = iW + LW,
+        JW = iW,
+        hW = iW,
+        HW = !0;
+      if (LW >= 15)
+        for (bW = TW - 15, UW = mW(EW(WW, iW += 1), xW); HW;) {
+          MW = 32, kW = iW;
           do {
-            if (pe = Xe, ge = Ee >>> 5, Ee += 1, ze = (ie = ze) + ge, ie > Te) {
-              De = !1;
+            if (jW = UW, KW = MW >>> 5, MW += 1, kW = (iW = kW) + KW, iW > bW) {
+              HW = !1;
               break
             }
-            Xe = ye(be(ee, ze), ke), Be = Ze + fe[pe], fe[pe] = ie - Ze
-          } while (!Me(ee, ie, Be));
-          if (!De) break;
-          oe = Ke(ee, we, ie - we, Je, oe);
+            UW = mW(EW(WW, kW), xW), sW = JW + AW[jW], AW[jW] = iW - JW
+          } while (!NW(WW, iW, sW));
+          if (!HW) break;
+          tW = PW(WW, hW, iW - hW, wW, tW);
           do {
-            for (Oe = ie, de = 4; ie + de < te && ee[ie + de] === ee[Be + de];) de += 1;
-            if (ie += de, oe = Fe(Je, oe, Oe - Be, de), we = ie, ie >= Te) {
-              De = !1;
+            for (SW = iW, YW = 4; iW + YW < TW && WW[iW + YW] === WW[sW + YW];) YW += 1;
+            if (iW += YW, tW = cW(wW, tW, SW - sW, YW), hW = iW, iW >= bW) {
+              HW = !1;
               break
             }
-            fe[ye(be(ee, ie - 1), ke)] = ie - 1 - Ze, Be = Ze + fe[We = ye(be(ee, ie), ke)], fe[We] = ie - Ze
-          } while (Me(ee, ie, Be));
-          if (!De) break;
-          Xe = ye(be(ee, ie += 1), ke)
+            AW[mW(EW(WW, iW - 1), xW)] = iW - 1 - JW, sW = JW + AW[yW = mW(EW(WW, iW), xW)], AW[yW] = iW - JW
+          } while (NW(WW, iW, sW));
+          if (!HW) break;
+          UW = mW(EW(WW, iW += 1), xW)
         }
-      return we < te && (oe = Ke(ee, we, te - we, Je, oe)), oe
+      return hW < TW && (tW = PW(WW, hW, TW - hW, wW, tW)), tW
     }
 
-    function oe(ee) {
-      this.array = ee
+    function tW(WW) {
+      this.array = WW
     }
-    oe.prototype.maxCompressedLength = function() {
-      var ee = this.array.length;
-      return 32 + ee + Math.floor(ee / 6)
-    }, oe.prototype.compressToBuffer = function(ee) {
-      var ie, He = this.array,
-        ye = He.length,
-        be = 0,
-        Me = 0;
-      for (Me = function(ee, ie, He) {
+    tW.prototype.maxCompressedLength = function() {
+      var WW = this.array.length;
+      return 32 + WW + Math.floor(WW / 6)
+    }, tW.prototype.compressToBuffer = function(WW) {
+      var iW, OW = this.array,
+        mW = OW.length,
+        EW = 0,
+        NW = 0;
+      for (NW = function(WW, iW, OW) {
           do {
-            ie[He] = 127 & ee, (ee >>>= 7) > 0 && (ie[He] += 128), He += 1
-          } while (ee > 0);
-          return He
-        }(ye, ee, Me); be < ye;) Me = Je(He, be, ie = Math.min(ye - be, 65536), ee, Me), be += ie;
-      return Me
-    }, ie.d = oe
+            iW[OW] = 127 & WW, (WW >>>= 7) > 0 && (iW[OW] += 128), OW += 1
+          } while (WW > 0);
+          return OW
+        }(mW, WW, NW); EW < mW;) NW = wW(OW, EW, iW = Math.min(mW - EW, 65536), WW, NW), EW += iW;
+      return NW
+    }, iW.d = tW
   },
-  40557: (ee, ie) => {
-    var He = [0, 255, 65535, 16777215, 4294967295];
+  41009: (WW, iW) => {
+    var OW = [0, 255, 65535, 16777215, 4294967295];
 
-    function ye(ee, ie, He, ye, be) {
-      var Me;
-      for (Me = 0; Me < be; Me++) He[ye + Me] = ee[ie + Me]
+    function mW(WW, iW, OW, mW, EW) {
+      var NW;
+      for (NW = 0; NW < EW; NW++) OW[mW + NW] = WW[iW + NW]
     }
 
-    function be(ee, ie, He, ye) {
-      var be;
-      for (be = 0; be < ye; be++) ee[ie + be] = ee[ie - He + be]
+    function EW(WW, iW, OW, mW) {
+      var EW;
+      for (EW = 0; EW < mW; EW++) WW[iW + EW] = WW[iW - OW + EW]
     }
 
-    function Me(ee) {
-      this.array = ee, this.pos = 0
+    function NW(WW) {
+      this.array = WW, this.pos = 0
     }
-    Me.prototype.readUncompressedLength = function() {
-      for (var ee, ie, He = 0, ye = 0; ye < 32 && this.pos < this.array.length;) {
-        if (ee = this.array[this.pos], this.pos += 1, (ie = 127 & ee) << ye >>> ye !== ie) return -1;
-        if (He |= ie << ye, ee < 128) return He;
-        ye += 7
+    NW.prototype.readUncompressedLength = function() {
+      for (var WW, iW, OW = 0, mW = 0; mW < 32 && this.pos < this.array.length;) {
+        if (WW = this.array[this.pos], this.pos += 1, (iW = 127 & WW) << mW >>> mW !== iW) return -1;
+        if (OW |= iW << mW, WW < 128) return OW;
+        mW += 7
       }
       return -1
-    }, Me.prototype.uncompressToBuffer = function(ee) {
-      for (var ie, Me, Ke, Ue, Fe = this.array, Je = Fe.length, oe = this.pos, Re = 0; oe < Fe.length;)
-        if (ie = Fe[oe], oe += 1, 0 === (3 & ie)) {
-          if ((Me = 1 + (ie >>> 2)) > 60) {
-            if (oe + 3 >= Je) return !1;
-            Ke = Me - 60, Me = 1 + ((Me = Fe[oe] + (Fe[oe + 1] << 8) + (Fe[oe + 2] << 16) + (Fe[oe + 3] << 24)) & He[Ke]), oe += Ke
+    }, NW.prototype.uncompressToBuffer = function(WW) {
+      for (var iW, NW, PW, LW, cW = this.array, wW = cW.length, tW = this.pos, ZW = 0; tW < cW.length;)
+        if (iW = cW[tW], tW += 1, 0 === (3 & iW)) {
+          if ((NW = 1 + (iW >>> 2)) > 60) {
+            if (tW + 3 >= wW) return !1;
+            PW = NW - 60, NW = 1 + ((NW = cW[tW] + (cW[tW + 1] << 8) + (cW[tW + 2] << 16) + (cW[tW + 3] << 24)) & OW[PW]), tW += PW
           }
-          if (oe + Me > Je) return !1;
-          ye(Fe, oe, ee, Re, Me), oe += Me, Re += Me
+          if (tW + NW > wW) return !1;
+          mW(cW, tW, WW, ZW, NW), tW += NW, ZW += NW
         } else {
-          switch (3 & ie) {
+          switch (3 & iW) {
             case 1:
-              Me = 4 + (ie >>> 2 & 7), Ue = Fe[oe] + (ie >>> 5 << 8), oe += 1;
+              NW = 4 + (iW >>> 2 & 7), LW = cW[tW] + (iW >>> 5 << 8), tW += 1;
               break;
             case 2:
-              if (oe + 1 >= Je) return !1;
-              Me = 1 + (ie >>> 2), Ue = Fe[oe] + (Fe[oe + 1] << 8), oe += 2;
+              if (tW + 1 >= wW) return !1;
+              NW = 1 + (iW >>> 2), LW = cW[tW] + (cW[tW + 1] << 8), tW += 2;
               break;
             case 3:
-              if (oe + 3 >= Je) return !1;
-              Me = 1 + (ie >>> 2), Ue = Fe[oe] + (Fe[oe + 1] << 8) + (Fe[oe + 2] << 16) + (Fe[oe + 3] << 24), oe += 4
+              if (tW + 3 >= wW) return !1;
+              NW = 1 + (iW >>> 2), LW = cW[tW] + (cW[tW + 1] << 8) + (cW[tW + 2] << 16) + (cW[tW + 3] << 24), tW += 4
           }
-          if (0 === Ue || Ue > Re) return !1;
-          be(ee, Re, Ue, Me), Re += Me
+          if (0 === LW || LW > ZW) return !1;
+          EW(WW, ZW, LW, NW), ZW += NW
         } return !0
-    }, ie.e = Me
+    }, iW.c = NW
   },
-  40541: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      SessionReplayRecorder: () => bH
+  40993: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      SessionReplayRecorder: () => NO
     });
-    const ye = {
+    const mW = {
         maxFps: 30,
         bitrate: 178e4,
         minBitrate: 5e5,
@@ -194,76 +194,81 @@ export const modules = {
         streamGrabEngines: ["gecko"],
         skipLowMemoryDevices: !1
       },
-      be = {
-        ...ye,
+      EW = {
+        ...mW,
         maxFps: 15,
         bitrate: 5e5,
         maxMacroblocks: 2040,
         captureBudgetMsPerSecond: 60,
         skipLowMemoryDevices: !0
       },
-      Me = {
-        desktop: ye,
-        mobile: be,
-        tablet: be
+      NW = {
+        desktop: mW,
+        mobile: EW,
+        tablet: EW
       };
-    var Ke = He(2966),
-      Ue = He(27);
-    const Fe = 4194304,
-      Je = 16777216;
-    var oe = He(3748);
-    const Re = [2, 4, 9, 3],
-      ke = oe.c,
-      qe = [ke.MouseInteraction, ke.MouseMove, ke.TouchMove],
-      fe = [ke.MouseMove, ke.MouseInteraction, ke.Scroll, ke.ViewportResize, ke.Input, ke.TouchMove, ke.MediaInteraction, ke.Drag],
-      Te = new Map([
+    var PW = OW(3822),
+      LW = OW(27);
+    const cW = 4194304,
+      wW = 16777216;
+    var tW = OW(4605);
+    const ZW = [2, 4, 9, 3],
+      xW = tW.g,
+      lW = [xW.MouseInteraction, xW.MouseMove, xW.TouchMove],
+      AW = [xW.MouseMove, xW.MouseInteraction, xW.Scroll, xW.ViewportResize, xW.Input, xW.TouchMove, xW.MediaInteraction, xW.Drag],
+      bW = new Map([
         ["warn", "warn"],
         ["countReset", "warn"],
         ["error", "error"],
         ["assert", "error"]
       ]);
 
-    function pe(ee) {
-      if ("object" !== typeof ee || null === ee || Array.isArray(ee)) return !1;
-      const ie = ee.timestamp;
-      return "number" === typeof ie && ie > 0 && ie <= 864e13
+    function jW(WW) {
+      if ("object" !== typeof WW || null === WW || Array.isArray(WW)) return !1;
+      const iW = WW.timestamp;
+      return "number" === typeof iW && iW > 0 && iW <= 864e13
     }
-    class Xe {
+
+    function UW(WW) {
+      var iW;
+      return WW.type === tW.c.IncrementalSnapshot ? null === (iW = WW.data) || void 0 === iW ? void 0 : iW.source : void 0
+    }
+    class kW {
       constructor() {
         this.eventCount = 0, this.messageCount = 0, this.clickCount = 0, this.keypressCount = 0, this.mouseActivityCount = 0, this.consoleLogCount = 0, this.consoleWarnCount = 0, this.consoleErrorCount = 0, this.firstUrl = null, this.urls = new Set, this.urlsLength = 0, this.timestamps = [], this.active = []
       }
       addMessage() {
         this.messageCount++
       }
-      addEvent(ee) {
+      addEvent(WW) {
         this.eventCount++;
-        const ie = function(ee) {
-          var ie;
-          return ee.type === oe.b.IncrementalSnapshot ? null === (ie = ee.data) || void 0 === ie ? void 0 : ie.source : void 0
-        }(ee);
-        this.timestamps.push(ee.timestamp), this.active.push(fe.includes(ie));
-        const He = function(ee) {
-          var ie;
-          const He = ee.data;
-          if (ee.type === oe.b.Custom && "$json_ld" === (null === He || void 0 === He ? void 0 : He.tag)) return;
-          const ye = "string" === typeof(null === He || void 0 === He ? void 0 : He.href) ? He.href.trim() : void 0,
-            be = "string" === typeof(null === He || void 0 === He || null === (ie = He.payload) || void 0 === ie ? void 0 : ie.href) ? He.payload.href.trim() : void 0;
-          return ye || be || void 0
-        }(ee);
-        He && this.addUrl(He), ie === ke.MouseInteraction && Re.includes(ee.data.type) && this.clickCount++, ie === ke.Input && this.keypressCount++, qe.includes(ie) && this.mouseActivityCount++;
-        const ye = ee.data;
-        if (ee.type === oe.b.Plugin && "rrweb/console@1" === (null === ye || void 0 === ye ? void 0 : ye.plugin)) {
-          var be;
-          const ee = Te.get(null === (be = ye.payload) || void 0 === be ? void 0 : be.level);
-          "warn" === ee ? this.consoleWarnCount++ : "error" === ee ? this.consoleErrorCount++ : this.consoleLogCount++
+        const iW = UW(WW);
+        this.timestamps.push(WW.timestamp), this.active.push(function(WW) {
+          var iW;
+          return AW.includes(UW(WW)) || WW.type === tW.c.Custom && (null === (iW = WW.data) || void 0 === iW ? void 0 : iW.tag) === tW.l.active
+        }(WW));
+        const OW = function(WW) {
+          var iW;
+          const OW = WW.data;
+          if (WW.type === tW.c.Custom && "$json_ld" === (null === OW || void 0 === OW ? void 0 : OW.tag)) return;
+          const mW = "string" === typeof(null === OW || void 0 === OW ? void 0 : OW.href) ? OW.href.trim() : void 0,
+            EW = "string" === typeof(null === OW || void 0 === OW || null === (iW = OW.payload) || void 0 === iW ? void 0 : iW.href) ? OW.payload.href.trim() : void 0;
+          return mW || EW || void 0
+        }(WW);
+        OW && this.addUrl(OW), iW === xW.MouseInteraction && ZW.includes(WW.data.type) && this.clickCount++, iW === xW.Input && this.keypressCount++, lW.includes(iW) && this.mouseActivityCount++;
+        const mW = WW.data;
+        if (WW.type === tW.c.Plugin && "rrweb/console@1" === (null === mW || void 0 === mW ? void 0 : mW.plugin)) {
+          var EW;
+          const WW = bW.get(null === (EW = mW.payload) || void 0 === EW ? void 0 : EW.level);
+          "warn" === WW ? this.consoleWarnCount++ : "error" === WW ? this.consoleErrorCount++ : this.consoleLogCount++
         }
       }
-      finish(ee) {
+      finish(WW) {
         if (0 === this.messageCount) throw new Error("A page recording chunk needs a message before its summary");
         return {
           eventCount: this.eventCount,
           messageCount: this.messageCount,
-          size: ee,
+          size: WW,
           clickCount: this.clickCount,
           keypressCount: this.keypressCount,
           mouseActivityCount: this.mouseActivityCount,
@@ -275,79 +280,79 @@ export const modules = {
           urls: [...this.urls]
         }
       }
-      addUrl(ee) {
-        const ie = ee.slice(0, 4096);
-        this.firstUrl ??= ie, this.urls.size < 25 && !this.urls.has(ie) && this.urlsLength + ie.length <= 8192 && (this.urls.add(ie), this.urlsLength += ie.length)
+      addUrl(WW) {
+        const iW = WW.slice(0, 4096);
+        this.firstUrl ??= iW, this.urls.size < 25 && !this.urls.has(iW) && this.urlsLength + iW.length <= 8192 && (this.urls.add(iW), this.urlsLength += iW.length)
       }
       activeMs() {
-        var ee;
-        const ie = this.timestamps.map(((ee, ie) => ie)).sort(((ee, ie) => this.timestamps[ee] - this.timestamps[ie]));
-        let He = 0,
-          ye = null,
-          be = 0;
-        for (const Ke of ie) {
-          const ee = this.timestamps[Ke],
-            ie = this.active[Ke],
-            Ue = !ye || ie && !ye.isActive || ye.isActive && be + 5e3 < ee;
-          var Me;
-          if (be = ie ? ee : be, Ue) null !== (Me = ye) && void 0 !== Me && Me.isActive && (He += Math.max(1, ye.end - ye.start)), ye = {
-            start: ee,
-            end: ee,
-            isActive: ie
+        var WW;
+        const iW = this.timestamps.map(((WW, iW) => iW)).sort(((WW, iW) => this.timestamps[WW] - this.timestamps[iW]));
+        let OW = 0,
+          mW = null,
+          EW = 0;
+        for (const PW of iW) {
+          const WW = this.timestamps[PW],
+            iW = this.active[PW],
+            LW = !mW || iW && !mW.isActive || mW.isActive && EW + 5e3 < WW;
+          var NW;
+          if (EW = iW ? WW : EW, LW) null !== (NW = mW) && void 0 !== NW && NW.isActive && (OW += Math.max(1, mW.end - mW.start)), mW = {
+            start: WW,
+            end: WW,
+            isActive: iW
           };
-          else ye.end = ee
+          else mW.end = WW
         }
-        return null !== (ee = ye) && void 0 !== ee && ee.isActive && (He += Math.max(1, ye.end - ye.start)), Math.floor(He)
+        return null !== (WW = mW) && void 0 !== WW && WW.isActive && (OW += Math.max(1, mW.end - mW.start)), Math.floor(OW)
       }
     }
-    const ze = 5592405.333333333;
-    class Be {
+    const sW = 5592405.333333333;
+    class MW {
       constructor() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1048576;
-        this.chunkChars = ee, this.lines = [], this.chars = 0, this.startMs = 1 / 0, this.endMs = -1 / 0, this.holdsSnapshot = !1, this.counter = new Xe, this.chunkIndex = 0, this.tailedLines = 0, this.tailedChars = 0
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1048576;
+        this.chunkChars = WW, this.lines = [], this.chars = 0, this.startMs = 1 / 0, this.endMs = -1 / 0, this.holdsSnapshot = !1, this.counter = new kW, this.chunkIndex = 0, this.tailedLines = 0, this.tailedChars = 0
       }
-      get dR() {
+      get sZ() {
         return 0 === this.lines.length
       }
       get tooBigForExit() {
         return this.holdsSnapshot || this.chars >= 262144
       }
-      add(ee) {
-        const ie = ee.events.filter(pe),
-          He = ie.map((ie => JSON.stringify([ee.windowId, ie]) + "\n"));
-        if (0 === He.length) return [];
-        const ye = [],
-          be = He.reduce(((ee, ie) => ee + ie.length), 0);
-        !this.dR && this.chars + be > this.chunkChars && ye.push(this.finish());
-        let Me = !1;
-        return ie.forEach(((ee, ie) => {
-          const be = He[ie];
-          !this.dR && this.chars + be.length > this.chunkChars && (ye.push(this.finish()), Me = !1), Me || (this.counter.addMessage(), Me = !0), this.counter.addEvent(ee), this.lines.push(be), this.chars += be.length, this.startMs = Math.min(this.startMs, ee.timestamp), this.endMs = Math.max(this.endMs, ee.timestamp), this.holdsSnapshot ||= ee.type === oe.b.FullSnapshot || ee.type === oe.b.Meta
-        })), ye.filter((ee => null !== ee))
+      add(WW) {
+        const iW = WW.events.filter(jW),
+          OW = iW.map((iW => JSON.stringify([WW.windowId, iW]) + "\n"));
+        if (0 === OW.length) return [];
+        const mW = [],
+          EW = OW.reduce(((WW, iW) => WW + iW.length), 0);
+        !this.sZ && this.chars + EW > this.chunkChars && mW.push(this.finish());
+        let NW = !1;
+        return iW.forEach(((WW, iW) => {
+          const EW = OW[iW];
+          !this.sZ && this.chars + EW.length > this.chunkChars && (mW.push(this.finish()), NW = !1), NW || (this.counter.addMessage(), NW = !0), this.counter.addEvent(WW), this.lines.push(EW), this.chars += EW.length, this.startMs = Math.min(this.startMs, WW.timestamp), this.endMs = Math.max(this.endMs, WW.timestamp), this.holdsSnapshot ||= WW.type === tW.c.FullSnapshot || WW.type === tW.c.Meta
+        })), mW.filter((WW => null !== WW))
       }
       finish() {
-        if (this.dR) return null;
+        if (this.sZ) return null;
         const {
-          startMs: ee,
-          endMs: ie,
-          counter: He,
-          holdsSnapshot: ye,
-          chunkIndex: be,
-          tailedChars: Me
-        } = this, Ke = {
+          startMs: WW,
+          endMs: iW,
+          counter: OW,
+          holdsSnapshot: mW,
+          chunkIndex: EW,
+          tailedChars: NW
+        } = this, PW = {
           text: this.lines.join(""),
-          startMs: ee,
-          endMs: ie,
-          counter: He,
-          holdsSnapshot: ye,
-          chunkIndex: be,
-          tailedChars: Me
+          startMs: WW,
+          endMs: iW,
+          counter: OW,
+          holdsSnapshot: mW,
+          chunkIndex: EW,
+          tailedChars: NW
         };
-        return this.reset(), Ke
+        return this.reset(), PW
       }
       takeTail() {
-        if (this.tailedLines === this.lines.length || this.chars > ze) return null;
-        const ee = {
+        if (this.tailedLines === this.lines.length || this.chars > sW) return null;
+        const WW = {
           chunkIndex: this.chunkIndex,
           fromChar: this.tailedChars,
           text: this.lines.slice(this.tailedLines).join(""),
@@ -355,289 +360,289 @@ export const modules = {
           endMs: this.endMs,
           summary: this.counter.finish(0)
         };
-        return this.tailedLines = this.lines.length, this.tailedChars = this.chars, ee
+        return this.tailedLines = this.lines.length, this.tailedChars = this.chars, WW
       }
       reset() {
-        this.lines = [], this.chars = 0, this.startMs = 1 / 0, this.endMs = -1 / 0, this.holdsSnapshot = !1, this.counter = new Xe, this.chunkIndex++, this.tailedLines = 0, this.tailedChars = 0
+        this.lines = [], this.chars = 0, this.startMs = 1 / 0, this.endMs = -1 / 0, this.holdsSnapshot = !1, this.counter = new kW, this.chunkIndex++, this.tailedLines = 0, this.tailedChars = 0
       }
     }
 
-    function Ee(ee) {
+    function KW(WW) {
       let {
-        text: ie
-      } = ee;
-      return ie.length <= ze
+        text: iW
+      } = WW;
+      return iW.length <= sW
     }
 
-    function ge(ee) {
+    function SW(WW) {
       const {
-        text: ie,
-        startMs: He,
-        endMs: ye,
-        counter: be,
-        chunkIndex: Me,
-        tailedChars: Ke
-      } = ee;
-      return Ke !== ie.length && Ee(ee) ? {
-        chunkIndex: Me,
-        fromChar: Ke,
-        text: ie.slice(Ke),
-        startMs: He,
-        endMs: ye,
-        summary: be.finish(0)
+        text: iW,
+        startMs: OW,
+        endMs: mW,
+        counter: EW,
+        chunkIndex: NW,
+        tailedChars: PW
+      } = WW;
+      return PW !== iW.length && KW(WW) ? {
+        chunkIndex: NW,
+        fromChar: PW,
+        text: iW.slice(PW),
+        startMs: OW,
+        endMs: mW,
+        summary: EW.finish(0)
       } : null
     }
 
-    function Oe(ee, ie) {
+    function YW(WW, iW) {
       let {
-        startMs: He,
-        endMs: ye,
-        counter: be,
-        holdsSnapshot: Me
-      } = ee, {
-        bytes: Ke,
-        inflatedBytes: Ue
-      } = ie;
-      return Ke.byteLength > Fe || Ue > Je ? (console.warn(`Session replay: dropped a ${Ue}-byte page recording chunk, over the size limits`), null) : {
-        bytes: Ke,
-        startMs: He,
-        endMs: ye,
-        summary: be.finish(Ue),
-        holdsSnapshot: Me
+        startMs: OW,
+        endMs: mW,
+        counter: EW,
+        holdsSnapshot: NW
+      } = WW, {
+        bytes: PW,
+        inflatedBytes: LW
+      } = iW;
+      return PW.byteLength > cW || LW > wW ? (console.warn(`Session replay: dropped a ${LW}-byte page recording chunk, over the size limits`), null) : {
+        bytes: PW,
+        startMs: OW,
+        endMs: mW,
+        summary: EW.finish(LW),
+        holdsSnapshot: NW
       }
     }
-    var de = He(40548);
-    class We {
-      constructor(ee, ie, He, ye) {
-        this.uploader = ee, this.timing = ie, this.journal = He, this.packer = ye, this.writer = new Be, this.cutNext = !1, this.packing = [], this.tailTimer = null, this.cutForVideoSinceTick = !1, this.tickedSinceVideoCut = !0
+    var yW = OW(40999);
+    class TW {
+      constructor(WW, iW, OW, mW) {
+        this.uploader = WW, this.timing = iW, this.journal = OW, this.packer = mW, this.writer = new MW, this.cutNext = !1, this.packing = [], this.tailTimer = null, this.cutForVideoSinceTick = !1, this.tickedSinceVideoCut = !0
       }
-      add(ee) {
-        this.pack(this.writer.add(ee)), (this.cutNext || this.timing.cutsEachBatch() || this.writer.tooBigForExit) && (this.cutNext = !1, this.cut());
-        const ie = this.journal;
-        null === ie || null !== this.tailTimer || this.writer.dR || (this.tailTimer = setTimeout((() => {
+      add(WW) {
+        this.pack(this.writer.add(WW)), (this.cutNext || this.timing.cutsEachBatch() || this.writer.tooBigForExit) && (this.cutNext = !1, this.cut());
+        const iW = this.journal;
+        null === iW || null !== this.tailTimer || this.writer.sZ || (this.tailTimer = setTimeout((() => {
           this.tailTimer = null;
-          const ee = this.writer.takeTail();
-          null !== ee && ie.domTail(ee)
+          const WW = this.writer.takeTail();
+          null !== WW && iW.domTail(WW)
         }), 3e3))
       }
       cutAfterNextBatch() {
         this.cutNext = !0
       }
       cut() {
-        const ee = this.writer.finish();
-        this.pack(null === ee ? [] : [ee])
+        const WW = this.writer.finish();
+        this.pack(null === WW ? [] : [WW])
       }
       cutOnTimer() {
         this.cutForVideoSinceTick || this.cut(), this.cutForVideoSinceTick = !1, this.tickedSinceVideoCut = !0
       }
       cutForVideo() {
-        if (!this.tickedSinceVideoCut || this.writer.dR) return;
+        if (!this.tickedSinceVideoCut || this.writer.sZ) return;
         this.tickedSinceVideoCut = !1, this.cutForVideoSinceTick = !0, this.cut();
-        const ee = this.packing[this.packing.length - 1];
-        return void 0 !== ee ? new Promise((ie => {
-          const He = ee.onQueued;
-          ee.onQueued = () => {
-            null === He || void 0 === He || He(), ie()
+        const WW = this.packing[this.packing.length - 1];
+        return void 0 !== WW ? new Promise((iW => {
+          const OW = WW.onQueued;
+          WW.onQueued = () => {
+            null === OW || void 0 === OW || OW(), iW()
           }
         })) : void 0
       }
       close() {
         null !== this.tailTimer && (clearTimeout(this.tailTimer), this.tailTimer = null), this.packer.close()
       }
-      pack(ee) {
-        const ie = ee.filter((ee => {
-            const ie = function(ee) {
+      pack(WW) {
+        const iW = WW.filter((WW => {
+            const iW = function(WW) {
               let {
-                text: ie
-              } = ee;
-              return ie.length <= Je || (console.warn(`Session replay: dropped a page recording chunk of ${ie.length} characters, over the size limits`), !1)
-            }(ee);
-            var He;
-            ie || (null === (He = this.journal) || void 0 === He || He.domTailDropped(ee.chunkIndex));
-            return ie
+                text: iW
+              } = WW;
+              return iW.length <= wW || (console.warn(`Session replay: dropped a page recording chunk of ${iW.length} characters, over the size limits`), !1)
+            }(WW);
+            var OW;
+            iW || (null === (OW = this.journal) || void 0 === OW || OW.domTailDropped(WW.chunkIndex));
+            return iW
           })),
-          He = this.journalWorks() && ie.every((ee => Ee(ee))) && this.packing.every((ee => ee.journalled));
-        if (this.timing.packsNow(He)) {
-          for (const ee of ie) this.packing.push({
-            text: ee,
+          OW = this.journalWorks() && iW.every((WW => KW(WW))) && this.packing.every((WW => WW.journalled));
+        if (this.timing.packsNow(OW)) {
+          for (const WW of iW) this.packing.push({
+            text: WW,
             packed: null,
-            journalled: this.tailHolds(ee)
+            journalled: this.tailHolds(WW)
           });
-          for (const ee of [...this.packing]) this.packHere(ee);
+          for (const WW of [...this.packing]) this.packHere(WW);
           return this.packer.forgetWaiting(), void this.queuePacked()
         }
-        for (const ye of ie) {
-          const ee = null === this.journal ? null : ge(ye);
-          null !== ee && this.journal.domTail(ee);
-          const ie = {
-            text: ye,
+        for (const mW of iW) {
+          const WW = null === this.journal ? null : SW(mW);
+          null !== WW && this.journal.domTail(WW);
+          const iW = {
+            text: mW,
             packed: null,
-            journalled: this.tailHolds(ye)
+            journalled: this.tailHolds(mW)
           };
-          this.packing.push(ie), this.packer.pack(ye.text).then((ee => {
-            ie.packed = ee, this.queuePacked()
+          this.packing.push(iW), this.packer.pack(mW.text).then((WW => {
+            iW.packed = WW, this.queuePacked()
           }), (() => {
-            this.packHere(ie), this.queuePacked()
+            this.packHere(iW), this.queuePacked()
           }))
         }
       }
-      packHere(ee) {
-        const ie = this.packing.indexOf(ee);
-        if (!(ie < 0)) try {
-          ee.packed ??= (0, de.c)(ee.text.text)
-        } catch (be) {
-          var He, ye;
-          console.warn("Session replay couldn't pack a page chunk, so dropped it.", be), this.packing.splice(ie, 1), null === (He = this.journal) || void 0 === He || He.domTailDropped(ee.text.chunkIndex), null === (ye = ee.onQueued) || void 0 === ye || ye.call(ee)
+      packHere(WW) {
+        const iW = this.packing.indexOf(WW);
+        if (!(iW < 0)) try {
+          WW.packed ??= (0, yW.d)(WW.text.text)
+        } catch (EW) {
+          var OW, mW;
+          console.warn("Session replay couldn't pack a page chunk, so dropped it.", EW), this.packing.splice(iW, 1), null === (OW = this.journal) || void 0 === OW || OW.domTailDropped(WW.text.chunkIndex), null === (mW = WW.onQueued) || void 0 === mW || mW.call(WW)
         }
       }
       journalWorks() {
         return null !== this.journal && this.journal.working
       }
-      tailHolds(ee) {
-        return this.journalWorks() && Ee(ee)
+      tailHolds(WW) {
+        return this.journalWorks() && KW(WW)
       }
       queuePacked() {
         for (; this.packing.length > 0 && null !== this.packing[0].packed;) {
           const {
-            text: ee,
-            packed: ie,
-            onQueued: He
+            text: WW,
+            packed: iW,
+            onQueued: OW
           } = this.packing.shift();
-          this.enqueue(ee.chunkIndex, Oe(ee, ie)), null === He || void 0 === He || He()
+          this.enqueue(WW.chunkIndex, YW(WW, iW)), null === OW || void 0 === OW || OW()
         }
       }
-      enqueue(ee, ie) {
-        var He;
-        if (null === ie) return void(null === (He = this.journal) || void 0 === He || He.domTailDropped(ee));
+      enqueue(WW, iW) {
+        var OW;
+        if (null === iW) return void(null === (OW = this.journal) || void 0 === OW || OW.domTailDropped(WW));
         const {
-          startMs: ye,
-          endMs: be,
-          summary: Me,
-          holdsSnapshot: Ke
-        } = ie, Ue = ie.bytes.buffer, Fe = {
-          startMs: ye,
-          endMs: be,
-          byteLength: Ue.byteLength,
-          summary: Me
-        }, Je = this.uploader.enqueue({
+          startMs: mW,
+          endMs: EW,
+          summary: NW,
+          holdsSnapshot: PW
+        } = iW, LW = iW.bytes.buffer, cW = {
+          startMs: mW,
+          endMs: EW,
+          byteLength: LW.byteLength,
+          summary: NW
+        }, wW = this.uploader.enqueue({
           kind: "dom",
           contentType: "application/octet-stream",
-          bytes: Ue,
+          bytes: LW,
           meta: {
             type: "dom",
-            chunk: Fe
+            chunk: cW
           },
-          dropLast: Ke
+          dropLast: PW
         });
-        var oe, Re;
-        null === Je ? null === (oe = this.journal) || void 0 === oe || oe.domTailDropped(ee) : null === (Re = this.journal) || void 0 === Re || Re.domQueued(Je, Ue, Fe, ee)
+        var tW, ZW;
+        null === wW ? null === (tW = this.journal) || void 0 === tW || tW.domTailDropped(WW) : null === (ZW = this.journal) || void 0 === ZW || ZW.domQueued(wW, LW, cW, WW)
       }
     }
-    var te = He(40570);
-    var Ze = He(40572),
-      we = He(3221),
-      De = He(97),
-      Pe = He(103),
-      Ae = He(35),
-      Ye = He(5086);
-    const Ve = {
+    var JW = OW(41014);
+    var hW = OW(41021),
+      HW = OW(4048),
+      nW = OW(100),
+      uW = OW(109),
+      oW = OW(39),
+      dW = OW(5386);
+    const eW = {
       logStats: !1
     };
 
-    function ae(ee) {
-      const ie = Ae.i.getItem(ee);
-      return "number" === typeof ie && Number.isFinite(ie) ? ie : null
+    function vW(WW) {
+      const iW = oW.i.getItem(WW);
+      return "number" === typeof iW && Number.isFinite(iW) ? iW : null
     }
 
-    function ce(ee, ie, He, ye) {
-      const be = Ae.i.getItem(ee);
-      return be === ie ? [(0, De.getOperatingSystem)()] : be === He ? [] : ye
+    function gW(WW, iW, OW, mW) {
+      const EW = oW.i.getItem(WW);
+      return EW === iW ? [(0, nW.getOperatingSystem)()] : EW === OW ? [] : mW
     }
 
-    function xe(ee) {
-      const ie = Ae.i.getItem("replayGrab");
-      return "stream" === ie ? [(0, we.e)()] : "videoFrame" === ie || "bitmap" === ie ? [] : ee
+    function DW(WW) {
+      const iW = oW.i.getItem("replayGrab");
+      return "stream" === iW ? [(0, HW.c)()] : "videoFrame" === iW || "bitmap" === iW ? [] : WW
     }
-    const Le = "/v1/release",
-      Ce = Fe;
-    var ve = He(1155),
-      ue = He(40584),
-      me = He(40592),
-      le = He(40594);
+    const VW = "/v1/release",
+      pW = cW;
+    var fW = OW(1194),
+      CW = OW(41035),
+      XW = OW(41041),
+      BW = OW(41046);
 
-    function Se(ee) {
-      return `replayJoiner/${ee}`
+    function qW(WW) {
+      return `replayJoiner/${WW}`
     }
-    class ne {
-      constructor(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ue.g;
-        this.baseUrl = ee, this.keepalive = ie
+    class RW {
+      constructor(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CW.f;
+        this.baseUrl = WW, this.keepalive = iW
       }
-      postPart(ee, ie) {
-        const He = (0, me.g)(ee, ie),
-          ye = 15e3 + (be = He.size, Math.ceil(be / 16384 * 1e3));
-        var be;
-        return this.post("/v1/part", He, He.size, ye, ee.sequence)
+      postPart(WW, iW) {
+        const OW = (0, XW.h)(WW, iW),
+          mW = 15e3 + (EW = OW.size, Math.ceil(EW / 16384 * 1e3));
+        var EW;
+        return this.post("/v1/part", OW, OW.size, mW, WW.sequence)
       }
-      finish(ee) {
-        const ie = JSON.stringify(ee);
-        return this.post("/v1/finish", ie, (0, ue.i)(ie), 3e4, ee.sequence)
+      finish(WW) {
+        const iW = JSON.stringify(WW);
+        return this.post("/v1/finish", iW, (0, CW.i)(iW), 3e4, WW.sequence)
       }
-      release(ee) {
-        return !this.keepalive.isInFlight(Se(ee.sequence)) && this.keepalive.sendBeacon(`${this.baseUrl}${Le}`, JSON.stringify(ee))
+      release(WW) {
+        return !this.keepalive.isInFlight(qW(WW.sequence)) && this.keepalive.sendBeacon(`${this.baseUrl}${VW}`, JSON.stringify(WW))
       }
-      async post(ee, ie, He, ye, be) {
-        const Me = `${this.baseUrl}${ee}`,
-          Ke = {
+      async post(WW, iW, OW, mW, EW) {
+        const NW = `${this.baseUrl}${WW}`,
+          PW = {
             method: "POST",
             headers: {
               "Content-Type": "text/plain"
             },
-            body: ie,
-            signal: (0, ve.v)(ye)
+            body: iW,
+            signal: (0, fW.t)(mW)
           },
-          Ue = He <= ue.d ? await this.keepalive.fetch(Me, Ke, He, Se(be)) : await fetch(Me, Ke);
-        if (!Ue.ok) throw new le.b(`Part joiner ${ee} failed with ${Ue.status}`, Ue.status);
-        return await Ue.json()
+          LW = OW <= CW.e ? await this.keepalive.fetch(NW, PW, OW, qW(EW)) : await fetch(NW, PW);
+        if (!LW.ok) throw new BW.c(`Part joiner ${WW} failed with ${LW.status}`, LW.status);
+        return await LW.json()
       }
     }
 
-    function je(ee) {
+    function GW(WW) {
       return {
-        releaseUrl: `${ee.url}${Le}`,
-        token: ee.token,
+        releaseUrl: `${WW.url}${VW}`,
+        token: WW.token,
         relay: {
-          url: `${ee.url}/v1/relay`,
-          maxBytes: Ce
+          url: `${WW.url}/v1/relay`,
+          maxBytes: pW
         }
       }
     }
-    var se = He(7132),
-      Ie = He(40602),
-      he = He(40606),
-      Ne = He(40609);
+    var IW = OW(7493),
+      aW = OW(41052),
+      rW = OW(41056),
+      zW = OW(41063);
 
-    function Ge() {
-      return (0, Ze.b)().manifestUrl
+    function FW() {
+      return (0, hW.d)().manifestUrl
     }
-    const re = {
+    const QW = {
       sendIntervalMs: 3e4,
       lateFromMs: 1 / 0,
       onSend: () => {},
       onListed: () => {}
     };
-    class Qe {
-      constructor(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.uploadToken = ie, this.sendEnabled = He, this.manifest = void 0, this.creatorGrants = new Map, this.sendTimer = null, this.ackedVideo = new Map, this.ackedTelemetry = new WeakSet, this.ackedGames = new WeakMap, this.ackedGrants = new Set, this.pendingDom = new Set, this.sending = !1, this.retries = 0, this.queuedSend = null, this.options = void 0, this.options = {
-          ...re,
-          ...ye
+    class Wi {
+      constructor(WW, iW, OW) {
+        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.uploadToken = iW, this.sendEnabled = OW, this.manifest = void 0, this.creatorGrants = new Map, this.sendTimer = null, this.ackedVideo = new Map, this.ackedTelemetry = new WeakSet, this.ackedGames = new WeakMap, this.ackedGrants = new Set, this.pendingDom = new Set, this.sending = !1, this.retries = 0, this.queuedSend = null, this.options = void 0, this.options = {
+          ...QW,
+          ...mW
         };
-        const be = Math.round((0, Ie.e)());
+        const EW = Math.round((0, aW.e)());
         this.manifest = {
-          recordingId: ee,
-          startedAtMs: be,
-          endedAtMs: be,
+          recordingId: WW,
+          startedAtMs: EW,
+          endedAtMs: EW,
           videoSegments: [],
           telemetrySegments: [],
           games: []
@@ -646,143 +651,143 @@ export const modules = {
       get contents() {
         return this.manifest
       }
-      setVideoSegment(ee, ie, He) {
-        const ye = {
-            sequence: ee,
-            ...ie,
-            startMs: Math.round(ie.startMs),
-            endMs: Math.round(ie.endMs),
-            ...null === He ? {} : {
-              parts: He
+      setVideoSegment(WW, iW, OW) {
+        const mW = {
+            sequence: WW,
+            ...iW,
+            startMs: Math.round(iW.startMs),
+            endMs: Math.round(iW.endMs),
+            ...null === OW ? {} : {
+              parts: OW
             }
           },
-          be = this.manifest.videoSegments.findIndex((ie => ie.sequence === ee)); - 1 === be ? this.manifest.videoSegments.push(ye) : this.manifest.videoSegments[be] = ye, this.sendSoon()
+          EW = this.manifest.videoSegments.findIndex((iW => iW.sequence === WW)); - 1 === EW ? this.manifest.videoSegments.push(mW) : this.manifest.videoSegments[EW] = mW, this.sendSoon()
       }
-      setStill(ee, ie) {
-        var He, ye;
-        ee > (null !== (He = null === (ye = this.manifest.still) || void 0 === ye ? void 0 : ye.atMs) && void 0 !== He ? He : -1 / 0) && (this.manifest.still = {
-          atMs: Math.round(ee),
-          sequence: ie
+      setStill(WW, iW) {
+        var OW, mW;
+        WW > (null !== (OW = null === (mW = this.manifest.still) || void 0 === mW ? void 0 : mW.atMs) && void 0 !== OW ? OW : -1 / 0) && (this.manifest.still = {
+          atMs: Math.round(WW),
+          sequence: iW
         }, this.sendSoon())
       }
-      addTelemetrySegment(ee, ie, He) {
+      addTelemetrySegment(WW, iW, OW) {
         this.manifest.telemetrySegments.push({
-          sequence: ee,
-          startMs: Math.round(ie),
-          endMs: Math.round(He)
+          sequence: WW,
+          startMs: Math.round(iW),
+          endMs: Math.round(OW)
         }), this.sendSoon()
       }
-      addDomSegment(ee) {
-        this.pendingDom.add(ee), this.sendSoon()
+      addDomSegment(WW) {
+        this.pendingDom.add(WW), this.sendSoon()
       }
-      addCreatorGrant(ee, ie) {
-        this.creatorGrants.set(ee, ie)
+      addCreatorGrant(WW, iW) {
+        this.creatorGrants.set(WW, iW)
       }
-      gameJoined(ee) {
+      gameJoined(WW) {
         this.gameLeft(), this.manifest.games.push({
-          ...ee,
-          joinedAtMs: Math.round((0, Ie.e)()),
+          ...WW,
+          joinedAtMs: Math.round((0, aW.e)()),
           leftAtMs: null,
           lowFps: !1,
           hadError: !1
         })
       }
-      flagLastGameQuitAfterDeath(ee) {
-        const ie = this.manifest.games.at(-1);
-        return !(!ie || (null === ee ? null !== ie.leftAtMs : ie.gameNameWithVariation !== ee)) && (ie.quitAfterDeath = !0, !0)
+      flagLastGameQuitAfterDeath(WW) {
+        const iW = this.manifest.games.at(-1);
+        return !(!iW || (null === WW ? null !== iW.leftAtMs : iW.gameNameWithVariation !== WW)) && (iW.quitAfterDeath = !0, !0)
       }
-      flagCurrentGame(ee) {
-        const ie = this.manifest.games.at(-1);
-        ie && null === ie.leftAtMs && (ie[ee] = !0)
+      flagCurrentGame(WW) {
+        const iW = this.manifest.games.at(-1);
+        iW && null === iW.leftAtMs && (iW[WW] = !0)
       }
-      updateCurrentStay(ee) {
-        var ie, He, ye;
-        const be = this.manifest.games.at(-1);
-        if (!be || null !== be.leftAtMs) return !1;
-        const Me = (0, se.i)(be.furthestStep, ee.furthestStep),
-          Ke = Math.max(null !== (ie = be.unboundKeyPresses) && void 0 !== ie ? ie : 0, null !== (He = ee.unboundKeyPresses) && void 0 !== He ? He : 0);
-        return (Me !== be.furthestStep || Ke !== (null !== (ye = be.unboundKeyPresses) && void 0 !== ye ? ye : 0)) && (void 0 !== Me && (be.furthestStep = Me), Ke > 0 && (be.unboundKeyPresses = Ke), !0)
+      updateCurrentStay(WW) {
+        var iW, OW, mW;
+        const EW = this.manifest.games.at(-1);
+        if (!EW || null !== EW.leftAtMs) return !1;
+        const NW = (0, IW.o)(EW.furthestStep, WW.furthestStep),
+          PW = Math.max(null !== (iW = EW.unboundKeyPresses) && void 0 !== iW ? iW : 0, null !== (OW = WW.unboundKeyPresses) && void 0 !== OW ? OW : 0);
+        return (NW !== EW.furthestStep || PW !== (null !== (mW = EW.unboundKeyPresses) && void 0 !== mW ? mW : 0)) && (void 0 !== NW && (EW.furthestStep = NW), PW > 0 && (EW.unboundKeyPresses = PW), !0)
       }
       gameLeft() {
-        const ee = this.manifest.games.at(-1);
-        ee && null === ee.leftAtMs && (ee.leftAtMs = Math.round((0, Ie.e)()))
+        const WW = this.manifest.games.at(-1);
+        WW && null === WW.leftAtMs && (WW.leftAtMs = Math.round((0, aW.e)()))
       }
       sendSoon() {
         this.schedule(this.options.sendIntervalMs, (() => []))
       }
-      sendShortly(ee) {
-        this.schedule(1e3, ee)
+      sendShortly(WW) {
+        this.schedule(1e3, WW)
       }
       send() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        var ie;
-        if (this.sending) return void(this.queuedSend = ei(null !== (ie = this.queuedSend) && void 0 !== ie ? ie : [], ee));
-        const He = this.prepareSend(ee);
-        null !== He && (this.sending = !0, this.postInTurn(He).then((ee => {
-          this.sending = !1, this.retries = "retryLater" === ee ? this.retries + 1 : 0;
-          const ie = this.queuedSend;
-          null !== ie ? (this.queuedSend = null, this.send(ie)) : "retryLater" === ee && this.retries <= 10 && this.sendSoon()
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        var iW;
+        if (this.sending) return void(this.queuedSend = ii(null !== (iW = this.queuedSend) && void 0 !== iW ? iW : [], WW));
+        const OW = this.prepareSend(WW);
+        null !== OW && (this.sending = !0, this.postInTurn(OW).then((WW => {
+          this.sending = !1, this.retries = "retryLater" === WW ? this.retries + 1 : 0;
+          const iW = this.queuedSend;
+          null !== iW ? (this.queuedSend = null, this.send(iW)) : "retryLater" === WW && this.retries <= 10 && this.sendSoon()
         })))
       }
       sendFinal() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         for (const {
-            request: He
+            request: OW
           }
-          of null !== (ie = this.prepareSend(ee)) && void 0 !== ie ? ie : []) {
-          var ie;
-          ue.g.sendBeacon(Ge(), JSON.stringify(He)) || (0, he.d)(Ge(), He)
+          of null !== (iW = this.prepareSend(WW)) && void 0 !== iW ? iW : []) {
+          var iW;
+          CW.f.sendBeacon(FW(), JSON.stringify(OW)) || (0, rW.b)(FW(), OW)
         }
       }
-      async postInTurn(ee) {
+      async postInTurn(WW) {
         for (const {
-            request: ie,
-            items: He
+            request: iW,
+            items: OW
           }
-          of ee) {
-          const ee = await (0, he.d)(Ge(), ie);
-          if ("retryLater" === ee) return ee;
-          for (const ie of He) ie.ack("uploaded" === ee);
+          of WW) {
+          const WW = await (0, rW.b)(FW(), iW);
+          if ("retryLater" === WW) return WW;
+          for (const iW of OW) iW.ack("uploaded" === WW);
           this.retries = 0
         }
         return "uploaded"
       }
-      schedule(ee, ie) {
-        const He = Date.now() + ee;
-        if (!this.sendEnabled || null !== this.sendTimer && this.sendTimer.dueMs <= He) return;
+      schedule(WW, iW) {
+        const OW = Date.now() + WW;
+        if (!this.sendEnabled || null !== this.sendTimer && this.sendTimer.dueMs <= OW) return;
         null !== this.sendTimer && clearTimeout(this.sendTimer.timer);
-        const ye = setTimeout((() => {
-          this.send(ie())
-        }), ee);
+        const mW = setTimeout((() => {
+          this.send(iW())
+        }), WW);
         this.sendTimer = {
-          timer: ye,
-          dueMs: He
+          timer: mW,
+          dueMs: OW
         }
       }
-      prepareSend(ee) {
+      prepareSend(WW) {
         if (null !== this.sendTimer && (clearTimeout(this.sendTimer.timer), this.sendTimer = null), !this.sendEnabled) return null;
-        this.manifest.endedAtMs = Math.round((0, Ie.e)());
-        const ie = this.pendingItems(ee);
+        this.manifest.endedAtMs = Math.round((0, aW.e)());
+        const iW = this.pendingItems(WW);
         this.options.onSend({
           ...this.manifest,
-          games: ie.flatMap((ee => "games" === ee.list ? [ee.value] : []))
+          games: iW.flatMap((WW => "games" === WW.list ? [WW.value] : []))
         });
         const {
-          recordingId: He,
-          startedAtMs: ye,
-          endedAtMs: be,
-          still: Me
-        } = this.manifest, Ke = {
+          recordingId: OW,
+          startedAtMs: mW,
+          endedAtMs: EW,
+          still: NW
+        } = this.manifest, PW = {
           uploadToken: this.uploadToken,
           manifest: {
-            recordingId: He,
-            startedAtMs: ye,
-            endedAtMs: be,
+            recordingId: OW,
+            startedAtMs: mW,
+            endedAtMs: EW,
             videoSegments: [],
             telemetrySegments: [],
             games: [],
-            ...void 0 === Me ? {} : {
-              still: Me
+            ...void 0 === NW ? {} : {
+              still: NW
             }
           },
           creatorGrants: [],
@@ -790,106 +795,106 @@ export const modules = {
             late: !0
           } : {}
         };
-        return (0, Ne.d)(Ke, ie)
+        return (0, zW.d)(PW, iW)
       }
-      pendingItems(ee) {
-        const ie = [];
-        for (const ye of this.creatorGrants.values()) this.ackedGrants.has(ye) || ie.push({
+      pendingItems(WW) {
+        const iW = [];
+        for (const mW of this.creatorGrants.values()) this.ackedGrants.has(mW) || iW.push({
           list: "creatorGrants",
-          value: ye,
+          value: mW,
           ack: () => {
-            this.ackedGrants.add(ye)
+            this.ackedGrants.add(mW)
           }
         });
-        for (const ye of this.manifest.games) {
-          const ee = JSON.stringify(ye);
-          this.ackedGames.get(ye) !== ee && ie.push({
+        for (const mW of this.manifest.games) {
+          const WW = JSON.stringify(mW);
+          this.ackedGames.get(mW) !== WW && iW.push({
             list: "games",
             value: {
-              ...ye
+              ...mW
             },
             ack: () => {
-              this.ackedGames.set(ye, ee)
+              this.ackedGames.set(mW, WW)
             }
           })
         }
-        for (const ye of this.manifest.videoSegments) this.ackedVideo.get(ye.sequence) !== ye && ie.push({
+        for (const mW of this.manifest.videoSegments) this.ackedVideo.get(mW.sequence) !== mW && iW.push({
           list: "videoSegments",
-          value: ye,
-          ack: ee => {
-            this.ackedVideo.set(ye.sequence, ye), ee && this.options.onListed({
+          value: mW,
+          ack: WW => {
+            this.ackedVideo.set(mW.sequence, mW), WW && this.options.onListed({
               list: "videoSegments",
-              value: ye
+              value: mW
             })
           }
         });
-        const He = new Set;
-        for (const ye of this.manifest.telemetrySegments) He.add(ye.sequence), this.ackedTelemetry.has(ye) || ie.push({
+        const OW = new Set;
+        for (const mW of this.manifest.telemetrySegments) OW.add(mW.sequence), this.ackedTelemetry.has(mW) || iW.push({
           list: "telemetrySegments",
-          value: ye,
-          ack: ee => {
-            this.ackedTelemetry.add(ye), ee && this.options.onListed({
+          value: mW,
+          ack: WW => {
+            this.ackedTelemetry.add(mW), WW && this.options.onListed({
               list: "telemetrySegments",
-              value: ye
+              value: mW
             })
           }
         });
-        for (const ye of this.pendingDom) ie.push({
+        for (const mW of this.pendingDom) iW.push({
           list: "domSegments",
-          value: ye,
-          ack: ee => {
-            this.pendingDom.delete(ye), ee && this.options.onListed({
+          value: mW,
+          ack: WW => {
+            this.pendingDom.delete(mW), WW && this.options.onListed({
               list: "domSegments",
-              value: ye
+              value: mW
             })
           }
         });
-        for (const ye of ei([], ee)) He.has(ye.sequence) || ie.push({
+        for (const mW of ii([], WW)) OW.has(mW.sequence) || iW.push({
           list: "telemetrySegments",
-          value: ye,
+          value: mW,
           ack: () => {}
         });
-        return ie
+        return iW
       }
     }
 
-    function ei(ee, ie) {
-      const He = [...ee];
-      for (const ye of ie) He.some((ee => ee.sequence === ye.sequence)) || He.push({
-        sequence: ye.sequence,
-        startMs: Math.round(ye.startMs),
-        endMs: Math.round(ye.endMs)
+    function ii(WW, iW) {
+      const OW = [...WW];
+      for (const mW of iW) OW.some((WW => WW.sequence === mW.sequence)) || OW.push({
+        sequence: mW.sequence,
+        startMs: Math.round(mW.startMs),
+        endMs: Math.round(mW.endMs)
       });
-      return He
+      return OW
     }
-    var ii = He(40579),
-      Hi = He(5106);
+    var Oi = OW(41028),
+      mi = OW(5397);
 
-    function yi(ee) {
+    function Ei(WW) {
       return {
-        ...ee,
+        ...WW,
         videoSegments: [],
         telemetrySegments: [],
-        games: ee.games.map((ee => ({
-          ...ee
+        games: WW.games.map((WW => ({
+          ...WW
         })))
       }
     }
-    class bi {
-      constructor(ee, ie, He, ye) {
-        var be;
-        this.journal = ee, this.record = void 0, this.landedVideo = new Map, this.record = {
-          recordingId: ie.recordingId,
-          uploadToken: ie.uploadToken,
-          expiresAtMs: ie.expiresAtMs,
+    class Ni {
+      constructor(WW, iW, OW, mW) {
+        var EW;
+        this.journal = WW, this.record = void 0, this.landedVideo = new Map, this.record = {
+          recordingId: iW.recordingId,
+          uploadToken: iW.uploadToken,
+          expiresAtMs: iW.expiresAtMs,
           nextVideoSequence: 0,
-          manifest: yi(He),
-          endpoints: ye,
-          lateUploadUntilMs: ie.expiresAtMs + ii.d,
-          ...void 0 === ie.partJoiner ? {} : {
-            partJoiner: je(ie.partJoiner)
+          manifest: Ei(OW),
+          endpoints: mW,
+          lateUploadUntilMs: iW.expiresAtMs + Oi.e,
+          ...void 0 === iW.partJoiner ? {} : {
+            partJoiner: GW(iW.partJoiner)
           }
-        }, null === (be = navigator.locks) || void 0 === be || be.request((0, Hi.w)(ie.recordingId), (() => new Promise((() => {})))), this.putRecording()
+        }, null === (EW = navigator.locks) || void 0 === EW || EW.request((0, mi.u)(iW.recordingId), (() => new Promise((() => {})))), this.putRecording()
       }
       get recordingId() {
         return this.record.recordingId
@@ -897,81 +902,81 @@ export const modules = {
       get working() {
         return this.journal.working
       }
-      manifestSent(ee) {
-        this.record.manifest = yi(ee), this.putRecording()
+      manifestSent(WW) {
+        this.record.manifest = Ei(WW), this.putRecording()
       }
-      videoQueued(ee, ie) {
-        this.record.nextVideoSequence = Math.max(this.record.nextVideoSequence, ie + 1), this.setMarker(), this.journal.putVideoSequence(this.snapshot(), ee, ie)
+      videoQueued(WW, iW) {
+        this.record.nextVideoSequence = Math.max(this.record.nextVideoSequence, iW + 1), this.setMarker(), this.journal.putVideoSequence(this.snapshot(), WW, iW)
       }
-      videoPartLanded(ee, ie, He) {
-        this.landedVideo.set(ee, {
-          segmentId: ee,
-          ...ie
+      videoPartLanded(WW, iW, OW) {
+        this.landedVideo.set(WW, {
+          segmentId: WW,
+          ...iW
         }), this.putRecording(), this.journal.putVideoProgress({
           recordingId: this.record.recordingId,
-          segmentId: ee,
-          ...ie
-        }, He)
+          segmentId: WW,
+          ...iW
+        }, OW)
       }
-      telemetryQueued(ee, ie, He, ye) {
+      telemetryQueued(WW, iW, OW, mW) {
         this.journal.putTelemetry({
           recordingId: this.record.recordingId,
-          sequence: ee,
-          startMs: He,
-          endMs: ye,
-          bytes: ie
+          sequence: WW,
+          startMs: OW,
+          endMs: mW,
+          bytes: iW
         })
       }
-      videoUploaded(ee) {
-        this.journal.removeVideoChunks(this.record.recordingId, ee)
+      videoUploaded(WW) {
+        this.journal.removeVideoChunks(this.record.recordingId, WW)
       }
-      videoSettled(ee) {
-        this.landedVideo.delete(ee), this.journal.removeVideo(this.record.recordingId, ee)
+      videoSettled(WW) {
+        this.landedVideo.delete(WW), this.journal.removeVideo(this.record.recordingId, WW)
       }
-      telemetryLanded(ee, ie, He, ye) {
+      telemetryLanded(WW, iW, OW, mW) {
         this.journal.putTelemetry({
           recordingId: this.record.recordingId,
-          sequence: ee,
-          startMs: He,
-          endMs: ye,
-          bytes: ie,
+          sequence: WW,
+          startMs: OW,
+          endMs: mW,
+          bytes: iW,
           landed: !0
         })
       }
-      telemetrySettled(ee) {
-        this.journal.removeTelemetry(this.record.recordingId, ee)
+      telemetrySettled(WW) {
+        this.journal.removeTelemetry(this.record.recordingId, WW)
       }
-      domQueued(ee, ie, He, ye) {
-        var be;
-        this.record.nextDomSequence = Math.max(null !== (be = this.record.nextDomSequence) && void 0 !== be ? be : 0, ee + 1), this.setMarker(), this.journal.queueDom(this.snapshot(), {
+      domQueued(WW, iW, OW, mW) {
+        var EW;
+        this.record.nextDomSequence = Math.max(null !== (EW = this.record.nextDomSequence) && void 0 !== EW ? EW : 0, WW + 1), this.setMarker(), this.journal.queueDom(this.snapshot(), {
           recordingId: this.record.recordingId,
-          sequence: ee,
-          chunk: He,
-          bytes: ie
-        }, ye)
+          sequence: WW,
+          chunk: OW,
+          bytes: iW
+        }, mW)
       }
-      domTail(ee) {
+      domTail(WW) {
         this.journal.putDomTail({
           recordingId: this.record.recordingId,
-          ...ee
+          ...WW
         })
       }
-      domTailDropped(ee) {
-        this.journal.removeDomTail(this.record.recordingId, ee)
+      domTailDropped(WW) {
+        this.journal.removeDomTail(this.record.recordingId, WW)
       }
-      domLanded(ee, ie) {
+      domLanded(WW, iW) {
         this.journal.putDom({
           recordingId: this.record.recordingId,
-          sequence: ee,
-          chunk: ie,
+          sequence: WW,
+          chunk: iW,
           bytes: null
         })
       }
-      domSettled(ee) {
-        this.journal.removeDom(this.record.recordingId, ee)
+      domSettled(WW) {
+        this.journal.removeDom(this.record.recordingId, WW)
       }
       setMarker() {
-        Ae.i.setItem(Hi.n, !0)
+        oW.i.setItem(mi.j, !0)
       }
       putRecording() {
         this.setMarker(), this.journal.putRecording(this.snapshot())
@@ -983,37 +988,37 @@ export const modules = {
         }
       }
     }
-    class Mi {
-      constructor(ee) {
-        this.deps = ee, this.pageHiding = !1, this.exitFlushedAtMs = -1 / 0
+    class Pi {
+      constructor(WW) {
+        this.deps = WW, this.pageHiding = !1, this.exitFlushedAtMs = -1 / 0
       }
       get isHiding() {
         return this.pageHiding
       }
-      listen(ee) {
+      listen(WW) {
         document.addEventListener("visibilitychange", (() => {
-          const ee = document.hidden;
-          this.deps.writeEvent(ee ? "hidden" : "visible"), this.deps.postToWorker({
+          const WW = document.hidden;
+          this.deps.writeEvent(WW ? "hidden" : "visible"), this.deps.postToWorker({
             type: "hidden",
-            hidden: ee
-          }), ee ? (this.flushTelemetryOnExit(), this.deps.stills.upload(), this.deps.manifest.send(this.uploadingTelemetry()), this.deps.cutPageRecording()) : this.exitFlushedAtMs = -1 / 0
+            hidden: WW
+          }), WW ? (this.flushTelemetryOnExit(), this.deps.stills.upload(), this.deps.manifest.send(this.uploadingTelemetry()), this.deps.cutPageRecording()) : this.exitFlushedAtMs = -1 / 0
         }), {
-          signal: ee
+          signal: WW
         }), window.addEventListener("pageshow", (() => {
           this.pageHiding = !1
         }), {
-          signal: ee
-        }), window.addEventListener("pagehide", (ee => {
+          signal: WW
+        }), window.addEventListener("pagehide", (WW => {
           this.pageHiding = !0, this.deps.postToWorker({
             type: "flush"
-          }), this.flushTelemetryOnExit(), this.deps.stills.beacon(), this.sendManifest(), ee.persisted || this.deps.releaseJoined(), this.deps.cutPageRecording()
+          }), this.flushTelemetryOnExit(), this.deps.stills.beacon(), this.sendManifest(), WW.persisted || this.deps.releaseJoined(), this.deps.cutPageRecording()
         }), {
-          signal: ee
+          signal: WW
         })
       }
       flushTelemetryOnExit() {
-        const ee = performance.now();
-        ee - this.exitFlushedAtMs > 1e3 && (this.deps.flushTelemetry(), this.exitFlushedAtMs = ee)
+        const WW = performance.now();
+        WW - this.exitFlushedAtMs > 1e3 && (this.deps.flushTelemetry(), this.exitFlushedAtMs = WW)
       }
       sendManifest() {
         this.pageHiding ? this.deps.manifest.sendFinal(this.uploadingTelemetry()) : this.deps.manifest.send()
@@ -1022,50 +1027,50 @@ export const modules = {
         this.pageHiding ? this.sendManifest() : this.deps.isStopped() ? this.deps.manifest.send(this.uploadingTelemetry()) : document.hidden && this.deps.manifest.sendShortly((() => this.uploadingTelemetry()))
       }
       uploadingTelemetry() {
-        return this.deps.queuedUploads().flatMap((ee => {
+        return this.deps.queuedUploads().flatMap((WW => {
           let {
-            sequence: ie,
-            meta: He
-          } = ee;
-          return "telemetry" === He.type ? [{
-            sequence: ie,
-            startMs: He.startMs,
-            endMs: He.endMs
+            sequence: iW,
+            meta: OW
+          } = WW;
+          return "telemetry" === OW.type ? [{
+            sequence: iW,
+            startMs: OW.startMs,
+            endMs: OW.endMs
           }] : []
         }))
       }
     }
-    var Ki = He(36938),
-      Ui = He.n(Ki);
+    var Li = OW(37245),
+      ci = OW.n(Li);
 
-    function Fi() {
-      return Ui()('/*! For license information please see sessionReplayVideo.worker.e6609570.worker.js.LICENSE.txt */\n(()=>{var ee={9:()=>{}},ie={};function He(ye){var be=ie[ye];if(void 0!==be)return be.exports;var Me=ie[ye]={exports:{}};return ee[ye](Me,Me.exports,He),Me.exports}(()=>{var ee,ie=Object.getPrototypeOf?ee=>Object.getPrototypeOf(ee):ee=>ee.__proto__;He.t=function(ye,be){if(1&be&&(ye=this(ye)),8&be)return ye;if("object"===typeof ye&&ye){if(4&be&&ye.__esModule)return ye;if(16&be&&"function"===typeof ye.then)return ye}var Me=Object.create(null);He.r(Me);var Ke={};ee=ee||[null,ie({}),ie([]),ie(ie)];for(var Ue=2&be&&ye;"object"==typeof Ue&&!~ee.indexOf(Ue);Ue=ie(Ue))Object.getOwnPropertyNames(Ue).forEach((ee=>Ke[ee]=()=>ye[ee]));return Ke.default=()=>ye,He.d(Me,Ke),Me}})(),He.d=(ee,ie)=>{for(var ye in ie)He.o(ie,ye)&&!He.o(ee,ye)&&Object.defineProperty(ee,ye,{enumerable:!0,get:ie[ye]})},He.o=(ee,ie)=>Object.prototype.hasOwnProperty.call(ee,ie),He.r=ee=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(ee,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(ee,"__esModule",{value:!0})};const ye="bloxdSessionReplayTails";const be=["recordings","videoHeaders","videoChunks","videoSequences","videoProgress","telemetry","dom","domTail"];function Me(ee){return new Promise(((ie,He)=>{ee.onsuccess=()=>{ie(ee.result)},ee.onerror=()=>{He(ee.error)}}))}function Ke(ee){return new Promise(((ie,He)=>{ee.oncomplete=()=>{ie()},ee.onerror=()=>{He(ee.error)},ee.onabort=()=>{var ie;He(null!==(ie=ee.error)&&void 0!==ie?ie:new Error("IndexedDB transaction aborted"))}}))}function Ue(ee){return IDBKeyRange.bound([ee],[ee,[]])}function Fe(ee,ie){return IDBKeyRange.bound([ee,ie],[ee,ie,[]])}class Je{constructor(){this.db=null,this.opening=null,this.failed=!1,this.tailRecordings=new Set}get working(){return!this.failed}static get supported(){try{return"undefined"!==typeof indexedDB}catch{return!1}}putRecording(ee){this.write(["recordings"],(ie=>{ie.objectStore("recordings").put(ee)}))}putVideoSequence(ee,ie,He){this.write(["recordings","videoSequences"],(ye=>{ye.objectStore("recordings").put(ee),ye.objectStore("videoSequences").put({recordingId:ee.recordingId,segmentId:ie,sequence:He})}))}appendVideo(ee,ie){this.write(["videoHeaders","videoChunks"],(He=>{He.objectStore("videoHeaders").put(ee);const ye=He.objectStore("videoChunks");for(const ee of ie)ye.put(ee)}))}putVideoProgress(ee,ie){this.write(["videoProgress","videoChunks"],(He=>{if(He.objectStore("videoProgress").put(ee),ie>0){const{recordingId:ye,segmentId:be}=ee;He.objectStore("videoChunks").delete(IDBKeyRange.bound([ye,be,0],[ye,be,ie],!1,!0))}}))}removeVideoChunks(ee,ie){this.write(["videoChunks"],(He=>{He.objectStore("videoChunks").delete(Fe(ee,ie))}))}removeVideo(ee,ie){this.write(["videoHeaders","videoChunks","videoSequences","videoProgress"],(He=>{He.objectStore("videoHeaders").delete([ee,ie]),He.objectStore("videoChunks").delete(Fe(ee,ie)),He.objectStore("videoSequences").delete([ee,ie]),He.objectStore("videoProgress").delete([ee,ie])}))}putTelemetry(ee){this.write(["telemetry"],(ie=>{ie.objectStore("telemetry").put(ee)}))}removeTelemetry(ee,ie){this.write(["telemetry"],(He=>{He.objectStore("telemetry").delete([ee,ie])}))}putDom(ee){this.write(["dom"],(ie=>{ie.objectStore("dom").put(ee)}))}queueDom(ee,ie,He){this.write(["recordings","dom","domTail"],(ye=>{ye.objectStore("recordings").put(ee),ye.objectStore("dom").put(ie),ye.objectStore("domTail").delete(Fe(ie.recordingId,He))}),(ye=>{console.warn(`Session replay couldn\'t journal page recording chunk ${ie.sequence}; a closing tab may lose it.`,ye),this.write(["recordings","domTail"],(ye=>{ye.objectStore("recordings").put(ee),ye.objectStore("domTail").delete(Fe(ie.recordingId,He))}))}))}putDomTail(ee){this.tailRecordings.add(ee.recordingId),this.write(["domTail"],(ie=>{ie.objectStore("domTail").put(ee)}))}removeDomTail(ee,ie){this.write(["domTail"],(He=>{He.objectStore("domTail").delete(Fe(ee,ie))}))}removeDom(ee,ie){this.write(["dom"],(He=>{He.objectStore("dom").delete([ee,ie])}))}async listRecordings(){const ee=await this.open();return await Me(ee.transaction("recordings","readonly").objectStore("recordings").getAll())}async read(ee){const ie=(await this.open()).transaction(["videoHeaders","videoChunks","videoSequences","videoProgress","telemetry","dom","domTail"],"readonly"),He=Ue(ee.recordingId),ye=ee=>Me(ie.objectStore(ee).getAll(He)),[be,Ke,Fe,Je,oe,Re,ke]=await Promise.all([ye("videoHeaders"),ye("videoChunks"),ye("videoSequences"),ye("videoProgress"),ye("telemetry"),ye("dom"),ye("domTail")]);return{recording:ee,telemetry:oe,dom:Re,domTails:ke,video:be.map((ee=>{var ie,He,ye;return{header:ee,sequence:null!==(ie=null===(He=Fe.find((ie=>ie.segmentId===ee.segmentId)))||void 0===He?void 0:He.sequence)&&void 0!==ie?ie:null,progress:null!==(ye=Je.find((ie=>ie.segmentId===ee.segmentId)))&&void 0!==ye?ye:null,chunks:Ke.filter((ie=>ie.segmentId===ee.segmentId))}}))}}async deleteRecording(ee){const ie=(await this.open()).transaction([...be],"readwrite");ie.objectStore("recordings").delete(ee);for(const He of be.slice(1))ie.objectStore(He).delete(Ue(ee));await Ke(ie)}async forgetSent(ee,ie){const He=(await this.open()).transaction([...be],"readwrite"),{recordingId:ye}=ee;He.objectStore("recordings").put(ee);for(const be of ie.videoSegmentIds)He.objectStore("videoHeaders").delete([ye,be]),He.objectStore("videoChunks").delete(Fe(ye,be)),He.objectStore("videoSequences").delete([ye,be]),He.objectStore("videoProgress").delete([ye,be]);for(const be of ie.telemetrySequences)He.objectStore("telemetry").delete([ye,be]);for(const be of ie.domSequences)He.objectStore("dom").delete([ye,be]);for(const be of ie.domTailChunks)He.objectStore("domTail").delete(Fe(ye,be));await Ke(He)}write(ee,ie){let He=arguments.length>2&&void 0!==arguments[2]?arguments[2]:ee=>{this.fail(ee)};if(this.failed)return;const ye=ye=>{try{var be;const Me=ye.transaction(ee,"readwrite");ie(Me),null===(be=Me.commit)||void 0===be||be.call(Me),Ke(Me).catch(He)}catch(Me){He(Me)}};null===this.db?this.open().then(ye,(ee=>{this.fail(ee)})):ye(this.db)}fail(ee){this.failed||(this.failed=!0,console.warn("Session replay can\'t keep its upload journal; what a closing tab leaves unsent will be lost.",ee),this.dropTails())}dropTails(){if(null===this.db||0===this.tailRecordings.size)return;const ee=ee=>{console.warn("Session replay couldn\'t drop its page recording tails from its upload journal.",ee)};try{const ie=this.db.transaction(["domTail"],"readwrite");for(const ee of this.tailRecordings)ie.objectStore("domTail").delete(Ue(ee));Ke(ie).catch(ee)}catch(ie){ee(ie)}}open(){return this.opening??=new Promise(((ee,ie)=>{const He=indexedDB.open(ye,4);He.onupgradeneeded=ee=>{const ie=He.result;ee.oldVersion<1&&(ie.createObjectStore("recordings",{keyPath:"recordingId"}),ie.createObjectStore("videoHeaders",{keyPath:["recordingId","segmentId"]}),ie.createObjectStore("videoChunks",{keyPath:["recordingId","segmentId","index"]}),ie.createObjectStore("videoSequences",{keyPath:["recordingId","segmentId"]}),ie.createObjectStore("telemetry",{keyPath:["recordingId","sequence"]})),ee.oldVersion<2&&ie.createObjectStore("videoProgress",{keyPath:["recordingId","segmentId"]}),ee.oldVersion<3&&ie.createObjectStore("dom",{keyPath:["recordingId","sequence"]}),ie.createObjectStore("domTail",{keyPath:["recordingId","chunkIndex","fromChar"]})};let be=!1;He.onblocked=()=>{be=!0,ie(new Error("An older tab holds the upload journal at an earlier version"))},He.onsuccess=()=>{be?He.result.close():(this.db=He.result,this.db.onversionchange=()=>{var ee;this.dropTails(),null===(ee=this.db)||void 0===ee||ee.close(),this.db=null,this.opening=null},ee(He.result))},He.onerror=()=>{ie(He.error)}})),this.opening}}const oe=[{fpsScale:1,areaScale:1},{fpsScale:2/3,areaScale:.56},{fpsScale:.5,areaScale:.36},{fpsScale:1/3,areaScale:.25}];class Re{constructor(){this.level=0,this.lastChangeMs=-1/0,this.healthySinceMs=null,this.firstSampleMs=null,this.gameStrugglingSinceMs=null,this.backpressureSinceMs=null,this.lastChangeReason="none",this.steppedDownForGameFps=!1}getLevel(){return oe[this.level]}getLevelIndex(){return this.level}getLastChangeReason(){return this.lastChangeReason}restartWarmUp(){this.firstSampleMs=null,this.healthySinceMs=null,this.gameStrugglingSinceMs=null,this.backpressureSinceMs=null}update(ee){this.firstSampleMs??=ee.nowMs;const ie=null!==ee.pingMs&&ee.pingMs>300,He=ee.nowMs-this.firstSampleMs>=3e4;He&&(null!==ee.gameFps&&ee.gameFps<24||ie)?this.gameStrugglingSinceMs??=ee.nowMs:this.gameStrugglingSinceMs=null,He&&ee.encoderBackpressureDrops>0?this.backpressureSinceMs??=ee.nowMs:this.backpressureSinceMs=null;const ye=null!==this.backpressureSinceMs&&ee.nowMs-this.backpressureSinceMs>=3e3,be=ye||null!==this.gameStrugglingSinceMs&&ee.nowMs-this.gameStrugglingSinceMs>=1e4,Me=this.steppedDownForGameFps?45:24,Ke=0===ee.encoderBackpressureDrops&&!ie&&(null===ee.gameFps||ee.gameFps>=Me);return be?(this.healthySinceMs=null,this.level<oe.length-1&&ee.nowMs-this.lastChangeMs>=1e4&&(this.level++,this.lastChangeMs=ee.nowMs,this.lastChangeReason=ye?"encoderBackpressure":ie?"highPing":"lowGameFps",this.steppedDownForGameFps||="lowGameFps"===this.lastChangeReason,!0)):Ke&&0!==this.level?(this.healthySinceMs??=ee.nowMs,ee.nowMs-this.healthySinceMs>=6e4&&(this.level--,this.lastChangeMs=ee.nowMs,this.lastChangeReason="recovered",this.healthySinceMs=null,this.steppedDownForGameFps&&=this.level>0,!0)):(this.healthySinceMs=null,!1)}}function ke(ee,ie){return ee.width===ie.width&&ee.height===ie.height}function qe(ee){return Math.max(2,2*Math.floor(ee/2))}function fe(ee){return Math.ceil(ee.width/16)*Math.ceil(ee.height/16)}function Te(ee,ie,He){const ye=ee.bitrate*fe(ie)/ee.maxMacroblocks;return He*Math.min(ee.bitrate,Math.max(ee.minBitrate,ye/He))}class pe{constructor(ee){this.intervalMs=void 0,this.nextDueMs=-1/0,this.intervalMs=1e3/ee}setMaxFps(ee){this.intervalMs=1e3/ee}shouldKeep(ee){return!(ee<this.nextDueMs-.25*this.intervalMs)&&(this.nextDueMs=ee-this.nextDueMs>this.intervalMs?ee+this.intervalMs:this.nextDueMs+this.intervalMs,!0)}reset(){this.nextDueMs=-1/0}}const Xe=["avc1.42001f","avc1.42e01f","avc1.4d001f","avc1.64001f"],ze=["variable","constant"],Be=["realtime","quality"],Ee=["quality","realtime"];class ge{constructor(){this.canvas=null,this.context=null}scale(ee,ie){if(ee.displayWidth===ie.width&&ee.displayHeight===ie.height)return ee;return this.contextFor(ie).drawImage(ee,0,0,ie.width,ie.height),new VideoFrame(this.canvas,{timestamp:ee.timestamp,alpha:"discard"})}contextFor(ee){return null===this.canvas||null===this.context?(this.canvas=new OffscreenCanvas(ee.width,ee.height),this.context=this.canvas.getContext("2d",{alpha:!1})):this.canvas.width===ee.width&&this.canvas.height===ee.height||(this.canvas.width=ee.width,this.canvas.height=ee.height),this.context}}const Oe=[...[.7,.6,.5,.42,.35].map((ee=>({width:640,quality:ee}))),{width:480,quality:.35},{width:360,quality:.35}],de=[{width:320,quality:.5},{width:320,quality:.35},{width:240,quality:.35},{width:160,quality:.35}];class We{constructor(ee,ie){this.steps=ee,this.targetBytes=ie,this.index=0}get step(){return this.steps[this.index]}record(ee){ee>this.targetBytes?this.index=Math.min(this.index+1,this.steps.length-1):ee<.6*this.targetBytes&&(this.index=Math.max(this.index-1,0))}}class te{constructor(ee){this.post=ee,this.full=new We(Oe,28e3),this.small=new We(de,6144),this.lastTimestampUs=-1/0,this.encoding=!1,this.failed=!1}offer(ee,ie){if(!(this.failed||this.encoding||ee.timestamp-this.lastTimestampUs<2e6)){this.lastTimestampUs=ee.timestamp;try{const He=Ze(ee,ee.displayWidth,ee.displayHeight,this.full.step.width),ye=Ze(He,He.width,He.height,this.small.step.width);this.encoding=!0,this.encode(He,ye,ie).finally((()=>{this.encoding=!1}))}catch(He){this.fail(He)}}}async encode(ee,ie,He){try{const[ye,be]=await Promise.all([ee.convertToBlob({type:"image/jpeg",quality:this.full.step.quality}),ie.convertToBlob({type:"image/jpeg",quality:this.small.step.quality})]);this.full.record(ye.size),this.small.record(be.size);const Me=await ye.arrayBuffer(),Ke=be.size<=8192?await be.arrayBuffer():null;this.post({type:"still",bytes:Me,small:Ke,atMs:He},null===Ke?[Me]:[Me,Ke])}catch(ye){this.fail(ye)}}fail(ee){this.failed=!0,console.warn("Session replay couldn\'t encode a still; recording without one.",ee)}}function Ze(ee,ie,He,ye){const be=Math.min(ye,ie),Me=Math.max(1,Math.round(He*be/ie)),Ke=new OffscreenCanvas(be,Me),Ue=Ke.getContext("2d");if(null===Ue)throw new Error("no 2D context");return Ue.drawImage(ee,0,0,be,Me),Ke}let we=Date.now()-performance.now();function De(){const ee=performance.now(),ie=Date.now();return Math.abs(ie-(ee+we))>20&&(we=ie-ee),ee+we}function Pe(ee){if(!ee)throw new Error("Assertion failed.")}const Ae=Math.PI/180,Ye=(Math.PI,[1,0,0,0,1,0,0,0,1]),Ve=ee=>{const ie=ee*Ae,He=Math.round(Math.cos(ie)),ye=Math.round(Math.sin(ie));return[He,ye,0,-ye,He,0,0,0,1]},ae=(ee,ie)=>[1,0,0,0,1,0,ee,ie,1],ce=(ee,ie)=>{const He=new Array(9);for(let ye=0;ye<3;ye++)for(let be=0;be<3;be++)He[3*ye+be]=ee[3*ye]*ie[be]+ee[3*ye+1]*ie[3+be]+ee[3*ye+2]*ie[6+be];return He},xe=ee=>ee&&ee[ee.length-1],Le=ee=>ee>=0&&ee<2**32,Ce=ee=>{let ie=0;for(;0===ee.readBits(1)&&ie<32;)ie++;if(ie>=32)throw new Error("Invalid exponential-Golomb code.");return(1<<ie)-1+ee.readBits(ie)},ve=ee=>{const ie=Ce(ee);return 0===(1&ie)?-(ie>>1):ie+1>>1},ue=ee=>ee.constructor===Uint8Array?ee:ArrayBuffer.isView(ee)?new Uint8Array(ee.buffer,ee.byteOffset,ee.byteLength):new Uint8Array(ee),me=ee=>ee.constructor===DataView?ee:ArrayBuffer.isView(ee)?new DataView(ee.buffer,ee.byteOffset,ee.byteLength):new DataView(ee),le="undefined"!==typeof globalThis.TextEncoder?globalThis.TextEncoder:class{constructor(){this.encoding="utf-8"}encode(){let ee=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";const ie=new Uint8Array(3*ee.length);let He=0;for(let ye=0;ye<ee.length;ye++){let be=ee.charCodeAt(ye);if(be<128)ie[He++]=be;else if(be<2048)ie[He++]=192|be>>6,ie[He++]=128|63&be;else if(be<55296||be>57343)ie[He++]=224|be>>12,ie[He++]=128|be>>6&63,ie[He++]=128|63&be;else{const Me=ye+1<ee.length?ee.charCodeAt(ye+1):0;be<56320&&Me>=56320&&Me<=57343?(be=65536+(be-55296<<10)+(Me-56320),ye++,ie[He++]=240|be>>18,ie[He++]=128|be>>12&63,ie[He++]=128|be>>6&63,ie[He++]=128|63&be):(ie[He++]=239,ie[He++]=191,ie[He++]=189)}}return ie.slice(0,He)}},Se=("undefined"!==typeof globalThis.TextDecoder&&globalThis.TextDecoder,new le),ne={bt709:1,bt470bg:5,smpte170m:6,bt2020:9,smpte432:12},je={bt709:1,smpte170m:6,linear:8,"iec61966-2-1":13,pq:16,hlg:18},se={rgb:0,bt709:1,bt470bg:5,smpte170m:6,"bt2020-ncl":9},Ie=ee=>!ee||null==ee.primaries&&null==ee.transfer&&null==ee.matrix&&null==ee.fullRange,he=ee=>ee instanceof ArrayBuffer||"undefined"!==typeof SharedArrayBuffer&&ee instanceof SharedArrayBuffer||ArrayBuffer.isView(ee);class Ne{constructor(){this.currentPromise=Promise.resolve(),this.pending=0}async acquire(){let ee;const ie=new Promise((ie=>{let He=!1;ee=()=>{He||(ie(),this.pending--,He=!0)}})),He=this.currentPromise;return this.currentPromise=ie,this.pending++,await He,ee}}const Ge=()=>{let ee,ie;return{promise:new Promise(((He,ye)=>{ee=He,ie=ye})),resolve:ee,reject:ie}},re=ee=>{throw new Error(`Unexpected value: ${ee}`)},Qe=(ee,ie,He,ye)=>{He>>>=0,He&=16777215,ye?(ee.setUint8(ie,255&He),ee.setUint8(ie+1,He>>>8&255),ee.setUint8(ie+2,He>>>16&255)):(ee.setUint8(ie,He>>>16&255),ee.setUint8(ie+1,He>>>8&255),ee.setUint8(ie+2,255&He))},ei="und",ii=ee=>{let ie=0;for(;0!==ee;)ee&=ee-1,ie++;return ie},Hi=/^[a-z]{3}$/,yi=1e6*(1+Number.EPSILON);const bi=(async()=>{})().constructor,Mi=ee=>ee instanceof bi||ee instanceof Promise||"function"===typeof ee?.then,Ki=function*(ee){for(const ie in ee){const He=ee[ie];void 0!==He&&(yield{key:ie,value:He})}},Ui=ee=>"number"===typeof ee&&!Number.isNaN(ee),Fi=ee=>{Pe(Number.isInteger(ee.num)),Pe(Number.isInteger(ee.den)),Pe(0!==ee.den);let ie=Math.abs(ee.num),He=Math.abs(ee.den);for(;0!==He;){const ee=ie%He;ie=He,He=ee}const ye=ie||1;return{num:ee.num/ye,den:ee.den/ye}};new Map,new Map;const Ji=ee=>Array.isArray(ee)?ee:[ee];class oi{constructor(){this._listeners=new Map}on(ee,ie,He){this._listeners.has(ee)||this._listeners.set(ee,new Set);const ye={oR:ie,once:He?.once??!1};return this._listeners.get(ee).add(ye),()=>{this._listeners.get(ee)?.delete(ye)}}_emit(){for(var ee=arguments.length,ie=new Array(ee),He=0;He<ee;He++)ie[He]=arguments[He];const[ye,be]=ie,Me=this._listeners.get(ye);if(Me)for(const Ue of Me){try{Ue.oR(be)}catch(Ke){console.error(Ke)}Ue.once&&Me.delete(Ue)}}}const Ri=ee=>null!==ee&&"object"===typeof ee&&Object.getPrototypeOf(ee)===Object.prototype&&Object.values(ee).every((ee=>"string"===typeof ee));class ki{constructor(ee,ie){if(this.data=ee,this.mimeType=ie,!(ee instanceof Uint8Array))throw new TypeError("data must be a Uint8Array.");if("string"!==typeof ie)throw new TypeError("mimeType must be a string.")}}class qi{constructor(ee,ie,He,ye){if(this.data=ee,this.mimeType=ie,this.name=He,this.description=ye,!(ee instanceof Uint8Array))throw new TypeError("data must be a Uint8Array.");if(void 0!==ie&&"string"!==typeof ie)throw new TypeError("mimeType, when provided, must be a string.");if(void 0!==He&&"string"!==typeof He)throw new TypeError("name, when provided, must be a string.");if(void 0!==ye&&"string"!==typeof ye)throw new TypeError("description, when provided, must be a string.")}}class fi{constructor(ee){this.bytes=ee,this.pos=0}seekToByte(ee){this.pos=8*ee}readBit(){const ee=Math.floor(this.pos/8),ie=this.bytes[ee]??0,He=7-(7&this.pos),ye=(ie&1<<He)>>He;return this.pos++,ye}readBits(ee){if(1===ee)return this.readBit();let ie=0;for(let He=0;He<ee;He++)ie<<=1,ie|=this.readBit();return ie}writeBits(ee,ie){const He=this.pos+ee;for(let ye=this.pos;ye<He;ye++){const ee=Math.floor(ye/8);let be=this.bytes[ee];const Me=7-(7&ye);be&=~(1<<Me),be|=(ie&1<<He-ye-1)>>He-ye-1<<Me,this.bytes[ee]=be}this.pos=He}copyBits(ee,ie){let He=0;for(;He<ee-7;He+=8)this.writeBits(8,ie.readBits(8));const ye=ee-He;ye>0&&this.writeBits(ye,ie.readBits(ye))}readAlignedByte(){if(this.pos%8!==0)throw new Error("Bitstream is not byte-aligned.");const ee=this.pos/8,ie=this.bytes[ee]??0;return this.pos+=8,ie}skipBits(ee){this.pos+=ee}getBitsLeft(){return 8*this.bytes.length-this.pos}clone(){const ee=new fi(this.bytes);return ee.pos=this.pos,ee}}const Ti=[96e3,88200,64e3,48e3,44100,32e3,24e3,22050,16e3,12e3,11025,8e3,7350],Xi=[-1,1,2,3,4,5,6,8],zi=ee=>{const ie=5===ee.objectType||29===ee.objectType,He=29===ee.objectType,ye=ie?ee.outputSampleRate/2:ee.outputSampleRate,be=He?1:ee.outputNumberOfChannels,Me=Xi.indexOf(be);if(-1===Me)throw new TypeError(`Unsupported number of channels: ${ee.outputNumberOfChannels}`);let Ke=16;ee.objectType>=32&&(Ke+=6),15===gi(ye)&&(Ke+=24),ie&&(Ke+=9,15===gi(ee.outputSampleRate)&&(Ke+=24));const Ue=Math.ceil(Ke/8),Fe=new Uint8Array(Ue),Je=new fi(Fe);return Bi(Je,ee.objectType),Ei(Je,ye),Je.writeBits(4,Me),ie&&(Ei(Je,ee.outputSampleRate),Bi(Je,2)),Je.writeBits(3,0),Fe},Bi=(ee,ie)=>{ie<32?ee.writeBits(5,ie):(ee.writeBits(5,31),ee.writeBits(6,ie-32))},Ei=(ee,ie)=>{const He=gi(ie);ee.writeBits(4,He),15===He&&ee.writeBits(24,ie)},gi=ee=>{const ie=Ti.indexOf(ee);return-1===ie?15:ie};var Oi;!function(ee){ee[ee.Silent=0]="Silent",ee[ee.Errors=1]="Errors",ee[ee.Warnings=2]="Warnings",ee[ee.Info=3]="Info"}(Oi||(Oi={}));class di{constructor(){}static get level(){return di._level}static set level(ee){if(ee!==Oi.Silent&&ee!==Oi.Errors&&ee!==Oi.Warnings&&ee!==Oi.Info)throw new TypeError("Invalid log level. Use one of the values of the LogLevel enum.");di._level=ee}static get _emitter(){return di._emitterInstance??=new oi}static on(ee,ie,He){return di._emitter.on(ee,ie,He)}static _error(){for(var ee=arguments.length,ie=new Array(ee),He=0;He<ee;He++)ie[He]=arguments[He];di._emitter._emit("error",ie),di._level>=Oi.Errors&&console.error(...ie)}static _warn(){for(var ee=arguments.length,ie=new Array(ee),He=0;He<ee;He++)ie[He]=arguments[He];di._emitter._emit("warn",ie),di._level>=Oi.Warnings&&console.warn(...ie)}static _info(){for(var ee=arguments.length,ie=new Array(ee),He=0;He<ee;He++)ie[He]=arguments[He];di._emitter._emit("info",ie),di._level>=Oi.Info&&console.info(...ie)}}di._level=Oi.Info,di._emitterInstance=null;const Wi=[48e3,44100,32e3],ti=[24e3,22050,16e3],Zi="Mediabunny v1.61.3";var wi,Di;!function(ee){ee[ee.NON_IDR_SLICE=1]="NON_IDR_SLICE",ee[ee.SLICE_DPA=2]="SLICE_DPA",ee[ee.SLICE_DPB=3]="SLICE_DPB",ee[ee.SLICE_DPC=4]="SLICE_DPC",ee[ee.IDR=5]="IDR",ee[ee.SEI=6]="SEI",ee[ee.SPS=7]="SPS",ee[ee.PPS=8]="PPS",ee[ee.AUD=9]="AUD",ee[ee.SPS_EXT=13]="SPS_EXT"}(wi||(wi={})),function(ee){ee[ee.RASL_N=8]="RASL_N",ee[ee.RASL_R=9]="RASL_R",ee[ee.BLA_W_LP=16]="BLA_W_LP",ee[ee.RSV_IRAP_VCL23=23]="RSV_IRAP_VCL23",ee[ee.VPS_NUT=32]="VPS_NUT",ee[ee.SPS_NUT=33]="SPS_NUT",ee[ee.PPS_NUT=34]="PPS_NUT",ee[ee.AUD_NUT=35]="AUD_NUT",ee[ee.PREFIX_SEI_NUT=39]="PREFIX_SEI_NUT",ee[ee.SUFFIX_SEI_NUT=40]="SUFFIX_SEI_NUT"}(Di||(Di={}));const Pi=function*(ee){let ie=0,He=-1;for(;ie<ee.length-2;){const ye=ee.indexOf(0,ie);if(-1===ye||ye>=ee.length-2)break;ie=ye;let be=0;ie+3<ee.length&&0===ee[ie+1]&&0===ee[ie+2]&&1===ee[ie+3]?be=4:0===ee[ie+1]&&1===ee[ie+2]&&(be=3),0!==be?(-1!==He&&ie>He&&(yield{offset:He,length:ie-He}),He=ie+be,ie=He):ie++}-1!==He&&He<ee.length&&(yield{offset:He,length:ee.length-He})},Ai=ee=>31&ee,Yi=ee=>{const ie=[],He=ee.length;for(let ye=0;ye<He;ye++)ye+2<He&&0===ee[ye]&&0===ee[ye+1]&&3===ee[ye+2]?(ie.push(0,0),ye+=2):ie.push(ee[ye]);return new Uint8Array(ie)},Vi=(new Uint8Array([0,0,0,1]),(ee,ie)=>{const He=ee.reduce(((ee,He)=>ee+ie+He.byteLength),0),ye=new Uint8Array(He);let be=0;for(const Me of ee){const ee=new DataView(ye.buffer,ye.byteOffset,ye.byteLength);switch(ie){case 1:ee.setUint8(be,Me.byteLength);break;case 2:ee.setUint16(be,Me.byteLength,!1);break;case 3:Qe(ee,be,Me.byteLength,!1);break;case 4:ee.setUint32(be,Me.byteLength,!1)}be+=ie,ye.set(Me,be),be+=Me.byteLength}return ye}),ai=ee=>{try{const ie=[],He=[],ye=[];for(const Ue of Pi(ee)){const be=ee.subarray(Ue.offset,Ue.offset+Ue.length),Me=Ai(be[0]);Me===wi.SPS?ie.push(be):Me===wi.PPS?He.push(be):Me===wi.SPS_EXT&&ye.push(be)}if(0===ie.length)return null;if(0===He.length)return null;const be=ie[0],Me=xi(be);Pe(null!==Me);const Ke=100===Me.profileIdc||110===Me.profileIdc||122===Me.profileIdc||144===Me.profileIdc;return{configurationVersion:1,avcProfileIndication:Me.profileIdc,profileCompatibility:Me.constraintFlags,avcLevelIndication:Me.levelIdc,lengthSizeMinusOne:3,sequenceParameterSets:ie,pictureParameterSets:He,chromaFormat:Ke?Me.chromaFormatIdc:null,bitDepthLumaMinus8:Ke?Me.bitDepthLumaMinus8:null,bitDepthChromaMinus8:Ke?Me.bitDepthChromaMinus8:null,sequenceParameterSetExt:Ke?ye:null}}catch(ie){return di._error("Error building AVC Decoder Configuration Record:",ie),null}},ci={1:{num:1,den:1},2:{num:12,den:11},3:{num:10,den:11},4:{num:16,den:11},5:{num:40,den:33},6:{num:24,den:11},7:{num:20,den:11},8:{num:32,den:11},9:{num:80,den:33},10:{num:18,den:11},11:{num:15,den:11},12:{num:64,den:33},13:{num:160,den:99},14:{num:4,den:3},15:{num:3,den:2},16:{num:2,den:1}},xi=ee=>{try{const ie=Yi(ee),He=new fi(ie);He.skipBits(1),He.skipBits(2);if(7!==He.readBits(5))return null;const ye=He.readAlignedByte(),be=He.readAlignedByte(),Me=He.readAlignedByte();Ce(He);let Ke=1,Ue=0,Fe=0,Je=0;if(100===ye||110===ye||122===ye||244===ye||44===ye||83===ye||86===ye||118===ye||128===ye){Ke=Ce(He),3===Ke&&(Je=He.readBits(1)),Ue=Ce(He),Fe=Ce(He),He.skipBits(1);if(He.readBits(1))for(let ee=0;ee<(3!==Ke?8:12);ee++){if(He.readBits(1)){const ie=ee<6?16:64;let ye=8,be=8;for(let ee=0;ee<ie;ee++){if(0!==be){be=(ye+ve(He)+256)%256}ye=0===be?ye:be}}}}Ce(He);const oe=Ce(He);if(0===oe)Ce(He);else if(1===oe){He.skipBits(1),ve(He),ve(He);const ee=Ce(He);for(let ie=0;ie<ee;ie++)ve(He)}Ce(He),He.skipBits(1);const Re=Ce(He),ke=Ce(He),qe=16*(Re+1),fe=16*(ke+1);let Te=qe,pe=fe;const Xe=He.readBits(1);Xe||He.skipBits(1),He.skipBits(1);if(He.readBits(1)){const ee=Ce(He),ie=Ce(He),ye=Ce(He),be=Ce(He);let Me,Ue;if(0===(0===Je?Ke:0))Me=1,Ue=2-Xe;else{Me=3===Ke?1:2,Ue=(1===Ke?2:1)*(2-Xe)}Te-=Me*(ee+ie),pe-=Ue*(ye+be)}let ze=2,Be=2,Ee=2,ge=0,Oe={num:1,den:1},de=null,We=null,te=null,Ze=null;const we=He.pos;if(He.readBits(1)){if(He.readBits(1)){const ee=He.readBits(8);if(255===ee)Oe={num:He.readBits(16),den:He.readBits(16)};else{const ie=ci[ee];ie&&(Oe=ie)}}He.readBits(1)&&He.skipBits(1);if(He.readBits(1)){He.skipBits(3),ge=He.readBits(1);He.readBits(1)&&(ze=He.readBits(8),Be=He.readBits(8),Ee=He.readBits(8))}He.readBits(1)&&(Ce(He),Ce(He));He.readBits(1)&&(He.skipBits(32),He.skipBits(32),He.skipBits(1));const ee=He.readBits(1);ee&&Li(He);const ie=He.readBits(1);ie&&Li(He),(ee||ie)&&He.skipBits(1),He.skipBits(1),te=He.pos,Ze=He.readBits(1),Ze&&(He.skipBits(1),Ce(He),Ce(He),Ce(He),Ce(He),de=Ce(He),We=Ce(He))}if(null===de){Pe(null===We);if(44!==ye&&86!==ye&&100!==ye&&110!==ye&&122!==ye&&244!==ye||!(16&be)){const ee=Re+1,ie=(2-Xe)*(ke+1),He=pH.find((ee=>ee.level>=Me))??xe(pH),ye=Math.min(Math.floor(He.maxDpbMbs/(ee*ie)),16);de=ye,We=ye}else de=0,We=0}return Pe(null!==We),{emulationUnpreventedBytes:ie,profileIdc:ye,constraintFlags:be,levelIdc:Me,frameMbsOnlyFlag:Xe,chromaFormatIdc:Ke,bitDepthLumaMinus8:Ue,bitDepthChromaMinus8:Fe,codedWidth:qe,codedHeight:fe,displayWidth:Te,displayHeight:pe,pixelAspectRatio:Oe,colourPrimaries:ze,matrixCoefficients:Ee,transferCharacteristics:Be,fullRangeFlag:ge,numReorderFrames:de,maxDecFrameBuffering:We,vuiParametersFlagBitOffset:we,bitstreamRestrictionFlagBitOffset:te,bitstreamRestrictionFlag:Ze}}catch(ie){return di._error("Error parsing AVC SPS:",ie),null}},Li=ee=>{const ie=Ce(ee);ee.skipBits(4),ee.skipBits(4);for(let He=0;He<=ie;He++)Ce(ee),Ce(ee),ee.skipBits(1);ee.skipBits(5),ee.skipBits(5),ee.skipBits(5),ee.skipBits(5)},Ci=ee=>ee>>1&63,vi=ee=>{try{const ie=[],He=[],ye=[],be=[];for(const Fe of Pi(ee)){const Me=ee.subarray(Fe.offset,Fe.offset+Fe.length),Ke=Ci(Me[0]);Ke===Di.VPS_NUT?ie.push(Me):Ke===Di.SPS_NUT?He.push(Me):Ke===Di.PPS_NUT?ye.push(Me):Ke!==Di.PREFIX_SEI_NUT&&Ke!==Di.SUFFIX_SEI_NUT||be.push(Me)}if(0===He.length||0===ye.length)return null;const Me=(ee=>{try{const ie=new fi(Yi(ee));ie.skipBits(16),ie.readBits(4);const He=ie.readBits(3),ye=ie.readBits(1),{general_profile_space:be,general_tier_flag:Me,general_profile_idc:Ke,general_profile_compatibility_flags:Ue,general_constraint_indicator_flags:Fe,general_level_idc:Je}=ui(ie,He);Ce(ie);const oe=Ce(ie);let Re=0;3===oe&&(Re=ie.readBits(1));const ke=Ce(ie),qe=Ce(ie);let fe=ke,Te=qe;if(ie.readBits(1)){const ee=Ce(ie),He=Ce(ie),ye=Ce(ie),be=Ce(ie);let Me=1,Ke=1;const Ue=0===Re?oe:0;1===Ue?(Me=2,Ke=2):2===Ue&&(Me=2,Ke=1),fe-=(ee+He)*Me,Te-=(ye+be)*Ke}const pe=Ce(ie),Xe=Ce(ie);Ce(ie);const ze=ie.readBits(1);let Be=0;for(let ee=ze?0:He;ee<=He;ee++)Ce(ie),Be=Ce(ie),Ce(ie);Ce(ie),Ce(ie),Ce(ie),Ce(ie),Ce(ie),Ce(ie),ie.readBits(1)&&ie.readBits(1)&&mi(ie),ie.skipBits(1),ie.skipBits(1),ie.readBits(1)&&(ie.skipBits(4),ie.skipBits(4),Ce(ie),Ce(ie),ie.skipBits(1));const Ee=Ce(ie);if(li(ie,Ee),ie.readBits(1)){const ee=Ce(ie);for(let He=0;He<ee;He++)Ce(ie),ie.skipBits(1)}ie.skipBits(1),ie.skipBits(1);let ge=2,Oe=2,de=2,We=0,te=0,Ze={num:1,den:1};if(ie.readBits(1)){const ee=ni(ie,He);Ze=ee.pixelAspectRatio,ge=ee.colourPrimaries,Oe=ee.transferCharacteristics,de=ee.matrixCoefficients,We=ee.fullRangeFlag,te=ee.minSpatialSegmentationIdc}return{displayWidth:fe,displayHeight:Te,pixelAspectRatio:Ze,colourPrimaries:ge,transferCharacteristics:Oe,matrixCoefficients:de,fullRangeFlag:We,maxDecFrameBuffering:Be+1,spsMaxSubLayersMinus1:He,spsTemporalIdNestingFlag:ye,generalProfileSpace:be,generalTierFlag:Me,generalProfileIdc:Ke,generalProfileCompatibilityFlags:Ue,generalConstraintIndicatorFlags:Fe,generalLevelIdc:Je,chromaFormatIdc:oe,bitDepthLumaMinus8:pe,bitDepthChromaMinus8:Xe,minSpatialSegmentationIdc:te}}catch(ie){return di._error("Error parsing HEVC SPS:",ie),null}})(He[0]);if(!Me)return null;let Ke=0;if(ye.length>0){const ee=ye[0],ie=new fi(Yi(ee));ie.skipBits(16),Ce(ie),Ce(ie),ie.skipBits(1),ie.skipBits(1),ie.skipBits(3),ie.skipBits(1),ie.skipBits(1),Ce(ie),Ce(ie),ve(ie),ie.skipBits(1),ie.skipBits(1),ie.readBits(1)&&Ce(ie),ve(ie),ve(ie),ie.skipBits(1),ie.skipBits(1),ie.skipBits(1),ie.skipBits(1);const He=ie.readBits(1),be=ie.readBits(1);Ke=He||be?He&&!be?2:!He&&be?3:0:0}const Ue=[...ie.length?[{arrayCompleteness:1,nalUnitType:Di.VPS_NUT,nalUnits:ie}]:[],...He.length?[{arrayCompleteness:1,nalUnitType:Di.SPS_NUT,nalUnits:He}]:[],...ye.length?[{arrayCompleteness:1,nalUnitType:Di.PPS_NUT,nalUnits:ye}]:[],...be.length?[{arrayCompleteness:1,nalUnitType:Ci(be[0][0]),nalUnits:be}]:[]];return{configurationVersion:1,generalProfileSpace:Me.generalProfileSpace,generalTierFlag:Me.generalTierFlag,generalProfileIdc:Me.generalProfileIdc,generalProfileCompatibilityFlags:Me.generalProfileCompatibilityFlags,generalConstraintIndicatorFlags:Me.generalConstraintIndicatorFlags,generalLevelIdc:Me.generalLevelIdc,minSpatialSegmentationIdc:Me.minSpatialSegmentationIdc,parallelismType:Ke,chromaFormatIdc:Me.chromaFormatIdc,bitDepthLumaMinus8:Me.bitDepthLumaMinus8,bitDepthChromaMinus8:Me.bitDepthChromaMinus8,avgFrameRate:0,constantFrameRate:0,numTemporalLayers:Me.spsMaxSubLayersMinus1+1,temporalIdNested:Me.spsTemporalIdNestingFlag,lengthSizeMinusOne:3,arrays:Ue}}catch(ie){return di._error("Error building HEVC Decoder Configuration Record:",ie),null}},ui=(ee,ie)=>{const He=ee.readBits(2),ye=ee.readBits(1),be=ee.readBits(5);let Me=0;for(let oe=0;oe<32;oe++)Me=Me<<1|ee.readBits(1);const Ke=new Uint8Array(6);for(let oe=0;oe<6;oe++)Ke[oe]=ee.readBits(8);const Ue=ee.readBits(8),Fe=[],Je=[];for(let oe=0;oe<ie;oe++)Fe.push(ee.readBits(1)),Je.push(ee.readBits(1));if(ie>0)for(let oe=ie;oe<8;oe++)ee.skipBits(2);for(let oe=0;oe<ie;oe++)Fe[oe]&&ee.skipBits(88),Je[oe]&&ee.skipBits(8);return{general_profile_space:He,general_tier_flag:ye,general_profile_idc:be,general_profile_compatibility_flags:Me,general_constraint_indicator_flags:Ke,general_level_idc:Ue}},mi=ee=>{for(let ie=0;ie<4;ie++)for(let He=0;He<(3===ie?2:6);He++){if(ee.readBits(1)){const He=Math.min(64,1<<4+(ie<<1));ie>1&&ve(ee);for(let ie=0;ie<He;ie++)ve(ee)}else Ce(ee)}},li=(ee,ie)=>{const He=[];for(let ye=0;ye<ie;ye++)He[ye]=Si(ee,ye,ie,He)},Si=(ee,ie,He,ye)=>{let be=0,Me=0,Ke=0;if(0!==ie&&(Me=ee.readBits(1)),Me){if(ie===He){Ke=ie-(Ce(ee)+1)}else Ke=ie-1;ee.readBits(1),Ce(ee);const Me=ye[Ke]??0;for(let ie=0;ie<=Me;ie++){ee.readBits(1)||ee.readBits(1)}be=ye[Ke]}else{const ie=Ce(ee),He=Ce(ee);for(let ye=0;ye<ie;ye++)Ce(ee),ee.readBits(1);for(let ye=0;ye<He;ye++)Ce(ee),ee.readBits(1);be=ie+He}return be},ni=(ee,ie)=>{let He=2,ye=2,be=2,Me=0,Ke=0,Ue={num:1,den:1};if(ee.readBits(1)){const ie=ee.readBits(8);if(255===ie)Ue={num:ee.readBits(16),den:ee.readBits(16)};else{const ee=ci[ie];ee&&(Ue=ee)}}return ee.readBits(1)&&ee.readBits(1),ee.readBits(1)&&(ee.readBits(3),Me=ee.readBits(1),ee.readBits(1)&&(He=ee.readBits(8),ye=ee.readBits(8),be=ee.readBits(8))),ee.readBits(1)&&(Ce(ee),Ce(ee)),ee.readBits(1),ee.readBits(1),ee.readBits(1),ee.readBits(1)&&(Ce(ee),Ce(ee),Ce(ee),Ce(ee)),ee.readBits(1)&&(ee.readBits(32),ee.readBits(32),ee.readBits(1)&&Ce(ee),ee.readBits(1)&&ji(ee,!0,ie)),ee.readBits(1)&&(ee.readBits(1),ee.readBits(1),ee.readBits(1),Ke=Ce(ee),Ce(ee),Ce(ee),Ce(ee),Ce(ee)),{pixelAspectRatio:Ue,colourPrimaries:He,transferCharacteristics:ye,matrixCoefficients:be,fullRangeFlag:Me,minSpatialSegmentationIdc:Ke}},ji=(ee,ie,He)=>{let ye=!1,be=!1,Me=!1;ie&&(ye=1===ee.readBits(1),be=1===ee.readBits(1),(ye||be)&&(Me=1===ee.readBits(1),Me&&(ee.readBits(8),ee.readBits(5),ee.readBits(1),ee.readBits(5)),ee.readBits(4),ee.readBits(4),Me&&ee.readBits(4),ee.readBits(5),ee.readBits(5),ee.readBits(5)));for(let Ke=0;Ke<=He;Ke++){let ie=!0;1===ee.readBits(1)||(ie=1===ee.readBits(1));let He=!1;ie?Ce(ee):He=1===ee.readBits(1);let Ke=1;if(!He){Ke=Ce(ee)+1}ye&&si(ee,Ke,Me),be&&si(ee,Ke,Me)}},si=(ee,ie,He)=>{for(let ye=0;ye<ie;ye++)Ce(ee),Ce(ee),He&&(Ce(ee),Ce(ee)),ee.readBits(1)};var Ii;!function(ee){ee[ee.audAllowed=0]="audAllowed",ee[ee.beforeFirstVcl=1]="beforeFirstVcl",ee[ee.afterFirstVcl=2]="afterFirstVcl",ee[ee.eoBitstreamAllowed=3]="eoBitstreamAllowed",ee[ee.noMoreDataAllowed=4]="noMoreDataAllowed"}(Ii||(Ii={}));const Ni=ee=>{const ie=me(ee),He=ie.getUint8(9),ye=ie.getUint16(10,!0),be=ie.getUint32(12,!0),Me=ie.getInt16(16,!0),Ke=ie.getUint8(18);let Ue=null;return Ke&&(Ue=ee.subarray(19,21+He)),{outputChannelCount:He,preSkip:ye,inputSampleRate:be,outputGain:Me,channelMappingFamily:Ke,channelMappingTable:Ue}};var Gi;!function(ee){ee[ee.STREAMINFO=0]="STREAMINFO",ee[ee.VORBIS_COMMENT=4]="VORBIS_COMMENT",ee[ee.PICTURE=6]="PICTURE"}(Gi||(Gi={}));new Uint8Array([5,4,65,67,45,51]),new Uint8Array([5,4,69,65,67,51]);const ri=[1,2,3,6],Qi=[0,8e3,16e3,32e3,0,0,11025,22050,44100,0,0,12e3,24e3,48e3,96e3,192e3],eH=[32e3,56e3,64e3,96e3,112e3,128e3,192e3,224e3,256e3,32e4,384e3,448e3,512e3,576e3,64e4,768e3,96e4,1024e3,1152e3,128e4,1344e3,1408e3,1411200,1472e3,1536e3,192e4,2048e3,3072e3,384e4,0,0,0],iH=[16,16,20,20,0,24,24,0],HH=[1,2,2,2,2,3,3,4,4,5,6,6,6,7,8,8],yH=[1,2,2,2,2,3,18,19,6,7,518,323,83,519,582,535],bH=[32e3,44100,48e3,0],MH=[8e3,16e3,32e3,64e3,128e3,22050,44100,88200,176400,352800,12e3,24e3,48e3,96e3,192e3,384e3],KH=[512,1024,2048,4096],UH=ee=>{const ie=FH(ee),He=me(ee);let ye=ie?4*Math.ceil(ie.frameSize/4):0,be=null;for(;ye+4<=ee.length&&1683496997===He.getUint32(ye);){const ie=JH(ee.subarray(ye));if(!ie)break;be??=ie,ye+=ie.frameSize}if(ie)return{frameSize:be?ye:ie.frameSize,sampleRate:ie.sampleRate,numberOfChannels:ie.numberOfChannels,sampleCount:ie.sampleCount,channelLayout:ie.channelLayout,pcmResolution:ie.pcmResolution,bitRate:ie.bitRate,core:ie,hasExtensions:null!==be};if(!be?.asset)return null;const{asset:Me}=be;return{frameSize:ye,sampleRate:Me.sampleRate,numberOfChannels:Me.numberOfChannels,sampleCount:Me.sampleCount,channelLayout:Me.channelLayout,pcmResolution:Me.pcmResolution,bitRate:0,core:null,hasExtensions:!0}},FH=ee=>{if(ee.length<18)return null;if(127!==ee[0]||254!==ee[1]||128!==ee[2]||1!==ee[3])return null;const ie=new fi(ee);if(ie.skipBits(32),ie.skipBits(1),31!==ie.readBits(5))return null;const He=ie.readBits(1),ye=ie.readBits(7)+1;if(ye%8!==0)return null;const be=ie.readBits(14)+1;if(be<96)return null;const Me=ie.readBits(6);if(Me>=HH.length)return null;const Ke=Qi[ie.readBits(4)];if(0===Ke)return null;const Ue=eH[ie.readBits(5)];if(0!==ie.readBits(1))return null;ie.skipBits(4),ie.skipBits(5);const Fe=ie.readBits(2);if(3===Fe)return null;ie.skipBits(1),He&&ie.skipBits(16),ie.skipBits(7);const Je=iH[ie.readBits(3)];if(0===Je)return null;const oe=0!==Fe;return{frameSize:be,sampleRate:Ke,numberOfChannels:HH[Me]+(oe?1:0),sampleCount:32*ye,channelLayout:yH[Me]|(oe?8:0),amode:Me,lfePresent:oe,bitRate:Ue,pcmResolution:Je}},JH=ee=>{if(ee.length<10)return null;if(100!==ee[0]||88!==ee[1]||32!==ee[2]||37!==ee[3])return null;const ie=new fi(ee);ie.skipBits(32),ie.skipBits(8);const He=ie.readBits(2),ye=ie.readBits(1),be=8+4*ye,Me=16+4*ye;ie.skipBits(be);const Ke=ie.readBits(Me)+1,Ue={frameSize:Ke,asset:null};if(!ie.readBits(1))return Ue;const Fe=bH[ie.readBits(2)],Je=512*(ie.readBits(3)+1);ie.readBits(1)&&ie.skipBits(36);const oe=ie.readBits(3)+1,Re=ie.readBits(3)+1,ke=[];for(let Xe=0;Xe<oe;Xe++)ke.push(ie.readBits(He+1));for(const Xe of ke)ie.skipBits(8*ii(Xe));if(ie.readBits(1)){ie.skipBits(2);const ee=ie.readBits(2)+1<<2,He=ie.readBits(2)+1;ie.skipBits(He*ee)}for(let Xe=0;Xe<Re;Xe++)ie.skipBits(Me);ie.skipBits(9),ie.skipBits(3),ie.readBits(1)&&ie.skipBits(4),ie.readBits(1)&&ie.skipBits(24),ie.readBits(1)&&ie.skipBits(8*(ie.readBits(10)+1));const qe=ie.readBits(5)+1,fe=MH[ie.readBits(4)],Te=ie.readBits(8)+1;let pe=0;if(ie.readBits(1)&&(Te>2&&ie.skipBits(1),Te>6&&ie.skipBits(1),ie.readBits(1))){const ee=ie.readBits(2)+1<<2;pe=ie.readBits(ee)}return 0===Fe||ie.getBitsLeft()<0?Ue:{frameSize:Ke,asset:{sampleRate:fe,numberOfChannels:Te,sampleCount:Math.round(Je*fe/Fe),channelLayout:pe,pcmResolution:qe}}},oH=ee=>{const ie=new Uint8Array(20),He=me(ie);He.setUint32(0,ee.sampleRate),He.setUint32(4,ee.bitRate),He.setUint32(8,ee.bitRate),ie[12]=ee.pcmResolution;const ye=ee.core&&!ee.hasExtensions?1:0,be=new fi(ie);return be.seekToByte(13),be.writeBits(2,Math.max(KH.indexOf(ee.sampleCount),0)),be.writeBits(5,ye),be.writeBits(1,ee.core?.lfePresent?1:0),be.writeBits(6,ee.core?.amode??0),be.writeBits(14,ee.core?ee.core.frameSize-1:0),be.writeBits(1,0),be.writeBits(3,0),be.writeBits(16,ee.channelLayout),be.writeBits(1,0),be.writeBits(1,0),be.writeBits(1,0),be.writeBits(5,0),ie},RH=["avc","hevc","vp9","av1","vp8","prores"],kH=["pcm-s16","pcm-s16be","pcm-s24","pcm-s24be","pcm-s32","pcm-s32be","pcm-f32","pcm-f32be","pcm-f64","pcm-f64be","pcm-u8","pcm-s8","ulaw","alaw"],qH=["aac","opus","mp3","vorbis","flac","ac3","eac3","dts"],fH=[...qH,...kH],TH=["webvtt"],pH=[{maxMacroblocks:99,maxBitrate:64e3,maxDpbMbs:396,level:10},{maxMacroblocks:396,maxBitrate:192e3,maxDpbMbs:900,level:11},{maxMacroblocks:396,maxBitrate:384e3,maxDpbMbs:2376,level:12},{maxMacroblocks:396,maxBitrate:768e3,maxDpbMbs:2376,level:13},{maxMacroblocks:396,maxBitrate:2e6,maxDpbMbs:2376,level:20},{maxMacroblocks:792,maxBitrate:4e6,maxDpbMbs:4752,level:21},{maxMacroblocks:1620,maxBitrate:4e6,maxDpbMbs:8100,level:22},{maxMacroblocks:1620,maxBitrate:1e7,maxDpbMbs:8100,level:30},{maxMacroblocks:3600,maxBitrate:14e6,maxDpbMbs:18e3,level:31},{maxMacroblocks:5120,maxBitrate:2e7,maxDpbMbs:20480,level:32},{maxMacroblocks:8192,maxBitrate:2e7,maxDpbMbs:32768,level:40},{maxMacroblocks:8192,maxBitrate:5e7,maxDpbMbs:32768,level:41},{maxMacroblocks:8704,maxBitrate:5e7,maxDpbMbs:34816,level:42},{maxMacroblocks:22080,maxBitrate:135e6,maxDpbMbs:110400,level:50},{maxMacroblocks:36864,maxBitrate:24e7,maxDpbMbs:184320,level:51},{maxMacroblocks:36864,maxBitrate:24e7,maxDpbMbs:184320,level:52},{maxMacroblocks:139264,maxBitrate:24e7,maxDpbMbs:696320,level:60},{maxMacroblocks:139264,maxBitrate:48e7,maxDpbMbs:696320,level:61},{maxMacroblocks:139264,maxBitrate:8e8,maxDpbMbs:696320,level:62}],XH=["ap4x","ap4h","apch","apcn","apcs","apco"],zH=["dtsc","dtsh","dtsl","dtse"],BH=ee=>{const ie=ee.split("."),He=Number(ie[1]),ye=ie[2],be=(He<<5)+Number(ye.slice(0,-1)),Me="H"===ye.slice(-1)?1:0,Ke=Number(ie[3]);return[129,be,(Me<<7)+((8===Ke?0:1)<<6)+((12===Ke?1:0)<<5)+((ie[4]?Number(ie[4]):0)<<4)+((ie[5]?Number(ie[5][0]):1)<<3)+((ie[5]?Number(ie[5][1]):1)<<2)+(ie[5]?Number(ie[5][2]):0),0]},EH=/^pcm-([usf])(\\d+)(be)?$/,gH=ee=>{if(Pe(kH.includes(ee)),"ulaw"===ee)return{dataType:"ulaw",sampleSize:1,littleEndian:!0,silentValue:255};if("alaw"===ee)return{dataType:"alaw",sampleSize:1,littleEndian:!0,silentValue:213};const ie=EH.exec(ee);let He;Pe(ie),He="u"===ie[1]?"unsigned":"s"===ie[1]?"signed":"float";return{dataType:He,sampleSize:Number(ie[2])/8,littleEndian:"be"!==ie[3],silentValue:"pcm-u8"===ee?128:0}},OH=ee=>ee.startsWith("avc1")||ee.startsWith("avc3")?"avc":ee.startsWith("hev1")||ee.startsWith("hvc1")?"hevc":"vp8"===ee?"vp8":ee.startsWith("vp09")?"vp9":ee.startsWith("av01")?"av1":XH.includes(ee)?"prores":"mp3"===ee||"mp4a.69"===ee||"mp4a.6B"===ee||"mp4a.6b"===ee||"mp4a.40.34"===ee?"mp3":ee.startsWith("mp4a.40.")||"mp4a.67"===ee?"aac":"opus"===ee||"Opus"===ee?"opus":"vorbis"===ee?"vorbis":"flac"===ee?"flac":"ac-3"===ee||"ac3"===ee?"ac3":"ec-3"===ee||"eac3"===ee?"eac3":zH.includes(ee)?"dts":"ulaw"===ee?"ulaw":"alaw"===ee?"alaw":EH.test(ee)?ee:"webvtt"===ee?"webvtt":null,dH=["avc1","avc3","hev1","hvc1","vp8","vp09","av01",...XH],WH=/^(avc1|avc3)\\.[0-9a-fA-F]{6}$/,tH=/^(hev1|hvc1)\\.(?:[ABC]?\\d+)\\.[0-9a-fA-F]{1,8}\\.[LH]\\d+(?:\\.[0-9a-fA-F]{1,2}){0,6}$/,ZH=/^vp09(?:\\.\\d{2}){3}(?:(?:\\.\\d{2}){5})?$/,wH=/^av01\\.\\d\\.\\d{2}[MH]\\.\\d{2}(?:\\.\\d\\.\\d{3}\\.\\d{2}\\.\\d{2}\\.\\d{2}\\.\\d)?$/,DH=(ee,ie)=>{if(!ee)throw new TypeError("Video chunk metadata must be provided.");if("object"!==typeof ee)throw new TypeError("Video chunk metadata must be an object.");if(!ee.decoderConfig)throw new TypeError("Video chunk metadata must include a decoder configuration.");if("object"!==typeof ee.decoderConfig)throw new TypeError("Video chunk metadata decoder configuration must be an object.");if("string"!==typeof ee.decoderConfig.codec)throw new TypeError("Video chunk metadata decoder configuration must specify a codec string.");if(!dH.some((ie=>ee.decoderConfig.codec.startsWith(ie))))throw new TypeError("Video chunk metadata decoder configuration codec string must be a valid video codec string as specified in the Mediabunny Codec Registry.");if(!Number.isInteger(ee.decoderConfig.codedWidth)||ee.decoderConfig.codedWidth<=0)throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedWidth (positive integer).");if(!Number.isInteger(ee.decoderConfig.codedHeight)||ee.decoderConfig.codedHeight<=0)throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedHeight (positive integer).");if(void 0!==ee.decoderConfig.displayAspectWidth&&(!Number.isInteger(ee.decoderConfig.displayAspectWidth)||ee.decoderConfig.displayAspectWidth<=0))throw new TypeError("Video chunk metadata decoder configuration displayAspectWidth, when defined, must be a positive integer.");if(void 0!==ee.decoderConfig.displayAspectHeight&&(!Number.isInteger(ee.decoderConfig.displayAspectHeight)||ee.decoderConfig.displayAspectHeight<=0))throw new TypeError("Video chunk metadata decoder configuration displayAspectHeight, when defined, must be a positive integer.");if(void 0!==ee.decoderConfig.displayAspectWidth!==(void 0!==ee.decoderConfig.displayAspectHeight))throw new TypeError("Video chunk metadata decoder configuration must specify both displayAspectWidth and displayAspectHeight, or neither.");if(void 0!==ee.decoderConfig.description&&!he(ee.decoderConfig.description))throw new TypeError("Video chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");if(void 0!==ee.decoderConfig.colorSpace){const{colorSpace:ie}=ee.decoderConfig;if("object"!==typeof ie)throw new TypeError("Video chunk metadata decoder configuration colorSpace, when provided, must be an object.");const He=Object.keys(ne);if(null!=ie.primaries&&!He.includes(ie.primaries))throw new TypeError(`Video chunk metadata decoder configuration colorSpace primaries, when defined, must be one of ${He.join(", ")}.`);const ye=Object.keys(je);if(null!=ie.transfer&&!ye.includes(ie.transfer))throw new TypeError(`Video chunk metadata decoder configuration colorSpace transfer, when defined, must be one of ${ye.join(", ")}.`);const be=Object.keys(se);if(null!=ie.matrix&&!be.includes(ie.matrix))throw new TypeError(`Video chunk metadata decoder configuration colorSpace matrix, when defined, must be one of ${be.join(", ")}.`);if(null!=ie.fullRange&&"boolean"!==typeof ie.fullRange)throw new TypeError("Video chunk metadata decoder configuration colorSpace fullRange, when defined, must be a boolean.")}if(ee.decoderConfig.codec.startsWith("avc1")||ee.decoderConfig.codec.startsWith("avc3")){if(!WH.test(ee.decoderConfig.codec))throw new TypeError("Video chunk metadata decoder configuration codec string for AVC must be a valid AVC codec string as specified in Section 3.4 of RFC 6381.")}else if(ee.decoderConfig.codec.startsWith("hev1")||ee.decoderConfig.codec.startsWith("hvc1")){if(!tH.test(ee.decoderConfig.codec))throw new TypeError("Video chunk metadata decoder configuration codec string for HEVC must be a valid HEVC codec string as specified in Section E.3 of ISO 14496-15.")}else if(ee.decoderConfig.codec.startsWith("vp8")){if("vp8"!==ee.decoderConfig.codec)throw new TypeError(\'Video chunk metadata decoder configuration codec string for VP8 must be "vp8".\')}else if(ee.decoderConfig.codec.startsWith("vp09")){if(!ZH.test(ee.decoderConfig.codec))throw new TypeError(\'Video chunk metadata decoder configuration codec string for VP9 must be a valid VP9 codec string as specified in Section "Codecs Parameter String" of https://www.webmproject.org/vp9/mp4/.\')}else if(ee.decoderConfig.codec.startsWith("av01")){if(!wH.test(ee.decoderConfig.codec))throw new TypeError(\'Video chunk metadata decoder configuration codec string for AV1 must be a valid AV1 codec string as specified in Section "Codecs Parameter String" of https://aomediacodec.github.io/av1-isobmff/.\')}else if(XH.some((ie=>ee.decoderConfig.codec.startsWith(ie)))&&!XH.some((ie=>ee.decoderConfig.codec===ie)))throw new TypeError(`Video chunk metadata decoder configuration codec string for ProRes must be one of the valid ProRes four-character codes: ${XH.join(", ")}.`);if(null!==ie&&OH(ee.decoderConfig.codec)!==ie)throw new TypeError(`Video chunk metadata decoder configuration codec string \'${ee.decoderConfig.codec}\' does not fit to the track codec \'${ie}\'.`)},PH=["mp4a","mp3","opus","vorbis","flac","ulaw","alaw","pcm","ac-3","ec-3","dts"],AH=(ee,ie)=>{if(!ee)throw new TypeError("Audio chunk metadata must be provided.");if("object"!==typeof ee)throw new TypeError("Audio chunk metadata must be an object.");if(!ee.decoderConfig)throw new TypeError("Audio chunk metadata must include a decoder configuration.");if("object"!==typeof ee.decoderConfig)throw new TypeError("Audio chunk metadata decoder configuration must be an object.");if("string"!==typeof ee.decoderConfig.codec)throw new TypeError("Audio chunk metadata decoder configuration must specify a codec string.");if(!PH.some((ie=>ee.decoderConfig.codec.startsWith(ie))))throw new TypeError("Audio chunk metadata decoder configuration codec string must be a valid audio codec string as specified in the Mediabunny Codec Registry.");if(!Number.isInteger(ee.decoderConfig.sampleRate)||ee.decoderConfig.sampleRate<=0)throw new TypeError("Audio chunk metadata decoder configuration must specify a valid sampleRate (positive integer).");if(!Number.isInteger(ee.decoderConfig.numberOfChannels)||ee.decoderConfig.numberOfChannels<=0)throw new TypeError("Audio chunk metadata decoder configuration must specify a valid numberOfChannels (positive integer).");if(void 0!==ee.decoderConfig.description&&!he(ee.decoderConfig.description))throw new TypeError("Audio chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");if(ee.decoderConfig.codec.startsWith("mp4a")&&"mp4a.69"!==ee.decoderConfig.codec&&"mp4a.6B"!==ee.decoderConfig.codec&&"mp4a.6b"!==ee.decoderConfig.codec){if(!["mp4a.40.2","mp4a.40.02","mp4a.40.5","mp4a.40.05","mp4a.40.29","mp4a.67"].includes(ee.decoderConfig.codec))throw new TypeError("Audio chunk metadata decoder configuration codec string for AAC must be a valid AAC codec string as specified in https://www.w3.org/TR/webcodecs-aac-codec-registration/.")}else if(ee.decoderConfig.codec.startsWith("mp3")||ee.decoderConfig.codec.startsWith("mp4a")){if("mp3"!==ee.decoderConfig.codec&&"mp4a.69"!==ee.decoderConfig.codec&&"mp4a.6B"!==ee.decoderConfig.codec&&"mp4a.6b"!==ee.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for MP3 must be "mp3", "mp4a.69" or "mp4a.6B".\')}else if(ee.decoderConfig.codec.startsWith("opus")){if("opus"!==ee.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for Opus must be "opus".\');if(ee.decoderConfig.description&&ee.decoderConfig.description.byteLength<18)throw new TypeError("Audio chunk metadata decoder configuration description, when specified, is expected to be an Identification Header as specified in Section 5.1 of RFC 7845.")}else if(ee.decoderConfig.codec.startsWith("vorbis")){if("vorbis"!==ee.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for Vorbis must be "vorbis".\');if(!ee.decoderConfig.description)throw new TypeError("Audio chunk metadata decoder configuration for Vorbis must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-vorbis-codec-registration/.")}else if(ee.decoderConfig.codec.startsWith("flac")){if("flac"!==ee.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for FLAC must be "flac".\');const ie=42;if(!ee.decoderConfig.description||ee.decoderConfig.description.byteLength<ie)throw new TypeError("Audio chunk metadata decoder configuration for FLAC must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-flac-codec-registration/.")}else if(ee.decoderConfig.codec.startsWith("ac-3")||ee.decoderConfig.codec.startsWith("ac3")){if("ac-3"!==ee.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for AC-3 must be "ac-3".\')}else if(ee.decoderConfig.codec.startsWith("ec-3")||ee.decoderConfig.codec.startsWith("eac3")){if("ec-3"!==ee.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for EC-3 must be "ec-3".\')}else if(ee.decoderConfig.codec.startsWith("dts")){if(!zH.includes(ee.decoderConfig.codec))throw new TypeError(`Audio chunk metadata decoder configuration codec string for DTS must be one of the following four-character codes: ${zH.join(", ")}.`)}else if((ee.decoderConfig.codec.startsWith("pcm")||ee.decoderConfig.codec.startsWith("ulaw")||ee.decoderConfig.codec.startsWith("alaw"))&&!kH.includes(ee.decoderConfig.codec))throw new TypeError(`Audio chunk metadata decoder configuration codec string for PCM must be one of the supported PCM codecs (${kH.join(", ")}).`);if(null!==ie&&OH(ee.decoderConfig.codec)!==ie)throw new TypeError(`Audio chunk metadata decoder configuration codec string \'${ee.decoderConfig.codec}\' does not fit to the track codec \'${ie}\'.`)},YH=ee=>{if(!ee)throw new TypeError("Subtitle metadata must be provided.");if("object"!==typeof ee)throw new TypeError("Subtitle metadata must be an object.");if(!ee.config)throw new TypeError("Subtitle metadata must include a config object.");if("object"!==typeof ee.config)throw new TypeError("Subtitle metadata config must be an object.");if("string"!==typeof ee.config.description)throw new TypeError("Subtitle metadata config description must be a string.")};var VH;!function(ee){ee[ee.FrameCount=1]="FrameCount",ee[ee.FileSize=2]="FileSize",ee[ee.Toc=4]="Toc"}(VH||(VH={}));class aH{constructor(ee,ie,He,ye,be){this.bytes=ee,this.view=ie,this.offset=He,this.start=ye,this.end=be,this.bufferPos=ye-He}static tempFromBytes(ee){return new aH(ee,me(ee),0,0,ee.length)}get length(){return this.end-this.start}get filePos(){return this.offset+this.bufferPos}set filePos(ee){this.bufferPos=ee-this.offset}get remainingLength(){return Math.max(this.end-this.filePos,0)}skip(ee){this.bufferPos+=ee}slice(ee){let ie=arguments.length>1&&void 0!==arguments[1]?arguments[1]:this.end-ee;if(ee<this.start||ee+ie>this.end)throw new RangeError("Slicing outside of original slice.");return new aH(this.bytes,this.view,this.offset,ee,ee+ie)}}const cH=(ee,ie)=>{if(ee.filePos<ee.start||ee.filePos+ie>ee.end)throw new RangeError(`Tried reading [${ee.filePos}, ${ee.filePos+ie}), but slice is [${ee.start}, ${ee.end}). This is likely an internal error, please report it alongside the file that caused it.`)},xH=(ee,ie)=>{cH(ee,ie);const He=ee.bytes.subarray(ee.bufferPos,ee.bufferPos+ie);return ee.bufferPos+=ie,He};var LH,CH;!function(ee){ee[ee.Unsynchronisation=128]="Unsynchronisation",ee[ee.ExtendedHeader=64]="ExtendedHeader",ee[ee.ExperimentalIndicator=32]="ExperimentalIndicator",ee[ee.Footer=16]="Footer"}(LH||(LH={})),function(ee){ee[ee.ISO_8859_1=0]="ISO_8859_1",ee[ee.UTF_16_WITH_BOM=1]="UTF_16_WITH_BOM",ee[ee.UTF_16_BE_NO_BOM=2]="UTF_16_BE_NO_BOM",ee[ee.UTF_8=3]="UTF_8"}(CH||(CH={}));class vH{constructor(ee){this.mutex=new Ne,this.trackTimestampInfo=new WeakMap,this.output=ee}onTrackClose(ee){}validateTimestamp(ee,ie,He){let ye=this.trackTimestampInfo.get(ee);if(ye){if(He&&(ye.maxTimestampBeforeLastKeyPacket=ye.maxTimestamp),null!==ye.maxTimestampBeforeLastKeyPacket&&ie<ye.maxTimestampBeforeLastKeyPacket)throw new Error(`Timestamps cannot be smaller than the largest timestamp of the previous GOP (a GOP begins with a key packet and ends right before the next key packet). Got ${ie}s, but largest timestamp is ${ye.maxTimestampBeforeLastKeyPacket}s.`);ye.maxTimestamp=Math.max(ye.maxTimestamp,ie)}else{if(!He)throw new Error("First packet must be a key packet.");ye={maxTimestamp:ie,maxTimestampBeforeLastKeyPacket:null},this.trackTimestampInfo.set(ee,ye)}}}const uH=/<(?:(\\d{2}):)?(\\d{2}):(\\d{2}).(\\d{3})>/g;const mH=ee=>{const ie=Math.floor(ee/36e5),He=Math.floor(ee%36e5/6e4),ye=Math.floor(ee%6e4/1e3),be=ee%1e3;return ie.toString().padStart(2,"0")+":"+He.toString().padStart(2,"0")+":"+ye.toString().padStart(2,"0")+"."+be.toString().padStart(3,"0")};class lH{constructor(ee){this.writer=ee,this.helper=new Uint8Array(8),this.helperView=new DataView(this.helper.buffer),this.offsets=new WeakMap}writeU32(ee){this.helperView.setUint32(0,ee,!1),this.writer.write(this.helper.subarray(0,4))}writeU64(ee){this.helperView.setUint32(0,Math.floor(ee/2**32),!1),this.helperView.setUint32(4,ee,!1),this.writer.write(this.helper.subarray(0,8))}writeAscii(ee){for(let ie=0;ie<ee.length;ie++)this.helperView.setUint8(ie%8,ee.charCodeAt(ie)),ie%8===7&&this.writer.write(this.helper);ee.length%8!==0&&this.writer.write(this.helper.subarray(0,ee.length%8))}writeBox(ee){if(this.offsets.set(ee,this.writer.getPos()),ee.contents&&!ee.children)this.writeBoxHeader(ee,ee.size??ee.contents.byteLength+8),this.writer.write(ee.contents);else{const ie=this.writer.getPos();if(this.writeBoxHeader(ee,0),ee.contents&&this.writer.write(ee.contents),ee.children)for(const be of ee.children)be&&this.writeBox(be);const He=this.writer.getPos(),ye=ee.size??He-ie;this.writer.seek(ie),this.writeBoxHeader(ee,ye),this.writer.seek(He)}}writeBoxHeader(ee,ie){this.writeU32(ee.largeSize?1:ie),this.writeAscii(ee.type),ee.largeSize&&this.writeU64(ie)}measureBoxHeader(ee){return 8+(ee.largeSize?8:0)}patchBox(ee){const ie=this.offsets.get(ee);Pe(void 0!==ie);const He=this.writer.getPos();this.writer.seek(ie),this.writeBox(ee),this.writer.seek(He)}measureBox(ee){if(ee.contents&&!ee.children){return this.measureBoxHeader(ee)+ee.contents.byteLength}{let ie=this.measureBoxHeader(ee);if(ee.contents&&(ie+=ee.contents.byteLength),ee.children)for(const He of ee.children)He&&(ie+=this.measureBox(He));return ie}}}const SH=new Uint8Array(8),nH=new DataView(SH.buffer),jH=ee=>[(ee%256+256)%256],sH=ee=>(nH.setUint16(0,ee,!1),[SH[0],SH[1]]),IH=ee=>(nH.setInt16(0,ee,!1),[SH[0],SH[1]]),hH=ee=>(nH.setUint32(0,ee,!1),[SH[1],SH[2],SH[3]]),NH=ee=>(nH.setUint32(0,ee,!1),[SH[0],SH[1],SH[2],SH[3]]),GH=ee=>(nH.setInt32(0,ee,!1),[SH[0],SH[1],SH[2],SH[3]]),rH=ee=>(nH.setUint32(0,Math.floor(ee/2**32),!1),nH.setUint32(4,ee,!1),[SH[0],SH[1],SH[2],SH[3],SH[4],SH[5],SH[6],SH[7]]),QH=ee=>(nH.setInt32(0,Math.floor(ee/2**32),!1),nH.setUint32(4,ee,!1),[SH[0],SH[1],SH[2],SH[3],SH[4],SH[5],SH[6],SH[7]]),ey=ee=>(nH.setInt16(0,256*ee,!1),[SH[0],SH[1]]),iy=ee=>(nH.setInt32(0,65536*ee,!1),[SH[0],SH[1],SH[2],SH[3]]),Hy=ee=>(nH.setInt32(0,2**30*ee,!1),[SH[0],SH[1],SH[2],SH[3]]),yy=(ee,ie)=>{const He=[];let ye=ee;do{let ee=127&ye;ye>>=7,He.length>0&&(ee|=128),He.push(ee),void 0!==ie&&ie--}while(ye>0||ie);return He.reverse()},by=function(ee){let ie=arguments.length>1&&void 0!==arguments[1]&&arguments[1];const He=Array(ee.length).fill(null).map(((ie,He)=>ee.charCodeAt(He)));return ie&&He.push(0),He},My=ee=>[iy(ee[0]),iy(ee[1]),Hy(ee[2]),iy(ee[3]),iy(ee[4]),Hy(ee[5]),iy(ee[6]),iy(ee[7]),Hy(ee[8])],Ky=(ee,ie,He)=>({type:ee,contents:ie&&new Uint8Array(ie.flat(10)),children:He}),Uy=(ee,ie,He,ye,be)=>Ky(ee,[jH(ie),hH(He),ye??[]],be),Fy=()=>Ky("styp",[by("iso5"),NH(0),by("iso5"),by("iso6"),by("mp41"),by("cmfc"),by("dash")]),Jy=(ee,ie)=>{const He=Math.max(0,ee.minWrittenTimestamp);let ye=Math.max(0,ee.maxWrittenEndTimestamp-He);return Number.isFinite(ye)||(ye=0),Uy("sidx",1,0,[NH(1),NH(vb),rH(mb(He,vb)),rH(0),sH(0),sH(1),NH(2147483647&ie),NH(mb(ye,vb)),NH(0)])},oy=ee=>({type:"mdat",largeSize:ee}),Ry=ee=>Ky("moov",void 0,[ky(ee.creationTime,ee.trackDatas),...ee.trackDatas.map((ie=>qy(ie,ee.creationTime))),ee.isFragmented?eb(ee.trackDatas):null,fb(ee)]),ky=(ee,ie)=>{const He=Math.max(0,...ie.map((ee=>Math.max(0,mb(lb(ee),vb)+mb(ee.startTimestampOffset??0,vb))))),ye=Math.max(0,...ie.map((ee=>ee.track.id)))+1,be=!Le(ee)||!Le(He),Me=be?rH:NH;return Uy("mvhd",+be,0,[Me(ee),Me(ee),NH(vb),Me(He),iy(1),ey(1),Array(10).fill(0),My(Ye),Array(24).fill(0),NH(ye)])},qy=(ee,ie)=>{const He=ub(ee),ye=null!==ee.startTimestampOffset&&0!==ee.startTimestampOffset;return Ky("trak",void 0,[fy(ee,ie),ye?Ty(ee):null,py(ee,ie),void 0!==He.name?Ky("udta",void 0,[Ky("name",[...Se.encode(He.name)])]):null])},fy=(ee,ie)=>{const He=Math.max(0,mb(lb(ee),vb)+mb(ee.startTimestampOffset??0,vb)),ye=!Le(ie)||!Le(He),be=ye?rH:NH;let Me;if("video"===ee.type&&ee.track.metadata.transformationMatrix)Me=ee.track.metadata.transformationMatrix;else if("video"===ee.type){const{rotation:ie,flip:He}=ee.track.metadata;Me=((ee,ie,He)=>{const[ye,be,,Me,Ke]=ee,Ue=Math.abs(ye)*ie+Math.abs(Me)*He,Fe=Math.abs(be)*ie+Math.abs(Ke)*He;return ce(ce(ae(-ie/2,-He/2),ee),ae(Ue/2,Fe/2))})(ce(Ve(ie??0),[He?-1:1,0,0,0,1,0,0,0,1]),ee.info.width,ee.info.height)}else Me=Ye;let Ke=2;!1!==ee.track.metadata.disposition?.default&&(Ke|=1);const Ue="video"===ee.type?0:"audio"===ee.type?1:"subtitle"===ee.type?2:re(ee);return Uy("tkhd",+ye,Ke,[be(ie),be(ie),NH(ee.track.id),NH(0),be(He),Array(8).fill(0),sH(0),sH(Ue),ey("audio"===ee.type?1:0),sH(0),My(Me),iy("video"===ee.type?ee.info.width:0),iy("video"===ee.type?ee.info.height:0)])},Ty=ee=>{const ie=ee.startTimestampOffset;if(Pe(null!==ie),ie>0){const He=mb(ie,vb),ye=mb(lb(ee),vb),be=!Le(He)||!Le(ye),Me=be?rH:NH,Ke=be?QH:GH;return Ky("edts",void 0,[Uy("elst",be?1:0,0,[NH(2),Me(He),Ke(-1),iy(1),Me(ye),Ke(0),iy(1)])])}{const ye=mb(-ie,ee.timescale),be=Math.max(0,mb(lb(ee),vb)+mb(ie,vb)),Me=!((He=ye)>=-(2**31)&&He<2**31)||!Le(be),Ke=Me?rH:NH,Ue=Me?QH:GH;return Ky("edts",void 0,[Uy("elst",Me?1:0,0,[NH(1),Ke(be),Ue(ye),iy(1)])])}var He},py=(ee,ie)=>Ky("mdia",void 0,[Xy(ee,ie),Ey(!0,zy[ee.type],By[ee.type]),gy(ee)]),Xy=(ee,ie)=>{const He=mb(lb(ee),ee.timescale),ye=!Le(ie)||!Le(He),be=ye?rH:NH;return Uy("mdhd",+ye,0,[be(ie),be(ie),NH(ee.timescale),be(He),sH(Db(ee.track.metadata.languageCode??ei)),sH(0)])},zy={video:"vide",audio:"soun",subtitle:"text"},By={video:"MediabunnyVideoHandler",audio:"MediabunnySoundHandler",subtitle:"MediabunnyTextHandler"},Ey=function(ee,ie,He){let ye=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"\\0\\0\\0\\0";return Uy("hdlr",0,0,[ee?by("mhlr"):NH(0),by(ie),by(ye),NH(0),NH(0),by(He,!0)])},gy=ee=>Ky("minf",void 0,[Oy[ee.type](),dy(),Zy(ee)]),Oy={video:()=>Uy("vmhd",0,1,[sH(0),sH(0),sH(0),sH(0)]),audio:()=>Uy("smhd",0,0,[sH(0),sH(0)]),subtitle:()=>Uy("nmhd",0,0)},dy=()=>Ky("dinf",void 0,[Wy()]),Wy=()=>Uy("dref",0,0,[NH(1)],[ty()]),ty=()=>Uy("url ",0,1),Zy=ee=>{const ie=ee.compositionTimeOffsetTable.length>1||ee.compositionTimeOffsetTable.some((ee=>0!==ee.sampleCompositionTimeOffset));return Ky("stbl",void 0,[wy(ee),sy(ee),ie?ry(ee):null,ie?Qy(ee):null,hy(ee),Ny(ee),Gy(ee),Iy(ee)])},wy=ee=>{let ie;if("video"===ee.type)ie=Dy(Ob(ee.track.source._codec,ee.info.decoderConfig.codec),ee);else if("audio"===ee.type){const He=Wb(ee.track.source._codec,ee.info.decoderConfig.codec,ee.muxer.isQuickTime);Pe(He),ie=ay(He,ee)}else"subtitle"===ee.type&&(ie=jy(Zb[ee.track.source._codec],ee));return Pe(ie),Uy("stsd",0,0,[NH(1)],[ie])},Dy=(ee,ie)=>Ky(ee,[Array(6).fill(0),sH(1),sH(0),sH(0),Array(12).fill(0),sH(ie.info.width),sH(ie.info.height),NH(4718592),NH(4718592),NH(0),sH(1),jH(18),by(Zi),Array(13).fill(0),sH(ie.info.hasAlphaChannel?32:24),IH(65535)],[db[ie.track.source._codec]?.(ie)??null,Ay(ie),Ie(ie.info.decoderConfig.colorSpace)?null:Yy(ie),Py(ie)]),Py=ee=>0===ee.avgBitrate&&0===ee.maxBitrate?null:Ky("btrt",[NH(0),NH(ee.maxBitrate),NH(ee.avgBitrate)]),Ay=ee=>ee.info.pixelAspectRatio.num===ee.info.pixelAspectRatio.den?null:Ky("pasp",[NH(ee.info.pixelAspectRatio.num),NH(ee.info.pixelAspectRatio.den)]),Yy=ee=>{const ie=ee.info.decoderConfig.colorSpace;return Ky("colr",[by(ee.muxer.isQuickTime?"nclc":"nclx"),sH(null!=ie?.primaries?ne[ie.primaries]:2),sH(null!=ie?.transfer?je[ie.transfer]:2),sH(null!=ie?.matrix?se[ie.matrix]:2),ee.muxer.isQuickTime?[]:jH((ie?.fullRange?1:0)<<7)])},Vy=ee=>{if(!ee.info.decoderConfig)return null;const ie=ee.info.decoderConfig,He=ie.codec.split("."),ye=Number(He[1]),be=Number(He[2]),Me=(Number(He[3])<<4)+((He[4]?Number(He[4]):1)<<1)+(He[8]?Number(He[8]):Number(ie.colorSpace?.fullRange??0)),Ke=He[5]?Number(He[5]):ie.colorSpace?.primaries?ne[ie.colorSpace.primaries]:1,Ue=He[6]?Number(He[6]):ie.colorSpace?.transfer?je[ie.colorSpace.transfer]:1,Fe=He[7]?Number(He[7]):ie.colorSpace?.matrix?se[ie.colorSpace.matrix]:1;return Uy("vpcC",1,0,[jH(ye),jH(be),jH(Me),jH(Ke),jH(Ue),jH(Fe),sH(0)])},ay=(ee,ie)=>{let He,ye=0,be=16;const Me=kH.includes(ie.track.source._codec);if(Me){const ee=ie.track.source._codec,{sampleSize:He}=gH(ee);be=8*He,be>16&&(ye=1)}if(ie.muxer.isQuickTime&&(ye=1),0===ye)He=[Array(6).fill(0),sH(1),sH(ye),sH(0),NH(0),sH(ie.info.numberOfChannels),sH(be),sH(0),sH(0),sH(ie.info.sampleRate<65536?ie.info.sampleRate:0),sH(0)];else{const ee=Me?0:-2;He=[Array(6).fill(0),sH(1),sH(ye),sH(0),NH(0),sH(ie.info.numberOfChannels),sH(Math.min(be,16)),IH(ee),sH(0),sH(ie.info.sampleRate<65536?ie.info.sampleRate:0),sH(0),Me?[NH(1),NH(be/8),NH(ie.info.numberOfChannels*be/8)]:[NH(0),NH(0),NH(0)],NH(2)]}return Ky(ee,He,[tb(ie.track.source._codec,ie.muxer.isQuickTime)?.(ie)??null,Py(ie)])},cy=ee=>{let ie;switch(ee.track.source._codec){case"aac":ie=64;break;case"mp3":ie=107;break;case"vorbis":ie=221;break;default:throw new Error(`Unhandled audio codec: ${ee.track.source._codec}`)}let He=[...jH(ie),...jH(21),...hH(0),...NH(ee.maxBitrate),...NH(ee.avgBitrate)];if(ee.info.decoderConfig.description){const ie=ue(ee.info.decoderConfig.description);He=[...He,...jH(5),...yy(ie.byteLength),...ie]}return He=[...sH(1),...jH(0),...jH(4),...yy(He.length),...He,...jH(6),...jH(1),...jH(2)],He=[...jH(3),...yy(He.length),...He],Uy("esds",0,0,He)},xy=ee=>Ky("wave",void 0,[Ly(ee),Cy(ee),Ky("\\0\\0\\0\\0")]),Ly=ee=>Ky("frma",[by(Wb(ee.track.source._codec,ee.info.decoderConfig.codec,ee.muxer.isQuickTime))]),Cy=ee=>{const{littleEndian:ie}=gH(ee.track.source._codec);return Ky("enda",[sH(+ie)])},vy=ee=>{let ie=ee.info.numberOfChannels,He=3840,ye=ee.info.sampleRate,be=0,Me=0,Ke=new Uint8Array(0);const Ue=ee.info.decoderConfig?.description;if(Ue){Pe(Ue.byteLength>=18);const ee=ue(Ue),Fe=Ni(ee);ie=Fe.outputChannelCount,He=Fe.preSkip,ye=Fe.inputSampleRate,be=Fe.outputGain,Me=Fe.channelMappingFamily,Fe.channelMappingTable&&(Ke=Fe.channelMappingTable)}return Ky("dOps",[jH(0),jH(ie),sH(He),NH(ye),IH(be),jH(Me),...Ke])},uy=ee=>{const ie=ee.info.decoderConfig?.description;Pe(ie);const He=ue(ie);return Uy("dfLa",0,0,[...He.subarray(4)])},my=ee=>{const{littleEndian:ie,sampleSize:He}=gH(ee.track.source._codec);return Uy("pcmC",0,0,[jH(+ie),jH(8*He)])},ly=ee=>{Pe(ee.info.primingPacket);const ie=(ee=>{if(ee.length<7)return null;if(11!==ee[0]||119!==ee[1])return null;const ie=new fi(ee);ie.skipBits(16),ie.skipBits(16);const He=ie.readBits(2);if(3===He)return null;const ye=ie.readBits(6),be=ie.readBits(5);if(be>8)return null;const Me=ie.readBits(3),Ke=ie.readBits(3);return 0!==(1&Ke)&&1!==Ke&&ie.skipBits(2),0!==(4&Ke)&&ie.skipBits(2),2===Ke&&ie.skipBits(2),{fscod:He,bsid:be,bsmod:Me,acmod:Ke,lfeon:ie.readBits(1),bitRateCode:Math.floor(ye/2)}})(ee.info.primingPacket.data);if(!ie)throw new Error("Couldn\'t extract AC-3 frame info from the audio packet. Ensure the packets contain valid AC-3 sync frames (as specified in ETSI TS 102 366).");const He=new Uint8Array(3),ye=new fi(He);return ye.writeBits(2,ie.fscod),ye.writeBits(5,ie.bsid),ye.writeBits(3,ie.bsmod),ye.writeBits(3,ie.acmod),ye.writeBits(1,ie.lfeon),ye.writeBits(5,ie.bitRateCode),ye.writeBits(5,0),Ky("dac3",[...He])},Sy=ee=>{Pe(ee.info.primingPacket);const ie=(ee=>{if(ee.length<6)return null;if(11!==ee[0]||119!==ee[1])return null;const ie=new fi(ee);ie.skipBits(16);const He=ie.readBits(2);if(ie.skipBits(3),0!==He&&2!==He)return null;const ye=ie.readBits(11),be=ie.readBits(2);let Me,Ke=0;3===be?(Ke=ie.readBits(2),Me=3):Me=ie.readBits(2);const Ue=ie.readBits(3),Fe=ie.readBits(1),Je=ie.readBits(5);if(Je<11||Je>16)return null;const oe=ri[Me];let Re;return Re=be<3?Wi[be]/1e3:ti[Ke]/1e3,{dataRate:Math.round((ye+1)*Re/(16*oe)),substreams:[{fscod:be,fscod2:Ke,bsid:Je,bsmod:0,acmod:Ue,lfeon:Fe,numDepSub:0,chanLoc:0}]}})(ee.info.primingPacket.data);if(!ie)throw new Error("Couldn\'t extract E-AC-3 frame info from the audio packet. Ensure the packets contain valid E-AC-3 sync frames (as specified in ETSI TS 102 366).");let He=16;for(const Ke of ie.substreams)He+=23,Ke.numDepSub>0?He+=9:He+=1;const ye=Math.ceil(He/8),be=new Uint8Array(ye),Me=new fi(be);Me.writeBits(13,ie.dataRate),Me.writeBits(3,ie.substreams.length-1);for(const Ke of ie.substreams)Me.writeBits(2,Ke.fscod),Me.writeBits(5,Ke.bsid),Me.writeBits(1,0),Me.writeBits(1,0),Me.writeBits(3,Ke.bsmod),Me.writeBits(3,Ke.acmod),Me.writeBits(1,Ke.lfeon),Me.writeBits(3,0),Me.writeBits(4,Ke.numDepSub),Ke.numDepSub>0?Me.writeBits(9,Ke.chanLoc):Me.writeBits(1,0);return Ky("dec3",[...be])},ny=ee=>{Pe(ee.info.primingPacket);const ie=UH(ee.info.primingPacket.data);if(!ie)throw new Error("Couldn\'t extract DTS frame info from the audio packet. Ensure the packets contain valid DTS frames as specified in ETSI TS 102 114.");return Ky("ddts",[...oH(ie)])},jy=(ee,ie)=>Ky(ee,[Array(6).fill(0),sH(1)],[wb[ie.track.source._codec](ie),Py(ie)]),sy=ee=>Uy("stts",0,0,[NH(ee.timeToSampleTable.length),ee.timeToSampleTable.map((ee=>[NH(ee.sampleCount),NH(ee.sampleDelta)]))]),Iy=ee=>{if(ee.samples.every((ee=>"key"===ee.type)))return null;const ie=[...ee.samples.entries()].filter((ee=>{let[,ie]=ee;return"key"===ie.type}));return Uy("stss",0,0,[NH(ie.length),ie.map((ee=>{let[ie]=ee;return NH(ie+1)}))])},hy=ee=>Uy("stsc",0,0,[NH(ee.compactlyCodedChunkTable.length),ee.compactlyCodedChunkTable.map((ee=>[NH(ee.firstChunk),NH(ee.samplesPerChunk),NH(1)]))]),Ny=ee=>{if("audio"===ee.type&&ee.info.requiresPcmTransformation){const{sampleSize:ie}=gH(ee.track.source._codec);return Uy("stsz",0,0,[NH(ie*ee.info.numberOfChannels),NH(ee.samples.reduce(((ie,He)=>ie+mb(He.duration,ee.timescale)),0))])}return Uy("stsz",0,0,[NH(0),NH(ee.samples.length),ee.samples.map((ee=>NH(ee.size)))])},Gy=ee=>ee.finalizedChunks.length>0&&xe(ee.finalizedChunks).offset>=2**32?Uy("co64",0,0,[NH(ee.finalizedChunks.length),ee.finalizedChunks.map((ee=>rH(ee.offset)))]):Uy("stco",0,0,[NH(ee.finalizedChunks.length),ee.finalizedChunks.map((ee=>NH(ee.offset)))]),ry=ee=>Uy("ctts",1,0,[NH(ee.compositionTimeOffsetTable.length),ee.compositionTimeOffsetTable.map((ee=>[NH(ee.sampleCount),GH(ee.sampleCompositionTimeOffset)]))]),Qy=ee=>{let ie=1/0,He=-1/0,ye=1/0,be=-1/0;Pe(ee.compositionTimeOffsetTable.length>0),Pe(ee.samples.length>0);for(let Ke=0;Ke<ee.compositionTimeOffsetTable.length;Ke++){const ye=ee.compositionTimeOffsetTable[Ke];ie=Math.min(ie,ye.sampleCompositionTimeOffset),He=Math.max(He,ye.sampleCompositionTimeOffset)}for(let Ke=0;Ke<ee.samples.length;Ke++){const ie=ee.samples[Ke];ye=Math.min(ye,mb(ie.timestamp,ee.timescale)),be=Math.max(be,mb(ie.timestamp+ie.duration,ee.timescale))}const Me=Math.max(-ie,0);return be>=2**31?null:Uy("cslg",0,0,[GH(Me),GH(ie),GH(He),GH(ye),GH(be)])},eb=ee=>Ky("mvex",void 0,ee.map(ib)),ib=ee=>Uy("trex",0,0,[NH(ee.track.id),NH(1),NH(0),NH(0),NH(0)]),Hb=(ee,ie)=>Ky("moof",void 0,[yb(ee),...ie.map(Mb)]),yb=ee=>Uy("mfhd",0,0,[NH(ee)]),bb=ee=>{let ie=0,He=0;const ye="delta"===ee.type;return He|=+ye,ie|=ye?1:2,ie<<24|He<<16},Mb=ee=>Ky("traf",void 0,[Kb(ee),Ub(ee),Fb(ee)]),Kb=ee=>{Pe(ee.currentChunk);let ie=0;ie|=8,ie|=16,ie|=32,ie|=131072;const He=ee.currentChunk.samples[1]??ee.currentChunk.samples[0],ye={duration:He.timescaleUnitsToNextSample,size:He.size,flags:bb(He)};return Uy("tfhd",0,131128,[NH(ee.track.id),NH(ye.duration),NH(ye.size),NH(ye.flags)])},Ub=ee=>(Pe(ee.currentChunk),Uy("tfdt",1,0,[rH(mb(ee.currentChunk.startTimestamp,ee.timescale))])),Fb=ee=>{Pe(ee.currentChunk);const ie=ee.currentChunk.samples.map((ee=>ee.timescaleUnitsToNextSample)),He=ee.currentChunk.samples.map((ee=>ee.size)),ye=ee.currentChunk.samples.map(bb),be=ee.currentChunk.samples.map((ie=>mb(ie.timestamp-ie.decodeTimestamp,ee.timescale))),Me=new Set(ie),Ke=new Set(He),Ue=new Set(ye),Fe=new Set(be),Je=2===Ue.size&&ye[0]!==ye[1],oe=Me.size>1,Re=Ke.size>1,ke=!Je&&Ue.size>1,qe=Fe.size>1||[...Fe].some((ee=>0!==ee));let fe=0;return fe|=1,fe|=4*+Je,fe|=256*+oe,fe|=512*+Re,fe|=1024*+ke,fe|=2048*+qe,Uy("trun",1,fe,[NH(ee.currentChunk.samples.length),NH(ee.currentChunk.offset-ee.currentChunk.moofOffset||0),Je?NH(ye[0]):[],ee.currentChunk.samples.map(((ee,Me)=>[oe?NH(ie[Me]):[],Re?NH(He[Me]):[],ke?NH(ye[Me]):[],qe?GH(be[Me]):[]]))])},Jb=ee=>Uy("tfra",1,0,[NH(ee.track.id),NH(63),NH(ee.finalizedChunks.length),ee.finalizedChunks.map((ie=>[rH(mb(ie.samples[0].timestamp,ee.timescale)),rH(ie.moofOffset),NH(ie.trafIndex+1),NH(1),NH(1)]))]),ob=()=>Uy("mfro",0,0,[NH(0)]),Rb=()=>Ky("vtte"),kb=(ee,ie,He,ye,be)=>Ky("vttc",void 0,[null!==be?Ky("vsid",[GH(be)]):null,null!==He?Ky("iden",[...Se.encode(He)]):null,null!==ie?Ky("ctim",[...Se.encode(mH(ie))]):null,null!==ye?Ky("sttg",[...Se.encode(ye)]):null,Ky("payl",[...Se.encode(ee)])]),qb=ee=>Ky("vtta",[...Se.encode(ee)]),fb=ee=>{const ie=[],He=ee.format._options.metadataFormat??"auto",ye=ee.output._metadataTags;if("mdir"===He||"auto"===He&&!ee.isQuickTime){const ee=Bb(ye);ee&&ie.push(ee)}else if("mdta"===He){const ee=Eb(ye);ee&&ie.push(ee)}else("udta"===He||"auto"===He&&ee.isQuickTime)&&Tb(ie,ee.output._metadataTags);return 0===ie.length?null:Ky("udta",void 0,ie)},Tb=(ee,ie)=>{for(const{key:He,value:ye}of Ki(ie))switch(He){case"title":ee.push(pb("\\xa9nam",ye));break;case"description":ee.push(pb("\\xa9des",ye));break;case"artist":ee.push(pb("\\xa9ART",ye));break;case"album":ee.push(pb("\\xa9alb",ye));break;case"albumArtist":ee.push(pb("albr",ye));break;case"genre":ee.push(pb("\\xa9gen",ye));break;case"date":ee.push(pb("\\xa9day",ye.toISOString().slice(0,10)));break;case"comment":ee.push(pb("\\xa9cmt",ye));break;case"lyrics":ee.push(pb("\\xa9lyr",ye));break;case"raw":case"discNumber":case"discsTotal":case"trackNumber":case"tracksTotal":case"beatsPerMinute":case"images":break;default:re(He)}if(ie.raw)for(const He in ie.raw){const ye=ie.raw[He];null==ye||4!==He.length||ee.some((ee=>ee.type===He))||("string"===typeof ye?ee.push(pb(He,ye)):ye instanceof Uint8Array&&ee.push(Ky(He,Array.from(ye))))}},pb=(ee,ie)=>{const He=Se.encode(ie);return Ky(ee,[sH(He.length),sH(Db("und")),Array.from(He)])},Xb={"image/jpeg":13,"image/png":14,"image/bmp":27},zb=(ee,ie)=>{const He=[];for(const{key:ye,value:be}of Ki(ee))switch(ye){case"title":He.push({key:ie?"title":"\\xa9nam",value:gb(be)});break;case"description":He.push({key:ie?"description":"\\xa9des",value:gb(be)});break;case"artist":He.push({key:ie?"artist":"\\xa9ART",value:gb(be)});break;case"album":He.push({key:ie?"album":"\\xa9alb",value:gb(be)});break;case"albumArtist":He.push({key:ie?"album_artist":"aART",value:gb(be)});break;case"comment":He.push({key:ie?"comment":"\\xa9cmt",value:gb(be)});break;case"genre":He.push({key:ie?"genre":"\\xa9gen",value:gb(be)});break;case"beatsPerMinute":ie||He.push({key:"tmpo",value:Ky("data",[NH(21),NH(0),sH(be)])});break;case"lyrics":He.push({key:ie?"lyrics":"\\xa9lyr",value:gb(be)});break;case"date":He.push({key:ie?"date":"\\xa9day",value:gb(be.toISOString().slice(0,10))});break;case"images":for(const ee of be)"coverFront"===ee.kind&&He.push({key:"covr",value:Ky("data",[NH(Xb[ee.mimeType]??0),NH(0),Array.from(ee.data)])});break;case"trackNumber":if(ie){const ie=void 0!==ee.tracksTotal?`${be}/${ee.tracksTotal}`:be.toString();He.push({key:"track",value:gb(ie)})}else He.push({key:"trkn",value:Ky("data",[NH(0),NH(0),sH(0),sH(be),sH(ee.tracksTotal??0),sH(0)])});break;case"discNumber":ie||He.push({key:"disc",value:Ky("data",[NH(0),NH(0),sH(0),sH(be),sH(ee.discsTotal??0),sH(0)])});break;case"tracksTotal":case"discsTotal":case"raw":break;default:re(ye)}if(ee.raw)for(const ye in ee.raw){const be=ee.raw[ye];null==be||!ie&&4!==ye.length||He.some((ee=>ee.key===ye))||("string"===typeof be?He.push({key:ye,value:gb(be)}):be instanceof Uint8Array?He.push({key:ye,value:Ky("data",[NH(0),NH(0),Array.from(be)])}):be instanceof ki&&He.push({key:ye,value:Ky("data",[NH(Xb[be.mimeType]??0),NH(0),Array.from(be.data)])}))}return He},Bb=ee=>{const ie=zb(ee,!1);return 0===ie.length?null:Uy("meta",0,0,void 0,[Ey(!1,"mdir","","appl"),Ky("ilst",void 0,ie.map((ee=>Ky(ee.key,void 0,[ee.value]))))])},Eb=ee=>{const ie=zb(ee,!0);return 0===ie.length?null:Ky("meta",void 0,[Ey(!1,"mdta",""),Uy("keys",0,0,[NH(ie.length)],ie.map((ee=>Ky("mdta",[...Se.encode(ee.key)])))),Ky("ilst",void 0,ie.map(((ee,ie)=>{const He=String.fromCharCode(...NH(ie+1));return Ky(He,void 0,[ee.value])})))])},gb=ee=>Ky("data",[NH(1),NH(0),...Se.encode(ee)]),Ob=(ee,ie)=>{switch(ee){case"avc":return ie.startsWith("avc3")?"avc3":"avc1";case"hevc":return"hvc1";case"vp8":return"vp08";case"vp9":return"vp09";case"av1":return"av01";case"prores":return ie}},db={avc:ee=>ee.info.decoderConfig&&Ky("avcC",[...ue(ee.info.decoderConfig.description)]),hevc:ee=>ee.info.decoderConfig&&Ky("hvcC",[...ue(ee.info.decoderConfig.description)]),vp8:Vy,vp9:Vy,av1:ee=>Ky("av1C",BH(ee.info.decoderConfig.codec)),prores:null},Wb=(ee,ie,He)=>{switch(ee){case"aac":case"mp3":case"vorbis":return"mp4a";case"opus":return"Opus";case"flac":return"fLaC";case"ulaw":return"ulaw";case"alaw":return"alaw";case"pcm-u8":return"raw ";case"pcm-s8":return"sowt";case"ac3":return"ac-3";case"eac3":return"ec-3";case"dts":return ie}if(He)switch(ee){case"pcm-s16":return"sowt";case"pcm-s16be":return"twos";case"pcm-s24":case"pcm-s24be":return"in24";case"pcm-s32":case"pcm-s32be":return"in32";case"pcm-f32":case"pcm-f32be":return"fl32";case"pcm-f64":case"pcm-f64be":return"fl64"}else switch(ee){case"pcm-s16":case"pcm-s16be":case"pcm-s24":case"pcm-s24be":case"pcm-s32":case"pcm-s32be":return"ipcm";case"pcm-f32":case"pcm-f32be":case"pcm-f64":case"pcm-f64be":return"fpcm"}},tb=(ee,ie)=>{switch(ee){case"aac":case"mp3":case"vorbis":return cy;case"opus":return vy;case"flac":return uy;case"ac3":return ly;case"eac3":return Sy;case"dts":return ny}if(ie)switch(ee){case"pcm-s24":case"pcm-s24be":case"pcm-s32":case"pcm-s32be":case"pcm-f32":case"pcm-f32be":case"pcm-f64":case"pcm-f64be":return xy}else switch(ee){case"pcm-s16":case"pcm-s16be":case"pcm-s24":case"pcm-s24be":case"pcm-s32":case"pcm-s32be":case"pcm-f32":case"pcm-f32be":case"pcm-f64":case"pcm-f64be":return my}return null},Zb={webvtt:"wvtt"},wb={webvtt:ee=>Ky("vttC",[...Se.encode(ee.info.config.description)])},Db=ee=>{Pe(3===ee.length);let ie=0;for(let He=0;He<3;He++)ie<<=5,ie+=ee.charCodeAt(He)-96;return ie};class Pb{constructor(ee,ie){if(this.finalized=!1,this.started=!1,this.pos=0,this.trackedWrites=null,this.trackedStart=-1,this.trackedEnd=-1,ee._writerAcquired)throw new Error("Can\'t have multiple Writers for the same Target.");this.target=ee,ee._setMonotonicity(ie),ee._writerAcquired=!0}start(){Pe(!this.started),this.target._start(),this.started=!0}write(ee){Pe(this.started&&!this.finalized),this.maybeTrackWrites(ee),this.target._write(ee,this.pos),this.pos+=ee.byteLength}seek(ee){this.pos=ee}getPos(){return this.pos}async flush(){return Pe(this.started&&!this.finalized),this.target._flush()}async finalize(){Pe(this.started&&!this.finalized),await this.target._finalize(),this.finalized=!0}maybeTrackWrites(ee){if(!this.trackedWrites)return;let ie=this.getPos();if(ie<this.trackedStart){if(ie+ee.byteLength<=this.trackedStart)return;ee=ee.subarray(this.trackedStart-ie),ie=0}const He=ie+ee.byteLength-this.trackedStart;let ye=this.trackedWrites.byteLength;for(;ye<He;)ye*=2;if(ye!==this.trackedWrites.byteLength){const ee=new Uint8Array(ye);ee.set(this.trackedWrites,0),this.trackedWrites=ee}this.trackedWrites.set(ee,ie-this.trackedStart),this.trackedEnd=Math.max(this.trackedEnd,ie+ee.byteLength)}startTrackingWrites(){this.trackedWrites=new Uint8Array(1024),this.trackedStart=this.getPos(),this.trackedEnd=this.trackedStart}stopTrackingWrites(){if(!this.trackedWrites)throw new Error("Internal error: Can\'t get tracked writes since nothing was tracked.");const ee={data:this.trackedWrites.subarray(0,this.trackedEnd-this.trackedStart),start:this.trackedStart,end:this.trackedEnd};return this.trackedWrites=null,ee}}He(9);class Ab extends oi{constructor(){super(...arguments),this._writerAcquired=!1,this._monotonicity=null,this.onwrite=null}_setMonotonicity(ee){!1!==this._monotonicity&&(this._monotonicity=ee)}_dispatchWrite(ee,ie){this.onwrite?.(ee,ie),this._emit("write",{start:ee,end:ie})}slice(ee){if(!Number.isInteger(ee)||ee<0)throw new TypeError("offset must be a non-negative integer.");return new xb(this,ee)}}const Yb=65536,Vb=2**32;class ab extends Ab{constructor(){let ee=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(super(),this.buffer=null,this._maxPos=0,!ee||"object"!==typeof ee)throw new TypeError("BufferTarget options, when provided, must be an object.");if(void 0!==ee.onFinalize&&"function"!==typeof ee.onFinalize)throw new TypeError("options.onFinalize, when provided, must be a function.");if(this._options=ee,this._supportsResize="resize"in new ArrayBuffer(0),this._supportsResize)try{this._buffer=new ArrayBuffer(Yb,{maxByteLength:Vb})}catch{this._buffer=new ArrayBuffer(Yb),this._supportsResize=!1}else this._buffer=new ArrayBuffer(Yb);this._bytes=new Uint8Array(this._buffer)}_ensureSize(ee){let ie=this._buffer.byteLength;for(;ie<ee;)ie*=2;if(ie!==this._buffer.byteLength){if(ie>Vb)throw new Error("ArrayBuffer exceeded maximum size of 4294967296 bytes. Please consider using another target.");if(this._supportsResize)this._buffer.resize(ie);else{const ee=new ArrayBuffer(ie),He=new Uint8Array(ee);He.set(this._bytes,0),this._buffer=ee,this._bytes=He}}}_start(){}_write(ee,ie){this._ensureSize(ie+ee.byteLength),this._bytes.set(ee,ie),this._maxPos=Math.max(this._maxPos,ie+ee.byteLength),this._dispatchWrite(ie,ie+ee.byteLength)}async _flush(){}async _finalize(){this.buffer=this._buffer.slice(0,this._maxPos),this._options.onFinalize&&await this._options.onFinalize(this.buffer),this._emit("finalized")}async _close(){}_getSlice(ee,ie){return this._bytes.slice(ee,ie)}}class cb extends Ab{_start(){}_write(ee,ie){this._dispatchWrite(ie,ie+ee.byteLength)}async _flush(){}async _finalize(){this._emit("finalized")}async _close(){}}class xb extends Ab{constructor(ee,ie){super(),this._baseTarget=ee,this._offset=ie}_start(){}_write(ee,ie){this._baseTarget._write(ee,this._offset+ie),this._dispatchWrite(ie,ie+ee.byteLength)}_flush(){return this._baseTarget._flush()}async _finalize(){this._emit("finalized")}async _close(){}_setMonotonicity(ee){super._setMonotonicity(ee),this._baseTarget._setMonotonicity(ee)}}class Lb{constructor(ee,ie){if(this.rootPath=ee,this.getTarget=ie,"string"!==typeof ee)throw new TypeError("rootPath must be a string.");if("function"!==typeof ie)throw new TypeError("getTarget must be a function.")}}const Cb=ee=>{const ie=ee.filePos,He=xH(ee,9),ye=new fi(He);if(4095!==ye.readBits(12))return null;ye.skipBits(1);if(0!==ye.readBits(2))return null;const be=ye.readBits(1),Me=ye.readBits(2)+1,Ke=ye.readBits(4);if(15===Ke)return null;ye.skipBits(1);const Ue=ye.readBits(3);if(0===Ue)throw new Error("ADTS frames with channel configuration 0 are not supported.");ye.skipBits(1),ye.skipBits(1),ye.skipBits(1),ye.skipBits(1);const Fe=ye.readBits(13);ye.skipBits(11);const Je=ye.readBits(2)+1;if(1!==Je)throw new Error("ADTS frames with more than one AAC frame are not supported.");let oe=null;return 1===be?ee.filePos-=2:oe=ye.readBits(16),{objectType:Me,samplingFrequencyIndex:Ke,channelConfiguration:Ue,frameLength:Fe,numberOfAacFrames:Je,crcCheck:oe,startPos:ie}},vb=57600,ub=ee=>{const ie={},He=ee.track;return void 0!==He.metadata.name&&(ie.name=He.metadata.name),ie},mb=function(ee,ie){const He=ee*ie;return!(arguments.length>2&&void 0!==arguments[2])||arguments[2]?Math.round(He):He},lb=ee=>{if(0===ee.samples.length)return 0;let ie=1/0,He=-1/0;for(let ye=0;ye<ee.samples.length;ye++){const be=ee.samples[ye];be.timestamp<ie&&(ie=be.timestamp),be.timestamp+be.duration>He&&(He=be.timestamp+be.duration)}return ie===1/0?0:He-ie};class Sb extends vH{constructor(ee,ie){super(ee),this.writer=null,this.boxWriter=null,this.initWriter=null,this.initBoxWriter=null,this.auxTarget=new ab,this.auxWriter=new Pb(this.auxTarget,!1),this.auxBoxWriter=new lH(this.auxWriter),this.mdat=null,this.ftypSize=null,this.trackDatas=[],this.allTracksKnown=Ge(),this.creationTime=Math.floor(Date.now()/1e3)+2082844800,this.finalizedChunks=[],this.wroteFragmentedHeader=!1,this.nextFragmentNumber=1,this.maxWrittenTimestamp=-1/0,this.minWrittenTimestamp=1/0,this.maxWrittenEndTimestamp=-1/0,this.segmentHeaderSize=null,this.format=ie,this.formatOptions={...ie._options},this.isQuickTime=ie instanceof qM,this.isCmaf=ie instanceof kM,this.minimumFragmentDuration=this.formatOptions.minimumFragmentDuration??(ie instanceof kM?1/0:1),this.auxWriter.start()}async start(){const ee=await this.mutex.acquire();if(this.isCmaf?(this.fastStart="fragmented",this.isFragmented=!0):(this.writer=await this.output._getRootWriter((ee=>void 0!==this.formatOptions.fastStart?"fragmented"===this.formatOptions.fastStart:ee instanceof ab)),this.boxWriter=new lH(this.writer),this.fastStart=this.formatOptions.fastStart??(this.writer.target instanceof ab&&"in-memory"),this.isFragmented="fragmented"===this.fastStart),this.isCmaf){if(!this.output._hasInitTarget())throw new Error("CMAF outputs require the initTarget field in OutputOptions to be set; the init segment will be written to it.");const ee=await this.output._getInitTarget(),ie=new Pb(ee,!0);ie.start(),this.initWriter=ie,this.initBoxWriter=new lH(ie)}const ie=this.output.tracks.some((ee=>ee.isVideoTrack()&&"avc"===ee.source._codec));{const ee=this.initBoxWriter??this.boxWriter;if(Pe(ee),this.formatOptions.onFtyp&&ee.writer.startTrackingWrites(),ee.writeBox((ee=>{const ie=512;return ee.isQuickTime?Ky("ftyp",[by("qt  "),NH(ie),by("qt  ")]):ee.fragmented?ee.cmaf?Ky("ftyp",[by("iso5"),NH(ie),by("iso5"),by("iso6"),by("mp41"),by("cmfc"),by("dash")]):Ky("ftyp",[by("iso5"),NH(ie),by("iso5"),by("iso6"),by("mp41")]):Ky("ftyp",[by("isom"),NH(ie),by("isom"),ee.holdsAvc?by("avc1"):[],by("mp41")])})({isQuickTime:this.isQuickTime,holdsAvc:ie,fragmented:this.isFragmented,cmaf:this.isCmaf})),this.formatOptions.onFtyp){const{data:ie,start:He}=ee.writer.stopTrackingWrites();this.formatOptions.onFtyp(ie,He)}this.ftypSize=ee.writer.getPos(),this.isCmaf&&await this.initWriter.flush()}if("in-memory"===this.fastStart);else if("reserve"===this.fastStart){for(const He of this.output.tracks)if(void 0===He.metadata.maximumPacketCount)throw new Error("All tracks must specify maximumPacketCount in their metadata when using fastStart: \'reserve\'.")}else this.isFragmented||(Pe(this.writer),Pe(this.boxWriter),this.formatOptions.onMdat&&this.writer.startTrackingWrites(),this.mdat=oy(!0),this.boxWriter.writeBox(this.mdat));await(this.writer?.flush());for(const He of this.output.tracks)He.isVideoTrack()&&He.metadata.decoderConfig?this.getVideoTrackData(He,He.metadata.primingPacket??null,{decoderConfig:He.metadata.decoderConfig}):He.isAudioTrack()&&He.metadata.decoderConfig&&this.getAudioTrackData(He,He.metadata.primingPacket??null,{decoderConfig:He.metadata.decoderConfig});ee()}allTracksAreKnown(){for(const ee of this.output.tracks)if(!ee.source._closed&&!this.trackDatas.some((ie=>ie.track===ee)))return!1;return!0}async getMimeType(){await this.allTracksKnown.promise;const ee=this.trackDatas.map((ee=>{if("video"===ee.type)return ee.info.decoderConfig.codec;if("audio"===ee.type)return ee.info.decoderConfig.codec;return{webvtt:"wvtt"}[ee.track.source._codec]}));return(ee=>{let ie=(ee.hasVideo?"video/":ee.hasAudio?"audio/":"application/")+(ee.isQuickTime?"quicktime":"mp4");ee.codecStrings.length>0&&(ie+=`; codecs="${[...new Set(ee.codecStrings)].join(", ")}"`);return ie})({isQuickTime:this.isQuickTime,hasVideo:this.trackDatas.some((ee=>"video"===ee.type)),hasAudio:this.trackDatas.some((ee=>"audio"===ee.type)),codecStrings:ee})}getVideoTrackData(ee,ie,He){const ye=this.trackDatas.find((ie=>ie.track===ee));if(ye)return ye;DH(He,ee.source._codec),Pe(He),Pe(He.decoderConfig);const be={...He.decoderConfig};Pe(void 0!==be.codedWidth),Pe(void 0!==be.codedHeight);let Me=!1;if("avc"!==ee.source._codec||be.description){if("hevc"===ee.source._codec&&!be.description){if(!ie)throw new Error("No HEVC description provided; you must therefore provide a priming packet.");const ee=vi(ie.data);if(!ee)throw new Error("Couldn\'t extract an HEVCDecoderConfigurationRecord from the HEVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.265) when not providing a description, or provide a description (must be an HEVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in HEVC format.");be.description=(ee=>{const ie=[];ie.push(ee.configurationVersion),ie.push((3&ee.generalProfileSpace)<<6|(1&ee.generalTierFlag)<<5|31&ee.generalProfileIdc),ie.push(ee.generalProfileCompatibilityFlags>>>24&255),ie.push(ee.generalProfileCompatibilityFlags>>>16&255),ie.push(ee.generalProfileCompatibilityFlags>>>8&255),ie.push(255&ee.generalProfileCompatibilityFlags),ie.push(...ee.generalConstraintIndicatorFlags),ie.push(255&ee.generalLevelIdc),ie.push(240|ee.minSpatialSegmentationIdc>>8&15),ie.push(255&ee.minSpatialSegmentationIdc),ie.push(252|3&ee.parallelismType),ie.push(252|3&ee.chromaFormatIdc),ie.push(248|7&ee.bitDepthLumaMinus8),ie.push(248|7&ee.bitDepthChromaMinus8),ie.push(ee.avgFrameRate>>8&255),ie.push(255&ee.avgFrameRate),ie.push((3&ee.constantFrameRate)<<6|(7&ee.numTemporalLayers)<<3|(1&ee.temporalIdNested)<<2|3&ee.lengthSizeMinusOne),ie.push(255&ee.arrays.length);for(const He of ee.arrays){ie.push((1&He.arrayCompleteness)<<7|63&He.nalUnitType),ie.push(He.nalUnits.length>>8&255),ie.push(255&He.nalUnits.length);for(const ee of He.nalUnits){ie.push(ee.length>>8&255),ie.push(255&ee.length);for(let He=0;He<ee.length;He++)ie.push(ee[He])}}return new Uint8Array(ie)})(ee),Me=!0}}else{if(!ie)throw new Error("No AVC description provided; you must therefore provide a priming packet.");const ee=ai(ie.data);if(!ee)throw new Error("Couldn\'t extract an AVCDecoderConfigurationRecord from the AVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.264) when not providing a description, or provide a description (must be an AVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in AVCC format.");be.description=(ee=>{const ie=[];ie.push(ee.configurationVersion),ie.push(ee.avcProfileIndication),ie.push(ee.profileCompatibility),ie.push(ee.avcLevelIndication),ie.push(252|3&ee.lengthSizeMinusOne),ie.push(224|31&ee.sequenceParameterSets.length);for(const He of ee.sequenceParameterSets){const ee=He.byteLength;ie.push(ee>>8),ie.push(255&ee);for(let ye=0;ye<ee;ye++)ie.push(He[ye])}ie.push(ee.pictureParameterSets.length);for(const He of ee.pictureParameterSets){const ee=He.byteLength;ie.push(ee>>8),ie.push(255&ee);for(let ye=0;ye<ee;ye++)ie.push(He[ye])}if((100===ee.avcProfileIndication||110===ee.avcProfileIndication||122===ee.avcProfileIndication||144===ee.avcProfileIndication)&&null!==ee.chromaFormat){Pe(null!==ee.bitDepthLumaMinus8),Pe(null!==ee.bitDepthChromaMinus8),Pe(null!==ee.sequenceParameterSetExt),ie.push(252|3&ee.chromaFormat),ie.push(248|7&ee.bitDepthLumaMinus8),ie.push(248|7&ee.bitDepthChromaMinus8),ie.push(ee.sequenceParameterSetExt.length);for(const He of ee.sequenceParameterSetExt){const ee=He.byteLength;ie.push(ee>>8),ie.push(255&ee);for(let ye=0;ye<ee;ye++)ie.push(He[ye])}}return new Uint8Array(ie)})(ee),Me=!0}const Ke=((ee,ie)=>{const He=ee<0?-1:1;let ye=0,be=1,Me=1,Ke=0,Ue=ee=Math.abs(ee);for(;;){const ee=Math.floor(Ue),Fe=ee*Me+ye,Je=ee*Ke+be;if(Je>ie)return{num:He*Me,den:Ke};if(ye=Me,be=Ke,Me=Fe,Ke=Je,Ue=1/(Ue-ee),!isFinite(Ue))break}return{num:He*Me,den:Ke}})(1/(ee.metadata.frameRate??vb),1e6).den,Ue=be.displayAspectWidth,Fe=be.displayAspectHeight,Je=void 0===Ue||void 0===Fe?{num:1,den:1}:Fi({num:Ue*be.codedHeight,den:Fe*be.codedWidth}),oe="ap4h"===be.codec||"ap4x"===be.codec,Re={muxer:this,track:ee,type:"video",info:{width:be.codedWidth,height:be.codedHeight,pixelAspectRatio:Je,decoderConfig:be,requiresAnnexBTransformation:Me,hasAlphaChannel:oe},timescale:Ke,samples:[],sampleQueue:[],timestampProcessingQueue:[],timeToSampleTable:[],compositionTimeOffsetTable:[],lastTimescaleUnits:null,lastSample:null,startTimestampOffset:null,finalizedChunks:[],currentChunk:null,compactlyCodedChunkTable:[],closed:!1,avgBitrate:ee.source._nominalBitrate??ee.metadata.averageBitrate??0,maxBitrate:ee.source._nominalBitrate??ee.metadata.bitrate??0};return this.trackDatas.push(Re),this.trackDatas.sort(((ee,ie)=>ee.track.id-ie.track.id)),this.allTracksAreKnown()&&this.allTracksKnown.resolve(),Re}getAudioTrackData(ee,ie,He){const ye=this.trackDatas.find((ie=>ie.track===ee));if(ye)return ye;AH(He,ee.source._codec),Pe(He),Pe(He.decoderConfig);const be={...He.decoderConfig};let Me=!1;if("aac"===ee.source._codec&&!be.description){if(!ie)throw new Error("No AAC description provided; you must therefore provide a priming packet.");const ee=Cb(aH.tempFromBytes(ie.data));if(!ee)throw new Error("Couldn\'t parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");const He=Ti[ee.samplingFrequencyIndex],ye=Xi[ee.channelConfiguration];if(void 0===He||void 0===ye)throw new Error("Invalid ADTS frame header.");be.description=zi({objectType:ee.objectType,outputSampleRate:He,outputNumberOfChannels:ye}),Me=!0}if(!ie){if("ac3"===ee.source._codec||"eac3"===ee.source._codec)throw new Error("AC-3/E-AC-3 require a priming packet.");if("dts"===ee.source._codec)throw new Error("DTS requires a priming packet.")}const Ke={muxer:this,track:ee,type:"audio",info:{numberOfChannels:He.decoderConfig.numberOfChannels,sampleRate:He.decoderConfig.sampleRate,decoderConfig:be,requiresPcmTransformation:!this.isFragmented&&kH.includes(ee.source._codec),expectedNextPcmPacketTimestamp:null,requiresAdtsStripping:Me,primingPacket:ie},timescale:be.sampleRate,samples:[],sampleQueue:[],timestampProcessingQueue:[],timeToSampleTable:[],compositionTimeOffsetTable:[],lastTimescaleUnits:null,lastSample:null,startTimestampOffset:null,finalizedChunks:[],currentChunk:null,compactlyCodedChunkTable:[],closed:!1,avgBitrate:ee.source._nominalBitrate??ee.metadata.averageBitrate??0,maxBitrate:ee.source._nominalBitrate??ee.metadata.bitrate??0};return this.trackDatas.push(Ke),this.trackDatas.sort(((ee,ie)=>ee.track.id-ie.track.id)),this.allTracksAreKnown()&&this.allTracksKnown.resolve(),Ke}getSubtitleTrackData(ee,ie){const He=this.trackDatas.find((ie=>ie.track===ee));if(He)return He;YH(ie),Pe(ie),Pe(ie.config);const ye={muxer:this,track:ee,type:"subtitle",info:{config:ie.config},timescale:1e3,samples:[],sampleQueue:[],timestampProcessingQueue:[],timeToSampleTable:[],compositionTimeOffsetTable:[],lastTimescaleUnits:null,lastSample:null,startTimestampOffset:null,finalizedChunks:[],currentChunk:null,compactlyCodedChunkTable:[],closed:!1,avgBitrate:ee.source._nominalBitrate??ee.metadata.averageBitrate??0,maxBitrate:ee.source._nominalBitrate??ee.metadata.bitrate??0,lastCueEndTimestamp:null,cueQueue:[],nextSourceId:0,cueToSourceId:new WeakMap};return this.trackDatas.push(ye),this.trackDatas.sort(((ee,ie)=>ee.track.id-ie.track.id)),this.allTracksAreKnown()&&this.allTracksKnown.resolve(),ye}async addEncodedVideoPacket(ee,ie,He){const ye=await this.mutex.acquire();try{const ye=this.getVideoTrackData(ee,ie,He);let be=ie.data;if(ye.info.requiresAnnexBTransformation){const ee=[...Pi(be)].map((ee=>be.subarray(ee.offset,ee.offset+ee.length)));if(0===ee.length)throw new Error("Failed to transform packet data. Make sure all packets are provided in Annex B format, as specified in ITU-T-REC-H.264 and ITU-T-REC-H.265.");be=Vi(ee,4)}this.validateTimestamp(ye.track,ie.timestamp,"key"===ie.type);const Me=this.createSampleForTrack(ye,be,ie.timestamp,ie.duration,ie.type);await this.registerSample(ye,Me)}finally{ye()}}async addEncodedAudioPacket(ee,ie,He){const ye=await this.mutex.acquire();try{const ye=this.getAudioTrackData(ee,ie,He);let be=ie.data;if(ye.info.requiresAdtsStripping){const ee=Cb(aH.tempFromBytes(be));if(!ee)throw new Error("Expected ADTS frame, didn\'t get one.");const ie=null===ee.crcCheck?7:9;be=be.subarray(ie)}this.validateTimestamp(ye.track,ie.timestamp,"key"===ie.type);let Me=ie.timestamp,Ke=ie.duration;if(ye.info.requiresPcmTransformation){const ee=gH(ye.info.decoderConfig.codec).sampleSize*ye.info.numberOfChannels;if(Ke=be.byteLength/ee/ye.info.sampleRate,null!==ye.info.expectedNextPcmPacketTimestamp){const ee=Me-ye.info.expectedNextPcmPacketTimestamp;if(ee<.01)Me=ye.info.expectedNextPcmPacketTimestamp;else{const ie=await this.padWithSilence(ye,ye.info.expectedNextPcmPacketTimestamp,ee);Me=ye.info.expectedNextPcmPacketTimestamp+ie}}ye.info.expectedNextPcmPacketTimestamp=Me+Ke}const Ue=this.createSampleForTrack(ye,be,Me,Ke,ie.type);await this.registerSample(ye,Ue)}finally{ye()}}async padWithSilence(ee,ie,He){const ye=mb(He,ee.timescale);if(He=ye/ee.timescale,ye>0){const{sampleSize:be,silentValue:Me}=gH(ee.info.decoderConfig.codec),Ke=ye*ee.info.numberOfChannels,Ue=new Uint8Array(be*Ke).fill(Me),Fe=this.createSampleForTrack(ee,new Uint8Array(Ue.buffer),ie,He,"key");await this.registerSample(ee,Fe)}return He}async addSubtitleCue(ee,ie,He){const ye=await this.mutex.acquire();try{const ye=this.getSubtitleTrackData(ee,He);this.validateTimestamp(ye.track,ie.timestamp,!0),"webvtt"===ee.source._codec&&(ye.cueQueue.push(ie),await this.processWebVTTCues(ye,ie.timestamp))}finally{ye()}}async processWebVTTCues(ee,ie){for(;ee.cueQueue.length>0;){ee.lastCueEndTimestamp??=Math.min(0,ee.cueQueue[0].timestamp);const He=new Set([]);for(const Fe of ee.cueQueue)Pe(Fe.timestamp<=ie),Pe(ee.lastCueEndTimestamp<=Fe.timestamp+Fe.duration),He.add(Math.max(Fe.timestamp,ee.lastCueEndTimestamp)),He.add(Fe.timestamp+Fe.duration);const ye=[...He].sort(((ee,ie)=>ee-ie)),be=ye[0],Me=ye[1]??be;if(ie<Me)break;if(ee.lastCueEndTimestamp<be){this.auxWriter.seek(0);const ie=Rb();this.auxBoxWriter.writeBox(ie);const He=this.auxTarget._getSlice(0,this.auxWriter.getPos()),ye=this.createSampleForTrack(ee,He,ee.lastCueEndTimestamp,be-ee.lastCueEndTimestamp,"key");await this.registerSample(ee,ye),ee.lastCueEndTimestamp=be}this.auxWriter.seek(0);for(let ie=0;ie<ee.cueQueue.length;ie++){const He=ee.cueQueue[ie];if(He.timestamp>=Me)break;uH.lastIndex=0;const ye=uH.test(He.text),Ke=He.timestamp+He.duration;let Ue=ee.cueToSourceId.get(He);if(void 0===Ue&&Me<Ke&&(Ue=ee.nextSourceId++,ee.cueToSourceId.set(He,Ue)),He.notes){const ee=qb(He.notes);this.auxBoxWriter.writeBox(ee)}const Fe=kb(He.text,ye?be:null,He.identifier??null,He.settings??null,Ue??null);this.auxBoxWriter.writeBox(Fe),Ke===Me&&ee.cueQueue.splice(ie--,1)}const Ke=this.auxTarget._getSlice(0,this.auxWriter.getPos()),Ue=this.createSampleForTrack(ee,Ke,be,Me-be,"key");await this.registerSample(ee,Ue),ee.lastCueEndTimestamp=Me}}createSampleForTrack(ee,ie,He,ye,be){return{timestamp:He,decodeTimestamp:He,duration:ye,data:ie,size:ie.byteLength,type:be,timescaleUnitsToNextSample:mb(ye,ee.timescale)}}processTimestamps(ee,ie){if(0===ee.timestampProcessingQueue.length)return;if("audio"===ee.type&&ee.info.requiresPcmTransformation){Pe(!this.isFragmented),ee.startTimestampOffset??=ee.timestampProcessingQueue[0].timestamp;let ie=0;for(let He=0;He<ee.timestampProcessingQueue.length;He++){const ye=ee.timestampProcessingQueue[He];ie+=mb(ye.duration,ee.timescale)}if(0===ee.timeToSampleTable.length)ee.timeToSampleTable.push({sampleCount:ie,sampleDelta:1});else{xe(ee.timeToSampleTable).sampleCount+=ie}return void(ee.timestampProcessingQueue.length=0)}const He=ee.timestampProcessingQueue.map((ee=>ee.timestamp)).sort(((ee,ie)=>ee-ie));this.isFragmented?ee.startTimestampOffset??=Math.min(He[0],0):ee.startTimestampOffset??=He[0];for(let ye=0;ye<ee.timestampProcessingQueue.length;ye++){const ie=ee.timestampProcessingQueue[ye];ie.decodeTimestamp=He[ye];const be=mb(ie.timestamp-ie.decodeTimestamp,ee.timescale),Me=mb(ie.duration,ee.timescale);if(null!==ee.lastTimescaleUnits){Pe(ee.lastSample);const He=mb(ie.decodeTimestamp,ee.timescale,!1),ye=Math.round(He-ee.lastTimescaleUnits);if(Pe(ye>=0),ee.lastTimescaleUnits+=ye,ee.lastSample.timescaleUnitsToNextSample=ye,!this.isFragmented){let ie=xe(ee.timeToSampleTable);if(Pe(ie),1===ie.sampleCount){ie.sampleDelta=ye;const He=ee.timeToSampleTable[ee.timeToSampleTable.length-2];He&&He.sampleDelta===ye&&(He.sampleCount++,ee.timeToSampleTable.pop(),ie=He)}else ie.sampleDelta!==ye&&(ie.sampleCount--,ee.timeToSampleTable.push(ie={sampleCount:1,sampleDelta:ye}));ie.sampleDelta===Me?ie.sampleCount++:ee.timeToSampleTable.push({sampleCount:1,sampleDelta:Me});const He=xe(ee.compositionTimeOffsetTable);Pe(He),He.sampleCompositionTimeOffset===be?He.sampleCount++:ee.compositionTimeOffsetTable.push({sampleCount:1,sampleCompositionTimeOffset:be})}}else ee.lastTimescaleUnits=mb(ie.decodeTimestamp,ee.timescale,!1),this.isFragmented||(ee.timeToSampleTable.push({sampleCount:1,sampleDelta:Me}),ee.compositionTimeOffsetTable.push({sampleCount:1,sampleCompositionTimeOffset:be}));ee.lastSample=ie}if(ee.timestampProcessingQueue.length=0,Pe(ee.lastSample),Pe(null!==ee.lastTimescaleUnits),void 0!==ie&&0===ee.lastSample.timescaleUnitsToNextSample){Pe("key"===ie.type);const He=mb(ie.timestamp,ee.timescale,!1),ye=Math.round(He-ee.lastTimescaleUnits);ee.lastSample.timescaleUnitsToNextSample=ye}}async registerSample(ee,ie){"key"===ie.type&&this.processTimestamps(ee,ie),ee.timestampProcessingQueue.push(ie),this.isFragmented?(ee.sampleQueue.push(ie),await this.interleaveSamples()):"reserve"===this.fastStart?await this.registerSampleFastStartReserve(ee,ie):await this.addSampleToTrack(ee,ie)}async addSampleToTrack(ee,ie){if(!this.isFragmented&&(ee.samples.push(ie),"reserve"===this.fastStart)){const ie=ee.track.metadata.maximumPacketCount;if(Pe(void 0!==ie),ee.samples.length>ie)throw new Error(`Track #${ee.track.id} has already reached the maximum packet count (${ie}). Either add less packets or increase the maximum packet count.`)}let He=!1;if(ee.currentChunk){ee.currentChunk.startTimestamp=Math.min(ee.currentChunk.startTimestamp,ie.timestamp);const ye=ie.timestamp-ee.currentChunk.startTimestamp;if(this.isFragmented){const be=this.trackDatas.every((He=>{if(ee===He)return"key"===ie.type;const ye=He.sampleQueue[0];return ye?"key"===ye.type:He.closed}));ye>=this.minimumFragmentDuration&&be&&ie.timestamp>this.maxWrittenTimestamp&&(He=!0,await this.finalizeFragment())}else He=ye>=.5}else He=!0;He&&(ee.currentChunk&&await this.finalizeCurrentChunk(ee),ee.currentChunk={startTimestamp:ie.timestamp,samples:[],offset:null,moofOffset:null,trafIndex:null}),Pe(ee.currentChunk),ee.currentChunk.samples.push(ie),this.isFragmented&&(this.maxWrittenTimestamp=Math.max(this.maxWrittenTimestamp,ie.timestamp),this.maxWrittenEndTimestamp=Math.max(this.maxWrittenEndTimestamp,ie.timestamp+ie.duration),this.minWrittenTimestamp=Math.min(this.minWrittenTimestamp,ie.timestamp))}async finalizeCurrentChunk(ee){if(Pe(!this.isFragmented),Pe(this.writer),!ee.currentChunk)return;ee.finalizedChunks.push(ee.currentChunk),this.finalizedChunks.push(ee.currentChunk);let ie=ee.currentChunk.samples.length;if("audio"===ee.type&&ee.info.requiresPcmTransformation&&(ie=ee.currentChunk.samples.reduce(((ie,He)=>ie+mb(He.duration,ee.timescale)),0)),0!==ee.compactlyCodedChunkTable.length&&xe(ee.compactlyCodedChunkTable).samplesPerChunk===ie||ee.compactlyCodedChunkTable.push({firstChunk:ee.finalizedChunks.length,samplesPerChunk:ie}),"in-memory"!==this.fastStart){ee.currentChunk.offset=this.writer.getPos();for(const ie of ee.currentChunk.samples)Pe(ie.data),this.writer.write(ie.data),ie.data=null;await this.writer.flush()}else ee.currentChunk.offset=0}async interleaveSamples(){let ee=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(Pe(this.isFragmented),ee||this.allTracksAreKnown())ee:for(;;){let ie=null,He=1/0;for(const be of this.trackDatas){if(!ee&&0===be.sampleQueue.length&&!be.closed)break ee;be.sampleQueue.length>0&&be.sampleQueue[0].timestamp<He&&(ie=be,He=be.sampleQueue[0].timestamp)}if(!ie)break;const ye=ie.sampleQueue.shift();await this.addSampleToTrack(ie,ye)}}async finalizeFragment(){let ee=arguments.length>0&&void 0!==arguments[0]?arguments[0]:!this.isCmaf;if(Pe(this.isFragmented),!this.wroteFragmentedHeader){this.wroteFragmentedHeader=!0;const ee=this.initBoxWriter??this.boxWriter;Pe(ee),this.formatOptions.onMoov&&ee.writer.startTrackingWrites(),this.ensureOneEnabledTrack();const ie=Ry(this);if(ee.writeBox(ie),this.formatOptions.onMoov){const{data:ie,start:He}=ee.writer.stopTrackingWrites();this.formatOptions.onMoov(ie,He)}if(this.isCmaf){Pe(this.initWriter),await this.initWriter.flush(),await this.initWriter.finalize(),this.writer=await this.output._getRootWriter(!0),this.boxWriter=new lH(this.writer);const ee=this.boxWriter.measureBox(Fy()),ie=this.boxWriter.measureBox(Jy(this,0));this.segmentHeaderSize=ee+ie,this.writer.seek(this.segmentHeaderSize)}}Pe(this.writer),Pe(this.boxWriter);const ie=this.trackDatas.filter((ee=>ee.currentChunk));if(0===ie.length)return void(ee&&await this.writer.flush());const He=this.nextFragmentNumber++,ye=Hb(He,ie),be=this.writer.getPos(),Me=be+this.boxWriter.measureBox(ye);let Ke=Me+8,Ue=1/0;for(let ke=0;ke<ie.length;ke++){const ee=ie[ke];Pe(ee.currentChunk),Pe(null!==ee.startTimestampOffset),ee.currentChunk.offset=Ke,ee.currentChunk.moofOffset=be,ee.currentChunk.trafIndex=ke,ee.currentChunk.startTimestamp-=ee.startTimestampOffset;for(const ie of ee.currentChunk.samples)Ke+=ie.size,ie.timestamp-=ee.startTimestampOffset,ie.decodeTimestamp-=ee.startTimestampOffset;Ue=Math.min(Ue,ee.currentChunk.startTimestamp)}const Fe=Ke-Me,Je=Fe>=2**32;if(Je)for(const ke of ie)ke.currentChunk.offset+=8;this.formatOptions.onMoof&&this.writer.startTrackingWrites();const oe=Hb(He,ie);if(this.boxWriter.writeBox(oe),this.formatOptions.onMoof){const{data:ee,start:ie}=this.writer.stopTrackingWrites();this.formatOptions.onMoof(ee,ie,Ue)}Pe(this.writer.getPos()===Me),this.formatOptions.onMdat&&this.writer.startTrackingWrites();const Re=oy(Je);Re.size=Fe,this.boxWriter.writeBox(Re),this.writer.seek(Me+(Je?16:8));for(const ke of ie)for(const ee of ke.currentChunk.samples)this.writer.write(ee.data),ee.data=null;if(this.formatOptions.onMdat){const{data:ee,start:ie}=this.writer.stopTrackingWrites();this.formatOptions.onMdat(ee,ie)}for(const ke of ie)ke.finalizedChunks.push(ke.currentChunk),this.finalizedChunks.push(ke.currentChunk),ke.currentChunk=null;ee&&await this.writer.flush()}async registerSampleFastStartReserve(ee,ie){this.allTracksAreKnown()?(this.mdat||await this.createFastStartReserveMdat(),await this.addSampleToTrack(ee,ie)):ee.sampleQueue.push(ie)}async createFastStartReserveMdat(){Pe(this.writer),Pe(this.boxWriter),this.ensureOneEnabledTrack();const ee=Ry(this),ie=this.boxWriter.measureBox(ee)+this.computeSampleTableSizeUpperBound()+4096;Pe(null!==this.ftypSize),this.writer.seek(this.ftypSize+ie),this.formatOptions.onMdat&&this.writer.startTrackingWrites(),this.mdat=oy(!0),this.boxWriter.writeBox(this.mdat);for(const He of this.trackDatas){for(const ee of He.sampleQueue)await this.addSampleToTrack(He,ee);He.sampleQueue.length=0}}computeSampleTableSizeUpperBound(){Pe("reserve"===this.fastStart);let ee=0;for(const ie of this.trackDatas){const He=ie.track.metadata.maximumPacketCount;Pe(void 0!==He),ee+=8*Math.ceil(2/3*He),ee+=4*He,ee+=8*Math.ceil(2/3*He),ee+=12*Math.ceil(2/3*He),ee+=4*He,ee+=8*He}return ee}async onTrackClose(ee){const ie=await this.mutex.acquire(),He=this.trackDatas.find((ie=>ie.track===ee));He&&(He.closed=!0,"subtitle"===He.type&&"webvtt"===ee.source._codec&&await this.processWebVTTCues(He,1/0),this.processTimestamps(He)),this.allTracksAreKnown()&&this.allTracksKnown.resolve(),this.isFragmented&&await this.interleaveSamples(),ie()}ensureOneEnabledTrack(){for(const ee of["video","audio","subtitle"]){const ie=this.trackDatas.filter((ie=>ie.type===ee));if(0===ie.length)continue;if(!ie.some((ee=>!1!==ee.track.metadata.disposition?.default))){const ee=ie[0];ee.track.metadata.disposition={...ee.track.metadata.disposition,default:!0}}}}async forceFragmentFinalization(){Pe(this.isFragmented);const ee=await this.mutex.acquire();try{for(const ee of this.trackDatas)"subtitle"===ee.type&&"webvtt"===ee.track.source._codec&&await this.processWebVTTCues(ee,1/0),this.processTimestamps(ee);await this.interleaveSamples(!0),await this.finalizeFragment()}finally{ee()}}async finalize(){const ee=await this.mutex.acquire();this.allTracksKnown.resolve(),this.ensureOneEnabledTrack(),this.mdat||"reserve"!==this.fastStart||await this.createFastStartReserveMdat();for(const He of this.trackDatas)He.closed=!0,"subtitle"===He.type&&"webvtt"===He.track.source._codec&&await this.processWebVTTCues(He,1/0),this.processTimestamps(He);if(this.isFragmented)await this.interleaveSamples(!0),await this.finalizeFragment(!1);else for(const He of this.trackDatas){await this.finalizeCurrentChunk(He);const ee=lb(He);if(ee>0){let ie=0;for(const ee of He.samples)ie+=ee.size;He.avgBitrate=Math.round(8*ie/ee)}else He.avgBitrate=0;let ie=0,ye=0,be=0;for(let Me=0;Me<He.samples.length;Me++){const ee=He.samples[Me];for(ye+=ee.size;ee.decodeTimestamp-He.samples[ie].decodeTimestamp>=1;)ye-=He.samples[ie].size,ie++;be=Math.max(be,ye)}if(He.maxBitrate=8*be,null!==He.startTimestampOffset)for(let Me=0;Me<He.samples.length;Me++){const ee=He.samples[Me];ee.timestamp-=He.startTimestampOffset,ee.decodeTimestamp-=He.startTimestampOffset}}if(Pe(this.writer),Pe(this.boxWriter),"in-memory"===this.fastStart){let ee;this.mdat=oy(!1);for(let He=0;He<2;He++){const ie=Ry(this),He=this.boxWriter.measureBox(ie);ee=this.boxWriter.measureBox(this.mdat);let ye=this.writer.getPos()+He+ee;for(const be of this.finalizedChunks){be.offset=ye;for(const{data:ie}of be.samples)Pe(ie),ye+=ie.byteLength,ee+=ie.byteLength}if(ye<2**32)break;ee>=2**32&&(this.mdat.largeSize=!0)}this.formatOptions.onMoov&&this.writer.startTrackingWrites();const ie=Ry(this);if(this.boxWriter.writeBox(ie),this.formatOptions.onMoov){const{data:ee,start:ie}=this.writer.stopTrackingWrites();this.formatOptions.onMoov(ee,ie)}this.formatOptions.onMdat&&this.writer.startTrackingWrites(),this.mdat.size=ee,this.boxWriter.writeBox(this.mdat);for(const He of this.finalizedChunks)for(const ee of He.samples)Pe(ee.data),this.writer.write(ee.data),ee.data=null;if(this.formatOptions.onMdat){const{data:ee,start:ie}=this.writer.stopTrackingWrites();this.formatOptions.onMdat(ee,ie)}}else if(this.isFragmented)if(this.isCmaf){const ee=null!==this.segmentHeaderSize?this.writer.getPos()-this.segmentHeaderSize:0;this.writer.seek(0),this.boxWriter.writeBox(Fy()),this.boxWriter.writeBox(Jy(this,ee))}else{const ee=this.writer.getPos(),He=(ie=this.trackDatas,Ky("mfra",void 0,[...ie.map(Jb),ob()]));this.boxWriter.writeBox(He);const ye=this.writer.getPos()-ee;this.writer.seek(this.writer.getPos()-4),this.boxWriter.writeU32(ye)}else{Pe(this.mdat);const ee=this.boxWriter.offsets.get(this.mdat);Pe(void 0!==ee);const ie=this.writer.getPos()-ee;if(this.mdat.size=ie,this.mdat.largeSize=ie>=2**32,this.boxWriter.patchBox(this.mdat),this.formatOptions.onMdat){const{data:ee,start:ie}=this.writer.stopTrackingWrites();this.formatOptions.onMdat(ee,ie)}const He=Ry(this);if("reserve"===this.fastStart){Pe(null!==this.ftypSize),this.writer.seek(this.ftypSize),this.formatOptions.onMoov&&this.writer.startTrackingWrites(),this.boxWriter.writeBox(He);const ee=this.boxWriter.offsets.get(this.mdat)-this.writer.getPos();this.boxWriter.writeBox({type:"free",size:ee})}else this.formatOptions.onMoov&&this.writer.startTrackingWrites(),this.boxWriter.writeBox(He);if(this.formatOptions.onMoov){const{data:ee,start:ie}=this.writer.stopTrackingWrites();this.formatOptions.onMoov(ee,ie)}}var ie;ee()}}var nb;!function(ee){ee[ee.EBML=440786851]="EBML",ee[ee.EBMLVersion=17030]="EBMLVersion",ee[ee.EBMLReadVersion=17143]="EBMLReadVersion",ee[ee.EBMLMaxIDLength=17138]="EBMLMaxIDLength",ee[ee.EBMLMaxSizeLength=17139]="EBMLMaxSizeLength",ee[ee.DocType=17026]="DocType",ee[ee.DocTypeVersion=17031]="DocTypeVersion",ee[ee.DocTypeReadVersion=17029]="DocTypeReadVersion",ee[ee.Void=236]="Void",ee[ee.Segment=408125543]="Segment",ee[ee.SeekHead=290298740]="SeekHead",ee[ee.Seek=19899]="Seek",ee[ee.SeekID=21419]="SeekID",ee[ee.SeekPosition=21420]="SeekPosition",ee[ee.Duration=17545]="Duration",ee[ee.Info=357149030]="Info",ee[ee.TimestampScale=2807729]="TimestampScale",ee[ee.MuxingApp=19840]="MuxingApp",ee[ee.WritingApp=22337]="WritingApp",ee[ee.Tracks=374648427]="Tracks",ee[ee.TrackEntry=174]="TrackEntry",ee[ee.TrackNumber=215]="TrackNumber",ee[ee.TrackUID=29637]="TrackUID",ee[ee.TrackType=131]="TrackType",ee[ee.FlagEnabled=185]="FlagEnabled",ee[ee.FlagDefault=136]="FlagDefault",ee[ee.FlagForced=21930]="FlagForced",ee[ee.FlagOriginal=21934]="FlagOriginal",ee[ee.FlagHearingImpaired=21931]="FlagHearingImpaired",ee[ee.FlagVisualImpaired=21932]="FlagVisualImpaired",ee[ee.FlagCommentary=21935]="FlagCommentary",ee[ee.FlagLacing=156]="FlagLacing",ee[ee.Name=21358]="Name",ee[ee.Language=2274716]="Language",ee[ee.LanguageBCP47=2274717]="LanguageBCP47",ee[ee.CodecID=134]="CodecID",ee[ee.CodecPrivate=25506]="CodecPrivate",ee[ee.CodecDelay=22186]="CodecDelay",ee[ee.SeekPreRoll=22203]="SeekPreRoll",ee[ee.DefaultDuration=2352003]="DefaultDuration",ee[ee.Video=224]="Video",ee[ee.PixelWidth=176]="PixelWidth",ee[ee.PixelHeight=186]="PixelHeight",ee[ee.DisplayWidth=21680]="DisplayWidth",ee[ee.DisplayHeight=21690]="DisplayHeight",ee[ee.DisplayUnit=21682]="DisplayUnit",ee[ee.AlphaMode=21440]="AlphaMode",ee[ee.Audio=225]="Audio",ee[ee.SamplingFrequency=181]="SamplingFrequency",ee[ee.Channels=159]="Channels",ee[ee.BitDepth=25188]="BitDepth",ee[ee.SimpleBlock=163]="SimpleBlock",ee[ee.BlockGroup=160]="BlockGroup",ee[ee.Block=161]="Block",ee[ee.BlockAdditions=30113]="BlockAdditions",ee[ee.BlockMore=166]="BlockMore",ee[ee.BlockAdditional=165]="BlockAdditional",ee[ee.BlockAddID=238]="BlockAddID",ee[ee.BlockDuration=155]="BlockDuration",ee[ee.ReferenceBlock=251]="ReferenceBlock",ee[ee.Cluster=524531317]="Cluster",ee[ee.Timestamp=231]="Timestamp",ee[ee.Cues=475249515]="Cues",ee[ee.CuePoint=187]="CuePoint",ee[ee.CueTime=179]="CueTime",ee[ee.CueTrackPositions=183]="CueTrackPositions",ee[ee.CueTrack=247]="CueTrack",ee[ee.CueClusterPosition=241]="CueClusterPosition",ee[ee.Colour=21936]="Colour",ee[ee.MatrixCoefficients=21937]="MatrixCoefficients",ee[ee.TransferCharacteristics=21946]="TransferCharacteristics",ee[ee.Primaries=21947]="Primaries",ee[ee.Range=21945]="Range",ee[ee.Projection=30320]="Projection",ee[ee.ProjectionType=30321]="ProjectionType",ee[ee.ProjectionPoseYaw=30323]="ProjectionPoseYaw",ee[ee.ProjectionPosePitch=30324]="ProjectionPosePitch",ee[ee.ProjectionPoseRoll=30325]="ProjectionPoseRoll",ee[ee.Attachments=423732329]="Attachments",ee[ee.AttachedFile=24999]="AttachedFile",ee[ee.FileDescription=18046]="FileDescription",ee[ee.FileName=18030]="FileName",ee[ee.FileMediaType=18016]="FileMediaType",ee[ee.FileData=18012]="FileData",ee[ee.FileUID=18094]="FileUID",ee[ee.Chapters=272869232]="Chapters",ee[ee.Tags=307544935]="Tags",ee[ee.Tag=29555]="Tag",ee[ee.Targets=25536]="Targets",ee[ee.TargetTypeValue=26826]="TargetTypeValue",ee[ee.TargetType=25546]="TargetType",ee[ee.TagTrackUID=25541]="TagTrackUID",ee[ee.TagEditionUID=25545]="TagEditionUID",ee[ee.TagChapterUID=25540]="TagChapterUID",ee[ee.TagAttachmentUID=25542]="TagAttachmentUID",ee[ee.SimpleTag=26568]="SimpleTag",ee[ee.TagName=17827]="TagName",ee[ee.TagLanguage=17530]="TagLanguage",ee[ee.TagString=17543]="TagString",ee[ee.TagBinary=17541]="TagBinary",ee[ee.ContentEncodings=28032]="ContentEncodings",ee[ee.ContentEncoding=25152]="ContentEncoding",ee[ee.ContentEncodingOrder=20529]="ContentEncodingOrder",ee[ee.ContentEncodingScope=20530]="ContentEncodingScope",ee[ee.ContentCompression=20532]="ContentCompression",ee[ee.ContentCompAlgo=16980]="ContentCompAlgo",ee[ee.ContentCompSettings=16981]="ContentCompSettings",ee[ee.ContentEncryption=20533]="ContentEncryption"}(nb||(nb={}));nb.EBML,nb.Segment,nb.SeekHead,nb.Info,nb.Cluster,nb.Tracks,nb.Cues,nb.Attachments,nb.Chapters,nb.Tags;const jb=new Uint32Array(256);for(let YM=0;YM<256;YM++){let ee=YM<<24;for(let ie=0;ie<8;ie++)ee=2147483648&ee?ee<<1^79764919:ee<<1;jb[YM]=ee>>>0&4294967295}new Uint8Array([9,240]),new Uint8Array([70,1]);const sb=new Uint32Array(256);for(let YM=0;YM<256;YM++){let ee=YM<<24;for(let ie=0;ie<8;ie++)ee=2147483648&ee?ee<<1^79764919:ee<<1;sb[YM]=ee>>>0&4294967295}const Ib=ee=>{let ie=4294967295;for(let He=0;He<ee.length;He++){const ye=ee[He];ie=(ie<<8^sb[ie>>>24^ye])>>>0}return ie},hb=new Uint8Array(16);{const ee=me(hb);hb[0]=0,ee.setUint16(1,45069,!1),ee.setUint16(3,1,!1),hb[5]=193,hb[6]=0,hb[7]=0,ee.setUint16(8,1,!1),ee.setUint16(10,61440,!1),ee.setUint32(12,Ib(hb.subarray(0,12)),!1)}const Nb=new Uint8Array(0);class Gb{constructor(ee,ie,He,ye){let be=arguments.length>4&&void 0!==arguments[4]?arguments[4]:-1,Me=arguments.length>5?arguments[5]:void 0,Ke=arguments.length>6?arguments[6]:void 0;if(this.data=ee,this.type=ie,this.timestamp=He,this.duration=ye,this.sequenceNumber=be,ee===Nb&&void 0===Me)throw new Error("Internal error: byteLength must be explicitly provided when constructing metadata-only packets.");if(void 0===Me&&(Me=ee.byteLength),!(ee instanceof Uint8Array))throw new TypeError("data must be a Uint8Array.");if("key"!==ie&&"delta"!==ie)throw new TypeError(\'type must be either "key" or "delta".\');if(!Number.isFinite(He))throw new TypeError("timestamp must be a number.");if(!Number.isFinite(ye)||ye<0)throw new TypeError("duration must be a non-negative number.");if(!Number.isFinite(be))throw new TypeError("sequenceNumber must be a number.");if(!Number.isInteger(Me)||Me<0)throw new TypeError("byteLength must be a non-negative integer.");if(void 0!==Ke&&("object"!==typeof Ke||!Ke))throw new TypeError("sideData, when provided, must be an object.");if(void 0!==Ke?.alpha&&!(Ke.alpha instanceof Uint8Array))throw new TypeError("sideData.alpha, when provided, must be a Uint8Array.");if(void 0!==Ke?.alphaByteLength&&(!Number.isInteger(Ke.alphaByteLength)||Ke.alphaByteLength<0))throw new TypeError("sideData.alphaByteLength, when provided, must be a non-negative integer.");this.byteLength=Me,this.sideData=Ke??{},this.sideData.alpha&&void 0===this.sideData.alphaByteLength&&(this.sideData.alphaByteLength=this.sideData.alpha.byteLength)}get isMetadataOnly(){return this.data===Nb}get microsecondTimestamp(){return Math.trunc(yi*this.timestamp)}get microsecondDuration(){return Math.trunc(yi*this.duration)}toEncodedVideoChunk(){if(this.isMetadataOnly)throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");if("undefined"===typeof EncodedVideoChunk)throw new Error("EncodedVideoChunk is not available in this environment.");return new EncodedVideoChunk({data:this.data,type:this.type,timestamp:this.microsecondTimestamp,duration:this.microsecondDuration})}alphaToEncodedVideoChunk(){let ee=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.type;if(!this.sideData.alpha)throw new TypeError("This packet does not contain alpha side data.");if(this.isMetadataOnly)throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");if("undefined"===typeof EncodedVideoChunk)throw new Error("EncodedVideoChunk is not available in this environment.");return new EncodedVideoChunk({data:this.sideData.alpha,type:ee,timestamp:this.microsecondTimestamp,duration:this.microsecondDuration})}toEncodedAudioChunk(){if(this.isMetadataOnly)throw new TypeError("Metadata-only packets cannot be converted to an audio chunk.");if("undefined"===typeof EncodedAudioChunk)throw new Error("EncodedAudioChunk is not available in this environment.");return new EncodedAudioChunk({data:this.data,type:this.type,timestamp:this.microsecondTimestamp,duration:this.microsecondDuration})}static fromEncodedChunk(ee,ie){if(!(ee instanceof EncodedVideoChunk||ee instanceof EncodedAudioChunk))throw new TypeError("chunk must be an EncodedVideoChunk or EncodedAudioChunk.");const He=new Uint8Array(ee.byteLength);return ee.copyTo(He),new Gb(He,ee.type,ee.timestamp/1e6,(ee.duration??0)/1e6,void 0,void 0,ie)}clone(ee){if(void 0!==ee&&("object"!==typeof ee||null===ee))throw new TypeError("options, when provided, must be an object.");if(void 0!==ee?.data&&!(ee.data instanceof Uint8Array))throw new TypeError("options.data, when provided, must be a Uint8Array.");if(void 0!==ee?.type&&"key"!==ee.type&&"delta"!==ee.type)throw new TypeError(\'options.type, when provided, must be either "key" or "delta".\');if(void 0!==ee?.timestamp&&!Number.isFinite(ee.timestamp))throw new TypeError("options.timestamp, when provided, must be a number.");if(void 0!==ee?.duration&&!Number.isFinite(ee.duration))throw new TypeError("options.duration, when provided, must be a number.");if(void 0!==ee?.sequenceNumber&&!Number.isFinite(ee.sequenceNumber))throw new TypeError("options.sequenceNumber, when provided, must be a number.");if(void 0!==ee?.sideData&&("object"!==typeof ee.sideData||null===ee.sideData))throw new TypeError("options.sideData, when provided, must be an object.");return new Gb(ee?.data??this.data,ee?.type??this.type,ee?.timestamp??this.timestamp,ee?.duration??this.duration,ee?.sequenceNumber??this.sequenceNumber,this.byteLength,ee?.sideData??this.sideData)}}var rb;!function(ee){ee[ee.PCM=1]="PCM",ee[ee.IEEE_FLOAT=3]="IEEE_FLOAT",ee[ee.ALAW=6]="ALAW",ee[ee.MULAW=7]="MULAW",ee[ee.EXTENSIBLE=65534]="EXTENSIBLE"}(rb||(rb={}));"function"===typeof SuppressedError&&SuppressedError;Symbol.dispose??=Symbol("Symbol.dispose");let Qb=-1/0,eM=-1/0,iM=null;"undefined"!==typeof FinalizationRegistry&&(iM=new FinalizationRegistry((ee=>{const ie=performance.now();"video"===ee.type?(ie-Qb>=1e3&&(di._error("A VideoSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your VideoSamples as soon as you\'re done using them."),Qb=ie),"undefined"!==typeof VideoFrame&&ee.data instanceof VideoFrame&&ee.data.close()):(ie-eM>=1e3&&(di._error("An AudioSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your AudioSamples as soon as you\'re done using them."),eM=ie),"undefined"!==typeof AudioData&&ee.data instanceof AudioData&&ee.data.close())})));const HM=["I420","I420P10","I420P12","I420A","I420AP10","I420AP12","I422","I422P10","I422P12","I422A","I422AP10","I422AP12","I444","I444P10","I444P12","I444A","I444AP10","I444AP12","NV12","RGBA","RGBX","BGRA","BGRX"];new Set(HM);Symbol.dispose;new Set(["f32","f32-planar","s16","s16-planar","s32","s32-planar","u8","u8-planar"]);Symbol.dispose;new Map,new Map;"function"===typeof SuppressedError&&SuppressedError;class yM{constructor(){this._connectedTrack=null,this._closingPromise=null,this._closed=!1,this._nominalBitrate=null}_ensureValidAdd(){if(!this._connectedTrack)throw new Error("Source is not connected to an output track.");if("canceled"===this._connectedTrack.output.state)throw new Error("Output has been canceled.");if("finalizing"===this._connectedTrack.output.state||"finalized"===this._connectedTrack.output.state)throw new Error("Output has been finalized.");if("pending"===this._connectedTrack.output.state)throw new Error("Output has not started.");if(this._closed)throw new Error("Source is closed.")}async _start(){}async _flushAndClose(ee){}close(){if(this._closingPromise)return;const ee=this._connectedTrack;if(!ee)throw new Error("Cannot call close without connecting the source to an output track.");if("pending"===ee.output.state)throw new Error("Cannot call close before output has been started.");this._closingPromise=(async()=>{await this._flushAndClose(!1),this._closed=!0,"finalizing"!==ee.output.state&&"finalized"!==ee.output.state&&ee.output._muxer.onTrackClose(ee)})()}async _flushOrWaitForOngoingClose(ee){return this._closingPromise??=(async()=>{await this._flushAndClose(ee),this._closed=!0})()}}class bM extends yM{constructor(ee){if(super(),!RH.includes(ee))throw new TypeError(`Invalid video codec \'${ee}\'. Must be one of: ${RH.join(", ")}.`);this._codec=ee}}const MM=(ee,ie)=>{if(ee.metadata.hasOnlyKeyPackets&&"key"!==ie.type)throw new Error("Cannot add non-key packets to a hasOnlyKeyPackets video track.")};class KM extends bM{constructor(ee){super(ee)}add(ee,ie){if(!(ee instanceof Gb))throw new TypeError("packet must be an EncodedPacket.");if(ee.isMetadataOnly)throw new TypeError("Metadata-only packets cannot be added.");if(void 0!==ie&&(!ie||"object"!==typeof ie))throw new TypeError("meta, when provided, must be an object.");return this._ensureValidAdd(),MM(this._connectedTrack,ee),this._connectedTrack.output._muxer.addEncodedVideoPacket(this._connectedTrack,ee,ie)}}class UM extends yM{constructor(ee){if(super(),!fH.includes(ee))throw new TypeError(`Invalid audio codec \'${ee}\'. Must be one of: ${fH.join(", ")}.`);this._codec=ee}}class FM extends yM{constructor(ee){if(super(),!TH.includes(ee))throw new TypeError(`Invalid subtitle codec \'${ee}\'. Must be one of: ${TH.join(", ")}.`);this._codec=ee}}class JM{get supportsVideoRotationMetadata(){return this.supportsVideoTransformationMetadata}getSupportedVideoCodecs(){return this.getSupportedCodecs().filter((ee=>RH.includes(ee)))}getSupportedAudioCodecs(){return this.getSupportedCodecs().filter((ee=>fH.includes(ee)))}getSupportedSubtitleCodecs(){return this.getSupportedCodecs().filter((ee=>TH.includes(ee)))}_codecUnsupportedHint(ee){return""}_isFragmentedIsobmff(){return!1}}class oM extends JM{constructor(){let ee=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(!ee||"object"!==typeof ee)throw new TypeError("options must be an object.");if(void 0!==ee.fastStart&&![!1,"in-memory","reserve","fragmented"].includes(ee.fastStart))throw new TypeError("options.fastStart, when provided, must be false, \'in-memory\', \'reserve\', or \'fragmented\'.");if(void 0!==ee.minimumFragmentDuration&&(!Ui(ee.minimumFragmentDuration)||ee.minimumFragmentDuration<0))throw new TypeError("options.minimumFragmentDuration, when provided, must be a non-negative number.");if(void 0!==ee.onFtyp&&"function"!==typeof ee.onFtyp)throw new TypeError("options.onFtyp, when provided, must be a function.");if(void 0!==ee.onMoov&&"function"!==typeof ee.onMoov)throw new TypeError("options.onMoov, when provided, must be a function.");if(void 0!==ee.onMdat&&"function"!==typeof ee.onMdat)throw new TypeError("options.onMdat, when provided, must be a function.");if(void 0!==ee.onMoof&&"function"!==typeof ee.onMoof)throw new TypeError("options.onMoof, when provided, must be a function.");if(void 0!==ee.metadataFormat&&!["mdir","mdta","udta","auto"].includes(ee.metadataFormat))throw new TypeError("options.metadataFormat, when provided, must be either \'auto\', \'mdir\', \'mdta\', or \'udta\'.");super(),this._options=ee}getSupportedTrackCounts(){const ee=2**32-1;return{video:{min:0,max:ee},audio:{min:0,max:ee},subtitle:{min:0,max:ee},total:{min:0,max:ee}}}get supportsVideoTransformationMetadata(){return!0}get supportsTimestampedMediaData(){return!0}get negativeTimestampSupport(){return"full"}_createMuxer(ee){return new Sb(ee,this)}_isFragmentedIsobmff(){return"fragmented"===this._options.fastStart}}class RM extends oM{constructor(ee){super(ee)}get _name(){return"MP4"}get fileExtension(){return".mp4"}get mimeType(){return"video/mp4"}getSupportedCodecs(){return[...RH,...qH,"pcm-s16","pcm-s16be","pcm-s24","pcm-s24be","pcm-s32","pcm-s32be","pcm-f32","pcm-f32be","pcm-f64","pcm-f64be",...TH]}_codecUnsupportedHint(ee){return(new qM).getSupportedCodecs().includes(ee)?" Switching to MOV will grant support for this codec.":""}}class kM extends oM{constructor(ee){super(ee)}get _name(){return"CMAF"}get fileExtension(){return".m4s"}get mimeType(){return"video/mp4"}getSupportedCodecs(){return[...RH,...qH,"pcm-s16","pcm-s16be","pcm-s24","pcm-s24be","pcm-s32","pcm-s32be","pcm-f32","pcm-f32be","pcm-f64","pcm-f64be",...TH]}}class qM extends oM{constructor(ee){super(ee)}get _name(){return"MOV"}get fileExtension(){return".mov"}get mimeType(){return"video/quicktime"}getSupportedCodecs(){return[...RH,...fH]}_codecUnsupportedHint(ee){return(new RM).getSupportedCodecs().includes(ee)?" Switching to MP4 will grant support for this codec.":""}}const fM=["video","audio","subtitle"];class TM{constructor(ee,ie,He,ye,be){this.id=ee,this.output=ie,this.type=He,this.source=ye,this.metadata=be}isVideoTrack(){return"video"===this.type}isAudioTrack(){return"audio"===this.type}isSubtitleTrack(){return"subtitle"===this.type}canBePairedWith(ee){if(!(ee instanceof TM))throw new TypeError("other must be an OutputTrack.");if(this===ee)return!1;const ie=Ji(this.metadata.group),He=Ji(ee.metadata.group);for(const ye of ie){if(this.type!==ee.type&&He.some((ee=>ye===ee)))return!0;if(He.some((ee=>ye._pairedGroups.has(ee))))return!0}return!1}}class pM extends TM{constructor(ee,ie,He,ye){super(ee,ie,"video",He,ye)}}class XM extends TM{constructor(ee,ie,He,ye){super(ee,ie,"audio",He,ye)}}class zM extends TM{constructor(ee,ie,He,ye){super(ee,ie,"subtitle",He,ye)}}class BM{constructor(){this._pairedGroups=new Set}pairWith(ee){if(!(ee instanceof BM))throw new TypeError("other must be an OutputTrackGroup.");if(this===ee)throw new TypeError("Cannot pair a group with itself.");this._pairedGroups.add(ee),ee._pairedGroups.add(this)}}const EM=ee=>{if(!ee||"object"!==typeof ee)throw new TypeError("metadata must be an object.");if(void 0!==ee.languageCode&&(ie=ee.languageCode,!Hi.test(ie)))throw new TypeError("metadata.languageCode, when provided, must be a three-letter, ISO 639-2/T language code.");var ie;if(void 0!==ee.name&&"string"!==typeof ee.name)throw new TypeError("metadata.name, when provided, must be a string.");if(void 0!==ee.disposition&&(ee=>{if(!ee||"object"!==typeof ee)throw new TypeError("disposition must be an object.");if(void 0!==ee.default&&"boolean"!==typeof ee.default)throw new TypeError("disposition.default must be a boolean.");if(void 0!==ee.primary&&"boolean"!==typeof ee.primary)throw new TypeError("disposition.primary must be a boolean.");if(void 0!==ee.forced&&"boolean"!==typeof ee.forced)throw new TypeError("disposition.forced must be a boolean.");if(void 0!==ee.original&&"boolean"!==typeof ee.original)throw new TypeError("disposition.original must be a boolean.");if(void 0!==ee.commentary&&"boolean"!==typeof ee.commentary)throw new TypeError("disposition.commentary must be a boolean.");if(void 0!==ee.hearingImpaired&&"boolean"!==typeof ee.hearingImpaired)throw new TypeError("disposition.hearingImpaired must be a boolean.");if(void 0!==ee.visuallyImpaired&&"boolean"!==typeof ee.visuallyImpaired)throw new TypeError("disposition.visuallyImpaired must be a boolean.")})(ee.disposition),void 0!==ee.maximumPacketCount&&(!Number.isInteger(ee.maximumPacketCount)||ee.maximumPacketCount<0))throw new TypeError("metadata.maximumPacketCount, when provided, must be a non-negative integer.");if(void 0!==ee.bitrate&&(!Number.isFinite(ee.bitrate)||ee.bitrate<0))throw new TypeError("metadata.bitrate, when provided, must be a non-negative number.");if(void 0!==ee.averageBitrate&&(!Number.isFinite(ee.averageBitrate)||ee.averageBitrate<0))throw new TypeError("metadata.averageBitrate, when provided, must be a non-negative number.");if(void 0!==ee.group&&!(ee.group instanceof BM)&&(!Array.isArray(ee.group)||ee.group.some((ee=>!(ee instanceof BM)))))throw new TypeError("metadata.group, when provided, must be an OutputTrackGroup instance or an array of OutputTrackGroup instances.")};class gM extends oi{get target(){const ee="Output.target cannot be used when using PathedTarget with an async callback. Use the \'target\' event instead.";if(this._rootTargetPromise)throw new TypeError(ee);const ie=this._getRootTarget();if(Mi(ie))throw new TypeError(ee);return ie}constructor(ee){if(super(),this.state="pending",this.defaultTrackGroup=new BM,this.tracks=[],this._onFinalize=null,this._unfinalizedTargets=new Set,this._rootWriterPromise=null,this._startPromise=null,this._cancelPromise=null,this._finalizePromise=null,this._mutex=new Ne,this._metadataTags={},this._rootTarget=null,this._rootTargetPromise=null,this._firstMediaStreamTimestamp=null,!ee||"object"!==typeof ee)throw new TypeError("options must be an object.");if(!(ee.format instanceof JM))throw new TypeError("options.format must be an OutputFormat.");if(!(ee.target instanceof Ab||ee.target instanceof Lb))throw new TypeError("options.target must be a Target or a PathedTarget.");if(ee.target instanceof Ab&&this._rememberTarget(ee.target),void 0!==ee.initTarget&&!(ee.initTarget instanceof Ab)&&"function"!==typeof ee.initTarget)throw new Error("options.initTarget, when provided, must be a Target or a function that returns or resolves to a Target.");if(void 0!==ee.onFinalize&&"function"!==typeof ee.onFinalize)throw new TypeError("options.onFinalize, when provided, must be a function.");this.format=ee.format,this.VR=ee.target,this._onFinalize=ee.onFinalize??null,this._initTarget=ee.initTarget??null,this._initTarget instanceof Ab&&this._rememberTarget(this._initTarget),this._muxer=ee.format._createMuxer(this)}_getTargetValidated(ee){Pe(this.VR instanceof Lb);const ie=this.VR.getTarget(ee),He=ee=>{if(!(ee instanceof Ab))throw new TypeError("getTarget must return a Target.");return ee};return Mi(ie)?ie.then(He):He(ie)}async _getTarget(ee){Pe(this.VR instanceof Lb);const ie=await this._getTargetValidated(ee);return this._emit("target",{target:ie,request:ee,isRoot:ee.isRoot}),"canceled"===this.state?await ie._close():this._rememberTarget(ie),ie}_rememberTarget(ee){this._unfinalizedTargets.add(ee),ee.on("finalized",(()=>this._unfinalizedTargets.delete(ee)),{once:!0})}async _getInitTarget(){if(Pe(null!==this._initTarget),this._initTarget instanceof Ab)return this._initTarget;const ee=await this._initTarget();return"canceled"===this.state?await ee._close():this._rememberTarget(ee),ee}_hasInitTarget(){return null!==this._initTarget}_getRootTarget(){if(this._rootTarget)return this._rootTarget;if(this._rootTargetPromise)return this._rootTargetPromise;if(this.VR instanceof Ab)return this._emit("target",{target:this.VR,request:null,isRoot:!0}),this._rootTarget=this.VR,this.VR;const ee={path:this.VR.rootPath,isRoot:!0,mimeType:this.format.mimeType},ie=this._getTargetValidated(ee),He=ie=>("canceled"===this.state?ie._close():this._rememberTarget(ie),this._emit("target",{target:ie,request:ee,isRoot:!0}),this._rootTarget=ie,ie);return Mi(ie)?this._rootTargetPromise=ie.then(He):He(ie)}_getRootWriter(ee){return this._rootWriterPromise??=(async()=>{const ie=await this._getRootTarget(),He=new Pb(ie,"boolean"===typeof ee?ee:ee(ie));return He.start(),He})()}addVideoTrack(ee){let ie=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(!(ee instanceof bM))throw new TypeError("source must be a VideoSource.");if(EM(ie),void 0!==ie.rotation&&![0,90,180,270].includes(ie.rotation))throw new TypeError(`Invalid video rotation: ${ie.rotation}. Has to be 0, 90, 180 or 270.`);if(void 0!==ie.flip&&"boolean"!==typeof ie.flip)throw new TypeError("metadata.flip, when provided, must be a boolean.");if(void 0!==ie.transformationMatrix&&(!Array.isArray(ie.transformationMatrix)||9!==ie.transformationMatrix.length||!ie.transformationMatrix.every((ee=>Number.isFinite(ee)))))throw new TypeError("metadata.transformationMatrix, when provided, must be an array of 9 finite numbers.");if(void 0!==ie.frameRate&&(!Number.isFinite(ie.frameRate)||ie.frameRate<=0))throw new TypeError(`Invalid video frame rate: ${ie.frameRate}. Must be a positive number.`);if(void 0!==ie.hasOnlyKeyPackets&&"boolean"!==typeof ie.hasOnlyKeyPackets)throw new TypeError("metadata.hasOnlyKeyPackets, when provided, must be a boolean.");if(void 0!==ie.canBeTransparent&&"boolean"!==typeof ie.canBeTransparent)throw new TypeError("metadata.canBeTransparent, when provided, must be a boolean.");if(void 0!==ie.decoderConfig&&DH({decoderConfig:ie.decoderConfig},ee._codec),void 0!==ie.primingPacket){if(!(ie.primingPacket instanceof Gb))throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");if(void 0===ie.decoderConfig)throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")}const He={...ie};return He.group??=this.defaultTrackGroup,this._addTrack(new pM(this.tracks.length+1,this,ee,He))}addAudioTrack(ee){let ie=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(!(ee instanceof UM))throw new TypeError("source must be an AudioSource.");if(EM(ie),void 0!==ie.decoderConfig&&AH({decoderConfig:ie.decoderConfig},ee._codec),void 0!==ie.primingPacket){if(!(ie.primingPacket instanceof Gb))throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");if(void 0===ie.decoderConfig)throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")}const He={...ie};return He.group??=this.defaultTrackGroup,this._addTrack(new XM(this.tracks.length+1,this,ee,He))}addSubtitleTrack(ee){let ie=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(!(ee instanceof FM))throw new TypeError("source must be a SubtitleSource.");EM(ie);const He={...ie};return He.group??=this.defaultTrackGroup,this._addTrack(new zM(this.tracks.length+1,this,ee,He))}setMetadataTags(ee){if((ee=>{if(!ee||"object"!==typeof ee)throw new TypeError("tags must be an object.");if(void 0!==ee.title&&"string"!==typeof ee.title)throw new TypeError("tags.title, when provided, must be a string.");if(void 0!==ee.description&&"string"!==typeof ee.description)throw new TypeError("tags.description, when provided, must be a string.");if(void 0!==ee.artist&&"string"!==typeof ee.artist)throw new TypeError("tags.artist, when provided, must be a string.");if(void 0!==ee.album&&"string"!==typeof ee.album)throw new TypeError("tags.album, when provided, must be a string.");if(void 0!==ee.albumArtist&&"string"!==typeof ee.albumArtist)throw new TypeError("tags.albumArtist, when provided, must be a string.");if(void 0!==ee.trackNumber&&(!Number.isInteger(ee.trackNumber)||ee.trackNumber<=0))throw new TypeError("tags.trackNumber, when provided, must be a positive integer.");if(void 0!==ee.tracksTotal&&(!Number.isInteger(ee.tracksTotal)||ee.tracksTotal<=0))throw new TypeError("tags.tracksTotal, when provided, must be a positive integer.");if(void 0!==ee.discNumber&&(!Number.isInteger(ee.discNumber)||ee.discNumber<=0))throw new TypeError("tags.discNumber, when provided, must be a positive integer.");if(void 0!==ee.discsTotal&&(!Number.isInteger(ee.discsTotal)||ee.discsTotal<=0))throw new TypeError("tags.discsTotal, when provided, must be a positive integer.");if(void 0!==ee.genre&&"string"!==typeof ee.genre)throw new TypeError("tags.genre, when provided, must be a string.");if(void 0!==ee.date&&(!(ee.date instanceof Date)||Number.isNaN(ee.date.getTime())))throw new TypeError("tags.date, when provided, must be a valid Date.");if(void 0!==ee.beatsPerMinute&&(!Number.isInteger(ee.beatsPerMinute)||ee.beatsPerMinute<=0))throw new TypeError("tags.beatsPerMinute, when provided, must be a positive integer.");if(void 0!==ee.lyrics&&"string"!==typeof ee.lyrics)throw new TypeError("tags.lyrics, when provided, must be a string.");if(void 0!==ee.images){if(!Array.isArray(ee.images))throw new TypeError("tags.images, when provided, must be an array.");for(const ie of ee.images){if(!ie||"object"!==typeof ie)throw new TypeError("Each image in tags.images must be an object.");if(!(ie.data instanceof Uint8Array))throw new TypeError("Each image.data must be a Uint8Array.");if("string"!==typeof ie.mimeType)throw new TypeError("Each image.mimeType must be a string.");if(!["coverFront","coverBack","unknown"].includes(ie.kind))throw new TypeError("Each image.kind must be \'coverFront\', \'coverBack\', or \'unknown\'.")}}if(void 0!==ee.comment&&"string"!==typeof ee.comment)throw new TypeError("tags.comment, when provided, must be a string.");if(void 0!==ee.raw){if(!ee.raw||"object"!==typeof ee.raw)throw new TypeError("tags.raw, when provided, must be an object.");for(const ie of Object.values(ee.raw))if(null!==ie&&"string"!==typeof ie&&(!Array.isArray(ie)||!ie.every((ee=>"string"===typeof ee)))&&!(ie instanceof Uint8Array)&&!(ie instanceof ki)&&!(ie instanceof qi)&&!Ri(ie))throw new TypeError("Each value in tags.raw must be a string, string array, Uint8Array, RichImageData, AttachedFile, Record<string, string>, or null.")}})(ee),"pending"!==this.state)throw new Error("Cannot set metadata tags after output has been started or canceled.");this._metadataTags=ee}_addTrack(ee){if("pending"!==this.state)throw new Error("Cannot add track after output has been started or canceled.");if(ee.source._connectedTrack)throw new Error("Source is already used for a track.");const ie=this.format.getSupportedTrackCounts(),He=this.tracks.reduce(((ie,He)=>ie+(He.type===ee.type?1:0)),0),ye=ie[ee.type].max;if(He===ye)throw new Error(0===ye?`${this.format._name} does not support ${ee.type} tracks.`:`${this.format._name} does not support more than ${ye} ${ee.type} track`+(1===ye?"":"s")+".");const be=ie.total.max;if(this.tracks.length===be)throw new Error(`${this.format._name} does not support more than ${be} tracks`+(1===be?"":"s")+" in total.");if(ee.isVideoTrack()){const ie=this.format.getSupportedVideoCodecs();if(0===ie.length)throw new Error(`${this.format._name} does not support video tracks.`+this.format._codecUnsupportedHint(ee.source._codec));if(!ie.includes(ee.source._codec))throw new Error(`Codec \'${ee.source._codec}\' cannot be contained within ${this.format._name}. Supported video codecs are: ${ie.map((ee=>`\'${ee}\'`)).join(", ")}.`+this.format._codecUnsupportedHint(ee.source._codec))}else if(ee.isAudioTrack()){const ie=this.format.getSupportedAudioCodecs();if(0===ie.length)throw new Error(`${this.format._name} does not support audio tracks.`+this.format._codecUnsupportedHint(ee.source._codec));if(!ie.includes(ee.source._codec))throw new Error(`Codec \'${ee.source._codec}\' cannot be contained within ${this.format._name}. Supported audio codecs are: ${ie.map((ee=>`\'${ee}\'`)).join(", ")}.`+this.format._codecUnsupportedHint(ee.source._codec))}else if(ee.isSubtitleTrack()){const ie=this.format.getSupportedSubtitleCodecs();if(0===ie.length)throw new Error(`${this.format._name} does not support subtitle tracks.`+this.format._codecUnsupportedHint(ee.source._codec));if(!ie.includes(ee.source._codec))throw new Error(`Codec \'${ee.source._codec}\' cannot be contained within ${this.format._name}. Supported subtitle codecs are: ${ie.map((ee=>`\'${ee}\'`)).join(", ")}.`+this.format._codecUnsupportedHint(ee.source._codec))}return this.tracks.push(ee),ee.source._connectedTrack=ee,ee}hasEnoughTracks(){const ee=this.format.getSupportedTrackCounts();for(const He of fM){if(this.tracks.reduce(((ee,ie)=>ee+(ie.type===He?1:0)),0)<ee[He].min)return!1}const ie=ee.total.min;return!(this.tracks.length<ie)}async start(){const ee=this.format.getSupportedTrackCounts();for(const He of fM){const ie=this.tracks.reduce(((ee,ie)=>ee+(ie.type===He?1:0)),0),ye=ee[He].min;if(ie<ye)throw new Error(ye===ee[He].max?`${this.format._name} requires exactly ${ye} ${He} track${1===ye?"":"s"}.`:`${this.format._name} requires at least ${ye} ${He} track${1===ye?"":"s"}.`)}const ie=ee.total.min;if(this.tracks.length<ie)throw new Error(ie===ee.total.max?`${this.format._name} requires exactly ${ie} track`+(1===ie?"":"s")+".":`${this.format._name} requires at least ${ie} track`+(1===ie?"":"s")+".");if("canceled"===this.state)throw new Error("Output has been canceled.");return this._startPromise?(di._warn("Output has already been started."),this._startPromise):this._startPromise=(async()=>{this.state="started";const ee=this._mutex.acquire();try{await this._muxer.start();const ee=this.tracks.map((ee=>ee.source._start()));await Promise.all(ee)}finally{(await ee)()}})()}getMimeType(){return this._muxer.getMimeType()}async cancel(){return"canceled"===this.state?this._cancelPromise??void 0:"finalizing"!==this.state&&"finalized"!==this.state?this._cancelPromise=(async()=>{this.state="canceled";const ee=await this._mutex.acquire();try{const ee=this.tracks.map((ee=>ee.source._flushOrWaitForOngoingClose(!0)));await Promise.all(ee),await Promise.all([...this._unfinalizedTargets].map((ee=>ee._close()))),this._unfinalizedTargets.clear()}finally{ee()}})():void("finalized"===this.state&&di._warn("Output has already been finalized."))}async finalize(){if("pending"===this.state)throw new Error("Cannot finalize before starting.");if("canceled"===this.state)throw new Error("Cannot finalize after canceling.");return this._finalizePromise?(di._warn("Output has already been finalized."),this._finalizePromise):this._finalizePromise=(async()=>{this.state="finalizing";const ee=await this._mutex.acquire();try{const ee=this.tracks.map((ee=>ee.source._flushOrWaitForOngoingClose(!1)));if(await Promise.all(ee),await this._muxer.finalize(),this._rootWriterPromise){const ee=await this._rootWriterPromise;ee.finalized||(await ee.flush(),await ee.finalize())}this._onFinalize&&await this._onFinalize(),this.state="finalized"}catch(ie){throw this.state="canceled",ie}finally{await Promise.all([...this._unfinalizedTargets].map((ee=>ee._close().catch((()=>{}))))),this._unfinalizedTargets.clear(),ee()}})()}}class OM{constructor(ee,ie,He,ye,be){this.frameDurationS=He,this.onFragment=be,this.firstTimestampUs=void 0,this.lastTimestampUs=void 0,this.output=void 0,this.source=void 0,this.pending=void 0,this.chunkCount=0,this.boxes=[],this.addingTimestampUs=null,this.firstTimestampUs=ie,this.lastTimestampUs=ie;const Me=ee=>{this.boxes.push(ee)};this.output=new gM({format:new RM({fastStart:"fragmented",minimumFragmentDuration:ye,onFtyp:Me,onMoov:Me,onMoof:Me,onMdat:ee=>{Me(ee),this.fragmentDone()}}),target:new cb}),this.source=new KM(ee),this.output.addVideoTrack(this.source),this.pending=this.output.start()}get durationUs(){return this.lastTimestampUs-this.firstTimestampUs}add(ee,ie){const He=new Uint8Array(ee.byteLength);ee.copyTo(He),this.addData(He,ee.type,ee.timestamp,ie)}addData(ee,ie,He,ye){const be=new Gb(ee,ie,(He-this.firstTimestampUs)/1e6,this.frameDurationS),Me=0===this.chunkCount++;this.lastTimestampUs=Math.max(this.lastTimestampUs,He),this.pending=this.pending.then((()=>(this.addingTimestampUs=He,this.source.add(be,Me?{decoderConfig:ye}:void 0))))}async finish(){await this.pending,this.addingTimestampUs=null,await this.output.finalize()}fragmentDone(){var ee;const ie=dM(this.boxes);this.boxes=[],this.onFragment({bytes:ie,endUs:null!==(ee=this.addingTimestampUs)&&void 0!==ee?ee:this.lastTimestampUs+1e6*this.frameDurationS})}}function dM(ee){const ie=new Uint8Array(ee.reduce(((ee,ie)=>ee+ie.byteLength),0));let He=0;for(const ye of ee)ie.set(ye,He),He+=ye.byteLength;return ie}class WM{constructor(ee,ie,He,ye){this.plan=ee,this.emit=He,this.onSlotsLow=ye,this.pending=[],this.pendingBytes=0,this.completeUntilUs=null,this.partStartUs=void 0,this.nextIndex=0,this.partStartUs=ie}get partCount(){return this.nextIndex}addFragment(ee){let{bytes:ie,endUs:He}=ee;this.pendingBytes>0&&this.pendingBytes+ie.byteLength>this.plan.maxBytes&&this.emitPending();let ye=0;for(;ie.byteLength-ye>this.plan.maxBytes-this.pendingBytes;){const ee=this.plan.maxBytes-this.pendingBytes;this.hold(ie.subarray(ye,ye+ee)),ye+=ee,this.emitPending()}this.hold(ie.subarray(ye)),this.completeUntilUs=He,He-this.partStartUs>=1e3*this.plan.partDurationMs*.9&&this.emitPending()}finish(){this.pendingBytes>0&&this.emitPending()}hold(ee){this.pending.push(ee),this.pendingBytes+=ee.byteLength}emitPending(){var ee;const ie=dM(this.pending);this.pending=[],this.pendingBytes=0,this.partStartUs=null!==(ee=this.completeUntilUs)&&void 0!==ee?ee:this.partStartUs,this.emit({index:this.nextIndex++,bytes:ie,completeUntilUs:this.completeUntilUs}),this.nextIndex===this.plan.count-1&&this.onSlotsLow()}}class tM{constructor(ee,ie,He,ye){let be=arguments.length>4&&void 0!==arguments[4]?arguments[4]:null,Me=arguments.length>5&&void 0!==arguments[5]?arguments[5]:()=>{};this.segmentDurationMs=ee,this.partPlan=ie,this.post=He,this.onSegmentEncoded=ye,this.journal=be,this.onMuxFailed=Me,this.segment=null,this.decoderConfig=null,this.pendingCutUs=null,this.cutRequested=!1,this.keyFrameMissed=!1,this.epochOffsetMs=1/0,this.finishing=Promise.resolve(),this.nextJournalId=0}noteFrameArrival(ee){const ie=De()-ee;(ie<this.epochOffsetMs||ie-this.epochOffsetMs>1e3)&&(this.epochOffsetMs=ie)}recordingMs(ee){return ee/1e3+this.epochOffsetMs}requestCut(){this.cutRequested=!0}needsKeyFrame(ee){const ie=null===this.segment?0:(ee-this.segment.mp4.firstTimestampUs)/1e3;(this.cutRequested||null===this.pendingCutUs&&(null===this.segment||ie>=this.segmentDurationMs))&&(this.pendingCutUs=ee);const He=this.keyFrameMissed||this.pendingCutUs===ee;return this.cutRequested=!1,this.keyFrameMissed=!1,He}onChunk(ee,ie,He){if(null!==ie&&void 0!==ie&&ie.decoderConfig&&(this.decoderConfig=ie.decoderConfig),null!==this.pendingCutUs&&ee.timestamp>=this.pendingCutUs){if("key"!==ee.type)return this.keyFrameMissed=!0,0;this.closeSegment(!0),this.segment=this.openSegment(ee.timestamp,He),this.pendingCutUs=null}if(null===this.segment)return console.warn("Session replay chunk arrived with no open segment; dropping it."),0;const ye=this.segment;if(null===ye.journalHeader)return ye.mp4.add(ee,this.decoderConfig),ee.byteLength;const be=new Uint8Array(ee.byteLength);return ee.copyTo(be),ye.mp4.addData(be,ee.type,ee.timestamp,this.decoderConfig),ye.chunkTimestampsUs.push(ee.timestamp),ye.unjournaled.push({recordingId:ye.journalHeader.recordingId,segmentId:ye.journalId,index:ye.chunkCount++,timestampUs:ee.timestamp,key:"key"===ee.type,data:be}),performance.now()-ye.lastJournalMs>=250&&this.journalChunks(ye),ee.byteLength}openSegment(ee,ie){const He=this.nextJournalId++,ye=null!==this.journal&&null!==this.decoderConfig?{recordingId:this.journal.recordingId,segmentId:He,containerCodec:ie.containerCodec,codec:ie.codec,width:ie.width,height:ie.height,fps:ie.fps,decoderConfig:this.decoderConfig,firstTimestampUs:ee,epochOffsetMs:this.epochOffsetMs}:null,be=[],Me=new WM(this.partPlan,ee,(Me=>{this.postPart(He,ie,ee,Me,null===ye?null:be)}),(()=>{var ee;(null===(ee=this.segment)||void 0===ee?void 0:ee.journalId)===He&&this.requestCut()})),Ke=this.partPlan.keyframeIntervalMs/1e3*.9,Ue=new OM(ie.containerCodec,ee,1/ie.fps,Ke,(ee=>{Me.addFragment(ee)}));return this.post({type:"videoSegmentOpened",journalId:He}),{mp4:Ue,parts:Me,format:ie,journalId:He,journalHeader:ye,unjournaled:[],chunkTimestampsUs:be,chunkCount:0,lastJournalMs:performance.now()}}postPart(ee,ie,He,ye,be){const{width:Me,height:Ke,codec:Ue,fps:Fe}=ie,{startMs:Je}=function(ee,ie,He,ye){const be=ee/1e3+He;return{startMs:be,endMs:be+ie/1e3+1e3/ye}}(He,0,this.epochOffsetMs,Fe),{completeUntilUs:oe}=ye,Re=null===oe?Je:this.recordingMs(oe),ke=ye.bytes.buffer,qe=null===be||null===oe?null:function(ee,ie){let He=0,ye=ee.length;for(;He<ye;){const be=He+ye>>1;ee[be]<ie?He=be+1:ye=be}return He}(be,oe);this.post({type:"videoPart",journalId:ee,index:ye.index,bytes:ke,meta:{startMs:Je,endMs:Re,width:Me,height:Ke,codec:Ue},completeUntilUs:oe,completeUntilIndex:qe},[ke])}journalChunks(ee){const ie=ee.journalHeader;null!==this.journal&&null!==ie&&0!==ee.unjournaled.length&&(ie.epochOffsetMs=this.epochOffsetMs,this.journal.journal.appendVideo({...ie},ee.unjournaled),ee.unjournaled=[],ee.lastJournalMs=performance.now())}closeSegment(ee){const ie=this.segment;this.segment=null,this.pendingCutUs=null,null!==ie&&(ee&&this.onSegmentEncoded(),this.journalChunks(ie),this.finishing=this.finishing.then((async()=>{let ee=null;try{await ie.mp4.finish()}catch(He){ee=He}ie.parts.finish(),this.post({type:"videoSegmentClosed",journalId:ie.journalId,parts:ie.parts.partCount}),null!==ee&&(console.error("Failed to finish a session replay video segment.",ee),this.onMuxFailed(ee instanceof Error?ee.message:String(ee)))})).catch((ee=>{console.error("Failed to close a session replay video segment.",ee)})))}whenFinished(){return this.finishing}}function ZM(ee,ie){return null!==ee&&ie>=ee}class wM{constructor(ee,ie,He,ye,be){let Me=arguments.length>5&&void 0!==arguments[5]?arguments[5]:null;this.config=ee,this.cssSize=He,this.post=ye,this.encoderPreference=be,this.quality=new Re,this.limiter=void 0,this.segmenter=void 0,this.scaler=new ge,this.still=void 0,this.scalerFailed=!1,this.backingSize=null,this.active=null,this.operations=Promise.resolve(),this.suspended=!1,this.hidden=!1,this.unavailable=!1,this.firstViableCandidate=0,this.encoderFailures=0,this.refusedFrames=0,this.rebuildDueMs=null,this.fpsRebuildDueMs=null,this.backpressureDropsSinceHealth=0,this.captureFps=void 0,this.lastKeyframeUs=-1/0,this.capturePaused=!1,this.stats=void 0,this.statsWindowStartMs=performance.now(),this.limiter=new pe(ee.maxFps),this.captureFps=ee.maxFps,this.segmenter=new tM(ee.segmentDurationMs,ie,ye,(()=>{this.encoderFailures=0}),Me,(ee=>{this.stopVideo(`Muxer failed: ${ee}`)})),this.still=new te(ye),this.stats=this.emptyStats()}handleFrame(ee,ie,He){const ye=performance.now();try{this.stats.deliveredFrames++;const be=ee.timestamp/1e3;if(this.segmenter.noteFrameArrival(be),this.unavailable||this.hidden||this.suspended)return;if(!this.limiter.shouldKeep(be))return void this.stats.droppedForFpsCap++;if(this.still.offer(ee,this.segmenter.recordingMs(ee.timestamp)),null===He)return void(this.capturePaused||(this.capturePaused=!0,this.flushSegment()));if(this.capturePaused=!1,this.noteBackingSize(ie),this.noteCaptureFps(He,ye),null===this.active)return void this.exclusive((()=>this.configureEncoder()));if(ZM(this.rebuildDueMs,ye)||ZM(this.fpsRebuildDueMs,ye))return void this.rebuild();if(this.active.encoder.encodeQueueSize>=3)return this.stats.droppedForBackpressure++,void this.backpressureDropsSinceHealth++;this.encode(this.active,ee)}finally{ee.close();const ie=performance.now()-ye;this.stats.workerBusyMs+=ie,this.stats.maxWorkerTaskMs=Math.max(this.stats.maxWorkerTaskMs,ie),this.maybePostStats(ye)}}resize(ee){0!==ee.width&&0!==ee.height&&(this.cssSize=ee,this.scheduleRebuildIfSizeChanged())}updateHealth(ee,ie){if(this.hidden)return void(this.backpressureDropsSinceHealth=0);const He=this.quality.update({nowMs:performance.now(),encoderBackpressureDrops:this.backpressureDropsSinceHealth,gameFps:ee,pingMs:ie});this.backpressureDropsSinceHealth=0,He&&(this.post({type:"qualityChanged",level:this.quality.getLevelIndex(),maxFps:this.levelMaxFps(),reason:this.quality.getLastChangeReason()}),this.rebuildDueMs=performance.now())}setHidden(ee){return this.hidden=ee,ee?this.exclusive((async()=>{await this.drainAndCloseSegment(),this.closeEncoder()})):(this.limiter.reset(),this.quality.restartWarmUp(),Promise.resolve())}cutAtNextFrame(){this.segmenter.requestCut()}gameJoined(){this.cutAtNextFrame(),this.quality.restartWarmUp()}flushSegment(){return this.exclusive((()=>this.drainAndCloseSegment()))}exclusive(ee){this.suspended=!0;const ie=this.operations.then(ee).catch((ee=>{console.error("Session replay encoder operation failed.",ee)})).finally((()=>{this.operations===ie&&(this.suspended=!1)}));return this.operations=ie,ie}rebuild(){return this.exclusive((async()=>{await this.drainAndCloseSegment(),this.closeEncoder(),await this.configureEncoder()}))}closeEncoder(){var ee;null===(ee=this.active)||void 0===ee||ee.encoder.close(),this.active=null}async drainAndCloseSegment(){const ee=this.active;null===ee||await async function(ee,ie){let He;const ye=new Promise((ee=>{He=setTimeout((()=>{ee(!1)}),ie)}));try{return await Promise.race([ee.then((()=>!0)),ye])}finally{clearTimeout(He)}}(ee.encoder.flush(),5e3)?this.segmenter.closeSegment(!0):this.failEncoder(ee,"flush timed out")}encode(ee,ie){const He=this.segmenter.needsKeyFrame(ie.timestamp)||ie.timestamp-this.lastKeyframeUs>=1e3*this.config.keyframeIntervalMs;He&&(this.lastKeyframeUs=ie.timestamp);const ye=this.scaleToEncoder(ee,ie);try{ee.encoder.encode(ye,{keyFrame:He})}catch(be){return void(be instanceof DOMException&&("InvalidStateError"===be.name||"EncodingError"===be.name)?this.failEncoder(ee,be.message):++this.refusedFrames>=30?this.failEncoder(ee,`refused 30 frames in a row: ${String(be)}`):1===this.refusedFrames&&console.warn("Session replay dropped a frame its encoder refused.",be))}finally{ye!==ie&&ye.close()}this.refusedFrames=0,this.stats.encodedFrames++}scaleToEncoder(ee,ie){let He=ie;if(!this.scalerFailed)try{He=this.scaler.scale(ie,ee.size)}catch(ye){this.scalerFailed=!0,console.warn("Session replay frame scaling failed; encoding frames at the canvas size.",ye)}return He.displayWidth===ee.size.width&&He.displayHeight===ee.size.height||(ee.sentMismatchedFrame=!0),He}onEncoderOutput(ee,ie,He){const ye=performance.now();this.stats.encodedBytes+=this.segmenter.onChunk(ee,ie,{containerCodec:He.candidate.containerCodec,codec:He.candidate.config.codec,width:He.size.width,height:He.size.height,fps:He.fps}),this.stats.workerBusyMs+=performance.now()-ye}noteBackingSize(ee){null!==this.backingSize&&ke(this.backingSize,ee)||(this.backingSize=ee,this.scheduleRebuildIfSizeChanged())}noteCaptureFps(ee,ie){this.captureFps=ee,null!==this.active&&Math.abs(this.encodeFps()-this.active.fps)>.3*this.active.fps?this.fpsRebuildDueMs??=ie+2e3:this.fpsRebuildDueMs=null}targetSize(){var ee;const ie=Math.floor(this.config.maxMacroblocks*this.quality.getLevel().areaScale);return function(ee,ie,He){const ye=ie.width*ie.height<ee.width*ee.height?ie:ee;let be=qe(Math.max(ye.width,64)),Me=qe(Math.max(ye.height,64));if(fe({width:be,height:Me})>He){const ee=be,ie=Me;for(be=qe(be*Math.sqrt(16*He*16/(be*Me))),Me=qe(be*ie/ee);fe({width:be,height:Me})>He;)be-=2,Me=qe(be*ie/ee)}return{width:be,height:Me}}(this.cssSize,null!==(ee=this.backingSize)&&void 0!==ee?ee:this.cssSize,ie)}scheduleRebuildIfSizeChanged(){null===this.active||ke(this.active.size,this.targetSize())||(this.rebuildDueMs=performance.now()+500)}async configureEncoder(){if(this.unavailable)return;const ee=this.quality.getLevel(),ie=this.encodeFps(),He=this.targetSize(),ye=function(ee){const ie={width:ee.width,height:ee.height,bitrate:ee.bitrate,framerate:ee.maxFps},He=[],ye=[ee.preferSoftware?"prefer-software":"prefer-hardware","no-preference"],be=ee.preferQualityLatency?Ee:Be;for(const Me of ye)for(const ee of Xe)for(const ye of ze)for(const Ke of be)He.push({config:{...ie,codec:ee,hardwareAcceleration:Me,bitrateMode:ye,latencyMode:Ke,avc:{format:"avc"}},containerCodec:"avc"});return He.push({config:{...ie,codec:"vp09.00.10.08",hardwareAcceleration:"no-preference",bitrateMode:"variable",latencyMode:"realtime"},containerCodec:"vp9"}),He}({...He,bitrate:Math.round(Te(this.config,He,ee.areaScale)*ie/this.config.maxFps),maxFps:ie,...this.encoderPreference});let be=null,Me=0;for(let Je=this.firstViableCandidate;Je<ye.length&&null===be;Je++){const ee=await VideoEncoder.isConfigSupported(ye[Je].config).catch((ee=>(console.warn("VideoEncoder.isConfigSupported threw.",ye[Je].config,ee),null)));null!==ee&&void 0!==ee&&ee.supported&&(be=ye[Je],Me=Je,this.firstViableCandidate=Je)}if(null===be)return void this.markUnavailable(`No supported encoder config at ${He.width}x${He.height}`);const Ke=new VideoEncoder({output:(ee,ie)=>{this.onEncoderOutput(ee,ie,Ue)},error:ee=>{this.failEncoder(Ue,ee.message)}}),Ue={encoder:Ke,candidates:ye,candidateIndex:Me,candidate:be,size:He,fps:ie,sentMismatchedFrame:!1};this.active=Ue,this.refusedFrames=0,this.limiter.setMaxFps(this.levelMaxFps()),this.rebuildDueMs=null,this.fpsRebuildDueMs=null,this.lastKeyframeUs=-1/0;try{Ke.configure(be.config)}catch(Fe){return void this.failEncoder(Ue,Fe instanceof Error?Fe.message:String(Fe))}this.scheduleRebuildIfSizeChanged()}levelMaxFps(){return Math.max(8,Math.round(this.config.maxFps*this.quality.getLevel().fpsScale))}encodeFps(){return Math.max(1,Math.min(this.levelMaxFps(),Math.round(this.captureFps)))}failEncoder(ee,ie){console.error("Session replay encoder failed.",ee.candidate.config,ie),this.active===ee&&(this.active=null,"closed"!==ee.encoder.state&&ee.encoder.close(),this.segmenter.closeSegment(!1),this.encoderFailures++,this.firstViableCandidate=function(ee,ie,He){var ye;let be=arguments.length>3&&void 0!==arguments[3]&&arguments[3];const Me=null===(ye=ee[ie])||void 0===ye?void 0:ye.config.hardwareAcceleration;if(!("prefer-hardware"===Me&&He||"no-preference"!==Me&&be))return ie+1;for(let Ke=ie+1;Ke<ee.length;Ke++)if(ee[Ke].config.hardwareAcceleration!==Me)return Ke;return ee.length}(ee.candidates,ee.candidateIndex,ee.sentMismatchedFrame,3===this.encoderFailures),this.encoderFailures>=4&&this.markUnavailable(`Encoder failed ${this.encoderFailures} times: ${ie}`))}stopVideo(ee){if(this.unavailable)return;const ie=this.active;this.active=null,null!==ie&&"closed"!==ie.encoder.state&&ie.encoder.close(),this.segmenter.closeSegment(!1),this.markUnavailable(ee)}markUnavailable(ee){console.warn(`Session replay video stopped: ${ee}`),this.unavailable=!0,this.segmenter.whenFinished().then((()=>{this.post({type:"videoUnavailable",reason:ee})}))}maybePostStats(ee){var ie,He,ye,be;const Me=ee-this.statsWindowStartMs;if(Me<5e3)return;const Ke=this.active;this.post({type:"stats",stats:{...this.stats,windowMs:Me,qualityLevel:this.quality.getLevelIndex(),codec:null!==(ie=null===Ke||void 0===Ke?void 0:Ke.candidate.config.codec)&&void 0!==ie?ie:null,hardwareAcceleration:null!==(He=null===Ke||void 0===Ke?void 0:Ke.candidate.config.hardwareAcceleration)&&void 0!==He?He:null,encodeWidth:null!==(ye=null===Ke||void 0===Ke?void 0:Ke.size.width)&&void 0!==ye?ye:0,encodeHeight:null!==(be=null===Ke||void 0===Ke?void 0:Ke.size.height)&&void 0!==be?be:0}}),this.stats=this.emptyStats(),this.statsWindowStartMs=ee}emptyStats(){return{windowMs:0,deliveredFrames:0,encodedFrames:0,droppedForFpsCap:0,droppedForBackpressure:0,workerBusyMs:0,maxWorkerTaskMs:0,encodedBytes:0,qualityLevel:0,codec:null,hardwareAcceleration:null,encodeWidth:0,encodeHeight:0}}}let DM=null,PM=0;function AM(ee){let ie=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[];self.postMessage(ee,{transfer:ie})}self.onmessage=ee=>{const ie=ee.data;switch(ie.type){case"init":DM=new wM(ie.videoConfig,ie.partPlan,ie.cssSize,AM,ie.encoderPreference,ie.journalRecordingId&&Je.supported?{recordingId:ie.journalRecordingId,journal:new Je}:null);break;case"frame":if(null===DM){console.warn("Session replay video worker got a frame before its pipeline started"),ie.image.close();break}!function(ee,ie,He,ye,be){if(ie instanceof VideoFrame)return void ee.handleFrame(ie,ye,be);let Me;try{Me=new VideoFrame(ie,{timestamp:He})}catch(Ke){return 0===PM++&&console.warn("Session replay couldn\'t make a video frame of a canvas bitmap; skipping frames until it can.",Ke),void(30===PM&&ee.stopVideo(`Bitmap frames keep failing: ${Ke instanceof Error?Ke.message:String(Ke)}`))}finally{ie.close()}PM=0,ee.handleFrame(Me,ye,be)}(DM,ie.image,ie.timestampUs,ie.OR,ie.captureFps);break;case"resize":DM.resize(ie.cssSize);break;case"health":DM.updateHealth(ie.gameFps,ie.pingMs);break;case"hidden":DM.setHidden(ie.hidden);break;case"flush":DM.flushSegment();break;case"cut":DM.cutAtNextFrame();break;case"gameJoined":DM.gameJoined()}}})();', "Worker", void 0, He.p + "sessionReplayVideo.worker.e6609570.worker.js")
+    function wi() {
+      return ci()('/*! For license information please see sessionReplayVideo.worker.36aaf5cc.worker.js.LICENSE.txt */\n(()=>{var WW={6:()=>{}},iW={};function OW(mW){var EW=iW[mW];if(void 0!==EW)return EW.exports;var NW=iW[mW]={exports:{}};return WW[mW](NW,NW.exports,OW),NW.exports}(()=>{var WW,iW=Object.getPrototypeOf?WW=>Object.getPrototypeOf(WW):WW=>WW.__proto__;OW.t=function(mW,EW){if(1&EW&&(mW=this(mW)),8&EW)return mW;if("object"===typeof mW&&mW){if(4&EW&&mW.__esModule)return mW;if(16&EW&&"function"===typeof mW.then)return mW}var NW=Object.create(null);OW.r(NW);var PW={};WW=WW||[null,iW({}),iW([]),iW(iW)];for(var LW=2&EW&&mW;"object"==typeof LW&&!~WW.indexOf(LW);LW=iW(LW))Object.getOwnPropertyNames(LW).forEach((WW=>PW[WW]=()=>mW[WW]));return PW.default=()=>mW,OW.d(NW,PW),NW}})(),OW.d=(WW,iW)=>{for(var mW in iW)OW.o(iW,mW)&&!OW.o(WW,mW)&&Object.defineProperty(WW,mW,{enumerable:!0,get:iW[mW]})},OW.o=(WW,iW)=>Object.prototype.hasOwnProperty.call(WW,iW),OW.r=WW=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(WW,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(WW,"__esModule",{value:!0})};const mW="bloxdSessionReplayTails";const EW=["recordings","videoHeaders","videoChunks","videoSequences","videoProgress","telemetry","dom","domTail"];function NW(WW){return new Promise(((iW,OW)=>{WW.onsuccess=()=>{iW(WW.result)},WW.onerror=()=>{OW(WW.error)}}))}function PW(WW){return new Promise(((iW,OW)=>{WW.oncomplete=()=>{iW()},WW.onerror=()=>{OW(WW.error)},WW.onabort=()=>{var iW;OW(null!==(iW=WW.error)&&void 0!==iW?iW:new Error("IndexedDB transaction aborted"))}}))}function LW(WW){return IDBKeyRange.bound([WW],[WW,[]])}function cW(WW,iW){return IDBKeyRange.bound([WW,iW],[WW,iW,[]])}class wW{constructor(){this.db=null,this.opening=null,this.failed=!1,this.tailRecordings=new Set}get working(){return!this.failed}static get supported(){try{return"undefined"!==typeof indexedDB}catch{return!1}}putRecording(WW){this.write(["recordings"],(iW=>{iW.objectStore("recordings").put(WW)}))}putVideoSequence(WW,iW,OW){this.write(["recordings","videoSequences"],(mW=>{mW.objectStore("recordings").put(WW),mW.objectStore("videoSequences").put({recordingId:WW.recordingId,segmentId:iW,sequence:OW})}))}appendVideo(WW,iW){this.write(["videoHeaders","videoChunks"],(OW=>{OW.objectStore("videoHeaders").put(WW);const mW=OW.objectStore("videoChunks");for(const WW of iW)mW.put(WW)}))}putVideoProgress(WW,iW){this.write(["videoProgress","videoChunks"],(OW=>{if(OW.objectStore("videoProgress").put(WW),iW>0){const{recordingId:mW,segmentId:EW}=WW;OW.objectStore("videoChunks").delete(IDBKeyRange.bound([mW,EW,0],[mW,EW,iW],!1,!0))}}))}removeVideoChunks(WW,iW){this.write(["videoChunks"],(OW=>{OW.objectStore("videoChunks").delete(cW(WW,iW))}))}removeVideo(WW,iW){this.write(["videoHeaders","videoChunks","videoSequences","videoProgress"],(OW=>{OW.objectStore("videoHeaders").delete([WW,iW]),OW.objectStore("videoChunks").delete(cW(WW,iW)),OW.objectStore("videoSequences").delete([WW,iW]),OW.objectStore("videoProgress").delete([WW,iW])}))}putTelemetry(WW){this.write(["telemetry"],(iW=>{iW.objectStore("telemetry").put(WW)}))}removeTelemetry(WW,iW){this.write(["telemetry"],(OW=>{OW.objectStore("telemetry").delete([WW,iW])}))}putDom(WW){this.write(["dom"],(iW=>{iW.objectStore("dom").put(WW)}))}queueDom(WW,iW,OW){this.write(["recordings","dom","domTail"],(mW=>{mW.objectStore("recordings").put(WW),mW.objectStore("dom").put(iW),mW.objectStore("domTail").delete(cW(iW.recordingId,OW))}),(mW=>{console.warn(`Session replay couldn\'t journal page recording chunk ${iW.sequence}; a closing tab may lose it.`,mW),this.write(["recordings","domTail"],(mW=>{mW.objectStore("recordings").put(WW),mW.objectStore("domTail").delete(cW(iW.recordingId,OW))}))}))}putDomTail(WW){this.tailRecordings.add(WW.recordingId),this.write(["domTail"],(iW=>{iW.objectStore("domTail").put(WW)}))}removeDomTail(WW,iW){this.write(["domTail"],(OW=>{OW.objectStore("domTail").delete(cW(WW,iW))}))}removeDom(WW,iW){this.write(["dom"],(OW=>{OW.objectStore("dom").delete([WW,iW])}))}async listRecordings(){const WW=await this.open();return await NW(WW.transaction("recordings","readonly").objectStore("recordings").getAll())}async read(WW){const iW=(await this.open()).transaction(["videoHeaders","videoChunks","videoSequences","videoProgress","telemetry","dom","domTail"],"readonly"),OW=LW(WW.recordingId),mW=WW=>NW(iW.objectStore(WW).getAll(OW)),[EW,PW,cW,wW,tW,ZW,xW]=await Promise.all([mW("videoHeaders"),mW("videoChunks"),mW("videoSequences"),mW("videoProgress"),mW("telemetry"),mW("dom"),mW("domTail")]);return{recording:WW,telemetry:tW,dom:ZW,domTails:xW,video:EW.map((WW=>{var iW,OW,mW;return{header:WW,sequence:null!==(iW=null===(OW=cW.find((iW=>iW.segmentId===WW.segmentId)))||void 0===OW?void 0:OW.sequence)&&void 0!==iW?iW:null,progress:null!==(mW=wW.find((iW=>iW.segmentId===WW.segmentId)))&&void 0!==mW?mW:null,chunks:PW.filter((iW=>iW.segmentId===WW.segmentId))}}))}}async deleteRecording(WW){const iW=(await this.open()).transaction([...EW],"readwrite");iW.objectStore("recordings").delete(WW);for(const OW of EW.slice(1))iW.objectStore(OW).delete(LW(WW));await PW(iW)}async forgetSent(WW,iW){const OW=(await this.open()).transaction([...EW],"readwrite"),{recordingId:mW}=WW;OW.objectStore("recordings").put(WW);for(const EW of iW.videoSegmentIds)OW.objectStore("videoHeaders").delete([mW,EW]),OW.objectStore("videoChunks").delete(cW(mW,EW)),OW.objectStore("videoSequences").delete([mW,EW]),OW.objectStore("videoProgress").delete([mW,EW]);for(const EW of iW.telemetrySequences)OW.objectStore("telemetry").delete([mW,EW]);for(const EW of iW.domSequences)OW.objectStore("dom").delete([mW,EW]);for(const EW of iW.domTailChunks)OW.objectStore("domTail").delete(cW(mW,EW));await PW(OW)}write(WW,iW){let OW=arguments.length>2&&void 0!==arguments[2]?arguments[2]:WW=>{this.fail(WW)};if(this.failed)return;const mW=mW=>{try{var EW;const NW=mW.transaction(WW,"readwrite");iW(NW),null===(EW=NW.commit)||void 0===EW||EW.call(NW),PW(NW).catch(OW)}catch(NW){OW(NW)}};null===this.db?this.open().then(mW,(WW=>{this.fail(WW)})):mW(this.db)}fail(WW){this.failed||(this.failed=!0,console.warn("Session replay can\'t keep its upload journal; what a closing tab leaves unsent will be lost.",WW),this.dropTails())}dropTails(){if(null===this.db||0===this.tailRecordings.size)return;const WW=WW=>{console.warn("Session replay couldn\'t drop its page recording tails from its upload journal.",WW)};try{const iW=this.db.transaction(["domTail"],"readwrite");for(const WW of this.tailRecordings)iW.objectStore("domTail").delete(LW(WW));PW(iW).catch(WW)}catch(iW){WW(iW)}}open(){return this.opening??=new Promise(((WW,iW)=>{const OW=indexedDB.open(mW,4);OW.onupgradeneeded=WW=>{const iW=OW.result;WW.oldVersion<1&&(iW.createObjectStore("recordings",{keyPath:"recordingId"}),iW.createObjectStore("videoHeaders",{keyPath:["recordingId","segmentId"]}),iW.createObjectStore("videoChunks",{keyPath:["recordingId","segmentId","index"]}),iW.createObjectStore("videoSequences",{keyPath:["recordingId","segmentId"]}),iW.createObjectStore("telemetry",{keyPath:["recordingId","sequence"]})),WW.oldVersion<2&&iW.createObjectStore("videoProgress",{keyPath:["recordingId","segmentId"]}),WW.oldVersion<3&&iW.createObjectStore("dom",{keyPath:["recordingId","sequence"]}),iW.createObjectStore("domTail",{keyPath:["recordingId","chunkIndex","fromChar"]})};let EW=!1;OW.onblocked=()=>{EW=!0,iW(new Error("An older tab holds the upload journal at an earlier version"))},OW.onsuccess=()=>{EW?OW.result.close():(this.db=OW.result,this.db.onversionchange=()=>{var WW;this.dropTails(),null===(WW=this.db)||void 0===WW||WW.close(),this.db=null,this.opening=null},WW(OW.result))},OW.onerror=()=>{iW(OW.error)}})),this.opening}}const tW=[{fpsScale:1,areaScale:1},{fpsScale:2/3,areaScale:.56},{fpsScale:.5,areaScale:.36},{fpsScale:1/3,areaScale:.25}];class ZW{constructor(){this.level=0,this.lastChangeMs=-1/0,this.healthySinceMs=null,this.firstSampleMs=null,this.gameStrugglingSinceMs=null,this.backpressureSinceMs=null,this.lastChangeReason="none",this.steppedDownForGameFps=!1}getLevel(){return tW[this.level]}getLevelIndex(){return this.level}getLastChangeReason(){return this.lastChangeReason}restartWarmUp(){this.firstSampleMs=null,this.healthySinceMs=null,this.gameStrugglingSinceMs=null,this.backpressureSinceMs=null}update(WW){this.firstSampleMs??=WW.nowMs;const iW=null!==WW.pingMs&&WW.pingMs>300,OW=WW.nowMs-this.firstSampleMs>=3e4;OW&&(null!==WW.gameFps&&WW.gameFps<24||iW)?this.gameStrugglingSinceMs??=WW.nowMs:this.gameStrugglingSinceMs=null,OW&&WW.encoderBackpressureDrops>0?this.backpressureSinceMs??=WW.nowMs:this.backpressureSinceMs=null;const mW=null!==this.backpressureSinceMs&&WW.nowMs-this.backpressureSinceMs>=3e3,EW=mW||null!==this.gameStrugglingSinceMs&&WW.nowMs-this.gameStrugglingSinceMs>=1e4,NW=this.steppedDownForGameFps?45:24,PW=0===WW.encoderBackpressureDrops&&!iW&&(null===WW.gameFps||WW.gameFps>=NW);return EW?(this.healthySinceMs=null,this.level<tW.length-1&&WW.nowMs-this.lastChangeMs>=1e4&&(this.level++,this.lastChangeMs=WW.nowMs,this.lastChangeReason=mW?"encoderBackpressure":iW?"highPing":"lowGameFps",this.steppedDownForGameFps||="lowGameFps"===this.lastChangeReason,!0)):PW&&0!==this.level?(this.healthySinceMs??=WW.nowMs,WW.nowMs-this.healthySinceMs>=6e4&&(this.level--,this.lastChangeMs=WW.nowMs,this.lastChangeReason="recovered",this.healthySinceMs=null,this.steppedDownForGameFps&&=this.level>0,!0)):(this.healthySinceMs=null,!1)}}function xW(WW,iW){return WW.width===iW.width&&WW.height===iW.height}function lW(WW){return Math.max(2,2*Math.floor(WW/2))}function AW(WW){return Math.ceil(WW.width/16)*Math.ceil(WW.height/16)}function bW(WW,iW,OW){const mW=WW.bitrate*AW(iW)/WW.maxMacroblocks;return OW*Math.min(WW.bitrate,Math.max(WW.minBitrate,mW/OW))}class jW{constructor(WW){this.intervalMs=void 0,this.nextDueMs=-1/0,this.intervalMs=1e3/WW}setMaxFps(WW){this.intervalMs=1e3/WW}shouldKeep(WW){return!(WW<this.nextDueMs-.25*this.intervalMs)&&(this.nextDueMs=WW-this.nextDueMs>this.intervalMs?WW+this.intervalMs:this.nextDueMs+this.intervalMs,!0)}reset(){this.nextDueMs=-1/0}}const UW=["avc1.42001f","avc1.42e01f","avc1.4d001f","avc1.64001f"],kW=["variable","constant"],sW=["realtime","quality"],MW=["quality","realtime"];class KW{constructor(){this.canvas=null,this.context=null}scale(WW,iW){if(WW.displayWidth===iW.width&&WW.displayHeight===iW.height)return WW;return this.contextFor(iW).drawImage(WW,0,0,iW.width,iW.height),new VideoFrame(this.canvas,{timestamp:WW.timestamp,alpha:"discard"})}contextFor(WW){return null===this.canvas||null===this.context?(this.canvas=new OffscreenCanvas(WW.width,WW.height),this.context=this.canvas.getContext("2d",{alpha:!1})):this.canvas.width===WW.width&&this.canvas.height===WW.height||(this.canvas.width=WW.width,this.canvas.height=WW.height),this.context}}const SW=[...[.7,.6,.5,.42,.35].map((WW=>({width:640,quality:WW}))),{width:480,quality:.35},{width:360,quality:.35}],YW=[{width:320,quality:.5},{width:320,quality:.35},{width:240,quality:.35},{width:160,quality:.35}];class yW{constructor(WW,iW){this.steps=WW,this.targetBytes=iW,this.index=0}get step(){return this.steps[this.index]}record(WW){WW>this.targetBytes?this.index=Math.min(this.index+1,this.steps.length-1):WW<.6*this.targetBytes&&(this.index=Math.max(this.index-1,0))}}class TW{constructor(WW){this.post=WW,this.full=new yW(SW,28e3),this.small=new yW(YW,6144),this.lastTimestampUs=-1/0,this.encoding=!1,this.failed=!1}offer(WW,iW){if(!(this.failed||this.encoding||WW.timestamp-this.lastTimestampUs<2e6)){this.lastTimestampUs=WW.timestamp;try{const OW=JW(WW,WW.displayWidth,WW.displayHeight,this.full.step.width),mW=JW(OW,OW.width,OW.height,this.small.step.width);this.encoding=!0,this.encode(OW,mW,iW).finally((()=>{this.encoding=!1}))}catch(OW){this.fail(OW)}}}async encode(WW,iW,OW){try{const[mW,EW]=await Promise.all([WW.convertToBlob({type:"image/jpeg",quality:this.full.step.quality}),iW.convertToBlob({type:"image/jpeg",quality:this.small.step.quality})]);this.full.record(mW.size),this.small.record(EW.size);const NW=await mW.arrayBuffer(),PW=EW.size<=8192?await EW.arrayBuffer():null;this.post({type:"still",bytes:NW,small:PW,atMs:OW},null===PW?[NW]:[NW,PW])}catch(mW){this.fail(mW)}}fail(WW){this.failed=!0,console.warn("Session replay couldn\'t encode a still; recording without one.",WW)}}function JW(WW,iW,OW,mW){const EW=Math.min(mW,iW),NW=Math.max(1,Math.round(OW*EW/iW)),PW=new OffscreenCanvas(EW,NW),LW=PW.getContext("2d");if(null===LW)throw new Error("no 2D context");return LW.drawImage(WW,0,0,EW,NW),PW}let hW=Date.now()-performance.now();function HW(){const WW=performance.now(),iW=Date.now();return Math.abs(iW-(WW+hW))>20&&(hW=iW-WW),WW+hW}function nW(WW){if(!WW)throw new Error("Assertion failed.")}const uW=Math.PI/180,oW=(Math.PI,[1,0,0,0,1,0,0,0,1]),dW=WW=>{const iW=WW*uW,OW=Math.round(Math.cos(iW)),mW=Math.round(Math.sin(iW));return[OW,mW,0,-mW,OW,0,0,0,1]},eW=(WW,iW)=>[1,0,0,0,1,0,WW,iW,1],vW=(WW,iW)=>{const OW=new Array(9);for(let mW=0;mW<3;mW++)for(let EW=0;EW<3;EW++)OW[3*mW+EW]=WW[3*mW]*iW[EW]+WW[3*mW+1]*iW[3+EW]+WW[3*mW+2]*iW[6+EW];return OW},gW=WW=>WW&&WW[WW.length-1],DW=WW=>WW>=0&&WW<2**32,VW=WW=>{let iW=0;for(;0===WW.readBits(1)&&iW<32;)iW++;if(iW>=32)throw new Error("Invalid exponential-Golomb code.");return(1<<iW)-1+WW.readBits(iW)},pW=WW=>{const iW=VW(WW);return 0===(1&iW)?-(iW>>1):iW+1>>1},fW=WW=>WW.constructor===Uint8Array?WW:ArrayBuffer.isView(WW)?new Uint8Array(WW.buffer,WW.byteOffset,WW.byteLength):new Uint8Array(WW),CW=WW=>WW.constructor===DataView?WW:ArrayBuffer.isView(WW)?new DataView(WW.buffer,WW.byteOffset,WW.byteLength):new DataView(WW),XW="undefined"!==typeof globalThis.TextEncoder?globalThis.TextEncoder:class{constructor(){this.encoding="utf-8"}encode(){let WW=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";const iW=new Uint8Array(3*WW.length);let OW=0;for(let mW=0;mW<WW.length;mW++){let EW=WW.charCodeAt(mW);if(EW<128)iW[OW++]=EW;else if(EW<2048)iW[OW++]=192|EW>>6,iW[OW++]=128|63&EW;else if(EW<55296||EW>57343)iW[OW++]=224|EW>>12,iW[OW++]=128|EW>>6&63,iW[OW++]=128|63&EW;else{const NW=mW+1<WW.length?WW.charCodeAt(mW+1):0;EW<56320&&NW>=56320&&NW<=57343?(EW=65536+(EW-55296<<10)+(NW-56320),mW++,iW[OW++]=240|EW>>18,iW[OW++]=128|EW>>12&63,iW[OW++]=128|EW>>6&63,iW[OW++]=128|63&EW):(iW[OW++]=239,iW[OW++]=191,iW[OW++]=189)}}return iW.slice(0,OW)}},BW=("undefined"!==typeof globalThis.TextDecoder&&globalThis.TextDecoder,new XW),qW={bt709:1,bt470bg:5,smpte170m:6,bt2020:9,smpte432:12},RW={bt709:1,smpte170m:6,linear:8,"iec61966-2-1":13,pq:16,hlg:18},GW={rgb:0,bt709:1,bt470bg:5,smpte170m:6,"bt2020-ncl":9},IW=WW=>!WW||null==WW.primaries&&null==WW.transfer&&null==WW.matrix&&null==WW.fullRange,aW=WW=>WW instanceof ArrayBuffer||"undefined"!==typeof SharedArrayBuffer&&WW instanceof SharedArrayBuffer||ArrayBuffer.isView(WW);class rW{constructor(){this.currentPromise=Promise.resolve(),this.pending=0}async acquire(){let WW;const iW=new Promise((iW=>{let OW=!1;WW=()=>{OW||(iW(),this.pending--,OW=!0)}})),OW=this.currentPromise;return this.currentPromise=iW,this.pending++,await OW,WW}}const zW=()=>{let WW,iW;return{promise:new Promise(((OW,mW)=>{WW=OW,iW=mW})),resolve:WW,reject:iW}},FW=WW=>{throw new Error(`Unexpected value: ${WW}`)},QW=(WW,iW,OW,mW)=>{OW>>>=0,OW&=16777215,mW?(WW.setUint8(iW,255&OW),WW.setUint8(iW+1,OW>>>8&255),WW.setUint8(iW+2,OW>>>16&255)):(WW.setUint8(iW,OW>>>16&255),WW.setUint8(iW+1,OW>>>8&255),WW.setUint8(iW+2,255&OW))},Wi="und",ii=WW=>{let iW=0;for(;0!==WW;)WW&=WW-1,iW++;return iW},Oi=/^[a-z]{3}$/,mi=1e6*(1+Number.EPSILON);const Ei=(async()=>{})().constructor,Ni=WW=>WW instanceof Ei||WW instanceof Promise||"function"===typeof WW?.then,Pi=function*(WW){for(const iW in WW){const OW=WW[iW];void 0!==OW&&(yield{key:iW,value:OW})}},Li=WW=>"number"===typeof WW&&!Number.isNaN(WW),ci=WW=>{nW(Number.isInteger(WW.num)),nW(Number.isInteger(WW.den)),nW(0!==WW.den);let iW=Math.abs(WW.num),OW=Math.abs(WW.den);for(;0!==OW;){const WW=iW%OW;iW=OW,OW=WW}const mW=iW||1;return{num:WW.num/mW,den:WW.den/mW}};new Map,new Map;const wi=WW=>Array.isArray(WW)?WW:[WW];class ti{constructor(){this._listeners=new Map}on(WW,iW,OW){this._listeners.has(WW)||this._listeners.set(WW,new Set);const mW={cZ:iW,once:OW?.once??!1};return this._listeners.get(WW).add(mW),()=>{this._listeners.get(WW)?.delete(mW)}}_emit(){for(var WW=arguments.length,iW=new Array(WW),OW=0;OW<WW;OW++)iW[OW]=arguments[OW];const[mW,EW]=iW,NW=this._listeners.get(mW);if(NW)for(const LW of NW){try{LW.cZ(EW)}catch(PW){console.error(PW)}LW.once&&NW.delete(LW)}}}const Zi=WW=>null!==WW&&"object"===typeof WW&&Object.getPrototypeOf(WW)===Object.prototype&&Object.values(WW).every((WW=>"string"===typeof WW));class xi{constructor(WW,iW){if(this.data=WW,this.mimeType=iW,!(WW instanceof Uint8Array))throw new TypeError("data must be a Uint8Array.");if("string"!==typeof iW)throw new TypeError("mimeType must be a string.")}}class li{constructor(WW,iW,OW,mW){if(this.data=WW,this.mimeType=iW,this.name=OW,this.description=mW,!(WW instanceof Uint8Array))throw new TypeError("data must be a Uint8Array.");if(void 0!==iW&&"string"!==typeof iW)throw new TypeError("mimeType, when provided, must be a string.");if(void 0!==OW&&"string"!==typeof OW)throw new TypeError("name, when provided, must be a string.");if(void 0!==mW&&"string"!==typeof mW)throw new TypeError("description, when provided, must be a string.")}}class Ai{constructor(WW){this.bytes=WW,this.pos=0}seekToByte(WW){this.pos=8*WW}readBit(){const WW=Math.floor(this.pos/8),iW=this.bytes[WW]??0,OW=7-(7&this.pos),mW=(iW&1<<OW)>>OW;return this.pos++,mW}readBits(WW){if(1===WW)return this.readBit();let iW=0;for(let OW=0;OW<WW;OW++)iW<<=1,iW|=this.readBit();return iW}writeBits(WW,iW){const OW=this.pos+WW;for(let mW=this.pos;mW<OW;mW++){const WW=Math.floor(mW/8);let EW=this.bytes[WW];const NW=7-(7&mW);EW&=~(1<<NW),EW|=(iW&1<<OW-mW-1)>>OW-mW-1<<NW,this.bytes[WW]=EW}this.pos=OW}copyBits(WW,iW){let OW=0;for(;OW<WW-7;OW+=8)this.writeBits(8,iW.readBits(8));const mW=WW-OW;mW>0&&this.writeBits(mW,iW.readBits(mW))}readAlignedByte(){if(this.pos%8!==0)throw new Error("Bitstream is not byte-aligned.");const WW=this.pos/8,iW=this.bytes[WW]??0;return this.pos+=8,iW}skipBits(WW){this.pos+=WW}getBitsLeft(){return 8*this.bytes.length-this.pos}clone(){const WW=new Ai(this.bytes);return WW.pos=this.pos,WW}}const bi=[96e3,88200,64e3,48e3,44100,32e3,24e3,22050,16e3,12e3,11025,8e3,7350],ji=[-1,1,2,3,4,5,6,8],Ui=WW=>{const iW=5===WW.objectType||29===WW.objectType,OW=29===WW.objectType,mW=iW?WW.outputSampleRate/2:WW.outputSampleRate,EW=OW?1:WW.outputNumberOfChannels,NW=ji.indexOf(EW);if(-1===NW)throw new TypeError(`Unsupported number of channels: ${WW.outputNumberOfChannels}`);let PW=16;WW.objectType>=32&&(PW+=6),15===Mi(mW)&&(PW+=24),iW&&(PW+=9,15===Mi(WW.outputSampleRate)&&(PW+=24));const LW=Math.ceil(PW/8),cW=new Uint8Array(LW),wW=new Ai(cW);return ki(wW,WW.objectType),si(wW,mW),wW.writeBits(4,NW),iW&&(si(wW,WW.outputSampleRate),ki(wW,2)),wW.writeBits(3,0),cW},ki=(WW,iW)=>{iW<32?WW.writeBits(5,iW):(WW.writeBits(5,31),WW.writeBits(6,iW-32))},si=(WW,iW)=>{const OW=Mi(iW);WW.writeBits(4,OW),15===OW&&WW.writeBits(24,iW)},Mi=WW=>{const iW=bi.indexOf(WW);return-1===iW?15:iW};var Ki;!function(WW){WW[WW.Silent=0]="Silent",WW[WW.Errors=1]="Errors",WW[WW.Warnings=2]="Warnings",WW[WW.Info=3]="Info"}(Ki||(Ki={}));class Si{constructor(){}static get level(){return Si._level}static set level(WW){if(WW!==Ki.Silent&&WW!==Ki.Errors&&WW!==Ki.Warnings&&WW!==Ki.Info)throw new TypeError("Invalid log level. Use one of the values of the LogLevel enum.");Si._level=WW}static get _emitter(){return Si._emitterInstance??=new ti}static on(WW,iW,OW){return Si._emitter.on(WW,iW,OW)}static _error(){for(var WW=arguments.length,iW=new Array(WW),OW=0;OW<WW;OW++)iW[OW]=arguments[OW];Si._emitter._emit("error",iW),Si._level>=Ki.Errors&&console.error(...iW)}static _warn(){for(var WW=arguments.length,iW=new Array(WW),OW=0;OW<WW;OW++)iW[OW]=arguments[OW];Si._emitter._emit("warn",iW),Si._level>=Ki.Warnings&&console.warn(...iW)}static _info(){for(var WW=arguments.length,iW=new Array(WW),OW=0;OW<WW;OW++)iW[OW]=arguments[OW];Si._emitter._emit("info",iW),Si._level>=Ki.Info&&console.info(...iW)}}Si._level=Ki.Info,Si._emitterInstance=null;const Yi=[48e3,44100,32e3],yi=[24e3,22050,16e3],Ti="Mediabunny v1.61.3";var Ji,Hi;!function(WW){WW[WW.NON_IDR_SLICE=1]="NON_IDR_SLICE",WW[WW.SLICE_DPA=2]="SLICE_DPA",WW[WW.SLICE_DPB=3]="SLICE_DPB",WW[WW.SLICE_DPC=4]="SLICE_DPC",WW[WW.IDR=5]="IDR",WW[WW.SEI=6]="SEI",WW[WW.SPS=7]="SPS",WW[WW.PPS=8]="PPS",WW[WW.AUD=9]="AUD",WW[WW.SPS_EXT=13]="SPS_EXT"}(Ji||(Ji={})),function(WW){WW[WW.RASL_N=8]="RASL_N",WW[WW.RASL_R=9]="RASL_R",WW[WW.BLA_W_LP=16]="BLA_W_LP",WW[WW.RSV_IRAP_VCL23=23]="RSV_IRAP_VCL23",WW[WW.VPS_NUT=32]="VPS_NUT",WW[WW.SPS_NUT=33]="SPS_NUT",WW[WW.PPS_NUT=34]="PPS_NUT",WW[WW.AUD_NUT=35]="AUD_NUT",WW[WW.PREFIX_SEI_NUT=39]="PREFIX_SEI_NUT",WW[WW.SUFFIX_SEI_NUT=40]="SUFFIX_SEI_NUT"}(Hi||(Hi={}));const ni=function*(WW){let iW=0,OW=-1;for(;iW<WW.length-2;){const mW=WW.indexOf(0,iW);if(-1===mW||mW>=WW.length-2)break;iW=mW;let EW=0;iW+3<WW.length&&0===WW[iW+1]&&0===WW[iW+2]&&1===WW[iW+3]?EW=4:0===WW[iW+1]&&1===WW[iW+2]&&(EW=3),0!==EW?(-1!==OW&&iW>OW&&(yield{offset:OW,length:iW-OW}),OW=iW+EW,iW=OW):iW++}-1!==OW&&OW<WW.length&&(yield{offset:OW,length:WW.length-OW})},ui=WW=>31&WW,oi=WW=>{const iW=[],OW=WW.length;for(let mW=0;mW<OW;mW++)mW+2<OW&&0===WW[mW]&&0===WW[mW+1]&&3===WW[mW+2]?(iW.push(0,0),mW+=2):iW.push(WW[mW]);return new Uint8Array(iW)},di=(new Uint8Array([0,0,0,1]),(WW,iW)=>{const OW=WW.reduce(((WW,OW)=>WW+iW+OW.byteLength),0),mW=new Uint8Array(OW);let EW=0;for(const NW of WW){const WW=new DataView(mW.buffer,mW.byteOffset,mW.byteLength);switch(iW){case 1:WW.setUint8(EW,NW.byteLength);break;case 2:WW.setUint16(EW,NW.byteLength,!1);break;case 3:QW(WW,EW,NW.byteLength,!1);break;case 4:WW.setUint32(EW,NW.byteLength,!1)}EW+=iW,mW.set(NW,EW),EW+=NW.byteLength}return mW}),ei=WW=>{try{const iW=[],OW=[],mW=[];for(const LW of ni(WW)){const EW=WW.subarray(LW.offset,LW.offset+LW.length),NW=ui(EW[0]);NW===Ji.SPS?iW.push(EW):NW===Ji.PPS?OW.push(EW):NW===Ji.SPS_EXT&&mW.push(EW)}if(0===iW.length)return null;if(0===OW.length)return null;const EW=iW[0],NW=gi(EW);nW(null!==NW);const PW=100===NW.profileIdc||110===NW.profileIdc||122===NW.profileIdc||144===NW.profileIdc;return{configurationVersion:1,avcProfileIndication:NW.profileIdc,profileCompatibility:NW.constraintFlags,avcLevelIndication:NW.levelIdc,lengthSizeMinusOne:3,sequenceParameterSets:iW,pictureParameterSets:OW,chromaFormat:PW?NW.chromaFormatIdc:null,bitDepthLumaMinus8:PW?NW.bitDepthLumaMinus8:null,bitDepthChromaMinus8:PW?NW.bitDepthChromaMinus8:null,sequenceParameterSetExt:PW?mW:null}}catch(iW){return Si._error("Error building AVC Decoder Configuration Record:",iW),null}},vi={1:{num:1,den:1},2:{num:12,den:11},3:{num:10,den:11},4:{num:16,den:11},5:{num:40,den:33},6:{num:24,den:11},7:{num:20,den:11},8:{num:32,den:11},9:{num:80,den:33},10:{num:18,den:11},11:{num:15,den:11},12:{num:64,den:33},13:{num:160,den:99},14:{num:4,den:3},15:{num:3,den:2},16:{num:2,den:1}},gi=WW=>{try{const iW=oi(WW),OW=new Ai(iW);OW.skipBits(1),OW.skipBits(2);if(7!==OW.readBits(5))return null;const mW=OW.readAlignedByte(),EW=OW.readAlignedByte(),NW=OW.readAlignedByte();VW(OW);let PW=1,LW=0,cW=0,wW=0;if(100===mW||110===mW||122===mW||244===mW||44===mW||83===mW||86===mW||118===mW||128===mW){PW=VW(OW),3===PW&&(wW=OW.readBits(1)),LW=VW(OW),cW=VW(OW),OW.skipBits(1);if(OW.readBits(1))for(let WW=0;WW<(3!==PW?8:12);WW++){if(OW.readBits(1)){const iW=WW<6?16:64;let mW=8,EW=8;for(let WW=0;WW<iW;WW++){if(0!==EW){EW=(mW+pW(OW)+256)%256}mW=0===EW?mW:EW}}}}VW(OW);const tW=VW(OW);if(0===tW)VW(OW);else if(1===tW){OW.skipBits(1),pW(OW),pW(OW);const WW=VW(OW);for(let iW=0;iW<WW;iW++)pW(OW)}VW(OW),OW.skipBits(1);const ZW=VW(OW),xW=VW(OW),lW=16*(ZW+1),AW=16*(xW+1);let bW=lW,jW=AW;const UW=OW.readBits(1);UW||OW.skipBits(1),OW.skipBits(1);if(OW.readBits(1)){const WW=VW(OW),iW=VW(OW),mW=VW(OW),EW=VW(OW);let NW,LW;if(0===(0===wW?PW:0))NW=1,LW=2-UW;else{NW=3===PW?1:2,LW=(1===PW?2:1)*(2-UW)}bW-=NW*(WW+iW),jW-=LW*(mW+EW)}let kW=2,sW=2,MW=2,KW=0,SW={num:1,den:1},YW=null,yW=null,TW=null,JW=null;const hW=OW.pos;if(OW.readBits(1)){if(OW.readBits(1)){const WW=OW.readBits(8);if(255===WW)SW={num:OW.readBits(16),den:OW.readBits(16)};else{const iW=vi[WW];iW&&(SW=iW)}}OW.readBits(1)&&OW.skipBits(1);if(OW.readBits(1)){OW.skipBits(3),KW=OW.readBits(1);OW.readBits(1)&&(kW=OW.readBits(8),sW=OW.readBits(8),MW=OW.readBits(8))}OW.readBits(1)&&(VW(OW),VW(OW));OW.readBits(1)&&(OW.skipBits(32),OW.skipBits(32),OW.skipBits(1));const WW=OW.readBits(1);WW&&Di(OW);const iW=OW.readBits(1);iW&&Di(OW),(WW||iW)&&OW.skipBits(1),OW.skipBits(1),TW=OW.pos,JW=OW.readBits(1),JW&&(OW.skipBits(1),VW(OW),VW(OW),VW(OW),VW(OW),YW=VW(OW),yW=VW(OW))}if(null===YW){nW(null===yW);if(44!==mW&&86!==mW&&100!==mW&&110!==mW&&122!==mW&&244!==mW||!(16&EW)){const WW=ZW+1,iW=(2-UW)*(xW+1),OW=jO.find((WW=>WW.level>=NW))??gW(jO),mW=Math.min(Math.floor(OW.maxDpbMbs/(WW*iW)),16);YW=mW,yW=mW}else YW=0,yW=0}return nW(null!==yW),{emulationUnpreventedBytes:iW,profileIdc:mW,constraintFlags:EW,levelIdc:NW,frameMbsOnlyFlag:UW,chromaFormatIdc:PW,bitDepthLumaMinus8:LW,bitDepthChromaMinus8:cW,codedWidth:lW,codedHeight:AW,displayWidth:bW,displayHeight:jW,pixelAspectRatio:SW,colourPrimaries:kW,matrixCoefficients:MW,transferCharacteristics:sW,fullRangeFlag:KW,numReorderFrames:YW,maxDecFrameBuffering:yW,vuiParametersFlagBitOffset:hW,bitstreamRestrictionFlagBitOffset:TW,bitstreamRestrictionFlag:JW}}catch(iW){return Si._error("Error parsing AVC SPS:",iW),null}},Di=WW=>{const iW=VW(WW);WW.skipBits(4),WW.skipBits(4);for(let OW=0;OW<=iW;OW++)VW(WW),VW(WW),WW.skipBits(1);WW.skipBits(5),WW.skipBits(5),WW.skipBits(5),WW.skipBits(5)},Vi=WW=>WW>>1&63,fi=WW=>{try{const iW=[],OW=[],mW=[],EW=[];for(const cW of ni(WW)){const NW=WW.subarray(cW.offset,cW.offset+cW.length),PW=Vi(NW[0]);PW===Hi.VPS_NUT?iW.push(NW):PW===Hi.SPS_NUT?OW.push(NW):PW===Hi.PPS_NUT?mW.push(NW):PW!==Hi.PREFIX_SEI_NUT&&PW!==Hi.SUFFIX_SEI_NUT||EW.push(NW)}if(0===OW.length||0===mW.length)return null;const NW=(WW=>{try{const iW=new Ai(oi(WW));iW.skipBits(16),iW.readBits(4);const OW=iW.readBits(3),mW=iW.readBits(1),{general_profile_space:EW,general_tier_flag:NW,general_profile_idc:PW,general_profile_compatibility_flags:LW,general_constraint_indicator_flags:cW,general_level_idc:wW}=Ci(iW,OW);VW(iW);const tW=VW(iW);let ZW=0;3===tW&&(ZW=iW.readBits(1));const xW=VW(iW),lW=VW(iW);let AW=xW,bW=lW;if(iW.readBits(1)){const WW=VW(iW),OW=VW(iW),mW=VW(iW),EW=VW(iW);let NW=1,PW=1;const LW=0===ZW?tW:0;1===LW?(NW=2,PW=2):2===LW&&(NW=2,PW=1),AW-=(WW+OW)*NW,bW-=(mW+EW)*PW}const jW=VW(iW),UW=VW(iW);VW(iW);const kW=iW.readBits(1);let sW=0;for(let WW=kW?0:OW;WW<=OW;WW++)VW(iW),sW=VW(iW),VW(iW);VW(iW),VW(iW),VW(iW),VW(iW),VW(iW),VW(iW),iW.readBits(1)&&iW.readBits(1)&&Xi(iW),iW.skipBits(1),iW.skipBits(1),iW.readBits(1)&&(iW.skipBits(4),iW.skipBits(4),VW(iW),VW(iW),iW.skipBits(1));const MW=VW(iW);if(Bi(iW,MW),iW.readBits(1)){const WW=VW(iW);for(let OW=0;OW<WW;OW++)VW(iW),iW.skipBits(1)}iW.skipBits(1),iW.skipBits(1);let KW=2,SW=2,YW=2,yW=0,TW=0,JW={num:1,den:1};if(iW.readBits(1)){const WW=Ri(iW,OW);JW=WW.pixelAspectRatio,KW=WW.colourPrimaries,SW=WW.transferCharacteristics,YW=WW.matrixCoefficients,yW=WW.fullRangeFlag,TW=WW.minSpatialSegmentationIdc}return{displayWidth:AW,displayHeight:bW,pixelAspectRatio:JW,colourPrimaries:KW,transferCharacteristics:SW,matrixCoefficients:YW,fullRangeFlag:yW,maxDecFrameBuffering:sW+1,spsMaxSubLayersMinus1:OW,spsTemporalIdNestingFlag:mW,generalProfileSpace:EW,generalTierFlag:NW,generalProfileIdc:PW,generalProfileCompatibilityFlags:LW,generalConstraintIndicatorFlags:cW,generalLevelIdc:wW,chromaFormatIdc:tW,bitDepthLumaMinus8:jW,bitDepthChromaMinus8:UW,minSpatialSegmentationIdc:TW}}catch(iW){return Si._error("Error parsing HEVC SPS:",iW),null}})(OW[0]);if(!NW)return null;let PW=0;if(mW.length>0){const WW=mW[0],iW=new Ai(oi(WW));iW.skipBits(16),VW(iW),VW(iW),iW.skipBits(1),iW.skipBits(1),iW.skipBits(3),iW.skipBits(1),iW.skipBits(1),VW(iW),VW(iW),pW(iW),iW.skipBits(1),iW.skipBits(1),iW.readBits(1)&&VW(iW),pW(iW),pW(iW),iW.skipBits(1),iW.skipBits(1),iW.skipBits(1),iW.skipBits(1);const OW=iW.readBits(1),EW=iW.readBits(1);PW=OW||EW?OW&&!EW?2:!OW&&EW?3:0:0}const LW=[...iW.length?[{arrayCompleteness:1,nalUnitType:Hi.VPS_NUT,nalUnits:iW}]:[],...OW.length?[{arrayCompleteness:1,nalUnitType:Hi.SPS_NUT,nalUnits:OW}]:[],...mW.length?[{arrayCompleteness:1,nalUnitType:Hi.PPS_NUT,nalUnits:mW}]:[],...EW.length?[{arrayCompleteness:1,nalUnitType:Vi(EW[0][0]),nalUnits:EW}]:[]];return{configurationVersion:1,generalProfileSpace:NW.generalProfileSpace,generalTierFlag:NW.generalTierFlag,generalProfileIdc:NW.generalProfileIdc,generalProfileCompatibilityFlags:NW.generalProfileCompatibilityFlags,generalConstraintIndicatorFlags:NW.generalConstraintIndicatorFlags,generalLevelIdc:NW.generalLevelIdc,minSpatialSegmentationIdc:NW.minSpatialSegmentationIdc,parallelismType:PW,chromaFormatIdc:NW.chromaFormatIdc,bitDepthLumaMinus8:NW.bitDepthLumaMinus8,bitDepthChromaMinus8:NW.bitDepthChromaMinus8,avgFrameRate:0,constantFrameRate:0,numTemporalLayers:NW.spsMaxSubLayersMinus1+1,temporalIdNested:NW.spsTemporalIdNestingFlag,lengthSizeMinusOne:3,arrays:LW}}catch(iW){return Si._error("Error building HEVC Decoder Configuration Record:",iW),null}},Ci=(WW,iW)=>{const OW=WW.readBits(2),mW=WW.readBits(1),EW=WW.readBits(5);let NW=0;for(let tW=0;tW<32;tW++)NW=NW<<1|WW.readBits(1);const PW=new Uint8Array(6);for(let tW=0;tW<6;tW++)PW[tW]=WW.readBits(8);const LW=WW.readBits(8),cW=[],wW=[];for(let tW=0;tW<iW;tW++)cW.push(WW.readBits(1)),wW.push(WW.readBits(1));if(iW>0)for(let tW=iW;tW<8;tW++)WW.skipBits(2);for(let tW=0;tW<iW;tW++)cW[tW]&&WW.skipBits(88),wW[tW]&&WW.skipBits(8);return{general_profile_space:OW,general_tier_flag:mW,general_profile_idc:EW,general_profile_compatibility_flags:NW,general_constraint_indicator_flags:PW,general_level_idc:LW}},Xi=WW=>{for(let iW=0;iW<4;iW++)for(let OW=0;OW<(3===iW?2:6);OW++){if(WW.readBits(1)){const OW=Math.min(64,1<<4+(iW<<1));iW>1&&pW(WW);for(let iW=0;iW<OW;iW++)pW(WW)}else VW(WW)}},Bi=(WW,iW)=>{const OW=[];for(let mW=0;mW<iW;mW++)OW[mW]=qi(WW,mW,iW,OW)},qi=(WW,iW,OW,mW)=>{let EW=0,NW=0,PW=0;if(0!==iW&&(NW=WW.readBits(1)),NW){if(iW===OW){PW=iW-(VW(WW)+1)}else PW=iW-1;WW.readBits(1),VW(WW);const NW=mW[PW]??0;for(let iW=0;iW<=NW;iW++){WW.readBits(1)||WW.readBits(1)}EW=mW[PW]}else{const iW=VW(WW),OW=VW(WW);for(let mW=0;mW<iW;mW++)VW(WW),WW.readBits(1);for(let mW=0;mW<OW;mW++)VW(WW),WW.readBits(1);EW=iW+OW}return EW},Ri=(WW,iW)=>{let OW=2,mW=2,EW=2,NW=0,PW=0,LW={num:1,den:1};if(WW.readBits(1)){const iW=WW.readBits(8);if(255===iW)LW={num:WW.readBits(16),den:WW.readBits(16)};else{const WW=vi[iW];WW&&(LW=WW)}}return WW.readBits(1)&&WW.readBits(1),WW.readBits(1)&&(WW.readBits(3),NW=WW.readBits(1),WW.readBits(1)&&(OW=WW.readBits(8),mW=WW.readBits(8),EW=WW.readBits(8))),WW.readBits(1)&&(VW(WW),VW(WW)),WW.readBits(1),WW.readBits(1),WW.readBits(1),WW.readBits(1)&&(VW(WW),VW(WW),VW(WW),VW(WW)),WW.readBits(1)&&(WW.readBits(32),WW.readBits(32),WW.readBits(1)&&VW(WW),WW.readBits(1)&&Gi(WW,!0,iW)),WW.readBits(1)&&(WW.readBits(1),WW.readBits(1),WW.readBits(1),PW=VW(WW),VW(WW),VW(WW),VW(WW),VW(WW)),{pixelAspectRatio:LW,colourPrimaries:OW,transferCharacteristics:mW,matrixCoefficients:EW,fullRangeFlag:NW,minSpatialSegmentationIdc:PW}},Gi=(WW,iW,OW)=>{let mW=!1,EW=!1,NW=!1;iW&&(mW=1===WW.readBits(1),EW=1===WW.readBits(1),(mW||EW)&&(NW=1===WW.readBits(1),NW&&(WW.readBits(8),WW.readBits(5),WW.readBits(1),WW.readBits(5)),WW.readBits(4),WW.readBits(4),NW&&WW.readBits(4),WW.readBits(5),WW.readBits(5),WW.readBits(5)));for(let PW=0;PW<=OW;PW++){let iW=!0;1===WW.readBits(1)||(iW=1===WW.readBits(1));let OW=!1;iW?VW(WW):OW=1===WW.readBits(1);let PW=1;if(!OW){PW=VW(WW)+1}mW&&Ii(WW,PW,NW),EW&&Ii(WW,PW,NW)}},Ii=(WW,iW,OW)=>{for(let mW=0;mW<iW;mW++)VW(WW),VW(WW),OW&&(VW(WW),VW(WW)),WW.readBits(1)};var ai;!function(WW){WW[WW.audAllowed=0]="audAllowed",WW[WW.beforeFirstVcl=1]="beforeFirstVcl",WW[WW.afterFirstVcl=2]="afterFirstVcl",WW[WW.eoBitstreamAllowed=3]="eoBitstreamAllowed",WW[WW.noMoreDataAllowed=4]="noMoreDataAllowed"}(ai||(ai={}));const ri=WW=>{const iW=CW(WW),OW=iW.getUint8(9),mW=iW.getUint16(10,!0),EW=iW.getUint32(12,!0),NW=iW.getInt16(16,!0),PW=iW.getUint8(18);let LW=null;return PW&&(LW=WW.subarray(19,21+OW)),{outputChannelCount:OW,preSkip:mW,inputSampleRate:EW,outputGain:NW,channelMappingFamily:PW,channelMappingTable:LW}};var zi;!function(WW){WW[WW.STREAMINFO=0]="STREAMINFO",WW[WW.VORBIS_COMMENT=4]="VORBIS_COMMENT",WW[WW.PICTURE=6]="PICTURE"}(zi||(zi={}));new Uint8Array([5,4,65,67,45,51]),new Uint8Array([5,4,69,65,67,51]);const Fi=[1,2,3,6],Qi=[0,8e3,16e3,32e3,0,0,11025,22050,44100,0,0,12e3,24e3,48e3,96e3,192e3],WO=[32e3,56e3,64e3,96e3,112e3,128e3,192e3,224e3,256e3,32e4,384e3,448e3,512e3,576e3,64e4,768e3,96e4,1024e3,1152e3,128e4,1344e3,1408e3,1411200,1472e3,1536e3,192e4,2048e3,3072e3,384e4,0,0,0],iO=[16,16,20,20,0,24,24,0],OO=[1,2,2,2,2,3,3,4,4,5,6,6,6,7,8,8],mO=[1,2,2,2,2,3,18,19,6,7,518,323,83,519,582,535],EO=[32e3,44100,48e3,0],NO=[8e3,16e3,32e3,64e3,128e3,22050,44100,88200,176400,352800,12e3,24e3,48e3,96e3,192e3,384e3],PO=[512,1024,2048,4096],LO=WW=>{const iW=cO(WW),OW=CW(WW);let mW=iW?4*Math.ceil(iW.frameSize/4):0,EW=null;for(;mW+4<=WW.length&&1683496997===OW.getUint32(mW);){const iW=wO(WW.subarray(mW));if(!iW)break;EW??=iW,mW+=iW.frameSize}if(iW)return{frameSize:EW?mW:iW.frameSize,sampleRate:iW.sampleRate,numberOfChannels:iW.numberOfChannels,sampleCount:iW.sampleCount,channelLayout:iW.channelLayout,pcmResolution:iW.pcmResolution,bitRate:iW.bitRate,core:iW,hasExtensions:null!==EW};if(!EW?.asset)return null;const{asset:NW}=EW;return{frameSize:mW,sampleRate:NW.sampleRate,numberOfChannels:NW.numberOfChannels,sampleCount:NW.sampleCount,channelLayout:NW.channelLayout,pcmResolution:NW.pcmResolution,bitRate:0,core:null,hasExtensions:!0}},cO=WW=>{if(WW.length<18)return null;if(127!==WW[0]||254!==WW[1]||128!==WW[2]||1!==WW[3])return null;const iW=new Ai(WW);if(iW.skipBits(32),iW.skipBits(1),31!==iW.readBits(5))return null;const OW=iW.readBits(1),mW=iW.readBits(7)+1;if(mW%8!==0)return null;const EW=iW.readBits(14)+1;if(EW<96)return null;const NW=iW.readBits(6);if(NW>=OO.length)return null;const PW=Qi[iW.readBits(4)];if(0===PW)return null;const LW=WO[iW.readBits(5)];if(0!==iW.readBits(1))return null;iW.skipBits(4),iW.skipBits(5);const cW=iW.readBits(2);if(3===cW)return null;iW.skipBits(1),OW&&iW.skipBits(16),iW.skipBits(7);const wW=iO[iW.readBits(3)];if(0===wW)return null;const tW=0!==cW;return{frameSize:EW,sampleRate:PW,numberOfChannels:OO[NW]+(tW?1:0),sampleCount:32*mW,channelLayout:mO[NW]|(tW?8:0),amode:NW,lfePresent:tW,bitRate:LW,pcmResolution:wW}},wO=WW=>{if(WW.length<10)return null;if(100!==WW[0]||88!==WW[1]||32!==WW[2]||37!==WW[3])return null;const iW=new Ai(WW);iW.skipBits(32),iW.skipBits(8);const OW=iW.readBits(2),mW=iW.readBits(1),EW=8+4*mW,NW=16+4*mW;iW.skipBits(EW);const PW=iW.readBits(NW)+1,LW={frameSize:PW,asset:null};if(!iW.readBits(1))return LW;const cW=EO[iW.readBits(2)],wW=512*(iW.readBits(3)+1);iW.readBits(1)&&iW.skipBits(36);const tW=iW.readBits(3)+1,ZW=iW.readBits(3)+1,xW=[];for(let UW=0;UW<tW;UW++)xW.push(iW.readBits(OW+1));for(const UW of xW)iW.skipBits(8*ii(UW));if(iW.readBits(1)){iW.skipBits(2);const WW=iW.readBits(2)+1<<2,OW=iW.readBits(2)+1;iW.skipBits(OW*WW)}for(let UW=0;UW<ZW;UW++)iW.skipBits(NW);iW.skipBits(9),iW.skipBits(3),iW.readBits(1)&&iW.skipBits(4),iW.readBits(1)&&iW.skipBits(24),iW.readBits(1)&&iW.skipBits(8*(iW.readBits(10)+1));const lW=iW.readBits(5)+1,AW=NO[iW.readBits(4)],bW=iW.readBits(8)+1;let jW=0;if(iW.readBits(1)&&(bW>2&&iW.skipBits(1),bW>6&&iW.skipBits(1),iW.readBits(1))){const WW=iW.readBits(2)+1<<2;jW=iW.readBits(WW)}return 0===cW||iW.getBitsLeft()<0?LW:{frameSize:PW,asset:{sampleRate:AW,numberOfChannels:bW,sampleCount:Math.round(wW*AW/cW),channelLayout:jW,pcmResolution:lW}}},tO=WW=>{const iW=new Uint8Array(20),OW=CW(iW);OW.setUint32(0,WW.sampleRate),OW.setUint32(4,WW.bitRate),OW.setUint32(8,WW.bitRate),iW[12]=WW.pcmResolution;const mW=WW.core&&!WW.hasExtensions?1:0,EW=new Ai(iW);return EW.seekToByte(13),EW.writeBits(2,Math.max(PO.indexOf(WW.sampleCount),0)),EW.writeBits(5,mW),EW.writeBits(1,WW.core?.lfePresent?1:0),EW.writeBits(6,WW.core?.amode??0),EW.writeBits(14,WW.core?WW.core.frameSize-1:0),EW.writeBits(1,0),EW.writeBits(3,0),EW.writeBits(16,WW.channelLayout),EW.writeBits(1,0),EW.writeBits(1,0),EW.writeBits(1,0),EW.writeBits(5,0),iW},ZO=["avc","hevc","vp9","av1","vp8","prores"],xO=["pcm-s16","pcm-s16be","pcm-s24","pcm-s24be","pcm-s32","pcm-s32be","pcm-f32","pcm-f32be","pcm-f64","pcm-f64be","pcm-u8","pcm-s8","ulaw","alaw"],lO=["aac","opus","mp3","vorbis","flac","ac3","eac3","dts"],AO=[...lO,...xO],bO=["webvtt"],jO=[{maxMacroblocks:99,maxBitrate:64e3,maxDpbMbs:396,level:10},{maxMacroblocks:396,maxBitrate:192e3,maxDpbMbs:900,level:11},{maxMacroblocks:396,maxBitrate:384e3,maxDpbMbs:2376,level:12},{maxMacroblocks:396,maxBitrate:768e3,maxDpbMbs:2376,level:13},{maxMacroblocks:396,maxBitrate:2e6,maxDpbMbs:2376,level:20},{maxMacroblocks:792,maxBitrate:4e6,maxDpbMbs:4752,level:21},{maxMacroblocks:1620,maxBitrate:4e6,maxDpbMbs:8100,level:22},{maxMacroblocks:1620,maxBitrate:1e7,maxDpbMbs:8100,level:30},{maxMacroblocks:3600,maxBitrate:14e6,maxDpbMbs:18e3,level:31},{maxMacroblocks:5120,maxBitrate:2e7,maxDpbMbs:20480,level:32},{maxMacroblocks:8192,maxBitrate:2e7,maxDpbMbs:32768,level:40},{maxMacroblocks:8192,maxBitrate:5e7,maxDpbMbs:32768,level:41},{maxMacroblocks:8704,maxBitrate:5e7,maxDpbMbs:34816,level:42},{maxMacroblocks:22080,maxBitrate:135e6,maxDpbMbs:110400,level:50},{maxMacroblocks:36864,maxBitrate:24e7,maxDpbMbs:184320,level:51},{maxMacroblocks:36864,maxBitrate:24e7,maxDpbMbs:184320,level:52},{maxMacroblocks:139264,maxBitrate:24e7,maxDpbMbs:696320,level:60},{maxMacroblocks:139264,maxBitrate:48e7,maxDpbMbs:696320,level:61},{maxMacroblocks:139264,maxBitrate:8e8,maxDpbMbs:696320,level:62}],UO=["ap4x","ap4h","apch","apcn","apcs","apco"],kO=["dtsc","dtsh","dtsl","dtse"],sO=WW=>{const iW=WW.split("."),OW=Number(iW[1]),mW=iW[2],EW=(OW<<5)+Number(mW.slice(0,-1)),NW="H"===mW.slice(-1)?1:0,PW=Number(iW[3]);return[129,EW,(NW<<7)+((8===PW?0:1)<<6)+((12===PW?1:0)<<5)+((iW[4]?Number(iW[4]):0)<<4)+((iW[5]?Number(iW[5][0]):1)<<3)+((iW[5]?Number(iW[5][1]):1)<<2)+(iW[5]?Number(iW[5][2]):0),0]},MO=/^pcm-([usf])(\\d+)(be)?$/,KO=WW=>{if(nW(xO.includes(WW)),"ulaw"===WW)return{dataType:"ulaw",sampleSize:1,littleEndian:!0,silentValue:255};if("alaw"===WW)return{dataType:"alaw",sampleSize:1,littleEndian:!0,silentValue:213};const iW=MO.exec(WW);let OW;nW(iW),OW="u"===iW[1]?"unsigned":"s"===iW[1]?"signed":"float";return{dataType:OW,sampleSize:Number(iW[2])/8,littleEndian:"be"!==iW[3],silentValue:"pcm-u8"===WW?128:0}},SO=WW=>WW.startsWith("avc1")||WW.startsWith("avc3")?"avc":WW.startsWith("hev1")||WW.startsWith("hvc1")?"hevc":"vp8"===WW?"vp8":WW.startsWith("vp09")?"vp9":WW.startsWith("av01")?"av1":UO.includes(WW)?"prores":"mp3"===WW||"mp4a.69"===WW||"mp4a.6B"===WW||"mp4a.6b"===WW||"mp4a.40.34"===WW?"mp3":WW.startsWith("mp4a.40.")||"mp4a.67"===WW?"aac":"opus"===WW||"Opus"===WW?"opus":"vorbis"===WW?"vorbis":"flac"===WW?"flac":"ac-3"===WW||"ac3"===WW?"ac3":"ec-3"===WW||"eac3"===WW?"eac3":kO.includes(WW)?"dts":"ulaw"===WW?"ulaw":"alaw"===WW?"alaw":MO.test(WW)?WW:"webvtt"===WW?"webvtt":null,YO=["avc1","avc3","hev1","hvc1","vp8","vp09","av01",...UO],yO=/^(avc1|avc3)\\.[0-9a-fA-F]{6}$/,TO=/^(hev1|hvc1)\\.(?:[ABC]?\\d+)\\.[0-9a-fA-F]{1,8}\\.[LH]\\d+(?:\\.[0-9a-fA-F]{1,2}){0,6}$/,JO=/^vp09(?:\\.\\d{2}){3}(?:(?:\\.\\d{2}){5})?$/,hO=/^av01\\.\\d\\.\\d{2}[MH]\\.\\d{2}(?:\\.\\d\\.\\d{3}\\.\\d{2}\\.\\d{2}\\.\\d{2}\\.\\d)?$/,HO=(WW,iW)=>{if(!WW)throw new TypeError("Video chunk metadata must be provided.");if("object"!==typeof WW)throw new TypeError("Video chunk metadata must be an object.");if(!WW.decoderConfig)throw new TypeError("Video chunk metadata must include a decoder configuration.");if("object"!==typeof WW.decoderConfig)throw new TypeError("Video chunk metadata decoder configuration must be an object.");if("string"!==typeof WW.decoderConfig.codec)throw new TypeError("Video chunk metadata decoder configuration must specify a codec string.");if(!YO.some((iW=>WW.decoderConfig.codec.startsWith(iW))))throw new TypeError("Video chunk metadata decoder configuration codec string must be a valid video codec string as specified in the Mediabunny Codec Registry.");if(!Number.isInteger(WW.decoderConfig.codedWidth)||WW.decoderConfig.codedWidth<=0)throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedWidth (positive integer).");if(!Number.isInteger(WW.decoderConfig.codedHeight)||WW.decoderConfig.codedHeight<=0)throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedHeight (positive integer).");if(void 0!==WW.decoderConfig.displayAspectWidth&&(!Number.isInteger(WW.decoderConfig.displayAspectWidth)||WW.decoderConfig.displayAspectWidth<=0))throw new TypeError("Video chunk metadata decoder configuration displayAspectWidth, when defined, must be a positive integer.");if(void 0!==WW.decoderConfig.displayAspectHeight&&(!Number.isInteger(WW.decoderConfig.displayAspectHeight)||WW.decoderConfig.displayAspectHeight<=0))throw new TypeError("Video chunk metadata decoder configuration displayAspectHeight, when defined, must be a positive integer.");if(void 0!==WW.decoderConfig.displayAspectWidth!==(void 0!==WW.decoderConfig.displayAspectHeight))throw new TypeError("Video chunk metadata decoder configuration must specify both displayAspectWidth and displayAspectHeight, or neither.");if(void 0!==WW.decoderConfig.description&&!aW(WW.decoderConfig.description))throw new TypeError("Video chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");if(void 0!==WW.decoderConfig.colorSpace){const{colorSpace:iW}=WW.decoderConfig;if("object"!==typeof iW)throw new TypeError("Video chunk metadata decoder configuration colorSpace, when provided, must be an object.");const OW=Object.keys(qW);if(null!=iW.primaries&&!OW.includes(iW.primaries))throw new TypeError(`Video chunk metadata decoder configuration colorSpace primaries, when defined, must be one of ${OW.join(", ")}.`);const mW=Object.keys(RW);if(null!=iW.transfer&&!mW.includes(iW.transfer))throw new TypeError(`Video chunk metadata decoder configuration colorSpace transfer, when defined, must be one of ${mW.join(", ")}.`);const EW=Object.keys(GW);if(null!=iW.matrix&&!EW.includes(iW.matrix))throw new TypeError(`Video chunk metadata decoder configuration colorSpace matrix, when defined, must be one of ${EW.join(", ")}.`);if(null!=iW.fullRange&&"boolean"!==typeof iW.fullRange)throw new TypeError("Video chunk metadata decoder configuration colorSpace fullRange, when defined, must be a boolean.")}if(WW.decoderConfig.codec.startsWith("avc1")||WW.decoderConfig.codec.startsWith("avc3")){if(!yO.test(WW.decoderConfig.codec))throw new TypeError("Video chunk metadata decoder configuration codec string for AVC must be a valid AVC codec string as specified in Section 3.4 of RFC 6381.")}else if(WW.decoderConfig.codec.startsWith("hev1")||WW.decoderConfig.codec.startsWith("hvc1")){if(!TO.test(WW.decoderConfig.codec))throw new TypeError("Video chunk metadata decoder configuration codec string for HEVC must be a valid HEVC codec string as specified in Section E.3 of ISO 14496-15.")}else if(WW.decoderConfig.codec.startsWith("vp8")){if("vp8"!==WW.decoderConfig.codec)throw new TypeError(\'Video chunk metadata decoder configuration codec string for VP8 must be "vp8".\')}else if(WW.decoderConfig.codec.startsWith("vp09")){if(!JO.test(WW.decoderConfig.codec))throw new TypeError(\'Video chunk metadata decoder configuration codec string for VP9 must be a valid VP9 codec string as specified in Section "Codecs Parameter String" of https://www.webmproject.org/vp9/mp4/.\')}else if(WW.decoderConfig.codec.startsWith("av01")){if(!hO.test(WW.decoderConfig.codec))throw new TypeError(\'Video chunk metadata decoder configuration codec string for AV1 must be a valid AV1 codec string as specified in Section "Codecs Parameter String" of https://aomediacodec.github.io/av1-isobmff/.\')}else if(UO.some((iW=>WW.decoderConfig.codec.startsWith(iW)))&&!UO.some((iW=>WW.decoderConfig.codec===iW)))throw new TypeError(`Video chunk metadata decoder configuration codec string for ProRes must be one of the valid ProRes four-character codes: ${UO.join(", ")}.`);if(null!==iW&&SO(WW.decoderConfig.codec)!==iW)throw new TypeError(`Video chunk metadata decoder configuration codec string \'${WW.decoderConfig.codec}\' does not fit to the track codec \'${iW}\'.`)},nO=["mp4a","mp3","opus","vorbis","flac","ulaw","alaw","pcm","ac-3","ec-3","dts"],uO=(WW,iW)=>{if(!WW)throw new TypeError("Audio chunk metadata must be provided.");if("object"!==typeof WW)throw new TypeError("Audio chunk metadata must be an object.");if(!WW.decoderConfig)throw new TypeError("Audio chunk metadata must include a decoder configuration.");if("object"!==typeof WW.decoderConfig)throw new TypeError("Audio chunk metadata decoder configuration must be an object.");if("string"!==typeof WW.decoderConfig.codec)throw new TypeError("Audio chunk metadata decoder configuration must specify a codec string.");if(!nO.some((iW=>WW.decoderConfig.codec.startsWith(iW))))throw new TypeError("Audio chunk metadata decoder configuration codec string must be a valid audio codec string as specified in the Mediabunny Codec Registry.");if(!Number.isInteger(WW.decoderConfig.sampleRate)||WW.decoderConfig.sampleRate<=0)throw new TypeError("Audio chunk metadata decoder configuration must specify a valid sampleRate (positive integer).");if(!Number.isInteger(WW.decoderConfig.numberOfChannels)||WW.decoderConfig.numberOfChannels<=0)throw new TypeError("Audio chunk metadata decoder configuration must specify a valid numberOfChannels (positive integer).");if(void 0!==WW.decoderConfig.description&&!aW(WW.decoderConfig.description))throw new TypeError("Audio chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");if(WW.decoderConfig.codec.startsWith("mp4a")&&"mp4a.69"!==WW.decoderConfig.codec&&"mp4a.6B"!==WW.decoderConfig.codec&&"mp4a.6b"!==WW.decoderConfig.codec){if(!["mp4a.40.2","mp4a.40.02","mp4a.40.5","mp4a.40.05","mp4a.40.29","mp4a.67"].includes(WW.decoderConfig.codec))throw new TypeError("Audio chunk metadata decoder configuration codec string for AAC must be a valid AAC codec string as specified in https://www.w3.org/TR/webcodecs-aac-codec-registration/.")}else if(WW.decoderConfig.codec.startsWith("mp3")||WW.decoderConfig.codec.startsWith("mp4a")){if("mp3"!==WW.decoderConfig.codec&&"mp4a.69"!==WW.decoderConfig.codec&&"mp4a.6B"!==WW.decoderConfig.codec&&"mp4a.6b"!==WW.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for MP3 must be "mp3", "mp4a.69" or "mp4a.6B".\')}else if(WW.decoderConfig.codec.startsWith("opus")){if("opus"!==WW.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for Opus must be "opus".\');if(WW.decoderConfig.description&&WW.decoderConfig.description.byteLength<18)throw new TypeError("Audio chunk metadata decoder configuration description, when specified, is expected to be an Identification Header as specified in Section 5.1 of RFC 7845.")}else if(WW.decoderConfig.codec.startsWith("vorbis")){if("vorbis"!==WW.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for Vorbis must be "vorbis".\');if(!WW.decoderConfig.description)throw new TypeError("Audio chunk metadata decoder configuration for Vorbis must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-vorbis-codec-registration/.")}else if(WW.decoderConfig.codec.startsWith("flac")){if("flac"!==WW.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for FLAC must be "flac".\');const iW=42;if(!WW.decoderConfig.description||WW.decoderConfig.description.byteLength<iW)throw new TypeError("Audio chunk metadata decoder configuration for FLAC must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-flac-codec-registration/.")}else if(WW.decoderConfig.codec.startsWith("ac-3")||WW.decoderConfig.codec.startsWith("ac3")){if("ac-3"!==WW.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for AC-3 must be "ac-3".\')}else if(WW.decoderConfig.codec.startsWith("ec-3")||WW.decoderConfig.codec.startsWith("eac3")){if("ec-3"!==WW.decoderConfig.codec)throw new TypeError(\'Audio chunk metadata decoder configuration codec string for EC-3 must be "ec-3".\')}else if(WW.decoderConfig.codec.startsWith("dts")){if(!kO.includes(WW.decoderConfig.codec))throw new TypeError(`Audio chunk metadata decoder configuration codec string for DTS must be one of the following four-character codes: ${kO.join(", ")}.`)}else if((WW.decoderConfig.codec.startsWith("pcm")||WW.decoderConfig.codec.startsWith("ulaw")||WW.decoderConfig.codec.startsWith("alaw"))&&!xO.includes(WW.decoderConfig.codec))throw new TypeError(`Audio chunk metadata decoder configuration codec string for PCM must be one of the supported PCM codecs (${xO.join(", ")}).`);if(null!==iW&&SO(WW.decoderConfig.codec)!==iW)throw new TypeError(`Audio chunk metadata decoder configuration codec string \'${WW.decoderConfig.codec}\' does not fit to the track codec \'${iW}\'.`)},oO=WW=>{if(!WW)throw new TypeError("Subtitle metadata must be provided.");if("object"!==typeof WW)throw new TypeError("Subtitle metadata must be an object.");if(!WW.config)throw new TypeError("Subtitle metadata must include a config object.");if("object"!==typeof WW.config)throw new TypeError("Subtitle metadata config must be an object.");if("string"!==typeof WW.config.description)throw new TypeError("Subtitle metadata config description must be a string.")};var dO;!function(WW){WW[WW.FrameCount=1]="FrameCount",WW[WW.FileSize=2]="FileSize",WW[WW.Toc=4]="Toc"}(dO||(dO={}));class eO{constructor(WW,iW,OW,mW,EW){this.bytes=WW,this.view=iW,this.offset=OW,this.start=mW,this.end=EW,this.bufferPos=mW-OW}static tempFromBytes(WW){return new eO(WW,CW(WW),0,0,WW.length)}get length(){return this.end-this.start}get filePos(){return this.offset+this.bufferPos}set filePos(WW){this.bufferPos=WW-this.offset}get remainingLength(){return Math.max(this.end-this.filePos,0)}skip(WW){this.bufferPos+=WW}slice(WW){let iW=arguments.length>1&&void 0!==arguments[1]?arguments[1]:this.end-WW;if(WW<this.start||WW+iW>this.end)throw new RangeError("Slicing outside of original slice.");return new eO(this.bytes,this.view,this.offset,WW,WW+iW)}}const vO=(WW,iW)=>{if(WW.filePos<WW.start||WW.filePos+iW>WW.end)throw new RangeError(`Tried reading [${WW.filePos}, ${WW.filePos+iW}), but slice is [${WW.start}, ${WW.end}). This is likely an internal error, please report it alongside the file that caused it.`)},gO=(WW,iW)=>{vO(WW,iW);const OW=WW.bytes.subarray(WW.bufferPos,WW.bufferPos+iW);return WW.bufferPos+=iW,OW};var DO,VO;!function(WW){WW[WW.Unsynchronisation=128]="Unsynchronisation",WW[WW.ExtendedHeader=64]="ExtendedHeader",WW[WW.ExperimentalIndicator=32]="ExperimentalIndicator",WW[WW.Footer=16]="Footer"}(DO||(DO={})),function(WW){WW[WW.ISO_8859_1=0]="ISO_8859_1",WW[WW.UTF_16_WITH_BOM=1]="UTF_16_WITH_BOM",WW[WW.UTF_16_BE_NO_BOM=2]="UTF_16_BE_NO_BOM",WW[WW.UTF_8=3]="UTF_8"}(VO||(VO={}));class pO{constructor(WW){this.mutex=new rW,this.trackTimestampInfo=new WeakMap,this.output=WW}onTrackClose(WW){}validateTimestamp(WW,iW,OW){let mW=this.trackTimestampInfo.get(WW);if(mW){if(OW&&(mW.maxTimestampBeforeLastKeyPacket=mW.maxTimestamp),null!==mW.maxTimestampBeforeLastKeyPacket&&iW<mW.maxTimestampBeforeLastKeyPacket)throw new Error(`Timestamps cannot be smaller than the largest timestamp of the previous GOP (a GOP begins with a key packet and ends right before the next key packet). Got ${iW}s, but largest timestamp is ${mW.maxTimestampBeforeLastKeyPacket}s.`);mW.maxTimestamp=Math.max(mW.maxTimestamp,iW)}else{if(!OW)throw new Error("First packet must be a key packet.");mW={maxTimestamp:iW,maxTimestampBeforeLastKeyPacket:null},this.trackTimestampInfo.set(WW,mW)}}}const fO=/<(?:(\\d{2}):)?(\\d{2}):(\\d{2}).(\\d{3})>/g;const CO=WW=>{const iW=Math.floor(WW/36e5),OW=Math.floor(WW%36e5/6e4),mW=Math.floor(WW%6e4/1e3),EW=WW%1e3;return iW.toString().padStart(2,"0")+":"+OW.toString().padStart(2,"0")+":"+mW.toString().padStart(2,"0")+"."+EW.toString().padStart(3,"0")};class XO{constructor(WW){this.writer=WW,this.helper=new Uint8Array(8),this.helperView=new DataView(this.helper.buffer),this.offsets=new WeakMap}writeU32(WW){this.helperView.setUint32(0,WW,!1),this.writer.write(this.helper.subarray(0,4))}writeU64(WW){this.helperView.setUint32(0,Math.floor(WW/2**32),!1),this.helperView.setUint32(4,WW,!1),this.writer.write(this.helper.subarray(0,8))}writeAscii(WW){for(let iW=0;iW<WW.length;iW++)this.helperView.setUint8(iW%8,WW.charCodeAt(iW)),iW%8===7&&this.writer.write(this.helper);WW.length%8!==0&&this.writer.write(this.helper.subarray(0,WW.length%8))}writeBox(WW){if(this.offsets.set(WW,this.writer.getPos()),WW.contents&&!WW.children)this.writeBoxHeader(WW,WW.size??WW.contents.byteLength+8),this.writer.write(WW.contents);else{const iW=this.writer.getPos();if(this.writeBoxHeader(WW,0),WW.contents&&this.writer.write(WW.contents),WW.children)for(const EW of WW.children)EW&&this.writeBox(EW);const OW=this.writer.getPos(),mW=WW.size??OW-iW;this.writer.seek(iW),this.writeBoxHeader(WW,mW),this.writer.seek(OW)}}writeBoxHeader(WW,iW){this.writeU32(WW.largeSize?1:iW),this.writeAscii(WW.type),WW.largeSize&&this.writeU64(iW)}measureBoxHeader(WW){return 8+(WW.largeSize?8:0)}patchBox(WW){const iW=this.offsets.get(WW);nW(void 0!==iW);const OW=this.writer.getPos();this.writer.seek(iW),this.writeBox(WW),this.writer.seek(OW)}measureBox(WW){if(WW.contents&&!WW.children){return this.measureBoxHeader(WW)+WW.contents.byteLength}{let iW=this.measureBoxHeader(WW);if(WW.contents&&(iW+=WW.contents.byteLength),WW.children)for(const OW of WW.children)OW&&(iW+=this.measureBox(OW));return iW}}}const BO=new Uint8Array(8),qO=new DataView(BO.buffer),RO=WW=>[(WW%256+256)%256],GO=WW=>(qO.setUint16(0,WW,!1),[BO[0],BO[1]]),IO=WW=>(qO.setInt16(0,WW,!1),[BO[0],BO[1]]),aO=WW=>(qO.setUint32(0,WW,!1),[BO[1],BO[2],BO[3]]),rO=WW=>(qO.setUint32(0,WW,!1),[BO[0],BO[1],BO[2],BO[3]]),zO=WW=>(qO.setInt32(0,WW,!1),[BO[0],BO[1],BO[2],BO[3]]),FO=WW=>(qO.setUint32(0,Math.floor(WW/2**32),!1),qO.setUint32(4,WW,!1),[BO[0],BO[1],BO[2],BO[3],BO[4],BO[5],BO[6],BO[7]]),QO=WW=>(qO.setInt32(0,Math.floor(WW/2**32),!1),qO.setUint32(4,WW,!1),[BO[0],BO[1],BO[2],BO[3],BO[4],BO[5],BO[6],BO[7]]),Wm=WW=>(qO.setInt16(0,256*WW,!1),[BO[0],BO[1]]),im=WW=>(qO.setInt32(0,65536*WW,!1),[BO[0],BO[1],BO[2],BO[3]]),Om=WW=>(qO.setInt32(0,2**30*WW,!1),[BO[0],BO[1],BO[2],BO[3]]),mm=(WW,iW)=>{const OW=[];let mW=WW;do{let WW=127&mW;mW>>=7,OW.length>0&&(WW|=128),OW.push(WW),void 0!==iW&&iW--}while(mW>0||iW);return OW.reverse()},Em=function(WW){let iW=arguments.length>1&&void 0!==arguments[1]&&arguments[1];const OW=Array(WW.length).fill(null).map(((iW,OW)=>WW.charCodeAt(OW)));return iW&&OW.push(0),OW},Nm=WW=>[im(WW[0]),im(WW[1]),Om(WW[2]),im(WW[3]),im(WW[4]),Om(WW[5]),im(WW[6]),im(WW[7]),Om(WW[8])],Pm=(WW,iW,OW)=>({type:WW,contents:iW&&new Uint8Array(iW.flat(10)),children:OW}),Lm=(WW,iW,OW,mW,EW)=>Pm(WW,[RO(iW),aO(OW),mW??[]],EW),cm=()=>Pm("styp",[Em("iso5"),rO(0),Em("iso5"),Em("iso6"),Em("mp41"),Em("cmfc"),Em("dash")]),wm=(WW,iW)=>{const OW=Math.max(0,WW.minWrittenTimestamp);let mW=Math.max(0,WW.maxWrittenEndTimestamp-OW);return Number.isFinite(mW)||(mW=0),Lm("sidx",1,0,[rO(1),rO(fE),FO(XE(OW,fE)),FO(0),GO(0),GO(1),rO(2147483647&iW),rO(XE(mW,fE)),rO(0)])},tm=WW=>({type:"mdat",largeSize:WW}),Zm=WW=>Pm("moov",void 0,[xm(WW.creationTime,WW.trackDatas),...WW.trackDatas.map((iW=>lm(iW,WW.creationTime))),WW.isFragmented?iE(WW.trackDatas):null,bE(WW)]),xm=(WW,iW)=>{const OW=Math.max(0,...iW.map((WW=>Math.max(0,XE(BE(WW),fE)+XE(WW.startTimestampOffset??0,fE))))),mW=Math.max(0,...iW.map((WW=>WW.track.id)))+1,EW=!DW(WW)||!DW(OW),NW=EW?FO:rO;return Lm("mvhd",+EW,0,[NW(WW),NW(WW),rO(fE),NW(OW),im(1),Wm(1),Array(10).fill(0),Nm(oW),Array(24).fill(0),rO(mW)])},lm=(WW,iW)=>{const OW=CE(WW),mW=null!==WW.startTimestampOffset&&0!==WW.startTimestampOffset;return Pm("trak",void 0,[Am(WW,iW),mW?bm(WW):null,jm(WW,iW),void 0!==OW.name?Pm("udta",void 0,[Pm("name",[...BW.encode(OW.name)])]):null])},Am=(WW,iW)=>{const OW=Math.max(0,XE(BE(WW),fE)+XE(WW.startTimestampOffset??0,fE)),mW=!DW(iW)||!DW(OW),EW=mW?FO:rO;let NW;if("video"===WW.type&&WW.track.metadata.transformationMatrix)NW=WW.track.metadata.transformationMatrix;else if("video"===WW.type){const{rotation:iW,flip:OW}=WW.track.metadata;NW=((WW,iW,OW)=>{const[mW,EW,,NW,PW]=WW,LW=Math.abs(mW)*iW+Math.abs(NW)*OW,cW=Math.abs(EW)*iW+Math.abs(PW)*OW;return vW(vW(eW(-iW/2,-OW/2),WW),eW(LW/2,cW/2))})(vW(dW(iW??0),[OW?-1:1,0,0,0,1,0,0,0,1]),WW.info.width,WW.info.height)}else NW=oW;let PW=2;!1!==WW.track.metadata.disposition?.default&&(PW|=1);const LW="video"===WW.type?0:"audio"===WW.type?1:"subtitle"===WW.type?2:FW(WW);return Lm("tkhd",+mW,PW,[EW(iW),EW(iW),rO(WW.track.id),rO(0),EW(OW),Array(8).fill(0),GO(0),GO(LW),Wm("audio"===WW.type?1:0),GO(0),Nm(NW),im("video"===WW.type?WW.info.width:0),im("video"===WW.type?WW.info.height:0)])},bm=WW=>{const iW=WW.startTimestampOffset;if(nW(null!==iW),iW>0){const OW=XE(iW,fE),mW=XE(BE(WW),fE),EW=!DW(OW)||!DW(mW),NW=EW?FO:rO,PW=EW?QO:zO;return Pm("edts",void 0,[Lm("elst",EW?1:0,0,[rO(2),NW(OW),PW(-1),im(1),NW(mW),PW(0),im(1)])])}{const mW=XE(-iW,WW.timescale),EW=Math.max(0,XE(BE(WW),fE)+XE(iW,fE)),NW=!((OW=mW)>=-(2**31)&&OW<2**31)||!DW(EW),PW=NW?FO:rO,LW=NW?QO:zO;return Pm("edts",void 0,[Lm("elst",NW?1:0,0,[rO(1),PW(EW),LW(mW),im(1)])])}var OW},jm=(WW,iW)=>Pm("mdia",void 0,[Um(WW,iW),Mm(!0,km[WW.type],sm[WW.type]),Km(WW)]),Um=(WW,iW)=>{const OW=XE(BE(WW),WW.timescale),mW=!DW(iW)||!DW(OW),EW=mW?FO:rO;return Lm("mdhd",+mW,0,[EW(iW),EW(iW),rO(WW.timescale),EW(OW),GO(nE(WW.track.metadata.languageCode??Wi)),GO(0)])},km={video:"vide",audio:"soun",subtitle:"text"},sm={video:"MediabunnyVideoHandler",audio:"MediabunnySoundHandler",subtitle:"MediabunnyTextHandler"},Mm=function(WW,iW,OW){let mW=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"\\0\\0\\0\\0";return Lm("hdlr",0,0,[WW?Em("mhlr"):rO(0),Em(iW),Em(mW),rO(0),rO(0),Em(OW,!0)])},Km=WW=>Pm("minf",void 0,[Sm[WW.type](),Ym(),Jm(WW)]),Sm={video:()=>Lm("vmhd",0,1,[GO(0),GO(0),GO(0),GO(0)]),audio:()=>Lm("smhd",0,0,[GO(0),GO(0)]),subtitle:()=>Lm("nmhd",0,0)},Ym=()=>Pm("dinf",void 0,[ym()]),ym=()=>Lm("dref",0,0,[rO(1)],[Tm()]),Tm=()=>Lm("url ",0,1),Jm=WW=>{const iW=WW.compositionTimeOffsetTable.length>1||WW.compositionTimeOffsetTable.some((WW=>0!==WW.sampleCompositionTimeOffset));return Pm("stbl",void 0,[hm(WW),Im(WW),iW?Qm(WW):null,iW?WE(WW):null,rm(WW),zm(WW),Fm(WW),am(WW)])},hm=WW=>{let iW;if("video"===WW.type)iW=Hm(YE(WW.track.source._codec,WW.info.decoderConfig.codec),WW);else if("audio"===WW.type){const OW=TE(WW.track.source._codec,WW.info.decoderConfig.codec,WW.muxer.isQuickTime);nW(OW),iW=em(OW,WW)}else"subtitle"===WW.type&&(iW=Gm(hE[WW.track.source._codec],WW));return nW(iW),Lm("stsd",0,0,[rO(1)],[iW])},Hm=(WW,iW)=>Pm(WW,[Array(6).fill(0),GO(1),GO(0),GO(0),Array(12).fill(0),GO(iW.info.width),GO(iW.info.height),rO(4718592),rO(4718592),rO(0),GO(1),RO(18),Em(Ti),Array(13).fill(0),GO(iW.info.hasAlphaChannel?32:24),IO(65535)],[yE[iW.track.source._codec]?.(iW)??null,um(iW),IW(iW.info.decoderConfig.colorSpace)?null:om(iW),nm(iW)]),nm=WW=>0===WW.avgBitrate&&0===WW.maxBitrate?null:Pm("btrt",[rO(0),rO(WW.maxBitrate),rO(WW.avgBitrate)]),um=WW=>WW.info.pixelAspectRatio.num===WW.info.pixelAspectRatio.den?null:Pm("pasp",[rO(WW.info.pixelAspectRatio.num),rO(WW.info.pixelAspectRatio.den)]),om=WW=>{const iW=WW.info.decoderConfig.colorSpace;return Pm("colr",[Em(WW.muxer.isQuickTime?"nclc":"nclx"),GO(null!=iW?.primaries?qW[iW.primaries]:2),GO(null!=iW?.transfer?RW[iW.transfer]:2),GO(null!=iW?.matrix?GW[iW.matrix]:2),WW.muxer.isQuickTime?[]:RO((iW?.fullRange?1:0)<<7)])},dm=WW=>{if(!WW.info.decoderConfig)return null;const iW=WW.info.decoderConfig,OW=iW.codec.split("."),mW=Number(OW[1]),EW=Number(OW[2]),NW=(Number(OW[3])<<4)+((OW[4]?Number(OW[4]):1)<<1)+(OW[8]?Number(OW[8]):Number(iW.colorSpace?.fullRange??0)),PW=OW[5]?Number(OW[5]):iW.colorSpace?.primaries?qW[iW.colorSpace.primaries]:1,LW=OW[6]?Number(OW[6]):iW.colorSpace?.transfer?RW[iW.colorSpace.transfer]:1,cW=OW[7]?Number(OW[7]):iW.colorSpace?.matrix?GW[iW.colorSpace.matrix]:1;return Lm("vpcC",1,0,[RO(mW),RO(EW),RO(NW),RO(PW),RO(LW),RO(cW),GO(0)])},em=(WW,iW)=>{let OW,mW=0,EW=16;const NW=xO.includes(iW.track.source._codec);if(NW){const WW=iW.track.source._codec,{sampleSize:OW}=KO(WW);EW=8*OW,EW>16&&(mW=1)}if(iW.muxer.isQuickTime&&(mW=1),0===mW)OW=[Array(6).fill(0),GO(1),GO(mW),GO(0),rO(0),GO(iW.info.numberOfChannels),GO(EW),GO(0),GO(0),GO(iW.info.sampleRate<65536?iW.info.sampleRate:0),GO(0)];else{const WW=NW?0:-2;OW=[Array(6).fill(0),GO(1),GO(mW),GO(0),rO(0),GO(iW.info.numberOfChannels),GO(Math.min(EW,16)),IO(WW),GO(0),GO(iW.info.sampleRate<65536?iW.info.sampleRate:0),GO(0),NW?[rO(1),rO(EW/8),rO(iW.info.numberOfChannels*EW/8)]:[rO(0),rO(0),rO(0)],rO(2)]}return Pm(WW,OW,[JE(iW.track.source._codec,iW.muxer.isQuickTime)?.(iW)??null,nm(iW)])},gm=WW=>{let iW;switch(WW.track.source._codec){case"aac":iW=64;break;case"mp3":iW=107;break;case"vorbis":iW=221;break;default:throw new Error(`Unhandled audio codec: ${WW.track.source._codec}`)}let OW=[...RO(iW),...RO(21),...aO(0),...rO(WW.maxBitrate),...rO(WW.avgBitrate)];if(WW.info.decoderConfig.description){const iW=fW(WW.info.decoderConfig.description);OW=[...OW,...RO(5),...mm(iW.byteLength),...iW]}return OW=[...GO(1),...RO(0),...RO(4),...mm(OW.length),...OW,...RO(6),...RO(1),...RO(2)],OW=[...RO(3),...mm(OW.length),...OW],Lm("esds",0,0,OW)},Dm=WW=>Pm("wave",void 0,[Vm(WW),pm(WW),Pm("\\0\\0\\0\\0")]),Vm=WW=>Pm("frma",[Em(TE(WW.track.source._codec,WW.info.decoderConfig.codec,WW.muxer.isQuickTime))]),pm=WW=>{const{littleEndian:iW}=KO(WW.track.source._codec);return Pm("enda",[GO(+iW)])},fm=WW=>{let iW=WW.info.numberOfChannels,OW=3840,mW=WW.info.sampleRate,EW=0,NW=0,PW=new Uint8Array(0);const LW=WW.info.decoderConfig?.description;if(LW){nW(LW.byteLength>=18);const WW=fW(LW),cW=ri(WW);iW=cW.outputChannelCount,OW=cW.preSkip,mW=cW.inputSampleRate,EW=cW.outputGain,NW=cW.channelMappingFamily,cW.channelMappingTable&&(PW=cW.channelMappingTable)}return Pm("dOps",[RO(0),RO(iW),GO(OW),rO(mW),IO(EW),RO(NW),...PW])},Cm=WW=>{const iW=WW.info.decoderConfig?.description;nW(iW);const OW=fW(iW);return Lm("dfLa",0,0,[...OW.subarray(4)])},Xm=WW=>{const{littleEndian:iW,sampleSize:OW}=KO(WW.track.source._codec);return Lm("pcmC",0,0,[RO(+iW),RO(8*OW)])},Bm=WW=>{nW(WW.info.primingPacket);const iW=(WW=>{if(WW.length<7)return null;if(11!==WW[0]||119!==WW[1])return null;const iW=new Ai(WW);iW.skipBits(16),iW.skipBits(16);const OW=iW.readBits(2);if(3===OW)return null;const mW=iW.readBits(6),EW=iW.readBits(5);if(EW>8)return null;const NW=iW.readBits(3),PW=iW.readBits(3);return 0!==(1&PW)&&1!==PW&&iW.skipBits(2),0!==(4&PW)&&iW.skipBits(2),2===PW&&iW.skipBits(2),{fscod:OW,bsid:EW,bsmod:NW,acmod:PW,lfeon:iW.readBits(1),bitRateCode:Math.floor(mW/2)}})(WW.info.primingPacket.data);if(!iW)throw new Error("Couldn\'t extract AC-3 frame info from the audio packet. Ensure the packets contain valid AC-3 sync frames (as specified in ETSI TS 102 366).");const OW=new Uint8Array(3),mW=new Ai(OW);return mW.writeBits(2,iW.fscod),mW.writeBits(5,iW.bsid),mW.writeBits(3,iW.bsmod),mW.writeBits(3,iW.acmod),mW.writeBits(1,iW.lfeon),mW.writeBits(5,iW.bitRateCode),mW.writeBits(5,0),Pm("dac3",[...OW])},qm=WW=>{nW(WW.info.primingPacket);const iW=(WW=>{if(WW.length<6)return null;if(11!==WW[0]||119!==WW[1])return null;const iW=new Ai(WW);iW.skipBits(16);const OW=iW.readBits(2);if(iW.skipBits(3),0!==OW&&2!==OW)return null;const mW=iW.readBits(11),EW=iW.readBits(2);let NW,PW=0;3===EW?(PW=iW.readBits(2),NW=3):NW=iW.readBits(2);const LW=iW.readBits(3),cW=iW.readBits(1),wW=iW.readBits(5);if(wW<11||wW>16)return null;const tW=Fi[NW];let ZW;return ZW=EW<3?Yi[EW]/1e3:yi[PW]/1e3,{dataRate:Math.round((mW+1)*ZW/(16*tW)),substreams:[{fscod:EW,fscod2:PW,bsid:wW,bsmod:0,acmod:LW,lfeon:cW,numDepSub:0,chanLoc:0}]}})(WW.info.primingPacket.data);if(!iW)throw new Error("Couldn\'t extract E-AC-3 frame info from the audio packet. Ensure the packets contain valid E-AC-3 sync frames (as specified in ETSI TS 102 366).");let OW=16;for(const PW of iW.substreams)OW+=23,PW.numDepSub>0?OW+=9:OW+=1;const mW=Math.ceil(OW/8),EW=new Uint8Array(mW),NW=new Ai(EW);NW.writeBits(13,iW.dataRate),NW.writeBits(3,iW.substreams.length-1);for(const PW of iW.substreams)NW.writeBits(2,PW.fscod),NW.writeBits(5,PW.bsid),NW.writeBits(1,0),NW.writeBits(1,0),NW.writeBits(3,PW.bsmod),NW.writeBits(3,PW.acmod),NW.writeBits(1,PW.lfeon),NW.writeBits(3,0),NW.writeBits(4,PW.numDepSub),PW.numDepSub>0?NW.writeBits(9,PW.chanLoc):NW.writeBits(1,0);return Pm("dec3",[...EW])},Rm=WW=>{nW(WW.info.primingPacket);const iW=LO(WW.info.primingPacket.data);if(!iW)throw new Error("Couldn\'t extract DTS frame info from the audio packet. Ensure the packets contain valid DTS frames as specified in ETSI TS 102 114.");return Pm("ddts",[...tO(iW)])},Gm=(WW,iW)=>Pm(WW,[Array(6).fill(0),GO(1)],[HE[iW.track.source._codec](iW),nm(iW)]),Im=WW=>Lm("stts",0,0,[rO(WW.timeToSampleTable.length),WW.timeToSampleTable.map((WW=>[rO(WW.sampleCount),rO(WW.sampleDelta)]))]),am=WW=>{if(WW.samples.every((WW=>"key"===WW.type)))return null;const iW=[...WW.samples.entries()].filter((WW=>{let[,iW]=WW;return"key"===iW.type}));return Lm("stss",0,0,[rO(iW.length),iW.map((WW=>{let[iW]=WW;return rO(iW+1)}))])},rm=WW=>Lm("stsc",0,0,[rO(WW.compactlyCodedChunkTable.length),WW.compactlyCodedChunkTable.map((WW=>[rO(WW.firstChunk),rO(WW.samplesPerChunk),rO(1)]))]),zm=WW=>{if("audio"===WW.type&&WW.info.requiresPcmTransformation){const{sampleSize:iW}=KO(WW.track.source._codec);return Lm("stsz",0,0,[rO(iW*WW.info.numberOfChannels),rO(WW.samples.reduce(((iW,OW)=>iW+XE(OW.duration,WW.timescale)),0))])}return Lm("stsz",0,0,[rO(0),rO(WW.samples.length),WW.samples.map((WW=>rO(WW.size)))])},Fm=WW=>WW.finalizedChunks.length>0&&gW(WW.finalizedChunks).offset>=2**32?Lm("co64",0,0,[rO(WW.finalizedChunks.length),WW.finalizedChunks.map((WW=>FO(WW.offset)))]):Lm("stco",0,0,[rO(WW.finalizedChunks.length),WW.finalizedChunks.map((WW=>rO(WW.offset)))]),Qm=WW=>Lm("ctts",1,0,[rO(WW.compositionTimeOffsetTable.length),WW.compositionTimeOffsetTable.map((WW=>[rO(WW.sampleCount),zO(WW.sampleCompositionTimeOffset)]))]),WE=WW=>{let iW=1/0,OW=-1/0,mW=1/0,EW=-1/0;nW(WW.compositionTimeOffsetTable.length>0),nW(WW.samples.length>0);for(let PW=0;PW<WW.compositionTimeOffsetTable.length;PW++){const mW=WW.compositionTimeOffsetTable[PW];iW=Math.min(iW,mW.sampleCompositionTimeOffset),OW=Math.max(OW,mW.sampleCompositionTimeOffset)}for(let PW=0;PW<WW.samples.length;PW++){const iW=WW.samples[PW];mW=Math.min(mW,XE(iW.timestamp,WW.timescale)),EW=Math.max(EW,XE(iW.timestamp+iW.duration,WW.timescale))}const NW=Math.max(-iW,0);return EW>=2**31?null:Lm("cslg",0,0,[zO(NW),zO(iW),zO(OW),zO(mW),zO(EW)])},iE=WW=>Pm("mvex",void 0,WW.map(OE)),OE=WW=>Lm("trex",0,0,[rO(WW.track.id),rO(1),rO(0),rO(0),rO(0)]),mE=(WW,iW)=>Pm("moof",void 0,[EE(WW),...iW.map(PE)]),EE=WW=>Lm("mfhd",0,0,[rO(WW)]),NE=WW=>{let iW=0,OW=0;const mW="delta"===WW.type;return OW|=+mW,iW|=mW?1:2,iW<<24|OW<<16},PE=WW=>Pm("traf",void 0,[LE(WW),cE(WW),wE(WW)]),LE=WW=>{nW(WW.currentChunk);let iW=0;iW|=8,iW|=16,iW|=32,iW|=131072;const OW=WW.currentChunk.samples[1]??WW.currentChunk.samples[0],mW={duration:OW.timescaleUnitsToNextSample,size:OW.size,flags:NE(OW)};return Lm("tfhd",0,131128,[rO(WW.track.id),rO(mW.duration),rO(mW.size),rO(mW.flags)])},cE=WW=>(nW(WW.currentChunk),Lm("tfdt",1,0,[FO(XE(WW.currentChunk.startTimestamp,WW.timescale))])),wE=WW=>{nW(WW.currentChunk);const iW=WW.currentChunk.samples.map((WW=>WW.timescaleUnitsToNextSample)),OW=WW.currentChunk.samples.map((WW=>WW.size)),mW=WW.currentChunk.samples.map(NE),EW=WW.currentChunk.samples.map((iW=>XE(iW.timestamp-iW.decodeTimestamp,WW.timescale))),NW=new Set(iW),PW=new Set(OW),LW=new Set(mW),cW=new Set(EW),wW=2===LW.size&&mW[0]!==mW[1],tW=NW.size>1,ZW=PW.size>1,xW=!wW&&LW.size>1,lW=cW.size>1||[...cW].some((WW=>0!==WW));let AW=0;return AW|=1,AW|=4*+wW,AW|=256*+tW,AW|=512*+ZW,AW|=1024*+xW,AW|=2048*+lW,Lm("trun",1,AW,[rO(WW.currentChunk.samples.length),rO(WW.currentChunk.offset-WW.currentChunk.moofOffset||0),wW?rO(mW[0]):[],WW.currentChunk.samples.map(((WW,NW)=>[tW?rO(iW[NW]):[],ZW?rO(OW[NW]):[],xW?rO(mW[NW]):[],lW?zO(EW[NW]):[]]))])},tE=WW=>Lm("tfra",1,0,[rO(WW.track.id),rO(63),rO(WW.finalizedChunks.length),WW.finalizedChunks.map((iW=>[FO(XE(iW.samples[0].timestamp,WW.timescale)),FO(iW.moofOffset),rO(iW.trafIndex+1),rO(1),rO(1)]))]),ZE=()=>Lm("mfro",0,0,[rO(0)]),xE=()=>Pm("vtte"),lE=(WW,iW,OW,mW,EW)=>Pm("vttc",void 0,[null!==EW?Pm("vsid",[zO(EW)]):null,null!==OW?Pm("iden",[...BW.encode(OW)]):null,null!==iW?Pm("ctim",[...BW.encode(CO(iW))]):null,null!==mW?Pm("sttg",[...BW.encode(mW)]):null,Pm("payl",[...BW.encode(WW)])]),AE=WW=>Pm("vtta",[...BW.encode(WW)]),bE=WW=>{const iW=[],OW=WW.format._options.metadataFormat??"auto",mW=WW.output._metadataTags;if("mdir"===OW||"auto"===OW&&!WW.isQuickTime){const WW=ME(mW);WW&&iW.push(WW)}else if("mdta"===OW){const WW=KE(mW);WW&&iW.push(WW)}else("udta"===OW||"auto"===OW&&WW.isQuickTime)&&jE(iW,WW.output._metadataTags);return 0===iW.length?null:Pm("udta",void 0,iW)},jE=(WW,iW)=>{for(const{key:OW,value:mW}of Pi(iW))switch(OW){case"title":WW.push(UE("\\xa9nam",mW));break;case"description":WW.push(UE("\\xa9des",mW));break;case"artist":WW.push(UE("\\xa9ART",mW));break;case"album":WW.push(UE("\\xa9alb",mW));break;case"albumArtist":WW.push(UE("albr",mW));break;case"genre":WW.push(UE("\\xa9gen",mW));break;case"date":WW.push(UE("\\xa9day",mW.toISOString().slice(0,10)));break;case"comment":WW.push(UE("\\xa9cmt",mW));break;case"lyrics":WW.push(UE("\\xa9lyr",mW));break;case"raw":case"discNumber":case"discsTotal":case"trackNumber":case"tracksTotal":case"beatsPerMinute":case"images":break;default:FW(OW)}if(iW.raw)for(const OW in iW.raw){const mW=iW.raw[OW];null==mW||4!==OW.length||WW.some((WW=>WW.type===OW))||("string"===typeof mW?WW.push(UE(OW,mW)):mW instanceof Uint8Array&&WW.push(Pm(OW,Array.from(mW))))}},UE=(WW,iW)=>{const OW=BW.encode(iW);return Pm(WW,[GO(OW.length),GO(nE("und")),Array.from(OW)])},kE={"image/jpeg":13,"image/png":14,"image/bmp":27},sE=(WW,iW)=>{const OW=[];for(const{key:mW,value:EW}of Pi(WW))switch(mW){case"title":OW.push({key:iW?"title":"\\xa9nam",value:SE(EW)});break;case"description":OW.push({key:iW?"description":"\\xa9des",value:SE(EW)});break;case"artist":OW.push({key:iW?"artist":"\\xa9ART",value:SE(EW)});break;case"album":OW.push({key:iW?"album":"\\xa9alb",value:SE(EW)});break;case"albumArtist":OW.push({key:iW?"album_artist":"aART",value:SE(EW)});break;case"comment":OW.push({key:iW?"comment":"\\xa9cmt",value:SE(EW)});break;case"genre":OW.push({key:iW?"genre":"\\xa9gen",value:SE(EW)});break;case"beatsPerMinute":iW||OW.push({key:"tmpo",value:Pm("data",[rO(21),rO(0),GO(EW)])});break;case"lyrics":OW.push({key:iW?"lyrics":"\\xa9lyr",value:SE(EW)});break;case"date":OW.push({key:iW?"date":"\\xa9day",value:SE(EW.toISOString().slice(0,10))});break;case"images":for(const WW of EW)"coverFront"===WW.kind&&OW.push({key:"covr",value:Pm("data",[rO(kE[WW.mimeType]??0),rO(0),Array.from(WW.data)])});break;case"trackNumber":if(iW){const iW=void 0!==WW.tracksTotal?`${EW}/${WW.tracksTotal}`:EW.toString();OW.push({key:"track",value:SE(iW)})}else OW.push({key:"trkn",value:Pm("data",[rO(0),rO(0),GO(0),GO(EW),GO(WW.tracksTotal??0),GO(0)])});break;case"discNumber":iW||OW.push({key:"disc",value:Pm("data",[rO(0),rO(0),GO(0),GO(EW),GO(WW.discsTotal??0),GO(0)])});break;case"tracksTotal":case"discsTotal":case"raw":break;default:FW(mW)}if(WW.raw)for(const mW in WW.raw){const EW=WW.raw[mW];null==EW||!iW&&4!==mW.length||OW.some((WW=>WW.key===mW))||("string"===typeof EW?OW.push({key:mW,value:SE(EW)}):EW instanceof Uint8Array?OW.push({key:mW,value:Pm("data",[rO(0),rO(0),Array.from(EW)])}):EW instanceof xi&&OW.push({key:mW,value:Pm("data",[rO(kE[EW.mimeType]??0),rO(0),Array.from(EW.data)])}))}return OW},ME=WW=>{const iW=sE(WW,!1);return 0===iW.length?null:Lm("meta",0,0,void 0,[Mm(!1,"mdir","","appl"),Pm("ilst",void 0,iW.map((WW=>Pm(WW.key,void 0,[WW.value]))))])},KE=WW=>{const iW=sE(WW,!0);return 0===iW.length?null:Pm("meta",void 0,[Mm(!1,"mdta",""),Lm("keys",0,0,[rO(iW.length)],iW.map((WW=>Pm("mdta",[...BW.encode(WW.key)])))),Pm("ilst",void 0,iW.map(((WW,iW)=>{const OW=String.fromCharCode(...rO(iW+1));return Pm(OW,void 0,[WW.value])})))])},SE=WW=>Pm("data",[rO(1),rO(0),...BW.encode(WW)]),YE=(WW,iW)=>{switch(WW){case"avc":return iW.startsWith("avc3")?"avc3":"avc1";case"hevc":return"hvc1";case"vp8":return"vp08";case"vp9":return"vp09";case"av1":return"av01";case"prores":return iW}},yE={avc:WW=>WW.info.decoderConfig&&Pm("avcC",[...fW(WW.info.decoderConfig.description)]),hevc:WW=>WW.info.decoderConfig&&Pm("hvcC",[...fW(WW.info.decoderConfig.description)]),vp8:dm,vp9:dm,av1:WW=>Pm("av1C",sO(WW.info.decoderConfig.codec)),prores:null},TE=(WW,iW,OW)=>{switch(WW){case"aac":case"mp3":case"vorbis":return"mp4a";case"opus":return"Opus";case"flac":return"fLaC";case"ulaw":return"ulaw";case"alaw":return"alaw";case"pcm-u8":return"raw ";case"pcm-s8":return"sowt";case"ac3":return"ac-3";case"eac3":return"ec-3";case"dts":return iW}if(OW)switch(WW){case"pcm-s16":return"sowt";case"pcm-s16be":return"twos";case"pcm-s24":case"pcm-s24be":return"in24";case"pcm-s32":case"pcm-s32be":return"in32";case"pcm-f32":case"pcm-f32be":return"fl32";case"pcm-f64":case"pcm-f64be":return"fl64"}else switch(WW){case"pcm-s16":case"pcm-s16be":case"pcm-s24":case"pcm-s24be":case"pcm-s32":case"pcm-s32be":return"ipcm";case"pcm-f32":case"pcm-f32be":case"pcm-f64":case"pcm-f64be":return"fpcm"}},JE=(WW,iW)=>{switch(WW){case"aac":case"mp3":case"vorbis":return gm;case"opus":return fm;case"flac":return Cm;case"ac3":return Bm;case"eac3":return qm;case"dts":return Rm}if(iW)switch(WW){case"pcm-s24":case"pcm-s24be":case"pcm-s32":case"pcm-s32be":case"pcm-f32":case"pcm-f32be":case"pcm-f64":case"pcm-f64be":return Dm}else switch(WW){case"pcm-s16":case"pcm-s16be":case"pcm-s24":case"pcm-s24be":case"pcm-s32":case"pcm-s32be":case"pcm-f32":case"pcm-f32be":case"pcm-f64":case"pcm-f64be":return Xm}return null},hE={webvtt:"wvtt"},HE={webvtt:WW=>Pm("vttC",[...BW.encode(WW.info.config.description)])},nE=WW=>{nW(3===WW.length);let iW=0;for(let OW=0;OW<3;OW++)iW<<=5,iW+=WW.charCodeAt(OW)-96;return iW};class uE{constructor(WW,iW){if(this.finalized=!1,this.started=!1,this.pos=0,this.trackedWrites=null,this.trackedStart=-1,this.trackedEnd=-1,WW._writerAcquired)throw new Error("Can\'t have multiple Writers for the same Target.");this.target=WW,WW._setMonotonicity(iW),WW._writerAcquired=!0}start(){nW(!this.started),this.target._start(),this.started=!0}write(WW){nW(this.started&&!this.finalized),this.maybeTrackWrites(WW),this.target._write(WW,this.pos),this.pos+=WW.byteLength}seek(WW){this.pos=WW}getPos(){return this.pos}async flush(){return nW(this.started&&!this.finalized),this.target._flush()}async finalize(){nW(this.started&&!this.finalized),await this.target._finalize(),this.finalized=!0}maybeTrackWrites(WW){if(!this.trackedWrites)return;let iW=this.getPos();if(iW<this.trackedStart){if(iW+WW.byteLength<=this.trackedStart)return;WW=WW.subarray(this.trackedStart-iW),iW=0}const OW=iW+WW.byteLength-this.trackedStart;let mW=this.trackedWrites.byteLength;for(;mW<OW;)mW*=2;if(mW!==this.trackedWrites.byteLength){const WW=new Uint8Array(mW);WW.set(this.trackedWrites,0),this.trackedWrites=WW}this.trackedWrites.set(WW,iW-this.trackedStart),this.trackedEnd=Math.max(this.trackedEnd,iW+WW.byteLength)}startTrackingWrites(){this.trackedWrites=new Uint8Array(1024),this.trackedStart=this.getPos(),this.trackedEnd=this.trackedStart}stopTrackingWrites(){if(!this.trackedWrites)throw new Error("Internal error: Can\'t get tracked writes since nothing was tracked.");const WW={data:this.trackedWrites.subarray(0,this.trackedEnd-this.trackedStart),start:this.trackedStart,end:this.trackedEnd};return this.trackedWrites=null,WW}}OW(6);class oE extends ti{constructor(){super(...arguments),this._writerAcquired=!1,this._monotonicity=null,this.onwrite=null}_setMonotonicity(WW){!1!==this._monotonicity&&(this._monotonicity=WW)}_dispatchWrite(WW,iW){this.onwrite?.(WW,iW),this._emit("write",{start:WW,end:iW})}slice(WW){if(!Number.isInteger(WW)||WW<0)throw new TypeError("offset must be a non-negative integer.");return new DE(this,WW)}}const dE=65536,eE=2**32;class vE extends oE{constructor(){let WW=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(super(),this.buffer=null,this._maxPos=0,!WW||"object"!==typeof WW)throw new TypeError("BufferTarget options, when provided, must be an object.");if(void 0!==WW.onFinalize&&"function"!==typeof WW.onFinalize)throw new TypeError("options.onFinalize, when provided, must be a function.");if(this._options=WW,this._supportsResize="resize"in new ArrayBuffer(0),this._supportsResize)try{this._buffer=new ArrayBuffer(dE,{maxByteLength:eE})}catch{this._buffer=new ArrayBuffer(dE),this._supportsResize=!1}else this._buffer=new ArrayBuffer(dE);this._bytes=new Uint8Array(this._buffer)}_ensureSize(WW){let iW=this._buffer.byteLength;for(;iW<WW;)iW*=2;if(iW!==this._buffer.byteLength){if(iW>eE)throw new Error("ArrayBuffer exceeded maximum size of 4294967296 bytes. Please consider using another target.");if(this._supportsResize)this._buffer.resize(iW);else{const WW=new ArrayBuffer(iW),OW=new Uint8Array(WW);OW.set(this._bytes,0),this._buffer=WW,this._bytes=OW}}}_start(){}_write(WW,iW){this._ensureSize(iW+WW.byteLength),this._bytes.set(WW,iW),this._maxPos=Math.max(this._maxPos,iW+WW.byteLength),this._dispatchWrite(iW,iW+WW.byteLength)}async _flush(){}async _finalize(){this.buffer=this._buffer.slice(0,this._maxPos),this._options.onFinalize&&await this._options.onFinalize(this.buffer),this._emit("finalized")}async _close(){}_getSlice(WW,iW){return this._bytes.slice(WW,iW)}}class gE extends oE{_start(){}_write(WW,iW){this._dispatchWrite(iW,iW+WW.byteLength)}async _flush(){}async _finalize(){this._emit("finalized")}async _close(){}}class DE extends oE{constructor(WW,iW){super(),this._baseTarget=WW,this._offset=iW}_start(){}_write(WW,iW){this._baseTarget._write(WW,this._offset+iW),this._dispatchWrite(iW,iW+WW.byteLength)}_flush(){return this._baseTarget._flush()}async _finalize(){this._emit("finalized")}async _close(){}_setMonotonicity(WW){super._setMonotonicity(WW),this._baseTarget._setMonotonicity(WW)}}class VE{constructor(WW,iW){if(this.rootPath=WW,this.getTarget=iW,"string"!==typeof WW)throw new TypeError("rootPath must be a string.");if("function"!==typeof iW)throw new TypeError("getTarget must be a function.")}}const pE=WW=>{const iW=WW.filePos,OW=gO(WW,9),mW=new Ai(OW);if(4095!==mW.readBits(12))return null;mW.skipBits(1);if(0!==mW.readBits(2))return null;const EW=mW.readBits(1),NW=mW.readBits(2)+1,PW=mW.readBits(4);if(15===PW)return null;mW.skipBits(1);const LW=mW.readBits(3);if(0===LW)throw new Error("ADTS frames with channel configuration 0 are not supported.");mW.skipBits(1),mW.skipBits(1),mW.skipBits(1),mW.skipBits(1);const cW=mW.readBits(13);mW.skipBits(11);const wW=mW.readBits(2)+1;if(1!==wW)throw new Error("ADTS frames with more than one AAC frame are not supported.");let tW=null;return 1===EW?WW.filePos-=2:tW=mW.readBits(16),{objectType:NW,samplingFrequencyIndex:PW,channelConfiguration:LW,frameLength:cW,numberOfAacFrames:wW,crcCheck:tW,startPos:iW}},fE=57600,CE=WW=>{const iW={},OW=WW.track;return void 0!==OW.metadata.name&&(iW.name=OW.metadata.name),iW},XE=function(WW,iW){const OW=WW*iW;return!(arguments.length>2&&void 0!==arguments[2])||arguments[2]?Math.round(OW):OW},BE=WW=>{if(0===WW.samples.length)return 0;let iW=1/0,OW=-1/0;for(let mW=0;mW<WW.samples.length;mW++){const EW=WW.samples[mW];EW.timestamp<iW&&(iW=EW.timestamp),EW.timestamp+EW.duration>OW&&(OW=EW.timestamp+EW.duration)}return iW===1/0?0:OW-iW};class qE extends pO{constructor(WW,iW){super(WW),this.writer=null,this.boxWriter=null,this.initWriter=null,this.initBoxWriter=null,this.auxTarget=new vE,this.auxWriter=new uE(this.auxTarget,!1),this.auxBoxWriter=new XO(this.auxWriter),this.mdat=null,this.ftypSize=null,this.trackDatas=[],this.allTracksKnown=zW(),this.creationTime=Math.floor(Date.now()/1e3)+2082844800,this.finalizedChunks=[],this.wroteFragmentedHeader=!1,this.nextFragmentNumber=1,this.maxWrittenTimestamp=-1/0,this.minWrittenTimestamp=1/0,this.maxWrittenEndTimestamp=-1/0,this.segmentHeaderSize=null,this.format=iW,this.formatOptions={...iW._options},this.isQuickTime=iW instanceof AN,this.isCmaf=iW instanceof lN,this.minimumFragmentDuration=this.formatOptions.minimumFragmentDuration??(iW instanceof lN?1/0:1),this.auxWriter.start()}async start(){const WW=await this.mutex.acquire();if(this.isCmaf?(this.fastStart="fragmented",this.isFragmented=!0):(this.writer=await this.output._getRootWriter((WW=>void 0!==this.formatOptions.fastStart?"fragmented"===this.formatOptions.fastStart:WW instanceof vE)),this.boxWriter=new XO(this.writer),this.fastStart=this.formatOptions.fastStart??(this.writer.target instanceof vE&&"in-memory"),this.isFragmented="fragmented"===this.fastStart),this.isCmaf){if(!this.output._hasInitTarget())throw new Error("CMAF outputs require the initTarget field in OutputOptions to be set; the init segment will be written to it.");const WW=await this.output._getInitTarget(),iW=new uE(WW,!0);iW.start(),this.initWriter=iW,this.initBoxWriter=new XO(iW)}const iW=this.output.tracks.some((WW=>WW.isVideoTrack()&&"avc"===WW.source._codec));{const WW=this.initBoxWriter??this.boxWriter;if(nW(WW),this.formatOptions.onFtyp&&WW.writer.startTrackingWrites(),WW.writeBox((WW=>{const iW=512;return WW.isQuickTime?Pm("ftyp",[Em("qt  "),rO(iW),Em("qt  ")]):WW.fragmented?WW.cmaf?Pm("ftyp",[Em("iso5"),rO(iW),Em("iso5"),Em("iso6"),Em("mp41"),Em("cmfc"),Em("dash")]):Pm("ftyp",[Em("iso5"),rO(iW),Em("iso5"),Em("iso6"),Em("mp41")]):Pm("ftyp",[Em("isom"),rO(iW),Em("isom"),WW.holdsAvc?Em("avc1"):[],Em("mp41")])})({isQuickTime:this.isQuickTime,holdsAvc:iW,fragmented:this.isFragmented,cmaf:this.isCmaf})),this.formatOptions.onFtyp){const{data:iW,start:OW}=WW.writer.stopTrackingWrites();this.formatOptions.onFtyp(iW,OW)}this.ftypSize=WW.writer.getPos(),this.isCmaf&&await this.initWriter.flush()}if("in-memory"===this.fastStart);else if("reserve"===this.fastStart){for(const OW of this.output.tracks)if(void 0===OW.metadata.maximumPacketCount)throw new Error("All tracks must specify maximumPacketCount in their metadata when using fastStart: \'reserve\'.")}else this.isFragmented||(nW(this.writer),nW(this.boxWriter),this.formatOptions.onMdat&&this.writer.startTrackingWrites(),this.mdat=tm(!0),this.boxWriter.writeBox(this.mdat));await(this.writer?.flush());for(const OW of this.output.tracks)OW.isVideoTrack()&&OW.metadata.decoderConfig?this.getVideoTrackData(OW,OW.metadata.primingPacket??null,{decoderConfig:OW.metadata.decoderConfig}):OW.isAudioTrack()&&OW.metadata.decoderConfig&&this.getAudioTrackData(OW,OW.metadata.primingPacket??null,{decoderConfig:OW.metadata.decoderConfig});WW()}allTracksAreKnown(){for(const WW of this.output.tracks)if(!WW.source._closed&&!this.trackDatas.some((iW=>iW.track===WW)))return!1;return!0}async getMimeType(){await this.allTracksKnown.promise;const WW=this.trackDatas.map((WW=>{if("video"===WW.type)return WW.info.decoderConfig.codec;if("audio"===WW.type)return WW.info.decoderConfig.codec;return{webvtt:"wvtt"}[WW.track.source._codec]}));return(WW=>{let iW=(WW.hasVideo?"video/":WW.hasAudio?"audio/":"application/")+(WW.isQuickTime?"quicktime":"mp4");WW.codecStrings.length>0&&(iW+=`; codecs="${[...new Set(WW.codecStrings)].join(", ")}"`);return iW})({isQuickTime:this.isQuickTime,hasVideo:this.trackDatas.some((WW=>"video"===WW.type)),hasAudio:this.trackDatas.some((WW=>"audio"===WW.type)),codecStrings:WW})}getVideoTrackData(WW,iW,OW){const mW=this.trackDatas.find((iW=>iW.track===WW));if(mW)return mW;HO(OW,WW.source._codec),nW(OW),nW(OW.decoderConfig);const EW={...OW.decoderConfig};nW(void 0!==EW.codedWidth),nW(void 0!==EW.codedHeight);let NW=!1;if("avc"!==WW.source._codec||EW.description){if("hevc"===WW.source._codec&&!EW.description){if(!iW)throw new Error("No HEVC description provided; you must therefore provide a priming packet.");const WW=fi(iW.data);if(!WW)throw new Error("Couldn\'t extract an HEVCDecoderConfigurationRecord from the HEVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.265) when not providing a description, or provide a description (must be an HEVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in HEVC format.");EW.description=(WW=>{const iW=[];iW.push(WW.configurationVersion),iW.push((3&WW.generalProfileSpace)<<6|(1&WW.generalTierFlag)<<5|31&WW.generalProfileIdc),iW.push(WW.generalProfileCompatibilityFlags>>>24&255),iW.push(WW.generalProfileCompatibilityFlags>>>16&255),iW.push(WW.generalProfileCompatibilityFlags>>>8&255),iW.push(255&WW.generalProfileCompatibilityFlags),iW.push(...WW.generalConstraintIndicatorFlags),iW.push(255&WW.generalLevelIdc),iW.push(240|WW.minSpatialSegmentationIdc>>8&15),iW.push(255&WW.minSpatialSegmentationIdc),iW.push(252|3&WW.parallelismType),iW.push(252|3&WW.chromaFormatIdc),iW.push(248|7&WW.bitDepthLumaMinus8),iW.push(248|7&WW.bitDepthChromaMinus8),iW.push(WW.avgFrameRate>>8&255),iW.push(255&WW.avgFrameRate),iW.push((3&WW.constantFrameRate)<<6|(7&WW.numTemporalLayers)<<3|(1&WW.temporalIdNested)<<2|3&WW.lengthSizeMinusOne),iW.push(255&WW.arrays.length);for(const OW of WW.arrays){iW.push((1&OW.arrayCompleteness)<<7|63&OW.nalUnitType),iW.push(OW.nalUnits.length>>8&255),iW.push(255&OW.nalUnits.length);for(const WW of OW.nalUnits){iW.push(WW.length>>8&255),iW.push(255&WW.length);for(let OW=0;OW<WW.length;OW++)iW.push(WW[OW])}}return new Uint8Array(iW)})(WW),NW=!0}}else{if(!iW)throw new Error("No AVC description provided; you must therefore provide a priming packet.");const WW=ei(iW.data);if(!WW)throw new Error("Couldn\'t extract an AVCDecoderConfigurationRecord from the AVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.264) when not providing a description, or provide a description (must be an AVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in AVCC format.");EW.description=(WW=>{const iW=[];iW.push(WW.configurationVersion),iW.push(WW.avcProfileIndication),iW.push(WW.profileCompatibility),iW.push(WW.avcLevelIndication),iW.push(252|3&WW.lengthSizeMinusOne),iW.push(224|31&WW.sequenceParameterSets.length);for(const OW of WW.sequenceParameterSets){const WW=OW.byteLength;iW.push(WW>>8),iW.push(255&WW);for(let mW=0;mW<WW;mW++)iW.push(OW[mW])}iW.push(WW.pictureParameterSets.length);for(const OW of WW.pictureParameterSets){const WW=OW.byteLength;iW.push(WW>>8),iW.push(255&WW);for(let mW=0;mW<WW;mW++)iW.push(OW[mW])}if((100===WW.avcProfileIndication||110===WW.avcProfileIndication||122===WW.avcProfileIndication||144===WW.avcProfileIndication)&&null!==WW.chromaFormat){nW(null!==WW.bitDepthLumaMinus8),nW(null!==WW.bitDepthChromaMinus8),nW(null!==WW.sequenceParameterSetExt),iW.push(252|3&WW.chromaFormat),iW.push(248|7&WW.bitDepthLumaMinus8),iW.push(248|7&WW.bitDepthChromaMinus8),iW.push(WW.sequenceParameterSetExt.length);for(const OW of WW.sequenceParameterSetExt){const WW=OW.byteLength;iW.push(WW>>8),iW.push(255&WW);for(let mW=0;mW<WW;mW++)iW.push(OW[mW])}}return new Uint8Array(iW)})(WW),NW=!0}const PW=((WW,iW)=>{const OW=WW<0?-1:1;let mW=0,EW=1,NW=1,PW=0,LW=WW=Math.abs(WW);for(;;){const WW=Math.floor(LW),cW=WW*NW+mW,wW=WW*PW+EW;if(wW>iW)return{num:OW*NW,den:PW};if(mW=NW,EW=PW,NW=cW,PW=wW,LW=1/(LW-WW),!isFinite(LW))break}return{num:OW*NW,den:PW}})(1/(WW.metadata.frameRate??fE),1e6).den,LW=EW.displayAspectWidth,cW=EW.displayAspectHeight,wW=void 0===LW||void 0===cW?{num:1,den:1}:ci({num:LW*EW.codedHeight,den:cW*EW.codedWidth}),tW="ap4h"===EW.codec||"ap4x"===EW.codec,ZW={muxer:this,track:WW,type:"video",info:{width:EW.codedWidth,height:EW.codedHeight,pixelAspectRatio:wW,decoderConfig:EW,requiresAnnexBTransformation:NW,hasAlphaChannel:tW},timescale:PW,samples:[],sampleQueue:[],timestampProcessingQueue:[],timeToSampleTable:[],compositionTimeOffsetTable:[],lastTimescaleUnits:null,lastSample:null,startTimestampOffset:null,finalizedChunks:[],currentChunk:null,compactlyCodedChunkTable:[],closed:!1,avgBitrate:WW.source._nominalBitrate??WW.metadata.averageBitrate??0,maxBitrate:WW.source._nominalBitrate??WW.metadata.bitrate??0};return this.trackDatas.push(ZW),this.trackDatas.sort(((WW,iW)=>WW.track.id-iW.track.id)),this.allTracksAreKnown()&&this.allTracksKnown.resolve(),ZW}getAudioTrackData(WW,iW,OW){const mW=this.trackDatas.find((iW=>iW.track===WW));if(mW)return mW;uO(OW,WW.source._codec),nW(OW),nW(OW.decoderConfig);const EW={...OW.decoderConfig};let NW=!1;if("aac"===WW.source._codec&&!EW.description){if(!iW)throw new Error("No AAC description provided; you must therefore provide a priming packet.");const WW=pE(eO.tempFromBytes(iW.data));if(!WW)throw new Error("Couldn\'t parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");const OW=bi[WW.samplingFrequencyIndex],mW=ji[WW.channelConfiguration];if(void 0===OW||void 0===mW)throw new Error("Invalid ADTS frame header.");EW.description=Ui({objectType:WW.objectType,outputSampleRate:OW,outputNumberOfChannels:mW}),NW=!0}if(!iW){if("ac3"===WW.source._codec||"eac3"===WW.source._codec)throw new Error("AC-3/E-AC-3 require a priming packet.");if("dts"===WW.source._codec)throw new Error("DTS requires a priming packet.")}const PW={muxer:this,track:WW,type:"audio",info:{numberOfChannels:OW.decoderConfig.numberOfChannels,sampleRate:OW.decoderConfig.sampleRate,decoderConfig:EW,requiresPcmTransformation:!this.isFragmented&&xO.includes(WW.source._codec),expectedNextPcmPacketTimestamp:null,requiresAdtsStripping:NW,primingPacket:iW},timescale:EW.sampleRate,samples:[],sampleQueue:[],timestampProcessingQueue:[],timeToSampleTable:[],compositionTimeOffsetTable:[],lastTimescaleUnits:null,lastSample:null,startTimestampOffset:null,finalizedChunks:[],currentChunk:null,compactlyCodedChunkTable:[],closed:!1,avgBitrate:WW.source._nominalBitrate??WW.metadata.averageBitrate??0,maxBitrate:WW.source._nominalBitrate??WW.metadata.bitrate??0};return this.trackDatas.push(PW),this.trackDatas.sort(((WW,iW)=>WW.track.id-iW.track.id)),this.allTracksAreKnown()&&this.allTracksKnown.resolve(),PW}getSubtitleTrackData(WW,iW){const OW=this.trackDatas.find((iW=>iW.track===WW));if(OW)return OW;oO(iW),nW(iW),nW(iW.config);const mW={muxer:this,track:WW,type:"subtitle",info:{config:iW.config},timescale:1e3,samples:[],sampleQueue:[],timestampProcessingQueue:[],timeToSampleTable:[],compositionTimeOffsetTable:[],lastTimescaleUnits:null,lastSample:null,startTimestampOffset:null,finalizedChunks:[],currentChunk:null,compactlyCodedChunkTable:[],closed:!1,avgBitrate:WW.source._nominalBitrate??WW.metadata.averageBitrate??0,maxBitrate:WW.source._nominalBitrate??WW.metadata.bitrate??0,lastCueEndTimestamp:null,cueQueue:[],nextSourceId:0,cueToSourceId:new WeakMap};return this.trackDatas.push(mW),this.trackDatas.sort(((WW,iW)=>WW.track.id-iW.track.id)),this.allTracksAreKnown()&&this.allTracksKnown.resolve(),mW}async addEncodedVideoPacket(WW,iW,OW){const mW=await this.mutex.acquire();try{const mW=this.getVideoTrackData(WW,iW,OW);let EW=iW.data;if(mW.info.requiresAnnexBTransformation){const WW=[...ni(EW)].map((WW=>EW.subarray(WW.offset,WW.offset+WW.length)));if(0===WW.length)throw new Error("Failed to transform packet data. Make sure all packets are provided in Annex B format, as specified in ITU-T-REC-H.264 and ITU-T-REC-H.265.");EW=di(WW,4)}this.validateTimestamp(mW.track,iW.timestamp,"key"===iW.type);const NW=this.createSampleForTrack(mW,EW,iW.timestamp,iW.duration,iW.type);await this.registerSample(mW,NW)}finally{mW()}}async addEncodedAudioPacket(WW,iW,OW){const mW=await this.mutex.acquire();try{const mW=this.getAudioTrackData(WW,iW,OW);let EW=iW.data;if(mW.info.requiresAdtsStripping){const WW=pE(eO.tempFromBytes(EW));if(!WW)throw new Error("Expected ADTS frame, didn\'t get one.");const iW=null===WW.crcCheck?7:9;EW=EW.subarray(iW)}this.validateTimestamp(mW.track,iW.timestamp,"key"===iW.type);let NW=iW.timestamp,PW=iW.duration;if(mW.info.requiresPcmTransformation){const WW=KO(mW.info.decoderConfig.codec).sampleSize*mW.info.numberOfChannels;if(PW=EW.byteLength/WW/mW.info.sampleRate,null!==mW.info.expectedNextPcmPacketTimestamp){const WW=NW-mW.info.expectedNextPcmPacketTimestamp;if(WW<.01)NW=mW.info.expectedNextPcmPacketTimestamp;else{const iW=await this.padWithSilence(mW,mW.info.expectedNextPcmPacketTimestamp,WW);NW=mW.info.expectedNextPcmPacketTimestamp+iW}}mW.info.expectedNextPcmPacketTimestamp=NW+PW}const LW=this.createSampleForTrack(mW,EW,NW,PW,iW.type);await this.registerSample(mW,LW)}finally{mW()}}async padWithSilence(WW,iW,OW){const mW=XE(OW,WW.timescale);if(OW=mW/WW.timescale,mW>0){const{sampleSize:EW,silentValue:NW}=KO(WW.info.decoderConfig.codec),PW=mW*WW.info.numberOfChannels,LW=new Uint8Array(EW*PW).fill(NW),cW=this.createSampleForTrack(WW,new Uint8Array(LW.buffer),iW,OW,"key");await this.registerSample(WW,cW)}return OW}async addSubtitleCue(WW,iW,OW){const mW=await this.mutex.acquire();try{const mW=this.getSubtitleTrackData(WW,OW);this.validateTimestamp(mW.track,iW.timestamp,!0),"webvtt"===WW.source._codec&&(mW.cueQueue.push(iW),await this.processWebVTTCues(mW,iW.timestamp))}finally{mW()}}async processWebVTTCues(WW,iW){for(;WW.cueQueue.length>0;){WW.lastCueEndTimestamp??=Math.min(0,WW.cueQueue[0].timestamp);const OW=new Set([]);for(const cW of WW.cueQueue)nW(cW.timestamp<=iW),nW(WW.lastCueEndTimestamp<=cW.timestamp+cW.duration),OW.add(Math.max(cW.timestamp,WW.lastCueEndTimestamp)),OW.add(cW.timestamp+cW.duration);const mW=[...OW].sort(((WW,iW)=>WW-iW)),EW=mW[0],NW=mW[1]??EW;if(iW<NW)break;if(WW.lastCueEndTimestamp<EW){this.auxWriter.seek(0);const iW=xE();this.auxBoxWriter.writeBox(iW);const OW=this.auxTarget._getSlice(0,this.auxWriter.getPos()),mW=this.createSampleForTrack(WW,OW,WW.lastCueEndTimestamp,EW-WW.lastCueEndTimestamp,"key");await this.registerSample(WW,mW),WW.lastCueEndTimestamp=EW}this.auxWriter.seek(0);for(let iW=0;iW<WW.cueQueue.length;iW++){const OW=WW.cueQueue[iW];if(OW.timestamp>=NW)break;fO.lastIndex=0;const mW=fO.test(OW.text),PW=OW.timestamp+OW.duration;let LW=WW.cueToSourceId.get(OW);if(void 0===LW&&NW<PW&&(LW=WW.nextSourceId++,WW.cueToSourceId.set(OW,LW)),OW.notes){const WW=AE(OW.notes);this.auxBoxWriter.writeBox(WW)}const cW=lE(OW.text,mW?EW:null,OW.identifier??null,OW.settings??null,LW??null);this.auxBoxWriter.writeBox(cW),PW===NW&&WW.cueQueue.splice(iW--,1)}const PW=this.auxTarget._getSlice(0,this.auxWriter.getPos()),LW=this.createSampleForTrack(WW,PW,EW,NW-EW,"key");await this.registerSample(WW,LW),WW.lastCueEndTimestamp=NW}}createSampleForTrack(WW,iW,OW,mW,EW){return{timestamp:OW,decodeTimestamp:OW,duration:mW,data:iW,size:iW.byteLength,type:EW,timescaleUnitsToNextSample:XE(mW,WW.timescale)}}processTimestamps(WW,iW){if(0===WW.timestampProcessingQueue.length)return;if("audio"===WW.type&&WW.info.requiresPcmTransformation){nW(!this.isFragmented),WW.startTimestampOffset??=WW.timestampProcessingQueue[0].timestamp;let iW=0;for(let OW=0;OW<WW.timestampProcessingQueue.length;OW++){const mW=WW.timestampProcessingQueue[OW];iW+=XE(mW.duration,WW.timescale)}if(0===WW.timeToSampleTable.length)WW.timeToSampleTable.push({sampleCount:iW,sampleDelta:1});else{gW(WW.timeToSampleTable).sampleCount+=iW}return void(WW.timestampProcessingQueue.length=0)}const OW=WW.timestampProcessingQueue.map((WW=>WW.timestamp)).sort(((WW,iW)=>WW-iW));this.isFragmented?WW.startTimestampOffset??=Math.min(OW[0],0):WW.startTimestampOffset??=OW[0];for(let mW=0;mW<WW.timestampProcessingQueue.length;mW++){const iW=WW.timestampProcessingQueue[mW];iW.decodeTimestamp=OW[mW];const EW=XE(iW.timestamp-iW.decodeTimestamp,WW.timescale),NW=XE(iW.duration,WW.timescale);if(null!==WW.lastTimescaleUnits){nW(WW.lastSample);const OW=XE(iW.decodeTimestamp,WW.timescale,!1),mW=Math.round(OW-WW.lastTimescaleUnits);if(nW(mW>=0),WW.lastTimescaleUnits+=mW,WW.lastSample.timescaleUnitsToNextSample=mW,!this.isFragmented){let iW=gW(WW.timeToSampleTable);if(nW(iW),1===iW.sampleCount){iW.sampleDelta=mW;const OW=WW.timeToSampleTable[WW.timeToSampleTable.length-2];OW&&OW.sampleDelta===mW&&(OW.sampleCount++,WW.timeToSampleTable.pop(),iW=OW)}else iW.sampleDelta!==mW&&(iW.sampleCount--,WW.timeToSampleTable.push(iW={sampleCount:1,sampleDelta:mW}));iW.sampleDelta===NW?iW.sampleCount++:WW.timeToSampleTable.push({sampleCount:1,sampleDelta:NW});const OW=gW(WW.compositionTimeOffsetTable);nW(OW),OW.sampleCompositionTimeOffset===EW?OW.sampleCount++:WW.compositionTimeOffsetTable.push({sampleCount:1,sampleCompositionTimeOffset:EW})}}else WW.lastTimescaleUnits=XE(iW.decodeTimestamp,WW.timescale,!1),this.isFragmented||(WW.timeToSampleTable.push({sampleCount:1,sampleDelta:NW}),WW.compositionTimeOffsetTable.push({sampleCount:1,sampleCompositionTimeOffset:EW}));WW.lastSample=iW}if(WW.timestampProcessingQueue.length=0,nW(WW.lastSample),nW(null!==WW.lastTimescaleUnits),void 0!==iW&&0===WW.lastSample.timescaleUnitsToNextSample){nW("key"===iW.type);const OW=XE(iW.timestamp,WW.timescale,!1),mW=Math.round(OW-WW.lastTimescaleUnits);WW.lastSample.timescaleUnitsToNextSample=mW}}async registerSample(WW,iW){"key"===iW.type&&this.processTimestamps(WW,iW),WW.timestampProcessingQueue.push(iW),this.isFragmented?(WW.sampleQueue.push(iW),await this.interleaveSamples()):"reserve"===this.fastStart?await this.registerSampleFastStartReserve(WW,iW):await this.addSampleToTrack(WW,iW)}async addSampleToTrack(WW,iW){if(!this.isFragmented&&(WW.samples.push(iW),"reserve"===this.fastStart)){const iW=WW.track.metadata.maximumPacketCount;if(nW(void 0!==iW),WW.samples.length>iW)throw new Error(`Track #${WW.track.id} has already reached the maximum packet count (${iW}). Either add less packets or increase the maximum packet count.`)}let OW=!1;if(WW.currentChunk){WW.currentChunk.startTimestamp=Math.min(WW.currentChunk.startTimestamp,iW.timestamp);const mW=iW.timestamp-WW.currentChunk.startTimestamp;if(this.isFragmented){const EW=this.trackDatas.every((OW=>{if(WW===OW)return"key"===iW.type;const mW=OW.sampleQueue[0];return mW?"key"===mW.type:OW.closed}));mW>=this.minimumFragmentDuration&&EW&&iW.timestamp>this.maxWrittenTimestamp&&(OW=!0,await this.finalizeFragment())}else OW=mW>=.5}else OW=!0;OW&&(WW.currentChunk&&await this.finalizeCurrentChunk(WW),WW.currentChunk={startTimestamp:iW.timestamp,samples:[],offset:null,moofOffset:null,trafIndex:null}),nW(WW.currentChunk),WW.currentChunk.samples.push(iW),this.isFragmented&&(this.maxWrittenTimestamp=Math.max(this.maxWrittenTimestamp,iW.timestamp),this.maxWrittenEndTimestamp=Math.max(this.maxWrittenEndTimestamp,iW.timestamp+iW.duration),this.minWrittenTimestamp=Math.min(this.minWrittenTimestamp,iW.timestamp))}async finalizeCurrentChunk(WW){if(nW(!this.isFragmented),nW(this.writer),!WW.currentChunk)return;WW.finalizedChunks.push(WW.currentChunk),this.finalizedChunks.push(WW.currentChunk);let iW=WW.currentChunk.samples.length;if("audio"===WW.type&&WW.info.requiresPcmTransformation&&(iW=WW.currentChunk.samples.reduce(((iW,OW)=>iW+XE(OW.duration,WW.timescale)),0)),0!==WW.compactlyCodedChunkTable.length&&gW(WW.compactlyCodedChunkTable).samplesPerChunk===iW||WW.compactlyCodedChunkTable.push({firstChunk:WW.finalizedChunks.length,samplesPerChunk:iW}),"in-memory"!==this.fastStart){WW.currentChunk.offset=this.writer.getPos();for(const iW of WW.currentChunk.samples)nW(iW.data),this.writer.write(iW.data),iW.data=null;await this.writer.flush()}else WW.currentChunk.offset=0}async interleaveSamples(){let WW=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(nW(this.isFragmented),WW||this.allTracksAreKnown())WW:for(;;){let iW=null,OW=1/0;for(const EW of this.trackDatas){if(!WW&&0===EW.sampleQueue.length&&!EW.closed)break WW;EW.sampleQueue.length>0&&EW.sampleQueue[0].timestamp<OW&&(iW=EW,OW=EW.sampleQueue[0].timestamp)}if(!iW)break;const mW=iW.sampleQueue.shift();await this.addSampleToTrack(iW,mW)}}async finalizeFragment(){let WW=arguments.length>0&&void 0!==arguments[0]?arguments[0]:!this.isCmaf;if(nW(this.isFragmented),!this.wroteFragmentedHeader){this.wroteFragmentedHeader=!0;const WW=this.initBoxWriter??this.boxWriter;nW(WW),this.formatOptions.onMoov&&WW.writer.startTrackingWrites(),this.ensureOneEnabledTrack();const iW=Zm(this);if(WW.writeBox(iW),this.formatOptions.onMoov){const{data:iW,start:OW}=WW.writer.stopTrackingWrites();this.formatOptions.onMoov(iW,OW)}if(this.isCmaf){nW(this.initWriter),await this.initWriter.flush(),await this.initWriter.finalize(),this.writer=await this.output._getRootWriter(!0),this.boxWriter=new XO(this.writer);const WW=this.boxWriter.measureBox(cm()),iW=this.boxWriter.measureBox(wm(this,0));this.segmentHeaderSize=WW+iW,this.writer.seek(this.segmentHeaderSize)}}nW(this.writer),nW(this.boxWriter);const iW=this.trackDatas.filter((WW=>WW.currentChunk));if(0===iW.length)return void(WW&&await this.writer.flush());const OW=this.nextFragmentNumber++,mW=mE(OW,iW),EW=this.writer.getPos(),NW=EW+this.boxWriter.measureBox(mW);let PW=NW+8,LW=1/0;for(let xW=0;xW<iW.length;xW++){const WW=iW[xW];nW(WW.currentChunk),nW(null!==WW.startTimestampOffset),WW.currentChunk.offset=PW,WW.currentChunk.moofOffset=EW,WW.currentChunk.trafIndex=xW,WW.currentChunk.startTimestamp-=WW.startTimestampOffset;for(const iW of WW.currentChunk.samples)PW+=iW.size,iW.timestamp-=WW.startTimestampOffset,iW.decodeTimestamp-=WW.startTimestampOffset;LW=Math.min(LW,WW.currentChunk.startTimestamp)}const cW=PW-NW,wW=cW>=2**32;if(wW)for(const xW of iW)xW.currentChunk.offset+=8;this.formatOptions.onMoof&&this.writer.startTrackingWrites();const tW=mE(OW,iW);if(this.boxWriter.writeBox(tW),this.formatOptions.onMoof){const{data:WW,start:iW}=this.writer.stopTrackingWrites();this.formatOptions.onMoof(WW,iW,LW)}nW(this.writer.getPos()===NW),this.formatOptions.onMdat&&this.writer.startTrackingWrites();const ZW=tm(wW);ZW.size=cW,this.boxWriter.writeBox(ZW),this.writer.seek(NW+(wW?16:8));for(const xW of iW)for(const WW of xW.currentChunk.samples)this.writer.write(WW.data),WW.data=null;if(this.formatOptions.onMdat){const{data:WW,start:iW}=this.writer.stopTrackingWrites();this.formatOptions.onMdat(WW,iW)}for(const xW of iW)xW.finalizedChunks.push(xW.currentChunk),this.finalizedChunks.push(xW.currentChunk),xW.currentChunk=null;WW&&await this.writer.flush()}async registerSampleFastStartReserve(WW,iW){this.allTracksAreKnown()?(this.mdat||await this.createFastStartReserveMdat(),await this.addSampleToTrack(WW,iW)):WW.sampleQueue.push(iW)}async createFastStartReserveMdat(){nW(this.writer),nW(this.boxWriter),this.ensureOneEnabledTrack();const WW=Zm(this),iW=this.boxWriter.measureBox(WW)+this.computeSampleTableSizeUpperBound()+4096;nW(null!==this.ftypSize),this.writer.seek(this.ftypSize+iW),this.formatOptions.onMdat&&this.writer.startTrackingWrites(),this.mdat=tm(!0),this.boxWriter.writeBox(this.mdat);for(const OW of this.trackDatas){for(const WW of OW.sampleQueue)await this.addSampleToTrack(OW,WW);OW.sampleQueue.length=0}}computeSampleTableSizeUpperBound(){nW("reserve"===this.fastStart);let WW=0;for(const iW of this.trackDatas){const OW=iW.track.metadata.maximumPacketCount;nW(void 0!==OW),WW+=8*Math.ceil(2/3*OW),WW+=4*OW,WW+=8*Math.ceil(2/3*OW),WW+=12*Math.ceil(2/3*OW),WW+=4*OW,WW+=8*OW}return WW}async onTrackClose(WW){const iW=await this.mutex.acquire(),OW=this.trackDatas.find((iW=>iW.track===WW));OW&&(OW.closed=!0,"subtitle"===OW.type&&"webvtt"===WW.source._codec&&await this.processWebVTTCues(OW,1/0),this.processTimestamps(OW)),this.allTracksAreKnown()&&this.allTracksKnown.resolve(),this.isFragmented&&await this.interleaveSamples(),iW()}ensureOneEnabledTrack(){for(const WW of["video","audio","subtitle"]){const iW=this.trackDatas.filter((iW=>iW.type===WW));if(0===iW.length)continue;if(!iW.some((WW=>!1!==WW.track.metadata.disposition?.default))){const WW=iW[0];WW.track.metadata.disposition={...WW.track.metadata.disposition,default:!0}}}}async forceFragmentFinalization(){nW(this.isFragmented);const WW=await this.mutex.acquire();try{for(const WW of this.trackDatas)"subtitle"===WW.type&&"webvtt"===WW.track.source._codec&&await this.processWebVTTCues(WW,1/0),this.processTimestamps(WW);await this.interleaveSamples(!0),await this.finalizeFragment()}finally{WW()}}async finalize(){const WW=await this.mutex.acquire();this.allTracksKnown.resolve(),this.ensureOneEnabledTrack(),this.mdat||"reserve"!==this.fastStart||await this.createFastStartReserveMdat();for(const OW of this.trackDatas)OW.closed=!0,"subtitle"===OW.type&&"webvtt"===OW.track.source._codec&&await this.processWebVTTCues(OW,1/0),this.processTimestamps(OW);if(this.isFragmented)await this.interleaveSamples(!0),await this.finalizeFragment(!1);else for(const OW of this.trackDatas){await this.finalizeCurrentChunk(OW);const WW=BE(OW);if(WW>0){let iW=0;for(const WW of OW.samples)iW+=WW.size;OW.avgBitrate=Math.round(8*iW/WW)}else OW.avgBitrate=0;let iW=0,mW=0,EW=0;for(let NW=0;NW<OW.samples.length;NW++){const WW=OW.samples[NW];for(mW+=WW.size;WW.decodeTimestamp-OW.samples[iW].decodeTimestamp>=1;)mW-=OW.samples[iW].size,iW++;EW=Math.max(EW,mW)}if(OW.maxBitrate=8*EW,null!==OW.startTimestampOffset)for(let NW=0;NW<OW.samples.length;NW++){const WW=OW.samples[NW];WW.timestamp-=OW.startTimestampOffset,WW.decodeTimestamp-=OW.startTimestampOffset}}if(nW(this.writer),nW(this.boxWriter),"in-memory"===this.fastStart){let WW;this.mdat=tm(!1);for(let OW=0;OW<2;OW++){const iW=Zm(this),OW=this.boxWriter.measureBox(iW);WW=this.boxWriter.measureBox(this.mdat);let mW=this.writer.getPos()+OW+WW;for(const EW of this.finalizedChunks){EW.offset=mW;for(const{data:iW}of EW.samples)nW(iW),mW+=iW.byteLength,WW+=iW.byteLength}if(mW<2**32)break;WW>=2**32&&(this.mdat.largeSize=!0)}this.formatOptions.onMoov&&this.writer.startTrackingWrites();const iW=Zm(this);if(this.boxWriter.writeBox(iW),this.formatOptions.onMoov){const{data:WW,start:iW}=this.writer.stopTrackingWrites();this.formatOptions.onMoov(WW,iW)}this.formatOptions.onMdat&&this.writer.startTrackingWrites(),this.mdat.size=WW,this.boxWriter.writeBox(this.mdat);for(const OW of this.finalizedChunks)for(const WW of OW.samples)nW(WW.data),this.writer.write(WW.data),WW.data=null;if(this.formatOptions.onMdat){const{data:WW,start:iW}=this.writer.stopTrackingWrites();this.formatOptions.onMdat(WW,iW)}}else if(this.isFragmented)if(this.isCmaf){const WW=null!==this.segmentHeaderSize?this.writer.getPos()-this.segmentHeaderSize:0;this.writer.seek(0),this.boxWriter.writeBox(cm()),this.boxWriter.writeBox(wm(this,WW))}else{const WW=this.writer.getPos(),OW=(iW=this.trackDatas,Pm("mfra",void 0,[...iW.map(tE),ZE()]));this.boxWriter.writeBox(OW);const mW=this.writer.getPos()-WW;this.writer.seek(this.writer.getPos()-4),this.boxWriter.writeU32(mW)}else{nW(this.mdat);const WW=this.boxWriter.offsets.get(this.mdat);nW(void 0!==WW);const iW=this.writer.getPos()-WW;if(this.mdat.size=iW,this.mdat.largeSize=iW>=2**32,this.boxWriter.patchBox(this.mdat),this.formatOptions.onMdat){const{data:WW,start:iW}=this.writer.stopTrackingWrites();this.formatOptions.onMdat(WW,iW)}const OW=Zm(this);if("reserve"===this.fastStart){nW(null!==this.ftypSize),this.writer.seek(this.ftypSize),this.formatOptions.onMoov&&this.writer.startTrackingWrites(),this.boxWriter.writeBox(OW);const WW=this.boxWriter.offsets.get(this.mdat)-this.writer.getPos();this.boxWriter.writeBox({type:"free",size:WW})}else this.formatOptions.onMoov&&this.writer.startTrackingWrites(),this.boxWriter.writeBox(OW);if(this.formatOptions.onMoov){const{data:WW,start:iW}=this.writer.stopTrackingWrites();this.formatOptions.onMoov(WW,iW)}}var iW;WW()}}var RE;!function(WW){WW[WW.EBML=440786851]="EBML",WW[WW.EBMLVersion=17030]="EBMLVersion",WW[WW.EBMLReadVersion=17143]="EBMLReadVersion",WW[WW.EBMLMaxIDLength=17138]="EBMLMaxIDLength",WW[WW.EBMLMaxSizeLength=17139]="EBMLMaxSizeLength",WW[WW.DocType=17026]="DocType",WW[WW.DocTypeVersion=17031]="DocTypeVersion",WW[WW.DocTypeReadVersion=17029]="DocTypeReadVersion",WW[WW.Void=236]="Void",WW[WW.Segment=408125543]="Segment",WW[WW.SeekHead=290298740]="SeekHead",WW[WW.Seek=19899]="Seek",WW[WW.SeekID=21419]="SeekID",WW[WW.SeekPosition=21420]="SeekPosition",WW[WW.Duration=17545]="Duration",WW[WW.Info=357149030]="Info",WW[WW.TimestampScale=2807729]="TimestampScale",WW[WW.MuxingApp=19840]="MuxingApp",WW[WW.WritingApp=22337]="WritingApp",WW[WW.Tracks=374648427]="Tracks",WW[WW.TrackEntry=174]="TrackEntry",WW[WW.TrackNumber=215]="TrackNumber",WW[WW.TrackUID=29637]="TrackUID",WW[WW.TrackType=131]="TrackType",WW[WW.FlagEnabled=185]="FlagEnabled",WW[WW.FlagDefault=136]="FlagDefault",WW[WW.FlagForced=21930]="FlagForced",WW[WW.FlagOriginal=21934]="FlagOriginal",WW[WW.FlagHearingImpaired=21931]="FlagHearingImpaired",WW[WW.FlagVisualImpaired=21932]="FlagVisualImpaired",WW[WW.FlagCommentary=21935]="FlagCommentary",WW[WW.FlagLacing=156]="FlagLacing",WW[WW.Name=21358]="Name",WW[WW.Language=2274716]="Language",WW[WW.LanguageBCP47=2274717]="LanguageBCP47",WW[WW.CodecID=134]="CodecID",WW[WW.CodecPrivate=25506]="CodecPrivate",WW[WW.CodecDelay=22186]="CodecDelay",WW[WW.SeekPreRoll=22203]="SeekPreRoll",WW[WW.DefaultDuration=2352003]="DefaultDuration",WW[WW.Video=224]="Video",WW[WW.PixelWidth=176]="PixelWidth",WW[WW.PixelHeight=186]="PixelHeight",WW[WW.DisplayWidth=21680]="DisplayWidth",WW[WW.DisplayHeight=21690]="DisplayHeight",WW[WW.DisplayUnit=21682]="DisplayUnit",WW[WW.AlphaMode=21440]="AlphaMode",WW[WW.Audio=225]="Audio",WW[WW.SamplingFrequency=181]="SamplingFrequency",WW[WW.Channels=159]="Channels",WW[WW.BitDepth=25188]="BitDepth",WW[WW.SimpleBlock=163]="SimpleBlock",WW[WW.BlockGroup=160]="BlockGroup",WW[WW.Block=161]="Block",WW[WW.BlockAdditions=30113]="BlockAdditions",WW[WW.BlockMore=166]="BlockMore",WW[WW.BlockAdditional=165]="BlockAdditional",WW[WW.BlockAddID=238]="BlockAddID",WW[WW.BlockDuration=155]="BlockDuration",WW[WW.ReferenceBlock=251]="ReferenceBlock",WW[WW.Cluster=524531317]="Cluster",WW[WW.Timestamp=231]="Timestamp",WW[WW.Cues=475249515]="Cues",WW[WW.CuePoint=187]="CuePoint",WW[WW.CueTime=179]="CueTime",WW[WW.CueTrackPositions=183]="CueTrackPositions",WW[WW.CueTrack=247]="CueTrack",WW[WW.CueClusterPosition=241]="CueClusterPosition",WW[WW.Colour=21936]="Colour",WW[WW.MatrixCoefficients=21937]="MatrixCoefficients",WW[WW.TransferCharacteristics=21946]="TransferCharacteristics",WW[WW.Primaries=21947]="Primaries",WW[WW.Range=21945]="Range",WW[WW.Projection=30320]="Projection",WW[WW.ProjectionType=30321]="ProjectionType",WW[WW.ProjectionPoseYaw=30323]="ProjectionPoseYaw",WW[WW.ProjectionPosePitch=30324]="ProjectionPosePitch",WW[WW.ProjectionPoseRoll=30325]="ProjectionPoseRoll",WW[WW.Attachments=423732329]="Attachments",WW[WW.AttachedFile=24999]="AttachedFile",WW[WW.FileDescription=18046]="FileDescription",WW[WW.FileName=18030]="FileName",WW[WW.FileMediaType=18016]="FileMediaType",WW[WW.FileData=18012]="FileData",WW[WW.FileUID=18094]="FileUID",WW[WW.Chapters=272869232]="Chapters",WW[WW.Tags=307544935]="Tags",WW[WW.Tag=29555]="Tag",WW[WW.Targets=25536]="Targets",WW[WW.TargetTypeValue=26826]="TargetTypeValue",WW[WW.TargetType=25546]="TargetType",WW[WW.TagTrackUID=25541]="TagTrackUID",WW[WW.TagEditionUID=25545]="TagEditionUID",WW[WW.TagChapterUID=25540]="TagChapterUID",WW[WW.TagAttachmentUID=25542]="TagAttachmentUID",WW[WW.SimpleTag=26568]="SimpleTag",WW[WW.TagName=17827]="TagName",WW[WW.TagLanguage=17530]="TagLanguage",WW[WW.TagString=17543]="TagString",WW[WW.TagBinary=17541]="TagBinary",WW[WW.ContentEncodings=28032]="ContentEncodings",WW[WW.ContentEncoding=25152]="ContentEncoding",WW[WW.ContentEncodingOrder=20529]="ContentEncodingOrder",WW[WW.ContentEncodingScope=20530]="ContentEncodingScope",WW[WW.ContentCompression=20532]="ContentCompression",WW[WW.ContentCompAlgo=16980]="ContentCompAlgo",WW[WW.ContentCompSettings=16981]="ContentCompSettings",WW[WW.ContentEncryption=20533]="ContentEncryption"}(RE||(RE={}));RE.EBML,RE.Segment,RE.SeekHead,RE.Info,RE.Cluster,RE.Tracks,RE.Cues,RE.Attachments,RE.Chapters,RE.Tags;const GE=new Uint32Array(256);for(let dN=0;dN<256;dN++){let WW=dN<<24;for(let iW=0;iW<8;iW++)WW=2147483648&WW?WW<<1^79764919:WW<<1;GE[dN]=WW>>>0&4294967295}new Uint8Array([9,240]),new Uint8Array([70,1]);const IE=new Uint32Array(256);for(let dN=0;dN<256;dN++){let WW=dN<<24;for(let iW=0;iW<8;iW++)WW=2147483648&WW?WW<<1^79764919:WW<<1;IE[dN]=WW>>>0&4294967295}const aE=WW=>{let iW=4294967295;for(let OW=0;OW<WW.length;OW++){const mW=WW[OW];iW=(iW<<8^IE[iW>>>24^mW])>>>0}return iW},rE=new Uint8Array(16);{const WW=CW(rE);rE[0]=0,WW.setUint16(1,45069,!1),WW.setUint16(3,1,!1),rE[5]=193,rE[6]=0,rE[7]=0,WW.setUint16(8,1,!1),WW.setUint16(10,61440,!1),WW.setUint32(12,aE(rE.subarray(0,12)),!1)}const zE=new Uint8Array(0);class FE{constructor(WW,iW,OW,mW){let EW=arguments.length>4&&void 0!==arguments[4]?arguments[4]:-1,NW=arguments.length>5?arguments[5]:void 0,PW=arguments.length>6?arguments[6]:void 0;if(this.data=WW,this.type=iW,this.timestamp=OW,this.duration=mW,this.sequenceNumber=EW,WW===zE&&void 0===NW)throw new Error("Internal error: byteLength must be explicitly provided when constructing metadata-only packets.");if(void 0===NW&&(NW=WW.byteLength),!(WW instanceof Uint8Array))throw new TypeError("data must be a Uint8Array.");if("key"!==iW&&"delta"!==iW)throw new TypeError(\'type must be either "key" or "delta".\');if(!Number.isFinite(OW))throw new TypeError("timestamp must be a number.");if(!Number.isFinite(mW)||mW<0)throw new TypeError("duration must be a non-negative number.");if(!Number.isFinite(EW))throw new TypeError("sequenceNumber must be a number.");if(!Number.isInteger(NW)||NW<0)throw new TypeError("byteLength must be a non-negative integer.");if(void 0!==PW&&("object"!==typeof PW||!PW))throw new TypeError("sideData, when provided, must be an object.");if(void 0!==PW?.alpha&&!(PW.alpha instanceof Uint8Array))throw new TypeError("sideData.alpha, when provided, must be a Uint8Array.");if(void 0!==PW?.alphaByteLength&&(!Number.isInteger(PW.alphaByteLength)||PW.alphaByteLength<0))throw new TypeError("sideData.alphaByteLength, when provided, must be a non-negative integer.");this.byteLength=NW,this.sideData=PW??{},this.sideData.alpha&&void 0===this.sideData.alphaByteLength&&(this.sideData.alphaByteLength=this.sideData.alpha.byteLength)}get isMetadataOnly(){return this.data===zE}get microsecondTimestamp(){return Math.trunc(mi*this.timestamp)}get microsecondDuration(){return Math.trunc(mi*this.duration)}toEncodedVideoChunk(){if(this.isMetadataOnly)throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");if("undefined"===typeof EncodedVideoChunk)throw new Error("EncodedVideoChunk is not available in this environment.");return new EncodedVideoChunk({data:this.data,type:this.type,timestamp:this.microsecondTimestamp,duration:this.microsecondDuration})}alphaToEncodedVideoChunk(){let WW=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.type;if(!this.sideData.alpha)throw new TypeError("This packet does not contain alpha side data.");if(this.isMetadataOnly)throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");if("undefined"===typeof EncodedVideoChunk)throw new Error("EncodedVideoChunk is not available in this environment.");return new EncodedVideoChunk({data:this.sideData.alpha,type:WW,timestamp:this.microsecondTimestamp,duration:this.microsecondDuration})}toEncodedAudioChunk(){if(this.isMetadataOnly)throw new TypeError("Metadata-only packets cannot be converted to an audio chunk.");if("undefined"===typeof EncodedAudioChunk)throw new Error("EncodedAudioChunk is not available in this environment.");return new EncodedAudioChunk({data:this.data,type:this.type,timestamp:this.microsecondTimestamp,duration:this.microsecondDuration})}static fromEncodedChunk(WW,iW){if(!(WW instanceof EncodedVideoChunk||WW instanceof EncodedAudioChunk))throw new TypeError("chunk must be an EncodedVideoChunk or EncodedAudioChunk.");const OW=new Uint8Array(WW.byteLength);return WW.copyTo(OW),new FE(OW,WW.type,WW.timestamp/1e6,(WW.duration??0)/1e6,void 0,void 0,iW)}clone(WW){if(void 0!==WW&&("object"!==typeof WW||null===WW))throw new TypeError("options, when provided, must be an object.");if(void 0!==WW?.data&&!(WW.data instanceof Uint8Array))throw new TypeError("options.data, when provided, must be a Uint8Array.");if(void 0!==WW?.type&&"key"!==WW.type&&"delta"!==WW.type)throw new TypeError(\'options.type, when provided, must be either "key" or "delta".\');if(void 0!==WW?.timestamp&&!Number.isFinite(WW.timestamp))throw new TypeError("options.timestamp, when provided, must be a number.");if(void 0!==WW?.duration&&!Number.isFinite(WW.duration))throw new TypeError("options.duration, when provided, must be a number.");if(void 0!==WW?.sequenceNumber&&!Number.isFinite(WW.sequenceNumber))throw new TypeError("options.sequenceNumber, when provided, must be a number.");if(void 0!==WW?.sideData&&("object"!==typeof WW.sideData||null===WW.sideData))throw new TypeError("options.sideData, when provided, must be an object.");return new FE(WW?.data??this.data,WW?.type??this.type,WW?.timestamp??this.timestamp,WW?.duration??this.duration,WW?.sequenceNumber??this.sequenceNumber,this.byteLength,WW?.sideData??this.sideData)}}var QE;!function(WW){WW[WW.PCM=1]="PCM",WW[WW.IEEE_FLOAT=3]="IEEE_FLOAT",WW[WW.ALAW=6]="ALAW",WW[WW.MULAW=7]="MULAW",WW[WW.EXTENSIBLE=65534]="EXTENSIBLE"}(QE||(QE={}));"function"===typeof SuppressedError&&SuppressedError;Symbol.dispose??=Symbol("Symbol.dispose");let WN=-1/0,iN=-1/0,ON=null;"undefined"!==typeof FinalizationRegistry&&(ON=new FinalizationRegistry((WW=>{const iW=performance.now();"video"===WW.type?(iW-WN>=1e3&&(Si._error("A VideoSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your VideoSamples as soon as you\'re done using them."),WN=iW),"undefined"!==typeof VideoFrame&&WW.data instanceof VideoFrame&&WW.data.close()):(iW-iN>=1e3&&(Si._error("An AudioSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your AudioSamples as soon as you\'re done using them."),iN=iW),"undefined"!==typeof AudioData&&WW.data instanceof AudioData&&WW.data.close())})));const mN=["I420","I420P10","I420P12","I420A","I420AP10","I420AP12","I422","I422P10","I422P12","I422A","I422AP10","I422AP12","I444","I444P10","I444P12","I444A","I444AP10","I444AP12","NV12","RGBA","RGBX","BGRA","BGRX"];new Set(mN);Symbol.dispose;new Set(["f32","f32-planar","s16","s16-planar","s32","s32-planar","u8","u8-planar"]);Symbol.dispose;new Map,new Map;"function"===typeof SuppressedError&&SuppressedError;class EN{constructor(){this._connectedTrack=null,this._closingPromise=null,this._closed=!1,this._nominalBitrate=null}_ensureValidAdd(){if(!this._connectedTrack)throw new Error("Source is not connected to an output track.");if("canceled"===this._connectedTrack.output.state)throw new Error("Output has been canceled.");if("finalizing"===this._connectedTrack.output.state||"finalized"===this._connectedTrack.output.state)throw new Error("Output has been finalized.");if("pending"===this._connectedTrack.output.state)throw new Error("Output has not started.");if(this._closed)throw new Error("Source is closed.")}async _start(){}async _flushAndClose(WW){}close(){if(this._closingPromise)return;const WW=this._connectedTrack;if(!WW)throw new Error("Cannot call close without connecting the source to an output track.");if("pending"===WW.output.state)throw new Error("Cannot call close before output has been started.");this._closingPromise=(async()=>{await this._flushAndClose(!1),this._closed=!0,"finalizing"!==WW.output.state&&"finalized"!==WW.output.state&&WW.output._muxer.onTrackClose(WW)})()}async _flushOrWaitForOngoingClose(WW){return this._closingPromise??=(async()=>{await this._flushAndClose(WW),this._closed=!0})()}}class NN extends EN{constructor(WW){if(super(),!ZO.includes(WW))throw new TypeError(`Invalid video codec \'${WW}\'. Must be one of: ${ZO.join(", ")}.`);this._codec=WW}}const PN=(WW,iW)=>{if(WW.metadata.hasOnlyKeyPackets&&"key"!==iW.type)throw new Error("Cannot add non-key packets to a hasOnlyKeyPackets video track.")};class LN extends NN{constructor(WW){super(WW)}add(WW,iW){if(!(WW instanceof FE))throw new TypeError("packet must be an EncodedPacket.");if(WW.isMetadataOnly)throw new TypeError("Metadata-only packets cannot be added.");if(void 0!==iW&&(!iW||"object"!==typeof iW))throw new TypeError("meta, when provided, must be an object.");return this._ensureValidAdd(),PN(this._connectedTrack,WW),this._connectedTrack.output._muxer.addEncodedVideoPacket(this._connectedTrack,WW,iW)}}class cN extends EN{constructor(WW){if(super(),!AO.includes(WW))throw new TypeError(`Invalid audio codec \'${WW}\'. Must be one of: ${AO.join(", ")}.`);this._codec=WW}}class wN extends EN{constructor(WW){if(super(),!bO.includes(WW))throw new TypeError(`Invalid subtitle codec \'${WW}\'. Must be one of: ${bO.join(", ")}.`);this._codec=WW}}class tN{get supportsVideoRotationMetadata(){return this.supportsVideoTransformationMetadata}getSupportedVideoCodecs(){return this.getSupportedCodecs().filter((WW=>ZO.includes(WW)))}getSupportedAudioCodecs(){return this.getSupportedCodecs().filter((WW=>AO.includes(WW)))}getSupportedSubtitleCodecs(){return this.getSupportedCodecs().filter((WW=>bO.includes(WW)))}_codecUnsupportedHint(WW){return""}_isFragmentedIsobmff(){return!1}}class ZN extends tN{constructor(){let WW=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(!WW||"object"!==typeof WW)throw new TypeError("options must be an object.");if(void 0!==WW.fastStart&&![!1,"in-memory","reserve","fragmented"].includes(WW.fastStart))throw new TypeError("options.fastStart, when provided, must be false, \'in-memory\', \'reserve\', or \'fragmented\'.");if(void 0!==WW.minimumFragmentDuration&&(!Li(WW.minimumFragmentDuration)||WW.minimumFragmentDuration<0))throw new TypeError("options.minimumFragmentDuration, when provided, must be a non-negative number.");if(void 0!==WW.onFtyp&&"function"!==typeof WW.onFtyp)throw new TypeError("options.onFtyp, when provided, must be a function.");if(void 0!==WW.onMoov&&"function"!==typeof WW.onMoov)throw new TypeError("options.onMoov, when provided, must be a function.");if(void 0!==WW.onMdat&&"function"!==typeof WW.onMdat)throw new TypeError("options.onMdat, when provided, must be a function.");if(void 0!==WW.onMoof&&"function"!==typeof WW.onMoof)throw new TypeError("options.onMoof, when provided, must be a function.");if(void 0!==WW.metadataFormat&&!["mdir","mdta","udta","auto"].includes(WW.metadataFormat))throw new TypeError("options.metadataFormat, when provided, must be either \'auto\', \'mdir\', \'mdta\', or \'udta\'.");super(),this._options=WW}getSupportedTrackCounts(){const WW=2**32-1;return{video:{min:0,max:WW},audio:{min:0,max:WW},subtitle:{min:0,max:WW},total:{min:0,max:WW}}}get supportsVideoTransformationMetadata(){return!0}get supportsTimestampedMediaData(){return!0}get negativeTimestampSupport(){return"full"}_createMuxer(WW){return new qE(WW,this)}_isFragmentedIsobmff(){return"fragmented"===this._options.fastStart}}class xN extends ZN{constructor(WW){super(WW)}get _name(){return"MP4"}get fileExtension(){return".mp4"}get mimeType(){return"video/mp4"}getSupportedCodecs(){return[...ZO,...lO,"pcm-s16","pcm-s16be","pcm-s24","pcm-s24be","pcm-s32","pcm-s32be","pcm-f32","pcm-f32be","pcm-f64","pcm-f64be",...bO]}_codecUnsupportedHint(WW){return(new AN).getSupportedCodecs().includes(WW)?" Switching to MOV will grant support for this codec.":""}}class lN extends ZN{constructor(WW){super(WW)}get _name(){return"CMAF"}get fileExtension(){return".m4s"}get mimeType(){return"video/mp4"}getSupportedCodecs(){return[...ZO,...lO,"pcm-s16","pcm-s16be","pcm-s24","pcm-s24be","pcm-s32","pcm-s32be","pcm-f32","pcm-f32be","pcm-f64","pcm-f64be",...bO]}}class AN extends ZN{constructor(WW){super(WW)}get _name(){return"MOV"}get fileExtension(){return".mov"}get mimeType(){return"video/quicktime"}getSupportedCodecs(){return[...ZO,...AO]}_codecUnsupportedHint(WW){return(new xN).getSupportedCodecs().includes(WW)?" Switching to MP4 will grant support for this codec.":""}}const bN=["video","audio","subtitle"];class jN{constructor(WW,iW,OW,mW,EW){this.id=WW,this.output=iW,this.type=OW,this.source=mW,this.metadata=EW}isVideoTrack(){return"video"===this.type}isAudioTrack(){return"audio"===this.type}isSubtitleTrack(){return"subtitle"===this.type}canBePairedWith(WW){if(!(WW instanceof jN))throw new TypeError("other must be an OutputTrack.");if(this===WW)return!1;const iW=wi(this.metadata.group),OW=wi(WW.metadata.group);for(const mW of iW){if(this.type!==WW.type&&OW.some((WW=>mW===WW)))return!0;if(OW.some((WW=>mW._pairedGroups.has(WW))))return!0}return!1}}class UN extends jN{constructor(WW,iW,OW,mW){super(WW,iW,"video",OW,mW)}}class kN extends jN{constructor(WW,iW,OW,mW){super(WW,iW,"audio",OW,mW)}}class sN extends jN{constructor(WW,iW,OW,mW){super(WW,iW,"subtitle",OW,mW)}}class MN{constructor(){this._pairedGroups=new Set}pairWith(WW){if(!(WW instanceof MN))throw new TypeError("other must be an OutputTrackGroup.");if(this===WW)throw new TypeError("Cannot pair a group with itself.");this._pairedGroups.add(WW),WW._pairedGroups.add(this)}}const KN=WW=>{if(!WW||"object"!==typeof WW)throw new TypeError("metadata must be an object.");if(void 0!==WW.languageCode&&(iW=WW.languageCode,!Oi.test(iW)))throw new TypeError("metadata.languageCode, when provided, must be a three-letter, ISO 639-2/T language code.");var iW;if(void 0!==WW.name&&"string"!==typeof WW.name)throw new TypeError("metadata.name, when provided, must be a string.");if(void 0!==WW.disposition&&(WW=>{if(!WW||"object"!==typeof WW)throw new TypeError("disposition must be an object.");if(void 0!==WW.default&&"boolean"!==typeof WW.default)throw new TypeError("disposition.default must be a boolean.");if(void 0!==WW.primary&&"boolean"!==typeof WW.primary)throw new TypeError("disposition.primary must be a boolean.");if(void 0!==WW.forced&&"boolean"!==typeof WW.forced)throw new TypeError("disposition.forced must be a boolean.");if(void 0!==WW.original&&"boolean"!==typeof WW.original)throw new TypeError("disposition.original must be a boolean.");if(void 0!==WW.commentary&&"boolean"!==typeof WW.commentary)throw new TypeError("disposition.commentary must be a boolean.");if(void 0!==WW.hearingImpaired&&"boolean"!==typeof WW.hearingImpaired)throw new TypeError("disposition.hearingImpaired must be a boolean.");if(void 0!==WW.visuallyImpaired&&"boolean"!==typeof WW.visuallyImpaired)throw new TypeError("disposition.visuallyImpaired must be a boolean.")})(WW.disposition),void 0!==WW.maximumPacketCount&&(!Number.isInteger(WW.maximumPacketCount)||WW.maximumPacketCount<0))throw new TypeError("metadata.maximumPacketCount, when provided, must be a non-negative integer.");if(void 0!==WW.bitrate&&(!Number.isFinite(WW.bitrate)||WW.bitrate<0))throw new TypeError("metadata.bitrate, when provided, must be a non-negative number.");if(void 0!==WW.averageBitrate&&(!Number.isFinite(WW.averageBitrate)||WW.averageBitrate<0))throw new TypeError("metadata.averageBitrate, when provided, must be a non-negative number.");if(void 0!==WW.group&&!(WW.group instanceof MN)&&(!Array.isArray(WW.group)||WW.group.some((WW=>!(WW instanceof MN)))))throw new TypeError("metadata.group, when provided, must be an OutputTrackGroup instance or an array of OutputTrackGroup instances.")};class SN extends ti{get target(){const WW="Output.target cannot be used when using PathedTarget with an async callback. Use the \'target\' event instead.";if(this._rootTargetPromise)throw new TypeError(WW);const iW=this._getRootTarget();if(Ni(iW))throw new TypeError(WW);return iW}constructor(WW){if(super(),this.state="pending",this.defaultTrackGroup=new MN,this.tracks=[],this._onFinalize=null,this._unfinalizedTargets=new Set,this._rootWriterPromise=null,this._startPromise=null,this._cancelPromise=null,this._finalizePromise=null,this._mutex=new rW,this._metadataTags={},this._rootTarget=null,this._rootTargetPromise=null,this._firstMediaStreamTimestamp=null,!WW||"object"!==typeof WW)throw new TypeError("options must be an object.");if(!(WW.format instanceof tN))throw new TypeError("options.format must be an OutputFormat.");if(!(WW.target instanceof oE||WW.target instanceof VE))throw new TypeError("options.target must be a Target or a PathedTarget.");if(WW.target instanceof oE&&this._rememberTarget(WW.target),void 0!==WW.initTarget&&!(WW.initTarget instanceof oE)&&"function"!==typeof WW.initTarget)throw new Error("options.initTarget, when provided, must be a Target or a function that returns or resolves to a Target.");if(void 0!==WW.onFinalize&&"function"!==typeof WW.onFinalize)throw new TypeError("options.onFinalize, when provided, must be a function.");this.format=WW.format,this.HZ=WW.target,this._onFinalize=WW.onFinalize??null,this._initTarget=WW.initTarget??null,this._initTarget instanceof oE&&this._rememberTarget(this._initTarget),this._muxer=WW.format._createMuxer(this)}_getTargetValidated(WW){nW(this.HZ instanceof VE);const iW=this.HZ.getTarget(WW),OW=WW=>{if(!(WW instanceof oE))throw new TypeError("getTarget must return a Target.");return WW};return Ni(iW)?iW.then(OW):OW(iW)}async _getTarget(WW){nW(this.HZ instanceof VE);const iW=await this._getTargetValidated(WW);return this._emit("target",{target:iW,request:WW,isRoot:WW.isRoot}),"canceled"===this.state?await iW._close():this._rememberTarget(iW),iW}_rememberTarget(WW){this._unfinalizedTargets.add(WW),WW.on("finalized",(()=>this._unfinalizedTargets.delete(WW)),{once:!0})}async _getInitTarget(){if(nW(null!==this._initTarget),this._initTarget instanceof oE)return this._initTarget;const WW=await this._initTarget();return"canceled"===this.state?await WW._close():this._rememberTarget(WW),WW}_hasInitTarget(){return null!==this._initTarget}_getRootTarget(){if(this._rootTarget)return this._rootTarget;if(this._rootTargetPromise)return this._rootTargetPromise;if(this.HZ instanceof oE)return this._emit("target",{target:this.HZ,request:null,isRoot:!0}),this._rootTarget=this.HZ,this.HZ;const WW={path:this.HZ.rootPath,isRoot:!0,mimeType:this.format.mimeType},iW=this._getTargetValidated(WW),OW=iW=>("canceled"===this.state?iW._close():this._rememberTarget(iW),this._emit("target",{target:iW,request:WW,isRoot:!0}),this._rootTarget=iW,iW);return Ni(iW)?this._rootTargetPromise=iW.then(OW):OW(iW)}_getRootWriter(WW){return this._rootWriterPromise??=(async()=>{const iW=await this._getRootTarget(),OW=new uE(iW,"boolean"===typeof WW?WW:WW(iW));return OW.start(),OW})()}addVideoTrack(WW){let iW=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(!(WW instanceof NN))throw new TypeError("source must be a VideoSource.");if(KN(iW),void 0!==iW.rotation&&![0,90,180,270].includes(iW.rotation))throw new TypeError(`Invalid video rotation: ${iW.rotation}. Has to be 0, 90, 180 or 270.`);if(void 0!==iW.flip&&"boolean"!==typeof iW.flip)throw new TypeError("metadata.flip, when provided, must be a boolean.");if(void 0!==iW.transformationMatrix&&(!Array.isArray(iW.transformationMatrix)||9!==iW.transformationMatrix.length||!iW.transformationMatrix.every((WW=>Number.isFinite(WW)))))throw new TypeError("metadata.transformationMatrix, when provided, must be an array of 9 finite numbers.");if(void 0!==iW.frameRate&&(!Number.isFinite(iW.frameRate)||iW.frameRate<=0))throw new TypeError(`Invalid video frame rate: ${iW.frameRate}. Must be a positive number.`);if(void 0!==iW.hasOnlyKeyPackets&&"boolean"!==typeof iW.hasOnlyKeyPackets)throw new TypeError("metadata.hasOnlyKeyPackets, when provided, must be a boolean.");if(void 0!==iW.canBeTransparent&&"boolean"!==typeof iW.canBeTransparent)throw new TypeError("metadata.canBeTransparent, when provided, must be a boolean.");if(void 0!==iW.decoderConfig&&HO({decoderConfig:iW.decoderConfig},WW._codec),void 0!==iW.primingPacket){if(!(iW.primingPacket instanceof FE))throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");if(void 0===iW.decoderConfig)throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")}const OW={...iW};return OW.group??=this.defaultTrackGroup,this._addTrack(new UN(this.tracks.length+1,this,WW,OW))}addAudioTrack(WW){let iW=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(!(WW instanceof cN))throw new TypeError("source must be an AudioSource.");if(KN(iW),void 0!==iW.decoderConfig&&uO({decoderConfig:iW.decoderConfig},WW._codec),void 0!==iW.primingPacket){if(!(iW.primingPacket instanceof FE))throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");if(void 0===iW.decoderConfig)throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")}const OW={...iW};return OW.group??=this.defaultTrackGroup,this._addTrack(new kN(this.tracks.length+1,this,WW,OW))}addSubtitleTrack(WW){let iW=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(!(WW instanceof wN))throw new TypeError("source must be a SubtitleSource.");KN(iW);const OW={...iW};return OW.group??=this.defaultTrackGroup,this._addTrack(new sN(this.tracks.length+1,this,WW,OW))}setMetadataTags(WW){if((WW=>{if(!WW||"object"!==typeof WW)throw new TypeError("tags must be an object.");if(void 0!==WW.title&&"string"!==typeof WW.title)throw new TypeError("tags.title, when provided, must be a string.");if(void 0!==WW.description&&"string"!==typeof WW.description)throw new TypeError("tags.description, when provided, must be a string.");if(void 0!==WW.artist&&"string"!==typeof WW.artist)throw new TypeError("tags.artist, when provided, must be a string.");if(void 0!==WW.album&&"string"!==typeof WW.album)throw new TypeError("tags.album, when provided, must be a string.");if(void 0!==WW.albumArtist&&"string"!==typeof WW.albumArtist)throw new TypeError("tags.albumArtist, when provided, must be a string.");if(void 0!==WW.trackNumber&&(!Number.isInteger(WW.trackNumber)||WW.trackNumber<=0))throw new TypeError("tags.trackNumber, when provided, must be a positive integer.");if(void 0!==WW.tracksTotal&&(!Number.isInteger(WW.tracksTotal)||WW.tracksTotal<=0))throw new TypeError("tags.tracksTotal, when provided, must be a positive integer.");if(void 0!==WW.discNumber&&(!Number.isInteger(WW.discNumber)||WW.discNumber<=0))throw new TypeError("tags.discNumber, when provided, must be a positive integer.");if(void 0!==WW.discsTotal&&(!Number.isInteger(WW.discsTotal)||WW.discsTotal<=0))throw new TypeError("tags.discsTotal, when provided, must be a positive integer.");if(void 0!==WW.genre&&"string"!==typeof WW.genre)throw new TypeError("tags.genre, when provided, must be a string.");if(void 0!==WW.date&&(!(WW.date instanceof Date)||Number.isNaN(WW.date.getTime())))throw new TypeError("tags.date, when provided, must be a valid Date.");if(void 0!==WW.beatsPerMinute&&(!Number.isInteger(WW.beatsPerMinute)||WW.beatsPerMinute<=0))throw new TypeError("tags.beatsPerMinute, when provided, must be a positive integer.");if(void 0!==WW.lyrics&&"string"!==typeof WW.lyrics)throw new TypeError("tags.lyrics, when provided, must be a string.");if(void 0!==WW.images){if(!Array.isArray(WW.images))throw new TypeError("tags.images, when provided, must be an array.");for(const iW of WW.images){if(!iW||"object"!==typeof iW)throw new TypeError("Each image in tags.images must be an object.");if(!(iW.data instanceof Uint8Array))throw new TypeError("Each image.data must be a Uint8Array.");if("string"!==typeof iW.mimeType)throw new TypeError("Each image.mimeType must be a string.");if(!["coverFront","coverBack","unknown"].includes(iW.kind))throw new TypeError("Each image.kind must be \'coverFront\', \'coverBack\', or \'unknown\'.")}}if(void 0!==WW.comment&&"string"!==typeof WW.comment)throw new TypeError("tags.comment, when provided, must be a string.");if(void 0!==WW.raw){if(!WW.raw||"object"!==typeof WW.raw)throw new TypeError("tags.raw, when provided, must be an object.");for(const iW of Object.values(WW.raw))if(null!==iW&&"string"!==typeof iW&&(!Array.isArray(iW)||!iW.every((WW=>"string"===typeof WW)))&&!(iW instanceof Uint8Array)&&!(iW instanceof xi)&&!(iW instanceof li)&&!Zi(iW))throw new TypeError("Each value in tags.raw must be a string, string array, Uint8Array, RichImageData, AttachedFile, Record<string, string>, or null.")}})(WW),"pending"!==this.state)throw new Error("Cannot set metadata tags after output has been started or canceled.");this._metadataTags=WW}_addTrack(WW){if("pending"!==this.state)throw new Error("Cannot add track after output has been started or canceled.");if(WW.source._connectedTrack)throw new Error("Source is already used for a track.");const iW=this.format.getSupportedTrackCounts(),OW=this.tracks.reduce(((iW,OW)=>iW+(OW.type===WW.type?1:0)),0),mW=iW[WW.type].max;if(OW===mW)throw new Error(0===mW?`${this.format._name} does not support ${WW.type} tracks.`:`${this.format._name} does not support more than ${mW} ${WW.type} track`+(1===mW?"":"s")+".");const EW=iW.total.max;if(this.tracks.length===EW)throw new Error(`${this.format._name} does not support more than ${EW} tracks`+(1===EW?"":"s")+" in total.");if(WW.isVideoTrack()){const iW=this.format.getSupportedVideoCodecs();if(0===iW.length)throw new Error(`${this.format._name} does not support video tracks.`+this.format._codecUnsupportedHint(WW.source._codec));if(!iW.includes(WW.source._codec))throw new Error(`Codec \'${WW.source._codec}\' cannot be contained within ${this.format._name}. Supported video codecs are: ${iW.map((WW=>`\'${WW}\'`)).join(", ")}.`+this.format._codecUnsupportedHint(WW.source._codec))}else if(WW.isAudioTrack()){const iW=this.format.getSupportedAudioCodecs();if(0===iW.length)throw new Error(`${this.format._name} does not support audio tracks.`+this.format._codecUnsupportedHint(WW.source._codec));if(!iW.includes(WW.source._codec))throw new Error(`Codec \'${WW.source._codec}\' cannot be contained within ${this.format._name}. Supported audio codecs are: ${iW.map((WW=>`\'${WW}\'`)).join(", ")}.`+this.format._codecUnsupportedHint(WW.source._codec))}else if(WW.isSubtitleTrack()){const iW=this.format.getSupportedSubtitleCodecs();if(0===iW.length)throw new Error(`${this.format._name} does not support subtitle tracks.`+this.format._codecUnsupportedHint(WW.source._codec));if(!iW.includes(WW.source._codec))throw new Error(`Codec \'${WW.source._codec}\' cannot be contained within ${this.format._name}. Supported subtitle codecs are: ${iW.map((WW=>`\'${WW}\'`)).join(", ")}.`+this.format._codecUnsupportedHint(WW.source._codec))}return this.tracks.push(WW),WW.source._connectedTrack=WW,WW}hasEnoughTracks(){const WW=this.format.getSupportedTrackCounts();for(const OW of bN){if(this.tracks.reduce(((WW,iW)=>WW+(iW.type===OW?1:0)),0)<WW[OW].min)return!1}const iW=WW.total.min;return!(this.tracks.length<iW)}async start(){const WW=this.format.getSupportedTrackCounts();for(const OW of bN){const iW=this.tracks.reduce(((WW,iW)=>WW+(iW.type===OW?1:0)),0),mW=WW[OW].min;if(iW<mW)throw new Error(mW===WW[OW].max?`${this.format._name} requires exactly ${mW} ${OW} track${1===mW?"":"s"}.`:`${this.format._name} requires at least ${mW} ${OW} track${1===mW?"":"s"}.`)}const iW=WW.total.min;if(this.tracks.length<iW)throw new Error(iW===WW.total.max?`${this.format._name} requires exactly ${iW} track`+(1===iW?"":"s")+".":`${this.format._name} requires at least ${iW} track`+(1===iW?"":"s")+".");if("canceled"===this.state)throw new Error("Output has been canceled.");return this._startPromise?(Si._warn("Output has already been started."),this._startPromise):this._startPromise=(async()=>{this.state="started";const WW=this._mutex.acquire();try{await this._muxer.start();const WW=this.tracks.map((WW=>WW.source._start()));await Promise.all(WW)}finally{(await WW)()}})()}getMimeType(){return this._muxer.getMimeType()}async cancel(){return"canceled"===this.state?this._cancelPromise??void 0:"finalizing"!==this.state&&"finalized"!==this.state?this._cancelPromise=(async()=>{this.state="canceled";const WW=await this._mutex.acquire();try{const WW=this.tracks.map((WW=>WW.source._flushOrWaitForOngoingClose(!0)));await Promise.all(WW),await Promise.all([...this._unfinalizedTargets].map((WW=>WW._close()))),this._unfinalizedTargets.clear()}finally{WW()}})():void("finalized"===this.state&&Si._warn("Output has already been finalized."))}async finalize(){if("pending"===this.state)throw new Error("Cannot finalize before starting.");if("canceled"===this.state)throw new Error("Cannot finalize after canceling.");return this._finalizePromise?(Si._warn("Output has already been finalized."),this._finalizePromise):this._finalizePromise=(async()=>{this.state="finalizing";const WW=await this._mutex.acquire();try{const WW=this.tracks.map((WW=>WW.source._flushOrWaitForOngoingClose(!1)));if(await Promise.all(WW),await this._muxer.finalize(),this._rootWriterPromise){const WW=await this._rootWriterPromise;WW.finalized||(await WW.flush(),await WW.finalize())}this._onFinalize&&await this._onFinalize(),this.state="finalized"}catch(iW){throw this.state="canceled",iW}finally{await Promise.all([...this._unfinalizedTargets].map((WW=>WW._close().catch((()=>{}))))),this._unfinalizedTargets.clear(),WW()}})()}}class YN{constructor(WW,iW,OW,mW,EW){this.frameDurationS=OW,this.onFragment=EW,this.firstTimestampUs=void 0,this.lastTimestampUs=void 0,this.output=void 0,this.source=void 0,this.pending=void 0,this.chunkCount=0,this.boxes=[],this.addingTimestampUs=null,this.firstTimestampUs=iW,this.lastTimestampUs=iW;const NW=WW=>{this.boxes.push(WW)};this.output=new SN({format:new xN({fastStart:"fragmented",minimumFragmentDuration:mW,onFtyp:NW,onMoov:NW,onMoof:NW,onMdat:WW=>{NW(WW),this.fragmentDone()}}),target:new gE}),this.source=new LN(WW),this.output.addVideoTrack(this.source),this.pending=this.output.start()}get durationUs(){return this.lastTimestampUs-this.firstTimestampUs}add(WW,iW){const OW=new Uint8Array(WW.byteLength);WW.copyTo(OW),this.addData(OW,WW.type,WW.timestamp,iW)}addData(WW,iW,OW,mW){const EW=new FE(WW,iW,(OW-this.firstTimestampUs)/1e6,this.frameDurationS),NW=0===this.chunkCount++;this.lastTimestampUs=Math.max(this.lastTimestampUs,OW),this.pending=this.pending.then((()=>(this.addingTimestampUs=OW,this.source.add(EW,NW?{decoderConfig:mW}:void 0))))}async finish(){await this.pending,this.addingTimestampUs=null,await this.output.finalize()}fragmentDone(){var WW;const iW=yN(this.boxes);this.boxes=[],this.onFragment({bytes:iW,endUs:null!==(WW=this.addingTimestampUs)&&void 0!==WW?WW:this.lastTimestampUs+1e6*this.frameDurationS})}}function yN(WW){const iW=new Uint8Array(WW.reduce(((WW,iW)=>WW+iW.byteLength),0));let OW=0;for(const mW of WW)iW.set(mW,OW),OW+=mW.byteLength;return iW}class TN{constructor(WW,iW,OW,mW){this.plan=WW,this.emit=OW,this.onSlotsLow=mW,this.pending=[],this.pendingBytes=0,this.completeUntilUs=null,this.partStartUs=void 0,this.nextIndex=0,this.partStartUs=iW}get partCount(){return this.nextIndex}addFragment(WW){let{bytes:iW,endUs:OW}=WW;this.pendingBytes>0&&this.pendingBytes+iW.byteLength>this.plan.maxBytes&&this.emitPending();let mW=0;for(;iW.byteLength-mW>this.plan.maxBytes-this.pendingBytes;){const WW=this.plan.maxBytes-this.pendingBytes;this.hold(iW.subarray(mW,mW+WW)),mW+=WW,this.emitPending()}this.hold(iW.subarray(mW)),this.completeUntilUs=OW,OW-this.partStartUs>=1e3*this.plan.partDurationMs*.9&&this.emitPending()}finish(){this.pendingBytes>0&&this.emitPending()}hold(WW){this.pending.push(WW),this.pendingBytes+=WW.byteLength}emitPending(){var WW;const iW=yN(this.pending);this.pending=[],this.pendingBytes=0,this.partStartUs=null!==(WW=this.completeUntilUs)&&void 0!==WW?WW:this.partStartUs,this.emit({index:this.nextIndex++,bytes:iW,completeUntilUs:this.completeUntilUs}),this.nextIndex===this.plan.count-1&&this.onSlotsLow()}}class JN{constructor(WW,iW,OW,mW){let EW=arguments.length>4&&void 0!==arguments[4]?arguments[4]:null,NW=arguments.length>5&&void 0!==arguments[5]?arguments[5]:()=>{};this.segmentDurationMs=WW,this.partPlan=iW,this.post=OW,this.onSegmentEncoded=mW,this.journal=EW,this.onMuxFailed=NW,this.segment=null,this.decoderConfig=null,this.pendingCutUs=null,this.cutRequested=!1,this.keyFrameMissed=!1,this.epochOffsetMs=1/0,this.finishing=Promise.resolve(),this.nextJournalId=0}noteFrameArrival(WW){const iW=HW()-WW;(iW<this.epochOffsetMs||iW-this.epochOffsetMs>1e3)&&(this.epochOffsetMs=iW)}recordingMs(WW){return WW/1e3+this.epochOffsetMs}requestCut(){this.cutRequested=!0}needsKeyFrame(WW){const iW=null===this.segment?0:(WW-this.segment.mp4.firstTimestampUs)/1e3;(this.cutRequested||null===this.pendingCutUs&&(null===this.segment||iW>=this.segmentDurationMs))&&(this.pendingCutUs=WW);const OW=this.keyFrameMissed||this.pendingCutUs===WW;return this.cutRequested=!1,this.keyFrameMissed=!1,OW}onChunk(WW,iW,OW){if(null!==iW&&void 0!==iW&&iW.decoderConfig&&(this.decoderConfig=iW.decoderConfig),null!==this.pendingCutUs&&WW.timestamp>=this.pendingCutUs){if("key"!==WW.type)return this.keyFrameMissed=!0,0;this.closeSegment(!0),this.segment=this.openSegment(WW.timestamp,OW),this.pendingCutUs=null}if(null===this.segment)return console.warn("Session replay chunk arrived with no open segment; dropping it."),0;const mW=this.segment;if(null===mW.journalHeader)return mW.mp4.add(WW,this.decoderConfig),WW.byteLength;const EW=new Uint8Array(WW.byteLength);return WW.copyTo(EW),mW.mp4.addData(EW,WW.type,WW.timestamp,this.decoderConfig),mW.chunkTimestampsUs.push(WW.timestamp),mW.unjournaled.push({recordingId:mW.journalHeader.recordingId,segmentId:mW.journalId,index:mW.chunkCount++,timestampUs:WW.timestamp,key:"key"===WW.type,data:EW}),performance.now()-mW.lastJournalMs>=250&&this.journalChunks(mW),WW.byteLength}openSegment(WW,iW){const OW=this.nextJournalId++,mW=null!==this.journal&&null!==this.decoderConfig?{recordingId:this.journal.recordingId,segmentId:OW,containerCodec:iW.containerCodec,codec:iW.codec,width:iW.width,height:iW.height,fps:iW.fps,decoderConfig:this.decoderConfig,firstTimestampUs:WW,epochOffsetMs:this.epochOffsetMs}:null,EW=[],NW=new TN(this.partPlan,WW,(NW=>{this.postPart(OW,iW,WW,NW,null===mW?null:EW)}),(()=>{var WW;(null===(WW=this.segment)||void 0===WW?void 0:WW.journalId)===OW&&this.requestCut()})),PW=this.partPlan.keyframeIntervalMs/1e3*.9,LW=new YN(iW.containerCodec,WW,1/iW.fps,PW,(WW=>{NW.addFragment(WW)}));return this.post({type:"videoSegmentOpened",journalId:OW}),{mp4:LW,parts:NW,format:iW,journalId:OW,journalHeader:mW,unjournaled:[],chunkTimestampsUs:EW,chunkCount:0,lastJournalMs:performance.now()}}postPart(WW,iW,OW,mW,EW){const{width:NW,height:PW,codec:LW,fps:cW}=iW,{startMs:wW}=function(WW,iW,OW,mW){const EW=WW/1e3+OW;return{startMs:EW,endMs:EW+iW/1e3+1e3/mW}}(OW,0,this.epochOffsetMs,cW),{completeUntilUs:tW}=mW,ZW=null===tW?wW:this.recordingMs(tW),xW=mW.bytes.buffer,lW=null===EW||null===tW?null:function(WW,iW){let OW=0,mW=WW.length;for(;OW<mW;){const EW=OW+mW>>1;WW[EW]<iW?OW=EW+1:mW=EW}return OW}(EW,tW);this.post({type:"videoPart",journalId:WW,index:mW.index,bytes:xW,meta:{startMs:wW,endMs:ZW,width:NW,height:PW,codec:LW},completeUntilUs:tW,completeUntilIndex:lW},[xW])}journalChunks(WW){const iW=WW.journalHeader;null!==this.journal&&null!==iW&&0!==WW.unjournaled.length&&(iW.epochOffsetMs=this.epochOffsetMs,this.journal.journal.appendVideo({...iW},WW.unjournaled),WW.unjournaled=[],WW.lastJournalMs=performance.now())}closeSegment(WW){const iW=this.segment;this.segment=null,this.pendingCutUs=null,null!==iW&&(WW&&this.onSegmentEncoded(),this.journalChunks(iW),this.finishing=this.finishing.then((async()=>{let WW=null;try{await iW.mp4.finish()}catch(OW){WW=OW}iW.parts.finish(),this.post({type:"videoSegmentClosed",journalId:iW.journalId,parts:iW.parts.partCount}),null!==WW&&(console.error("Failed to finish a session replay video segment.",WW),this.onMuxFailed(WW instanceof Error?WW.message:String(WW)))})).catch((WW=>{console.error("Failed to close a session replay video segment.",WW)})))}whenFinished(){return this.finishing}}function hN(WW,iW){return null!==WW&&iW>=WW}class HN{constructor(WW,iW,OW,mW,EW){let NW=arguments.length>5&&void 0!==arguments[5]?arguments[5]:null;this.config=WW,this.cssSize=OW,this.post=mW,this.encoderPreference=EW,this.quality=new ZW,this.limiter=void 0,this.segmenter=void 0,this.scaler=new KW,this.still=void 0,this.scalerFailed=!1,this.backingSize=null,this.active=null,this.operations=Promise.resolve(),this.suspended=!1,this.hidden=!1,this.unavailable=!1,this.firstViableCandidate=0,this.encoderFailures=0,this.refusedFrames=0,this.rebuildDueMs=null,this.fpsRebuildDueMs=null,this.backpressureDropsSinceHealth=0,this.captureFps=void 0,this.lastKeyframeUs=-1/0,this.capturePaused=!1,this.stats=void 0,this.statsWindowStartMs=performance.now(),this.limiter=new jW(WW.maxFps),this.captureFps=WW.maxFps,this.segmenter=new JN(WW.segmentDurationMs,iW,mW,(()=>{this.encoderFailures=0}),NW,(WW=>{this.stopVideo(`Muxer failed: ${WW}`)})),this.still=new TW(mW),this.stats=this.emptyStats()}handleFrame(WW,iW,OW){const mW=performance.now();try{this.stats.deliveredFrames++;const EW=WW.timestamp/1e3;if(this.segmenter.noteFrameArrival(EW),this.unavailable||this.hidden||this.suspended)return;if(!this.limiter.shouldKeep(EW))return void this.stats.droppedForFpsCap++;if(this.still.offer(WW,this.segmenter.recordingMs(WW.timestamp)),null===OW)return void(this.capturePaused||(this.capturePaused=!0,this.flushSegment()));if(this.capturePaused=!1,this.noteBackingSize(iW),this.noteCaptureFps(OW,mW),null===this.active)return void this.exclusive((()=>this.configureEncoder()));if(hN(this.rebuildDueMs,mW)||hN(this.fpsRebuildDueMs,mW))return void this.rebuild();if(this.active.encoder.encodeQueueSize>=3)return this.stats.droppedForBackpressure++,void this.backpressureDropsSinceHealth++;this.encode(this.active,WW)}finally{WW.close();const iW=performance.now()-mW;this.stats.workerBusyMs+=iW,this.stats.maxWorkerTaskMs=Math.max(this.stats.maxWorkerTaskMs,iW),this.maybePostStats(mW)}}resize(WW){0!==WW.width&&0!==WW.height&&(this.cssSize=WW,this.scheduleRebuildIfSizeChanged())}updateHealth(WW,iW){if(this.hidden)return void(this.backpressureDropsSinceHealth=0);const OW=this.quality.update({nowMs:performance.now(),encoderBackpressureDrops:this.backpressureDropsSinceHealth,gameFps:WW,pingMs:iW});this.backpressureDropsSinceHealth=0,OW&&(this.post({type:"qualityChanged",level:this.quality.getLevelIndex(),maxFps:this.levelMaxFps(),reason:this.quality.getLastChangeReason()}),this.rebuildDueMs=performance.now())}setHidden(WW){return this.hidden=WW,WW?this.exclusive((async()=>{await this.drainAndCloseSegment(),this.closeEncoder()})):(this.limiter.reset(),this.quality.restartWarmUp(),Promise.resolve())}cutAtNextFrame(){this.segmenter.requestCut()}gameJoined(){this.cutAtNextFrame(),this.quality.restartWarmUp()}flushSegment(){return this.exclusive((()=>this.drainAndCloseSegment()))}exclusive(WW){this.suspended=!0;const iW=this.operations.then(WW).catch((WW=>{console.error("Session replay encoder operation failed.",WW)})).finally((()=>{this.operations===iW&&(this.suspended=!1)}));return this.operations=iW,iW}rebuild(){return this.exclusive((async()=>{await this.drainAndCloseSegment(),this.closeEncoder(),await this.configureEncoder()}))}closeEncoder(){var WW;null===(WW=this.active)||void 0===WW||WW.encoder.close(),this.active=null}async drainAndCloseSegment(){const WW=this.active;null===WW||await async function(WW,iW){let OW;const mW=new Promise((WW=>{OW=setTimeout((()=>{WW(!1)}),iW)}));try{return await Promise.race([WW.then((()=>!0)),mW])}finally{clearTimeout(OW)}}(WW.encoder.flush(),5e3)?this.segmenter.closeSegment(!0):this.failEncoder(WW,"flush timed out")}encode(WW,iW){const OW=this.segmenter.needsKeyFrame(iW.timestamp)||iW.timestamp-this.lastKeyframeUs>=1e3*this.config.keyframeIntervalMs;OW&&(this.lastKeyframeUs=iW.timestamp);const mW=this.scaleToEncoder(WW,iW);try{WW.encoder.encode(mW,{keyFrame:OW})}catch(EW){return void(EW instanceof DOMException&&("InvalidStateError"===EW.name||"EncodingError"===EW.name)?this.failEncoder(WW,EW.message):++this.refusedFrames>=30?this.failEncoder(WW,`refused 30 frames in a row: ${String(EW)}`):1===this.refusedFrames&&console.warn("Session replay dropped a frame its encoder refused.",EW))}finally{mW!==iW&&mW.close()}this.refusedFrames=0,this.stats.encodedFrames++}scaleToEncoder(WW,iW){let OW=iW;if(!this.scalerFailed)try{OW=this.scaler.scale(iW,WW.size)}catch(mW){this.scalerFailed=!0,console.warn("Session replay frame scaling failed; encoding frames at the canvas size.",mW)}return OW.displayWidth===WW.size.width&&OW.displayHeight===WW.size.height||(WW.sentMismatchedFrame=!0),OW}onEncoderOutput(WW,iW,OW){const mW=performance.now();this.stats.encodedBytes+=this.segmenter.onChunk(WW,iW,{containerCodec:OW.candidate.containerCodec,codec:OW.candidate.config.codec,width:OW.size.width,height:OW.size.height,fps:OW.fps}),this.stats.workerBusyMs+=performance.now()-mW}noteBackingSize(WW){null!==this.backingSize&&xW(this.backingSize,WW)||(this.backingSize=WW,this.scheduleRebuildIfSizeChanged())}noteCaptureFps(WW,iW){this.captureFps=WW,null!==this.active&&Math.abs(this.encodeFps()-this.active.fps)>.3*this.active.fps?this.fpsRebuildDueMs??=iW+2e3:this.fpsRebuildDueMs=null}targetSize(){var WW;const iW=Math.floor(this.config.maxMacroblocks*this.quality.getLevel().areaScale);return function(WW,iW,OW){const mW=iW.width*iW.height<WW.width*WW.height?iW:WW;let EW=lW(Math.max(mW.width,64)),NW=lW(Math.max(mW.height,64));if(AW({width:EW,height:NW})>OW){const WW=EW,iW=NW;for(EW=lW(EW*Math.sqrt(16*OW*16/(EW*NW))),NW=lW(EW*iW/WW);AW({width:EW,height:NW})>OW;)EW-=2,NW=lW(EW*iW/WW)}return{width:EW,height:NW}}(this.cssSize,null!==(WW=this.backingSize)&&void 0!==WW?WW:this.cssSize,iW)}scheduleRebuildIfSizeChanged(){null===this.active||xW(this.active.size,this.targetSize())||(this.rebuildDueMs=performance.now()+500)}async configureEncoder(){if(this.unavailable)return;const WW=this.quality.getLevel(),iW=this.encodeFps(),OW=this.targetSize(),mW=function(WW){const iW={width:WW.width,height:WW.height,bitrate:WW.bitrate,framerate:WW.maxFps},OW=[],mW=[WW.preferSoftware?"prefer-software":"prefer-hardware","no-preference"],EW=WW.preferQualityLatency?MW:sW;for(const NW of mW)for(const WW of UW)for(const mW of kW)for(const PW of EW)OW.push({config:{...iW,codec:WW,hardwareAcceleration:NW,bitrateMode:mW,latencyMode:PW,avc:{format:"avc"}},containerCodec:"avc"});return OW.push({config:{...iW,codec:"vp09.00.10.08",hardwareAcceleration:"no-preference",bitrateMode:"variable",latencyMode:"realtime"},containerCodec:"vp9"}),OW}({...OW,bitrate:Math.round(bW(this.config,OW,WW.areaScale)*iW/this.config.maxFps),maxFps:iW,...this.encoderPreference});let EW=null,NW=0;for(let wW=this.firstViableCandidate;wW<mW.length&&null===EW;wW++){const WW=await VideoEncoder.isConfigSupported(mW[wW].config).catch((WW=>(console.warn("VideoEncoder.isConfigSupported threw.",mW[wW].config,WW),null)));null!==WW&&void 0!==WW&&WW.supported&&(EW=mW[wW],NW=wW,this.firstViableCandidate=wW)}if(null===EW)return void this.markUnavailable(`No supported encoder config at ${OW.width}x${OW.height}`);const PW=new VideoEncoder({output:(WW,iW)=>{this.onEncoderOutput(WW,iW,LW)},error:WW=>{this.failEncoder(LW,WW.message)}}),LW={encoder:PW,candidates:mW,candidateIndex:NW,candidate:EW,size:OW,fps:iW,sentMismatchedFrame:!1};this.active=LW,this.refusedFrames=0,this.limiter.setMaxFps(this.levelMaxFps()),this.rebuildDueMs=null,this.fpsRebuildDueMs=null,this.lastKeyframeUs=-1/0;try{PW.configure(EW.config)}catch(cW){return void this.failEncoder(LW,cW instanceof Error?cW.message:String(cW))}this.scheduleRebuildIfSizeChanged()}levelMaxFps(){return Math.max(8,Math.round(this.config.maxFps*this.quality.getLevel().fpsScale))}encodeFps(){return Math.max(1,Math.min(this.levelMaxFps(),Math.round(this.captureFps)))}failEncoder(WW,iW){console.error("Session replay encoder failed.",WW.candidate.config,iW),this.active===WW&&(this.active=null,"closed"!==WW.encoder.state&&WW.encoder.close(),this.segmenter.closeSegment(!1),this.encoderFailures++,this.firstViableCandidate=function(WW,iW,OW){var mW;let EW=arguments.length>3&&void 0!==arguments[3]&&arguments[3];const NW=null===(mW=WW[iW])||void 0===mW?void 0:mW.config.hardwareAcceleration;if(!("prefer-hardware"===NW&&OW||"no-preference"!==NW&&EW))return iW+1;for(let PW=iW+1;PW<WW.length;PW++)if(WW[PW].config.hardwareAcceleration!==NW)return PW;return WW.length}(WW.candidates,WW.candidateIndex,WW.sentMismatchedFrame,3===this.encoderFailures),this.encoderFailures>=4&&this.markUnavailable(`Encoder failed ${this.encoderFailures} times: ${iW}`))}stopVideo(WW){if(this.unavailable)return;const iW=this.active;this.active=null,null!==iW&&"closed"!==iW.encoder.state&&iW.encoder.close(),this.segmenter.closeSegment(!1),this.markUnavailable(WW)}markUnavailable(WW){console.warn(`Session replay video stopped: ${WW}`),this.unavailable=!0,this.segmenter.whenFinished().then((()=>{this.post({type:"videoUnavailable",reason:WW})}))}maybePostStats(WW){var iW,OW,mW,EW;const NW=WW-this.statsWindowStartMs;if(NW<5e3)return;const PW=this.active;this.post({type:"stats",stats:{...this.stats,windowMs:NW,qualityLevel:this.quality.getLevelIndex(),codec:null!==(iW=null===PW||void 0===PW?void 0:PW.candidate.config.codec)&&void 0!==iW?iW:null,hardwareAcceleration:null!==(OW=null===PW||void 0===PW?void 0:PW.candidate.config.hardwareAcceleration)&&void 0!==OW?OW:null,encodeWidth:null!==(mW=null===PW||void 0===PW?void 0:PW.size.width)&&void 0!==mW?mW:0,encodeHeight:null!==(EW=null===PW||void 0===PW?void 0:PW.size.height)&&void 0!==EW?EW:0}}),this.stats=this.emptyStats(),this.statsWindowStartMs=WW}emptyStats(){return{windowMs:0,deliveredFrames:0,encodedFrames:0,droppedForFpsCap:0,droppedForBackpressure:0,workerBusyMs:0,maxWorkerTaskMs:0,encodedBytes:0,qualityLevel:0,codec:null,hardwareAcceleration:null,encodeWidth:0,encodeHeight:0}}}let nN=null,uN=0;function oN(WW){let iW=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[];self.postMessage(WW,{transfer:iW})}self.onmessage=WW=>{const iW=WW.data;switch(iW.type){case"init":nN=new HN(iW.videoConfig,iW.partPlan,iW.cssSize,oN,iW.encoderPreference,iW.journalRecordingId&&wW.supported?{recordingId:iW.journalRecordingId,journal:new wW}:null);break;case"frame":if(null===nN){console.warn("Session replay video worker got a frame before its pipeline started"),iW.image.close();break}!function(WW,iW,OW,mW,EW){if(iW instanceof VideoFrame)return void WW.handleFrame(iW,mW,EW);let NW;try{NW=new VideoFrame(iW,{timestamp:OW})}catch(PW){return 0===uN++&&console.warn("Session replay couldn\'t make a video frame of a canvas bitmap; skipping frames until it can.",PW),void(30===uN&&WW.stopVideo(`Bitmap frames keep failing: ${PW instanceof Error?PW.message:String(PW)}`))}finally{iW.close()}uN=0,WW.handleFrame(NW,mW,EW)}(nN,iW.image,iW.timestampUs,iW.xx,iW.captureFps);break;case"resize":nN.resize(iW.cssSize);break;case"health":nN.updateHealth(iW.gameFps,iW.pingMs);break;case"hidden":nN.setHidden(iW.hidden);break;case"flush":nN.flushSegment();break;case"cut":nN.cutAtNextFrame();break;case"gameJoined":nN.gameJoined()}}})();', "Worker", void 0, OW.p + "sessionReplayVideo.worker.36aaf5cc.worker.js")
     }
 
-    function Ji(ee) {
-      return Math.max(2, 2 * Math.floor(ee / 2))
+    function ti(WW) {
+      return Math.max(2, 2 * Math.floor(WW / 2))
     }
 
-    function oi(ee) {
-      return Math.ceil(ee.width / 16) * Math.ceil(ee.height / 16)
+    function Zi(WW) {
+      return Math.ceil(WW.width / 16) * Math.ceil(WW.height / 16)
     }
-    class Ri {
-      constructor(ee) {
-        this.intervalMs = void 0, this.nextDueMs = -1 / 0, this.intervalMs = 1e3 / ee
+    class xi {
+      constructor(WW) {
+        this.intervalMs = void 0, this.nextDueMs = -1 / 0, this.intervalMs = 1e3 / WW
       }
-      setMaxFps(ee) {
-        this.intervalMs = 1e3 / ee
+      setMaxFps(WW) {
+        this.intervalMs = 1e3 / WW
       }
-      shouldKeep(ee) {
-        return !(ee < this.nextDueMs - .25 * this.intervalMs) && (this.nextDueMs = ee - this.nextDueMs > this.intervalMs ? ee + this.intervalMs : this.nextDueMs + this.intervalMs, !0)
+      shouldKeep(WW) {
+        return !(WW < this.nextDueMs - .25 * this.intervalMs) && (this.nextDueMs = WW - this.nextDueMs > this.intervalMs ? WW + this.intervalMs : this.nextDueMs + this.intervalMs, !0)
       }
       reset() {
         this.nextDueMs = -1 / 0
       }
     }
-    class ki {
-      constructor(ee, ie, He) {
-        this.budgetMsPerSecond = ee, this.minFps = ie, this.smoothedCostMs = He
+    class li {
+      constructor(WW, iW, OW) {
+        this.budgetMsPerSecond = WW, this.minFps = iW, this.smoothedCostMs = OW
       }
       get averageCostMs() {
         return this.smoothedCostMs
@@ -1073,42 +1078,42 @@ export const modules = {
       get paused() {
         return this.affordableFps() < this.minFps
       }
-      record(ee) {
-        const ie = this.paused ? .5 : .05;
-        this.smoothedCostMs += (ee - this.smoothedCostMs) * ie
+      record(WW) {
+        const iW = this.paused ? .5 : .05;
+        this.smoothedCostMs += (WW - this.smoothedCostMs) * iW
       }
-      maxFps(ee) {
-        return this.paused ? .1 : Math.min(ee, this.affordableFps())
+      maxFps(WW) {
+        return this.paused ? .1 : Math.min(WW, this.affordableFps())
       }
       affordableFps() {
         return this.budgetMsPerSecond / this.smoothedCostMs
       }
     }
-    class qi {
+    class Ai {
       static isSupported() {
-        const ee = globalThis.CanvasCaptureMediaStream;
-        return ("undefined" !== typeof CanvasCaptureMediaStreamTrack && "requestFrame" in CanvasCaptureMediaStreamTrack.prototype || void 0 !== ee && "requestFrame" in ee.prototype) && "function" === typeof HTMLCanvasElement.prototype.captureStream && "requestVideoFrameCallback" in HTMLVideoElement.prototype
+        const WW = globalThis.CanvasCaptureMediaStream;
+        return ("undefined" !== typeof CanvasCaptureMediaStreamTrack && "requestFrame" in CanvasCaptureMediaStreamTrack.prototype || void 0 !== WW && "requestFrame" in WW.prototype) && "function" === typeof HTMLCanvasElement.prototype.captureStream && "requestVideoFrameCallback" in HTMLVideoElement.prototype
       }
-      constructor(ee, ie, He) {
-        this.onFrame = ie, this.stream = void 0, this.requester = void 0, this.video = document.createElement("video"), this.closed = !1, this.onVideoFrame = () => {
+      constructor(WW, iW, OW) {
+        this.onFrame = iW, this.stream = void 0, this.requester = void 0, this.video = document.createElement("video"), this.closed = !1, this.onVideoFrame = () => {
           this.closed || (this.onFrame(this.video), this.video.requestVideoFrameCallback(this.onVideoFrame))
-        }, this.stream = ee.captureStream(0);
-        const ye = this.stream.getVideoTracks()[0];
-        this.requester = "requestFrame" in ye ? ye : this.stream, this.video.muted = !0, this.video.playsInline = !0, this.video.srcObject = this.stream, this.video.play().catch(He), this.video.requestVideoFrameCallback(this.onVideoFrame)
+        }, this.stream = WW.captureStream(0);
+        const mW = this.stream.getVideoTracks()[0];
+        this.requester = "requestFrame" in mW ? mW : this.stream, this.video.muted = !0, this.video.playsInline = !0, this.video.srcObject = this.stream, this.video.play().catch(OW), this.video.requestVideoFrameCallback(this.onVideoFrame)
       }
       request() {
         this.requester.requestFrame()
       }
       close() {
         this.closed = !0;
-        for (const ee of this.stream.getTracks()) ee.stop();
+        for (const WW of this.stream.getTracks()) WW.stop();
         this.video.srcObject = null
       }
     }
-    class fi {
-      constructor(ee, ie, He, ye) {
-        let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {};
-        this.worker = ee, this.grab = ye, this.onUnavailable = be, this.render = null, this.stream = null, this.frameLimiter = void 0, this.budget = void 0, this.wantedFps = void 0, this.captureFps = void 0, this.failedGrabs = 0, this.unrecoverableGrabFailures = 0, this.pendingGrab = null, this.loggedPause = !1, this.budgetMsPerSecond = void 0, this.frameCostFloorMs = void 0, this.budgetMsPerSecond = He.msPerSecond, this.frameCostFloorMs = He.frameCostFloorMs, this.budget = new ki(this.budgetMsPerSecond, 5, this.frameCostFloorMs), this.wantedFps = ie, this.captureFps = this.budgetedFps(), this.frameLimiter = new Ri(this.captureFps)
+    class bi {
+      constructor(WW, iW, OW, mW) {
+        let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {};
+        this.worker = WW, this.grab = mW, this.onUnavailable = EW, this.render = null, this.stream = null, this.frameLimiter = void 0, this.budget = void 0, this.wantedFps = void 0, this.captureFps = void 0, this.failedGrabs = 0, this.unrecoverableGrabFailures = 0, this.pendingGrab = null, this.loggedPause = !1, this.budgetMsPerSecond = void 0, this.frameCostFloorMs = void 0, this.budgetMsPerSecond = OW.msPerSecond, this.frameCostFloorMs = OW.frameCostFloorMs, this.budget = new li(this.budgetMsPerSecond, 5, this.frameCostFloorMs), this.wantedFps = iW, this.captureFps = this.budgetedFps(), this.frameLimiter = new xi(this.captureFps)
       }
       get frameCost() {
         return {
@@ -1117,141 +1122,141 @@ export const modules = {
           grabPath: this.grab.path
         }
       }
-      start(ee) {
-        if (this.stop(), this.render = ee, "stream" === this.grab.path) {
-          const ie = new qi(ee.canvas, (ee => {
-            this.onStreamFrame(ee)
-          }), (ee => {
-            this.stream === ie && (this.stop(), this.onUnavailable(`the canvas capture stream didn't play: ${ee instanceof Error?ee.message:String(ee)}`))
+      start(WW) {
+        if (this.stop(), this.render = WW, "stream" === this.grab.path) {
+          const iW = new Ai(WW.canvas, (WW => {
+            this.onStreamFrame(WW)
+          }), (WW => {
+            this.stream === iW && (this.stop(), this.onUnavailable(`the canvas capture stream didn't play: ${WW instanceof Error?WW.message:String(WW)}`))
           }));
-          this.stream = ie
+          this.stream = iW
         }
       }
       stop() {
-        var ee;
-        this.render = null, this.pendingGrab = null, null === (ee = this.stream) || void 0 === ee || ee.close(), this.stream = null
+        var WW;
+        this.render = null, this.pendingGrab = null, null === (WW = this.stream) || void 0 === WW || WW.close(), this.stream = null
       }
-      setMaxFps(ee) {
-        this.wantedFps = ee, this.applyFps()
+      setMaxFps(WW) {
+        this.wantedFps = WW, this.applyFps()
       }
       onAfterRender() {
-        const ee = performance.timeOrigin + performance.now(),
-          ie = this.render;
-        if (null === ie) return;
-        const He = performance.now();
+        const WW = performance.timeOrigin + performance.now(),
+          iW = this.render;
+        if (null === iW) return;
+        const OW = performance.now();
         if (null !== this.pendingGrab) {
-          if (He - this.pendingGrab.startMs < 1e3) return;
+          if (OW - this.pendingGrab.startMs < 1e3) return;
           return this.pendingGrab = null, void this.grabFailed(new Error("A canvas grab didn't settle within a second"))
         }
-        if (!this.frameLimiter.shouldKeep(ee)) return;
-        const ye = {
-          startMs: He,
-          timestampUs: Math.round(1e3 * ee),
-          OR: {
-            width: ie.canvas.width,
-            height: ie.canvas.height
+        if (!this.frameLimiter.shouldKeep(WW)) return;
+        const mW = {
+          startMs: OW,
+          timestampUs: Math.round(1e3 * WW),
+          xx: {
+            width: iW.canvas.width,
+            height: iW.canvas.height
           },
           syncMs: 0,
           paused: this.isPaused()
         };
-        null !== this.stream ? this.requestStreamFrame(this.stream, ye) : "bitmap" === this.grab.path ? this.grabBitmap(ie.canvas, ye) : this.grabVideoFrame(ie.canvas, ye)
+        null !== this.stream ? this.requestStreamFrame(this.stream, mW) : "bitmap" === this.grab.path ? this.grabBitmap(iW.canvas, mW) : this.grabVideoFrame(iW.canvas, mW)
       }
-      requestStreamFrame(ee, ie) {
-        this.pendingGrab = ie;
+      requestStreamFrame(WW, iW) {
+        this.pendingGrab = iW;
         try {
-          ee.request()
-        } catch (He) {
-          return this.pendingGrab = null, void this.grabFailed(He)
+          WW.request()
+        } catch (OW) {
+          return this.pendingGrab = null, void this.grabFailed(OW)
         }
-        ie.syncMs = performance.now() - ie.startMs
+        iW.syncMs = performance.now() - iW.startMs
       }
-      grabVideoFrame(ee, ie) {
-        let He;
+      grabVideoFrame(WW, iW) {
+        let OW;
         try {
-          He = new VideoFrame(ee, {
-            timestamp: ie.timestampUs
+          OW = new VideoFrame(WW, {
+            timestamp: iW.timestampUs
           })
-        } catch (ye) {
-          return void this.grabFailed(ye)
+        } catch (mW) {
+          return void this.grabFailed(mW)
         }
-        this.deliver(He, ie), this.recordCost(Math.max(2 * (performance.now() - ie.startMs), this.frameCostFloorMs))
+        this.deliver(OW, iW), this.recordCost(Math.max(2 * (performance.now() - iW.startMs), this.frameCostFloorMs))
       }
-      grabBitmap(ee, ie) {
-        const He = this.grab.cssSize(),
-          ye = function(ee, ie, He) {
-            const ye = ie.width * ie.height < ee.width * ee.height ? ie : ee;
-            let be = Ji(Math.max(ye.width, 64)),
-              Me = Ji(Math.max(ye.height, 64));
-            if (oi({
-                width: be,
-                height: Me
-              }) > He) {
-              const ee = be,
-                ie = Me;
-              for (be = Ji(be * Math.sqrt(16 * He * 16 / (be * Me))), Me = Ji(be * ie / ee); oi({
-                  width: be,
-                  height: Me
-                }) > He;) be -= 2, Me = Ji(be * ie / ee)
+      grabBitmap(WW, iW) {
+        const OW = this.grab.cssSize(),
+          mW = function(WW, iW, OW) {
+            const mW = iW.width * iW.height < WW.width * WW.height ? iW : WW;
+            let EW = ti(Math.max(mW.width, 64)),
+              NW = ti(Math.max(mW.height, 64));
+            if (Zi({
+                width: EW,
+                height: NW
+              }) > OW) {
+              const WW = EW,
+                iW = NW;
+              for (EW = ti(EW * Math.sqrt(16 * OW * 16 / (EW * NW))), NW = ti(EW * iW / WW); Zi({
+                  width: EW,
+                  height: NW
+                }) > OW;) EW -= 2, NW = ti(EW * iW / WW)
             }
             return {
-              width: be,
-              height: Me
+              width: EW,
+              height: NW
             }
-          }(0 === He.width ? ie.OR : He, ie.OR, this.grab.maxMacroblocks);
-        this.pendingGrab = ie, createImageBitmap(ee, {
-          resizeWidth: ye.width,
-          resizeHeight: ye.height,
+          }(0 === OW.width ? iW.xx : OW, iW.xx, this.grab.maxMacroblocks);
+        this.pendingGrab = iW, createImageBitmap(WW, {
+          resizeWidth: mW.width,
+          resizeHeight: mW.height,
           resizeQuality: "low"
-        }).then((ee => {
-          this.pendingGrab === ie ? (this.pendingGrab = null, this.deliverMeasured(ee, ie)) : ee.close()
-        }), (ee => {
-          this.pendingGrab === ie && (this.pendingGrab = null, this.grabFailed(ee))
-        })), ie.syncMs = performance.now() - ie.startMs
+        }).then((WW => {
+          this.pendingGrab === iW ? (this.pendingGrab = null, this.deliverMeasured(WW, iW)) : WW.close()
+        }), (WW => {
+          this.pendingGrab === iW && (this.pendingGrab = null, this.grabFailed(WW))
+        })), iW.syncMs = performance.now() - iW.startMs
       }
-      onStreamFrame(ee) {
-        const ie = this.pendingGrab;
-        if (null === ie) return;
+      onStreamFrame(WW) {
+        const iW = this.pendingGrab;
+        if (null === iW) return;
         this.pendingGrab = null;
-        const He = performance.now();
-        let ye;
+        const OW = performance.now();
+        let mW;
         try {
-          ye = new VideoFrame(ee, {
-            timestamp: ie.timestampUs
+          mW = new VideoFrame(WW, {
+            timestamp: iW.timestampUs
           })
-        } catch (be) {
-          return void this.grabFailed(be)
+        } catch (EW) {
+          return void this.grabFailed(EW)
         }
-        ie.syncMs += performance.now() - He, this.deliverMeasured(ye, ie)
+        iW.syncMs += performance.now() - OW, this.deliverMeasured(mW, iW)
       }
-      deliverMeasured(ee, ie) {
-        const He = performance.now();
-        this.deliver(ee, ie), this.recordCost(Math.max(ie.syncMs + performance.now() - He, this.frameCostFloorMs))
+      deliverMeasured(WW, iW) {
+        const OW = performance.now();
+        this.deliver(WW, iW), this.recordCost(Math.max(iW.syncMs + performance.now() - OW, this.frameCostFloorMs))
       }
-      deliver(ee, ie) {
-        const He = {
+      deliver(WW, iW) {
+        const OW = {
           type: "frame",
-          image: ee,
-          timestampUs: ie.timestampUs,
-          OR: ie.OR,
-          captureFps: ie.paused ? null : this.captureFps
+          image: WW,
+          timestampUs: iW.timestampUs,
+          xx: iW.xx,
+          captureFps: iW.paused ? null : this.captureFps
         };
         try {
-          this.worker.postMessage(He, [ee])
-        } catch (ye) {
-          return ee.close(), void this.grabFailed(ye)
+          this.worker.postMessage(OW, [WW])
+        } catch (mW) {
+          return WW.close(), void this.grabFailed(mW)
         }
         this.failedGrabs = 0, this.unrecoverableGrabFailures = 0
       }
-      recordCost(ee) {
-        this.budget.record(ee), this.applyFps()
+      recordCost(WW) {
+        this.budget.record(WW), this.applyFps()
       }
-      grabFailed(ee) {
-        0 === this.failedGrabs++ && console.warn("Session replay couldn't grab a canvas frame; skipping frames until it can.", ee);
-        !(ee instanceof DOMException && "InvalidStateError" === ee.name) && ++this.unrecoverableGrabFailures >= 30 && (this.stop(), this.onUnavailable(`canvas grabs keep failing: ${ee instanceof Error?ee.message:String(ee)}`))
+      grabFailed(WW) {
+        0 === this.failedGrabs++ && console.warn("Session replay couldn't grab a canvas frame; skipping frames until it can.", WW);
+        !(WW instanceof DOMException && "InvalidStateError" === WW.name) && ++this.unrecoverableGrabFailures >= 30 && (this.stop(), this.onUnavailable(`canvas grabs keep failing: ${WW instanceof Error?WW.message:String(WW)}`))
       }
       applyFps() {
-        const ee = this.budgetedFps();
-        ee !== this.captureFps && (this.captureFps = ee, this.frameLimiter.setMaxFps(ee), this.isPaused() && !this.loggedPause && (this.loggedPause = !0, console.warn(`Session replay paused video: ${this.grab.path} grabs cost ${this.budget.averageCostMs.toFixed(1)} ms, over a budget of ${this.budgetMsPerSecond} ms/s at 5 fps.`)))
+        const WW = this.budgetedFps();
+        WW !== this.captureFps && (this.captureFps = WW, this.frameLimiter.setMaxFps(WW), this.isPaused() && !this.loggedPause && (this.loggedPause = !0, console.warn(`Session replay paused video: ${this.grab.path} grabs cost ${this.budget.averageCostMs.toFixed(1)} ms, over a budget of ${this.budgetMsPerSecond} ms/s at 5 fps.`)))
       }
       isPaused() {
         return this.budgetMsPerSecond > 0 && this.budget.paused
@@ -1260,10 +1265,10 @@ export const modules = {
         return this.budgetMsPerSecond > 0 ? this.budget.maxFps(this.wantedFps) : this.wantedFps
       }
     }
-    var Ti = He(1260);
-    class Xi {
-      constructor(ee) {
-        this.events = ee, this.canvas = null, this.resizeObserver = null, this.listeners = null, this.size = {
+    var ji = OW(1301);
+    class Ui {
+      constructor(WW) {
+        this.events = WW, this.canvas = null, this.resizeObserver = null, this.listeners = null, this.size = {
           width: 0,
           height: 0
         }
@@ -1272,57 +1277,57 @@ export const modules = {
         return this.size
       }
       check() {
-        const ee = (0, Ti.A)().gameRender();
-        if (null === ee || ee.canvas === this.canvas) return ee;
-        const ie = null !== this.canvas;
-        return this.canvas = ee.canvas, this.observe(ee.canvas), ie ? this.events.onCanvasSwapped(ee) : this.events.onFirstCanvas(ee), ee
+        const WW = (0, ji.y)().gameRender();
+        if (null === WW || WW.canvas === this.canvas) return WW;
+        const iW = null !== this.canvas;
+        return this.canvas = WW.canvas, this.observe(WW.canvas), iW ? this.events.onCanvasSwapped(WW) : this.events.onFirstCanvas(WW), WW
       }
       stop() {
-        var ee, ie;
-        null === (ee = this.resizeObserver) || void 0 === ee || ee.disconnect(), null === (ie = this.listeners) || void 0 === ie || ie.abort()
+        var WW, iW;
+        null === (WW = this.resizeObserver) || void 0 === WW || WW.disconnect(), null === (iW = this.listeners) || void 0 === iW || iW.abort()
       }
-      observe(ee) {
+      observe(WW) {
         this.stop(), this.listeners = new AbortController;
         const {
-          signal: ie
+          signal: iW
         } = this.listeners;
-        ee.addEventListener("webglcontextlost", (() => {
+        WW.addEventListener("webglcontextlost", (() => {
           this.events.onContextLost()
         }), {
-          signal: ie
-        }), ee.addEventListener("webglcontextrestored", (() => {
+          signal: iW
+        }), WW.addEventListener("webglcontextrestored", (() => {
           this.events.onContextRestored()
         }), {
-          signal: ie
+          signal: iW
         });
-        const He = ee.getBoundingClientRect();
+        const OW = WW.getBoundingClientRect();
         this.size = {
-          width: Math.round(He.width),
-          height: Math.round(He.height)
-        }, this.resizeObserver = new ResizeObserver((ee => {
-          const ie = ee[ee.length - 1].contentRect,
-            He = {
-              width: Math.round(ie.width),
-              height: Math.round(ie.height)
+          width: Math.round(OW.width),
+          height: Math.round(OW.height)
+        }, this.resizeObserver = new ResizeObserver((WW => {
+          const iW = WW[WW.length - 1].contentRect,
+            OW = {
+              width: Math.round(iW.width),
+              height: Math.round(iW.height)
             };
-          0 !== He.width && 0 !== He.height && (this.size = He, this.events.onResized(He))
-        })), this.resizeObserver.observe(ee)
+          0 !== OW.width && 0 !== OW.height && (this.size = OW, this.events.onResized(OW))
+        })), this.resizeObserver.observe(WW)
       }
     }
-    const zi = {
+    const ki = {
         desktop: 12582912,
         mobile: 6291456,
         tablet: 6291456
       },
-      Bi = 12e4;
-    class Ei extends Error {
-      constructor(ee, ie) {
-        super(ie), this.reason = ee
+      si = 12e4;
+    class Mi extends Error {
+      constructor(WW, iW) {
+        super(iW), this.reason = WW
       }
     }
-    class gi {
-      constructor(ee, ie, He, ye, be) {
-        this.access = ee, this.uploadToken = ie, this.transport = He, this.callbacks = ye, this.options = be, this.segments = new Map, this.sending = !1, this.refused = !1, this.downUntilMs = -1 / 0, this.stats = {
+    class Ki {
+      constructor(WW, iW, OW, mW, EW) {
+        this.access = WW, this.uploadToken = iW, this.transport = OW, this.callbacks = mW, this.options = EW, this.segments = new Map, this.sending = !1, this.refused = !1, this.downUntilMs = -1 / 0, this.stats = {
           handBacks: {
             unreachable: 0,
             refused: 0,
@@ -1337,13 +1342,13 @@ export const modules = {
       get accepting() {
         return !this.refused && this.options.nowMs() >= this.downUntilMs && this.segments.size < 2 && this.heldBytes() < this.options.maxHeldBytes
       }
-      owns(ee) {
-        return this.segments.has(ee)
+      owns(WW) {
+        return this.segments.has(WW)
       }
-      open(ee, ie) {
-        this.segments.set(ee, {
-          journalId: ee,
-          sequence: ie,
+      open(WW, iW) {
+        this.segments.set(WW, {
+          journalId: WW,
+          sequence: iW,
           parts: [],
           sentParts: 0,
           totalParts: null,
@@ -1351,315 +1356,315 @@ export const modules = {
           cut: !1
         })
       }
-      addPart(ee, ie) {
-        const He = this.segments.get(ee);
-        if (void 0 !== He) {
-          He.parts.push(ie), He.bytes += ie.bytes.byteLength, !He.cut && null === He.totalParts && He.bytes > this.options.maxHeldBytes / 2 && (He.cut = !0, this.callbacks.cut());
-          for (const ee of this.segments.values()) {
+      addPart(WW, iW) {
+        const OW = this.segments.get(WW);
+        if (void 0 !== OW) {
+          OW.parts.push(iW), OW.bytes += iW.bytes.byteLength, !OW.cut && null === OW.totalParts && OW.bytes > this.options.maxHeldBytes / 2 && (OW.cut = !0, this.callbacks.cut());
+          for (const WW of this.segments.values()) {
             if (this.heldBytes() <= this.options.maxHeldBytes) break;
-            this.handBack(ee, "byteCap"), this.downUntilMs = this.options.nowMs() + Bi
+            this.handBack(WW, "byteCap"), this.downUntilMs = this.options.nowMs() + si
           }
           this.pump()
         }
       }
-      close(ee, ie) {
-        const He = this.segments.get(ee);
-        void 0 !== He && (He.totalParts = ie, this.pump())
+      close(WW, iW) {
+        const OW = this.segments.get(WW);
+        void 0 !== OW && (OW.totalParts = iW, this.pump())
       }
-      forget(ee) {
-        this.segments.delete(ee)
+      forget(WW) {
+        this.segments.delete(WW)
       }
       releaseAll() {
-        for (const ee of this.segments.values()) ee.sentParts > 0 && this.transport.release({
+        for (const WW of this.segments.values()) WW.sentParts > 0 && this.transport.release({
           token: this.access.token,
-          sequence: ee.sequence
+          sequence: WW.sequence
         }) && this.stats.releases++
       }
       heldBytes() {
-        let ee = 0;
-        for (const ie of this.segments.values()) ee += ie.bytes;
-        return ee
+        let WW = 0;
+        for (const iW of this.segments.values()) WW += iW.bytes;
+        return WW
       }
       async pump() {
         if (!this.sending) {
           this.sending = !0;
-          for (let ie = this.nextWork(); null !== ie; ie = this.nextWork()) try {
-            await this.advance(ie)
-          } catch (ee) {
-            console.warn(`Session replay part joiner failed on video segment ${ie.sequence}; uploading it straight to storage.`, ee), ee instanceof Ei || (this.downUntilMs = this.options.nowMs() + Bi), this.handBack(ie, ee instanceof Ei ? ee.reason : "unreachable")
+          for (let iW = this.nextWork(); null !== iW; iW = this.nextWork()) try {
+            await this.advance(iW)
+          } catch (WW) {
+            console.warn(`Session replay part joiner failed on video segment ${iW.sequence}; uploading it straight to storage.`, WW), WW instanceof Mi || (this.downUntilMs = this.options.nowMs() + si), this.handBack(iW, WW instanceof Mi ? WW.reason : "unreachable")
           }
           this.sending = !1
         }
       }
       nextWork() {
-        for (const ee of this.segments.values())
-          if (ee.sentParts < ee.parts.length || ee.totalParts === ee.parts.length) return ee;
+        for (const WW of this.segments.values())
+          if (WW.sentParts < WW.parts.length || WW.totalParts === WW.parts.length) return WW;
         return null
       }
-      async advance(ee) {
-        if (ee.sentParts < ee.parts.length) return this.expectHeld(await this.sendPart(ee, ee.parts[ee.sentParts])), void ee.sentParts++;
-        for (let ie = 0; this.owns(ee.journalId); ie++) {
-          const He = await this.request((() => this.transport.finish({
+      async advance(WW) {
+        if (WW.sentParts < WW.parts.length) return this.expectHeld(await this.sendPart(WW, WW.parts[WW.sentParts])), void WW.sentParts++;
+        for (let iW = 0; this.owns(WW.journalId); iW++) {
+          const OW = await this.request((() => this.transport.finish({
             token: this.access.token,
             uploadToken: this.uploadToken,
-            sequence: ee.sequence,
-            parts: ee.parts.length
+            sequence: WW.sequence,
+            parts: WW.parts.length
           })));
-          if (!this.owns(ee.journalId)) return;
-          if ("stored" === He.outcome && He.stored.parts === ee.parts.length) return this.segments.delete(ee.journalId), void this.callbacks.stored(ee.journalId, ee.sequence, He.stored);
-          if ("missing" !== He.outcome || ie >= 2) throw this.failure(He);
-          for (const ie of He.parts) {
-            if (!this.owns(ee.journalId)) return;
-            const He = ee.parts[ie];
-            if (void 0 === He) throw new Ei("missing", `the joiner asked for part ${ie} of ${ee.parts.length}`);
-            this.expectHeld(await this.sendPart(ee, He))
+          if (!this.owns(WW.journalId)) return;
+          if ("stored" === OW.outcome && OW.stored.parts === WW.parts.length) return this.segments.delete(WW.journalId), void this.callbacks.stored(WW.journalId, WW.sequence, OW.stored);
+          if ("missing" !== OW.outcome || iW >= 2) throw this.failure(OW);
+          for (const iW of OW.parts) {
+            if (!this.owns(WW.journalId)) return;
+            const OW = WW.parts[iW];
+            if (void 0 === OW) throw new Mi("missing", `the joiner asked for part ${iW} of ${WW.parts.length}`);
+            this.expectHeld(await this.sendPart(WW, OW))
           }
         }
       }
-      sendPart(ee, ie) {
+      sendPart(WW, iW) {
         return this.request((() => this.transport.postPart({
           token: this.access.token,
           uploadToken: this.uploadToken,
-          sequence: ee.sequence,
-          index: ie.index,
+          sequence: WW.sequence,
+          index: iW.index,
           meta: {
-            ...ie.meta,
-            startMs: Math.round(ie.meta.startMs),
-            endMs: Math.round(ie.meta.endMs)
+            ...iW.meta,
+            startMs: Math.round(iW.meta.startMs),
+            endMs: Math.round(iW.meta.endMs)
           },
-          completeUntilUs: ie.completeUntilUs
-        }, ie.bytes)))
+          completeUntilUs: iW.completeUntilUs
+        }, iW.bytes)))
       }
-      expectHeld(ee) {
-        if ("buffered" !== ee.outcome) throw this.failure(ee)
+      expectHeld(WW) {
+        if ("buffered" !== WW.outcome) throw this.failure(WW)
       }
-      failure(ee) {
-        if ("refused" === ee.outcome) {
+      failure(WW) {
+        if ("refused" === WW.outcome) {
           this.refused = !0;
-          for (const ee of [...this.segments.values()]) this.handBack(ee, "refused");
-          return new Ei("refused", `refused: ${ee.reason}`)
+          for (const WW of [...this.segments.values()]) this.handBack(WW, "refused");
+          return new Mi("refused", `refused: ${WW.reason}`)
         }
-        const ie = "stored" === ee.outcome ? "shortStored" : "missing" === ee.outcome ? "missing" : "closed";
-        return new Ei(ie, `answered ${ee.outcome}`)
+        const iW = "stored" === WW.outcome ? "shortStored" : "missing" === WW.outcome ? "missing" : "closed";
+        return new Mi(iW, `answered ${WW.outcome}`)
       }
-      async request(ee) {
-        for (let He = 1;; He++) {
+      async request(WW) {
+        for (let OW = 1;; OW++) {
           try {
-            return await ee()
-          } catch (ie) {
-            if (He >= 3) throw ie
+            return await WW()
+          } catch (iW) {
+            if (OW >= 3) throw iW
           }
-          await this.options.wait(1e3 * 2 ** (He - 1))
+          await this.options.wait(1e3 * 2 ** (OW - 1))
         }
       }
-      handBack(ee, ie) {
-        this.segments.delete(ee.journalId) && (this.stats.handBacks[ie]++, this.callbacks.handBack(ee.journalId, ee.sequence, ee.parts, ee.totalParts))
+      handBack(WW, iW) {
+        this.segments.delete(WW.journalId) && (this.stats.handBacks[iW]++, this.callbacks.handBack(WW.journalId, WW.sequence, WW.parts, WW.totalParts))
       }
     }
-    const Oi = ue.d;
-    class di {
-      constructor(ee, ie, He, ye) {
-        let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        this.transport = ee, this.uploadToken = ie, this.nextTelemetrySequence = He, this.queuedDomAfter = ye, this.nowMs = be, this.segments = new Map, this.telemetry = null, this.telemetryAsked = null, this.dom = null, this.domTaken = -1, this.videoDue = null, this.stopped = !1
+    const Si = CW.e;
+    class Yi {
+      constructor(WW, iW, OW, mW) {
+        let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        this.transport = WW, this.uploadToken = iW, this.nextTelemetrySequence = OW, this.queuedDomAfter = mW, this.nowMs = EW, this.segments = new Map, this.telemetry = null, this.telemetryAsked = null, this.dom = null, this.domTaken = -1, this.videoDue = null, this.stopped = !1
       }
-      prefetch(ee, ie, He, ye, be) {
-        const Me = this.segment(ee, ie, He, ye);
-        if (void 0 === be) return void this.request(Me, 0);
-        const Ke = be.then((() => {
-          this.stopped || this.segments.get(ti(ee, ie)) !== Me || Me.requested || this.request(Me, 0), this.videoDue === Ke && (this.videoDue = null)
+      prefetch(WW, iW, OW, mW, EW) {
+        const NW = this.segment(WW, iW, OW, mW);
+        if (void 0 === EW) return void this.request(NW, 0);
+        const PW = EW.then((() => {
+          this.stopped || this.segments.get(Ti(WW, iW)) !== NW || NW.requested || this.request(NW, 0), this.videoDue === PW && (this.videoDue = null)
         }));
-        this.videoDue = Ke
+        this.videoDue = PW
       }
-      async takeDom(ee) {
-        await this.videoDue, this.domTaken = Math.max(this.domTaken, ee);
-        const ie = this.dom;
-        if ((null === ie || void 0 === ie ? void 0 : ie.sequence) !== ee) return;
+      async takeDom(WW) {
+        await this.videoDue, this.domTaken = Math.max(this.domTaken, WW);
+        const iW = this.dom;
+        if ((null === iW || void 0 === iW ? void 0 : iW.sequence) !== WW) return;
         this.dom = null;
-        const He = await ie.upload;
-        return void 0 !== He && Wi(He, this.nowMs()) ? He.upload : void 0
+        const OW = await iW.upload;
+        return void 0 !== OW && yi(OW, this.nowMs()) ? OW.upload : void 0
       }
-      async get(ee, ie, He, ye, be) {
-        const Me = this.segment(ee, ie, He, be),
-          Ke = Me.requests.find((ee => ye >= ee.first && ye < ee.end));
-        if (void 0 === this.valid(Me, ye) && void 0 !== Ke) {
-          const ee = await Ke.answer.catch((() => null));
-          if (null !== ee && "rejected" in ee) return ee
+      async get(WW, iW, OW, mW, EW) {
+        const NW = this.segment(WW, iW, OW, EW),
+          PW = NW.requests.find((WW => mW >= WW.first && mW < WW.end));
+        if (void 0 === this.valid(NW, mW) && void 0 !== PW) {
+          const WW = await PW.answer.catch((() => null));
+          if (null !== WW && "rejected" in WW) return WW
         }
-        let Ue = this.valid(Me, ye);
-        if (void 0 === Ue) {
-          const ee = await this.request(Me, ye).answer;
-          if ("rejected" in ee) return ee;
-          Ue = ee[0]
+        let LW = this.valid(NW, mW);
+        if (void 0 === LW) {
+          const WW = await this.request(NW, mW).answer;
+          if ("rejected" in WW) return WW;
+          LW = WW[0]
         }
-        return Ue
+        return LW
       }
-      takeTelemetry(ee) {
-        const ie = this.telemetry;
-        if ((null === ie || void 0 === ie ? void 0 : ie.sequence) === ee) return this.telemetry = null, Wi(ie.lJ, this.nowMs()) ? ie.lJ.target : void 0
+      takeTelemetry(WW) {
+        const iW = this.telemetry;
+        if ((null === iW || void 0 === iW ? void 0 : iW.sequence) === WW) return this.telemetry = null, yi(iW.BL, this.nowMs()) ? iW.BL.target : void 0
       }
-      peek(ee, ie, He) {
-        const ye = this.segments.get(ti(ee, ie));
-        return void 0 === ye ? void 0 : this.valid(ye, He)
+      peek(WW, iW, OW) {
+        const mW = this.segments.get(Ti(WW, iW));
+        return void 0 === mW ? void 0 : this.valid(mW, OW)
       }
-      expire(ee, ie, He) {
-        const ye = this.segments.get(ti(ee, ie)),
-          be = null === ye || void 0 === ye ? void 0 : ye.lJ.get(He);
-        if (void 0 !== ye && void 0 !== be)
-          for (const [Me, Ke] of ye.lJ) Ke.expiresAtMs <= be.expiresAtMs && ye.lJ.delete(Me)
+      expire(WW, iW, OW) {
+        const mW = this.segments.get(Ti(WW, iW)),
+          EW = null === mW || void 0 === mW ? void 0 : mW.BL.get(OW);
+        if (void 0 !== mW && void 0 !== EW)
+          for (const [NW, PW] of mW.BL) PW.expiresAtMs <= EW.expiresAtMs && mW.BL.delete(NW)
       }
       stop() {
         this.stopped = !0
       }
-      forget(ee, ie) {
-        this.segments.delete(ti(ee, ie))
+      forget(WW, iW) {
+        this.segments.delete(Ti(WW, iW))
       }
-      segment(ee, ie, He, ye) {
-        const be = ti(ee, ie);
-        let Me = this.segments.get(be);
-        return void 0 === Me && (Me = {
-          kind: ee,
-          sequence: ie,
-          contentType: He,
-          slots: ye,
-          lJ: new Map,
+      segment(WW, iW, OW, mW) {
+        const EW = Ti(WW, iW);
+        let NW = this.segments.get(EW);
+        return void 0 === NW && (NW = {
+          kind: WW,
+          sequence: iW,
+          contentType: OW,
+          slots: mW,
+          BL: new Map,
           requests: [],
           requested: !1
-        }, this.segments.set(be, Me)), Me
+        }, this.segments.set(EW, NW)), NW
       }
-      valid(ee, ie) {
-        const He = ee.lJ.get(ie);
-        return void 0 !== He && Wi(He, this.nowMs()) ? He.target : void 0
+      valid(WW, iW) {
+        const OW = WW.BL.get(iW);
+        return void 0 !== OW && yi(OW, this.nowMs()) ? OW.target : void 0
       }
       telemetryToAskFor() {
-        const ee = this.nextTelemetrySequence(),
-          ie = this.telemetry;
-        return this.telemetryAsked === ee || null !== ie && ie.sequence === ee && Wi(ie.lJ, this.nowMs()) ? null : ee
+        const WW = this.nextTelemetrySequence(),
+          iW = this.telemetry;
+        return this.telemetryAsked === WW || null !== iW && iW.sequence === WW && yi(iW.BL, this.nowMs()) ? null : WW
       }
       domToAskFor() {
-        var ee;
-        const ie = this.queuedDomAfter(this.domTaken);
-        return null === ie || ie.sequence === (null === (ee = this.dom) || void 0 === ee ? void 0 : ee.sequence) ? null : ie
+        var WW;
+        const iW = this.queuedDomAfter(this.domTaken);
+        return null === iW || iW.sequence === (null === (WW = this.dom) || void 0 === WW ? void 0 : WW.sequence) ? null : iW
       }
-      request(ee, ie) {
-        const He = ie < ee.slots.count ? ee.slots.count : ie + 1,
-          ye = this.nowMs();
-        ee.requested = !0;
-        const be = "video" === ee.kind ? this.telemetryToAskFor() : null;
-        null !== be && (this.telemetryAsked = be);
-        const Me = "video" === ee.kind ? this.domToAskFor() : null,
-          Ke = this.transport.requestPostTargets({
+      request(WW, iW) {
+        const OW = iW < WW.slots.count ? WW.slots.count : iW + 1,
+          mW = this.nowMs();
+        WW.requested = !0;
+        const EW = "video" === WW.kind ? this.telemetryToAskFor() : null;
+        null !== EW && (this.telemetryAsked = EW);
+        const NW = "video" === WW.kind ? this.domToAskFor() : null,
+          PW = this.transport.requestPostTargets({
             uploadToken: this.uploadToken,
-            kind: ee.kind,
-            sequence: ee.sequence,
-            contentType: ee.contentType,
+            kind: WW.kind,
+            sequence: WW.sequence,
+            contentType: WW.contentType,
             parts: {
-              first: ie,
-              count: He - ie,
-              maxBytes: ee.slots.maxBytes
+              first: iW,
+              count: OW - iW,
+              maxBytes: WW.slots.maxBytes
             },
-            ...null === be ? {} : {
+            ...null === EW ? {} : {
               nextTelemetry: {
-                sequence: be,
-                maxBytes: Oi
+                sequence: EW,
+                maxBytes: Si
               }
             },
-            ...null === Me ? {} : {
-              dom: Me
+            ...null === NW ? {} : {
+              dom: NW
             }
           });
-        if (null !== Me) {
-          const ee = Ke.then((ee => {
-            if ("rejected" in ee || void 0 === ee.domUpload) return;
+        if (null !== NW) {
+          const WW = PW.then((WW => {
+            if ("rejected" in WW || void 0 === WW.domUpload) return;
             const {
-              expiresInSecs: ie,
-              ...He
-            } = ee.domUpload;
+              expiresInSecs: iW,
+              ...OW
+            } = WW.domUpload;
             return {
-              upload: He,
-              expiresAtMs: ye + 1e3 * ie
+              upload: OW,
+              expiresAtMs: mW + 1e3 * iW
             }
           }), (() => {
-            var ee;
-            (null === (ee = this.dom) || void 0 === ee ? void 0 : ee.sequence) === Me.sequence && (this.dom = null)
+            var WW;
+            (null === (WW = this.dom) || void 0 === WW ? void 0 : WW.sequence) === NW.sequence && (this.dom = null)
           }));
           this.dom = {
-            sequence: Me.sequence,
-            upload: ee
+            sequence: NW.sequence,
+            upload: WW
           }
         }
-        const Ue = Ke.then((He => {
-            var Me, Ke;
-            if ("rejected" in He) return He;
-            const Ue = ye + 1e3 * He.expiresInSecs;
-            He.targets.forEach(((He, ye) => {
-              ee.lJ.set(ie + ye, {
-                target: He,
-                expiresAtMs: Ue
+        const LW = PW.then((OW => {
+            var NW, PW;
+            if ("rejected" in OW) return OW;
+            const LW = mW + 1e3 * OW.expiresInSecs;
+            OW.targets.forEach(((OW, mW) => {
+              WW.BL.set(iW + mW, {
+                target: OW,
+                expiresAtMs: LW
               })
             }));
-            return null !== be && be >= this.nextTelemetrySequence() && (null !== (Me = null === (Ke = this.telemetry) || void 0 === Ke ? void 0 : Ke.sequence) && void 0 !== Me ? Me : -1) <= be && void 0 !== He.telemetryTarget && (this.telemetry = {
-              sequence: be,
-              lJ: {
-                target: He.telemetryTarget,
-                expiresAtMs: Ue
+            return null !== EW && EW >= this.nextTelemetrySequence() && (null !== (NW = null === (PW = this.telemetry) || void 0 === PW ? void 0 : PW.sequence) && void 0 !== NW ? NW : -1) <= EW && void 0 !== OW.telemetryTarget && (this.telemetry = {
+              sequence: EW,
+              BL: {
+                target: OW.telemetryTarget,
+                expiresAtMs: LW
               }
-            }), He.targets
+            }), OW.targets
           })),
-          Fe = {
-            first: ie,
-            end: He,
-            answer: Ue
+          cW = {
+            first: iW,
+            end: OW,
+            answer: LW
           };
-        ee.requests.push(Fe);
-        const Je = () => {
-          ee.requests.splice(ee.requests.indexOf(Fe), 1), null !== be && this.telemetryAsked === be && (this.telemetryAsked = null)
+        WW.requests.push(cW);
+        const wW = () => {
+          WW.requests.splice(WW.requests.indexOf(cW), 1), null !== EW && this.telemetryAsked === EW && (this.telemetryAsked = null)
         };
-        return Ue.then(Je, Je), Fe
+        return LW.then(wW, wW), cW
       }
     }
 
-    function Wi(ee, ie) {
-      return ee.expiresAtMs - 6e4 > ie
+    function yi(WW, iW) {
+      return WW.expiresAtMs - 6e4 > iW
     }
 
-    function ti(ee, ie) {
-      return `${ee}:${ie}`
+    function Ti(WW, iW) {
+      return `${WW}:${iW}`
     }
-    const Zi = {
+    const Ji = {
       maxAttempts: 10,
       baseBackoffMs: 1e3
     };
 
-    function wi(ee) {
-      return new Promise((ie => {
-        const He = () => {
-            clearTimeout(ye), window.removeEventListener("online", He), ie()
+    function Hi(WW) {
+      return new Promise((iW => {
+        const OW = () => {
+            clearTimeout(mW), window.removeEventListener("online", OW), iW()
           },
-          ye = setTimeout(He, ee);
-        window.addEventListener("online", He)
+          mW = setTimeout(OW, WW);
+        window.addEventListener("online", OW)
       }))
     }
-    const Di = ["video", "dom"],
-      Pi = "video",
-      Ai = {
+    const ni = ["video", "dom"],
+      ui = "video",
+      oi = {
         telemetry: 0,
         dom: 1,
         still: 2,
         video: 3
       },
-      Yi = "an earlier part of its segment was dropped",
-      Vi = new Set([403, 408, 409, 429]),
-      ai = new Set(["RequestTimeout", "IncompleteBody"]);
-    class ci {
-      constructor(ee, ie, He, ye) {
-        this.transport = ee, this.uploadToken = ie, this.options = He, this.callbacks = ye, this.queue = [], this.nextSequence = new Map, this.targets = void 0, this.brokenSegments = new Set, this.queuedBytes = 0, this.pumping = !1, this.uploadInFlight = !1, this.stopped = !1, this.targets = new di(ee, ie, (() => {
-          var ee;
-          return null !== (ee = this.nextSequence.get("telemetry")) && void 0 !== ee ? ee : 0
-        }), (ee => {
-          const ie = this.queue.find((ie => "dom" === ie.kind && ie.sequence > ee));
-          return void 0 === ie ? null : {
-            sequence: ie.sequence,
-            byteLength: ie.bytes.byteLength
+      di = "an earlier part of its segment was dropped",
+      ei = new Set([403, 408, 409, 429]),
+      vi = new Set(["RequestTimeout", "IncompleteBody"]);
+    class gi {
+      constructor(WW, iW, OW, mW) {
+        this.transport = WW, this.uploadToken = iW, this.options = OW, this.callbacks = mW, this.queue = [], this.nextSequence = new Map, this.targets = void 0, this.brokenSegments = new Set, this.queuedBytes = 0, this.pumping = !1, this.uploadInFlight = !1, this.stopped = !1, this.targets = new Yi(WW, iW, (() => {
+          var WW;
+          return null !== (WW = this.nextSequence.get("telemetry")) && void 0 !== WW ? WW : 0
+        }), (WW => {
+          const iW = this.queue.find((iW => "dom" === iW.kind && iW.sequence > WW));
+          return void 0 === iW ? null : {
+            sequence: iW.sequence,
+            byteLength: iW.bytes.byteLength
           }
         }))
       }
@@ -1670,325 +1675,325 @@ export const modules = {
         return this.uploadInFlight ? this.queue[0].kind : null
       }
       queued() {
-        return this.queue.map((ee => {
+        return this.queue.map((WW => {
           let {
-            kind: ie,
-            sequence: He,
-            meta: ye
-          } = ee;
+            kind: iW,
+            sequence: OW,
+            meta: mW
+          } = WW;
           return {
-            kind: ie,
-            sequence: He,
-            meta: ye
+            kind: iW,
+            sequence: OW,
+            meta: mW
           }
         }))
       }
-      openSegment(ee, ie, He, ye) {
-        const be = this.takeSequence(ee);
-        return this.prefetchTargets(ee, be, ie, He, ye), be
+      openSegment(WW, iW, OW, mW) {
+        const EW = this.takeSequence(WW);
+        return this.prefetchTargets(WW, EW, iW, OW, mW), EW
       }
-      prefetchTargets(ee, ie, He, ye, be) {
-        this.stopped || this.targets.prefetch(ee, ie, He, ye, be)
+      prefetchTargets(WW, iW, OW, mW, EW) {
+        this.stopped || this.targets.prefetch(WW, iW, OW, mW, EW)
       }
-      peekTarget(ee, ie, He) {
-        return this.targets.peek(ee, ie, He)
+      peekTarget(WW, iW, OW) {
+        return this.targets.peek(WW, iW, OW)
       }
-      closeSegment(ee, ie) {
-        this.targets.forget(ee, ie), ee === Pi && this.brokenSegments.delete(ie)
+      closeSegment(WW, iW) {
+        this.targets.forget(WW, iW), WW === ui && this.brokenSegments.delete(iW)
       }
-      enqueue(ee) {
-        var ie, He;
-        const ye = null !== (ie = null === (He = ee.part) || void 0 === He ? void 0 : He.sequence) && void 0 !== ie ? ie : null;
-        if (this.stopped) return this.callbacks.onDropped(ee, "uploader stopped", ye), null;
-        if (null !== ye && ee.kind === Pi && this.brokenSegments.has(ye)) return this.callbacks.onDropped(ee, Yi, ye), null;
-        "still" === ee.kind && this.removeQueued(ee.kind);
-        const be = {
-            ...ee,
-            sequence: null !== ye && void 0 !== ye ? ye : this.takeSequence(ee.kind)
+      enqueue(WW) {
+        var iW, OW;
+        const mW = null !== (iW = null === (OW = WW.part) || void 0 === OW ? void 0 : OW.sequence) && void 0 !== iW ? iW : null;
+        if (this.stopped) return this.callbacks.onDropped(WW, "uploader stopped", mW), null;
+        if (null !== mW && WW.kind === ui && this.brokenSegments.has(mW)) return this.callbacks.onDropped(WW, di, mW), null;
+        "still" === WW.kind && this.removeQueued(WW.kind);
+        const EW = {
+            ...WW,
+            sequence: null !== mW && void 0 !== mW ? mW : this.takeSequence(WW.kind)
           },
-          Me = this.queue.findIndex(((ie, He) => (He > 0 || !this.uploadInFlight) && Ai[ie.kind] > Ai[ee.kind]));
-        return this.queue.splice(-1 === Me ? this.queue.length : Me, 0, be), this.queuedBytes += ee.bytes.byteLength, this.enforceBacklogCap(), this.pump(), this.queue.includes(be) ? be.sequence : null
+          NW = this.queue.findIndex(((iW, OW) => (OW > 0 || !this.uploadInFlight) && oi[iW.kind] > oi[WW.kind]));
+        return this.queue.splice(-1 === NW ? this.queue.length : NW, 0, EW), this.queuedBytes += WW.bytes.byteLength, this.enforceBacklogCap(), this.pump(), this.queue.includes(EW) ? EW.sequence : null
       }
       stop() {
         this.stopped = !0, this.targets.stop();
-        for (const ee of this.queue.splice(this.uploadInFlight ? 1 : 0)) this.queuedBytes -= ee.bytes.byteLength, this.callbacks.onDropped(ee, "uploader stopped", ee.sequence)
+        for (const WW of this.queue.splice(this.uploadInFlight ? 1 : 0)) this.queuedBytes -= WW.bytes.byteLength, this.callbacks.onDropped(WW, "uploader stopped", WW.sequence)
       }
-      takeSequence(ee) {
-        var ie;
-        const He = null !== (ie = this.nextSequence.get(ee)) && void 0 !== ie ? ie : 0;
-        return this.nextSequence.set(ee, He + 1), He
+      takeSequence(WW) {
+        var iW;
+        const OW = null !== (iW = this.nextSequence.get(WW)) && void 0 !== iW ? iW : 0;
+        return this.nextSequence.set(WW, OW + 1), OW
       }
-      removeQueued(ee) {
-        for (let ie = this.queue.length - 1; ie >= (this.uploadInFlight ? 1 : 0); ie--)
-          if (this.queue[ie].kind === ee) {
-            const [ee] = this.queue.splice(ie, 1);
-            this.queuedBytes -= ee.bytes.byteLength
+      removeQueued(WW) {
+        for (let iW = this.queue.length - 1; iW >= (this.uploadInFlight ? 1 : 0); iW--)
+          if (this.queue[iW].kind === WW) {
+            const [WW] = this.queue.splice(iW, 1);
+            this.queuedBytes -= WW.bytes.byteLength
           }
       }
       enforceBacklogCap() {
-        for (const ee of Di)
-          for (const ie of [!1, !0])
-            for (let He = this.uploadInFlight ? 1 : 0; He < this.queue.length && this.queuedBytes > this.options.maxBacklogBytes;) {
-              const ye = this.queue[He];
-              if (ye.kind !== ee || !0 === ye.dropLast && !ie) {
-                He++;
+        for (const WW of ni)
+          for (const iW of [!1, !0])
+            for (let OW = this.uploadInFlight ? 1 : 0; OW < this.queue.length && this.queuedBytes > this.options.maxBacklogBytes;) {
+              const mW = this.queue[OW];
+              if (mW.kind !== WW || !0 === mW.dropLast && !iW) {
+                OW++;
                 continue
               }
-              const [be] = this.queue.splice(He, 1);
-              this.queuedBytes -= be.bytes.byteLength, this.callbacks.onDropped(be, "backlog over cap", be.sequence), this.segmentBroken(be)
+              const [EW] = this.queue.splice(OW, 1);
+              this.queuedBytes -= EW.bytes.byteLength, this.callbacks.onDropped(EW, "backlog over cap", EW.sequence), this.segmentBroken(EW)
             }
       }
-      segmentBroken(ee) {
-        if (void 0 !== ee.part && ee.kind === Pi) {
-          this.brokenSegments.add(ee.sequence);
-          for (let ie = this.queue.length - 1; ie >= (this.uploadInFlight ? 1 : 0); ie--) {
-            const He = this.queue[ie];
-            He.kind === Pi && void 0 !== He.part && He.sequence === ee.sequence && (this.queue.splice(ie, 1), this.queuedBytes -= He.bytes.byteLength, this.callbacks.onDropped(He, Yi, He.sequence))
+      segmentBroken(WW) {
+        if (void 0 !== WW.part && WW.kind === ui) {
+          this.brokenSegments.add(WW.sequence);
+          for (let iW = this.queue.length - 1; iW >= (this.uploadInFlight ? 1 : 0); iW--) {
+            const OW = this.queue[iW];
+            OW.kind === ui && void 0 !== OW.part && OW.sequence === WW.sequence && (this.queue.splice(iW, 1), this.queuedBytes -= OW.bytes.byteLength, this.callbacks.onDropped(OW, di, OW.sequence))
           }
         }
       }
       async pump() {
         if (!this.pumping) {
           for (this.pumping = !0; this.queue.length > 0 && !this.stopped;) {
-            const ee = this.queue[0];
+            const WW = this.queue[0];
             this.uploadInFlight = !0;
-            const ie = await this.upload(ee);
-            this.uploadInFlight = !1, this.queue.shift(), this.queuedBytes -= ee.bytes.byteLength, "uploaded" !== ie.type ? (this.callbacks.onDropped(ee, ie.reason, ee.sequence), this.segmentBroken(ee), "refused" !== ie.type || this.stopped || "telemetry" !== ee.kind || (console.warn(`Session replay uploads refused (${ie.reason}); stopping uploads for this page load.`), this.stop(), this.callbacks.onStopped(ie.reason))) : this.callbacks.onUploaded(ee, ee.sequence)
+            const iW = await this.upload(WW);
+            this.uploadInFlight = !1, this.queue.shift(), this.queuedBytes -= WW.bytes.byteLength, "uploaded" !== iW.type ? (this.callbacks.onDropped(WW, iW.reason, WW.sequence), this.segmentBroken(WW), "refused" !== iW.type || this.stopped || "telemetry" !== WW.kind || (console.warn(`Session replay uploads refused (${iW.reason}); stopping uploads for this page load.`), this.stop(), this.callbacks.onStopped(iW.reason))) : this.callbacks.onUploaded(WW, WW.sequence)
           }
           this.pumping = !1
         }
       }
-      async upload(ee) {
-        let ie = null,
-          He = 0;
-        for (let be = 1;; be++) {
+      async upload(WW) {
+        let iW = null,
+          OW = 0;
+        for (let EW = 1;; EW++) {
           try {
-            if (null === ie) {
-              const He = await this.requestTarget(ee);
-              if ("rejected" in He) {
-                if (!He.retryable) return {
+            if (null === iW) {
+              const OW = await this.requestTarget(WW);
+              if ("rejected" in OW) {
+                if (!OW.retryable) return {
                   type: "refused",
-                  reason: He.reason
+                  reason: OW.reason
                 };
-                throw new Error(`rejected for now: ${He.reason}`)
+                throw new Error(`rejected for now: ${OW.reason}`)
               }
-              ie = He
+              iW = OW
             }
             try {
-              "put" === ie.type ? await this.transport.put(ie.url, ee.bytes, ee.contentType, ie.ifNoneMatch) : await this.transport.post(ie.target, ee.bytes, ee.contentType)
-            } catch (ye) {
-              if (ye instanceof le.b && null !== ye.status && ye.status < 500 && !Vi.has(ye.status) && (null === ye.storageCode || !ai.has(ye.storageCode))) return console.warn(`Session replay ${ee.kind} segment ${ee.sequence} refused by storage:`, ye), {
+              "put" === iW.type ? await this.transport.put(iW.url, WW.bytes, WW.contentType, iW.ifNoneMatch) : await this.transport.post(iW.target, WW.bytes, WW.contentType)
+            } catch (mW) {
+              if (mW instanceof BW.c && null !== mW.status && mW.status < 500 && !ei.has(mW.status) && (null === mW.storageCode || !vi.has(mW.storageCode))) return console.warn(`Session replay ${WW.kind} segment ${WW.sequence} refused by storage:`, mW), {
                 type: "dropped",
-                reason: ye.message
+                reason: mW.message
               };
-              throw ye
+              throw mW
             }
             return {
               type: "uploaded"
             }
-          } catch (ye) {
-            const be = ye instanceof Error ? ye.message : String(ye),
-              Me = void 0 === ee.part ? "" : ` part ${ee.part.index}`;
-            if (console.warn(`Session replay ${ee.kind} segment ${ee.sequence}${Me} upload failed:`, ye), ye instanceof le.b && (403 === ye.status && (ie = null, void 0 !== ee.part && this.targets.expire(ee.kind, ee.sequence, ee.part.index)), ++He >= this.options.maxAttempts)) return {
+          } catch (mW) {
+            const EW = mW instanceof Error ? mW.message : String(mW),
+              NW = void 0 === WW.part ? "" : ` part ${WW.part.index}`;
+            if (console.warn(`Session replay ${WW.kind} segment ${WW.sequence}${NW} upload failed:`, mW), mW instanceof BW.c && (403 === mW.status && (iW = null, void 0 !== WW.part && this.targets.expire(WW.kind, WW.sequence, WW.part.index)), ++OW >= this.options.maxAttempts)) return {
               type: "dropped",
-              reason: be
+              reason: EW
             }
           }
-          const Me = Math.min(3e4, this.options.baseBackoffMs * 2 ** (be - 1));
-          if (await this.options.wait(Me * (.75 + .5 * Math.random())), this.stopped) return {
+          const NW = Math.min(3e4, this.options.baseBackoffMs * 2 ** (EW - 1));
+          if (await this.options.wait(NW * (.75 + .5 * Math.random())), this.stopped) return {
             type: "dropped",
             reason: "uploader stopped"
           }
         }
       }
-      async requestTarget(ee) {
+      async requestTarget(WW) {
         const {
-          part: ie
-        } = ee;
-        if (void 0 !== ie) {
-          const He = await this.targets.get(ee.kind, ee.sequence, ee.contentType, ie.index, ie.slots);
-          return "rejected" in He ? He : {
+          part: iW
+        } = WW;
+        if (void 0 !== iW) {
+          const OW = await this.targets.get(WW.kind, WW.sequence, WW.contentType, iW.index, iW.slots);
+          return "rejected" in OW ? OW : {
             type: "post",
-            target: He
+            target: OW
           }
         }
-        const He = "dom" === ee.kind ? await this.targets.takeDom(ee.sequence) : void 0;
-        if (void 0 !== He) return {
+        const OW = "dom" === WW.kind ? await this.targets.takeDom(WW.sequence) : void 0;
+        if (void 0 !== OW) return {
           type: "put",
-          url: He.uploadUrl,
-          ifNoneMatch: He.ifNoneMatch
+          url: OW.uploadUrl,
+          ifNoneMatch: OW.ifNoneMatch
         };
-        const ye = "telemetry" === ee.kind && ee.bytes.byteLength <= Oi ? this.targets.takeTelemetry(ee.sequence) : void 0;
-        if (void 0 !== ye) return {
+        const mW = "telemetry" === WW.kind && WW.bytes.byteLength <= Si ? this.targets.takeTelemetry(WW.sequence) : void 0;
+        if (void 0 !== mW) return {
           type: "post",
-          target: ye
+          target: mW
         };
-        const be = await this.transport.requestPutUrl({
+        const EW = await this.transport.requestPutUrl({
           uploadToken: this.uploadToken,
-          kind: ee.kind,
-          sequence: ee.sequence,
-          contentType: ee.contentType,
-          byteLength: ee.bytes.byteLength
+          kind: WW.kind,
+          sequence: WW.sequence,
+          contentType: WW.contentType,
+          byteLength: WW.bytes.byteLength
         });
-        return "rejected" in be ? be : {
+        return "rejected" in EW ? EW : {
           type: "put",
-          url: be.uploadUrl,
-          ifNoneMatch: be.ifNoneMatch
+          url: EW.uploadUrl,
+          ifNoneMatch: EW.ifNoneMatch
         }
       }
     }
-    class xi {
-      constructor(ee, ie, He, ye, be) {
-        let Me = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
-        this.uploader = ee, this.slots = ie, this.manifest = He, this.journal = ye, this.cut = be, this.joiner = Me, this.segments = new Map, this.storedWhole = new Map, this.openJournalId = null, this.cutJournalId = null
+    class Di {
+      constructor(WW, iW, OW, mW, EW) {
+        let NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
+        this.uploader = WW, this.slots = iW, this.manifest = OW, this.journal = mW, this.cut = EW, this.joiner = NW, this.segments = new Map, this.storedWhole = new Map, this.openJournalId = null, this.cutJournalId = null
       }
-      onWorkerMessage(ee, ie) {
-        switch (ee.type) {
+      onWorkerMessage(WW, iW) {
+        switch (WW.type) {
           case "videoSegmentOpened": {
-            var He, ye;
-            if (null !== (He = this.joiner) && void 0 !== He && He.accepting) {
-              var be;
-              const ie = this.uploader.takeSequence("video");
-              this.joiner.open(ee.journalId, ie), this.openJournalId = ee.journalId, null === (be = this.journal) || void 0 === be || be.videoQueued(ee.journalId, ie);
+            var OW, mW;
+            if (null !== (OW = this.joiner) && void 0 !== OW && OW.accepting) {
+              var EW;
+              const iW = this.uploader.takeSequence("video");
+              this.joiner.open(WW.journalId, iW), this.openJournalId = WW.journalId, null === (EW = this.journal) || void 0 === EW || EW.videoQueued(WW.journalId, iW);
               break
             }
-            const Me = this.uploader.openSegment("video", "video/mp4", this.slots, ie);
-            this.segments.set(ee.journalId, {
-              sequence: Me,
+            const NW = this.uploader.openSegment("video", "video/mp4", this.slots, iW);
+            this.segments.set(WW.journalId, {
+              sequence: NW,
               settledParts: 0,
               totalParts: null,
               landedParts: 0,
               listedParts: 0,
               uploaded: !1
-            }), this.openJournalId = ee.journalId, null === (ye = this.journal) || void 0 === ye || ye.videoQueued(ee.journalId, Me);
+            }), this.openJournalId = WW.journalId, null === (mW = this.journal) || void 0 === mW || mW.videoQueued(WW.journalId, NW);
             break
           }
           case "videoPart": {
-            var Me;
-            if (null !== (Me = this.joiner) && void 0 !== Me && Me.owns(ee.journalId)) {
+            var NW;
+            if (null !== (NW = this.joiner) && void 0 !== NW && NW.owns(WW.journalId)) {
               const {
-                index: ie,
-                bytes: He,
-                meta: ye,
-                completeUntilUs: be,
-                completeUntilIndex: Me
-              } = ee;
-              this.joiner.addPart(ee.journalId, {
-                index: ie,
-                bytes: He,
-                meta: ye,
-                completeUntilUs: be,
-                completeUntilIndex: Me
+                index: iW,
+                bytes: OW,
+                meta: mW,
+                completeUntilUs: EW,
+                completeUntilIndex: NW
+              } = WW;
+              this.joiner.addPart(WW.journalId, {
+                index: iW,
+                bytes: OW,
+                meta: mW,
+                completeUntilUs: EW,
+                completeUntilIndex: NW
               });
               break
             }
-            const ie = this.segments.get(ee.journalId);
-            void 0 !== ie && this.enqueuePart(ee.journalId, ie.sequence, ee);
+            const iW = this.segments.get(WW.journalId);
+            void 0 !== iW && this.enqueuePart(WW.journalId, iW.sequence, WW);
             break
           }
           case "videoSegmentClosed": {
-            var Ke;
-            if (null !== (Ke = this.joiner) && void 0 !== Ke && Ke.owns(ee.journalId)) {
-              var Ue;
-              if (this.openJournalId === ee.journalId && (this.openJournalId = null), ee.parts > 0) this.joiner.close(ee.journalId, ee.parts);
-              else this.joiner.forget(ee.journalId), null === (Ue = this.journal) || void 0 === Ue || Ue.videoSettled(ee.journalId);
+            var PW;
+            if (null !== (PW = this.joiner) && void 0 !== PW && PW.owns(WW.journalId)) {
+              var LW;
+              if (this.openJournalId === WW.journalId && (this.openJournalId = null), WW.parts > 0) this.joiner.close(WW.journalId, WW.parts);
+              else this.joiner.forget(WW.journalId), null === (LW = this.journal) || void 0 === LW || LW.videoSettled(WW.journalId);
               break
             }
-            const ie = this.segments.get(ee.journalId);
-            if (void 0 === ie) break;
-            ie.totalParts = ee.parts, this.openJournalId === ee.journalId && (this.openJournalId = null), this.maybeDone(ee.journalId, ie);
+            const iW = this.segments.get(WW.journalId);
+            if (void 0 === iW) break;
+            iW.totalParts = WW.parts, this.openJournalId === WW.journalId && (this.openJournalId = null), this.maybeDone(WW.journalId, iW);
             break
           }
         }
       }
-      joinedStored(ee, ie, He) {
-        this.manifest.setVideoSegment(ie, He.meta, null), this.storedWhole.set(ie, ee)
+      joinedStored(WW, iW, OW) {
+        this.manifest.setVideoSegment(iW, OW.meta, null), this.storedWhole.set(iW, WW)
       }
-      joinedHandedBack(ee, ie, He, ye) {
-        const be = {
-          sequence: ie,
+      joinedHandedBack(WW, iW, OW, mW) {
+        const EW = {
+          sequence: iW,
           settledParts: 0,
-          totalParts: ye,
+          totalParts: mW,
           landedParts: 0,
           listedParts: 0,
           uploaded: !1
         };
-        this.segments.set(ee, be), this.uploader.prefetchTargets("video", ie, "video/mp4", this.slots);
-        for (const Me of He) this.enqueuePart(ee, ie, Me)
+        this.segments.set(WW, EW), this.uploader.prefetchTargets("video", iW, "video/mp4", this.slots);
+        for (const NW of OW) this.enqueuePart(WW, iW, NW)
       }
-      enqueuePart(ee, ie, He) {
+      enqueuePart(WW, iW, OW) {
         this.uploader.enqueue({
           kind: "video",
           contentType: "video/mp4",
-          bytes: He.bytes,
+          bytes: OW.bytes,
           meta: {
             type: "video",
-            meta: He.meta,
-            journalId: ee,
-            index: He.index,
-            completeUntilUs: He.completeUntilUs,
-            completeUntilIndex: He.completeUntilIndex
+            meta: OW.meta,
+            journalId: WW,
+            index: OW.index,
+            completeUntilUs: OW.completeUntilUs,
+            completeUntilIndex: OW.completeUntilIndex
           },
           part: {
-            sequence: ie,
-            index: He.index,
+            sequence: iW,
+            index: OW.index,
             slots: this.slots
           }
         })
       }
-      landed(ee, ie) {
-        if (null !== ee.completeUntilUs && ee.meta.endMs > ee.meta.startMs) {
-          var He, ye;
-          const be = this.segments.get(ee.journalId);
-          void 0 !== be && (be.landedParts = ee.index + 1), this.manifest.setVideoSegment(ie, ee.meta, ee.index + 1), null === (He = this.journal) || void 0 === He || He.videoPartLanded(ee.journalId, {
-            partsLanded: ee.index + 1,
-            completeUntilUs: ee.completeUntilUs,
-            meta: ee.meta
-          }, null !== (ye = ee.completeUntilIndex) && void 0 !== ye ? ye : 0)
+      landed(WW, iW) {
+        if (null !== WW.completeUntilUs && WW.meta.endMs > WW.meta.startMs) {
+          var OW, mW;
+          const EW = this.segments.get(WW.journalId);
+          void 0 !== EW && (EW.landedParts = WW.index + 1), this.manifest.setVideoSegment(iW, WW.meta, WW.index + 1), null === (OW = this.journal) || void 0 === OW || OW.videoPartLanded(WW.journalId, {
+            partsLanded: WW.index + 1,
+            completeUntilUs: WW.completeUntilUs,
+            meta: WW.meta
+          }, null !== (mW = WW.completeUntilIndex) && void 0 !== mW ? mW : 0)
         }
-        this.settled(ee)
+        this.settled(WW)
       }
-      dropped(ee) {
-        this.settled(ee), ee.journalId === this.openJournalId && ee.journalId !== this.cutJournalId && (this.cutJournalId = ee.journalId, this.cut())
+      dropped(WW) {
+        this.settled(WW), WW.journalId === this.openJournalId && WW.journalId !== this.cutJournalId && (this.cutJournalId = WW.journalId, this.cut())
       }
-      listed(ee, ie) {
-        if (null !== ie)
-          for (const [ye, be] of this.segments) be.sequence === ee && (be.listedParts = Math.max(be.listedParts, ie), this.maybeDone(ye, be));
+      listed(WW, iW) {
+        if (null !== iW)
+          for (const [mW, EW] of this.segments) EW.sequence === WW && (EW.listedParts = Math.max(EW.listedParts, iW), this.maybeDone(mW, EW));
         else {
-          const ie = this.storedWhole.get(ee);
-          var He;
-          void 0 !== ie && (this.storedWhole.delete(ee), null === (He = this.journal) || void 0 === He || He.videoSettled(ie))
+          const iW = this.storedWhole.get(WW);
+          var OW;
+          void 0 !== iW && (this.storedWhole.delete(WW), null === (OW = this.journal) || void 0 === OW || OW.videoSettled(iW))
         }
       }
-      settled(ee) {
-        const ie = this.segments.get(ee.journalId);
-        void 0 !== ie && (ie.settledParts++, this.maybeDone(ee.journalId, ie))
+      settled(WW) {
+        const iW = this.segments.get(WW.journalId);
+        void 0 !== iW && (iW.settledParts++, this.maybeDone(WW.journalId, iW))
       }
-      maybeDone(ee, ie) {
-        if (null === ie.totalParts || ie.settledParts < ie.totalParts) return;
-        const He = ie.listedParts >= ie.landedParts;
-        var ye, be;
-        ie.uploaded || (ie.uploaded = !0, this.uploader.closeSegment("video", ie.sequence), He || null === (ye = this.journal) || void 0 === ye || ye.videoUploaded(ee));
-        He && (this.segments.delete(ee), null === (be = this.journal) || void 0 === be || be.videoSettled(ee))
+      maybeDone(WW, iW) {
+        if (null === iW.totalParts || iW.settledParts < iW.totalParts) return;
+        const OW = iW.listedParts >= iW.landedParts;
+        var mW, EW;
+        iW.uploaded || (iW.uploaded = !0, this.uploader.closeSegment("video", iW.sequence), OW || null === (mW = this.journal) || void 0 === mW || mW.videoUploaded(WW));
+        OW && (this.segments.delete(WW), null === (EW = this.journal) || void 0 === EW || EW.videoSettled(WW))
       }
     }
-    var Li = He(3214),
-      Ci = He(5081);
-    class vi {
-      constructor(ee, ie) {
-        this.deps = ee, this.videoStatus = ie, this.worker = null, this.capture = null, this.uploads = null, this.joiner = null, this.qualityLevel = 0, this.statsWindows = 0, this.videoStarted = !1, this.canvasWatch = new Xi({
-          onFirstCanvas: ee => {
-            this.attachToCanvas(ee)
+    var Vi = OW(4045),
+      fi = OW(5380);
+    class Ci {
+      constructor(WW, iW) {
+        this.deps = WW, this.videoStatus = iW, this.worker = null, this.capture = null, this.uploads = null, this.joiner = null, this.qualityLevel = 0, this.statsWindows = 0, this.videoStarted = !1, this.canvasWatch = new Ui({
+          onFirstCanvas: WW => {
+            this.attachToCanvas(WW)
           },
-          onCanvasSwapped: ee => {
-            this.deps.telemetry.writeEvent("canvasSwapped"), null !== this.capture && (this.capture.start(ee), this.postToWorker({
+          onCanvasSwapped: WW => {
+            this.deps.telemetry.writeEvent("canvasSwapped"), null !== this.capture && (this.capture.start(WW), this.postToWorker({
               type: "cut"
             }))
           },
-          onResized: ee => {
+          onResized: WW => {
             this.postToWorker({
               type: "resize",
-              cssSize: ee
+              cssSize: WW
             })
           },
           onContextLost: () => {
@@ -1999,288 +2004,288 @@ export const modules = {
           }
         })
       }
-      attachToCanvas(ee) {
+      attachToCanvas(WW) {
         if (null !== this.deps.videoConfig && "recorded" === this.videoStatus) try {
-          this.startVideo(ee, this.deps.videoConfig)
-        } catch (ie) {
-          console.warn("Session replay couldn't start its video; recording DOM and events without it.", ie), this.videoUnavailable(`video couldn't start: ${ie instanceof Error?ie.message:String(ie)}`)
+          this.startVideo(WW, this.deps.videoConfig)
+        } catch (iW) {
+          console.warn("Session replay couldn't start its video; recording DOM and events without it.", iW), this.videoUnavailable(`video couldn't start: ${iW instanceof Error?iW.message:String(iW)}`)
         }
       }
-      startVideo(ee, ie) {
-        var He, ye, be;
-        const Me = new Fi,
-          Ke = (0, ii.k)(ie),
-          Ue = () => {
+      startVideo(WW, iW) {
+        var OW, mW, EW;
+        const NW = new wi,
+          PW = (0, Oi.t)(iW),
+          LW = () => {
             this.postToWorker({
               type: "cut"
             })
           },
-          Fe = null === this.deps.joinerAccess ? null : this.createJoiner(this.deps.joinerAccess, (() => Je), Ue),
-          Je = new xi(this.deps.uploader, Ke, this.deps.manifest, this.deps.journal, Ue, Fe);
-        Me.onmessage = ee => {
-          this.onWorkerMessage(ee.data, Je)
-        }, Me.onerror = ee => {
-          console.error("Session replay video worker error.", ee.message), this.worker === Me && (this.endVideo(), this.videoStopped("stopped_error", `video worker failed: ${ee.message||"it didn't load"}`))
-        }, this.worker = Me, this.uploads = Je, this.joiner = Fe, this.deps.debug.joiner = null !== (He = null === Fe || void 0 === Fe ? void 0 : Fe.stats) && void 0 !== He ? He : null, this.videoStarted = !0, this.deps.stills.start();
-        const oe = (0, De.getOperatingSystem)(),
-          Re = (0, we.e)();
+          cW = null === this.deps.joinerAccess ? null : this.createJoiner(this.deps.joinerAccess, (() => wW), LW),
+          wW = new Di(this.deps.uploader, PW, this.deps.manifest, this.deps.journal, LW, cW);
+        NW.onmessage = WW => {
+          this.onWorkerMessage(WW.data, wW)
+        }, NW.onerror = WW => {
+          console.error("Session replay video worker error.", WW.message), this.worker === NW && (this.endVideo(), this.videoStopped("stopped_error", `video worker failed: ${WW.message||"it didn't load"}`))
+        }, this.worker = NW, this.uploads = wW, this.joiner = cW, this.deps.debug.joiner = null !== (OW = null === cW || void 0 === cW ? void 0 : cW.stats) && void 0 !== OW ? OW : null, this.videoStarted = !0, this.deps.stills.start();
+        const tW = (0, nW.getOperatingSystem)(),
+          ZW = (0, HW.c)();
         this.postToWorker({
           type: "init",
-          videoConfig: ie,
+          videoConfig: iW,
           partPlan: {
-            ...Ke,
-            partDurationMs: ie.partDurationMs,
-            keyframeIntervalMs: ie.keyframeIntervalMs
+            ...PW,
+            partDurationMs: iW.partDurationMs,
+            keyframeIntervalMs: iW.keyframeIntervalMs
           },
           cssSize: this.canvasWatch.cssSize,
           encoderPreference: {
-            preferSoftware: ie.softwareEncoderPlatforms.includes(oe),
-            preferQualityLatency: "ios" === oe
+            preferSoftware: iW.softwareEncoderPlatforms.includes(tW),
+            preferQualityLatency: "ios" === tW
           },
-          journalRecordingId: null !== (ye = null === (be = this.deps.journal) || void 0 === be ? void 0 : be.recordingId) && void 0 !== ye ? ye : null
+          journalRecordingId: null !== (mW = null === (EW = this.deps.journal) || void 0 === EW ? void 0 : EW.recordingId) && void 0 !== mW ? mW : null
         });
-        const ke = function(ee, ie, He, ye) {
-          const be = ye && ee.streamGrabEngines.includes(He) ? "stream" : ee.videoFrameGrabPlatforms.includes(ie) ? "videoFrame" : "bitmap";
+        const xW = function(WW, iW, OW, mW) {
+          const EW = mW && WW.streamGrabEngines.includes(OW) ? "stream" : WW.videoFrameGrabPlatforms.includes(iW) ? "videoFrame" : "bitmap";
           return {
-            path: be,
-            frameCostFloorMs: Math.max(ee.captureFrameCostFloorMs, "stream" === be ? 2.5 : 0, "ios" === ie ? 3.5 : 0)
+            path: EW,
+            frameCostFloorMs: Math.max(WW.captureFrameCostFloorMs, "stream" === EW ? 2.5 : 0, "ios" === iW ? 3.5 : 0)
           }
-        }(ie, oe, Re, qi.isSupported() && !ee.renderer.endsWith("webgpu"));
-        this.capture = new fi(Me, ie.maxFps, {
-          msPerSecond: ie.captureBudgetMsPerSecond,
-          frameCostFloorMs: ke.frameCostFloorMs
+        }(iW, tW, ZW, Ai.isSupported() && !WW.renderer.endsWith("webgpu"));
+        this.capture = new bi(NW, iW.maxFps, {
+          msPerSecond: iW.captureBudgetMsPerSecond,
+          frameCostFloorMs: xW.frameCostFloorMs
         }, {
-          path: ke.path,
-          maxMacroblocks: ie.maxMacroblocks,
+          path: xW.path,
+          maxMacroblocks: iW.maxMacroblocks,
           cssSize: () => this.canvasWatch.cssSize
-        }, (ee => {
-          this.endVideo(), this.videoStopped("stopped_error", ee)
-        })), this.capture.start(ee)
+        }, (WW => {
+          this.endVideo(), this.videoStopped("stopped_error", WW)
+        })), this.capture.start(WW)
       }
-      createJoiner(ee, ie, He) {
-        return new gi(ee, this.deps.recording.uploadToken, new ne(ee.url), {
-          stored: (ee, He, ye) => {
-            ie().joinedStored(ee, He, ye), this.deps.pageExit.segmentLanded()
+      createJoiner(WW, iW, OW) {
+        return new Ki(WW, this.deps.recording.uploadToken, new RW(WW.url), {
+          stored: (WW, OW, mW) => {
+            iW().joinedStored(WW, OW, mW), this.deps.pageExit.segmentLanded()
           },
-          handBack: (ee, He, ye, be) => {
-            ie().joinedHandedBack(ee, He, ye, be)
+          handBack: (WW, OW, mW, EW) => {
+            iW().joinedHandedBack(WW, OW, mW, EW)
           },
-          cut: He
+          cut: OW
         }, {
-          wait: wi,
+          wait: Hi,
           nowMs: Date.now,
-          maxHeldBytes: zi[this.deps.platformType]
+          maxHeldBytes: ki[this.deps.platformType]
         })
       }
-      onWorkerMessage(ee, ie) {
-        var He, ye, be, Me;
-        switch (ee.type) {
+      onWorkerMessage(WW, iW) {
+        var OW, mW, EW, NW;
+        switch (WW.type) {
           case "videoSegmentOpened":
           case "videoPart":
           case "videoSegmentClosed":
-            ie.onWorkerMessage(ee, "videoSegmentOpened" === ee.type ? null === (He = this.deps.dom()) || void 0 === He ? void 0 : He.cutForVideo() : void 0), this.deps.debug.uploadBacklogBytes = this.deps.uploader.backlogBytes;
+            iW.onWorkerMessage(WW, "videoSegmentOpened" === WW.type ? null === (OW = this.deps.dom()) || void 0 === OW ? void 0 : OW.cutForVideo() : void 0), this.deps.debug.uploadBacklogBytes = this.deps.uploader.backlogBytes;
             break;
           case "still":
-            this.deps.stills.received(ee, document.hidden);
+            this.deps.stills.received(WW, document.hidden);
             break;
           case "stats":
-            be = this.deps.debug, Me = ee.stats, be.workerStats.push(Me), be.workerStats.length > 120 && be.workerStats.shift(), this.deps.debug.uploadBacklogBytes = this.deps.uploader.backlogBytes, this.maybeLogStats(ee.stats);
+            EW = this.deps.debug, NW = WW.stats, EW.workerStats.push(NW), EW.workerStats.length > 120 && EW.workerStats.shift(), this.deps.debug.uploadBacklogBytes = this.deps.uploader.backlogBytes, this.maybeLogStats(WW.stats);
             break;
           case "qualityChanged":
-            this.qualityLevel = ee.level, null === (ye = this.capture) || void 0 === ye || ye.setMaxFps(ee.maxFps), this.deps.debug.qualityChanges.push({
-              atMs: (0, Ie.e)(),
-              level: ee.level,
-              maxFps: ee.maxFps,
-              reason: ee.reason
-            }), this.deps.experiment.logStats && console.warn(`Session replay stats: quality level ${ee.level} (${ee.reason})`), this.deps.telemetry.writeEvent("qualityChanged");
+            this.qualityLevel = WW.level, null === (mW = this.capture) || void 0 === mW || mW.setMaxFps(WW.maxFps), this.deps.debug.qualityChanges.push({
+              atMs: (0, aW.e)(),
+              level: WW.level,
+              maxFps: WW.maxFps,
+              reason: WW.reason
+            }), this.deps.experiment.logStats && console.warn(`Session replay stats: quality level ${WW.level} (${WW.reason})`), this.deps.telemetry.writeEvent("qualityChanged");
             break;
           case "videoUnavailable":
-            this.videoUnavailable(ee.reason)
+            this.videoUnavailable(WW.reason)
         }
       }
-      videoUnavailable(ee) {
-        var ie, He;
-        null === (ie = this.capture) || void 0 === ie || ie.stop(), this.capture = null, null === (He = this.worker) || void 0 === He || He.terminate(), this.worker = null, this.videoStopped("stopped_error", ee)
+      videoUnavailable(WW) {
+        var iW, OW;
+        null === (iW = this.capture) || void 0 === iW || iW.stop(), this.capture = null, null === (OW = this.worker) || void 0 === OW || OW.terminate(), this.worker = null, this.videoStopped("stopped_error", WW)
       }
-      videoStopped(ee, ie) {
-        "recorded" !== this.videoStatus || this.deps.isStopped() || (this.deps.debug.videoUnavailableReason = ie, "stopped_error" === ee && this.deps.telemetry.writeEvent("captureFailed"), this.setVideoStatus(ee, ie))
+      videoStopped(WW, iW) {
+        "recorded" !== this.videoStatus || this.deps.isStopped() || (this.deps.debug.videoUnavailableReason = iW, "stopped_error" === WW && this.deps.telemetry.writeEvent("captureFailed"), this.setVideoStatus(WW, iW))
       }
-      setVideoStatus(ee, ie) {
-        this.videoStatus = ee, (0, Li.g)("dom_only", this.deps.recording), null !== this.deps.dom() && (0, Ci.g)(ee, ie)
+      setVideoStatus(WW, iW) {
+        this.videoStatus = WW, (0, Vi.i)("dom_only", this.deps.recording), null !== this.deps.dom() && (0, fi.d)(WW, iW)
       }
-      maybeLogStats(ee) {
+      maybeLogStats(WW) {
         if (!this.deps.experiment.logStats || ++this.statsWindows % 6 !== 0) return;
-        const ie = Math.round(1e3 * ee.encodedFrames / ee.windowMs);
-        console.warn(`Session replay stats: ${ie} fps encoded, ${ee.encodeWidth}x${ee.encodeHeight} ${ee.hardwareAcceleration}`)
+        const iW = Math.round(1e3 * WW.encodedFrames / WW.windowMs);
+        console.warn(`Session replay stats: ${iW} fps encoded, ${WW.encodeWidth}x${WW.encodeHeight} ${WW.hardwareAcceleration}`)
       }
       onCellular() {
         "recorded" === this.videoStatus && (this.videoStarted ? (this.endVideo(), this.videoStopped("stopped_cellular", "moved onto cellular data")) : this.setVideoStatus("skipped_cellular", null))
       }
       endVideo() {
-        var ee;
-        null === (ee = this.capture) || void 0 === ee || ee.stop(), this.capture = null, this.postToWorker({
+        var WW;
+        null === (WW = this.capture) || void 0 === WW || WW.stop(), this.capture = null, this.postToWorker({
           type: "flush"
         });
-        const ie = this.worker;
+        const iW = this.worker;
         this.worker = null, setTimeout((() => {
-          null === ie || void 0 === ie || ie.terminate()
+          null === iW || void 0 === iW || iW.terminate()
         }), 15e3)
       }
-      postToWorker(ee) {
-        var ie;
-        null === (ie = this.worker) || void 0 === ie || ie.postMessage(ee)
+      postToWorker(WW) {
+        var iW;
+        null === (iW = this.worker) || void 0 === iW || iW.postMessage(WW)
       }
     }
-    const ui = 3 * ue.d / 4,
-      mi = {
+    const Xi = 3 * CW.e / 4,
+      Bi = {
         desktop: 88080384,
         mobile: 16777216,
         tablet: 16777216
       };
-    var li = He(40617);
-    const Si = {
+    var qi = OW(41067);
+    const Ri = {
         count: 1,
-        maxBytes: ii.g
+        maxBytes: Oi.l
       },
-      ni = "image/jpeg";
-    class ji {
-      constructor(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ue.g;
-        this.uploader = ee, this.manifest = ie, this.relay = He, this.keepalive = ye, this.latest = null, this.queued = null, this.nextSequence = 0, this.refreshTimer = null, this.stopped = !1
+      Gi = "image/jpeg";
+    class Ii {
+      constructor(WW, iW, OW) {
+        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : CW.f;
+        this.uploader = WW, this.manifest = iW, this.relay = OW, this.keepalive = mW, this.latest = null, this.queued = null, this.nextSequence = 0, this.refreshTimer = null, this.stopped = !1
       }
       start() {
         this.prefetchNext(), this.refreshTimer = setInterval((() => {
           this.prefetchNext()
         }), 15e5)
       }
-      received(ee, ie) {
+      received(WW, iW) {
         let {
-          bytes: He,
-          small: ye,
-          atMs: be
-        } = ee;
-        const Me = He.byteLength <= Si.maxBytes ? He : ye;
-        null !== Me && (this.latest = {
-          bytes: Me,
-          small: ye,
-          atMs: be
-        }, ie && this.upload())
+          bytes: OW,
+          small: mW,
+          atMs: EW
+        } = WW;
+        const NW = OW.byteLength <= Ri.maxBytes ? OW : mW;
+        null !== NW && (this.latest = {
+          bytes: NW,
+          small: mW,
+          atMs: EW
+        }, iW && this.upload())
       }
       upload() {
-        var ee, ie;
-        const He = this.latest;
-        if (this.stopped || null === He || He.atMs <= (null !== (ee = null === (ie = this.queued) || void 0 === ie ? void 0 : ie.atMs) && void 0 !== ee ? ee : -1 / 0)) return;
-        const ye = this.takeSequence();
+        var WW, iW;
+        const OW = this.latest;
+        if (this.stopped || null === OW || OW.atMs <= (null !== (WW = null === (iW = this.queued) || void 0 === iW ? void 0 : iW.atMs) && void 0 !== WW ? WW : -1 / 0)) return;
+        const mW = this.takeSequence();
         this.queued = {
-          atMs: He.atMs,
-          sequence: ye
+          atMs: OW.atMs,
+          sequence: mW
         }, this.uploader.enqueue({
           kind: "still",
-          contentType: ni,
-          bytes: He.bytes,
+          contentType: Gi,
+          bytes: OW.bytes,
           meta: {
             type: "still",
-            atMs: He.atMs,
-            sequence: ye
+            atMs: OW.atMs,
+            sequence: mW
           },
           part: {
-            sequence: ye,
+            sequence: mW,
             index: 0,
-            slots: Si
+            slots: Ri
           }
         })
       }
-      landed(ee) {
-        this.manifest.setStill(ee.atMs, ee.sequence), this.uploader.closeSegment("still", ee.sequence)
+      landed(WW) {
+        this.manifest.setStill(WW.atMs, WW.sequence), this.uploader.closeSegment("still", WW.sequence)
       }
-      dropped(ee) {
-        this.uploader.closeSegment("still", ee.sequence)
+      dropped(WW) {
+        this.uploader.closeSegment("still", WW.sequence)
       }
       beacon() {
-        var ee, ie, He, ye;
-        const be = this.latest;
-        if (this.stopped || null === be || be.atMs <= (null !== (ee = null === (ie = this.manifest.contents.still) || void 0 === ie ? void 0 : ie.atMs) && void 0 !== ee ? ee : -1 / 0)) return;
-        const Me = (null === (He = this.queued) || void 0 === He ? void 0 : He.atMs) === be.atMs ? this.queued : null;
-        if (null !== Me && this.keepalive.isInFlight(ni)) return void this.manifest.setStill(be.atMs, Me.sequence);
-        const Ke = null !== (ye = null === Me || void 0 === Me ? void 0 : Me.sequence) && void 0 !== ye ? ye : this.nextSequence,
-          Ue = this.uploader.peekTarget("still", Ke, 0);
-        if (void 0 !== Ue)
-          for (const Fe of [be.bytes, be.small])
-            if (null !== Fe && this.sendBeacon(Ue, Fe)) return null === Me && this.takeSequence(), void this.manifest.setStill(be.atMs, Ke)
+        var WW, iW, OW, mW;
+        const EW = this.latest;
+        if (this.stopped || null === EW || EW.atMs <= (null !== (WW = null === (iW = this.manifest.contents.still) || void 0 === iW ? void 0 : iW.atMs) && void 0 !== WW ? WW : -1 / 0)) return;
+        const NW = (null === (OW = this.queued) || void 0 === OW ? void 0 : OW.atMs) === EW.atMs ? this.queued : null;
+        if (null !== NW && this.keepalive.isInFlight(Gi)) return void this.manifest.setStill(EW.atMs, NW.sequence);
+        const PW = null !== (mW = null === NW || void 0 === NW ? void 0 : NW.sequence) && void 0 !== mW ? mW : this.nextSequence,
+          LW = this.uploader.peekTarget("still", PW, 0);
+        if (void 0 !== LW)
+          for (const cW of [EW.bytes, EW.small])
+            if (null !== cW && this.sendBeacon(LW, cW)) return null === NW && this.takeSequence(), void this.manifest.setStill(EW.atMs, PW)
       }
-      sendBeacon(ee, ie) {
-        var He, ye;
-        const be = null !== (He = null === (ye = this.relay) || void 0 === ye ? void 0 : ye.beacon({
+      sendBeacon(WW, iW) {
+        var OW, mW;
+        const EW = null !== (OW = null === (mW = this.relay) || void 0 === mW ? void 0 : mW.beacon({
           method: "POST",
-          url: ee.url,
-          fields: ee.fields
-        }, ie, ni, this.keepalive)) && void 0 !== He ? He : null;
-        if (null !== be) return be;
+          url: WW.url,
+          fields: WW.fields
+        }, iW, Gi, this.keepalive)) && void 0 !== OW ? OW : null;
+        if (null !== EW) return EW;
         const {
-          form: Me,
-          byteLength: Ke
-        } = (0, li.j)(ee, ie, ni);
-        return this.keepalive.sendUploadBeacon(ee.url, Me, Ke)
+          form: NW,
+          byteLength: PW
+        } = (0, qi.h)(WW, iW, Gi);
+        return this.keepalive.sendUploadBeacon(WW.url, NW, PW)
       }
       stop() {
         this.stopped = !0, null !== this.refreshTimer && clearInterval(this.refreshTimer)
       }
       takeSequence() {
-        const ee = this.nextSequence++;
-        return this.prefetchNext(), ee
+        const WW = this.nextSequence++;
+        return this.prefetchNext(), WW
       }
       prefetchNext() {
-        this.stopped || this.uploader.prefetchTargets("still", this.nextSequence, ni, Si)
+        this.stopped || this.uploader.prefetchTargets("still", this.nextSequence, Gi, Ri)
       }
     }
-    var si = He(5100),
-      Ii = He(40619),
-      Ni = He(40627),
-      Gi = He(40631),
-      ri = He(7136),
-      Qi = He(7142);
+    var ai = OW(5390),
+      ri = OW(41073),
+      zi = OW(41082),
+      Fi = OW(41084),
+      Qi = OW(7500),
+      WO = OW(7502);
 
-    function eH(ee) {
-      return 50 * Math.floor(ee / 50)
+    function iO(WW) {
+      return 50 * Math.floor(WW / 50)
     }
-    class iH {
+    class OO {
       constructor() {
-        this.writer = new ri.e((0, Ie.e)()), this.framesSinceFpsSample = 0, this.lastFpsSampleMs = performance.now(), this.unsubscribers = [], this.actionBits = 0, this.carriedBytes = 0
+        this.writer = new Qi.e((0, aW.e)()), this.framesSinceFpsSample = 0, this.lastFpsSampleMs = performance.now(), this.unsubscribers = [], this.actionBits = 0, this.carriedBytes = 0
       }
-      attach(ee, ie) {
-        null !== ee && (this.setActionBits(ee.getActionBits(), (0, Ie.e)()), this.unsubscribers.push(ee.onKey(((ee, ie, He, ye, be, Me) => {
-          const Ke = (0, Qi.e)(ee);
-          be ? this.writer.writeKey(eH(Me), Ke, ie, He, ye) : 0 !== Ke && null === (0, Qi.g)(ee) && this.writer.writeKey(eH(Me), 0, ie, He, ye)
-        })), ee.onActions(((ee, ie) => {
-          this.setActionBits(ee, ie)
-        })), ee.onPointerLock(((ee, ie) => {
-          this.writer.writeEvent(ie, ee ? "pointerLocked" : "pointerUnlocked")
-        })))), this.unsubscribers.push((0, Ti.r)((() => {
-          const ee = (0, Ti.e)();
-          this.writer.writeFrame((0, Ie.e)() - ee, ee), this.framesSinceFpsSample++, ie()
+      attach(WW, iW) {
+        null !== WW && (this.setActionBits(WW.getActionBits(), (0, aW.e)()), this.unsubscribers.push(WW.onKey(((WW, iW, OW, mW, EW, NW) => {
+          const PW = (0, WO.e)(WW);
+          EW ? this.writer.writeKey(iO(NW), PW, iW, OW, mW) : 0 !== PW && null === (0, WO.g)(WW) && this.writer.writeKey(iO(NW), 0, iW, OW, mW)
+        })), WW.onActions(((WW, iW) => {
+          this.setActionBits(WW, iW)
+        })), WW.onPointerLock(((WW, iW) => {
+          this.writer.writeEvent(iW, WW ? "pointerLocked" : "pointerUnlocked")
+        })))), this.unsubscribers.push((0, ji.r)((() => {
+          const WW = (0, ji.e)();
+          this.writer.writeFrame((0, aW.e)() - WW, WW), this.framesSinceFpsSample++, iW()
         })))
       }
-      writeState(ee, ie) {
-        this.writer.writeState((0, Ie.e)(), {
-          backingWidth: ee.canvas.width,
-          backingHeight: ee.canvas.height,
-          cssWidth: ee.cssWidth,
-          cssHeight: ee.cssHeight,
+      writeState(WW, iW) {
+        this.writer.writeState((0, aW.e)(), {
+          backingWidth: WW.canvas.width,
+          backingHeight: WW.canvas.height,
+          cssWidth: WW.cssWidth,
+          cssHeight: WW.cssHeight,
           devicePixelRatio: window.devicePixelRatio,
-          renderer: ee.renderer,
-          pingMs: ee.pingMs,
-          hidden: ie,
-          qualityLevel: ee.qualityLevel
+          renderer: WW.renderer,
+          pingMs: WW.pingMs,
+          hidden: iW,
+          qualityLevel: WW.qualityLevel
         })
       }
-      writeEvent(ee) {
-        this.writer.writeEvent((0, Ie.e)(), ee)
+      writeEvent(WW) {
+        this.writer.writeEvent((0, aW.e)(), WW)
       }
       sampleFps() {
-        const ee = performance.now(),
-          ie = ee - this.lastFpsSampleMs,
-          He = this.framesSinceFpsSample;
-        return this.lastFpsSampleMs = ee, this.framesSinceFpsSample = 0, 0 === He || ie <= 0 ? null : 1e3 * He / ie
+        const WW = performance.now(),
+          iW = WW - this.lastFpsSampleMs,
+          OW = this.framesSinceFpsSample;
+        return this.lastFpsSampleMs = WW, this.framesSinceFpsSample = 0, 0 === OW || iW <= 0 ? null : 1e3 * OW / iW
       }
       get recordBytes() {
         return this.writer.recordBytes
@@ -2289,80 +2294,80 @@ export const modules = {
         return this.writer.recordBytes > this.carriedBytes
       }
       takeChunk() {
-        const ee = this.writer.chunkStartMs,
-          ie = (0, Ie.e)(),
-          He = this.writer.takeChunk(ie);
-        return this.carriedBytes = 0, 0 !== this.actionBits && (this.writer.writeActions(ie, this.actionBits), this.carriedBytes = this.writer.recordBytes), {
-          bytes: He,
-          startMs: ee,
-          endMs: ie
+        const WW = this.writer.chunkStartMs,
+          iW = (0, aW.e)(),
+          OW = this.writer.takeChunk(iW);
+        return this.carriedBytes = 0, 0 !== this.actionBits && (this.writer.writeActions(iW, this.actionBits), this.carriedBytes = this.writer.recordBytes), {
+          bytes: OW,
+          startMs: WW,
+          endMs: iW
         }
       }
       stop() {
-        for (const ee of this.unsubscribers) ee();
+        for (const WW of this.unsubscribers) WW();
         this.unsubscribers = []
       }
-      setActionBits(ee, ie) {
-        ee !== this.actionBits && (this.actionBits = ee, this.writer.writeActions(eH(ie), ee))
+      setActionBits(WW, iW) {
+        WW !== this.actionBits && (this.actionBits = WW, this.writer.writeActions(iO(iW), WW))
       }
     }
-    var HH = He(5109),
-      yH = He(40638);
-    class bH {
-      constructor(ee, ie) {
-        var He;
-        this.recording = ee, this.telemetry = new iH, this.manifest = void 0, this.journal = null, this.uploader = void 0, this.video = void 0, this.stills = void 0, this.videoConfig = void 0, this.debug = void 0, this.lifetime = new AbortController, this.timers = [], this.ownFpsMonitor = void 0, this.lowFpsOpen = !1, this.pageExit = void 0, this.dom = void 0;
-        const ye = ie.dryRun ? null : null !== (He = ee.partJoiner) && void 0 !== He ? He : null,
-          be = null === ye ? null : (0, me.k)(je(ye)),
-          Ke = ie.dryRun ? new li.e : new li.i((0, Ze.b)().segmentUploadUrl, {
-            relay: be
+    var mO = OW(5399),
+      EO = OW(41091);
+    class NO {
+      constructor(WW, iW) {
+        var OW;
+        this.recording = WW, this.telemetry = new OO, this.manifest = void 0, this.journal = null, this.uploader = void 0, this.video = void 0, this.stills = void 0, this.videoConfig = void 0, this.debug = void 0, this.lifetime = new AbortController, this.timers = [], this.ownFpsMonitor = void 0, this.lowFpsOpen = !1, this.pageExit = void 0, this.dom = void 0;
+        const mW = iW.dryRun ? null : null !== (OW = WW.partJoiner) && void 0 !== OW ? OW : null,
+          EW = null === mW ? null : (0, XW.l)(GW(mW)),
+          PW = iW.dryRun ? new qi.d : new qi.f((0, hW.d)().segmentUploadUrl, {
+            relay: EW
           });
-        var Fe, Je;
-        this.videoConfig = ie.dryRun ? function(ee) {
-          var ie, He, ye, be;
-          const Ke = Me[ee],
-            Ue = Ae.i.getItem("replaySkipLowMemory"),
-            Fe = "boolean" === typeof Ue ? Ue : null;
+        var cW, wW;
+        this.videoConfig = iW.dryRun ? function(WW) {
+          var iW, OW, mW, EW;
+          const PW = NW[WW],
+            LW = oW.i.getItem("replaySkipLowMemory"),
+            cW = "boolean" === typeof LW ? LW : null;
           return {
-            ...Ke,
-            maxFps: null !== (ie = ae("replayMaxFps")) && void 0 !== ie ? ie : Ke.maxFps,
-            maxMacroblocks: null !== (He = ae("replayMaxMacroblocks")) && void 0 !== He ? He : Ke.maxMacroblocks,
-            captureBudgetMsPerSecond: null !== (ye = ae("replayCaptureBudgetMs")) && void 0 !== ye ? ye : Ke.captureBudgetMsPerSecond,
-            captureFrameCostFloorMs: null !== (be = ae("replayCaptureCostFloorMs")) && void 0 !== be ? be : Ke.captureFrameCostFloorMs,
-            softwareEncoderPlatforms: ce("replayEncoder", "software", "hardware", Ke.softwareEncoderPlatforms),
-            videoFrameGrabPlatforms: ce("replayGrab", "videoFrame", "bitmap", Ke.videoFrameGrabPlatforms),
-            streamGrabEngines: xe(Ke.streamGrabEngines),
-            skipLowMemoryDevices: null !== Fe && void 0 !== Fe ? Fe : Ke.skipLowMemoryDevices
+            ...PW,
+            maxFps: null !== (iW = vW("replayMaxFps")) && void 0 !== iW ? iW : PW.maxFps,
+            maxMacroblocks: null !== (OW = vW("replayMaxMacroblocks")) && void 0 !== OW ? OW : PW.maxMacroblocks,
+            captureBudgetMsPerSecond: null !== (mW = vW("replayCaptureBudgetMs")) && void 0 !== mW ? mW : PW.captureBudgetMsPerSecond,
+            captureFrameCostFloorMs: null !== (EW = vW("replayCaptureCostFloorMs")) && void 0 !== EW ? EW : PW.captureFrameCostFloorMs,
+            softwareEncoderPlatforms: gW("replayEncoder", "software", "hardware", PW.softwareEncoderPlatforms),
+            videoFrameGrabPlatforms: gW("replayGrab", "videoFrame", "bitmap", PW.videoFrameGrabPlatforms),
+            streamGrabEngines: DW(PW.streamGrabEngines),
+            skipLowMemoryDevices: null !== cW && void 0 !== cW ? cW : PW.skipLowMemoryDevices
           }
-        }(ie.platformType) : ee.videoConfig && (Fe = ee.videoConfig, Je = ie.platformType, {
-          ...Me[Je],
-          ...Fe
+        }(iW.platformType) : WW.videoConfig && (cW = WW.videoConfig, wW = iW.platformType, {
+          ...NW[wW],
+          ...cW
         });
-        const oe = (0, HH.e)(this.videoConfig);
-        (0, Li.g)("recorded" === oe ? "video" : "dom_only", ee), this.manifest = new Qe(ee.recordingId, ee.uploadToken, !ie.dryRun, {
+        const tW = (0, mO.b)(this.videoConfig);
+        (0, Vi.i)("recorded" === tW ? "video" : "dom_only", WW), this.manifest = new Wi(WW.recordingId, WW.uploadToken, !iW.dryRun, {
           sendIntervalMs: this.manifestIntervalMs,
-          lateFromMs: ee.expiresAtMs - 6e4,
-          onSend: ee => {
-            var ie;
-            null === (ie = this.journal) || void 0 === ie || ie.manifestSent(ee)
+          lateFromMs: WW.expiresAtMs - 6e4,
+          onSend: WW => {
+            var iW;
+            null === (iW = this.journal) || void 0 === iW || iW.manifestSent(WW)
           },
-          onListed: ee => {
+          onListed: WW => {
             let {
-              list: ie,
-              value: He
-            } = ee;
-            var ye, be;
-            if ("videoSegments" === ie) null === (ye = this.video.uploads) || void 0 === ye || ye.listed(He.sequence, null !== (be = He.parts) && void 0 !== be ? be : null);
-            else if ("telemetrySegments" === ie) {
-              var Me;
-              null === (Me = this.journal) || void 0 === Me || Me.telemetrySettled(He.sequence)
+              list: iW,
+              value: OW
+            } = WW;
+            var mW, EW;
+            if ("videoSegments" === iW) null === (mW = this.video.uploads) || void 0 === mW || mW.listed(OW.sequence, null !== (EW = OW.parts) && void 0 !== EW ? EW : null);
+            else if ("telemetrySegments" === iW) {
+              var NW;
+              null === (NW = this.journal) || void 0 === NW || NW.telemetrySettled(OW.sequence)
             } else {
-              var Ke;
-              null === (Ke = this.journal) || void 0 === Ke || Ke.domSettled(He.sequence)
+              var PW;
+              null === (PW = this.journal) || void 0 === PW || PW.domSettled(OW.sequence)
             }
           }
-        }), !ie.dryRun && Gi.b.supported && (this.journal = new bi(new Gi.b, ee, this.manifest.contents, (0, Ze.b)())), this.debug = function() {
-          const ee = {
+        }), !iW.dryRun && Fi.d.supported && (this.journal = new Ni(new Fi.d, WW, this.manifest.contents, (0, hW.d)())), this.debug = function() {
+          const WW = {
             stoppedReason: null,
             videoUnavailableReason: null,
             uploadBacklogBytes: 0,
@@ -2373,32 +2378,32 @@ export const modules = {
             captureFrameCost: null,
             joiner: null
           };
-          return window.sessionReplayDebug = ee, ee
-        }(), this.uploader = new ci(Ke, ee.uploadToken, {
-          ...Zi,
-          maxBacklogBytes: mi[ie.platformType],
-          wait: wi
+          return window.sessionReplayDebug = WW, WW
+        }(), this.uploader = new gi(PW, WW.uploadToken, {
+          ...Ji,
+          maxBacklogBytes: Bi[iW.platformType],
+          wait: Hi
         }, {
-          onUploaded: (ee, ie) => {
-            var He;
-            this.debug.uploadedBytesByKind[ee.kind] = (null !== (He = this.debug.uploadedBytesByKind[ee.kind]) && void 0 !== He ? He : 0) + ee.bytes.byteLength, this.debug.uploadBacklogBytes = this.uploader.backlogBytes, this.onSegmentUploaded(ee.meta, ie, ee.bytes), this.pageExit.segmentLanded()
+          onUploaded: (WW, iW) => {
+            var OW;
+            this.debug.uploadedBytesByKind[WW.kind] = (null !== (OW = this.debug.uploadedBytesByKind[WW.kind]) && void 0 !== OW ? OW : 0) + WW.bytes.byteLength, this.debug.uploadBacklogBytes = this.uploader.backlogBytes, this.onSegmentUploaded(WW.meta, iW, WW.bytes), this.pageExit.segmentLanded()
           },
-          onDropped: (ee, ie, He) => {
-            var ye;
-            if (console.warn(`Session replay dropped a ${ee.kind} segment: ${ie}`), this.debug.droppedSegments++, this.debug.uploadBacklogBytes = this.uploader.backlogBytes, "video" === ee.meta.type) this.telemetry.writeEvent("videoSegmentDropped"), null === (ye = this.video.uploads) || void 0 === ye || ye.dropped(ee.meta);
-            else if ("still" === ee.meta.type) this.stills.dropped(ee.meta);
-            else if ("telemetry" === ee.meta.type && null !== He) {
-              var be;
-              null === (be = this.journal) || void 0 === be || be.telemetrySettled(He)
-            } else if ("dom" === ee.meta.type && null !== He) {
-              var Me;
-              null === (Me = this.journal) || void 0 === Me || Me.domSettled(He)
+          onDropped: (WW, iW, OW) => {
+            var mW;
+            if (console.warn(`Session replay dropped a ${WW.kind} segment: ${iW}`), this.debug.droppedSegments++, this.debug.uploadBacklogBytes = this.uploader.backlogBytes, "video" === WW.meta.type) this.telemetry.writeEvent("videoSegmentDropped"), null === (mW = this.video.uploads) || void 0 === mW || mW.dropped(WW.meta);
+            else if ("still" === WW.meta.type) this.stills.dropped(WW.meta);
+            else if ("telemetry" === WW.meta.type && null !== OW) {
+              var EW;
+              null === (EW = this.journal) || void 0 === EW || EW.telemetrySettled(OW)
+            } else if ("dom" === WW.meta.type && null !== OW) {
+              var NW;
+              null === (NW = this.journal) || void 0 === NW || NW.domSettled(OW)
             }
           },
-          onStopped: ee => {
-            this.stop(`uploads refused: ${ee}`)
+          onStopped: WW => {
+            this.stop(`uploads refused: ${WW}`)
           }
-        }), this.stills = new ji(this.uploader, this.manifest, be), this.pageExit = new Mi({
+        }), this.stills = new Ii(this.uploader, this.manifest, EW), this.pageExit = new Pi({
           manifest: this.manifest,
           stills: this.stills,
           queuedUploads: () => this.uploader.queued(),
@@ -2406,24 +2411,24 @@ export const modules = {
             this.flushTelemetry()
           },
           cutPageRecording: () => {
-            var ee, ie;
-            null === (ee = this.dom) || void 0 === ee || ee.cut(), null === (ie = this.dom) || void 0 === ie || ie.cutAfterNextBatch()
+            var WW, iW;
+            null === (WW = this.dom) || void 0 === WW || WW.cut(), null === (iW = this.dom) || void 0 === iW || iW.cutAfterNextBatch()
           },
-          postToWorker: ee => {
-            this.video.postToWorker(ee)
+          postToWorker: WW => {
+            this.video.postToWorker(WW)
           },
-          writeEvent: ee => {
-            this.telemetry.writeEvent(ee)
+          writeEvent: WW => {
+            this.telemetry.writeEvent(WW)
           },
           isStopped: () => this.isStopped,
           releaseJoined: () => {
-            var ee;
-            null === (ee = this.video.joiner) || void 0 === ee || ee.releaseAll()
+            var WW;
+            null === (WW = this.video.joiner) || void 0 === WW || WW.releaseAll()
           }
-        }), this.video = new vi({
-          recording: ee,
+        }), this.video = new Ci({
+          recording: WW,
           videoConfig: this.videoConfig,
-          joinerAccess: ye,
+          joinerAccess: mW,
           uploader: this.uploader,
           manifest: this.manifest,
           journal: this.journal,
@@ -2431,366 +2436,366 @@ export const modules = {
           pageExit: this.pageExit,
           telemetry: this.telemetry,
           debug: this.debug,
-          experiment: ie.dryRun ? {
-            logStats: !0 === Ae.i.getItem("replayLogStats")
-          } : Ve,
-          platformType: ie.platformType,
+          experiment: iW.dryRun ? {
+            logStats: !0 === oW.i.getItem("replayLogStats")
+          } : eW,
+          platformType: iW.platformType,
           isStopped: () => this.isStopped,
           dom: () => this.dom
-        }, oe);
-        const Re = ie.dryRun ? function() {
-          var ee;
-          const ie = null !== (ee = (0, Ye.f)() ? Pe.currentUrl.getSearchParam("replayPostHogHost") : null) && void 0 !== ee ? ee : Ae.i.getItem("replayPostHogHost");
-          return "string" === typeof ie && ie.length > 0 ? {
-            apiHost: ie,
+        }, tW);
+        const ZW = iW.dryRun ? function() {
+          var WW;
+          const iW = null !== (WW = (0, dW.f)() ? uW.currentUrl.getSearchParam("replayPostHogHost") : null) && void 0 !== WW ? WW : oW.i.getItem("replayPostHogHost");
+          return "string" === typeof iW && iW.length > 0 ? {
+            apiHost: iW,
             projectApiKey: "dry-run"
           } : null
-        }() : ee.posthog;
-        if (this.ownFpsMonitor = null === Re ? new yH.c({
+        }() : WW.posthog;
+        if (this.ownFpsMonitor = null === ZW ? new EO.b({
             onEpisodeStarted: () => {
               this.onLowFps(!0)
             },
             onEpisodeEnded: () => {
               this.onLowFps(!1)
             }
-          }) : null, Ue.h.subscribe("sessionReplayLowFps", (ee => {
+          }) : null, LW.l.subscribe("sessionReplayLowFps", (WW => {
             let {
-              low: ie
-            } = ee;
-            this.isStopped || this.onLowFps(ie)
-          })), Ue.h.subscribe("sessionReplayStayProgress", (ee => {
-            !this.isStopped && this.manifest.updateCurrentStay(ee) && this.manifest.sendSoon()
-          })), Ue.h.subscribe("sessionReplayGameQuit", (ee => {
+              low: iW
+            } = WW;
+            this.isStopped || this.onLowFps(iW)
+          })), LW.l.subscribe("sessionReplayStayProgress", (WW => {
+            !this.isStopped && this.manifest.updateCurrentStay(WW) && this.manifest.sendSoon()
+          })), LW.l.subscribe("sessionReplayGameQuit", (WW => {
             let {
-              reasons: ie,
-              gameName: He
-            } = ee;
-            ie.includes("quit_after_death") && !this.isStopped && this.manifest.flagLastGameQuitAfterDeath(He) && this.pageExit.sendManifest()
-          })), null !== ie.currentGame && (this.listStay(ie.currentGame), Ue.h.yR("sessionReplayStayOpened", ie.currentGame.gameNameWithVariation)), this.start(ee.expiresAtMs), this.dom = null, null !== Re) {
-          const He = new We(this.uploader, {
+              reasons: iW,
+              gameName: OW
+            } = WW;
+            iW.includes("quit_after_death") && !this.isStopped && this.manifest.flagLastGameQuitAfterDeath(OW) && this.pageExit.sendManifest()
+          })), null !== iW.currentGame && (this.listStay(iW.currentGame), LW.l.iZ("sessionReplayStayOpened", iW.currentGame.gameNameWithVariation)), this.start(WW.expiresAtMs), this.dom = null, null !== ZW) {
+          const OW = new TW(this.uploader, {
             cutsEachBatch: () => this.isStopped || this.pageExit.isHiding,
-            packsNow: ee => this.isStopped || this.pageExit.isHiding || document.hidden && !ee
-          }, this.journal, new te.e);
-          this.dom = He, (0, Ci.c)({
-            recording: ee,
-            posthog: Re,
+            packsNow: WW => this.isStopped || this.pageExit.isHiding || document.hidden && !WW
+          }, this.journal, new JW.d);
+          this.dom = OW, (0, fi.c)({
+            recording: WW,
+            posthog: ZW,
             videoStatus: this.video.videoStatus,
-            dryRun: ie.dryRun,
-            onDomBatch: ee => {
-              He.add(ee)
+            dryRun: iW.dryRun,
+            onDomBatch: WW => {
+              OW.add(WW)
             }
           })
         }
       }
       get manifestIntervalMs() {
-        var ee, ie;
-        return null !== (ee = null === (ie = this.videoConfig) || void 0 === ie ? void 0 : ie.manifestIntervalMs) && void 0 !== ee ? ee : 3e4
+        var WW, iW;
+        return null !== (WW = null === (iW = this.videoConfig) || void 0 === iW ? void 0 : iW.manifestIntervalMs) && void 0 !== WW ? WW : 3e4
       }
       get isStopped() {
         return this.lifetime.signal.aborted
       }
-      listStay(ee) {
+      listStay(WW) {
         const {
-          lobbyName: ie,
-          ...He
-        } = ee;
-        this.manifest.gameJoined("anonymous" === this.recording.tags.place_mode || null === ie ? He : {
-          ...He,
-          lobbyName: ie
+          lobbyName: iW,
+          ...OW
+        } = WW;
+        this.manifest.gameJoined("anonymous" === this.recording.tags.place_mode || null === iW ? OW : {
+          ...OW,
+          lobbyName: iW
         })
       }
-      gameJoined(ee) {
+      gameJoined(WW) {
         this.isStopped || (this.video.postToWorker({
           type: "gameJoined"
-        }), this.flushTelemetry(), this.listStay(ee), Ue.h.yR("sessionReplayStayOpened", ee.gameNameWithVariation), this.lowFpsOpen && this.manifest.flagCurrentGame("lowFps"), this.manifest.send())
+        }), this.flushTelemetry(), this.listStay(WW), LW.l.iZ("sessionReplayStayOpened", WW.gameNameWithVariation), this.lowFpsOpen && this.manifest.flagCurrentGame("lowFps"), this.manifest.send())
       }
       gameLeft() {
         this.isStopped || (this.video.postToWorker({
           type: "flush"
         }), this.flushTelemetry(), this.manifest.gameLeft(), this.manifest.send())
       }
-      addCreatorGrant(ee, ie) {
-        this.isStopped || (this.manifest.addCreatorGrant(ee, ie), this.manifest.send())
+      addCreatorGrant(WW, iW) {
+        this.isStopped || (this.manifest.addCreatorGrant(WW, iW), this.manifest.send())
       }
-      onLowFps(ee) {
-        this.lowFpsOpen = ee, ee && this.manifest.flagCurrentGame("lowFps")
+      onLowFps(WW) {
+        this.lowFpsOpen = WW, WW && this.manifest.flagCurrentGame("lowFps")
       }
-      start(ee) {
-        const ie = this.lifetime.signal;
+      start(WW) {
+        const iW = this.lifetime.signal;
         this.timers.push(setInterval((() => {
           this.onStateTick()
         }), 1e3), setInterval((() => {
-          var ee;
-          this.flushTelemetry(), null === (ee = this.dom) || void 0 === ee || ee.cutOnTimer()
+          var WW;
+          this.flushTelemetry(), null === (WW = this.dom) || void 0 === WW || WW.cutOnTimer()
         }), this.manifestIntervalMs), setTimeout((() => {
           this.stop("upload token expiring")
-        }), Math.max(0, ee - Date.now() - 6e4))), this.pageExit.listen(ie), this.telemetry.attach((0, Ni.c)(), (() => {
-          var ee;
-          null === (ee = this.video.capture) || void 0 === ee || ee.onAfterRender()
+        }), Math.max(0, WW - Date.now() - 6e4))), this.pageExit.listen(iW), this.telemetry.attach((0, zi.e)(), (() => {
+          var WW;
+          null === (WW = this.video.capture) || void 0 === WW || WW.onAfterRender()
         }));
-        for (const He of ["error", "unhandledrejection"]) window.addEventListener(He, (ee => {
-          (0, Ii.c)(ee) && this.manifest.flagCurrentGame("hadError")
+        for (const OW of ["error", "unhandledrejection"]) window.addEventListener(OW, (WW => {
+          (0, ri.c)(WW) && this.manifest.flagCurrentGame("hadError")
         }), {
-          signal: ie
+          signal: iW
         });
-        (0, HH.h)((() => {
+        (0, mO.c)((() => {
           this.video.onCellular()
-        }), ie), null !== this.journal && (0, si.d)(ie)
+        }), iW), null !== this.journal && (0, ai.c)(iW)
       }
-      stop(ee) {
-        var ie, He;
+      stop(WW) {
+        var iW, OW;
         if (!this.isStopped) {
-          console.warn(`Session replay stopped recording: ${ee}`), this.debug.stoppedReason = ee, this.lifetime.abort();
-          for (const ee of this.timers) clearTimeout(ee);
-          this.stills.stop(), this.video.canvasWatch.stop(), null !== this.dom && (0, Ci.j)(), this.telemetry.stop(), this.flushTelemetry(), null === (ie = this.dom) || void 0 === ie || ie.cut(), null === (He = this.dom) || void 0 === He || He.close(), this.video.endVideo(), this.manifest.send(), (0, Li.g)("events_only", this.recording)
+          console.warn(`Session replay stopped recording: ${WW}`), this.debug.stoppedReason = WW, this.lifetime.abort();
+          for (const WW of this.timers) clearTimeout(WW);
+          this.stills.stop(), this.video.canvasWatch.stop(), null !== this.dom && (0, fi.h)(), this.telemetry.stop(), this.flushTelemetry(), null === (iW = this.dom) || void 0 === iW || iW.cut(), null === (OW = this.dom) || void 0 === OW || OW.close(), this.video.endVideo(), this.manifest.send(), (0, Vi.i)("events_only", this.recording)
         }
       }
       onStateTick() {
-        var ee;
-        const ie = this.video.canvasWatch.check();
-        if (null === ie) return;
+        var WW;
+        const iW = this.video.canvasWatch.check();
+        if (null === iW) return;
         const {
-          cssSize: He
-        } = this.video.canvasWatch, ye = Ke.c.getLastColyseusPingMs();
+          cssSize: OW
+        } = this.video.canvasWatch, mW = PW.b.getLastColyseusPingMs();
         this.telemetry.writeState({
-          canvas: ie.canvas,
-          cssWidth: He.width,
-          cssHeight: He.height,
-          renderer: ie.renderer,
-          pingMs: ye,
+          canvas: iW.canvas,
+          cssWidth: OW.width,
+          cssHeight: OW.height,
+          renderer: iW.renderer,
+          pingMs: mW,
           qualityLevel: this.video.qualityLevel
-        }, document.hidden), this.telemetry.recordBytes >= ui && this.flushTelemetry();
-        const be = this.telemetry.sampleFps(),
-          Me = document.hidden ? null : be;
-        if (null === (ee = this.ownFpsMonitor) || void 0 === ee || ee.addSample(Me, Date.now()), document.hidden || this.video.postToWorker({
+        }, document.hidden), this.telemetry.recordBytes >= Xi && this.flushTelemetry();
+        const EW = this.telemetry.sampleFps(),
+          NW = document.hidden ? null : EW;
+        if (null === (WW = this.ownFpsMonitor) || void 0 === WW || WW.addSample(NW, Date.now()), document.hidden || this.video.postToWorker({
             type: "health",
-            gameFps: Me,
-            pingMs: ye
+            gameFps: NW,
+            pingMs: mW
           }), null !== this.video.capture) {
           const {
-            averageMs: ee,
-            fps: ie,
-            grabPath: He
+            averageMs: WW,
+            fps: iW,
+            grabPath: OW
           } = this.video.capture.frameCost;
           this.debug.captureFrameCost = {
-            averageMs: ee,
-            budgetFps: ie,
-            grabPath: He
+            averageMs: WW,
+            budgetFps: iW,
+            grabPath: OW
           }
         }
       }
-      onSegmentUploaded(ee, ie, He) {
-        var ye;
-        if ("video" === ee.type) null === (ye = this.video.uploads) || void 0 === ye || ye.landed(ee, ie);
-        else if ("still" === ee.type) this.stills.landed(ee);
-        else if ("dom" === ee.type) {
-          var be;
-          null === (be = this.journal) || void 0 === be || be.domLanded(ie, ee.chunk), this.manifest.addDomSegment({
-            sequence: ie,
-            ...ee.chunk
+      onSegmentUploaded(WW, iW, OW) {
+        var mW;
+        if ("video" === WW.type) null === (mW = this.video.uploads) || void 0 === mW || mW.landed(WW, iW);
+        else if ("still" === WW.type) this.stills.landed(WW);
+        else if ("dom" === WW.type) {
+          var EW;
+          null === (EW = this.journal) || void 0 === EW || EW.domLanded(iW, WW.chunk), this.manifest.addDomSegment({
+            sequence: iW,
+            ...WW.chunk
           })
         } else {
-          var Me;
-          null === (Me = this.journal) || void 0 === Me || Me.telemetryLanded(ie, He, ee.startMs, ee.endMs), this.manifest.addTelemetrySegment(ie, ee.startMs, ee.endMs)
+          var NW;
+          null === (NW = this.journal) || void 0 === NW || NW.telemetryLanded(iW, OW, WW.startMs, WW.endMs), this.manifest.addTelemetrySegment(iW, WW.startMs, WW.endMs)
         }
       }
       flushTelemetry() {
         if (!this.telemetry.hasRecords()) return;
         const {
-          bytes: ee,
-          startMs: ie,
-          endMs: He
-        } = this.telemetry.takeChunk(), ye = this.uploader.enqueue({
+          bytes: WW,
+          startMs: iW,
+          endMs: OW
+        } = this.telemetry.takeChunk(), mW = this.uploader.enqueue({
           kind: "telemetry",
           contentType: "application/octet-stream",
-          bytes: ee,
+          bytes: WW,
           meta: {
             type: "telemetry",
-            startMs: ie,
-            endMs: He
+            startMs: iW,
+            endMs: OW
           }
         });
-        var be;
-        null !== ye && (null === (be = this.journal) || void 0 === be || be.telemetryQueued(ye, ee, ie, He));
+        var EW;
+        null !== mW && (null === (EW = this.journal) || void 0 === EW || EW.telemetryQueued(mW, WW, iW, OW));
         this.debug.uploadBacklogBytes = this.uploader.backlogBytes
       }
     }
   },
-  7136: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Ze,
-      h: () => we
+  7500: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => JW,
+      h: () => hW
     });
-    var ye = He(7142);
-    const be = 827609666,
-      Me = 2,
-      Ke = 1,
-      Ue = 13,
-      Fe = 1,
-      Je = 2,
-      oe = 3,
-      Re = 4,
-      ke = 5,
-      qe = 7,
-      fe = 19,
-      Te = 6,
-      pe = 7,
-      Xe = 7,
-      ze = 1,
-      Be = 2,
-      Ee = 4,
-      ge = 65535,
-      Oe = 10,
-      de = ["unknown", "webgl1", "webgl2", "webgpu", "rust_webgl1", "rust_webgl2", "rust_webgpu"],
-      We = ["none", "contextLost", "contextRestored", "canvasSwapped", "videoSegmentDropped", "qualityChanged", "captureFailed", "hidden", "visible", "pointerLocked", "pointerUnlocked"];
+    var mW = OW(7502);
+    const EW = 827609666,
+      NW = 2,
+      PW = 1,
+      LW = 13,
+      cW = 1,
+      wW = 2,
+      tW = 3,
+      ZW = 4,
+      xW = 5,
+      lW = 7,
+      AW = 19,
+      bW = 6,
+      jW = 7,
+      UW = 7,
+      kW = 1,
+      sW = 2,
+      MW = 4,
+      KW = 65535,
+      SW = 10,
+      YW = ["unknown", "webgl1", "webgl2", "webgpu", "rust_webgl1", "rust_webgl2", "rust_webgpu"],
+      yW = ["none", "contextLost", "contextRestored", "canvasSwapped", "videoSegmentDropped", "qualityChanged", "captureFailed", "hidden", "visible", "pointerLocked", "pointerUnlocked"];
 
-    function te(ee) {
-      return Math.max(0, Math.min(ge, Math.round(ee)))
+    function TW(WW) {
+      return Math.max(0, Math.min(KW, Math.round(WW)))
     }
-    class Ze {
-      constructor(ee) {
-        this.buffer = new ArrayBuffer(65536), this.view = new DataView(this.buffer), this.length = 0, this.baseEpochMs = 0, this.startChunk(ee)
+    class JW {
+      constructor(WW) {
+        this.buffer = new ArrayBuffer(65536), this.view = new DataView(this.buffer), this.length = 0, this.baseEpochMs = 0, this.startChunk(WW)
       }
       get chunkStartMs() {
         return this.baseEpochMs
       }
       get recordBytes() {
-        return this.length - Ue
+        return this.length - LW
       }
-      writeFrame(ee, ie) {
-        this.reserve(qe);
-        const He = this.view,
-          ye = this.length;
-        He.setUint8(ye, Fe), He.setUint32(ye + 1, this.timeUnits(ee), !0), He.setUint16(ye + 5, te(100 * ie), !0), this.length += qe
+      writeFrame(WW, iW) {
+        this.reserve(lW);
+        const OW = this.view,
+          mW = this.length;
+        OW.setUint8(mW, cW), OW.setUint32(mW + 1, this.timeUnits(WW), !0), OW.setUint16(mW + 5, TW(100 * iW), !0), this.length += lW
       }
-      writeState(ee, ie) {
-        this.reserve(fe);
-        const He = this.view,
-          ye = this.length;
-        He.setUint8(ye, Je), He.setUint32(ye + 1, this.timeUnits(ee), !0), He.setUint16(ye + 5, te(ie.backingWidth), !0), He.setUint16(ye + 7, te(ie.backingHeight), !0), He.setUint16(ye + 9, te(ie.cssWidth), !0), He.setUint16(ye + 11, te(ie.cssHeight), !0), He.setUint16(ye + 13, te(100 * ie.devicePixelRatio), !0), He.setUint8(ye + 15, de.indexOf(ie.renderer)), He.setUint16(ye + 16, null === ie.pingMs ? ge : te(Math.min(ie.pingMs, ge - 1)), !0), He.setUint8(ye + 18, (ie.hidden ? 1 : 0) | (7 & ie.qualityLevel) << 1), this.length += fe
+      writeState(WW, iW) {
+        this.reserve(AW);
+        const OW = this.view,
+          mW = this.length;
+        OW.setUint8(mW, wW), OW.setUint32(mW + 1, this.timeUnits(WW), !0), OW.setUint16(mW + 5, TW(iW.backingWidth), !0), OW.setUint16(mW + 7, TW(iW.backingHeight), !0), OW.setUint16(mW + 9, TW(iW.cssWidth), !0), OW.setUint16(mW + 11, TW(iW.cssHeight), !0), OW.setUint16(mW + 13, TW(100 * iW.devicePixelRatio), !0), OW.setUint8(mW + 15, YW.indexOf(iW.renderer)), OW.setUint16(mW + 16, null === iW.pingMs ? KW : TW(Math.min(iW.pingMs, KW - 1)), !0), OW.setUint8(mW + 18, (iW.hidden ? 1 : 0) | (7 & iW.qualityLevel) << 1), this.length += AW
       }
-      writeEvent(ee, ie) {
-        this.reserve(Te);
-        const He = this.length;
-        this.view.setUint8(He, oe), this.view.setUint32(He + 1, this.timeUnits(ee), !0), this.view.setUint8(He + 5, We.indexOf(ie)), this.length += Te
+      writeEvent(WW, iW) {
+        this.reserve(bW);
+        const OW = this.length;
+        this.view.setUint8(OW, tW), this.view.setUint32(OW + 1, this.timeUnits(WW), !0), this.view.setUint8(OW + 5, yW.indexOf(iW)), this.length += bW
       }
-      writeActions(ee, ie) {
-        this.reserve(pe);
-        const He = this.length;
-        this.view.setUint8(He, Re), this.view.setUint32(He + 1, this.timeUnits(ee), !0), this.view.setUint16(He + 5, ie, !0), this.length += pe
+      writeActions(WW, iW) {
+        this.reserve(jW);
+        const OW = this.length;
+        this.view.setUint8(OW, ZW), this.view.setUint32(OW + 1, this.timeUnits(WW), !0), this.view.setUint16(OW + 5, iW, !0), this.length += jW
       }
-      writeKey(ee, ie, He, ye, be) {
-        this.reserve(Xe);
-        const Me = this.length;
-        this.view.setUint8(Me, ke), this.view.setUint32(Me + 1, this.timeUnits(ee), !0), this.view.setUint8(Me + 5, ie), this.view.setUint8(Me + 6, (He ? ze : 0) | (ye ? Be : 0) | (be ? Ee : 0)), this.length += Xe
+      writeKey(WW, iW, OW, mW, EW) {
+        this.reserve(UW);
+        const NW = this.length;
+        this.view.setUint8(NW, xW), this.view.setUint32(NW + 1, this.timeUnits(WW), !0), this.view.setUint8(NW + 5, iW), this.view.setUint8(NW + 6, (OW ? kW : 0) | (mW ? sW : 0) | (EW ? MW : 0)), this.length += UW
       }
-      takeChunk(ee) {
-        const ie = this.buffer.slice(0, this.length);
-        return this.startChunk(ee), ie
+      takeChunk(WW) {
+        const iW = this.buffer.slice(0, this.length);
+        return this.startChunk(WW), iW
       }
-      startChunk(ee) {
-        this.baseEpochMs = ee, this.view.setUint32(0, be, !0), this.view.setUint8(4, Me), this.view.setFloat64(5, ee, !0), this.length = Ue
+      startChunk(WW) {
+        this.baseEpochMs = WW, this.view.setUint32(0, EW, !0), this.view.setUint8(4, NW), this.view.setFloat64(5, WW, !0), this.length = LW
       }
-      timeUnits(ee) {
-        return Math.max(0, Math.round((ee - this.baseEpochMs) * Oe))
+      timeUnits(WW) {
+        return Math.max(0, Math.round((WW - this.baseEpochMs) * SW))
       }
-      reserve(ee) {
-        if (this.length + ee <= this.buffer.byteLength) return;
-        const ie = new ArrayBuffer(2 * this.buffer.byteLength);
-        new Uint8Array(ie).set(new Uint8Array(this.buffer, 0, this.length)), this.buffer = ie, this.view = new DataView(ie)
+      reserve(WW) {
+        if (this.length + WW <= this.buffer.byteLength) return;
+        const iW = new ArrayBuffer(2 * this.buffer.byteLength);
+        new Uint8Array(iW).set(new Uint8Array(this.buffer, 0, this.length)), this.buffer = iW, this.view = new DataView(iW)
       }
     }
 
-    function we(ee) {
-      const ie = new DataView(ee),
-        He = ee.byteLength < Ue ? 0 : ie.getUint8(4);
-      if (He < Ke || He > Me || ie.getUint32(0, !0) !== be) throw new Error(`Not a version ${Ke}-${Me} replay telemetry chunk`);
-      const te = ie.getFloat64(5, !0),
-        Ze = {
-          baseEpochMs: te,
-          inputRecorded: He >= 2,
+    function hW(WW) {
+      const iW = new DataView(WW),
+        OW = WW.byteLength < LW ? 0 : iW.getUint8(4);
+      if (OW < PW || OW > NW || iW.getUint32(0, !0) !== EW) throw new Error(`Not a version ${PW}-${NW} replay telemetry chunk`);
+      const TW = iW.getFloat64(5, !0),
+        JW = {
+          baseEpochMs: TW,
+          inputRecorded: OW >= 2,
           frames: [],
           states: [],
           events: [],
           actions: [],
           keys: []
         },
-        we = ee => te + ie.getUint32(ee, !0) / Oe;
-      let De = Ue;
-      for (; De < ee.byteLength;) {
-        const ee = ie.getUint8(De);
-        if (ee === Fe) Ze.frames.push({
-          atMs: we(De + 1),
-          cpuFrameMs: ie.getUint16(De + 5, !0) / 100
-        }), De += qe;
-        else if (ee === Je) {
-          var Pe;
-          const ee = ie.getUint16(De + 16, !0),
-            He = ie.getUint8(De + 18);
-          Ze.states.push({
-            atMs: we(De + 1),
-            backingWidth: ie.getUint16(De + 5, !0),
-            backingHeight: ie.getUint16(De + 7, !0),
-            cssWidth: ie.getUint16(De + 9, !0),
-            cssHeight: ie.getUint16(De + 11, !0),
-            devicePixelRatio: ie.getUint16(De + 13, !0) / 100,
-            renderer: null !== (Pe = de[ie.getUint8(De + 15)]) && void 0 !== Pe ? Pe : "unknown",
-            pingMs: ee === ge ? null : ee,
-            hidden: 1 === (1 & He),
-            qualityLevel: He >> 1 & 7
-          }), De += fe
-        } else if (ee === oe) {
-          var Ae;
-          Ze.events.push({
-            atMs: we(De + 1),
-            event: null !== (Ae = We[ie.getUint8(De + 5)]) && void 0 !== Ae ? Ae : "none"
-          }), De += Te
-        } else if (ee === Re && Ze.inputRecorded) Ze.actions.push({
-          atMs: we(De + 1),
-          bits: ie.getUint16(De + 5, !0)
-        }), De += pe;
+        hW = WW => TW + iW.getUint32(WW, !0) / SW;
+      let HW = LW;
+      for (; HW < WW.byteLength;) {
+        const WW = iW.getUint8(HW);
+        if (WW === cW) JW.frames.push({
+          atMs: hW(HW + 1),
+          cpuFrameMs: iW.getUint16(HW + 5, !0) / 100
+        }), HW += lW;
+        else if (WW === wW) {
+          var nW;
+          const WW = iW.getUint16(HW + 16, !0),
+            OW = iW.getUint8(HW + 18);
+          JW.states.push({
+            atMs: hW(HW + 1),
+            backingWidth: iW.getUint16(HW + 5, !0),
+            backingHeight: iW.getUint16(HW + 7, !0),
+            cssWidth: iW.getUint16(HW + 9, !0),
+            cssHeight: iW.getUint16(HW + 11, !0),
+            devicePixelRatio: iW.getUint16(HW + 13, !0) / 100,
+            renderer: null !== (nW = YW[iW.getUint8(HW + 15)]) && void 0 !== nW ? nW : "unknown",
+            pingMs: WW === KW ? null : WW,
+            hidden: 1 === (1 & OW),
+            qualityLevel: OW >> 1 & 7
+          }), HW += AW
+        } else if (WW === tW) {
+          var uW;
+          JW.events.push({
+            atMs: hW(HW + 1),
+            event: null !== (uW = yW[iW.getUint8(HW + 5)]) && void 0 !== uW ? uW : "none"
+          }), HW += bW
+        } else if (WW === ZW && JW.inputRecorded) JW.actions.push({
+          atMs: hW(HW + 1),
+          bits: iW.getUint16(HW + 5, !0)
+        }), HW += jW;
         else {
-          if (ee !== ke || !Ze.inputRecorded) throw new Error(`Unknown replay telemetry record type ${ee} at byte ${De}`);
+          if (WW !== xW || !JW.inputRecorded) throw new Error(`Unknown replay telemetry record type ${WW} at byte ${HW}`);
           {
-            var Ye;
-            const ee = ie.getUint8(De + 6);
-            Ze.keys.push({
-              atMs: we(De + 1),
-              code: null !== (Ye = ye.d[ie.getUint8(De + 5)]) && void 0 !== Ye ? Ye : ye.d[0],
-              down: 0 !== (ee & ze),
-              bound: 0 !== (ee & Be),
-              inPlay: 0 !== (ee & Ee)
-            }), De += Xe
+            var oW;
+            const WW = iW.getUint8(HW + 6);
+            JW.keys.push({
+              atMs: hW(HW + 1),
+              code: null !== (oW = mW.c[iW.getUint8(HW + 5)]) && void 0 !== oW ? oW : mW.c[0],
+              down: 0 !== (WW & kW),
+              bound: 0 !== (WW & sW),
+              inPlay: 0 !== (WW & MW)
+            }), HW += UW
           }
         }
       }
-      return Ze
+      return JW
     }
   },
-  36938: ee => {
-    ee.exports = function(ee, ie, He, ye) {
-      var be = self || window;
+  37245: WW => {
+    WW.exports = function(WW, iW, OW, mW) {
+      var EW = self || window;
       try {
         try {
-          var Me;
+          var NW;
           try {
-            Me = new be.Blob([ee])
-          } catch (Je) {
-            (Me = new(be.BlobBuilder || be.WebKitBlobBuilder || be.MozBlobBuilder || be.MSBlobBuilder)).append(ee), Me = Me.getBlob()
+            NW = new EW.Blob([WW])
+          } catch (wW) {
+            (NW = new(EW.BlobBuilder || EW.WebKitBlobBuilder || EW.MozBlobBuilder || EW.MSBlobBuilder)).append(WW), NW = NW.getBlob()
           }
-          var Ke = be.URL || be.webkitURL,
-            Ue = Ke.createObjectURL(Me),
-            Fe = new be[ie](Ue, He);
-          return Ke.revokeObjectURL(Ue), Fe
-        } catch (Je) {
-          return new be[ie]("data:application/javascript,".concat(encodeURIComponent(ee)), He)
+          var PW = EW.URL || EW.webkitURL,
+            LW = PW.createObjectURL(NW),
+            cW = new EW[iW](LW, OW);
+          return PW.revokeObjectURL(LW), cW
+        } catch (wW) {
+          return new EW[iW]("data:application/javascript,".concat(encodeURIComponent(WW)), OW)
         }
-      } catch (Je) {
-        if (!ye) throw Error("Inline worker is not supported");
-        return new be[ie](ye, He)
+      } catch (wW) {
+        if (!mW) throw Error("Inline worker is not supported");
+        return new EW[iW](mW, OW)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

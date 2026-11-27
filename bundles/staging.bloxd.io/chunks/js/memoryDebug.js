@@ -1,66 +1,66 @@
-export const id = 47;
-export const ids = [47];
+export const id = 48;
+export const ids = [48];
 export const modules = {
-  5179: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      startMemoryDebug: () => oe
+  5448: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      startMemoryDebug: () => tW
     });
-    var ye = He(3094),
-      be = He(3037);
-    const Me = 6e4,
-      Ke = 5,
-      Ue = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
-    var Fe = He(649);
-    const Je = [];
+    var mW = OW(2381),
+      EW = OW(3866);
+    const NW = 6e4,
+      PW = 5,
+      LW = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
+    var cW = OW(673);
+    const wW = [];
 
-    function oe() {
-      (0, be.r)() && (0, be.x)(ke), Re(), setInterval(Re, Me)
+    function tW() {
+      (0, EW.x)() && (0, EW.D)(xW), ZW(), setInterval(ZW, NW)
     }
 
-    function Re() {
-      var ee;
+    function ZW() {
+      var WW;
       const {
-        client: ie,
-        playedS: He,
-        snapshot: Me
-      } = (0, Fe.n)(), oe = null !== (ee = Me.wasmMainMiB) && void 0 !== ee ? ee : function() {
+        client: iW,
+        playedS: OW,
+        snapshot: NW
+      } = (0, cW.n)(), tW = null !== (WW = NW.wasmMainMiB) && void 0 !== WW ? WW : function() {
         try {
-          return (0, Fe.P)((0, ye.t)().buffer.byteLength)
+          return (0, cW.Q)((0, mW.v)().buffer.byteLength)
         } catch {
           return null
         }
-      }(), Re = function(ee) {
+      }(), ZW = function(WW) {
         let {
-          client: ie,
-          playedS: He,
-          hidden: ye,
-          snapshot: be
-        } = ee;
-        const Me = [`client=${null!==ie&&void 0!==ie?ie:"none"}`];
-        null !== He && Me.push(`playedS=${He}`);
-        const Ke = be.pageAgeS;
-        "number" === typeof Ke && Me.push(`pageAgeS=${Ke}`), Me.push("hidden=" + (ye ? 1 : 0));
-        for (const Fe of Ue) {
-          const ee = be[Fe];
-          "number" === typeof ee && Number.isFinite(ee) && Me.push(`${Fe}=${ee}`)
+          client: iW,
+          playedS: OW,
+          hidden: mW,
+          snapshot: EW
+        } = WW;
+        const NW = [`client=${null!==iW&&void 0!==iW?iW:"none"}`];
+        null !== OW && NW.push(`playedS=${OW}`);
+        const PW = EW.pageAgeS;
+        "number" === typeof PW && NW.push(`pageAgeS=${PW}`), NW.push("hidden=" + (mW ? 1 : 0));
+        for (const cW of LW) {
+          const WW = EW[cW];
+          "number" === typeof WW && Number.isFinite(WW) && NW.push(`${cW}=${WW}`)
         }
-        return Me.join(" ")
+        return NW.join(" ")
       }({
-        client: ie,
-        playedS: He,
+        client: iW,
+        playedS: OW,
         hidden: document.hidden,
         snapshot: {
-          ...Me,
-          wasmMainMiB: oe
+          ...NW,
+          wasmMainMiB: tW
         }
       });
-      (0, be.r)() ? (Je.push(Re), Je.length >= Ke && ke()) : (0, be.m)("memory", Re)
+      (0, EW.x)() ? (wW.push(ZW), wW.length >= PW && xW()) : (0, EW.m)("memory", ZW)
     }
 
-    function ke() {
-      for (const ee of Je.splice(0))(0, be.m)("memory", ee)
+    function xW() {
+      for (const WW of wW.splice(0))(0, EW.m)("memory", WW)
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

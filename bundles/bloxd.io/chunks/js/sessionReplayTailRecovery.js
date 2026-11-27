@@ -1,560 +1,560 @@
-export const id = 64;
-export const ids = [64];
+export const id = 65;
+export const ids = [65];
 export const modules = {
-  40657: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      recoverReplayTails: () => ce
+  41118: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      recoverReplayTails: () => vW
     });
-    var ye = He(40579),
-      be = He(35),
-      Me = He(40570),
-      Ke = He(40548),
-      Ue = He(40572),
-      Fe = He(1155);
-    const Je = 35e3;
-    async function oe(ee, ie, He) {
-      const ye = {
-          token: ee.token,
-          sequence: ie
+    var mW = OW(41028),
+      EW = OW(39),
+      NW = OW(41014),
+      PW = OW(40999),
+      LW = OW(41021),
+      cW = OW(1194);
+    const wW = 35e3;
+    async function tW(WW, iW, OW) {
+      const mW = {
+          token: WW.token,
+          sequence: iW
         },
-        be = (0, Fe.v)(Je),
-        Me = void 0 === He ? be : (0, Fe.k)([He, be]);
-      let Ke = !1;
+        EW = (0, cW.t)(wW),
+        NW = void 0 === OW ? EW : (0, cW.m)([OW, EW]);
+      let PW = !1;
       try {
-        const ie = await fetch(ee.releaseUrl, {
+        const iW = await fetch(WW.releaseUrl, {
           method: "POST",
           headers: {
             "Content-Type": "text/plain"
           },
-          body: JSON.stringify(ye),
-          signal: Me
+          body: JSON.stringify(mW),
+          signal: NW
         });
-        if (503 === ie.status) {
+        if (503 === iW.status) {
           const {
-            reason: ee
-          } = await ie.json();
-          Ke = "release_retrying" === ee || "shutting_down" === ee
+            reason: WW
+          } = await iW.json();
+          PW = "release_retrying" === WW || "shutting_down" === WW
         }
-        if (!ie.ok) throw new Error(`HTTP ${ie.status}`);
-        const He = await ie.json();
-        return "stored" === He.outcome ? He.stored : null
-      } catch (Ue) {
-        if (Me.aborted || Ke) throw Ue;
-        return console.warn(`Session replay couldn't ask the part joiner about video segment ${ie}; uploading it from the journal.`, Ue), null
+        if (!iW.ok) throw new Error(`HTTP ${iW.status}`);
+        const OW = await iW.json();
+        return "stored" === OW.outcome ? OW.stored : null
+      } catch (LW) {
+        if (NW.aborted || PW) throw LW;
+        return console.warn(`Session replay couldn't ask the part joiner about video segment ${iW}; uploading it from the journal.`, LW), null
       }
     }
-    var Re = He(40606),
-      ke = He(40631),
-      qe = He(5106),
-      fe = He(40609);
-    async function Te(ee, ie, He) {
-      if (!ee.mayStartUpload()) return "retryLater";
+    var ZW = OW(41056),
+      xW = OW(41084),
+      lW = OW(5397),
+      AW = OW(41063);
+    async function bW(WW, iW, OW) {
+      if (!WW.mayStartUpload()) return "retryLater";
       const {
-        kind: ye,
-        sequence: be,
-        contentType: Me
-      } = He;
-      let Ke;
+        kind: mW,
+        sequence: EW,
+        contentType: NW
+      } = OW;
+      let PW;
       try {
-        Ke = await He.bytes()
-      } catch (Ue) {
-        return console.warn(`Session replay couldn't mux late ${ye} segment ${be}; skipping it.`, Ue), "refused"
+        PW = await OW.bytes()
+      } catch (LW) {
+        return console.warn(`Session replay couldn't mux late ${mW} segment ${EW}; skipping it.`, LW), "refused"
       }
       try {
-        const He = ee.transportFor(ie),
-          Ue = await He.requestPutUrl({
-            uploadToken: ie.uploadToken,
-            kind: ye,
-            sequence: be,
-            contentType: Me,
-            byteLength: Ke.byteLength,
+        const OW = WW.transportFor(iW),
+          LW = await OW.requestPutUrl({
+            uploadToken: iW.uploadToken,
+            kind: mW,
+            sequence: EW,
+            contentType: NW,
+            byteLength: PW.byteLength,
             late: !0
           });
-        return "rejected" in Ue ? (console.warn(`Session replay late ${ye} segment ${be} refused: ${Ue.reason}`), Ue.retryable ? "retryLater" : "refused") : (await He.put(Ue.uploadUrl, Ke, Me, Ue.ifNoneMatch), "uploaded")
-      } catch (Ue) {
-        return console.warn(`Session replay late ${ye} segment ${be} upload failed; trying again later.`, Ue), "retryLater"
+        return "rejected" in LW ? (console.warn(`Session replay late ${mW} segment ${EW} refused: ${LW.reason}`), LW.retryable ? "retryLater" : "refused") : (await OW.put(LW.uploadUrl, PW, NW, LW.ifNoneMatch), "uploaded")
+      } catch (LW) {
+        return console.warn(`Session replay late ${mW} segment ${EW} upload failed; trying again later.`, LW), "retryLater"
       }
     }
-    async function pe(ee, ie, He) {
-      var ye;
-      const be = ee.nowMs(),
-        Me = (null !== (ye = He.domSegments) && void 0 !== ye ? ye : []).filter((ee => ee.endMs <= be));
-      for (const Ke of [...He.videoSegments, ...He.telemetrySegments, ...Me]) He.endedAtMs = Math.max(He.endedAtMs, Ke.endMs);
-      for (const Ke of (0, fe.e)({
-          uploadToken: ie.uploadToken,
-          manifest: He,
+    async function jW(WW, iW, OW) {
+      var mW;
+      const EW = WW.nowMs(),
+        NW = (null !== (mW = OW.domSegments) && void 0 !== mW ? mW : []).filter((WW => WW.endMs <= EW));
+      for (const PW of [...OW.videoSegments, ...OW.telemetrySegments, ...NW]) OW.endedAtMs = Math.max(OW.endedAtMs, PW.endMs);
+      for (const PW of (0, AW.f)({
+          uploadToken: iW.uploadToken,
+          manifest: OW,
           creatorGrants: [],
           late: !0
         })) {
-        const He = await ee.postManifest(ie, Ke);
-        if ("uploaded" !== He) return He
+        const OW = await WW.postManifest(iW, PW);
+        if ("uploaded" !== OW) return OW
       }
       return "uploaded"
     }
-    var Xe = He(40665),
-      ze = He(40679),
-      Be = He(40726),
-      Ee = He(40750),
-      ge = He(40738);
-    class Oe {
-      constructor(ee, ie, He, ye, be) {
-        this.frameDurationS = He, this.onFragment = be, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = ie, this.lastTimestampUs = ie;
-        const Me = ee => {
-          this.boxes.push(ee)
+    var UW = OW(41120),
+      kW = OW(41142),
+      sW = OW(41179),
+      MW = OW(41205),
+      KW = OW(41190);
+    class SW {
+      constructor(WW, iW, OW, mW, EW) {
+        this.frameDurationS = OW, this.onFragment = EW, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = iW, this.lastTimestampUs = iW;
+        const NW = WW => {
+          this.boxes.push(WW)
         };
-        this.output = new Xe.c({
-          format: new ze.i({
+        this.output = new UW.c({
+          format: new kW.h({
             fastStart: "fragmented",
-            minimumFragmentDuration: ye,
-            onFtyp: Me,
-            onMoov: Me,
-            onMoof: Me,
-            onMdat: ee => {
-              Me(ee), this.fragmentDone()
+            minimumFragmentDuration: mW,
+            onFtyp: NW,
+            onMoov: NW,
+            onMoof: NW,
+            onMdat: WW => {
+              NW(WW), this.fragmentDone()
             }
           }),
-          target: new Be.e
-        }), this.source = new Ee.g(ee), this.output.addVideoTrack(this.source), this.pending = this.output.start()
+          target: new sW.f
+        }), this.source = new MW.k(WW), this.output.addVideoTrack(this.source), this.pending = this.output.start()
       }
       get durationUs() {
         return this.lastTimestampUs - this.firstTimestampUs
       }
-      add(ee, ie) {
-        const He = new Uint8Array(ee.byteLength);
-        ee.copyTo(He), this.addData(He, ee.type, ee.timestamp, ie)
+      add(WW, iW) {
+        const OW = new Uint8Array(WW.byteLength);
+        WW.copyTo(OW), this.addData(OW, WW.type, WW.timestamp, iW)
       }
-      addData(ee, ie, He, ye) {
-        const be = new ge.c(ee, ie, (He - this.firstTimestampUs) / 1e6, this.frameDurationS),
-          Me = 0 === this.chunkCount++;
-        this.lastTimestampUs = Math.max(this.lastTimestampUs, He), this.pending = this.pending.then((() => (this.addingTimestampUs = He, this.source.add(be, Me ? {
-          decoderConfig: ye
+      addData(WW, iW, OW, mW) {
+        const EW = new KW.c(WW, iW, (OW - this.firstTimestampUs) / 1e6, this.frameDurationS),
+          NW = 0 === this.chunkCount++;
+        this.lastTimestampUs = Math.max(this.lastTimestampUs, OW), this.pending = this.pending.then((() => (this.addingTimestampUs = OW, this.source.add(EW, NW ? {
+          decoderConfig: mW
         } : void 0))))
       }
       async finish() {
         await this.pending, this.addingTimestampUs = null, await this.output.finalize()
       }
       fragmentDone() {
-        var ee;
-        const ie = de(this.boxes);
+        var WW;
+        const iW = YW(this.boxes);
         this.boxes = [], this.onFragment({
-          bytes: ie,
-          endUs: null !== (ee = this.addingTimestampUs) && void 0 !== ee ? ee : this.lastTimestampUs + 1e6 * this.frameDurationS
+          bytes: iW,
+          endUs: null !== (WW = this.addingTimestampUs) && void 0 !== WW ? WW : this.lastTimestampUs + 1e6 * this.frameDurationS
         })
       }
     }
 
-    function de(ee) {
-      const ie = new Uint8Array(ee.reduce(((ee, ie) => ee + ie.byteLength), 0));
-      let He = 0;
-      for (const ye of ee) ie.set(ye, He), He += ye.byteLength;
-      return ie
+    function YW(WW) {
+      const iW = new Uint8Array(WW.reduce(((WW, iW) => WW + iW.byteLength), 0));
+      let OW = 0;
+      for (const mW of WW) iW.set(mW, OW), OW += mW.byteLength;
+      return iW
     }
-    He(40602);
+    OW(41052);
 
-    function We(ee, ie, He, ye) {
-      const be = ee / 1e3 + He;
+    function yW(WW, iW, OW, mW) {
+      const EW = WW / 1e3 + OW;
       return {
-        startMs: be,
-        endMs: be + ie / 1e3 + 1e3 / ye
+        startMs: EW,
+        endMs: EW + iW / 1e3 + 1e3 / mW
       }
     }
-    const te = 2,
-      Ze = 18e5;
+    const TW = 2,
+      JW = 18e5;
 
-    function we(ee, ie) {
-      const He = ie[ie.length - 1].timestampUs - ee.firstTimestampUs,
+    function hW(WW, iW) {
+      const OW = iW[iW.length - 1].timestampUs - WW.firstTimestampUs,
         {
-          startMs: ye,
-          endMs: be
-        } = We(ee.firstTimestampUs, He, ee.epochOffsetMs, ee.fps);
+          startMs: mW,
+          endMs: EW
+        } = yW(WW.firstTimestampUs, OW, WW.epochOffsetMs, WW.fps);
       return {
-        startMs: Math.round(ye),
-        endMs: Math.round(be),
-        width: ee.width,
-        height: ee.height,
-        codec: ee.codec
+        startMs: Math.round(mW),
+        endMs: Math.round(EW),
+        width: WW.width,
+        height: WW.height,
+        codec: WW.codec
       }
     }
-    async function De(ee, ie) {
-      const He = [],
-        ye = new Oe(ee.containerCodec, ee.firstTimestampUs, 1 / ee.fps, te, (ee => {
+    async function HW(WW, iW) {
+      const OW = [],
+        mW = new SW(WW.containerCodec, WW.firstTimestampUs, 1 / WW.fps, TW, (WW => {
           let {
-            bytes: ie
-          } = ee;
-          He.push(ie)
+            bytes: iW
+          } = WW;
+          OW.push(iW)
         }));
-      for (const be of ie) ye.addData(be.data, be.key ? "key" : "delta", be.timestampUs, ee.decoderConfig);
-      return await ye.finish(), de(He).buffer
+      for (const EW of iW) mW.addData(EW.data, EW.key ? "key" : "delta", EW.timestampUs, WW.decoderConfig);
+      return await mW.finish(), YW(OW).buffer
     }
 
-    function Pe(ee, ie, He) {
-      var ye;
-      const be = null === (ye = ee.videoProgress) || void 0 === ye ? void 0 : ye.find((ee => ee.segmentId === ie));
-      return void 0 !== be && (null === He || be.partsLanded > He.partsLanded) ? be : He
+    function nW(WW, iW, OW) {
+      var mW;
+      const EW = null === (mW = WW.videoProgress) || void 0 === mW ? void 0 : mW.find((WW => WW.segmentId === iW));
+      return void 0 !== EW && (null === OW || EW.partsLanded > OW.partsLanded) ? EW : OW
     }
-    const Ae = 6e5;
-    async function Ye(ee, ie) {
-      const He = {
-        recordingId: ie.recordingId,
+    const uW = 6e5;
+    async function oW(WW, iW) {
+      const OW = {
+        recordingId: iW.recordingId,
         outcome: "nothing",
         videoSegments: 0,
         telemetrySegments: 0,
         domSegments: 0
       };
-      if (ee.nowMs() > ee.lateUploadUntilMs(ie) - Ae) return {
-        ...He,
+      if (WW.nowMs() > WW.lateUploadUntilMs(iW) - uW) return {
+        ...OW,
         outcome: "expired"
       };
-      const ye = new Set;
-      let be;
+      const mW = new Set;
+      let EW;
       try {
-        be = await async function(ee, ie, He, ye) {
+        EW = await async function(WW, iW, OW, mW) {
           const {
-            partJoiner: be
-          } = ie;
-          if (void 0 === be) return He;
-          const Me = ee.nowMs() > ie.manifest.endedAtMs + Ze,
-            Ke = new Map;
+            partJoiner: EW
+          } = iW;
+          if (void 0 === EW) return OW;
+          const NW = WW.nowMs() > iW.manifest.endedAtMs + JW,
+            PW = new Map;
           for (const {
-              header: Fe,
-              sequence: Je,
-              progress: oe
+              header: cW,
+              sequence: wW,
+              progress: tW
             }
-            of He.video)
-            if (null !== Je && null === Pe(ie, Fe.segmentId, oe)) {
-              let ie;
+            of OW.video)
+            if (null !== wW && null === nW(iW, cW.segmentId, tW)) {
+              let iW;
               try {
-                ie = await ee.releaseJoined(be, Je)
-              } catch (Ue) {
-                if (!Me) {
-                  ye.add(Fe.segmentId);
+                iW = await WW.releaseJoined(EW, wW)
+              } catch (LW) {
+                if (!NW) {
+                  mW.add(cW.segmentId);
                   continue
                 }
-                console.warn(`Session replay's part joiner didn't answer about video segment ${Je} in time; uploading it from the journal.`, Ue), ie = null
+                console.warn(`Session replay's part joiner didn't answer about video segment ${wW} in time; uploading it from the journal.`, LW), iW = null
               }
-              null !== ie && Ke.set(Fe.segmentId, ie)
+              null !== iW && PW.set(cW.segmentId, iW)
             } return {
-            ...He,
-            joined: Ke
+            ...OW,
+            joined: PW
           }
-        }(ee, ie, await ee.store.read(ie), ye)
-      } catch (Xe) {
-        return console.warn(`Session replay couldn't read what an earlier page load left of ${ie.recordingId}; trying again later.`, Xe), {
-          ...He,
+        }(WW, iW, await WW.store.read(iW), mW)
+      } catch (UW) {
+        return console.warn(`Session replay couldn't read what an earlier page load left of ${iW.recordingId}; trying again later.`, UW), {
+          ...OW,
           outcome: "retryLater"
         }
       }
-      const Me = [],
-        Ke = {
-          ...ie.manifest,
+      const NW = [],
+        PW = {
+          ...iW.manifest,
           videoSegments: [],
           telemetrySegments: [],
-          ...be.dom.length + be.domTails.length > 0 ? {
-            domSegments: Me
+          ...EW.dom.length + EW.domTails.length > 0 ? {
+            domSegments: NW
           } : {}
         },
-        Ue = () => Ke.videoSegments.length + Ke.telemetrySegments.length + Me.length > 0,
-        Fe = function(ee, ie) {
-          let He = ee.video.reduce(((ee, ie) => {
+        LW = () => PW.videoSegments.length + PW.telemetrySegments.length + NW.length > 0,
+        cW = function(WW, iW) {
+          let OW = WW.video.reduce(((WW, iW) => {
             let {
-              sequence: He
-            } = ie;
-            return null === He ? ee : Math.max(ee, He + 1)
-          }), ie.nextVideoSequence);
+              sequence: OW
+            } = iW;
+            return null === OW ? WW : Math.max(WW, OW + 1)
+          }), iW.nextVideoSequence);
           return {
-            segments: [...ee.video].sort(((ee, ie) => ee.header.segmentId - ie.header.segmentId)).map((ye => {
-              var be, Me, Ke;
+            segments: [...WW.video].sort(((WW, iW) => WW.header.segmentId - iW.header.segmentId)).map((mW => {
+              var EW, NW, PW;
               let {
-                header: Ue,
-                sequence: Fe,
-                progress: Je,
-                chunks: oe
-              } = ye;
-              const Re = Pe(ie, Ue.segmentId, Je),
-                ke = null === (be = ee.joined) || void 0 === be ? void 0 : be.get(Ue.segmentId),
-                qe = null !== Fe && void 0 !== ke ? {
-                  sequence: Fe,
-                  ...ke.meta
-                } : null !== Fe && null !== Re ? {
-                  sequence: Fe,
-                  ...Re.meta,
-                  startMs: Math.round(Re.meta.startMs),
-                  endMs: Math.round(Re.meta.endMs),
-                  parts: Re.partsLanded
+                header: LW,
+                sequence: cW,
+                progress: wW,
+                chunks: tW
+              } = mW;
+              const ZW = nW(iW, LW.segmentId, wW),
+                xW = null === (EW = WW.joined) || void 0 === EW ? void 0 : EW.get(LW.segmentId),
+                lW = null !== cW && void 0 !== xW ? {
+                  sequence: cW,
+                  ...xW.meta
+                } : null !== cW && null !== ZW ? {
+                  sequence: cW,
+                  ...ZW.meta,
+                  startMs: Math.round(ZW.meta.startMs),
+                  endMs: Math.round(ZW.meta.endMs),
+                  parts: ZW.partsLanded
                 } : null,
-                fe = null !== (Me = null !== (Ke = null === ke || void 0 === ke ? void 0 : ke.completeUntilUs) && void 0 !== Ke ? Ke : null === Re || void 0 === Re ? void 0 : Re.completeUntilUs) && void 0 !== Me ? Me : null,
-                Te = function(ee) {
-                  const ie = [...ee].sort(((ee, ie) => ee.index - ie.index)),
-                    He = [];
-                  for (const ye of ie) {
-                    if (0 === He.length ? !ye.key : ye.index !== He[0].index + He.length) break;
-                    He.push(ye)
+                AW = null !== (NW = null !== (PW = null === xW || void 0 === xW ? void 0 : xW.completeUntilUs) && void 0 !== PW ? PW : null === ZW || void 0 === ZW ? void 0 : ZW.completeUntilUs) && void 0 !== NW ? NW : null,
+                bW = function(WW) {
+                  const iW = [...WW].sort(((WW, iW) => WW.index - iW.index)),
+                    OW = [];
+                  for (const mW of iW) {
+                    if (0 === OW.length ? !mW.key : mW.index !== OW[0].index + OW.length) break;
+                    OW.push(mW)
                   }
-                  return He
-                }(null === fe ? oe : oe.filter((ee => ee.timestampUs >= fe))),
-                pe = 0 === Te.length ? null : {
-                  sequence: He++,
+                  return OW
+                }(null === AW ? tW : tW.filter((WW => WW.timestampUs >= AW))),
+                jW = 0 === bW.length ? null : {
+                  sequence: OW++,
                   header: {
-                    ...Ue,
-                    firstTimestampUs: Te[0].timestampUs
+                    ...LW,
+                    firstTimestampUs: bW[0].timestampUs
                   },
-                  chunks: Te
+                  chunks: bW
                 };
               return {
-                segmentId: Ue.segmentId,
-                landed: qe,
-                tail: pe
+                segmentId: LW.segmentId,
+                landed: lW,
+                tail: jW
               }
             })),
-            nextSequence: He
+            nextSequence: OW
           }
-        }(be, ie),
-        Je = function(ee, ie) {
-          var He;
-          let ye = ee.dom.reduce(((ee, ie) => {
+        }(EW, iW),
+        wW = function(WW, iW) {
+          var OW;
+          let mW = WW.dom.reduce(((WW, iW) => {
             let {
-              sequence: He
-            } = ie;
-            return Math.max(ee, He + 1)
-          }), null !== (He = ie.nextDomSequence) && void 0 !== He ? He : 0);
-          const be = [...ee.domTails].sort(((ee, ie) => ee.chunkIndex - ie.chunkIndex || ee.fromChar - ie.fromChar)),
-            Me = [];
-          for (const Ke of be) {
-            const ee = Me[Me.length - 1],
-              ie = (null === ee || void 0 === ee ? void 0 : ee.chunkIndex) === Ke.chunkIndex;
-            Ke.fromChar === (ie ? ee.text.length : 0) && (ie ? (ee.text += Ke.text, ee.last = Ke) : Me.push({
-              chunkIndex: Ke.chunkIndex,
-              sequence: ye++,
-              text: Ke.text,
-              last: Ke
+              sequence: OW
+            } = iW;
+            return Math.max(WW, OW + 1)
+          }), null !== (OW = iW.nextDomSequence) && void 0 !== OW ? OW : 0);
+          const EW = [...WW.domTails].sort(((WW, iW) => WW.chunkIndex - iW.chunkIndex || WW.fromChar - iW.fromChar)),
+            NW = [];
+          for (const PW of EW) {
+            const WW = NW[NW.length - 1],
+              iW = (null === WW || void 0 === WW ? void 0 : WW.chunkIndex) === PW.chunkIndex;
+            PW.fromChar === (iW ? WW.text.length : 0) && (iW ? (WW.text += PW.text, WW.last = PW) : NW.push({
+              chunkIndex: PW.chunkIndex,
+              sequence: mW++,
+              text: PW.text,
+              last: PW
             }))
           }
           return {
-            tails: Me,
-            nextSequence: ye
+            tails: NW,
+            nextSequence: mW
           }
-        }(be, ie),
-        oe = {
+        }(EW, iW),
+        tW = {
           videoSegmentIds: [],
           telemetrySequences: [],
           domSequences: [],
           domTailChunks: []
         };
-      let Re = !1;
-      const ke = async be => {
-        if (Ue()) {
-          const Ue = await pe(ee, ie, Ke);
-          if ("retryLater" === be && "uploaded" === Ue) try {
-            var Me;
-            const He = Je.tails.find((ee => {
+      let ZW = !1;
+      const xW = async EW => {
+        if (LW()) {
+          const LW = await jW(WW, iW, PW);
+          if ("retryLater" === EW && "uploaded" === LW) try {
+            var NW;
+            const OW = wW.tails.find((WW => {
                 let {
-                  chunkIndex: ie
-                } = ee;
-                return !oe.domTailChunks.includes(ie)
+                  chunkIndex: iW
+                } = WW;
+                return !tW.domTailChunks.includes(iW)
               })),
-              ye = null !== (Me = null === He || void 0 === He ? void 0 : He.sequence) && void 0 !== Me ? Me : Je.nextSequence;
-            await ee.store.forgetSent({
-              ...ie,
-              nextVideoSequence: Fe.nextSequence,
-              nextDomSequence: ye
-            }, oe)
-          } catch (Xe) {
-            console.warn(`Session replay couldn't drop what it sent of ${ie.recordingId} from its journal.`, Xe)
+              mW = null !== (NW = null === OW || void 0 === OW ? void 0 : OW.sequence) && void 0 !== NW ? NW : wW.nextSequence;
+            await WW.store.forgetSent({
+              ...iW,
+              nextVideoSequence: cW.nextSequence,
+              nextDomSequence: mW
+            }, tW)
+          } catch (UW) {
+            console.warn(`Session replay couldn't drop what it sent of ${iW.recordingId} from its journal.`, UW)
           }
-          if ("refused" === Ue && ye.size > 0) return {
-            ...He,
+          if ("refused" === LW && mW.size > 0) return {
+            ...OW,
             outcome: "refused"
           }
         }
         return {
-          ...He,
-          outcome: be
+          ...OW,
+          outcome: EW
         }
       };
       for (const {
-          segmentId: pe,
-          landed: ze,
-          tail: Be
+          segmentId: jW,
+          landed: kW,
+          tail: sW
         }
-        of Fe.segments)
-        if (!ye.has(pe)) {
-          if (null !== ze && Ke.videoSegments.push(ze), null !== Be) {
-            const ye = await Te(ee, ie, {
+        of cW.segments)
+        if (!mW.has(jW)) {
+          if (null !== kW && PW.videoSegments.push(kW), null !== sW) {
+            const mW = await bW(WW, iW, {
               kind: "video",
-              sequence: Be.sequence,
+              sequence: sW.sequence,
               contentType: "video/mp4",
-              bytes: () => ee.mux(Be.header, Be.chunks)
+              bytes: () => WW.mux(sW.header, sW.chunks)
             });
-            if ("retryLater" === ye) return await ke(ye);
-            "refused" === ye ? Re = !0 : (Ke.videoSegments.push({
-              sequence: Be.sequence,
-              ...we(Be.header, Be.chunks)
-            }), He.videoSegments++)
+            if ("retryLater" === mW) return await xW(mW);
+            "refused" === mW ? ZW = !0 : (PW.videoSegments.push({
+              sequence: sW.sequence,
+              ...hW(sW.header, sW.chunks)
+            }), OW.videoSegments++)
           }
-          oe.videoSegmentIds.push(pe)
-        } const qe = [...be.telemetry].sort(((ee, ie) => ee.sequence - ie.sequence));
-      for (const pe of qe) {
-        const ye = pe.landed ? "uploaded" : await Te(ee, ie, {
+          tW.videoSegmentIds.push(jW)
+        } const lW = [...EW.telemetry].sort(((WW, iW) => WW.sequence - iW.sequence));
+      for (const jW of lW) {
+        const mW = jW.landed ? "uploaded" : await bW(WW, iW, {
           kind: "telemetry",
-          sequence: pe.sequence,
+          sequence: jW.sequence,
           contentType: "application/octet-stream",
-          bytes: async () => pe.bytes
+          bytes: async () => jW.bytes
         });
-        if ("retryLater" === ye) return await ke(ye);
-        oe.telemetrySequences.push(pe.sequence), "refused" !== ye ? (Ke.telemetrySegments.push({
-          sequence: pe.sequence,
-          startMs: Math.round(pe.startMs),
-          endMs: Math.round(pe.endMs)
-        }), He.telemetrySegments++) : Re = !0
+        if ("retryLater" === mW) return await xW(mW);
+        tW.telemetrySequences.push(jW.sequence), "refused" !== mW ? (PW.telemetrySegments.push({
+          sequence: jW.sequence,
+          startMs: Math.round(jW.startMs),
+          endMs: Math.round(jW.endMs)
+        }), OW.telemetrySegments++) : ZW = !0
       }
-      const fe = [...be.dom].sort(((ee, ie) => ee.sequence - ie.sequence));
+      const AW = [...EW.dom].sort(((WW, iW) => WW.sequence - iW.sequence));
       for (const {
-          sequence: pe,
-          chunk: ze,
-          bytes: Be
+          sequence: jW,
+          chunk: kW,
+          bytes: sW
         }
-        of fe) {
-        const ye = null === Be ? "uploaded" : await Te(ee, ie, {
+        of AW) {
+        const mW = null === sW ? "uploaded" : await bW(WW, iW, {
           kind: "dom",
-          sequence: pe,
+          sequence: jW,
           contentType: "application/octet-stream",
-          bytes: async () => Be
+          bytes: async () => sW
         });
-        if ("retryLater" === ye) return await ke(ye);
-        oe.domSequences.push(pe), Me.push({
-          sequence: pe,
-          ...ze
-        }), "uploaded" === ye && He.domSegments++
+        if ("retryLater" === mW) return await xW(mW);
+        tW.domSequences.push(jW), NW.push({
+          sequence: jW,
+          ...kW
+        }), "uploaded" === mW && OW.domSegments++
       }
       for (const {
-          chunkIndex: pe,
-          sequence: ze,
-          text: Be,
-          last: Ee
+          chunkIndex: jW,
+          sequence: kW,
+          text: sW,
+          last: MW
         }
-        of Je.tails) {
-        let ye;
-        const be = await Te(ee, ie, {
+        of wW.tails) {
+        let mW;
+        const EW = await bW(WW, iW, {
           kind: "dom",
-          sequence: ze,
+          sequence: kW,
           contentType: "application/octet-stream",
-          bytes: async () => (ye = await ee.packDom(Be), ye.bytes.buffer)
+          bytes: async () => (mW = await WW.packDom(sW), mW.bytes.buffer)
         });
-        if ("retryLater" === be) return await ke(be);
-        if (oe.domTailChunks.push(pe), "refused" === be) {
-          Re = !0;
+        if ("retryLater" === EW) return await xW(EW);
+        if (tW.domTailChunks.push(jW), "refused" === EW) {
+          ZW = !0;
           continue
         }
         const {
-          bytes: Ke,
-          inflatedBytes: Ue
-        } = ye, {
-          startMs: Fe,
-          endMs: Je,
-          summary: qe
-        } = Ee;
-        Me.push({
-          sequence: ze,
-          startMs: Fe,
-          endMs: Je,
-          byteLength: Ke.byteLength,
+          bytes: PW,
+          inflatedBytes: LW
+        } = mW, {
+          startMs: cW,
+          endMs: wW,
+          summary: lW
+        } = MW;
+        NW.push({
+          sequence: kW,
+          startMs: cW,
+          endMs: wW,
+          byteLength: PW.byteLength,
           summary: {
-            ...qe,
-            size: Ue
+            ...lW,
+            size: LW
           }
-        }), He.domSegments++
+        }), OW.domSegments++
       }
-      return ye.size > 0 ? await ke("retryLater") : Ue() ? {
-        ...He,
-        outcome: await pe(ee, ie, Ke)
-      } : Re ? {
-        ...He,
+      return mW.size > 0 ? await xW("retryLater") : LW() ? {
+        ...OW,
+        outcome: await jW(WW, iW, PW)
+      } : ZW ? {
+        ...OW,
         outcome: "refused"
-      } : He
+      } : OW
     }
-    var Ve = He(40592),
-      ae = He(40617);
-    async function ce() {
-      const ee = "undefined" === typeof navigator ? void 0 : navigator.locks;
-      if (!ke.b.supported || void 0 === ee) return;
-      const ie = new ke.b,
-        He = new Ve.c,
-        Fe = new Me.e,
-        Je = await async function(ee) {
-          const ie = [];
-          for (const ye of await ee.store.listRecordings()) {
-            let be = {
-              recordingId: ye.recordingId,
+    var dW = OW(41041),
+      eW = OW(41067);
+    async function vW() {
+      const WW = "undefined" === typeof navigator ? void 0 : navigator.locks;
+      if (!xW.d.supported || void 0 === WW) return;
+      const iW = new xW.d,
+        OW = new dW.e,
+        cW = new NW.d,
+        wW = await async function(WW) {
+          const iW = [];
+          for (const mW of await WW.store.listRecordings()) {
+            let EW = {
+              recordingId: mW.recordingId,
               outcome: "live",
               videoSegments: 0,
               telemetrySegments: 0,
               domSegments: 0
             };
             try {
-              await ee.withLock(ye.recordingId, (async () => {
-                const ie = (await ee.store.listRecordings()).find((ee => {
+              await WW.withLock(mW.recordingId, (async () => {
+                const iW = (await WW.store.listRecordings()).find((WW => {
                   let {
-                    recordingId: ie
-                  } = ee;
-                  return ie === ye.recordingId
+                    recordingId: iW
+                  } = WW;
+                  return iW === mW.recordingId
                 }));
-                if (void 0 !== ie) {
+                if (void 0 !== iW) {
                   try {
-                    be = await Ye(ee, ie)
-                  } catch (He) {
-                    console.warn(`Session replay couldn't recover what an earlier page load left of ${ye.recordingId}; forgetting it.`, He), be = {
-                      ...be,
+                    EW = await oW(WW, iW)
+                  } catch (OW) {
+                    console.warn(`Session replay couldn't recover what an earlier page load left of ${mW.recordingId}; forgetting it.`, OW), EW = {
+                      ...EW,
                       outcome: "failed"
                     }
                   }
-                  "retryLater" !== be.outcome && await ee.store.deleteRecording(ye.recordingId)
-                } else be = {
-                  ...be,
+                  "retryLater" !== EW.outcome && await WW.store.deleteRecording(mW.recordingId)
+                } else EW = {
+                  ...EW,
                   outcome: "nothing"
                 }
               }))
-            } catch (He) {
-              console.warn(`Session replay couldn't forget ${ye.recordingId}'s journal.`, He)
+            } catch (OW) {
+              console.warn(`Session replay couldn't forget ${mW.recordingId}'s journal.`, OW)
             }
-            ie.push(be)
+            iW.push(EW)
           }
-          return ie
+          return iW
         }({
-          store: ie,
-          transportFor: ee => {
-            var ie;
-            return new ae.i((null !== (ie = ee.endpoints) && void 0 !== ie ? ie : (0, Ue.b)()).segmentUploadUrl, {
-              relay: He.for(ee)
+          store: iW,
+          transportFor: WW => {
+            var iW;
+            return new eW.f((null !== (iW = WW.endpoints) && void 0 !== iW ? iW : (0, LW.d)()).segmentUploadUrl, {
+              relay: OW.for(WW)
             })
           },
-          postManifest: (ee, ie) => {
-            var He;
-            return (0, Re.d)((null !== (He = ee.endpoints) && void 0 !== He ? He : (0, Ue.b)()).manifestUrl, ie)
+          postManifest: (WW, iW) => {
+            var OW;
+            return (0, ZW.b)((null !== (OW = WW.endpoints) && void 0 !== OW ? OW : (0, LW.d)()).manifestUrl, iW)
           },
-          withLock: async (ie, He) => {
-            await ee.request((0, qe.w)(ie), {
+          withLock: async (iW, OW) => {
+            await WW.request((0, lW.u)(iW), {
               ifAvailable: !0
-            }, (async ee => {
-              null !== ee && await He()
+            }, (async WW => {
+              null !== WW && await OW()
             }))
           },
-          mux: De,
-          packDom: ee => Fe.pack(ee).catch((() => (0, Ke.c)(ee))),
-          releaseJoined: oe,
+          mux: HW,
+          packDom: WW => cW.pack(WW).catch((() => (0, PW.d)(WW))),
+          releaseJoined: tW,
           nowMs: Date.now,
-          lateUploadUntilMs: ee => {
-            var ie;
-            return null !== (ie = ee.lateUploadUntilMs) && void 0 !== ie ? ie : ee.expiresAtMs + ye.d
+          lateUploadUntilMs: WW => {
+            var iW;
+            return null !== (iW = WW.lateUploadUntilMs) && void 0 !== iW ? iW : WW.expiresAtMs + mW.e
           },
           mayStartUpload: () => !0
         }).finally((() => {
-          Fe.close()
+          cW.close()
         }));
-      for (const ye of Je) "live" !== ye.outcome && console.info(`Session replay: ${ye.outcome} what an earlier page load left of ${ye.recordingId} (${ye.videoSegments} video, ${ye.telemetrySegments} telemetry, ${ye.domSegments} page recording).`);
-      0 === (await ie.listRecordings()).length && be.i.removeItem(qe.n)
+      for (const mW of wW) "live" !== mW.outcome && console.info(`Session replay: ${mW.outcome} what an earlier page load left of ${mW.recordingId} (${mW.videoSegments} video, ${mW.telemetrySegments} telemetry, ${mW.domSegments} page recording).`);
+      0 === (await iW.listRecordings()).length && EW.i.removeItem(lW.j)
     }
   },
-  40729: () => {}
+  41185: () => {}
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

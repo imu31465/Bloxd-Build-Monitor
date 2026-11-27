@@ -1,0 +1,4115 @@
+.GreenvilleBackpackBag {
+  flex-shrink: 0;
+  height: 9.325em;
+  position: relative;
+  transform-origin: 50% 100%;
+  width: 6.1em
+}
+
+.GreenvilleBackpackBag .GreenvilleBackpackArt {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%
+}
+
+.GreenvilleBackpackBag .GreenvilleBackpackArt.Full {
+  filter: drop-shadow(.12em 0 0 #e34f4f) drop-shadow(-.12em 0 0 #e34f4f) drop-shadow(0 .12em 0 #e34f4f) drop-shadow(0 -.12em 0 #e34f4f)
+}
+
+.GreenvilleBackpackBag .GreenvilleBackpackWindow {
+  --slant: 0.47em;
+  --rise: 3.29em;
+  height: calc(var(--rise) + var(--slant));
+  left: 22.2%;
+  position: absolute;
+  top: 43.5%;
+  width: 34.5%
+}
+
+.GreenvilleBackpackBag .GreenvilleBackpackWindow .GreenvilleBackpackOre {
+  align-content: flex-start;
+  clip-path: polygon(0 0, 100% var(--slant), 100% 100%, 0 calc(100% - var(--slant)));
+  display: flex;
+  flex-wrap: wrap-reverse;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: bottom .25s ease-out, height .25s ease-out;
+  width: 100%
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GreenvilleBackpackBag .GreenvilleBackpackWindow .GreenvilleBackpackOre {
+    transition: none
+  }
+}
+
+.GreenvilleBackpackBag .GreenvilleBackpackWindow .GreenvilleBackpackOre .GreenvilleBackpackOreTile {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: .69em;
+  justify-content: center;
+  width: .69em
+}
+
+.GreenvilleBackpackBag .GreenvilleBackpackWindow .GreenvilleBackpackOre .GreenvilleBackpackOreTile .ItemWrapper {
+  flex-shrink: 0;
+  height: 245%;
+  width: 245%
+}
+
+.GreenvilleBackpack {
+  align-items: flex-start;
+  align-self: flex-start;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  margin-bottom: .8rem;
+  pointer-events: none;
+  white-space: nowrap
+}
+
+.GreenvilleBackpack .GreenvilleBackpackCount {
+  font-feature-settings: "tnum";
+  align-items: baseline;
+  display: flex;
+  font-variant-numeric: tabular-nums;
+  gap: .3rem
+}
+
+.GreenvilleBackpack .GreenvilleBackpackCount .GreenvilleBackpackTotal {
+  display: inline-block;
+  font-size: max(2.6rem, 20px);
+  line-height: 1
+}
+
+.GreenvilleBackpack .GreenvilleBackpackCount .GreenvilleBackpackTotal.Full {
+  color: #ff8a80
+}
+
+.GreenvilleBackpack .GreenvilleBackpackCount .GreenvilleBackpackCapacity {
+  color: #cfcfcf;
+  font-size: max(1.6rem, 13px)
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow {
+  align-items: flex-end;
+  display: flex;
+  gap: .8rem
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackBag {
+  font-size: max(1.35rem, 10px)
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackBag .GreenvilleBackpackFalling {
+  height: 1.9em;
+  left: 50%;
+  margin-left: -.95em;
+  position: absolute;
+  top: .5em;
+  width: 1.9em
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackInfo {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackInfo .GreenvilleBackpackTallies {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackInfo .GreenvilleBackpackTallies .GreenvilleBackpackTally {
+  font-feature-settings: "tnum";
+  align-items: center;
+  display: flex;
+  font-size: max(1.3rem, 12px);
+  font-variant-numeric: tabular-nums;
+  gap: .25rem
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackInfo .GreenvilleBackpackTallies .GreenvilleBackpackTally .GreenvilleBackpackTallyIcon {
+  height: max(2.1rem, 18px);
+  position: relative;
+  width: max(2.1rem, 18px)
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackInfo .GreenvilleBackpackTallies .GreenvilleBackpackTally .GreenvilleBackpackShards {
+  display: flex;
+  gap: .15rem;
+  margin-left: .15rem
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackInfo .GreenvilleBackpackTallies .GreenvilleBackpackTally .GreenvilleBackpackShards .GreenvilleBackpackShard {
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #fff;
+  height: max(.6rem, 5px);
+  width: max(.6rem, 5px)
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackInfo .GreenvilleBackpackTallies .GreenvilleBackpackTally .GreenvilleBackpackShards .GreenvilleBackpackShard.Filled {
+  background: #fff
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackInfo .GreenvilleBackpackFullLine {
+  display: flex;
+  flex-direction: column;
+  font-size: max(1.3rem, 12px)
+}
+
+.GreenvilleBackpack .GreenvilleBackpackRow .GreenvilleBackpackInfo .GreenvilleBackpackFullLine .GreenvilleBackpackFullTitle {
+  color: #ff8a80;
+  font-size: max(1.5rem, 13px)
+}
+
+.GreenvilleGoldPurse {
+  box-sizing: border-box;
+  max-width: min(24rem, 33.6vw);
+  width: 19.5rem
+}
+
+:where(.RightElementsTouchscreen) .GreenvilleGoldPurse {
+  width: 14.625rem
+}
+
+@media(max-height:650px), (max-width:1000px) {
+  .GreenvilleGoldPurse {
+    width: max(14.4rem, 180px)
+  }
+}
+
+.GreenvilleGoldPurse {
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  flex-shrink: 0;
+  padding: .75rem;
+  pointer-events: none;
+  white-space: nowrap
+}
+
+.GreenvilleGoldPurse:has(+.GreenvilleNavRoom:not(.Hidden)) {
+  min-width: max-content;
+  width: var(--greenville-map-width, 100%)
+}
+
+.GreenvilleGoldPurse .GreenvilleGoldPurseBody {
+  align-items: center;
+  display: flex;
+  gap: .75rem;
+  justify-content: space-between
+}
+
+.GreenvilleGoldPurse .GreenvilleGoldPurseBody .GreenvilleGoldPurseIcon {
+  height: 3.3rem;
+  position: relative;
+  width: 3.3rem
+}
+
+.GreenvilleGoldPurse .GreenvilleGoldPurseBody .GreenvilleGoldPurseAmount {
+  font-feature-settings: "tnum";
+  color: #ffb914;
+  font-size: 2.85rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .GreenvilleGoldPurse {
+    padding: 5px 10px
+  }
+
+  .GreenvilleGoldPurse .GreenvilleGoldPurseBody {
+    gap: 6px
+  }
+
+  .GreenvilleGoldPurse .GreenvilleGoldPurseBody .GreenvilleGoldPurseIcon {
+    height: max(3.3rem, 24px);
+    width: max(3.3rem, 24px)
+  }
+
+  .GreenvilleGoldPurse .GreenvilleGoldPurseBody .GreenvilleGoldPurseAmount {
+    font-size: max(2.85rem, 22px)
+  }
+}
+
+.GreenvilleGoldCoin {
+  height: max(3rem, 26px);
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  translate: -50% -50%;
+  width: max(3rem, 26px);
+  z-index: 6
+}
+
+.GreenvilleGoldCoin.IntoMenu {
+  z-index: 17
+}
+
+.GameBackgroundScreen.GreenvilleBoardOverlay {
+  background: #303a59;
+  pointer-events: auto;
+  z-index: 9
+}
+
+.GreenvilleBoard {
+  --tile-min-width: 9em;
+  --tile-icon: 3.4em;
+  --detail-icon: 6.5em;
+  --board-background: #303a59;
+  --board-header: #394980;
+  --board-trim: #a8e08a;
+  --board-well: #1a1f2e;
+  --board-chip-text: #fff;
+  --board-tile: #3c4b68;
+  --board-tile-hover: #394980;
+  --board-tile-text: #fff;
+  --board-locked-text: #a4a4a4;
+  --board-selected: #ffb914;
+  --board-detail: #2b3249;
+  --board-status: #394980;
+  --board-status-text: #fcd373;
+  --board-speaker: #a8e08a;
+  background: var(--board-background);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: max(1.35rem, 14px, min(1.125vw, 2vh));
+  font-weight: 800;
+  height: 100%;
+  padding: var(--notchTop) var(--notchRight) var(--notchBottom) var(--notchLeft);
+  position: relative;
+  text-align: left;
+  white-space: normal;
+  width: 100%
+}
+
+.GreenvilleBoard dd,
+.GreenvilleBoard dl,
+.GreenvilleBoard h2,
+.GreenvilleBoard h3,
+.GreenvilleBoard p {
+  margin: 0
+}
+
+.GreenvilleBoard .GreenvilleBoardHeader {
+  align-items: center;
+  background: var(--board-header);
+  border-bottom: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  display: flex;
+  gap: .8em;
+  justify-content: flex-end;
+  min-height: calc(var(--InGameHeaderRowsHeight, 2.5rem) + .25rem);
+  padding: .5em .6em .85em 1em;
+  position: relative
+}
+
+.GreenvilleBoard .GreenvilleBoardHeader:after {
+  background: var(--board-trim);
+  bottom: 0;
+  content: "";
+  height: .35em;
+  left: 0;
+  position: absolute;
+  right: 0
+}
+
+.GreenvilleBoard .GreenvilleBoardHeader .ExitButton {
+  font-size: 1.4em
+}
+
+.GreenvilleBoard .GreenvilleBoardWallet {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em;
+  justify-content: flex-end
+}
+
+.GreenvilleBoard .GreenvilleBoardLevel {
+  background: var(--board-well);
+  border: 1px solid #0f0f0f;
+  color: var(--board-chip-text, #fff);
+  padding: .15em .5em;
+  white-space: nowrap
+}
+
+.GreenvilleBoard .GreenvilleBoardTabs {
+  background: var(--board-header);
+  border-bottom: 1px solid #0f0f0f;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35em;
+  padding: .5em .6em 0
+}
+
+.GreenvilleBoard .GreenvilleBoardTabs .GreenvilleBoardTab {
+  align-items: center;
+  background: none;
+  background: var(--board-tile);
+  border: 1px solid #0f0f0f;
+  border-bottom: none;
+  box-sizing: content-box;
+  color: inherit;
+  color: #cfcfcf;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 900;
+  gap: .4em;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  min-height: 2.2em;
+  padding: .2em 1em;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard .GreenvilleBoardTabs .GreenvilleBoardTab:hover {
+    background: var(--board-tile-hover);
+    color: #fff
+  }
+}
+
+.GreenvilleBoard .GreenvilleBoardTabs .GreenvilleBoardTab.pad-focused {
+  background: var(--board-tile-hover);
+  color: #fff
+}
+
+@media(hover:none) {
+  .GreenvilleBoard .GreenvilleBoardTabs .GreenvilleBoardTab:active {
+    background: var(--board-tile-hover);
+    color: #fff
+  }
+}
+
+.GreenvilleBoard .GreenvilleBoardTabs .GreenvilleBoardTab.Selected {
+  background: var(--board-selected);
+  color: #0f0f0f
+}
+
+.GreenvilleBoard .GreenvilleBoardBody {
+  display: grid;
+  flex: 1 1;
+  grid-template-columns: 1fr 21em;
+  grid-template-rows: minmax(0, 1fr);
+  min-height: 0
+}
+
+.GreenvilleBoard .GreenvilleBoardStatus {
+  align-items: center;
+  background: var(--board-status);
+  border-top: 1px solid #0f0f0f;
+  color: var(--board-status-text);
+  display: flex;
+  gap: .6em;
+  min-height: 2em;
+  padding: .4em 1em
+}
+
+.GreenvilleBoard .GreenvilleBoardStatus .GreenvilleBoardSpeaker {
+  background: var(--board-speaker);
+  border: 1px solid #0f0f0f;
+  color: #0f0f0f;
+  flex-shrink: 0;
+  font-size: .75em;
+  font-weight: 900;
+  letter-spacing: .08em;
+  padding: .05em .45em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles {
+  grid-gap: .6em;
+  display: grid;
+  gap: .6em;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(auto-fill, minmax(var(--tile-min-width), 1fr));
+  overflow-y: auto;
+  padding: .7em
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile {
+  align-items: center;
+  background: none;
+  background: var(--board-tile);
+  border: 1px solid #0f0f0f;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: content-box;
+  color: inherit;
+  color: var(--board-tile-text);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  gap: .4em;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile:hover {
+    background: var(--board-tile-hover)
+  }
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile.pad-focused {
+  background: var(--board-tile-hover)
+}
+
+@media(hover:none) {
+  .GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile:active {
+    background: var(--board-tile-hover)
+  }
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile.Selected {
+  outline: 3px solid var(--board-selected);
+  outline-offset: -1px
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile {
+  padding: 1.35em .5em .8em
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile.Locked .GreenvilleBoardTileIcon {
+  filter: grayscale(1) brightness(.85)
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile.Locked .GreenvilleBoardTileName {
+  color: var(--board-locked-text)
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile .GreenvilleBoardBadge {
+  left: -1px;
+  position: absolute;
+  top: -1px
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTileIcon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: var(--tile-icon);
+  justify-content: center;
+  width: var(--tile-icon)
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTileName {
+  font-size: .9em;
+  font-weight: 900;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  text-align: center
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles.Roomy {
+  --tile-icon: 5.5em;
+  gap: 1em;
+  grid-auto-rows: minmax(min-content, 1fr);
+  grid-template-columns: repeat(var(--tile-columns), minmax(0, 1fr));
+  padding: 1em
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles.Roomy .GreenvilleBoardTile {
+  font-size: 1.15em;
+  gap: .6em;
+  justify-content: center;
+  padding: 1.8em 1em 1.2em
+}
+
+.GreenvilleBoard .GreenvilleBoardTiles.Roomy .GreenvilleBoardTileName {
+  font-size: 1em
+}
+
+.GreenvilleBoard .GreenvilleBoardBadge {
+  align-items: center;
+  background: var(--board-selected);
+  border: 1px solid #0f0f0f;
+  color: #0f0f0f;
+  display: inline-flex;
+  font-size: .7em;
+  font-weight: 900;
+  gap: .3em;
+  letter-spacing: .06em;
+  padding: 0 .35em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard .GreenvilleBoardBadge.Muted {
+  background: var(--board-well);
+  color: #cfcfcf
+}
+
+.GreenvilleBoard .GreenvilleBoardDetail {
+  background: var(--board-detail);
+  border-left: 1px solid #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+  overflow-y: auto;
+  padding: .8em
+}
+
+.GreenvilleBoard .GreenvilleBoardDetailHeader {
+  display: flex;
+  flex-direction: column;
+  gap: .6em
+}
+
+.GreenvilleBoard .GreenvilleBoardDetailHeader h3 {
+  font-size: 1.35em;
+  line-height: 1.15;
+  overflow-wrap: anywhere
+}
+
+.GreenvilleBoard .GreenvilleBoardDetailHero {
+  align-items: center;
+  background: var(--board-well);
+  border: 1px solid #0f0f0f;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 1.1em
+}
+
+.GreenvilleBoard .GreenvilleBoardDetailIcon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: var(--detail-icon);
+  justify-content: center;
+  width: var(--detail-icon)
+}
+
+.GreenvilleBoard .GreenvilleBoardDetailHeading {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: .3em;
+  min-width: 0
+}
+
+.GreenvilleBoard .GreenvilleBoardDetailBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em
+}
+
+.GreenvilleBoard .GreenvilleBoardDescription {
+  color: #f2f2f2;
+  font-size: .9em;
+  line-height: 1.35
+}
+
+.GreenvilleBoard .GreenvilleBoardFacts {
+  display: flex;
+  flex-direction: column;
+  gap: .35em
+}
+
+.GreenvilleBoard .GreenvilleBoardFacts>div {
+  align-items: center;
+  border-bottom: 1px solid hsla(0, 0%, 95%, .1);
+  display: flex;
+  gap: .8em;
+  justify-content: space-between;
+  padding-bottom: .35em
+}
+
+.GreenvilleBoard .GreenvilleBoardFacts dt {
+  color: #cfcfcf;
+  font-size: .75em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard .GreenvilleBoardFacts dd {
+  text-align: right
+}
+
+.GreenvilleBoard .GreenvilleBoardActions {
+  background: inherit;
+  bottom: -.8em;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  margin-bottom: -.8em;
+  margin-top: auto;
+  padding: .5em 0 .8em;
+  position: sticky
+}
+
+.GreenvilleBoard .GreenvilleBoardActions .NewButton {
+  min-height: 2.6em
+}
+
+.GreenvilleBoard .GreenvilleBoardHint {
+  color: #cfcfcf;
+  text-align: center
+}
+
+@media(orientation:landscape)and (max-height:500px), (orientation:landscape)and (max-width:900px) {
+  .GreenvilleBoard .GreenvilleBoardBody {
+    grid-template-columns: 1fr 17em
+  }
+}
+
+@media(max-height:560px) {
+  .GreenvilleBoard .GreenvilleBoardTabs {
+    padding-top: .3em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTabs .GreenvilleBoardTab {
+    min-height: 1.8em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles {
+    gap: .45em;
+    padding: .45em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTile {
+    gap: .3em;
+    padding: 1.15em .35em .5em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTileIcon {
+    --tile-icon: 2.6em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles.Roomy {
+    gap: .5em;
+    padding: .5em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles.Roomy .GreenvilleBoardTile {
+    font-size: 1em;
+    padding: 1.3em .5em .6em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles.Roomy .GreenvilleBoardTileIcon {
+    --tile-icon: 3em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardDetail {
+    gap: .45em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardDetailHeader h3 {
+    font-size: 1.1em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardStatus {
+    min-height: 1.7em;
+    padding: .25em .8em
+  }
+}
+
+@media(max-height:560px), (max-width:900px)and (orientation:portrait) {
+  .GreenvilleBoard .GreenvilleBoardDetailHeader {
+    align-items: center;
+    flex-direction: row
+  }
+
+  .GreenvilleBoard .GreenvilleBoardDetailHero {
+    padding: .2em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardDetailIcon {
+    --detail-icon: 2.8em
+  }
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .GreenvilleBoard .GreenvilleBoardHeader {
+    padding-bottom: .65em;
+    padding-top: .3em
+  }
+}
+
+@media(max-width:900px)and (orientation:portrait) {
+  .GreenvilleBoard .GreenvilleBoardHeader {
+    padding-top: calc(var(--InGameHeaderRowsHeight, 2.5rem) + .25rem)
+  }
+
+  .GreenvilleBoard .GreenvilleBoardWallet {
+    flex: 1 1;
+    justify-content: flex-start
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTabs .GreenvilleBoardTab {
+    flex: 1 1;
+    justify-content: center
+  }
+
+  .GreenvilleBoard .GreenvilleBoardBody {
+    display: flex;
+    flex-direction: column
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles {
+    --tile-min-width: 6.5em;
+    flex: 1 1;
+    min-height: 0
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles.Roomy {
+    gap: .6em;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(auto-fill, minmax(var(--tile-min-width), 1fr));
+    padding: .7em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles.Roomy .GreenvilleBoardTile {
+    font-size: 1em;
+    padding: 1.35em .5em .8em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles.Roomy .GreenvilleBoardTileIcon {
+    --tile-icon: 3.4em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardTiles .GreenvilleBoardTileName {
+    font-size: .82em
+  }
+
+  .GreenvilleBoard .GreenvilleBoardDetail {
+    border-left: none;
+    border-top: 1px solid #0f0f0f;
+    flex: 0 1 auto;
+    max-height: 45%;
+    min-height: 0
+  }
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard {
+  --board-background: repeating-linear-gradient(90deg, #444750 0 0.9em, #51535a 0.9em 1.25em, #444750 1.25em 1.8em);
+  --board-header: #7b340e;
+  --board-trim: repeating-linear-gradient(-45deg, #ffb914 0 0.5em, #0f0f0f 0.5em 1em);
+  --board-well: #1d1d1d;
+  --board-tile: #bb8a5b;
+  --board-tile-hover: #c69f7a;
+  --board-tile-text: #0f0f0f;
+  --board-locked-text: #352d26;
+  --board-selected: #ffb914;
+  --board-detail: #292929;
+  --board-status: #4c240e;
+  --board-status-text: #fcd373;
+  --board-speaker: #ffb914
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate {
+  background: linear-gradient(#876544, #876544) left 0 top 33%/100% 2px no-repeat, linear-gradient(#876544, #876544) left 0 top 66%/100% 2px no-repeat, var(--board-tile);
+  border: 2px solid #876544;
+  justify-content: flex-start;
+  padding-top: 2.3em
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate:hover {
+    --board-tile: #c69f7a
+  }
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate.pad-focused {
+  --board-tile: #c69f7a
+}
+
+@media(hover:none) {
+  .GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate:active {
+    --board-tile: #c69f7a
+  }
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate .GreenvilleBoardTileIcon {
+  background: #51535a;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  padding: .4em
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate .GreenvilleDepotStencil {
+  align-self: center
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate .GreenvilleDepotBlurb {
+  font-size: .8em;
+  line-height: 1.3;
+  max-width: 16em;
+  text-align: center
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate .GreenvilleBoardTileName {
+  border: .12em dashed;
+  font-size: .8em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  padding: .1em .35em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate.Locked {
+  --board-tile: #635141
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleDepotCrate.Locked:after {
+  background: repeating-linear-gradient(-45deg, #ffb914 0 .5em, #0f0f0f .5em 1em);
+  content: "";
+  height: .45em;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 1.5em;
+  transform: rotate(-2deg)
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardDetail {
+  border-left: .3em solid #7b340d
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardDetailHero {
+  background: #51535a;
+  border: .2em solid #876544
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardDetailHeader h3 {
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-shadow: -2px -2px 0 #0f0f0f, -2px -1px 0 #0f0f0f, -2px 0 0 #0f0f0f, -2px 1px 0 #0f0f0f, -2px 2px 0 #0f0f0f, -1px -2px 0 #0f0f0f, -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, -1px 2px 0 #0f0f0f, 0 -2px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 0 2px 0 #0f0f0f, 1px -2px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f, 1px 2px 0 #0f0f0f, 2px -2px 0 #0f0f0f, 2px -1px 0 #0f0f0f, 2px 0 0 #0f0f0f, 2px 1px 0 #0f0f0f, 2px 2px 0 #0f0f0f;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardDetailHeader h3 .svg-inline--fa,
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardDetailHeader h3.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardDetailHeader h3 .svg-inline--fa path:only-of-type,
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardDetailHeader h3.svg-inline--fa path:only-of-type {
+  stroke: #0f0f0f;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 4px;
+  stroke-linejoin: round
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleDepotStencil {
+  align-self: flex-start;
+  background: #ffb914;
+  border: 1px solid #0f0f0f;
+  color: #0f0f0f;
+  font-size: .75em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  padding: .15em .5em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard.GreenvilleDepotBoard .GreenvilleDepotLoaded {
+  align-self: center;
+  border: .15em solid #ffb914;
+  color: #ffb914;
+  font-size: 1.1em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  padding: .2em .8em;
+  text-transform: uppercase;
+  transform: rotate(-4deg)
+}
+
+@media(max-width:900px)and (orientation:portrait) {
+  .GreenvilleBoard.GreenvilleDepotBoard .GreenvilleBoardDetail {
+    border-left: none;
+    border-top: .3em solid #7b340d
+  }
+}
+
+@media(max-height:560px), (max-width:900px)and (orientation:portrait) {
+  .GreenvilleBoard.GreenvilleDepotBoard .GreenvilleDepotBlurb {
+    display: none
+  }
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard {
+  --board-background: repeating-conic-gradient(#242730 0 25%, #393d48 0 50%) 0 0 /4em 4em;
+  --board-header: #cc1414;
+  --board-trim: linear-gradient(#cfcfcf, #a4a4a4);
+  --board-well: #252525;
+  --board-tile: #252525;
+  --board-tile-hover: #333;
+  --board-tile-text: #f2f2f2;
+  --board-selected: #ffb914;
+  --board-detail: #22283b;
+  --board-status: #800c0c;
+  --board-status-text: #fcd373;
+  --board-speaker: #cfcfcf
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay {
+  background: linear-gradient(#f2f2f2, #f2f2f2) left 0 top 0/.25em 100% no-repeat, linear-gradient(#f2f2f2, #f2f2f2) right 0 top 0/.25em 100% no-repeat, var(--board-tile);
+  border: 2px solid #a4a4a4
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay:hover {
+    --board-tile: #333
+  }
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay.pad-focused {
+  --board-tile: #333
+}
+
+@media(hover:none) {
+  .GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay:active {
+    --board-tile: #333
+  }
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay .GreenvilleBoardTileName {
+  font-size: .85em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay.Out {
+  --board-tile: repeating-linear-gradient(-45deg, #665120 0 0.4em, #252525 0.4em 1.2em)
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay.Out:hover {
+    --board-tile: repeating-linear-gradient(-45deg, #665120 0 0.4em, #333 0.4em 1.2em)
+  }
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay.Out.pad-focused {
+  --board-tile: repeating-linear-gradient(-45deg, #665120 0 0.4em, #333 0.4em 1.2em)
+}
+
+@media(hover:none) {
+  .GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay.Out:active {
+    --board-tile: repeating-linear-gradient(-45deg, #665120 0 0.4em, #333 0.4em 1.2em)
+  }
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleGarageBay.Out .GreenvilleBoardTileIcon {
+  filter: grayscale(1) brightness(.7)
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardDetail {
+  border-left: .3em solid #a4a4a4
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardDetailHero {
+  --board-tile: #252525;
+  background: linear-gradient(#f2f2f2, #f2f2f2) left 0 top 0/.25em 100% no-repeat, linear-gradient(#f2f2f2, #f2f2f2) right 0 top 0/.25em 100% no-repeat, var(--board-tile);
+  border: .2em solid #a4a4a4
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardDetailHeader h3 {
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-shadow: -2px -2px 0 #0f0f0f, -2px -1px 0 #0f0f0f, -2px 0 0 #0f0f0f, -2px 1px 0 #0f0f0f, -2px 2px 0 #0f0f0f, -1px -2px 0 #0f0f0f, -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, -1px 2px 0 #0f0f0f, 0 -2px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 0 2px 0 #0f0f0f, 1px -2px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f, 1px 2px 0 #0f0f0f, 2px -2px 0 #0f0f0f, 2px -1px 0 #0f0f0f, 2px 0 0 #0f0f0f, 2px 1px 0 #0f0f0f, 2px 2px 0 #0f0f0f;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardDetailHeader h3 .svg-inline--fa,
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardDetailHeader h3.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardDetailHeader h3 .svg-inline--fa path:only-of-type,
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardDetailHeader h3.svg-inline--fa path:only-of-type {
+  stroke: #0f0f0f;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 4px;
+  stroke-linejoin: round
+}
+
+.GreenvilleBoard.GreenvilleGarageBoard .GreenvilleGarageOutStamp {
+  align-self: center;
+  border: .15em solid #ffb914;
+  color: #ffb914;
+  font-size: 1.1em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  padding: .2em .8em;
+  text-transform: uppercase;
+  transform: rotate(-4deg)
+}
+
+@media(max-width:900px)and (orientation:portrait) {
+  .GreenvilleBoard.GreenvilleGarageBoard .GreenvilleBoardDetail {
+    border-left: none;
+    border-top: .3em solid #a4a4a4
+  }
+}
+
+.GreenvilleBoardChip {
+  font-feature-settings: "tnum";
+  align-items: center;
+  background: var(--board-well, #1a1f2e);
+  border: 1px solid #0f0f0f;
+  color: var(--board-chip-text, #fff);
+  cursor: help;
+  display: inline-flex;
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  gap: .3em;
+  padding: .15em .5em .15em .2em;
+  white-space: nowrap
+}
+
+.GreenvilleBoardChip .GreenvilleBoardChipIcon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: 1.4em;
+  justify-content: center;
+  width: 1.4em
+}
+
+.GreenvilleBoardChip.Short {
+  border-color: #fc6464;
+  color: #ff8a80
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox {
+  --tooltipBackground: #22283b;
+  padding: 0;
+  white-space: normal
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox[data-popper-placement*=bottom] .tooltip-arrow:after,
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox[data-popper-placement*=bottom] .tooltip-arrow:before {
+  border-bottom-color: #ffb914
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltip {
+  border-top: .2em solid #ffb914;
+  display: flex;
+  flex-direction: column;
+  font-size: max(1.1rem, 13px, min(.9166666667vw, 1.6296296296vh));
+  line-height: 1.4;
+  max-width: 19em;
+  min-width: 11em;
+  text-align: left
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipHeader {
+  align-items: center;
+  display: flex;
+  gap: .6em;
+  padding: .55em .75em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipIcon {
+  align-items: center;
+  background: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  height: 2.4em;
+  justify-content: center;
+  padding: .25em;
+  width: 2.4em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipName {
+  font-size: 1.1em;
+  font-weight: 900;
+  line-height: 1.2
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipDescription {
+  color: #f2f2f2;
+  padding: 0 .75em .6em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipHeld {
+  grid-gap: .35em 1.2em;
+  align-items: baseline;
+  border-top: 1px solid hsla(0, 0%, 95%, .1);
+  display: grid;
+  gap: .35em 1.2em;
+  grid-template-columns: 1fr auto;
+  padding: .5em .75em .65em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipHeld .GreenvilleChipTooltipLabel {
+  color: #cfcfcf;
+  font-size: .75em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipHeld .GreenvilleChipTooltipCount {
+  color: #cfcfcf;
+  font-weight: 900
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipHeld .GreenvilleChipTooltipHeldAmount {
+  color: #1dd06d
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipHeld .GreenvilleChipTooltipMeter {
+  background: #1a1f2e;
+  grid-column: 1/-1;
+  height: .3em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipHeld .GreenvilleChipTooltipMeter span {
+  background: #1dd06d;
+  display: block;
+  height: 100%
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipHeld.Short .GreenvilleChipTooltipHeldAmount {
+  color: #ff8a80
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.GreenvilleChipTooltipBox .GreenvilleChipTooltipHeld.Short .GreenvilleChipTooltipMeter span {
+  background: #e34f4f
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles.GreenvilleLumberTickets {
+  --tile-min-width: 15em;
+  gap: 1.6em;
+  padding: 1.6em
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket {
+  --tile-icon: 10em;
+  background: #f6e6bf;
+  border: 1px solid #f9c88b;
+  color: #0f0f0f;
+  justify-content: flex-start;
+  padding: 1.8em 1em 1em;
+  transform: rotate(-.8deg)
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket:nth-child(2) {
+  transform: rotate(.6deg)
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket:nth-child(3) {
+  transform: rotate(-.4deg)
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket:hover {
+    background: #f4ecd9
+  }
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket.pad-focused {
+  background: #f4ecd9
+}
+
+@media(hover:none) {
+  .GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket:active {
+    background: #f4ecd9
+  }
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket:before {
+  background: #e73131;
+  border: 1px solid #0f0f0f;
+  content: "";
+  height: .7em;
+  left: calc(50% - .35em);
+  position: absolute;
+  top: .45em;
+  width: .7em
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket.Selected {
+  transform: none
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket.Ready {
+  border-bottom: .4em solid #1dd06d
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleBoardTileName {
+  border-bottom: 1px solid #f9c88b;
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  order: -2;
+  padding-bottom: .25em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleBoardBadge {
+  order: -1;
+  position: static
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleBoardTileIcon {
+  flex: 1 1 auto;
+  height: auto;
+  min-height: var(--tile-icon);
+  width: 100%
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleBoardTileIcon>* {
+  height: var(--tile-icon);
+  width: var(--tile-icon)
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleLumberNeeds {
+  --need-icon: 2em;
+  align-self: stretch;
+  font-size: .9em
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleLumberNeed {
+  border-bottom-color: #f9c88b
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleLumberNeedCount {
+  color: #49453b
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleLumberNeedTick,
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .Met .GreenvilleLumberNeedCount {
+  color: #07940e
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleLumberReward {
+  justify-content: center
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberNeeds {
+  display: flex;
+  flex-direction: column;
+  text-align: left
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberNeeds .GreenvilleLumberNeed {
+  align-items: center;
+  border-bottom: 1px solid #683f19;
+  display: flex;
+  gap: .5em;
+  padding: .3em 0
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberNeeds .GreenvilleLumberNeedIcon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: var(--need-icon, 2em);
+  justify-content: center;
+  width: var(--need-icon, 2em)
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberNeeds .GreenvilleLumberNeedName {
+  flex: 1 1;
+  min-width: 0;
+  overflow-wrap: anywhere
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberNeeds .GreenvilleLumberNeedCount {
+  font-feature-settings: "tnum";
+  color: #cfcfcf;
+  font-variant-numeric: tabular-nums
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberNeeds .GreenvilleLumberNeedTick {
+  color: #1dd06d;
+  text-align: center;
+  width: 1em
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberNeeds .Met .GreenvilleLumberNeedCount {
+  color: #1dd06d
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberReward {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em;
+  justify-content: flex-end
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberReward .GreenvilleLumberExp {
+  background: var(--board-well);
+  border: 1px solid #0f0f0f;
+  color: #1dd06d;
+  padding: .15em .5em;
+  white-space: nowrap
+}
+
+@media(max-height:560px) {
+  .GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles.GreenvilleLumberTickets {
+    gap: .8em;
+    padding: .8em
+  }
+
+  .GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles.GreenvilleLumberTickets .GreenvilleBoardTile.GreenvilleLumberTicket {
+    padding: 1.5em .5em .6em
+  }
+
+  .GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles.GreenvilleLumberTickets .GreenvilleBoardTile.GreenvilleLumberTicket .GreenvilleLumberNeeds {
+    --need-icon: 1.6em;
+    font-size: .85em
+  }
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberWood {
+  background: linear-gradient(#79491b, #79491b) left 0 top 22%/100% 1px no-repeat, linear-gradient(#79491b, #79491b) left 0 top 61%/100% 1px no-repeat, linear-gradient(#79491b, #79491b) left 0 top 83%/100% 1px no-repeat, var(--board-tile)
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberWood:not(.Spare) {
+  --board-tile: #683f19
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberWood:not(.Spare) .GreenvilleBoardTileName {
+  color: #cfcfcf
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberWood:hover {
+    --board-tile: #985a1f
+  }
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberWood.pad-focused {
+  --board-tile: #985a1f
+}
+
+@media(hover:none) {
+  .GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberWood:active {
+    --board-tile: #985a1f
+  }
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleLumberWood .GreenvilleBoardChip {
+  font-size: .9em
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberLogEnd {
+  align-items: center;
+  background: repeating-radial-gradient(#fdb653 0 .3em, #9f5e20 .3em .38em);
+  border: .2em solid #3f2915;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: .3em;
+  width: 100%
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberSpare {
+  color: #1dd06d
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleLumberSpare.None {
+  color: #cfcfcf
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard {
+  --board-background: repeating-linear-gradient(#5c3918 0 2.6em, #3a2714 2.6em 2.72em, #683f19 2.72em 5.32em, #3a2714 5.32em 5.44em);
+  --board-header: #3f2915;
+  --board-trim: linear-gradient(to bottom right, #cfcfcf 50%, transparent 0) 0 0 /0.7em 100% repeat-x;
+  --board-well: #2e2013;
+  --board-tile: #87511d;
+  --board-tile-hover: #985a1f;
+  --board-detail: #4b3016;
+  --board-status: #3f2915;
+  --board-status-text: #f8dfa6;
+  --board-speaker: #fdb653
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardHeader {
+  background: linear-gradient(#824e1c, #824e1c) left 0 top .3em/100% 1px no-repeat, linear-gradient(#2e2013, #2e2013) left 0 top calc(.3em + 1px)/100% 1px no-repeat, var(--board-header)
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles {
+  background: radial-gradient(ellipse at bottom, #8b6b43 0 45%, transparent 46%) left -2em bottom -1.2em/18em 3.4em no-repeat, radial-gradient(ellipse at bottom, #8b6b43 0 45%, transparent 46%) right 3em bottom -1.4em/12em 2.8em no-repeat, radial-gradient(circle, #8b6b43 0 .12em, transparent .14em) 1.3em 2.1em/9em 7em, radial-gradient(circle, #8b6b43 0 .09em, transparent .11em) 5.7em 4.4em/11em 8em, radial-gradient(circle, #8b6b43 0 .1em, transparent .12em) 3.2em 6.3em/7em 9em
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardTiles .GreenvilleBoardTile.Selected {
+  outline: .2em solid var(--board-selected);
+  outline-offset: .15em
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardBadge.Ready {
+  background: #1dd06d
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardBadge.Tracking {
+  background: var(--board-well);
+  color: var(--board-selected)
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardDetail {
+  border-left: .3em solid #3f2915
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardFacts>div {
+  border-bottom-color: #683f19
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardFacts dt {
+  color: #f8dfa6
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardHint {
+  color: #fcd373
+}
+
+.GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardStatus {
+  border-top: .25em solid #3a2714
+}
+
+@media(max-width:900px)and (orientation:portrait) {
+  .GreenvilleBoard.GreenvilleLumberBoard .GreenvilleBoardDetail {
+    border-left: none;
+    border-top: .3em solid #3f2915
+  }
+}
+
+.GreenvilleTrackerCard {
+  box-sizing: border-box;
+  max-width: min(24rem, 33.6vw);
+  width: 19.5rem
+}
+
+:where(.RightElementsTouchscreen) .GreenvilleTrackerCard {
+  width: 14.625rem
+}
+
+@media(max-height:650px), (max-width:1000px) {
+  .GreenvilleTrackerCard {
+    width: max(14.4rem, 180px)
+  }
+}
+
+.GreenvilleTrackerCard {
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  font-size: 1.5rem;
+  min-height: 0;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  padding: .75rem;
+  pointer-events: none;
+  text-align: left;
+  white-space: normal
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerRows {
+  display: flex;
+  flex-direction: column;
+  font-size: .9em;
+  gap: .5rem;
+  list-style: none;
+  margin: .75rem 0 0;
+  padding: 0
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleTrackerRow {
+  align-items: center;
+  display: flex;
+  gap: .75rem;
+  line-height: 1.4
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleTrackerRow .GreenvilleTrackerIcon {
+  flex-shrink: 0;
+  height: 1.4em;
+  position: relative;
+  width: 1.4em
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleTrackerRow .GreenvilleTrackerLabel {
+  flex: 1 1;
+  min-width: 0
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleTrackerRow .GreenvilleTrackerValue {
+  font-feature-settings: "tnum";
+  color: #cfcfcf;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleTrackerRow .GreenvilleTrackerValue.Gold {
+  color: #ffb914
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleTrackerRow .GreenvilleTrackerValue.Boosted {
+  color: #85baff
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleTrackerRow.Golden .GreenvilleTrackerLabel {
+  color: #ffb914
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleTrackerRow.Done .GreenvilleTrackerValue {
+  color: #1dd06d
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerReady,
+.GreenvilleTrackerCard .GreenvilleTrackerTip {
+  font-size: .85em;
+  font-weight: 700;
+  margin-top: .75rem
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerReady {
+  color: #1dd06d
+}
+
+.GreenvilleTrackerCard .GreenvilleTrackerTip {
+  font-feature-settings: "tnum";
+  color: #fcd373;
+  font-variant-numeric: tabular-nums
+}
+
+@media(max-height:650px), (max-width:1000px) {
+  .GreenvilleTrackerCard {
+    font-size: 1.3rem
+  }
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .GreenvilleTrackerCard {
+    font-size: max(1.3rem, 13px)
+  }
+
+  .GreenvilleTrackerCard .GreenvilleTrackerReady,
+  .GreenvilleTrackerCard .GreenvilleTrackerRows,
+  .GreenvilleTrackerCard .GreenvilleTrackerTip {
+    font-size: max(.9em, 12px)
+  }
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard {
+  --board-background: #0e240f;
+  --board-header: #612b0e;
+  --board-trim: #a3672f;
+  --board-well: #0e1b0f;
+  --board-tile: #0e240f;
+  --board-tile-hover: #29482b;
+  --board-tile-text: #f2f2f2;
+  --board-locked-text: #748175;
+  --board-selected: #f2f2f2;
+  --board-detail: #0e1b0f;
+  --board-status: #612b0e;
+  --board-status-text: #f2f2f2;
+  --board-speaker: #f2f2f2
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleOreTile {
+  border: .12em dashed #748175;
+  box-shadow: none
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleOreTile.Selected {
+  --board-tile: #29482b;
+  border: .2em solid #f2f2f2;
+  outline: none
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleOreTile .GreenvilleOrePrice {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em;
+  justify-content: center
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleOreTile .GreenvilleBoardChip {
+  --board-well: #fcd373;
+  --board-chip-text: #0f0f0f
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleOreTile.Legendary {
+  border-color: #ffb914
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleOreTile.Legendary .GreenvilleBoardTileName {
+  color: #fcd373
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleOreTile.Legendary.Selected {
+  border-color: #f2f2f2
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleOreSample {
+  align-items: center;
+  background: linear-gradient(#a3672f, #a3672f) left 0 bottom 0/100% .25em no-repeat, #3d3d3d;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: .25em .25em .45em;
+  width: 100%
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardDetailHeader h3 {
+  color: #f2f2f2
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardFacts>div {
+  border-bottom: 1px dashed #748175
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardFacts dt {
+  color: #748175
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardFacts .GreenvilleBoardChip {
+  --board-well: #fcd373;
+  --board-chip-text: #0f0f0f
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardFacts .GreenvilleOreHeld {
+  color: #1dd06d
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardFacts .GreenvilleOreHeld.None {
+  color: #cfcfcf
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleOreExp {
+  color: #1dd06d
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleOreRare {
+  background: #ffb914;
+  color: #0f0f0f
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardHint {
+  color: #fcd373;
+  text-align: left
+}
+
+.GreenvilleBoard.GreenvilleOreBuyerBoard .GreenvilleBoardStatus {
+  border-top: .25em solid #a3672f
+}
+
+@keyframes greenvilleFarmTwinkle {
+
+  0%,
+  to {
+    transform: scale(0) rotate(0deg)
+  }
+
+  50% {
+    transform: scale(1) rotate(45deg)
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSign {
+  align-items: center;
+  background: #0e220f;
+  border: .3em solid #8c2323;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em .8em;
+  grid-column: 1/-1;
+  justify-content: space-between;
+  padding: .45em .7em
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSign .GreenvilleFarmSignBoard {
+  border-bottom: .1em dashed #f2f2f2;
+  color: #f2f2f2;
+  font-size: 1.05em;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSign .GreenvilleFarmSignActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSection {
+  grid-column: 1/-1;
+  margin: 0
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard h4.GreenvilleFarmSection.Golden {
+  background: #ffb914;
+  border: 1px solid #0f0f0f;
+  color: #0f0f0f;
+  font-size: .85em;
+  font-weight: 900;
+  justify-self: flex-start;
+  letter-spacing: .1em;
+  padding: .15em .6em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard hr.GreenvilleFarmSection {
+  border: none;
+  border-top: .15em dashed #f5e9cc;
+  height: 0
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate {
+  --board-tile: #5b2c2c;
+  --board-tile-text: #f5e9cc;
+  background: linear-gradient(#351515, #351515) left 0 top 33%/100% 2px no-repeat, linear-gradient(#351515, #351515) left 0 top 66%/100% 2px no-repeat, var(--board-tile);
+  border: .15em solid #351515
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate:hover {
+    --board-tile: #692929
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate.pad-focused {
+  --board-tile: #692929
+}
+
+@media(hover:none) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate:active {
+    --board-tile: #692929
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate .GreenvilleBoardChip {
+  --board-well: #f5e9cc;
+  --board-chip-text: #0f0f0f
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate.Empty .GreenvilleBoardTileIcon {
+  filter: grayscale(1) brightness(.9)
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate.Empty .GreenvilleBoardTileName {
+  color: #cfcfcf
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate.Golden {
+  --board-tile: #ffb914;
+  --board-tile-text: #0f0f0f;
+  border-color: #b6830e
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate.Golden:hover {
+    --board-tile: #fcd373
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate.Golden.pad-focused {
+  --board-tile: #fcd373
+}
+
+@media(hover:none) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate.Golden:active {
+    --board-tile: #fcd373
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmCrate.Golden .GreenvilleFarmGoldenName {
+  color: inherit
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle:after,
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle:before {
+  animation: greenvilleFarmTwinkle 1.8s ease-in-out infinite;
+  background: linear-gradient(#f5e9cc, #f5e9cc) 50%/100% .16em no-repeat, linear-gradient(#f5e9cc, #f5e9cc) 50%/.16em 100% no-repeat;
+  content: "";
+  height: .8em;
+  position: absolute;
+  transform: scale(0);
+  width: .8em
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle:before {
+  right: .4em;
+  top: .4em
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle:after {
+  animation-delay: -.9s;
+  left: .4em;
+  top: 45%
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle[data-off-screen]:after,
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle[data-off-screen]:before,
+html[data-app-covered] .WholeAppWrapper .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle:after,
+html[data-app-covered] .WholeAppWrapper .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle:before {
+  animation-play-state: paused
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle:after,
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSparkle:before {
+    animation: none;
+    transform: rotate(45deg) scale(.7)
+  }
+}
+
+@media(max-height:560px) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSign {
+    border-width: .2em;
+    padding: .3em .5em
+  }
+
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmSign .GreenvilleFarmSignActions .NewButton {
+    min-height: 2em
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard {
+  --tile-min-width: 9.5em;
+  --detail-icon: 4.5em;
+  --board-background: conic-gradient(#0b540e 0 25%, #0c470f 0 50%, #0b540e 0 75%, #0a610e 0) 0 0 /1.6em 1.6em;
+  --board-header: repeating-linear-gradient(90deg, #e73131 0 1.6em, #f5e9cc 1.6em 3.2em);
+  --board-trim: repeating-linear-gradient(90deg, #8c2323 0 0.8em, #f5e9cc 0.8em 1.6em);
+  --board-well: #0e1f0f;
+  --board-tile: #d2b779;
+  --board-tile-hover: #dac697;
+  --board-tile-text: #0f0f0f;
+  --board-selected: #f5e9cc;
+  --board-detail: #163927;
+  --board-status: #8c2323;
+  --board-status-text: #f5e9cc;
+  --board-speaker: #fcd373
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTabs {
+  background: #163927
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTabs .GreenvilleBoardTab {
+  background: #8c2323;
+  color: #f5e9cc
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTabs .GreenvilleBoardTab:hover {
+    background: #a22626
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTabs .GreenvilleBoardTab.pad-focused {
+  background: #a22626
+}
+
+@media(hover:none) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTabs .GreenvilleBoardTab:active {
+    background: #a22626
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTabs .GreenvilleBoardTab.Selected {
+  background: #f5e9cc;
+  color: #0f0f0f
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.Selected {
+  outline: .2em solid var(--board-selected);
+  outline-offset: .15em
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmProduce {
+  align-items: center;
+  background: #dcc692;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: .25em;
+  width: 100%
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmProduce.Golden {
+  background: #936c12;
+  border-color: #ffb914
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmGoldenName {
+  color: #fcd373
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket {
+  --tile-icon: 9em;
+  background: conic-gradient(var(--board-tile) 0 25%, #baa36c 0 50%, var(--board-tile) 0 75%, #baa36c 0) 0 0/.6em .6em;
+  border: .18em solid #7a6b49;
+  justify-content: flex-start
+}
+
+@media(hover:hover) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket:hover {
+    --board-tile: #dac697
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket.pad-focused {
+  --board-tile: #dac697
+}
+
+@media(hover:none) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket:active {
+    --board-tile: #dac697
+  }
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket .GreenvilleBoardTileName {
+  background: #f5e9cc;
+  border: 1px solid #0f0f0f;
+  order: -1;
+  padding: .1em .5em
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket .GreenvilleBoardTileIcon {
+  background: #7a6b49;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  height: auto;
+  min-height: var(--tile-icon);
+  width: 100%
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket .GreenvilleBoardTileIcon>* {
+  height: var(--tile-icon);
+  width: var(--tile-icon)
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket .GreenvilleFarmNeeds {
+  align-self: stretch;
+  color: #fff;
+  font-size: .85em;
+  text-align: left
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket .GreenvilleBoardChip {
+  --board-well: #f5e9cc;
+  --board-chip-text: #0f0f0f
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket .GreenvilleFarmReward {
+  justify-content: center
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles .GreenvilleBoardTile.GreenvilleFarmBasket.WantsGolden {
+  border-color: #ffb914
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmReward {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em;
+  justify-content: flex-end
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmReward .GreenvilleFarmExp {
+  background: #0e1f0f;
+  border: 1px solid #0f0f0f;
+  color: #1dd06d;
+  padding: .15em .5em;
+  white-space: nowrap
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmState.Accepted {
+  background: #cfcfcf
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmState.Tracking {
+  background: #85baff
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmReadyBadge,
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmState.Ready {
+  background: #1dd06d
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmGoldenBadge {
+  background: #ffb914
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmNeeds {
+  display: flex;
+  flex-direction: column;
+  gap: .4em
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmNeeds .GreenvilleFarmNeed {
+  align-items: center;
+  background: #0e1f0f;
+  border: 1px solid #0f0f0f;
+  display: flex;
+  gap: .6em;
+  padding: .3em .5em .3em .3em
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmNeeds .GreenvilleFarmNeed.Golden {
+  border-color: #ffb914
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmNeeds .GreenvilleFarmNeed .GreenvilleFarmNeedIcon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: 2em;
+  justify-content: center;
+  width: 2em
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmNeeds .GreenvilleFarmNeed .GreenvilleFarmNeedName {
+  flex: 1 1;
+  min-width: 0;
+  overflow-wrap: anywhere
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmNeeds .GreenvilleFarmNeed .GreenvilleFarmNeedCount {
+  font-feature-settings: "tnum";
+  color: #cfcfcf;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmNeeds .GreenvilleFarmNeed.Met .GreenvilleFarmNeedCount {
+  color: #1dd06d
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleFarmTracking {
+  align-items: center;
+  align-self: center;
+  border: .12em dashed;
+  color: #85baff;
+  display: inline-flex;
+  font-size: .9em;
+  font-weight: 900;
+  gap: .4em;
+  letter-spacing: .1em;
+  padding: .15em .7em;
+  text-transform: uppercase
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardDetail {
+  border-left: .3em solid #8c2323
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardDetailHero {
+  background: #7a6b49
+}
+
+.GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardStatus {
+  border-top: .25em solid #e73131
+}
+
+@media(max-width:900px)and (orientation:portrait) {
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardTiles.Roomy {
+    --tile-min-width: 14em
+  }
+
+  .GreenvilleBoard.GreenvilleFarmBoard .GreenvilleBoardDetail {
+    border-left: none;
+    border-top: .3em solid #8c2323
+  }
+}
+
+.GreenvilleHudColumn {
+  align-items: flex-end;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  min-height: 0;
+  padding: 2.5rem .75rem 6rem 0;
+  pointer-events: none
+}
+
+:where(.RightElementsTouchscreen) .GreenvilleHudColumn {
+  padding-bottom: 0
+}
+
+@media(max-height:650px) {
+  .GreenvilleHudColumn {
+    padding-bottom: 0
+  }
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin: auto 0;
+  min-height: 0
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleTrackerCard .GreenvilleTrackerTitle {
+  align-items: center;
+  display: flex;
+  gap: .4em
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleBestTime {
+  color: #cfcfcf
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleBestTime .GreenvilleBestTimeRank {
+  font-feature-settings: "tnum";
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  min-width: 1em
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleBestTime.First,
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleTrackerCard .GreenvilleTrackerRows .GreenvilleBestTime.First .GreenvilleTrackerValue {
+  color: #ffb914
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleJobsStrip .GreenvilleTrackerTitle {
+  color: #cfcfcf;
+  font-size: max(1.2rem, 11px);
+  font-weight: 800
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleJobsStrip .GreenvilleJobsStripJobs {
+  grid-gap: .375rem;
+  display: grid;
+  gap: .375rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  list-style: none;
+  margin: .6rem 0 0;
+  padding: 0
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleJobsStrip .GreenvilleJobsStripJobs .GreenvilleJobsStripJob {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleJobsStrip .GreenvilleJobsStripJobs .GreenvilleJobsStripJob .GreenvilleJobsStripIcon {
+  aspect-ratio: 1;
+  position: relative;
+  width: min(3rem, 100%)
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleJobsStrip .GreenvilleJobsStripJobs .GreenvilleJobsStripJob .GreenvilleJobsStripLevel {
+  font-feature-settings: "tnum";
+  color: #cfcfcf;
+  font-size: max(1.2rem, 12px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  white-space: nowrap
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleJobsStrip .GreenvilleJobsStripJobs .GreenvilleJobsStripJob.Max .GreenvilleJobsStripLevel {
+  color: #ffb914
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleJobsStrip {
+    display: none
+  }
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleNextUnlock .GreenvilleNextUnlockEyebrow {
+  color: #cfcfcf;
+  font-size: max(1.2rem, 11px);
+  font-weight: 800
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleNextUnlock .GreenvilleNextUnlockBody {
+  align-items: center;
+  display: flex;
+  gap: .75rem;
+  margin-top: .45rem
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleNextUnlock .GreenvilleNextUnlockBody .GreenvilleNextUnlockIcon {
+  flex-shrink: 0;
+  height: 3.375rem;
+  position: relative;
+  width: 3.375rem
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleNextUnlock .GreenvilleNextUnlockBody .GreenvilleNextUnlockText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleNextUnlock .GreenvilleNextUnlockBody .GreenvilleNextUnlockText .GreenvilleNextUnlockName {
+  color: #fff;
+  font-size: max(1.5rem, 12px)
+}
+
+.GreenvilleHudColumn .GreenvilleHudColumnStack .GreenvilleNextUnlock .GreenvilleNextUnlockBody .GreenvilleNextUnlockText .GreenvilleNextUnlockLevel {
+  color: #ffb914;
+  font-size: max(1.275rem, 11px)
+}
+
+.GreenvilleLevelUpReveal {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding-top: max(var(--top-bar-bottom, 0px) + 1rem, 33.3333333333vh - 5rem);
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 7
+}
+
+.GreenvilleLevelUpReveal.Plain {
+  padding-top: calc(max(var(--top-bar-bottom, 0px) + 1rem, 33.3333333333vh - 5rem) + 5rem)
+}
+
+.GreenvilleLevelUpReveal.Plain .GreenvilleLevelUpRevealText {
+  animation-name: GreenvilleRevealTextPop
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage {
+  height: 5rem;
+  position: relative;
+  width: calc(min(5rem, 90vw / var(--unlock-count))*var(--unlock-count))
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage .GreenvilleLevelUpRevealMover {
+  --drop: calc(50vh - max(var(--top-bar-bottom, 0px) + 1rem, 33.3333333333vh - 5rem) - 2.5rem);
+  animation: GreenvilleRevealRise var(--reveal-ms) both;
+  inset: 0;
+  position: absolute
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage .GreenvilleLevelUpRevealGlow,
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage .GreenvilleLevelUpRevealRays,
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage .GreenvilleLevelUpRevealSparks {
+  left: 50%;
+  position: absolute;
+  top: 50%
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage .GreenvilleLevelUpRevealRays {
+  animation: GreenvilleRevealRaysTurn 8s linear infinite, GreenvilleRevealRays var(--reveal-ms) ease-out both;
+  aspect-ratio: 1;
+  background: repeating-conic-gradient(rgba(255, 185, 20, .5) 0deg 9deg, transparent 9deg 22.5deg);
+  margin: -8.5rem;
+  -webkit-mask-image: radial-gradient(closest-side, #000 20%, transparent 70%);
+  mask-image: radial-gradient(closest-side, #000 20%, transparent 70%);
+  opacity: .55;
+  scale: .6;
+  width: 17rem
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage .GreenvilleLevelUpRevealGlow {
+  animation: GreenvilleRevealGlow var(--reveal-ms) ease-out both;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, #fcd373, rgba(255, 185, 20, .6) 30%, transparent 68%);
+  margin: -5rem;
+  opacity: .7;
+  width: 10rem
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage .GreenvilleLevelUpRevealSparks span {
+  animation: GreenvilleRevealSpark .7s cubic-bezier(.15, .8, .3, 1) calc(var(--reveal-ms)*.03 + var(--delay)) forwards;
+  background: linear-gradient(0deg, transparent, #ffb914 45%, #f2f2f2);
+  height: 1.2rem;
+  margin: -1.2rem 0 0 -.15rem;
+  opacity: 0;
+  position: absolute;
+  transform-origin: 50% 100%;
+  width: .3rem
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage .GreenvilleLevelUpRevealIcon {
+  --burst: max(1, calc(2.8/var(--unlock-count)));
+  align-items: center;
+  animation: GreenvilleRevealIcon var(--reveal-ms) ease-out both;
+  display: flex;
+  filter: drop-shadow(0 0 .5rem rgba(255, 185, 20, .9));
+  inset: 0;
+  position: absolute
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealStage .GreenvilleLevelUpRevealIcon .GreenvilleLevelUpRevealItem {
+  flex-shrink: 0;
+  height: min(5rem, 90vw/var(--unlock-count));
+  width: min(5rem, 90vw/var(--unlock-count))
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealText {
+  align-items: center;
+  animation: GreenvilleRevealText var(--reveal-ms) ease-out both;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  margin-top: .8rem;
+  text-align: center
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealText .GreenvilleLevelUpRevealHeading {
+  color: #ffb914;
+  font-size: 1.1rem;
+  letter-spacing: .08em;
+  text-transform: uppercase
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealText .GreenvilleLevelUpRevealNames {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem
+}
+
+.GreenvilleLevelUpReveal .GreenvilleLevelUpRevealText .GreenvilleLevelUpRevealName {
+  font-size: 2.2rem;
+  line-height: 1.1
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .GreenvilleLevelUpReveal .GreenvilleLevelUpRevealText .GreenvilleLevelUpRevealHeading {
+    font-size: max(1.1rem, 11px)
+  }
+
+  .GreenvilleLevelUpReveal .GreenvilleLevelUpRevealText .GreenvilleLevelUpRevealName {
+    font-size: max(2.2rem, 20px)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .GreenvilleLevelUpReveal *,
+  .GreenvilleLevelUpReveal :before {
+    animation: none !important
+  }
+}
+
+@keyframes GreenvilleRevealRise {
+
+  0%,
+  20% {
+    animation-timing-function: cubic-bezier(.5, 0, .2, 1);
+    translate: 0 var(--drop)
+  }
+
+  32%,
+  to {
+    translate: 0 0
+  }
+}
+
+@keyframes GreenvilleRevealIcon {
+  0% {
+    opacity: 0;
+    rotate: -280deg;
+    scale: .15
+  }
+
+  5% {
+    opacity: 1;
+    rotate: -80deg;
+    scale: calc(var(--burst)*1.8/2.8)
+  }
+
+  14% {
+    rotate: 15deg;
+    scale: var(--burst)
+  }
+
+  20% {
+    rotate: -5deg;
+    scale: calc(var(--burst)*2.5/2.8)
+  }
+
+  32% {
+    rotate: 0deg;
+    scale: .9
+  }
+
+  36% {
+    scale: 1.12
+  }
+
+  40%,
+  to {
+    opacity: 1;
+    rotate: 0deg;
+    scale: 1
+  }
+}
+
+@keyframes GreenvilleRevealRaysTurn {
+  to {
+    rotate: 1turn
+  }
+}
+
+@keyframes GreenvilleRevealRays {
+  0% {
+    opacity: 0;
+    scale: .2
+  }
+
+  6% {
+    opacity: 1;
+    scale: 1.3
+  }
+
+  20% {
+    opacity: 1;
+    scale: 1.5
+  }
+
+  32%,
+  to {
+    opacity: .55;
+    scale: .6
+  }
+}
+
+@keyframes GreenvilleRevealGlow {
+  0% {
+    opacity: 0;
+    scale: .3
+  }
+
+  4% {
+    opacity: 1;
+    scale: 1.6
+  }
+
+  20% {
+    opacity: .9;
+    scale: 1.8
+  }
+
+  32%,
+  to {
+    opacity: .7;
+    scale: 1
+  }
+}
+
+@keyframes GreenvilleRevealSpark {
+  0% {
+    opacity: 1;
+    transform: rotate(var(--angle)) translateY(0) scaleY(1)
+  }
+
+  70% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0;
+    transform: rotate(var(--angle)) translateY(calc(var(--distance)*-1)) scaleY(.3)
+  }
+}
+
+@keyframes GreenvilleRevealText {
+
+  0%,
+  31% {
+    opacity: 0;
+    translate: 0 .6rem
+  }
+
+  38%,
+  to {
+    opacity: 1;
+    translate: 0 0
+  }
+}
+
+@keyframes GreenvilleRevealTextPop {
+  0% {
+    opacity: 0;
+    scale: .6
+  }
+
+  8% {
+    opacity: 1;
+    scale: 1.12
+  }
+
+  14%,
+  to {
+    opacity: 1;
+    scale: 1
+  }
+}
+
+.GreenvilleMarketCountdown {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  pointer-events: none;
+  position: fixed;
+  top: 25vh;
+  top: 25dvh;
+  translate: -50% -50%;
+  z-index: 1
+}
+
+.GreenvilleMarketCountdown .GreenvilleMarketCountdownTime {
+  font-feature-settings: "tnum";
+  color: #fff;
+  font-size: max(3.5rem, 32px);
+  font-variant-numeric: tabular-nums;
+  line-height: 1
+}
+
+.GreenvilleMarketCountdown.Urgent .GreenvilleMarketCountdownTime {
+  color: #ff8a80
+}
+
+.GreenvilleMarketCountdown .GreenvilleMarketCountdownAdded {
+  animation: GreenvilleMarketCountdownAdded 1.2s ease-out forwards;
+  color: #1dd06d;
+  font-size: max(1.6rem, 16px);
+  position: absolute;
+  top: 100%;
+  white-space: nowrap
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GreenvilleMarketCountdown .GreenvilleMarketCountdownAdded {
+    animation-name: GreenvilleMarketCountdownAddedFade
+  }
+}
+
+@keyframes GreenvilleMarketCountdownAdded {
+  0% {
+    opacity: 0;
+    scale: .6;
+    translate: 0 .6rem
+  }
+
+  20% {
+    opacity: 1;
+    scale: 1.15;
+    translate: 0 0
+  }
+
+  35% {
+    scale: 1
+  }
+
+  75% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0;
+    translate: 0 -.6rem
+  }
+}
+
+@keyframes GreenvilleMarketCountdownAddedFade {
+
+  0%,
+  75% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+.GreenvilleMarketWaypoints {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 1
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint {
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  translate: -100vw -100vh;
+  will-change: translate
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint .GreenvilleMarketWaypointBadge {
+  align-items: center;
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-size: max(1rem, 11px);
+  height: max(2rem, 22px);
+  justify-content: center;
+  position: relative;
+  width: max(2rem, 22px)
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint .GreenvilleMarketWaypointBadge .GreenvilleMarketWaypointItem {
+  inset: 12%;
+  position: absolute
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint .GreenvilleMarketWaypointLabels {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: max(.75rem, 10px);
+  left: 50%;
+  line-height: 1.2;
+  position: absolute;
+  top: calc(100% + .15rem);
+  transform: translateX(-50%);
+  white-space: nowrap
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint .GreenvilleMarketWaypointLabels .GreenvilleMarketWaypointLabel {
+  color: #f2f2f2
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint .GreenvilleMarketWaypointLabels .GreenvilleMarketWaypointDistance {
+  font-feature-settings: "tnum";
+  color: #cfcfcf;
+  font-variant-numeric: tabular-nums
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint .GreenvilleMarketWaypointLabels .GreenvilleMarketWaypointDistance:empty {
+  display: none
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint.House .GreenvilleMarketWaypointBadge {
+  background: #ffb914;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #22283b;
+  font-size: max(1.6rem, 17px);
+  height: max(3rem, 32px);
+  width: max(3rem, 32px)
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint.House .GreenvilleMarketWaypointLabels {
+  font-size: max(1rem, 12px)
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint.House .GreenvilleMarketWaypointLabels .GreenvilleMarketWaypointLabel {
+  color: #fcd373
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint.House .GreenvilleMarketWaypointLabels .GreenvilleMarketWaypointDistance {
+  color: #fff
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint.House .GreenvilleMarketWaypointPulse {
+  animation: GreenvilleMarketWaypointPulse 1.6s ease-out infinite;
+  border: max(.2rem, 2px) solid #ffb914;
+  inset: 0;
+  position: absolute
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint.House .GreenvilleMarketWaypointPulse[data-off-screen],
+html[data-app-covered] .WholeAppWrapper .GreenvilleMarketWaypoints .GreenvilleMarketWaypoint.House .GreenvilleMarketWaypointPulse {
+  animation-play-state: paused
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GreenvilleMarketWaypoints .GreenvilleMarketWaypoint.House .GreenvilleMarketWaypointPulse {
+    display: none
+  }
+}
+
+@keyframes GreenvilleMarketWaypointPulse {
+  0% {
+    opacity: .9;
+    scale: 1
+  }
+
+  to {
+    opacity: 0;
+    scale: 1.9
+  }
+}
+
+.GreenvilleNavMap {
+  --greenville-map-pin: 2.25rem;
+  aspect-ratio: 1;
+  background: #22283b;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+.GreenvilleNavMap.Full {
+  container-type: size;
+  aspect-ratio: auto;
+  height: 100%
+}
+
+.GreenvilleNavMap.Full .GreenvilleNavMapWorld .GreenvilleNavMapPlane {
+  height: min(100cqw, 100cqh);
+  margin: auto;
+  width: min(100cqw, 100cqh)
+}
+
+@supports not (width:1cqw) {
+  .GreenvilleNavMap.Full .GreenvilleNavMapWorld .GreenvilleNavMapPlane {
+    aspect-ratio: 1;
+    bottom: auto;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(100%, 70vh)
+  }
+}
+
+@supports(width:1cqmin) {
+  .GreenvilleNavMap {
+    --greenville-map-pin: min(2.25rem, 18cqmin)
+  }
+
+  .GreenvilleNavMap.Full {
+    --greenville-map-pin: min(3rem, 7cqmin)
+  }
+
+  .GreenvilleNavMap.Full .GreenvilleNavMapPlane {
+    --greenville-map-landmark: min(max(calc(var(--greenville-map-tile)*0.45), calc(1.5rem*var(--greenville-map-unzoom, 1))), calc(5rem*var(--greenville-map-unzoom, 1)));
+    container-type: inline-size
+  }
+
+  .GreenvilleNavMap.Full .GreenvilleNavLandmark {
+    height: var(--greenville-map-landmark);
+    transform: translate(-50%, -50%);
+    width: var(--greenville-map-landmark)
+  }
+
+  .GreenvilleNavMap.Full .GreenvilleNavPlaceName {
+    font-size: min(max(var(--greenville-map-tile)*.14/var(--greenville-map-unzoom, 1), .7rem), 1.3rem);
+    max-width: calc(var(--greenville-map-tile)/var(--greenville-map-unzoom, 1))
+  }
+
+  .GreenvilleNavMap.Full .GreenvilleNavPlaceName.UnderLandmark {
+    transform: translate(-50%, calc(var(--greenville-map-landmark)/2)) scale(var(--greenville-map-unzoom, 1)) translateY(.15em)
+  }
+}
+
+.GreenvilleNavMap .GreenvilleNavMapWorld {
+  inset: 0;
+  position: absolute;
+  transform-origin: 0 0
+}
+
+.GreenvilleNavMap .GreenvilleNavMapWorld .GreenvilleNavMapPlane {
+  inset: 0;
+  position: absolute
+}
+
+.GreenvilleNavMap .GreenvilleNavArrowTrack,
+.GreenvilleNavMap .GreenvilleNavMapLots,
+.GreenvilleNavMap .GreenvilleNavMapPlan,
+.GreenvilleNavMap .GreenvilleNavMapTerrainHost,
+.GreenvilleNavMap .GreenvilleNavSewers {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%
+}
+
+.GreenvilleNavMap .GreenvilleNavSewers {
+  -ms-interpolation-mode: nearest-neighbor;
+  background: #333;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast
+}
+
+.GreenvilleNavMap.Sewers {
+  background: #0f0f0f
+}
+
+.GreenvilleNavMap.Sewers .GreenvilleNavHome,
+.GreenvilleNavMap.Sewers .GreenvilleNavLandmark,
+.GreenvilleNavMap.Sewers .GreenvilleNavMarker,
+.GreenvilleNavMap.Sewers .GreenvilleNavPlaceName {
+  display: none
+}
+
+.GreenvilleNavMap .GreenvilleNavMapTerrainHost .GreenvilleNavMapTerrain {
+  -ms-interpolation-mode: nearest-neighbor;
+  display: block;
+  height: 100%;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  width: 100%
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavGround {
+  fill: #22283b
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavRoad {
+  fill: #838383
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavDistrict {
+  fill: #244981
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavDistrict[data-district=constructionSiteA],
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavDistrict[data-district=constructionSiteB] {
+  fill: #394980
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavDistrict[data-district=quarry] {
+  fill: #3c4b68
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavDistrict[data-district=industry] {
+  fill: #7b3e26
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavDistrict[data-district=market] {
+  fill: #583080
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavDistrict[data-district=lumberMill] {
+  fill: #196d5f
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavDistrict[data-district=farm] {
+  fill: #655127
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavPlotGrass {
+  fill: #194e2b
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavPlotRoof {
+  fill: #b3454a;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: bottom
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavPlotRoof.Built {
+  opacity: 1
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavPlotRoof.Loading {
+  animation: GreenvilleNavPlotLoading 1.2s ease-in-out infinite alternate
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavPlotRoof.Loading[data-off-screen],
+html[data-app-covered] .WholeAppWrapper .GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavPlotRoof.Loading {
+  animation-play-state: paused
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavPlotRoof.Loading {
+    animation: none;
+    opacity: .35
+  }
+}
+
+.GreenvilleNavMap .GreenvilleNavMapPlan .GreenvilleNavPlotRoof.Mine {
+  fill: #ffb914;
+  animation: none;
+  opacity: 1
+}
+
+.GreenvilleNavMap .GreenvilleNavMapLots .GreenvilleNavLot {
+  fill: none;
+  stroke: none;
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke
+}
+
+.GreenvilleNavMap .GreenvilleNavMapLots .GreenvilleNavLot.Vacant {
+  stroke: #cfcfcf;
+  stroke-dasharray: 3px 3px
+}
+
+.GreenvilleNavMap .GreenvilleNavMapLots .GreenvilleNavLot.Loading {
+  stroke: #85baff;
+  animation: GreenvilleNavLotLoading 1.2s ease-in-out infinite alternate
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GreenvilleNavMap .GreenvilleNavMapLots .GreenvilleNavLot.Loading {
+    animation: none
+  }
+}
+
+.GreenvilleNavMap .GreenvilleNavMapLots .GreenvilleNavLot.Mine {
+  stroke: #ffb914;
+  stroke-dasharray: none;
+  stroke-width: 3px
+}
+
+.GreenvilleNavMap .GreenvilleNavPin {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(var(--greenville-map-unzoom, 1))
+}
+
+.GreenvilleNavMap .GreenvilleNavLandmark {
+  height: var(--greenville-map-pin);
+  opacity: calc(1 - var(--greenville-map-fade, 0));
+  width: var(--greenville-map-pin)
+}
+
+.GreenvilleNavMap .GreenvilleNavMarker {
+  height: 2rem;
+  opacity: var(--greenville-map-fade, 0);
+  width: 2rem
+}
+
+.GreenvilleNavMap .GreenvilleNavMarker .SkyblockMapIcon {
+  height: 100%;
+  width: 100%
+}
+
+.GreenvilleNavMap .GreenvilleNavPlaceName {
+  color: #fff;
+  font-size: .9rem;
+  line-height: 1.1;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, -50%) scale(var(--greenville-map-unzoom, 1));
+  white-space: normal;
+  width: max-content
+}
+
+.GreenvilleNavMap .GreenvilleNavPlaceName.UnderLandmark {
+  transform: translate(-50%, calc(var(--greenville-map-pin)/2*var(--greenville-map-unzoom, 1))) scale(var(--greenville-map-unzoom, 1)) translateY(.2rem);
+  transform-origin: 50% 0
+}
+
+.GreenvilleNavMap .GreenvilleNavPlaceName.Neighbourhood {
+  color: #cfcfcf
+}
+
+.GreenvilleNavMap .GreenvilleNavHome {
+  background: #ffb914;
+  border: 1px solid #0f0f0f;
+  color: #1a1f2e;
+  font-size: 1.15rem;
+  line-height: 1;
+  padding: .15rem .2rem
+}
+
+.GreenvilleNavMap .GreenvilleNavGoalTrack {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.GreenvilleNavMap .GreenvilleNavGoalTrack .GreenvilleNavGoal {
+  background: #e34f4f;
+  border: 1px solid #0f0f0f;
+  color: #fff;
+  font-size: .9rem;
+  left: 0;
+  line-height: 1;
+  padding: .15rem .2rem;
+  top: 0
+}
+
+.GreenvilleNavMap .GreenvilleNavArrowTrack .GreenvilleNavSewersFog {
+  background: radial-gradient(ellipse var(--greenville-sewers-fog) var(--greenville-sewers-fog) at 50% 50%, transparent 30%, #0f0f0f 100%);
+  height: 200%;
+  left: -100%;
+  position: absolute;
+  top: -100%;
+  width: 200%
+}
+
+.GreenvilleNavMap .GreenvilleNavArrowTrack .GreenvilleNavArrow {
+  height: var(--greenville-map-pin);
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: var(--greenville-map-pin)
+}
+
+.GreenvilleNavMap .GreenvilleNavArrowTrack .GreenvilleNavArrow svg {
+  display: block;
+  height: 100%;
+  overflow: visible;
+  width: 100%
+}
+
+.GreenvilleNavMap .GreenvilleNavArrowTrack .GreenvilleNavArrow polygon {
+  fill: #fff;
+  stroke: #1a1f2e;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  paint-order: stroke
+}
+
+@keyframes GreenvilleNavPlotLoading {
+  0% {
+    opacity: .2
+  }
+
+  to {
+    opacity: .55
+  }
+}
+
+@keyframes GreenvilleNavLotLoading {
+  0% {
+    stroke-opacity: .3
+  }
+
+  to {
+    stroke-opacity: 1
+  }
+}
+
+.GreenvilleBoard.GreenvilleMapBoard .GreenvilleBoardBody {
+  display: flex;
+  padding: 1em
+}
+
+.GreenvilleBoard.GreenvilleMapBoard .GreenvilleMapFrame {
+  flex: 1 1;
+  position: relative;
+  touch-action: none
+}
+
+.GreenvilleNavRoom {
+  max-width: min(24rem, 33.6vw);
+  width: 19.5rem
+}
+
+:where(.RightElementsTouchscreen) .GreenvilleNavRoom {
+  width: 14.625rem
+}
+
+@media(max-height:650px), (max-width:1000px) {
+  .GreenvilleNavRoom {
+    width: max(14.4rem, 180px)
+  }
+}
+
+.GreenvilleNavRoom {
+  container-type: size;
+  aspect-ratio: 1;
+  display: flex;
+  flex-shrink: 100;
+  justify-content: flex-end;
+  min-height: max(10rem, 90px);
+  pointer-events: none
+}
+
+.GreenvilleNavRoom.Hidden {
+  display: none
+}
+
+@supports not (width:1cqw) {
+  .GreenvilleNavRoom {
+    flex-shrink: 0
+  }
+}
+
+.GreenvilleNavRoom .GreenvilleNav {
+  background: none;
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: content-box;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  height: min(100cqw, 100cqh);
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: .75rem;
+  pointer-events: auto;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  width: min(100cqw, 100cqh)
+}
+
+@supports not (width:1cqw) {
+  .GreenvilleNavRoom .GreenvilleNav {
+    height: 100%;
+    width: 100%
+  }
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .GreenvilleNavRoom .GreenvilleNav {
+    padding: 4px
+  }
+}
+
+.GreenvilleNavRoom .GreenvilleNav .GreenvilleNavOpenHint {
+  bottom: .25rem;
+  color: #fff;
+  display: flex;
+  font-size: .85rem;
+  left: .25rem;
+  position: absolute
+}
+
+.GreenvilleNavRoom .GreenvilleNav .GreenvilleNavOpenHint .GreenvilleNavExpandIcon {
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  padding: .3rem
+}
+
+.GreenvilleMoodChip {
+  --greenville-mood-fill: #1dd06d;
+  --greenville-mood-face: #1dd06d;
+  align-items: center;
+  background: rgba(26, 31, 46, .9);
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex: 0 1 auto;
+  gap: max(.4rem, 4px);
+  height: calc(2.5rem + 2px);
+  max-width: calc(var(--hotbar-slots-width, 42rem) - var(--hotbar-keys-reach, 0px) - 13.5rem);
+  min-width: 0;
+  padding: 0 max(.6rem, 5px);
+  pointer-events: none;
+  position: relative
+}
+
+.GreenvilleMoodChip.Tired {
+  --greenville-mood-fill: #ffb914;
+  --greenville-mood-face: #fcd373
+}
+
+.GreenvilleMoodChip.Drained {
+  --greenville-mood-fill: #e34f4f;
+  --greenville-mood-face: #ff8a80
+}
+
+.GreenvilleMoodChip.Rested {
+  --greenville-mood-fill: #4f94f1;
+  --greenville-mood-face: #85baff
+}
+
+.GreenvilleMoodChip.Rested .GreenvilleMoodChipFill:after {
+  animation: GreenvilleMoodShimmer 1.6s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(133, 186, 255, .8), transparent);
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipFace {
+  color: var(--greenville-mood-face);
+  flex: none;
+  font-size: max(1.3rem, 14px)
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipZz {
+  color: #85baff;
+  flex: none;
+  font-size: max(.8rem, 9px);
+  font-weight: 800;
+  line-height: 1
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipMeter {
+  flex: 0 1 auto;
+  height: max(1.1rem, 8px);
+  min-width: max(2rem, 24px);
+  position: relative;
+  width: 4.5rem
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipMeter .GreenvilleMoodChipBar {
+  background: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipMeter .GreenvilleMoodChipBar .GreenvilleMoodChipFill {
+  background: var(--greenville-mood-fill);
+  inset: 0;
+  overflow: hidden;
+  position: absolute;
+  transform-origin: left;
+  transition: transform .4s ease-out
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipMeter .GreenvilleMoodChipTick {
+  background: #1a1f2e;
+  bottom: -2px;
+  left: var(--greenville-break-even);
+  position: absolute;
+  top: -2px;
+  translate: -50% 0;
+  width: 2px
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipCoin {
+  flex: none;
+  height: max(1.5rem, 14px);
+  position: relative;
+  width: max(1.5rem, 14px)
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipEarnings {
+  font-feature-settings: "tnum";
+  color: #cfcfcf;
+  flex: 0 .01 auto;
+  font-size: max(1rem, 11px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  line-height: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipEarnings.Positive {
+  color: #ffb914
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipEarnings.Negative {
+  color: #ff8a80
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipEarnings .GreenvilleMoodChipLuck {
+  margin-right: .25em
+}
+
+.GreenvilleMoodChip .GreenvilleMoodChipBoost {
+  align-items: center;
+  background: #4f94f1;
+  border: 1px solid #0f0f0f;
+  color: #fff;
+  display: flex;
+  font-size: .7rem;
+  height: 1.1rem;
+  justify-content: center;
+  position: absolute;
+  right: -.45rem;
+  top: -.45rem;
+  width: 1.1rem
+}
+
+.GreenvilleMoodChip.Exhausted:before {
+  animation: GreenvilleMoodPulse .9s ease-in-out infinite alternate;
+  box-shadow: inset 0 0 .6rem #e34f4f;
+  content: "";
+  inset: -1px;
+  position: absolute
+}
+
+@media(max-height:420px), (max-width:650px) {
+
+  .GreenvilleMoodChip .GreenvilleMoodChipBoost,
+  .GreenvilleMoodChip .GreenvilleMoodChipCoin,
+  .GreenvilleMoodChip .GreenvilleMoodChipLuck {
+    display: none
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .GreenvilleMoodChip.Exhausted:before,
+  .GreenvilleMoodChip.Rested .GreenvilleMoodChipFill:after {
+    animation: none
+  }
+}
+
+@keyframes GreenvilleMoodShimmer {
+  0% {
+    transform: translateX(-100%)
+  }
+
+  to {
+    transform: translateX(100%)
+  }
+}
+
+@keyframes GreenvilleMoodPulse {
+  0% {
+    opacity: .25
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.GreenvilleNavSign {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  transform-origin: top center
+}
+
+.GreenvilleNavSign .GreenvilleNavBlade {
+  align-items: center;
+  background: #006747;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  outline: .125rem solid #fff;
+  outline-offset: -.25rem;
+  overflow: hidden;
+  padding: .45rem .6rem
+}
+
+.GreenvilleNavSign .GreenvilleNavBlade .GreenvilleNavHeader {
+  font-size: .6em;
+  font-weight: 700;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.GreenvilleNavSign .GreenvilleNavBlade .GreenvilleNavBladeText {
+  align-items: center;
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: 1fr minmax(0, auto) 1fr;
+  white-space: nowrap
+}
+
+.GreenvilleNavSign .GreenvilleNavBlade .GreenvilleNavBladeText .GreenvilleNavNumber {
+  font-feature-settings: "tnum";
+  font-size: .65em;
+  font-variant-numeric: tabular-nums;
+  grid-column: 1;
+  justify-self: flex-start;
+  padding-right: .4rem
+}
+
+.GreenvilleNavSign .GreenvilleNavBlade .GreenvilleNavBladeText .GreenvilleNavStreet {
+  grid-column: 2;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.GreenvilleNavSign .GreenvilleNavBlade .GreenvilleNavBladeText .GreenvilleNavStreet .GreenvilleNavSuffix {
+  font-size: .75em
+}
+
+.GreenvilleNavSign.Large .GreenvilleNavBlade {
+  font-size: 2.1rem;
+  outline-offset: -.375rem;
+  outline-width: .1875rem;
+  padding: .6rem 1.2rem
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .GreenvilleNavSign {
+    gap: 2px
+  }
+
+  .GreenvilleNavSign .GreenvilleNavBlade {
+    font-size: max(1.4rem, 12px);
+    outline-offset: -3px;
+    outline-width: 1px;
+    padding: 3px 6px
+  }
+
+  .GreenvilleNavSign .GreenvilleNavBlade .GreenvilleNavBladeText .GreenvilleNavNumber,
+  .GreenvilleNavSign .GreenvilleNavBlade .GreenvilleNavHeader {
+    font-size: max(.65em, 10px)
+  }
+
+  .GreenvilleNavSign.Large .GreenvilleNavBlade {
+    font-size: max(2.1rem, 18px);
+    outline-offset: -4px;
+    outline-width: 2px;
+    padding: 4px 12px
+  }
+}
+
+.GreenvilleTopBar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  left: 50%;
+  max-width: min(45rem, 100vw - 2*(min(32rem, 32vw) + 1rem));
+  pointer-events: none;
+  position: fixed;
+  top: max(var(--hud-safe-top, var(--notchTop)), .5rem);
+  translate: -50% 0;
+  width: max-content;
+  z-index: 1
+}
+
+.GreenvilleTopBar .GreenvilleNavSign {
+  max-width: 100%
+}
+
+.GreenvilleTopBar .GreenvilleNavSign.Large {
+  min-width: min(24rem, min(45rem, 100vw - 2*(min(32rem, 32vw) + 1rem)))
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag {
+  align-items: center;
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  max-width: 100%;
+  padding: .6rem 1.5rem;
+  position: relative;
+  text-align: center;
+  transform-origin: top center;
+  z-index: 1
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagEyebrow {
+  color: #cfcfcf;
+  font-size: 1.2rem;
+  font-weight: 800;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagName {
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1.15;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  font-weight: 800;
+  gap: .6rem;
+  justify-content: center
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagJob {
+  flex-shrink: 0;
+  height: 2.4rem;
+  position: relative;
+  width: 2.4rem
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagLevel {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagBar {
+  background: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  height: .9375rem;
+  overflow: hidden;
+  position: relative;
+  width: 7.5rem
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagBar:before {
+  background: #ffb914;
+  content: "";
+  inset: 0 auto 0 0;
+  position: absolute;
+  width: .375rem
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagBar .GreenvillePlaceTagBarFill {
+  background: #ffb914;
+  inset: 0;
+  position: absolute;
+  transform-origin: left;
+  transition: transform .12s ease-out
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagExp {
+  font-feature-settings: "tnum";
+  color: #cfcfcf;
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagMax {
+  color: #ffb914
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag.Sewers {
+  background: #0f0f0f;
+  border-color: #07940e;
+  color: #a8e08a
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag.Sewers:after {
+  background: repeating-linear-gradient(90deg, #838383 0 .3rem, transparent .3rem .9rem);
+  content: "";
+  height: .6rem;
+  inset: auto .75rem -.6rem;
+  position: absolute
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag.Sewers .GreenvillePlaceTagName {
+  letter-spacing: .08em
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceChip {
+  align-items: center;
+  background: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  display: inline-flex;
+  font-size: .85em;
+  font-weight: 700;
+  gap: .3em;
+  padding: .1em .5em;
+  white-space: nowrap
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceChip.Locked {
+  color: #cfcfcf
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceChip.Danger {
+  border-color: #fc6464;
+  color: #ff8a80
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceChip.Golden {
+  color: #ffb914
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceChip .GreenvillePlaceChipBar {
+  background: rgba(38, 52, 93, .85);
+  height: .5rem;
+  overflow: hidden;
+  width: 3.75rem
+}
+
+.GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceChip .GreenvillePlaceChipBar .GreenvillePlaceChipBarFill {
+  background: #1dd06d;
+  display: block;
+  height: 100%;
+  transform-origin: left;
+  transition: transform .12s ease-out;
+  width: 100%
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .GreenvilleTopBar {
+    gap: 3px
+  }
+
+  .GreenvilleTopBar .GreenvillePlaceTag {
+    flex-direction: row;
+    gap: .4rem;
+    padding: 3px 12px
+  }
+
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceChip,
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagChips,
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagEyebrow,
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagBar,
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagExp,
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagMax {
+    display: none
+  }
+
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagName {
+    font-size: max(2.4rem, 17px);
+    min-width: 0
+  }
+
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow {
+    flex-wrap: nowrap;
+    font-size: max(1.5rem, 13px)
+  }
+
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow:before {
+    content: "·"
+  }
+
+  .GreenvilleTopBar .GreenvillePlaceTag .GreenvillePlaceTagRow .GreenvillePlaceTagJob {
+    height: max(2.4rem, 17px);
+    width: max(2.4rem, 17px)
+  }
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .GreenvilleTopBar {
+    max-width: calc(100vw - 128px);
+    top: calc(var(--hud-safe-top, var(--notchTop)) + var(--InGameHeaderRowsHeight, 2.5rem) + 15.25rem + 44px)
+  }
+
+  .GreenvilleTopBar .GreenvilleNavSign.Large {
+    min-width: 0
+  }
+}
+
+.GameBackgroundScreen.GreenvilleHousePickerOverlay {
+  align-items: flex-end;
+  z-index: 9
+}
+
+.GreenvilleHousePicker {
+  --board-tile: #3c4b68;
+  --board-tile-hover: #394980;
+  --board-tile-text: #fff;
+  --board-selected: #ffb914;
+  align-items: stretch;
+  background: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: max(1.35rem, 14px, min(1.125vw, 2vh));
+  gap: .6em;
+  max-height: 100%;
+  padding: .8em max(.8em, var(--notchRight)) max(.8em, var(--notchBottom)) max(.8em, var(--notchLeft));
+  width: min(100%, 60em)
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerTitle {
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerHouses {
+  grid-gap: .6em;
+  display: grid;
+  gap: .6em;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  min-height: 0
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerHouses .GreenvilleHousePickerHouse {
+  align-items: center;
+  background: none;
+  background: var(--board-tile);
+  border: 1px solid #0f0f0f;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: content-box;
+  color: inherit;
+  color: var(--board-tile-text);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  gap: .4em;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(hover:hover) {
+  .GreenvilleHousePicker .GreenvilleHousePickerHouses .GreenvilleHousePickerHouse:hover {
+    background: var(--board-tile-hover)
+  }
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerHouses .GreenvilleHousePickerHouse.pad-focused {
+  background: var(--board-tile-hover)
+}
+
+@media(hover:none) {
+  .GreenvilleHousePicker .GreenvilleHousePickerHouses .GreenvilleHousePickerHouse:active {
+    background: var(--board-tile-hover)
+  }
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerHouses .GreenvilleHousePickerHouse.Selected {
+  outline: 3px solid var(--board-selected);
+  outline-offset: -1px
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerHouses .GreenvilleHousePickerHouse {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: .5em
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerHouses .GreenvilleHousePickerHouse:disabled {
+  cursor: default
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerHouses .GreenvilleHousePickerHouse img {
+  height: clamp(48px, 22vh, 9em);
+  object-fit: contain;
+  width: 100%
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerHouses .GreenvilleHousePickerHouse .GreenvilleHousePickerHouseName {
+  font-size: .9em;
+  font-weight: 900;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  text-align: center
+}
+
+.GreenvilleHousePicker .GreenvilleHousePickerMoveIn {
+  align-self: center;
+  font-size: 1.1em;
+  font-weight: 700;
+  min-width: 50%;
+  padding: .5em 1.5em
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: .6rem
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardHead {
+  align-items: center;
+  display: flex;
+  gap: .6rem
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardHead .GreenvilleTutorialCardToggle {
+  align-items: center;
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  display: flex;
+  flex: 1 1;
+  font: inherit;
+  gap: .6rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  pointer-events: auto;
+  text-align: inherit;
+  text-align: left;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardHead .GreenvilleTutorialCardLine {
+  flex: 1 1;
+  font-weight: 700;
+  line-height: 1.3;
+  min-width: 0
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardHead .GreenvilleTutorialCardCount {
+  font-feature-settings: "tnum";
+  color: #ffb914;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardHead .GreenvilleTutorialCardChevron {
+  color: #ffb914;
+  flex-shrink: 0
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardBar {
+  background: #1a1f2e;
+  height: .5rem
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardBar span {
+  background: #ffb914;
+  display: block;
+  height: 100%;
+  transition: width .3s ease-out
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardJobs {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardJobs .GreenvilleTutorialCardJob {
+  align-items: center;
+  display: flex;
+  gap: .6rem
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardJobs .GreenvilleTutorialCardJob .GreenvilleTutorialCardJobIcon {
+  flex-shrink: 0;
+  height: 1.6em;
+  position: relative;
+  width: 1.6em
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardJobs .GreenvilleTutorialCardJob .GreenvilleTutorialCardJobName {
+  flex: 1 1;
+  font-size: .9em;
+  min-width: 0
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardJobs .GreenvilleTutorialCardJob .GreenvilleTutorialCardGo {
+  flex-shrink: 0;
+  padding: .25em .8em
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardActions {
+  display: flex;
+  gap: .6rem
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardActions .GreenvilleTutorialCardGo {
+  flex: 1 1
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardGo,
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardSkip {
+  font-size: .9em;
+  font-weight: 700;
+  padding: .4em .9em;
+  pointer-events: auto
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardSkip {
+  font-size: .75em
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard .GreenvilleTutorialCardGo .GreenvilleTutorialCardKey {
+  display: inline-flex;
+  font-size: .8em;
+  margin-left: .4em
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard.Compact .GreenvilleTutorialCardHead .GreenvilleTutorialCardLine {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.GreenvilleTrackerCard.GreenvilleTutorialCard.Compact .GreenvilleTutorialCardGo {
+  flex-shrink: 0;
+  padding: .25em .8em
+}
+
+.GreenvilleMarketWaypoints .GreenvilleMarketWaypoint .GreenvilleTutorialHand {
+  animation: GreenvilleTutorialHandTap 1s ease-in-out infinite alternate;
+  color: #fff;
+  font-size: max(2.5rem, 24px);
+  left: 60%;
+  top: 60%
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GreenvilleMarketWaypoints .GreenvilleMarketWaypoint .GreenvilleTutorialHand {
+    animation: none
+  }
+}
+
+@keyframes GreenvilleTutorialHandTap {
+  0% {
+    translate: .4rem .4rem
+  }
+
+  to {
+    translate: 0 0
+  }
+}

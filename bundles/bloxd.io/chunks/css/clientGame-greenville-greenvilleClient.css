@@ -1,3 +1,86 @@
+.ClientGameMapZoomControls {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  z-index: 2
+}
+
+.ClientGameMapZoomControls button {
+  background: rgba(34, 40, 59, .9);
+  border: 1px solid #0f0f0f;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.3rem;
+  height: 2.25rem;
+  line-height: 1;
+  padding: 0;
+  width: 2.25rem
+}
+
+@media(hover:hover) {
+  .ClientGameMapZoomControls button:hover {
+    background: #394980
+  }
+}
+
+.ClientGameMapZoomControls button.pad-focused {
+  background: #394980
+}
+
+@media(hover:none) {
+  .ClientGameMapZoomControls button:active {
+    background: #394980
+  }
+}
+
+.ClientGameMapZoomControls button:disabled {
+  cursor: default;
+  opacity: .4
+}
+
+.SkyblockMapIconSlot {
+  display: contents
+}
+
+.SkyblockMapIcon {
+  -ms-interpolation-mode: nearest-neighbor;
+  display: block;
+  height: 1.25rem;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  pointer-events: none;
+  width: 1.25rem
+}
+
+.SkyblockMapIcon.Portal {
+  isolation: isolate;
+  position: relative
+}
+
+.SkyblockMapIcon .SkyblockMapIconLayer,
+.SkyblockMapIcon .SkyblockMapIconTint {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%
+}
+
+.SkyblockMapIcon .SkyblockMapIconTint {
+  background: currentColor;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%
+}
+
+.SkyblockMapIcon .SkyblockMapIconShade {
+  mix-blend-mode: multiply
+}
+
 @keyframes rainbowShimmer {
   0% {
     transform: translateX(0)
@@ -97,41 +180,404 @@
   }
 }
 
-.SkyblockMapIconSlot {
-  display: contents
+.GameBackgroundScreen.SmugglerPackOverlay {
+  background: rgba(26, 31, 46, .6);
+  box-sizing: border-box;
+  padding: 1rem;
+  pointer-events: auto;
+  z-index: 9
 }
 
-.SkyblockMapIcon {
-  -ms-interpolation-mode: nearest-neighbor;
-  display: block;
-  height: 1.25rem;
-  image-rendering: optimizeSpeed;
-  image-rendering: -o-crisp-edges;
-  image-rendering: pixelated;
-  image-rendering: optimize-contrast;
+.SmugglerPackPanel {
+  background: linear-gradient(180deg, #774110, #66370c 30%, #4e2a12);
+  border: 4px solid #3a2820;
+  box-shadow: inset 0 0 0 4px #42220e, .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-height: 90dvh;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  white-space: normal;
+  width: min(52.5rem, 94vw)
+}
+
+.SmugglerPackPanel h2,
+.SmugglerPackPanel h3,
+.SmugglerPackPanel p {
+  margin: 0
+}
+
+.SmugglerPackPanel .SmugglerPackStrap {
+  background: repeating-linear-gradient(180deg, #3a2820 0 1.2rem, #473026 1.2rem 1.4rem);
+  bottom: 0;
   pointer-events: none;
-  width: 1.25rem
+  position: absolute;
+  top: 0;
+  width: 4rem
 }
 
-.SkyblockMapIcon.Portal {
-  isolation: isolate;
+.SmugglerPackPanel .SmugglerPackStrap.Left {
+  left: 22%
+}
+
+.SmugglerPackPanel .SmugglerPackStrap.Right {
+  right: 22%
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll,
+.SmugglerPackPanel .SmugglerPackFlap,
+.SmugglerPackPanel .SmugglerPackPockets {
   position: relative
 }
 
-.SkyblockMapIcon .SkyblockMapIconLayer,
-.SkyblockMapIcon .SkyblockMapIconTint {
-  height: 100%;
-  inset: 0;
+.SmugglerPackPanel .SmugglerPackFlap {
+  align-items: center;
+  background: linear-gradient(180deg, #774110, #66370c);
+  border-bottom: 4px solid #42220e;
+  display: flex;
+  gap: 1rem;
+  outline: 6px dashed #cf841b;
+  outline-offset: -.45rem;
+  padding: 1rem 1.5rem 1.2rem
+}
+
+.SmugglerPackPanel .SmugglerPackFlap>div:first-child {
+  flex: 1 1
+}
+
+.SmugglerPackPanel .SmugglerPackFlap h2 {
+  color: #ffcf05;
+  font-size: 1.6rem;
+  text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
+}
+
+.SmugglerPackPanel .SmugglerPackFlap h2 .svg-inline--fa,
+.SmugglerPackPanel .SmugglerPackFlap h2.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.SmugglerPackPanel .SmugglerPackFlap h2 .svg-inline--fa path:only-of-type,
+.SmugglerPackPanel .SmugglerPackFlap h2.svg-inline--fa path:only-of-type {
+  stroke: #3a2820;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.SmugglerPackPanel .SmugglerPackFlap p {
+  margin: .2rem 0 0
+}
+
+.SmugglerPackPanel .SmugglerPackFlapActions {
+  align-items: stretch;
+  display: flex;
+  gap: .4rem
+}
+
+.SmugglerPackPanel .SmugglerPackFlapActions .ExitButton {
+  display: flex
+}
+
+.SmugglerPackPanel .SmugglerPackWallet {
+  display: flex;
+  gap: .4rem
+}
+
+.SmugglerPackPanel .SmugglerPackWallet .SmugglerPackPrice {
+  background: #3a2820;
+  border: 2px solid #ffcf05;
+  padding: .25rem .6rem
+}
+
+.SmugglerPackPanel .SmugglerPackPrice {
+  align-items: center;
+  display: inline-flex;
+  font-size: 1.05rem;
+  gap: .3rem
+}
+
+.SmugglerPackPanel .SmugglerPackPrice .SmugglerPackPriceIcon {
+  height: 1.6rem;
+  width: 1.6rem
+}
+
+.SmugglerPackPanel .SmugglerPackPrice.Short {
+  color: #ff8a80
+}
+
+.SmugglerPackPanel .SmugglerPackPockets {
+  grid-gap: 1.1rem;
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: 1fr 1fr;
+  overflow-y: auto;
+  padding: 1.2rem 1.5rem
+}
+
+.SmugglerPackPanel .SmugglerPackPocket {
+  grid-gap: .5rem 1.1rem;
+  background: linear-gradient(180deg, #4e2a12, #42220e);
+  border: 3px solid #3a2820;
+  border-top: .2rem solid #3a2820;
+  display: grid;
+  gap: .5rem 1.1rem;
+  grid-template-areas: "goods deal" "name deal";
+  grid-template-columns: 8rem 1fr;
+  grid-template-rows: auto 1fr;
+  outline: 6px dashed #774110;
+  outline-offset: -.35rem;
+  padding: 1.3rem 1.1rem 1.1rem;
+  position: relative
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackBuckle {
+  background: #3a2820;
+  border: .375rem solid #ffcf05;
+  box-shadow: 0 2px 0 hsla(0, 0%, 6%, .5);
+  height: 1.5rem;
+  left: calc(44% - .36px + 1.402rem);
   position: absolute;
+  top: -.2rem;
+  transform: translate(-50%, -15%);
+  width: 1.5rem
+}
+
+.SmugglerPackPanel .SmugglerPackPocket:nth-child(2n) .SmugglerPackBuckle {
+  left: auto;
+  right: calc(44% - .36px + 1.402rem);
+  transform: translate(50%, -15%)
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackGoods {
+  background: #42220e;
+  border: 3px solid #3a2820;
+  grid-area: goods;
+  height: 5.5rem;
+  justify-self: center;
+  padding: .45rem;
+  position: relative;
+  width: 5.5rem
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackAmount {
+  background: #3a2820;
+  border: 2px solid #ffcf05;
+  bottom: -.5rem;
+  font-size: .95rem;
+  padding: 0 .3rem;
+  position: absolute;
+  right: -.5rem;
+  text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackAmount .svg-inline--fa,
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackAmount.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackAmount .svg-inline--fa path:only-of-type,
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackAmount.svg-inline--fa path:only-of-type {
+  stroke: #3a2820;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.SmugglerPackPanel .SmugglerPackPocket h3 {
+  align-self: start;
+  font-size: 1rem;
+  grid-area: name;
+  justify-self: center;
+  line-height: 1.15;
+  max-width: 100%;
+  text-align: center;
+  text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
+}
+
+.SmugglerPackPanel .SmugglerPackPocket h3 .svg-inline--fa,
+.SmugglerPackPanel .SmugglerPackPocket h3.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.SmugglerPackPanel .SmugglerPackPocket h3 .svg-inline--fa path:only-of-type,
+.SmugglerPackPanel .SmugglerPackPocket h3.svg-inline--fa path:only-of-type {
+  stroke: #3a2820;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackDeal {
+  border-left: 6px dashed #774110;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  grid-area: deal;
+  justify-content: center;
+  min-width: 0;
+  padding-left: 1.1rem
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackPrices {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackPrices .SmugglerPackPrice {
+  background: #3a2820;
+  border: 2px solid #473026;
+  font-size: 1.15rem;
+  justify-content: space-between;
+  padding: .2rem .5rem
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackPrices .SmugglerPackPrice.Short {
+  border-color: #ff8a80
+}
+
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackBuy.BlueButton {
+  font-size: 1.05rem;
   width: 100%
 }
 
-.SkyblockMapIcon .SkyblockMapIconTint {
-  background: currentColor;
-  mask-size: 100% 100%;
-  -webkit-mask-size: 100% 100%
+.SmugglerPackPanel .SmugglerPackPocket .SmugglerPackBuy.BlueButton.DisabledNewButton {
+  opacity: .4
 }
 
-.SkyblockMapIcon .SkyblockMapIconShade {
-  mix-blend-mode: multiply
+.SmugglerPackPanel .SmugglerPackPocket.SoldOut .SmugglerPackGoods,
+.SmugglerPackPanel .SmugglerPackPocket.Unaffordable .SmugglerPackGoods {
+  filter: saturate(.4) brightness(.75)
+}
+
+.SmugglerPackPanel .SmugglerPackPocket.SoldOut .SmugglerPackBuckle,
+.SmugglerPackPanel .SmugglerPackPocket.Unaffordable .SmugglerPackBuckle {
+  filter: saturate(.25) brightness(.65)
+}
+
+.SmugglerPackPanel .SmugglerPackPocket.Bought {
+  animation: SmugglerPackBought .6s ease-out
+}
+
+.SmugglerPackPanel .SmugglerPackPocket.Bought .SmugglerPackBuckle {
+  animation: SmugglerPackBuckleShine .6s ease-out
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll {
+  align-items: center;
+  background: repeating-linear-gradient(180deg, #325c40 0 .5rem, #385140 .5rem .7rem);
+  border-top: 4px solid #42220e;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  min-height: 2.6rem;
+  padding: .5rem 1.5rem
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackRotates {
+  text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackRotates .svg-inline--fa,
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackRotates.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackRotates .svg-inline--fa path:only-of-type,
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackRotates.svg-inline--fa path:only-of-type {
+  stroke: #3a2820;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackStatus {
+  text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackStatus .svg-inline--fa,
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackStatus.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackStatus .svg-inline--fa path:only-of-type,
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackStatus.svg-inline--fa path:only-of-type {
+  stroke: #3a2820;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackStatus.bought {
+  color: #1dd06d
+}
+
+.SmugglerPackPanel .SmugglerPackBedroll .SmugglerPackStatus.refused {
+  color: #ff8a80
+}
+
+@keyframes SmugglerPackBought {
+  0% {
+    filter: brightness(1.6);
+    transform: scale(1.06)
+  }
+
+  to {
+    filter: brightness(1);
+    transform: scale(1)
+  }
+}
+
+@keyframes SmugglerPackBuckleShine {
+  0% {
+    box-shadow: 0 0 14px 4px #ffcf05
+  }
+
+  to {
+    box-shadow: 0 2px 0 hsla(0, 0%, 6%, .5)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .SmugglerPackPanel .SmugglerPackPocket.Bought,
+  .SmugglerPackPanel .SmugglerPackPocket.Bought .SmugglerPackBuckle {
+    animation: none
+  }
+}
+
+@media(max-width:640px) {
+  .SmugglerPackPanel {
+    max-height: 92dvh;
+    width: 96vw
+  }
+
+  .SmugglerPackPanel .SmugglerPackPockets {
+    gap: .6rem;
+    padding: .8rem
+  }
+
+  .SmugglerPackPanel .SmugglerPackPocket {
+    grid-template-areas: "goods" "name" "deal";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto
+  }
+
+  .SmugglerPackPanel .SmugglerPackPocket .SmugglerPackBuckle {
+    left: calc(44% - .36px + 1.684rem)
+  }
+
+  .SmugglerPackPanel .SmugglerPackPocket:nth-child(2n) .SmugglerPackBuckle {
+    right: calc(44% - .36px + 1.684rem)
+  }
+
+  .SmugglerPackPanel .SmugglerPackPocket .SmugglerPackDeal {
+    border-left: none;
+    border-top: 6px dashed #774110;
+    padding-left: 0;
+    padding-top: .6rem
+  }
 }

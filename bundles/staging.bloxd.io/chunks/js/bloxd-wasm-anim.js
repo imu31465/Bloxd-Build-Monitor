@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  54241: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/bloxd_wasm_anim_bg.89418a6564cbd67bad6a.wasm"
+  54791: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/bloxd_wasm_anim_bg.39cfafebdd7463cb374f.wasm"
   },
-  54238: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      BloxdAnimWasmError: () => ce,
-      compileAnimationPackInWasm: () => ve
+  54787: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      BloxdAnimWasmError: () => vW,
+      compileAnimationPackInWasm: () => pW
     });
-    var ye = {};
+    var mW = {};
 
-    function be(ee, ie, He, ye, be, Me) {
-      const Ke = ze(ee, we.FAv6),
-        Ue = De,
-        Fe = ze(ie, we.FAv6),
-        Je = De,
-        oe = ze(He, we.FAv6),
-        Re = De,
-        ke = ze(ye, we.FAv6),
-        fe = De,
-        Te = ze(be, we.FAv6),
-        pe = De;
-      var Be = Xe(Me) ? 0 : function(ee, ie) {
-          const He = ie(1 * ee.length, 1) >>> 0;
-          return qe().set(ee, He / 1), De = ee.length, He
-        }(Me, we.FAv6),
-        ge = De;
-      const Oe = we.VFZj(Ke, Ue, Fe, Je, oe, Re, ke, fe, Te, pe, Be, ge);
-      if (Oe[3]) throw Ee(Oe[2]);
-      var de, We, te = (de = Oe[0], We = Oe[1], de >>>= 0, qe().subarray(de / 1, de / 1 + We)).slice();
-      return we.Q6q2(Oe[0], 1 * Oe[1], 1), te
+    function EW(WW, iW, OW, mW, EW, NW) {
+      const PW = kW(WW, hW.VnNx),
+        LW = HW,
+        cW = kW(iW, hW.VnNx),
+        wW = HW,
+        tW = kW(OW, hW.VnNx),
+        ZW = HW,
+        xW = kW(mW, hW.VnNx),
+        AW = HW,
+        bW = kW(EW, hW.VnNx),
+        jW = HW;
+      var sW = UW(NW) ? 0 : function(WW, iW) {
+          const OW = iW(1 * WW.length, 1) >>> 0;
+          return lW().set(WW, OW / 1), HW = WW.length, OW
+        }(NW, hW.VnNx),
+        KW = HW;
+      const SW = hW.Ncmb(PW, LW, cW, wW, tW, ZW, xW, AW, bW, jW, sW, KW);
+      if (SW[3]) throw MW(SW[2]);
+      var YW, yW, TW = (YW = SW[0], yW = SW[1], YW >>>= 0, lW().subarray(YW / 1, YW / 1 + yW)).slice();
+      return hW.AlF0(SW[0], 1 * SW[1], 1), TW
     }
 
-    function Me(ee, ie) {
-      const He = Be(ee, we.FAv6, we.e9iw),
-        ye = De,
-        be = we.dnEm(He, ye, ie);
-      if (be[1]) throw Ee(be[0])
+    function NW(WW, iW) {
+      const OW = sW(WW, hW.VnNx, hW.Rmm1),
+        mW = HW,
+        EW = hW.JLiP(OW, mW, iW);
+      if (EW[1]) throw MW(EW[0])
     }
 
-    function Ke() {
-      we.Zx71()
+    function PW() {
+      hW.xFkT()
     }
 
-    function Ue() {
+    function LW() {
       return {
         __proto__: null,
-        VMk7: {
+        rthQ: {
           __proto__: null,
-          O7wX: function(ee, ie) {
-            return Fe(Error(Re(ee, ie)))
+          Mjwu: function(WW, iW) {
+            return cW(Error(ZW(WW, iW)))
           },
-          xNza: function(ee, ie) {
-            const He = fe(ie),
-              ye = "string" === typeof He ? He : void 0;
-            var be = Xe(ye) ? 0 : Be(ye, we.FAv6, we.e9iw),
-              Me = De;
-            oe().setInt32(ee + 4, Me, !0), oe().setInt32(ee + 0, be, !0)
+          dZ7X: function(WW, iW) {
+            const OW = AW(iW),
+              mW = "string" === typeof OW ? OW : void 0;
+            var EW = UW(mW) ? 0 : sW(mW, hW.VnNx, hW.Rmm1),
+              NW = HW;
+            tW().setInt32(WW + 4, NW, !0), tW().setInt32(WW + 0, EW, !0)
           },
-          KwCh: function(ee, ie) {
-            throw new Error(Re(ee, ie))
+          v1Mk: function(WW, iW) {
+            throw new Error(ZW(WW, iW))
           },
-          f3x2: function(ee, ie) {
-            console.error(Re(ee, ie))
+          iaoL: function(WW, iW) {
+            console.error(ZW(WW, iW))
           },
-          AeIi: function(ee) {
-            Ee(ee)
+          lgNX: function(WW) {
+            MW(WW)
           }
         }
       }
     }
 
-    function Fe(ee) {
-      pe === Te.length && Te.push(Te.length + 1);
-      const ie = pe;
-      return pe = Te[ie], Te[ie] = ee, ie
+    function cW(WW) {
+      jW === bW.length && bW.push(bW.length + 1);
+      const iW = jW;
+      return jW = bW[iW], bW[iW] = WW, iW
     }
-    He.r(ye), He.d(ye, {
-      WFe: () => be,
-      vR: () => Me,
-      default: () => Ye,
-      initSync: () => Ae,
-      uR: () => Ke
+    OW.r(mW), OW.d(mW, {
+      lLW: () => EW,
+      sw: () => NW,
+      default: () => oW,
+      initSync: () => uW,
+      qt: () => PW
     });
-    let Je = null;
+    let wW = null;
 
-    function oe() {
-      return null !== Je && Je.buffer === we.memory.buffer || (Je = new DataView(we.memory.buffer)), Je
+    function tW() {
+      return null !== wW && wW.buffer === hW.memory.buffer || (wW = new DataView(hW.memory.buffer)), wW
     }
 
-    function Re(ee, ie) {
-      return function(ee, ie) {
-        de += ie, de >= Oe && (ge = new TextDecoder("utf-8", {
+    function ZW(WW, iW) {
+      return function(WW, iW) {
+        YW += iW, YW >= SW && (KW = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), ge.decode(), de = ie);
-        return ge.decode(qe().subarray(ee, ee + ie))
-      }(ee >>> 0, ie)
+        }), KW.decode(), YW = iW);
+        return KW.decode(lW().subarray(WW, WW + iW))
+      }(WW >>> 0, iW)
     }
-    let ke = null;
+    let xW = null;
 
-    function qe() {
-      return null !== ke && 0 !== ke.byteLength || (ke = new Uint8Array(we.memory.buffer)), ke
-    }
-
-    function fe(ee) {
-      return Te[ee]
-    }
-    let Te = new Array(1024).fill(void 0);
-    Te.push(void 0, null, !0, !1);
-    let pe = Te.length;
-
-    function Xe(ee) {
-      return void 0 === ee || null === ee
+    function lW() {
+      return null !== xW && 0 !== xW.byteLength || (xW = new Uint8Array(hW.memory.buffer)), xW
     }
 
-    function ze(ee, ie) {
-      const He = ie(4 * ee.length, 4) >>> 0,
-        ye = oe();
-      for (let be = 0; be < ee.length; be++) ye.setUint32(He + 4 * be, Fe(ee[be]), !0);
-      return De = ee.length, He
+    function AW(WW) {
+      return bW[WW]
+    }
+    let bW = new Array(1024).fill(void 0);
+    bW.push(void 0, null, !0, !1);
+    let jW = bW.length;
+
+    function UW(WW) {
+      return void 0 === WW || null === WW
     }
 
-    function Be(ee, ie, He) {
-      if (void 0 === He) {
-        const He = We.encode(ee),
-          ye = ie(He.length, 1) >>> 0;
-        return qe().subarray(ye, ye + He.length).set(He), De = He.length, ye
+    function kW(WW, iW) {
+      const OW = iW(4 * WW.length, 4) >>> 0,
+        mW = tW();
+      for (let EW = 0; EW < WW.length; EW++) mW.setUint32(OW + 4 * EW, cW(WW[EW]), !0);
+      return HW = WW.length, OW
+    }
+
+    function sW(WW, iW, OW) {
+      if (void 0 === OW) {
+        const OW = yW.encode(WW),
+          mW = iW(OW.length, 1) >>> 0;
+        return lW().subarray(mW, mW + OW.length).set(OW), HW = OW.length, mW
       }
-      let ye = ee.length,
-        be = ie(ye, 1) >>> 0;
-      const Me = qe();
-      let Ke = 0;
-      for (; Ke < ye; Ke++) {
-        const ie = ee.charCodeAt(Ke);
-        if (ie > 127) break;
-        Me[be + Ke] = ie
+      let mW = WW.length,
+        EW = iW(mW, 1) >>> 0;
+      const NW = lW();
+      let PW = 0;
+      for (; PW < mW; PW++) {
+        const iW = WW.charCodeAt(PW);
+        if (iW > 127) break;
+        NW[EW + PW] = iW
       }
-      if (Ke !== ye) {
-        0 !== Ke && (ee = ee.slice(Ke)), be = He(be, ye, ye = Ke + 3 * ee.length, 1) >>> 0;
-        const ie = qe().subarray(be + Ke, be + ye);
-        Ke += We.encodeInto(ee, ie).written, be = He(be, ye, Ke, 1) >>> 0
+      if (PW !== mW) {
+        0 !== PW && (WW = WW.slice(PW)), EW = OW(EW, mW, mW = PW + 3 * WW.length, 1) >>> 0;
+        const iW = lW().subarray(EW + PW, EW + mW);
+        PW += yW.encodeInto(WW, iW).written, EW = OW(EW, mW, PW, 1) >>> 0
       }
-      return De = Ke, be
+      return HW = PW, EW
     }
 
-    function Ee(ee) {
-      const ie = fe(ee);
-      return function(ee) {
-        ee < 1028 || (Te[ee] = pe, pe = ee)
-      }(ee), ie
+    function MW(WW) {
+      const iW = AW(WW);
+      return function(WW) {
+        WW < 1028 || (bW[WW] = jW, jW = WW)
+      }(WW), iW
     }
-    let ge = new TextDecoder("utf-8", {
+    let KW = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    ge.decode();
-    const Oe = 2146435072;
-    let de = 0;
-    const We = new TextEncoder;
-    "encodeInto" in We || (We.encodeInto = function(ee, ie) {
-      const He = We.encode(ee);
-      return ie.set(He), {
-        read: ee.length,
-        written: He.length
+    KW.decode();
+    const SW = 2146435072;
+    let YW = 0;
+    const yW = new TextEncoder;
+    "encodeInto" in yW || (yW.encodeInto = function(WW, iW) {
+      const OW = yW.encode(WW);
+      return iW.set(OW), {
+        read: WW.length,
+        written: OW.length
       }
     });
-    let te, Ze, we, De = 0;
+    let TW, JW, hW, HW = 0;
 
-    function Pe(ee, ie) {
-      return Ze = ee, we = ee.exports, te = ie, Je = null, ke = null, we.UmbL(), we
+    function nW(WW, iW) {
+      return JW = WW, hW = WW.exports, TW = iW, wW = null, xW = null, hW.zNwJ(), hW
     }
 
-    function Ae(ee) {
-      if (void 0 !== we) return we;
-      void 0 !== ee && (Object.getPrototypeOf(ee) === Object.prototype ? ({
-        module: ee
-      } = ee) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const ie = Ue();
-      ee instanceof WebAssembly.Module || (ee = new WebAssembly.Module(ee));
-      return Pe(new WebAssembly.Instance(ee, ie), ee)
+    function uW(WW) {
+      if (void 0 !== hW) return hW;
+      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
+        module: WW
+      } = WW) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const iW = LW();
+      WW instanceof WebAssembly.Module || (WW = new WebAssembly.Module(WW));
+      return nW(new WebAssembly.Instance(WW, iW), WW)
     }
-    async function Ye(ee) {
-      if (void 0 !== we) return we;
-      void 0 !== ee && (Object.getPrototypeOf(ee) === Object.prototype ? ({
-        module_or_path: ee
-      } = ee) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const ie = Ue();
-      ("string" === typeof ee || "function" === typeof Request && ee instanceof Request || "function" === typeof URL && ee instanceof URL) && (ee = fetch(ee));
+    async function oW(WW) {
+      if (void 0 !== hW) return hW;
+      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
+        module_or_path: WW
+      } = WW) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const iW = LW();
+      ("string" === typeof WW || "function" === typeof Request && WW instanceof Request || "function" === typeof URL && WW instanceof URL) && (WW = fetch(WW));
       const {
-        instance: He,
-        module: ye
-      } = await async function(ee, ie) {
-        if ("function" === typeof Response && ee instanceof Response) {
-          if (!ee.ok) throw new Error(`failed to fetch Wasm: ${ee.status} ${ee.statusText} fetching '${ee.url}'`);
+        instance: OW,
+        module: mW
+      } = await async function(WW, iW) {
+        if ("function" === typeof Response && WW instanceof Response) {
+          if (!WW.ok) throw new Error(`failed to fetch Wasm: ${WW.status} ${WW.statusText} fetching '${WW.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(ee, ie)
-          } catch (He) {
-            if (! function(ee) {
-                switch (ee) {
+            return await WebAssembly.instantiateStreaming(WW, iW)
+          } catch (OW) {
+            if (! function(WW) {
+                switch (WW) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(ee.type) || "application/wasm" === ee.headers.get("Content-Type")) throw He;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", He)
+              }(WW.type) || "application/wasm" === WW.headers.get("Content-Type")) throw OW;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", OW)
           }
-          const ye = await ee.arrayBuffer();
-          return await WebAssembly.instantiate(ye, ie)
+          const mW = await WW.arrayBuffer();
+          return await WebAssembly.instantiate(mW, iW)
         } {
-          const He = await WebAssembly.instantiate(ee, ie);
-          return He instanceof WebAssembly.Instance ? {
-            instance: He,
-            module: ee
-          } : He
+          const OW = await WebAssembly.instantiate(WW, iW);
+          return OW instanceof WebAssembly.Instance ? {
+            instance: OW,
+            module: WW
+          } : OW
         }
-      }(await ee, ie);
-      return Pe(He, ye)
+      }(await WW, iW);
+      return nW(OW, mW)
     }
-    var Ve = He(3101),
-      ae = He(7251);
-    class ce extends Error {
+    var dW = OW(2388),
+      eW = OW(7625);
+    class vW extends Error {
       stage;
-      constructor(ee, ie) {
-        super((0, Ve.A)(ee, ie), {
-          cause: ie
-        }), this.name = "BloxdAnimWasmError", this.stage = ee
+      constructor(WW, iW) {
+        super((0, dW.A)(WW, iW), {
+          cause: iW
+        }), this.name = "BloxdAnimWasmError", this.stage = WW
       }
     }
-    let xe = null,
-      Le = null;
+    let gW = null,
+      DW = null;
 
-    function Ce() {
-      if (Le) throw Le
+    function VW() {
+      if (DW) throw DW
     }
-    async function ve(ee, ie, be) {
-      Ce();
-      const Me = await (xe ??= (async () => {
-        let ee;
+    async function pW(WW, iW, EW) {
+      VW();
+      const NW = await (gW ??= (async () => {
+        let WW;
         try {
-          ee = await (0, Ve.B)(new He.U(He(54241)), (0, ae.d)("bloxd_wasm_anim"))
-        } catch (ie) {
-          throw new ce((0, Ve.J)(ie), ie)
+          WW = await (0, dW.B)(new OW.U(OW(54791)), (0, eW.c)("bloxd_wasm_anim"))
+        } catch (iW) {
+          throw new vW((0, dW.E)(iW), iW)
         }
         try {
-          await Ye({
-            module_or_path: ee
+          await oW({
+            module_or_path: WW
           })
-        } catch (ie) {
-          throw new ce("instantiate", ie)
+        } catch (iW) {
+          throw new vW("instantiate", iW)
         }
-        return ye
-      })(), xe.catch((() => {
-        xe = null
-      })), xe);
-      Ce();
+        return mW
+      })(), gW.catch((() => {
+        gW = null
+      })), gW);
+      VW();
       try {
-        return Me.WFe(Object.entries(ee).flat(), [...ie.mobTypes], [...ie.vehicleTypes], [...ie.mobAiStates], [...ie.playerPoses], "builtIns" in be ? be.builtIns : void 0)
-      } catch (Ke) {
-        const ee = new ce("call", Ke);
-        throw Ke instanceof WebAssembly.RuntimeError && (Le = ee), ee
+        return NW.lLW(Object.entries(WW).flat(), [...iW.mobTypes], [...iW.vehicleTypes], [...iW.mobAiStates], [...iW.playerPoses], "builtIns" in EW ? EW.builtIns : void 0)
+      } catch (PW) {
+        const WW = new vW("call", PW);
+        throw PW instanceof WebAssembly.RuntimeError && (DW = WW), WW
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,1197 +1,221 @@
 export const id = 252;
 export const ids = [252];
 export const modules = {
-  39259: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => fe
+  37559: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => Li,
+      h: () => ki,
+      k: () => xi,
+      n: () => wi,
+      r: () => li,
+      s: () => Zi,
+      t: () => si,
+      u: () => ti,
+      x: () => bi
     });
-    var ye = He(186),
-      be = He(38476);
-    const Me = 1.2,
-      Ke = {
-        poseRig: "golem",
-        physicsBodyDimensions: {
-          width: .5,
-          height: 2.5
-        },
-        hitBoxDimensions: {
-          width: 2.2,
-          height: 2.8
-        },
-        eyeHeight: 2.3,
-        rideHeight: 2.3,
-        XF: .5,
-        Rye: !1
+    const mW = JSON.parse('{"sounds":{"lavaFlow":{"src":["/sounds/generatedSounds/ambient/lavaFlow.ba535035cf.ogg","/sounds/generatedSounds/ambient/lavaFlow.40571c16d7.m4a"],"ms":34000}}}'),
+      EW = JSON.parse('{"sounds":{"carCrash":{"src":["/sounds/generatedSounds/cars/carCrash.e9cf35a412.ogg","/sounds/generatedSounds/cars/carCrash.378aeb32a4.m4a"],"ms":539.7732426303855},"carDoorClose":{"src":["/sounds/generatedSounds/cars/carDoorClose.792cfcf48d.ogg","/sounds/generatedSounds/cars/carDoorClose.02592e995c.m4a"],"ms":570.7029478458049},"carDoorOpen":{"src":["/sounds/generatedSounds/cars/carDoorOpen.84f5742c92.ogg","/sounds/generatedSounds/cars/carDoorOpen.4b24cf5b50.m4a"],"ms":720.5895691609977},"carDriveLoop":{"src":["/sounds/generatedSounds/cars/carDriveLoop.7d8aad83fa.ogg","/sounds/generatedSounds/cars/carDriveLoop.5006bad297.m4a"],"ms":29642.721088435374},"carEngineStart":{"src":["/sounds/generatedSounds/cars/carEngineStart.113a5bdaed.ogg","/sounds/generatedSounds/cars/carEngineStart.59e7d8c4d8.m4a"],"ms":2800},"carHorn":{"src":["/sounds/generatedSounds/cars/carHorn.48c4508b59.ogg","/sounds/generatedSounds/cars/carHorn.1dc1df2fde.m4a"],"ms":500},"carIdleLoop":{"src":["/sounds/generatedSounds/cars/carIdleLoop.a19bcbcf02.ogg","/sounds/generatedSounds/cars/carIdleLoop.f8d228b71b.m4a"],"ms":27663.94557823129},"carLockChirp":{"src":["/sounds/generatedSounds/cars/carLockChirp.9aca331d9d.ogg","/sounds/generatedSounds/cars/carLockChirp.fa852bd28d.m4a"],"ms":600},"indicatorTick":{"src":["/sounds/generatedSounds/cars/indicatorTick.a504f02722.ogg","/sounds/generatedSounds/cars/indicatorTick.22837b7860.m4a"],"ms":5266.303854875283},"reverseBeep":{"src":["/sounds/generatedSounds/cars/reverseBeep.ceefe34cd6.ogg","/sounds/generatedSounds/cars/reverseBeep.7edf81482f.m4a"],"ms":5254.512471655329},"seatbeltClick":{"src":["/sounds/generatedSounds/cars/seatbeltClick.297ca727e6.ogg","/sounds/generatedSounds/cars/seatbeltClick.c5a857e362.m4a"],"ms":500},"tyreScreech":{"src":["/sounds/generatedSounds/cars/tyreScreech.bb041f0ca3.ogg","/sounds/generatedSounds/cars/tyreScreech.e7ca10f146.m4a"],"ms":2000},"vanIdleLoop":{"src":["/sounds/generatedSounds/cars/vanIdleLoop.2f4b2da6c2.ogg","/sounds/generatedSounds/cars/vanIdleLoop.80c88614af.m4a"],"ms":17625.011337868484}}}'),
+      NW = JSON.parse('{"sounds":{"crowdAmbience":{"src":["/sounds/generatedSounds/crowd/crowdAmbience.c8437e74dd.ogg","/sounds/generatedSounds/crowd/crowdAmbience.ea6c2e684d.m4a"],"ms":54935.51020408163},"crowdCheer":{"src":["/sounds/generatedSounds/crowd/crowdCheer.d4ed8b2c1c.ogg","/sounds/generatedSounds/crowd/crowdCheer.fb9bf08384.m4a"],"ms":6269.3877551020405},"refereeWhistle":{"src":["/sounds/generatedSounds/crowd/refereeWhistle.a84918de49.ogg","/sounds/generatedSounds/crowd/refereeWhistle.0493b386d1.m4a"],"ms":2089.795918367347}}}'),
+      PW = JSON.parse('{"sounds":{"cryptWhoosh":{"src":["/sounds/generatedSounds/customGame_horror/cryptWhoosh.844ce087ed.ogg","/sounds/generatedSounds/customGame_horror/cryptWhoosh.c75574f860.m4a"],"ms":1700},"doorKnock":{"src":["/sounds/generatedSounds/customGame_horror/doorKnock.80bf2c9cfa.ogg","/sounds/generatedSounds/customGame_horror/doorKnock.613b502cf4.m4a"],"ms":1173.3333333333333},"futureStrangePulse":{"src":["/sounds/generatedSounds/customGame_horror/futureStrangePulse.61faea2ed8.ogg","/sounds/generatedSounds/customGame_horror/futureStrangePulse.1d00dd561e.m4a"],"ms":2874.6938775510203},"hauntedHorrorImpact":{"src":["/sounds/generatedSounds/customGame_horror/hauntedHorrorImpact.ea0fde6a01.ogg","/sounds/generatedSounds/customGame_horror/hauntedHorrorImpact.0e6e85a919.m4a"],"ms":1072.857142857143},"horrorAccent1":{"src":["/sounds/generatedSounds/customGame_horror/horrorAccent1.04cc33b3ab.ogg","/sounds/generatedSounds/customGame_horror/horrorAccent1.a5ff289665.m4a"],"ms":1919.5238095238096},"horrorFright":{"src":["/sounds/generatedSounds/customGame_horror/horrorFright.b4df6be561.ogg","/sounds/generatedSounds/customGame_horror/horrorFright.d7b4fbe242.m4a"],"ms":1630.952380952381},"horrorMaleDrone":{"src":["/sounds/generatedSounds/customGame_horror/horrorMaleDrone.6f331180a7.ogg","/sounds/generatedSounds/customGame_horror/horrorMaleDrone.dd19a1f7a7.m4a"],"ms":7933.492063492064},"intensiveRainLoop":{"src":["/sounds/generatedSounds/customGame_horror/intensiveRainLoop.f6cdd700b8.ogg","/sounds/generatedSounds/customGame_horror/intensiveRainLoop.0555238ac6.m4a"],"ms":13037.687074829933},"metalDoorKnock":{"src":["/sounds/generatedSounds/customGame_horror/metalDoorKnock.c84367cbe5.ogg","/sounds/generatedSounds/customGame_horror/metalDoorKnock.1a78095aa6.m4a"],"ms":4219.410430839002},"ominousBellHit":{"src":["/sounds/generatedSounds/customGame_horror/ominousBellHit.f04c38d22a.ogg","/sounds/generatedSounds/customGame_horror/ominousBellHit.4e565251b0.m4a"],"ms":8756.621315192744},"pulseFromTheDark":{"src":["/sounds/generatedSounds/customGame_horror/pulseFromTheDark.e686b72847.ogg","/sounds/generatedSounds/customGame_horror/pulseFromTheDark.a641ffeb77.m4a"],"ms":7653.582766439909},"suspenseRiser":{"src":["/sounds/generatedSounds/customGame_horror/suspenseRiser.5219dee7aa.ogg","/sounds/generatedSounds/customGame_horror/suspenseRiser.0a968190eb.m4a"],"ms":6825.396825396825},"thunderRain":{"src":["/sounds/generatedSounds/customGame_horror/thunderRain.7c4bd7d291.ogg","/sounds/generatedSounds/customGame_horror/thunderRain.bb210a15a2.m4a"],"ms":12085.986394557824},"zapAccent1":{"src":["/sounds/generatedSounds/customGame_horror/zapAccent1.e3333a4b1a.ogg","/sounds/generatedSounds/customGame_horror/zapAccent1.45dc32c494.m4a"],"ms":500},"zapAccent2":{"src":["/sounds/generatedSounds/customGame_horror/zapAccent2.e3f819cbb0.ogg","/sounds/generatedSounds/customGame_horror/zapAccent2.5f9028348b.m4a"],"ms":500}}}'),
+      LW = JSON.parse('{"sounds":{"cloth1":{"src":["/sounds/generatedSounds/dig/cloth1.05a08dc4fb.ogg","/sounds/generatedSounds/dig/cloth1.f8fe54888d.m4a"],"ms":1671.8367346938776},"cloth2":{"src":["/sounds/generatedSounds/dig/cloth2.7829e18f4b.ogg","/sounds/generatedSounds/dig/cloth2.a4fea3c753.m4a"],"ms":1671.8367346938776},"cloth3":{"src":["/sounds/generatedSounds/dig/cloth3.6f9b529149.ogg","/sounds/generatedSounds/dig/cloth3.003f8bbd3f.m4a"],"ms":1671.8367346938776},"cloth4":{"src":["/sounds/generatedSounds/dig/cloth4.dbc3f9b535.ogg","/sounds/generatedSounds/dig/cloth4.7628865b9a.m4a"],"ms":1668.9342403628118},"glass1":{"src":["/sounds/generatedSounds/dig/glass1.2f38bfce4a.ogg","/sounds/generatedSounds/dig/glass1.452bc60794.m4a"],"ms":1671.8367346938776},"glass2":{"src":["/sounds/generatedSounds/dig/glass2.3173ef3666.ogg","/sounds/generatedSounds/dig/glass2.cf3e88ca50.m4a"],"ms":1671.8367346938776},"glass3":{"src":["/sounds/generatedSounds/dig/glass3.cd544b9631.ogg","/sounds/generatedSounds/dig/glass3.2590b0886a.m4a"],"ms":1671.8367346938776},"grass1":{"src":["/sounds/generatedSounds/dig/grass1.c14b97ac10.ogg","/sounds/generatedSounds/dig/grass1.b6378a858b.m4a"],"ms":500},"grass2":{"src":["/sounds/generatedSounds/dig/grass2.f557cf8250.ogg","/sounds/generatedSounds/dig/grass2.fa97e0a564.m4a"],"ms":500},"grass3":{"src":["/sounds/generatedSounds/dig/grass3.8e7cb1b279.ogg","/sounds/generatedSounds/dig/grass3.a2f42dc5db.m4a"],"ms":835.9183673469388},"grass4":{"src":["/sounds/generatedSounds/dig/grass4.2874c7116a.ogg","/sounds/generatedSounds/dig/grass4.f566b3e92f.m4a"],"ms":835.9183673469388},"gravel1":{"src":["/sounds/generatedSounds/dig/gravel1.72dd125068.ogg","/sounds/generatedSounds/dig/gravel1.1693a343cb.m4a"],"ms":500},"gravel2":{"src":["/sounds/generatedSounds/dig/gravel2.0aa298d6d1.ogg","/sounds/generatedSounds/dig/gravel2.faee9676db.m4a"],"ms":500},"gravel3":{"src":["/sounds/generatedSounds/dig/gravel3.64fc4ba4d2.ogg","/sounds/generatedSounds/dig/gravel3.4308ff586e.m4a"],"ms":500},"gravel4":{"src":["/sounds/generatedSounds/dig/gravel4.31cba2659f.ogg","/sounds/generatedSounds/dig/gravel4.931883237b.m4a"],"ms":500},"pickUp":{"src":["/sounds/generatedSounds/dig/pickUp.960660e213.ogg","/sounds/generatedSounds/dig/pickUp.34e373a822.m4a"],"ms":500},"sand1":{"src":["/sounds/generatedSounds/dig/sand1.8511bee21f.ogg","/sounds/generatedSounds/dig/sand1.60a22b4edc.m4a"],"ms":500},"sand2":{"src":["/sounds/generatedSounds/dig/sand2.3004e0ac22.ogg","/sounds/generatedSounds/dig/sand2.5c03f0b39d.m4a"],"ms":500},"sand3":{"src":["/sounds/generatedSounds/dig/sand3.17803d3e5a.ogg","/sounds/generatedSounds/dig/sand3.2ed3e8130a.m4a"],"ms":500},"sand4":{"src":["/sounds/generatedSounds/dig/sand4.2d0c913071.ogg","/sounds/generatedSounds/dig/sand4.8f1ecb26e2.m4a"],"ms":500},"snow1":{"src":["/sounds/generatedSounds/dig/snow1.e25466fd86.ogg","/sounds/generatedSounds/dig/snow1.2ece2fbbd8.m4a"],"ms":500},"snow2":{"src":["/sounds/generatedSounds/dig/snow2.b5e875061b.ogg","/sounds/generatedSounds/dig/snow2.b92b5d8bff.m4a"],"ms":500},"snow3":{"src":["/sounds/generatedSounds/dig/snow3.dfd8286f82.ogg","/sounds/generatedSounds/dig/snow3.26a8c8404f.m4a"],"ms":650.1587301587301},"snow4":{"src":["/sounds/generatedSounds/dig/snow4.a15d7f8942.ogg","/sounds/generatedSounds/dig/snow4.a6a3a28c9e.m4a"],"ms":650.1587301587301},"stone1":{"src":["/sounds/generatedSounds/dig/stone1.6f7ac4555c.ogg","/sounds/generatedSounds/dig/stone1.dd5aa59242.m4a"],"ms":500},"stone2":{"src":["/sounds/generatedSounds/dig/stone2.8827e7c037.ogg","/sounds/generatedSounds/dig/stone2.d180d61d41.m4a"],"ms":500},"stone3":{"src":["/sounds/generatedSounds/dig/stone3.35d73f20f4.ogg","/sounds/generatedSounds/dig/stone3.398560c147.m4a"],"ms":500},"stone4":{"src":["/sounds/generatedSounds/dig/stone4.2f13e94b0c.ogg","/sounds/generatedSounds/dig/stone4.d602f80b6d.m4a"],"ms":500},"wood1":{"src":["/sounds/generatedSounds/dig/wood1.cf48c3da8e.ogg","/sounds/generatedSounds/dig/wood1.83446b174a.m4a"],"ms":928.7981859410431},"wood2":{"src":["/sounds/generatedSounds/dig/wood2.3215ff27a7.ogg","/sounds/generatedSounds/dig/wood2.727461b3f6.m4a"],"ms":928.7981859410431},"wood3":{"src":["/sounds/generatedSounds/dig/wood3.80109fe9f0.ogg","/sounds/generatedSounds/dig/wood3.bda9910875.m4a"],"ms":928.7981859410431},"wood4":{"src":["/sounds/generatedSounds/dig/wood4.58f852000c.ogg","/sounds/generatedSounds/dig/wood4.c89db522c8.m4a"],"ms":928.7981859410431}}}'),
+      cW = JSON.parse('{"sounds":{"extinguisherSpray":{"src":["/sounds/generatedSounds/fire/extinguisherSpray.a0ff717082.ogg","/sounds/generatedSounds/fire/extinguisherSpray.0d3a5c7316.m4a"],"ms":2598.7301587301586},"fireAlarmBell":{"src":["/sounds/generatedSounds/fire/fireAlarmBell.279ccd75bf.ogg","/sounds/generatedSounds/fire/fireAlarmBell.b4de4196ad.m4a"],"ms":7848.730158730158},"fireCrackle":{"src":["/sounds/generatedSounds/fire/fireCrackle.f0f234bd84.ogg","/sounds/generatedSounds/fire/fireCrackle.7432f07251.m4a"],"ms":17343.94557823129},"fireTruckHorn":{"src":["/sounds/generatedSounds/fire/fireTruckHorn.017054718d.ogg","/sounds/generatedSounds/fire/fireTruckHorn.ec6be6235e.m4a"],"ms":3546.485260770975}}}'),
+      wW = JSON.parse('{"sounds":{"caughtFish":{"src":["/sounds/generatedSounds/fishing/caughtFish.6e9d3bcd83.ogg","/sounds/generatedSounds/fishing/caughtFish.720027e64c.m4a"],"ms":1976.7573696145125},"reel":{"src":["/sounds/generatedSounds/fishing/reel.0d8a9b6ef7.ogg","/sounds/generatedSounds/fishing/reel.957d2fd877.m4a"],"ms":531.9501133786848}}}'),
+      tW = JSON.parse('{"sounds":{"game_start_countdown_01":{"src":["/sounds/generatedSounds/gameStart/game_start_countdown_01.cf3394eef0.ogg","/sounds/generatedSounds/gameStart/game_start_countdown_01.3008ea2146.m4a"],"ms":1000.7709750566893},"game_start_countdown_02":{"src":["/sounds/generatedSounds/gameStart/game_start_countdown_02.28dc02e780.ogg","/sounds/generatedSounds/gameStart/game_start_countdown_02.81b0bf3e96.m4a"],"ms":994.9206349206348},"game_start_countdown_03":{"src":["/sounds/generatedSounds/gameStart/game_start_countdown_03.4397a9bb79.ogg","/sounds/generatedSounds/gameStart/game_start_countdown_03.e032512256.m4a"],"ms":1000.7709750566893},"game_start_countdown_final":{"src":["/sounds/generatedSounds/gameStart/game_start_countdown_final.9142b4501b.ogg","/sounds/generatedSounds/gameStart/game_start_countdown_final.3566fe33da.m4a"],"ms":1583.1065759637188}}}'),
+      ZW = JSON.parse('{"sounds":{"bullet_shell_bounce_general_07":{"src":["/sounds/generatedSounds/gunMisc/bullet_shell_bounce_general_07.1dee1c5e3e.ogg","/sounds/generatedSounds/gunMisc/bullet_shell_bounce_general_07.36191552b5.m4a"],"ms":823.0612244897959},"bullet_shell_bounce_general_08":{"src":["/sounds/generatedSounds/gunMisc/bullet_shell_bounce_general_08.948015413f.ogg","/sounds/generatedSounds/gunMisc/bullet_shell_bounce_general_08.2f6f3bd1af.m4a"],"ms":907.0294784580499},"headshot_04":{"src":["/sounds/generatedSounds/gunMisc/headshot_04.d8b5773ee7.ogg","/sounds/generatedSounds/gunMisc/headshot_04.1dea946a0d.m4a"],"ms":500},"headshot_06":{"src":["/sounds/generatedSounds/gunMisc/headshot_06.b8fca14ec1.ogg","/sounds/generatedSounds/gunMisc/headshot_06.a2acc7e06c.m4a"],"ms":500},"headshot_08":{"src":["/sounds/generatedSounds/gunMisc/headshot_08.a13cfc9df7.ogg","/sounds/generatedSounds/gunMisc/headshot_08.8f29e79688.m4a"],"ms":500},"headshot_11":{"src":["/sounds/generatedSounds/gunMisc/headshot_11.2514c5d111.ogg","/sounds/generatedSounds/gunMisc/headshot_11.53b1bb35d6.m4a"],"ms":500}}}'),
+      xW = JSON.parse('{"sounds":{"pistol_cock_01":{"src":["/sounds/generatedSounds/gunPistol/pistol_cock_01.6bb1557b84.ogg","/sounds/generatedSounds/gunPistol/pistol_cock_01.213b7dc7b8.m4a"],"ms":510},"pistol_cock_02":{"src":["/sounds/generatedSounds/gunPistol/pistol_cock_02.61af8cff63.ogg","/sounds/generatedSounds/gunPistol/pistol_cock_02.19a8463bcf.m4a"],"ms":500},"pistol_cock_03":{"src":["/sounds/generatedSounds/gunPistol/pistol_cock_03.200823cadc.ogg","/sounds/generatedSounds/gunPistol/pistol_cock_03.8da83ee8c9.m4a"],"ms":500},"pistol_cock_06":{"src":["/sounds/generatedSounds/gunPistol/pistol_cock_06.5fa4b22818.ogg","/sounds/generatedSounds/gunPistol/pistol_cock_06.2ecea4e265.m4a"],"ms":500},"pistol_magazine_load_01":{"src":["/sounds/generatedSounds/gunPistol/pistol_magazine_load_01.a848cda730.ogg","/sounds/generatedSounds/gunPistol/pistol_magazine_load_01.712afbe822.m4a"],"ms":500},"pistol_magazine_load_02":{"src":["/sounds/generatedSounds/gunPistol/pistol_magazine_load_02.6bf7dde995.ogg","/sounds/generatedSounds/gunPistol/pistol_magazine_load_02.421fb3ac20.m4a"],"ms":500},"pistol_magazine_load_03":{"src":["/sounds/generatedSounds/gunPistol/pistol_magazine_load_03.579e77d699.ogg","/sounds/generatedSounds/gunPistol/pistol_magazine_load_03.0a8d582cd9.m4a"],"ms":500},"pistol_magazine_unload_01":{"src":["/sounds/generatedSounds/gunPistol/pistol_magazine_unload_01.5eb15ac0fc.ogg","/sounds/generatedSounds/gunPistol/pistol_magazine_unload_01.bbc083ccda.m4a"],"ms":500},"pistol_magazine_unload_02":{"src":["/sounds/generatedSounds/gunPistol/pistol_magazine_unload_02.9b223e9639.ogg","/sounds/generatedSounds/gunPistol/pistol_magazine_unload_02.e8336e5182.m4a"],"ms":500},"pistol_magazine_unload_03":{"src":["/sounds/generatedSounds/gunPistol/pistol_magazine_unload_03.f2aa7220fc.ogg","/sounds/generatedSounds/gunPistol/pistol_magazine_unload_03.6486f16c51.m4a"],"ms":500},"pistol_shot_01":{"src":["/sounds/generatedSounds/gunPistol/pistol_shot_01.e217f3db39.ogg","/sounds/generatedSounds/gunPistol/pistol_shot_01.54643c8a9e.m4a"],"ms":1500},"pistol_shot_02":{"src":["/sounds/generatedSounds/gunPistol/pistol_shot_02.e62c40adaf.ogg","/sounds/generatedSounds/gunPistol/pistol_shot_02.ef2d834e00.m4a"],"ms":1569.591836734694},"pistol_shot_03":{"src":["/sounds/generatedSounds/gunPistol/pistol_shot_03.e82f921a8b.ogg","/sounds/generatedSounds/gunPistol/pistol_shot_03.0caca99a99.m4a"],"ms":1735.8956916099773},"pistol_shot_04":{"src":["/sounds/generatedSounds/gunPistol/pistol_shot_04.1e1bf970dd.ogg","/sounds/generatedSounds/gunPistol/pistol_shot_04.f22546708f.m4a"],"ms":1526.7120181405896},"pistol_shot_05":{"src":["/sounds/generatedSounds/gunPistol/pistol_shot_05.46de202a6e.ogg","/sounds/generatedSounds/gunPistol/pistol_shot_05.91794bc16d.m4a"],"ms":1442.2222222222224}}}'),
+      lW = JSON.parse('{"sounds":{"rifle_cock_01":{"src":["/sounds/generatedSounds/gunRifle/rifle_cock_01.7f2d42f56d.ogg","/sounds/generatedSounds/gunRifle/rifle_cock_01.7facd07e84.m4a"],"ms":705.3061224489796},"rifle_cock_02":{"src":["/sounds/generatedSounds/gunRifle/rifle_cock_02.a8c785e547.ogg","/sounds/generatedSounds/gunRifle/rifle_cock_02.6884d7c3f5.m4a"],"ms":1149.3877551020407},"rifle_magazine_load_01":{"src":["/sounds/generatedSounds/gunRifle/rifle_magazine_load_01.0425ab15b9.ogg","/sounds/generatedSounds/gunRifle/rifle_magazine_load_01.b3868efb59.m4a"],"ms":500},"rifle_magazine_load_02":{"src":["/sounds/generatedSounds/gunRifle/rifle_magazine_load_02.e26988008c.ogg","/sounds/generatedSounds/gunRifle/rifle_magazine_load_02.501e0b62ff.m4a"],"ms":500},"rifle_magazine_load_03":{"src":["/sounds/generatedSounds/gunRifle/rifle_magazine_load_03.6002b821c7.ogg","/sounds/generatedSounds/gunRifle/rifle_magazine_load_03.8f364ef1ce.m4a"],"ms":500},"rifle_magazine_unload_01":{"src":["/sounds/generatedSounds/gunRifle/rifle_magazine_unload_01.16df473a7e.ogg","/sounds/generatedSounds/gunRifle/rifle_magazine_unload_01.8eb7661b07.m4a"],"ms":500},"rifle_magazine_unload_02":{"src":["/sounds/generatedSounds/gunRifle/rifle_magazine_unload_02.ba48d78bbc.ogg","/sounds/generatedSounds/gunRifle/rifle_magazine_unload_02.496926e19b.m4a"],"ms":500},"rifle_magazine_unload_04":{"src":["/sounds/generatedSounds/gunRifle/rifle_magazine_unload_04.aaeca32c28.ogg","/sounds/generatedSounds/gunRifle/rifle_magazine_unload_04.49ff6ac063.m4a"],"ms":500},"rifle_shot_01":{"src":["/sounds/generatedSounds/gunRifle/rifle_shot_01.e4ad7d4a05.ogg","/sounds/generatedSounds/gunRifle/rifle_shot_01.8f0bf1fa33.m4a"],"ms":2115.918367346939},"rifle_shot_02":{"src":["/sounds/generatedSounds/gunRifle/rifle_shot_02.9052b7a2c4.ogg","/sounds/generatedSounds/gunRifle/rifle_shot_02.22489b5347.m4a"],"ms":2429.3877551020405},"rifle_shot_03":{"src":["/sounds/generatedSounds/gunRifle/rifle_shot_03.b941e5f091.ogg","/sounds/generatedSounds/gunRifle/rifle_shot_03.46d501c23c.m4a"],"ms":2298.7755102040815},"rifle_shot_04":{"src":["/sounds/generatedSounds/gunRifle/rifle_shot_04.11129a4707.ogg","/sounds/generatedSounds/gunRifle/rifle_shot_04.645779c083.m4a"],"ms":2481.6326530612246}}}'),
+      AW = JSON.parse('{"sounds":{"semiAuto_cock_01":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_01.1bf3b423df.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_01.c1262696d3.m4a"],"ms":500},"semiAuto_cock_02":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_02.0502910c5b.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_02.9be3888d6f.m4a"],"ms":548.5714285714286},"semiAuto_cock_03":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_03.78650fc2e7.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_03.664d3fc9ca.m4a"],"ms":500},"semiAuto_cock_04":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_04.10f85e1a0a.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_04.a01e891b99.m4a"],"ms":522.4489795918367},"semiAuto_cock_05":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_05.ef159476a0.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_cock_05.e03ba94f5b.m4a"],"ms":500},"semiAuto_first_shot_01":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_first_shot_01.a40cdc85cf.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_first_shot_01.1fdccf5cfb.m4a"],"ms":500},"semiAuto_magazine_load_01":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_01.9142f527d2.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_01.eede00a57c.m4a"],"ms":548.5714285714286},"semiAuto_magazine_load_02":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_02.104802c8f7.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_02.d0b1c7b36a.m4a"],"ms":500},"semiAuto_magazine_load_03":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_03.003bee89f7.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_03.431dfa4b87.m4a"],"ms":548.5714285714286},"semiAuto_magazine_load_04":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_04.6ff38e6235.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_04.6ca840ed4b.m4a"],"ms":500},"semiAuto_magazine_load_05":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_05.08d1c424f7.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_load_05.cdab4bc547.m4a"],"ms":500},"semiAuto_magazine_unload_01":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_unload_01.4ed2d713a4.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_unload_01.10166c07c1.m4a"],"ms":500},"semiAuto_magazine_unload_02":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_unload_02.17d8611499.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_unload_02.4851965acf.m4a"],"ms":500},"semiAuto_magazine_unload_03":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_unload_03.2d28214d42.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_unload_03.7b48f2ca76.m4a"],"ms":500},"semiAuto_magazine_unload_04":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_unload_04.d5e26a2c21.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_magazine_unload_04.e81222df79.m4a"],"ms":500},"semiAuto_shot_01":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_01.aab11d4f40.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_01.bdd80da890.m4a"],"ms":500},"semiAuto_shot_02":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_02.124cb55e3c.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_02.e24272ec5d.m4a"],"ms":500},"semiAuto_shot_03":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_03.53237f53ea.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_03.f9daceec00.m4a"],"ms":500},"semiAuto_shot_04":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_04.17017eccfb.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_04.f792f78c92.m4a"],"ms":500},"semiAuto_shot_05":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_05.7910ab11bc.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_05.142c159cea.m4a"],"ms":500},"semiAuto_shot_06":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_06.ba10b77c57.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_06.f6e4cda8b6.m4a"],"ms":500},"semiAuto_shot_07":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_07.218c3cfbd7.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_07.aa835d18c4.m4a"],"ms":500},"semiAuto_shot_08":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_08.fb18b2d38f.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_shot_08.3493f96551.m4a"],"ms":500},"semiAuto_tail_only_shot_01":{"src":["/sounds/generatedSounds/gunSemiAutomatic/semiAuto_tail_only_shot_01.5571fab505.ogg","/sounds/generatedSounds/gunSemiAutomatic/semiAuto_tail_only_shot_01.1a1d609f08.m4a"],"ms":2455.5102040816328}}}'),
+      bW = JSON.parse('{"sounds":{"shotgun_cock_01":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_cock_01.c54ea385b9.ogg","/sounds/generatedSounds/gunShotgun/shotgun_cock_01.ee18a51143.m4a"],"ms":914.2857142857142},"shotgun_cock_02":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_cock_02.73fead856c.ogg","/sounds/generatedSounds/gunShotgun/shotgun_cock_02.619224ae31.m4a"],"ms":500},"shotgun_cock_03":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_cock_03.1129d2eb52.ogg","/sounds/generatedSounds/gunShotgun/shotgun_cock_03.414351b854.m4a"],"ms":679.1836734693878},"shotgun_cock_04":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_cock_04.543fa236cf.ogg","/sounds/generatedSounds/gunShotgun/shotgun_cock_04.b297af5c38.m4a"],"ms":548.5714285714286},"shotgun_cock_05":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_cock_05.afe7cdd475.ogg","/sounds/generatedSounds/gunShotgun/shotgun_cock_05.ea79e0088b.m4a"],"ms":548.5714285714286},"shotgun_load_bullet_01":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_01.5d3ef91f3e.ogg","/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_01.3730abb12d.m4a"],"ms":548.5714285714286},"shotgun_load_bullet_02":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_02.9846750617.ogg","/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_02.2524ceda8d.m4a"],"ms":522.4489795918367},"shotgun_load_bullet_03":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_03.a95bbd543d.ogg","/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_03.55ba2f77d6.m4a"],"ms":500},"shotgun_load_bullet_04":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_04.96fe2d8506.ogg","/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_04.3111f9dea5.m4a"],"ms":500},"shotgun_load_bullet_05":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_05.1b1f7fd02b.ogg","/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_05.eb475a19f0.m4a"],"ms":500},"shotgun_load_bullet_06":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_06.6ad28b28aa.ogg","/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_06.db8a4fd067.m4a"],"ms":679.1836734693878},"shotgun_load_bullet_07":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_07.47316ae766.ogg","/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_07.898b919d33.m4a"],"ms":548.5714285714286},"shotgun_load_bullet_08":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_08.6ab6c749ff.ogg","/sounds/generatedSounds/gunShotgun/shotgun_load_bullet_08.7c8051a2ab.m4a"],"ms":500},"shotgun_shot_01":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_shot_01.c850dbca53.ogg","/sounds/generatedSounds/gunShotgun/shotgun_shot_01.706985b664.m4a"],"ms":2612.2448979591836},"shotgun_shot_02":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_shot_02.8a62e23239.ogg","/sounds/generatedSounds/gunShotgun/shotgun_shot_02.c6082e059c.m4a"],"ms":2507.7551020408164},"shotgun_shot_03":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_shot_03.d416830dcd.ogg","/sounds/generatedSounds/gunShotgun/shotgun_shot_03.fdac6cf1bc.m4a"],"ms":2638.3673469387754},"shotgun_shot_04":{"src":["/sounds/generatedSounds/gunShotgun/shotgun_shot_04.eed1c9d44a.ogg","/sounds/generatedSounds/gunShotgun/shotgun_shot_04.94db1e5f4c.m4a"],"ms":2037.5510204081634}}}'),
+      jW = JSON.parse('{"sounds":{"submachine_cock_01":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_cock_01.32e98c51f0.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_cock_01.afcbd0a497.m4a"],"ms":500},"submachine_cock_02":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_cock_02.d20e56f2d1.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_cock_02.ebaa8821dd.m4a"],"ms":500},"submachine_cock_03":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_cock_03.af598b8411.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_cock_03.c9c5c01477.m4a"],"ms":500},"submachine_cock_04":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_cock_04.479e155a63.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_cock_04.2d04073ce9.m4a"],"ms":500},"submachine_first_shot_01":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_first_shot_01.4e7bb2f5ba.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_first_shot_01.db7ec1538b.m4a"],"ms":500},"submachine_magazine_load_01":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_load_01.1884a47433.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_load_01.fc2c5a3022.m4a"],"ms":500},"submachine_magazine_load_02":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_load_02.8ee77a0884.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_load_02.a646582612.m4a"],"ms":500},"submachine_magazine_load_03":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_load_03.bea13ee1ff.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_load_03.416acb4eb1.m4a"],"ms":500},"submachine_magazine_load_04":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_load_04.b7d33bce81.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_load_04.d6bf5251bf.m4a"],"ms":500},"submachine_magazine_unload_01":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_unload_01.9b3585c904.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_unload_01.d246efe8a3.m4a"],"ms":500},"submachine_magazine_unload_02":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_unload_02.5c75fc445c.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_unload_02.87fd5a411a.m4a"],"ms":500},"submachine_magazine_unload_03":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_unload_03.52c367ee3c.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_magazine_unload_03.0b2d94ed5a.m4a"],"ms":500},"submachine_shot_01":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_shot_01.2526d5882e.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_shot_01.a13bbc5568.m4a"],"ms":500},"submachine_shot_02":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_shot_02.ca5c113920.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_shot_02.02c15cac2c.m4a"],"ms":500},"submachine_shot_03":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_shot_03.e7949181af.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_shot_03.7fc9cca2c5.m4a"],"ms":500},"submachine_shot_04":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_shot_04.ed8db5418d.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_shot_04.80cae2b9a1.m4a"],"ms":500},"submachine_shot_05":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_shot_05.2be10ca8bb.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_shot_05.765b757261.m4a"],"ms":500},"submachine_shot_06":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_shot_06.326b4da3d5.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_shot_06.9a1916a17e.m4a"],"ms":500},"submachine_shot_07":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_shot_07.e32102fead.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_shot_07.ecdc7e160d.m4a"],"ms":500},"submachine_shot_08":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_shot_08.cffd30a8e8.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_shot_08.a982383657.m4a"],"ms":500},"submachine_shot_09":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_shot_09.9da79bb831.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_shot_09.08c6deab75.m4a"],"ms":500},"submachine_tail_only_shot_01":{"src":["/sounds/generatedSounds/gunSubmachineGun/submachine_tail_only_shot_01.c880bdfd21.ogg","/sounds/generatedSounds/gunSubmachineGun/submachine_tail_only_shot_01.2f2b24d200.m4a"],"ms":1858.8208616780046}}}'),
+      UW = JSON.parse('{"sounds":{"bearRoar1":{"src":["/sounds/generatedSounds/mobBear/bearRoar1.63c50e53db.ogg","/sounds/generatedSounds/mobBear/bearRoar1.035fff53ae.m4a"],"ms":1011.1791383219954},"bearRoar2":{"src":["/sounds/generatedSounds/mobBear/bearRoar2.78b4410ea2.ogg","/sounds/generatedSounds/mobBear/bearRoar2.9063dab487.m4a"],"ms":793.6507936507936},"bearRoar3":{"src":["/sounds/generatedSounds/mobBear/bearRoar3.33c848d25f.ogg","/sounds/generatedSounds/mobBear/bearRoar3.c66ab5b2c9.m4a"],"ms":764.2630385487529},"bearRoar4":{"src":["/sounds/generatedSounds/mobBear/bearRoar4.c0a8934c07.ogg","/sounds/generatedSounds/mobBear/bearRoar4.6adf90fcc6.m4a"],"ms":781.9047619047619},"bearRoar5":{"src":["/sounds/generatedSounds/mobBear/bearRoar5.1db2edc420.ogg","/sounds/generatedSounds/mobBear/bearRoar5.791e6452a1.m4a"],"ms":646.6666666666666}}}'),
+      kW = JSON.parse('{"sounds":{"catHiss1":{"src":["/sounds/generatedSounds/mobCat/catHiss1.33269da18a.ogg","/sounds/generatedSounds/mobCat/catHiss1.930fa86a61.m4a"],"ms":1252.0861678004535},"catHiss2":{"src":["/sounds/generatedSounds/mobCat/catHiss2.f2bda6f1b6.ogg","/sounds/generatedSounds/mobCat/catHiss2.ac30acf8d0.m4a"],"ms":1064.2403628117913},"catHiss3":{"src":["/sounds/generatedSounds/mobCat/catHiss3.bf4a3001f9.ogg","/sounds/generatedSounds/mobCat/catHiss3.1483906add.m4a"],"ms":1082.6530612244899},"catHiss4":{"src":["/sounds/generatedSounds/mobCat/catHiss4.6640379d7d.ogg","/sounds/generatedSounds/mobCat/catHiss4.83e25558ba.m4a"],"ms":978.8662131519275},"catHurt1":{"src":["/sounds/generatedSounds/mobCat/catHurt1.dbd00ccf33.ogg","/sounds/generatedSounds/mobCat/catHurt1.bd8169ed5b.m4a"],"ms":809.795918367347},"catHurt2":{"src":["/sounds/generatedSounds/mobCat/catHurt2.240099c737.ogg","/sounds/generatedSounds/mobCat/catHurt2.241dc11eb7.m4a"],"ms":779.4104308390023},"catHurt3":{"src":["/sounds/generatedSounds/mobCat/catHurt3.4f6a5e0095.ogg","/sounds/generatedSounds/mobCat/catHurt3.cc351c6057.m4a"],"ms":626.9387755102041},"catMeow1":{"src":["/sounds/generatedSounds/mobCat/catMeow1.fde26dfc4b.ogg","/sounds/generatedSounds/mobCat/catMeow1.acdbdf4004.m4a"],"ms":1306.1224489795918},"catMeow2":{"src":["/sounds/generatedSounds/mobCat/catMeow2.1cbbc056ef.ogg","/sounds/generatedSounds/mobCat/catMeow2.618538fc12.m4a"],"ms":1384.4897959183672},"catMeow3":{"src":["/sounds/generatedSounds/mobCat/catMeow3.c97522f9d7.ogg","/sounds/generatedSounds/mobCat/catMeow3.f4a4a8f3f2.m4a"],"ms":1280},"catMeow4":{"src":["/sounds/generatedSounds/mobCat/catMeow4.df32f4a62e.ogg","/sounds/generatedSounds/mobCat/catMeow4.aa97127e44.m4a"],"ms":1567.3469387755101},"catMeow5":{"src":["/sounds/generatedSounds/mobCat/catMeow5.4b97902aa1.ogg","/sounds/generatedSounds/mobCat/catMeow5.09c0210d94.m4a"],"ms":1802.4489795918369}}}'),
+      sW = JSON.parse('{"sounds":{"cowHurt1":{"src":["/sounds/generatedSounds/mobCow/cowHurt1.d89ba7867c.ogg","/sounds/generatedSounds/mobCow/cowHurt1.29bff86f0f.m4a"],"ms":522.6530612244899},"cowMoo1":{"src":["/sounds/generatedSounds/mobCow/cowMoo1.a0d9302366.ogg","/sounds/generatedSounds/mobCow/cowMoo1.768276c334.m4a"],"ms":1574.331065759637},"cowMoo2":{"src":["/sounds/generatedSounds/mobCow/cowMoo2.0583e9615f.ogg","/sounds/generatedSounds/mobCow/cowMoo2.5d7f8aeb4a.m4a"],"ms":1947.4149659863947},"cowMoo3":{"src":["/sounds/generatedSounds/mobCow/cowMoo3.9b0d3ebd3c.ogg","/sounds/generatedSounds/mobCow/cowMoo3.f80a88ec94.m4a"],"ms":2099.342403628118}}}'),
+      MW = JSON.parse('{"sounds":{"croneAttack1":{"src":["/sounds/generatedSounds/mobCrone/croneAttack1.5b921df950.ogg","/sounds/generatedSounds/mobCrone/croneAttack1.61ad4af555.m4a"],"ms":500},"croneHurt1":{"src":["/sounds/generatedSounds/mobCrone/croneHurt1.fc6c6ef020.ogg","/sounds/generatedSounds/mobCrone/croneHurt1.23e658ebfc.m4a"],"ms":751.6780045351475},"croneIdle1":{"src":["/sounds/generatedSounds/mobCrone/croneIdle1.1e9778b9e7.ogg","/sounds/generatedSounds/mobCrone/croneIdle1.98b70ae5fd.m4a"],"ms":6756.8707482993195}}}'),
+      KW = JSON.parse('{"sounds":{"deerGrunt1":{"src":["/sounds/generatedSounds/mobDeer/deerGrunt1.1ce39f44af.ogg","/sounds/generatedSounds/mobDeer/deerGrunt1.a1674dd770.m4a"],"ms":976.7346938775511},"deerHurt1":{"src":["/sounds/generatedSounds/mobDeer/deerHurt1.aae5bc1b1b.ogg","/sounds/generatedSounds/mobDeer/deerHurt1.eff6554660.m4a"],"ms":500}}}'),
+      SW = JSON.parse('{"sounds":{"dogBark1":{"src":["/sounds/generatedSounds/mobDog/dogBark1.ad6156df61.ogg","/sounds/generatedSounds/mobDog/dogBark1.a3032337ce.m4a"],"ms":500},"dogBark2":{"src":["/sounds/generatedSounds/mobDog/dogBark2.0e49419118.ogg","/sounds/generatedSounds/mobDog/dogBark2.69d8999e34.m4a"],"ms":500},"dogBark3":{"src":["/sounds/generatedSounds/mobDog/dogBark3.a0ebbb9d4a.ogg","/sounds/generatedSounds/mobDog/dogBark3.addb944bd7.m4a"],"ms":500},"dogGrowl1":{"src":["/sounds/generatedSounds/mobDog/dogGrowl1.9766a58232.ogg","/sounds/generatedSounds/mobDog/dogGrowl1.681f142696.m4a"],"ms":634.8979591836734},"dogGrowl2":{"src":["/sounds/generatedSounds/mobDog/dogGrowl2.278f6fea05.ogg","/sounds/generatedSounds/mobDog/dogGrowl2.5b2292932e.m4a"],"ms":543.3560090702948},"dogGrowl3":{"src":["/sounds/generatedSounds/mobDog/dogGrowl3.17e7c58c00.ogg","/sounds/generatedSounds/mobDog/dogGrowl3.cf56d3144a.m4a"],"ms":1361.360544217687},"dogHurt1":{"src":["/sounds/generatedSounds/mobDog/dogHurt1.71189625d4.ogg","/sounds/generatedSounds/mobDog/dogHurt1.3868ce7c00.m4a"],"ms":500},"dogHurt2":{"src":["/sounds/generatedSounds/mobDog/dogHurt2.666e1df5e2.ogg","/sounds/generatedSounds/mobDog/dogHurt2.055039bdb3.m4a"],"ms":500}}}'),
+      YW = JSON.parse('{"sounds":{"fennecYip1":{"src":["/sounds/generatedSounds/mobFennec/fennecYip1.141bf7c2ad.ogg","/sounds/generatedSounds/mobFennec/fennecYip1.b11e38629c.m4a"],"ms":500},"fennecYip2":{"src":["/sounds/generatedSounds/mobFennec/fennecYip2.c5ff30a404.ogg","/sounds/generatedSounds/mobFennec/fennecYip2.b287bb9bbe.m4a"],"ms":500},"fennecYip3":{"src":["/sounds/generatedSounds/mobFennec/fennecYip3.41bdbb2cb0.ogg","/sounds/generatedSounds/mobFennec/fennecYip3.a608a4d4fc.m4a"],"ms":500}}}'),
+      yW = JSON.parse('{"sounds":{"golemGrunt1":{"src":["/sounds/generatedSounds/mobGolem/golemGrunt1.76adcd5d57.ogg","/sounds/generatedSounds/mobGolem/golemGrunt1.09934e03cf.m4a"],"ms":6687.34693877551},"golemGrunt2":{"src":["/sounds/generatedSounds/mobGolem/golemGrunt2.718c5c1260.ogg","/sounds/generatedSounds/mobGolem/golemGrunt2.550af3b959.m4a"],"ms":4911.0204081632655}}}'),
+      TW = JSON.parse('{"sounds":{"gorillaIdle1":{"src":["/sounds/generatedSounds/mobGorilla/gorillaIdle1.a8c232ecd6.ogg","/sounds/generatedSounds/mobGorilla/gorillaIdle1.c8fa507f2f.m4a"],"ms":898.140589569161},"gorillaIdle2":{"src":["/sounds/generatedSounds/mobGorilla/gorillaIdle2.7178723a1c.ogg","/sounds/generatedSounds/mobGorilla/gorillaIdle2.477396f72e.m4a"],"ms":825.3061224489796},"gorillaIdle3":{"src":["/sounds/generatedSounds/mobGorilla/gorillaIdle3.8d5c441242.ogg","/sounds/generatedSounds/mobGorilla/gorillaIdle3.2301577504.m4a"],"ms":1357.233560090703},"gorillaIdle4":{"src":["/sounds/generatedSounds/mobGorilla/gorillaIdle4.a6b40fb80c.ogg","/sounds/generatedSounds/mobGorilla/gorillaIdle4.6d55f5892d.m4a"],"ms":1061.2698412698414},"gorillaRoar1":{"src":["/sounds/generatedSounds/mobGorilla/gorillaRoar1.995907736a.ogg","/sounds/generatedSounds/mobGorilla/gorillaRoar1.ef9cc0abb7.m4a"],"ms":1002.6757369614512}}}'),
+      JW = JSON.parse('{"sounds":{"horseHurt1":{"src":["/sounds/generatedSounds/mobHorse/horseHurt1.78e0de9d20.ogg","/sounds/generatedSounds/mobHorse/horseHurt1.10bcb2d432.m4a"],"ms":1044.8979591836735},"horseHurt2":{"src":["/sounds/generatedSounds/mobHorse/horseHurt2.deefe55ab5.ogg","/sounds/generatedSounds/mobHorse/horseHurt2.b4467bafe9.m4a"],"ms":1332.2448979591836},"horseIdle1":{"src":["/sounds/generatedSounds/mobHorse/horseIdle1.2d0fa83e16.ogg","/sounds/generatedSounds/mobHorse/horseIdle1.d0f74b4d01.m4a"],"ms":1410.6122448979593},"horseIdle2":{"src":["/sounds/generatedSounds/mobHorse/horseIdle2.f2753c8e83.ogg","/sounds/generatedSounds/mobHorse/horseIdle2.239470b29b.m4a"],"ms":634.3310657596371},"horseIdle3":{"src":["/sounds/generatedSounds/mobHorse/horseIdle3.469aa3710c.ogg","/sounds/generatedSounds/mobHorse/horseIdle3.3373481eb4.m4a"],"ms":853.469387755102}}}'),
+      hW = JSON.parse('{"sounds":{"knightGrunt1":{"src":["/sounds/generatedSounds/mobKnight/knightGrunt1.623eb5df1d.ogg","/sounds/generatedSounds/mobKnight/knightGrunt1.31bf66d818.m4a"],"ms":2026.6666666666667},"knightGrunt2":{"src":["/sounds/generatedSounds/mobKnight/knightGrunt2.7f4401bb8b.ogg","/sounds/generatedSounds/mobKnight/knightGrunt2.7770f46f4b.m4a"],"ms":2154.671201814059},"knightGrunt3":{"src":["/sounds/generatedSounds/mobKnight/knightGrunt3.d107b44715.ogg","/sounds/generatedSounds/mobKnight/knightGrunt3.59352e3012.m4a"],"ms":1674.671201814059}}}'),
+      HW = JSON.parse('{"sounds":{"pigHurt1":{"src":["/sounds/generatedSounds/mobPig/pigHurt1.d69763bd98.ogg","/sounds/generatedSounds/mobPig/pigHurt1.cac9bcdec5.m4a"],"ms":705.6009070294784},"pigHurt2":{"src":["/sounds/generatedSounds/mobPig/pigHurt2.7c85ee9393.ogg","/sounds/generatedSounds/mobPig/pigHurt2.671a636fd5.m4a"],"ms":667.4603174603175},"pigHurt3":{"src":["/sounds/generatedSounds/mobPig/pigHurt3.4b4f903222.ogg","/sounds/generatedSounds/mobPig/pigHurt3.5303e1f9a9.m4a"],"ms":500},"pigOink1":{"src":["/sounds/generatedSounds/mobPig/pigOink1.34d1e2254f.ogg","/sounds/generatedSounds/mobPig/pigOink1.ca72b7cec7.m4a"],"ms":976.7573696145124},"pigOink2":{"src":["/sounds/generatedSounds/mobPig/pigOink2.874dcf2f60.ogg","/sounds/generatedSounds/mobPig/pigOink2.b7bb9f22f6.m4a"],"ms":1015.578231292517},"pigOink3":{"src":["/sounds/generatedSounds/mobPig/pigOink3.3e62ef18ba.ogg","/sounds/generatedSounds/mobPig/pigOink3.a3705a54ca.m4a"],"ms":500},"pigOink4":{"src":["/sounds/generatedSounds/mobPig/pigOink4.459fad97b8.ogg","/sounds/generatedSounds/mobPig/pigOink4.95c76835dc.m4a"],"ms":500},"pigOink5":{"src":["/sounds/generatedSounds/mobPig/pigOink5.f74a5ae107.ogg","/sounds/generatedSounds/mobPig/pigOink5.ae624bc158.m4a"],"ms":519.4557823129252}}}'),
+      nW = JSON.parse('{"sounds":{"reaverAttack1":{"src":["/sounds/generatedSounds/mobReaver/reaverAttack1.ca61fcdbeb.ogg","/sounds/generatedSounds/mobReaver/reaverAttack1.45faadb3e3.m4a"],"ms":4031.1111111111113},"reaverAttack2":{"src":["/sounds/generatedSounds/mobReaver/reaverAttack2.a77ecbef0c.ogg","/sounds/generatedSounds/mobReaver/reaverAttack2.1ea5f3856f.m4a"],"ms":1552.0181405895692},"reaverAttack3":{"src":["/sounds/generatedSounds/mobReaver/reaverAttack3.891a2b437e.ogg","/sounds/generatedSounds/mobReaver/reaverAttack3.91e1228566.m4a"],"ms":1857.5510204081634},"reaverGrunt1":{"src":["/sounds/generatedSounds/mobReaver/reaverGrunt1.00f1fb6c0e.ogg","/sounds/generatedSounds/mobReaver/reaverGrunt1.ffcf7b92fb.m4a"],"ms":5073.5600907029475},"reaverGrunt2":{"src":["/sounds/generatedSounds/mobReaver/reaverGrunt2.53c8385e02.ogg","/sounds/generatedSounds/mobReaver/reaverGrunt2.48b3d8990d.m4a"],"ms":2950.090702947846},"reaverGrunt3":{"src":["/sounds/generatedSounds/mobReaver/reaverGrunt3.bb008878f0.ogg","/sounds/generatedSounds/mobReaver/reaverGrunt3.80b33272a5.m4a"],"ms":6640.907029478458}}}'),
+      uW = JSON.parse('{"sounds":{"sheepBaa1":{"src":["/sounds/generatedSounds/mobSheep/sheepBaa1.8a9fc9334f.ogg","/sounds/generatedSounds/mobSheep/sheepBaa1.7d3a17eb42.m4a"],"ms":1039.3877551020407},"sheepBaa2":{"src":["/sounds/generatedSounds/mobSheep/sheepBaa2.d82eef68ac.ogg","/sounds/generatedSounds/mobSheep/sheepBaa2.1ef6b3843e.m4a"],"ms":1243.968253968254},"sheepBaa3":{"src":["/sounds/generatedSounds/mobSheep/sheepBaa3.e05a7c0873.ogg","/sounds/generatedSounds/mobSheep/sheepBaa3.f0e124c203.m4a"],"ms":827.7551020408164},"sheepBaa4":{"src":["/sounds/generatedSounds/mobSheep/sheepBaa4.42196c8462.ogg","/sounds/generatedSounds/mobSheep/sheepBaa4.57c4eaacd5.m4a"],"ms":1048.1179138321997},"sheepHurt1":{"src":["/sounds/generatedSounds/mobSheep/sheepHurt1.6f3051b1a1.ogg","/sounds/generatedSounds/mobSheep/sheepHurt1.e215869398.m4a"],"ms":700.2721088435375}}}'),
+      oW = JSON.parse('{"sounds":{"skeletonRattle1":{"src":["/sounds/generatedSounds/mobSkeleton/skeletonRattle1.b154868fa0.ogg","/sounds/generatedSounds/mobSkeleton/skeletonRattle1.9187426696.m4a"],"ms":1088.0045351473923},"skeletonRattle2":{"src":["/sounds/generatedSounds/mobSkeleton/skeletonRattle2.15a4ef943b.ogg","/sounds/generatedSounds/mobSkeleton/skeletonRattle2.65df4ac7b1.m4a"],"ms":1499.9773242630386},"skeletonRattle3":{"src":["/sounds/generatedSounds/mobSkeleton/skeletonRattle3.5ddc9e6f19.ogg","/sounds/generatedSounds/mobSkeleton/skeletonRattle3.ad665fb332.m4a"],"ms":750},"skeletonRattle4":{"src":["/sounds/generatedSounds/mobSkeleton/skeletonRattle4.c09a2e3051.ogg","/sounds/generatedSounds/mobSkeleton/skeletonRattle4.fc3dfc857c.m4a"],"ms":650.6575963718822}}}'),
+      dW = JSON.parse('{"sounds":{"stagGrunt1":{"src":["/sounds/generatedSounds/mobStag/stagGrunt1.aef2e41cd9.ogg","/sounds/generatedSounds/mobStag/stagGrunt1.4211cd6ee0.m4a"],"ms":976.7346938775511},"stagHurt1":{"src":["/sounds/generatedSounds/mobStag/stagHurt1.d771203607.ogg","/sounds/generatedSounds/mobStag/stagHurt1.3266b47456.m4a"],"ms":500}}}'),
+      eW = JSON.parse('{"sounds":{"stalkerAttack1":{"src":["/sounds/generatedSounds/mobStalker/stalkerAttack1.216720c0af.ogg","/sounds/generatedSounds/mobStalker/stalkerAttack1.673850c1a5.m4a"],"ms":963.6281179138322},"stalkerIdle1":{"src":["/sounds/generatedSounds/mobStalker/stalkerIdle1.2058bc3324.ogg","/sounds/generatedSounds/mobStalker/stalkerIdle1.f40f241d5f.m4a"],"ms":2051.065759637188}}}'),
+      vW = JSON.parse('{"sounds":{"warperGrunt1":{"src":["/sounds/generatedSounds/mobWarper/warperGrunt1.82778846cc.ogg","/sounds/generatedSounds/mobWarper/warperGrunt1.9c849db2f2.m4a"],"ms":2883.605442176871},"warperGrunt2":{"src":["/sounds/generatedSounds/mobWarper/warperGrunt2.01a76ec20f.ogg","/sounds/generatedSounds/mobWarper/warperGrunt2.c4b4229d4d.m4a"],"ms":6405.351473922902},"warperGrunt3":{"src":["/sounds/generatedSounds/mobWarper/warperGrunt3.843383145a.ogg","/sounds/generatedSounds/mobWarper/warperGrunt3.899cd7d78a.m4a"],"ms":4806.530612244898},"warperGrunt4":{"src":["/sounds/generatedSounds/mobWarper/warperGrunt4.ed3229c164.ogg","/sounds/generatedSounds/mobWarper/warperGrunt4.a38348fb8d.m4a"],"ms":5781.768707482994},"warperGrunt5":{"src":["/sounds/generatedSounds/mobWarper/warperGrunt5.1187ef6f43.ogg","/sounds/generatedSounds/mobWarper/warperGrunt5.cf905a0e24.m4a"],"ms":4284.081632653061},"warperPhase1":{"src":["/sounds/generatedSounds/mobWarper/warperPhase1.7271f22fba.ogg","/sounds/generatedSounds/mobWarper/warperPhase1.d442a861f3.m4a"],"ms":5867.256235827665},"warperPhase2":{"src":["/sounds/generatedSounds/mobWarper/warperPhase2.39a2a243ab.ogg","/sounds/generatedSounds/mobWarper/warperPhase2.4c78ca656e.m4a"],"ms":5866.916099773242}}}'),
+      gW = JSON.parse('{"sounds":{"wraithGrunt1":{"src":["/sounds/generatedSounds/mobWraith/wraithGrunt1.bda664365f.ogg","/sounds/generatedSounds/mobWraith/wraithGrunt1.4053f52fcc.m4a"],"ms":4111.995464852607},"wraithGrunt2":{"src":["/sounds/generatedSounds/mobWraith/wraithGrunt2.f09570b03d.ogg","/sounds/generatedSounds/mobWraith/wraithGrunt2.95e7589d19.m4a"],"ms":5173.333333333333},"wraithHurt":{"src":["/sounds/generatedSounds/mobWraith/wraithHurt.d8f5806599.ogg","/sounds/generatedSounds/mobWraith/wraithHurt.6798a1c2e6.m4a"],"ms":4277.324263038548}}}'),
+      DW = JSON.parse('{"sounds":{"ZombieGrunt1":{"src":["/sounds/generatedSounds/mobZombie/ZombieGrunt1.ddb8ec17c4.ogg","/sounds/generatedSounds/mobZombie/ZombieGrunt1.ba4cdfc218.m4a"],"ms":2089.795918367347},"ZombieGrunt2":{"src":["/sounds/generatedSounds/mobZombie/ZombieGrunt2.d2d923e2bb.ogg","/sounds/generatedSounds/mobZombie/ZombieGrunt2.b7e423b403.m4a"],"ms":2351.0204081632655},"ZombieGrunt3":{"src":["/sounds/generatedSounds/mobZombie/ZombieGrunt3.6489e08781.ogg","/sounds/generatedSounds/mobZombie/ZombieGrunt3.9abbdaad0f.m4a"],"ms":1750.204081632653},"ZombieHurt1":{"src":["/sounds/generatedSounds/mobZombie/ZombieHurt1.57ce1fc126.ogg","/sounds/generatedSounds/mobZombie/ZombieHurt1.9b36a23220.m4a"],"ms":1593.4693877551022},"ZombieHurt2":{"src":["/sounds/generatedSounds/mobZombie/ZombieHurt2.768397b9e7.ogg","/sounds/generatedSounds/mobZombie/ZombieHurt2.de61f74ace.m4a"],"ms":1906.938775510204},"ZombieHurt3":{"src":["/sounds/generatedSounds/mobZombie/ZombieHurt3.b8fa303e9b.ogg","/sounds/generatedSounds/mobZombie/ZombieHurt3.904a0e4bf3.m4a"],"ms":1018.7755102040817},"ZombieHurt4":{"src":["/sounds/generatedSounds/mobZombie/ZombieHurt4.27706d19e0.ogg","/sounds/generatedSounds/mobZombie/ZombieHurt4.ce650d56e0.m4a"],"ms":1358.3673469387757}}}'),
+      VW = JSON.parse('{"sounds":{"bass":{"src":["/sounds/generatedSounds/note/bass.cd0a59eb39.ogg","/sounds/generatedSounds/note/bass.bfe9b15dae.m4a"],"ms":500},"bassattack":{"src":["/sounds/generatedSounds/note/bassattack.cd0a59eb39.ogg","/sounds/generatedSounds/note/bassattack.bfe9b15dae.m4a"],"ms":500},"bd":{"src":["/sounds/generatedSounds/note/bd.8c448d4221.ogg","/sounds/generatedSounds/note/bd.8ecde202ed.m4a"],"ms":500},"bigDrumSwish1":{"src":["/sounds/generatedSounds/note/bigDrumSwish1.93c10d9cd5.ogg","/sounds/generatedSounds/note/bigDrumSwish1.dcf1c195b1.m4a"],"ms":3892.2448979591836},"bigDrumSwish2":{"src":["/sounds/generatedSounds/note/bigDrumSwish2.b8e3a07435.ogg","/sounds/generatedSounds/note/bigDrumSwish2.66065c0113.m4a"],"ms":3056.326530612245},"bigDrumSwish3":{"src":["/sounds/generatedSounds/note/bigDrumSwish3.b1532cb065.ogg","/sounds/generatedSounds/note/bigDrumSwish3.55fc7de37a.m4a"],"ms":3578.7755102040815},"drumSwish1":{"src":["/sounds/generatedSounds/note/drumSwish1.f0c21f167b.ogg","/sounds/generatedSounds/note/drumSwish1.93c696db21.m4a"],"ms":4127.34693877551},"drumSwish2":{"src":["/sounds/generatedSounds/note/drumSwish2.f1d944fd75.ogg","/sounds/generatedSounds/note/drumSwish2.924b2992d1.m4a"],"ms":4127.34693877551},"harp_pling":{"src":["/sounds/generatedSounds/note/harp_pling.ad2985df83.ogg","/sounds/generatedSounds/note/harp_pling.62b2d0942e.m4a"],"ms":835.9183673469388},"hat":{"src":["/sounds/generatedSounds/note/hat.5a502554ba.ogg","/sounds/generatedSounds/note/hat.9554d5fd6e.m4a"],"ms":500},"levelup":{"src":["/sounds/generatedSounds/note/levelup.edab7fa090.ogg","/sounds/generatedSounds/note/levelup.55ec76327c.m4a"],"ms":4458.231292517006},"lowDrum1":{"src":["/sounds/generatedSounds/note/lowDrum1.44355817bd.ogg","/sounds/generatedSounds/note/lowDrum1.85f1ff2275.m4a"],"ms":3683.265306122449},"lowDrum2":{"src":["/sounds/generatedSounds/note/lowDrum2.77194b3a41.ogg","/sounds/generatedSounds/note/lowDrum2.f57b11841e.m4a"],"ms":3840},"lowDrum3":{"src":["/sounds/generatedSounds/note/lowDrum3.02bb81db92.ogg","/sounds/generatedSounds/note/lowDrum3.ed5abb9b81.m4a"],"ms":4205.714285714285},"snare":{"src":["/sounds/generatedSounds/note/snare.3c9c28db85.ogg","/sounds/generatedSounds/note/snare.a9bb111ffd.m4a"],"ms":500},"sonarBeep":{"src":["/sounds/generatedSounds/note/sonarBeep.0ce4b82f46.ogg","/sounds/generatedSounds/note/sonarBeep.843900d3a0.m4a"],"ms":4127.34693877551},"trumpetFlare":{"src":["/sounds/generatedSounds/note/trumpetFlare.c3e2f227e0.ogg","/sounds/generatedSounds/note/trumpetFlare.4b1e290cc6.m4a"],"ms":1683.4467120181407},"trumpetNote1":{"src":["/sounds/generatedSounds/note/trumpetNote1.f8786cf1f3.ogg","/sounds/generatedSounds/note/trumpetNote1.b4942b94c0.m4a"],"ms":779.8412698412699},"trumpetNote2":{"src":["/sounds/generatedSounds/note/trumpetNote2.8a8ce09879.ogg","/sounds/generatedSounds/note/trumpetNote2.675f8aad13.m4a"],"ms":845.6916099773243},"trumpetNote3":{"src":["/sounds/generatedSounds/note/trumpetNote3.9a9f31bd92.ogg","/sounds/generatedSounds/note/trumpetNote3.288a95f97d.m4a"],"ms":1090.7256235827665}}}'),
+      pW = JSON.parse('{"sounds":{"cameraShutter":{"src":["/sounds/generatedSounds/phoneAndMoney/cameraShutter.44fdddc6be.ogg","/sounds/generatedSounds/phoneAndMoney/cameraShutter.3bc8314829.m4a"],"ms":553.764172335601},"coinsDrop":{"src":["/sounds/generatedSounds/phoneAndMoney/coinsDrop.32d8bc4347.ogg","/sounds/generatedSounds/phoneAndMoney/coinsDrop.38536a25ac.m4a"],"ms":2106.190476190476},"jobComplete":{"src":["/sounds/generatedSounds/phoneAndMoney/jobComplete.9d4f92cb8a.ogg","/sounds/generatedSounds/phoneAndMoney/jobComplete.374b9bdcd0.m4a"],"ms":2330.090702947846},"messageReceive":{"src":["/sounds/generatedSounds/phoneAndMoney/messageReceive.72e8744c72.ogg","/sounds/generatedSounds/phoneAndMoney/messageReceive.d811bb7ab5.m4a"],"ms":600.204081632653},"phoneNotify":{"src":["/sounds/generatedSounds/phoneAndMoney/phoneNotify.03663a6565.ogg","/sounds/generatedSounds/phoneAndMoney/phoneNotify.4a13cc735b.m4a"],"ms":500},"phoneTap":{"src":["/sounds/generatedSounds/phoneAndMoney/phoneTap.90e2cf5b38.ogg","/sounds/generatedSounds/phoneAndMoney/phoneTap.db97b657c7.m4a"],"ms":500},"phoneVibrate":{"src":["/sounds/generatedSounds/phoneAndMoney/phoneVibrate.04b9222f53.ogg","/sounds/generatedSounds/phoneAndMoney/phoneVibrate.07cea724dd.m4a"],"ms":1062.7437641723357},"tillPurchase":{"src":["/sounds/generatedSounds/phoneAndMoney/tillPurchase.59e37cdf13.ogg","/sounds/generatedSounds/phoneAndMoney/tillPurchase.8a31d15949.m4a"],"ms":2754.4897959183672}}}'),
+      fW = JSON.parse('{"sounds":{"handcuffsLock":{"src":["/sounds/generatedSounds/police/handcuffsLock.6a9c1418be.ogg","/sounds/generatedSounds/police/handcuffsLock.11709b2e6a.m4a"],"ms":626.9387755102041},"radioBeep":{"src":["/sounds/generatedSounds/police/radioBeep.e6c55f9f0f.ogg","/sounds/generatedSounds/police/radioBeep.9bdab5322d.m4a"],"ms":650},"radioChatter":{"src":["/sounds/generatedSounds/police/radioChatter.9a5ac6b41f.ogg","/sounds/generatedSounds/police/radioChatter.4d66d13f55.m4a"],"ms":3372.9931972789113},"runningSteps":{"src":["/sounds/generatedSounds/police/runningSteps.b3f04a77cd.ogg","/sounds/generatedSounds/police/runningSteps.28847ec02b.m4a"],"ms":3305.555555555555},"sirenChirp":{"src":["/sounds/generatedSounds/police/sirenChirp.cc9e16308f.ogg","/sounds/generatedSounds/police/sirenChirp.b1e8e407ae.m4a"],"ms":924.1723356009071},"sirenWail":{"src":["/sounds/generatedSounds/police/sirenWail.9a59fda416.ogg","/sounds/generatedSounds/police/sirenWail.62e4fe02e1.m4a"],"ms":5195.056689342404},"sirenYelp":{"src":["/sounds/generatedSounds/police/sirenYelp.a6d72a4ba4.ogg","/sounds/generatedSounds/police/sirenYelp.a3427883f0.m4a"],"ms":5239.3650793650795},"stunZap":{"src":["/sounds/generatedSounds/police/stunZap.e219d2afac.ogg","/sounds/generatedSounds/police/stunZap.a4858eca37.m4a"],"ms":750},"whistle":{"src":["/sounds/generatedSounds/police/whistle.0e39aea1c5.ogg","/sounds/generatedSounds/police/whistle.14ce3af59e.m4a"],"ms":535.9183673469388}}}'),
+      CW = JSON.parse('{"sounds":{"beep":{"src":["/sounds/generatedSounds/randomBeep/beep.8b4efbee27.ogg","/sounds/generatedSounds/randomBeep/beep.4a58c8fda1.m4a"],"ms":2455.5102040816328}}}'),
+      XW = JSON.parse('{"sounds":{"cannonFire1":{"src":["/sounds/generatedSounds/randomCannon/cannonFire1.88e8634234.ogg","/sounds/generatedSounds/randomCannon/cannonFire1.a3713fafe1.m4a"],"ms":4880.748299319728},"cannonFire2":{"src":["/sounds/generatedSounds/randomCannon/cannonFire2.94eebe3faf.ogg","/sounds/generatedSounds/randomCannon/cannonFire2.df83c1849f.m4a"],"ms":4880.748299319728},"cannonFire3":{"src":["/sounds/generatedSounds/randomCannon/cannonFire3.a2d9c615fe.ogg","/sounds/generatedSounds/randomCannon/cannonFire3.17e0e936e7.m4a"],"ms":4880.748299319728}}}'),
+      BW = JSON.parse('{"sounds":{"cashRegister":{"src":["/sounds/generatedSounds/randomCash/cashRegister.f9689ce1d5.ogg","/sounds/generatedSounds/randomCash/cashRegister.213c46ea50.m4a"],"ms":3819.6825396825398}}}'),
+      qW = JSON.parse('{"sounds":{"exp_collect":{"src":["/sounds/generatedSounds/randomExp/exp_collect.4506a014e6.ogg","/sounds/generatedSounds/randomExp/exp_collect.15ad18b9b0.m4a"],"ms":1009.2063492063493},"exp_levelup":{"src":["/sounds/generatedSounds/randomExp/exp_levelup.adf39e0df1.ogg","/sounds/generatedSounds/randomExp/exp_levelup.ef96d23bf9.m4a"],"ms":1469.863945578231}}}'),
+      RW = JSON.parse('{"sounds":{"fallsmall":{"src":["/sounds/generatedSounds/randomFallsmall/fallsmall.8787edef5f.ogg","/sounds/generatedSounds/randomFallsmall/fallsmall.54f1f1de4e.m4a"],"ms":1764.716553287982}}}'),
+      GW = JSON.parse('{"sounds":{"fireBurn":{"src":["/sounds/generatedSounds/randomFire/fireBurn.67cfb4511c.ogg","/sounds/generatedSounds/randomFire/fireBurn.7d68bf2c46.m4a"],"ms":2827.3922902494332}}}'),
+      IW = JSON.parse('{"sounds":{"firecracker1":{"src":["/sounds/generatedSounds/randomFirecracker/firecracker1.302dd94dda.ogg","/sounds/generatedSounds/randomFirecracker/firecracker1.d44ae2819a.m4a"],"ms":5302.857142857142},"firecracker2":{"src":["/sounds/generatedSounds/randomFirecracker/firecracker2.8570b879af.ogg","/sounds/generatedSounds/randomFirecracker/firecracker2.d603349d84.m4a"],"ms":5250.6122448979595},"firecracker3":{"src":["/sounds/generatedSounds/randomFirecracker/firecracker3.22029e7583.ogg","/sounds/generatedSounds/randomFirecracker/firecracker3.89bdbcdbe8.m4a"],"ms":5198.367346938776},"firecracker4":{"src":["/sounds/generatedSounds/randomFirecracker/firecracker4.c034d62520.ogg","/sounds/generatedSounds/randomFirecracker/firecracker4.237f8e8c5e.m4a"],"ms":5877.551020408164}}}'),
+      aW = JSON.parse('{"sounds":{"bow":{"src":["/sounds/generatedSounds/randomItems/bow.9010dc5b17.ogg","/sounds/generatedSounds/randomItems/bow.9bdeca57e0.m4a"],"ms":500},"bucketEmpty1":{"src":["/sounds/generatedSounds/randomItems/bucketEmpty1.07356ce57e.ogg","/sounds/generatedSounds/randomItems/bucketEmpty1.416e660058.m4a"],"ms":1114.5578231292516},"bucketEmpty2":{"src":["/sounds/generatedSounds/randomItems/bucketEmpty2.dea047f1e7.ogg","/sounds/generatedSounds/randomItems/bucketEmpty2.32d6c39cdf.m4a"],"ms":1114.5578231292516},"bucketEmpty3":{"src":["/sounds/generatedSounds/randomItems/bucketEmpty3.0eda797cd5.ogg","/sounds/generatedSounds/randomItems/bucketEmpty3.49cc5e3249.m4a"],"ms":1114.5578231292516},"bucketFill1":{"src":["/sounds/generatedSounds/randomItems/bucketFill1.bd0ce0e0f3.ogg","/sounds/generatedSounds/randomItems/bucketFill1.b9392a9c4f.m4a"],"ms":1021.6780045351475},"bucketFill2":{"src":["/sounds/generatedSounds/randomItems/bucketFill2.8c71d12361.ogg","/sounds/generatedSounds/randomItems/bucketFill2.2bc36a6f38.m4a"],"ms":1021.6780045351475},"bucketFill3":{"src":["/sounds/generatedSounds/randomItems/bucketFill3.076ba65edc.ogg","/sounds/generatedSounds/randomItems/bucketFill3.fc0a424ddc.m4a"],"ms":1021.6780045351475},"burp":{"src":["/sounds/generatedSounds/randomItems/burp.52624213f1.ogg","/sounds/generatedSounds/randomItems/burp.b90a452252.m4a"],"ms":500},"chestClose":{"src":["/sounds/generatedSounds/randomItems/chestClose.36da871a12.ogg","/sounds/generatedSounds/randomItems/chestClose.66cfe65762.m4a"],"ms":557.2789115646258},"chestOpen":{"src":["/sounds/generatedSounds/randomItems/chestOpen.333f243366.ogg","/sounds/generatedSounds/randomItems/chestOpen.913c05abd1.m4a"],"ms":743.0385487528345},"doorClose":{"src":["/sounds/generatedSounds/randomItems/doorClose.5efec53ca2.ogg","/sounds/generatedSounds/randomItems/doorClose.b524ef5ab8.m4a"],"ms":835.9183673469388},"doorClose2":{"src":["/sounds/generatedSounds/randomItems/doorClose2.3c31aa4eae.ogg","/sounds/generatedSounds/randomItems/doorClose2.c12e59ae3e.m4a"],"ms":835.9183673469388},"doorOpen-bloxd1":{"src":["/sounds/generatedSounds/randomItems/doorOpen-bloxd1.4f98651802.ogg","/sounds/generatedSounds/randomItems/doorOpen-bloxd1.78731020c7.m4a"],"ms":743.0385487528345},"doorOpen-bloxd2":{"src":["/sounds/generatedSounds/randomItems/doorOpen-bloxd2.66c7ba7e9e.ogg","/sounds/generatedSounds/randomItems/doorOpen-bloxd2.373f4d13c7.m4a"],"ms":835.9183673469388},"drink":{"src":["/sounds/generatedSounds/randomItems/drink.86ebaddeaf.ogg","/sounds/generatedSounds/randomItems/drink.732cb4d7dd.m4a"],"ms":500},"eat1":{"src":["/sounds/generatedSounds/randomItems/eat1.35964227e7.ogg","/sounds/generatedSounds/randomItems/eat1.c5530732d5.m4a"],"ms":500},"equip_leather1":{"src":["/sounds/generatedSounds/randomItems/equip_leather1.56b27aca41.ogg","/sounds/generatedSounds/randomItems/equip_leather1.5a83e17c62.m4a"],"ms":928.7981859410431},"hoeTill1":{"src":["/sounds/generatedSounds/randomItems/hoeTill1.c19aefeeac.ogg","/sounds/generatedSounds/randomItems/hoeTill1.2948a3527a.m4a"],"ms":1114.5578231292516},"hoeTill2":{"src":["/sounds/generatedSounds/randomItems/hoeTill2.c185150bdd.ogg","/sounds/generatedSounds/randomItems/hoeTill2.84c3cdff1a.m4a"],"ms":557.2789115646258},"hoeTill3":{"src":["/sounds/generatedSounds/randomItems/hoeTill3.da579e77ae.ogg","/sounds/generatedSounds/randomItems/hoeTill3.4433ccf735.m4a"],"ms":928.7981859410431},"hoeTill4":{"src":["/sounds/generatedSounds/randomItems/hoeTill4.0162c5df3c.ogg","/sounds/generatedSounds/randomItems/hoeTill4.da01e6f979.m4a"],"ms":928.7981859410431},"successfulBowHit":{"src":["/sounds/generatedSounds/randomItems/successfulBowHit.d6b15457dc.ogg","/sounds/generatedSounds/randomItems/successfulBowHit.d871f1c331.m4a"],"ms":500},"trapdoorOpen":{"src":["/sounds/generatedSounds/randomItems/trapdoorOpen.1a677289ee.ogg","/sounds/generatedSounds/randomItems/trapdoorOpen.24592e0ad6.m4a"],"ms":835.9183673469388}}}'),
+      rW = JSON.parse('{"sounds":{"laugh1":{"src":["/sounds/generatedSounds/randomLaugh/laugh1.b557cef931.ogg","/sounds/generatedSounds/randomLaugh/laugh1.013c31bbc9.m4a"],"ms":898.3219954648525},"laugh2":{"src":["/sounds/generatedSounds/randomLaugh/laugh2.92185d3c4c.ogg","/sounds/generatedSounds/randomLaugh/laugh2.1845db7423.m4a"],"ms":1919.092970521542},"laugh3":{"src":["/sounds/generatedSounds/randomLaugh/laugh3.2fefb9e8b0.ogg","/sounds/generatedSounds/randomLaugh/laugh3.67266afeb7.m4a"],"ms":1668.2766439909299}}}'),
+      zW = JSON.parse('{"sounds":{"magicAccent1":{"src":["/sounds/generatedSounds/randomMagic/magicAccent1.fa16e5550e.ogg","/sounds/generatedSounds/randomMagic/magicAccent1.37920fc9a1.m4a"],"ms":5250.6122448979595},"magicAccent2":{"src":["/sounds/generatedSounds/randomMagic/magicAccent2.a40d6e8242.ogg","/sounds/generatedSounds/randomMagic/magicAccent2.0ea9695948.m4a"],"ms":5041.632653061224},"magicAccent3":{"src":["/sounds/generatedSounds/randomMagic/magicAccent3.6366f4a942.ogg","/sounds/generatedSounds/randomMagic/magicAccent3.ae99ea7d26.m4a"],"ms":4963.265306122449},"magicAccent4":{"src":["/sounds/generatedSounds/randomMagic/magicAccent4.bb99d3447c.ogg","/sounds/generatedSounds/randomMagic/magicAccent4.78218e95ce.m4a"],"ms":4728.163265306122}}}'),
+      FW = JSON.parse('{"sounds":{"splash1":{"src":["/sounds/generatedSounds/randomSplash/splash1.a1b530ff00.ogg","/sounds/generatedSounds/randomSplash/splash1.7c75d73a64.m4a"],"ms":1114.5578231292516}}}'),
+      QW = JSON.parse('{"sounds":{"rpgBeltCloth1":{"src":["/sounds/generatedSounds/rpg/rpgBeltCloth1.454a250f9c.ogg","/sounds/generatedSounds/rpg/rpgBeltCloth1.73bb40ec4f.m4a"],"ms":722.5396825396826},"rpgBeltCloth2":{"src":["/sounds/generatedSounds/rpg/rpgBeltCloth2.dc55032a2f.ogg","/sounds/generatedSounds/rpg/rpgBeltCloth2.71e6a893f5.m4a"],"ms":753.3106575963718},"rpgBeltHandle1":{"src":["/sounds/generatedSounds/rpg/rpgBeltHandle1.0c57de087a.ogg","/sounds/generatedSounds/rpg/rpgBeltHandle1.7058298fef.m4a"],"ms":500},"rpgBeltHandle2":{"src":["/sounds/generatedSounds/rpg/rpgBeltHandle2.5f9207e376.ogg","/sounds/generatedSounds/rpg/rpgBeltHandle2.b43c7bafd2.m4a"],"ms":500},"rpgBookClose":{"src":["/sounds/generatedSounds/rpg/rpgBookClose.0e6a9810b4.ogg","/sounds/generatedSounds/rpg/rpgBookClose.1aff25cf0d.m4a"],"ms":500},"rpgBookFlip1":{"src":["/sounds/generatedSounds/rpg/rpgBookFlip1.546f9eaf3f.ogg","/sounds/generatedSounds/rpg/rpgBookFlip1.dbed472ef8.m4a"],"ms":768.6621315192745},"rpgBookFlip2":{"src":["/sounds/generatedSounds/rpg/rpgBookFlip2.54ea6bc574.ogg","/sounds/generatedSounds/rpg/rpgBookFlip2.de48cd4fc7.m4a"],"ms":500},"rpgBookFlip3":{"src":["/sounds/generatedSounds/rpg/rpgBookFlip3.ea5b885f07.ogg","/sounds/generatedSounds/rpg/rpgBookFlip3.68917d260a.m4a"],"ms":500},"rpgBookOpen":{"src":["/sounds/generatedSounds/rpg/rpgBookOpen.c9d3c76b3e.ogg","/sounds/generatedSounds/rpg/rpgBookOpen.28f355b139.m4a"],"ms":500},"rpgBookPlace1":{"src":["/sounds/generatedSounds/rpg/rpgBookPlace1.53eee094de.ogg","/sounds/generatedSounds/rpg/rpgBookPlace1.147c3c4eb9.m4a"],"ms":500},"rpgBookPlace2":{"src":["/sounds/generatedSounds/rpg/rpgBookPlace2.3bfc13c868.ogg","/sounds/generatedSounds/rpg/rpgBookPlace2.cbdd8aa748.m4a"],"ms":500},"rpgBookPlace3":{"src":["/sounds/generatedSounds/rpg/rpgBookPlace3.44153d2f03.ogg","/sounds/generatedSounds/rpg/rpgBookPlace3.359d44cb36.m4a"],"ms":500},"rpgChop":{"src":["/sounds/generatedSounds/rpg/rpgChop.e601a56496.ogg","/sounds/generatedSounds/rpg/rpgChop.0332e71c44.m4a"],"ms":500},"rpgCloth1":{"src":["/sounds/generatedSounds/rpg/rpgCloth1.ef84c8d49b.ogg","/sounds/generatedSounds/rpg/rpgCloth1.8224af8608.m4a"],"ms":661.0430839002267},"rpgCloth2":{"src":["/sounds/generatedSounds/rpg/rpgCloth2.d00eb54e9e.ogg","/sounds/generatedSounds/rpg/rpgCloth2.52000ecd4b.m4a"],"ms":500},"rpgCloth3":{"src":["/sounds/generatedSounds/rpg/rpgCloth3.c3de65fa59.ogg","/sounds/generatedSounds/rpg/rpgCloth3.884482449b.m4a"],"ms":500},"rpgCloth4":{"src":["/sounds/generatedSounds/rpg/rpgCloth4.a8be288d03.ogg","/sounds/generatedSounds/rpg/rpgCloth4.36563899b2.m4a"],"ms":500},"rpgCreak1":{"src":["/sounds/generatedSounds/rpg/rpgCreak1.1c1db358b9.ogg","/sounds/generatedSounds/rpg/rpgCreak1.62cc160f7b.m4a"],"ms":661.0430839002267},"rpgCreak2":{"src":["/sounds/generatedSounds/rpg/rpgCreak2.921259012f.ogg","/sounds/generatedSounds/rpg/rpgCreak2.12f849da05.m4a"],"ms":830.1587301587302},"rpgCreak3":{"src":["/sounds/generatedSounds/rpg/rpgCreak3.6c94d9f889.ogg","/sounds/generatedSounds/rpg/rpgCreak3.a7da76d1c0.m4a"],"ms":500},"rpgDoorClose1":{"src":["/sounds/generatedSounds/rpg/rpgDoorClose1.e9e18b0dbb.ogg","/sounds/generatedSounds/rpg/rpgDoorClose1.92900e7ba1.m4a"],"ms":675.0566893424036},"rpgDoorClose2":{"src":["/sounds/generatedSounds/rpg/rpgDoorClose2.c82845deec.ogg","/sounds/generatedSounds/rpg/rpgDoorClose2.9a90f48721.m4a"],"ms":612.4943310657596},"rpgDoorClose3":{"src":["/sounds/generatedSounds/rpg/rpgDoorClose3.049610ff78.ogg","/sounds/generatedSounds/rpg/rpgDoorClose3.e8a634d73d.m4a"],"ms":713.9455782312925},"rpgDoorClose4":{"src":["/sounds/generatedSounds/rpg/rpgDoorClose4.06d86c2421.ogg","/sounds/generatedSounds/rpg/rpgDoorClose4.f7bb6c88d9.m4a"],"ms":603.3786848072561},"rpgDoorOpen1":{"src":["/sounds/generatedSounds/rpg/rpgDoorOpen1.ac73170ca7.ogg","/sounds/generatedSounds/rpg/rpgDoorOpen1.dfc30b92b4.m4a"],"ms":918.9795918367347},"rpgDoorOpen2":{"src":["/sounds/generatedSounds/rpg/rpgDoorOpen2.502a7b3df7.ogg","/sounds/generatedSounds/rpg/rpgDoorOpen2.061d6549f9.m4a"],"ms":1413.3333333333333},"rpgDrawKnife1":{"src":["/sounds/generatedSounds/rpg/rpgDrawKnife1.e0ed3462e6.ogg","/sounds/generatedSounds/rpg/rpgDrawKnife1.1d2ba8b592.m4a"],"ms":500},"rpgDrawKnife2":{"src":["/sounds/generatedSounds/rpg/rpgDrawKnife2.9dbfa60936.ogg","/sounds/generatedSounds/rpg/rpgDrawKnife2.6e93a44b04.m4a"],"ms":500},"rpgDrawKnife3":{"src":["/sounds/generatedSounds/rpg/rpgDrawKnife3.338886a3d1.ogg","/sounds/generatedSounds/rpg/rpgDrawKnife3.39de280392.m4a"],"ms":500},"rpgDropLeather":{"src":["/sounds/generatedSounds/rpg/rpgDropLeather.3d167d8542.ogg","/sounds/generatedSounds/rpg/rpgDropLeather.e94fd8de1d.m4a"],"ms":500},"rpgFootstep00":{"src":["/sounds/generatedSounds/rpg/rpgFootstep00.426c5c0aec.ogg","/sounds/generatedSounds/rpg/rpgFootstep00.fa64e37d7b.m4a"],"ms":500},"rpgFootstep01":{"src":["/sounds/generatedSounds/rpg/rpgFootstep01.6414ece427.ogg","/sounds/generatedSounds/rpg/rpgFootstep01.7e7746e8d7.m4a"],"ms":500},"rpgFootstep02":{"src":["/sounds/generatedSounds/rpg/rpgFootstep02.4da5e3c41f.ogg","/sounds/generatedSounds/rpg/rpgFootstep02.706f1e04ce.m4a"],"ms":500},"rpgFootstep03":{"src":["/sounds/generatedSounds/rpg/rpgFootstep03.1ab5ea234e.ogg","/sounds/generatedSounds/rpg/rpgFootstep03.6579fed287.m4a"],"ms":500},"rpgFootstep04":{"src":["/sounds/generatedSounds/rpg/rpgFootstep04.41d0f09633.ogg","/sounds/generatedSounds/rpg/rpgFootstep04.4207b56522.m4a"],"ms":500},"rpgFootstep05":{"src":["/sounds/generatedSounds/rpg/rpgFootstep05.88a4f5909f.ogg","/sounds/generatedSounds/rpg/rpgFootstep05.0a6fb3718b.m4a"],"ms":500},"rpgFootstep06":{"src":["/sounds/generatedSounds/rpg/rpgFootstep06.672fd9523a.ogg","/sounds/generatedSounds/rpg/rpgFootstep06.27d421bcde.m4a"],"ms":500},"rpgFootstep07":{"src":["/sounds/generatedSounds/rpg/rpgFootstep07.7043e24d40.ogg","/sounds/generatedSounds/rpg/rpgFootstep07.32ab765a7f.m4a"],"ms":500},"rpgFootstep08":{"src":["/sounds/generatedSounds/rpg/rpgFootstep08.51ff43142c.ogg","/sounds/generatedSounds/rpg/rpgFootstep08.951a7dd176.m4a"],"ms":500},"rpgFootstep09":{"src":["/sounds/generatedSounds/rpg/rpgFootstep09.0356f24743.ogg","/sounds/generatedSounds/rpg/rpgFootstep09.9383e135ab.m4a"],"ms":500},"rpgHandleCoins1":{"src":["/sounds/generatedSounds/rpg/rpgHandleCoins1.7d6d4b52e8.ogg","/sounds/generatedSounds/rpg/rpgHandleCoins1.88fce3cc84.m4a"],"ms":845.5328798185941},"rpgHandleCoins2":{"src":["/sounds/generatedSounds/rpg/rpgHandleCoins2.b89bbef7f8.ogg","/sounds/generatedSounds/rpg/rpgHandleCoins2.0d2e5aca00.m4a"],"ms":500},"rpgHandleSmallLeather1":{"src":["/sounds/generatedSounds/rpg/rpgHandleSmallLeather1.433e02ae77.ogg","/sounds/generatedSounds/rpg/rpgHandleSmallLeather1.153ac77ae5.m4a"],"ms":500},"rpgHandleSmallLeather2":{"src":["/sounds/generatedSounds/rpg/rpgHandleSmallLeather2.b6dbd75dae.ogg","/sounds/generatedSounds/rpg/rpgHandleSmallLeather2.39c2fbf824.m4a"],"ms":500},"rpgKnifeSlice1":{"src":["/sounds/generatedSounds/rpg/rpgKnifeSlice1.84c2758fbe.ogg","/sounds/generatedSounds/rpg/rpgKnifeSlice1.e8a6e49c09.m4a"],"ms":599.546485260771},"rpgKnifeSlice2":{"src":["/sounds/generatedSounds/rpg/rpgKnifeSlice2.dee866edf1.ogg","/sounds/generatedSounds/rpg/rpgKnifeSlice2.0e007e6cc7.m4a"],"ms":568.798185941043},"rpgMetalClick":{"src":["/sounds/generatedSounds/rpg/rpgMetalClick.372edc3207.ogg","/sounds/generatedSounds/rpg/rpgMetalClick.4c7d976562.m4a"],"ms":500},"rpgMetalLatch":{"src":["/sounds/generatedSounds/rpg/rpgMetalLatch.437cf13439.ogg","/sounds/generatedSounds/rpg/rpgMetalLatch.f40bb0b9c2.m4a"],"ms":500},"rpgMetalPot1":{"src":["/sounds/generatedSounds/rpg/rpgMetalPot1.a2bd032483.ogg","/sounds/generatedSounds/rpg/rpgMetalPot1.150da5e391.m4a"],"ms":1460.4761904761906},"rpgMetalPot2":{"src":["/sounds/generatedSounds/rpg/rpgMetalPot2.6bb054872c.ogg","/sounds/generatedSounds/rpg/rpgMetalPot2.3b8863d182.m4a"],"ms":937.7777777777778},"rpgMetalPot3":{"src":["/sounds/generatedSounds/rpg/rpgMetalPot3.bfd02327c8.ogg","/sounds/generatedSounds/rpg/rpgMetalPot3.5a13102342.m4a"],"ms":907.0068027210884}}}'),
+      Wi = JSON.parse('{"sounds":{"hit1":{"src":["/sounds/generatedSounds/step/hit1.e093cf3228.ogg","/sounds/generatedSounds/step/hit1.ff45f4337a.m4a"],"ms":557.2789115646258},"hit2":{"src":["/sounds/generatedSounds/step/hit2.38daa3ed9e.ogg","/sounds/generatedSounds/step/hit2.6812b28b5f.m4a"],"ms":650.1587301587301},"hit3":{"src":["/sounds/generatedSounds/step/hit3.dc338197e0.ogg","/sounds/generatedSounds/step/hit3.6c1b9b1b7a.m4a"],"ms":650.1587301587301},"step_cloth1":{"src":["/sounds/generatedSounds/step/step_cloth1.45ed0e7739.ogg","/sounds/generatedSounds/step/step_cloth1.2f2f556abb.m4a"],"ms":1671.8367346938776},"step_cloth2":{"src":["/sounds/generatedSounds/step/step_cloth2.efec4b9ec9.ogg","/sounds/generatedSounds/step/step_cloth2.e5eb9b9e70.m4a"],"ms":1671.8367346938776},"step_cloth3":{"src":["/sounds/generatedSounds/step/step_cloth3.9ab6850d89.ogg","/sounds/generatedSounds/step/step_cloth3.6dc728b5fa.m4a"],"ms":1671.8367346938776},"step_cloth4":{"src":["/sounds/generatedSounds/step/step_cloth4.bd8bd13436.ogg","/sounds/generatedSounds/step/step_cloth4.de2bf82954.m4a"],"ms":1671.8367346938776},"step_grass1":{"src":["/sounds/generatedSounds/step/step_grass1.eb721946a4.ogg","/sounds/generatedSounds/step/step_grass1.f32a3134ed.m4a"],"ms":500},"step_grass2":{"src":["/sounds/generatedSounds/step/step_grass2.714988e6e1.ogg","/sounds/generatedSounds/step/step_grass2.f2b5ef1e8f.m4a"],"ms":500},"step_grass3":{"src":["/sounds/generatedSounds/step/step_grass3.088119534d.ogg","/sounds/generatedSounds/step/step_grass3.b578743e2e.m4a"],"ms":500},"step_grass4":{"src":["/sounds/generatedSounds/step/step_grass4.01384e83f2.ogg","/sounds/generatedSounds/step/step_grass4.a54b81092d.m4a"],"ms":500},"step_grass5":{"src":["/sounds/generatedSounds/step/step_grass5.db0c641196.ogg","/sounds/generatedSounds/step/step_grass5.b3651323a6.m4a"],"ms":1483.1746031746031},"step_gravel1":{"src":["/sounds/generatedSounds/step/step_gravel1.d566283b8a.ogg","/sounds/generatedSounds/step/step_gravel1.e0cbb3d86d.m4a"],"ms":1486.077097505669},"step_gravel2":{"src":["/sounds/generatedSounds/step/step_gravel2.50fd45c9ea.ogg","/sounds/generatedSounds/step/step_gravel2.81f169ab6e.m4a"],"ms":1483.1746031746031},"step_gravel3":{"src":["/sounds/generatedSounds/step/step_gravel3.cd5bc96cc6.ogg","/sounds/generatedSounds/step/step_gravel3.62f1774ad9.m4a"],"ms":1486.077097505669},"step_gravel4":{"src":["/sounds/generatedSounds/step/step_gravel4.1353c716cb.ogg","/sounds/generatedSounds/step/step_gravel4.fc74a17af6.m4a"],"ms":1486.077097505669},"step_sand2":{"src":["/sounds/generatedSounds/step/step_sand2.8bee0fd56e.ogg","/sounds/generatedSounds/step/step_sand2.6833413770.m4a"],"ms":1486.077097505669},"step_sand3":{"src":["/sounds/generatedSounds/step/step_sand3.f13b1a7b33.ogg","/sounds/generatedSounds/step/step_sand3.3ef858e02d.m4a"],"ms":1486.077097505669},"step_sand4":{"src":["/sounds/generatedSounds/step/step_sand4.14ad87d362.ogg","/sounds/generatedSounds/step/step_sand4.03dd811553.m4a"],"ms":1486.077097505669},"step_sand5":{"src":["/sounds/generatedSounds/step/step_sand5.075b766fb9.ogg","/sounds/generatedSounds/step/step_sand5.ae688045a8.m4a"],"ms":1486.077097505669},"step_snow1":{"src":["/sounds/generatedSounds/step/step_snow1.567a17d044.ogg","/sounds/generatedSounds/step/step_snow1.38aaf79cee.m4a"],"ms":500},"step_snow2":{"src":["/sounds/generatedSounds/step/step_snow2.d5633a8a75.ogg","/sounds/generatedSounds/step/step_snow2.6b4b76df76.m4a"],"ms":500},"step_snow3":{"src":["/sounds/generatedSounds/step/step_snow3.7cac973845.ogg","/sounds/generatedSounds/step/step_snow3.c9b652f79b.m4a"],"ms":500},"step_snow4":{"src":["/sounds/generatedSounds/step/step_snow4.3a6a2f5937.ogg","/sounds/generatedSounds/step/step_snow4.8a48fcefb9.m4a"],"ms":500},"step_stone1":{"src":["/sounds/generatedSounds/step/step_stone1.ee2c11a48b.ogg","/sounds/generatedSounds/step/step_stone1.2a460e3bc9.m4a"],"ms":1486.077097505669},"step_stone2":{"src":["/sounds/generatedSounds/step/step_stone2.edbd380f73.ogg","/sounds/generatedSounds/step/step_stone2.43c47dc116.m4a"],"ms":1486.077097505669},"step_stone3":{"src":["/sounds/generatedSounds/step/step_stone3.45b33078dc.ogg","/sounds/generatedSounds/step/step_stone3.048d948b3f.m4a"],"ms":1486.077097505669},"step_stone4":{"src":["/sounds/generatedSounds/step/step_stone4.72321eeab6.ogg","/sounds/generatedSounds/step/step_stone4.f28b4112fa.m4a"],"ms":1486.077097505669},"step_stone5":{"src":["/sounds/generatedSounds/step/step_stone5.92674ed034.ogg","/sounds/generatedSounds/step/step_stone5.2bdd7ef337.m4a"],"ms":1486.077097505669},"step_stone6":{"src":["/sounds/generatedSounds/step/step_stone6.8d58b34230.ogg","/sounds/generatedSounds/step/step_stone6.fb4041e4d4.m4a"],"ms":1486.077097505669},"step_wood1":{"src":["/sounds/generatedSounds/step/step_wood1.05093eaab9.ogg","/sounds/generatedSounds/step/step_wood1.0d504a5579.m4a"],"ms":743.0385487528345},"step_wood2":{"src":["/sounds/generatedSounds/step/step_wood2.cf55f6017f.ogg","/sounds/generatedSounds/step/step_wood2.47ea4aa05f.m4a"],"ms":743.0385487528345},"step_wood3":{"src":["/sounds/generatedSounds/step/step_wood3.024a6c3778.ogg","/sounds/generatedSounds/step/step_wood3.1cfbdfae68.m4a"],"ms":743.0385487528345},"step_wood4":{"src":["/sounds/generatedSounds/step/step_wood4.7a87fd7836.ogg","/sounds/generatedSounds/step/step_wood4.8dcfbd9507.m4a"],"ms":743.0385487528345},"step_wood5":{"src":["/sounds/generatedSounds/step/step_wood5.d513a68d41.ogg","/sounds/generatedSounds/step/step_wood5.437fa647ad.m4a"],"ms":743.0385487528345},"step_wood6":{"src":["/sounds/generatedSounds/step/step_wood6.ef9eed4b5e.ogg","/sounds/generatedSounds/step/step_wood6.c6683a5128.m4a"],"ms":743.0385487528345},"sweep6":{"src":["/sounds/generatedSounds/step/sweep6.0bebd4c1ac.ogg","/sounds/generatedSounds/step/sweep6.4232d78cd1.m4a"],"ms":1114.5578231292516}}}'),
+      ii = JSON.parse('{"sounds":{"rocketEngineLoop":{"src":["/sounds/generatedSounds/survivalFactory/rocketEngineLoop.abee0d19cb.ogg","/sounds/generatedSounds/survivalFactory/rocketEngineLoop.8ebb281311.m4a"],"ms":13167.369614512472}}}'),
+      Oi = JSON.parse('{"sounds":{"crowdMurmur":{"src":["/sounds/generatedSounds/town/crowdMurmur.495357485f.ogg","/sounds/generatedSounds/town/crowdMurmur.e41069480b.m4a"],"ms":15708.140589569162},"doorbell":{"src":["/sounds/generatedSounds/town/doorbell.5407c1978a.ogg","/sounds/generatedSounds/town/doorbell.e9b037aaa0.m4a"],"ms":3017.4603174603176},"gateCreak":{"src":["/sounds/generatedSounds/town/gateCreak.6208708efa.ogg","/sounds/generatedSounds/town/gateCreak.a68a23c420.m4a"],"ms":3720.9977324263036},"keysJingle":{"src":["/sounds/generatedSounds/town/keysJingle.6d8f119c6e.ogg","/sounds/generatedSounds/town/keysJingle.9c288516ad.m4a"],"ms":2400},"kidsPlaying":{"src":["/sounds/generatedSounds/town/kidsPlaying.8d3e53bf32.ogg","/sounds/generatedSounds/town/kidsPlaying.4527a27cb2.m4a"],"ms":16534.67120181406},"parkBirds":{"src":["/sounds/generatedSounds/town/parkBirds.b97a9ae1ca.ogg","/sounds/generatedSounds/town/parkBirds.d8a307b456.m4a"],"ms":13663.106575963719},"shopDoorbell":{"src":["/sounds/generatedSounds/town/shopDoorbell.6999f6ba8c.ogg","/sounds/generatedSounds/town/shopDoorbell.3f4de5b599.m4a"],"ms":925.0566893424036}}}');
+    var mi = OW(1185);
+    const Ei = new Set(["mob", "random"]),
+      Ni = {
+        ambient: mW,
+        cars: EW,
+        crowd: NW,
+        customGame_horror: PW,
+        dig: LW,
+        fire: cW,
+        fishing: wW,
+        gameStart: tW,
+        gunMisc: ZW,
+        gunPistol: xW,
+        gunRifle: lW,
+        gunSemiAutomatic: AW,
+        gunShotgun: bW,
+        gunSubmachineGun: jW,
+        mobBear: UW,
+        mobCat: kW,
+        mobCow: sW,
+        mobCrone: MW,
+        mobDeer: KW,
+        mobDog: SW,
+        mobFennec: YW,
+        mobGolem: yW,
+        mobGorilla: TW,
+        mobHorse: JW,
+        mobKnight: hW,
+        mobPig: HW,
+        mobReaver: nW,
+        mobSheep: uW,
+        mobSkeleton: oW,
+        mobStag: dW,
+        mobStalker: eW,
+        mobWarper: vW,
+        mobWraith: gW,
+        mobZombie: DW,
+        note: VW,
+        phoneAndMoney: pW,
+        police: fW,
+        randomBeep: CW,
+        randomCannon: XW,
+        randomCash: BW,
+        randomExp: qW,
+        randomFallsmall: RW,
+        randomFire: GW,
+        randomFirecracker: IW,
+        randomItems: aW,
+        randomLaugh: rW,
+        randomMagic: zW,
+        randomSplash: FW,
+        rpg: QW,
+        step: Wi,
+        survivalFactory: ii,
+        town: Oi
       },
-      Ue = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: 2.5
-        },
-        hitBoxDimensions: {
-          width: 1.8,
-          height: 2.6
-        },
-        eyeHeight: 2.3,
-        rideHeight: 2.3,
-        XF: .5,
-        Rye: !1
-      },
-      Fe = {
-        physicsBodyDimensions: {
-          width: ye.g.KX,
-          height: ye.g.UX
-        },
-        hitBoxDimensions: {
-          width: ye.g.KX + .4,
-          height: ye.g.UX + .6
-        },
-        eyeHeight: ye.g.UX * ye.g.playerEyeToHeightRatio,
-        rideHeight: ye.g.UX - .3,
-        XF: .5,
-        Rye: !1
-      },
-      Je = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: .95
-        },
-        hitBoxDimensions: {
-          width: 1.6,
-          height: 1.1
-        },
-        eyeHeight: .9,
-        rideHeight: .5,
-        XF: .5,
-        Rye: !1
-      },
-      oe = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: 1.8
-        },
-        hitBoxDimensions: {
-          width: 1.7,
-          height: 1.9
-        },
-        eyeHeight: 1.3,
-        rideHeight: 1.3,
-        XF: .5,
-        Rye: !1
-      },
-      Re = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: 1.9
-        },
-        hitBoxDimensions: {
-          width: 1.5,
-          height: 2.1
-        },
-        eyeHeight: 1.9,
-        rideHeight: 1,
-        XF: .5,
-        Rye: !1
-      },
-      ke = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: 1.9
-        },
-        hitBoxDimensions: {
-          width: 1.5,
-          height: 2.4
-        },
-        eyeHeight: 2,
-        rideHeight: 1.8,
-        XF: .5,
-        Rye: !1
-      },
-      qe = {
-        Player: {
-          defaultName: "Player",
-          physicsBodyDimensions: {
-            width: ye.g.KX,
-            height: ye.g.UX
-          },
-          hitBoxDimensions: {
-            width: ye.g.KX + .4,
-            height: ye.g.UX + .6
-          },
-          eyeHeight: ye.g.UX * ye.g.playerEyeToHeightRatio,
-          rideHeight: ye.g.UX - .1,
-          XF: be.e.XF,
-          Rye: !0
-        },
-        Pig: {
-          poseNameRise: {
-            sitting: 1.4
-          },
-          physicsBodyDimensions: {
-            width: .5,
-            height: .8
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 1.2
-          },
-          eyeHeight: .8,
-          rideHeight: .5,
-          XF: .5,
-          Rye: !1
-        },
-        Cow: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.1
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 1.4
-          },
-          eyeHeight: 1.2,
-          rideHeight: 1,
-          XF: .5,
-          Rye: !1
-        },
-        Sheep: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.1
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 1.3
-          },
-          eyeHeight: 1.2,
-          rideHeight: .8,
-          XF: .5,
-          Rye: !1
-        },
-        Horse: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.9
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 2.1
-          },
-          eyeHeight: 1.9,
-          rideHeight: .9,
-          XF: .5,
-          Rye: !1
-        },
-        Camel: {
-          modelScale: Me,
-          physicsBodyDimensions: {
-            width: .6,
-            height: 2.52
-          },
-          hitBoxDimensions: {
-            width: 1.92,
-            height: 2.76
-          },
-          eyeHeight: 2.52,
-          rideHeight: 1.7999999999999998,
-          XF: .5,
-          Rye: !1
-        },
-        Slime: {
-          physicsBodyDimensions: {
-            width: .6,
-            height: .8
-          },
-          hitBoxDimensions: {
-            width: 1,
-            height: .9
-          },
-          eyeHeight: .5,
-          rideHeight: .5,
-          XF: .5,
-          Rye: !1
-        },
-        "Cave Golem": Ke,
-        "Draugr Zombie": {
-          ...Fe,
-          defaultPose: "zombie"
-        },
-        "Draugr Skeleton": Fe,
-        "Frost Golem": Ke,
-        "Frost Zombie": {
-          ...Fe,
-          defaultPose: "zombie"
-        },
-        "Frost Skeleton": Fe,
-        "Draugr Knight": {
-          physicsBodyDimensions: {
-            width: ye.g.KX,
-            height: ye.g.UX
-          },
-          hitBoxDimensions: {
-            width: ye.g.KX + .4,
-            height: 2.8
-          },
-          eyeHeight: 1.9,
-          rideHeight: 1.8,
-          XF: .5,
-          Rye: !1
-        },
-        Wolf: Je,
-        Bear: oe,
-        Deer: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.9
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 2.1
-          },
-          eyeHeight: 1.8,
-          rideHeight: .8,
-          XF: .5,
-          Rye: !1
-        },
-        Stag: Re,
-        "Gold Watermelon Stag": {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.9
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 2.1
-          },
-          eyeHeight: 1.9,
-          rideHeight: 1,
-          XF: .5,
-          Rye: !1
-        },
-        Gorilla: ke,
-        Wildcat: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: .7
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: .7
-          },
-          eyeHeight: .55,
-          rideHeight: .4,
-          XF: .5,
-          Rye: !1
-        },
-        "Draugr Huntress": Fe,
-        "Magma Golem": Ke,
-        "Spirit Golem": Ke,
-        "Spirit Wolf": Je,
-        "Spirit Bear": oe,
-        "Spirit Stag": Re,
-        "Spirit Gorilla": ke,
-        "Draugr Warper": {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.5
-          },
-          hitBoxDimensions: {
-            width: .6,
-            height: 3
-          },
-          eyeHeight: 2.4,
-          rideHeight: 2.8,
-          XF: .5,
-          Rye: !1
-        },
-        "Frost Wraith": {
-          poseRig: "wraith",
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.7
-          },
-          hitBoxDimensions: {
-            width: .6,
-            height: 2.8
-          },
-          eyeHeight: 2.3,
-          rideHeight: 2.6,
-          XF: .5,
-          Rye: !1
-        },
-        "Draugr Reaver": {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.6
-          },
-          hitBoxDimensions: {
-            width: .6,
-            height: 2.7
-          },
-          eyeHeight: 2.2,
-          rideHeight: 2.5,
-          XF: .5,
-          Rye: !1
-        },
-        NPC: {
-          physicsBodyDimensions: {
-            width: ye.g.KX,
-            height: ye.g.UX
-          },
-          hitBoxDimensions: {
-            width: ye.g.KX + .4,
-            height: ye.g.UX + .6
-          },
-          eyeHeight: ye.g.UX * ye.g.playerEyeToHeightRatio,
-          rideHeight: ye.g.UX - .1,
-          XF: .5,
-          Rye: !1
-        },
-        67: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.5
-          },
-          hitBoxDimensions: {
-            width: 3,
-            height: 2.5
-          },
-          eyeHeight: 1.9,
-          rideHeight: 2.5,
-          XF: .5,
-          Rye: !1
-        },
-        "Bobino Musculino": {
-          physicsBodyDimensions: {
-            width: ye.g.KX,
-            height: ye.g.UX
-          },
-          hitBoxDimensions: {
-            width: ye.g.KX + .4,
-            height: ye.g.UX + .6
-          },
-          eyeHeight: ye.g.UX * ye.g.playerEyeToHeightRatio,
-          rideHeight: ye.g.UX - .1,
-          XF: .5,
-          Rye: !1
-        },
-        "Capitano Explovissimo": {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.8
-          },
-          hitBoxDimensions: {
-            width: .5,
-            height: 2.5
-          },
-          eyeHeight: 1.5,
-          rideHeight: 2,
-          XF: .5,
-          Rye: !1
-        },
-        "Desert Fennec": {
-          physicsBodyDimensions: {
-            width: .4,
-            height: .8
-          },
-          hitBoxDimensions: {
-            width: .8,
-            height: .8
-          },
-          eyeHeight: .65,
-          rideHeight: .6,
-          XF: .5,
-          Rye: !1
-        },
-        "Armour Collector": {
-          physicsBodyDimensions: {
-            width: 1,
-            height: 3.5
-          },
-          hitBoxDimensions: {
-            width: 2,
-            height: 3.7
-          },
-          eyeHeight: 3.1,
-          rideHeight: 3.6,
-          XF: .5,
-          Rye: !1
-        },
-        "Furnace Knight": {
-          physicsBodyDimensions: {
-            width: .8,
-            height: 2.4
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 2.5
-          },
-          eyeHeight: 2,
-          rideHeight: 2.45,
-          XF: .5,
-          Rye: !1
-        },
-        "Lil Knight": {
-          physicsBodyDimensions: {
-            width: .8,
-            height: 2.4
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 2.55
-          },
-          eyeHeight: 2,
-          rideHeight: 2.5,
-          XF: .5,
-          Rye: !1
-        },
-        "Glass Gremlin": {
-          physicsBodyDimensions: {
-            width: .6,
-            height: 2.5
-          },
-          hitBoxDimensions: {
-            width: 1,
-            height: 2.6
-          },
-          eyeHeight: 2.2,
-          rideHeight: 2.55,
-          XF: .5,
-          Rye: !1
-        },
-        "Glass Bro": {
-          physicsBodyDimensions: {
-            width: .8,
-            height: 2.1
-          },
-          hitBoxDimensions: {
-            width: 1.3,
-            height: 2.2
-          },
-          eyeHeight: 1.8,
-          rideHeight: 2.1,
-          XF: .5,
-          Rye: !1
-        },
-        "Lord Vulcan": {
-          physicsBodyDimensions: {
-            width: 1.2,
-            height: 5.4
-          },
-          hitBoxDimensions: {
-            width: 2.4,
-            height: 5.4
-          },
-          eyeHeight: 4.1,
-          rideHeight: 5.4,
-          XF: .5,
-          Rye: !1
-        },
-        Zombie: {
-          ...Fe,
-          defaultPose: "zombie"
-        },
-        Skeleton: Fe,
-        Mummy: {
-          ...Fe,
-          defaultPose: "zombie"
-        },
-        Scorpion: {
-          physicsBodyDimensions: {
-            width: 1,
-            height: .9
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 1.4
-          },
-          eyeHeight: .6,
-          rideHeight: .9,
-          XF: .5,
-          Rye: !1
-        },
-        Vulcanite: {
-          physicsBodyDimensions: {
-            width: .8,
-            height: 2
-          },
-          hitBoxDimensions: {
-            width: 1.3,
-            height: 2.1
-          },
-          eyeHeight: 1.6,
-          rideHeight: 2.1,
-          XF: .5,
-          Rye: !1
-        },
-        "Evil Tome": {
-          physicsBodyDimensions: {
-            width: .6,
-            height: .9
-          },
-          hitBoxDimensions: {
-            width: .9,
-            height: .95
-          },
-          eyeHeight: .6,
-          rideHeight: .95,
-          XF: .5,
-          Rye: !1
-        },
-        "Magma Toad": {
-          physicsBodyDimensions: {
-            width: 1,
-            height: 1
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 1.15
-          },
-          eyeHeight: 1,
-          rideHeight: 1.1,
-          XF: .5,
-          Rye: !1
-        },
-        Stalker: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.6
-          },
-          hitBoxDimensions: {
-            width: .6,
-            height: 2.9
-          },
-          eyeHeight: 2.4,
-          rideHeight: 2.5,
-          XF: .5,
-          Rye: !1
-        },
-        Crone: {
-          turnRate: 1.2,
-          physicsBodyDimensions: {
-            width: .6,
-            height: 2.9
-          },
-          hitBoxDimensions: {
-            width: .7,
-            height: 3.2
-          },
-          eyeHeight: 2.7,
-          rideHeight: 2.8,
-          XF: .5,
-          Rye: !1
-        },
-        "Iron Guardian": Ue,
-        "Gold Guardian": Ue,
-        "Diamond Guardian": Ue,
-        "Moonstone Guardian": Ue,
-        "Iron Goofy Golem": Ue,
-        "Gold Goofy Golem": Ue,
-        "Diamond Goofy Golem": Ue,
-        "Moonstone Goofy Golem": Ue,
-        "Tiki Terror": {
-          poseRig: "tiki",
-          physicsBodyDimensions: {
-            width: 1,
-            height: 4.3
-          },
-          hitBoxDimensions: {
-            width: 2.4,
-            height: 4.5
-          },
-          eyeHeight: 3.9,
-          rideHeight: 4.3,
-          XF: .5,
-          Rye: !1
-        }
-      };
+      Pi = new Map;
+    for (const [Mi, {
+        sounds: Ki
+      }] of Object.entries(Ni))
+      for (const [WW, iW] of Object.entries(Ki)) {
+        const OW = Pi.get(WW);
+        if (void 0 !== OW) throw new Error(`duplicate sound name ${WW} in ${OW.group} and ${Mi}`);
+        const mW = iW.src.map((WW => mi.clientSideServerUrls.staticUrl + WW));
+        Pi.set(WW, {
+          group: Mi,
+          file: {
+            ...iW,
+            src: mW
+          }
+        })
+      }
+    const Li = new Map([...Ei].map((WW => {
+      const iW = Object.keys(Ni).filter((iW => iW.startsWith(WW) && /^[A-Z]/.test(iW.slice(WW.length))));
+      return [WW, iW]
+    })));
 
-    function fe(ee) {
-      return qe[ee]
+    function ci(WW) {
+      const iW = Pi.get(WW);
+      if (void 0 === iW) throw new Error(`Invalid sound name ${WW} (not in any sound group)`);
+      return iW
+    }
+
+    function wi(WW) {
+      return ci(WW).group
+    }
+
+    function ti(WW) {
+      return ci(WW).file
+    }
+
+    function Zi(WW) {
+      return Pi.has(WW)
+    }
+
+    function xi(WW, iW) {
+      return li(WW).includes(iW)
+    }
+
+    function li(WW) {
+      if (!(WW in Ni)) throw new Error(`Invalid sound group ${WW}`);
+      return Object.keys(Ni[WW].sounds)
+    }
+    const Ai = new Map;
+
+    function bi(WW) {
+      let iW = Ai.get(WW);
+      return void 0 === iW && (iW = [...Pi.keys()].filter((iW => iW.startsWith(WW))), Ai.set(WW, iW)), iW
+    }
+    const ji = new Map,
+      Ui = new Map;
+
+    function ki(WW) {
+      const iW = bi(WW),
+        OW = iW[Math.floor(Math.random() * iW.length)];
+      if (iW.length > 1) {
+        const iW = function(WW, iW) {
+          const OW = `${iW}\n${WW}`;
+          let mW = Ui.get(OW);
+          return void 0 === mW && (mW = bi(WW).filter((WW => Pi.get(WW).group === iW)), Ui.set(OW, mW)), mW
+        }(WW, Pi.get(OW).group);
+        iW.length > 1 ? ji.set(OW, iW) : ji.delete(OW)
+      }
+      return OW
+    }
+
+    function si(WW) {
+      return ji.get(WW)
     }
   },
-  37893: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => ye
+  37563: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => mW,
+      f: () => NW
     });
-    const ye = {
-      "skyblock:forged:astral-astral-astral": {
-        name: "Heart of the Cosmos",
-        lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
-        damageMultiplier: 1.8,
-        cooldownMultiplier: .8,
-        ability: "starfall"
-      },
-      "skyblock:forged:astral-moonstone-sanguine": {
-        name: "Eclipse Edge",
-        lore: "Moonlight over starlight over blood: the sky goes dark wherever it is drawn.",
-        damageMultiplier: 1.7,
-        cooldownMultiplier: .81,
-        ability: "eclipseField"
-      },
-      "skyblock:forged:astral-diamond-moonstone": {
-        name: "Starcutter",
-        lore: "A blade so sharp the Forge Mother swears it once cut a falling star in two.",
-        damageMultiplier: 1.65,
-        cooldownMultiplier: .83,
-        ability: "starfall"
-      },
-      "skyblock:forged:astral-sanguine-magmasteel": {
-        name: "Triune Flame",
-        lore: "Each of Lord Vulcan's three faces, bound into one burning edge.",
-        damageMultiplier: 1.65,
-        cooldownMultiplier: .83,
-        ability: "magmaWave"
-      },
-      "skyblock:forged:magmasteel-magmasteel-magmasteel": {
-        name: "Vulcan's Bane",
-        lore: "Forged in the heat of his own rift. It remembers the way down.",
-        damageMultiplier: 1.56,
-        cooldownMultiplier: .83,
-        ability: "magmaWave"
-      },
-      "skyblock:forged:magmasteel-astral-sanguine": {
-        name: "Comet's Wake",
-        lore: "It leaves a trail of fire through the air, like something falling from very far up.",
-        damageMultiplier: 1.56,
-        cooldownMultiplier: .83,
-        ability: "starfall"
-      },
-      "skyblock:forged:magmasteel-sanguine-astral": {
-        name: "Vulcan's Ruin",
-        lore: "The Forge Mother made only one, then sat down for a long while.",
-        damageMultiplier: 1.6,
-        cooldownMultiplier: .83,
-        ability: "warcry"
-      },
-      "skyblock:forged:magmasteel-iron-stone": {
-        name: "Forgehand",
-        lore: "A smith's sword: plain to look at, and it hits like a hammer.",
-        damageMultiplier: 1.4,
-        cooldownMultiplier: .9,
-        ability: "quake"
-      },
-      "skyblock:forged:sanguine-sanguine-sanguine": {
-        name: "Crimson Covenant",
-        lore: "It drinks, and so do you.",
-        damageMultiplier: 1.53,
-        cooldownMultiplier: .83,
-        ability: "bloodPact"
-      },
-      "skyblock:forged:sanguine-astral-moonstone": {
-        name: "Nightbloom",
-        lore: "A red flower that only opens after dark.",
-        damageMultiplier: 1.56,
-        cooldownMultiplier: .83,
-        ability: "eclipseField"
-      },
-      "skyblock:forged:sanguine-iron-wood": {
-        name: "Butcher's Oath",
-        lore: "Heavy, honest and always hungry.",
-        damageMultiplier: 1.35,
-        cooldownMultiplier: .95,
-        ability: "bloodPact"
-      },
-      "skyblock:forged:moonstone-moonstone-moonstone": {
-        name: "Lunar Requiem",
-        lore: "Swung, it leaves a pale arc that lingers like a second moon.",
-        damageMultiplier: 1.35,
-        cooldownMultiplier: .85,
-        ability: "moonDash"
-      },
-      "skyblock:forged:moonstone-astral-moonstone": {
-        name: "Silver Tide",
-        lore: "Pulled by the same moon that pulls the sea.",
-        damageMultiplier: 1.4,
-        cooldownMultiplier: .84,
-        ability: "moonDash"
-      },
-      "skyblock:forged:diamond-diamond-diamond": {
-        name: "Prism Fang",
-        lore: "Every facet catches a different light, and every strike finds a different weakness.",
-        damageMultiplier: 1.29,
-        cooldownMultiplier: .88,
-        ability: "gildedEdge",
-        traits: {
-          crit: 1.8
-        }
-      },
-      "skyblock:forged:diamond-moonstone-gold": {
-        name: "Jeweller's Pride",
-        lore: "Too pretty to fight with. Fight with it anyway.",
-        damageMultiplier: 1.24,
-        cooldownMultiplier: .91,
-        ability: "gildedEdge"
-      },
-      "skyblock:forged:gold-gold-gold": {
-        name: "King's Ransom",
-        lore: "Worth more than the treasure it guards.",
-        damageMultiplier: 1.18,
-        cooldownMultiplier: .91,
-        ability: "gildedEdge",
-        traits: {
-          coins: 2.5
-        }
-      },
-      "skyblock:forged:gold-moonstone-gold": {
-        name: "Midas Moon",
-        lore: "Mobs it fells seem to rattle with coins.",
-        damageMultiplier: 1.18,
-        cooldownMultiplier: .92,
-        ability: "gildedEdge",
-        traits: {
-          coins: 2,
-          bossBane: .6
-        }
-      },
-      "skyblock:forged:iron-iron-iron": {
-        name: "Old Faithful",
-        lore: "It has never let anyone down. It never will.",
-        damageMultiplier: 1.15,
-        cooldownMultiplier: .94,
-        ability: "warcry"
-      },
-      "skyblock:forged:iron-wood-wood": {
-        name: "Militia Blade",
-        lore: "Handed out at the outpost gate when the rift first opened.",
-        damageMultiplier: 1.09,
-        cooldownMultiplier: .97,
-        ability: "warcry"
-      },
-      "skyblock:forged:stone-stone-stone": {
-        name: "Quarryman's Cleaver",
-        lore: "Chipped from one block of stone, handle and all.",
-        damageMultiplier: 1.09,
-        cooldownMultiplier: .97,
-        ability: "quake"
-      },
-      "skyblock:forged:wood-wood-wood": {
-        name: "Lorenzo's Lesson",
-        lore: "Courage matters more than the blade. This one is mostly courage.",
-        damageMultiplier: 1.06,
-        cooldownMultiplier: .97,
-        ability: "warcry"
-      }
-    }
-  },
-  38478: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Ke
-    });
-    var ye = He(352),
-      be = He.n(ye),
-      Me = He(1952);
-    let Ke;
-    var Ue, Fe, Je, oe, Re, ke, qe, fe, Te;
-    const pe = [2, 0, 1, 150, 133, "a", 224, 7, 5, 103, "d", 8, 255, "length", 223, 112, 249, "undefined", void 0, "b", "c", 63, 6, "fromCodePoint", 12, "push", 85, 68, 9, 148, 91, 179, 55, 8191, 88, 13, 14, 4, 3, "h", 21, "i", "g", 62, 198, 106, 117, 155, 186, !1, 105, 125, "f", 123, 124, "e", null, 127, 128, 129, 130, 131, 119, 120, 121, 122, 141, 142, 143, 144, 145, 146, 116, "pk", 76, 153, 90, 242, !0, 151, 33554432, 67108864, 10, 243, 89, "Q", ".", 27, 149, 176, 92, 99, 200, 35, 39, 47, 180, 20, 190, 81, 183, 77, 19, 107, 49, 205, 94, "on"];
+    const mW = "__default",
+      EW = ["end", "stop", "playerror"];
 
-    function Xe(ee) {
-      return typeof Ue[ee] === pe[17] ? Ue[ee] = function(...ee) {
-        for (De(ee[pe[13]] = pe[2], ee[pe[5]] = 'auDmHP:FEhqtg4+2NsRj|XfOr6e<?$}`iW5!o8=c#T*b,AIB1@xGkLCQ93~M^/zZ.[>vU")&KyS(n;J0l_%w{YV7pd]', ee[pe[0]] = "" + (ee[pe[1]] || ""), ee[-pe[4]] = ee[pe[0]].length, ee[pe[10]] = [], ee[pe[8]] = pe[1], ee[-pe[9]] = pe[1], ee[pe[7]] = -pe[2]), ee[-pe[3]] = pe[1]; ee[-pe[3]] < ee[-pe[4]]; ee[-pe[3]]++)
-          if (ee[pe[6]] = ee[pe[5]].indexOf(ee[pe[0]][ee[-pe[3]]]), ee[pe[6]] !== -pe[2])
-            if (ee[pe[7]] < pe[1]) ee[pe[7]] = ee[pe[6]];
-            else {
-              De(ee[pe[7]] += ee[pe[6]] * pe[30], ee[pe[8]] |= ee[pe[7]] << ee[-pe[9]], ee[-pe[9]] += (ee[pe[7]] & pe[33]) > pe[34] ? pe[35] : pe[36]);
-              do {
-                De(ee[pe[10]].push(ee[pe[8]] & pe[12]), ee[pe[8]] >>= pe[11], ee[-pe[9]] -= pe[11])
-              } while (ee[-pe[9]] > pe[7]);
-              ee[pe[7]] = -pe[2]
-            } return ee[pe[7]] > -pe[2] && ee[pe[10]].push((ee[pe[8]] | ee[pe[7]] << ee[-pe[9]]) & pe[12]), ze(ee[pe[10]])
-      }(Fe[ee]) : Ue[ee]
-    }
-
-    function ze(...ee) {
-      return ee[pe[13]] = pe[2], typeof oe !== pe[17] && oe ? (new oe).decode(new Re(ee[pe[1]])) : typeof ke !== pe[17] && ke ? ke.from(ee[pe[1]]).toString("utf-8") : Te(ee[pe[1]])
-    }
-
-    function Be() {}
-    De(Ue = {}, Fe = [">U;`9ca", "W:w;r3:oF", 'r$z?!y04Tz.t#mV!^U)k^KC#aRp_(+G?:i"e.ca', "dA0Cq1a", '~OxG("s!F.&)(<]?bsTGs=z:52j0w=9!', "=e)kJ16T<s?0rK=R?boqDL:*LjGRu", "L35i5Y)~94", ";:5KA92L$M[6:8O!c:6<5#oRT[oFC/Q!(9(L1Ga", "Bb7@%AtZ<s2O{2P=rCHFZ0BY[h/l)4l52ZKCLK1}~z%)K&l5Igm", 'D@{;Yk|~D380_^v}7sMLbZsj}M#?yr$s5msJG87"I9t|k<t', "Kt?;IU@j7.oq_rQ!<&s:h3?o!g|0a", "!26}J_3Ys22~K&+e~|CnFVv!]+nIEc4", 'TG~L{nOuzMcMa<Zoi:*("SZB|4', 'T1r},9)IPqCn7&y6Chp@&oqVm3"Ls^3!Dh~EdWPLBRvyfxL?(MUFpMa', "_?#:QLsT;+t:f8s<9G*$7Yn5[h", ".GE}2znr4Mq(Mm", "pE7Hy3GOAth(eP%<$5OhiyzVuhQy}8Z*5Oeix{[u", "%+QH7J/4HCQ", '?[Jh+1nr|3k"<&^Obb0@@ZBFW2w$3H,cgO`@gQtFA9?5pw2c~|Ri#(DR*s', '~&R$b(lrHhGlY@c`y[;n=%P(uZ4}"^v8i8n;B@`BuR5"M2:bm2hCTypr_2#', "Rhrh_z%V+RUlu", "Usk;jxnr|3>64{]fr&6J_na", '}C/?Dz:*zt7Z.<}!d|Qhzc%5qsP0Q=Aje#zQ{kM$8je".1KR&[|;EQa', "D2rWN&O_FQ7fce&8", '?Umi#9n#{.|qjx1e*85<=Y_!_CSiuNC5P@)F;"34Rh<53oL?', "(Ui(c%DE3+j<`D", 'S*<;?k^S^El@?MU=kh7HYY?k?+J6"o#`FHW<L%9#+XvEu', "xGT}C)u(IRGRJ66O+3r@qoQTPC7v0eFR!U~G6kJ#C~tKEoE", 'O#n$g"3u', "qe7njx6T#~250Dt", '0Gv;+"yu)4h4oBcRS1"H<y_G$+vt/Kw5iGt;C)iVnE^l+Pj#[a', ".zU;WU4jwCs<M)q6%6!iLZyGY~P%)4<?Ce7h)1I.j3::NwV#GA&H", '4H.:$/[uWCb"22u}N2Hxh"[3BE[uD_`8w:DKtV=kx^&y1NzohgUe$', "S1Y?z1G4~[Jou", "$h9hZQE}Vj+/3KFRmSi}q1s4@2%fgwe?tS_CF^Z46+", 'jR1ho#.gJ9l)yKWrVcz`F"4u7~[i{wB<kA"QcY/$Mz=', "~+JHI;:ED3P~F=W`$51@vI,R[^@!u", 's&.CPSQul3WMT115`I]En":E]+o>311c@5U$O3%gez=0Y6p?A[ph', "_)8nJA04XjOsM%<*WG;?^c6jjC~)PKd$NI9@=Ya", '0[Bk/;9D:4$"=@(=/O7@fYQFys,F$H"}KObKWU^D', "0zAShVl~FQB++8f58^ME", 'r["nYYD}=4IQv+3?X[Q:9IdF]+J9f/l#MCPk6=4BJLS!c+S=', "E3PS/^;Thz+|<xPbpEh:6J^D!C3)^oMT[G]$=ysj:", "_yoSOx>~02O0OBV?_+M$A(qR!g2s@H", "[1{$B/3Y(tEN=88j{a", "+ZU$7&^Vxg}K.opN5bc@cUwu", "JULS2Q5}[3mK.1Y?KtKC/crSL4Y6rw=Rr^w$zc|DO~aG*64", "`OAQaQ)gj^@nx%#eOUhJ%WPFu^*!O+g", "MCLQgzF6ZZ{Z6HuR&G?FmS+Ii^UZ|<6T7s}H9{X_bt8", 'YGa<DI|D~s_If/B<SGtq$&LOr[$5o<cr1[/Hhz$"C~];C)"`O^Uq', "=ef`e=RVGhluimv6s2)``y,I5^`nNmKj51r@@)(FBE", "{`9CK1$F:", "T#OH8B%kshhU4{G5$U$ndwCIu2", "s29:ExkD9[EU!)m`=s)Q@ZUg;9^9LNMOfI(S$", "Ab4`:K@jiZPGXKL<qU`hc/sjL~q(qD]?A5a}S1frRgkRv)95f2ry=/w!m", "y+VHk(|k1gZMlw{fT:V&0zY$(zeG^<VTW^e(>z`F*tf43H", "qS+`e=%gV~SvV+Kj]a", 'cg,;S"ujaXcmN2s5$8C?3Z.~r~=kWH35EIYnI~Y4Xj^HXK=6P&m', '4Ibi|x("tMhKXN]O~#gS>1+k{C>L8HzoP2X`b/^VB2rnk<t6$#r}HV4LmjE4u', 'UU`nb%}g,9O4"^h`L3bSQ)d3ig<KH&!RJs6}IZa)@2#zl&q', "JA}`BZh4~z+Qpw7fz`C`YY9D", ")8u}30Ik|C``TKar>C:W_w@B4>N}&==={6$q]=Sr!^IFjxC5<|KyS_a", ">1phsQ.V_3Ultw;j>s`kTUf~1ZkyT/c6ZO}n6yfDWg", "d9LqI;%~w380rm", '.mQy~KjLbMz@!xL<y**i|MM(}>dS"@R#FUSL{AoD*tE[u', ':Om$[KoDJLIy"oR#o&0@%"yFighU91"`+3nL4', "jGvP;1HEl3`0P/g=2b6}L~@4:", "SOnP)1[TILP02&Dr*#W:C%84K[oQI8H=s^NWWM@!I9f:kMg", "[hFWAZNrzRs<v=q", "FC0Hp3dFX~(2.we$GAUqA(_YUCDJn1<*V1LnNw_FH", "XGLq(3^~NR$KNBERB[VkOntLrsuNnm", '^+OneCSklhX"A@@<.ze(l_:~xg:0P1tc%`0kCL4Li3T"j2oscOdCgQ<!s2', "hIl@W#`BbE~k~@lezz2W<", "#Szkm5sjJMyiimyeR3(;<w(Fh|m:u", 'O${SWJ.gK~))`x7$?Ihi"^t4v^8"M2|#>AhCD^h4"C1lb)4<sgm', "?bnPI96(22T", "7Mz@YkdTAt;^D/L#6S^LVJaly[E:N<88Pil:{=*RIR7$!)[`i^?qf#i}H", "DZwL0w4_02D(58W`h8FW.oiD", "@#o$$!eog[w^C/>Rk3SE|Mj4H4t~5P=8V1VHy_ju;zw2f/b6&sI`~Ga", ".G^QlQCSP4Ash1p!1`:k5kb3c4!0Ox:re58Qu1a", "n9hKm1$L&|Joe8z}0?VnxI#D0^i+H2M$Ya", "%)5$a1a", '71fn+SAYl^+QyKr!fCB:"0wTt+G"wMe*cU2nI/a', "KM]i$lz:|hX0Dxu8hb4`$", "Ymmi#l5.f.%6a<%cN:VkL8CST[N0J6m6[sOy__ujM|x>u^H}", '.?5idYhjW2UE]@O5A37?TZn#Q~bXiw{55^+njM=o8C@ly"Y!k&A`9)a', "@:d:SzT_s3e[@1/O1&!Ka0y4,9DB|&V5V?`HT(nR22S6^wEeka", ">zyieY?rF|oq0=>R:S%G[1|o~zzIdH", "bGWidBHEezg};1ms~eQy/~T(ZL$n(+9?e81y:os!BZt/x8=RR&{`N", '%[$Sd3KIt|(9l<"ro8aWX"sLH3}kj=h', "5^K:O&URAE`K:e>sJsGik9dO.ZO|KMk?~CM;uI9~GCK6~4u8qeD", "R#FW*@0Zvj<:~/^*?&OHOn,R|j", "qi=kmSS#`R@!X1q=ahhC>^LBoC_flw_c%8}QG%@43+)!%@a*>a", "m@7kAld!Rh@!*6bcJM{`x@9UHCPCUw`*]zUL$yUrntLr3H", "R$vi*)TBZ24(x=[O)zGSdWm73s`Mq_*e[yB?m_yus^3;>+D8)a", "g&AQ(zM!BgS)b~~T+ik$s", "OCf?A%1V`2FOg2ar/s=F", "K`W(PK~In[ZXiMh", 'Uzz@&QJkF.Wn*4G?Z`O@ey6TPCj0aN)jhUYe~^Sk;+Y;pmG?&1/F"0a', "#C@CQc!$qQj0+PiRv?A`lwpVp~e<ePdfqgBn&^_G%gK^w+:ROiD", 'I8=n{"a', 'h3(PWyH*d+j0]_(=n+?$tVy$h|Q)u/B<LAU&$B`$".!mu', "gIfHMK_uk4x9$KD}zzPqNSk#StJ;ex6T[:`kWYyuK[D(A4>}teRK8#a", "k5jgH)m3", "{qo#i_RA", "hE,D|8kk", ">G=`;_|D", ":RMLvKRD", "8bGiBU5D", "z3eZ", "xC=ZpWb", "z;Gv", "xj7M_#u", "eEngAxfT", "5Eb;m*fT", "EEhg", "eE2w(0[rb", "Vf)hLD@Jb", "~~4MEDrqb", "eE2wfxzT", "kong5JNT", "<>}ci*eT", "Jk}iiW<T", "#Q[i{weT", "1Q*xwqzT", ";owD32jT", "eE2wfxos1r", ">=Zi;#Rr`N", "Vf^bqqY:1r", "t>b;VJzT", "i$*x_w+S", '"XXiG', "sEng", "hE2Dr", ">~tis", ";I@QnZ=T", "[_YMG", "eE2w(0<T", "HE9xfxzT", "ko2w^WZT", "i~Nwz", "t>QiU/AT", "iMQcs*u", "t>QiGW5T", "ko}i^x~S", ";oOi6JIT", "s$*x_wu", "!jFji7av", "5@6q", "%:0Y", 'V#A"', "E=0Y", "]8PzVt)4", "ZvI<o", 'u`>"', "$!yq", "9_Oc", "mENwWq>T", "=2DhoyIT", 'Sp]g="&T', "5f#xqqfT", "OM,c", "v>YM", "1~Qiv2jT", "[D,c", "5~,i0xNT", "~$YU~JAT", "{1zgJqzT", "@j#96Ju", "9_Vs+<4S", "5~,i=BoT", "yM,c", "X_dB|%BS", "Hb1Z+{fx", 'P"kpZ&iE>dU,oYKfHb8R``lOe!g1S%Kfex[aeHP6(v1]t?H"%"7uR', '[k,cRwT:/~if*9hy="n?;;_UP)J@X>hyf$dI||ql=Ri`Lj*KQH', "LB1Z2sG>H#`yG", "ZNdn%6_wUKu4p", "JCES2y@c8G<Rd", ",v]l", "7BHZ(1c:", "g]_2XiL", "=pHS:V0G", "1RwnjcXG", "+bhPw$Wx", '7PnrcTw"', "Br,IKka", "(eir~<L$", "V,3?y", "/Q*xwqzT", "5~,iOwKT"]), De(Je = function(...ee) {
-      De(ee[pe[13]] = pe[1], ee[-pe[0]] = [function() {
-        return globalThis
-      }, function() {
-        return global
-      }, function() {
-        return window
-      }, function() {
-        return new Function("return this")()
-      }], ee[pe[2]] = pe[18], ee[-pe[14]] = []);
-      try {
-        De(ee[pe[2]] = Object, ee[-pe[14]][pe[25]]("".__proto__.constructor.name))
-      } catch (Fe) {}
-      ee: for (ee[-pe[15]] = pe[1]; ee[-pe[15]] < ee[-pe[0]][pe[13]]; ee[-pe[15]]++) try {
-        for (ee[pe[2]] = ee[-pe[0]][ee[-pe[15]]](), ee[pe[16]] = pe[1]; ee[pe[16]] < ee[-pe[14]][pe[13]]; ee[pe[16]]++)
-          if (typeof ee[pe[2]][ee[-pe[14]][ee[pe[16]]]] === pe[17]) continue ee;
-        return ee[pe[2]]
-      } catch (Fe) {}
-      return ee[pe[2]] || this
-    }() || {}, oe = Je.TextDecoder, Re = Je.Uint8Array, ke = Je.bR, qe = Je.String || String, fe = Je.Array || Array, Te = function(...ee) {
-      return De(ee[pe[13]] = pe[1], ee[pe[5]] = new fe(pe[58]), ee[pe[19]] = qe[pe[23]] || qe.fromCharCode, ee[pe[0]] = []),
-        function(...ie) {
-          for (De(ie[pe[13]] = pe[2], ie[pe[2]] = pe[18], ie[pe[19]] = pe[18], ie[pe[20]] = ie[pe[1]][pe[13]], ee[pe[0]][pe[13]] = pe[1]), ie[pe[10]] = pe[1]; ie[pe[10]] < ie[pe[20]];) De(ie[pe[19]] = ie[pe[1]][ie[pe[10]]++], ie[pe[19]] <= pe[57] ? ie[pe[2]] = ie[pe[19]] : ie[pe[19]] <= pe[14] ? ie[pe[2]] = (31 & ie[pe[19]]) << pe[22] | ie[pe[1]][ie[pe[10]]++] & pe[21] : ie[pe[19]] <= 239 ? ie[pe[2]] = (15 & ie[pe[19]]) << pe[24] | (ie[pe[1]][ie[pe[10]]++] & pe[21]) << pe[22] | ie[pe[1]][ie[pe[10]]++] & pe[21] : qe[pe[23]] ? ie[pe[2]] = (ie[pe[19]] & pe[7]) << 18 | (ie[pe[1]][ie[pe[10]]++] & pe[21]) << pe[24] | (ie[pe[1]][ie[pe[10]]++] & pe[21]) << pe[22] | ie[pe[1]][ie[pe[10]]++] & pe[21] : (ie[pe[2]] = pe[21], ie[pe[10]] += pe[38]), ee[pe[0]][pe[25]](ee[pe[5]][ie[pe[2]]] || (ee[pe[5]][ie[pe[2]]] = ee[pe[19]](ie[pe[2]]))));
-          return ee[pe[0]].join("")
+    function NW(WW, iW) {
+      const OW = () => {
+        if (function(WW) {
+            return "loaded" === WW.state() && !WW.playing() && !WW._playLock
+          }(WW)) {
+          for (const iW of EW) WW.off(iW, OW);
+          WW.unload(), null === iW || void 0 === iW || iW()
         }
-    }());
-    const Ee = be()[Xe(pe[45])](),
-      ge = be()[Xe(pe[45])](),
-      Oe = be()[Xe(pe[45])](),
-      de = be()[Xe(pe[45])](),
-      We = be()[Xe(pe[45])](),
-      te = be()[Xe(pe[45])](),
-      Ze = be()[Xe(pe[45])](),
-      we = (...ee) => {
-        function ie(...ee) {
-          return ee[pe[13]] = pe[2], typeof Ue[ee[pe[1]]] === pe[17] ? Ue[ee[pe[1]]] = function(...ee) {
-            for (De(ee[pe[13]] = pe[2], ee[-pe[47]] = 'bH@uo,_dZCv#VRnL&Ds>.G9?KQ1z0Yp`/:JjFagT(|5;i<N7B%~=4m2"I*Ek6+Pfx$USX)OWrl3[MAqct^}e!8]ywh{', ee[pe[0]] = "" + (ee[pe[1]] || ""), ee[-pe[46]] = ee[pe[0]].length, ee[pe[10]] = [], ee[pe[8]] = pe[1], ee[pe[22]] = pe[1], ee[pe[7]] = -pe[2]), ee[pe[11]] = pe[1]; ee[pe[11]] < ee[-pe[46]]; ee[pe[11]]++)
-              if (ee[pe[41]] = ee[-pe[47]].indexOf(ee[pe[0]][ee[pe[11]]]), ee[pe[41]] !== -pe[2])
-                if (ee[pe[7]] < pe[1]) ee[pe[7]] = ee[pe[41]];
-                else {
-                  De(ee[pe[7]] += ee[pe[41]] * pe[30], ee[pe[8]] |= ee[pe[7]] << ee[pe[22]], ee[pe[22]] += (ee[pe[7]] & pe[33]) > pe[34] ? pe[35] : pe[36]);
-                  do {
-                    De(ee[pe[10]].push(ee[pe[8]] & pe[12]), ee[pe[8]] >>= pe[11], ee[pe[22]] -= pe[11])
-                  } while (ee[pe[22]] > pe[7]);
-                  ee[pe[7]] = -pe[2]
-                } return ee[pe[7]] > -pe[2] && ee[pe[10]].push((ee[pe[8]] | ee[pe[7]] << ee[pe[22]]) & pe[12]), ze(ee[pe[10]])
-          }(Fe[ee[pe[1]]]) : Ue[ee[pe[1]]]
-        }
-        ee[pe[13]] = pe[38], Xe(pe[103]) + "X" in Be && function(...ee) {
-          De(ee[pe[13]] = pe[1], ee[pe[5]] = function(...ie) {
-            return De(ie[pe[13]] = pe[2], ie[pe[2]] = []), (ie[pe[1]] === pe[2] || ie[pe[1]] >= pe[37]) && ee[pe[19]](ie[pe[2]], [], ie[pe[1]], pe[1]), ie[pe[2]]
-          }, ee[pe[19]] = function(...ie) {
-            for (ie[pe[13]] = pe[37], ie[pe[5]] = ie[pe[38]]; ie[pe[5]] < ie[pe[0]]; ie[pe[5]]++) {
-              if (ie[pe[2]].length !== ie[pe[5]]) return;
-              for (ie[pe[19]] = pe[1]; ie[pe[19]] < ie[pe[0]]; ie[pe[19]]++) ee[pe[48]](ie[pe[2]], [ie[pe[5]], ie[pe[19]]]) && (De(ie[pe[2]].push([ie[pe[5]], ie[pe[19]]]), ee[pe[19]](ie[pe[1]], ie[pe[2]], ie[pe[0]], ie[pe[5]] + pe[2])), ie[pe[2]].length === ie[pe[0]] && ie[pe[1]].push(ee[pe[10]](ie[pe[2]])), ie[pe[2]].pop())
-            }
-          }, ee[pe[10]] = function(...ee) {
-            for (De(ee[pe[13]] = pe[2], ee[pe[5]] = [], ee[pe[0]] = ee[pe[1]].length), ee[pe[38]] = pe[1]; ee[pe[38]] < ee[pe[0]]; ee[pe[38]]++)
-              for (ee[pe[5]][ee[pe[38]]] = "", ee[pe[37]] = pe[1]; ee[pe[37]] < ee[pe[0]]; ee[pe[37]]++) ee[pe[5]][ee[pe[38]]] += ee[pe[1]][ee[pe[38]]][pe[2]] === ee[pe[37]] ? pe[85] : pe[86];
-            return ee[pe[5]]
-          }, ee[pe[48]] = function(...ee) {
-            for (De(ee[pe[13]] = pe[0], ee[pe[0]] = ee[pe[1]].length), ee[pe[19]] = pe[1]; ee[pe[19]] < ee[pe[0]]; ee[pe[19]]++) {
-              if (ee[pe[1]][ee[pe[19]]][pe[1]] === ee[pe[2]][pe[1]] || ee[pe[1]][ee[pe[19]]][pe[2]] === ee[pe[2]][pe[2]]) return pe[49];
-              if (Math.abs((ee[pe[1]][ee[pe[19]]][pe[1]] - ee[pe[2]][pe[1]]) / (ee[pe[1]][ee[pe[19]]][pe[2]] - ee[pe[2]][pe[2]])) === pe[2]) return pe[49]
-            }
-            return pe[78]
-          }, console.log(ee[pe[5]]))
-        }();
-        const He = te;
-        return be()[Xe(108) + ie(109)](He, ee[pe[0]]), be()[ie(110)](ee[pe[1]], He, be()[ie(111)](He, ee[pe[2]]))
       };
-
-    function De() {
-      De = function() {}
-    }
-    Ke = (...ee) => {
-      function ie(...ee) {
-        return ee[pe[13]] = pe[2], typeof Ue[ee[pe[1]]] === pe[17] ? Ue[ee[pe[1]]] = function(...ee) {
-          for (De(ee[pe[13]] = pe[2], ee[pe[5]] = 'uSTXphbPcMglfLHEARerNnamKG>[z(s9iVjt51<do6`~3k=v&BZQ%]I;C$8O_.{yY!F}2/#*7UD+xwW4Jq",)0:?|^@', ee[pe[0]] = "" + (ee[pe[1]] || ""), ee[-pe[50]] = ee[pe[0]].length, ee[pe[10]] = [], ee[pe[51]] = pe[1], ee[pe[52]] = pe[1], ee[pe[42]] = -pe[2]), ee[pe[11]] = pe[1]; ee[pe[11]] < ee[-pe[50]]; ee[pe[11]]++)
-            if (ee[pe[28]] = ee[pe[5]].indexOf(ee[pe[0]][ee[pe[11]]]), ee[pe[28]] !== -pe[2])
-              if (ee[pe[42]] < pe[1]) ee[pe[42]] = ee[pe[28]];
-              else {
-                De(ee[pe[42]] += ee[pe[28]] * pe[30], ee[pe[51]] |= ee[pe[42]] << ee[pe[52]], ee[pe[52]] += (ee[pe[42]] & pe[33]) > pe[34] ? pe[35] : pe[36]);
-                do {
-                  De(ee[pe[10]].push(ee[pe[51]] & pe[12]), ee[pe[51]] >>= pe[11], ee[pe[52]] -= pe[11])
-                } while (ee[pe[52]] > pe[7]);
-                ee[pe[42]] = -pe[2]
-              } return ee[pe[42]] > -pe[2] && ee[pe[10]].push((ee[pe[51]] | ee[pe[42]] << ee[pe[52]]) & pe[12]), ze(ee[pe[10]])
-        }(Fe[ee[pe[1]]]) : Ue[ee[pe[1]]]
-      }
-      ee[pe[13]] = pe[11];
-      const He = ee[pe[1]][ie(pe[15])][ie(113) + ie(114) + ie(115)](ee[pe[2]]);
-      ee[pe[5]] = ee[pe[1]][ie(pe[15])][ie(pe[72]) + ie(pe[46]) + ie(118) + "s"](He);
-      const ye = ee[pe[5]] === pe[56] ? ee[pe[1]][ie(pe[15])][ie(pe[62]) + ie(pe[63]) + ie(pe[64]) + ie(pe[65])](ee[pe[2]], ie(pe[53]) + ie(pe[54]) + ie(pe[51]) + pe[55]) : ee[pe[5]][ie(pe[53]) + ie(pe[54]) + ie(pe[51]) + pe[55]],
-        Ke = ee[pe[5]] === pe[56] ? ee[pe[1]][ie(pe[15])][ie(126) + ie(pe[57]) + ie(pe[58])](ee[pe[2]], ie(pe[59]) + ie(pe[60]) + ie(pe[61])) : ee[pe[5]][ie(pe[59]) + ie(pe[60]) + ie(pe[61])];
-      De(be()[ie(132)](Ee, pe[1], pe[1], ee[pe[8]]), be().sq(Ee, Ee, be()[ie(pe[4])], ee[pe[38]].heading), be()[ie(134)](Ze, ee[pe[37]].Op), Ze[pe[2]] = pe[1]);
-      const Je = ee[pe[0]][ie(135) + ie(136)]();
-      if (De(ee[pe[5]] = ee[pe[1]][ie(pe[15])][ie(137) + ie(138) + ie(139) + ie(140)](He), ee[pe[28]] = ee[pe[5]] === pe[56] ? ee[pe[1]][ie(pe[15])][ie(pe[62]) + ie(pe[63]) + ie(pe[64]) + ie(pe[65])](ee[pe[2]], ie(pe[66]) + ie(pe[67])) : ee[pe[5]][ie(pe[66]) + ie(pe[67])]), !Je && be()[pe[73]](Ze) && (ee[pe[5]] === pe[56] ? ee[pe[1]][ie(pe[15])][ie(pe[62]) + ie(pe[63]) + ie(pe[64]) + ie(pe[65])](ee[pe[2]], ie(pe[68]) + ie(pe[69]) + ie(pe[70]) + ie(pe[71])) : ee[pe[5]][ie(pe[68]) + ie(pe[69]) + ie(pe[70]) + ie(pe[71])])) {
-        function fe(ee) {
-          var ie, He, ye, be, Me, Ke, Ue;
-          for (De(ie = "" + (ee || ""), He = ie.length, ye = [], be = pe[1], Me = pe[1], Ke = -pe[2]), Ue = pe[1]; Ue < He; Ue++) {
-            var Fe = '~uv8`),eqY"h!nl:ib93KAw%po=VC$X5/I&GJgFWT.[#PQaEmjrZc>|1*+z6@]MU0<O4^SL{Dx7yd_(B2kHfst;?R}N'.indexOf(ie[Ue]);
-            if (Fe !== -pe[2])
-              if (Ke < pe[1]) Ke = Fe;
-              else {
-                De(Ke += Fe * pe[30], be |= Ke << Me, Me += (Ke & pe[33]) > pe[34] ? pe[35] : pe[36]);
-                do {
-                  De(ye.push(be & pe[12]), be >>= pe[11], Me -= pe[11])
-                } while (Me > pe[7]);
-                Ke = -pe[2]
-              }
-          }
-          return Ke > -pe[2] && ye.push((be | Ke << Me) & pe[12]), ze(ye)
-        }
-
-        function Te(...ee) {
-          return ee[pe[13]] = pe[2], typeof Ue[ee[pe[1]]] === pe[17] ? Ue[ee[pe[1]]] = fe(Fe[ee[pe[1]]]) : Ue[ee[pe[1]]]
-        }
-
-        function Xe() {
-          console.log((function(...ee) {
-            for (De(ee[pe[13]] = pe[2], ee[pe[5]] = pe[1], ee[pe[19]] = {}, ee[-pe[72]] = pe[1], ee[pe[10]] = pe[1], ee[pe[8]] = pe[1], ee[pe[46]] = ee[pe[1]].length), ee[pe[7]] = pe[1]; ee[pe[7]] < ee[pe[46]]; ee[pe[7]]++) {
-              for (De(ee[pe[19]] = {}, ee[-pe[72]] = pe[1], ee[pe[10]] = pe[2]), ee[pe[11]] = ee[pe[7]] + pe[2]; ee[pe[11]] < ee[pe[46]]; ee[pe[11]]++) ee[pe[1]][ee[pe[7]]].x !== ee[pe[1]][ee[pe[11]]].x || ee[pe[1]][ee[pe[7]]].y !== ee[pe[1]][ee[pe[11]]].y ? (ee[pe[1]][ee[pe[7]]].y === ee[pe[1]][ee[pe[11]]].y ? ee[pe[8]] = Number.MAX_SAFE_INTEGER : ee[pe[8]] = (ee[pe[1]][ee[pe[7]]].x - ee[pe[1]][ee[pe[11]]].x) / (ee[pe[1]][ee[pe[7]]].y - ee[pe[1]][ee[pe[11]]].y), ee[pe[19]][ee[pe[8]]] || (ee[pe[19]][ee[pe[8]]] = pe[1]), De(ee[pe[19]][ee[pe[8]]]++, ee[-pe[72]] = Math.max(ee[-pe[72]], ee[pe[19]][ee[pe[8]]]))) : ee[pe[10]]++;
-              De(ee[-pe[72]] += ee[pe[10]], ee[pe[5]] = Math.max(ee[pe[5]], ee[-pe[72]]))
-            }
-            return ee[pe[5]]
-          }))
-        }
-        Te(147) + pe[52] in Be && Xe(), De(we(ge, Ee, Ze), we(Oe, Ze, Ee), be()[Te(pe[29])](de, Ze, Oe));
-        const te = be()[Te(pe[88])](Ze),
-          Pe = be()[Te(pe[3])](Ee, Ze) / ee[pe[8]] / te,
-          Ae = Math[Te(pe[79])](Pe, pe[1]) + pe[2];
-        if (ee[pe[8]] * ee[pe[8]] < be()[pe[73]](Oe)) {
-          function Ye(...ee) {
-            for (De(ee[pe[13]] = pe[2], ee[pe[74]] = 'S4hDRIkng:<u/>rvH}Q9K~0Z%PX*olU8OW=N7,ac2p#@$yFBYe5zbJ`_L!+w3Am;6j{TxECd1?]Vs[.)&tiM|Gfq("^', ee[pe[0]] = "" + (ee[pe[1]] || ""), ee[pe[38]] = ee[pe[0]].length, ee[pe[37]] = [], ee[pe[8]] = pe[1], ee[pe[52]] = pe[1], ee[pe[75]] = -pe[2]), ee[pe[11]] = pe[1]; ee[pe[11]] < ee[pe[38]]; ee[pe[11]]++)
-              if (ee[pe[41]] = ee[pe[74]].indexOf(ee[pe[0]][ee[pe[11]]]), ee[pe[41]] !== -pe[2])
-                if (ee[pe[75]] < pe[1]) ee[pe[75]] = ee[pe[41]];
-                else {
-                  De(ee[pe[75]] += ee[pe[41]] * pe[30], ee[pe[8]] |= ee[pe[75]] << ee[pe[52]], ee[pe[52]] += (ee[pe[75]] & pe[33]) > pe[34] ? pe[35] : pe[36]);
-                  do {
-                    De(ee[pe[37]].push(ee[pe[8]] & pe[12]), ee[pe[8]] >>= pe[11], ee[pe[52]] -= pe[11])
-                  } while (ee[pe[52]] > pe[7]);
-                  ee[pe[75]] = -pe[2]
-                } return ee[pe[75]] > -pe[2] && ee[pe[37]].push((ee[pe[8]] | ee[pe[75]] << ee[pe[52]]) & pe[12]), ze(ee[pe[37]])
-          }
-
-          function Ve(...ee) {
-            return ee[pe[13]] = pe[2], typeof Ue[ee[pe[1]]] === pe[17] ? Ue[ee[pe[1]]] = Ye(Fe[ee[pe[1]]]) : Ue[ee[pe[1]]]
-          }
-
-          function ae(...ee) {
-            De(ee[pe[13]] = pe[1], ee[pe[5]] = function(...ie) {
-              return De(ie[pe[13]] = pe[38], ie[pe[76]] = {}), ie[pe[0]].length !== ie[pe[1]].length + ie[pe[2]].length ? pe[49] : ee[-pe[77]](ie[pe[1]], ie[pe[2]], ie[pe[0]], pe[1], pe[1], pe[1], ie[pe[76]])
-            }, ee[-pe[77]] = function(ie, He, ye, be, Me, Ke, Ue) {
-              var Fe = pe[49];
-              return Ke >= ye.length ? pe[78] : Ue["" + be + Me + Ke] !== pe[18] ? Ue["" + be + Me + Ke] : (ye[Ke] === ie[be] && ye[Ke] === He[Me] ? Fe = ee[-pe[77]](ie, He, ye, be + pe[2], Me, Ke + pe[2], Ue) || ee[-pe[77]](ie, He, ye, be, Me + pe[2], Ke + pe[2], Ue) : ye[Ke] === ie[be] ? Fe = ee[-pe[77]](ie, He, ye, be + pe[2], Me, Ke + pe[2], Ue) : ye[Ke] === He[Me] && (Fe = ee[-pe[77]](ie, He, ye, be, Me + pe[2], Ke + pe[2], Ue)), Ue["" + be + Me + Ke] = Fe, Fe)
-            }, console.log(ee[pe[5]]))
-          }
-          Ve(152) + "r" in Be && ae(), be()[Ve(pe[75])](Ee, Ee, Oe, Ae)
-        }
-        De(ee[pe[28]] = (pe[1], Me.v)(ee[pe[28]], 1, Math[Te(pe[79])](pe[2], Math[Te(154)](pe[1], -Pe, pe[2] - te / ee[pe[8]]))), be()[Te(pe[47])](Ee, Ee, de))
-      }
-      const oe = We;
-      if (De(be()[ie(156)](oe, Ee, Ze), oe[pe[2]] = pe[1], ee[pe[82]] = be()[ie(157)](oe)), !Je) {
-        function ce() {
-          function ee(...ee) {
-            return ee[pe[13]] = pe[2], ee[pe[1]][pe[2]] * pe[81] + (ee[pe[1]][pe[1]] < pe[1] ? pe[80] | ee[pe[1]][pe[1]] : ee[pe[1]][pe[1]])
-          }
-
-          function ie(...ee) {
-            switch (ee[pe[13]] = pe[2], ((ee[pe[1]] & pe[80]) !== pe[1]) * pe[2] + (ee[pe[1]] < pe[1]) * pe[0]) {
-              case pe[1]:
-                return [ee[pe[1]] % pe[80], Math.trunc(ee[pe[1]] / pe[81])];
-              case pe[2]:
-                return [ee[pe[1]] % pe[80] - pe[80], Math.trunc(ee[pe[1]] / pe[81]) + pe[2]];
-              case pe[0]:
-                return [((ee[pe[1]] + pe[80]) % pe[80] + pe[80]) % pe[80], Math.round(ee[pe[1]] / pe[81])];
-              case pe[38]:
-                return [ee[pe[1]] % pe[80], Math.trunc(ee[pe[1]] / pe[81])]
-            }
-          }
-          let He = ee([pe[0], pe[37]]),
-            ye = ee([pe[2], pe[0]]),
-            be = He + ye,
-            Me = be - ye,
-            Ke = Me * pe[0],
-            Ue = Ke / pe[0];
-          De(console.log(ie(be)), console.log(ie(Me)), console.log(ie(Ke)), console.log(ie(Ue)))
-        }
-        ie(158) + "9" in Be && ce(), ee[pe[82]] *= ee[pe[28]]
-      }
-      const Re = ee[pe[22]][ie(159) + ie(160) + ie(161)],
-        ke = Re ? Math[ie(162)](Re, ee[pe[82]]) : ee[pe[82]];
-      be()[ie(163) + ie(164)](oe, oe);
-      const qe = ee[pe[7]] !== pe[56] && ee[pe[7]] !== void pe[1] ? ee[pe[7]] : ee[pe[22]][ie(165) + ie(166) + ie(167) + ie(168)];
-      if (ke > pe[1]) {
-        function xe(ee) {
-          var ie, He, ye, be, Me, Ke, Ue;
-          for (De(ie = "" + (ee || ""), He = ie.length, ye = [], be = pe[1], Me = pe[1], Ke = -pe[2]), Ue = pe[1]; Ue < He; Ue++) {
-            var Fe = 'a$G)"Fz(IrSTPH4pu%8EXd3hmyR*.=K?nJ:9~_0DC7U{]6eNtLs,x1&OMoj|Z#fYB;!2g+>kbA@Q/cV[ivlwq<5}`^W'.indexOf(ie[Ue]);
-            if (Fe !== -pe[2])
-              if (Ke < pe[1]) Ke = Fe;
-              else {
-                De(Ke += Fe * pe[30], be |= Ke << Me, Me += (Ke & pe[33]) > pe[34] ? pe[35] : pe[36]);
-                do {
-                  De(ye.push(be & pe[12]), be >>= pe[11], Me -= pe[11])
-                } while (Me > pe[7]);
-                Ke = -pe[2]
-              }
-          }
-          return Ke > -pe[2] && ye.push((be | Ke << Me) & pe[12]), ze(ye)
-        }
-
-        function Le(...ee) {
-          return ee[pe[13]] = pe[2], typeof Ue[ee[pe[1]]] === pe[17] ? Ue[ee[pe[1]]] = xe(Fe[ee[pe[1]]]) : Ue[ee[pe[1]]]
-        }
-
-        function Ce(...ee) {
-          De(ee[pe[13]] = pe[1], ee[pe[87]] = function(...ie) {
-            return De(ie[pe[13]] = pe[2], ie[pe[83]] = []), (ie[pe[1]] === pe[2] || ie[pe[1]] >= pe[37]) && ee[pe[2]](ie[pe[83]], [], ie[pe[1]], pe[1]), ie[pe[83]]
-          }, ee[pe[2]] = function(...ie) {
-            for (ie[pe[13]] = pe[37], ie[pe[37]] = ie[pe[38]]; ie[pe[37]] < ie[pe[0]]; ie[pe[37]]++) {
-              if (ie[pe[2]].length !== ie[pe[37]]) return;
-              for (ie[pe[8]] = pe[1]; ie[pe[8]] < ie[pe[0]]; ie[pe[8]]++) ee[pe[10]](ie[pe[2]], [ie[pe[37]], ie[pe[8]]]) && (De(ie[pe[2]].push([ie[pe[37]], ie[pe[8]]]), ee[pe[2]](ie[pe[1]], ie[pe[2]], ie[pe[0]], ie[pe[37]] + pe[2])), ie[pe[2]].length === ie[pe[0]] && ie[pe[1]].push(ee[pe[38]](ie[pe[2]])), ie[pe[2]].pop())
-            }
-          }, ee[pe[38]] = function(...ee) {
-            for (De(ee[pe[13]] = pe[2], ee[pe[2]] = [], ee[pe[84]] = ee[pe[1]].length), ee[pe[20]] = pe[1]; ee[pe[20]] < ee[pe[84]]; ee[pe[20]]++)
-              for (ee[pe[2]][ee[pe[20]]] = "", ee[pe[10]] = pe[1]; ee[pe[10]] < ee[pe[84]]; ee[pe[10]]++) ee[pe[2]][ee[pe[20]]] += ee[pe[1]][ee[pe[20]]][pe[2]] === ee[pe[10]] ? pe[85] : pe[86];
-            return ee[pe[2]]
-          }, ee[pe[10]] = function(...ee) {
-            for (De(ee[pe[13]] = pe[0], ee[pe[0]] = ee[pe[1]].length), ee[pe[38]] = pe[1]; ee[pe[38]] < ee[pe[0]]; ee[pe[38]]++) {
-              if (ee[pe[1]][ee[pe[38]]][pe[1]] === ee[pe[2]][pe[1]] || ee[pe[1]][ee[pe[38]]][pe[2]] === ee[pe[2]][pe[2]]) return pe[49];
-              if (Math.abs((ee[pe[1]][ee[pe[38]]][pe[1]] - ee[pe[2]][pe[1]]) / (ee[pe[1]][ee[pe[38]]][pe[2]] - ee[pe[2]][pe[2]])) === pe[2]) return pe[49]
-            }
-            return pe[78]
-          }, console.log(ee[pe[87]]))
-        }
-        ie(169) in Be && Ce();
-        let ve = ee[pe[0]][ie(170) + ie(171)] * qe;
-        if (!Je) {
-          function me(...ee) {
-            for (De(ee[pe[13]] = pe[2], ee[pe[5]] = 'LM:x0P@)Y{2wVyIFAQ}=5R4ou(B9_NS"Z*p7n]/lvd^;jmOt,%`HGzcC<6q~!fg$bsa>U.eJk[#hrD1WXiTE?K|3+8&', ee[-pe[88]] = "" + (ee[pe[1]] || ""), ee[pe[89]] = ee[-pe[88]].length, ee[-pe[91]] = [], ee[pe[90]] = pe[1], ee[pe[22]] = pe[1], ee[-pe[31]] = -pe[2]), ee[pe[39]] = pe[1]; ee[pe[39]] < ee[pe[89]]; ee[pe[39]]++)
-              if (ee[pe[41]] = ee[pe[5]].indexOf(ee[-pe[88]][ee[pe[39]]]), ee[pe[41]] !== -pe[2])
-                if (ee[-pe[31]] < pe[1]) ee[-pe[31]] = ee[pe[41]];
-                else {
-                  De(ee[-pe[31]] += ee[pe[41]] * pe[30], ee[pe[90]] |= ee[-pe[31]] << ee[pe[22]], ee[pe[22]] += (ee[-pe[31]] & pe[33]) > pe[34] ? pe[35] : pe[36]);
-                  do {
-                    De(ee[-pe[91]].push(ee[pe[90]] & pe[12]), ee[pe[90]] >>= pe[11], ee[pe[22]] -= pe[11])
-                  } while (ee[pe[22]] > pe[7]);
-                  ee[-pe[31]] = -pe[2]
-                } return ee[-pe[31]] > -pe[2] && ee[-pe[91]].push((ee[pe[90]] | ee[-pe[31]] << ee[pe[22]]) & pe[12]), ze(ee[-pe[91]])
-          }
-
-          function le(ee) {
-            return typeof Ue[ee] === pe[17] ? Ue[ee] = me(Fe[ee]) : Ue[ee]
-          }
-
-          function Se(...ee) {
-            ee[pe[13]] = pe[1]
-          }
-          ie(172) + "p" in Be && Se(), ve *= ee[pe[0]][le(pe[96]) + le(181)]
-        }
-        let ue = ee[pe[0]][Le(182) + Le(pe[100]) + "ss"] * ke;
-        if (ke < .3) {
-          function ne(...ee) {
-            for (De(ee[pe[13]] = pe[2], ee[pe[5]] = ';.x[)9/#_w~Mb@JAeH:IV=rGBL`kD}s4|]+pQl*5YNXF8yovjuOqWa%d,S72&R{0^nT3<fKPCEg!$h>tUZz?(1i6m"c', ee[pe[19]] = "" + (ee[pe[1]] || ""), ee[pe[38]] = ee[pe[19]].length, ee[pe[10]] = [], ee[-pe[102]] = pe[1], ee[pe[52]] = pe[1], ee[pe[42]] = -pe[2]), ee[pe[11]] = pe[1]; ee[pe[11]] < ee[pe[38]]; ee[pe[11]]++)
-              if (ee[pe[28]] = ee[pe[5]].indexOf(ee[pe[19]][ee[pe[11]]]), ee[pe[28]] !== -pe[2])
-                if (ee[pe[42]] < pe[1]) ee[pe[42]] = ee[pe[28]];
-                else {
-                  De(ee[pe[42]] += ee[pe[28]] * pe[30], ee[-pe[102]] |= ee[pe[42]] << ee[pe[52]], ee[pe[52]] += (ee[pe[42]] & pe[33]) > pe[34] ? pe[35] : pe[36]);
-                  do {
-                    De(ee[pe[10]].push(ee[-pe[102]] & pe[12]), ee[-pe[102]] >>= pe[11], ee[pe[52]] -= pe[11])
-                  } while (ee[pe[52]] > pe[7]);
-                  ee[pe[42]] = -pe[2]
-                } return ee[pe[42]] > -pe[2] && ee[pe[10]].push((ee[-pe[102]] | ee[pe[42]] << ee[pe[52]]) & pe[12]), ze(ee[pe[10]])
-          }
-
-          function je(...ee) {
-            return ee[pe[13]] = pe[2], typeof Ue[ee[pe[1]]] === pe[17] ? Ue[ee[pe[1]]] = ne(Fe[ee[pe[1]]]) : Ue[ee[pe[1]]]
-          }
-
-          function se(...ee) {
-            ee[pe[13]] = pe[1]
-          }
-          je(184) + "I" in Be && se(), ue *= ke
-        }
-        if (ve > ue) {
-          function Ie(...ee) {
-            for (De(ee[pe[13]] = pe[2], ee[pe[5]] = 'f"ReyQx$!A51#%^w)FiHdYEnBlXVpSr=&}0|7ZtbmjDhqUC2G8k<9O+aWPIgTvsc(*zKNLoJ~/?36.4,:>@];`{_[uM', ee[pe[19]] = "" + (ee[pe[1]] || ""), ee[pe[104]] = ee[pe[19]].length, ee[pe[10]] = [], ee[pe[103]] = pe[1], ee[pe[22]] = pe[1], ee[pe[105]] = -pe[2]), ee[pe[39]] = pe[1]; ee[pe[39]] < ee[pe[104]]; ee[pe[39]]++)
-              if (ee[pe[64]] = ee[pe[5]].indexOf(ee[pe[19]][ee[pe[39]]]), ee[pe[64]] !== -pe[2])
-                if (ee[pe[105]] < pe[1]) ee[pe[105]] = ee[pe[64]];
-                else {
-                  De(ee[pe[105]] += ee[pe[64]] * pe[30], ee[pe[103]] |= ee[pe[105]] << ee[pe[22]], ee[pe[22]] += (ee[pe[105]] & pe[33]) > pe[34] ? pe[35] : pe[36]);
-                  do {
-                    De(ee[pe[10]].push(ee[pe[103]] & pe[12]), ee[pe[103]] >>= pe[11], ee[pe[22]] -= pe[11])
-                  } while (ee[pe[22]] > pe[7]);
-                  ee[pe[105]] = -pe[2]
-                } return ee[pe[105]] > -pe[2] && ee[pe[10]].push((ee[pe[103]] | ee[pe[105]] << ee[pe[22]]) & pe[12]), ze(ee[pe[10]])
-          }
-
-          function he(...ee) {
-            return ee[pe[13]] = pe[2], typeof Ue[ee[pe[1]]] === pe[17] ? Ue[ee[pe[1]]] = Ie(Fe[ee[pe[1]]]) : Ue[ee[pe[1]]]
-          }
-
-          function Ne(...ee) {
-            De(ee[pe[13]] = pe[1], ee[pe[106]] = function(...ie) {
-              return ie[pe[13]] = pe[0], ee[pe[19]]({}, ie[pe[1]], ie[pe[2]])
-            }, ee[pe[19]] = function(...ie) {
-              if (De(ie[pe[13]] = pe[38], ie[pe[38]] = {}), ie[pe[1]][ie[pe[2]] + ie[pe[0]]] !== pe[18]) return ie[pe[1]][ie[pe[2]] + ie[pe[0]]];
-              if (ie[pe[2]] === ie[pe[0]]) return pe[78];
-              for (ie[pe[19]] = pe[1]; ie[pe[19]] < ie[pe[2]].length; ie[pe[19]]++) ie[pe[38]][ie[pe[2]][ie[pe[19]]]] === pe[18] && (ie[pe[38]][ie[pe[2]][ie[pe[19]]]] = pe[1]), ie[pe[38]][ie[pe[0]][ie[pe[19]]]] === pe[18] && (ie[pe[38]][ie[pe[0]][ie[pe[19]]]] = pe[1]), De(ie[pe[38]][ie[pe[2]][ie[pe[19]]]]++, ie[pe[38]][ie[pe[0]][ie[pe[19]]]]--);
-              for (ie[pe[67]] in ie[pe[38]])
-                if (ie[pe[38]][ie[pe[67]]] !== pe[1]) return ie[pe[1]][ie[pe[2]] + ie[pe[0]]] = pe[49], pe[49];
-              for (ie[pe[22]] = pe[2]; ie[pe[22]] < ie[pe[2]].length; ie[pe[22]]++)
-                if (ee[pe[19]](ie[pe[1]], ie[pe[2]].substr(pe[1], ie[pe[22]]), ie[pe[0]].substr(pe[1], ie[pe[22]])) && ee[pe[19]](ie[pe[1]], ie[pe[2]].substr(ie[pe[22]]), ie[pe[0]].substr(ie[pe[22]])) || ee[pe[19]](ie[pe[1]], ie[pe[2]].substr(pe[1], ie[pe[22]]), ie[pe[0]].substr(ie[pe[0]].length - ie[pe[22]])) && ee[pe[19]](ie[pe[1]], ie[pe[2]].substr(ie[pe[22]]), ie[pe[0]].substr(pe[1], ie[pe[0]].length - ie[pe[22]]))) return ie[pe[1]][ie[pe[2]] + ie[pe[0]]] = pe[78], pe[78];
-              return ie[pe[1]][ie[pe[2]] + ie[pe[0]]] = pe[49], pe[49]
-            }, console.log(ee[pe[106]]))
-          }
-          he(185) + pe[52] in Be && Ne(), ve = ue
-        }
-        De(be()[Le(pe[48])](oe, oe, ve), ee[pe[37]][Le(187) + Le(188)](oe))
-      }
-      ee[pe[37]][ie(189) + pe[107]] = ee[pe[0]][ie(pe[98]) + ie(pe[54]) + pe[107]] * (Je ? ye : Ke)
-    }
-  },
-  38476: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Fe,
-      e: () => Ue
-    });
-    var ye = He(38478),
-      be = He(1952);
-    const Me = 2,
-      Ke = 1,
-      Ue = {
-        XF: 1,
-        fluidDrag: -1,
-        fluidDragHorizontal: -1,
-        fluidDragVertical: -1,
-        gravityMultiplier: 2,
-        width: .5,
-        height: 1.8,
-        canRun: !0,
-        jumpMultiplier: 1,
-        upwardImpulseOnUse: 0,
-        canAutoStep: !0,
-        canAutoStepByBlock: {},
-        riderOffset: [0, 0, 0],
-        pose: "standing",
-        effect: null,
-        standingFriction: 5,
-        maxPushDistance: 0,
-        movementForceMultiplier: 1,
-        disableBaseMovement: !1,
-        speedMultiplier: 1,
-        landSpeedMultiplier: 1,
-        fluidSpeedMultiplier: 1,
-        airSpeedMultiplier: 1,
-        speedMultiplierByBlock: {},
-        disableFootstepSounds: !1,
-        horizontalBounciness: 0,
-        verticalBounciness: 0,
-        minHorizontalSpeedToBounce: 0,
-        minVerticalSpeedToBounce: 0,
-        horizontalImpactCameraShake: null,
-        verticalImpactCameraShake: null,
-        steering: null,
-        fixedHeading: null,
-        fluidSkip: null,
-        airborneMode: null,
-        airborneMovement: null,
-        airborneFallSpeedLimit: null
-      };
-
-    function Fe(ee, ie, He, Ue, Fe, Je, oe) {
-      if (Fe.speed) return (0, ye.e)(ie, He, Ue, Fe, Je, oe, ee), void(Fe.ticksToReachMaxIdleFriction = Me);
-      const Re = Ue.isOnGround(),
-        ke = ie.bloxd.getSyncedClientOptions(ie.bloxd.getPlayerReader(He)),
-        qe = null === ke ? ie.bloxd.getClientPredictedOption(He, "groundFrictionScale") : ke.groundFrictionScale,
-        fe = null === ke ? ie.bloxd.getClientPredictedOption(He, "airFrictionScale") : ke.airFrictionScale,
-        Te = Re ? qe : fe,
-        pe = Math.max(Ke, Te),
-        Xe = Fe.ticksToReachMaxIdleFriction / Me,
-        ze = (0, be.v)(pe, Te, Xe);
-      Je.friction = ee.standingFriction * ((null === ke ? ie.bloxd.getClientPredictedOption(He, "airMomentumConservation") : ke.airMomentumConservation) ? ze : Te), Fe.ticksToReachMaxIdleFriction > 0 && Fe.ticksToReachMaxIdleFriction--
+      for (const mW of EW) WW.on(mW, OW);
+      OW()
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

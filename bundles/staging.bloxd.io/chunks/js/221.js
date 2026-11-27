@@ -1,802 +1,644 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  37024: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      capturePreviewPicture: () => Xe,
-      holdPreviewsLow: () => Ke.g,
-      openLiveFigure: () => pe,
-      rasterNametag: () => ge
+  37536: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      isMoreOptionsInFooter: () => pW,
+      showOnboardingPopup: () => fW
     });
-    var ye = He(1189),
-      be = He(2683),
-      Me = He(34919),
-      Ke = He(37028),
-      Ue = He(37035),
-      Fe = He(37043),
-      Je = He(37081),
-      oe = He(3820);
-    const Re = 480,
-      ke = 16,
-      qe = {
-        minGapMs: 250,
-        now: () => performance.now(),
-        skip: Ke.u
-      },
-      fe = 30,
-      Te = 1e4;
+    var mW = OW(62),
+      EW = OW(1172),
+      NW = OW(1422),
+      PW = OW(1532),
+      LW = OW(1102),
+      cW = OW(4994),
+      wW = OW(1659),
+      tW = OW(344),
+      ZW = OW(1653),
+      xW = OW(3083),
+      lW = OW(1089),
+      AW = OW.n(lW),
+      bW = OW(1111),
+      jW = OW(37541),
+      UW = OW(3247),
+      kW = OW(4723),
+      sW = OW(1107),
+      MW = OW(1391),
+      KW = OW(1283);
+    const SW = "OnboardingMorePanel";
 
-    function pe(ee, ie, He, Fe) {
-      const Je = Me.i.openCharacter(ee, "player");
-      let oe = !1,
-        Re = !1,
-        fe = null;
-      const pe = async () => {
-        const ee = Je.dev.canvas(),
-          ie = await (ye = () => ee.isConnected && function(ee) {
-            const {
-              x: ie,
-              width: He
-            } = ze(ee);
-            if (0 === He || 0 === ee.height) return !1;
-            if (Be ??= document.createElement("canvas").getContext("2d", {
-                willReadFrequently: !0
-              }), null === Be) return !1;
-            const ye = Be.canvas;
-            ye.height = Math.min(ee.height, ke), ye.width = Math.max(1, Math.round(He * ye.height / ee.height));
-            const be = Be;
-            return be.imageSmoothingQuality = "high", be.drawImage(ee, ie, 0, He, ee.height, 0, 0, ye.width, ye.height), Ee(be.getImageData(0, 0, ye.width, ye.height).data)
-          }(ee), be = Ke.e, Me = () => !oe && Je.isReady(), Ue = qe, new Promise((ee => {
-            let ie = Number.NEGATIVE_INFINITY;
-            const He = () => {
-              be((() => {
-                try {
-                  if (!Me()) return void ee(!1);
-                  if (Ue.skip()) return void ee(!0);
-                  const be = Ue.now();
-                  if (be - ie >= Ue.minGapMs && (ie = be, ye())) return void ee(!0);
-                  He()
-                } catch (be) {
-                  console.warn("[loading-character] couldn't read a figure's frame", be), ee(!1)
-                }
-              }))
-            };
-            He()
-          })));
-        var ye, be, Me, Ue;
-        return !ie || oe || Re || (Re = !0, He(!0)), ie
-      };
-      return Je.ready.then((() => {
-        if (oe) return !1;
-        for (const Ke of ye.v) {
-          var ee;
-          Je.setCosmetic(Ke, null !== (ee = ie.cosmetics[Ke]) && void 0 !== ee ? ee : (0, be.e)(Ke))
-        }
-        const He = Promise.all(ye.v.map((ee => Je.untilDrawn(ee)))).then((() => !0)),
-          Me = new Promise((ee => {
-            setTimeout((() => {
-              (0, Ke.e)((() => {
-                ee(!1)
-              }))
-            }), Te)
-          }));
-        return Promise.race([He, Me])
-      })).then((async ee => {
-        if (!oe && Je.isReady() && await pe() && ee) return Xe(Je.dev.canvas(), (() => !oe && Je.isReady())).then((ee => {
-          null === ee || oe || Fe(ee)
-        }))
-      })).catch((ee => {
-        console.warn("[loading-character] a figure couldn't draw", ee)
-      })), {
-        resize: (ee, ie) => {
-          const ye = (0, Ue.c)(ee, ie, window.devicePixelRatio),
-            be = null !== fe && (fe[0] !== ye[0] || fe[1] !== ye[1]);
-          fe = ye, Je.resize(ee, ie), be && Re && (Re = !1, He(!1), pe())
+    function YW(WW) {
+      let {
+        open: iW,
+        onToggle: OW
+      } = WW;
+      const {
+        t: mW
+      } = (0, EW.B)();
+      return (0, KW.jsxs)("button", {
+        type: "button",
+        className: "OnboardingMoreOptions",
+        "aria-expanded": iW,
+        "aria-controls": iW ? SW : void 0,
+        onClick: () => {
+          iW || (0, cW.l)("more"), OW()
         },
-        close: () => {
-          oe = !0, Je.close()
+        children: [mW("homePage:onboardingMoreOptions"), (0, KW.jsx)(MW.c, {
+          name: iW ? "caret-up" : "caret-down"
+        })]
+      })
+    }
+    const yW = Object.entries(wW.e).filter((WW => {
+      let [, iW] = WW;
+      return "default" === iW.cosmeticPack
+    }));
+
+    function TW(WW) {
+      return ZW.e.default.colourGroups[WW].colours.map(((WW, iW) => {
+        let {
+          rbg: OW,
+          order: mW
+        } = WW;
+        return {
+          rbg: OW,
+          order: mW,
+          index: iW
         }
-      }
+      })).sort(((WW, iW) => WW.order - iW.order))
+    }
+    const JW = TW("eyes"),
+      hW = TW("skin");
+
+    function HW(WW, iW) {
+      var OW;
+      if (void 0 === iW || "default" !== (null === (OW = (0, xW.l)(WW, iW)) || void 0 === OW ? void 0 : OW.cosmeticPack)) return null;
+      const mW = (0, xW.h)(iW);
+      return mW && [mW[0], Number(mW[1])]
     }
 
-    function Xe(ee, ie) {
-      return new Promise((He => {
-        const ye = be => {
-          (0, Ke.e)((() => {
-            if (!ie()) return void He(null);
-            const Me = ee.isConnected ? function(ee) {
-              let {
-                canvas: ie,
-                x: He,
-                width: ye
-              } = ee;
-              if (0 === ye || 0 === ie.height) return null;
-              const be = Math.min(1, Re / ie.height),
-                Me = document.createElement("canvas");
-              Me.width = Math.max(1, Math.round(ye * be)), Me.height = Math.max(1, Math.round(ie.height * be));
-              const Ke = Me.getContext("2d", {
-                willReadFrequently: !0
-              });
-              if (!Ke) return null;
-              if (Ke.drawImage(ie, He, 0, ye, ie.height, 0, 0, Me.width, Me.height), !Ee(Ke.getImageData(0, 0, Me.width, Me.height).data)) return null;
-              return Me.toDataURL("image/webp", .85)
-            }(ze(ee)) : null;
-            null !== Me || be <= 1 || !ee.isConnected ? He(Me) : ye(be - 1)
+    function nW(WW, iW, OW) {
+      return `${WW}_${iW}_${OW}`
+    }
+
+    function uW(WW) {
+      let {
+        label: iW,
+        colours: OW,
+        picked: mW,
+        onPick: NW
+      } = WW;
+      const {
+        t: PW
+      } = (0, EW.B)();
+      return (0, KW.jsxs)("div", {
+        className: "OnboardingColours",
+        children: [(0, KW.jsx)("div", {
+          className: "OnboardingColoursLabel",
+          children: iW
+        }), (0, KW.jsx)("div", {
+          className: "OnboardingSwatches",
+          role: "radiogroup",
+          "aria-label": iW,
+          children: OW.map(((WW, iW) => {
+            let {
+              rbg: OW,
+              index: EW
+            } = WW;
+            return (0, KW.jsx)("button", {
+              type: "button",
+              className: AW()("OnboardingSwatch", {
+                OnboardingSwatchSelected: EW === mW
+              }),
+              style: {
+                backgroundColor: `rgb(${OW.join(",")})`
+              },
+              role: "radio",
+              "aria-checked": EW === mW,
+              "aria-label": PW("homePage:onboardingColour", {
+                number: iW + 1
+              }),
+              onClick: () => {
+                NW(EW)
+              }
+            }, EW)
           }))
-        };
-        ye(fe)
-      }))
+        })]
+      })
     }
 
-    function ze(ee) {
-      const ie = Math.min(ee.width, Math.round(ee.height * oe.b));
-      return {
-        canvas: ee,
-        x: Math.round((ee.width - ie) / 2),
-        width: ie
-      }
-    }
-    let Be = null;
-
-    function Ee(ee) {
-      for (let ie = 3; ie < ee.length; ie += 4)
-        if (0 !== ee[ie]) return !0;
-      return !1
-    }
-    async function ge(ee) {
-      var ie;
-      await Je.j.load();
-      const He = {
-          name: ee.name,
-          info: null,
-          colour: null !== (ie = ee.nameColour) && void 0 !== ie ? ie : "default",
-          ranks: ee.ranks,
-          effects: [],
-          health: null,
-          Po: null,
-          hideNameSeed: null,
-          player: !ee.isYou
+    function oW(WW) {
+      let {
+        moreOptions: iW,
+        onToggleMoreOptions: OW,
+        moreOptionsBelowPresets: NW
+      } = WW;
+      const {
+        t: PW
+      } = (0, EW.B)(), {
+        userContext: LW,
+        isUserContextUpdating: wW
+      } = (0, sW.e)(), [, ZW] = (0, mW.useReducer)((WW => WW + 1), 0), xW = (0, mW.useRef)({}), lW = (0, mW.useRef)(null), MW = (0, mW.useRef)({}), TW = (0, kW.c)(), oW = {
+        ...LW.getPlayerCosmetics(),
+        ...lW.current
+      }, dW = (0, mW.useRef)(null);
+      (0, mW.useEffect)((() => {
+        var WW;
+        iW && (null === (WW = dW.current) || void 0 === WW || WW.scrollIntoView({
+          block: "nearest"
+        }))
+      }), [iW]);
+      const eW = (WW, iW) => {
+          (0, jW.d)(WW, Object.entries(iW)), TW.current ? ZW() : WW.publishUpdateIfCurrent()
         },
-        ye = document.createElement("canvas"),
-        [be, Me] = (0, Fe.f)((0, Fe.i)(Fe.e.Nametag, He), ye, !0);
-      return 0 === be || 0 === Me ? null : {
-        src: ye.toDataURL("image/png"),
-        width: be,
-        height: Me
-      }
-    }
-  },
-  34927: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ke,
-      d: () => be,
-      h: () => oe
-    });
-    var ye = He(1557);
-
-    function be(ee) {
-      var ie;
-      return {
-        ...Ke.store,
-        yaw: Ke.store.yaw + (null !== (ie = ye.b[ee].previewYaw) && void 0 !== ie ? ie : 0)
-      }
-    }
-    const Me = {
-        yaw: .61 * Math.PI,
-        pitch: Math.PI / 2.05,
-        radius: 30,
-        target: [0, 0, 0]
-      },
-      Ke = {
-        player: Me,
-        store: {
-          ...Me,
-          radius: 33,
-          target: [0, 3.9, 0]
-        }
-      };
-
-    function Ue(ee, ie) {
-      ee instanceof Promise ? ee.then(ie).catch((ee => {
-        console.error("Couldn't open the preview", ee)
-      })) : ie(ee)
-    }
-    class Fe {
-      constructor(ee) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, Ue(ee, (ee => {
-          this.closed ? ee.close() : (this.opened = ee, null !== this.size && ee.resize(this.size.width, this.size.height), null !== this.view && ee.show(this.view))
+        vW = function(WW) {
+          let {
+            isDefault: iW = !1
+          } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          const OW = {
+            ...!wW && LW.isLoggedIn() ? MW.current : lW.current,
+            ...WW
+          };
+          if (!wW) return lW.current = null, MW.current = {}, void eW(LW, OW);
+          lW.current = OW, iW || (MW.current = {
+            ...MW.current,
+            ...WW
+          }), ZW(), bW.userContextManager.getCurrentUserContext().then((WW => {
+            if (lW.current !== OW) return;
+            lW.current = null;
+            const iW = MW.current;
+            MW.current = {};
+            const mW = WW.isLoggedIn() ? iW : OW;
+            0 !== Object.keys(mW).length ? eW(WW, mW) : TW.current && ZW()
+          })).catch((WW => {
+            console.warn("Couldn't put on the onboarding look held for the account", WW), lW.current === OW && (lW.current = null, MW.current = {}, TW.current && ZW())
+          }))
+        },
+        gW = (0, mW.useRef)(!1);
+      (0, mW.useEffect)((() => {
+        gW.current || (gW.current = !0, !wW && LW.isLoggedIn() || vW((0, tW.cc)(yW)[1].cosmetics, {
+          isDefault: !0
         }))
-      }
-      show(ee) {
-        var ie;
-        this.view = ee, null === (ie = this.opened) || void 0 === ie || ie.show(ee)
-      }
-      resize(ee, ie) {
-        var He;
-        this.size = {
-          width: ee,
-          height: ie
-        }, null === (He = this.opened) || void 0 === He || He.resize(ee, ie)
-      }
-      close() {
-        var ee;
-        this.closed = !0, null === (ee = this.opened) || void 0 === ee || ee.close(), this.opened = null
-      }
-    }
-    class Je {
-      constructor(ee) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(ee).then((ee => ee.ready)), Ue(ee, (ee => {
-          this.closed ? ee.close() : (this.opened = ee, null !== this.size && ee.resize(this.size.width, this.size.height))
-        }))
-      }
-      get dev() {
-        return this.opened.dev
-      }
-      isReady() {
-        var ee, ie;
-        return null !== (ee = null === (ie = this.opened) || void 0 === ie ? void 0 : ie.isReady()) && void 0 !== ee && ee
-      }
-      setCosmetic(ee, ie) {
-        var He;
-        null === (He = this.opened) || void 0 === He || He.setCosmetic(ee, ie)
-      }
-      playEmote(ee) {
-        var ie;
-        null === (ie = this.opened) || void 0 === ie || ie.playEmote(ee)
-      }
-      setOrbit(ee) {
-        var ie;
-        null === (ie = this.opened) || void 0 === ie || ie.setOrbit(ee)
-      }
-      resetCamera() {
-        var ee;
-        null === (ee = this.opened) || void 0 === ee || ee.resetCamera()
-      }
-      async untilDrawn(ee) {
-        var ie;
-        await this.ready, await (null === (ie = this.opened) || void 0 === ie ? void 0 : ie.untilDrawn(ee))
-      }
-      resize(ee, ie) {
-        var He;
-        this.size = {
-          width: ee,
-          height: ie
-        }, null === (He = this.opened) || void 0 === He || He.resize(ee, ie)
-      }
-      close() {
-        var ee;
-        this.closed = !0, null === (ee = this.opened) || void 0 === ee || ee.close(), this.opened = null
-      }
-    }
-    const oe = new class {
-      constructor() {
-        this.host = null, this.makeDefault = null
-      }
-      setHost(ee) {
-        this.host = ee
-      }
-      setDefaultHost(ee) {
-        this.makeDefault = ee
-      }
-      current() {
-        if (null === this.host) {
-          if (null === this.makeDefault) throw new Error("no preview host");
-          this.host = this.makeDefault()
-        }
-        return this.host
-      }
-      openMob(ee) {
-        return new Fe(this.current().openMob(ee))
-      }
-      openPet(ee) {
-        return new Fe(this.current().openPet(ee))
-      }
-      openMobLineup(ee) {
-        return new Fe(this.current().openMobLineup(ee))
-      }
-      openCharacter(ee, ie) {
-        return new Je(this.current().openCharacter(ee, ie))
-      }
-    }
-  },
-  34919: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => ye.b,
-      f: () => ye.d,
-      i: () => ye.h
-    });
-    var ye = He(34927);
-    class be {
-      constructor(ee) {
-        this.load = ee, this.loaded = null, this.loading = null
-      }
-      run(ee) {
-        return null !== this.loaded ? ee(this.loaded) : (this.loading ??= this.load().then((ee => (this.loaded = ee, ee)), (ee => {
-          throw this.loading = null, ee
-        })), this.loading.then(ee))
-      }
-    }
-    class Me {
-      constructor() {
-        this.mobScene = new be((() => Promise.all([He.e(84), He.e(259), He.e(258), He.e(283), He.e(111), He.e(284), He.e(87), He.e(281), He.e(85), He.e(86), He.e(291), He.e(285), He.e(290), He.e(288), He.e(280), He.e(303), He.e(255), He.e(272), He.e(286), He.e(289), He.e(89), He.e(249), He.e(204), He.e(109), He.e(261), He.e(252), He.e(268), He.e(219), He.e(269), He.e(88), He.e(273)]).then((() => He(42155))))), this.characterScene = new be((() => Promise.all([He.e(84), He.e(259), He.e(258), He.e(283), He.e(111), He.e(284), He.e(87), He.e(281), He.e(85), He.e(86), He.e(291), He.e(285), He.e(290), He.e(288), He.e(280), He.e(303), He.e(255), He.e(272), He.e(286), He.e(289), He.e(89), He.e(249), He.e(204), He.e(109), He.e(261), He.e(252), He.e(268), He.e(219), He.e(269), He.e(88), He.e(218)]).then((() => He(42256)))))
-      }
-      openMob(ee) {
-        return this.mobScene.run((ie => ie.openMobPreview(ee)))
-      }
-      openPet(ee) {
-        return this.mobScene.run((ie => ie.openPetPreview(ee)))
-      }
-      openMobLineup(ee) {
-        return this.mobScene.run((ie => ie.openMobLineupPreview(ee)))
-      }
-      openCharacter(ee, ie) {
-        return this.characterScene.run((He => He.openCharacterPreview(ee, ie)))
-      }
-    }
-    ye.h.setDefaultHost((() => new Me))
-  },
-  37049: (ee, ie, He) => {
-    function ye(ee, ie, He) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(ee, ie).getContext("2d", He);
-      const ye = document.createElement("canvas");
-      return ye.width = ee, ye.height = ie, ye.getContext("2d", He)
-    }
-
-    function be(ee, ie) {
-      return ee.getContext("2d", ie)
-    }
-    He.d(ie, {
-      c: () => be,
-      f: () => ye
-    })
-  },
-  37035: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Me
-    });
-    const ye = 4e5,
-      be = 2;
-
-    function Me(ee, ie, He) {
-      let [Me, Ke] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [ee, ie], Ue = Math.min(Number.isFinite(He) && He > 0 ? He : 1, be);
-      const Fe = Math.max(0, Me, ee) * Math.max(0, Ke, ie) * Ue * Ue;
-      return Fe > ye && (Ue *= Math.sqrt(ye / Fe)), [Math.max(1, Math.floor(Math.max(0, ee) * Ue)), Math.max(1, Math.floor(Math.max(0, ie) * Ue))]
-    }
-  },
-  37090: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => oe,
-      f: () => Fe,
-      j: () => Ue,
-      n: () => Je
-    });
-    var ye = He(1992);
-    let be = null,
-      Me = 0;
-    const Ke = new Set;
-
-    function Ue() {
-      return be
-    }
-
-    function Fe() {
-      return Me
-    }
-
-    function Je(ee) {
-      be = ee, Me++, (0, ye.d)();
-      for (const ie of Ke) ie()
-    }
-
-    function oe(ee) {
-      Ke.add(ee)
-    }
-  },
-  37028: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Te,
-      g: () => oe,
-      h: () => qe,
-      l: () => Re,
-      o: () => pe,
-      q: () => fe,
-      u: () => ke
-    });
-    const ye = 30,
-      be = 4;
-    let Me = 0,
-      Ke = !1,
-      Ue = !1,
-      Fe = Number.NEGATIVE_INFINITY,
-      Je = [];
-
-    function oe() {
-      0 === Me && (Ke = !1, Ue = !1), Me++;
-      let ee = !1;
-      return () => {
-        ee || (ee = !0, Me--)
-      }
-    }
-
-    function Re(ee) {
-      ee && (Ue = !0)
-    }
-
-    function ke() {
-      return Ue
-    }
-
-    function qe(ee) {
-      Ke = ee
-    }
-
-    function fe(ee) {
-      return !(Me > 0 && (Ke || ee - Fe < 1e3 / ye - be)) && (Fe = ee, !0)
-    }
-
-    function Te(ee) {
-      Je.push(ee)
-    }
-
-    function pe() {
-      if (0 === Je.length) return;
-      const ee = Je;
-      Je = [];
-      for (const He of ee) try {
-        He()
-      } catch (ie) {
-        console.warn("[bloxd-previews] an after-draw callback threw", ie)
-      }
-    }
-  },
-  37102: (ee, ie, He) => {
-    function ye() {
-      return He(37108)
-    }
-
-    function be() {
-      return He(37116)
-    }
-
-    function Me(ee) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(ee)
-    }
-    He.d(ie, {
-      b: () => Me,
-      e: () => ye,
-      h: () => be
-    })
-  },
-  37043: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => pe,
-      f: () => ue,
-      i: () => Pe,
-      m: () => Ve
-    });
-    var ye = He(37068),
-      be = He(37049),
-      Me = He(37058),
-      Ke = He(37062);
-
-    function Ue(ee, ie, He) {
-      const ye = "object" === typeof ee && null !== ee ? ee : {},
-        be = function(ee, ie, He) {
-          if (!Array.isArray(ee) || 0 === ee.length) return [];
-          const ye = [{
-            width: 0,
-            height: 0,
-            y: 0,
-            items: []
-          }];
-          for (const Ue of (0, Ke.k)(ee, Ke.d.DEFAULT_FONT_SIZE, He)) {
-            if ("text" !== Ue.kind) {
-              ye[ye.length - 1].items.push({
-                content: Ue,
-                chars: 1,
-                size: {
-                  x: 0,
-                  width: 0
-                }
-              });
-              continue
-            }
-            if (0 === Ue.text.length) continue;
-            const ee = ye[ye.length - 1].items.reduce(((ee, ie) => ee + ("text" === ie.content.kind ? (0, Me.e)(ie.content.text) : ie.chars)), 0);
-            (0, Me.i)(Ue.text, ee).forEach(((ee, ie) => {
-              ie > 0 && ye.push({
-                width: 0,
-                height: 0,
-                y: 0,
-                items: []
-              }), ee.length > 0 && ye[ye.length - 1].items.push({
-                content: {
-                  ...Ue,
-                  text: ee
-                },
-                chars: ee.length,
-                size: {
-                  x: 0,
-                  width: 0
+      }), []), (0, mW.useEffect)((() => () => {
+        LW.publishUpdateIfCurrent()
+      }), [LW]);
+      const DW = HW("eyes", oW.eyes),
+        VW = HW("skin", oW.skin);
+      return (0, KW.jsxs)(KW.Fragment, {
+        children: [(0, KW.jsx)("div", {
+          className: "OnboardingPresets",
+          children: yW.map(((WW, iW) => {
+            let [OW, {
+              cosmetics: mW
+            }] = WW;
+            const EW = function(WW, iW) {
+              return Object.entries(iW).every((iW => {
+                let [OW, mW] = iW;
+                return "skin" === OW || ("eyes" === OW ? (null === (EW = HW("eyes", WW.eyes)) || void 0 === EW ? void 0 : EW[0]) === (null === (NW = HW("eyes", mW)) || void 0 === NW ? void 0 : NW[0]) : WW[OW] === mW);
+                var EW, NW
+              }))
+            }(oW, mW);
+            return (0, KW.jsx)("button", {
+              type: "button",
+              className: AW()("OnboardingPreset", {
+                OnboardingPresetSelected: EW
+              }),
+              "aria-label": PW("homePage:onboardingPreset", {
+                number: iW + 1
+              }),
+              "aria-pressed": EW,
+              onClick: () => {
+                (0, cW.l)(`preset.${OW}`);
+                const {
+                  eyes: WW,
+                  skin: iW
+                } = xW.current;
+                vW({
+                  ...mW,
+                  ...void 0 !== WW && {
+                    eyes: nW("eyes", HW("eyes", mW.eyes)[0], WW)
+                  },
+                  ...void 0 !== iW && {
+                    skin: nW("skin", "0", iW)
+                  }
+                })
+              },
+              children: (0, KW.jsx)("div", {
+                className: "OnboardingPresetImage",
+                style: {
+                  backgroundImage: `url(/textures/charSkins/previews/character_${OW}_preview.png)`
                 }
               })
-            }))
-          }
-          let be = Ke.d.VERTICAL_PADDING / 2;
-          for (const Me of ye) {
-            if (0 === Me.items.length) continue;
-            const {
-              width: ee,
-              height: ye,
-              sizes: Ue
-            } = (0, Ke.g)(Me.items.map((ee => ee.content)), ie, He);
-            Me.items.forEach(((ee, ie) => {
-              ee.size = Ue[ie]
-            })), Me.width = ee, Me.height = ye, Me.y = be, be += ye + Ke.d.LINE_SPACING
-          }
-          return ye
-        }(ye.content, ie, He);
-      let Ue = 0,
-        Fe = Ke.d.VERTICAL_PADDING,
-        Je = 0;
-      for (const Me of be) {
-        Ue = Math.max(Ue, Me.width + 2 * Ke.d.HORIZONTAL_PADDING), Fe += Me.height + Ke.d.LINE_SPACING;
-        for (const ee of Me.items) Je += ee.chars
-      }
-      const oe = "string" === typeof ye.backgroundColor ? ye.backgroundColor : "#22283b";
-      return {
-        width: Ue,
-        height: Fe,
-        chars: Je,
-        draw: (ee, ie) => {
-          const ye = [];
-          if (ee.fillStyle = oe, ee.fillRect(0, 0, Ue, Fe), null === ie)
-            for (const Me of be) Me.items.length > 0 && (0, Ke.o)(Me.items.map((ee => ee.content)), 0, Me.y, Me.height, ee, He, ye);
-          else {
-            let Me = 0;
-            for (const Ue of be)
-              for (const be of Ue.items) {
-                if (Me >= ie) break;
-                const Fe = "text" === be.content.kind ? {
-                  ...be.content,
-                  text: be.content.text.substring(0, ie - Me)
-                } : be.content;
-                (0, Ke.n)(Fe, be.size.x, Ue.y, Ue.height, ee, He, ye, be.size.width), Me += be.chars
+            }, OW)
+          }))
+        }), NW && (0, KW.jsx)(YW, {
+          open: iW,
+          onToggle: OW
+        }), iW && (0, KW.jsxs)("div", {
+          ref: dW,
+          id: SW,
+          className: "OnboardingMore",
+          children: [(0, KW.jsx)("div", {
+            className: "OnboardingMorePreview",
+            children: (0, KW.jsx)(UW.e, {
+              cosmetics: oW
+            })
+          }), (0, KW.jsxs)("div", {
+            className: "OnboardingMoreColours",
+            children: [(0, KW.jsx)(uW, {
+              label: PW("homePage:onboardingEyeColour"),
+              colours: JW,
+              picked: null === DW || void 0 === DW ? void 0 : DW[1],
+              onPick: WW => {
+                var iW;
+                (0, cW.l)("eyes"), xW.current.eyes = WW, vW({
+                  eyes: nW("eyes", null !== (iW = null === DW || void 0 === DW ? void 0 : DW[0]) && void 0 !== iW ? iW : "0", WW)
+                })
               }
-          }(0, Ke.l)(ye, ee)
-        }
-      }
+            }), (0, KW.jsx)(uW, {
+              label: PW("homePage:onboardingSkinColour"),
+              colours: hW,
+              picked: null === VW || void 0 === VW ? void 0 : VW[1],
+              onPick: WW => {
+                (0, cW.l)("skin"), xW.current.skin = WW, vW({
+                  skin: nW("skin", "0", WW)
+                })
+              }
+            })]
+          })]
+        })]
+      })
     }
-    var Fe = He(37064),
-      Je = He(37066);
-    const oe = 256,
-      Re = 1024,
-      ke = {
-        width: 1,
-        height: 7 / 8
+    var dW = OW(1259),
+      eW = OW(25),
+      vW = OW(35118),
+      gW = OW(1383),
+      DW = OW(1782);
+
+    function VW(WW) {
+      const {
+        t: iW
+      } = (0, EW.B)(), {
+        userContext: OW,
+        isUserContextUpdating: NW
+      } = (0, sW.e)(), LW = NW ? null : OW.getPlayerName(), wW = (0, mW.useRef)(null), [tW, ZW] = (0, mW.useState)((() => null === LW ? (0, dW.d)() : null)), [xW, lW] = (0, mW.useState)(null), [AW, bW] = (0, mW.useState)(!1), jW = (0, mW.useRef)("EZ"), UW = (0, kW.c)(), SW = (0, mW.useRef)(null !== tW), YW = (0, mW.useRef)(!1), yW = (0, mW.useRef)(null), TW = null !== tW && void 0 !== tW ? tW : LW, JW = (0, mW.useRef)(null), hW = WW => {
+        wW.current && (wW.current.value = WW), ZW(WW)
+      }, HW = (0, mW.useRef)(!1);
+      (0, mW.useEffect)((() => {
+        var WW, iW;
+        !AW && HW.current && (HW.current = !1, null === (WW = wW.current) || void 0 === WW || WW.focus(), null === (iW = wW.current) || void 0 === iW || iW.select())
+      }), [AW]);
+      const nW = (0, mW.useRef)(null);
+      (0, mW.useEffect)((() => {
+        var WW;
+        null !== xW && (null === (WW = nW.current) || void 0 === WW || WW.scrollIntoView({
+          block: "nearest"
+        }))
+      }), [xW]);
+      const uW = (WW, iW) => {
+        const OW = document.activeElement === wW.current || HW.current;
+        bW(!0), lW(null), WW.then((WW => {
+          UW.current && (bW(!1), HW.current = OW, iW(WW))
+        }))
       };
-    var qe = He(37076);
-    const fe = {
-      leaderboard: ""
+      (0, mW.useEffect)((() => {
+        var WW, iW;
+        eW.d.get("isTouchScreen") || (null === (WW = wW.current) || void 0 === WW || WW.focus(), null === (iW = wW.current) || void 0 === iW || iW.select())
+      }), []);
+      const oW = () => {
+          (0, cW.p)(jW.current), WW()
+        },
+        VW = (WW, iW) => {
+          var OW, mW;
+          if (yW.current === WW) return jW.current = null !== (OW = null === (mW = JW.current) || void 0 === mW ? void 0 : mW.outcome) && void 0 !== OW ? OW : "EZ", void oW();
+          yW.current = WW, lW(iW)
+        },
+        pW = WW => "refused" === WW.outcome ? WW.message : iW((0, vW.i)(WW.failure)),
+        fW = WW => !(WW.length >= dW.j) && (lW({
+          kind: "error",
+          message: iW("homePage:changeNameMinLengthError", {
+            length: dW.j
+          })
+        }), !0),
+        CW = WW => {
+          var mW, EW, NW;
+          WW.toLowerCase() !== (null === (mW = null !== (EW = null === (NW = JW.current) || void 0 === NW ? void 0 : NW.name) && void 0 !== EW ? EW : LW) || void 0 === mW ? void 0 : mW.toLowerCase()) ? fW(WW) || uW((0, vW.e)(OW, WW), (OW => {
+            "taken" !== OW.outcome ? "refused" !== OW.outcome && "failed" !== OW.outcome ? OW.name !== WW ? (jW.current = "suffixed", JW.current = {
+              name: OW.name,
+              outcome: jW.current
+            }, hW(OW.name), lW({
+              kind: "suffixed",
+              taken: WW,
+              name: OW.name
+            })) : oW() : VW(WW, {
+              kind: "error",
+              message: pW(OW)
+            }) : VW(WW, {
+              kind: "error",
+              message: iW("homePage:onboardingNameAllTaken")
+            })
+          })) : oW()
+        };
+      (0, mW.useEffect)((() => {
+        if (!AW || null !== LW || !YW.current) return;
+        const WW = setTimeout((() => {
+          YW.current = !1, bW(!1), VW(TW, {
+            kind: "noAccount"
+          })
+        }), 2e4);
+        return () => {
+          clearTimeout(WW)
+        }
+      }), [AW, LW]), (0, mW.useEffect)((() => {
+        if (null === LW) return;
+        const WW = SW.current && "EZ" === jW.current && OW.isLoggedIn();
+        SW.current = !1, yW.current = null, "noAccount" === (null === xW || void 0 === xW ? void 0 : xW.kind) && lW(null), WW && hW(LW), YW.current && (YW.current = !1, bW(!1), CW(WW ? LW : TW))
+      }), [LW]);
+      const XW = "error" === (null === xW || void 0 === xW ? void 0 : xW.kind) ? xW.message : "noAccount" === (null === xW || void 0 === xW ? void 0 : xW.kind) ? iW("homePage:onboardingNameNoAccount") : null;
+      return {
+        field: (0, KW.jsxs)("div", {
+          className: "OnboardingNameField",
+          ref: nW,
+          children: [(0, KW.jsx)("div", {
+            className: "OnboardingSubtitle",
+            children: iW("general:name")
+          }), null === TW && (0, KW.jsx)(gW.d, {}), null !== TW && (0, KW.jsxs)("div", {
+            className: "OnboardingNameRow",
+            children: [(0, KW.jsx)(DW.b, {
+              className: "OnboardingNameInput",
+              ariaLabel: iW("general:name"),
+              maxLength: dW.f,
+              defaultValue: TW,
+              domRef: wW,
+              forcedText: AW ? TW : null,
+              onEnter: () => {
+                var WW;
+                null === (WW = wW.current) || void 0 === WW || WW.blur()
+              },
+              onValueChange: WW => {
+                const OW = (0, dW.p)(WW);
+                OW !== WW && wW.current && (wW.current.value = OW), lW(OW !== WW ? {
+                  kind: "error",
+                  message: iW("homePage:nameCharacters")
+                } : null), OW !== TW && (jW.current = "changed"), ZW(OW)
+              }
+            }), (0, KW.jsx)(PW.f, {
+              className: "OnboardingRandomName",
+              ariaLabel: iW("homePage:onboardingRandomName"),
+              disabled: AW,
+              onClick: () => {
+                (() => {
+                  if (lW(null), null === LW || OW.isLoggedIn()) return hW((0, dW.d)()), void(jW.current = "rolled");
+                  uW((0, vW.m)(OW), (WW => {
+                    var iW, mW;
+                    if ("refused" === WW.outcome || "failed" === WW.outcome) return hW(OW.getPlayerName()), jW.current = null !== (iW = null === (mW = JW.current) || void 0 === mW ? void 0 : mW.outcome) && void 0 !== iW ? iW : "EZ", void lW({
+                      kind: "error",
+                      message: pW(WW)
+                    });
+                    jW.current = "rolled", JW.current = {
+                      name: WW.name,
+                      outcome: "rolled"
+                    }, hW(WW.name)
+                  }))
+                })()
+              },
+              children: (0, KW.jsx)(MW.c, {
+                name: "dice"
+              })
+            })]
+          }), "suffixed" === (null === xW || void 0 === xW ? void 0 : xW.kind) && (0, KW.jsx)("div", {
+            className: "OnboardingNameNote",
+            children: iW("homePage:onboardingNameSuffixed", {
+              taken: xW.taken,
+              name: xW.name
+            })
+          }), null !== XW && (0, KW.jsx)("div", {
+            className: "OnboardingNameNote OnboardingNameError",
+            children: XW
+          })]
+        }),
+        submit: () => {
+          if (!AW && null !== TW) {
+            if (null === LW) {
+              if (fW(TW)) return;
+              return HW.current = document.activeElement === wW.current, YW.current = !0, bW(!0), void lW(null)
+            }
+            CW(TW)
+          }
+        },
+        busy: AW,
+        ready: null !== TW
+      }
+    }
+
+    function pW(WW) {
+      return WW < 500
+    }
+
+    function fW() {
+      const WW = {
+          finished: !1
+        },
+        iW = {
+          press: null
+        };
+      return NW.NotificationProvider.showCustomPopup({
+        body: OW => (0, KW.jsx)(CW, {
+          onFinish: () => {
+            (0, cW.j)(), WW.finished = !0, OW()
+          },
+          doneRef: iW
+        }),
+        middleScreenPopupClassName: "OnboardingPopup",
+        disableExitButton: !0,
+        ignoreBackgroundPress: !0,
+        dismiss: () => {
+          var WW;
+          null === (WW = iW.press) || void 0 === WW || WW.call(iW)
+        },
+        onClose: () => {
+          WW.finished || (0, cW.f)()
+        }
+      })
+    }
+
+    function CW(WW) {
+      let {
+        onFinish: iW,
+        doneRef: OW
+      } = WW;
+      const {
+        t: NW
+      } = (0, EW.B)(), wW = VW(iW), tW = wW.ready && !wW.busy ? wW.submit : null;
+      (0, mW.useEffect)((() => (OW.press = tW, () => {
+        OW.press = null
+      })));
+      const [ZW, xW] = (0, mW.useState)(!1), lW = (0, LW.l)(((WW, iW) => pW(iW))), AW = () => {
+        xW(!ZW)
+      };
+      return (0, mW.useEffect)((() => {
+        (0, cW.t)()
+      }), []), (0, KW.jsxs)("div", {
+        className: "Onboarding",
+        children: [(0, KW.jsx)("div", {
+          className: "OnboardingTitle",
+          children: NW("homePage:onboardingTitle")
+        }), (0, KW.jsxs)("div", {
+          className: "OnboardingBody",
+          children: [wW.field, (0, KW.jsx)(oW, {
+            moreOptions: ZW,
+            onToggleMoreOptions: AW,
+            moreOptionsBelowPresets: !lW
+          })]
+        }), (0, KW.jsxs)("div", {
+          className: "OnboardingFooter",
+          children: [lW && (0, KW.jsx)(YW, {
+            open: ZW,
+            onToggle: AW
+          }), (0, KW.jsx)(PW.n, {
+            className: "OnboardingPrimaryButton",
+            padDefaultFocus: !0,
+            loading: wW.busy,
+            disabled: !wW.ready,
+            onClick: wW.submit,
+            children: NW("homePage:onboardingDone")
+          })]
+        })]
+      })
+    }
+  },
+  37541: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW
+    });
+    var mW = OW(2037),
+      EW = OW(1584);
+    const NW = new class {
+      constructor() {
+        this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
+      }
+      save(WW, iW) {
+        WW !== this.userContext && this.sendHeld(), this.userContext = WW;
+        for (const [mW, EW] of iW) this.pending.set(mW, EW);
+        if (null !== this.timer) return;
+        const OW = this.lastSentAt + 1100 - Date.now();
+        OW <= 0 ? this.send(WW) : (this.timer = setTimeout((() => {
+          this.sendHeld()
+        }), OW), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+          "hidden" === document.visibilityState && this.sendHeld()
+        }))))
+      }
+      sendHeld() {
+        null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
+      }
+      send(WW) {
+        const iW = Array.from(this.pending, (WW => {
+          let [iW, OW] = WW;
+          return {
+            NE: iW,
+            PE: OW
+          }
+        }));
+        this.pending.clear(), this.lastSentAt = Date.now(), EW.e.updateCosmetics(WW, iW).catch((WW => {
+          console.error("Failed to update cosmetics", WW)
+        }))
+      }
     };
-    var Te = He(37081);
-    const pe = {
-        Nametag: 1,
-        MultilineText: 2,
-        Board: 3,
-        Leaderboard: 4
-      },
-      Xe = 2048,
-      ze = 256,
-      Be = 10,
-      Ee = 4,
-      ge = 65536,
-      Oe = new TextDecoder;
-    let de = Te.q,
-      We = -1;
-    const te = new Map,
-      Ze = new Map;
-    let we = 0;
-    const De = new TextEncoder;
 
-    function Pe(ee, ie) {
-      const He = De.encode(JSON.stringify(ie)),
-        ye = new Uint8Array(He.length + 1);
-      return ye[0] = ee, ye.set(He, 1), ye
-    }
-    const Ae = {
-        name: "Ag",
-        info: null,
-        colour: "default",
-        ranks: [],
-        effects: [],
-        health: .5,
-        Po: null,
-        hideNameSeed: null
-      },
-      Ye = [Pe(pe.Nametag, Ae), Pe(pe.Nametag, {
-        ...Ae,
-        info: {
-          content: [{
-            str: "Ag"
-          }],
-          subtitle: ["Ag"]
-        }
-      }), Pe(pe.MultilineText, {
-        box: {
-          content: ["Ag"]
-        },
-        shown: null
-      }), ...ye.d.map(((ee, ie) => Pe(pe.Board, {
-        shared: {
-          text: "Ag",
-          textSize: ie
-        },
-        w: 0,
-        h: 0
-      })))];
-
-    function Ve(ee) {
-      Te.j.load().then((() => {
-        if (ee()) return;
-        const ie = (0, be.f)(1, 1, {
-          willReadFrequently: !0
-        });
-        var He;
-        ie && (He = ie.canvas, Ye.map((ee => ue(ee, He))))
-      }))
-    }
-    let ae = Te.w;
-
-    function ce() {
-      te.clear(), Ze.clear()
-    }
-
-    function xe(ee, ie) {
-      const He = ee.get(ie);
-      return void 0 !== He && (ee.delete(ie), ee.set(ie, He)), He
-    }
-
-    function Le(ee, ie, He) {
-      ee.set(ie, He), ee.size > ze && ee.delete(ee.keys().next().value)
-    }
-
-    function Ce(ee, ie, He) {
-      if (ee === pe.Nametag) {
-        let ee = xe(te, ie);
-        return void 0 === ee && (ee = (0, Fe.e)(JSON.parse(ie), He, de), Le(te, ie, ee)), ee
-      }
-      if (ee === pe.MultilineText) {
-        var be;
-        const ee = JSON.parse(ie),
-          ye = JSON.stringify(null !== (be = ee.box) && void 0 !== be ? be : null),
-          Me = "number" === typeof ee.shown ? ee.shown : null;
-        let Ke = xe(Ze, ye);
-        void 0 === Ke && (Ke = Ue(ee.box, He, de), Le(Ze, ye, Ke));
-        const Fe = null === Me ? null : Math.min(Math.max(0, Math.floor(Me)), Ke.chars),
-          Je = Ke;
-        return {
-          width: Je.width,
-          height: Je.height,
-          draw: ee => {
-            Je.draw(ee, Fe)
-          }
-        }
-      }
-      if (ee === pe.Board) return function(ee, ie) {
-        var He;
-        if (!ie.canSeePlayerWrittenText) return null;
-        const {
-          shared: be,
-          w: Me = 0,
-          h: Ke = 0
-        } = ee, Ue = !Me;
-        let Fe;
-        if (Ue) {
-          var qe, fe;
-          Fe = null !== (qe = null === be || void 0 === be || null === (fe = be.text) || void 0 === fe ? void 0 : fe.toString()) && void 0 !== qe ? qe : ""
-        } else {
-          if ("string" !== typeof(null === be || void 0 === be ? void 0 : be.text)) return null;
-          Fe = be.text
-        }
-        if ("" === Fe.trim()) return null;
-        const Te = null !== (He = null === be || void 0 === be ? void 0 : be.textSize) && void 0 !== He ? He : 0,
-          pe = ye.d[Te].ingameFontSize;
-        let Xe = ke,
-          ze = oe;
-        Ue || (Fe = (0, ye.n)(Fe, Te, Me, Ke), Xe = (0, ye.v)(Me, Ke), ze = Math.min(oe, Re / Math.max(Xe.width, Xe.height)));
-        const Be = Math.round(ze * Xe.width),
-          Ee = Math.round(ze * Xe.height),
-          ge = ze / oe;
-        return {
-          width: Be,
-          height: Ee,
-          draw: ee => {
-            Je.b.fontSize = pe * ge, Je.b.fontWeight = "bold", Je.b.font = "'Jetbrains Mono', monospace", Je.b.drawText(ee, Fe, 0, (-10 - 7 * Te) * ge, Be, Ee)
-          }
-        }
-      }(JSON.parse(ie), de);
-      if (ee === pe.Leaderboard) return function(ee, ie, He) {
-        var ye;
-        const be = (0, qe.k)(ee.opts, fe),
-          Me = (0, qe.f)(be, He),
-          Ke = {
-            top: (0, qe.g)(be, (0, qe.m)(ee.top)),
-            around: null !== (ye = ee.around) && void 0 !== ye ? ye : null,
-            showPlayerText: ie.canSeePlayerWrittenText,
-            localPlayerDbId: ie.localPlayerDbId
-          };
-        return {
-          width: Me.pixelWidth,
-          height: Me.pixelHeight,
-          draw: ee => {
-            const {
-              a: ie,
-              d: He
-            } = ee.getTransform();
-            (0, qe.d)(ee, Math.round(Me.pixelWidth * ie), Math.round(Me.pixelHeight * He), Me, be, Ke)
-          }
-        }
-      }(JSON.parse(ie), de, Xe);
-      throw new Error(`unknown text plane kind ${ee}`)
-    }
-    const ve = 2 ** Math.floor(Math.log2(Xe));
-
-    function ue(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      try {
-        if (ee.length < 2) return [0, 0];
-        const Me = (0, be.c)(ie);
-        if (!Me) return [0, 0];
-        const Ke = ae();
-        Ke !== We && (We = Ke, ce());
-        const [Ue] = ee, Fe = Oe.decode(ee.subarray(1));
-        let Je;
-        Ue !== pe.Board && Ue !== pe.Leaderboard || !de.canSeePlayerWrittenText || de.glyphsShown(Fe), Me.save();
-        try {
-          Je = Ce(Ue, Fe, Me)
-        } finally {
-          Me.restore()
-        }
-        if (null === Je || !(Je.width > 0 && Je.height > 0)) return [0, 0];
-        const oe = Math.min(1, Xe / Je.width, Xe / Je.height),
-          Re = ee => ye ? function(ee) {
-            const ie = 2 ** Math.ceil(Math.log2(ee));
-            return Math.min(ve, ie - ee > ee - ie / 2 ? ie / 2 : ie)
-          }(ee) : Math.min(Xe, Math.ceil(ee * oe)),
-          [ke, qe] = [Re(Je.width), Re(Je.height)];
-        ! function(ee, ie, He, ye, be) {
-          const Me = Math.max(ee.width, He),
-            Ke = Math.max(ee.height, ye),
-            Ue = be || Me * Ke > Math.max(Ee * He * ye, ge),
-            [Fe, Je] = Ue ? [He, ye] : [Me, Ke];
-          Fe === ee.width && Je === ee.height ? ie.clearRect(0, 0, Fe, Je) : (ee.width = Fe, ee.height = Je)
-        }(ie, Me, ke, qe, He), Me.save();
-        try {
-          const [ee, ie] = ye ? [ke / Je.width, qe / Je.height] : [oe, oe];
-          1 === ee && 1 === ie || Me.scale(ee, ie), Je.draw(Me)
-        } finally {
-          Me.restore()
-        }
-        return [ke, qe]
-      } catch (Me) {
-        ! function(ee, ie) {
-          we < Be && (we++, console.warn(`[bloxd-wasm-client] ${ee}`, ie))
-        }("could not raster a text plane", Me);
-        try {
-          ie.width = 1
-        } catch {}
-        return [0, 0]
-      }
+    function PW(WW, iW) {
+      for (const [OW, mW] of iW) WW.setPlayerCosmetics(OW, mW);
+      if (null === mW.gameBridge.latest("connectedGame").websocketUrl) NW.save(WW, iW);
+      else
+        for (const [OW, EW] of iW) mW.gameBridge.send("updateMyCosmetic", {
+          NE: OW,
+          PE: EW
+        })
     }
   },
-  37108: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
-  },
-  37116: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  35118: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => kW,
+      i: () => wW,
+      l: () => bW,
+      m: () => AW
+    });
+    var mW = OW(154),
+      EW = OW(1259),
+      NW = OW(1185),
+      PW = OW(1111),
+      LW = OW(1850);
+    const cW = {
+      offline: "homePage:onboardingNameNoAccount",
+      outdated: "general:updatedReloading",
+      busy: "homePage:changeNameTooFast",
+      server: "homePage:changeNameFailed"
+    };
+
+    function wW(WW) {
+      return cW[WW]
+    }
+
+    function tW(WW) {
+      return (0, LW.c)(WW) ? "outdated" : WW instanceof mW.c ? 429 === WW.httpCode ? "busy" : "server" : "offline"
+    }
+
+    function ZW(WW, iW, OW) {
+      return (0, PW.postJsonWithMetricsCookiesAndJsonResponse)(`${NW.clientSideServerUrls.indexUrl}${iW}`, OW, {
+        retries: 3
+      }, WW.getMetricsCookies()).catch((WW => (console.error("Bad response from the server when trying to change name:", iW, WW), {
+        outcome: "failed",
+        failure: tW(WW)
+      })))
+    }
+
+    function xW(WW) {
+      return "outcome" in WW && "failed" === WW.outcome
+    }
+
+    function lW(WW) {
+      return console.error("Error when trying to get with new name from DB", WW), {
+        outcome: "refused",
+        message: WW
+      }
+    }
+    async function AW(WW) {
+      const iW = await ZW(WW, "/index/name/random", {});
+      return xW(iW) ? iW : "err" in iW ? lW(iW.err) : (WW.setPlayerName(iW.name), {
+        outcome: "changed",
+        name: iW.name
+      })
+    }
+    async function bW(WW, iW) {
+      const OW = await ZW(WW, "/index/name/update", {
+        name: iW
+      });
+      return xW(OW) ? OW : "err" in OW ? lW(OW.err) : OW.nameExists ? {
+        outcome: "taken"
+      } : (WW.setPlayerName(iW), {
+        outcome: "changed",
+        name: iW
+      })
+    }
+
+    function jW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const mW = 1 === iW ? 1 : 10 ** (iW - 1),
+        NW = String(mW + Math.floor(OW() * (10 ** iW - mW)));
+      return `${WW.slice(0,EW.f-iW)}${NW}`
+    }
+    const UW = [1, 2, 3, 4];
+    async function kW(WW, iW) {
+      const OW = await bW(WW, iW);
+      if ("taken" !== OW.outcome) return OW;
+      for (const mW of UW) {
+        const OW = jW(iW, mW),
+          EW = await bW(WW, OW);
+        if ("taken" !== EW.outcome) return EW
+      }
+      return {
+        outcome: "taken"
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

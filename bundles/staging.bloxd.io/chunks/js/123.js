@@ -1,883 +1,1051 @@
 export const id = 123;
-export const ids = [123, 176];
+export const ids = [123];
 export const modules = {
-  9660: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      default: () => zi
+  40312: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW,
+      f: () => NW
     });
-    var ye = He(1515),
-      be = He(18),
-      Me = He(5064),
-      Ke = He(59),
-      Ue = He(1432);
-    var Fe = He(1983),
-      Je = He(1502),
-      oe = He(1340),
-      Re = He(1127),
-      ke = He(9663),
-      qe = He(9667),
-      fe = He(4974),
-      Te = He(153),
-      pe = He(1083),
-      Xe = He(27),
-      ze = He(1192),
-      Be = He(1768),
-      Ee = He(97),
-      ge = He(1294),
-      Oe = He(1425),
-      de = He(4914),
-      We = He(4719),
-      te = He(4678),
-      Ze = He(3572),
-      we = He(2418),
-      De = He(1315),
-      Pe = He(780),
-      Ae = He(1178),
-      Ye = He(1033),
-      Ve = He(1169),
-      ae = He(3618),
-      ce = He(3465),
-      xe = He(1342),
-      Le = He(1320),
-      Ce = He(5491),
-      ve = He(9674),
-      ue = He(3203),
-      me = He(1228);
+    var mW = OW(2780);
+    let EW = null;
 
-    function le(ee) {
-      let {
-        onApply: ie,
-        onSkip: He
-      } = ee;
-      const {
-        t: ye
-      } = (0, Re.v)();
-      return (0, Ke.useEffect)((() => {
-        ue.h.skipPlayWait()
-      }), []), (0, me.jsx)(xe.k, {
-        icon: "download",
-        title: "customTexturePack:downloadTitle",
-        subtitle: (0, me.jsxs)("div", {
-          className: "CustomTexturePackDownloaderSubtitleText",
-          children: [ye("customTexturePack:downloadPrompt"), (0, me.jsx)("div", {
-            className: "CustomTexturePackDownloaderWarningText",
-            children: ye("customTexturePack:authorWarning")
-          }), (0, me.jsx)("div", {
-            className: "CustomTexturePackDownloaderSecondaryText",
-            children: ye("customTexturePack:existingPackSaved")
-          })]
-        }),
-        confirm: {
-          text: "general:apply",
-          onClick: ie
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: He
-        }
-      })
+    function NW(WW) {
+      return null !== EW && WW === EW
     }
-    async function Se() {
-      let ee = !1;
-      const ie = oe.NotificationProvider.showCustomPopup({
-        body: ie => (0, me.jsx)(le, {
-          onApply: () => {
-            ee = !0, ie()
-          },
-          onSkip: ie
-        }),
-        disableExitButton: !0,
-        disablePressBackgroundToClose: !0
-      });
-      return await ie.getResult(), ee
+
+    function PW() {
+      this.Qq = !1, this.stopPropagation = !1, this.xR = !1, this.disabled = !1
     }
-    let ne = {
-      wanted: !1
-    };
-    let je = null;
-
-    function se(ee) {
-      ee.setGamePackConfirm(Se), je = ee
-    }
-    var Ie = He(3871),
-      he = He(1490),
-      Ne = He(35),
-      Ge = He(3580);
-
-    function re(ee) {
-      let {
-        schematicId: ie,
-        texturePackKey: He,
-        onClose: ye
-      } = ee;
-      const [be, Me] = (0, Ke.useState)("prompt"), [Ue, Fe] = (0, Ke.useState)(null), Je = (0, Ie.c)();
-
-      function oe() {
-        ye()
-      }
-      return "prompt" === be ? (0, me.jsx)(le, {
-        onApply: async function() {
-          Me("downloading");
-          try {
-            const ee = await async function(ee, ie) {
-              const He = await (0, Ce.e)(ie);
-              if (He) return {
-                pack: He,
-                key: ie
-              };
-              const ye = await pe.userContextManager.getCurrentUserContext(),
-                be = (await he.b.getGame(ye, ee, !0)).customTexturePackKey;
-              if (!be) return null;
-              const Me = await (0, Ce.e)(be);
-              if (!Me) throw new Error("The texture pack could not be found");
-              return {
-                pack: Me,
-                key: be
-              }
-            }(ie, He);
-            if (!Je.current) return;
-            if (!ee) return void ye();
-            if ((0, ae.l)(ee.pack)) return void Me("refused");
-            const be = ce.c.toJson(),
-              Ke = ce.c.isUsingTemporaryTexturePack() ? "customGame" : "player";
-            if (ce.c.setFromJson(ee.pack, "customGame"), await ce.c.saveTemporaryTexturePack(ee.key), Je.current) return void(0, Be.reloadBloxd)();
-            ce.c.setFromJson(be, Ke), await (0, Ge.p)(Ne.e)
-          } catch (ee) {
-            Fe(ee instanceof Error ? ee.message : String(ee)), Me("error")
-          }
-        },
-        onSkip: oe
-      }) : "downloading" === be ? (0, me.jsx)(xe.k, {
-        icon: "download",
-        title: "customTexturePack:downloading",
-        subtitle: (0, me.jsx)("div", {
-          className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, me.jsx)(Le.b, {
-            showFace: !0
-          })
+    class LW {
+      constructor(WW, iW) {
+        this.version = "0.7.0";
+        var OW = Object.assign({}, new PW, iW || {});
+        this.element = WW || document, this.Qq = !!OW.Qq, this.stopPropagation = !!OW.stopPropagation, this.xR = !!OW.xR, this.disabled = !!OW.disabled, this.filterEvents = (WW, iW) => !0, this.ignoreEvent = WW => !1, this.down = new mW.EventEmitter, this.up = new mW.EventEmitter, this.state = {}, this.bR = {
+          dx: 0,
+          dy: 0,
+          diW: 0,
+          eiW: 0,
+          viW: 0
+        }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
+          lastX: 0,
+          lastY: 0,
+          currID: null
+        }, "loading" !== document.readyState ? wW(this) : document.addEventListener("DOMContentLoaded", (WW => {
+          wW(this)
+        }), {
+          once: !0
         })
-      }) : "error" === be ? (0, me.jsx)(xe.k, {
-        icon: "face-worried",
-        title: "customTexturePack:errorTitle",
-        subtitle: Ue,
-        confirm: {
-          text: "customTexturePack:refreshPage",
-          onClick: () => {
-            window.location.reload()
-          }
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: oe
+      }
+      bind(WW) {
+        for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
+        OW.forEach((iW => {
+          var OW = this._keyBindmap[iW] || [];
+          OW.includes(WW) || (OW.push(WW), this._keyBindmap[iW] = OW)
+        })), this.state[WW] = !!this.state[WW], this.pressCount[WW] = this.pressCount[WW] || 0, this.releaseCount[WW] = this.releaseCount[WW] || 0
+      }
+      unbind(WW) {
+        for (var iW in this._keyBindmap) {
+          var OW = this._keyBindmap[iW],
+            mW = OW.indexOf(WW);
+          mW > -1 && OW.splice(mW, 1)
         }
-      }) : "refused" === be ? (0, me.jsx)(xe.k, {
-        icon: "face-worried",
-        title: "customTexturePack:cantApplyTitle",
-        subtitle: "customTexturePack:gamePackHasExternalUrls",
-        confirm: {
-          text: "general:continue",
-          onClick: oe
+      }
+      getBindings() {
+        var WW = {};
+        for (var iW in this._keyBindmap) {
+          this._keyBindmap[iW].forEach((OW => {
+            WW[OW] = WW[OW] || [], WW[OW].push(iW)
+          }))
         }
-      }) : null
-    }
-    var Qe = He(9691),
-      ei = He(4665),
-      ii = He(1833),
-      Hi = He(1814),
-      yi = He(4673),
-      bi = He(2166),
-      Mi = He(9693);
-    var Ki = He(5129),
-      Ui = He(1260),
-      Fi = He(1763),
-      Ji = He(645),
-      oi = He(732),
-      Ri = He(1851);
-
-    function ki() {
-      const ee = be.e.get("clientEscMenuOptions");
-      Fe.gameBridge.send("setLookSensitivity", be.e.get("isTouchScreen") ? (0, oi.u)(ee) : ee.mouseSensitivity)
-    }
-    const qi = 45e3;
-
-    function fi(ee) {
-      const ie = ee.asError();
-      if (ie.debugResult.Ce || (0, Fi.b)(ie.debugResult.error)) return;
-      console.log("Failed to join lobby:", ie.message);
-      const He = "timedOut" === ie.debugResult.gameServerUnreachable;
-      (0, Hi.reportClientError)("matchmake_failed", ie.message, He ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : Te.k[ie.code]);
-      const {
-        error: ye
-      } = ie.debugResult;
-      if (ye instanceof Ze.k && "default" !== ye.packSource) {
-        const ee = (0, yi.g)("js", "game" === ye.packSource ? "game" : "page", (0, yi.h)(ye));
-        (0, Hi.reportClientError)("texture_pack", ye, ee)
+        return WW
+      }
+      hZ() {
+        cW(this.bR), cW(this.pressCount), cW(this.releaseCount)
       }
     }
 
-    function Ti(ee) {
-      if (null === ee || void 0 === ee || !ee.isError()) return !1;
-      const ie = ee.asError();
-      return ie.code === Te.k.REQUEST_TO_MATCHMAKING && !(0, Fi.b)(ie.debugResult.error)
-    }
-    async function Xi(ee, ie, He) {
-      const ye = (0, Ki.I)(ie);
-      async function Ke(ee, ie, He, ye) {
-        var Ke;
-        if (ye.aborted) return null;
-        null === be.e.get("gameEntrySource") && (0, be.l)("directPlayUrl"), Ji.I && (0, ve.loadWasmPlay)().catch((() => {})), be.e.set({
-          gameState: "findingLobby"
-        }), Xe.h.yR("loadingScreenState", "loadingPage:findingLobby");
-        const Ue = await pe.userContextManager.getCurrentUserContext();
-        Fe.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: ie,
-          discordContext: ee instanceof Ae.f ? ee.getSerialisableParams() : null
-        }), (0, ii.g)(null !== (Ke = ue.h.playInputAt()) && void 0 !== Ke ? Ke : performance.now());
-        const Je = await async function(ee, ie, He, ye, be) {
-          try {
-            await (0, Ri.k)(Me.reqLibsLoadedPromise, qi, "Required libraries timed out")
-          } catch (Ke) {
-            const ee = Ke instanceof Ri.f ? `Required libraries still loading after ${qi/1e3} s: ${(0,Me.requiredLibsPending)().join(", ")}` : Ke.toString();
-            return ze.e.errorWithCode(ee, Te.k.LOAD_REQUIRED_LIBS, {
-              error: Ke,
-              severity: "medium"
-            })
-          }
-          return Xe.h.yR("matchmakeAndPlayStepCompleted", {
-            step: Te.k.LOAD_REQUIRED_LIBS,
-            totalSubSteps: 1
-          }), (0, Me.matchmakeAndPlayMaybeUnloaded)(ee, ie, He, ye, be)
-        }(ee, ie, He, Ue, ye), oe = Je.isError() ? Je.asError() : null;
-        if (ye.aborted) return oe && fi(Je), Fe.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), null;
-        if (null !== oe && void 0 !== oe && oe.debugResult.Ce) return console.log("Join cancelled:", oe.message), null;
-        if (oe) return Je;
-        const {
-          gameNameWithVariation: Re,
-          lobbyName: ke
-        } = Je.getValue();
-        return ki(), (0, Ui.A)().setGameViewShown(!0), Ue.recordJoin(Re, ke), (0, ge.P)(), Je
-      }
-      return ye && (0, be.l)("updateRejoin"), (0, bi.g)((async be => {
-        try {
-          var Me;
-          let Ue = ee,
-            Fe = await Ke(Ue, ie, He, be);
-          for (let ee = 0; ye && ee < Ki.i && (Ti(Fe) && await (0, Ki.J)((0, Ki.s)(ee), be)); ee++) Ue = (0, Ki.w)(Ue, ee + 1, "string" === typeof Ue && (0, Ve.K)(Ue)), Fe = await Ke(Ue, ie, He, be);
-          return null !== (Me = Fe) && void 0 !== Me && Me.isError() && fi(Fe), Fe
-        } catch (Ue) {
-          if ((0, Hi.reportClientError)("matchmake_failed", Ue, "unexpected"), Fe.gameBridge.send("leaveGame", {
-              reloadPath: be.aborted ? null : "/"
-            }), be.aborted) return null;
-          throw Ue
-        }
-      }), (async ee => {
-        var He;
-        if (ye) return;
-        const be = (0, ge.G)();
-        null !== be && (await be, ee.aborted) || (null !== (He = Pe.e[ie]) && void 0 !== He && He.playAdBeforeMatchmaking ? (ue.h.skipPlayWait(), await new Promise((ee => {
-          (0, ge.db)((() => {
-            ee(!0)
-          }), "video_start")
-        }))) : (0, ge.db)((() => {}), "video_start"))
-      }))
+    function cW(WW) {
+      for (var iW in WW) WW[iW] = 0
     }
 
-    function zi() {
-      const {
-        t: ee
-      } = (0, Re.v)(), ie = (0, Je.useNavigatePreserveSearch)(), He = (0, ye.u)(), Ae = (0, ye.B)(), ae = (0, Ke.useRef)({
-        t: ee,
-        navigate: ie
-      });
-      ae.current = {
-        t: ee,
-        navigate: ie
+    function wW(WW) {
+      window.addEventListener("keydown", jW.bind(null, WW, !0), !1), window.addEventListener("keyup", jW.bind(null, WW, !1), !1);
+      var iW = {
+        passive: !0
       };
-      const xe = (0, Ke.useRef)("");
-      xe.current = He.pathname + He.search;
-      const {
-        gameState: Le,
-        clientEscMenuOptions: Ce
-      } = (0, be.m)(["gameState", "clientEscMenuOptions"]), ue = (0, Ke.useRef)(null), le = (0, Ke.useRef)(!1);
-      var Se;
-      (0, Ke.useEffect)((() => () => {
-        Xe.h.yR("leftPlayPage")
-      }), []), (0, bi.j)(), (0, bi.l)(), Se = Ji.I, (0, Ke.useEffect)((() => {
-        if (!Se) return;
-        let ee = !0;
-        return (0, ve.loadWasmPlay)().then((ie => {
-          ee && se(ie)
-        })).catch((() => {})), () => {
-          var ie;
-          ee = !1, ne.wanted = !1, null === (ie = je) || void 0 === ie || ie.setGamePackConfirm(null), je = null
-        }
-      }), [Se]), (0, Ke.useEffect)((() => {
-        var ee, ie, ye;
-        (0, Me.needGameClientNow)();
-        const {
-          t: Ke,
-          navigate: Ue
-        } = ae.current, Re = (0, Qe.d)(Ae, He.search);
-        if (Ae.lobbyName && !new URLSearchParams(He.search).has("lobby")) return void Ue((0, De.b)(Re.gameNameWithVariation, Re.lobbyName), {
-          replace: !0
-        });
-        let Oe = Promise.resolve({
-          shouldMatchmake: !0
-        });
-        const Le = new AbortController;
-        if ("/play/discord-custom-lobby" === He.pathname) {
-          const ee = be.e.get("discordContext");
-          if (!ee) return void Ue("/");
-          Oe = fe.c.setupDiscordLobby(ee, "classic").then((() => ({
-            shouldMatchmake: !0,
-            discordContext: ee
-          }))).catch((ie => (console.error("Failed to setup discord lobby", ie), {
-            shouldMatchmake: !1,
-            discordContext: ee
-          })))
-        } else if (!Re.gameNameWithVariation || !(0, Ve.J)(Re.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${Re.gameNameWithVariation}`), void Ue(-1);
-        const Ce = ue.current;
-        if (null !== Ce && Re.gameNameWithVariation === Ce.gameNameWithVariation && Re.lobbyName === Ce.lobbyName) return;
-        if (Fe.gameBridge.latest("connectedGame").replay) return void(0, bi.f)(null);
-        if ("releaseCountdown" === (null === (ee = (0, we.i)(Re.gameNameWithVariation)) || void 0 === ee ? void 0 : ee.type)) return console.error(`Game hasn't been released yet: ${Re.gameNameWithVariation}`), void Ue(-1);
-        const Se = le.current;
-        le.current = !1, (0, ge.K)(), be.e.set({
-          gameState: "loadingScreen"
-        });
-        const je = function() {
-            ne.wanted = !1;
-            const ee = {
-              wanted: !0
-            };
-            return ne = ee, () => ee.wanted
-          }(),
-          Ie = Re.gameNameWithVariation;
-        if (Ie && (Ji.I || (0, Ye.k)(Ie))) {
-          const ee = Ji.I ? Promise.all([(0, ve.loadWasmPlay)(), pe.userContextManager.getCurrentUserContext()]).then((ee => {
-            let [ie, He] = ee;
-            if (je()) return se(ie), ie.packForGame(Ie, He, je)
-          })) : async function(ee, ie) {
-            await ce.c.indexedDbValuesAreLoaded();
-            const He = await pe.userContextManager.getCurrentUserContext(),
-              ye = (0, Ye.r)(ee);
-            let be;
-            try {
-              be = await he.b.getGame(He, ye, !0)
-            } catch (Fe) {
-              return void console.error("Failed to get game", Fe)
-            }
-            if (null !== ie && void 0 !== ie && ie.aborted) return;
-            const Me = be.customTexturePackKey;
-            if (!Me) return void(ce.c.isUsingTemporaryTexturePack() && ((0, Be.reloadBloxd)(), await new Promise((() => {}))));
-            if (ce.c.isUsingTemporaryTexturePack() && ce.c.getTemporaryTexturePackSource() === Me) return;
-            const Ke = oe.NotificationProvider.showCustomPopup({
-                body: ee => (0, me.jsx)(re, {
-                  schematicId: ye,
-                  texturePackKey: Me,
-                  onClose: ee
-                }),
-                disableExitButton: !0,
-                disablePressBackgroundToClose: !0
-              }),
-              Ue = () => {
-                Ke.tearDownNotification()
-              };
-            null === ie || void 0 === ie || ie.addEventListener("abort", Ue, {
-              once: !0
-            }), await Ke.getResult(), null === ie || void 0 === ie || ie.removeEventListener("abort", Ue)
-          }(Ie, Le.signal), ie = Oe;
-          Oe = ee.catch((ee => {
-            console.error("Failed to check for custom texture pack", ee)
-          })).then((() => ie))
-        }
-        const Ne = {
-          wasm: Ji.I,
-          game: Re.gameNameWithVariation,
-          custom: void 0 !== Ie && (0, Ye.k)(Ie),
-          lobbyName: null !== (ie = Re.lobbyName) && void 0 !== ie ? ie : null,
-          direct: null !== Re.directJoinVmUrl && void 0 !== Re.directJoinVmUrl,
-          discord: "/play/discord-custom-lobby" === He.pathname,
-          adBeforeMatchmaking: void 0 !== Ie && !0 === (null === (ye = Pe.e[Ie]) || void 0 === ye ? void 0 : ye.playAdBeforeMatchmaking),
-          afterAnother: null !== ue.current || (0, bi.b)()
-        };
-        (0, Mi.f)(null);
-        const Ge = !(ii = Ne).wasm || void 0 === ii.game || ii.custom || ii.direct || ii.discord || ii.adBeforeMatchmaking || ii.afterAnother ? null : () => {
-          ! function(ee, ie) {
-            (0, Mi.f)({
-              key: (0, Mi.e)(ee, ie),
-              settled: Promise.all([Me.matchmakingLibrariesPromise, pe.userContextManager.getCurrentUserContext()]).then((He => {
-                let [ye, be] = He;
-                if (void 0 === ye.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
-                return ye.matchmakeForAhead(ee, ie, be)
-              })).catch((ee => ({
-                result: ze.e.errorWithCode(String(ee), Te.k.REQUEST_TO_MATCHMAKING, {
-                  error: ee,
-                  severity: "medium"
-                }),
-                at: performance.now()
-              })))
-            })
-          }(Ne.lobbyName, Ne.game)
-        };
-        var ii;
-        const Hi = null !== ue.current;
-        ue.current = null, (0, bi.f)(null);
-        const yi = () => {
-          Se ? (0, Je.navigateToHomePage)() : (le.current = Hi, Ue(-1))
-        };
-        let Ki = !1;
-        const Ui = He.pathname + He.search,
-          oi = () => !Ki && xe.current === Ui;
-        return (0, Mi.c)(Oe, Ge, (ee => {
-          let {
-            shouldMatchmake: ie,
-            discordContext: He
-          } = ee;
-          oi() && (ie ? Xi(null !== He && void 0 !== He ? He : Re.lobbyName, He ? "classic" : Re.gameNameWithVariation, Re.directJoinVmUrl).then((ee => {
-            if (null !== ee && oi())
-              if (ee.isError()) {
-                var ie, He;
-                const ye = ee.asError(),
-                  Me = null !== (ie = ye.debugResult.severity) && void 0 !== ie ? ie : "high";
-                if (Xe.h.yR("joinFailed", {
-                    step: null !== (He = ye.code) && void 0 !== He ? He : null,
-                    severity: Me
-                  }), (0, Fi.b)(ye.debugResult.error)) return void Fi.d.reload();
-                if (ye.code === Te.k.SHADER_PACK) return void(0, ei.d)(ye.message, Ue);
-                const Je = be.e.get("gameEntrySource"),
-                  fe = ye.code === Te.k.INITIALISE_WEBGL ? (0, We.b)() : null,
-                  {
-                    error: pe
-                  } = ye.debugResult;
-                let ze;
-                if ((0, qe.c)(Ke, ye)) ze = Promise.resolve(!1);
-                else if (null !== fe) ze = (0, We.i)(fe);
-                else if (pe instanceof Ze.k) ze = (0, te.f)(pe);
-                else {
-                  let ee;
-                  switch (Me) {
-                    case "low":
-                      ee = "face-diagonal-mouth";
-                      break;
-                    case "medium":
-                      ee = "face-worried";
-                      break;
-                    case "high":
-                      ee = "face-dizzy"
-                  }
-                  const ie = pe instanceof Ri.f;
-                  let He = (0, ke.c)(ye.message);
-                  ie ? He = Ke("general:gameFilesStalled") : ye.debugResult.gameServerUnreachable && (He = Ke((0, Ee.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
-                  ze = oe.NotificationProvider.showPromptPopup({
-                    icon: ee,
-                    title: Te.u[ye.code],
-                    subtitle: (0, me.jsxs)(me.Fragment, {
-                      children: [He, pe instanceof Error && !ie && (0, me.jsx)("div", {
-                        style: {
-                          fontSize: "0.9rem",
-                          paddingTop: "1rem"
-                        },
-                        children: (0, me.jsx)(de.d, {
-                          errorString: pe.stack
-                        })
-                      })]
-                    }),
-                    confirmText: Ke("general:tryAgain"),
-                    cancelText: Ke("general:cancel")
-                  }).getResult().then((ee => !0 === ee))
-                }
-                ze.then((ee => {
-                  if (ee) {
-                    (0, be.l)(Je);
-                    const ee = (0, De.b)(Re.gameNameWithVariation, Re.lobbyName);
-                    "low" === Me ? Ue(ee) : (0, Be.reloadBloxd)(ee)
-                  }
-                })), Fe.gameBridge.send("leaveGame", {
-                  reloadPath: "/"
-                }), yi()
-              } else {
-                const {
-                  gameNameWithVariation: ie,
-                  lobbyName: He
-                } = ee.getValue();
-                ue.current = {
-                  gameNameWithVariation: ie,
-                  lobbyName: He
-                };
-                const ye = (0, De.b)(ie, He);
-                Ue(ye, {
-                  replace: !0
-                })
-              }
-          })).catch((ee => {
-            if (!oi()) return;
-            Xe.h.yR("joinFailed", {
-              step: null,
-              severity: "unexpected"
-            });
-            oe.NotificationProvider.showPromptPopup({
-              icon: "face-dizzy",
-              title: "Unexpected Error",
-              subtitle: (0, me.jsxs)(me.Fragment, {
-                children: [Ke("homePage:pleaseCopyError"), (0, me.jsx)("div", {
-                  style: {
-                    fontSize: "0.9rem",
-                    paddingTop: "1rem"
-                  },
-                  children: (0, me.jsx)(de.d, {
-                    errorString: ee.stack
-                  })
-                })]
-              }),
-              confirmText: Ke("general:tryAgain"),
-              cancelText: Ke("general:cancel")
-            }).getResult().then((ee => {
-              !0 === ee && (0, Be.reloadBloxd)((0, De.b)(Re.gameNameWithVariation, Re.lobbyName))
-            })), yi()
-          })) : Ue(-1))
-        }), oi), () => {
-          Ki = !0, Le.abort()
-        }
-      }), [Ae, He.search, He.pathname]), (0, Ke.useEffect)((() => {
-        Ce.disableFullscreen && (0, Oe.e)() ? (0, Oe.l)() : !Ce.disableFullscreen && (0, Oe.i)() && (0, Oe.s)({
-          automatic: !0
-        })
-      }), [Le, Ce]), (0, Ke.useEffect)((() => {
-        "inGame" === Le && ki()
-      }), [Le, Ce]), (0, Ke.useEffect)((() => {
-        "inGame" !== Le && be.e.set({
-          openInGameMenuName: null
-        })
-      }), [Le]);
-      const Ie = function(ee) {
-        const ie = (0, be.i)(ee),
-          [He, ye] = (0, Ke.useState)(0),
-          [Me, Fe] = (0, Ke.useState)(!1);
-        (0, Ue.f)("gameJoined", (() => {
-          (0, be.i)(be.e.get("gameState")) && (ye((ee => ee + 1)), Fe(!0))
-        })), (0, Ke.useEffect)((() => {
-          ie || Fe(!1)
-        }), [ie]);
-        const Je = "inGame" === ee;
-        return {
-          mounted: Je || ie && Me,
-          shown: Je,
-          key: He
-        }
-      }(Le);
-      return (0, me.jsx)(me.Fragment, {
-        children: Ie.mounted && (0, me.jsx)(Me.InGameUi, {
-          shown: Ie.shown
-        }, Ie.key)
-      })
+      WW.element.addEventListener("touchstart", lW.bind(void 0, WW), {
+        passive: !1
+      }), WW.element.addEventListener("touchend", bW.bind(void 0, WW), iW), WW.element.addEventListener("mousedown", UW.bind(null, WW, !0), iW), window.document.addEventListener("mouseup", UW.bind(null, WW, !1), iW), WW.element.addEventListener("touchmove", kW.bind(null, WW), iW), WW.element.addEventListener("mousemove", kW.bind(null, WW), iW), window.PointerEvent, WW.element.addEventListener("wheel", sW.bind(null, WW), iW), WW.element.addEventListener("contextmenu", MW.bind(null, WW), !1), window.addEventListener("blur", YW.bind(null, WW), !1)
     }
-  },
-  5491: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => be
-    });
-    var ye = He(1141);
-    async function be(ee) {
-      const ie = await fetch(`${ye.clientSideServerUrls.s3Url}/${ee}`, {
-        headers: {
-          Accept: "application/json"
-        }
-      });
-      if (404 === ie.status || 403 === ie.status) return null;
-      if (!ie.ok) throw new Error(`Failed to download the texture pack (${ie.status})`);
-      return await ie.json()
-    }
-  },
-  9667: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => pe,
-      d: () => Xe
-    });
-    var ye = He(153),
-      be = He(186),
-      Me = He(1033),
-      Ke = He(1040),
-      Ue = He(1169),
-      Fe = He(1983),
-      Je = He(2418),
-      oe = He(1490),
-      Re = He(1340),
-      ke = He(1083),
-      qe = He(9669),
-      fe = He(1502),
-      Te = He(1536);
+    var tW = 0,
+      ZW = 0,
+      xW = null;
 
-    function pe(ee, ie) {
-      const He = !0 === ie.debugResult.gameRefused,
-        Me = He || ie.code === ye.k.REQUEST_TO_MATCHMAKING ? (0, qe.l)(ie.message) : null;
-      if (null !== Me) return ge(ee, ee((0, qe.o)(Me)), ee(qe.n[Me])), !0;
-      if (He) return async function(ee) {
-        const {
-          gameNameWithVariation: ie,
-          lobbyName: He,
-          shownLobbyName: ye
-        } = Fe.gameBridge.latest("connectedGame"), be = "classic" === ie && (0, Ue.I)(He) ? ye : await (0, Je.h)(ee, ie, He);
-        return "" !== be ? ee("general:cantJoinGame", {
-          game: be
-        }) : ee("general:cantJoinThisGame")
-      }(ee).then((He => {
-        ge(ee, He, ie.message)
-      })), !0;
-      const {
-        joinFailure: Ke
-      } = ie.debugResult, oe = "refused" === (null === Ke || void 0 === Ke ? void 0 : Ke.at) ? Ke.code : null;
-      return oe === be.c.schematicNotPublished.code ? (async function(ee, ie) {
-        const He = ze(),
-          ye = await Ee(He);
-        if (null === ye || ye.gamePublished) return void ge(ee, ee("general:cantJoinThisGame"), ie);
-        await Be(ee, "rocket-launch", ee("studio:gameNotPublishedTitle", {
-          game: ye.name
-        }), ee("studio:publishInStudio"), He)
-      }(ee, ie.message), !0) : (oe === be.c.schematicBanned.code || oe === be.c.customGameTakenDown.code) && (Ee(ze()).then((ie => {
-        Xe(ee, ie)
-      })), !0)
+    function lW(WW, iW) {
+      iW.preventDefault(), AW(iW)
     }
 
-    function Xe(ee, ie) {
-      !0 !== (null === ie || void 0 === ie ? void 0 : ie.takenDown) ? ge(ee, ee("general:cantJoinThisGame"), be.c.customGameTakenDown.text) : Be(ee, "lock", ee("studio:gameTakenDownTitle", {
-        game: ie.name
-      }), ee("studio:viewInStudio"), ie.schematicId)
-    }
-
-    function ze() {
-      return (0, Me.r)(Fe.gameBridge.latest("connectedGame").gameNameWithVariation)
-    }
-    async function Be(ee, ie, He, ye, be) {
-      !0 === await Re.NotificationProvider.showPromptPopup({
-        icon: ie,
-        title: He,
-        confirmText: ye,
-        cancelText: ee("general:cancel")
-      }).getResult() && (0, fe.navigatePreserveSearch)((0, Te.s)((0, Ke.b)(be), "manage"))
-    }
-    async function Ee(ee) {
-      try {
-        return await oe.b.getGame(await ke.userContextManager.getCurrentUserContext(), ee, !0)
-      } catch (ie) {
-        return (0, oe.c)(ie) || console.error(`Failed to get game ${ee}`, ie), null
+    function AW(WW) {
+      let iW = !1;
+      for (let OW = 0; OW < WW.touches.length; ++OW)
+        if (WW.touches[OW].identifier === xW) {
+          iW = !0;
+          break
+        } if (!iW) {
+        const iW = WW.changedTouches[0];
+        tW = iW.clientX, ZW = iW.clientY, xW = iW.identifier
       }
     }
 
-    function ge(ee, ie, He) {
-      Re.NotificationProvider.showPromptPopup({
-        icon: "lock",
-        title: ie,
-        subtitle: He,
-        confirmText: ee("general:ok"),
-        cancelText: ""
-      })
+    function bW(WW, iW) {
+      for (var OW = iW.changedTouches, mW = 0; mW < OW.length; ++mW) OW[mW].identifier === xW && (xW = null)
     }
-  },
-  9691: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ke
-    });
-    var ye = He(1315),
-      be = He(1169),
-      Me = He(610);
 
-    function Ke(ee) {
-      return ee = function(ee, ie) {
-        var He;
-        const ye = new URLSearchParams(ie),
-          be = ye.get("lobby"),
-          Me = ye.get("vm"),
-          Ke = null !== (He = be) && void 0 !== He ? He : ee.lobbyName,
-          Ue = null !== Me && void 0 !== Me ? Me : ee.directJoinVmUrl;
-        if (Ke === ee.lobbyName && Ue === ee.directJoinVmUrl) return ee;
-        return {
-          ...ee,
-          lobbyName: Ke,
-          directJoinVmUrl: Ue
+    function jW(WW, iW, OW) {
+      if (!WW.ignoreEvent(OW)) try {
+        yW(WW, OW), iW && OW.isTrusted && !OW.repeat && WW._keyStates[OW.code] && TW(WW, OW.code)
+      } finally {
+        JW(OW.code, iW, WW, OW)
+      }
+    }
+
+    function UW(WW, iW, OW) {
+      if (!WW.ignoreEvent(OW)) try {
+        yW(WW, OW)
+      } finally {
+        ! function(WW, iW, OW) {
+          if ("pointerId" in OW)
+            if (iW) {
+              if (null !== WW._touches.currID) return;
+              WW._touches.currID = OW.pointerId
+            } else {
+              if (WW._touches.currID !== OW.pointerId) return;
+              WW._touches.currID = null
+            } var mW = "button" in OW ? OW.button + 1 : 1;
+          JW("Mouse" + mW, iW, WW, OW)
+        }(WW, iW, OW)
+      }
+    }
+
+    function kW(WW, iW) {
+      var OW = iW.movementX || iW.mozMovementX || 0,
+        mW = iW.movementY || iW.mozMovementY || 0;
+      if (iW.touches && 0 === (OW | mW)) {
+        var EW = function(WW) {
+          AW(WW);
+          for (let iW = 0; iW < WW.changedTouches.length; ++iW)
+            if (WW.changedTouches[iW].identifier == xW) {
+              const OW = WW.changedTouches[iW],
+                mW = [OW.clientX - tW, OW.clientY - ZW];
+              return tW = OW.clientX, ZW = OW.clientY, mW
+            } return console.error(`Did not find touch id ${xW}`), [0, 0]
+        }(iW);
+        OW = EW[0], mW = EW[1]
+      }
+      WW.bR.dx += OW, WW.bR.dy += mW
+    }
+
+    function sW(WW, iW) {
+      yW(WW, iW);
+      var OW = 1;
+      switch (iW.deltaMode) {
+        case 0:
+          OW = 1;
+          break;
+        case 1:
+          OW = 12;
+          break;
+        case 2:
+          OW = WW.element.clientHeight || window.innerHeight
+      }
+      WW.bR.diW += (iW.deltaX || 0) * OW, WW.bR.eiW += (iW.deltaY || 0) * OW, WW.bR.viW += (iW.deltaZ || 0) * OW
+    }
+
+    function MW(WW, iW) {
+      if (!WW.xR) return iW.preventDefault(), !1
+    }
+    var KW = {
+      AltLeft: "altKey",
+      AltRight: "altKey",
+      ControlLeft: "ctrlKey",
+      ControlRight: "ctrlKey",
+      ShiftLeft: "shiftKey",
+      ShiftRight: "shiftKey",
+      MetaLeft: "metaKey",
+      MetaRight: "metaKey"
+    };
+
+    function SW(WW, iW) {
+      return !!WW[KW[iW]] || ("AltRight" === iW || "ControlLeft" === iW) && "function" === typeof WW.getModifierState && !0 === WW.getModifierState("AltGraph")
+    }
+
+    function YW(WW, iW) {
+      for (var OW in WW._modifiersHeldThroughBlur = {}, KW) WW._keyStates[OW] && (WW._modifiersHeldThroughBlur[OW] = !0);
+      iW && iW.isTrusted && function() {
+        try {
+          return window.self !== window.top
+        } catch (WW) {
+          return !0
         }
-      }(ee, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), ee = function(ee) {
-        if ((0, Me.P)(ee.directJoinVmUrl)) return ee;
-        const ie = (0, be.$)(ee.directJoinVmUrl);
-        null === ie && (ee.directJoinVmUrl = void 0);
-        return ee
-      }(ee = function(ee) {
-        if ((0, Me.P)(ee.gameNameWithVariation)) return ee;
-        return ee.gameNameWithVariation = (0, ye.g)(ee.gameNameWithVariation), ee
-      }(ee))
+      }() && (clearTimeout(WW._blurRelease), WW._blurRelease = setTimeout((function() {
+        if (!document.hasFocus())
+          for (var iW in WW._modifiersHeldThroughBlur = {}, WW._keyStates) WW._keyStates[iW] && !/^Mouse\d/.test(iW) && TW(WW, iW)
+      }), 0))
+    }
+
+    function yW(WW, iW) {
+      var OW = WW._modifiersHeldThroughBlur;
+      if (OW && iW.isTrusted && document.hasFocus())
+        for (var mW in OW) delete OW[mW], WW._keyStates[mW] && mW !== iW.code && (SW(iW, mW) || TW(WW, mW))
+    }
+
+    function TW(WW, iW) {
+      const OW = {
+          code: iW,
+          preventDefault: () => {},
+          stopPropagation: () => {}
+        },
+        mW = EW;
+      EW = OW;
+      try {
+        JW(iW, !1, WW, OW)
+      } finally {
+        EW = mW
+      }
+    }
+
+    function JW(WW, iW, OW, mW) {
+      var EW = OW._keyBindmap[WW];
+      EW && (hW(OW._keyStates[WW], iW) && (OW._keyStates[WW] = iW, EW.forEach((WW => {
+        (!OW.filterEvents || OW.filterEvents(mW, WW)) && function(WW, iW, OW, mW) {
+          var EW = iW ? OW.pressCount : OW.releaseCount;
+          EW[WW] = (EW[WW] || 0) + 1;
+          var NW = OW._bindPressCount[WW] || 0;
+          (NW += iW ? 1 : -1) < 0 && (NW = 0);
+          OW._bindPressCount[WW] = NW;
+          var PW = OW.state[WW];
+          if (hW(PW, NW)) {
+            OW.state[WW] = NW > 0;
+            var LW = iW ? OW.down : OW.up;
+            OW.disabled || LW.emit(WW, mW)
+          }
+        }(WW, iW, OW, mW)
+      }))), "button" in mW || (OW.Qq && !mW.defaultPrevented && mW.preventDefault(), OW.stopPropagation && mW.stopPropagation()))
+    }
+
+    function hW(WW, iW) {
+      return WW ? !iW : iW
     }
   },
-  9683: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Me,
-      g: () => be
+  37904: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => bW,
+      i: () => jW
     });
-    let ye = !1;
+    var mW = OW(62),
+      EW = OW(1526),
+      NW = OW(2075),
+      PW = OW(37902),
+      LW = OW(643),
+      cW = OW(1089),
+      wW = OW.n(cW),
+      tW = OW(1283);
+    const ZW = [xW()];
 
-    function be() {
-      ye = !0
+    function xW() {
+      return {
+        source: null,
+        direction: null,
+        WC: null,
+        timeout: void 0,
+        writtenAngle: null
+      }
     }
 
-    function Me() {
-      return ye
-    }
-  },
-  9693: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ue,
-      e: () => be,
-      f: () => Me,
-      i: () => Ke
-    });
-    let ye = null;
-
-    function be(ee, ie) {
-      return `${ie}\n${null!==ee&&void 0!==ee?ee:""}`
+    function lW(WW) {
+      return ZW.find((iW => null !== iW.source && iW.source === WW))
     }
 
-    function Me(ee) {
-      ye = ee
+    function AW(WW) {
+      clearTimeout(WW.timeout), WW.source = null, WW.direction = null, WW.writtenAngle = null, WW.WC && (WW.WC.style.rotate = "")
     }
-
-    function Ke(ee) {
-      const ie = ye;
-      return ye = null, null !== ie && ie.key === ee ? ie.settled : null
-    }
-
-    function Ue(ee, ie, He, ye) {
-      let be = !1;
-      null !== ie && setTimeout((() => {
-        ye() && !be && ie()
-      }), 0), ee.then((ee => {
-        be = !0, He(ee)
-      }))
-    }
-  },
-  9674: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      loadWasmPlay: () => ke,
-      loadWasmPlayAhead: () => qe,
-      loadWasmPreviews: () => fe
-    });
-    var ye = He(3465),
-      be = He(2342),
-      Me = He(2170),
-      Ke = He(5046),
-      Ue = He(3892),
-      Fe = He(9683);
-    let Je = null;
-
-    function oe() {
-      return Promise.all([He.e(86), He.e(89), He.e(103), He.e(234), He.e(233), He.e(150), He.e(216), He.e(243), He.e(155), He.e(101), He.e(244), He.e(75)]).then((() => He(41771)))
-    }
-
-    function Re() {
-      Promise.all([He.e(84), He.e(87), He.e(85), He.e(86), He.e(103), He.e(100), He.e(300), He.e(207), He.e(250), He.e(274), He.e(244), He.e(54)]).then((() => He(42095))).catch((() => {}))
-    }
-
-    function ke() {
-      return Ke.d.cancelDownloadForJoin(), (0, Ue.b)(), (0, be.g)(), (0, Fe.g)(), (0, Me.i)(), Re(), Promise.all([He.e(89), He.e(103), He.e(234), He.e(233), He.e(150), He.e(155), He.e(70)]).then((() => He(42125))).then((ee => {
+    const bW = (0, mW.memo)((function() {
+      const [, WW] = (0, mW.useReducer)((WW => WW + 1), 0);
+      return (0, EW.e)("damagedByOtherPlayer", (iW => {
         let {
-          startJoinLoad: ie
-        } = ee;
-        ie()
-      }), (() => {})), Je ??= oe().then((ee => (ee.startWasmPlay(), ee.followPageUiPack((ee => {
-        ye.c.showGamePack(ee)
-      })), ee)), (ee => {
-        throw Je = null, ee
-      })), Je
-    }
-
-    function qe() {
-      return Re(), He.e(124).then((() => He(42130))).catch((() => {})), oe().then((() => {}))
-    }
-
-    function fe() {
-      return oe().then((ee => {
-        ee.startWasmPreviews(), ee.prefetchWasmPreviews()
-      }))
-    }
-  },
-  9669: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Me,
-      h: () => Ke,
-      l: () => Ue,
-      n: () => Je,
-      o: () => Fe
-    });
-    var ye = He(186),
-      be = He(5018);
-
-    function Me(ee) {
-      return Ke(ee) === ye.c.gameOrPluginOnPlayerAuthRejected.code
-    }
-
-    function Ke(ee) {
-      return "object" === typeof ee && null !== ee ? ee.code : void 0
-    }
-
-    function Ue(ee) {
-      var ie;
-      return null !== (ie = Object.keys(be.e).find((ie => be.e[ie] === ee))) && void 0 !== ie ? ie : null
-    }
-
-    function Fe(ee) {
-      return "notWhitelisted" === ee ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
-    }
-    const Je = {
-      private: "customLobby:cantJoinPrivate",
-      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
-      banned: "customLobby:cantJoinBanned",
-      adminLocked: "customLobby:cantJoinAdminLocked"
-    }
-  },
-  9663: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Je,
-      c: () => Fe
-    });
-    var ye = He(347);
-
-    function be(ee) {
-      if (!ee.startsWith("{")) return ee;
-      let ie;
-      try {
-        ie = JSON.parse(ee)
-      } catch {
-        return ee
-      }
-      return function(ee) {
-        if (null === (0, ye.Be)(ee)) return !1;
-        const {
-          params: ie
-        } = ee;
-        return void 0 === ie || "object" === typeof ie && null !== ie && Object.values(ie).every((ee => "string" === typeof ee))
-      }(ie) ? ie : ee
-    }
-    var Me = He(1127),
-      Ke = He(1196);
-
-    function Ue(ee) {
-      return (0, Me.s)(Ke.f.get().getCurrentLanguageCode(), ee.translationKey, ee.params)
-    }
-
-    function Fe(ee) {
-      const ie = be(ee);
-      return "string" === typeof ie ? ie : Ue(ie)
-    }
-
-    function Je(ee) {
-      const ie = be(ee);
-      return "string" === typeof ie ? ie : Ue({
-        translationKey: "moderation:kicked",
-        params: {
-          reason: Ue(ie)
+          ME: OW,
+          direction: mW
+        } = iW;
+        const EW = OW || "nonDirectional",
+          NW = function(WW) {
+            var iW;
+            const OW = null !== (iW = lW(WW)) && void 0 !== iW ? iW : ZW.find((WW => null === WW.source));
+            if (OW) return OW;
+            const mW = {
+              source: null,
+              direction: null,
+              WC: null,
+              timeout: void 0,
+              writtenAngle: null
+            };
+            return ZW.push(mW), mW
+          }(EW);
+        clearTimeout(NW.timeout), NW.source = EW, NW.direction = mW, NW.timeout = setTimeout((() => {
+          AW(NW), WW()
+        }), 800), WW()
+      })), (0, NW.c)("kill", (iW => {
+        let {
+          killer: OW,
+          victim: mW
+        } = iW;
+        const EW = OW.local && lW(mW.id);
+        EW && (AW(EW), WW())
+      })), (0, mW.useEffect)((() => {
+        const WW = (0, PW.h)("turnDamageIndicators", jW);
+        return () => {
+          WW(), ZW.forEach(AW)
         }
+      }), []), (0, tW.jsx)("div", {
+        className: "DirectionalDamage",
+        children: ZW.map(((WW, iW) => (0, tW.jsx)("div", {
+          ref: iW => {
+            WW.WC = iW
+          },
+          className: wW()("DamageIndicator", {
+            DamageIndicatorFullCircle: (0, LW.K)(WW.direction),
+            DamageIndicatorIdle: null === WW.source
+          })
+        }, iW)))
+      })
+    }));
+
+    function jW(WW) {
+      for (const iW of ZW) {
+        if (null === iW.source || (0, LW.K)(iW.direction)) continue;
+        const OW = iW.direction - WW;
+        OW !== iW.writtenAngle && (iW.writtenAngle = OW, iW.WC.style.rotate = `${OW}rad`)
+      }
+    }
+  },
+  37909: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => hW,
+      g: () => TW
+    });
+    var mW = OW(62),
+      EW = OW(25),
+      NW = OW(37902),
+      PW = OW(37915),
+      LW = OW(37609),
+      cW = OW(37763),
+      wW = OW(2037),
+      tW = OW(2075),
+      ZW = OW(1283);
+    const xW = 20 * Math.PI / 180,
+      lW = new Map,
+      AW = 25 * Math.PI / 180,
+      bW = Array.from({
+        length: 6
+      }, (() => ({
+        kind: null,
+        direction: 0,
+        shownAt: 0,
+        WC: null,
+        fade: null,
+        timeout: void 0,
+        writtenAngle: null,
+        away: !1
+      })));
+    let jW = null,
+      UW = null,
+      kW = [];
+    const sW = 2;
+
+    function MW(WW) {
+      const iW = "combat" === WW.kind || "explosion" === WW.kind,
+        OW = null !== UW && null !== WW.writtenAngle && function(WW, iW, OW, mW) {
+          const EW = iW.width / 3.8,
+            NW = (mW ? .7 : .35) * EW + 1,
+            PW = (mW ? .175 : .1) * EW + 1,
+            LW = iW.width / 2 - PW,
+            cW = Math.sin(WW),
+            wW = Math.cos(WW),
+            tW = iW.left + iW.width / 2 + cW * LW,
+            ZW = iW.top + iW.height / 2 - wW * LW,
+            xW = Math.abs(wW) * NW + Math.abs(cW) * PW,
+            lW = Math.abs(cW) * NW + Math.abs(wW) * PW;
+          return OW.some((WW => tW + xW > WW.left - sW && tW - xW < WW.right + sW && ZW + lW > WW.top - sW && ZW - lW < WW.bottom + sW))
+        }(WW.writtenAngle, UW, kW, iW);
+      OW !== WW.away && WW.WC && (WW.away = OW, WW.WC.classList.toggle("SoundCueAway", OW))
+    }
+    let KW = 0;
+
+    function SW(WW) {
+      var iW;
+      clearTimeout(WW.timeout), null === (iW = WW.fade) || void 0 === iW || iW.cancel(), WW.fade = null, WW.kind = null, WW.writtenAngle = null, WW.away = !1, WW.WC && (WW.WC.className = "SoundCue SoundCueIdle", WW.WC.style.rotate = "")
+    }
+
+    function YW(WW, iW) {
+      var OW, mW, EW;
+      const NW = performance.now();
+      if (Math.abs((0, PW.y)(KW, iW)) < xW || NW - (null !== (OW = lW.get(WW)) && void 0 !== OW ? OW : -1 / 0) < 250) return;
+      lW.set(WW, NW), null === (mW = jW) || void 0 === mW || mW();
+      const LW = function(WW, iW) {
+          const OW = bW.find((OW => OW.kind === WW && Math.abs((0, PW.y)(OW.direction, iW)) < AW));
+          if (OW) return OW;
+          return bW.find((WW => null === WW.kind)) || bW.reduce(((WW, iW) => iW.shownAt < WW.shownAt ? iW : WW))
+        }(WW, iW),
+        cW = LW.WC;
+      cW && (clearTimeout(LW.timeout), null === (EW = LW.fade) || void 0 === EW || EW.cancel(), LW.kind = WW, LW.direction = iW, LW.shownAt = NW, cW.className = `SoundCue SoundCue-${WW}`, LW.away = !1, yW(LW, KW), MW(LW), LW.fade = cW.animate([{
+        opacity: 1
+      }, {
+        opacity: 1,
+        offset: .5
+      }, {
+        opacity: 0
+      }], {
+        duration: 1200,
+        fill: "forwards"
+      }), LW.timeout = setTimeout((() => {
+        SW(LW)
+      }), 1200))
+    }
+
+    function yW(WW, iW) {
+      const OW = WW.direction - iW;
+      OW !== WW.writtenAngle && WW.WC && (WW.writtenAngle = OW, WW.WC.style.rotate = `${OW}rad`, MW(WW))
+    }
+
+    function TW(WW) {
+      KW = WW;
+      for (const iW of bW) null !== iW.kind && yW(iW, WW)
+    }
+    const JW = (0, mW.memo)((function() {
+        const WW = (0, mW.useRef)(null);
+        return (0, mW.useEffect)((() => {
+          const iW = WW.current,
+            OW = () => {
+              const {
+                anywhere: WW,
+                boxes: OW
+              } = (0, cW.b)();
+              iW.classList.toggle("SoundDirectionsHidden", WW), UW = iW.getBoundingClientRect(), kW = OW;
+              for (const iW of bW) MW(iW)
+            };
+          let mW = 0;
+          const EW = () => {
+            cancelAnimationFrame(mW), mW = requestAnimationFrame((() => {
+              mW = requestAnimationFrame(OW)
+            }))
+          };
+          OW(), jW = OW, window.addEventListener("resize", EW);
+          const NW = (0, cW.f)(OW),
+            PW = new ResizeObserver(OW);
+          return PW.observe(iW), () => {
+            PW.disconnect(), NW(), window.removeEventListener("resize", EW), cancelAnimationFrame(mW), jW = null, UW = null, kW = []
+          }
+        }), []), (0, mW.useEffect)((() => {
+          const WW = (0, NW.h)("turnSoundCues", TW),
+            iW = (0, LW.c)(YW);
+          return () => {
+            iW(), WW(), bW.forEach(SW), lW.clear()
+          }
+        }), []), (0, ZW.jsx)("div", {
+          ref: WW,
+          className: "SoundDirections",
+          children: bW.map(((WW, iW) => (0, ZW.jsx)("div", {
+            ref: iW => {
+              WW.WC = iW
+            },
+            className: "SoundCue SoundCueIdle"
+          }, iW)))
+        })
+      })),
+      hW = (0, mW.memo)((function() {
+        const {
+          clientEscMenuOptions: WW
+        } = (0, EW.p)(["clientEscMenuOptions"]);
+        return WW.showSoundDirections ? (0, ZW.jsxs)(ZW.Fragment, {
+          children: [(0, ZW.jsx)(JW, {}), (0, ZW.jsx)(HW, {})]
+        }) : null
+      })),
+      HW = (0, mW.memo)((function() {
+        const [WW, iW] = (0, mW.useState)((() => {
+          var WW;
+          return null === (WW = wW.gameBridge.latest("localPlayerAlive")) || void 0 === WW || WW
+        }));
+        return (0, tW.c)("localPlayerAliveSet", iW), (0, cW.c)(!WW), null
+      }))
+  },
+  37763: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => cW,
+      c: () => LW,
+      f: () => wW
+    });
+    var mW = OW(62);
+    const EW = new Set,
+      NW = new Set;
+
+    function PW() {
+      for (const WW of NW) WW()
+    }
+
+    function LW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      (0, mW.useEffect)((() => WW ? function() {
+        const WW = {
+          element: arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null
+        };
+        return EW.add(WW), PW(), () => {
+          EW.delete(WW) && PW()
+        }
+      }(iW) : void 0), [WW, iW]), (0, mW.useEffect)((() => {
+        WW && PW()
+      }), [WW, OW])
+    }
+
+    function cW() {
+      const WW = [];
+      for (const {
+          element: OW
+        }
+        of EW) {
+        var iW;
+        if (null === OW) return {
+          anywhere: !0,
+          boxes: []
+        };
+        const mW = null === (iW = OW.current) || void 0 === iW ? void 0 : iW.getBoundingClientRect();
+        mW && mW.width > 0 && WW.push(mW)
+      }
+      return {
+        anywhere: !1,
+        boxes: WW
+      }
+    }
+
+    function wW(WW) {
+      return NW.add(WW), () => {
+        NW.delete(WW)
+      }
+    }
+  },
+  37735: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW,
+      g: () => NW
+    });
+    let mW = !1;
+
+    function EW() {
+      return mW
+    }
+
+    function NW(WW) {
+      return mW !== WW && (mW = WW, !0)
+    }
+  },
+  42192: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      startPadGameplay: () => KW
+    });
+    OW(42060);
+    var mW = OW(42067),
+      EW = OW(2478),
+      NW = OW(25),
+      PW = OW(40274),
+      LW = OW(2350),
+      cW = OW(40298),
+      wW = OW(27),
+      tW = OW(2365),
+      ZW = OW(39615),
+      xW = OW(10079),
+      lW = OW(42075);
+    const AW = {
+      yawRadPerSec: 0,
+      pitchRadPerSec: 0
+    };
+    var bW = OW(42089),
+      jW = OW(10053),
+      UW = OW(40305);
+    const kW = WW => WW.padSneakToggled || !!NW.d.get("clientEscMenuOptions").crouchIsToggle && WW.crouchToggled,
+      sW = () => {
+        const WW = (() => {
+          const WW = (0, xW.d)();
+          let iW = AW;
+          const OW = new lW.b;
+          let mW = !1,
+            EW = 0;
+          const NW = () => {
+            const OW = performance.now(),
+              NW = 0 === EW ? 0 : OW - EW;
+            if (EW = OW, !mW) return WW.discardPending(), null;
+            const PW = (0, lW.o)(iW, NW),
+              LW = WW.drainLookDelta(),
+              cW = (0, ZW.h)();
+            return {
+              jH: (PW.jH + LW.jH) * cW,
+              UH: (PW.UH + LW.UH) * cW
+            }
+          };
+          return {
+            update: (WW, EW, PW, LW) => {
+              WW.camera.vI !== NW && (WW.camera.vI = NW), mW = !0, iW = (0, lW.p)(OW, EW, PW, LW, performance.now())
+            },
+            release: () => {
+              mW = !1, iW = AW, OW.reset()
+            },
+            uninstall: WW => {
+              WW.camera.vI === NW && (WW.camera.vI = null)
+            }
+          }
+        })();
+        return {
+          update: (iW, OW, mW) => {
+            WW.update((0, tW.h)(), iW, OW, mW)
+          },
+          release: WW.release,
+          uninstall: () => {
+            const iW = (0, tW.h)();
+            iW && WW.uninstall(iW)
+          }
+        }
+      };
+    var MW = OW(42086);
+    OW(38866), OW(9966);
+    OW(9976).e;
+    const KW = () => {
+      const WW = (0, MW.b)((() => {
+          const WW = {
+            x: 0,
+            y: 0,
+            magnitude: 0,
+            headingOffset: 0,
+            jumpHeld: !1,
+            jumpPressedSinceTick: !1,
+            crouchHeld: !1,
+            running: !1,
+            sprintHeld: !1
+          };
+          return {
+            bodies: () => (0, PW.d)(),
+            look: sW(),
+            move: (iW, OW) => {
+              const mW = (0, tW.h)(),
+                EW = mW.EY.YOW();
+              if (WW.x = iW.x, WW.y = iW.y, WW.magnitude = iW.magnitude, WW.headingOffset = iW.headingOffset, WW.jumpHeld = iW.jumpHeld, iW.jumpPressed && (WW.jumpPressedSinceTick = !0), WW.running = iW.running, WW.sprintHeld = iW.sprintHeld, OW) {
+                const iW = (0, bW.f)({
+                  ...OW,
+                  descending: mW.EY.HiW(mW.Dv).shouldIgnoreCrouchingSpeedReduction(),
+                  canCrouch: !!mW.gM.canCrouch,
+                  toggled: kW(EW)
+                });
+                WW.crouchHeld = iW.crouchHeld, EW.padSneakToggled = iW.toggled, EW.crouchToggled = !1, (0, jW.g)(iW.toggled)
+              }
+              EW.gamepad = WW
+            },
+            stopMoving: () => {
+              var iW;
+              Object.assign(WW, {
+                x: 0,
+                y: 0,
+                magnitude: 0,
+                headingOffset: 0,
+                jumpHeld: !1,
+                jumpPressedSinceTick: !1,
+                crouchHeld: !1,
+                running: !1,
+                sprintHeld: !1
+              });
+              const OW = null === (iW = (0, tW.h)()) || void 0 === iW ? void 0 : iW.EY.YOW();
+              (null === OW || void 0 === OW ? void 0 : OW.gamepad) === WW && (OW.gamepad = null)
+            },
+            uninstall: () => {},
+            deviceChanged: WW => {
+              const iW = (0, tW.h)(),
+                OW = null === iW || void 0 === iW ? void 0 : iW.EY.YOW();
+              "touch" === WW ? ((0, jW.g)(!1), null !== OW && void 0 !== OW && OW.padSneakToggled && (OW.padSneakToggled = !1, OW.isTouchscreen && !OW.gamepad && iW.EY.aiW(iW.Dv).setCrouching(!!iW.gM.canCrouch && OW.touchCrouch))) : "gamepad" === WW && OW && (0, jW.g)(kW(OW))
+            },
+            hasPlayer: () => {
+              var WW;
+              return !(null === (WW = (0, tW.h)()) || void 0 === WW || !WW.Dv)
+            },
+            isPlayerDead: () => {
+              var WW;
+              const iW = (0, tW.h)();
+              return !1 === (null === (WW = iW.EY.jOW(iW.Dv)) || void 0 === WW ? void 0 : WW.isAlive)
+            },
+            isReplayMode: () => {
+              var WW, iW;
+              return !(null === (WW = (0, tW.d)()) || void 0 === WW || null === (iW = WW.client) || void 0 === iW || !iW.isReplayMode())
+            },
+            isFreeCameraOn: () => {
+              var WW, iW, OW;
+              return !(null === (WW = (0, tW.d)()) || void 0 === WW || null === (iW = WW.client) || void 0 === iW || null === (OW = iW.freeCameraController) || void 0 === OW || !OW.isEnabled())
+            },
+            targetsBlock: () => !!(0, tW.h)().WiW,
+            selectedSlotEmpty: () => {
+              var WW;
+              const iW = (0, tW.h)();
+              return !(null !== (WW = iW.EY.ziW(iW.Dv)) && void 0 !== WW && WW.getItemAtSelectedSlot())
+            },
+            pickBlockAllowed: () => {
+              const WW = (0, tW.h)().gM;
+              return !!WW.creative && !!WW.canPickBlocks
+            },
+            zoomAllowed: () => !!(0, tW.h)().gM.canUseZoomKey,
+            scrollHotbar: WW => {
+              wW.l.iZ("ScrollInventorySlot", WW)
+            },
+            hasFullInventory: () => (0, cW.b)((0, tW.h)()),
+            hasLobbyTab: () => (0, UW.d)((0, tW.h)().gM),
+            contextActionInputs: () => {
+              var WW, iW, OW, mW;
+              const EW = (0, tW.h)();
+              return {
+                holdingGun: !(null === (WW = EW.EY.UOW(EW.Dv)) || void 0 === WW || null === (iW = WW.nS) || void 0 === iW || !iW.isGun()),
+                customButtons: null !== (OW = EW.gM.customButtons) && void 0 !== OW ? OW : null,
+                touchscreenActionButton: null !== (mW = EW.gM.touchscreenActionButton) && void 0 !== mW ? mW : null
+              }
+            },
+            pressTouchButton: WW => {
+              (0, LW.sendColyMessage)(EW.xj, WW)
+            }
+          }
+        })()),
+        iW = (0, mW.b)(),
+        OW = null,
+        NW = null;
+      return () => {
+        WW(), iW(), null === OW || void 0 === OW || OW(), null === NW || void 0 === NW || NW()
+      }
+    }
+  },
+  37915: (WW, iW, OW) => {
+    OW.d(iW, {
+      C: () => tW,
+      d: () => mW,
+      f: () => xW,
+      g: () => ZW,
+      k: () => PW,
+      m: () => AW,
+      q: () => cW,
+      t: () => bW,
+      w: () => wW,
+      y: () => LW
+    });
+    const mW = Math.PI / 2 - .001,
+      EW = 2 * Math.PI,
+      NW = 1e-9;
+
+    function PW(WW, iW) {
+      iW.heading = WW.heading, iW.pitch = WW.pitch
+    }
+
+    function LW(WW, iW) {
+      const OW = iW - WW;
+      return OW - EW * Math.floor((OW + Math.PI) / EW)
+    }
+
+    function cW(WW, iW, OW) {
+      return WW + LW(WW, iW) * OW
+    }
+
+    function wW(WW) {
+      if (!Number.isFinite(WW)) return WW;
+      const iW = WW - EW * Math.floor(WW / EW);
+      return iW < EW ? iW : 0
+    }
+
+    function tW(WW, iW) {
+      return WW + LW(WW, iW)
+    }
+
+    function ZW(WW) {
+      return Math.max(-mW, Math.min(mW, WW))
+    }
+
+    function xW(WW, iW, OW) {
+      const mW = Math.cos(iW);
+      return OW[0] = mW * Math.sin(WW), OW[1] = -Math.sin(iW), OW[2] = mW * Math.cos(WW), OW
+    }
+
+    function lW(WW, iW, OW, mW) {
+      const EW = Math.sqrt(WW * WW + OW * OW);
+      return EW < NW && Math.abs(iW) < NW || (EW >= NW && (mW.heading = Math.atan2(WW, OW)), mW.pitch = ZW(Math.atan2(-iW, EW) + 0)), mW
+    }
+
+    function AW(WW, iW) {
+      return lW(WW[0], WW[1], WW[2], iW)
+    }
+
+    function bW(WW, iW, OW) {
+      return lW(iW[0] - WW[0], iW[1] - WW[1], iW[2] - WW[2], OW)
+    }
+  },
+  37730: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => cW
+    });
+    var mW = OW(327),
+      EW = OW(25),
+      NW = OW(37735),
+      PW = OW(1729),
+      LW = OW(2085);
+
+    function cW(WW, iW) {
+      var OW, cW, wW;
+      if (!EW.d.get("isKeydownEnabled") || WW.repeat) return;
+      const tW = WW.code;
+      "Escape" === WW.key ? (0, PW.h)(WW) : null !== (OW = LW.v.OpenSettings) && void 0 !== OW && OW.includes(tW) ? (0, PW.s)(WW, mW.m.SETTINGS) : null !== (cW = LW.v.OpenCharacterCustomization) && void 0 !== cW && cW.includes(tW) ? (0, NW.e)() || (0, PW.s)(WW, mW.m.CUSTOMISATION, iW()) : null !== (wW = LW.v.ShowDebugOverlay) && void 0 !== wW && wW.includes(tW) && EW.d.set({
+        showDebugOverlay: !EW.d.get("showDebugOverlay")
       })
     }
+  },
+  37709: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => xW,
+      d: () => tW,
+      g: () => lW,
+      j: () => ZW
+    });
+    var mW = OW(344),
+      EW = OW(678),
+      NW = OW(687),
+      PW = OW(39);
+    const LW = {
+        idStorageKey: "playSessionId",
+        lastActivityStorageKey: "playSessionLastActivityMs",
+        expiryMs: 3e5
+      },
+      cW = "playSessionGameNameWithVariation",
+      wW = "wasMatchmakePlayer";
+
+    function tW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j;
+      (0, NW.h)(WW, LW)
+    }
+
+    function ZW() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j).setItem(wW, !0)
+    }
+
+    function xW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j;
+      return (0, NW.b)(WW, LW)
+    }
+
+    function lW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PW.j;
+      const OW = (0, NW.b)(iW, LW),
+        tW = function(WW) {
+          const iW = WW.getItem(cW);
+          return "string" !== typeof iW ? null : iW
+        }(iW),
+        ZW = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j).getItem(wW)
+        }(iW);
+      let xW;
+      return xW = null !== OW && null !== tW && (0, NW.e)(iW, LW) && function(WW, iW, OW) {
+          const EW = (0, mW.Tb)(WW),
+            NW = (0, mW.Tb)(iW),
+            PW = (0, mW.Lb)(WW),
+            LW = (0, mW.Lb)(iW);
+          return !(EW !== NW || !OW) || EW === NW && PW === LW
+        }(tW, WW, ZW) ? OW : (0, EW.d)(), (0, NW.i)(iW, LW, xW), iW.setItem(cW, WW),
+        function() {
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j).removeItem(wW)
+        }(iW), xW
+    }
+  },
+  37707: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => KW,
+      e: () => SW
+    });
+    var mW = OW(1052),
+      EW = OW(192),
+      NW = OW(339),
+      PW = OW(649),
+      LW = OW(344),
+      cW = OW(1061),
+      wW = OW(671),
+      tW = OW(698),
+      ZW = OW(5230),
+      xW = OW(100),
+      lW = OW(136),
+      AW = OW(1856),
+      bW = OW(117),
+      jW = OW(37709),
+      UW = OW(39),
+      kW = OW(683),
+      sW = OW(657),
+      MW = OW(37711);
+
+    function KW() {
+      var WW, iW;
+      return [...null !== (WW = navigator.languages) && void 0 !== WW ? WW : [null !== (iW = navigator.language) && void 0 !== iW ? iW : "none"], "EN-gb"]
+    }
+
+    function SW(WW, iW, OW, SW, YW) {
+      const yW = (0, mW.i)(iW) ? (0, mW.n)(iW) : null,
+        TW = WW.isLoggedIn() && void 0 !== (0, EW.c)(NW.k, lW.siteUsed) ? (0, sW.g)() : null,
+        JW = {
+          cookies: (0, AW.getAllCookiesForGameNameWithVariation)(iW),
+          isMobile: (0, xW.isMobile)(),
+          isUsingCustomGameTexturePack: null !== yW && YW(yW),
+          generalCookies: {
+            joinDiscord: !!UW.i.getItem("DiscordPressed"),
+            newGo: ZW.c,
+            ...WW.getMetricsCookies(),
+            trafficCode: SW,
+            compliance: xW.compliance
+          },
+          browserInfo: {
+            ua: window.navigator.userAgent,
+            name: (0, xW.getBrowserName)(),
+            version: (0, xW.getBrowserVersion)(),
+            platform: navigator.platform,
+            platformType: (0, xW.getPlatformType)(),
+            deviceType: (0, bW.d)()
+          },
+          isLoggedIn: WW.isLoggedIn(),
+          lobbyName: OW,
+          languages: KW(),
+          version: PW.d,
+          siteUsed: lW.siteUsed,
+          subsiteUsed: lW.subsiteUsed,
+          playSessionId: (0, jW.g)(iW),
+          visitSessionId: (0, kW.getVisitSessionId)(),
+          clientReason: wW.B.reason,
+          budgetBasis: (0, MW.g)(),
+          ...null !== tW.o && {
+            diagClaim: tW.o.claimId
+          },
+          ...null !== TW && {
+            webGpuLoss: TW
+          }
+        };
+      return null !== yW && (0, LW.xc)(yW) ? (JW.lobbyName = (0, mW.f)(yW, (0, mW.m)(iW), OW), {
+        roomName: `classic_${cW.e}`,
+        joinOptions: JW
+      }) : {
+        roomName: iW,
+        joinOptions: JW
+      }
+    }
+  },
+  5713: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => xW,
+      i: () => cW,
+      m: () => AW,
+      o: () => wW,
+      p: () => lW
+    });
+    var mW = OW(5721),
+      EW = OW(5725);
+    const NW = !1,
+      PW = mW.h.map((WW => {
+        const iW = [];
+        for (let NW = 1; NW <= WW.reach; NW++) iW.push(EW.j[(0, mW.d)(WW.source, NW)].id);
+        const OW = "water" === WW.family;
+        return Object.freeze({
+          name: WW.kind,
+          family: WW.family,
+          reach: WW.reach,
+          stepTicks: OW ? 5 : 10,
+          slopeDistance: OW ? 4 : 2,
+          sourceId: EW.j[WW.source].id,
+          fallingId: EW.j[(0, mW.b)(WW.source)].id,
+          flowingIds: Object.freeze(iW),
+          makesSources: OW,
+          stillId: EW.j[WW.still].id
+        })
+      })),
+      LW = new Map;
+    for (const bW of PW) LW.set(bW.sourceId, Object.freeze({
+      kind: bW,
+      state: "source",
+      distance: 0
+    })), LW.set(bW.fallingId, Object.freeze({
+      kind: bW,
+      state: "falling",
+      distance: 0
+    })), bW.flowingIds.forEach(((WW, iW) => {
+      LW.set(WW, Object.freeze({
+        kind: bW,
+        state: "flowing",
+        distance: iW + 1
+      }))
+    }));
+
+    function cW(WW) {
+      return PW.find((iW => iW.name === WW))
+    }
+
+    function wW(WW) {
+      return null === WW ? void 0 : LW.get(WW)
+    }
+    const tW = new Uint8Array(65536);
+    for (const [bW, jW] of LW) tW[bW] = "source" === jW.state ? 1 : 2;
+    const ZW = new Map;
+    for (const bW of PW) ZW.set(bW.stillId, bW.family);
+
+    function xW(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = wW(WW)) || void 0 === OW ? void 0 : OW.kind.family) && void 0 !== iW ? iW : lW(WW)
+    }
+
+    function lW(WW) {
+      var iW;
+      return null === WW ? null : null !== (iW = ZW.get(WW)) && void 0 !== iW ? iW : null
+    }
+    EW.j.Obsidian.id, EW.j["Messy Stone"].id;
+
+    function AW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : function() {
+        let WW = 0;
+        for (const iW of PW) WW = Math.max(WW, iW.stillId, iW.sourceId, iW.fallingId, ...iW.flowingIds);
+        return WW
+      }() + 1;
+      const iW = new Uint8Array(WW);
+      for (const OW of PW) {
+        const mW = ("water" === OW.family ? 1 : 2) << 4;
+        for (const EW of [OW.stillId, OW.sourceId, OW.fallingId, ...OW.flowingIds]) EW < WW && (iW[EW] = mW)
+      }
+      return iW
+    }
+  },
+  40189: (WW, iW, OW) => {
+    function mW(WW, iW, OW, mW, EW) {
+      var NW = {};
+      return Object.keys(mW).forEach((function(WW) {
+        NW[WW] = mW[WW]
+      })), NW.enumerable = !!NW.enumerable, NW.configurable = !!NW.configurable, ("value" in NW || NW.initializer) && (NW.writable = !0), NW = OW.slice().reverse().reduce((function(OW, mW) {
+        return mW(WW, iW, OW) || OW
+      }), NW), EW && void 0 !== NW.initializer && (NW.value = NW.initializer ? NW.initializer.call(EW) : void 0, NW.initializer = void 0), void 0 === NW.initializer && (Object.defineProperty(WW, iW, NW), NW = null), NW
+    }
+    OW.d(iW, {
+      c: () => mW
+    })
+  },
+  40181: (WW, iW, OW) => {
+    function mW(WW, iW, OW, mW) {
+      OW && Object.defineProperty(WW, iW, {
+        enumerable: OW.enumerable,
+        configurable: OW.configurable,
+        writable: OW.writable,
+        value: OW.initializer ? OW.initializer.call(mW) : void 0
+      })
+    }
+    OW.d(iW, {
+      e: () => mW
+    })
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

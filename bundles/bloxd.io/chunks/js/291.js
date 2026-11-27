@@ -1,2652 +1,1294 @@
 export const id = 291;
 export const ids = [291];
 export const modules = {
-  41424: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => ye
+  41940: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW
     });
-    class ye {
-      constructor(ee, ie, He) {
-        this.bu = ee, this.bv = ie, this.distance = He, this.faceId = 0, this.subMeshId = 0, this._internalSubMeshId = 0
-      }
-    }
+    let mW = !1
   },
-  41437: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ke
+  41511: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => AW
     });
-    var ye = He(37925),
-      be = He(37917),
-      Me = He(37920);
-    class Ke {
-      constructor(ee, ie, He) {
-        this.vectors = (0, ye.c)(8, be.p.Zero), this.center = be.p.Zero(), this.centerWorld = be.p.Zero(), this.extendSize = be.p.Zero(), this.extendSizeWorld = be.p.Zero(), this.directions = (0, ye.c)(3, be.p.Zero), this.vectorsWorld = (0, ye.c)(8, be.p.Zero), this.minimumWorld = be.p.Zero(), this.maximumWorld = be.p.Zero(), this.minimum = be.p.Zero(), this.maximum = be.p.Zero(), this._drawWrapperFront = null, this._drawWrapperBack = null, this.reConstruct(ee, ie, He)
+    var mW = OW(41516),
+      EW = OW(41519),
+      NW = OW(38276),
+      PW = OW(38241),
+      LW = OW(38270),
+      cW = OW(39088),
+      wW = OW(41531);
+    class tW {
+      get wrapU() {
+        return this._wrapU
       }
-      reConstruct(ee, ie, He) {
-        const ye = ee.x,
-          Me = ee.y,
-          Ke = ee.z,
-          Ue = ie.x,
-          Fe = ie.y,
-          Je = ie.z,
-          oe = this.vectors;
-        this.minimum.wie(ye, Me, Ke), this.maximum.wie(Ue, Fe, Je), oe[0].wie(ye, Me, Ke), oe[1].wie(Ue, Fe, Je), oe[2].wie(Ue, Me, Ke), oe[3].wie(ye, Fe, Ke), oe[4].wie(ye, Me, Je), oe[5].wie(Ue, Fe, Ke), oe[6].wie(ye, Fe, Je), oe[7].wie(Ue, Me, Je), ie.addToRef(ee, this.center).scaleInPlace(.5), ie.subtractToRef(ee, this.extendSize).scaleInPlace(.5), this._worldMatrix = He || be.b.IdentityReadOnly, this._update(this._worldMatrix)
+      set wrapU(WW) {
+        this._wrapU = WW
       }
-      scale(ee) {
-        const ie = Ke._TmpVector3,
-          He = this.maximum.subtractToRef(this.minimum, ie[0]),
-          ye = He.length();
-        He.normalizeFromLength(ye);
-        const be = ye * ee,
-          Me = He.scaleInPlace(.5 * be),
-          Ue = this.center.subtractToRef(Me, ie[1]),
-          Fe = this.center.addToRef(Me, ie[2]);
-        return this.reConstruct(Ue, Fe, this._worldMatrix), this
+      get wrapV() {
+        return this._wrapV
       }
-      getWorldMatrix() {
-        return this._worldMatrix
+      set wrapV(WW) {
+        this._wrapV = WW
       }
-      _update(ee) {
-        const ie = this.minimumWorld,
-          He = this.maximumWorld,
-          ye = this.directions,
-          Me = this.vectorsWorld,
-          Ke = this.vectors;
-        if (ee.isIdentity()) {
-          ie.jD(this.minimum), He.jD(this.maximum);
-          for (let ee = 0; ee < 8; ++ee) Me[ee].jD(Ke[ee]);
-          this.extendSizeWorld.jD(this.extendSize), this.centerWorld.jD(this.center)
-        } else {
-          ie.Iee(Number.MAX_VALUE), He.Iee(-Number.MAX_VALUE);
-          for (let ye = 0; ye < 8; ++ye) {
-            const Ue = Me[ye];
-            be.p.TransformCoordinatesToRef(Ke[ye], ee, Ue), ie.minimizeInPlace(Ue), He.maximizeInPlace(Ue)
-          }
-          He.subtractToRef(ie, this.extendSizeWorld).scaleInPlace(.5), He.addToRef(ie, this.centerWorld).scaleInPlace(.5)
+      get coordinatesMode() {
+        return 0
+      }
+      get isCube() {
+        return !!this._texture && this._texture.isCube
+      }
+      set isCube(WW) {
+        this._texture && (this._texture.isCube = WW)
+      }
+      get is3D() {
+        return !!this._texture && this._texture.is3D
+      }
+      set is3D(WW) {
+        this._texture && (this._texture.is3D = WW)
+      }
+      get is2DArray() {
+        return !!this._texture && this._texture.is2DArray
+      }
+      set is2DArray(WW) {
+        this._texture && (this._texture.is2DArray = WW)
+      }
+      getClassName() {
+        return "ThinTexture"
+      }
+      static _IsRenderTargetWrapper(WW) {
+        return void 0 !== WW?.shareDepth
+      }
+      constructor(WW) {
+        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = wW.d.Zero(), this._cachedBaseSize = wW.d.Zero(), this._initialSamplingMode = 2, this._texture = tW._IsRenderTargetWrapper(WW) ? WW.texture : WW, this._texture && (this._engine = this._texture.VA(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
+      }
+      isReady() {
+        return 4 === this.delayLoadState ? (this.delayLoad(), !1) : !!this._texture && this._texture.isReady
+      }
+      delayLoad() {}
+      getInternalTexture() {
+        return this._texture
+      }
+      getSize() {
+        if (this._texture) {
+          if (this._texture.width) return this._cachedSize.width = this._texture.width, this._cachedSize.height = this._texture.height, this._cachedSize;
+          if (this._texture._size) return this._cachedSize.width = this._texture._size, this._cachedSize.height = this._texture._size, this._cachedSize
         }
-        be.p.FromArrayToRef(ee.m, 0, ye[0]), be.p.FromArrayToRef(ee.m, 4, ye[1]), be.p.FromArrayToRef(ee.m, 8, ye[2]), this._worldMatrix = ee
+        return this._cachedSize
       }
-      isInFrustum(ee) {
-        return Ke.IsInFrustum(this.vectorsWorld, ee)
+      getBaseSize() {
+        return this.isReady() && this._texture ? this._texture._size ? (this._cachedBaseSize.width = this._texture._size, this._cachedBaseSize.height = this._texture._size, this._cachedBaseSize) : (this._cachedBaseSize.width = this._texture.baseWidth, this._cachedBaseSize.height = this._texture.baseHeight, this._cachedBaseSize) : (this._cachedBaseSize.width = 0, this._cachedBaseSize.height = 0, this._cachedBaseSize)
       }
-      isCompletelyInFrustum(ee) {
-        return Ke.IsCompletelyInFrustum(this.vectorsWorld, ee)
+      get samplingMode() {
+        return this._texture ? this._texture.samplingMode : this._initialSamplingMode
       }
-      intersectsPoint(ee) {
-        const ie = this.minimumWorld,
-          He = this.maximumWorld,
-          ye = ie.x,
-          be = ie.y,
-          Ke = ie.z,
-          Ue = He.x,
-          Fe = He.y,
-          Je = He.z,
-          oe = ee.x,
-          Re = ee.y,
-          ke = ee.z,
-          qe = -Me.b;
-        return !(Ue - oe < qe || qe > oe - ye) && (!(Fe - Re < qe || qe > Re - be) && !(Je - ke < qe || qe > ke - Ke))
+      updateSamplingMode(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._texture && this._engine && this._engine.updateTextureSamplingMode(WW, this._texture, this._texture.generateMipMaps && iW)
       }
-      intersectsSphere(ee) {
-        return Ke.IntersectsSphere(this.minimumWorld, this.maximumWorld, ee.centerWorld, ee.radiusWorld)
-      }
-      intersectsMinMax(ee, ie) {
-        const He = this.minimumWorld,
-          ye = this.maximumWorld,
-          be = He.x,
-          Me = He.y,
-          Ke = He.z,
-          Ue = ye.x,
-          Fe = ye.y,
-          Je = ye.z,
-          oe = ee.x,
-          Re = ee.y,
-          ke = ee.z,
-          qe = ie.x,
-          fe = ie.y,
-          Te = ie.z;
-        return !(Ue < oe || be > qe) && (!(Fe < Re || Me > fe) && !(Je < ke || Ke > Te))
+      releaseInternalTexture() {
+        this._texture && (this._texture.dispose(), this._texture = null)
       }
       dispose() {
-        this._drawWrapperFront?.dispose(), this._drawWrapperBack?.dispose()
-      }
-      static Intersects(ee, ie) {
-        return ee.intersectsMinMax(ie.minimumWorld, ie.maximumWorld)
-      }
-      static IntersectsSphere(ee, ie, He, ye) {
-        const Me = Ke._TmpVector3[0];
-        be.p.ClampToRef(He, ee, ie, Me);
-        return be.p.DistanceSquared(He, Me) <= ye * ye
-      }
-      static IsCompletelyInFrustum(ee, ie) {
-        for (let He = 0; He < 6; ++He) {
-          const ye = ie[He];
-          for (let ie = 0; ie < 8; ++ie)
-            if (ye.dotCoordinate(ee[ie]) < 0) return !1
-        }
-        return !0
-      }
-      static IsInFrustum(ee, ie) {
-        for (let He = 0; He < 6; ++He) {
-          let ye = !0;
-          const be = ie[He];
-          for (let ie = 0; ie < 8; ++ie)
-            if (be.dotCoordinate(ee[ie]) >= 0) {
-              ye = !1;
-              break
-            } if (ye) return !1
-        }
-        return !0
+        this._texture && (this.releaseInternalTexture(), this._engine = null)
       }
     }
-    Ke._TmpVector3 = (0, ye.c)(3, be.p.Zero)
-  },
-  41429: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Re
-    });
-    var ye = He(37925),
-      be = He(37917),
-      Me = He(41437);
-    class Ke {
-      constructor(ee, ie, He) {
-        this.center = be.p.Zero(), this.centerWorld = be.p.Zero(), this.minimum = be.p.Zero(), this.maximum = be.p.Zero(), this.reConstruct(ee, ie, He)
-      }
-      reConstruct(ee, ie, He) {
-        this.minimum.jD(ee), this.maximum.jD(ie);
-        const ye = be.p.Distance(ee, ie);
-        ie.addToRef(ee, this.center).scaleInPlace(.5), this.radius = .5 * ye, this._update(He || be.b.IdentityReadOnly)
-      }
-      scale(ee) {
-        const ie = Ke._TmpVector3,
-          He = this.maximum.subtractToRef(this.minimum, ie[0]),
-          ye = He.length();
-        He.normalizeFromLength(ye);
-        const be = ye * ee,
-          Me = He.scaleInPlace(.5 * be),
-          Ue = this.center.subtractToRef(Me, ie[1]),
-          Fe = this.center.addToRef(Me, ie[2]);
-        return this.reConstruct(Ue, Fe, this._worldMatrix), this
-      }
-      getWorldMatrix() {
-        return this._worldMatrix
-      }
-      _update(ee) {
-        if (ee.isIdentity()) this.centerWorld.jD(this.center), this.radiusWorld = this.radius;
-        else {
-          be.p.TransformCoordinatesToRef(this.center, ee, this.centerWorld);
-          const ie = Ke._TmpVector3[0];
-          be.p.TransformNormalFromFloatsToRef(1, 1, 1, ee, ie), this.radiusWorld = Math.max(Math.abs(ie.x), Math.abs(ie.y), Math.abs(ie.z)) * this.radius
-        }
-      }
-      isInFrustum(ee) {
-        const ie = this.centerWorld,
-          He = this.radiusWorld;
-        for (let ye = 0; ye < 6; ye++)
-          if (ee[ye].dotCoordinate(ie) <= -He) return !1;
-        return !0
-      }
-      isCenterInFrustum(ee) {
-        const ie = this.centerWorld;
-        for (let He = 0; He < 6; He++)
-          if (ee[He].dotCoordinate(ie) < 0) return !1;
-        return !0
-      }
-      intersectsPoint(ee) {
-        const ie = be.p.DistanceSquared(this.centerWorld, ee);
-        return !(this.radiusWorld * this.radiusWorld < ie)
-      }
-      static Intersects(ee, ie) {
-        const He = be.p.DistanceSquared(ee.centerWorld, ie.centerWorld),
-          ye = ee.radiusWorld + ie.radiusWorld;
-        return !(ye * ye < He)
-      }
-      static CreateFromCenterAndRadius(ee, ie, He) {
-        this._TmpVector3[0].jD(ee), this._TmpVector3[1].wie(0, 0, ie), this._TmpVector3[2].jD(ee), this._TmpVector3[0].addInPlace(this._TmpVector3[1]), this._TmpVector3[2].XMe(this._TmpVector3[1]);
-        const ye = new Ke(this._TmpVector3[0], this._TmpVector3[2]);
-        return ye._worldMatrix = He || be.b.Identity(), ye
-      }
-    }
-    Ke._TmpVector3 = (0, ye.c)(3, be.p.Zero);
-    const Ue = {
-        min: 0,
-        max: 0
-      },
-      Fe = {
-        min: 0,
-        max: 0
-      },
-      Je = (ee, ie, He) => {
-        const ye = be.p.Dot(ie.centerWorld, ee),
-          Me = Math.abs(be.p.Dot(ie.directions[0], ee)) * ie.extendSize.x + Math.abs(be.p.Dot(ie.directions[1], ee)) * ie.extendSize.y + Math.abs(be.p.Dot(ie.directions[2], ee)) * ie.extendSize.z;
-        He.min = ye - Me, He.max = ye + Me
-      },
-      oe = (ee, ie, He) => (Je(ee, ie, Ue), Je(ee, He, Fe), !(Ue.min > Fe.max || Fe.min > Ue.max));
-    class Re {
-      constructor(ee, ie, He) {
-        this._isLocked = !1, this.boundingBox = new Me.d(ee, ie, He), this.OMe = new Ke(ee, ie, He)
-      }
-      reConstruct(ee, ie, He) {
-        this.boundingBox.reConstruct(ee, ie, He), this.OMe.reConstruct(ee, ie, He)
-      }
-      get minimum() {
-        return this.boundingBox.minimum
-      }
-      get maximum() {
-        return this.boundingBox.maximum
-      }
-      get isLocked() {
-        return this._isLocked
-      }
-      set isLocked(ee) {
-        this._isLocked = ee
-      }
-      update(ee) {
-        this._isLocked || (this.boundingBox._update(ee), this.OMe._update(ee))
-      }
-      centerOn(ee, ie) {
-        const He = Re._TmpVector3[0].jD(ee).XMe(ie),
-          ye = Re._TmpVector3[1].jD(ee).addInPlace(ie);
-        return this.boundingBox.reConstruct(He, ye, this.boundingBox.getWorldMatrix()), this.OMe.reConstruct(He, ye, this.boundingBox.getWorldMatrix()), this
-      }
-      encapsulate(ee) {
-        const ie = be.p.Minimize(this.minimum, ee),
-          He = be.p.Maximize(this.maximum, ee);
-        return this.reConstruct(ie, He, this.boundingBox.getWorldMatrix()), this
-      }
-      encapsulateBoundingInfo(ee) {
-        const ie = be.j.Matrix[0];
-        this.boundingBox.getWorldMatrix().invertToRef(ie);
-        const He = be.j.rf[0];
-        return be.p.TransformCoordinatesToRef(ee.boundingBox.minimumWorld, ie, He), this.encapsulate(He), be.p.TransformCoordinatesToRef(ee.boundingBox.maximumWorld, ie, He), this.encapsulate(He), this
-      }
-      scale(ee) {
-        return this.boundingBox.scale(ee), this.OMe.scale(ee), this
-      }
-      isInFrustum(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if ((2 === ie || 3 === ie) && this.OMe.isCenterInFrustum(ee)) return !0;
-        if (!this.OMe.isInFrustum(ee)) return !1;
-        return !(1 !== ie && 3 !== ie) || this.boundingBox.isInFrustum(ee)
-      }
-      get diagonalLength() {
-        const ee = this.boundingBox;
-        return ee.maximumWorld.subtractToRef(ee.minimumWorld, Re._TmpVector3[0]).length()
-      }
-      isCompletelyInFrustum(ee) {
-        return this.boundingBox.isCompletelyInFrustum(ee)
-      }
-      _checkCollision(ee) {
-        return ee._canDoCollision(this.OMe.centerWorld, this.OMe.radiusWorld, this.boundingBox.minimumWorld, this.boundingBox.maximumWorld)
-      }
-      intersectsPoint(ee) {
-        return !!this.OMe.centerWorld && (!!this.OMe.intersectsPoint(ee) && !!this.boundingBox.intersectsPoint(ee))
-      }
-      intersects(ee, ie) {
-        if (!Ke.Intersects(this.OMe, ee.OMe)) return !1;
-        if (!Me.d.Intersects(this.boundingBox, ee.boundingBox)) return !1;
-        if (!ie) return !0;
-        const He = this.boundingBox,
-          ye = ee.boundingBox;
-        return !!oe(He.directions[0], He, ye) && (!!oe(He.directions[1], He, ye) && (!!oe(He.directions[2], He, ye) && (!!oe(ye.directions[0], He, ye) && (!!oe(ye.directions[1], He, ye) && (!!oe(ye.directions[2], He, ye) && (!!oe(be.p.Cross(He.directions[0], ye.directions[0]), He, ye) && (!!oe(be.p.Cross(He.directions[0], ye.directions[1]), He, ye) && (!!oe(be.p.Cross(He.directions[0], ye.directions[2]), He, ye) && (!!oe(be.p.Cross(He.directions[1], ye.directions[0]), He, ye) && (!!oe(be.p.Cross(He.directions[1], ye.directions[1]), He, ye) && (!!oe(be.p.Cross(He.directions[1], ye.directions[2]), He, ye) && (!!oe(be.p.Cross(He.directions[2], ye.directions[0]), He, ye) && (!!oe(be.p.Cross(He.directions[2], ye.directions[1]), He, ye) && !!oe(be.p.Cross(He.directions[2], ye.directions[2]), He, ye))))))))))))))
-      }
-    }
-    Re._TmpVector3 = (0, ye.c)(2, be.p.Zero)
-  },
-  41458: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me,
-      f: () => Fe,
-      g: () => Ue,
-      k: () => Ke
-    });
-    var ye = He(41264),
-      be = He(37917);
-
-    function Me(ee) {
-      -1 === ee.indexOf("vClipPlane") && ee.push("vClipPlane"), -1 === ee.indexOf("vClipPlane2") && ee.push("vClipPlane2"), -1 === ee.indexOf("vClipPlane3") && ee.push("vClipPlane3"), -1 === ee.indexOf("vClipPlane4") && ee.push("vClipPlane4"), -1 === ee.indexOf("vClipPlane5") && ee.push("vClipPlane5"), -1 === ee.indexOf("vClipPlane6") && ee.push("vClipPlane6")
-    }
-
-    function Ke(ee, ie, He) {
-      const ye = !!(ee.clipPlane ?? ie.clipPlane),
-        be = !!(ee.clipPlane2 ?? ie.clipPlane2),
-        Me = !!(ee.clipPlane3 ?? ie.clipPlane3),
-        Ke = !!(ee.clipPlane4 ?? ie.clipPlane4),
-        Ue = !!(ee.clipPlane5 ?? ie.clipPlane5),
-        Fe = !!(ee.clipPlane6 ?? ie.clipPlane6);
-      ye && He.push("#define CLIPPLANE"), be && He.push("#define CLIPPLANE2"), Me && He.push("#define CLIPPLANE3"), Ke && He.push("#define CLIPPLANE4"), Ue && He.push("#define CLIPPLANE5"), Fe && He.push("#define CLIPPLANE6")
-    }
-
-    function Ue(ee, ie, He) {
-      let ye = !1;
-      const be = !!(ee.clipPlane ?? ie.clipPlane),
-        Me = !!(ee.clipPlane2 ?? ie.clipPlane2),
-        Ke = !!(ee.clipPlane3 ?? ie.clipPlane3),
-        Ue = !!(ee.clipPlane4 ?? ie.clipPlane4),
-        Fe = !!(ee.clipPlane5 ?? ie.clipPlane5),
-        Je = !!(ee.clipPlane6 ?? ie.clipPlane6);
-      return He.CLIPPLANE !== be && (He.CLIPPLANE = be, ye = !0), He.CLIPPLANE2 !== Me && (He.CLIPPLANE2 = Me, ye = !0), He.CLIPPLANE3 !== Ke && (He.CLIPPLANE3 = Ke, ye = !0), He.CLIPPLANE4 !== Ue && (He.CLIPPLANE4 = Ue, ye = !0), He.CLIPPLANE5 !== Fe && (He.CLIPPLANE5 = Fe, ye = !0), He.CLIPPLANE6 !== Je && (He.CLIPPLANE6 = Je, ye = !0), ye
-    }
-
-    function Fe(ee, ie, He) {
-      let ye = ie.clipPlane ?? He.clipPlane;
-      Je(ee, "vClipPlane", ye), ye = ie.clipPlane2 ?? He.clipPlane2, Je(ee, "vClipPlane2", ye), ye = ie.clipPlane3 ?? He.clipPlane3, Je(ee, "vClipPlane3", ye), ye = ie.clipPlane4 ?? He.clipPlane4, Je(ee, "vClipPlane4", ye), ye = ie.clipPlane5 ?? He.clipPlane5, Je(ee, "vClipPlane5", ye), ye = ie.clipPlane6 ?? He.clipPlane6, Je(ee, "vClipPlane6", ye)
-    }
-
-    function Je(ee, ie, He) {
-      if (He) {
-        const Me = ye.b.Xx()?.floatingOriginOffset || be.p.ZeroReadOnly;
-        ee.setFloat4(ie, He.normal.x, He.normal.y, He.normal.z, He.d + be.p.Dot(He.normal, Me))
-      }
-    }
-  },
-  41481: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => ye
-    });
-    class ye {
-      constructor() {
-        this._defines = {}, this._currentRank = 32, this._maxRank = -1, this._mesh = null
-      }
-      unBindMesh() {
-        this._mesh = null
-      }
-      addFallback(ee, ie) {
-        this._defines[ee] || (ee < this._currentRank && (this._currentRank = ee), ee > this._maxRank && (this._maxRank = ee), this._defines[ee] = new Array), this._defines[ee].push(ie)
-      }
-      addCPUSkinningFallback(ee, ie) {
-        this._mesh = ie, ee < this._currentRank && (this._currentRank = ee), ee > this._maxRank && (this._maxRank = ee)
-      }
-      get hasMoreFallbacks() {
-        return this._currentRank <= this._maxRank
-      }
-      reduce(ee, ie) {
-        if (this._mesh && this._mesh.computeBonesUsingShaders && this._mesh.numBoneInfluencers > 0) {
-          this._mesh.computeBonesUsingShaders = !1, ee = ee.replace("#define NUM_BONE_INFLUENCERS " + this._mesh.numBoneInfluencers, "#define NUM_BONE_INFLUENCERS 0"), ie._bonesComputationForcedToCPU = !0;
-          const He = this._mesh.Xx();
-          for (let ee = 0; ee < He.meshes.length; ee++) {
-            const ye = He.meshes[ee];
-            if (ye.material) {
-              if (ye.computeBonesUsingShaders && 0 !== ye.numBoneInfluencers)
-                if (ye.material.getEffect() === ie) ye.computeBonesUsingShaders = !1;
-                else if (ye.pW)
-                for (const ee of ye.pW) {
-                  if (ee.effect === ie) {
-                    ye.computeBonesUsingShaders = !1;
-                    break
-                  }
-                }
-            } else !this._mesh.material && ye.computeBonesUsingShaders && ye.numBoneInfluencers > 0 && (ye.computeBonesUsingShaders = !1)
-          }
-        } else {
-          const ie = this._defines[this._currentRank];
-          if (ie)
-            for (let He = 0; He < ie.length; He++) ee = ee.replace("#define " + ie[He], "");
-          this._currentRank++
-        }
-        return ee
-      }
-    }
-  },
-  41414: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => ze
-    });
-    var ye = He(41113),
-      be = He(41121),
-      Me = He(41203),
-      Ke = He(37931),
-      Ue = He(37929),
-      Fe = He(41421),
-      Je = He(41238),
-      oe = He(39467),
-      Re = He(38590),
-      ke = He(41446),
-      qe = He(41141);
-    let fe = (() => {
-      var ee;
-      let ie, He, Me, Ke, Ue, Fe, Je, oe, Re, ke, fe, Te, pe = [];
-      return ee = class {
-        constructor() {
-          this._func = (0, ye.l)(this, pe), this.reset()
-        }
-        reset() {
-          this.enabled = !1, this.mask = 255, this.funcRef = 1, this.funcMask = 255, this.func = 519, this.opStencilFail = 7680, this.opDepthFail = 7680, this.opStencilDepthPass = 7681, this.backFunc = 519, this.backOpStencilFail = 7680, this.backOpDepthFail = 7680, this.backOpStencilDepthPass = 7681
-        }
-        get func() {
-          return this._func
-        }
-        set func(ee) {
-          this._func = ee
-        }
-        get backFunc() {
-          return this._backFunc
-        }
-        set backFunc(ee) {
-          this._backFunc = ee
-        }
-        get funcRef() {
-          return this._funcRef
-        }
-        set funcRef(ee) {
-          this._funcRef = ee
-        }
-        get funcMask() {
-          return this._funcMask
-        }
-        set funcMask(ee) {
-          this._funcMask = ee
-        }
-        get opStencilFail() {
-          return this._opStencilFail
-        }
-        set opStencilFail(ee) {
-          this._opStencilFail = ee
-        }
-        get opDepthFail() {
-          return this._opDepthFail
-        }
-        set opDepthFail(ee) {
-          this._opDepthFail = ee
-        }
-        get opStencilDepthPass() {
-          return this._opStencilDepthPass
-        }
-        set opStencilDepthPass(ee) {
-          this._opStencilDepthPass = ee
-        }
-        get backOpStencilFail() {
-          return this._backOpStencilFail
-        }
-        set backOpStencilFail(ee) {
-          this._backOpStencilFail = ee
-        }
-        get backOpDepthFail() {
-          return this._backOpDepthFail
-        }
-        set backOpDepthFail(ee) {
-          this._backOpDepthFail = ee
-        }
-        get backOpStencilDepthPass() {
-          return this._backOpStencilDepthPass
-        }
-        set backOpStencilDepthPass(ee) {
-          this._backOpStencilDepthPass = ee
-        }
-        get mask() {
-          return this._mask
-        }
-        set mask(ee) {
-          this._mask = ee
-        }
-        get enabled() {
-          return this._enabled
-        }
-        set enabled(ee) {
-          this._enabled = ee
-        }
-        getClassName() {
-          return "MaterialStencilState"
-        }
-        copyTo(ee) {
-          qe.c.Clone((() => ee), this)
-        }
-        serialize() {
-          return qe.c.Serialize(this)
-        }
-        parse(ee, ie, He) {
-          qe.c.Parse((() => this), ee, ie, He)
-        }
-      }, (() => {
-        const qe = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        ie = [(0, be.R)()], He = [(0, be.R)()], Me = [(0, be.R)()], Ke = [(0, be.R)()], Ue = [(0, be.R)()], Fe = [(0, be.R)()], Je = [(0, be.R)()], oe = [(0, be.R)()], Re = [(0, be.R)()], ke = [(0, be.R)()], fe = [(0, be.R)()], Te = [(0, be.R)()], (0, ye.i)(ee, null, ie, {
-          kind: "getter",
-          name: "func",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "func" in ee,
-            get: ee => ee.func
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, He, {
-          kind: "getter",
-          name: "backFunc",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "backFunc" in ee,
-            get: ee => ee.backFunc
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, Me, {
-          kind: "getter",
-          name: "funcRef",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "funcRef" in ee,
-            get: ee => ee.funcRef
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, Ke, {
-          kind: "getter",
-          name: "funcMask",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "funcMask" in ee,
-            get: ee => ee.funcMask
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, Ue, {
-          kind: "getter",
-          name: "opStencilFail",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "opStencilFail" in ee,
-            get: ee => ee.opStencilFail
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, Fe, {
-          kind: "getter",
-          name: "opDepthFail",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "opDepthFail" in ee,
-            get: ee => ee.opDepthFail
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, Je, {
-          kind: "getter",
-          name: "opStencilDepthPass",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "opStencilDepthPass" in ee,
-            get: ee => ee.opStencilDepthPass
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, oe, {
-          kind: "getter",
-          name: "backOpStencilFail",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "backOpStencilFail" in ee,
-            get: ee => ee.backOpStencilFail
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, Re, {
-          kind: "getter",
-          name: "backOpDepthFail",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "backOpDepthFail" in ee,
-            get: ee => ee.backOpDepthFail
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, ke, {
-          kind: "getter",
-          name: "backOpStencilDepthPass",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "backOpStencilDepthPass" in ee,
-            get: ee => ee.backOpStencilDepthPass
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, fe, {
-          kind: "getter",
-          name: "mask",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "mask" in ee,
-            get: ee => ee.mask
-          },
-          metadata: qe
-        }, null, pe), (0, ye.i)(ee, null, Te, {
-          kind: "getter",
-          name: "enabled",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "enabled" in ee,
-            get: ee => ee.enabled
-          },
-          metadata: qe
-        }, null, pe), qe && Object.defineProperty(ee, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: qe
-        })
-      })(), ee
-    })();
-    var Te = He(41451),
-      pe = He(41022),
-      Xe = He(40985);
-    let ze = (() => {
-      var ee;
-      let ie, He, Xe, ze, Be, Ee, ge, Oe, de, We, te, Ze, we, De, Pe, Ae, Ye, Ve, ae, ce, xe, Le, Ce, ve, ue, me, le, Se, ne, je = [],
-        se = [],
-        Ie = [],
-        he = [],
-        Ne = [],
-        Ge = [],
-        re = [],
-        Qe = [],
-        ei = [],
-        ii = [],
-        Hi = [],
-        yi = [],
-        bi = [],
-        Mi = [],
-        Ki = [],
-        Ui = [],
-        Fi = [],
-        Ji = [],
-        oi = [],
-        Ri = [],
-        ki = [],
-        qi = [],
-        fi = [],
-        Ti = [],
-        Xi = [],
-        zi = [],
-        Bi = [],
-        Ei = [],
-        gi = [],
-        Oi = [],
-        di = [],
+    var ZW, xW = OW(41538),
+      lW = OW(41415);
+    let AW = (() => {
+      var WW;
+      let iW, OW, wW, ZW, lW, AW, bW, jW, UW, kW, sW, MW, KW, SW, YW, yW, TW, JW, hW, HW, nW, uW, oW, dW, eW, vW = tW,
+        gW = [],
+        DW = [],
+        VW = [],
+        pW = [],
+        fW = [],
+        CW = [],
+        XW = [],
+        BW = [],
+        qW = [],
+        RW = [],
+        GW = [],
+        IW = [],
+        aW = [],
+        rW = [],
+        zW = [],
+        FW = [],
+        QW = [],
         Wi = [],
+        ii = [],
+        Oi = [],
+        mi = [],
+        Ei = [],
+        Ni = [],
+        Pi = [],
+        Li = [],
+        ci = [],
+        wi = [],
         ti = [],
         Zi = [],
-        wi = [],
-        Di = [],
-        Pi = [],
-        Ai = [],
-        Yi = [],
-        Vi = [],
-        ai = [],
-        ci = [],
         xi = [],
-        Li = [],
-        Ci = [],
-        vi = [],
-        ui = [],
-        mi = [],
-        li = [],
-        Si = [],
-        ni = [];
-      return ee = class {
-        get useVertexPulling() {
-          return this._useVertexPulling
+        li = [];
+      return WW = class extends vW {
+        set hasAlpha(WW) {
+          this._hasAlpha = WW
         }
-        set useVertexPulling(ie) {
-          this._useVertexPulling !== ie && (this._useVertexPulling = ie, this.tye(ee.MiscDirtyFlag))
+        get hasAlpha() {
+          return this._hasAlpha
         }
-        get _supportGlowLayer() {
+        set getAlphaFromRGB(WW) {
+          this._getAlphaFromRGB !== WW && (this._getAlphaFromRGB = WW, this._scene && this._scene.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))))
+        }
+        get getAlphaFromRGB() {
+          return this._getAlphaFromRGB
+        }
+        set coordinatesIndex(WW) {
+          this._coordinatesIndex !== WW && (this._coordinatesIndex = WW, this._scene && this._scene.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))))
+        }
+        get coordinatesIndex() {
+          return this._coordinatesIndex
+        }
+        set coordinatesMode(WW) {
+          this._coordinatesMode !== WW && (this._coordinatesMode = WW, this._scene && this._scene.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))))
+        }
+        get coordinatesMode() {
+          return this._coordinatesMode
+        }
+        get wrapU() {
+          return this._wrapU
+        }
+        set wrapU(WW) {
+          this._wrapU = WW
+        }
+        get wrapV() {
+          return this._wrapV
+        }
+        set wrapV(WW) {
+          this._wrapV = WW
+        }
+        get isCube() {
+          return this._texture ? this._texture.isCube : this._isCube
+        }
+        set isCube(WW) {
+          this._texture ? this._texture.isCube = WW : this._isCube = WW
+        }
+        get is3D() {
+          return !!this._texture && this._texture.is3D
+        }
+        set is3D(WW) {
+          this._texture && (this._texture.is3D = WW)
+        }
+        get is2DArray() {
+          return !!this._texture && this._texture.is2DArray
+        }
+        set is2DArray(WW) {
+          this._texture && (this._texture.is2DArray = WW)
+        }
+        get gammaSpace() {
+          return this._texture ? (null === this._texture._gammaSpace && (this._texture._gammaSpace = this._gammaSpace), this._texture._gammaSpace && !this._texture._useSRGBBuffer) : this._gammaSpace
+        }
+        set gammaSpace(WW) {
+          if (this._texture) {
+            if (this._texture._gammaSpace === WW) return;
+            this._texture._gammaSpace = WW
+          } else {
+            if (this._gammaSpace === WW) return;
+            this._gammaSpace = WW
+          }
+          this.bD()?.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this)))
+        }
+        get isRGBD() {
+          return null != this._texture && this._texture._isRGBD
+        }
+        set isRGBD(WW) {
+          WW !== this.isRGBD && (this._texture && (this._texture._isRGBD = WW), this.bD()?.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))))
+        }
+        get noMipmap() {
           return !1
         }
-        set _glowModeEnabled(ee) {}
-        get shaderLanguage() {
-          return this._shaderLanguage
+        get lodGenerationOffset() {
+          return this._texture ? this._texture._lodGenerationOffset : 0
         }
-        get canRenderToMRT() {
-          return !1
+        set lodGenerationOffset(WW) {
+          this._texture && (this._texture._lodGenerationOffset = WW)
         }
-        set alpha(ie) {
-          if (this._alpha === ie) return;
-          const He = this._alpha;
-          this._alpha = ie, 1 !== He && 1 !== ie || this.tye(ee.MiscDirtyFlag + ee.PrePassDirtyFlag)
+        get lodGenerationScale() {
+          return this._texture ? this._texture._lodGenerationScale : 0
         }
-        get alpha() {
-          return this._alpha
+        set lodGenerationScale(WW) {
+          this._texture && (this._texture._lodGenerationScale = WW)
         }
-        set backFaceCulling(ie) {
-          this._backFaceCulling !== ie && (this._backFaceCulling = ie, this.tye(ee.TextureDirtyFlag))
+        get linearSpecularLOD() {
+          return !!this._texture && this._texture._linearSpecularLOD
         }
-        get backFaceCulling() {
-          return this._backFaceCulling
+        set linearSpecularLOD(WW) {
+          this._texture && (this._texture._linearSpecularLOD = WW)
         }
-        set textureRepetitionMode(ie) {
-          const He = Math.max(0, Math.min(0 | ie, 4));
-          this._textureRepetitionMode !== He && (this._textureRepetitionMode = He, this.tye(ee.TextureDirtyFlag))
+        get irradianceTexture() {
+          return this._texture ? this._texture._irradianceTexture : null
         }
-        get textureRepetitionMode() {
-          return this._textureRepetitionMode
+        set irradianceTexture(WW) {
+          this._texture && (this._texture._irradianceTexture = WW)
         }
-        set cullBackFaces(ie) {
-          this._cullBackFaces !== ie && (this._cullBackFaces = ie, this.tye(ee.TextureDirtyFlag))
+        get uid() {
+          return this._uid || (this._uid = (0, cW.b)()), this._uid
         }
-        get cullBackFaces() {
-          return this._cullBackFaces
-        }
-        get blockDirtyMechanism() {
-          return this._blockDirtyMechanism
-        }
-        set blockDirtyMechanism(ee) {
-          this._blockDirtyMechanism !== ee && (this._blockDirtyMechanism = ee, ee || this.markDirty())
-        }
-        atomicMaterialsUpdate(ee) {
-          this.blockDirtyMechanism = !0;
-          try {
-            ee(this)
-          } finally {
-            this.blockDirtyMechanism = !1
-          }
-        }
-        get hasRenderTargetTextures() {
-          return this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._eventInfo.hasRenderTargetTextures
-        }
-        set onDispose(ee) {
-          this._onDisposeObserver && this.Bx.remove(this._onDisposeObserver), this._onDisposeObserver = this.Bx.add(ee)
-        }
-        get onBindObservable() {
-          return this._onBindObservable || (this._onBindObservable = new Ke.d), this._onBindObservable
-        }
-        set onBind(ee) {
-          this._onBindObserver && this.onBindObservable.remove(this._onBindObserver), this._onBindObserver = this.onBindObservable.add(ee)
-        }
-        get onUnBindObservable() {
-          return this._onUnBindObservable || (this._onUnBindObservable = new Ke.d), this._onUnBindObservable
-        }
-        get onEffectCreatedObservable() {
-          return this._onEffectCreatedObservable || (this._onEffectCreatedObservable = new Ke.d), this._onEffectCreatedObservable
-        }
-        set alphaMode(ee) {
-          this._alphaMode[0] = ee
-        }
-        get alphaMode() {
-          return this._alphaMode[0]
-        }
-        get alphaModes() {
-          return this._alphaMode
-        }
-        setAlphaMode(ie) {
-          let He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          this._alphaMode[He] !== ie && (this._alphaMode[He] = ie, this.tye(ee.TextureDirtyFlag))
-        }
-        set needDepthPrePass(ee) {
-          this._needDepthPrePass !== ee && (this._needDepthPrePass = ee, this._needDepthPrePass && (this.checkReadyOnEveryCall = !0))
-        }
-        get needDepthPrePass() {
-          return this._needDepthPrePass
-        }
-        get isPrePassCapable() {
-          return !1
-        }
-        set fogEnabled(ie) {
-          this._fogEnabled !== ie && (this._fogEnabled = ie, this.tye(ee.MiscDirtyFlag))
-        }
-        get fogEnabled() {
-          return this._fogEnabled
-        }
-        get wireframe() {
-          switch (this._fillMode) {
-            case ee.WireFrameFillMode:
-            case ee.LineListDrawMode:
-            case ee.LineLoopDrawMode:
-            case ee.LineStripDrawMode:
-              return !0
-          }
-          return this._scene.forceWireframe
-        }
-        set wireframe(ie) {
-          this.fillMode = ie ? ee.WireFrameFillMode : ee.TriangleFillMode
-        }
-        get pointsCloud() {
-          switch (this._fillMode) {
-            case ee.PointFillMode:
-            case ee.PointListDrawMode:
-              return !0
-          }
-          return this._scene.forcePointsCloud
-        }
-        set pointsCloud(ie) {
-          this.fillMode = ie ? ee.PointFillMode : ee.TriangleFillMode
-        }
-        get fillMode() {
-          return this._fillMode
-        }
-        set fillMode(ie) {
-          this._fillMode !== ie && (this._fillMode = ie, this.tye(ee.MiscDirtyFlag))
-        }
-        get useLogarithmicDepth() {
-          return this._useLogarithmicDepth
-        }
-        set useLogarithmicDepth(ee) {
-          const ie = this.Xx().Nf().getCaps().fragmentDepthSupported;
-          ee && !ie && oe.e.Warn("Logarithmic depth has been requested for a material on a device that doesn't support it."), this._useLogarithmicDepth = ee && ie, this._markAllSubMeshesAsMiscDirty()
-        }
-        get isVertexOutputInvariant() {
-          return this._isVertexOutputInvariant
-        }
-        set isVertexOutputInvariant(ee) {
-          this._isVertexOutputInvariant !== ee && (this._isVertexOutputInvariant = ee, this._markAllSubMeshesAsMiscDirty())
-        }
-        _getDrawWrapper() {
-          return this._drawWrapper
-        }
-        _setDrawWrapper(ee) {
-          this._drawWrapper = ee
-        }
-        constructor(ie, He, be) {
-          let Fe = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          this.customShaderNameResolve = (0, ye.l)(this, je), this.shadowDepthWrapper = null, this.allowShaderHotSwapping = !0, this._shaderLanguage = 0, this._forceGLSL = !1, this._useVertexPulling = !1, this.id = (0, ye.l)(this, se, void 0), this.uniqueId = ((0, ye.l)(this, Ie), (0, ye.l)(this, he, void 0)), this._loadedUniqueId = (0, ye.l)(this, Ne), this.name = (0, ye.l)(this, Ge, void 0), this.metadata = ((0, ye.l)(this, re), (0, ye.l)(this, Qe, null)), this._internalMetadata = (0, ye.l)(this, ei), this.reservedDataStore = null, this.checkReadyOnEveryCall = (0, ye.l)(this, ii, !1), this.checkReadyOnlyOnce = ((0, ye.l)(this, Hi), (0, ye.l)(this, yi, !1)), this.state = ((0, ye.l)(this, bi), (0, ye.l)(this, Mi, "")), this._alpha = ((0, ye.l)(this, Ki), (0, ye.l)(this, Ui, 1)), this.inspectableCustomProperties = (0, ye.l)(this, Fi), this._backFaceCulling = (0, ye.l)(this, Ji, !0), this._textureRepetitionMode = ((0, ye.l)(this, oi), (0, ye.l)(this, Ri, 0)), this.textureRepetitionHexTilingParams = ((0, ye.l)(this, ki), (0, ye.l)(this, qi, [1, .6, 7, .5])), this._cullBackFaces = ((0, ye.l)(this, fi), (0, ye.l)(this, Ti, !0)), this._blockDirtyMechanism = ((0, ye.l)(this, Xi), !1), this.sideOrientation = (0, ye.l)(this, zi, null), this.onCompiled = ((0, ye.l)(this, Bi), null), this.onError = null, this.getRenderTargetTextures = null, this.doNotSerialize = !1, this._storeEffectOnSubMeshes = !1, this.animations = null, this.Bx = new Ke.d, this._onDisposeObserver = null, this._onUnBindObservable = null, this._onBindObserver = null, this._alphaMode = (0, ye.l)(this, Ei, [2]), this._needDepthPrePass = ((0, ye.l)(this, gi), (0, ye.l)(this, Oi, !1)), this.disableDepthWrite = ((0, ye.l)(this, di), (0, ye.l)(this, Wi, !1)), this.disableColorWrite = ((0, ye.l)(this, ti), (0, ye.l)(this, Zi, !1)), this.forceDepthWrite = ((0, ye.l)(this, wi), (0, ye.l)(this, Di, !1)), this.depthFunction = ((0, ye.l)(this, Pi), (0, ye.l)(this, Ai, 0)), this.separateCullingPass = ((0, ye.l)(this, Yi), (0, ye.l)(this, Vi, !1)), this._fogEnabled = ((0, ye.l)(this, ai), (0, ye.l)(this, ci, !0)), this.pointSize = ((0, ye.l)(this, xi), (0, ye.l)(this, Li, 1)), this.zOffset = ((0, ye.l)(this, Ci), (0, ye.l)(this, vi, 0)), this.zOffsetUnits = ((0, ye.l)(this, ui), (0, ye.l)(this, mi, 0)), this.clipPlane = (0, ye.l)(this, li), this.stencil = new fe, this._isVertexOutputInvariant = (0, ye.l)(this, Si, ee.ForceVertexOutputInvariant), this._materialContext = (0, ye.l)(this, ni), this._useUBO = !1, this._fillMode = ee.TriangleFillMode, this._cachedDepthWriteState = !1, this._cachedColorWriteState = !1, this._cachedDepthFunctionState = 0, this._indexInSceneMaterialArray = -1, this.meshMap = null, this._parentContainer = null, this._uniformBufferLayoutBuilt = !1, this._eventInfo = {}, this._callbackPluginEventGeneric = () => {}, this._callbackPluginEventIsReadyForSubMesh = () => {}, this._callbackPluginEventPrepareDefines = () => {}, this._callbackPluginEventPrepareDefinesBeforeAttributes = () => {}, this._callbackPluginEventHardBindForSubMesh = () => {}, this._callbackPluginEventBindForSubMesh = () => {}, this._callbackPluginEventHasRenderTargetTextures = () => {}, this._callbackPluginEventFillRenderTargetTextures = () => {}, this._transparencyMode = null, this.name = ie;
-          const oe = He || Ue.b.LastCreatedScene;
-          oe && (this._scene = oe, this._dirtyCallbacks = {}, this._forceGLSL = Fe, this._dirtyCallbacks[1] = this._markAllSubMeshesAsTexturesDirty.bind(this), this._dirtyCallbacks[2] = this._markAllSubMeshesAsLightsDirty.bind(this), this._dirtyCallbacks[4] = this._markAllSubMeshesAsFresnelDirty.bind(this), this._dirtyCallbacks[8] = this._markAllSubMeshesAsAttributesDirty.bind(this), this._dirtyCallbacks[16] = this._markAllSubMeshesAsMiscDirty.bind(this), this._dirtyCallbacks[32] = this._markAllSubMeshesAsPrePassDirty.bind(this), this._dirtyCallbacks[127] = this._markAllSubMeshesAsAllDirty.bind(this), this.id = ie || Me.h.RandomId(), this.uniqueId = this._scene.getUniqueId(), this._materialContext = this._scene.Nf().createMaterialContext(), this._drawWrapper = new ke.b(this._scene.Nf(), !1), this._drawWrapper.materialContext = this._materialContext, this._uniformBuffer = new Je.b(this._scene.Nf(), void 0, void 0, ie), this._useUBO = this.Xx().Nf().supportsUniformBuffers, this._createUniformBuffer(), be || this._scene.addMaterial(this), this._scene.useMaterialMeshMap && (this.meshMap = {}), ee.OnEventObservable.notifyObservers(this, 1))
-        }
-        _createUniformBuffer() {
-          const ee = this.Xx().Nf();
-          this._uniformBuffer?.dispose(), ee.isWebGPU && !this._forceGLSL ? (this._uniformBuffer = new Je.b(ee, void 0, void 0, this.name, !0), this._shaderLanguage = 1) : this._uniformBuffer = new Je.b(this._scene.Nf(), void 0, void 0, this.name), this._uniformBufferLayoutBuilt = !1
-        }
-        toString(ee) {
-          return "Name: " + this.name
+        toString() {
+          return this.name
         }
         getClassName() {
-          return "Material"
+          return "BaseTexture"
         }
-        get _isMaterial() {
+        set onDispose(WW) {
+          this._onDisposeObserver && this.jD.remove(this._onDisposeObserver), this._onDisposeObserver = this.jD.add(WW)
+        }
+        get isBlocking() {
           return !0
         }
-        get isFrozen() {
-          return this.checkReadyOnlyOnce
+        get loadingError() {
+          return this._loadingError
         }
-        freeze() {
-          this.markDirty(), this.checkReadyOnlyOnce = !0
+        get errorObject() {
+          return this._errorObject
         }
-        unfreeze() {
-          this.markDirty(), this.checkReadyOnlyOnce = !1
+        constructor(iW) {
+          let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          super(null), this.uniqueId = ((0, mW.g)(this, gW), (0, mW.g)(this, DW, void 0)), this.name = ((0, mW.g)(this, VW), (0, mW.g)(this, pW, void 0)), this.displayName = ((0, mW.g)(this, fW), (0, mW.g)(this, CW, void 0)), this.metadata = ((0, mW.g)(this, XW), (0, mW.g)(this, BW, null)), this._internalMetadata = (0, mW.g)(this, qW), this.reservedDataStore = null, this._hasAlpha = (0, mW.g)(this, RW, !1), this._getAlphaFromRGB = ((0, mW.g)(this, GW), (0, mW.g)(this, IW, !1)), this.level = ((0, mW.g)(this, aW), (0, mW.g)(this, rW, 1)), this._coordinatesIndex = ((0, mW.g)(this, zW), (0, mW.g)(this, FW, 0)), this.optimizeUVAllocation = ((0, mW.g)(this, QW), (0, mW.g)(this, Wi, !0)), this._coordinatesMode = ((0, mW.g)(this, ii), (0, mW.g)(this, Oi, 0)), this.wrapR = ((0, mW.g)(this, mi), (0, mW.g)(this, Ei, 1)), this.anisotropicFilteringLevel = ((0, mW.g)(this, Ni), (0, mW.g)(this, Pi, WW.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, mW.g)(this, Li), !1), this._gammaSpace = !0, this.invertZ = (0, mW.g)(this, ci, !1), this.lodLevelInAlpha = ((0, mW.g)(this, wi), (0, mW.g)(this, ti, !1)), this._dominantDirection = ((0, mW.g)(this, Zi), null), this.isRenderTarget = (0, mW.g)(this, xi, !1), this._prefiltered = ((0, mW.g)(this, li), !1), this._forceSerialize = !1, this.animations = [], this.jD = new NW.e, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, iW ? WW._IsScene(iW) ? this._scene = iW : this._engine = iW : this._scene = LW.d.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.VA()), this._texture = OW, this._uid = null
         }
-        isReady(ee, ie) {
-          return !0
-        }
-        isReadyForSubMesh(ee, ie, He) {
-          const ye = ie.materialDefines;
-          return !!ye && (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = ye, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), this._eventInfo.isReadyForSubMesh)
-        }
-        getEffect() {
-          return this._drawWrapper.effect
-        }
-        Xx() {
+        bD() {
           return this._scene
         }
-        _getEffectiveOrientation(ee) {
-          return null !== this.sideOrientation ? this.sideOrientation : ee.sideOrientation
+        _getEngine() {
+          return this._engine
         }
-        get transparencyMode() {
-          return this._transparencyMode
+        getTextureMatrix() {
+          return PW.d.IdentityReadOnly
         }
-        set transparencyMode(ee) {
-          this._transparencyMode = ee
+        getReflectionTextureMatrix() {
+          return PW.d.IdentityReadOnly
         }
-        get _hasTransparencyMode() {
-          return null != this._transparencyMode
+        getRefractionTextureMatrix() {
+          return this.getReflectionTextureMatrix()
         }
-        get _transparencyModeIsBlend() {
-          return this._transparencyMode === ee.MATERIAL_ALPHABLEND || this._transparencyMode === ee.MATERIAL_ALPHATESTANDBLEND
+        isReadyOrNotBlocking() {
+          return !this.isBlocking || this.isReady() || this.loadingError
         }
-        get _transparencyModeIsTest() {
-          return this._transparencyMode === ee.MATERIAL_ALPHATEST || this._transparencyMode === ee.MATERIAL_ALPHATESTANDBLEND
-        }
-        get _disableAlphaBlending() {
-          return this._transparencyMode === ee.MATERIAL_OPAQUE || this._transparencyMode === ee.MATERIAL_ALPHATEST
-        }
-        needAlphaBlending() {
-          return this._hasTransparencyMode ? this._transparencyModeIsBlend : !this._disableAlphaBlending && this.alpha < 1
-        }
-        needAlphaBlendingForMesh(ee) {
-          return this._hasTransparencyMode ? this._transparencyModeIsBlend : ee.visibility < 1 || !this._disableAlphaBlending && (ee.hasVertexAlpha || this.needAlphaBlending())
-        }
-        needAlphaTesting() {
-          return !!this._hasTransparencyMode && this._transparencyModeIsTest
-        }
-        needAlphaTestingForMesh(ee) {
-          return this._hasTransparencyMode ? this._transparencyModeIsTest : !this.needAlphaBlendingForMesh(ee) && this.needAlphaTesting()
-        }
-        getAlphaTestTexture() {
-          return null
-        }
-        markDirty() {
-          let ie = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const He = this.Xx().meshes;
-          for (const ee of He)
-            if (ee.pW)
-              for (const He of ee.pW)
-                if (He.iT() === this)
-                  for (const ee of He._drawWrappers) ee && this._materialContext === ee.materialContext && (ee._wasPreviouslyReady = !1, ee._wasPreviouslyUsingInstances = null, ee._forceRebindOnNextCall = ie);
-          ie && this.tye(ee.AllDirtyFlag)
-        }
-        _preBind(ie) {
-          let He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const ye = this._scene.Nf(),
-            be = (null == He ? this.sideOrientation : He) === ee.ClockWiseSideOrientation,
-            Me = ie || this._getDrawWrapper();
-          return (0, pe.e)(Me) && Me.materialContext && (Me.materialContext.useVertexPulling = this.useVertexPulling), ye.enableEffect(Me), ye.setState(this.backFaceCulling, this.zOffset, !1, be, this._scene._mirroredCameraPosition ? !this.cullBackFaces : this.cullBackFaces, this.stencil, this.zOffsetUnits), be
-        }
-        bind(ee, ie) {}
-        buildUniformLayout() {
-          const ee = this._uniformBuffer;
-          this._eventInfo.ubo = ee, this._callbackPluginEventGeneric(8, this._eventInfo), ee.create(), this._uniformBufferLayoutBuilt = !0
-        }
-        bindForSubMesh(ee, ie, He) {
-          const ye = He._drawWrapper;
-          this._eventInfo.subMesh = He, this._callbackPluginEventBindForSubMesh(this._eventInfo), ye._forceRebindOnNextCall = !1
-        }
-        bindOnlyWorldMatrix(ee) {}
-        bindView(ee) {
-          this._useUBO ? this._needToBindSceneUbo = !0 : ee.setMatrix("view", this.Xx().getViewMatrix())
-        }
-        bindViewProjection(ee) {
-          this._useUBO ? this._needToBindSceneUbo = !0 : (ee.setMatrix("viewProjection", this.Xx().getTransformMatrix()), ee.setMatrix("projection", this.Xx().getProjectionMatrix()), ee.setMatrix("inverseProjection", this.Xx().getInverseProjectionMatrix()))
-        }
-        bindEyePosition(ee, ie) {
-          this._useUBO ? this._needToBindSceneUbo = !0 : this._scene.bindEyePosition(ee, ie)
-        }
-        _afterBind(ee) {
-          let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          if (this._scene._cachedMaterial = this, this._needToBindSceneUbo && ie && (this._needToBindSceneUbo = !1, (0, Te.x)(ie, this.Xx().getSceneUniformBuffer()), this._scene.finalizeSceneUbo()), this._scene._cachedVisibility = ee ? ee.visibility : 1, this._onBindObservable && ee && this._onBindObservable.notifyObservers(ee), this.disableDepthWrite) {
-            const ee = this._scene.Nf();
-            this._cachedDepthWriteState = ee.getDepthWrite(), ee.setDepthWrite(!1)
-          }
-          if (this.disableColorWrite) {
-            const ee = this._scene.Nf();
-            this._cachedColorWriteState = ee.getColorWrite(), ee.setColorWrite(!1)
-          }
-          if (0 !== this.depthFunction) {
-            const ee = this._scene.Nf();
-            this._cachedDepthFunctionState = ee.getDepthFunction() || 0, ee.setDepthFunction(this.depthFunction)
-          }
-        }
-        unbind() {
-          if (this._scene.getSceneUniformBuffer().unbindEffect(), this._onUnBindObservable && this._onUnBindObservable.notifyObservers(this), 0 !== this.depthFunction) {
-            this._scene.Nf().setDepthFunction(this._cachedDepthFunctionState)
-          }
-          if (this.disableDepthWrite) {
-            this._scene.Nf().setDepthWrite(this._cachedDepthWriteState)
-          }
-          if (this.disableColorWrite) {
-            this._scene.Nf().setColorWrite(this._cachedColorWriteState)
-          }
-        }
-        getAnimatables() {
-          return this._eventInfo.animatables = [], this._callbackPluginEventGeneric(256, this._eventInfo), this._eventInfo.animatables
-        }
-        getActiveTextures() {
-          return this._eventInfo.activeTextures = [], this._callbackPluginEventGeneric(512, this._eventInfo), this._eventInfo.activeTextures
-        }
-        hasTexture(ee) {
-          return this._eventInfo.hasTexture = !1, this._eventInfo.texture = ee, this._callbackPluginEventGeneric(1024, this._eventInfo), this._eventInfo.hasTexture
-        }
-        clone(ee) {
-          return null
-        }
-        _clonePlugins(ie, He) {
-          const ye = {};
-          if (this._serializePlugins(ye), ee._ParsePlugins(ye, ie, this._scene, He), this.pluginManager)
-            for (const ee of this.pluginManager._plugins) {
-              const He = ie.pluginManager.getPlugin(ee.name);
-              He && ee.copyTo(He)
-            }
-        }
-        getBindedMeshes() {
-          if (this.meshMap) {
-            const ee = [];
-            for (const ie in this.meshMap) {
-              const He = this.meshMap[ie];
-              He && ee.push(He)
-            }
-            return ee
-          }
-          return this._scene.meshes.filter((ee => ee.material === this))
-        }
-        forceCompilation(ee, ie, He, ye) {
-          const be = {
-              clipPlane: !1,
-              useInstances: !1,
-              ...He
-            },
-            Me = this.Xx(),
-            Ke = this.allowShaderHotSwapping;
-          this.allowShaderHotSwapping = !1;
-          const Ue = () => {
-            if (!this._scene || !this._scene.Nf()) return;
-            const He = Me.clipPlane;
-            if (be.clipPlane && (Me.clipPlane = new Re.c(0, 0, 0, 1)), this._storeEffectOnSubMeshes) {
-              let He = !0,
-                Me = null;
-              if (ee.pW) {
-                const ie = new Fe.b(0, 0, 0, 0, 0, ee, void 0, !1, !1);
-                ie.materialDefines && (ie.materialDefines._renderId = -1), this.isReadyForSubMesh(ee, ie, be.useInstances) || (ie.effect && ie.effect.getCompilationError() && ie.effect.allFallbacksProcessed() ? Me = ie.effect.getCompilationError() : (He = !1, setTimeout(Ue, 16)))
-              }
-              He && (this.allowShaderHotSwapping = Ke, Me && ye && ye(Me), ie && ie(this))
-            } else this.isReady() ? (this.allowShaderHotSwapping = Ke, ie && ie(this)) : setTimeout(Ue, 16);
-            be.clipPlane && (Me.clipPlane = He)
-          };
-          Ue()
-        }
-        async forceCompilationAsync(ee, ie) {
-          return await new Promise(((He, ye) => {
-            this.forceCompilation(ee, (() => {
-              He()
-            }), ie, (ee => {
-              ye(ee)
-            }))
-          }))
-        }
-        tye(ie) {
-          this.Xx().blockMaterialDirtyMechanism || this._blockDirtyMechanism || (ee._DirtyCallbackArray.length = 0, ie & ee.ImageProcessingDirtyFlag && ee._DirtyCallbackArray.push(ee._ImageProcessingDirtyCallBack), ie & ee.TextureDirtyFlag && ee._DirtyCallbackArray.push(ee._TextureDirtyCallBack), ie & ee.LightDirtyFlag && ee._DirtyCallbackArray.push(ee._LightsDirtyCallBack), ie & ee.FresnelDirtyFlag && ee._DirtyCallbackArray.push(ee._FresnelDirtyCallBack), ie & ee.AttributesDirtyFlag && ee._DirtyCallbackArray.push(ee._AttributeDirtyCallBack), ie & ee.MiscDirtyFlag && ee._DirtyCallbackArray.push(ee._MiscDirtyCallBack), ie & ee.PrePassDirtyFlag && ee._DirtyCallbackArray.push(ee._PrePassDirtyCallBack), ee._DirtyCallbackArray.length && this._markAllSubMeshesAsDirty(ee._RunDirtyCallBacks), this.Xx().resetCachedMaterial())
-        }
-        resetDrawCache() {
-          const ee = this.Xx().meshes;
-          for (const ie of ee)
-            if (ie.pW)
-              for (const ee of ie.pW) ee.iT() === this && ee.resetDrawCache()
-        }
-        _markAllSubMeshesAsDirty(ee) {
-          const ie = this.Xx();
-          if (ie.blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
-          const He = ie.meshes;
-          for (const ye of He)
-            if (ye.pW)
-              for (const He of ye.pW) {
-                if ((He.iT() || (ie._hasDefaultMaterial ? ie.defaultMaterial : null)) === this)
-                  for (const ie of He._drawWrappers) ie && ie.defines && ie.defines.markAllAsDirty && this._materialContext === ie.materialContext && ee(ie.defines)
-              }
-        }
-        _markScenePrePassDirty() {
-          if (this.Xx().blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
-          const ee = this.Xx().enablePrePassRenderer();
-          ee && ee.tye()
-        }
-        _markAllSubMeshesAsAllDirty() {
-          this._markAllSubMeshesAsDirty(ee._AllDirtyCallBack)
-        }
-        _markAllSubMeshesAsImageProcessingDirty() {
-          this._markAllSubMeshesAsDirty(ee._ImageProcessingDirtyCallBack)
-        }
-        _markAllSubMeshesAsTexturesDirty() {
-          this._markAllSubMeshesAsDirty(ee._TextureDirtyCallBack)
-        }
-        _markAllSubMeshesAsFresnelDirty() {
-          this._markAllSubMeshesAsDirty(ee._FresnelDirtyCallBack)
-        }
-        _markAllSubMeshesAsFresnelAndMiscDirty() {
-          this._markAllSubMeshesAsDirty(ee._FresnelAndMiscDirtyCallBack)
-        }
-        _markAllSubMeshesAsLightsDirty() {
-          this._markAllSubMeshesAsDirty(ee._LightsDirtyCallBack)
-        }
-        _markAllSubMeshesAsAttributesDirty() {
-          this._markAllSubMeshesAsDirty(ee._AttributeDirtyCallBack)
-        }
-        _markAllSubMeshesAsMiscDirty() {
-          this._markAllSubMeshesAsDirty(ee._MiscDirtyCallBack)
-        }
-        _markAllSubMeshesAsPrePassDirty() {
-          this._markAllSubMeshesAsDirty(ee._PrePassDirtyCallBack)
-        }
-        _markAllSubMeshesAsTexturesAndMiscDirty() {
-          this._markAllSubMeshesAsDirty(ee._TextureAndMiscDirtyCallBack)
-        }
-        _checkScenePerformancePriority() {
-          if (0 !== this._scene.performancePriority) {
-            this.checkReadyOnlyOnce = !0;
-            const ee = this._scene.onScenePerformancePriorityChangedObservable.addOnce((() => {
-              this.checkReadyOnlyOnce = !1
-            }));
-            this.Bx.add((() => {
-              this._scene.onScenePerformancePriorityChangedObservable.remove(ee)
-            }))
-          }
-        }
-        setPrePassRenderer(ee) {
+        scale(WW) {}
+        get canRescale() {
           return !1
         }
-        dispose(ee, ie, He) {
-          const ye = this.Xx();
-          if (ye.stopAnimation(this), ye.freeProcessedMaterials(), ye.removeMaterial(this), this._eventInfo.forceDisposeTextures = ie, this._callbackPluginEventGeneric(2, this._eventInfo), this._parentContainer) {
-            const ee = this._parentContainer.materials.indexOf(this);
-            ee > -1 && this._parentContainer.materials.splice(ee, 1), this._parentContainer = null
+        _getFromCache(WW, iW, OW, mW, EW, NW) {
+          const PW = this._getEngine();
+          if (!PW) return null;
+          const LW = PW._getUseSRGBBuffer(!!EW, iW),
+            cW = PW.getLoadedTexturesCache();
+          for (let wW = 0; wW < cW.length; wW++) {
+            const PW = cW[wW];
+            if ((void 0 === EW || LW === PW._useSRGBBuffer) && (void 0 === mW || mW === PW.invertY) && PW.url === WW && PW.generateMipMaps === !iW && (!OW || OW === PW.samplingMode) && (void 0 === NW || NW === PW.isCube)) return PW.incrementReferences(), PW
           }
-          if (!0 !== He)
-            if (this.meshMap)
-              for (const be in this.meshMap) {
-                const ee = this.meshMap[be];
-                this._disposeMeshResources(ee)
-              } else {
-                const ee = ye.meshes;
-                for (const ie of ee) this._disposeMeshResources(ie)
-              }
-          this._uniformBuffer.dispose(), this._drawWrapper.effect && (this._storeEffectOnSubMeshes || this._drawWrapper.effect.dispose(), this._drawWrapper.effect = null), this.metadata = null, this.Bx.notifyObservers(this), this.Bx.clear(), this._onBindObservable && this._onBindObservable.clear(), this._onUnBindObservable && this._onUnBindObservable.clear(), this._onEffectCreatedObservable && this._onEffectCreatedObservable.clear(), this._eventInfo && (this._eventInfo = {})
+          return null
         }
-        _disposeMeshResources(ee) {
-          if (!ee) return;
-          const ie = ee.geometry,
-            He = ee._internalAbstractMeshDataInfo._materialForRenderPass;
-          if (this._storeEffectOnSubMeshes) {
-            if (ee.pW && He)
-              for (const ye of ee.pW) {
-                const ee = ye._drawWrappers;
-                for (let be = 0; be < ee.length; be++) {
-                  const Me = ee[be]?.effect;
-                  if (!Me) continue;
-                  He[be] === this && (ie?._releaseVertexArrayObject(Me), ye._removeDrawWrapper(be, !0, !0))
-                }
-              }
-          } else ie?._releaseVertexArrayObject(this._drawWrapper.effect);
-          ee.material !== this || ee.jMe || (ee.material = null)
+        _rebuild() {}
+        clone() {
+          return null
+        }
+        get textureType() {
+          return this._texture && void 0 !== this._texture.type ? this._texture.type : 0
+        }
+        get textureFormat() {
+          return this._texture && void 0 !== this._texture.format ? this._texture.format : 5
+        }
+        _markAllSubMeshesAsTexturesDirty() {
+          const WW = this.bD();
+          WW && WW.markAllMaterialsAsDirty(1)
+        }
+        readPixels() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            mW = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+            PW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+            LW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
+            cW = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
+          if (!this._texture) return null;
+          const wW = this._getEngine();
+          if (!wW) return null;
+          const tW = this.getSize();
+          let ZW = tW.width,
+            xW = tW.height;
+          0 !== iW && (ZW /= Math.pow(2, iW), xW /= Math.pow(2, iW), ZW = Math.round(ZW), xW = Math.round(xW)), LW = Math.min(ZW, LW), cW = Math.min(xW, cW);
+          try {
+            return this._texture.isCube || this._texture.is2DArray ? wW._readTexturePixels(this._texture, LW, cW, WW, iW, OW, mW, EW, NW, PW) : wW._readTexturePixels(this._texture, LW, cW, -1, iW, OW, mW, EW, NW, PW)
+          } catch (lW) {
+            return null
+          }
+        }
+        _readPixelsSync() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            mW = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            EW = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          if (!this._texture) return null;
+          const NW = this.getSize();
+          let PW = NW.width,
+            LW = NW.height;
+          const cW = this._getEngine();
+          if (!cW) return null;
+          0 != iW && (PW /= Math.pow(2, iW), LW /= Math.pow(2, iW), PW = Math.round(PW), LW = Math.round(LW));
+          try {
+            return this._texture.isCube ? cW._readTexturePixelsSync(this._texture, PW, LW, WW, iW, OW, mW, EW) : cW._readTexturePixelsSync(this._texture, PW, LW, -1, iW, OW, mW, EW)
+          } catch (wW) {
+            return null
+          }
+        }
+        get _lodTextureHigh() {
+          return this._texture ? this._texture._lodTextureHigh : null
+        }
+        get _lodTextureMid() {
+          return this._texture ? this._texture._lodTextureMid : null
+        }
+        get _lodTextureLow() {
+          return this._texture ? this._texture._lodTextureLow : null
+        }
+        dispose() {
+          if (this._scene) {
+            this._scene.stopAnimation && this._scene.stopAnimation(this), this._scene.removePendingData(this);
+            const WW = this._scene.textures.indexOf(this);
+            if (WW >= 0 && this._scene.textures.splice(WW, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
+              const WW = this._parentContainer.textures.indexOf(this);
+              WW > -1 && this._parentContainer.textures.splice(WW, 1), this._parentContainer = null
+            }
+          }
+          this.jD.notifyObservers(this), this.jD.clear(), this.metadata = null, super.dispose()
         }
         serialize() {
-          const ee = qe.c.Serialize(this);
-          return ee.stencil = this.stencil.serialize(), ee.uniqueId = this.uniqueId, this._serializePlugins(ee), ee
+          let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (!this.name && !WW) return null;
+          const iW = xW.d.Serialize(this);
+          return xW.d.AppendSerializedAnimations(this, iW), iW
         }
-        _serializePlugins(ee) {
-          if (ee.plugins = {}, this.pluginManager)
-            for (const ie of this.pluginManager._plugins) ie.doNotSerialize || (ee.plugins[ie.getClassName()] = ie.serialize())
-        }
-        static ParseAlphaMode(ee, ie) {
-          void 0 !== ee._alphaMode ? ie._alphaMode = Array.isArray(ee._alphaMode) ? [...ee._alphaMode] : [ee._alphaMode] : void 0 !== ee.alphaMode ? ie._alphaMode = Array.isArray(ee.alphaMode) ? [...ee.alphaMode] : [ee.alphaMode] : ie._alphaMode = [2]
-        }
-        static Parse(ie, He, ye) {
-          if (ie.customType) {
-            if ("BABYLON.PBRMaterial" === ie.customType && ie.overloadedAlbedo && (ie.customType = "BABYLON.LegacyPBRMaterial", !BABYLON.LegacyPBRMaterial)) return oe.e.Error("Your scene is trying to load a legacy version of the PBRMaterial, please, include it from the materials library."), null
-          } else ie.customType = "BABYLON.StandardMaterial";
-          const be = Me.h.Instantiate(ie.customType).Parse(ie, He, ye);
-          return be._loadedUniqueId = ie.uniqueId, ee.ParseAlphaMode(ie, be), be
-        }
-        static _ParsePlugins(ee, ie, He, ye) {
-          if (ee.plugins)
-            for (const be in ee.plugins) {
-              const Ke = ee.plugins[be];
-              let Ue = ie.pluginManager?.getPlugin(Ke.name);
-              if (!Ue) {
-                const ee = Me.h.Instantiate("BABYLON." + be);
-                ee && (Ue = new ee(ie))
+        static WhenAllReady(WW, iW) {
+          let OW = WW.length;
+          if (0 !== OW)
+            for (let mW = 0; mW < WW.length; mW++) {
+              const EW = WW[mW];
+              if (EW.isReady()) 0 === --OW && iW();
+              else {
+                const WW = EW.onLoadObservable;
+                WW ? WW.addOnce((() => {
+                  0 === --OW && iW()
+                })) : 0 === --OW && iW()
               }
-              Ue?.parse(Ke, He, ye)
-            }
+            } else iW()
+        }
+        static _IsScene(WW) {
+          return "Scene" === WW.getClassName()
         }
       }, (() => {
-        const Me = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        ie = [(0, be.R)()], He = [(0, be.R)()], Xe = [(0, be.R)()], ze = [(0, be.R)()], Be = [(0, be.R)()], Ee = [(0, be.R)()], ge = [(0, be.R)()], Oe = [(0, be.R)("alpha")], de = [(0, be.R)("backFaceCulling")], We = [(0, be.R)("textureRepetitionMode")], te = [(0, be.R)("textureRepetitionHexTilingParams")], Ze = [(0, be.R)("cullBackFaces")], we = [(0, be.R)()], De = [(0, be.R)()], Pe = [(0, be.R)()], Ae = [(0, be.R)()], Ye = [(0, be.R)()], Ve = [(0, be.R)()], ae = [(0, be.R)()], ce = [(0, be.R)()], xe = [(0, be.R)("fogEnabled")], Le = [(0, be.R)()], Ce = [(0, be.R)()], ve = [(0, be.R)()], ue = [(0, be.R)()], me = [(0, be.R)()], le = [(0, be.R)()], Se = [(0, be.R)()], ne = [(0, be.R)()], (0, ye.i)(ee, null, ue, {
+        const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(vW[Symbol.metadata] ?? null) : void 0;
+        iW = [(0, EW.M)()], OW = [(0, EW.M)()], wW = [(0, EW.M)()], ZW = [(0, EW.M)()], lW = [(0, EW.M)("hasAlpha")], AW = [(0, EW.M)("getAlphaFromRGB")], bW = [(0, EW.M)()], jW = [(0, EW.M)("coordinatesIndex")], UW = [(0, EW.M)()], kW = [(0, EW.M)("coordinatesMode")], sW = [(0, EW.M)()], MW = [(0, EW.M)()], KW = [(0, EW.M)()], SW = [(0, EW.M)()], YW = [(0, EW.M)()], yW = [(0, EW.M)()], TW = [(0, EW.M)()], JW = [(0, EW.M)()], hW = [(0, EW.M)()], HW = [(0, EW.M)()], nW = [(0, EW.M)()], uW = [(0, EW.M)()], oW = [(0, EW.M)()], dW = [(0, EW.F)()], eW = [(0, EW.M)()], (0, mW.e)(WW, null, sW, {
           kind: "getter",
-          name: "pointsCloud",
+          name: "wrapU",
           static: !1,
           private: !1,
           access: {
-            has: ee => "pointsCloud" in ee,
-            get: ee => ee.pointsCloud
+            has: WW => "wrapU" in WW,
+            get: WW => WW.wrapU
           },
-          metadata: Me
-        }, null, je), (0, ye.i)(ee, null, me, {
+          metadata: NW
+        }, null, gW), (0, mW.e)(WW, null, MW, {
           kind: "getter",
-          name: "fillMode",
+          name: "wrapV",
           static: !1,
           private: !1,
           access: {
-            has: ee => "fillMode" in ee,
-            get: ee => ee.fillMode
+            has: WW => "wrapV" in WW,
+            get: WW => WW.wrapV
           },
-          metadata: Me
-        }, null, je), (0, ye.i)(ee, null, le, {
+          metadata: NW
+        }, null, gW), (0, mW.e)(WW, null, YW, {
           kind: "getter",
-          name: "useLogarithmicDepth",
+          name: "isCube",
           static: !1,
           private: !1,
           access: {
-            has: ee => "useLogarithmicDepth" in ee,
-            get: ee => ee.useLogarithmicDepth
+            has: WW => "isCube" in WW,
+            get: WW => WW.isCube
           },
-          metadata: Me
-        }, null, je), (0, ye.i)(ee, null, ne, {
+          metadata: NW
+        }, null, gW), (0, mW.e)(WW, null, yW, {
           kind: "getter",
-          name: "transparencyMode",
+          name: "is3D",
           static: !1,
           private: !1,
           access: {
-            has: ee => "transparencyMode" in ee,
-            get: ee => ee.transparencyMode
+            has: WW => "is3D" in WW,
+            get: WW => WW.is3D
           },
-          metadata: Me
-        }, null, je), (0, ye.i)(null, null, ie, {
-          kind: "field",
-          name: "id",
+          metadata: NW
+        }, null, gW), (0, mW.e)(WW, null, TW, {
+          kind: "getter",
+          name: "is2DArray",
           static: !1,
           private: !1,
           access: {
-            has: ee => "id" in ee,
-            get: ee => ee.id,
-            set: (ee, ie) => {
-              ee.id = ie
-            }
+            has: WW => "is2DArray" in WW,
+            get: WW => WW.is2DArray
           },
-          metadata: Me
-        }, se, Ie), (0, ye.i)(null, null, He, {
+          metadata: NW
+        }, null, gW), (0, mW.e)(WW, null, JW, {
+          kind: "getter",
+          name: "gammaSpace",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "gammaSpace" in WW,
+            get: WW => WW.gammaSpace
+          },
+          metadata: NW
+        }, null, gW), (0, mW.e)(WW, null, nW, {
+          kind: "getter",
+          name: "lodGenerationOffset",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "lodGenerationOffset" in WW,
+            get: WW => WW.lodGenerationOffset
+          },
+          metadata: NW
+        }, null, gW), (0, mW.e)(WW, null, uW, {
+          kind: "getter",
+          name: "lodGenerationScale",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "lodGenerationScale" in WW,
+            get: WW => WW.lodGenerationScale
+          },
+          metadata: NW
+        }, null, gW), (0, mW.e)(WW, null, oW, {
+          kind: "getter",
+          name: "linearSpecularLOD",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "linearSpecularLOD" in WW,
+            get: WW => WW.linearSpecularLOD
+          },
+          metadata: NW
+        }, null, gW), (0, mW.e)(WW, null, dW, {
+          kind: "getter",
+          name: "irradianceTexture",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "irradianceTexture" in WW,
+            get: WW => WW.irradianceTexture
+          },
+          metadata: NW
+        }, null, gW), (0, mW.e)(null, null, iW, {
           kind: "field",
           name: "uniqueId",
           static: !1,
           private: !1,
           access: {
-            has: ee => "uniqueId" in ee,
-            get: ee => ee.uniqueId,
-            set: (ee, ie) => {
-              ee.uniqueId = ie
+            has: WW => "uniqueId" in WW,
+            get: WW => WW.uniqueId,
+            set: (WW, iW) => {
+              WW.uniqueId = iW
             }
           },
-          metadata: Me
-        }, he, Ne), (0, ye.i)(null, null, Xe, {
+          metadata: NW
+        }, DW, VW), (0, mW.e)(null, null, OW, {
           kind: "field",
           name: "name",
           static: !1,
           private: !1,
           access: {
-            has: ee => "name" in ee,
-            get: ee => ee.name,
-            set: (ee, ie) => {
-              ee.name = ie
+            has: WW => "name" in WW,
+            get: WW => WW.name,
+            set: (WW, iW) => {
+              WW.name = iW
             }
           },
-          metadata: Me
-        }, Ge, re), (0, ye.i)(null, null, ze, {
+          metadata: NW
+        }, pW, fW), (0, mW.e)(null, null, wW, {
+          kind: "field",
+          name: "displayName",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "displayName" in WW,
+            get: WW => WW.displayName,
+            set: (WW, iW) => {
+              WW.displayName = iW
+            }
+          },
+          metadata: NW
+        }, CW, XW), (0, mW.e)(null, null, ZW, {
           kind: "field",
           name: "metadata",
           static: !1,
           private: !1,
           access: {
-            has: ee => "metadata" in ee,
-            get: ee => ee.metadata,
-            set: (ee, ie) => {
-              ee.metadata = ie
+            has: WW => "metadata" in WW,
+            get: WW => WW.metadata,
+            set: (WW, iW) => {
+              WW.metadata = iW
             }
           },
-          metadata: Me
-        }, Qe, ei), (0, ye.i)(null, null, Be, {
+          metadata: NW
+        }, BW, qW), (0, mW.e)(null, null, lW, {
           kind: "field",
-          name: "checkReadyOnEveryCall",
+          name: "_hasAlpha",
           static: !1,
           private: !1,
           access: {
-            has: ee => "checkReadyOnEveryCall" in ee,
-            get: ee => ee.checkReadyOnEveryCall,
-            set: (ee, ie) => {
-              ee.checkReadyOnEveryCall = ie
+            has: WW => "_hasAlpha" in WW,
+            get: WW => WW._hasAlpha,
+            set: (WW, iW) => {
+              WW._hasAlpha = iW
             }
           },
-          metadata: Me
-        }, ii, Hi), (0, ye.i)(null, null, Ee, {
+          metadata: NW
+        }, RW, GW), (0, mW.e)(null, null, AW, {
           kind: "field",
-          name: "checkReadyOnlyOnce",
+          name: "_getAlphaFromRGB",
           static: !1,
           private: !1,
           access: {
-            has: ee => "checkReadyOnlyOnce" in ee,
-            get: ee => ee.checkReadyOnlyOnce,
-            set: (ee, ie) => {
-              ee.checkReadyOnlyOnce = ie
+            has: WW => "_getAlphaFromRGB" in WW,
+            get: WW => WW._getAlphaFromRGB,
+            set: (WW, iW) => {
+              WW._getAlphaFromRGB = iW
             }
           },
-          metadata: Me
-        }, yi, bi), (0, ye.i)(null, null, ge, {
+          metadata: NW
+        }, IW, aW), (0, mW.e)(null, null, bW, {
           kind: "field",
-          name: "state",
+          name: "level",
           static: !1,
           private: !1,
           access: {
-            has: ee => "state" in ee,
-            get: ee => ee.state,
-            set: (ee, ie) => {
-              ee.state = ie
+            has: WW => "level" in WW,
+            get: WW => WW.level,
+            set: (WW, iW) => {
+              WW.level = iW
             }
           },
-          metadata: Me
-        }, Mi, Ki), (0, ye.i)(null, null, Oe, {
+          metadata: NW
+        }, rW, zW), (0, mW.e)(null, null, jW, {
           kind: "field",
-          name: "_alpha",
+          name: "_coordinatesIndex",
           static: !1,
           private: !1,
           access: {
-            has: ee => "_alpha" in ee,
-            get: ee => ee._alpha,
-            set: (ee, ie) => {
-              ee._alpha = ie
+            has: WW => "_coordinatesIndex" in WW,
+            get: WW => WW._coordinatesIndex,
+            set: (WW, iW) => {
+              WW._coordinatesIndex = iW
             }
           },
-          metadata: Me
-        }, Ui, Fi), (0, ye.i)(null, null, de, {
+          metadata: NW
+        }, FW, QW), (0, mW.e)(null, null, UW, {
           kind: "field",
-          name: "_backFaceCulling",
+          name: "optimizeUVAllocation",
           static: !1,
           private: !1,
           access: {
-            has: ee => "_backFaceCulling" in ee,
-            get: ee => ee._backFaceCulling,
-            set: (ee, ie) => {
-              ee._backFaceCulling = ie
+            has: WW => "optimizeUVAllocation" in WW,
+            get: WW => WW.optimizeUVAllocation,
+            set: (WW, iW) => {
+              WW.optimizeUVAllocation = iW
             }
           },
-          metadata: Me
-        }, Ji, oi), (0, ye.i)(null, null, We, {
+          metadata: NW
+        }, Wi, ii), (0, mW.e)(null, null, kW, {
           kind: "field",
-          name: "_textureRepetitionMode",
+          name: "_coordinatesMode",
           static: !1,
           private: !1,
           access: {
-            has: ee => "_textureRepetitionMode" in ee,
-            get: ee => ee._textureRepetitionMode,
-            set: (ee, ie) => {
-              ee._textureRepetitionMode = ie
+            has: WW => "_coordinatesMode" in WW,
+            get: WW => WW._coordinatesMode,
+            set: (WW, iW) => {
+              WW._coordinatesMode = iW
             }
           },
-          metadata: Me
-        }, Ri, ki), (0, ye.i)(null, null, te, {
+          metadata: NW
+        }, Oi, mi), (0, mW.e)(null, null, KW, {
           kind: "field",
-          name: "textureRepetitionHexTilingParams",
+          name: "wrapR",
           static: !1,
           private: !1,
           access: {
-            has: ee => "textureRepetitionHexTilingParams" in ee,
-            get: ee => ee.textureRepetitionHexTilingParams,
-            set: (ee, ie) => {
-              ee.textureRepetitionHexTilingParams = ie
+            has: WW => "wrapR" in WW,
+            get: WW => WW.wrapR,
+            set: (WW, iW) => {
+              WW.wrapR = iW
             }
           },
-          metadata: Me
-        }, qi, fi), (0, ye.i)(null, null, Ze, {
+          metadata: NW
+        }, Ei, Ni), (0, mW.e)(null, null, SW, {
           kind: "field",
-          name: "_cullBackFaces",
+          name: "anisotropicFilteringLevel",
           static: !1,
           private: !1,
           access: {
-            has: ee => "_cullBackFaces" in ee,
-            get: ee => ee._cullBackFaces,
-            set: (ee, ie) => {
-              ee._cullBackFaces = ie
+            has: WW => "anisotropicFilteringLevel" in WW,
+            get: WW => WW.anisotropicFilteringLevel,
+            set: (WW, iW) => {
+              WW.anisotropicFilteringLevel = iW
             }
           },
-          metadata: Me
-        }, Ti, Xi), (0, ye.i)(null, null, we, {
+          metadata: NW
+        }, Pi, Li), (0, mW.e)(null, null, hW, {
           kind: "field",
-          name: "sideOrientation",
+          name: "invertZ",
           static: !1,
           private: !1,
           access: {
-            has: ee => "sideOrientation" in ee,
-            get: ee => ee.sideOrientation,
-            set: (ee, ie) => {
-              ee.sideOrientation = ie
+            has: WW => "invertZ" in WW,
+            get: WW => WW.invertZ,
+            set: (WW, iW) => {
+              WW.invertZ = iW
             }
           },
-          metadata: Me
-        }, zi, Bi), (0, ye.i)(null, null, De, {
+          metadata: NW
+        }, ci, wi), (0, mW.e)(null, null, HW, {
           kind: "field",
-          name: "_alphaMode",
+          name: "lodLevelInAlpha",
           static: !1,
           private: !1,
           access: {
-            has: ee => "_alphaMode" in ee,
-            get: ee => ee._alphaMode,
-            set: (ee, ie) => {
-              ee._alphaMode = ie
+            has: WW => "lodLevelInAlpha" in WW,
+            get: WW => WW.lodLevelInAlpha,
+            set: (WW, iW) => {
+              WW.lodLevelInAlpha = iW
             }
           },
-          metadata: Me
-        }, Ei, gi), (0, ye.i)(null, null, Pe, {
+          metadata: NW
+        }, ti, Zi), (0, mW.e)(null, null, eW, {
           kind: "field",
-          name: "_needDepthPrePass",
+          name: "isRenderTarget",
           static: !1,
           private: !1,
           access: {
-            has: ee => "_needDepthPrePass" in ee,
-            get: ee => ee._needDepthPrePass,
-            set: (ee, ie) => {
-              ee._needDepthPrePass = ie
+            has: WW => "isRenderTarget" in WW,
+            get: WW => WW.isRenderTarget,
+            set: (WW, iW) => {
+              WW.isRenderTarget = iW
             }
           },
-          metadata: Me
-        }, Oi, di), (0, ye.i)(null, null, Ae, {
-          kind: "field",
-          name: "disableDepthWrite",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "disableDepthWrite" in ee,
-            get: ee => ee.disableDepthWrite,
-            set: (ee, ie) => {
-              ee.disableDepthWrite = ie
-            }
-          },
-          metadata: Me
-        }, Wi, ti), (0, ye.i)(null, null, Ye, {
-          kind: "field",
-          name: "disableColorWrite",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "disableColorWrite" in ee,
-            get: ee => ee.disableColorWrite,
-            set: (ee, ie) => {
-              ee.disableColorWrite = ie
-            }
-          },
-          metadata: Me
-        }, Zi, wi), (0, ye.i)(null, null, Ve, {
-          kind: "field",
-          name: "forceDepthWrite",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "forceDepthWrite" in ee,
-            get: ee => ee.forceDepthWrite,
-            set: (ee, ie) => {
-              ee.forceDepthWrite = ie
-            }
-          },
-          metadata: Me
-        }, Di, Pi), (0, ye.i)(null, null, ae, {
-          kind: "field",
-          name: "depthFunction",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "depthFunction" in ee,
-            get: ee => ee.depthFunction,
-            set: (ee, ie) => {
-              ee.depthFunction = ie
-            }
-          },
-          metadata: Me
-        }, Ai, Yi), (0, ye.i)(null, null, ce, {
-          kind: "field",
-          name: "separateCullingPass",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "separateCullingPass" in ee,
-            get: ee => ee.separateCullingPass,
-            set: (ee, ie) => {
-              ee.separateCullingPass = ie
-            }
-          },
-          metadata: Me
-        }, Vi, ai), (0, ye.i)(null, null, xe, {
-          kind: "field",
-          name: "_fogEnabled",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "_fogEnabled" in ee,
-            get: ee => ee._fogEnabled,
-            set: (ee, ie) => {
-              ee._fogEnabled = ie
-            }
-          },
-          metadata: Me
-        }, ci, xi), (0, ye.i)(null, null, Le, {
-          kind: "field",
-          name: "pointSize",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "pointSize" in ee,
-            get: ee => ee.pointSize,
-            set: (ee, ie) => {
-              ee.pointSize = ie
-            }
-          },
-          metadata: Me
-        }, Li, Ci), (0, ye.i)(null, null, Ce, {
-          kind: "field",
-          name: "zOffset",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "zOffset" in ee,
-            get: ee => ee.zOffset,
-            set: (ee, ie) => {
-              ee.zOffset = ie
-            }
-          },
-          metadata: Me
-        }, vi, ui), (0, ye.i)(null, null, ve, {
-          kind: "field",
-          name: "zOffsetUnits",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "zOffsetUnits" in ee,
-            get: ee => ee.zOffsetUnits,
-            set: (ee, ie) => {
-              ee.zOffsetUnits = ie
-            }
-          },
-          metadata: Me
-        }, mi, li), (0, ye.i)(null, null, Se, {
-          kind: "field",
-          name: "_isVertexOutputInvariant",
-          static: !1,
-          private: !1,
-          access: {
-            has: ee => "_isVertexOutputInvariant" in ee,
-            get: ee => ee._isVertexOutputInvariant,
-            set: (ee, ie) => {
-              ee._isVertexOutputInvariant = ie
-            }
-          },
-          metadata: Me
-        }, Si, ni), Me && Object.defineProperty(ee, Symbol.metadata, {
+          metadata: NW
+        }, xi, li), NW && Object.defineProperty(WW, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Me
+          value: NW
         })
-      })(), ee.TriangleFillMode = 0, ee.WireFrameFillMode = 1, ee.PointFillMode = 2, ee.PointListDrawMode = 3, ee.LineListDrawMode = 4, ee.LineLoopDrawMode = 5, ee.LineStripDrawMode = 6, ee.TriangleStripDrawMode = 7, ee.TriangleFanDrawMode = 8, ee.ClockWiseSideOrientation = 0, ee.CounterClockWiseSideOrientation = 1, ee.ImageProcessingDirtyFlag = 64, ee.TextureDirtyFlag = 1, ee.LightDirtyFlag = 2, ee.FresnelDirtyFlag = 4, ee.AttributesDirtyFlag = 8, ee.MiscDirtyFlag = 16, ee.PrePassDirtyFlag = 32, ee.AllDirtyFlag = 127, ee.MATERIAL_OPAQUE = 0, ee.MATERIAL_ALPHATEST = 1, ee.MATERIAL_ALPHABLEND = 2, ee.MATERIAL_ALPHATESTANDBLEND = 3, ee.MATERIAL_NORMALBLENDMETHOD_WHITEOUT = 0, ee.MATERIAL_NORMALBLENDMETHOD_RNM = 1, ee.LIGHTFALLOFF_PHYSICAL = 0, ee.LIGHTFALLOFF_GLTF = 1, ee.LIGHTFALLOFF_STANDARD = 2, ee.OnEventObservable = new Ke.d, ee.ForceVertexOutputInvariant = !1, ee._AllDirtyCallBack = ee => ee.markAllAsDirty(), ee._ImageProcessingDirtyCallBack = ee => ee.markAsImageProcessingDirty(), ee._TextureDirtyCallBack = ee => ee.markAsTexturesDirty(), ee._FresnelDirtyCallBack = ee => ee.markAsFresnelDirty(), ee._MiscDirtyCallBack = ee => ee.markAsMiscDirty(), ee._PrePassDirtyCallBack = ee => ee.markAsPrePassDirty(), ee._LightsDirtyCallBack = ee => ee.markAsLightDirty(), ee._AttributeDirtyCallBack = ee => ee.markAsAttributesDirty(), ee._FresnelAndMiscDirtyCallBack = ie => {
-        ee._FresnelDirtyCallBack(ie), ee._MiscDirtyCallBack(ie)
-      }, ee._TextureAndMiscDirtyCallBack = ie => {
-        ee._TextureDirtyCallBack(ie), ee._MiscDirtyCallBack(ie)
-      }, ee._DirtyCallbackArray = [], ee._RunDirtyCallBacks = ie => {
-        for (const He of ee._DirtyCallbackArray) He(ie)
-      }, ee
+      })(), WW.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, WW
     })();
-    Object.getOwnPropertyDescriptor(ze.prototype, "pluginManager") || Object.defineProperty(ze.prototype, "pluginManager", (0, Xe.d)("Material", "pluginManager"))
+    (ZW = AW.prototype).forceSphericalPolynomialsRecompute ?? (ZW.forceSphericalPolynomialsRecompute = (0, lW.k)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(AW.prototype, "sphericalPolynomial") || Object.defineProperty(AW.prototype, "sphericalPolynomial", (0, lW.h)("BaseTexture", "sphericalPolynomial"))
   },
-  41466: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => be
+  41992: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => KW,
+      h: () => sW
     });
-    var ye = He(41e3);
-    class be {
-      static get DiffuseTextureEnabled() {
-        return this._DiffuseTextureEnabled
-      }
-      static set DiffuseTextureEnabled(ee) {
-        this._DiffuseTextureEnabled !== ee && (this._DiffuseTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get BaseWeightTextureEnabled() {
-        return this._BaseWeightTextureEnabled
-      }
-      static set BaseWeightTextureEnabled(ee) {
-        this._BaseWeightTextureEnabled !== ee && (this._BaseWeightTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get BaseDiffuseRoughnessTextureEnabled() {
-        return this._BaseDiffuseRoughnessTextureEnabled
-      }
-      static set BaseDiffuseRoughnessTextureEnabled(ee) {
-        this._BaseDiffuseRoughnessTextureEnabled !== ee && (this._BaseDiffuseRoughnessTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get DetailTextureEnabled() {
-        return this._DetailTextureEnabled
-      }
-      static set DetailTextureEnabled(ee) {
-        this._DetailTextureEnabled !== ee && (this._DetailTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get DecalMapEnabled() {
-        return this._DecalMapEnabled
-      }
-      static set DecalMapEnabled(ee) {
-        this._DecalMapEnabled !== ee && (this._DecalMapEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get AmbientTextureEnabled() {
-        return this._AmbientTextureEnabled
-      }
-      static set AmbientTextureEnabled(ee) {
-        this._AmbientTextureEnabled !== ee && (this._AmbientTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get OpacityTextureEnabled() {
-        return this._OpacityTextureEnabled
-      }
-      static set OpacityTextureEnabled(ee) {
-        this._OpacityTextureEnabled !== ee && (this._OpacityTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get ReflectionTextureEnabled() {
-        return this._ReflectionTextureEnabled
-      }
-      static set ReflectionTextureEnabled(ee) {
-        this._ReflectionTextureEnabled !== ee && (this._ReflectionTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get EmissiveTextureEnabled() {
-        return this._EmissiveTextureEnabled
-      }
-      static set EmissiveTextureEnabled(ee) {
-        this._EmissiveTextureEnabled !== ee && (this._EmissiveTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get SpecularTextureEnabled() {
-        return this._SpecularTextureEnabled
-      }
-      static set SpecularTextureEnabled(ee) {
-        this._SpecularTextureEnabled !== ee && (this._SpecularTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get BumpTextureEnabled() {
-        return this._BumpTextureEnabled
-      }
-      static set BumpTextureEnabled(ee) {
-        this._BumpTextureEnabled !== ee && (this._BumpTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get LightmapTextureEnabled() {
-        return this._LightmapTextureEnabled
-      }
-      static set LightmapTextureEnabled(ee) {
-        this._LightmapTextureEnabled !== ee && (this._LightmapTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get RefractionTextureEnabled() {
-        return this._RefractionTextureEnabled
-      }
-      static set RefractionTextureEnabled(ee) {
-        this._RefractionTextureEnabled !== ee && (this._RefractionTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get ColorGradingTextureEnabled() {
-        return this._ColorGradingTextureEnabled
-      }
-      static set ColorGradingTextureEnabled(ee) {
-        this._ColorGradingTextureEnabled !== ee && (this._ColorGradingTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get FresnelEnabled() {
-        return this._FresnelEnabled
-      }
-      static set FresnelEnabled(ee) {
-        this._FresnelEnabled !== ee && (this._FresnelEnabled = ee, ye.e.MarkAllMaterialsAsDirty(4))
-      }
-      static get ClearCoatTextureEnabled() {
-        return this._ClearCoatTextureEnabled
-      }
-      static set ClearCoatTextureEnabled(ee) {
-        this._ClearCoatTextureEnabled !== ee && (this._ClearCoatTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get ClearCoatBumpTextureEnabled() {
-        return this._ClearCoatBumpTextureEnabled
-      }
-      static set ClearCoatBumpTextureEnabled(ee) {
-        this._ClearCoatBumpTextureEnabled !== ee && (this._ClearCoatBumpTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get ClearCoatTintTextureEnabled() {
-        return this._ClearCoatTintTextureEnabled
-      }
-      static set ClearCoatTintTextureEnabled(ee) {
-        this._ClearCoatTintTextureEnabled !== ee && (this._ClearCoatTintTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get SheenTextureEnabled() {
-        return this._SheenTextureEnabled
-      }
-      static set SheenTextureEnabled(ee) {
-        this._SheenTextureEnabled !== ee && (this._SheenTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get AnisotropicTextureEnabled() {
-        return this._AnisotropicTextureEnabled
-      }
-      static set AnisotropicTextureEnabled(ee) {
-        this._AnisotropicTextureEnabled !== ee && (this._AnisotropicTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get ThicknessTextureEnabled() {
-        return this._ThicknessTextureEnabled
-      }
-      static set ThicknessTextureEnabled(ee) {
-        this._ThicknessTextureEnabled !== ee && (this._ThicknessTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get RefractionIntensityTextureEnabled() {
-        return this._ThicknessTextureEnabled
-      }
-      static set RefractionIntensityTextureEnabled(ee) {
-        this._RefractionIntensityTextureEnabled !== ee && (this._RefractionIntensityTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get TranslucencyIntensityTextureEnabled() {
-        return this._TranslucencyIntensityTextureEnabled
-      }
-      static set TranslucencyIntensityTextureEnabled(ee) {
-        this._TranslucencyIntensityTextureEnabled !== ee && (this._TranslucencyIntensityTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get TranslucencyColorTextureEnabled() {
-        return this._TranslucencyColorTextureEnabled
-      }
-      static set TranslucencyColorTextureEnabled(ee) {
-        this._TranslucencyColorTextureEnabled !== ee && (this._TranslucencyColorTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-      static get IridescenceTextureEnabled() {
-        return this._IridescenceTextureEnabled
-      }
-      static set IridescenceTextureEnabled(ee) {
-        this._IridescenceTextureEnabled !== ee && (this._IridescenceTextureEnabled = ee, ye.e.MarkAllMaterialsAsDirty(1))
-      }
-    }
-    be._DiffuseTextureEnabled = !0, be._BaseWeightTextureEnabled = !0, be._BaseDiffuseRoughnessTextureEnabled = !0, be._DetailTextureEnabled = !0, be._DecalMapEnabled = !0, be._AmbientTextureEnabled = !0, be._OpacityTextureEnabled = !0, be._ReflectionTextureEnabled = !0, be._EmissiveTextureEnabled = !0, be._SpecularTextureEnabled = !0, be._BumpTextureEnabled = !0, be._LightmapTextureEnabled = !0, be._RefractionTextureEnabled = !0, be._ColorGradingTextureEnabled = !0, be._FresnelEnabled = !0, be._ClearCoatTextureEnabled = !0, be._ClearCoatBumpTextureEnabled = !0, be._ClearCoatTintTextureEnabled = !0, be._SheenTextureEnabled = !0, be._AnisotropicTextureEnabled = !0, be._ThicknessTextureEnabled = !0, be._RefractionIntensityTextureEnabled = !0, be._TranslucencyIntensityTextureEnabled = !0, be._TranslucencyColorTextureEnabled = !0, be._IridescenceTextureEnabled = !0
-  },
-  41451: (ee, ie, He) => {
-    He.d(ie, {
-      A: () => Ee,
-      D: () => Pe,
-      F: () => ge,
-      I: () => we,
-      K: () => De,
-      O: () => qe,
-      R: () => ke,
-      T: () => me,
-      U: () => xe,
-      V: () => ae,
-      W: () => Ve,
-      Z: () => Be,
-      _: () => Ae,
-      ab: () => le,
-      cb: () => Se,
-      d: () => Ye,
-      eb: () => ne,
-      g: () => Oe,
-      hb: () => he,
-      k: () => Re,
-      kb: () => se,
-      l: () => Xe,
-      n: () => ze,
-      nb: () => Ie,
-      r: () => Ze,
-      rb: () => fe,
-      v: () => Fe,
-      w: () => Te,
-      x: () => pe
-    });
-    var ye = He(39467),
-      be = He(37929),
-      Me = He(41301),
-      Ke = He(41458),
-      Ue = He(41466);
+    var mW = OW(41516),
+      EW = OW(41519),
+      NW = OW(38276),
+      PW = OW(38241),
+      LW = OW(41511),
+      cW = OW(38299),
+      wW = OW(41415),
+      tW = OW(41420),
+      ZW = OW(41626),
+      xW = OW(38939),
+      lW = OW(41574);
 
-    function Fe(ee, ie, He) {
-      if (!ee || ee.LOGARITHMICDEPTH || ee.indexOf && ee.indexOf("LOGARITHMICDEPTH") >= 0) {
-        const ee = He.activeCamera;
-        1 === ee.mode && ye.e.Error("Logarithmic depth is not compatible with orthographic cameras!", 20), ie.setFloat("logarithmicDepthConstant", 2 / (Math.log(ee.maxZ + 1) / Math.LN2))
-      }
-    }
-    const Je = {
-        r: 0,
-        g: 0,
-        b: 0
-      },
-      oe = {
-        NUM_MORPH_INFLUENCERS: 0,
-        NORMAL: !1,
-        TANGENT: !1,
-        UV: !1,
-        UV2: !1,
-        COLOR: !1
-      };
-
-    function Re(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      He && ee.fogEnabled && (!ie || ie.applyFog) && 0 !== ee.fogMode && (He.setFloat4("vFogInfos", ee.fogMode, ee.fogStart, ee.fogEnd, ee.fogDensity), ye ? (ee.fogColor.toLinearSpaceToRef(Je, ee.Nf().useExactSrgbConversions), He.setColor3("vFogColor", Je)) : He.setColor3("vFogColor", ee.fogColor))
-    }
-
-    function ke(ee, ie, He, ye, be, Me, Ke, Ue, Fe, Je) {
-      const Re = ee.numMaxInfluencers || ee.numInfluencers;
-      return Re <= 0 ? 0 : (ie.push("#define MORPHTARGETS"), ee.hasPositions && ie.push("#define MORPHTARGETTEXTURE_HASPOSITIONS"), ee.hasNormals && ie.push("#define MORPHTARGETTEXTURE_HASNORMALS"), ee.hasTangents && ie.push("#define MORPHTARGETTEXTURE_HASTANGENTS"), ee.hasUVs && ie.push("#define MORPHTARGETTEXTURE_HASUVS"), ee.hasUV2s && ie.push("#define MORPHTARGETTEXTURE_HASUV2S"), ee.hasColors && ie.push("#define MORPHTARGETTEXTURE_HASCOLORS"), ee.supportsPositions && be && ie.push("#define MORPHTARGETS_POSITION"), ee.supportsNormals && Me && ie.push("#define MORPHTARGETS_NORMAL"), ee.supportsTangents && Ke && ie.push("#define MORPHTARGETS_TANGENT"), ee.supportsUVs && Ue && ie.push("#define MORPHTARGETS_UV"), ee.supportsUV2s && Fe && ie.push("#define MORPHTARGETS_UV2"), ee.supportsColors && Je && ie.push("#define MORPHTARGETS_COLOR"), ie.push("#define NUM_MORPH_INFLUENCERS " + Re), ee.isUsingTextureForTargets && ie.push("#define MORPHTARGETS_TEXTURE"), oe.NUM_MORPH_INFLUENCERS = Re, oe.NORMAL = Me, oe.TANGENT = Ke, oe.UV = Ue, oe.UV2 = Fe, oe.COLOR = Je, qe(He, ye, oe, be), Re)
-    }
-
-    function qe(ee, ie, He) {
-      let Me = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const Ke = He.NUM_MORPH_INFLUENCERS;
-      if (Ke > 0 && be.b.LastCreatedEngine) {
-        const Ue = be.b.LastCreatedEngine.getCaps().maxVertexAttribs,
-          Fe = ie.morphTargetManager;
-        if (Fe?.isUsingTextureForTargets) return;
-        const Je = Fe && Fe.supportsPositions && Me,
-          oe = Fe && Fe.supportsNormals && He.NORMAL,
-          Re = Fe && Fe.supportsTangents && He.TANGENT,
-          ke = Fe && Fe.supportsUVs && He.UV1,
-          qe = Fe && Fe.supportsUV2s && He.UV2,
-          fe = Fe && Fe.supportsColors && He.VERTEXCOLOR;
-        for (let He = 0; He < Ke; He++) Je && ee.push("position" + He), oe && ee.push("normal" + He), Re && ee.push("tangent" + He), ke && ee.push("uv_" + He), qe && ee.push("uv2_" + He), fe && ee.push("color" + He), ee.length > Ue && ye.e.Error("Cannot add more vertex attributes for mesh " + ie.name)
-      }
-    }
-
-    function fe(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      ee.push("world0"), ee.push("world1"), ee.push("world2"), ee.push("world3"), ie && (ee.push("previousWorld0"), ee.push("previousWorld1"), ee.push("previousWorld2"), ee.push("previousWorld3"))
-    }
-
-    function Te(ee, ie) {
-      const He = ee.morphTargetManager;
-      ee && He && ie.setFloatArray("morphTargetInfluences", He.influences)
-    }
-
-    function pe(ee, ie) {
-      ie.bindToEffect(ee, "Scene")
-    }
-
-    function Xe(ee, ie, He, ye) {
-      let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-        Me = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        Ke = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        Fe = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        Je = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        oe = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-        Re = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-        ke = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 0;
-      if (ee.texturesEnabled && be && Ue.c.ReflectionTextureEnabled) {
-        if (He.oie("reflectionMatrix", be.getReflectionTextureMatrix()), He.updateFloat2("vReflectionInfos", be.level * ee.iblIntensity, ke), Fe && be.boundingBoxSize) {
-          const ee = be;
-          He.updateVector3("vReflectionPosition", ee.boundingBoxPosition), He.updateVector3("vReflectionSize", ee.boundingBoxSize)
+    function AW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const mW = iW.width,
+        EW = iW.height;
+      if (WW instanceof Float32Array) {
+        let iW = WW.byteLength / WW.BYTES_PER_ELEMENT;
+        const OW = new Uint8Array(iW);
+        for (; --iW >= 0;) {
+          let mW = WW[iW];
+          mW < 0 ? mW = 0 : mW > 1 && (mW = 1), OW[iW] = 255 * mW
         }
-        if (Me) {
-          const ee = be.getSize().width;
-          He.updateFloat2("vReflectionFilteringInfo", ee, Math.log2(ee))
-        }
-        if (oe && !ie.USEIRRADIANCEMAP) {
-          const ee = be.sphericalPolynomial;
-          if (ie.USESPHERICALFROMREFLECTIONMAP && ee)
-            if (ie.SPHERICAL_HARMONICS) {
-              const ie = ee.preScaledHarmonics;
-              He.updateVector3("vSphericalL00", ie.l00), He.updateVector3("vSphericalL1_1", ie.l1_1), He.updateVector3("vSphericalL10", ie.l10), He.updateVector3("vSphericalL11", ie.l11), He.updateVector3("vSphericalL2_2", ie.l2_2), He.updateVector3("vSphericalL2_1", ie.l2_1), He.updateVector3("vSphericalL20", ie.l20), He.updateVector3("vSphericalL21", ie.l21), He.updateVector3("vSphericalL22", ie.l22)
-            } else He.updateFloat3("vSphericalX", ee.x.x, ee.x.y, ee.x.z), He.updateFloat3("vSphericalY", ee.y.x, ee.y.y, ee.y.z), He.updateFloat3("vSphericalZ", ee.z.x, ee.z.y, ee.z.z), He.updateFloat3("vSphericalXX_ZZ", ee.xx.x - ee.zz.x, ee.xx.y - ee.zz.y, ee.xx.z - ee.zz.z), He.updateFloat3("vSphericalYY_ZZ", ee.yy.x - ee.zz.x, ee.yy.y - ee.zz.y, ee.yy.z - ee.zz.z), He.updateFloat3("vSphericalZZ", ee.zz.x, ee.zz.y, ee.zz.z), He.updateFloat3("vSphericalXY", ee.xy.x, ee.xy.y, ee.xy.z), He.updateFloat3("vSphericalYZ", ee.yz.x, ee.yz.y, ee.yz.z), He.updateFloat3("vSphericalZX", ee.zx.x, ee.zx.y, ee.zx.z)
-        } else Je && ie.USEIRRADIANCEMAP && ie.USE_IRRADIANCE_DOMINANT_DIRECTION && be.irradianceTexture && He.updateVector3("vReflectionDominantDirection", be.irradianceTexture._dominantDirection);
-        Ke && He.updateFloat3("vReflectionMicrosurfaceInfos", be.getSize().width, be.lodGenerationScale, be.lodGenerationOffset)
+        WW = OW
       }
-      Re && He.updateColor3("vReflectionColor", ye)
-    }
-
-    function ze(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-        be = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      if (ye && Ue.c.ReflectionTextureEnabled) {
-        ie.LODBASEDMICROSFURACE ? He.setTexture("reflectionSampler", ye) : (He.setTexture("reflectionSampler", ye._lodTextureMid || ye), He.setTexture("reflectionSamplerLow", ye._lodTextureLow || ye), He.setTexture("reflectionSamplerHigh", ye._lodTextureHigh || ye)), ie.USEIRRADIANCEMAP && He.setTexture("irradianceSampler", ye.irradianceTexture);
-        const Me = ee.iblCdfGenerator;
-        be && Me && He.setTexture("icdfSampler", Me.getIcdfTexture())
+      const NW = document.createElement("canvas");
+      NW.width = mW, NW.height = EW;
+      const PW = NW.getContext("2d");
+      if (!PW) return null;
+      const LW = PW.createImageData(mW, EW);
+      if (LW.data.set(WW), PW.putImageData(LW, 0, 0), OW) {
+        const WW = document.createElement("canvas");
+        WW.width = mW, WW.height = EW;
+        const iW = WW.getContext("2d");
+        return iW ? (iW.translate(0, EW), iW.scale(1, -1), iW.drawImage(NW, 0, 0), WW.toDataURL("image/png")) : null
       }
+      return NW.toDataURL("image/png")
     }
 
-    function Be(ee, ie, He) {
-      ie._needUVs = !0, ie[He] = !0, ee.optimizeUVAllocation && ee.getTextureMatrix().isIdentityAs3x2() ? (ie[He + "DIRECTUV"] = ee.coordinatesIndex + 1, ie["MAINUV" + (ee.coordinatesIndex + 1)] = !0) : ie[He + "DIRECTUV"] = 0
+    function bW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const mW = WW.getInternalTexture();
+      if (!mW) return null;
+      const EW = WW._readPixelsSync(iW, OW);
+      return EW ? AW(EW, WW.getSize(), mW.invertY) : null
     }
-
-    function Ee(ee, ie, He) {
-      const ye = ee.getTextureMatrix();
-      ie.oie(He + "Matrix", ye)
+    async function jW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const mW = WW.getInternalTexture();
+      if (!mW) return null;
+      const EW = await WW.readPixels(iW, OW);
+      return EW ? AW(EW, WW.getSize(), mW.invertY) : null
     }
-
-    function ge(ee, ie, He) {
-      He.BAKED_VERTEX_ANIMATION_TEXTURE && He.INSTANCES && ee.push("bakedVertexAnimationSettingsInstanced")
-    }
-
-    function Oe(ee, ie, He) {
-      var ye;
-      if (ie && ee && (ee.computeBonesUsingShaders && ie._bonesComputationForcedToCPU && (ee.computeBonesUsingShaders = !1), ee.useBones && ee.computeBonesUsingShaders && ee.skeleton)) {
-        const be = ee.skeleton;
-        if (be.isUsingTextureForMatrices && ie.getUniformIndex("boneTextureInfo") > -1) {
-          const He = be.getTransformMatrixTexture(ee);
-          ie.setTexture("boneSampler", He), ie.setFloat2("boneTextureInfo", be._textureWidth, be._textureHeight)
-        } else {
-          const Me = be.getTransformMatrices(ee);
-          Me && (ie.setMatrices("mBones", Me), He && ee.Xx().prePassRenderer && ee.Xx().prePassRenderer.getIndex(2) && (He.previousBones[ee.uniqueId] || (He.previousBones[ee.uniqueId] = Me.slice()), ie.setMatrices("mPreviousBones", He.previousBones[ee.uniqueId]), ye = Me, He.previousBones[ee.uniqueId].set(ye)))
-        }
-      }
-    }
-
-    function de(ee, ie, He, ye, be) {
-      let Me = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-      ee._bindLight(ie, He, ye, be, Me)
-    }
-    const We = 4,
-      te = new WeakMap;
-
-    function Ze(ee, ie, He, ye) {
-      let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4;
-      const Me = Math.min(ie.lightSources.length, be);
-      for (let Ke = 0; Ke < Me; Ke++) {
-        de(ie.lightSources[Ke], Ke, ee, He, "boolean" === typeof ye ? ye : ye.SPECULARTERM, ie.receiveShadows)
-      }
-    }
-
-    function we(ee, ie, He, ye) {
-      He.NUM_BONE_INFLUENCERS > 0 && (ye.addCPUSkinningFallback(0, ie), ee.push("matricesIndices"), ee.push("matricesWeights"), He.NUM_BONE_INFLUENCERS > 4 && (ee.push("matricesIndicesExtra"), ee.push("matricesWeightsExtra")))
-    }
-
-    function De(ee, ie) {
-      (ie.INSTANCES || ie.THIN_INSTANCES) && fe(ee, !!ie.PREPASS_VELOCITY), ie.INSTANCESCOLOR && ee.push("instanceColor")
-    }
-
-    function Pe(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
-        ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        be = 0;
-      for (let Me = 0; Me < He && ee["LIGHT" + Me]; Me++) Me > 0 && (be = ye + Me, ie.addFallback(be, "LIGHT" + Me)), ee.SHADOWS || (ee["SHADOW" + Me] && ie.addFallback(ye, "SHADOW" + Me), ee["SHADOWPCF" + Me] && ie.addFallback(ye, "SHADOWPCF" + Me), ee["SHADOWPCSS" + Me] && ie.addFallback(ye, "SHADOWPCSS" + Me), ee["SHADOWPOISSON" + Me] && ie.addFallback(ye, "SHADOWPOISSON" + Me), ee["SHADOWESM" + Me] && ie.addFallback(ye, "SHADOWESM" + Me), ee["SHADOWCLOSEESM" + Me] && ie.addFallback(ye, "SHADOWCLOSEESM" + Me));
-      return be
-    }
-
-    function Ae(ee, ie, He, ye, be, Me, Ke) {
-      let Ue = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        Fe = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        Je = arguments.length > 9 ? arguments[9] : void 0,
-        oe = arguments.length > 10 ? arguments[10] : void 0;
-      if (Ke._areMiscDirty) {
-        Ke.LOGARITHMICDEPTH = He, Ke.POINTSIZE = ye, Ke.FOG = be && function(ee, ie) {
-          return ie.fogEnabled && ee.applyFog && 0 !== ie.fogMode
-        }(ee, ie), Ke.NONUNIFORMSCALING = ee.nonUniformScaling, Ke.ALPHATEST = Me, Ke.DECAL_AFTER_DETAIL = Ue, Ke.USE_VERTEX_PULLING = Fe, Ke.RIGHT_HANDED = ie.useRightHandedSystem;
-        const Re = Fe ? Je?.geometry?.getIndexBuffer() : null,
-          ke = !!Je && Je.isUnIndexed;
-        Ke.VERTEX_PULLING_USE_INDEX_BUFFER = !!Re && !ke, Ke.VERTEX_PULLING_INDEX_BUFFER_32BITS = !(!Re || ke) && Re.is32Bits, Ke.VERTEXOUTPUT_INVARIANT = !!oe
-      }
-    }
-
-    function Ye(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (!ee.lightsEnabled || ye) return !0;
-      const be = ie.lightSources,
-        Me = Math.min(be.length, He);
-      for (let Ke = 0; Ke < Me; Ke++)
-        if (!be[Ke].areLightTexturesReady()) return !1;
-      return !0
-    }
-
-    function Ve(ee, ie, He, be) {
-      let Me = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4,
-        Ke = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (!He._areLightsDirty) return He._needNormals;
-      const Ue = Me;
-      Me = function(ee, ie) {
-        const He = ee.Nf().getCaps().maxUniformBuffersPerShaderStage;
-        if (null == He) return ie;
-        const ye = Math.max(He - We, 1);
-        return Math.min(ie, ye)
-      }(ee, Me);
-      let Fe = 0;
-      const Je = {
-        needNormals: He._needNormals,
-        needRebuild: !1,
-        lightmapMode: !1,
-        shadowEnabled: !1,
-        specularEnabled: !1
-      };
-      if (ee.lightsEnabled && !Ke) {
-        ie.lightSources.length > Me && Me < Ue && function(ee, ie, He, be) {
-          let Me = te.get(ee);
-          Me || (Me = new Set, te.set(ee, Me)), Me.has(be) || (Me.add(be), ye.e.Warn(`maxSimultaneousLights is ${ie} but this engine supports at most ${He} simultaneous lights. Each light declares its own uniform buffer in the vertex shader, so the ${be} lights affecting this mesh plus the scene, mesh, material and leftover buffers would need ${be+We} uniform buffers, over the device limit of ${ee.getCaps().maxUniformBuffersPerShaderStage} per shader stage. The light count has been clamped to ${He}, so the extra lights will not contribute to the render. Set maxSimultaneousLights to ${He} or less to silence this warning.`))
-        }(ee.Nf(), Ue, Me, Math.min(ie.lightSources.length, Ue));
-        for (const ye of ie.lightSources)
-          if (ce(ee, ie, ye, Fe, He, be, Je), Fe++, Fe === Me) break
-      }
-      He.SPECULARTERM = Je.specularEnabled, He.SHADOWS = Je.shadowEnabled;
-      const oe = Math.max(Me, He.MAXLIGHTCOUNT || 0);
-      for (let ye = Fe; ye < oe; ye++) void 0 !== He["LIGHT" + ye] && (He["LIGHT" + ye] = !1, He["HEMILIGHT" + ye] = !1, He["POINTLIGHT" + ye] = !1, He["DIRLIGHT" + ye] = !1, He["SPOTLIGHT" + ye] = !1, He["AREALIGHT" + ye] = !1, He["CLUSTLIGHT" + ye] = !1, He["SHADOW" + ye] = !1, He["SHADOWCSM" + ye] = !1, He["SHADOWCSMDEBUG" + ye] = !1, He["SHADOWCSMNUM_CASCADES" + ye] = !1, He["SHADOWCSMUSESHADOWMAXZ" + ye] = !1, He["SHADOWCSMNOBLEND" + ye] = !1, He["SHADOWCSM_RIGHTHANDED" + ye] = !1, He["SHADOWPCF" + ye] = !1, He["SHADOWPCSS" + ye] = !1, He["SHADOWPOISSON" + ye] = !1, He["SHADOWESM" + ye] = !1, He["SHADOWCLOSEESM" + ye] = !1, He["SHADOWCUBE" + ye] = !1, He["SHADOWLOWQUALITY" + ye] = !1, He["SHADOWMEDIUMQUALITY" + ye] = !1);
-      He.LIGHTCOUNT = Fe, He.MAXLIGHTCOUNT = Me;
-      const Re = ee.Nf().getCaps();
-      return void 0 === He.SHADOWFLOAT && (Je.needRebuild = !0), He.SHADOWFLOAT = Je.shadowEnabled && (Re.textureFloatRender && Re.textureFloatLinearFiltering || Re.textureHalfFloatRender && Re.textureHalfFloatLinearFiltering), He.LIGHTMAPEXCLUDED = Je.lightmapMode, Je.needRebuild && He.rebuild(), Je.needNormals
-    }
-
-    function ae(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 8,
-        Me = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (ie && Ue.c.ReflectionTextureEnabled) {
-        if (!ie.isReadyOrNotBlocking()) return !1;
-        He._needNormals = !0, He.REFLECTION = !0, He.GAMMAREFLECTION = ie.gammaSpace, He.RGBDREFLECTION = ie.isRGBD, He.LODINREFLECTIONALPHA = ie.lodLevelInAlpha, He.LINEARSPECULARREFLECTION = ie.linearSpecularLOD, He.USEIRRADIANCEMAP = !1, He.LODBASEDMICROSFURACE = ee.Nf().getCaps().textureLOD;
-        const Ke = ee.Nf();
-        switch (ye && be > 0 ? (He.NUM_SAMPLES = "" + be, Ke._features.needTypeSuffixInShaderConstants && (He.NUM_SAMPLES = He.NUM_SAMPLES + "u"), He.REALTIME_FILTERING = !0, ee.iblCdfGenerator && (He.IBL_CDF_FILTERING = !0)) : He.REALTIME_FILTERING = !1, He.INVERTCUBICMAP = 6 === ie.coordinatesMode, He.REFLECTIONMAP_3D = ie.isCube, He.REFLECTIONMAP_OPPOSITEZ = He.REFLECTIONMAP_3D && ee.useRightHandedSystem ? !ie.invertZ : ie.invertZ, He.REFLECTIONMAP_CUBIC = !1, He.REFLECTIONMAP_EXPLICIT = !1, He.REFLECTIONMAP_PLANAR = !1, He.REFLECTIONMAP_PROJECTION = !1, He.REFLECTIONMAP_SKYBOX = !1, He.REFLECTIONMAP_SPHERICAL = !1, He.REFLECTIONMAP_EQUIRECTANGULAR = !1, He.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, He.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, ie.coordinatesMode) {
-          case 0:
-            He.REFLECTIONMAP_EXPLICIT = !0;
-            break;
-          case 2:
-            He.REFLECTIONMAP_PLANAR = !0;
-            break;
-          case 4:
-            He.REFLECTIONMAP_PROJECTION = !0;
-            break;
-          case 5:
-            He.REFLECTIONMAP_SKYBOX = !0;
-            break;
-          case 1:
-            He.REFLECTIONMAP_SPHERICAL = !0;
-            break;
-          case 7:
-            He.REFLECTIONMAP_EQUIRECTANGULAR = !0;
-            break;
-          case 8:
-            He.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !0;
-            break;
-          case 9:
-            He.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !0;
-            break;
-          default:
-            He.REFLECTIONMAP_CUBIC = !0, He.USE_LOCAL_REFLECTIONMAP_CUBIC = !!ie.boundingBoxSize
-        }
-        5 !== ie.coordinatesMode && (ie.irradianceTexture ? (He.USEIRRADIANCEMAP = !0, He.USESPHERICALFROMREFLECTIONMAP = !1, He.USESPHERICALINVERTEX = !1, ie.irradianceTexture._dominantDirection ? He.USE_IRRADIANCE_DOMINANT_DIRECTION = !0 : He.USE_IRRADIANCE_DOMINANT_DIRECTION = !1) : ie.isCube && (He.USESPHERICALFROMREFLECTIONMAP = !0, He.USEIRRADIANCEMAP = !1, He.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, He.USESPHERICALINVERTEX = Me))
-      } else He.REFLECTION = !1, He.REFLECTIONMAP_3D = !1, He.REFLECTIONMAP_SPHERICAL = !1, He.REFLECTIONMAP_PLANAR = !1, He.REFLECTIONMAP_CUBIC = !1, He.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, He.REFLECTIONMAP_PROJECTION = !1, He.REFLECTIONMAP_SKYBOX = !1, He.REFLECTIONMAP_EXPLICIT = !1, He.REFLECTIONMAP_EQUIRECTANGULAR = !1, He.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, He.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, He.INVERTCUBICMAP = !1, He.USESPHERICALFROMREFLECTIONMAP = !1, He.USEIRRADIANCEMAP = !1, He.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, He.USESPHERICALINVERTEX = !1, He.REFLECTIONMAP_OPPOSITEZ = !1, He.LODINREFLECTIONALPHA = !1, He.GAMMAREFLECTION = !1, He.RGBDREFLECTION = !1, He.LINEARSPECULARREFLECTION = !1;
-      return !0
-    }
-
-    function ce(ee, ie, He, ye, be, Ke, Ue) {
-      switch (Ue.needNormals = !0, void 0 === be["LIGHT" + ye] && (Ue.needRebuild = !0), be["LIGHT" + ye] = !0, be["SPOTLIGHT" + ye] = !1, be["HEMILIGHT" + ye] = !1, be["POINTLIGHT" + ye] = !1, be["DIRLIGHT" + ye] = !1, be["AREALIGHT" + ye] = !1, be["CLUSTLIGHT" + ye] = !1, He.prepareLightSpecificDefines(be, ye), be["LIGHT_FALLOFF_PHYSICAL" + ye] = !1, be["LIGHT_FALLOFF_GLTF" + ye] = !1, be["LIGHT_FALLOFF_STANDARD" + ye] = !1, He.falloffType) {
-        case Me.c.FALLOFF_GLTF:
-          be["LIGHT_FALLOFF_GLTF" + ye] = !0;
-          break;
-        case Me.c.FALLOFF_PHYSICAL:
-          be["LIGHT_FALLOFF_PHYSICAL" + ye] = !0;
-          break;
-        case Me.c.FALLOFF_STANDARD:
-          be["LIGHT_FALLOFF_STANDARD" + ye] = !0
-      }
-      if (Ke && !He.specular.equalsFloats(0, 0, 0) && (Ue.specularEnabled = !0), be["SHADOW" + ye] = !1, be["SHADOWCSM" + ye] = !1, be["SHADOWCSMDEBUG" + ye] = !1, be["SHADOWCSMNUM_CASCADES" + ye] = !1, be["SHADOWCSMUSESHADOWMAXZ" + ye] = !1, be["SHADOWCSMNOBLEND" + ye] = !1, be["SHADOWCSM_RIGHTHANDED" + ye] = !1, be["SHADOWPCF" + ye] = !1, be["SHADOWPCSS" + ye] = !1, be["SHADOWPOISSON" + ye] = !1, be["SHADOWESM" + ye] = !1, be["SHADOWCLOSEESM" + ye] = !1, be["SHADOWCUBE" + ye] = !1, be["SHADOWLOWQUALITY" + ye] = !1, be["SHADOWMEDIUMQUALITY" + ye] = !1, ie && ie.receiveShadows && ee.shadowsEnabled && He.shadowEnabled) {
-        const ie = He.getShadowGenerator(ee.activeCamera) ?? He.getShadowGenerator();
-        if (ie) {
-          const ee = ie.getShadowMap();
-          ee && ee.renderList && ee.renderList.length > 0 && (Ue.shadowEnabled = !0, ie.prepareDefines(be, ye))
-        }
-      }
-      He.lightmapMode != Me.c.LIGHTMAP_DEFAULT ? (Ue.lightmapMode = !0, be["LIGHTMAPEXCLUDED" + ye] = !0, be["LIGHTMAPNOSPECULAR" + ye] = He.lightmapMode == Me.c.LIGHTMAP_SHADOWSONLY) : (be["LIGHTMAPEXCLUDED" + ye] = !1, be["LIGHTMAPNOSPECULAR" + ye] = !1)
-    }
-
-    function xe(ee, ie, He, ye, be) {
-      let Me = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        Ue = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        Fe = function(ee, ie) {
-          let He = !1;
-          if (ee.activeCamera) {
-            const ye = ie.CAMERA_ORTHOGRAPHIC ? 1 : 0,
-              be = ie.CAMERA_PERSPECTIVE ? 1 : 0,
-              Me = 1 === ee.activeCamera.mode ? 1 : 0,
-              Ke = 0 === ee.activeCamera.mode ? 1 : 0;
-            (ye ^ Me || be ^ Ke) && (ie.CAMERA_ORTHOGRAPHIC = 1 === Me, ie.CAMERA_PERSPECTIVE = 1 === Ke, He = !0)
+    var UW = OW(41940),
+      kW = OW(41538);
+    let sW = (() => {
+        var WW;
+        let iW, OW, AW, sW, MW, KW, SW, YW, yW, TW, JW, hW, HW, nW = LW.c,
+          uW = [],
+          oW = [],
+          dW = [],
+          eW = [],
+          vW = [],
+          gW = [],
+          DW = [],
+          VW = [],
+          pW = [],
+          fW = [],
+          CW = [],
+          XW = [],
+          BW = [],
+          qW = [],
+          RW = [],
+          GW = [],
+          IW = [],
+          aW = [],
+          rW = [],
+          zW = [],
+          FW = [],
+          QW = [],
+          Wi = [],
+          ii = [],
+          Oi = [];
+        return WW = class extends nW {
+          static _CreateVideoTexture(iW, OW, mW) {
+            arguments.length > 5 && void 0 !== arguments[5] || WW.TRILINEAR_SAMPLINGMODE;
+            throw (0, wW.o)("VideoTexture")
           }
-          return He
-        }(ee, ye);
-      !1 !== Me && (Fe = (0, Ke.g)(He, ee, ye)), ye.DEPTHPREPASS !== !ie.getColorWrite() && (ye.DEPTHPREPASS = !ye.DEPTHPREPASS, Fe = !0), ye.INSTANCES !== be && (ye.INSTANCES = be, Fe = !0), ye.THIN_INSTANCES !== Ue && (ye.THIN_INSTANCES = Ue, Fe = !0), Fe && ye.markAsUnprocessed()
-    }
-    const Le = 40,
-      Ce = 64,
-      ve = new WeakMap,
-      ue = new WeakSet;
-
-    function me(ee, ie, He, be) {
-      let Me = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        Ke = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-        Ue = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      if (!ie._areAttributesDirty && ie._needNormals === ie._normals && ie._needUVs === ie._uvs) return !1;
-      ie._normals = ie._needNormals, ie._uvs = ie._needUVs, ie.NORMAL = ie._needNormals && ee.isVerticesDataPresent("normal"), ie._needNormals && ee.isVerticesDataPresent("tangent") && (ie.TANGENT = !0);
-      for (let ye = 1; ye <= 6; ++ye) ie["UV" + ye] = !!ie._needUVs && ee.isVerticesDataPresent(`uv${1===ye?"":ye}`);
-      if (He) {
-        const He = ee.useVertexColors && ee.isVerticesDataPresent("color");
-        ie.VERTEXCOLOR = He, ie.VERTEXALPHA = ee.hasVertexAlpha && He && Ke
-      }
-      return ee.isVerticesDataPresent("instanceColor") && (ee.nMe || ee.hasThinInstances) && (ie.INSTANCESCOLOR = !0), be && function(ee, ie) {
-        if (ee.useBones && ee.computeBonesUsingShaders && ee.skeleton) {
-          ie.NUM_BONE_INFLUENCERS = ee.numBoneInfluencers;
-          const He = void 0 !== ie.BONETEXTURE;
-          if (ee.skeleton.isUsingTextureForMatrices && He) ie.BONETEXTURE = !0;
-          else {
-            ie.BonesPerMesh = ee.skeleton.bones.length + 1, ie.BONETEXTURE = !He && void 0;
-            const be = ee.Xx(),
-              Me = be.prePassRenderer;
-            if (Me && Me.enabled) {
-              const He = -1 === Me.excludedSkinnedMesh.indexOf(ee);
-              ie.BONES_VELOCITY_ENABLED = He
-            }
-            const Ke = !0 === ie.MULTIVIEW,
-              Ue = 2 * ie.BonesPerMesh + (Ke ? 1 : 0);
-            if (ve.get(ee.skeleton) !== Ue) {
-              ve.set(ee.skeleton, Ue);
-              const He = be.Nf().getCaps().maxVertexUniformVectors;
-              if (He && !ue.has(ee.skeleton)) {
-                const be = 4 * ie.BonesPerMesh,
-                  Me = Ke ? Ce : Le,
-                  Ue = Math.max(He - Me, 0);
-                (be > Ue || Ke && 3 * be > He) && (ue.add(ee.skeleton), ye.e.Warn(`Skeleton "${ee.skeleton.name}": ${ee.skeleton.bones.length} bones stored as vertex uniforms use ${be} of ~${Ue} usable uniform vectors${Ke?" (multiview)":""} on a device reporting ${He}. This can exceed the GPU vertex-uniform limit and make the mesh silently fail to render. Set skeleton.useTextureToStoreBoneMatrices = true to store bone matrices in a texture.`))
+          get noMipmap() {
+            return this._noMipmap
+          }
+          get mimeType() {
+            return this._mimeType
+          }
+          set isBlocking(WW) {
+            this._isBlocking = WW
+          }
+          get isBlocking() {
+            return this._isBlocking
+          }
+          get invertY() {
+            return this._invertY
+          }
+          constructor(iW, OW, EW, PW) {
+            let LW, cW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : WW.TRILINEAR_SAMPLINGMODE,
+              wW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              ZW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              xW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              lW = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              AW = arguments.length > 9 ? arguments[9] : void 0,
+              bW = arguments.length > 10 ? arguments[10] : void 0,
+              jW = arguments.length > 11 ? arguments[11] : void 0,
+              kW = arguments.length > 12 ? arguments[12] : void 0,
+              sW = arguments.length > 13 ? arguments[13] : void 0;
+            super(OW), this.url = ((0, mW.g)(this, uW), (0, mW.g)(this, oW, null)), this.uOffset = ((0, mW.g)(this, dW), (0, mW.g)(this, eW, 0)), this.vOffset = ((0, mW.g)(this, vW), (0, mW.g)(this, gW, 0)), this.uScale = ((0, mW.g)(this, DW), (0, mW.g)(this, VW, 1)), this.vScale = ((0, mW.g)(this, pW), (0, mW.g)(this, fW, 1)), this.uAng = ((0, mW.g)(this, CW), (0, mW.g)(this, XW, 0)), this.vAng = ((0, mW.g)(this, BW), (0, mW.g)(this, qW, 0)), this.wAng = ((0, mW.g)(this, RW), (0, mW.g)(this, GW, 0)), this.uRotationCenter = ((0, mW.g)(this, IW), (0, mW.g)(this, aW, .5)), this.vRotationCenter = ((0, mW.g)(this, rW), (0, mW.g)(this, zW, .5)), this.wRotationCenter = ((0, mW.g)(this, FW), (0, mW.g)(this, QW, .5)), this.homogeneousRotationInUVTransform = ((0, mW.g)(this, Wi), (0, mW.g)(this, ii, !1)), this.inspectableCustomProperties = ((0, mW.g)(this, Oi), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new NW.e, this._isBlocking = !0, this.name = iW || "", this.url = iW;
+            let MW = !1,
+              KW = null,
+              SW = !0;
+            "object" === typeof EW && null !== EW ? (LW = EW.noMipmap ?? !1, PW = EW.invertY ?? !UW.b, cW = EW.samplingMode ?? WW.TRILINEAR_SAMPLINGMODE, wW = EW.onLoad ?? null, ZW = EW.onError ?? null, xW = EW.buffer ?? null, lW = EW.deleteBuffer ?? !1, AW = EW.format, bW = EW.mimeType, jW = EW.loaderOptions, kW = EW.creationFlags, MW = EW.useSRGBBuffer ?? !1, KW = EW.internalTexture ?? null, SW = EW.gammaSpace ?? SW, sW = EW.forcedExtension ?? sW) : LW = !!EW, this._gammaSpace = SW, this._noMipmap = LW, this._invertY = void 0 === PW ? !UW.b : PW, this._initialSamplingMode = cW, this._buffer = xW, this._deleteBuffer = lW, this._mimeType = bW, this._loaderOptions = jW, this._creationFlags = kW, this._useSRGBBuffer = MW, this._forcedExtension = sW, void 0 !== AW && (this._format = AW);
+            const YW = this.bD(),
+              yW = this._getEngine();
+            if (!yW) return;
+            yW.onBeforeTextureInitObservable.notifyObservers(this);
+            const TW = () => {
+                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), wW && wW(), !this.isBlocking && YW && YW.resetCachedMaterial()
+              },
+              JW = (iW, OW) => {
+                this._loadingError = !0, this._errorObject = {
+                  message: iW,
+                  exception: OW
+                }, ZW && ZW(iW, OW), WW.OnTextureLoadErrorObservable.notifyObservers(this)
+              };
+            if (!this.url && !KW) return this._delayedOnLoad = TW, void(this._delayedOnError = JW);
+            if (this._texture = KW ?? this._getFromCache(this.url, LW, cW, this._invertY, MW, this.isCube), this._texture)
+              if (this._texture.isReady) tW.d.SetImmediate((() => TW()));
+              else {
+                const WW = this._texture.onLoadedObservable.add(TW);
+                this._texture.onErrorObservable.add((iW => {
+                  JW(iW.message, iW.exception), this._texture?.onLoadedObservable.remove(WW)
+                }))
               }
+            else if (YW && YW.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = TW, this._delayedOnError = JW;
+            else {
+              try {
+                this._texture = yW.createTexture(this.url, LW, this._invertY, YW, cW, TW, JW, this._buffer, void 0, this._format, this._forcedExtension, bW, jW, kW, MW)
+              } catch (hW) {
+                throw JW("error loading", hW), hW
+              }
+              lW && (this._buffer = null)
             }
           }
-        } else ie.NUM_BONE_INFLUENCERS = 0, ie.BonesPerMesh = 0, void 0 !== ie.BONETEXTURE && (ie.BONETEXTURE = !1)
-      }(ee, ie), Me && function(ee, ie) {
-        const He = ee.morphTargetManager;
-        He ? (ie.MORPHTARGETS_UV = He.supportsUVs && ie.UV1, ie.MORPHTARGETS_UV2 = He.supportsUV2s && ie.UV2, ie.MORPHTARGETS_TANGENT = He.supportsTangents && ie.TANGENT, ie.MORPHTARGETS_NORMAL = He.supportsNormals && ie.NORMAL, ie.MORPHTARGETS_POSITION = He.supportsPositions, ie.MORPHTARGETS_COLOR = He.supportsColors, ie.MORPHTARGETTEXTURE_HASUVS = He.hasUVs, ie.MORPHTARGETTEXTURE_HASUV2S = He.hasUV2s, ie.MORPHTARGETTEXTURE_HASTANGENTS = He.hasTangents, ie.MORPHTARGETTEXTURE_HASNORMALS = He.hasNormals, ie.MORPHTARGETTEXTURE_HASPOSITIONS = He.hasPositions, ie.MORPHTARGETTEXTURE_HASCOLORS = He.hasColors, ie.NUM_MORPH_INFLUENCERS = He.numMaxInfluencers || He.numInfluencers, ie.MORPHTARGETS = ie.NUM_MORPH_INFLUENCERS > 0, ie.MORPHTARGETS_TEXTURE = He.isUsingTextureForTargets) : (ie.MORPHTARGETS_UV = !1, ie.MORPHTARGETS_UV2 = !1, ie.MORPHTARGETS_TANGENT = !1, ie.MORPHTARGETS_NORMAL = !1, ie.MORPHTARGETS_POSITION = !1, ie.MORPHTARGETS_COLOR = !1, ie.MORPHTARGETTEXTURE_HASUVS = !1, ie.MORPHTARGETTEXTURE_HASUV2S = !1, ie.MORPHTARGETTEXTURE_HASTANGENTS = !1, ie.MORPHTARGETTEXTURE_HASNORMALS = !1, ie.MORPHTARGETTEXTURE_HASPOSITIONS = !1, ie.MORPHTARGETTEXTURE_HAS_COLORS = !1, ie.MORPHTARGETS = !1, ie.NUM_MORPH_INFLUENCERS = 0)
-      }(ee, ie), Ue && function(ee, ie) {
-        const He = ee.bakedVertexAnimationManager;
-        ie.BAKED_VERTEX_ANIMATION_TEXTURE = !(!He || !He.isEnabled)
-      }(ee, ie), !0
-    }
-
-    function le(ee, ie) {
-      if (ee.activeCamera) {
-        const He = ie.MULTIVIEW;
-        ie.MULTIVIEW = null !== ee.activeCamera.outputRenderTarget && ee.activeCamera.outputRenderTarget.getViewCount() > 1, ie.MULTIVIEW != He && ie.markAsUnprocessed()
-      }
-    }
-
-    function Se(ee, ie, He) {
-      const ye = ie.ORDER_INDEPENDENT_TRANSPARENCY,
-        be = ie.ORDER_INDEPENDENT_TRANSPARENCY_16BITS;
-      ie.ORDER_INDEPENDENT_TRANSPARENCY = ee.useOrderIndependentTransparency && He, ie.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !ee.Nf().getCaps().textureFloatLinearFiltering, ye === ie.ORDER_INDEPENDENT_TRANSPARENCY && be === ie.ORDER_INDEPENDENT_TRANSPARENCY_16BITS || ie.markAsUnprocessed()
-    }
-
-    function ne(ee, ie, He) {
-      const ye = ie.PREPASS;
-      if (!ie._arePrePassDirty) return;
-      const be = [{
-        type: 1,
-        define: "PREPASS_POSITION",
-        index: "PREPASS_POSITION_INDEX"
-      }, {
-        type: 9,
-        define: "PREPASS_LOCAL_POSITION",
-        index: "PREPASS_LOCAL_POSITION_INDEX"
-      }, {
-        type: 2,
-        define: "PREPASS_VELOCITY",
-        index: "PREPASS_VELOCITY_INDEX"
-      }, {
-        type: 11,
-        define: "PREPASS_VELOCITY_LINEAR",
-        index: "PREPASS_VELOCITY_LINEAR_INDEX"
-      }, {
-        type: 3,
-        define: "PREPASS_REFLECTIVITY",
-        index: "PREPASS_REFLECTIVITY_INDEX"
-      }, {
-        type: 0,
-        define: "PREPASS_IRRADIANCE_LEGACY",
-        index: "PREPASS_IRRADIANCE_LEGACY_INDEX"
-      }, {
-        type: 7,
-        define: "PREPASS_ALBEDO_SQRT",
-        index: "PREPASS_ALBEDO_SQRT_INDEX"
-      }, {
-        type: 5,
-        define: "PREPASS_DEPTH",
-        index: "PREPASS_DEPTH_INDEX"
-      }, {
-        type: 10,
-        define: "PREPASS_SCREENSPACE_DEPTH",
-        index: "PREPASS_SCREENSPACE_DEPTH_INDEX"
-      }, {
-        type: 6,
-        define: "PREPASS_NORMAL",
-        index: "PREPASS_NORMAL_INDEX"
-      }, {
-        type: 8,
-        define: "PREPASS_WORLD_NORMAL",
-        index: "PREPASS_WORLD_NORMAL_INDEX"
-      }, {
-        type: 14,
-        define: "PREPASS_IRRADIANCE",
-        index: "PREPASS_IRRADIANCE_INDEX"
-      }];
-      if (ee.prePassRenderer && ee.prePassRenderer.enabled && He) {
-        ie.PREPASS = !0, ie.SCENE_MRT_COUNT = ee.prePassRenderer.mrtCount, ie.PREPASS_NORMAL_WORLDSPACE = ee.prePassRenderer.generateNormalsInWorldSpace, ie.PREPASS_COLOR = !0, ie.PREPASS_COLOR_INDEX = 0;
-        for (let He = 0; He < be.length; He++) {
-          const ye = ee.prePassRenderer.getIndex(be[He].type); - 1 !== ye ? (ie[be[He].define] = !0, ie[be[He].index] = ye) : ie[be[He].define] = !1
-        }
-      } else {
-        ie.PREPASS = !1;
-        for (let ee = 0; ee < be.length; ee++) ie[be[ee].define] = !1
-      }
-      ie.PREPASS != ye && (ie.markAsUnprocessed(), ie.markAsImageProcessingDirty())
-    }
-
-    function je(ee, ie, He, ye) {
-      let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-        Me = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        Ke = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        Ue = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        Fe = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        Je = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
-      be && be.push("Light" + ee), Me || (ie.push("vLightData" + ee, "vLightDiffuse" + ee, "vLightSpecular" + ee, "vLightDirection" + ee, "vLightWidth" + ee, "vLightHeight" + ee, "vLightFalloff" + ee, "vLightGround" + ee, "vSliceData" + ee, "vSliceRanges" + ee, "lightMatrix" + ee, "shadowsInfo" + ee, "depthValues" + ee), He.push("shadowTexture" + ee), He.push("depthTexture" + ee), ie.push("viewFrustumZ" + ee, "cascadeBlendFactor" + ee, "lightSizeUVCorrection" + ee, "depthCorrection" + ee, "penumbraDarkness" + ee, "frustumLengths" + ee), ye && (He.push("projectionLightTexture" + ee), ie.push("textureProjectionMatrix" + ee)), Ke && He.push("iesLightTexture" + ee), Fe && He.push("rectAreaLightEmissionTexture" + ee), Ue && (He.push("lightDataTexture" + ee), Je || He.push("tileMaskTexture" + ee)))
-    }
-
-    function se(ee, ie, He) {
-      const ye = ["vReflectionMicrosurfaceInfos", "vReflectionDominantDirection", "reflectionMatrix", "vReflectionInfos", "vReflectionPosition", "vReflectionSize", "vReflectionColor", "vReflectionFilteringInfo"];
-      He && ye.push("vSphericalX", "vSphericalY", "vSphericalZ", "vSphericalXX_ZZ", "vSphericalYY_ZZ", "vSphericalZZ", "vSphericalXY", "vSphericalYZ", "vSphericalZX", "vSphericalL00", "vSphericalL1_1", "vSphericalL10", "vSphericalL11", "vSphericalL2_2", "vSphericalL2_1", "vSphericalL20", "vSphericalL21", "vSphericalL22"), ee.push(...ye);
-      ie.push("reflectionSampler", "reflectionSamplerLow", "reflectionSamplerHigh", "irradianceSampler", "icdfSampler")
-    }
-
-    function Ie(ee, ie, He) {
-      let ye, be, Me = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 4,
-        Ke = null;
-      if (ee.uniformsNames) {
-        const Ue = ee;
-        ye = Ue.uniformsNames, be = Ue.uniformBuffersNames, ie = Ue.samplers, He = Ue.defines, Me = Ue.maxSimultaneousLights || 0, Ke = Ue.shaderLanguage ?? null
-      } else ye = ee, ie || (ie = []);
-      for (let Ue = 0; Ue < Me && He["LIGHT" + Ue]; Ue++) je(Ue, ye, ie, He["PROJECTEDLIGHTTEXTURE" + Ue], be, !1, He["IESLIGHTTEXTURE" + Ue], He["CLUSTLIGHT" + Ue], He["RECTAREALIGHTEMISSIONTEXTURE" + Ue], 1 === Ke);
-      He.NUM_MORPH_INFLUENCERS && (ye.push("morphTargetInfluences"), ye.push("morphTargetCount")), He.BAKED_VERTEX_ANIMATION_TEXTURE && (ye.push("bakedVertexAnimationSettings"), ye.push("bakedVertexAnimationTextureSizeInverted"), ye.push("bakedVertexAnimationTime"), ie.push("bakedVertexAnimationTexture"))
-    }
-
-    function he(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        He = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        be = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        Me = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      ee.addUniform("vReflectionInfos", 2), ee.addUniform("reflectionMatrix", 16), ie && ee.addUniform("vReflectionMicrosurfaceInfos", 3), He && (ee.addUniform("vReflectionPosition", 3), ee.addUniform("vReflectionSize", 3)), ye && (ee.addUniform("vReflectionFilteringInfo", 2), ee.addUniform("vReflectionDominantDirection", 3)), Me && ee.addUniform("vReflectionColor", 3), be && (ee.addUniform("vSphericalL00", 3), ee.addUniform("vSphericalL1_1", 3), ee.addUniform("vSphericalL10", 3), ee.addUniform("vSphericalL11", 3), ee.addUniform("vSphericalL2_2", 3), ee.addUniform("vSphericalL2_1", 3), ee.addUniform("vSphericalL20", 3), ee.addUniform("vSphericalL21", 3), ee.addUniform("vSphericalL22", 3), ee.addUniform("vSphericalX", 3), ee.addUniform("vSphericalY", 3), ee.addUniform("vSphericalZ", 3), ee.addUniform("vSphericalXX_ZZ", 3), ee.addUniform("vSphericalYY_ZZ", 3), ee.addUniform("vSphericalZZ", 3), ee.addUniform("vSphericalXY", 3), ee.addUniform("vSphericalYZ", 3), ee.addUniform("vSphericalZX", 3))
-    }
-  },
-  41472: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Me
-    });
-    var ye = He(37917),
-      be = He(41414);
-    class Me extends be.e {
-      constructor(ee, ie) {
-        let He = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        super(ee, ie, void 0, arguments.length > 3 && void 0 !== arguments[3] && arguments[3]), this._normalMatrix = new ye.b, this._storeEffectOnSubMeshes = He
-      }
-      getEffect() {
-        return this._storeEffectOnSubMeshes ? this._activeEffect : super.getEffect()
-      }
-      isReady(ee, ie) {
-        return !!ee && (!this._storeEffectOnSubMeshes || (!ee.pW || 0 === ee.pW.length || this.isReadyForSubMesh(ee, ee.pW[0], ie)))
-      }
-      _isReadyForSubMesh(ee) {
-        const ie = ee.materialDefines;
-        return !(this.checkReadyOnEveryCall || !ee.effect || !ie || ie._renderId !== this.Xx().getRenderId())
-      }
-      bindOnlyWorldMatrix(ee) {
-        this._activeEffect.setMatrix("world", ee)
-      }
-      bindOnlyNormalMatrix(ee) {
-        this._activeEffect.setMatrix("normalMatrix", ee)
-      }
-      bind(ee, ie) {
-        ie && this.bindForSubMesh(ee, ie, ie.pW[0])
-      }
-      _afterBind(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          He = arguments.length > 2 ? arguments[2] : void 0;
-        super._afterBind(ee, ie, He), this.Xx()._cachedEffect = ie, He ? He._drawWrapper._forceRebindOnNextCall = !1 : this._drawWrapper._forceRebindOnNextCall = !1
-      }
-      _mustRebind(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        return He._drawWrapper._forceRebindOnNextCall || ee.isCachedMaterialInvalid(this, ie, ye)
-      }
-      dispose(ee, ie, He) {
-        this._activeEffect = void 0, super.dispose(ee, ie, He)
-      }
-    }
-  },
-  41495: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me,
-      h: () => be
-    });
-    const ye = new WeakMap;
-
-    function be(ee) {
-      const ie = ee.getVertexBuffers();
-      if (!ie) return null;
-      let He = ye.get(ee);
-      if (He) {
-        let ee = !1;
-        for (const ye in ie)
-          if (!He.has(ye)) {
-            ee = !0;
-            break
-          } if (!ee) return He
-      } else He = new Map, ye.set(ee, He);
-      for (const ye in ie) {
-        const ee = ie[ye];
-        if (ee) {
-          const ie = ee.byteOffset,
-            be = ee.byteStride,
-            Me = ee.type,
-            Ke = ee.normalized;
-          He.set(ye, {
-            offset: ie,
-            stride: be,
-            type: Me,
-            normalized: Ke
+          updateURL(WW) {
+            let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              OW = arguments.length > 2 ? arguments[2] : void 0,
+              mW = arguments.length > 3 ? arguments[3] : void 0;
+            this.url && (this.releaseInternalTexture(), this.bD().markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = WW), this.url = WW, this._buffer = iW, this._forcedExtension = mW, this.delayLoadState = 4;
+            const EW = this._delayedOnLoad;
+            this._delayedOnLoad = () => {
+              EW ? EW() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), OW && OW()
+            }, this.delayLoad()
+          }
+          delayLoad() {
+            if (4 !== this.delayLoadState) return;
+            const WW = this.bD();
+            if (!WW) return;
+            let iW = this.url;
+            !iW && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (iW = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(iW, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? tW.d.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = WW.VA().createTexture(iW, this._noMipmap, this._invertY, WW, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
+          }
+          _prepareRowForTextureGeneration(WW, iW, OW, mW) {
+            WW *= this._cachedUScale, iW *= this._cachedVScale, WW -= this.uRotationCenter * this._cachedUScale, iW -= this.vRotationCenter * this._cachedVScale, OW -= this.wRotationCenter, PW.q.TransformCoordinatesFromFloatsToRef(WW, iW, OW, this._rowGenerationMatrix, mW), mW.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, mW.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, mW.z += this.wRotationCenter
+          }
+          getTextureMatrix() {
+            let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * WW === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
+            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * WW, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = PW.d.Zero(), this._rowGenerationMatrix = new PW.d, this._t0 = PW.q.Zero(), this._t1 = PW.q.Zero(), this._t2 = PW.q.Zero()), PW.d.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (PW.d.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, PW.l.Matrix[0]), PW.d.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, PW.l.Matrix[1]), PW.d.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, PW.l.Matrix[2]), PW.d.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, PW.l.Matrix[3]), PW.l.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(PW.l.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(PW.l.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(PW.l.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.yEW(this._t0), this._t2.yEW(this._t0), PW.d.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
+            const iW = this.bD();
+            if (!iW) return this._cachedTextureMatrix;
+            const OW = this._cachedIdentity3x2;
+            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && OW !== this._cachedIdentity3x2 && iW.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))), this._cachedTextureMatrix
+          }
+          getReflectionTextureMatrix() {
+            const iW = this.bD();
+            if (!iW) return this._cachedReflectionTextureMatrix;
+            if (this.uOffset === this._cachedReflectionUOffset && this.vOffset === this._cachedReflectionVOffset && this.uScale === this._cachedReflectionUScale && this.vScale === this._cachedReflectionVScale && this.coordinatesMode === this._cachedReflectionCoordinatesMode) {
+              if (this.coordinatesMode !== WW.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
+              if (this._cachedReflectionProjectionMatrixId === iW.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
+            }
+            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = PW.d.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = PW.d.Zero());
+            const OW = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
+            switch (this._cachedReflectionUOffset = this.uOffset, this._cachedReflectionVOffset = this.vOffset, this._cachedReflectionUScale = this.uScale, this._cachedReflectionVScale = this.vScale, this._cachedReflectionCoordinatesMode = this.coordinatesMode, this.coordinatesMode) {
+              case WW.PLANAR_MODE:
+                PW.d.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
+                break;
+              case WW.PROJECTION_MODE: {
+                PW.d.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
+                const WW = iW.getProjectionMatrix();
+                this._cachedReflectionProjectionMatrixId = WW.updateFlag, WW.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
+                break
+              }
+              default:
+                PW.d.IdentityToRef(this._cachedReflectionTextureMatrix)
+            }
+            return OW && iW.markAllMaterialsAsDirty(1, (WW => WW.hasTexture(this))), this._cachedReflectionTextureMatrix
+          }
+          clone() {
+            const iW = {
+              noMipmap: this._noMipmap,
+              invertY: this._invertY,
+              samplingMode: this.samplingMode,
+              onLoad: void 0,
+              onError: void 0,
+              buffer: this._texture ? this._texture._buffer : void 0,
+              deleteBuffer: this._deleteBuffer,
+              format: this.textureFormat,
+              mimeType: this.mimeType,
+              loaderOptions: this._loaderOptions,
+              creationFlags: this._creationFlags,
+              useSRGBBuffer: this._useSRGBBuffer
+            };
+            return kW.d.Clone((() => new WW(this._texture ? this._texture.url : null, this.bD(), iW)), this)
+          }
+          serialize() {
+            const iW = this.name;
+            WW.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
+            const OW = super.serialize(WW._SerializeInternalTextureUniqueId);
+            if (!OW) return null;
+            if (WW.SerializeBuffers || WW.ForceSerializeBuffers)
+              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) OW.base64String = this._buffer, OW.name = OW.name.replace("data:", "");
+              else if (this.url && this.url.startsWith("data:") && this._buffer instanceof Uint8Array) {
+              const WW = this.mimeType || "image/png";
+              OW.base64String = `data:${WW};base64,${(0,lW.h)(this._buffer)}`
+            } else(WW.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (OW.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? bW(this) : jW(this));
+            return OW.invertY = this._invertY, OW.samplingMode = this.samplingMode, OW._creationFlags = this._creationFlags, OW._useSRGBBuffer = this._useSRGBBuffer, WW._SerializeInternalTextureUniqueId && (OW.internalTextureUniqueId = this._texture?.uniqueId), OW.internalTextureLabel = this._texture?.label, OW.noMipmap = this._noMipmap, this.name = iW, OW
+          }
+          getClassName() {
+            return "Texture"
+          }
+          dispose() {
+            super.dispose(), this.onLoadObservable.clear(), this._delayedOnLoad = null, this._delayedOnError = null, this._buffer = null
+          }
+          static Parse(iW, OW, mW) {
+            if (iW.customType) {
+              const WW = ZW.b.Instantiate(iW.customType).Parse(iW, OW, mW);
+              return iW.samplingMode && WW.updateSamplingMode && WW._samplingMode && WW._samplingMode !== iW.samplingMode && WW.updateSamplingMode(iW.samplingMode), WW
+            }
+            if (iW.isCube && !iW.isRenderTarget) return WW._CubeTextureParser(iW, OW, mW);
+            const EW = void 0 !== iW.internalTextureUniqueId;
+            if (!iW.name && !iW.isRenderTarget && !EW) return null;
+            let NW;
+            if (EW) {
+              const WW = OW.VA().getLoadedTexturesCache();
+              for (const OW of WW)
+                if (OW.uniqueId === iW.internalTextureUniqueId) {
+                  NW = OW;
+                  break
+                }
+            }
+            const PW = WW => {
+              if (WW && WW._texture && (WW._texture._cachedWrapU = null, WW._texture._cachedWrapV = null, WW._texture._cachedWrapR = null), iW.samplingMode) {
+                const OW = iW.samplingMode;
+                WW && WW.samplingMode !== OW && WW.updateSamplingMode(OW)
+              }
+              if (WW && iW.animations)
+                for (let OW = 0; OW < iW.animations.length; OW++) {
+                  const mW = iW.animations[OW],
+                    EW = (0, cW.d)("BABYLON.Animation");
+                  EW && WW.animations.push(EW.Parse(mW))
+                }
+              WW && WW._texture && (EW && !NW && WW._texture._setUniqueId(iW.internalTextureUniqueId), WW._texture.label = iW.internalTextureLabel)
+            };
+            return kW.d.Parse((() => {
+              let EW = !0;
+              if (iW.noMipmap && (EW = !1), iW.mirrorPlane) {
+                const mW = WW._CreateMirror(iW.name, iW.renderTargetSize, OW, EW);
+                return mW._waitingRenderList = iW.renderList, mW.mirrorPlane = xW.c.FromArray(iW.mirrorPlane), PW(mW), mW
+              }
+              if (iW.isRenderTarget && !iW.base64String) {
+                let mW = null;
+                if (iW.isCube) {
+                  if (OW.reflectionProbes)
+                    for (let WW = 0; WW < OW.reflectionProbes.length; WW++) {
+                      const mW = OW.reflectionProbes[WW];
+                      if (mW.name === iW.name) return mW.cubeTexture
+                    }
+                } else mW = WW._CreateRenderTargetTexture(iW.name, iW.renderTargetSize, OW, EW, iW._creationFlags ?? 0), mW._waitingRenderList = iW.renderList;
+                return PW(mW), mW
+              }
+              if (iW.isVideo) {
+                const NW = WW._CreateVideoTexture(mW + (iW.url || iW.name), mW + (iW.src || iW.url), OW, EW, iW.invertY, iW.samplingMode, iW.settings || {});
+                return PW(NW), NW
+              } {
+                let LW;
+                if ("string" === typeof iW.base64String && iW.base64String && !NW) {
+                  const mW = {
+                      buffer: iW.base64String,
+                      noMipmap: !EW,
+                      invertY: iW.invertY,
+                      samplingMode: iW.samplingMode,
+                      useSRGBBuffer: iW._useSRGBBuffer ?? !1,
+                      creationFlags: iW._creationFlags ?? 0,
+                      onLoad: () => {
+                        PW(LW)
+                      }
+                    },
+                    NW = iW.base64String,
+                    cW = NW.startsWith("data:") ? NW.substring(5) : NW;
+                  LW = WW.CreateFromBase64String("", cW, OW, mW), LW.name = iW.name
+                } else {
+                  let cW;
+                  cW = iW.name && (iW.name.indexOf("://") > 0 || iW.name.startsWith("data:")) ? iW.name : mW + iW.name, iW.url && (iW.url.startsWith("data:") || WW.UseSerializedUrlIfAny) && (cW = iW.url);
+                  const wW = {
+                    noMipmap: !EW,
+                    invertY: iW.invertY,
+                    samplingMode: iW.samplingMode,
+                    useSRGBBuffer: iW._useSRGBBuffer ?? !1,
+                    creationFlags: iW._creationFlags ?? 0,
+                    onLoad: () => {
+                      PW(LW)
+                    },
+                    internalTexture: NW
+                  };
+                  LW = new WW(cW, OW, wW)
+                }
+                return LW
+              }
+            }), iW, OW)
+          }
+          static CreateFromBase64String(iW, OW, mW, EW, NW) {
+            let PW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : WW.TRILINEAR_SAMPLINGMODE;
+            return new WW("data:" + OW, mW, EW, NW, PW, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, iW, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
+          }
+          static LoadFromDataString(iW, OW, mW) {
+            let EW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              NW = arguments.length > 4 ? arguments[4] : void 0,
+              PW = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              LW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : WW.TRILINEAR_SAMPLINGMODE,
+              cW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              wW = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+              tW = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
+              ZW = arguments.length > 10 ? arguments[10] : void 0,
+              xW = arguments.length > 11 ? arguments[11] : void 0;
+            return "data:" !== iW.substring(0, 5) && (iW = "data:" + iW), new WW(iW, mW, NW, PW, LW, cW, wW, OW, EW, tW, void 0, void 0, ZW, xW)
+          }
+        }, (() => {
+          const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(nW[Symbol.metadata] ?? null) : void 0;
+          iW = [(0, EW.M)()], OW = [(0, EW.M)()], AW = [(0, EW.M)()], sW = [(0, EW.M)()], MW = [(0, EW.M)()], KW = [(0, EW.M)()], SW = [(0, EW.M)()], YW = [(0, EW.M)()], yW = [(0, EW.M)()], TW = [(0, EW.M)()], JW = [(0, EW.M)()], hW = [(0, EW.M)()], HW = [(0, EW.M)()], (0, mW.e)(WW, null, HW, {
+            kind: "getter",
+            name: "isBlocking",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "isBlocking" in WW,
+              get: WW => WW.isBlocking
+            },
+            metadata: NW
+          }, null, uW), (0, mW.e)(null, null, iW, {
+            kind: "field",
+            name: "url",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "url" in WW,
+              get: WW => WW.url,
+              set: (WW, iW) => {
+                WW.url = iW
+              }
+            },
+            metadata: NW
+          }, oW, dW), (0, mW.e)(null, null, OW, {
+            kind: "field",
+            name: "uOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "uOffset" in WW,
+              get: WW => WW.uOffset,
+              set: (WW, iW) => {
+                WW.uOffset = iW
+              }
+            },
+            metadata: NW
+          }, eW, vW), (0, mW.e)(null, null, AW, {
+            kind: "field",
+            name: "vOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "vOffset" in WW,
+              get: WW => WW.vOffset,
+              set: (WW, iW) => {
+                WW.vOffset = iW
+              }
+            },
+            metadata: NW
+          }, gW, DW), (0, mW.e)(null, null, sW, {
+            kind: "field",
+            name: "uScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "uScale" in WW,
+              get: WW => WW.uScale,
+              set: (WW, iW) => {
+                WW.uScale = iW
+              }
+            },
+            metadata: NW
+          }, VW, pW), (0, mW.e)(null, null, MW, {
+            kind: "field",
+            name: "vScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "vScale" in WW,
+              get: WW => WW.vScale,
+              set: (WW, iW) => {
+                WW.vScale = iW
+              }
+            },
+            metadata: NW
+          }, fW, CW), (0, mW.e)(null, null, KW, {
+            kind: "field",
+            name: "uAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "uAng" in WW,
+              get: WW => WW.uAng,
+              set: (WW, iW) => {
+                WW.uAng = iW
+              }
+            },
+            metadata: NW
+          }, XW, BW), (0, mW.e)(null, null, SW, {
+            kind: "field",
+            name: "vAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "vAng" in WW,
+              get: WW => WW.vAng,
+              set: (WW, iW) => {
+                WW.vAng = iW
+              }
+            },
+            metadata: NW
+          }, qW, RW), (0, mW.e)(null, null, YW, {
+            kind: "field",
+            name: "wAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "wAng" in WW,
+              get: WW => WW.wAng,
+              set: (WW, iW) => {
+                WW.wAng = iW
+              }
+            },
+            metadata: NW
+          }, GW, IW), (0, mW.e)(null, null, yW, {
+            kind: "field",
+            name: "uRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "uRotationCenter" in WW,
+              get: WW => WW.uRotationCenter,
+              set: (WW, iW) => {
+                WW.uRotationCenter = iW
+              }
+            },
+            metadata: NW
+          }, aW, rW), (0, mW.e)(null, null, TW, {
+            kind: "field",
+            name: "vRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "vRotationCenter" in WW,
+              get: WW => WW.vRotationCenter,
+              set: (WW, iW) => {
+                WW.vRotationCenter = iW
+              }
+            },
+            metadata: NW
+          }, zW, FW), (0, mW.e)(null, null, JW, {
+            kind: "field",
+            name: "wRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "wRotationCenter" in WW,
+              get: WW => WW.wRotationCenter,
+              set: (WW, iW) => {
+                WW.wRotationCenter = iW
+              }
+            },
+            metadata: NW
+          }, QW, Wi), (0, mW.e)(null, null, hW, {
+            kind: "field",
+            name: "homogeneousRotationInUVTransform",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "homogeneousRotationInUVTransform" in WW,
+              get: WW => WW.homogeneousRotationInUVTransform,
+              set: (WW, iW) => {
+                WW.homogeneousRotationInUVTransform = iW
+              }
+            },
+            metadata: NW
+          }, ii, Oi), NW && Object.defineProperty(WW, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: NW
           })
-        }
-      }
-      return He
-    }
+        })(), WW.SerializeBuffers = !0, WW.ForceSerializeBuffers = !1, WW.OnTextureLoadErrorObservable = new NW.e, WW._SerializeInternalTextureUniqueId = !1, WW._CubeTextureParser = (WW, iW, OW) => {
+          throw (0, wW.o)("CubeTexture")
+        }, WW._CreateMirror = (WW, iW, OW, mW) => {
+          throw (0, wW.o)("MirrorTexture")
+        }, WW._CreateRenderTargetTexture = (WW, iW, OW, mW, EW) => {
+          throw (0, wW.o)("RenderTargetTexture")
+        }, WW.NEAREST_SAMPLINGMODE = 1, WW.NEAREST_NEAREST_MIPLINEAR = 8, WW.BILINEAR_SAMPLINGMODE = 2, WW.LINEAR_LINEAR_MIPNEAREST = 11, WW.TRILINEAR_SAMPLINGMODE = 3, WW.LINEAR_LINEAR_MIPLINEAR = 3, WW.NEAREST_NEAREST_MIPNEAREST = 4, WW.NEAREST_LINEAR_MIPNEAREST = 5, WW.NEAREST_LINEAR_MIPLINEAR = 6, WW.NEAREST_LINEAR = 7, WW.NEAREST_NEAREST = 1, WW.LINEAR_NEAREST_MIPNEAREST = 9, WW.LINEAR_NEAREST_MIPLINEAR = 10, WW.LINEAR_LINEAR = 2, WW.LINEAR_NEAREST = 12, WW.EXPLICIT_MODE = 0, WW.SPHERICAL_MODE = 1, WW.PLANAR_MODE = 2, WW.CUBIC_MODE = 3, WW.PROJECTION_MODE = 4, WW.SKYBOX_MODE = 5, WW.INVCUBIC_MODE = 6, WW.EQUIRECTANGULAR_MODE = 7, WW.FIXED_EQUIRECTANGULAR_MODE = 8, WW.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, WW.CLAMP_ADDRESSMODE = 0, WW.WRAP_ADDRESSMODE = 1, WW.MIRROR_ADDRESSMODE = 2, WW.UseSerializedUrlIfAny = !1, WW
+      })(),
+      MW = !1;
 
-    function Me(ee, ie) {
-      ie.forEach(((ie, He) => {
-        const ye = `vp_${He}_info`;
-        ee.setFloat4(ye, ie.offset, ie.stride, ie.type, ie.normalized ? 1 : 0)
-      }))
+    function KW() {
+      MW || (MW = !0, (0, cW.h)("BABYLON.Texture", sW), kW.d._TextureParser = sW.Parse)
     }
   },
-  41439: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ue,
-      f: () => Fe
+  41531: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => mW
     });
-    var ye = He(41113),
-      be = He(37917),
-      Me = He(41121);
-    let Ke = (() => {
-      var ee;
-      let ie, He, be = [];
-      return ee = class {
-        static extractMinAndMaxIndexed(ee, ie, He, ye, be, Me) {
-          for (let Ke = He; Ke < He + ye; Ke++) {
-            const He = 3 * ie[Ke],
-              ye = ee[He],
-              Ue = ee[He + 1],
-              Fe = ee[He + 2];
-            be.minimizeInPlaceFromFloats(ye, Ue, Fe), Me.maximizeInPlaceFromFloats(ye, Ue, Fe)
-          }
-        }
-        static extractMinAndMax(ee, ie, He, ye, be, Me) {
-          for (let Ke = ie, Ue = ie * ye; Ke < ie + He; Ke++, Ue += ye) {
-            const ie = ee[Ue],
-              He = ee[Ue + 1],
-              ye = ee[Ue + 2];
-            be.minimizeInPlaceFromFloats(ie, He, ye), Me.maximizeInPlaceFromFloats(ie, He, ye)
-          }
-        }
-      }, (() => {
-        const Ke = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        ie = [Me.h.filter((function() {
-          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0]) && !Array.isArray(arguments.length <= 1 ? void 0 : arguments[1])
-        }))], He = [Me.h.filter((function() {
-          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], (0, ye.i)(ee, null, ie, {
-          kind: "method",
-          name: "extractMinAndMaxIndexed",
-          static: !0,
-          private: !1,
-          access: {
-            has: ee => "extractMinAndMaxIndexed" in ee,
-            get: ee => ee.extractMinAndMaxIndexed
-          },
-          metadata: Ke
-        }, null, be), (0, ye.i)(ee, null, He, {
-          kind: "method",
-          name: "extractMinAndMax",
-          static: !0,
-          private: !1,
-          access: {
-            has: ee => "extractMinAndMax" in ee,
-            get: ee => ee.extractMinAndMax
-          },
-          metadata: Ke
-        }, null, be), Ke && Object.defineProperty(ee, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: Ke
-        }), (0, ye.l)(ee, be)
-      })(), ee
-    })();
-
-    function Ue(ee, ie, He, ye) {
-      let Me = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const Ue = new be.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-        Fe = new be.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-      return Ke.extractMinAndMaxIndexed(ee, ie, He, ye, Ue, Fe), Me && (Ue.x -= Ue.x * Me.x + Me.y, Ue.y -= Ue.y * Me.x + Me.y, Ue.z -= Ue.z * Me.x + Me.y, Fe.x += Fe.x * Me.x + Me.y, Fe.y += Fe.y * Me.x + Me.y, Fe.z += Fe.z * Me.x + Me.y), {
-        minimum: Ue,
-        maximum: Fe
+    class mW {
+      constructor(WW, iW) {
+        this.width = WW, this.height = iW
       }
-    }
-
-    function Fe(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-        Me = arguments.length > 4 ? arguments[4] : void 0;
-      const Ue = new be.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-        Fe = new be.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-      return Me || (Me = 3), Ke.extractMinAndMax(ee, ie, He, Me, Ue, Fe), ye && (Ue.x -= Ue.x * ye.x + ye.y, Ue.y -= Ue.y * ye.x + ye.y, Ue.z -= Ue.z * ye.x + ye.y, Fe.x += Fe.x * ye.x + ye.y, Fe.y += Fe.y * ye.x + ye.y, Fe.z += Fe.z * ye.x + ye.y), {
-        minimum: Ue,
-        maximum: Fe
-      }
-    }
-  },
-  41421: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => oe
-    });
-    var ye, be = He(41247),
-      Me = He(41424),
-      Ke = He(41429),
-      Ue = He(41439),
-      Fe = He(41446),
-      Je = He(40985);
-    class oe {
-      get materialDefines() {
-        const ee = this._mainDrawWrapperOverride ? this._mainDrawWrapperOverride.defines : this._getDrawWrapper()?.defines;
-        return "string" === typeof ee ? null : ee
-      }
-      set materialDefines(ee) {
-        (this._mainDrawWrapperOverride ?? this._getDrawWrapper(void 0, !0)).defines = ee
-      }
-      _getDrawWrapper(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        ee = ee ?? this._engine.currentRenderPassId;
-        let He = this._drawWrappers[ee];
-        return !He && ie && (this._drawWrappers[ee] = He = new Fe.b(this._mesh.Xx().Nf())), He
-      }
-      _removeDrawWrapper(ee) {
-        let ie = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._drawWrappers[ee]?.dispose(ie), this._drawWrappers[ee] = void 0
-      }
-      get effect() {
-        return this._mainDrawWrapperOverride ? this._mainDrawWrapperOverride.effect : this._getDrawWrapper()?.effect ?? null
-      }
-      get _drawWrapper() {
-        return this._mainDrawWrapperOverride ?? this._getDrawWrapper(void 0, !0)
-      }
-      get _drawWrapperOverride() {
-        return this._mainDrawWrapperOverride
-      }
-      _setMainDrawWrapperOverride(ee) {
-        this._mainDrawWrapperOverride = ee
-      }
-      setEffect(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          He = arguments.length > 2 ? arguments[2] : void 0,
-          ye = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const be = this._drawWrapper;
-        be.setEffect(ee, ie, ye), void 0 !== He && (be.materialContext = He), ee || (be.defines = null, be.materialContext = void 0)
-      }
-      resetDrawCache(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this._drawWrappers) {
-          if (void 0 !== ee) return void this._removeDrawWrapper(ee, !0, ie);
-          for (const ee of this._drawWrappers) ee?.dispose(ie)
-        }
-        this._drawWrappers = []
-      }
-      static AddToMesh(ee, ie, He, ye, be, Me, Ke) {
-        return new oe(ee, ie, He, ye, be, Me, Ke, !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7])
-      }
-      constructor(ee, ie, He, ye, be, Me, Ke) {
-        let Ue = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          Fe = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8];
-        this.materialIndex = ee, this.verticesStart = ie, this.verticesCount = He, this.indexStart = ye, this.indexCount = be, this._mainDrawWrapperOverride = null, this._linesIndexCount = 0, this._linesIndexBuffer = null, this._lastColliderWorldVertices = null, this._lastColliderTransformMatrix = null, this._wasDispatched = !1, this._renderId = 0, this._alphaIndex = 0, this._distanceToCamera = 0, this._currentMaterial = null, this._mesh = Me, this._renderingMesh = Ke || Me, Fe && Me.pW.push(this), this._engine = this._mesh.Xx().Nf(), this.resetDrawCache(), this._trianglePlanes = [], this._id = Me.pW.length - 1, Ue && (this.refreshBoundingInfo(), Me.computeWorldMatrix(!0))
-      }
-      get IsGlobal() {
-        return 0 === this.verticesStart && this.verticesCount === this._mesh.getTotalVertices() && 0 === this.indexStart && this.indexCount === this._mesh.getTotalIndices()
-      }
-      WC() {
-        return this.IsGlobal || this._mesh.hasThinInstances ? this._mesh.WC() : this._boundingInfo
-      }
-      setBoundingInfo(ee) {
-        return this._boundingInfo = ee, this
-      }
-      getMesh() {
-        return this._mesh
-      }
-      getRenderingMesh() {
-        return this._renderingMesh
-      }
-      getReplacementMesh() {
-        return this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : null
-      }
-      getEffectiveMesh() {
-        const ee = this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : null;
-        return ee || this._renderingMesh
-      }
-      iT() {
-        let ee = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        const ie = this._renderingMesh.getMaterialForRenderPass(this._engine.currentRenderPassId) ?? this._renderingMesh.material;
-        if (!ie) return ee && this._mesh.Xx()._hasDefaultMaterial ? this._mesh.Xx().defaultMaterial : null;
-        if (this._isMultiMaterial(ie)) {
-          const ee = ie.getSubMaterial(this.materialIndex);
-          return this._currentMaterial !== ee && (this._currentMaterial = ee, this.resetDrawCache()), ee
-        }
-        return ie
-      }
-      _isMultiMaterial(ee) {
-        return void 0 !== ee.getSubMaterial
-      }
-      refreshBoundingInfo() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        if (this._lastColliderWorldVertices = null, this.IsGlobal || !this._renderingMesh || !this._renderingMesh.geometry) return this;
-        if (ee || (ee = this._renderingMesh.getVerticesData(be.h.PositionKind)), !ee) return this._boundingInfo = this._mesh.WC(), this;
-        const ie = this._renderingMesh.eMe();
-        let He;
-        if (0 === this.indexStart && this.indexCount === ie.length) {
-          const ee = this._renderingMesh.WC();
-          He = {
-            minimum: ee.minimum.clone(),
-            maximum: ee.maximum.clone()
-          }
-        } else He = (0, Ue.b)(ee, ie, this.indexStart, this.indexCount, this._renderingMesh.geometry.boundingBias);
-        return this._boundingInfo ? this._boundingInfo.reConstruct(He.minimum, He.maximum) : this._boundingInfo = new Ke.c(He.minimum, He.maximum), this
-      }
-      _checkCollision(ee) {
-        return this.WC()._checkCollision(ee)
-      }
-      updateBoundingInfo(ee) {
-        let ie = this.WC();
-        return ie || (this.refreshBoundingInfo(), ie = this.WC()), ie && ie.update(ee), this
-      }
-      isInFrustum(ee) {
-        const ie = this.WC();
-        return !!ie && ie.isInFrustum(ee, this._mesh.cullingStrategy)
-      }
-      isCompletelyInFrustum(ee) {
-        const ie = this.WC();
-        return !!ie && ie.isCompletelyInFrustum(ee)
-      }
-      render(ee) {
-        return this._renderingMesh.render(this, ee, this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : void 0), this
-      }
-      _getLinesIndexBuffer(ee, ie) {
-        if (!this._linesIndexBuffer) {
-          const He = 6 * Math.floor(this.indexCount / 3),
-            ye = this.verticesStart + this.verticesCount > 65535 ? new Uint32Array(He) : new Uint16Array(He);
-          let be = 0;
-          if (0 === ee.length)
-            for (let ee = this.indexStart; ee < this.indexStart + this.indexCount; ee += 3) ye[be++] = ee, ye[be++] = ee + 1, ye[be++] = ee + 1, ye[be++] = ee + 2, ye[be++] = ee + 2, ye[be++] = ee;
-          else
-            for (let ie = this.indexStart; ie < this.indexStart + this.indexCount; ie += 3) ye[be++] = ee[ie], ye[be++] = ee[ie + 1], ye[be++] = ee[ie + 1], ye[be++] = ee[ie + 2], ye[be++] = ee[ie + 2], ye[be++] = ee[ie];
-          this._linesIndexBuffer = ie.createIndexBuffer(ye), this._linesIndexCount = ye.length
-        }
-        return this._linesIndexBuffer
-      }
-      canIntersects(ee) {
-        const ie = this.WC();
-        return !!ie && ee.intersectsBox(ie.boundingBox)
-      }
-      intersects(ee, ie, He, ye, be) {
-        const Me = this.iT();
-        if (!Me) return null;
-        let Ke = 3,
-          Ue = !1;
-        switch (Me.fillMode) {
-          case 3:
-          case 5:
-          case 6:
-          case 8:
-            return null;
-          case 7:
-            Ke = 1, Ue = !0
-        }
-        return 4 === Me.fillMode ? He.length ? this._intersectLines(ee, ie, He, this._mesh.intersectionThreshold, ye) : this._intersectUnIndexedLines(ee, ie, He, this._mesh.intersectionThreshold, ye) : !He.length && this._mesh._unIndexed ? this._intersectUnIndexedTriangles(ee, ie, He, ye, be) : this._intersectTriangles(ee, ie, He, Ke, Ue, ye, be)
-      }
-      _intersectLines(ee, ie, He, ye, be) {
-        let Ke = null;
-        for (let Ue = this.indexStart; Ue < this.indexStart + this.indexCount; Ue += 2) {
-          const Fe = ie[He[Ue]],
-            Je = ie[He[Ue + 1]],
-            oe = ee.intersectionSegment(Fe, Je, ye);
-          if (!(oe < 0) && ((be || !Ke || oe < Ke.distance) && (Ke = new Me.b(null, null, oe), Ke.faceId = Ue / 2, be))) break
-        }
-        return Ke
-      }
-      _intersectUnIndexedLines(ee, ie, He, ye, be) {
-        let Ke = null;
-        for (let Ue = this.verticesStart; Ue < this.verticesStart + this.verticesCount; Ue += 2) {
-          const He = ie[Ue],
-            Fe = ie[Ue + 1],
-            Je = ee.intersectionSegment(He, Fe, ye);
-          if (!(Je < 0) && ((be || !Ke || Je < Ke.distance) && (Ke = new Me.b(null, null, Je), Ke.faceId = Ue / 2, be))) break
-        }
-        return Ke
-      }
-      _intersectTriangles(ee, ie, He, ye, be, Me, Ke) {
-        let Ue = null,
-          Fe = -1;
-        for (let Je = this.indexStart; Je < this.indexStart + this.indexCount - (3 - ye); Je += ye) {
-          Fe++;
-          const ye = He[Je],
-            oe = He[Je + 1],
-            Re = He[Je + 2];
-          if (be && 4294967295 === Re) {
-            Je += 2;
-            continue
-          }
-          const ke = ie[ye],
-            qe = ie[oe],
-            fe = ie[Re];
-          if (!ke || !qe || !fe) continue;
-          if (Ke && !Ke(ke, qe, fe, ee, ye, oe, Re)) continue;
-          const Te = ee.intersectsTriangle(ke, qe, fe);
-          if (Te) {
-            if (Te.distance < 0) continue;
-            if ((Me || !Ue || Te.distance < Ue.distance) && (Ue = Te, Ue.faceId = Fe, Me)) break
-          }
-        }
-        return Ue
-      }
-      _intersectUnIndexedTriangles(ee, ie, He, ye, be) {
-        let Me = null;
-        for (let Ke = this.verticesStart; Ke < this.verticesStart + this.verticesCount; Ke += 3) {
-          const He = ie[Ke],
-            Ue = ie[Ke + 1],
-            Fe = ie[Ke + 2];
-          if (be && !be(He, Ue, Fe, ee, -1, -1, -1)) continue;
-          const Je = ee.intersectsTriangle(He, Ue, Fe);
-          if (Je) {
-            if (Je.distance < 0) continue;
-            if ((ye || !Me || Je.distance < Me.distance) && (Me = Je, Me.faceId = Ke / 3, ye)) break
-          }
-        }
-        return Me
-      }
-      _rebuild() {
-        this._linesIndexBuffer && (this._linesIndexBuffer = null)
-      }
-      clone(ee, ie) {
-        const He = new oe(this.materialIndex, this.verticesStart, this.verticesCount, this.indexStart, this.indexCount, ee, ie, !1);
-        if (!this.IsGlobal) {
-          const ee = this.WC();
-          if (!ee) return He;
-          He._boundingInfo = new Ke.c(ee.minimum, ee.maximum)
-        }
-        return He
-      }
-      dispose() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._linesIndexBuffer && (this._mesh.Xx().Nf()._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null);
-        const ie = this._mesh.pW.indexOf(this);
-        this._mesh.pW.splice(ie, 1), this.resetDrawCache(void 0, ee)
+      toString() {
+        return `{W: ${this.width}, H: ${this.height}}`
       }
       getClassName() {
-        return "SubMesh"
+        return "Size"
       }
-      static CreateFromIndices(ee, ie, He, ye, be) {
-        let Me = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Ke = Number.MAX_VALUE,
-          Ue = -Number.MAX_VALUE;
-        const Fe = (be || ye).eMe();
-        for (let Je = ie; Je < ie + He; Je++) {
-          const ee = Fe[Je];
-          ee < Ke && (Ke = ee), ee > Ue && (Ue = ee)
-        }
-        return new oe(ee, Ke, Ue - Ke + 1, ie, He, ye, be, Me)
+      getHashCode() {
+        let WW = 0 | this.width;
+        return WW = 397 * WW ^ this.height, WW
       }
-    }(ye = oe.prototype).projectToRef ?? (ye.projectToRef = (0, Je.h)("SubMesh", "projectToRef"))
+      HJ(WW) {
+        this.width = WW.width, this.height = WW.height
+      }
+      yWW(WW, iW) {
+        return this.width = WW, this.height = iW, this
+      }
+      set(WW, iW) {
+        return this.yWW(WW, iW)
+      }
+      multiplyByFloats(WW, iW) {
+        return new mW(this.width * WW, this.height * iW)
+      }
+      clone() {
+        return new mW(this.width, this.height)
+      }
+      equals(WW) {
+        return !!WW && (this.width === WW.width && this.height === WW.height)
+      }
+      get surface() {
+        return this.width * this.height
+      }
+      static Zero() {
+        return new mW(0, 0)
+      }
+      add(WW) {
+        return new mW(this.width + WW.width, this.height + WW.height)
+      }
+      subtract(WW) {
+        return new mW(this.width - WW.width, this.height - WW.height)
+      }
+      scale(WW) {
+        return new mW(this.width * WW, this.height * WW)
+      }
+      static Lerp(WW, iW, OW) {
+        const EW = WW.width + (iW.width - WW.width) * OW,
+          NW = WW.height + (iW.height - WW.height) * OW;
+        return new mW(EW, NW)
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

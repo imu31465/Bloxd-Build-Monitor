@@ -1,196 +1,242 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  37420: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => pe,
-      d: () => Xe,
-      h: () => ke,
-      j: () => Re
+  37868: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => jW,
+      h: () => UW,
+      l: () => xW,
+      o: () => ZW
     });
-    var ye = He(34867),
-      be = He(37424),
-      Me = He(37427),
-      Ke = He(9446),
-      Ue = He(1432),
-      Fe = He(59),
-      Je = He(77),
-      oe = He(1228);
+    var mW = OW(35220),
+      EW = OW(3361),
+      NW = OW(3368),
+      PW = OW(9954),
+      LW = OW(1526),
+      cW = OW(62),
+      wW = OW(80),
+      tW = OW(1283);
 
-    function Re() {
-      var ee;
-      return (0, Ue.j)(be.b, (0, be.p)()), (0, oe.jsx)(oe.Fragment, {
-        children: null === (ee = (0, be.p)()) || void 0 === ee ? void 0 : ee.content
+    function ZW() {
+      var WW;
+      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
+        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
       })
     }
 
-    function ke(ee) {
-      var ie;
+    function xW(WW) {
+      var iW;
       let {
-        show: He
-      } = ee;
-      (0, Ue.j)(be.b, (0, be.p)());
-      const Je = null === (ie = (0, be.p)()) || void 0 === ie ? void 0 : ie.menu;
-      return (0, Fe.useEffect)((() => {
-        var ee;
-        He || (null === Je || void 0 === Je || null === (ee = Je.onClose) || void 0 === ee || ee.call(Je), (0, Me.l)())
-      }), [He, Je]), (0, Fe.useEffect)((() => He ? (0, Ke.g)(Me.r, Me.e) : void 0), [He]), (0, oe.jsx)(ye.e, {
-        showing: He,
+        show: OW
+      } = WW;
+      (0, LW.g)(EW.g, (0, EW.F)());
+      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
+      return (0, cW.useEffect)((() => {
+        var WW;
+        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
+      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
+        showing: OW,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Je || void 0 === Je ? void 0 : Je.content
+        children: null === wW || void 0 === wW ? void 0 : wW.content
       })
     }
-    const qe = new Map,
-      fe = new Set;
+    const lW = new Map,
+      AW = new Set;
 
-    function Te(ee, ie) {
-      ie ? qe.set(ee, ie) : qe.delete(ee);
-      for (const He of fe) He()
+    function bW(WW, iW) {
+      iW ? lW.set(WW, iW) : lW.delete(WW);
+      for (const OW of AW) OW()
     }
 
-    function pe(ee) {
+    function jW(WW) {
       let {
-        placement: ie = "bottom"
-      } = ee;
-      const He = (0, Fe.useRef)(null);
-      return (0, Fe.useLayoutEffect)((() => {
-        const ee = He.current;
-        return Te(ie, ee), () => {
-          qe.get(ie) === ee && Te(ie, null)
+        placement: iW = "bottom"
+      } = WW;
+      const OW = (0, cW.useRef)(null);
+      return (0, cW.useLayoutEffect)((() => {
+        const WW = OW.current;
+        return bW(iW, WW), () => {
+          lW.get(iW) === WW && bW(iW, null)
         }
-      }), [ie]), (0, oe.jsx)("div", {
-        ref: He,
-        id: `clientGameHud-${ie}`,
+      }), [iW]), (0, tW.jsx)("div", {
+        ref: OW,
+        id: `clientGameHud-${iW}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Xe(ee) {
+    function UW(WW) {
       let {
-        children: ie,
-        placement: He = "bottom"
-      } = ee;
-      const [ye, be] = (0, Fe.useState)((() => {
-        var ee;
-        return null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null
+        children: iW,
+        placement: OW = "bottom"
+      } = WW;
+      const [mW, EW] = (0, cW.useState)((() => {
+        var WW;
+        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
       }));
-      return (0, Fe.useEffect)((() => {
-        const ee = () => {
-          var ee;
-          be(null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null)
+      return (0, cW.useEffect)((() => {
+        const WW = () => {
+          var WW;
+          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
         };
-        return fe.add(ee), ee(), () => {
-          fe.delete(ee)
+        return AW.add(WW), WW(), () => {
+          AW.delete(WW)
         }
-      }), [He]), ye ? (0, Je.createPortal)(ie, ye) : null
+      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
     }
   },
-  34867: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me
+  35220: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
     });
-    var ye = He(4931),
-      be = He(4937);
+    var mW = OW(5243),
+      EW = OW(5251);
 
-    function Me(ee) {
+    function NW(WW) {
       let {
-        children: ie,
-        showing: He,
-        globallyUniqueKey: Me,
-        alwaysMountChildren: Ke = !1,
-        doGameplayStartStopOnShow: Ue = !0,
-        keepsMovement: Fe = !1
-      } = ee;
-      return (0, be.e)(!0, He, Me, Fe), (0, ye.c)(Ue, He), He || Ke ? ie : null
+        children: iW,
+        showing: OW,
+        globallyUniqueKey: NW,
+        alwaysMountChildren: PW = !1,
+        doGameplayStartStopOnShow: LW = !0,
+        keepsMovement: cW = !1
+      } = WW;
+      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
     }
   },
-  37516: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Me,
-      d: () => Ke,
-      g: () => Ue,
-      k: () => Fe
+  37919: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => LW,
+      e: () => cW,
+      h: () => wW,
+      i: () => tW,
+      j: () => AW
     });
-    var ye = He(59),
-      be = He(3416);
-    const Me = 8,
-      Ke = "InGameHeaderContainer",
-      Ue = "TopRightElements";
+    var mW = OW(62),
+      EW = OW(4275),
+      NW = OW(3457),
+      PW = OW(27);
+    const LW = 8,
+      cW = "InGameHeaderContainer",
+      wW = "TopRightElements";
 
-    function Fe(ee) {
-      const [ie] = (0, be.b)(), [He, Fe] = (0, ye.useState)(!1);
-      return (0, ye.useLayoutEffect)((() => {
-        if (!ee) return;
-        const ie = document.querySelector(`.${Ke}`),
-          He = document.querySelector(`.${Ue}`),
-          ye = () => {
-            const ye = ee.getBoundingClientRect(),
-              be = ie ? ie.getBoundingClientRect().right : 0,
-              Ke = He ? He.getBoundingClientRect().left : window.innerWidth,
-              Ue = ye.left < be + Me,
-              Je = ye.right > Ke - Me;
-            Fe(Ue || Je)
+    function tW(WW) {
+      const [iW] = (0, EW.d)(), [OW, NW] = (0, mW.useState)(!1);
+      return (0, mW.useLayoutEffect)((() => {
+        if (!WW) return;
+        const iW = document.querySelector(`.${cW}`),
+          OW = document.querySelector(`.${wW}`),
+          mW = () => {
+            const mW = WW.getBoundingClientRect(),
+              EW = iW ? iW.getBoundingClientRect().right : 0,
+              PW = OW ? OW.getBoundingClientRect().left : window.innerWidth,
+              cW = mW.left < EW + LW,
+              wW = mW.right > PW - LW;
+            NW(cW || wW)
           };
-        ye();
-        const be = new ResizeObserver(ye);
-        return be.observe(ee), ie && be.observe(ie), He && be.observe(He), () => {
-          be.disconnect()
+        mW();
+        const EW = new ResizeObserver(mW);
+        return EW.observe(WW), iW && EW.observe(iW), OW && EW.observe(OW), () => {
+          EW.disconnect()
         }
-      }), [ee, ie]), He
+      }), [WW, iW]), OW
+    }
+    const ZW = `.InGameUi .${cW}`,
+      xW = [ZW, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
+      lW = 1e3;
+
+    function AW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WW,
+        OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const [EW, cW] = (0, mW.useState)(null);
+      return (0, mW.useLayoutEffect)((() => {
+        if (!WW) return;
+        const mW = new ResizeObserver((() => {
+          wW()
+        }));
+        mW.observe(WW), iW && iW !== WW && mW.observe(iW);
+        let EW = [];
+
+        function wW() {
+          var NW, PW, wW;
+          const tW = WW.getBoundingClientRect(),
+            lW = function() {
+              const WW = xW.map((WW => document.querySelector(WW))).filter((WW => null !== WW));
+              for (const iW of WW) EW.includes(iW) || mW.observe(iW);
+              for (const iW of EW) WW.includes(iW) || mW.unobserve(iW);
+              return EW = WW, WW
+            }(),
+            AW = lW.filter((WW => {
+              const iW = WW.getBoundingClientRect();
+              return iW.width > 0 && iW.height > 0 && tW.left < iW.right + LW && tW.right > iW.left - LW
+            }));
+          if (0 === AW.length && !OW) return void cW(null);
+          const bW = lW.find((WW => WW.matches(ZW))),
+            jW = Math.max(null !== (NW = null === bW || void 0 === bW ? void 0 : bW.getBoundingClientRect().bottom) && void 0 !== NW ? NW : 0, ...AW.map((WW => WW.getBoundingClientRect().bottom))),
+            UW = null !== (PW = null === iW || void 0 === iW || null === (wW = iW.offsetParent) || void 0 === wW ? void 0 : wW.getBoundingClientRect().top) && void 0 !== PW ? PW : 0;
+          cW(Math.ceil(jW + LW / 2) - Math.round(UW))
+        }
+        const tW = setInterval(wW, lW);
+        wW(), window.addEventListener("resize", wW);
+        const AW = (0, PW.n)(NW.d, wW);
+        return () => {
+          mW.disconnect(), clearInterval(tW), window.removeEventListener("resize", wW), AW()
+        }
+      }), [WW, iW, OW]), EW
     }
   },
-  40282: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke,
-      d: () => be,
-      h: () => Me
+  37888: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      e: () => EW,
+      f: () => NW
     });
-    var ye = He(59);
+    var mW = OW(62);
 
-    function be(ee) {
-      return Ue(ee, Fe)
+    function EW(WW) {
+      return LW(WW, cW)
     }
 
-    function Me(ee) {
-      return Ue(ee, Je)
+    function NW(WW) {
+      return LW(WW, wW)
     }
 
-    function Ke(ee) {
-      return `${Math.floor(ee/60)}:${String(ee%60).padStart(2,"0")}`
+    function PW(WW) {
+      return `${Math.floor(WW/60)}:${String(WW%60).padStart(2,"0")}`
     }
 
-    function Ue(ee, ie) {
-      const [, He] = (0, ye.useState)(null);
-      return (0, ye.useEffect)((() => {
-        if (0 === ee) return;
-        const ye = window.setInterval((() => {
-          const ye = ie(ee);
-          He((ie => (null === ie || void 0 === ie ? void 0 : ie.endsAt) === ee && ie.value === ye ? ie : {
-            endsAt: ee,
-            value: ye
+    function LW(WW, iW) {
+      const [, OW] = (0, mW.useState)(null);
+      return (0, mW.useEffect)((() => {
+        if (0 === WW) return;
+        const mW = window.setInterval((() => {
+          const mW = iW(WW);
+          OW((iW => (null === iW || void 0 === iW ? void 0 : iW.endsAt) === WW && iW.value === mW ? iW : {
+            endsAt: WW,
+            value: mW
           }))
         }), 250);
         return () => {
-          window.clearInterval(ye)
+          window.clearInterval(mW)
         }
-      }), [ee, ie]), ie(ee)
+      }), [WW, iW]), iW(WW)
     }
 
-    function Fe(ee) {
-      return (ee - performance.now()) / 1e3
+    function cW(WW) {
+      return (WW - performance.now()) / 1e3
     }
 
-    function Je(ee) {
-      return Math.max(0, Math.ceil(Fe(ee)))
+    function wW(WW) {
+      return Math.max(0, Math.ceil(cW(WW)))
     }
   },
-  37509: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => be
+  37917: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    const ye = [{
+    const mW = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -207,286 +253,148 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function be(ee, ie, He) {
-      const be = Math.abs(ee - ie),
-        Me = Date.now() - He;
-      for (const Ke of ye)
-        if (ee < Ke.maxDist) return be >= Ke.hardUpdateDist || Me > Ke.timeBetweenSoftChecks && be >= Ke.softUpdateDist;
+    function EW(WW, iW, OW) {
+      const EW = Math.abs(WW - iW),
+        NW = Date.now() - OW;
+      for (const PW of mW)
+        if (WW < PW.maxDist) return EW >= PW.hardUpdateDist || NW > PW.timeBetweenSoftChecks && EW >= PW.softUpdateDist;
       return !1
     }
   },
-  9446: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Me,
-      g: () => be
+  9954: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => EW
     });
-    let ye = null;
-    const be = function(ee) {
-        const ie = {
-          cycle: ee,
+    let mW = null;
+    const EW = function(WW) {
+        const iW = {
+          cycle: WW,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return ye = ie, () => {
-          ye === ie && (ye = null)
+        return mW = iW, () => {
+          mW === iW && (mW = null)
         }
       },
-      Me = () => {
-        var ee;
-        return null !== (ee = ye) && void 0 !== ee && ee.canCycle() ? ye.cycle : null
+      NW = () => {
+        var WW;
+        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
       }
   },
-  39331: (ee, ie, He) => {
-    function ye(ee, ie, He) {
-      var ye;
+  39739: (WW, iW, OW) => {
+    function mW(WW, iW, OW) {
+      var mW;
       const {
-        width: be,
-        height: Me
-      } = He, Ke = null !== (ye = ee.text) && void 0 !== ye ? ye : ee, Ue = (Ke.x / 100 - .5) * be, Fe = (Ke.y / 100 - .5) * Me, Je = be / 2 - ie.x;
-      if (null !== ee.text && Math.abs(Ue) <= Je && Fe >= ie.top - Me / 2 && Fe <= Me / 2 - ie.bottom) return {
-        x: Ke.x,
-        y: Ke.y
+        width: EW,
+        height: NW
+      } = OW, PW = null !== (mW = WW.text) && void 0 !== mW ? mW : WW, LW = (PW.x / 100 - .5) * EW, cW = (PW.y / 100 - .5) * NW, wW = EW / 2 - iW.x;
+      if (null !== WW.text && Math.abs(LW) <= wW && cW >= iW.top - NW / 2 && cW <= NW / 2 - iW.bottom) return {
+        x: PW.x,
+        y: PW.y
       };
-      const oe = Math.min(0 === Ue ? 1 / 0 : Je / Math.abs(Ue), Fe > 0 ? (Me / 2 - ie.bottom) / Fe : Fe < 0 ? (ie.top - Me / 2) / Fe : 1 / 0);
-      return !Number.isFinite(oe) || oe < 0 ? {
+      const tW = Math.min(0 === LW ? 1 / 0 : wW / Math.abs(LW), cW > 0 ? (NW / 2 - iW.bottom) / cW : cW < 0 ? (iW.top - NW / 2) / cW : 1 / 0);
+      return !Number.isFinite(tW) || tW < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + Ue * oe / be * 100,
-        y: 50 + Fe * oe / Me * 100
+        x: 50 + LW * tW / EW * 100,
+        y: 50 + cW * tW / NW * 100
       }
     }
-    He.d(ie, {
-      c: () => ye
+    OW.d(iW, {
+      b: () => mW
     })
   },
-  37427: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Me,
-      e: () => Te,
-      f: () => pe,
-      h: () => Ue,
-      j: () => ke,
-      l: () => Xe,
-      n: () => Re,
-      p: () => Be,
-      r: () => fe,
-      u: () => ze
+  40712: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    var ye = He(18),
-      be = He(27);
-    const Me = "clientGameInventoryButtonsChanged",
-      Ke = new Map;
+    const mW = 1e3;
 
-    function Ue() {
-      return [...Ke.values()].sort(((ee, ie) => {
-        var He, ye;
-        return (null !== (He = ee.order) && void 0 !== He ? He : 0) - (null !== (ye = ie.order) && void 0 !== ye ? ye : 0)
-      }))
-    }
-    let Fe = null;
-
-    function Je(ee) {
-      Fe = ee
-    }
-    let oe = !1;
-
-    function Re(ee) {
-      oe = !0;
-      try {
-        ee.onClick()
-      } finally {
-        oe = !1
-      }
-      ee.panel && "clientGame" === ye.e.get("openInGameMenuName") && Je(ee.id)
-    }
-
-    function ke() {
-      return oe
-    }
-
-    function qe() {
-      return Ue().filter((ee => ee.panel && !ee.disabled))
-    }
-
-    function fe(ee) {
-      const ie = qe(),
-        He = ie.findIndex((ee => ee.id === Fe));
-      return !(He < 0 || ie.length < 2) && (Re(ie[(He + ee + ie.length) % ie.length]), !0)
-    }
-
-    function Te() {
-      return null !== Fe && qe().length > 1
-    }
-
-    function pe() {
-      Je(null)
-    }
-
-    function Xe() {
-      "inventory" !== ye.e.get("openInGameMenuName") && Je(null)
-    }
-
-    function ze() {
-      const ee = Fe;
-      return Je(null), ee
-    }
-
-    function Be(ee) {
-      return Ke.set(ee.id, ee), be.h.yR(Me, Ue(), !0), () => {
-        Ke.get(ee.id) === ee && (Ke.delete(ee.id), be.h.yR(Me, Ue()))
-      }
+    function EW(WW, iW) {
+      const OW = performance.now() + WW;
+      return 0 !== iW && Math.abs(OW - iW) < mW ? iW : OW
     }
   },
-  37424: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ue,
-      d: () => ze,
-      h: () => pe,
-      l: () => Xe,
-      m: () => ke,
-      p: () => Je,
-      s: () => Te,
-      v: () => qe,
-      z: () => oe
+  40719: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => cW
     });
-    var ye = He(18),
-      be = He(27),
-      Me = He(1246),
-      Ke = He(37427);
-    const Ue = "clientGameUiChanged";
-    let Fe = null;
-
-    function Je() {
-      return Fe
-    }
-
-    function oe(ee, ie) {
-      const He = {
-        content: ee,
-        menu: ie
-      };
-      return Fe = He, be.h.yR(Ue, Fe, !0), () => {
-        Fe === He && (Fe = null, fe = !1, pe(), be.h.yR(Ue, null))
-      }
-    }
-    let Re = null;
-
-    function ke() {
-      return Re
-    }
-
-    function qe(ee) {
-      return Re = ee, () => {
-        Re === ee && (Re = null)
-      }
-    }
-    let fe = !1;
-
-    function Te() {
-      const ee = ye.e.get("openInGameMenuName");
-      "clientGame" !== ee && (fe = "inventory" === ee), (0, Ke.j)() || (0, Ke.f)(), (0, Me.w)(Me.c), ye.e.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function pe() {
-      Be(!1)
-    }
-
-    function Xe() {
-      Be(fe)
-    }
-
-    function ze() {
-      fe && Be(!1)
-    }
-
-    function Be(ee) {
-      "clientGame" === ye.e.get("openInGameMenuName") && ye.e.set({
-        openInGameMenuName: ee ? "inventory" : null
-      }), ee || (0, Ke.f)(), fe = !1
-    }
-  },
-  40287: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Fe
-    });
-    var ye = He(37509),
-      be = He(1127),
-      Me = He(1196),
-      Ke = He(39291),
-      Ue = He(39331);
-    class Fe {
-      constructor(ee, ie) {
-        var He;
-        this.classes = ee, this.distanceKey = ie, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var mW = OW(37917),
+      EW = OW(1172),
+      NW = OW(1244),
+      PW = OW(39679),
+      LW = OW(39739);
+    class cW {
+      constructor(WW, iW) {
+        var OW;
+        this.classes = WW, this.distanceKey = iW, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.xf = !1, this.jB = () => {
+        }, this.render = null, this.JA = !1, this.Lk = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.jB), null === (He = window.visualViewport) || void 0 === He || He.addEventListener("resize", this.jB)
+        }, window.addEventListener("resize", this.Lk), null === (OW = window.visualViewport) || void 0 === OW || OW.addEventListener("resize", this.Lk)
       }
-      bindMarker(ee) {
-        const ie = this.refs.get(ee);
-        if (ie) return ie;
-        const He = ie => {
-          var ye;
-          null === (ye = this.markers.get(ee)) || void 0 === ye || ye.stopObserving(), this.markers.delete(ee), ie && !this.xf ? (this.markers.set(ee, this.mount(ie)), this.refs.set(ee, He)) : this.refs.delete(ee)
+      bindMarker(WW) {
+        const iW = this.refs.get(WW);
+        if (iW) return iW;
+        const OW = iW => {
+          var mW;
+          null === (mW = this.markers.get(WW)) || void 0 === mW || mW.stopObserving(), this.markers.delete(WW), iW && !this.JA ? (this.markers.set(WW, this.mount(iW)), this.refs.set(WW, OW)) : this.refs.delete(WW)
         };
-        return this.refs.set(ee, He), He
+        return this.refs.set(WW, OW), OW
       }
       hasMarkers() {
         return this.markers.size > 0
       }
-      setRender(ee) {
-        this.render = ee
+      setRender(WW) {
+        this.render = WW
       }
-      update(ee, ie, He, ye, be) {
-        const Me = this.markers.get(ee);
-        Me && (Me.target ??= [0, 0, 0], Me.target[0] = ie, Me.target[1] = He, Me.target[2] = ye, this.place(Me), this.Ri(Me, be && Math.hypot(ie - be[0], He - be[1], ye - be[2])))
+      update(WW, iW, OW, mW, EW) {
+        const NW = this.markers.get(WW);
+        NW && (NW.target ??= [0, 0, 0], NW.target[0] = iW, NW.target[1] = OW, NW.target[2] = mW, this.place(NW), this.zi(NW, EW && Math.hypot(iW - EW[0], OW - EW[1], mW - EW[2])))
       }
       dispose() {
-        var ee;
-        this.xf = !0, window.removeEventListener("resize", this.jB), null === (ee = window.visualViewport) || void 0 === ee || ee.removeEventListener("resize", this.jB);
-        for (const ie of this.markers.values()) ie.stopObserving();
+        var WW;
+        this.JA = !0, window.removeEventListener("resize", this.Lk), null === (WW = window.visualViewport) || void 0 === WW || WW.removeEventListener("resize", this.Lk);
+        for (const iW of this.markers.values()) iW.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(ee) {
+      place(WW) {
         const {
-          render: ie,
-          viewport: He
+          render: iW,
+          viewport: OW
         } = this;
-        if (!ie || !ee.target) return;
-        const ye = (50 - ie.screenBandPct.y) / 100 * He.height,
-          be = {
-            x: ee.halfSize.width + 8,
-            top: ee.halfSize.height + 8,
-            bottom: ee.halfSize.height + ee.labelsBelow + ye
+        if (!iW || !WW.target) return;
+        const mW = (50 - iW.screenBandPct.y) / 100 * OW.height,
+          EW = {
+            x: WW.halfSize.width + 8,
+            top: WW.halfSize.height + 8,
+            bottom: WW.halfSize.height + WW.labelsBelow + mW
           },
-          Me = ie.projectWorldPosToViewport(ee.target),
-          Fe = null !== Me && void 0 !== Me ? Me : ie.projectWorldPosToScreenPos(ee.target),
-          Je = (0, Ue.c)({
-            x: Fe.x,
-            y: Fe.y,
-            text: Me
-          }, be, He);
-        (0, Ke.c)(ee.root, Math.round(100 * Je.x) / 100, Math.round(100 * Je.y) / 100)
+          NW = iW.projectWorldPosToViewport(WW.target),
+          cW = null !== NW && void 0 !== NW ? NW : iW.projectWorldPosToScreenPos(WW.target),
+          wW = (0, LW.b)({
+            x: cW.x,
+            y: cW.y,
+            text: NW
+          }, EW, OW);
+        (0, PW.e)(WW.root, Math.round(100 * wW.x) / 100, Math.round(100 * wW.y) / 100)
       }
-      Ri(ee, ie) {
-        if (null === ie) return void(null !== ee.metres && (ee.metres = null, ee.distance.textContent = ""));
-        const He = Date.now();
-        (null === ee.metres || (0, ye.e)(ie, ee.metres, ee.metresShownAt)) && (ee.metres = Math.round(ie), ee.metresShownAt = He, ee.distance.textContent = (0, be.s)(Me.f.get().getCurrentLanguageCode(), this.distanceKey, {
-          distance: String(ee.metres)
+      zi(WW, iW) {
+        if (null === iW) return void(null !== WW.metres && (WW.metres = null, WW.distance.textContent = ""));
+        const OW = Date.now();
+        (null === WW.metres || (0, mW.e)(iW, WW.metres, WW.metresShownAt)) && (WW.metres = Math.round(iW), WW.metresShownAt = OW, WW.distance.textContent = (0, EW.u)(NW.e.get().getCurrentLanguageCode(), this.distanceKey, {
+          distance: String(WW.metres)
         }))
       }
-      mount(ee) {
-        const ie = {
-            root: ee,
-            distance: ee.querySelector(`.${this.classes.distance}`),
+      mount(WW) {
+        const iW = {
+            root: WW,
+            distance: WW.querySelector(`.${this.classes.distance}`),
             halfSize: {
               width: 0,
               height: 0
@@ -497,35 +405,36 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          He = ee.querySelector(`.${this.classes.labels}`),
-          ye = new ResizeObserver((() => {
-            ie.halfSize = {
-              width: Math.max(ee.offsetWidth, He.offsetWidth) / 2,
-              height: ee.offsetHeight / 2
-            }, ie.labelsBelow = He.offsetTop + He.offsetHeight - ee.offsetHeight, this.place(ie)
+          OW = WW.querySelector(`.${this.classes.labels}`),
+          mW = new ResizeObserver((() => {
+            iW.halfSize = {
+              width: Math.max(WW.offsetWidth, OW.offsetWidth) / 2,
+              height: WW.offsetHeight / 2
+            }, iW.labelsBelow = OW.offsetTop + OW.offsetHeight - WW.offsetHeight, this.place(iW)
           }));
-        return ye.observe(ee, {
+        return mW.observe(WW, {
           box: "border-box"
-        }), ye.observe(He, {
+        }), mW.observe(OW, {
           box: "border-box"
-        }), ie.stopObserving = () => {
-          ye.disconnect()
-        }, ie
+        }), iW.stopObserving = () => {
+          mW.disconnect()
+        }, iW
       }
     }
   },
-  40276: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      default: () => qi
+  40701: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => wi
     });
-    const ye = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes", "hat", "back"];
-    var be = He(59),
-      Me = He(37424),
-      Ke = He(37853),
-      Ue = He(37440),
-      Fe = He(1768),
-      Je = He(27);
-    const oe = {
+    const mW = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes", "hat", "back"];
+    var EW = OW(62),
+      NW = OW(3361),
+      PW = OW(40706),
+      LW = OW(38195),
+      cW = OW(37898),
+      wW = OW(1856),
+      tW = OW(27);
+    const ZW = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -551,416 +460,187 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const Re = 32;
+    const xW = 32;
 
-    function ke(ee, ie, He, ye) {
+    function lW(WW, iW, OW, mW) {
       return {
         tag: "line",
         attrs: {
-          x1: ee,
-          y1: ie,
-          x2: He,
-          y2: ye,
+          x1: WW,
+          y1: iW,
+          x2: OW,
+          y2: mW,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function qe(ee) {
+    function AW(WW) {
       return {
         tag: "circle",
         attrs: {
-          cx: Re,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Re,
-          r: ee,
+          cx: xW,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xW,
+          r: WW,
           class: "Fill"
         }
       }
     }
 
-    function fe(ee, ie) {
+    function bW(WW, iW) {
       return {
         tag: "path",
         attrs: {
-          d: ee,
-          "stroke-width": ie
+          d: WW,
+          "stroke-width": iW
         }
       }
     }
 
-    function Te(ee, ie, He) {
+    function jW(WW, iW, OW) {
       return {
         tag: "circle",
         attrs: {
-          cx: Re,
-          cy: Re,
-          r: ee,
-          "stroke-width": ie,
-          class: He
+          cx: xW,
+          cy: xW,
+          r: WW,
+          "stroke-width": iW,
+          class: OW
         }
       }
     }
 
-    function pe(ee, ie, He) {
+    function UW(WW, iW, OW) {
       return {
         tag: "text",
         attrs: {
-          x: ee,
-          y: ie,
+          x: WW,
+          y: iW,
           class: "Fill Label"
         },
-        text: He
+        text: OW
       }
     }
-    const Xe = {
-      pistol: ee => [ke(Re, Re - ee - 5, Re, Re - ee), ke(Re - ee - 5, Re, Re - ee, Re), ke(Re + ee, Re, Re + ee + 5, Re), qe(1.4)],
-      rifle: ee => [ke(Re, Re - ee - 8, Re, Re - ee), ke(Re, Re + ee, Re, Re + ee + 8), ke(Re - ee - 8, Re, Re - ee, Re), ke(Re + ee, Re, Re + ee + 8, Re), qe(1)],
-      smg: ee => {
-        const ie = Math.PI / 2,
-          He = [];
-        for (let Ke = 0; Ke < 4; Ke++) He.push((be = Ke * ie + .35, Me = (Ke + 1) * ie - .35, fe(`M${Re+(ye=6+ee)*Math.cos(be)} ${Re+ye*Math.sin(be)} A${ye} ${ye} 0 0 1 ${Re+ye*Math.cos(Me)} ${Re+ye*Math.sin(Me)}`, 2)));
-        var ye, be, Me;
-        return [...He, qe(1.4)]
+    const kW = {
+      pistol: WW => [lW(xW, xW - WW - 5, xW, xW - WW), lW(xW - WW - 5, xW, xW - WW, xW), lW(xW + WW, xW, xW + WW + 5, xW), AW(1.4)],
+      rifle: WW => [lW(xW, xW - WW - 8, xW, xW - WW), lW(xW, xW + WW, xW, xW + WW + 8), lW(xW - WW - 8, xW, xW - WW, xW), lW(xW + WW, xW, xW + WW + 8, xW), AW(1)],
+      smg: WW => {
+        const iW = Math.PI / 2,
+          OW = [];
+        for (let PW = 0; PW < 4; PW++) OW.push((EW = PW * iW + .35, NW = (PW + 1) * iW - .35, bW(`M${xW+(mW=6+WW)*Math.cos(EW)} ${xW+mW*Math.sin(EW)} A${mW} ${mW} 0 0 1 ${xW+mW*Math.cos(NW)} ${xW+mW*Math.sin(NW)}`, 2)));
+        var mW, EW, NW;
+        return [...OW, AW(1.4)]
       },
-      shotgun: ee => [Te(ee, 3, "Ring Outline"), Te(ee, 1.5, "Ring")],
-      marksman: ee => [fe(`M${26-ee/2} ${39+ee/2} L32 33 L${38+ee/2} ${39+ee/2}`, 2), ke(14 - ee, Re, 24 - ee, Re, 1.5), ke(40 + ee, Re, 50 + ee, Re, 1.5), ke(14 - ee, 30, 14 - ee, 34, 1.5), ke(50 + ee, 30, 50 + ee, 34, 1.5)],
-      machineGun: ee => {
-        const ie = 10 + ee,
-          He = [];
-        for (const [ye, be] of [
+      shotgun: WW => [jW(WW, 3, "Ring Outline"), jW(WW, 1.5, "Ring")],
+      marksman: WW => [bW(`M${26-WW/2} ${39+WW/2} L32 33 L${38+WW/2} ${39+WW/2}`, 2), lW(14 - WW, xW, 24 - WW, xW, 1.5), lW(40 + WW, xW, 50 + WW, xW, 1.5), lW(14 - WW, 30, 14 - WW, 34, 1.5), lW(50 + WW, 30, 50 + WW, 34, 1.5)],
+      machineGun: WW => {
+        const iW = 10 + WW,
+          OW = [];
+        for (const [mW, EW] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) He.push(fe(`M${Re+ye*ie} ${Re+be*(ie-5)} L${Re+ye*ie} ${Re+be*ie} L${Re+ye*(ie-5)} ${Re+be*ie}`, 2));
-        return [...He, ke(Re, 28, Re, 36, 1.5), ke(28, Re, 36, Re, 1.5)]
+          ]) OW.push(bW(`M${xW+mW*iW} ${xW+EW*(iW-5)} L${xW+mW*iW} ${xW+EW*iW} L${xW+mW*(iW-5)} ${xW+EW*iW}`, 2));
+        return [...OW, lW(xW, 28, xW, 36, 1.5), lW(28, xW, 36, xW, 1.5)]
       },
-      launcher: () => [ke(14, 30, 50, 30, 1.5), ke(Re, 24, Re, 52, 1.5), ke(28, 38, 36, 38, 1.5), ke(29, 44, 35, 44, 1.5), ke(30, 50, 34, 50, 1.5), pe(38, 40, "100"), pe(37, 46, "200"), qe(1.4, 30)],
-      melee: () => [fe("M32 26 L38 32 L32 38 L26 32 Z", 1.5), qe(1.2)],
-      throwable: () => [qe(1.6)]
+      launcher: () => [lW(14, 30, 50, 30, 1.5), lW(xW, 24, xW, 52, 1.5), lW(28, 38, 36, 38, 1.5), lW(29, 44, 35, 44, 1.5), lW(30, 50, 34, 50, 1.5), UW(38, 40, "100"), UW(37, 46, "200"), AW(1.4, 30)],
+      melee: () => [bW("M32 26 L38 32 L32 38 L26 32 Z", 1.5), AW(1.2)],
+      throwable: () => [AW(1.6)]
     };
 
-    function ze(ee) {
+    function sW(WW) {
       let {
-        tag: ie,
-        attrs: He,
-        text: ye
-      } = ee, be = `<${ie}`;
-      for (const [Me, Ke] of Object.entries(He)) be += ` ${Me}="${Ke}"`;
-      return void 0 === ye ? `${be}/>` : `${be}>${ye}</${ie}>`
+        tag: iW,
+        attrs: OW,
+        text: mW
+      } = WW, EW = `<${iW}`;
+      for (const [NW, PW] of Object.entries(OW)) EW += ` ${NW}="${PW}"`;
+      return void 0 === mW ? `${EW}/>` : `${EW}>${mW}</${iW}>`
     }
-    class Be {
-      constructor(ee, ie) {
-        this.api = ee, this.localPlayerId = ie, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = ee => {
-          this.element = ee, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, ee && !this.enabled && (ee.style.display = "none")
+    class MW {
+      constructor(WW, iW) {
+        this.api = WW, this.localPlayerId = iW, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = WW => {
+          this.element = WW, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, WW && !this.enabled && (WW.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, Fe.getRemInPx)()))
-        }, this.tokens = [Je.h.subscribe("aimingOverlay", (ee => {
-          this.sniperOverlay = "sniper" === ee
-        })), Je.h.subscribe("mouseState", (ee => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, wW.getRemInPx)()))
+        }, this.tokens = [tW.l.subscribe("aimingOverlay", (WW => {
+          this.sniperOverlay = "sniper" === WW
+        })), tW.l.subscribe("mouseState", (WW => {
           let {
-            isDown: ie
-          } = ee;
-          this.mouseDown = ie
+            isDown: iW
+          } = WW;
+          this.mouseDown = iW
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      JY(ee) {
-        ee !== this.enabled && (this.enabled = ee, this.drawnVisible = null, ee || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      WK(WW) {
+        WW !== this.enabled && (this.enabled = WW, this.drawnVisible = null, WW || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(ee, ie) {
-        var He, ye;
+      frame(WW, iW) {
+        var OW, mW;
         if (!this.enabled) return;
         const {
-          api: be
-        } = this, Me = be.isAlive(this.localPlayerId) && null !== (He = null === (ye = be.Vye(this.localPlayerId)) || void 0 === ye ? void 0 : ye.name) && void 0 !== He ? He : null, Ke = (Ue = Me) && oe[Ue] || null;
-        var Ue;
-        if (this.setOwnsCrosshair(null !== Ke), !this.element) return;
-        const Fe = be.getHeldGunInaccuracy(),
-          Je = null !== Fe,
-          Re = null !== Ke && !this.sniperOverlay && be.isCrosshairShown();
-        if (Re !== this.drawnVisible && (this.drawnVisible = Re, this.element.style.display = Re ? "block" : "none"), !Re) return;
-        const ke = Je ? function(ee) {
-            return "launcher" === ee || "melee" === ee || "throwable" === ee ? "none" : "shotgun" === ee ? "cone" : "offset"
-          }(Ke) : "none",
-          qe = null !== Fe && void 0 !== Fe ? Fe : 0;
-        "cone" === ke ? this.drawCone(Ke, this.coneRadiusVh(qe, ie) * this.gapPerVh, ee) : (this.coneDrawn = !1, this.draw(Ke, "none" === ke ? 2 : this.offsetGap(qe)));
-        const fe = !Je && this.mouseDown;
-        fe !== this.drawnPressed && (this.drawnPressed = fe, this.element.classList.toggle("Pressed", fe))
+          api: EW
+        } = this, NW = EW.isAlive(this.localPlayerId) && null !== (OW = null === (mW = EW.kOW(this.localPlayerId)) || void 0 === mW ? void 0 : mW.name) && void 0 !== OW ? OW : null, PW = (LW = NW) && ZW[LW] || null;
+        var LW;
+        if (this.setOwnsCrosshair(null !== PW), !this.element) return;
+        const cW = EW.getHeldGunInaccuracy(),
+          wW = null !== cW,
+          tW = null !== PW && !this.sniperOverlay && EW.isCrosshairShown();
+        if (tW !== this.drawnVisible && (this.drawnVisible = tW, this.element.style.display = tW ? "block" : "none"), !tW) return;
+        const xW = wW ? function(WW) {
+            return "launcher" === WW || "melee" === WW || "throwable" === WW ? "none" : "shotgun" === WW ? "cone" : "offset"
+          }(PW) : "none",
+          lW = null !== cW && void 0 !== cW ? cW : 0;
+        "cone" === xW ? this.drawCone(PW, this.coneRadiusVh(lW, iW) * this.gapPerVh, WW) : (this.coneDrawn = !1, this.draw(PW, "none" === xW ? 2 : this.offsetGap(lW)));
+        const AW = !wW && this.mouseDown;
+        AW !== this.drawnPressed && (this.drawnPressed = AW, this.element.classList.toggle("Pressed", AW))
       }
       dispose() {
-        for (const ee of this.tokens) Je.h.unsubscribe(ee);
+        for (const WW of this.tokens) tW.l.unsubscribe(WW);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(ee, ie) {
-        var He, ye;
-        ee !== this.drawnFamily ? (this.drawnFamily = ee, this.drawnGap = ie, this.element.innerHTML = function(ee, ie) {
-          return `<svg viewBox="0 0 64 64">${Xe[ee](ie).map(ze).join("")}</svg>`
-        }(ee, ie), this.shapes = Array.from(null !== (He = null === (ye = this.element.firstElementChild) || void 0 === ye ? void 0 : ye.children) && void 0 !== He ? He : [])) : ie !== this.drawnGap && (this.drawnGap = ie, function(ee, ie, He) {
-          const ye = Xe[ie](He);
-          for (let be = 0; be < ye.length; be++)
-            for (const [ie, He] of Object.entries(ye[be].attrs)) {
-              const ye = String(He);
-              ee[be].getAttribute(ie) !== ye && ee[be].setAttribute(ie, ye)
+      draw(WW, iW) {
+        var OW, mW;
+        WW !== this.drawnFamily ? (this.drawnFamily = WW, this.drawnGap = iW, this.element.innerHTML = function(WW, iW) {
+          return `<svg viewBox="0 0 64 64">${kW[WW](iW).map(sW).join("")}</svg>`
+        }(WW, iW), this.shapes = Array.from(null !== (OW = null === (mW = this.element.firstElementChild) || void 0 === mW ? void 0 : mW.children) && void 0 !== OW ? OW : [])) : iW !== this.drawnGap && (this.drawnGap = iW, function(WW, iW, OW) {
+          const mW = kW[iW](OW);
+          for (let EW = 0; EW < mW.length; EW++)
+            for (const [iW, OW] of Object.entries(mW[EW].attrs)) {
+              const mW = String(OW);
+              WW[EW].getAttribute(iW) !== mW && WW[EW].setAttribute(iW, mW)
             }
-        }(this.shapes, ee, ie))
+        }(this.shapes, WW, iW))
       }
-      drawCone(ee, ie, He) {
-        ee === this.drawnFamily && this.coneDrawn ? this.shownRadius += (ie - this.shownRadius) * (1 - Math.exp(-He / 80)) : this.shownRadius = ie, this.coneDrawn = !0, this.draw(ee, Math.round(4 * this.shownRadius) / 4)
+      drawCone(WW, iW, OW) {
+        WW === this.drawnFamily && this.coneDrawn ? this.shownRadius += (iW - this.shownRadius) * (1 - Math.exp(-OW / 80)) : this.shownRadius = iW, this.coneDrawn = !0, this.draw(WW, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(ee, ie) {
-        if (!(ie > 0)) return 1;
-        const He = ee * Ke.j / 2;
-        return Math.max(50 * Math.tan(He) / ie, 1)
+      coneRadiusVh(WW, iW) {
+        if (!(iW > 0)) return 1;
+        const OW = WW * LW.i / 2;
+        return Math.max(50 * Math.tan(OW) / iW, 1)
       }
-      offsetGap(ee) {
-        const ie = 2 + ((0, Ue.d)(ee) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * ie) / 2)
+      offsetGap(WW) {
+        const iW = 2 + ((0, cW.f)(WW) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * iW) / 2)
       }
-      setOwnsCrosshair(ee) {
-        ee !== this.ownsCrosshair && (this.ownsCrosshair = ee, document.body.classList.toggle("FrontlineCustomCrosshair", ee))
-      }
-    }
-    const Ee = "FrontlineCustomDamage",
-      ge = .45,
-      Oe = .2;
-    class de {
-      constructor(ee, ie) {
-        this.api = ee, this.localPlayerId = ie, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
-          frac: 0,
-          at: -1 / 0
-        }, this.maxHealth = null, this.My = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = ee => {
-          var ie, He;
-          this.clearHits(), this.root = ee, this.lowLayer = null !== (ie = null === ee || void 0 === ee ? void 0 : ee.querySelector(".FrontlineDamageLow")) && void 0 !== ie ? ie : null, this.arcLayer = null !== (He = null === ee || void 0 === ee ? void 0 : ee.querySelector(".FrontlineDamageArcs")) && void 0 !== He ? He : null, this.showRoot(), this.drawLow()
-        }, this.token = Je.h.subscribe("damagedByOtherPlayer", (ee => {
-          let {
-            direction: ie,
-            Hy: He
-          } = ee;
-          this.onHurt(ie, He)
-        })), this.syncHealth(), document.body.classList.add(Ee)
-      }
-      JY(ee) {
-        ee !== this.enabled && (this.enabled = ee, document.body.classList.toggle(Ee, ee), ee || this.clearHits(), this.showRoot())
-      }
-      frame(ee) {
-        this.syncHealth(), this.cameraHeading = ee;
-        for (const ie of this.arcs) this.drawArcAngle(ie)
-      }
-      dispose() {
-        Je.h.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Ee)
-      }
-      showRoot() {
-        this.root && (this.root.style.display = this.enabled ? "" : "none")
-      }
-      syncHealth() {
-        const ee = this.api.getClientOption(this.localPlayerId, "_health"),
-          ie = this.api.getClientOption(this.localPlayerId, "_shield"),
-          He = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(ee, this.readHealth) && Object.is(ie, this.readShield) && Object.is(He, this.readMaxHealth)) return;
-        if (this.readHealth = ee, this.readShield = ie, this.readMaxHealth = He, null === ee || void 0 === ee || !He) return this.lastHealthPool = null, this.maxHealth = null, this.My = 1, this.dead = !1, void this.drawLow();
-        const ye = ee + (null !== ie && void 0 !== ie ? ie : 0);
-        if (null !== this.lastHealthPool && ye < this.lastHealthPool) {
-          const ee = performance.now(),
-            ie = (this.lastHealthPool - ye) / He;
-          this.lastDrop = ee - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + ie,
-            at: this.lastDrop.at
-          } : {
-            frac: ie,
-            at: ee
-          }
-        }
-        this.dead = ee <= 0, this.dead && this.clearHits(), this.lastHealthPool = ye, this.maxHealth = He, this.My = ee > 0 ? ee / He : 1, this.drawLow()
-      }
-      onHurt(ee, ie) {
-        if (this.syncHealth(), this.dead || !this.enabled) return;
-        const He = Math.min(1, this.takeDamageFrac(ie) / .3);
-        null !== ee && this.showArc(ee, He), this.flashEdge(null === ee ? null : ee - this.cameraHeading, .4 + .6 * He)
-      }
-      takeDamageFrac(ee) {
-        if (void 0 !== ee && this.maxHealth) return ee / this.maxHealth;
-        if (performance.now() - this.lastDrop.at >= 300) return .12;
-        const {
-          frac: ie
-        } = this.lastDrop;
-        return this.lastDrop = {
-          frac: 0,
-          at: -1 / 0
-        }, ie
-      }
-      drawLow() {
-        if (!this.lowLayer) return;
-        const ee = te((ge - this.My) / .25),
-          ie = te((Oe - this.My) / .15000000000000002),
-          He = this.My < ge;
-        this.lowLayer.classList.toggle("Active", He), this.lowLayer.classList.toggle("Critical", this.My < Oe), this.lowLayer.style.opacity = String(He ? .55 + .3 * ee + .15 * ie : 0)
-      }
-      showArc(ee, ie) {
-        var He, ye;
-        if (!this.arcLayer) return;
-        let be = this.arcs.find((ie => We(ie.direction, ee) < .6));
-        if (!be) {
-          const ie = document.createElement("div");
-          ie.className = "FrontlineDamageArc", ie.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(ie), be = {
-            element: ie,
-            direction: ee,
-            drawnAngle: null,
-            fade: null,
-            pop: null
-          }, this.arcs.push(be)
-        }
-        be.direction = ee, this.drawArcAngle(be);
-        const Me = be.fade ? Number(getComputedStyle(be.element).opacity) : 0;
-        null === (He = be.fade) || void 0 === He || He.cancel(), null === (ye = be.pop) || void 0 === ye || ye.cancel(), be.element.style.opacity = "1";
-        const Ke = be.element.animate([{
-          opacity: Me
-        }, {
-          opacity: 1
-        }], 144);
-        be.fade = Ke, be.pop = be.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * ie
-        }, {
-          scale: 1
-        }], {
-          duration: 160,
-          easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
-        });
-        const Ue = be;
-        Ke.onfinish = () => {
-          if (Ue.fade !== Ke) return;
-          const ee = Ue.element.animate([{
-            opacity: 1
-          }, {
-            opacity: 0
-          }], {
-            delay: 936,
-            duration: 864,
-            easing: "cubic-bezier(0.4, 0, 0.7, 1)",
-            fill: "forwards"
-          });
-          ee.startTime = Ke.startTime, Ue.fade = ee, ee.onfinish = () => {
-            Ue.fade === ee && (Ue.element.remove(), Ze(this.arcs, Ue))
-          }
-        }
-      }
-      drawArcAngle(ee) {
-        const ie = ee.direction - this.cameraHeading;
-        (null === ee.drawnAngle || Math.abs(ie - ee.drawnAngle) > .005) && (ee.drawnAngle = ie, ee.element.style.rotate = `${ie}rad`)
-      }
-      flashEdge(ee, ie) {
-        var He, ye, be;
-        if (!this.root) return;
-        let Me = this.flashes.find((ie => null === ie.angle || null === ee ? ie.angle === ee : We(ie.angle, ee) < .5));
-        if (!Me) {
-          const ie = document.createElement("div");
-          ie.className = "FrontlineDamageFlash";
-          const He = ie.appendChild(document.createElement("div"));
-          He.className = "FrontlineDamageFlashGlow", this.root.insertBefore(ie, this.arcLayer), Me = {
-            element: ie,
-            glow: He,
-            angle: ee,
-            level: 0,
-            animation: null
-          }, this.flashes.push(Me)
-        }
-        const Ke = null === (He = Me.animation) || void 0 === He || null === (ye = He.effect) || void 0 === ye ? void 0 : ye.getComputedTiming().progress,
-          Ue = null === Ke || void 0 === Ke ? 0 : Me.level * (1 - Ke);
-        Me.level = Math.min(1, Math.max(ie, Ue + .6 * ie)), Me.angle = ee;
-        const {
-          x: Fe,
-          y: Je,
-          rx: oe,
-          ry: Re
-        } = function(ee, ie) {
-          const He = window.innerWidth,
-            ye = window.innerHeight;
-          if (null === ee) return {
-            x: He / 2,
-            y: ye / 2,
-            rx: 0,
-            ry: 0
-          };
-          const be = Math.sin(ee),
-            Me = -Math.cos(ee),
-            Ke = He / 2 / Math.max(1e-6, Math.abs(be)),
-            Ue = ye / 2 / Math.max(1e-6, Math.abs(Me)),
-            Fe = Math.min(Ke, Ue),
-            Je = Math.round(He / 2 + be * Fe),
-            oe = Math.round(ye / 2 + Me * Fe),
-            Re = ye / 100 * (.85 + .25 * ie),
-            ke = Ke <= Ue,
-            qe = Math.round((ke ? 30 : 74) * Re),
-            fe = Math.round((ke ? 58 : 26) * Re);
-          return {
-            x: Je,
-            y: oe,
-            rx: qe,
-            ry: fe
-          }
-        }(ee, Me.level), {
-          style: ke
-        } = Me.glow;
-        Me.glow.classList.toggle("Everywhere", null === ee), ke.setProperty("--glowX", `${Fe}px`), ke.setProperty("--glowY", `${Je}px`), ke.setProperty("--glowRx", `${oe}px`), ke.setProperty("--glowRy", `${Re}px`), Me.element.style.transformOrigin = `${Fe}px ${Je}px`, null === (be = Me.animation) || void 0 === be || be.cancel();
-        const qe = Me.element.animate([{
-          opacity: 0,
-          scale: .82,
-          easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
-        }, {
-          opacity: Me.level,
-          scale: 1,
-          offset: .12,
-          easing: "linear"
-        }, {
-          opacity: .8 * Me.level,
-          offset: .38,
-          easing: "cubic-bezier(0.4, 0, 0.7, 1)"
-        }, {
-          opacity: 0,
-          scale: .92
-        }], {
-          duration: 520 + 180 * Me.level
-        });
-        Me.animation = qe;
-        const fe = Me;
-        qe.onfinish = () => {
-          fe.animation === qe && (fe.element.remove(), Ze(this.flashes, fe))
-        }
-      }
-      clearHits() {
-        for (const ye of this.arcs) {
-          var ee, ie;
-          null === (ee = ye.fade) || void 0 === ee || ee.cancel(), ye.fade = null, null === (ie = ye.pop) || void 0 === ie || ie.cancel(), ye.element.remove()
-        }
-        this.arcs.length = 0;
-        for (const ye of this.flashes) {
-          var He;
-          null === (He = ye.animation) || void 0 === He || He.cancel(), ye.element.remove()
-        }
-        this.flashes.length = 0
+      setOwnsCrosshair(WW) {
+        WW !== this.ownsCrosshair && (this.ownsCrosshair = WW, document.body.classList.toggle("FrontlineCustomCrosshair", WW))
       }
     }
-
-    function We(ee, ie) {
-      return Math.abs(Math.atan2(Math.sin(ee - ie), Math.cos(ee - ie)))
-    }
-
-    function te(ee) {
-      return Math.max(0, Math.min(1, ee))
-    }
-
-    function Ze(ee, ie) {
-      const He = ee.indexOf(ie); - 1 !== He && ee.splice(He, 1)
-    }
-    var we = He(1053),
-      De = He.n(we),
-      Pe = He(37420),
-      Ae = He(37516),
-      Ye = He(1127),
-      Ve = He(1432),
-      ae = He(40282);
-    const ce = "frontlineHudChanged",
-      xe = "frontlineScoreboardChanged";
-    class Le {
+    var KW = OW(1089),
+      SW = OW.n(KW),
+      YW = OW(37868),
+      yW = OW(37919),
+      TW = OW(1172),
+      JW = OW(1526),
+      hW = OW(37888),
+      HW = OW(40710),
+      nW = OW(40712);
+    const uW = "frontlineHudChanged",
+      oW = "frontlineScoreboardChanged";
+    class dW {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -973,86 +653,85 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      DR(ee) {
-        this.wire = ee, Je.h.yR(ce, ee, !0)
+      yZ(WW) {
+        this.wire = WW, tW.l.iZ(uW, WW, !0)
       }
-      receiveScoreboard(ee) {
-        let ie = "scoreboard" === ee[0] ? performance.now() + ee[5] : 0;
-        const He = this.scoreboard.endsAt;
-        0 !== ie && 0 !== He && Math.abs(ie - He) < 1e3 && (ie = He), this.scoreboard = {
-          wire: ee,
-          endsAt: ie
-        }, Je.h.yR(xe, this.scoreboard, !0)
+      receiveScoreboard(WW) {
+        const iW = "scoreboard" === WW[0] ? (0, nW.e)(WW[5], this.scoreboard.endsAt) : 0;
+        this.scoreboard = {
+          wire: WW,
+          endsAt: iW
+        }, tW.l.iZ(oW, this.scoreboard, !0)
       }
     }
-    var Ce = He(1228);
-    const ve = {
+    var eW = OW(1283);
+    const vW = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function ue(ee) {
+    function gW(WW) {
       let {
-        className: ie,
-        point: He
-      } = ee;
-      const [ye, be, Me, Ke, Ue, Fe] = He;
-      return (0, Ce.jsxs)("div", {
-        className: De()(ie, `Owner-${be||"None"}`, `Leader-${Ke||"None"}`, {
-          Contested: Ue,
-          Here: Fe
+        className: iW,
+        point: OW
+      } = WW;
+      const [mW, EW, NW, PW, LW, cW] = OW;
+      return (0, eW.jsxs)("div", {
+        className: SW()(iW, `Owner-${EW||"None"}`, `Leader-${PW||"None"}`, {
+          Contested: LW,
+          Here: cW
         }),
-        children: [(0, Ce.jsx)("span", {
+        children: [(0, eW.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: ye
-        }), (0, Ce.jsx)("i", {
+          children: mW
+        }), (0, eW.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${Me}%`
+            width: `${NW}%`
           }
         })]
       })
     }
-    const me = (0, be.memo)((function(ee) {
+    const DW = (0, EW.memo)((function(WW) {
         let {
-          points: ie,
-          markers: He
-        } = ee;
+          points: iW,
+          markers: OW
+        } = WW;
         const {
-          t: ye
-        } = (0, Ye.v)();
-        return ie ? (0, Ce.jsx)("div", {
+          t: mW
+        } = (0, TW.B)();
+        return iW ? (0, eW.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: ie.map((ee => {
-            const [ie, , , , , , , be] = ee;
-            return (0, Ce.jsxs)("div", {
-              ref: He.points.bindMarker(ie),
+          children: iW.map((WW => {
+            const [iW, , , , , , , EW] = WW;
+            return (0, eW.jsxs)("div", {
+              ref: OW.points.bindMarker(iW),
               className: "FrontlinePointMarker",
-              children: [(0, Ce.jsx)(ue, {
+              children: [(0, eW.jsx)(gW, {
                 className: "FrontlinePointMarkerTile",
-                point: ee
-              }), (0, Ce.jsxs)("div", {
+                point: WW
+              }), (0, eW.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [be && (0, Ce.jsx)("span", {
-                  className: De()("FrontlinePointMarkerHomeTurf", `Team-${be}`),
-                  children: ye("frontlineHud:homeTurf", {
-                    team: ye(ve[be])
+                children: [EW && (0, eW.jsx)("span", {
+                  className: SW()("FrontlinePointMarkerHomeTurf", `Team-${EW}`),
+                  children: mW("frontlineHud:homeTurf", {
+                    team: mW(vW[EW])
                   })
-                }), (0, Ce.jsx)("span", {
+                }), (0, eW.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, ie)
+            }, iW)
           }))
         }) : null
       })),
-      le = {
+      VW = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      Se = {
+      pW = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -1060,269 +739,252 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function ne(ee) {
+    function fW(WW) {
       let {
-        hud: ie,
-        crosshair: He,
-        damage: ye,
-        markers: be
-      } = ee;
-      const Me = (0, Ve.j)(ce, ie.getWire()),
-        Ke = (0, Ve.j)(xe, ie.getScoreboard());
-      return (0, Ce.jsxs)(Ce.Fragment, {
-        children: [(0, Ce.jsx)(je, {
-          damage: ye
-        }), (0, Ce.jsx)(me, {
-          points: "scoreboard" === Ke.wire[0] ? Ke.wire[6] : null,
-          markers: be
-        }), (0, Ce.jsx)(Ie, {
-          view: Ke
-        }), (0, Ce.jsx)("div", {
+        hud: iW,
+        crosshair: OW,
+        damage: mW,
+        markers: EW
+      } = WW;
+      const NW = (0, JW.g)(uW, iW.getWire()),
+        PW = (0, JW.g)(oW, iW.getScoreboard());
+      return (0, eW.jsxs)(eW.Fragment, {
+        children: [(0, eW.jsx)(HW.e, {
+          controller: mW
+        }), (0, eW.jsx)(DW, {
+          points: "scoreboard" === PW.wire[0] ? PW.wire[6] : null,
+          markers: EW
+        }), (0, eW.jsx)(XW, {
+          view: PW
+        }), (0, eW.jsx)("div", {
           className: "FrontlineReticle",
-          ref: He.bindElement
-        }), (0, Ce.jsx)(Pe.d, {
-          children: (0, Ce.jsx)(se, {
-            wire: Me
+          ref: OW.bindElement
+        }), (0, eW.jsx)(YW.h, {
+          children: (0, eW.jsx)(CW, {
+            wire: NW
           })
         })]
       })
     }
-    const je = (0, be.memo)((function(ee) {
+    const CW = (0, EW.memo)((function(WW) {
         let {
-          damage: ie
-        } = ee;
-        return (0, Ce.jsxs)("div", {
-          className: "FrontlineDamage",
-          ref: ie.bindElement,
-          children: [(0, Ce.jsx)("div", {
-            className: "FrontlineDamageLow",
-            children: (0, Ce.jsx)("div", {
-              className: "FrontlineDamageShade"
-            })
-          }), (0, Ce.jsx)("div", {
-            className: "FrontlineDamageArcs"
-          })]
-        })
-      })),
-      se = (0, be.memo)((function(ee) {
-        let {
-          wire: ie
-        } = ee;
+          wire: iW
+        } = WW;
         const {
-          t: He
-        } = (0, Ye.v)();
-        if ("capture" === ie[0]) {
-          const [, ee, ye, be, Me, Ke, Ue] = ie, Fe = Math.round(be / 100 * 24);
-          return (0, Ce.jsxs)("div", {
-            className: De()("FrontlinePlate", `Status-${ye}`, `Leader-${Me||"None"}`),
-            children: [(0, Ce.jsx)(re, {}), (0, Ce.jsxs)("div", {
+          t: OW
+        } = (0, TW.B)();
+        if ("capture" === iW[0]) {
+          const [, WW, mW, EW, NW, PW, LW] = iW, cW = Math.round(EW / 100 * 24);
+          return (0, eW.jsxs)("div", {
+            className: SW()("FrontlinePlate", `Status-${mW}`, `Leader-${NW||"None"}`),
+            children: [(0, eW.jsx)(GW, {}), (0, eW.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, Ce.jsx)("span", {
+              children: [(0, eW.jsx)("span", {
                 className: "FrontlineObjective",
-                children: ee
-              }), (0, Ce.jsxs)("div", {
+                children: WW
+              }), (0, eW.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, Ce.jsx)("div", {
+                children: [(0, eW.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: He("frontlineHud:objective", {
-                    point: ee,
-                    friendly: Ke,
-                    enemy: Ue
+                  children: OW("frontlineHud:objective", {
+                    point: WW,
+                    friendly: PW,
+                    enemy: LW
                   })
-                }), (0, Ce.jsx)("div", {
+                }), (0, eW.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: He(le[ye])
+                  children: OW(VW[mW])
                 })]
-              }), (0, Ce.jsxs)("span", {
+              }), (0, eW.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(be).padStart(3, "0"), (0, Ce.jsx)("small", {
+                children: [String(EW).padStart(3, "0"), (0, eW.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, Ce.jsx)(Ne, {
+            }), (0, eW.jsx)(qW, {
               segments: 24,
-              lit: Fe
+              lit: cW
             })]
           })
         }
-        if ("alert" === ie[0]) {
-          const [, ee, ye, be] = ie;
-          return (0, Ce.jsxs)("div", {
-            className: De()("FrontlinePlate", "FrontlineAlert", `Tone-${be}`),
-            children: [(0, Ce.jsx)(re, {}), (0, Ce.jsx)("div", {
+        if ("alert" === iW[0]) {
+          const [, WW, mW, EW] = iW;
+          return (0, eW.jsxs)("div", {
+            className: SW()("FrontlinePlate", "FrontlineAlert", `Tone-${EW}`),
+            children: [(0, eW.jsx)(GW, {}), (0, eW.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: He(Se[ee])
-            }), (0, Ce.jsx)("div", {
+              children: OW(pW[WW])
+            }), (0, eW.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: ye
+              children: mW
             })]
           })
         }
         return null
       })),
-      Ie = (0, be.memo)((function(ee) {
+      XW = (0, EW.memo)((function(WW) {
         let {
-          view: ie
-        } = ee;
+          view: iW
+        } = WW;
         const {
-          t: He
-        } = (0, Ye.v)(), ye = (0, be.useRef)(null), Me = function(ee, ie) {
-          const [He, ye] = (0, be.useState)(!1);
-          return (0, be.useLayoutEffect)((() => {
-            const ie = ee.current;
-            if (!ie) return;
-            const He = document.querySelector(`.${Ae.d}`),
-              be = document.querySelector(`.${Ae.g}`),
-              Me = () => {
-                var ee;
-                const Me = ie.querySelector(".FrontlineTeamTrack"),
-                  Ke = (0, Fe.getRemInPx)(),
-                  Ue = ie.getBoundingClientRect().width - 2 * (null !== (ee = null === Me || void 0 === Me ? void 0 : Me.getBoundingClientRect().width) && void 0 !== ee ? ee : 0),
-                  Je = window.innerWidth / 2,
-                  oe = He ? He.getBoundingClientRect().right : 0,
-                  Re = be ? be.getBoundingClientRect().left : window.innerWidth,
-                  ke = Math.min(Je - oe, Re - Je) - Ae.c - Ue / 2,
-                  qe = ke < 6 * Ke,
-                  fe = qe ? (window.innerWidth - Ue) / 2 - Ae.c : ke;
-                ie.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(fe,14*Ke)))}px`), ye(qe)
+          t: OW
+        } = (0, TW.B)(), mW = (0, EW.useRef)(null), NW = function(WW, iW) {
+          const [OW, mW] = (0, EW.useState)(!1);
+          return (0, EW.useLayoutEffect)((() => {
+            const iW = WW.current;
+            if (!iW) return;
+            const OW = document.querySelector(`.${yW.e}`),
+              EW = document.querySelector(`.${yW.h}`),
+              NW = () => {
+                var WW;
+                const NW = iW.querySelector(".FrontlineTeamTrack"),
+                  PW = (0, wW.getRemInPx)(),
+                  LW = iW.getBoundingClientRect().width - 2 * (null !== (WW = null === NW || void 0 === NW ? void 0 : NW.getBoundingClientRect().width) && void 0 !== WW ? WW : 0),
+                  cW = window.innerWidth / 2,
+                  tW = OW ? OW.getBoundingClientRect().right : 0,
+                  ZW = EW ? EW.getBoundingClientRect().left : window.innerWidth,
+                  xW = Math.min(cW - tW, ZW - cW) - yW.b - LW / 2,
+                  lW = xW < 6 * PW,
+                  AW = lW ? (window.innerWidth - LW) / 2 - yW.b : xW;
+                iW.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(AW,14*PW)))}px`), mW(lW)
               };
-            Me();
-            const Ke = new ResizeObserver(Me);
-            for (const ee of [ie, He, be]) ee && Ke.observe(ee);
-            return window.addEventListener("resize", Me), () => {
-              Ke.disconnect(), window.removeEventListener("resize", Me)
+            NW();
+            const PW = new ResizeObserver(NW);
+            for (const WW of [iW, OW, EW]) WW && PW.observe(WW);
+            return window.addEventListener("resize", NW), () => {
+              PW.disconnect(), window.removeEventListener("resize", NW)
             }
-          }), [ee, ie]), He
-        }(ye, "scoreboard" === ie.wire[0]);
-        if ("scoreboard" !== ie.wire[0]) return null;
-        const [, Ke, Ue, Je, oe, , Re] = ie.wire, ke = "Red" === Ke ? "Blue" : "Red";
-        return (0, Ce.jsxs)("div", {
-          className: De()("FrontlineScoreboardContainer", {
-            Below: Me
+          }), [WW, iW]), OW
+        }(mW, "scoreboard" === iW.wire[0]);
+        if ("scoreboard" !== iW.wire[0]) return null;
+        const [, PW, LW, cW, tW, , ZW] = iW.wire, xW = "Red" === PW ? "Blue" : "Red";
+        return (0, eW.jsxs)("div", {
+          className: SW()("FrontlineScoreboardContainer", {
+            Below: NW
           }),
-          children: [(0, Ce.jsxs)("div", {
-            ref: ye,
+          children: [(0, eW.jsxs)("div", {
+            ref: mW,
             className: "FrontlineScoreboard",
-            children: [(0, Ce.jsx)(re, {}), (0, Ce.jsx)(he, {
-              team: Ke,
-              tickets: Ue,
-              goal: oe,
+            children: [(0, eW.jsx)(GW, {}), (0, eW.jsx)(BW, {
+              team: PW,
+              tickets: LW,
+              goal: tW,
               side: "Friendly"
-            }), (0, Ce.jsx)("div", {
+            }), (0, eW.jsx)("div", {
               className: "FrontlinePoints",
-              children: Re.map((ee => (0, Ce.jsx)(ue, {
+              children: ZW.map((WW => (0, eW.jsx)(gW, {
                 className: "FrontlinePoint",
-                point: ee
-              }, ee[0])))
-            }), (0, Ce.jsx)(he, {
-              team: ke,
-              tickets: Je,
-              goal: oe,
+                point: WW
+              }, WW[0])))
+            }), (0, eW.jsx)(BW, {
+              team: xW,
+              tickets: cW,
+              goal: tW,
               side: "Enemy"
             })]
-          }), (0, Ce.jsxs)("div", {
+          }), (0, eW.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, Ce.jsx)(Ge, {
-              endsAt: ie.endsAt
-            }), (0, Ce.jsx)("div", {
+            children: [(0, eW.jsx)(RW, {
+              endsAt: iW.endsAt
+            }), (0, eW.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: He("frontlineHud:ticketGoal", {
-                goal: oe
+              children: OW("frontlineHud:ticketGoal", {
+                goal: tW
               })
             })]
           })]
         })
       }));
 
-    function he(ee) {
+    function BW(WW) {
       let {
-        team: ie,
-        tickets: He,
-        goal: ye,
-        side: be
-      } = ee;
+        team: iW,
+        tickets: OW,
+        goal: mW,
+        side: EW
+      } = WW;
       const {
-        t: Me
-      } = (0, Ye.v)(), Ke = String(He).padStart(3, "0"), Ue = Ke.search(/[1-9]/), Fe = -1 === Ue ? Ke : Ke.slice(0, Ue), Je = Math.min(20, Math.floor(He / ye * 20));
-      return (0, Ce.jsxs)("div", {
-        className: De()("FrontlineTeamScore", be, `Team-${ie}`),
-        children: [(0, Ce.jsxs)("div", {
+        t: NW
+      } = (0, TW.B)(), PW = String(OW).padStart(3, "0"), LW = PW.search(/[1-9]/), cW = -1 === LW ? PW : PW.slice(0, LW), wW = Math.min(20, Math.floor(OW / mW * 20));
+      return (0, eW.jsxs)("div", {
+        className: SW()("FrontlineTeamScore", EW, `Team-${iW}`),
+        children: [(0, eW.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, Ce.jsx)("span", {
+          children: [(0, eW.jsx)("span", {
             className: "Lead",
-            children: Fe
-          }), -1 !== Ue && Ke.slice(Ue)]
-        }), (0, Ce.jsxs)("div", {
+            children: cW
+          }), -1 !== LW && PW.slice(LW)]
+        }), (0, eW.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, Ce.jsx)("div", {
+          children: [(0, eW.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: Me(ve[ie])
-          }), (0, Ce.jsx)(Ne, {
+            children: NW(vW[iW])
+          }), (0, eW.jsx)(qW, {
             segments: 20,
-            lit: Je
+            lit: wW
           })]
         })]
       })
     }
 
-    function Ne(ee) {
+    function qW(WW) {
       let {
-        segments: ie,
-        lit: He
-      } = ee;
-      return (0, Ce.jsx)("div", {
+        segments: iW,
+        lit: OW
+      } = WW;
+      return (0, eW.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: ie
-        }, ((ee, ie) => (0, Ce.jsx)("i", {
-          className: De()({
-            Lit: ie < He
+          length: iW
+        }, ((WW, iW) => (0, eW.jsx)("i", {
+          className: SW()({
+            Lit: iW < OW
           })
-        }, ie)))
+        }, iW)))
       })
     }
 
-    function Ge(ee) {
+    function RW(WW) {
       let {
-        endsAt: ie
-      } = ee;
-      const He = (0, ae.h)(ie);
-      return (0, Ce.jsx)("div", {
-        className: De()("FrontlineClock", {
-          Urgent: He <= 60
+        endsAt: iW
+      } = WW;
+      const OW = (0, hW.f)(iW);
+      return (0, eW.jsx)("div", {
+        className: SW()("FrontlineClock", {
+          Urgent: OW <= 60
         }),
-        children: (0, ae.c)(He)
+        children: (0, hW.d)(OW)
       })
     }
 
-    function re() {
-      return (0, Ce.jsxs)(Ce.Fragment, {
-        children: [(0, Ce.jsx)("i", {
+    function GW() {
+      return (0, eW.jsxs)(eW.Fragment, {
+        children: [(0, eW.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Ce.jsx)("i", {
+        }), (0, eW.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var Qe = He(40287);
-    class ei {
-      constructor(ee) {
-        this.hud = ee, this.points = new Qe.e({
+    var IW = OW(40719);
+    class aW {
+      constructor(WW) {
+        this.hud = WW, this.points = new IW.d({
           labels: "FrontlinePointMarkerLabels",
           distance: "FrontlinePointMarkerDistance"
         }, "frontlineHud:markerDistance")
       }
-      frame(ee, ie) {
-        this.points.setRender(ee);
-        const He = this.hud.getScoreboard().wire;
-        if ("scoreboard" === He[0] && this.points.hasMarkers())
-          for (const [ye, , , , , , be] of He[6]) be && this.points.update(ye, be[0], be[1] + 2.5, be[2], ie)
+      frame(WW, iW) {
+        this.points.setRender(WW);
+        const OW = this.hud.getScoreboard().wire;
+        if ("scoreboard" === OW[0] && this.points.hasMarkers())
+          for (const [mW, , , , , , EW] of OW[6]) EW && this.points.update(mW, EW[0], EW[1] + 2.5, EW[2], iW)
       }
     }
-    var ii = He(7044),
-      Hi = He(2777);
-    const yi = "frontlineRoundEndChanged";
-    class bi {
+    var rW = OW(7421),
+      zW = OW(3637);
+    const FW = "frontlineRoundEndChanged";
+    class QW {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1333,245 +995,522 @@ export const modules = {
       getView() {
         return this.view
       }
-      DR(ee) {
-        const ie = "roundEnd" === ee[0] ? performance.now() + ee[5] : 0;
+      yZ(WW) {
+        const iW = "roundEnd" === WW[0] ? performance.now() + WW[5] : 0;
         this.view = {
-          wire: ee,
+          wire: WW,
           key: this.view.key + 1,
-          endsAt: ie
-        }, Je.h.yR(yi, this.view, !0)
+          endsAt: iW
+        }, tW.l.iZ(FW, this.view, !0)
       }
     }
-    const Mi = (0, be.lazy)((() => (0, Hi.e)(Promise.all([He.e(261), He.e(222)]).then((() => He(44949))), (ee => ee.FrontlineMvpLineup)))),
-      Ki = [4800, 4e3, 3200],
-      Ui = [1, 0, 2],
-      Fi = {
+    var Wi = OW(2983);
+    const ii = (0, EW.lazy)((() => (0, zW.b)(Promise.all([OW.e(266), OW.e(228)]).then((() => OW(53944))), (WW => WW.FrontlineMvpLineup)))),
+      Oi = [4800, 4e3, 3200],
+      mi = [1, 0, 2],
+      Ei = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      Ji = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      Ni = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function oi(ee) {
+    function Pi(WW) {
       let {
-        controller: ie
-      } = ee;
-      const He = (0, Ve.j)(yi, ie.getView()),
-        ye = (0, ae.d)(He.endsAt);
-      return "roundEnd" !== He.wire[0] || 1e3 * ye < -2e3 ? null : (0, Ce.jsx)(Ri, {
-        wire: He.wire,
-        secondsLeft: Math.max(0, Math.ceil(ye))
-      }, He.key)
+        controller: iW
+      } = WW;
+      const OW = (0, JW.g)(FW, iW.getView()),
+        mW = (0, hW.e)(OW.endsAt);
+      return "roundEnd" !== OW.wire[0] || 1e3 * mW < -2e3 ? null : (0, eW.jsx)(Li, {
+        wire: OW.wire,
+        secondsLeft: Math.max(0, Math.ceil(mW))
+      }, OW.key)
     }
-    const Ri = (0, be.memo)((function(ee) {
+    const Li = (0, EW.memo)((function(WW) {
       let {
-        wire: ie,
-        secondsLeft: He
-      } = ee;
+        wire: iW,
+        secondsLeft: OW
+      } = WW;
       const {
-        t: Me
-      } = (0, Ye.v)(), [, Ke, Ue, Fe, Je, , oe, Re] = ie, ke = (0, be.useMemo)((() => Ui.filter((ee => ee < Re.length))), [Re]), qe = (0, be.useMemo)((() => ke.map((ee => {
-        const [, , , , , ie, He] = Re[ee];
+        t: NW
+      } = (0, TW.B)();
+      (0, EW.useEffect)((() => (0, Wi.c)()), []);
+      const [, PW, LW, cW, wW, , tW, ZW] = iW, xW = (0, EW.useMemo)((() => mi.filter((WW => WW < ZW.length))), [ZW]), lW = (0, EW.useMemo)((() => xW.map((WW => {
+        const [, , , , , iW, OW] = ZW[WW];
         return {
-          cosmetics: ye.map(((ee, He) => [ee, ie[He]])),
-          size: 0 === ee ? 1.15 : .85,
+          cosmetics: mW.map(((WW, OW) => [WW, iW[OW]])),
+          size: 0 === WW ? 1.15 : .85,
           heldGun: {
-            name: He,
-            aimed: 0 === ee
+            name: OW,
+            aimed: 0 === WW
           },
-          showAfterMs: Ki[ee]
+          showAfterMs: Oi[WW]
         }
-      }))), [Re, ke]);
-      return (0, Ce.jsxs)("div", {
-        className: De()("FrontlineRoundEnd", `Result-${Ke}`),
+      }))), [ZW, xW]);
+      return (0, eW.jsxs)("div", {
+        className: SW()("FrontlineRoundEnd", `Result-${PW}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, Ce.jsx)("div", {
+        children: [(0, eW.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, Ce.jsxs)("div", {
+        }), (0, eW.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, Ce.jsxs)("div", {
+          children: [(0, eW.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, Ce.jsx)("i", {
+            children: [(0, eW.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, Ce.jsx)("i", {
+            }), (0, eW.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (fe = Me(Fi[Ke]), /\p{Script=Arabic}/u.test(fe) ? [fe] : (0, ii.c)(fe)).map(((ee, ie) => (0, Ce.jsx)("span", {
+            }), (AW = NW(Ei[PW]), /\p{Script=Arabic}/u.test(AW) ? [AW] : (0, rW.c)(AW)).map(((WW, iW) => (0, eW.jsx)("span", {
               style: {
-                "--letter": ie
+                "--letter": iW
               },
-              children: ee
-            }, ie)))]
-          }), (0, Ce.jsxs)("div", {
+              children: WW
+            }, iW)))]
+          }), (0, eW.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [Ue && "victory" === Ke && (0, Ce.jsx)("span", {
+            children: [LW && "victory" === PW && (0, eW.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: Me("frontlineRoundEnd:comeback")
-            }), (0, Ce.jsxs)("span", {
+              children: NW("frontlineRoundEnd:comeback")
+            }), (0, eW.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, Ce.jsx)("b", {
+              children: [(0, eW.jsx)("b", {
                 className: "Friendly",
-                children: Fe
-              }), " \u2013 ", (0, Ce.jsx)("b", {
+                children: cW
+              }), " \u2013 ", (0, eW.jsx)("b", {
                 className: "Enemy",
-                children: Je
+                children: wW
               })]
             })]
           })]
-        }), ke.length > 0 && (0, Ce.jsxs)("div", {
+        }), xW.length > 0 && (0, eW.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": ke.length
+            "--columns": xW.length
           },
-          children: [(0, Ce.jsx)(be.Suspense, {
+          children: [(0, eW.jsx)(EW.Suspense, {
             fallback: null,
-            children: (0, Ce.jsx)(Mi, {
+            children: (0, eW.jsx)(ii, {
               className: "FrontlineRoundEndLineup",
-              players: qe
+              players: lW
             })
-          }), ke.map((ee => (0, Ce.jsx)(ki, {
-            mvp: Re[ee],
-            place: ee
-          }, ee)))]
-        }), (0, Ce.jsx)("div", {
+          }), xW.map((WW => (0, eW.jsx)(ci, {
+            mvp: ZW[WW],
+            place: WW
+          }, WW)))]
+        }), (0, eW.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: Me("frontlineRoundEnd:nextFront", {
-            map: oe,
-            seconds: String(He)
+          children: NW("frontlineRoundEnd:nextFront", {
+            map: tW,
+            seconds: String(OW)
           })
         })]
       });
-      var fe
+      var AW
     }));
 
-    function ki(ee) {
+    function ci(WW) {
       let {
-        mvp: ie,
-        place: He
-      } = ee;
+        mvp: iW,
+        place: OW
+      } = WW;
       const {
-        t: ye
-      } = (0, Ye.v)(), [be, Me, Ke, Ue, Fe] = ie, [Je, oe] = ye(function(ee, ie) {
-        return 1 === ie && "damage" !== ee ? `frontlineRoundEnd:${ee}One` : `frontlineRoundEnd:${ee}`
-      }(Ke, Ue), {
+        t: mW
+      } = (0, TW.B)(), [EW, NW, PW, LW, cW] = iW, [wW, tW] = mW(function(WW, iW) {
+        return 1 === iW && "damage" !== WW ? `frontlineRoundEnd:${WW}One` : `frontlineRoundEnd:${WW}`
+      }(PW, LW), {
         name: "\0",
-        count: Ue.toLocaleString()
+        count: LW.toLocaleString()
       }).split("\0");
-      return (0, Ce.jsxs)("div", {
-        className: De()("FrontlineMvpCard", `Place-${He+1}`, `Team-${Me}`),
+      return (0, eW.jsxs)("div", {
+        className: SW()("FrontlineMvpCard", `Place-${OW+1}`, `Team-${NW}`),
         style: {
-          "--revealMs": `${Ki[He]}ms`
+          "--revealMs": `${Oi[OW]}ms`
         },
-        children: [(0, Ce.jsx)("i", {
+        children: [(0, eW.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Ce.jsx)("i", {
+        }), (0, eW.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, Ce.jsx)("div", {
+        }), (0, eW.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: ye(Ji[He])
-        }), (0, Ce.jsxs)("div", {
+          children: mW(Ni[OW])
+        }), (0, eW.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [Je, (0, Ce.jsx)("span", {
+          children: [wW, (0, eW.jsx)("span", {
             className: "FrontlineMvpName",
-            children: be
-          }), oe]
-        }), (0, Ce.jsx)("div", {
+            children: EW
+          }), tW]
+        }), (0, eW.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: Fe
+          children: cW
         })]
       })
     }
-    const qi = function(ee, ie, He, ye) {
+    const wi = function(WW, iW, OW, mW) {
       let {
-        localPlayerId: Ke
-      } = ye;
-      const Ue = new Le,
-        Fe = new bi;
-      let Je = null,
-        oe = null,
-        Re = null,
-        ke = null,
-        qe = null,
-        fe = [!1, !1];
-      const Te = () => {
-        var ee, ie;
-        const [He, ye] = fe;
-        null === (ee = oe) || void 0 === ee || ee.JY(!He), null === (ie = Re) || void 0 === ie || ie.JY(!ye)
+        localPlayerId: LW
+      } = mW;
+      const cW = new dW,
+        wW = new QW;
+      let tW = null,
+        ZW = null,
+        xW = null,
+        lW = null,
+        AW = null,
+        bW = [!1, !1];
+      const jW = () => {
+        var WW, iW;
+        const [OW, mW] = bW;
+        null === (WW = ZW) || void 0 === WW || WW.WK(!OW), null === (iW = xW) || void 0 === iW || iW.WK(!mW)
       };
       return {
-        onCreate: ee => {
-          Je = ee, oe = new Be(ee, Ke), Re = new de(ee, Ke), ke = new ei(Ue), Te(), qe = (0, Me.z)((0, be.createElement)(be.Fragment, null, (0, be.createElement)(ne, {
-            hud: Ue,
-            crosshair: oe,
-            damage: Re,
-            markers: ke
-          }), (0, be.createElement)(oi, {
-            controller: Fe
+        onCreate: WW => {
+          tW = WW, ZW = new MW(WW, LW), xW = new PW.d(WW, LW), lW = new aW(cW), jW(), AW = (0, NW.O)((0, EW.createElement)(EW.Fragment, null, (0, EW.createElement)(fW, {
+            hud: cW,
+            crosshair: ZW,
+            damage: xW,
+            markers: lW
+          }), (0, EW.createElement)(Pi, {
+            controller: wW
           })))
         },
         onClose: () => {
-          var ee, ie, He, ye;
-          null === (ee = qe) || void 0 === ee || ee(), null === (ie = oe) || void 0 === ie || ie.dispose(), oe = null, null === (He = Re) || void 0 === He || He.dispose(), Re = null, null === (ye = ke) || void 0 === ye || ye.points.dispose(), ke = null, Je = null
+          var WW, iW, OW, mW;
+          null === (WW = AW) || void 0 === WW || WW(), null === (iW = ZW) || void 0 === iW || iW.dispose(), ZW = null, null === (OW = xW) || void 0 === OW || OW.dispose(), xW = null, null === (mW = lW) || void 0 === mW || mW.points.dispose(), lW = null, tW = null
         },
-        onAfterRender: (ee, ie) => {
-          var He, ye, be, Me, Ue;
-          null === (He = oe) || void 0 === He || He.frame(ee, ie.tanHalfFovY), null === (ye = Re) || void 0 === ye || ye.frame(ie.cameraHeading), null === (be = ke) || void 0 === be || be.frame(ie, null !== (Me = null === (Ue = Je) || void 0 === Ue ? void 0 : Ue.getPositionView(Ke)) && void 0 !== Me ? Me : null)
+        onAfterRender: (WW, iW) => {
+          var OW, mW, EW, NW, PW;
+          null === (OW = ZW) || void 0 === OW || OW.frame(WW, iW.tanHalfFovY), null === (mW = xW) || void 0 === mW || mW.frame(iW.cameraHeading), null === (EW = lW) || void 0 === EW || EW.frame(iW, null !== (NW = null === (PW = tW) || void 0 === PW ? void 0 : PW.getPositionView(LW)) && void 0 !== NW ? NW : null)
         },
-        onReceivedMessageFromServer: (ee, ie) => {
-          "frontlineHud" === ee ? Ue.DR(ie) : "frontlineScoreboard" === ee ? Ue.receiveScoreboard(ie) : "frontlineRoundEnd" === ee ? Fe.DR(ie) : "frontlinePrefs" === ee && (fe = ie, Te())
+        onReceivedMessageFromServer: (WW, iW) => {
+          "frontlineHud" === WW ? cW.yZ(iW) : "frontlineScoreboard" === WW ? cW.receiveScoreboard(iW) : "frontlineRoundEnd" === WW ? wW.yZ(iW) : "frontlinePrefs" === WW && (bW = iW, jW())
         }
       }
     }
   },
-  7044: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => be
+  40710: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => NW
     });
-    const ye = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    var mW = OW(62),
+      EW = OW(1283);
+    const NW = (0, mW.memo)((function(WW) {
+      let {
+        controller: iW
+      } = WW;
+      return (0, EW.jsxs)("div", {
+        className: "DamageFeedback",
+        ref: iW.bindElement,
+        children: [(0, EW.jsx)("div", {
+          className: "DamageFeedbackLow",
+          children: (0, EW.jsx)("div", {
+            className: "DamageFeedbackShade"
+          })
+        }), (0, EW.jsx)("div", {
+          className: "DamageFeedbackArcs"
+        })]
+      })
+    }))
+  },
+  40706: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW
+    });
+    var mW = OW(27);
+    const EW = "DamageFeedbackArcsShown",
+      NW = .45,
+      PW = .2;
+    class LW {
+      constructor(WW, iW) {
+        let {
+          arcs: OW = !0,
+          edgeGlow: EW = !0,
+          lowHealthShade: NW = !0,
+          enabled: PW = !0
+        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.api = WW, this.localPlayerId = iW, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+          frac: 0,
+          at: -1 / 0
+        }, this.maxHealth = null, this.DE = 1, this.dead = !1, this.enabled = void 0, this.parts = void 0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = WW => {
+          var iW, OW;
+          this.clearHits(), this.root = WW, this.lowLayer = null !== (iW = null === WW || void 0 === WW ? void 0 : WW.querySelector(".DamageFeedbackLow")) && void 0 !== iW ? iW : null, this.arcLayer = null !== (OW = null === WW || void 0 === WW ? void 0 : WW.querySelector(".DamageFeedbackArcs")) && void 0 !== OW ? OW : null, this.showRoot(), this.drawLow()
+        }, this.parts = {
+          arcs: OW,
+          edgeGlow: EW,
+          lowHealthShade: NW
+        }, this.enabled = PW, this.token = mW.l.subscribe("damagedByOtherPlayer", (WW => {
+          let {
+            direction: iW,
+            vE: OW
+          } = WW;
+          this.onHurt(iW, OW)
+        })), this.syncHealth(), this.showCustomDamage()
+      }
+      WK(WW) {
+        WW !== this.enabled && (this.enabled = WW, this.showCustomDamage(), WW || this.clearHits(), this.showRoot())
+      }
+      frame(WW) {
+        this.syncHealth(), this.cameraHeading = WW;
+        for (const iW of this.arcs) this.drawArcAngle(iW)
+      }
+      dispose() {
+        mW.l.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(EW)
+      }
+      showCustomDamage() {
+        document.body.classList.toggle(EW, this.enabled && this.parts.arcs)
+      }
+      showRoot() {
+        this.root && (this.root.style.display = this.enabled ? "" : "none")
+      }
+      syncHealth() {
+        const WW = this.api.getClientOption(this.localPlayerId, "_health"),
+          iW = this.api.getClientOption(this.localPlayerId, "_shield"),
+          OW = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(WW, this.readHealth) && Object.is(iW, this.readShield) && Object.is(OW, this.readMaxHealth)) return;
+        if (this.readHealth = WW, this.readShield = iW, this.readMaxHealth = OW, null === WW || void 0 === WW || !OW) return this.lastHealthPool = null, this.maxHealth = null, this.DE = 1, this.dead = !1, void this.drawLow();
+        const mW = WW + (null !== iW && void 0 !== iW ? iW : 0);
+        if (null !== this.lastHealthPool && mW < this.lastHealthPool) {
+          const WW = performance.now(),
+            iW = (this.lastHealthPool - mW) / OW;
+          this.lastDrop = WW - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + iW,
+            at: this.lastDrop.at
+          } : {
+            frac: iW,
+            at: WW
+          }
+        }
+        this.dead = WW <= 0, this.dead && this.clearHits(), this.lastHealthPool = mW, this.maxHealth = OW, this.DE = WW > 0 ? WW / OW : 1, this.drawLow()
+      }
+      onHurt(WW, iW) {
+        if (this.syncHealth(), this.dead || !this.enabled) return;
+        const OW = Math.min(1, this.takeDamageFrac(iW) / .3);
+        null !== WW && this.parts.arcs && this.showArc(WW, OW), this.parts.edgeGlow && this.flashEdge(null === WW ? null : WW - this.cameraHeading, .4 + .6 * OW)
+      }
+      takeDamageFrac(WW) {
+        if (void 0 !== WW && this.maxHealth) return WW / this.maxHealth;
+        if (performance.now() - this.lastDrop.at >= 300) return .12;
+        const {
+          frac: iW
+        } = this.lastDrop;
+        return this.lastDrop = {
+          frac: 0,
+          at: -1 / 0
+        }, iW
+      }
+      drawLow() {
+        if (!this.lowLayer || !this.parts.lowHealthShade) return;
+        const WW = wW((NW - this.DE) / .25),
+          iW = wW((PW - this.DE) / .15000000000000002),
+          OW = this.DE < NW;
+        this.lowLayer.classList.toggle("Active", OW), this.lowLayer.classList.toggle("Critical", this.DE < PW), this.lowLayer.style.opacity = String(OW ? .55 + .3 * WW + .15 * iW : 0)
+      }
+      showArc(WW, iW) {
+        var OW, mW;
+        if (!this.arcLayer) return;
+        let EW = this.arcs.find((iW => cW(iW.direction, WW) < .6));
+        if (!EW) {
+          const iW = document.createElement("div");
+          iW.className = "DamageFeedbackArc", iW.appendChild(document.createElement("div")).className = "DamageFeedbackArcBand", this.arcLayer.appendChild(iW), EW = {
+            element: iW,
+            direction: WW,
+            drawnAngle: null,
+            fade: null,
+            pop: null
+          }, this.arcs.push(EW)
+        }
+        EW.direction = WW, this.drawArcAngle(EW);
+        const NW = EW.fade ? Number(getComputedStyle(EW.element).opacity) : 0;
+        null === (OW = EW.fade) || void 0 === OW || OW.cancel(), null === (mW = EW.pop) || void 0 === mW || mW.cancel(), EW.element.style.opacity = "1";
+        const PW = EW.element.animate([{
+          opacity: NW
+        }, {
+          opacity: 1
+        }], 144);
+        EW.fade = PW, EW.pop = EW.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * iW
+        }, {
+          scale: 1
+        }], {
+          duration: 160,
+          easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
+        });
+        const LW = EW;
+        PW.onfinish = () => {
+          if (LW.fade !== PW) return;
+          const WW = LW.element.animate([{
+            opacity: 1
+          }, {
+            opacity: 0
+          }], {
+            delay: 936,
+            duration: 864,
+            easing: "cubic-bezier(0.4, 0, 0.7, 1)",
+            fill: "forwards"
+          });
+          WW.startTime = PW.startTime, LW.fade = WW, WW.onfinish = () => {
+            LW.fade === WW && (LW.element.remove(), tW(this.arcs, LW))
+          }
+        }
+      }
+      drawArcAngle(WW) {
+        const iW = WW.direction - this.cameraHeading;
+        (null === WW.drawnAngle || Math.abs(iW - WW.drawnAngle) > .005) && (WW.drawnAngle = iW, WW.element.style.rotate = `${iW}rad`)
+      }
+      flashEdge(WW, iW) {
+        var OW, mW, EW;
+        if (!this.root) return;
+        let NW = this.flashes.find((iW => null === iW.angle || null === WW ? iW.angle === WW : cW(iW.angle, WW) < .5));
+        if (!NW) {
+          const iW = document.createElement("div");
+          iW.className = "DamageFeedbackFlash";
+          const OW = iW.appendChild(document.createElement("div"));
+          OW.className = "DamageFeedbackFlashGlow", this.root.insertBefore(iW, this.arcLayer), NW = {
+            element: iW,
+            glow: OW,
+            angle: WW,
+            level: 0,
+            animation: null
+          }, this.flashes.push(NW)
+        }
+        const PW = null === (OW = NW.animation) || void 0 === OW || null === (mW = OW.effect) || void 0 === mW ? void 0 : mW.getComputedTiming().progress,
+          LW = null === PW || void 0 === PW ? 0 : NW.level * (1 - PW);
+        NW.level = Math.min(1, Math.max(iW, LW + .6 * iW)), NW.angle = WW;
+        const {
+          x: wW,
+          y: ZW,
+          rx: xW,
+          ry: lW
+        } = function(WW, iW) {
+          const OW = window.innerWidth,
+            mW = window.innerHeight;
+          if (null === WW) return {
+            x: OW / 2,
+            y: mW / 2,
+            rx: 0,
+            ry: 0
+          };
+          const EW = Math.sin(WW),
+            NW = -Math.cos(WW),
+            PW = OW / 2 / Math.max(1e-6, Math.abs(EW)),
+            LW = mW / 2 / Math.max(1e-6, Math.abs(NW)),
+            cW = Math.min(PW, LW),
+            wW = Math.round(OW / 2 + EW * cW),
+            tW = Math.round(mW / 2 + NW * cW),
+            ZW = mW / 100 * (.85 + .25 * iW),
+            xW = PW <= LW,
+            lW = Math.round((xW ? 30 : 74) * ZW),
+            AW = Math.round((xW ? 58 : 26) * ZW);
+          return {
+            x: wW,
+            y: tW,
+            rx: lW,
+            ry: AW
+          }
+        }(WW, NW.level), {
+          style: AW
+        } = NW.glow;
+        NW.glow.classList.toggle("Everywhere", null === WW), AW.setProperty("--glowX", `${wW}px`), AW.setProperty("--glowY", `${ZW}px`), AW.setProperty("--glowRx", `${xW}px`), AW.setProperty("--glowRy", `${lW}px`), NW.element.style.transformOrigin = `${wW}px ${ZW}px`, null === (EW = NW.animation) || void 0 === EW || EW.cancel();
+        const bW = NW.element.animate([{
+          opacity: 0,
+          scale: .82,
+          easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
+        }, {
+          opacity: NW.level,
+          scale: 1,
+          offset: .12,
+          easing: "linear"
+        }, {
+          opacity: .8 * NW.level,
+          offset: .38,
+          easing: "cubic-bezier(0.4, 0, 0.7, 1)"
+        }, {
+          opacity: 0,
+          scale: .92
+        }], {
+          duration: 520 + 180 * NW.level
+        });
+        NW.animation = bW;
+        const jW = NW;
+        bW.onfinish = () => {
+          jW.animation === bW && (jW.element.remove(), tW(this.flashes, jW))
+        }
+      }
+      clearHits() {
+        for (const mW of this.arcs) {
+          var WW, iW;
+          null === (WW = mW.fade) || void 0 === WW || WW.cancel(), mW.fade = null, null === (iW = mW.pop) || void 0 === iW || iW.cancel(), mW.element.remove()
+        }
+        this.arcs.length = 0;
+        for (const mW of this.flashes) {
+          var OW;
+          null === (OW = mW.animation) || void 0 === OW || OW.cancel(), mW.element.remove()
+        }
+        this.flashes.length = 0
+      }
+    }
+
+    function cW(WW, iW) {
+      return Math.abs(Math.atan2(Math.sin(WW - iW), Math.cos(WW - iW)))
+    }
+
+    function wW(WW) {
+      return Math.max(0, Math.min(1, WW))
+    }
+
+    function tW(WW, iW) {
+      const OW = WW.indexOf(iW); - 1 !== OW && WW.splice(OW, 1)
+    }
+  },
+  7421: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => EW
+    });
+    const mW = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function be(ee) {
-      return null === ye ? Array.from(ee) : Array.from(ye.segment(ee), (ee => {
+    function EW(WW) {
+      return null === mW ? Array.from(WW) : Array.from(mW.segment(WW), (WW => {
         let {
-          segment: ie
-        } = ee;
-        return ie
+          segment: iW
+        } = WW;
+        return iW
       }))
     }
   },
-  39291: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke,
-      g: () => Me
+  39679: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => PW,
+      h: () => NW
     });
-    const ye = new WeakMap;
+    const mW = new WeakMap;
 
-    function be(ee) {
-      let ie = ye.get(ee);
-      return ie || (ie = {
-        hidden: ee.hidden,
+    function EW(WW) {
+      let iW = mW.get(WW);
+      return iW || (iW = {
+        hidden: WW.hidden,
         x: NaN,
         y: NaN
-      }, ye.set(ee, ie)), ie
+      }, mW.set(WW, iW)), iW
     }
 
-    function Me(ee, ie) {
-      const He = be(ee);
-      He.hidden !== ie && (He.hidden = ie, ee.hidden = ie)
+    function NW(WW, iW) {
+      const OW = EW(WW);
+      OW.hidden !== iW && (OW.hidden = iW, WW.hidden = iW)
     }
 
-    function Ke(ee, ie, He) {
-      const ye = be(ee);
-      ye.x === ie && ye.y === He || (ye.x = ie, ye.y = He, ee.style.translate = `${ie}vw ${He}vh`)
+    function PW(WW, iW, OW) {
+      const mW = EW(WW);
+      mW.x === iW && mW.y === OW || (mW.x = iW, mW.y = OW, WW.style.translate = `${iW}vw ${OW}vh`)
     }
   },
-  37893: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => ye
+  38214: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => mW
     });
-    const ye = {
+    const mW = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1733,4 +1672,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

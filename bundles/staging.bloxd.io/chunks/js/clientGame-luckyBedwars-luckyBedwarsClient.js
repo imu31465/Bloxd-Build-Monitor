@@ -1,285 +1,136 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  37420: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => pe,
-      d: () => Xe,
-      h: () => ke,
-      j: () => Re
+  37868: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => jW,
+      h: () => UW,
+      l: () => xW,
+      o: () => ZW
     });
-    var ye = He(34867),
-      be = He(37424),
-      Me = He(37427),
-      Ke = He(9446),
-      Ue = He(1432),
-      Fe = He(59),
-      Je = He(77),
-      oe = He(1228);
+    var mW = OW(35220),
+      EW = OW(3361),
+      NW = OW(3368),
+      PW = OW(9954),
+      LW = OW(1526),
+      cW = OW(62),
+      wW = OW(80),
+      tW = OW(1283);
 
-    function Re() {
-      var ee;
-      return (0, Ue.j)(be.b, (0, be.p)()), (0, oe.jsx)(oe.Fragment, {
-        children: null === (ee = (0, be.p)()) || void 0 === ee ? void 0 : ee.content
+    function ZW() {
+      var WW;
+      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
+        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
       })
     }
 
-    function ke(ee) {
-      var ie;
+    function xW(WW) {
+      var iW;
       let {
-        show: He
-      } = ee;
-      (0, Ue.j)(be.b, (0, be.p)());
-      const Je = null === (ie = (0, be.p)()) || void 0 === ie ? void 0 : ie.menu;
-      return (0, Fe.useEffect)((() => {
-        var ee;
-        He || (null === Je || void 0 === Je || null === (ee = Je.onClose) || void 0 === ee || ee.call(Je), (0, Me.l)())
-      }), [He, Je]), (0, Fe.useEffect)((() => He ? (0, Ke.g)(Me.r, Me.e) : void 0), [He]), (0, oe.jsx)(ye.e, {
-        showing: He,
+        show: OW
+      } = WW;
+      (0, LW.g)(EW.g, (0, EW.F)());
+      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
+      return (0, cW.useEffect)((() => {
+        var WW;
+        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
+      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
+        showing: OW,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Je || void 0 === Je ? void 0 : Je.content
+        children: null === wW || void 0 === wW ? void 0 : wW.content
       })
     }
-    const qe = new Map,
-      fe = new Set;
+    const lW = new Map,
+      AW = new Set;
 
-    function Te(ee, ie) {
-      ie ? qe.set(ee, ie) : qe.delete(ee);
-      for (const He of fe) He()
+    function bW(WW, iW) {
+      iW ? lW.set(WW, iW) : lW.delete(WW);
+      for (const OW of AW) OW()
     }
 
-    function pe(ee) {
+    function jW(WW) {
       let {
-        placement: ie = "bottom"
-      } = ee;
-      const He = (0, Fe.useRef)(null);
-      return (0, Fe.useLayoutEffect)((() => {
-        const ee = He.current;
-        return Te(ie, ee), () => {
-          qe.get(ie) === ee && Te(ie, null)
+        placement: iW = "bottom"
+      } = WW;
+      const OW = (0, cW.useRef)(null);
+      return (0, cW.useLayoutEffect)((() => {
+        const WW = OW.current;
+        return bW(iW, WW), () => {
+          lW.get(iW) === WW && bW(iW, null)
         }
-      }), [ie]), (0, oe.jsx)("div", {
-        ref: He,
-        id: `clientGameHud-${ie}`,
+      }), [iW]), (0, tW.jsx)("div", {
+        ref: OW,
+        id: `clientGameHud-${iW}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Xe(ee) {
+    function UW(WW) {
       let {
-        children: ie,
-        placement: He = "bottom"
-      } = ee;
-      const [ye, be] = (0, Fe.useState)((() => {
-        var ee;
-        return null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null
+        children: iW,
+        placement: OW = "bottom"
+      } = WW;
+      const [mW, EW] = (0, cW.useState)((() => {
+        var WW;
+        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
       }));
-      return (0, Fe.useEffect)((() => {
-        const ee = () => {
-          var ee;
-          be(null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null)
+      return (0, cW.useEffect)((() => {
+        const WW = () => {
+          var WW;
+          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
         };
-        return fe.add(ee), ee(), () => {
-          fe.delete(ee)
+        return AW.add(WW), WW(), () => {
+          AW.delete(WW)
         }
-      }), [He]), ye ? (0, Je.createPortal)(ie, ye) : null
+      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
     }
   },
-  34867: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me
+  35220: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
     });
-    var ye = He(4931),
-      be = He(4937);
+    var mW = OW(5243),
+      EW = OW(5251);
 
-    function Me(ee) {
+    function NW(WW) {
       let {
-        children: ie,
-        showing: He,
-        globallyUniqueKey: Me,
-        alwaysMountChildren: Ke = !1,
-        doGameplayStartStopOnShow: Ue = !0,
-        keepsMovement: Fe = !1
-      } = ee;
-      return (0, be.e)(!0, He, Me, Fe), (0, ye.c)(Ue, He), He || Ke ? ie : null
+        children: iW,
+        showing: OW,
+        globallyUniqueKey: NW,
+        alwaysMountChildren: PW = !1,
+        doGameplayStartStopOnShow: LW = !0,
+        keepsMovement: cW = !1
+      } = WW;
+      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
     }
   },
-  9446: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Me,
-      g: () => be
+  9954: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => EW
     });
-    let ye = null;
-    const be = function(ee) {
-        const ie = {
-          cycle: ee,
+    let mW = null;
+    const EW = function(WW) {
+        const iW = {
+          cycle: WW,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return ye = ie, () => {
-          ye === ie && (ye = null)
+        return mW = iW, () => {
+          mW === iW && (mW = null)
         }
       },
-      Me = () => {
-        var ee;
-        return null !== (ee = ye) && void 0 !== ee && ee.canCycle() ? ye.cycle : null
+      NW = () => {
+        var WW;
+        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
       }
   },
-  37427: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Me,
-      e: () => Te,
-      f: () => pe,
-      h: () => Ue,
-      j: () => ke,
-      l: () => Xe,
-      n: () => Re,
-      p: () => Be,
-      r: () => fe,
-      u: () => ze
+  40771: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => QW
     });
-    var ye = He(18),
-      be = He(27);
-    const Me = "clientGameInventoryButtonsChanged",
-      Ke = new Map;
-
-    function Ue() {
-      return [...Ke.values()].sort(((ee, ie) => {
-        var He, ye;
-        return (null !== (He = ee.order) && void 0 !== He ? He : 0) - (null !== (ye = ie.order) && void 0 !== ye ? ye : 0)
-      }))
-    }
-    let Fe = null;
-
-    function Je(ee) {
-      Fe = ee
-    }
-    let oe = !1;
-
-    function Re(ee) {
-      oe = !0;
-      try {
-        ee.onClick()
-      } finally {
-        oe = !1
-      }
-      ee.panel && "clientGame" === ye.e.get("openInGameMenuName") && Je(ee.id)
-    }
-
-    function ke() {
-      return oe
-    }
-
-    function qe() {
-      return Ue().filter((ee => ee.panel && !ee.disabled))
-    }
-
-    function fe(ee) {
-      const ie = qe(),
-        He = ie.findIndex((ee => ee.id === Fe));
-      return !(He < 0 || ie.length < 2) && (Re(ie[(He + ee + ie.length) % ie.length]), !0)
-    }
-
-    function Te() {
-      return null !== Fe && qe().length > 1
-    }
-
-    function pe() {
-      Je(null)
-    }
-
-    function Xe() {
-      "inventory" !== ye.e.get("openInGameMenuName") && Je(null)
-    }
-
-    function ze() {
-      const ee = Fe;
-      return Je(null), ee
-    }
-
-    function Be(ee) {
-      return Ke.set(ee.id, ee), be.h.yR(Me, Ue(), !0), () => {
-        Ke.get(ee.id) === ee && (Ke.delete(ee.id), be.h.yR(Me, Ue()))
-      }
-    }
-  },
-  37424: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ue,
-      d: () => ze,
-      h: () => pe,
-      l: () => Xe,
-      m: () => ke,
-      p: () => Je,
-      s: () => Te,
-      v: () => qe,
-      z: () => oe
-    });
-    var ye = He(18),
-      be = He(27),
-      Me = He(1246),
-      Ke = He(37427);
-    const Ue = "clientGameUiChanged";
-    let Fe = null;
-
-    function Je() {
-      return Fe
-    }
-
-    function oe(ee, ie) {
-      const He = {
-        content: ee,
-        menu: ie
-      };
-      return Fe = He, be.h.yR(Ue, Fe, !0), () => {
-        Fe === He && (Fe = null, fe = !1, pe(), be.h.yR(Ue, null))
-      }
-    }
-    let Re = null;
-
-    function ke() {
-      return Re
-    }
-
-    function qe(ee) {
-      return Re = ee, () => {
-        Re === ee && (Re = null)
-      }
-    }
-    let fe = !1;
-
-    function Te() {
-      const ee = ye.e.get("openInGameMenuName");
-      "clientGame" !== ee && (fe = "inventory" === ee), (0, Ke.j)() || (0, Ke.f)(), (0, Me.w)(Me.c), ye.e.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function pe() {
-      Be(!1)
-    }
-
-    function Xe() {
-      Be(fe)
-    }
-
-    function ze() {
-      fe && Be(!1)
-    }
-
-    function Be(ee) {
-      "clientGame" === ye.e.get("openInGameMenuName") && ye.e.set({
-        openInGameMenuName: ee ? "inventory" : null
-      }), ee || (0, Ke.f)(), fe = !1
-    }
-  },
-  40330: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      default: () => Qe
-    });
-    const ye = {
+    const mW = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -289,270 +140,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var be = He(59),
-      Me = He(38876),
-      Ke = He(347);
-    const Ue = ["Basic", "Rare", "Super"];
+    var EW = OW(62),
+      NW = OW(39220),
+      PW = OW(344);
+    const LW = ["Basic", "Rare", "Super"];
 
-    function Fe(ee, ie) {
-      return `${"Basic"===ie?"":`${ie} `}${"Simple"===ee?"":`${ee} `}Lucky Block`
+    function cW(WW, iW) {
+      return `${"Basic"===iW?"":`${iW} `}${"Simple"===WW?"":`${WW} `}Lucky Block`
     }
-    const Je = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((ee => Ue.map((ie => [Fe(ee, ie), {
-      category: ee,
-      rarity: ie
+    const wW = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((WW => LW.map((iW => [cW(WW, iW), {
+      category: WW,
+      rarity: iW
     }])))));
-    Je.keys();
+    wW.keys();
 
-    function oe(ee) {
-      return Je.get(ee)
+    function tW(WW) {
+      return wW.get(WW)
     }
-    const Re = "Obsidian",
-      ke = ["Cobweb"],
-      qe = [...["Red", "Blue", "Green", "Yellow"].map((ee => `${(0,Ke.ab)(ee)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", Re, ...ke];
+    const ZW = "Obsidian",
+      xW = ["Cobweb"],
+      lW = [...["Red", "Blue", "Green", "Yellow"].map((WW => `${(0,PW.Z)(WW)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", ZW, ...xW];
 
-    function fe(ee) {
-      return qe.includes(ee)
+    function AW(WW) {
+      return lW.includes(WW)
     }
-    var Te = He(610);
+    var bW = OW(643);
 
-    function pe(ee, ie) {
-      const He = oe(ee);
-      if (He) {
-        const ee = oe(ie);
-        if (!ee) return;
-        const ye = Ue.length - 1 - Ue.indexOf(ee.rarity);
-        return (ee.category === He.category ? 0 : 1) * Ue.length + ye
+    function jW(WW, iW) {
+      const OW = tW(WW);
+      if (OW) {
+        const WW = tW(iW);
+        if (!WW) return;
+        const mW = LW.length - 1 - LW.indexOf(WW.rarity);
+        return (WW.category === OW.category ? 0 : 1) * LW.length + mW
       }
-      if (!fe(ee)) return;
-      if (ie === ee) return 0;
-      const ye = ee => fe(ee) && !ke.includes(ee) && ee !== Re;
-      return ye(ee) && ye(ie) ? 1 : void 0
+      if (!AW(WW)) return;
+      if (iW === WW) return 0;
+      const mW = WW => AW(WW) && !xW.includes(WW) && WW !== ZW;
+      return mW(WW) && mW(iW) ? 1 : void 0
     }
-    const Xe = [...Array.from({
-      length: Te.u - Te.r
-    }, ((ee, ie) => Te.r + ie)), ...Array.from({
-      length: Te.r
-    }, ((ee, ie) => ie))];
-    class ze {
-      constructor(ee) {
-        this.inventory = ee, this.pending = new Map
+    const UW = [...Array.from({
+      length: bW.o - bW.m
+    }, ((WW, iW) => bW.m + iW)), ...Array.from({
+      length: bW.m
+    }, ((WW, iW) => iW))];
+    class kW {
+      constructor(WW) {
+        this.inventory = WW, this.pending = new Map
       }
-      onPlace(ee) {
-        var ie;
-        const He = this.inventory.selectedSlot(),
-          ye = this.inventory.itemAt(He);
-        (null === ye || void 0 === ye ? void 0 : ye.name) === ee && (null !== (ie = ye.amount) && void 0 !== ie ? ie : 1) <= 1 && Be(ee) && this.pending.set(He, ee)
+      onPlace(WW) {
+        var iW;
+        const OW = this.inventory.selectedSlot(),
+          mW = this.inventory.itemAt(OW);
+        (null === mW || void 0 === mW ? void 0 : mW.name) === WW && (null !== (iW = mW.amount) && void 0 !== iW ? iW : 1) <= 1 && sW(WW) && this.pending.set(OW, WW)
       }
-      onDrop(ee, ie) {
-        ie < Te.r && null === this.inventory.itemAt(ie) && Be(ee) && this.refill(ie, ee)
+      onDrop(WW, iW) {
+        iW < bW.m && null === this.inventory.itemAt(iW) && sW(WW) && this.refill(iW, WW)
       }
-      YR() {
-        const ee = [...this.pending];
+      hZ() {
+        const WW = [...this.pending];
         this.pending.clear();
-        for (const [ie, He] of ee) null === this.inventory.itemAt(ie) && this.refill(ie, He)
+        for (const [iW, OW] of WW) null === this.inventory.itemAt(iW) && this.refill(iW, OW)
       }
-      refill(ee, ie) {
-        const He = function(ee, ie, He, ye) {
-          let be, Me = 1 / 0;
-          for (const Ke of Xe) {
-            if (Ke === ie) continue;
-            const Ue = ye(Ke);
-            if (!Ue || Ke < Te.r && ie !== He) continue;
-            const Fe = pe(ee, Ue.name);
-            void 0 !== Fe && Fe < Me && (be = Ke, Me = Fe)
+      refill(WW, iW) {
+        const OW = function(WW, iW, OW, mW) {
+          let EW, NW = 1 / 0;
+          for (const PW of UW) {
+            if (PW === iW) continue;
+            const LW = mW(PW);
+            if (!LW || PW < bW.m && iW !== OW) continue;
+            const cW = jW(WW, LW.name);
+            void 0 !== cW && cW < NW && (EW = PW, NW = cW)
           }
-          return be
-        }(ie, ee, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== He && this.inventory.swap(ee, He)
+          return EW
+        }(iW, WW, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== OW && this.inventory.swap(WW, OW)
       }
     }
 
-    function Be(ee) {
-      return !!oe(ee) || fe(ee)
+    function sW(WW) {
+      return !!tW(WW) || AW(WW)
     }
-    var Ee = He(37424),
-      ge = He(77),
-      Oe = He(1053),
-      de = He.n(Oe);
-    const We = "Lucky Clover",
-      te = {
+    var MW = OW(3361),
+      KW = OW(80),
+      SW = OW(1089),
+      YW = OW.n(SW);
+    const yW = "Lucky Clover",
+      TW = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function Ze(ee) {
-      return te[ee][0]
+    function JW(WW) {
+      return TW[WW][0]
     }
 
-    function we(ee) {
-      return Ue.filter((ie => ee >= Ze(ie)))
+    function hW(WW) {
+      return LW.filter((iW => WW >= JW(iW)))
     }
-    var De = He(335),
-      Pe = He(2532),
-      Ae = He(18),
-      Ye = He(2733),
-      Ve = He(1970),
-      ae = He(37420),
-      ce = He(1323);
-    var xe = He(1228);
-    const Le = {
-      Basic: Ke.L.whiteUiText,
-      Rare: Ke.L.goldUiText,
-      Super: Ke.L.cyanUiText
+    var HW = OW(327),
+      nW = OW(3332),
+      uW = OW(25),
+      oW = OW(3599),
+      dW = OW(2032),
+      eW = OW(37868),
+      vW = OW(1391);
+    var gW = OW(1283);
+    const DW = {
+      Basic: PW.M.whiteUiText,
+      Rare: PW.M.goldUiText,
+      Super: PW.M.cyanUiText
     };
-    let Ce = 1;
+    let VW = 1;
 
-    function ve() {
-      const ee = (0, Pe.i)("currencyAmounts"),
-        ie = null === ee || void 0 === ee ? void 0 : ee.Clovers;
-      return !ie || ie.hidden ? null : (0, xe.jsx)(ae.d, {
-        children: (0, xe.jsx)(ue, {
-          amount: ie.amount
+    function pW() {
+      const WW = (0, nW.e)("currencyAmounts"),
+        iW = null === WW || void 0 === WW ? void 0 : WW.Clovers;
+      return !iW || iW.hidden ? null : (0, gW.jsx)(eW.h, {
+        children: (0, gW.jsx)(fW, {
+          amount: iW.amount
         })
       })
     }
 
-    function ue(ee) {
-      var ie, He, ye;
+    function fW(WW) {
+      var iW, OW, mW;
       let {
-        amount: Me
-      } = ee;
+        amount: NW
+      } = WW;
       const {
-        openEverythingMenuName: Fe
-      } = (0, Ae.m)(["openEverythingMenuName"]), Je = (0, Ye.d)(), [oe, Re] = (0, be.useState)(Me), [ke, qe] = (0, be.useState)(null), [fe, Te] = (0, be.useState)(0), [pe, Xe] = (0, be.useState)([]), ze = (0, be.useRef)(Me), Be = (0, be.useRef)(!1), Ee = (0, be.useRef)(null), Oe = Fe === De.r.SHOP;
-      (0, be.useEffect)((() => {
-        const ee = ze.current;
-        if (ze.current = Me, Me <= ee || Oe) return void Re(Me);
-        const ie = Je || pe.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (He = Me - ee, ye = !Be.current, He <= 0 || !ye && He < 40 ? 0 : Math.min(4, Math.ceil(He / 30)));
-        var He, ye;
-        if (Be.current = !0, we(Me).length > we(ee).length && Te(Ce++), ie > 0) {
-          const ee = [];
-          for (let He = 0; He < ie; He++) ee.push({
-            id: Ce++,
+        openEverythingMenuName: cW
+      } = (0, uW.p)(["openEverythingMenuName"]), wW = (0, oW.e)(), [tW, ZW] = (0, EW.useState)(NW), [xW, lW] = (0, EW.useState)(null), [AW, bW] = (0, EW.useState)(0), [jW, UW] = (0, EW.useState)([]), kW = (0, EW.useRef)(NW), sW = (0, EW.useRef)(!1), MW = (0, EW.useRef)(null), SW = cW === HW.m.SHOP;
+      (0, EW.useEffect)((() => {
+        const WW = kW.current;
+        if (kW.current = NW, NW <= WW || SW) return void ZW(NW);
+        const iW = wW || jW.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (OW = NW - WW, mW = !sW.current, OW <= 0 || !mW && OW < 40 ? 0 : Math.min(4, Math.ceil(OW / 30)));
+        var OW, mW;
+        if (sW.current = !0, hW(NW).length > hW(WW).length && bW(VW++), iW > 0) {
+          const WW = [];
+          for (let OW = 0; OW < iW; OW++) WW.push({
+            id: VW++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * He
+            delayMs: 70 * OW
           });
-          Xe((ie => [...ie, ...ee]))
+          UW((iW => [...iW, ...WW]))
         }
-        const be = ie > 0 ? 600 : 0;
-        qe({
-          id: Ce++,
-          delayMs: be
+        const EW = iW > 0 ? 600 : 0;
+        lW({
+          id: VW++,
+          delayMs: EW
         });
-        const Ue = performance.now() + be;
-        let Fe = 0;
-        const oe = ie => {
-          const He = Ke.c.clamp((ie - Ue) / 600, 0, 1);
-          Re(Math.round(ee + (Me - ee) * He)), He < 1 && (Fe = requestAnimationFrame(oe))
+        const LW = performance.now() + EW;
+        let cW = 0;
+        const tW = iW => {
+          const OW = PW.e.clamp((iW - LW) / 600, 0, 1);
+          ZW(Math.round(WW + (NW - WW) * OW)), OW < 1 && (cW = requestAnimationFrame(tW))
         };
-        return Fe = requestAnimationFrame(oe), () => {
-          cancelAnimationFrame(Fe)
+        return cW = requestAnimationFrame(tW), () => {
+          cancelAnimationFrame(cW)
         }
-      }), [Me, Oe]);
-      const te = function(ee) {
-          var ie;
-          const He = null !== (ie = Ue.find((ie => ee < Ze(ie)))) && void 0 !== ie ? ie : "Super";
+      }), [NW, SW]);
+      const TW = function(WW) {
+          var iW;
+          const OW = null !== (iW = LW.find((iW => WW < JW(iW)))) && void 0 !== iW ? iW : "Super";
           return {
-            rarity: He,
-            progress: Ke.c.clamp(ee / Ze(He), 0, 1)
+            rarity: OW,
+            progress: PW.e.clamp(WW / JW(OW), 0, 1)
           }
-        }(oe),
-        Pe = we(oe).at(-1);
-      return (0, xe.jsxs)(xe.Fragment, {
-        children: [(0, xe.jsx)("div", {
+        }(tW),
+        nW = hW(tW).at(-1);
+      return (0, gW.jsxs)(gW.Fragment, {
+        children: [(0, gW.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, xe.jsxs)("div", {
-            className: de()("LuckyCloverWallet", {
-              Capped: Pe && "Basic" !== Pe
+          children: (0, gW.jsxs)("div", {
+            className: YW()("LuckyCloverWallet", {
+              Capped: nW && "Basic" !== nW
             }),
-            style: Pe && {
-              "--luckyTierColour": Le[Pe]
+            style: nW && {
+              "--luckyTierColour": DW[nW]
             },
-            children: [(0, xe.jsx)("div", {
+            children: [(0, gW.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${te.progress})`
+                transform: `scaleX(${TW.progress})`
               }
-            }), fe > 0 && (0, xe.jsx)("div", {
+            }), AW > 0 && (0, gW.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(ie=null===ke||void 0===ke?void 0:ke.delayMs)&&void 0!==ie?ie:0}ms`
+                animationDelay: `${null!==(iW=null===xW||void 0===xW?void 0:xW.delayMs)&&void 0!==iW?iW:0}ms`
               }
-            }, fe), (0, xe.jsx)("div", {
-              ref: Ee,
-              className: de()("LuckyCloverWalletIcon", ke && "Bounce"),
+            }, AW), (0, gW.jsx)("div", {
+              ref: MW,
+              className: YW()("LuckyCloverWalletIcon", xW && "Bounce"),
               style: {
-                animationDelay: `${null!==(ye=null===ke||void 0===ke?void 0:ke.delayMs)&&void 0!==ye?ye:0}ms`
+                animationDelay: `${null!==(mW=null===xW||void 0===xW?void 0:xW.delayMs)&&void 0!==mW?mW:0}ms`
               },
-              children: (0, xe.jsx)(Ve.c, {
-                itemName: We,
+              children: (0, gW.jsx)(dW.b, {
+                itemName: yW,
                 amount: 0
               })
-            }, null !== (He = null === ke || void 0 === ke ? void 0 : ke.id) && void 0 !== He ? He : 0), (0, xe.jsx)("span", {
+            }, null !== (OW = null === xW || void 0 === xW ? void 0 : xW.id) && void 0 !== OW ? OW : 0), (0, gW.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: oe
-            }), Pe && (0, xe.jsx)(ce.e, {
+              children: tW
+            }), nW && (0, gW.jsx)(vW.c, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, ge.createPortal)(pe.map((ee => (0, xe.jsx)(me, {
-          flyer: ee,
-          target: Ee,
+        }), (0, KW.createPortal)(jW.map((WW => (0, gW.jsx)(CW, {
+          flyer: WW,
+          target: MW,
           onDone: () => {
-            Xe((ie => ie.filter((ie => ie.id !== ee.id))))
+            UW((iW => iW.filter((iW => iW.id !== WW.id))))
           }
-        }, ee.id))), document.body)]
+        }, WW.id))), document.body)]
       })
     }
 
-    function me(ee) {
+    function CW(WW) {
       let {
-        flyer: ie,
-        target: He,
-        onDone: ye
-      } = ee;
-      const Me = (0, be.useRef)(null);
-      return (0, be.useEffect)((() => {
-        var ee;
-        const be = null === (ee = He.current) || void 0 === ee ? void 0 : ee.getBoundingClientRect();
-        if (!Me.current || !be) return void ye();
+        flyer: iW,
+        target: OW,
+        onDone: mW
+      } = WW;
+      const NW = (0, EW.useRef)(null);
+      return (0, EW.useEffect)((() => {
+        var WW;
+        const EW = null === (WW = OW.current) || void 0 === WW ? void 0 : WW.getBoundingClientRect();
+        if (!NW.current || !EW) return void mW();
         const {
-          x: Ke,
-          y: Ue
-        } = ie, Fe = Ke + 140 * (Math.random() - .5), Je = Ue - 30 - 40 * Math.random(), oe = Me.current.animate([{
-          transform: `translate(${Ke}px, ${Ue}px) scale(0.3)`,
+          x: PW,
+          y: LW
+        } = iW, cW = PW + 140 * (Math.random() - .5), wW = LW - 30 - 40 * Math.random(), tW = NW.current.animate([{
+          transform: `translate(${PW}px, ${LW}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${Fe}px, ${Je}px) scale(1.3)`,
+          transform: `translate(${cW}px, ${wW}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${be.left}px, ${be.top}px) scale(0.8)`,
+          transform: `translate(${EW.left}px, ${EW.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: ie.delayMs,
+          delay: iW.delayMs,
           fill: "backwards"
         });
-        return oe.onfinish = ye, () => {
-          oe.cancel()
+        return tW.onfinish = mW, () => {
+          tW.cancel()
         }
-      }), []), (0, xe.jsx)("div", {
-        ref: Me,
+      }), []), (0, gW.jsx)("div", {
+        ref: NW,
         className: "LuckyCloverFlying",
-        children: (0, xe.jsx)(Ve.c, {
-          itemName: We,
+        children: (0, gW.jsx)(dW.b, {
+          itemName: yW,
           amount: 0
         })
       })
     }
-    var le = He(27);
-    const Se = "luckyGearUpgradeView",
-      ne = {
+    var XW = OW(27);
+    const BW = "luckyGearUpgradeView",
+      qW = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -560,13 +411,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function je(ee) {
-      var ie;
-      return null !== (ie = ne[ee.split(" ")[0]]) && void 0 !== ie ? ie : "#e07bff"
+    function RW(WW) {
+      var iW;
+      return null !== (iW = qW[WW.split(" ")[0]]) && void 0 !== iW ? iW : "#e07bff"
     }
-    class se {
-      constructor(ee, ie) {
-        this.selectedSlot = ee, this.itemAt = ie, this.rings = [], this.unseen = new Map, this.view = {
+    class GW {
+      constructor(WW, iW) {
+        this.selectedSlot = WW, this.itemAt = iW, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -574,200 +425,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      DR(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [He, ye, be] of ee) this.rings.push({
+      yZ(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [OW, mW, EW] of WW) this.rings.push({
           id: this.nextId++,
-          slot: He,
-          colour: je(be),
-          until: ie + 1200
-        }), He !== this.selectedSlot() && this.unseen.set(He, {
-          from: ye,
-          to: be
+          slot: OW,
+          colour: RW(EW),
+          until: iW + 1200
+        }), OW !== this.selectedSlot() && this.unseen.set(OW, {
+          from: mW,
+          to: EW
         });
-        this.yR()
+        this.iZ()
       }
-      YR() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      hZ() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const ie = this.rings.filter((ie => ie.until > ee));
-        let He = ie.length !== this.rings.length;
-        this.rings = ie;
-        for (const [ye, {
-            from: be,
-            to: Me
+        const iW = this.rings.filter((iW => iW.until > WW));
+        let OW = iW.length !== this.rings.length;
+        this.rings = iW;
+        for (const [mW, {
+            from: EW,
+            to: NW
           }] of this.unseen) {
-          const ee = this.itemAt(ye);
-          (ye === this.selectedSlot() || ee !== Me && ee !== be) && (this.unseen.delete(ye), He = !0)
+          const WW = this.itemAt(mW);
+          (mW === this.selectedSlot() || WW !== NW && WW !== EW) && (this.unseen.delete(mW), OW = !0)
         }
-        He && this.yR()
+        OW && this.iZ()
       }
-      yR() {
+      iZ() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, le.h.yR(Se, this.view)
+        }, XW.l.iZ(BW, this.view)
       }
     }
-    var Ie = He(1432);
+    var IW = OW(1526);
 
-    function he(ee) {
-      return document.querySelector(`.HotBar [data-inven-idx="${ee}"]`)
+    function aW(WW) {
+      return document.querySelector(`.HotBar [data-inven-idx="${WW}"]`)
     }
 
-    function Ne(ee) {
+    function rW(WW) {
       let {
-        ring: ie
-      } = ee;
-      const [He, ye] = (0, be.useState)(null);
-      return (0, be.useLayoutEffect)((() => {
-        var ee, He;
-        ye(null !== (ee = null === (He = he(ie.slot)) || void 0 === He ? void 0 : He.getBoundingClientRect()) && void 0 !== ee ? ee : null)
-      }), [ie]), He ? (0, xe.jsx)("div", {
+        ring: iW
+      } = WW;
+      const [OW, mW] = (0, EW.useState)(null);
+      return (0, EW.useLayoutEffect)((() => {
+        var WW, OW;
+        mW(null !== (WW = null === (OW = aW(iW.slot)) || void 0 === OW ? void 0 : OW.getBoundingClientRect()) && void 0 !== WW ? WW : null)
+      }), [iW]), OW ? (0, gW.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: He.left,
-          top: He.top,
-          width: He.width,
-          height: He.height,
-          "--ringColour": ie.colour,
+          left: OW.left,
+          top: OW.top,
+          width: OW.width,
+          height: OW.height,
+          "--ringColour": iW.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function Ge(ee) {
+    function zW(WW) {
       let {
-        slot: ie
-      } = ee;
-      const [He, ye] = (0, be.useState)(null);
-      return (0, be.useLayoutEffect)((() => {
-        const ee = () => {
-          ye(he(ie))
+        slot: iW
+      } = WW;
+      const [OW, mW] = (0, EW.useState)(null);
+      return (0, EW.useLayoutEffect)((() => {
+        const WW = () => {
+          mW(aW(iW))
         };
-        ee();
-        const He = new MutationObserver(ee),
-          be = document.querySelector(".BottomMiddleElements");
-        return be && He.observe(be, {
+        WW();
+        const OW = new MutationObserver(WW),
+          EW = document.querySelector(".BottomMiddleElements");
+        return EW && OW.observe(EW, {
           childList: !0,
           subtree: !0
         }), () => {
-          He.disconnect()
+          OW.disconnect()
         }
-      }), [ie]), He ? (0, ge.createPortal)((0, xe.jsx)("div", {
+      }), [iW]), OW ? (0, KW.createPortal)((0, gW.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), He) : null
+      }), OW) : null
     }
 
-    function re(ee) {
+    function FW(WW) {
       let {
-        controller: ie
-      } = ee;
-      const He = (0, Ie.j)(Se, ie.getView());
-      return (0, xe.jsxs)(xe.Fragment, {
-        children: [He.rings.map((ee => (0, xe.jsx)(Ne, {
-          ring: ee
-        }, ee.id))), He.unseenSlots.map((ee => (0, xe.jsx)(Ge, {
-          slot: ee
-        }, ee)))]
+        controller: iW
+      } = WW;
+      const OW = (0, IW.g)(BW, iW.getView());
+      return (0, gW.jsxs)(gW.Fragment, {
+        children: [OW.rings.map((WW => (0, gW.jsx)(rW, {
+          ring: WW
+        }, WW.id))), OW.unseenSlots.map((WW => (0, gW.jsx)(zW, {
+          slot: WW
+        }, WW)))]
       })
     }
-    const Qe = function(ee, ie, He, Ke) {
-      let Ue, {
-          localPlayerId: Fe
-        } = Ke,
-        Je = null;
-      const oe = new ze({
-          itemAt: ee => Ue.getItemSlot(Fe, ee),
-          selectedSlot: () => Ue.getSelectedInventorySlotI(Fe),
-          swap: (ee, ie) => {
-            Ue.swapInventorySlots(ee, ie)
+    const QW = function(WW, iW, OW, PW) {
+      let LW, {
+          localPlayerId: cW
+        } = PW,
+        wW = null;
+      const tW = new kW({
+          itemAt: WW => LW.getItemSlot(cW, WW),
+          selectedSlot: () => LW.getSelectedInventorySlotI(cW),
+          swap: (WW, iW) => {
+            LW.swapInventorySlots(WW, iW)
           }
         }),
-        Re = new se((() => Ue.getSelectedInventorySlotI(Fe)), (ee => {
-          var ie;
-          return null === (ie = Ue.getItemSlot(Fe, ee)) || void 0 === ie ? void 0 : ie.name
+        ZW = new GW((() => LW.getSelectedInventorySlotI(cW)), (WW => {
+          var iW;
+          return null === (iW = LW.getItemSlot(cW, WW)) || void 0 === iW ? void 0 : iW.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, Me.e)()
+          placeAgainstBeds: (0, NW.d)()
         },
-        onCreate: ee => {
-          Ue = ee, Je = (0, Ee.z)((0, be.createElement)(be.Fragment, null, (0, be.createElement)(ve), (0, be.createElement)(re, {
-            controller: Re
+        onCreate: WW => {
+          LW = WW, wW = (0, MW.O)((0, EW.createElement)(EW.Fragment, null, (0, EW.createElement)(pW), (0, EW.createElement)(FW, {
+            controller: ZW
           })))
         },
         onClose: () => {
-          var ee;
-          null === (ee = Je) || void 0 === ee || ee()
+          var WW;
+          null === (WW = wW) || void 0 === WW || WW()
         },
-        YR: () => {
-          oe.YR(), Re.YR()
+        hZ: () => {
+          tW.hZ(), ZW.hZ()
         },
-        onReceivedMessageFromServer: (ee, ie) => {
-          "luckyGearUpgrade" === ee && Re.DR(ie)
+        onReceivedMessageFromServer: (WW, iW) => {
+          "luckyGearUpgrade" === WW && ZW.yZ(iW)
         },
-        onPlayerChangeBlock: (ee, ie, He, ye, be, Me) => {
-          "Air" !== Me && oe.onPlace(Me)
+        onPlayerChangeBlock: (WW, iW, OW, mW, EW, NW) => {
+          "Air" !== NW && tW.onPlace(NW)
         },
-        onPlayerDropItem: (ee, ie, He, ye) => {
-          oe.onDrop(ie, ye)
+        onPlayerDropItem: (WW, iW, OW, mW) => {
+          tW.onDrop(iW, mW)
         },
-        onPlayerAltAction: (ee, ie, He, be, Me, Ke) => {
-          if (!Ke || "Mesh" !== Ue.getEntityType(Ke)) return;
-          const Fe = Ue.getEntityName(Ke),
-            Je = Object.values(ye).find((ee => ee.name === Fe));
-          Je && Ue.openShop(ee, !1, Je.shopTab)
+        onPlayerAltAction: (WW, iW, OW, EW, NW, PW) => {
+          if (!PW || "Mesh" !== LW.getEntityType(PW)) return;
+          const cW = LW.getEntityName(PW),
+            wW = Object.values(mW).find((WW => WW.name === cW));
+          wW && LW.openShop(WW, !1, wW.shopTab)
         }
       }
     }
   },
-  38876: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Ue
+  39220: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW
     });
-    var ye = He(347),
-      be = He(37770),
-      Me = He(4870);
-    const Ke = ["Leaf Bed", "_Leaf Bed Head", ...ye.Lc.flatMap((ee => [`${ee} Bed`, `_${ee} Bed Head`, `${ee} Strongbed`, `_${ee} Strongbed Head`]))];
+    var mW = OW(344),
+      EW = OW(38097),
+      NW = OW(5187);
+    const PW = ["Leaf Bed", "_Leaf Bed Head", ...mW.yc.flatMap((WW => [`${WW} Bed`, `_${WW} Bed Head`, `${WW} Strongbed`, `_${WW} Strongbed Head`]))];
 
-    function Ue() {
-      let ee;
+    function LW() {
+      let WW;
       return {
-        onCreate(ie) {
-          ee = ie
+        onCreate(iW) {
+          WW = iW
         },
-        altVetoBlocks: Ke,
-        onPlayerAttemptAltAction(ie, He, ye, Ke, Ue, Fe) {
-          var Je;
-          if ((0, be.e)(ee.getMetaInfo(Ue).rootName) && !ee.isEntityInteractable(Fe) && (0, Me.e)(null === (Je = ee.Vye(ie)) || void 0 === Je ? void 0 : Je.typeObj.type)) return "preventAction"
+        altVetoBlocks: PW,
+        onPlayerAttemptAltAction(iW, OW, mW, PW, LW, cW) {
+          var wW;
+          if ((0, EW.d)(WW.getMetaInfo(LW).rootName) && !WW.isEntityInteractable(cW) && (0, NW.f)(null === (wW = WW.kOW(iW)) || void 0 === wW ? void 0 : wW.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37770: (ee, ie, He) => {
-    function ye(ee) {
-      return ee.includes("Leaf Bed")
+  38097: (WW, iW, OW) => {
+    function mW(WW) {
+      return WW.includes("Leaf Bed")
     }
 
-    function be(ee) {
-      return / Bed(?: Head)?(?:\||$)/.test(ee) && !ye(ee)
+    function EW(WW) {
+      return / Bed(?: Head)?(?:\||$)/.test(WW) && !mW(WW)
     }
 
-    function Me(ee) {
-      return ee.includes(" Strongbed")
+    function NW(WW) {
+      return WW.includes(" Strongbed")
     }
 
-    function Ke(ee) {
-      return ye(ee) || be(ee) || Me(ee)
+    function PW(WW) {
+      return mW(WW) || EW(WW) || NW(WW)
     }
-    He.d(ie, {
-      e: () => Ke,
-      i: () => ye,
-      k: () => Me,
-      m: () => be
+    OW.d(iW, {
+      d: () => PW,
+      f: () => mW,
+      j: () => NW,
+      l: () => EW
     })
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

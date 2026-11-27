@@ -1,373 +1,556 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  41658: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      startWasmPadGameplay: () => Ce
+  5525: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => MW,
+      f: () => UW
     });
-    He(41666);
-    var ye = He(41670),
-      be = He(41688),
-      Me = He(2018),
-      Ke = He(41694),
-      Ue = He(5279),
-      Fe = He(5262),
-      Je = He(41702),
-      oe = He(41704),
-      Re = He(5286),
-      ke = He(41766),
-      qe = He(2495),
-      fe = He(9584),
-      Te = He(41679),
-      pe = He(9558),
-      Xe = He(39896);
-    const ze = ee => {
-        const ie = Re.d.indexOf(ee);
-        if (ie < 0) throw new Error(`No core action "${ee}"`);
-        return ie
-      },
-      Be = ze("primary-fire"),
-      Ee = ze("alt-fire"),
-      ge = ze("mid-fire"),
-      Oe = ze("jump"),
-      de = ze("ReloadGun"),
-      We = ze("SwapCameraZoom"),
-      te = ze("TouchAction1"),
-      Ze = {
-        SpecialAction1: ze("SpecialAction1"),
-        SpecialAction2: ze("SpecialAction2")
-      },
-      we = (ee, ie) => {
-        (0, qe.v)(Ue.J.PadAction, ee, 0, 0, (0, qe.s)(ie, performance.now()))
-      },
-      De = ee => {
-        we(ee, Ke.Bd.Down)
-      },
-      Pe = ee => {
-        we(ee, 0)
-      },
-      Ae = ee => {
-        De(ee), Pe(ee)
-      },
-      Ye = () => {
-        const ee = (0, oe.h)();
-        return null !== ee && void 0 !== ee && ee.isCoreRunning ? ee : null
-      },
-      Ve = ee => Ke.v.playerFlags(ee.api.apiView, 0),
-      ae = ee => null !== ee && Ke.v.targetBlockId(ee.api.apiView, 0) !== Ke.ad,
-      ce = () => {
-        const ee = (0, fe.d)(),
-          ie = new Te.d;
-        let He = !1;
-        const ye = (ee, ie) => {
-            (0, qe.v)(Ue.J.PadLook, Ke.Ld.Rate, ee, ie, 0)
-          },
-          be = () => {
-            He = !1, ie.reset(), ye(0, 0)
-          };
-        return {
-          update: (be, Me, Fe) => {
-            He || (ee.discardPending(), He = !0);
-            const Je = (0, Te.u)(ie, be, Me, Fe, performance.now());
-            ye(Je.yawRadPerSec, Je.pitchRadPerSec);
-            const oe = ee.drainLookDelta();
-            0 === oe.XV && 0 === oe.zV || (0, qe.v)(Ue.J.PadLook, Ke.Ld.Gyro, oe.XV, oe.zV, 0)
-          },
-          release: be,
-          uninstall: be
+    var mW = OW(1335),
+      EW = OW(27);
+    var NW = OW(344);
+    var PW = OW(643);
+    var LW = OW(3305),
+      cW = OW(5533),
+      wW = OW(5560),
+      tW = OW(5575);
+    class ZW {
+      constructor(WW, iW, OW, mW, EW, NW) {
+        this.id = WW, this.type = iW, this.parameters = OW, this.tearDownNotification = mW, this.onDonePromise = EW, this.resolveRequest = NW
+      }
+    }
+    const xW = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class lW {
+      constructor(WW, iW, OW, mW, EW, NW) {
+        this.id = WW, this.type = iW, this.parameters = OW, this.resolveRequest = mW, this.onDonePromise = EW, this.tearDownNotification = NW, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const PW = UW[iW];
+        if (!PW) throw console.error(`No QTE implementation registered for type: ${iW}`), new Error(`No QTE implementation registered for type: ${iW}`);
+        this.implementation = new PW(OW, (WW => {
+          this.isCompleted = !0, this.resolveRequest(WW)
+        }), this.tearDownNotification), this.setupInputHandlers()
+      }
+      setupInputHandlers() {
+        this.mouseSub = EW.l.subscribe("QTEMouseState", (WW => {
+          let {
+            isDown: iW
+          } = WW;
+          this.isCompleted || this.implementation.handleMouseInput(iW)
+        })), this.stopInputActions = (0, wW.g)((WW => {
+          this.isCompleted || !xW.has(WW.action) && !(0, wW.f)(WW) || this.implementation.handleMouseInput(WW.down)
+        })), this.tickSub = EW.l.subscribe("noaTick", (WW => {
+          if (this.isCompleted) return;
+          const iW = WW / 1e3;
+          this.implementation.handleTick(iW)
+        })), this.stopShellTicks = (0, cW.x)((() => {
+          this.isCompleted || this.implementation.handleTick(LW.t / 1e3)
+        }))
+      }
+      cleanup() {
+        var WW, iW;
+        this.mouseSub && (EW.l.unsubscribe(this.mouseSub), this.mouseSub = null), null === (WW = this.stopInputActions) || void 0 === WW || WW.call(this), this.stopInputActions = null, null === (iW = this.stopShellTicks) || void 0 === iW || iW.call(this), this.stopShellTicks = null, this.tickSub && (EW.l.unsubscribe(this.tickSub), this.tickSub = null)
+      }
+      async waitUntilDone() {
+        await this.onDonePromise
+      }
+      getState() {
+        return this.implementation.getState()
+      }
+      tearDown() {
+        this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
+      }
+    }
+    const AW = new mW.d,
+      bW = new Map;
+    let jW = null;
+    const UW = {
+      progressBar: class {
+        constructor(WW, iW, OW) {
+          var mW, EW, NW, PW;
+          this.resolveRequest = iW, this.tearDownNotification = OW, this.progress = 0, this.KN = void 0, this.SN = void 0, this.YN = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const LW = WW;
+          this.KN = null !== (mW = LW.KN) && void 0 !== mW ? mW : .075, this.SN = null !== (EW = LW.SN) && void 0 !== EW ? EW : 1, this.progress = null !== (NW = LW.MN) && void 0 !== NW ? NW : 30, this.YN = null !== (PW = LW.YN) && void 0 !== PW && PW, this.parameters = LW
         }
-      },
-      xe = () => {
-        const ee = Ye();
-        return null !== ee && 0 !== (Ve(ee) & Ke.Pd.PadSneakToggled)
-      },
-      Le = () => {
-        const ee = (ee => {
-          const ie = ee => function() {
-            return (0, ke.c)(), ee(...arguments)
-          };
+        handleMouseInput(WW) {
+          WW && !this.isCompleted && (this.clickCount++, this.progress += this.SN, this.progress >= 100 && this.complete(!0))
+        }
+        handleTick() {
+          if (!this.isCompleted)
+            if (this.progress -= this.KN, this.YN && this.progress <= 0) this.complete(!1);
+            else if (this.progress <= 0) this.progress = 0;
+          else if (this.progress >= 100) return void this.complete(!0)
+        }
+        complete(WW) {
+          this.isCompleted = !0, this.resolveRequest(WW)
+        }
+        getState() {
           return {
-            primaryFireDown: ie((ee => (we(Be, Ke.Bd.Down | (ee ? Ke.Bd.Repeat : 0)), 0))),
-            primaryFireUp: ie((() => {
-              Pe(Be)
-            })),
-            altFireDown: ie((() => (De(Ee), 0))),
-            altFireUp: ie((() => {
-              Pe(Ee)
-            })),
-            jumpDown: ie((() => {
-              Ae(Oe)
-            })),
-            specialActionDown: ie((ee => {
-              De(Ze[ee])
-            })),
-            specialActionUp: ie((ee => {
-              Pe(Ze[ee])
-            })),
-            reloadGun: ie((() => {
-              Ae(de)
-            })),
-            dropItem: ie((ee => {
-              we(Ke.Fd.Drop, Ke.Bd.Down | (ee ? Ke.Bd.Stack : 0))
-            })),
-            swapCameraZoom: ie((() => {
-              Ae(We)
-            })),
-            pickBlock: ie((() => (Ae(ge), ae(ee()))))
-          }
-        })(Ye);
-        let ie = !1,
-          He = null;
-        const ye = () => {
-          var ee;
-          null === (ee = He) || void 0 === ee || ee(), He = null
-        };
-        return {
-          bodies: () => ee,
-          look: ce(),
-          move: (ee, He) => {
-            var be;
-            ye();
-            const {
-              bits: Me,
-              flips: Ue
-            } = (ee => {
-              if (null === ee) return {
-                bits: Ke.Hd.Peek,
-                flips: 0
-              };
-              const ie = ee.sneakHeld ? Ke.Hd.SneakHeld : 0;
-              return "hold" === ee.mode ? {
-                bits: ie | Ke.Hd.SneakHoldMode,
-                flips: ee.sneakTogglePressed ? 1 : 0
-              } : {
-                bits: ie,
-                flips: ee.sneakPressed || ee.sneakTogglePressed ? 1 : 0
-              }
-            })(He);
-            null !== (be = Ye()) && void 0 !== be && be.padMove(ee.x, ee.y, ee.magnitude, ee.headingOffset, (ee => Ke.Hd.Active | (ee.jumpHeld ? Ke.Hd.JumpHeld : 0) | (ee.jumpPressed ? Ke.Hd.JumpPressed : 0) | (ee.running ? Ke.Hd.Running : 0) | (ee.sprintHeld ? Ke.Hd.SprintHeld : 0))(ee) | Me, Ue) && (ie = !0), (0, pe.f)(xe())
-          },
-          stopMoving: () => {
-            var ee;
-            ie && (ie = !(null !== (ee = Ye()) && void 0 !== ee && ee.padMove(0, 0, 0, 0, 0, 0)), ye(), He = (0, Fe.w)((() => {
-              ye(), (0, pe.f)(xe())
-            })))
-          },
-          uninstall: ye,
-          deviceChanged: ee => {
-            var He;
-            "touch" === ee ? ((0, pe.f)(!1), null !== (He = Ye()) && void 0 !== He && He.padMove(0, 0, 0, 0, Ke.Hd.EndToggle, 0) && (ie = !1)) : "gamepad" === ee && (0, pe.f)(xe())
-          },
-          hasPlayer: () => null !== Ye(),
-          isPlayerDead: () => {
-            var ee;
-            return !1 === (null === (ee = Ye()) || void 0 === ee ? void 0 : ee.localPlayerAlive())
-          },
-          isReplayMode: () => {
-            const ee = Ye();
-            return null !== ee && 0 !== (Ve(ee) & Ke.Pd.Replay)
-          },
-          isFreeCameraOn: () => {
-            const ee = Ye();
-            return null !== ee && 0 !== (Ve(ee) & Ke.Pd.FreeCam)
-          },
-          targetsBlock: () => ae(Ye()),
-          selectedSlotEmpty: () => {
-            var ee;
-            return !(null !== (ee = Ye()) && void 0 !== ee && ee.items.lJ())
-          },
-          pickBlockAllowed: () => !!Me.c.get("creative") && !!Me.c.get("canPickBlocks"),
-          scrollHotbar: ee => {
-            we(Ke.Fd.Hotbar, Ke.Bd.Down | (ee > 0 ? Ke.Bd.Next : 0))
-          },
-          hasFullInventory: Je.l,
-          hasLobbyTab: () => (0, Xe.e)({
-            lobbyLeaderboardInfo: Me.c.get("lobbyLeaderboardInfo"),
-            lobbyManage: Me.c.get("lobbyManage")
-          }),
-          contextActionInputs: () => {
-            var ee, ie, He, ye;
-            const be = Ye();
-            return {
-              holdingGun: !1 !== (null === be || void 0 === be ? void 0 : be.localPlayerAlive()) && "Gun" === (null === be || void 0 === be || null === (ee = be.items.lJ()) || void 0 === ee || null === (ie = ee.typeObj) || void 0 === ie ? void 0 : ie.type),
-              customButtons: null !== (He = Me.c.get("customButtons")) && void 0 !== He ? He : null,
-              touchscreenActionButton: null !== (ye = Me.c.get("touchscreenActionButton")) && void 0 !== ye ? ye : null
-            }
-          },
-          pressTouchButton: ee => {
-            ee ? De(te) : Pe(te)
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              progress: this.progress,
+              clickCount: this.clickCount
+            },
+            isActive: !0
           }
         }
+        tearDown() {
+          this.tearDownNotification()
+        }
       },
-      Ce = () => {
-        const ee = (0, be.d)(Le()),
-          ie = (0, ye.b)(),
-          He = null;
-        return () => {
-          ee(), ie(), null === He || void 0 === He || He()
+      timedClick: class {
+        constructor(WW, iW, OW) {
+          var mW;
+          this.resolveRequest = iW, this.tearDownNotification = OW, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = WW, this.timeWindowMs = null !== (mW = this.parameters.JN) && void 0 !== mW ? mW : 3e3, this.startTime = Date.now()
+        }
+        handleMouseInput(WW) {
+          if (!WW || this.isCompleted) return;
+          Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
+        }
+        handleTick() {
+          if (this.isCompleted) return;
+          Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
+        }
+        complete(WW) {
+          this.isCompleted = !0, this.resolveRequest(WW)
+        }
+        getState() {
+          const WW = Date.now() - this.startTime,
+            iW = Math.max(0, this.timeWindowMs - WW);
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              timeRemaining: iW,
+              JN: this.timeWindowMs
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      gravityBar: class {
+        constructor(WW, iW, OW) {
+          var mW;
+          this.resolveRequest = iW, this.tearDownNotification = OW, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const EW = WW;
+          this.parameters = {
+            ...EW,
+            uN: NW.e.clamp(EW.uN, .05, 1)
+          }, this.progress = null !== (mW = EW.MN) && void 0 !== mW ? mW : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+        }
+        handleMouseInput(WW) {
+          this.isMouseDown = WW
+        }
+        handleTick(WW) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(WW))
+        }
+        updateMover() {
+          this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
+          const WW = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += WW * this.parameters.oN * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+        }
+        pickNewMoverTarget() {
+          this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+        }
+        randomNumTicksUntilDirectionChange() {
+          const WW = NW.e.clamp(1 - .7 * this.parameters.dN, 0, 1.4);
+          return Math.floor(60 * WW + 40 * Math.random())
+        }
+        updateCatchZone() {
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.eN : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = NW.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const WW = this.parameters.uN / 2,
+            iW = WW,
+            OW = 1 - WW;
+          this.catchZonePosition <= iW ? (this.catchZonePosition = iW, this.catchZoneVelocity = 0) : this.catchZonePosition >= OW && (this.catchZonePosition = OW, this.catchZoneVelocity = 0)
+        }
+        isMoverInCatchZone() {
+          const WW = this.parameters.uN / 2;
+          return this.moverPosition >= this.catchZonePosition - WW && this.moverPosition <= this.catchZonePosition + WW
+        }
+        updateProgress(WW) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.vN * WW : this.progress -= this.parameters.gN * WW, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.YN && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        }
+        complete(WW) {
+          this.isCompleted = !0, this.resolveRequest(WW)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              catchZonePosition: this.catchZonePosition,
+              uN: this.parameters.uN,
+              moverPosition: this.moverPosition,
+              progress: this.progress,
+              isCatching: this.isMoverInCatchZone()
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      precisionBar: class {
+        constructor(WW, iW, OW) {
+          var mW, EW, PW, LW, cW;
+          this.resolveRequest = iW, this.tearDownNotification = OW, this.startTime = void 0, this.speed = void 0, this.VN = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const wW = WW;
+          this.parameters = {
+            ...wW,
+            speed: null !== (mW = wW.speed) && void 0 !== mW ? mW : .5,
+            VN: NW.e.clamp(wW.VN, .05, 1),
+            label: null !== (EW = wW.label) && void 0 !== EW ? EW : [{
+              str: "Click when the marker is within the green zone."
+            }],
+            icon: null !== (PW = wW.icon) && void 0 !== PW ? PW : null,
+            scale: null !== (LW = wW.scale) && void 0 !== LW ? LW : 1,
+            rotation: null !== (cW = wW.rotation) && void 0 !== cW ? cW : 0
+          }, this.speed = this.parameters.speed, this.VN = this.parameters.VN, this.startTime = Date.now()
+        }
+        handleMouseInput(WW) {
+          if (WW) {
+            this.updateMarkerPosition();
+            const WW = Math.abs(this.markerPosition - .5) <= this.VN / 2;
+            this.complete(WW)
+          }
+        }
+        handleTick() {
+          this.isCompleted || this.updateMarkerPosition()
+        }
+        updateMarkerPosition() {
+          const WW = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = WW <= .5 ? 2 * WW : 2 - 2 * WW
+        }
+        complete(WW) {
+          this.isCompleted = !0, this.resolveRequest(WW)
+        }
+        getState() {
+          return this.updateMarkerPosition(), {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              markerPosition: this.markerPosition
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      rhythmClick: class {
+        constructor(WW, iW, OW) {
+          this.resolveRequest = iW, this.tearDownNotification = OW, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = WW, this.shrinkStartTime = Date.now()
+        }
+        handleMouseInput(WW) {
+          if (!WW || this.isCompleted) return;
+          const iW = this.getOuterCircleProgress();
+          if (iW <= this.parameters.XN && iW >= -this.parameters.XN) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.fN) return void this.complete(!0)
+          } else this.handleMiss();
+          this.shrinkStartTime = Date.now()
+        }
+        handleMiss() {
+          this.misses++, this.lastClickResult = !1, !(0, PW.K)(this.parameters.BN) && this.misses > this.parameters.BN ? this.complete(!1) : this.shrinkStartTime = Date.now()
+        }
+        handleTick() {
+          if (this.isCompleted) return;
+          this.getOuterCircleProgress() < -this.parameters.XN && this.handleMiss()
+        }
+        getOuterCircleProgress() {
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.CN
+        }
+        complete(WW) {
+          this.isCompleted = !0, this.resolveRequest(WW)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              outerCircleProgress: this.getOuterCircleProgress(),
+              successes: this.successes,
+              fN: this.parameters.fN,
+              misses: this.misses,
+              lastClickResult: this.lastClickResult
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
         }
       }
+    };
+
+    function kW() {
+      (0, tW.j)(LW.y.Qte, jW ? LW.y.Qte : 0), jW ? EW.l.iZ("qteStateUpdated", jW.getState()) : EW.l.iZ("qteStateUpdated", {
+        type: null,
+        typeSpecificParameters: null,
+        isActive: !1
+      })
+    }
+    class sW {
+      constructor(WW, iW) {
+        this.resultPromise = WW, this.tearDownQTE = iW
+      }
+      static create(WW, iW, OW) {
+        const mW = Promise.race([WW, iW]);
+        return new sW(mW, OW)
+      }
+      async getResult() {
+        return await this.resultPromise
+      }
+    }
+    class MW {
+      static queueQTE(WW, iW, OW) {
+        let mW, EW;
+        const NW = new Promise((WW => {
+            mW = WW
+          })),
+          PW = new Promise((WW => {
+            EW = () => {
+              WW("qteTornDown")
+            }
+          })),
+          LW = Promise.race([NW, PW]).then((() => {})),
+          cW = new ZW(WW, iW, OW, EW, LW, mW);
+        return bW.set(WW, cW), AW.enqueue(cW), jW || this.processNextQTE(), sW.create(NW, PW, EW)
+      }
+      static async processNextQTE() {
+        if (jW || AW.sZ()) return void(AW.sZ() && jW && (jW = null, kW()));
+        const WW = await AW.dequeue();
+        if (!bW.has(WW.id)) return void await this.processNextQTE();
+        bW.delete(WW.id);
+        const iW = new lW(WW.id, WW.type, WW.parameters, WW.resolveRequest, WW.onDonePromise, WW.tearDownNotification);
+        jW = iW, kW();
+        try {
+          await iW.waitUntilDone()
+        } catch (OW) {
+          console.error("Error while waiting for QTE to resolve:", OW.stack)
+        }
+        jW === iW && (jW.cleanup(), jW = null, kW()), await this.processNextQTE()
+      }
+      static cancelQTE(WW) {
+        if (jW && jW.id === WW) return jW.tearDown(), jW = null, kW(), void this.processNextQTE();
+        const iW = bW.get(WW);
+        iW && (bW.delete(WW), iW.tearDownNotification())
+      }
+      static getCurrentState() {
+        return jW ? jW.getState() : {
+          type: null,
+          parameters: null,
+          state: null,
+          isActive: !1
+        }
+      }
+      static reset() {
+        jW && (jW.tearDown(), jW = null), bW.forEach(((WW, iW) => {
+          this.cancelQTE(iW)
+        })), AW.emptyQueue(), bW.clear(), kW()
+      }
+    }
   },
-  5262: (ee, ie, He) => {
-    He.d(ie, {
-      A: () => we,
-      E: () => De,
-      H: () => ze,
-      K: () => Ke,
-      O: () => Ue,
-      Q: () => te,
-      c: () => We,
-      d: () => Ee,
-      e: () => Ae,
-      g: () => Pe,
-      k: () => Xe,
-      o: () => Oe,
-      q: () => Be,
-      u: () => ge,
-      w: () => Ze
+  5533: (WW, iW, OW) => {
+    OW.d(iW, {
+      B: () => hW,
+      D: () => HW,
+      F: () => kW,
+      G: () => PW,
+      K: () => LW,
+      N: () => TW,
+      e: () => yW,
+      g: () => MW,
+      k: () => uW,
+      m: () => nW,
+      n: () => UW,
+      o: () => SW,
+      r: () => sW,
+      v: () => KW,
+      x: () => JW
     });
-    var ye = He(5265);
-    const be = {
+    var mW = OW(5540);
+    const EW = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let Me = be;
+    let NW = EW;
 
-    function Ke(ee) {
-      Me = null !== ee && void 0 !== ee ? ee : be
+    function PW(WW) {
+      NW = null !== WW && void 0 !== WW ? WW : EW
     }
 
-    function Ue() {
-      return Me
+    function LW() {
+      return NW
     }
-    const Fe = new Set,
-      Je = new Set;
-    let oe = -1;
-    const Re = new Set,
-      ke = new Set;
-    let qe = 0,
-      fe = 0;
-    const Te = new Set,
-      pe = new Set;
+    const cW = new Set,
+      wW = new Set;
+    let tW = -1;
+    const ZW = new Set,
+      xW = new Set;
+    let lW = 0,
+      AW = 0;
+    const bW = new Set,
+      jW = new Set;
 
-    function Xe(ee) {
-      return Fe.add(ee), () => {
-        Fe.delete(ee)
+    function UW(WW) {
+      return cW.add(WW), () => {
+        cW.delete(WW)
       }
     }
 
-    function ze(ee, ie) {
-      for (const ye of Fe) try {
-        ye(ee)
-      } catch (He) {
-        ie(He)
+    function kW(WW, iW) {
+      for (const mW of cW) try {
+        mW(WW)
+      } catch (OW) {
+        iW(OW)
       }
     }
 
-    function Be(ee) {
-      return Je.add(ee), () => {
-        Je.delete(ee)
+    function sW(WW) {
+      return wW.add(WW), () => {
+        wW.delete(WW)
       }
     }
 
-    function Ee(ee, ie) {
-      const He = oe < 0 ? 0 : ee - oe;
-      oe = ee;
-      for (const be of Je) try {
-        be(He)
-      } catch (ye) {
-        ie(ye)
+    function MW(WW, iW) {
+      const OW = tW < 0 ? 0 : WW - tW;
+      tW = WW;
+      for (const EW of wW) try {
+        EW(OW)
+      } catch (mW) {
+        iW(mW)
       }
     }
 
-    function ge(ee) {
-      return Re.add(ee), () => {
-        Re.delete(ee)
+    function KW(WW) {
+      return ZW.add(WW), () => {
+        ZW.delete(WW)
       }
     }
 
-    function Oe(ee) {
-      return ke.add(ee), () => {
-        ke.delete(ee)
+    function SW(WW) {
+      return xW.add(WW), () => {
+        xW.delete(WW)
       }
     }
-    let de = 0;
+    let YW = 0;
 
-    function We(ee) {
-      de += ee
+    function yW(WW) {
+      YW += WW
     }
 
-    function te() {
-      const ee = de;
-      return de = 0, ee
+    function TW() {
+      const WW = YW;
+      return YW = 0, WW
     }
 
-    function Ze(ee) {
-      return Te.add(ee), () => {
-        Te.delete(ee)
-      }
-    }
-
-    function we(ee) {
-      return pe.add(ee), () => {
-        pe.delete(ee)
+    function JW(WW) {
+      return bW.add(WW), () => {
+        bW.delete(WW)
       }
     }
 
-    function De() {
-      qe = 0, fe = 0, oe = -1
+    function hW(WW) {
+      return jW.add(WW), () => {
+        jW.delete(WW)
+      }
     }
 
-    function Pe(ee, ie) {
-      if ("paced" === ee) return fe += ie, null;
-      if ("drawn" !== ee && "skipped" !== ee) return null;
-      const He = ie + fe;
-      return fe = 0, He
+    function HW() {
+      lW = 0, AW = 0, tW = -1
     }
 
-    function Ae(ee, ie, He, be) {
-      const Me = (0, ye.h)(ie),
-        Ke = ee > 0 ? performance.now() : 0;
-      for (let ye = 0; ye < ee; ye++)
-        for (const ee of Te) try {
-          ee()
-        } catch (Ue) {
-          be(Ue)
+    function nW(WW, iW) {
+      if ("paced" === WW) return AW += iW, null;
+      if ("drawn" !== WW && "skipped" !== WW) return null;
+      const OW = iW + AW;
+      return AW = 0, OW
+    }
+
+    function uW(WW, iW, OW, EW) {
+      const NW = (0, mW.g)(iW),
+        PW = WW > 0 ? performance.now() : 0;
+      for (let mW = 0; mW < WW; mW++)
+        for (const WW of bW) try {
+          WW()
+        } catch (LW) {
+          EW(LW)
         }
-      if (ee > 0 && We(performance.now() - Ke), null !== He) {
-        for (const ee of Re) try {
-          ee(He)
-        } catch (Ue) {
-          be(Ue)
+      if (WW > 0 && yW(performance.now() - PW), null !== OW) {
+        for (const WW of ZW) try {
+          WW(OW)
+        } catch (LW) {
+          EW(LW)
         }
-        qe += He
+        lW += OW
       }
-      if ("drawn" === ie) {
-        const ee = qe;
-        qe = 0;
-        for (const ie of ke) try {
-          ie(ee)
-        } catch (Ue) {
-          be(Ue)
+      if ("drawn" === iW) {
+        const WW = lW;
+        lW = 0;
+        for (const iW of xW) try {
+          iW(WW)
+        } catch (LW) {
+          EW(LW)
         }
       }
-      for (const ye of pe) try {
-        ye(ee, Me)
-      } catch (Ue) {
-        be(Ue)
+      for (const mW of jW) try {
+        mW(WW, NW)
+      } catch (LW) {
+        EW(LW)
       }
     }
   },
-  5286: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => be,
-      h: () => Me,
-      l: () => Ke,
-      p: () => ye,
-      t: () => Ue
+  5560: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => cW,
+      f: () => NW,
+      g: () => LW
     });
-    const ye = {
+    var mW = OW(3305),
+      EW = OW(5568);
+
+    function NW(WW) {
+      let {
+        action: iW,
+        flags: OW
+      } = WW;
+      return "mid-fire" === iW && 0 !== (OW & mW.e.AltLeftClick)
+    }
+    const PW = new Set;
+
+    function LW(WW) {
+      return PW.add(WW), () => {
+        PW.delete(WW)
+      }
+    }
+
+    function cW(WW) {
+      const iW = EW.e[255 & WW];
+      if (void 0 === iW) return;
+      const OW = WW >>> 8 & 255,
+        NW = {
+          action: iW,
+          down: 0 !== (OW & mW.e.Down),
+          flags: OW,
+          press: WW >>> 16
+        };
+      for (const mW of PW) mW(NW)
+    }
+  },
+  5568: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW,
+      i: () => NW,
+      m: () => PW,
+      n: () => mW,
+      q: () => LW
+    });
+    const mW = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -558,14 +741,15 @@ export const modules = {
         TouchJump: 188,
         TouchCrouch: 189,
         TouchPov: 190,
-        TouchAction1: 191,
-        TouchAction2: 192,
-        TouchAction3: 193,
-        TouchAttack: 194,
-        TouchUse: 195
+        TouchZoom: 191,
+        TouchAction1: 192,
+        TouchAction2: 193,
+        TouchAction3: 194,
+        TouchAttack: 195,
+        TouchUse: 196
       },
-      be = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      Me = {
+      EW = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      NW = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +812,64 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      Ke = {
+      PW = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
-        "primary-fire": [194],
-        "alt-fire": [195]
+        Zoom: [191],
+        "primary-fire": [195],
+        "alt-fire": [196]
       },
-      Ue = [16]
+      LW = [16]
   },
-  41766: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke,
-      d: () => Me,
-      g: () => be
+  5575: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW,
+      h: () => PW,
+      j: () => wW
     });
-    let ye = null;
+    var mW = OW(3305),
+      EW = OW(3308);
+    const NW = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function be(ee) {
-      ye = ee
+    function PW(WW) {
+      return WW instanceof HTMLElement && (!!(WW.isContentEditable || WW instanceof HTMLTextAreaElement || WW instanceof HTMLSelectElement) || WW instanceof HTMLInputElement && !NW.has(WW.type))
     }
 
-    function Me(ee) {
-      ye === ee && (ye = null)
-    }
-
-    function Ke() {
-      var ee;
-      null === (ee = ye) || void 0 === ee || ee()
-    }
-  },
-  5291: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ue,
-      d: () => Ke,
-      h: () => Je
-    });
-    var ye = He(2492),
-      be = He(2495);
-    const Me = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
-
-    function Ke(ee) {
-      return ee instanceof HTMLElement && (!!(ee.isContentEditable || ee instanceof HTMLTextAreaElement || ee instanceof HTMLSelectElement) || ee instanceof HTMLInputElement && !Me.has(ee.type))
-    }
-
-    function Ue(ee) {
-      let ie = null;
-      const He = He => {
-          const be = Ke(He);
-          be !== ie && (ie = be, ee(ye.f.UiCapture, ye.p.Keyboard, 0, 0, be ? ye.p.Keyboard : 0))
+    function LW(WW) {
+      let iW = null;
+      const OW = OW => {
+          const EW = PW(OW);
+          EW !== iW && (iW = EW, WW(mW.k.UiCapture, mW.y.Keyboard, 0, 0, EW ? mW.y.Keyboard : 0))
         },
-        be = ee => {
-          He(ee.target)
+        EW = WW => {
+          OW(WW.target)
         },
-        Me = ee => {
-          He(ee.relatedTarget)
+        NW = WW => {
+          OW(WW.relatedTarget)
         },
-        Ue = () => {
-          He(document.activeElement)
+        LW = () => {
+          OW(document.activeElement)
         },
-        Fe = {
+        cW = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", be, Fe), document.addEventListener("focusout", Me, Fe), document.addEventListener("keydown", Ue, Fe), He(document.activeElement), () => {
-        document.removeEventListener("focusin", be, Fe), document.removeEventListener("focusout", Me, Fe), document.removeEventListener("keydown", Ue, Fe)
+      return document.addEventListener("focusin", EW, cW), document.addEventListener("focusout", NW, cW), document.addEventListener("keydown", LW, cW), OW(document.activeElement), () => {
+        document.removeEventListener("focusin", EW, cW), document.removeEventListener("focusout", NW, cW), document.removeEventListener("keydown", LW, cW)
       }
     }
-    const Fe = new Map;
+    const cW = new Map;
 
-    function Je(ee, ie) {
-      var He;
-      let ye = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      Fe.set(ye, (null !== (He = Fe.get(ye)) && void 0 !== He ? He : 0) & ~ee | ie & ee);
-      let Me = 0;
-      for (const be of Fe.values()) Me |= be;
-      return (0, be.A)(ee, Me & ee)
+    function wW(WW, iW) {
+      var OW;
+      let mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      cW.set(mW, (null !== (OW = cW.get(mW)) && void 0 !== OW ? OW : 0) & ~WW | iW & WW);
+      let NW = 0;
+      for (const EW of cW.values()) NW |= EW;
+      return (0, EW.z)(WW, NW & WW)
     }
-  },
-  37770: (ee, ie, He) => {
-    function ye(ee) {
-      return ee.includes("Leaf Bed")
-    }
-
-    function be(ee) {
-      return / Bed(?: Head)?(?:\||$)/.test(ee) && !ye(ee)
-    }
-
-    function Me(ee) {
-      return ee.includes(" Strongbed")
-    }
-
-    function Ke(ee) {
-      return ye(ee) || be(ee) || Me(ee)
-    }
-    He.d(ie, {
-      e: () => Ke,
-      i: () => ye,
-      k: () => Me,
-      m: () => be
-    })
-  },
-  37765: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Je
-    });
-    var ye = He(37770),
-      be = He(9961);
-    const Me = [],
-      Ke = [],
-      Ue = [],
-      Fe = [];
-    for (const oe of Object.keys(be.m))(0, ye.i)(oe) ? Me.push(oe) : (0, ye.m)(oe) && Ke.push(oe), (0, ye.k)(oe) && Ue.push(oe), (oe.includes(" Bed Head") || oe.includes(" Strongbed Head")) && Fe.push(oe);
-    const Je = {
-      leafBeds: Me,
-      woolBeds: Ke,
-      strongBeds: Ue,
-      beds: [...Me, ...Ke, ...Ue],
-      bedHeads: Fe,
-      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
-    }
-  },
-  7083: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ke,
-      f: () => be,
-      j: () => Fe,
-      m: () => Me,
-      o: () => Je,
-      s: () => ye,
-      u: () => Ue
-    });
-    let ye = function(ee) {
-        return ee[ee.DEFAULT = 0] = "DEFAULT", ee[ee.BOAT = 1] = "BOAT", ee[ee.GLIDER = 2] = "GLIDER", ee[ee.BALLOON = 3] = "BALLOON", ee[ee.SLEEPING = 4] = "SLEEPING", ee[ee.RIDING_MOB = 5] = "RIDING_MOB", ee[ee.CAR = 6] = "CAR", ee[ee.HOVERCRAFT = 7] = "HOVERCRAFT", ee
-      }({}),
-      be = function(ee) {
-        return ee[ee.WOOD = 0] = "WOOD", ee[ee.OBSIDIAN = 1] = "OBSIDIAN", ee[ee.SPEED = 2] = "SPEED", ee
-      }({}),
-      Me = function(ee) {
-        return ee[ee.WOOD = 0] = "WOOD", ee[ee.IRON = 1] = "IRON", ee[ee.GOLD = 2] = "GOLD", ee[ee.DIAMOND = 3] = "DIAMOND", ee
-      }({}),
-      Ke = function(ee) {
-        return ee[ee.YELLOW = 0] = "YELLOW", ee[ee.WHITE = 1] = "WHITE", ee[ee.RED = 2] = "RED", ee[ee.PURPLE = 3] = "PURPLE", ee[ee.PINK = 4] = "PINK", ee[ee.ORANGE = 5] = "ORANGE", ee[ee.MAGENTA = 6] = "MAGENTA", ee[ee.LIME = 7] = "LIME", ee[ee.LIGHT_GRAY = 8] = "LIGHT_GRAY", ee[ee.LIGHT_BLUE = 9] = "LIGHT_BLUE", ee[ee.GREEN = 10] = "GREEN", ee[ee.GRAY = 11] = "GRAY", ee[ee.CYAN = 12] = "CYAN", ee[ee.BROWN = 13] = "BROWN", ee[ee.BLUE = 14] = "BLUE", ee[ee.BLACK = 15] = "BLACK", ee
-      }({}),
-      Ue = function(ee) {
-        return ee[ee.ROTATION_1 = 0] = "ROTATION_1", ee[ee.ROTATION_2 = 1] = "ROTATION_2", ee[ee.ROTATION_3 = 2] = "ROTATION_3", ee[ee.ROTATION_4 = 3] = "ROTATION_4", ee
-      }({}),
-      Fe = function(ee) {
-        return ee[ee.KART = 0] = "KART", ee[ee.OFF_ROADER = 1] = "OFF_ROADER", ee[ee.CAR = 2] = "CAR", ee[ee.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", ee[ee.ARMORED_CAR = 4] = "ARMORED_CAR", ee[ee.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", ee[ee.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", ee[ee.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", ee
-      }({});
-    ye.DEFAULT, ye.BOAT, be.SPEED, ye.GLIDER, Me.DIAMOND, ye.BALLOON, Ke.BLACK, ye.SLEEPING, Ue.ROTATION_4, ye.RIDING_MOB, ye.CAR, Fe.MOONSTONE_MINING_DRILL, ye.HOVERCRAFT;
-    let Je = function(ee) {
-      return ee[ee.NORMAL = 0] = "NORMAL", ee[ee.GLIDING = 1] = "GLIDING", ee[ee.FLOATING = 2] = "FLOATING", ee
-    }({})
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

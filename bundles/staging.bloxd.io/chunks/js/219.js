@@ -1,1091 +1,1248 @@
 export const id = 219;
-export const ids = [219];
+export const ids = [218, 219];
 export const modules = {
-  37436: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Te,
-      d: () => Oe
+  35078: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      CAPPED_COUNTS_VISIT_CAP: () => NW,
+      reportCappedWasmFailure: () => cW,
+      reportUncappedWasmFailure: () => LW,
+      reportWasmCrash: () => EW,
+      reportWasmFailure: () => PW
     });
-    He(34844);
-    var ye = He(59),
-      be = He(1432),
-      Me = He(1983),
-      Ke = He(2029),
-      Ue = He(18),
-      Fe = He(2532),
-      Je = He(37440),
-      oe = He(37447),
-      Re = He(34824),
-      ke = He(34836),
-      qe = He(34859),
-      fe = He(1228);
-    const Te = (0, ye.memo)((function() {
-      var ee;
-      const {
-        isTouchScreen: ie,
-        clientEscMenuOptions: He,
-        scriptedCameraFacing: Me,
-        crosshairShownOverride: Te,
-        crosshairGameView: Xe
-      } = (0, Ue.m)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), ze = (0, Fe.i)("gunshotOrigin"), Be = (0, ye.useRef)(null), Ee = (0, ye.useRef)(!1), [ge, de] = (0, ye.useState)(pe);
-      (0, be.f)("cameraZoomSet", de), (0, ye.useEffect)((() => {
-        de(pe())
-      }), []);
-      const We = (0, Ke.k)("heldItemAim"),
-        Ze = We.gun,
-        we = (0, qe.f)(),
-        De = (0, ye.useRef)(we);
-      De.current = we;
-      const [Pe, Ae] = (0, ye.useState)(!1);
-      (0, ye.useEffect)((() => (0, oe.e)("crosshairAccuracy", Oe)), []), (0, be.f)("mouseState", (ee => {
-        let {
-          isDown: ie
-        } = ee;
-        Ee.current = ie, Be.current && (Be.current.style.transform = (0, ke.f)(ie, De.current.growOnClick)), "shapes" === De.current.style && Ae(ie)
-      }));
-      const Ye = (0, Re.e)(ie, He.touchActionButtons);
-      return (null !== (ee = (0, Je.b)(Xe, Te)) && void 0 !== ee ? ee : (0, Je.e)(We, ge > 1, Ye, ze)) ? "movement" === Me || "cursor" === Me ? null : (0, fe.jsxs)(fe.Fragment, {
-        children: [Ze && (0, fe.jsx)(te, {
-          custom: we.forGuns && "shapes" === we.style ? we : null,
-          touch: ie
-        }), !Ze && (0, fe.jsx)(ke.b, {
-          settings: we,
-          touch: ie,
-          pressRef: Be,
-          pressed: "shapes" === we.style ? Pe : Ee.current
-        })]
-      }) : null
-    }));
+    var mW = OW(1888);
 
-    function pe() {
-      return Me.gameBridge.lookup("cameraZoom", null)
+    function EW(WW) {
+      (0, mW.reportClientError)("wasm_load", WW.message, WW.code)
     }
-    const Xe = [{
-        current: null
-      }, {
-        current: null
-      }, {
-        current: null
-      }, {
-        current: null
-      }],
-      ze = {
-        current: null
-      },
-      Be = {
-        current: null
+    const NW = mW.MAX_ERRORS_PER_VISIT - 4;
+
+    function PW(WW, iW, OW, EW) {
+      (0, mW.reportClientError)(WW, iW, OW, !1, mW.MAX_ERRORS_PER_VISIT, {
+        context: EW
+      })
+    }
+
+    function LW(WW, iW, OW, EW) {
+      (0, mW.reportClientError)(WW, iW, OW, !1, 1 / 0, {
+        context: EW
+      })
+    }
+
+    function cW(WW, iW, OW, EW) {
+      (0, mW.reportClientError)(WW, iW, OW, !1, NW, {
+        context: EW
+      })
+    }
+  },
+  37250: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => SW,
+      g: () => TW,
+      j: () => JW,
+      l: () => YW
+    });
+    var mW = OW(37271),
+      EW = OW(2381),
+      NW = OW(37286),
+      PW = OW(2388),
+      LW = OW(35078),
+      cW = OW(3974),
+      wW = OW(4417),
+      tW = OW(4409),
+      ZW = OW(37257),
+      xW = OW(1888),
+      lW = OW(37260),
+      AW = OW(37265),
+      bW = OW(2372);
+    let jW = !1;
+    const UW = 40;
+    var kW = OW(299),
+      sW = OW(4816);
+    const MW = "bloxdWasmFailureReported";
+
+    function KW() {
+      return "undefined" === typeof WebAssembly
+    }
+
+    function SW() {
+      return (0, mW.f)()
+    }
+
+    function YW() {
+      if (KW()) return "this browser has no WebAssembly";
+      const WW = (0, EW.p)();
+      return "compile" === WW || "instantiate" === WW ? `the core wasm didn't load here (${(0,EW.h)()})` : null
+    }
+    async function yW(WW) {
+      return await (0, kW.p)(), await (0, NW.f)(NW.e, void 0, WW)
+    }
+
+    function TW() {
+      KW() || (0, sW.e)((() => {
+        yW()
+      }))
+    }
+
+    function JW() {
+      if (KW()) return async () => ((0, cW.d)("unsupported", 0), hW("unsupported", "This browser has no WebAssembly"), !1);
+      const WW = {
+        reloadFailedDownload: !0
       };
-    let Ee = 0,
-      ge = 0;
-
-    function Oe(ee) {
-      ge = ee, Xe[0].current || ze.current || Be.current ? We(ee) : Ee = ee
-    }
-
-    function de(ee) {
-      return ((0, Je.d)(ee) - (0, Je.d)(0)) * window.innerHeight / 100
-    }
-
-    function We(ee) {
-      var ie;
-      if (null === (ie = Be.current) || void 0 === ie || ie.call(Be, de(ee)), Xe[0].current) {
-        const ie = `${(0,Je.d)(ee)}vh`;
-        Xe[0].current.style.transform = `translateX(calc(0px - ${ie}))`, Xe[1].current.style.transform = `translateX(calc(0px + ${ie}))`, Xe[2].current.style.transform = `translateY(calc(0px - ${ie}))`, Xe[3].current.style.transform = `translateY(calc(0px + ${ie}))`
+      return yW(WW), async () => {
+        var iW;
+        const OW = performance.now();
+        await yW(WW);
+        const mW = (performance.now() - OW) / 1e3;
+        if ((0, EW.R)()) return (0, cW.d)("ready", mW), jW || (jW = !0, (0, EW.Y)((() => {
+          if ("call" !== (0, EW.p)()) return;
+          const WW = (0, EW.m)(),
+            iW = (0, ZW.l)(WW, EW.H, EW.eb),
+            OW = (0, EW.v)().buffer.byteLength,
+            mW = (0, ZW.e)(iW.kind, iW.refusedBytes),
+            NW = mW ? "alloc_failed" : iW.kind,
+            PW = (0, lW.h)(OW),
+            LW = mW ? `_r${Math.floor(Math.log2(iW.refusedBytes))}` : "",
+            cW = (0, bW.e)();
+          null === cW && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
+          const wW = new Error((0, AW.b)(WW, OW, iW));
+          if (WW instanceof Error && void 0 !== WW.stack) {
+            const iW = WW.stack.split("\n"),
+              OW = iW.length > UW ? [...iW.slice(0, UW / 2), ...iW.slice(-UW / 2)] : iW;
+            wW.stack = OW.join("\n")
+          }(0, xW.reportClientError)("wasm_load", wW, `wasm_call_${NW}_${null!==cW&&void 0!==cW?cW:"unnamed"}_m${PW}${LW}`)
+        }))), (0, PW.J)(NW.e.url()) && (0, LW.reportCappedWasmFailure)("wasm_load", wW.e.message, wW.e.code), !0;
+        const kW = tW.b[null !== (iW = (0, EW.p)()) && void 0 !== iW ? iW : "call"];
+        return (0, cW.d)(kW, mW), hW(kW, (0, EW.h)()), !1
       }
-      ze.current && (ze.current.style.filter = `blur(${Math.round(ee/10)}px)`)
     }
 
-    function te(ee) {
-      let {
-        custom: ie,
-        touch: He
-      } = ee;
-      const Me = (0, be.j)("aimingOverlay", "none"),
-        Ke = "1.2vh",
-        Ue = "0.3vh";
-      (0, ye.useEffect)((() => {
-        Ee && We(Ee)
-      }), []);
-      const Fe = (0, ye.useRef)(null !== ie);
-      return (0, ye.useLayoutEffect)((() => {
-        var ee;
-        ie ? null === (ee = Be.current) || void 0 === ee || ee.call(Be, de(ge)) : Fe.current && We(ge);
-        Fe.current = null !== ie
-      }), [ie]), (0, fe.jsxs)(fe.Fragment, {
-        children: ["sniper" === Me && (0, fe.jsxs)("div", {
-          ref: ze,
-          className: "GunCrosshairOverlayWrapper",
-          children: [(0, fe.jsx)("div", {
-            className: "GunCrosshairOverlay"
-          }), (0, fe.jsx)("div", {
-            className: "GunCrosshairOverlayLine1"
-          }), (0, fe.jsx)("div", {
-            className: "GunCrosshairOverlayLine2"
-          }), (0, fe.jsx)("div", {
-            className: "GunCrosshairOverlayDot"
-          })]
-        }), (0, fe.jsxs)("div", {
-          className: "GunCrosshairWrapper",
-          style: {
-            opacity: "sniper" === Me ? 0 : 1
-          },
-          children: [ie && (0, fe.jsx)(ke.b, {
-            settings: ie,
-            touch: He,
-            spreadRef: Be
-          }), !ie && (0, fe.jsxs)(fe.Fragment, {
-            children: [(0, fe.jsx)("div", {
-              className: "GunCrosshair",
-              style: {
-                width: Ke,
-                height: Ue,
-                top: "49.85vh",
-                left: "calc(50vw - 0.6vh)"
-              },
-              ref: Xe[0]
-            }), (0, fe.jsx)("div", {
-              className: "GunCrosshair",
-              style: {
-                width: Ke,
-                height: Ue,
-                top: "49.85vh",
-                left: "calc(50vw - 0.6vh)"
-              },
-              ref: Xe[1]
-            }), (0, fe.jsx)("div", {
-              className: "GunCrosshair",
-              style: {
-                width: Ue,
-                height: Ke,
-                top: "49.4vh",
-                left: "calc(50vw - 0.15vh)"
-              },
-              ref: Xe[2]
-            }), (0, fe.jsx)("div", {
-              className: "GunCrosshair",
-              style: {
-                width: Ue,
-                height: Ke,
-                top: "49.4vh",
-                left: "calc(50vw - 0.15vh)"
-              },
-              ref: Xe[3]
-            })]
-          })]
-        })]
-      })
+    function hW(WW, iW) {
+      (0, tW.j)(MW, `Bloxd wasm ${WW}, so the game can't start: ${iW}`, iW, WW)
     }
   },
-  34836: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Te,
-      f: () => fe
-    });
-    He(34844);
-    var ye = He(1053),
-      be = He.n(ye),
-      Me = He(59),
-      Ke = He(34829);
-
-    function Ue(ee, ie) {
-      return Math.max(1, Math.round(ee * ie))
-    }
-
-    function Fe(ee, ie) {
-      const He = ie * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        ye = function(ee, ie) {
-          if (ee.lines) return Ue(ee.lineThickness, ie) % 2;
-          if (ee.dot) return Ue(ee.dotSize, ie) % 2;
-          return Je(ee, ie) % 2
-        }(ee, ie),
-        be = oe(ee.lineThickness * He, ye),
-        Me = Ue(ee.lineLength, He),
-        Ke = Math.round(ee.gap * He),
-        Fe = ee.outline > 0 ? Ue(ee.outline, He) : 0,
-        ke = [];
-      if (ee.lines && (ke.push({
-          x: be + Ke,
-          y: 0,
-          w: Me,
-          h: be,
-          arm: "right"
-        }), ke.push({
-          x: -Ke - Me,
-          y: 0,
-          w: Me,
-          h: be,
-          arm: "left"
-        }), ke.push({
-          x: 0,
-          y: be + Ke,
-          w: be,
-          h: Me,
-          arm: "down"
-        }), ee.tStyle || ke.push({
-          x: 0,
-          y: -Ke - Me,
-          w: be,
-          h: Me,
-          arm: "up"
-        }), 0 === Ke && ke.push({
-          x: 0,
-          y: 0,
-          w: be,
-          h: be
-        })), ee.dot) {
-        const ie = oe(ee.dotSize * He, ye),
-          Me = ee.lines && 0 === Ke && ee.dotSize > ee.lineThickness ? Math.max(ie, be + 2) : ie,
-          Ue = (be - Me) / 2;
-        ke.push({
-          x: Ue,
-          y: Ue,
-          w: Me,
-          h: Me
-        })
-      }
-      const qe = ke.map((ee => ({
-        ...ee,
-        x: ee.x - Fe,
-        y: ee.y - Fe,
-        w: ee.w + 2 * Fe,
-        h: ee.h + 2 * Fe
-      })));
-      let fe = null,
-        Te = null;
-      if (ee.circle) {
-        const ie = Ue(ee.circleThickness, He),
-          Me = function(ee, ie) {
-            return ee + (ee % 2 === ie ? 0 : 1)
-          }(Je(ee, He), ye),
-          Ke = (be - Me) / 2;
-        fe = Re(Ke, Me, ie), Fe > 0 && (Te = Re(Ke - Fe, Me + 2 * Fe, ie + 2 * Fe))
-      }
-      return {
-        cell: be,
-        fills: ke,
-        outlines: Fe > 0 ? qe : [],
-        ring: fe,
-        ringOutline: Te
-      }
-    }
-
-    function Je(ee, ie) {
-      return Math.round(ee.circleRadius * ie * 2 + Ue(ee.circleThickness, ie))
-    }
-
-    function oe(ee, ie) {
-      return Math.max(2 - ie, 2 * Math.round((ee - ie) / 2) + ie)
-    }
-
-    function Re(ee, ie, He) {
-      const ye = 2 * He >= ie - 1;
-      return {
-        x: ee,
-        y: ee,
-        size: ie,
-        border: Math.min(He, Math.floor(ie / 2)),
-        filled: ye
-      }
-    }
-    var ke = He(1228);
-    const qe = 1.4;
-
-    function fe(ee, ie) {
-      return ee && ie ? `scale(${qe})` : "scale(1)"
-    }
-
-    function Te(ee) {
-      return "classic" === ee.settings.style ? (0, ke.jsx)(ze, {
-        ...ee
-      }) : (0, ke.jsx)(te, {
-        ...ee
-      })
-    }
-    const pe = .125;
-
-    function Xe(ee, ie) {
-      const He = {};
-      if (ee.color !== Ke.e.color && (He.color = (0, Ke.j)(ee.color)), ee.opacity !== Ke.e.opacity && (He.opacity = ee.opacity / 100), ee.outline !== Ke.e.outline || ee.outlineColor !== Ke.e.outlineColor) {
-        const ie = ee.outline,
-          ye = (0, Ke.j)(ee.outlineColor);
-        He.textShadow = ie > 0 ? `-${ie}px 0 ${ye}, 0 ${ie}px ${ye}, ${ie}px 0 ${ye}, 0 -${ie}px ${ye}` : "none"
-      }
-      if (ee.size !== Ke.e.size) {
-        const ye = ee.size / 100;
-        He.fontSize = ie ? `calc(max(1.3rem, 18px) * ${ye})` : `calc(1.3rem * ${ye})`, He.marginTop = `-${pe}em`, He.transformOrigin = `50% calc(50% + ${pe}em)`
-      }
-      return He
-    }
-
-    function ze(ee) {
-      let {
-        settings: ie,
-        touch: He,
-        inPreview: ye,
-        inEditor: Me,
-        pressed: Ke = !1,
-        pressRef: Ue
-      } = ee;
-      return (0, ke.jsx)("div", {
-        className: be()("Crosshair", {
-          Touch: He,
-          CrosshairInPreview: ye,
-          CrosshairInEditor: Me || ye
-        }),
-        ref: Ue,
-        style: {
-          transform: fe(Ke, ie.growOnClick),
-          ...Xe(ie, He)
-        },
-        children: "+"
-      })
-    }
-
-    function Be(ee, ie) {
-      return ee / ie + "px"
-    }
-
-    function Ee(ee, ie, He, ye) {
-      return {
-        ...de(ee, ie, He),
-        width: Be(ee.w, He),
-        height: Be(ee.h, He),
-        background: ye
-      }
-    }
-
-    function ge(ee, ie, He) {
-      return {
-        left: Be(ee.x, ie),
-        top: Be(ee.y, ie),
-        width: Be(ee.size, ie),
-        height: Be(ee.size, ie),
-        borderWidth: Be(ee.border, ie),
-        borderColor: He,
-        background: ee.filled ? He : void 0
-      }
-    }
-    const Oe = {
-      left: [-1, 0],
-      right: [1, 0],
-      up: [0, -1],
-      down: [0, 1]
-    };
-
-    function de(ee, ie, He) {
-      const [ye, be] = ee.arm ? Oe[ee.arm] : [0, 0], Me = Math.round(ie * He);
-      return {
-        left: Be(ee.x + ye * Me, He),
-        top: Be(ee.y + be * Me, He)
-      }
-    }
-
-    function We(ee) {
-      return ee.arm ? {
-        "data-arm": ee.arm,
-        "data-x": ee.x,
-        "data-y": ee.y
-      } : {}
-    }
-
-    function te(ee) {
-      let {
-        settings: ie,
-        inPreview: He,
-        inEditor: ye,
-        pressed: Ue = !1,
-        spread: Je,
-        spreadRef: oe
-      } = ee;
-      const Re = (0, Me.useRef)(null),
-        {
-          box: fe,
-          dpr: Te
-        } = function(ee) {
-          const [ie, He] = (0, Me.useState)({
-            box: {
-              left: 0,
-              top: 0,
-              width: 0,
-              height: 0
-            },
-            dpr: 1
-          });
-          return (0, Me.useLayoutEffect)((() => {
-            const ie = ee.current;
-            if (!ie) return;
-            const ye = () => {
-              const ee = ie.getBoundingClientRect(),
-                ye = window.devicePixelRatio || 1;
-              He((ie => ie.dpr === ye && ie.box.left === ee.left && ie.box.top === ee.top && ie.box.width === ee.width && ie.box.height === ee.height ? ie : {
-                box: {
-                  left: ee.left,
-                  top: ee.top,
-                  width: ee.width,
-                  height: ee.height
-                },
-                dpr: ye
-              }))
-            };
-            ye();
-            const be = new ResizeObserver(ye);
-            return be.observe(ie), window.addEventListener("resize", ye), window.addEventListener("scroll", ye, !0), () => {
-              be.disconnect(), window.removeEventListener("resize", ye), window.removeEventListener("scroll", ye, !0)
-            }
-          }), [ee]), ie
-        }(Re),
-        pe = (0, Me.useRef)(Te);
-      pe.current = Te;
-      const Xe = Fe(ie, Te, Ue && ie.growOnClick ? qe : 1),
-        ze = function(ee, ie, He) {
-          const ye = Math.round((ee.left + ee.width / 2) * He - ie / 2),
-            be = Math.round((ee.top + ee.height / 2) * He - ie / 2);
-          return {
-            x: ye / He - ee.left,
-            y: be / He - ee.top
-          }
-        }(fe, Xe.cell, Te),
-        Be = (0, Ke.j)(ie.color),
-        Oe = (0, Ke.j)(ie.outlineColor),
-        te = (0, Me.useRef)(0);
-      (0, Me.useLayoutEffect)((() => {
-        if (oe) return oe.current = ee => {
-          var ie;
-          te.current = ee, null === (ie = Re.current) || void 0 === ie || ie.querySelectorAll("[data-arm]").forEach((ie => {
-            Object.assign(ie.style, de(function(ee) {
-              return {
-                x: Number(ee.dataset.x),
-                y: Number(ee.dataset.y),
-                arm: ee.dataset.arm
-              }
-            }(ie), ee, pe.current))
-          }))
-        }, () => {
-          oe.current = null
-        }
-      }), [oe]);
-      const Ze = null !== Je && void 0 !== Je ? Je : te.current;
-      return (0, ke.jsx)("div", {
-        ref: Re,
-        className: be()("CrosshairShapes", {
-          CrosshairInPreview: He,
-          CrosshairInEditor: ye || He,
-          CrosshairSpreads: void 0 !== oe
-        }),
-        children: (0, ke.jsx)("div", {
-          className: "CrosshairShapesOrigin",
-          style: {
-            left: ze.x,
-            top: ze.y,
-            opacity: ie.opacity / 100
-          },
-          children: (0, ke.jsxs)("div", {
-            className: "CrosshairShapesPress",
-            children: [Xe.ringOutline && (0, ke.jsx)("div", {
-              className: "CrosshairRing",
-              style: ge(Xe.ringOutline, Te, Oe)
-            }), Xe.outlines.map(((ee, ie) => (0, ke.jsx)("div", {
-              className: "CrosshairPart",
-              ...We(ee),
-              style: Ee(ee, Ze, Te, Oe)
-            }, `o${ie}`))), Xe.ring && (0, ke.jsx)("div", {
-              className: "CrosshairRing",
-              style: ge(Xe.ring, Te, Be)
-            }), Xe.fills.map(((ee, ie) => (0, ke.jsx)("div", {
-              className: "CrosshairPart",
-              ...We(ee),
-              style: Ee(ee, Ze, Te, Be)
-            }, `f${ie}`)))]
-          })
-        })
-      })
-    }
+  37306: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/bloxd_wasm_bg.c887ae513bec2c674549.wasm"
   },
-  34851: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => oe,
-      h: () => pe,
-      j: () => Te
-    });
-    var ye = He(34829);
-    const be = "XH1-",
-      Me = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      Ke = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      Ue = ["color", "outlineColor"],
-      Fe = 1 + 3 * Ue.length + Ke.length + 1,
-      Je = Math.ceil(8 * Fe / Math.log2(62)),
-      oe = be.length + Je;
-
-    function Re(ee) {
-      let ie = 90;
-      for (const He of ee) ie = 31 * ie + He & 255;
-      return ie
-    }
-    const ke = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      qe = BigInt(ke.length);
-
-    function fe(ee, ie) {
-      let He = 0n;
-      for (const be of ee) {
-        const ee = ke.indexOf(be);
-        if (ee < 0) return null;
-        He = He * qe + BigInt(ee)
-      }
-      if (He >> BigInt(8 * ie) !== 0n) return null;
-      const ye = [];
-      for (let be = 0; be < ie; be++) ye.unshift(Number(0xffn & He)), He >>= 8n;
-      return ye
-    }
-
-    function Te(ee) {
-      let ie = "shapes" === ee.style ? 1 : 0;
-      Me.forEach(((He, ye) => {
-        ee[He] && (ie |= 1 << ye + 1)
-      }));
-      const He = [ie];
-      for (const be of Ue) {
-        const ie = (0, ye.f)(be, ee[be]);
-        He.push(ie >> 16 & 255, ie >> 8 & 255, 255 & ie)
-      }
-      for (const be of Ke) {
-        const {
-          min: ie,
-          step: Me
-        } = ye.d[be];
-        He.push(Math.round(((0, ye.f)(be, ee[be]) - ie) / Me))
-      }
-      return He.push(Re(He)), be + function(ee, ie) {
-        let He = 0n;
-        for (const be of ee) He = He << 8n | BigInt(be);
-        let ye = "";
-        for (let be = 0; be < ie; be++) ye = ke[Number(He % qe)] + ye, He /= qe;
-        return ye
-      }(He, Je)
-    }
-
-    function pe(ee) {
-      for (const ie of ee.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Je}})`, "gi"))) {
-        const ee = Xe(fe(ie[1], Fe));
-        if (ee) return ee
-      }
-      return null
-    }
-
-    function Xe(ee) {
-      if (!ee || ee.length !== Fe || Re(ee.slice(0, -1)) !== ee[ee.length - 1]) return null;
-      const ie = ee[0],
-        He = {
-          ...ye.e,
-          style: 1 & ie ? "shapes" : "classic"
-        };
-      Me.forEach(((ee, ye) => {
-        He[ee] = 0 !== (ie & 1 << ye + 1)
-      }));
-      let be = 1;
-      for (const ye of Ue) He[ye] = ee[be] << 16 | ee[be + 1] << 8 | ee[be + 2], be += 3;
-      for (const Me of Ke) {
-        const {
-          min: ie,
-          step: Ke
-        } = ye.d[Me];
-        He[Me] = (0, ye.f)(Me, ie + ee[be] * Ke), be++
-      }
-      return He
-    }
+  37283: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/bloxd_wasm_textures_bg.5f6ebeba7b776ee2ab3c.wasm"
   },
-  34829: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => ye,
-      e: () => be,
-      f: () => Me,
-      j: () => Je,
-      k: () => Fe,
-      l: () => oe,
-      n: () => Ue,
-      o: () => Ke
+  37295: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      NO: () => mW,
+      EnvelopeKind: () => EW,
+      TO: () => NW,
+      PhysicsEngine: () => PW,
+      HE: () => LW,
+      BE: () => cW,
+      AN: () => wW,
+      IN: () => tW,
+      VP: () => ZW,
+      SL: () => xW,
+      cc: () => lW,
+      ec: () => AW,
+      ac: () => bW,
+      sw: () => jW,
+      default: () => Yi,
+      initSync: () => Si,
+      qt: () => UW,
+      dZ: () => kW,
+      eZ: () => sW,
+      vZ: () => MW,
+      gZ: () => KW,
+      DZ: () => SW,
+      VZ: () => YW,
+      pZ: () => yW,
+      fZ: () => TW,
+      CZ: () => JW,
+      XZ: () => hW,
+      BZ: () => HW,
+      qZ: () => nW,
+      RZ: () => uW,
+      GZ: () => oW
     });
-    const ye = {
-        opacity: {
-          min: 5,
-          max: 100,
-          step: 1
-        },
-        outline: {
-          min: 0,
-          max: 4,
-          step: .1
-        },
-        size: {
-          min: 25,
-          max: 400,
-          step: 5
-        },
-        lineLength: {
-          min: .5,
-          max: 40,
-          step: .5
-        },
-        lineThickness: {
-          min: .5,
-          max: 10,
-          step: .5
-        },
-        gap: {
-          min: 0,
-          max: 40,
-          step: .5
-        },
-        dotSize: {
-          min: .5,
-          max: 12,
-          step: .5
-        },
-        circleRadius: {
-          min: 1,
-          max: 60,
-          step: .5
-        },
-        circleThickness: {
-          min: .5,
-          max: 6,
-          step: .5
-        },
-        color: {
-          min: 0,
-          max: 16777215,
-          step: 1
-        },
-        outlineColor: {
-          min: 0,
-          max: 16777215,
-          step: 1
-        }
-      },
-      be = Object.freeze({
-        style: "classic",
-        color: 16777215,
-        opacity: 100,
-        outline: 1.2,
-        outlineColor: 0,
-        growOnClick: !0,
-        size: 100,
-        lines: !0,
-        lineLength: 6,
-        lineThickness: 2,
-        gap: 3,
-        tStyle: !1,
-        dot: !1,
-        dotSize: 2,
-        circle: !1,
-        circleRadius: 10,
-        circleThickness: 1,
-        forGuns: !1
-      });
-
-    function Me(ee, ie) {
-      var He;
-      const {
-        min: Me,
-        max: Ke,
-        step: Ue
-      } = ye[ee];
-      if (!Number.isFinite(ie)) return be[ee];
-      const Fe = (null !== (He = String(Ue).split(".")[1]) && void 0 !== He ? He : "").length,
-        Je = Number((Math.round(ie / Ue) * Ue).toFixed(Fe));
-      return Math.min(Ke, Math.max(Me, Je))
-    }
-
-    function Ke(ee, ie, He) {
-      const ye = "number" === typeof He ? Me(ie, He) : He;
-      return {
-        ...ee,
-        [ie]: ye
+    class mW {
+      __destroy_into_raw() {
+        const WW = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, eW.unregister(this), WW
       }
-    }
-
-    function Ue(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(be).every((ye => He.includes(ye) || ee[ye] === ie[ye]))
-    }
-
-    function Fe(ee) {
-      return Ue(ee, be)
-    }
-
-    function Je(ee) {
-      return `#${ee.toString(16).padStart(6,"0")}`
-    }
-
-    function oe(ee) {
-      const ie = /^#?([0-9a-f]{6})$/i.exec(ee.trim());
-      return ie ? parseInt(ie[1], 16) : null
-    }
-  },
-  34859: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Re,
-      f: () => ke
-    });
-    var ye = He(59),
-      be = He(35),
-      Me = He(34851),
-      Ke = He(34829);
-    const Ue = "crosshairCode";
-    let Fe = null;
-    const Je = new Set;
-
-    function oe() {
-      if (null === Fe) {
-        var ee;
-        const ie = be.i.getItem(Ue);
-        Fe = null !== (ee = "string" === typeof ie ? (0, Me.h)(ie) : null) && void 0 !== ee ? ee : Ke.e
+      free() {
+        const WW = this.__destroy_into_raw();
+        si.hZNs(WW, 0)
       }
-      return Fe
-    }
-
-    function Re(ee) {
-      Fe = ee, (0, Ke.k)(ee) ? be.i.removeItem(Ue) : be.i.setItem(Ue, (0, Me.j)(ee));
-      for (const ie of Je) ie()
-    }
-
-    function ke() {
-      const [ee, ie] = (0, ye.useState)(oe);
-      return (0, ye.useEffect)((() => {
-        const ee = () => {
-          ie(oe())
-        };
-        return ee(), He = ee, Je.add(He), () => {
-          Je.delete(He)
-        };
-        var He
-      }), []), ee
-    }
-  },
-  37590: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Me,
-      e: () => Fe,
-      f: () => Ke
-    });
-    var ye = He(610),
-      be = He(2969);
-
-    function Me(ee) {
-      return ee === (0, be.h)().dHe ? (0, be.h)().gC : ee
-    }
-
-    function Ke(ee) {
-      return !(0, ye.P)(ee) && Me(ee) === (0, be.h)().gC
-    }
-    const Ue = "gravity";
-
-    function Fe() {
-      return (0, be.h)().physics[Ue][1]
-    }
-  },
-  37574: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => de
-    });
-    var ye = He(37578),
-      be = He(186),
-      Me = He(5338),
-      Ke = He(37584),
-      Ue = He(37224),
-      Fe = He(37627),
-      Je = He(37590),
-      oe = He(352),
-      Re = He.n(oe),
-      ke = He(2969),
-      qe = He(37620),
-      fe = He(27),
-      Te = He(18),
-      pe = He(37596),
-      Xe = He(37601),
-      ze = He(37605),
-      Be = He(37612);
-    const Ee = new Set(["note"]);
-    const ge = {
-      stop: () => ge,
-      fade: () => ge,
-      rate: () => ge,
-      stopsAtOnce: () => !1,
-      isAlive: () => !1,
-      getDurationMs: () => 0,
-      getVolume: () => 0,
-      getRelativeVolume: () => 0,
-      setRelativeVolume: () => ge,
-      setPannerAttr: () => ge,
-      setPosition: () => ge
-    };
-    class Oe {
-      constructor(ee) {
-        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new Fe.i, this._howl = (0, Ue.countDecodesAs)(new Me.Howl({
-          src: [...(0, ye.s)(ee).src],
-          pool: 15
-        }), "sound"), this._howl.once("loaderror", (() => {
-          this._loadFailed = !0
-        }))
+      IZ() {
+        const WW = si.QvcQ(this.__wbg_ptr);
+        if (WW[2]) throw xi(WW[1]);
+        return WW[0] >>> 0
       }
-      play() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const ie = this._howl.play(Ke.b);
-        ee && this._howl.loop(!0, ie);
-        let He = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), ie);
-        const ye = {
-          stop: () => {
-            var ee;
-            return null === (ee = this.liveHowl()) || void 0 === ee || ee.stop(ie), ye
-          },
-          fade: (ee, He, be) => {
-            var Me;
-            return null === (Me = this.liveHowl()) || void 0 === Me || Me.fade(ee, He, be, ie), ye
-          },
-          rate: ee => {
-            var He;
-            return null === (He = this.liveHowl()) || void 0 === He || He.rate(ee, ie), ye
-          },
-          stopsAtOnce: () => this._howl.playing(ie) && !this._howl._playLock,
-          isAlive: () => {
-            const ee = this._howl._soundById(ie);
-            return !this._loadFailed && !!ee && !ee._ended
-          },
-          getDurationMs: () => this._howl._soundById(ie) ? 1e3 * this._howl.duration(ie) / this._howl.rate(ie) : 0,
-          getVolume: () => He * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => He,
-          setRelativeVolume: ee => {
-            var be;
-            if (ee > 1) throw new Error("Volume should be <= 1");
-            return He = Te.e.get("soundOnFromAd") ? ee : 0, null === (be = this.liveHowl()) || void 0 === be || be.volume(Math.min(1, He * this._volumeMultiplier.getTotalMultipliedVal()), ie), ye
-          },
-          setPannerAttr: ee => {
-            let {
-              coneInnerAngle: He,
-              coneOuterAngle: be = 360,
-              coneOuterGain: Me,
-              distanceModel: Ke,
-              maxDistance: Ue,
-              panningModel: Fe,
-              refDistance: Je,
-              rolloffFactor: oe
-            } = ee;
-            return this._setPannerAttr({
-              id: ie,
-              coneInnerAngle: He,
-              coneOuterAngle: be,
-              coneOuterGain: Me,
-              distanceModel: Ke,
-              maxDistance: Ue,
-              panningModel: Fe,
-              refDistance: Je,
-              rolloffFactor: oe
-            }), ye
-          },
-          setPosition: ee => {
-            var He;
-            return null === (He = this.liveHowl()) || void 0 === He || He.pos(ee[2], ee[1], ee[0], ie), ye
-          }
-        };
-        return ye
+      aZ() {
+        return si.qwgF(this.__wbg_ptr) >>> 0
       }
-      liveHowl() {
-        return this._unloaded ? null : this._howl
-      }
-      loaded() {
-        return "loaded" === this._howl.state()
-      }
-      unloadOnceIdle() {
-        (0, Ke.f)(this._howl, (() => {
-          this._unloaded = !0
-        }))
-      }
-      setGlobalVolume(ee) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", ee), this._howl.volume(ee)
-      }
-      _setPannerAttr(ee) {
-        let {
-          id: ie,
-          coneInnerAngle: He = 360,
-          coneOuterAngle: ye = 360,
-          coneOuterGain: be = 0,
-          distanceModel: Me = "inverse",
-          maxDistance: Ke = 1e3,
-          panningModel: Ue = "HRTF",
-          refDistance: Fe = qe.j,
-          rolloffFactor: Je = 1
-        } = ee;
-        const oe = this.liveHowl();
-        if (null === oe) return;
-        oe.pannerAttr({
-          coneOuterAngle: ye
-        }, ie);
-        const Re = {
-          coneInnerAngle: He,
-          coneOuterAngle: ye,
-          coneOuterGain: be,
-          distanceModel: Me,
-          maxDistance: Ke,
-          panningModel: Ue,
-          refDistance: Fe,
-          rolloffFactor: Je
-        };
-        oe.pannerAttr(Re, ie)
-      }
-    }
-    const de = new class {
       constructor() {
-        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new pe.c, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, fe.h.subscribe("appManagerUpdated|soundVolume", (ee => {
-          const ie = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
-          for (const He of ie) He.setGlobalVolume(ee)
-        }))
+        const WW = si.pt1D();
+        return this.__wbg_ptr = WW, eW.register(this, this.__wbg_ptr, this), this
       }
-      play(ee, ie) {
-        var He;
-        let Me, Ke = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (He = (0, ke.h)()) || void 0 === He ? void 0 : He.gC,
-          Ue = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : qe.f,
-          Fe = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : qe.j,
-          oe = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var fe;
-        (0, ke.h)() ? Me = !!Array.isArray(Ke) || (0, Je.b)(Ke) !== (null === (fe = (0, ke.h)()) || void 0 === fe ? void 0 : fe.gC): Me = !1;
-        const Te = (0, ye.j)(ee),
-          Xe = this.loadSound(Me ? this.spatialSounds : this.stereoSounds, ee);
-        if (!Me) {
-          const ee = Xe.play(oe);
-          return ee.setRelativeVolume(ie), ee
-        }
-        const ze = (0, ke.h)(),
-          Be = Array.isArray(Ke) ? Ke : ze.sE.pE(Ke),
-          Oe = ze.sE.pE(ze.gC);
-        if (!Be || Re().sqrDist(Be, Oe) > Ue * Ue) return ge;
-        let de;
-        if (!oe) {
-          if (!this.spatialVoices.admit({
-              group: Ee.has(Te) ? null : (0, pe.i)(ee),
-              loudness: (0, pe.f)(ie, Re().Po(Be, Oe), Fe),
-              startMs: performance.now(),
-              getDurationMs: () => {
-                var ee, ie;
-                return null !== (ee = null === (ie = de) || void 0 === ie ? void 0 : ie.getDurationMs()) && void 0 !== ee ? ee : 0
-              },
-              isAlive: () => {
-                var ee, ie;
-                return null !== (ee = null === (ie = de) || void 0 === ie ? void 0 : ie.isAlive()) && void 0 !== ee && ee
-              },
-              canStop: () => {
-                var ee, ie;
-                return null !== (ee = null === (ie = de) || void 0 === ie ? void 0 : ie.stopsAtOnce()) && void 0 !== ee && ee
-              },
-              stop: () => {
-                var ee;
-                null === (ee = de) || void 0 === ee || ee.stop()
-              }
-            })) return ge
-        }
-        return de = Xe.play(oe), de.setRelativeVolume(ie), de.setPannerAttr({
-          refDistance: Fe
-        }), de.setPosition([Be[0], Be[1] + be.g.UX * be.g.playerEyeToHeightRatio, Be[2]]), de
+      rZ() {
+        return si.jY9D(this.__wbg_ptr) >>> 0
       }
-      preload(ee) {
-        const ie = (0, ye.o)(ee) ? [ee] : (0, ye.w)(ee);
-        if (0 === ie.length) throw new Error(`Invalid sound name ${ee} (no sound has it or starts with it)`);
-        for (const He of ie) this.loadSound(this.stereoSounds, He)
+      zZ(WW) {
+        const iW = si.t9fM(this.__wbg_ptr, WW);
+        if (iW[2]) throw xi(iW[1]);
+        return iW[0] >>> 0
       }
-      preloadAtIdle(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Be.e;
-        const He = ee.filter((ee => !this.idlePreloads.has(ee)));
-        for (const be of He) this.idlePreloads.add(be);
-        const ye = this.idlePreloadGeneration;
-        (0, ze.c)(He, {
-          ...ie,
-          Ce: () => ye !== this.idlePreloadGeneration,
-          fetchFile: ee => {
-            this.idlePreloads.delete(ee);
-            try {
-              return this.preload(ee), Promise.resolve()
-            } catch (ie) {
-              return Promise.reject(ie)
-            }
-          }
-        })
-      }
-      loadSound(ee, ie) {
-        const He = ee[ie];
-        if (He) return He;
-        const be = this.makeSound(ee, ie);
-        for (const Ke of null !== (Me = (0, ye.r)(ie)) && void 0 !== Me ? Me : []) {
-          var Me;
-          ee[Ke] || this.makeSound(ee, Ke)
-        }
-        return be
-      }
-      makeSound(ee, ie) {
-        (0, Be.h)(ie);
-        const He = new Oe(ie);
-        return He.setGlobalVolume(Te.e.get("soundVolume")), ee[ie] = He, He
-      }
-      freeSoundsAfterGame() {
-        this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
-      }
-      freeSounds() {
-        for (const ee of [this.stereoSounds, this.spatialSounds])
-          for (const [ie, He] of Object.entries(ee)) !Xe.b.has((0, ye.j)(ie)) && He.loaded() && (He.unloadOnceIdle(), delete ee[ie])
+      FZ(WW) {
+        const iW = si.jcIu(this.__wbg_ptr, WW);
+        if (iW[2]) throw xi(iW[1]);
+        return iW[0] >>> 0
       }
     }
-  },
-  37666: (ee, ie, He) => {
-    function ye(ee, ie) {
-      var He, ye, be, Me, Ke, Ue, Fe, Je;
-      return ee.name === ie.name && ((null === (He = ee.attributes) || void 0 === He || null === (ye = He.customAttributes) || void 0 === ye ? void 0 : ye.stackKey) === (null === (be = ie.attributes) || void 0 === be || null === (Me = be.customAttributes) || void 0 === Me ? void 0 : Me.stackKey) && (!0 !== (null === (Ke = ee.attributes) || void 0 === Ke || null === (Ue = Ke.customAttributes) || void 0 === Ue ? void 0 : Ue.unstackable) && !0 !== (null === (Fe = ie.attributes) || void 0 === Fe || null === (Je = Fe.customAttributes) || void 0 === Je ? void 0 : Je.unstackable)))
-    }
-    He.d(ie, {
-      d: () => ye
-    })
-  },
-  37770: (ee, ie, He) => {
-    function ye(ee) {
-      return ee.includes("Leaf Bed")
-    }
-
-    function be(ee) {
-      return / Bed(?: Head)?(?:\||$)/.test(ee) && !ye(ee)
-    }
-
-    function Me(ee) {
-      return ee.includes(" Strongbed")
-    }
-
-    function Ke(ee) {
-      return ye(ee) || be(ee) || Me(ee)
-    }
-    He.d(ie, {
-      e: () => Ke,
-      i: () => ye,
-      k: () => Me,
-      m: () => be
-    })
-  },
-  37765: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Je
+    Symbol.dispose && (mW.prototype[Symbol.dispose] = mW.prototype.free);
+    const EW = Object.freeze({
+      Js: 0,
+      0: "Js",
+      Error: 1,
+      1: "Error",
+      LeaveRoom: 2,
+      2: "LeaveRoom",
+      RoomState: 3,
+      3: "RoomState",
+      RoomStatePatch: 4,
+      4: "RoomStatePatch",
+      RoomDataNone: 5,
+      5: "RoomDataNone",
+      RoomDataBin: 6,
+      6: "RoomDataBin",
+      RoomDataBytes: 7,
+      7: "RoomDataBytes",
+      Ignored: 8,
+      8: "Ignored",
+      StringType: 16,
+      16: "StringType"
     });
-    var ye = He(37770),
-      be = He(9961);
-    const Me = [],
-      Ke = [],
-      Ue = [],
-      Fe = [];
-    for (const oe of Object.keys(be.m))(0, ye.i)(oe) ? Me.push(oe) : (0, ye.m)(oe) && Ke.push(oe), (0, ye.k)(oe) && Ue.push(oe), (oe.includes(" Bed Head") || oe.includes(" Strongbed Head")) && Fe.push(oe);
-    const Je = {
-      leafBeds: Me,
-      woolBeds: Ke,
-      strongBeds: Ue,
-      beds: [...Me, ...Ke, ...Ue],
-      bedHeads: Fe,
-      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
+    class NW {
+      __destroy_into_raw() {
+        const WW = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, vW.unregister(this), WW
+      }
+      free() {
+        const WW = this.__destroy_into_raw();
+        si.UAWg(WW, 0)
+      }
+      ix(WW, iW) {
+        const OW = si.JuoC(this.__wbg_ptr, WW, iW);
+        if (OW[2]) throw xi(OW[1]);
+        return OW[0] >>> 0
+      }
+      Ox(WW) {
+        const iW = si.xrS5(this.__wbg_ptr, WW);
+        if (iW[2]) throw xi(iW[1]);
+        return iW[0] >>> 0
+      }
+      mx() {
+        si.JBxm(this.__wbg_ptr)
+      }
+      static Ex() {
+        return si.gsbE() >>> 0
+      }
+      Nx() {
+        return si.VDVM(this.__wbg_ptr) >>> 0
+      }
+      Px() {
+        const WW = si.yNEw(this.__wbg_ptr);
+        return 0 === WW[0] ? void 0 : WW[1]
+      }
+      Lx() {
+        return si.kgof(this.__wbg_ptr) >>> 0
+      }
+      wx() {
+        return si.kkpA(this.__wbg_ptr) >>> 0
+      }
+      static Wx() {
+        return si.YrbY() >>> 0
+      }
+      constructor() {
+        const WW = si.MaLa();
+        return this.__wbg_ptr = WW, vW.register(this, this.__wbg_ptr, this), this
+      }
+      tx() {
+        return si.g6A9(this.__wbg_ptr) >>> 0
+      }
+      Zx() {
+        return si.aqpx(this.__wbg_ptr) >>> 0
+      }
+      lx() {
+        return si.RVbi(this.__wbg_ptr) >>> 0
+      }
+      QZ(WW) {
+        return si.lL0s(this.__wbg_ptr, WW) >>> 0
+      }
+      reserve(WW, iW) {
+        const OW = si.mk5h(this.__wbg_ptr, WW, iW);
+        if (OW[1]) throw xi(OW[0])
+      }
+      jx(WW, iW) {
+        const OW = ci(WW, si.qZbx),
+          mW = Mi;
+        si.Ci2h(this.__wbg_ptr, OW, mW, iW)
+      }
+      text() {
+        let WW, iW;
+        try {
+          const OW = si.Paiz(this.__wbg_ptr);
+          return WW = OW[0], iW = OW[1], zW(OW[0], OW[1])
+        } finally {
+          si.NQBs(WW, iW, 1)
+        }
+      }
+    }
+    Symbol.dispose && (NW.prototype[Symbol.dispose] = NW.prototype.free);
+    class PW {
+      __destroy_into_raw() {
+        const WW = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, gW.unregister(this), WW
+      }
+      free() {
+        const WW = this.__destroy_into_raw();
+        si.Joyz(WW, 0)
+      }
+      kx(WW, iW) {
+        BW(iW, mW);
+        const OW = si.Uc1K(this.__wbg_ptr, WW, iW.__wbg_ptr);
+        if (OW[2]) throw xi(OW[1]);
+        return OW[0] >>> 0
+      }
+      sx() {
+        const WW = si.rs5P(this.__wbg_ptr);
+        if (WW[1]) throw xi(WW[0])
+      }
+      Yx(WW, iW, OW, mW, EW, NW, PW, cW, wW, tW, ZW) {
+        BW(WW, LW);
+        const xW = si.fqRV(this.__wbg_ptr, WW.__wbg_ptr, iW, OW, mW, EW, NW, PW, cW, wW, tW, ZW);
+        if (xW[2]) throw xi(xW[1]);
+        return xW[0]
+      }
+      yx() {
+        const WW = si.P264(this.__wbg_ptr);
+        var iW = qW(WW[0], WW[1]).slice();
+        return si.NQBs(WW[0], 8 * WW[1], 8), iW
+      }
+      Tx() {
+        return si.ygKB(this.__wbg_ptr) >>> 0
+      }
+      Jx() {
+        return si.FV6x(this.__wbg_ptr) >>> 0
+      }
+      hx() {
+        return si.JkTG(this.__wbg_ptr) >>> 0
+      }
+      constructor(WW, iW, OW, mW, EW, NW, PW, LW) {
+        const cW = si.Fv4r(WW, iW, OW, mW, EW, NW, PW, LW);
+        if (cW[2]) throw xi(cW[1]);
+        return this.__wbg_ptr = cW[0], gW.register(this, this.__wbg_ptr, this), this
+      }
+      vx(WW) {
+        BW(WW, mW);
+        const iW = si.kibH(this.__wbg_ptr, WW.__wbg_ptr);
+        if (iW[2]) throw xi(iW[1]);
+        return iW[0] >>> 0
+      }
+      gx(WW) {
+        const iW = si.CRSh(this.__wbg_ptr, WW);
+        if (iW[1]) throw xi(iW[0])
+      }
+      Dx() {
+        return si.g3Zk(this.__wbg_ptr) >>> 0
+      }
+      resume(WW, iW) {
+        BW(WW, LW), BW(iW, mW);
+        const OW = si.WTcv(this.__wbg_ptr, WW.__wbg_ptr, iW.__wbg_ptr);
+        if (OW[2]) throw xi(OW[1]);
+        return OW[0] >>> 0
+      }
+      qx(WW) {
+        const iW = si.uEig(this.__wbg_ptr, WW);
+        if (iW[1]) throw xi(iW[0])
+      }
+      Ix(WW, iW) {
+        BW(iW, mW);
+        const OW = si.spWb(this.__wbg_ptr, WW, iW.__wbg_ptr);
+        if (OW[1]) throw xi(OW[0])
+      }
+      Qx(WW) {
+        const iW = ti(WW, si.qZbx),
+          OW = Mi,
+          mW = si.DDZq(this.__wbg_ptr, iW, OW);
+        if (mW[1]) throw xi(mW[0])
+      }
+      Kx(WW, iW, OW, mW, EW, NW) {
+        const PW = si.Vrdp(this.__wbg_ptr, WW, iW, OW, mW, EW, NW);
+        if (PW[1]) throw xi(PW[0])
+      }
+      Sx(WW, iW, OW, mW) {
+        const EW = ci(WW, si.qZbx),
+          NW = Mi,
+          PW = ti(iW, si.qZbx),
+          LW = Mi,
+          cW = ti(OW, si.qZbx),
+          wW = Mi,
+          tW = ti(mW, si.qZbx),
+          ZW = Mi,
+          xW = si.dXJO(this.__wbg_ptr, EW, NW, PW, LW, cW, wW, tW, ZW);
+        if (xW[1]) throw xi(xW[0])
+      }
+      il(WW, iW) {
+        BW(iW, mW);
+        const OW = si.grTy(this.__wbg_ptr, WW, iW.__wbg_ptr);
+        if (OW[1]) throw xi(OW[0])
+      }
+      nx(WW, iW, OW) {
+        const mW = si.dhgp(this.__wbg_ptr, WW, iW, OW);
+        if (mW[1]) throw xi(mW[0])
+      }
+      ml(WW, iW, OW, mW, EW, NW, PW, cW, wW, tW) {
+        BW(WW, LW);
+        return si.fwQk(this.__wbg_ptr, WW.__wbg_ptr, iW, OW, mW, EW, NW, PW, cW, wW, tW)
+      }
+    }
+    Symbol.dispose && (PW.prototype[Symbol.dispose] = PW.prototype.free);
+    class LW {
+      static __wrap(WW) {
+        const iW = Object.create(LW.prototype);
+        return iW.__wbg_ptr = WW, DW.register(iW, iW.__wbg_ptr, iW), iW
+      }
+      __destroy_into_raw() {
+        const WW = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, DW.unregister(this), WW
+      }
+      free() {
+        const WW = this.__destroy_into_raw();
+        si.cghE(WW, 0)
+      }
+      Nl(WW) {
+        const iW = si.fH5X(this.__wbg_ptr, WW);
+        if (iW[2]) throw xi(iW[1]);
+        return iW[0] >>> 0
+      }
+      Pl(WW, iW, OW) {
+        return si.ss4E(this.__wbg_ptr, WW, iW, OW)
+      }
+      Ll(WW, iW, OW) {
+        return si.H4ae(this.__wbg_ptr, WW, iW, OW) >>> 0
+      }
+      cl(WW, iW, OW, mW) {
+        return 0 !== si.hNrn(this.__wbg_ptr, WW, iW, OW, mW)
+      }
+      wl() {
+        si.Iif8(this.__wbg_ptr)
+      }
+      tl(WW) {
+        const iW = si.yQ2G(this.__wbg_ptr, WW);
+        if (iW[3]) throw xi(iW[2]);
+        var OW = GW(iW[0], iW[1]).slice();
+        return si.NQBs(iW[0], 1 * iW[1], 1), OW
+      }
+      evict(WW, iW) {
+        return si.QDB5(this.__wbg_ptr, WW, iW) >>> 0
+      }
+      Zl() {
+        si.OWUS(this.__wbg_ptr)
+      }
+      xl(WW, iW, OW) {
+        si.d9jo(this.__wbg_ptr, WW, iW, OW)
+      }
+      ll(WW) {
+        const iW = si.PRuS(this.__wbg_ptr, WW);
+        if (iW[1]) throw xi(iW[0])
+      }
+      Al() {
+        return si.X7cP(this.__wbg_ptr) >>> 0
+      }
+      bl() {
+        return si.R8XC(this.__wbg_ptr) >>> 0
+      }
+      jl(WW, iW, OW) {
+        si.wzEc(this.__wbg_ptr, WW, iW, OW)
+      }
+      Ul(WW, iW, OW) {
+        si.KaiG(this.__wbg_ptr, WW, iW, OW)
+      }
+      kl() {
+        return si.qGEt(this.__wbg_ptr) >>> 0
+      }
+      sl() {
+        return si.tl6N(this.__wbg_ptr) >>> 0
+      }
+      constructor() {
+        const WW = si.JsGL();
+        return this.__wbg_ptr = WW, DW.register(this, this.__wbg_ptr, this), this
+      }
+      static Ml() {
+        const WW = si.fQZO();
+        return LW.__wrap(WW)
+      }
+      Kl() {
+        return si.xw45(this.__wbg_ptr) >>> 0
+      }
+      Sl() {
+        return si.kGj6(this.__wbg_ptr) >>> 0
+      }
+      Yl(WW, iW, OW, mW) {
+        const EW = si.Y2zd(this.__wbg_ptr, WW, iW, OW, mW);
+        if (EW[1]) throw xi(EW[0])
+      }
+      yl() {
+        return si.n6HT(this.__wbg_ptr) >>> 0
+      }
+      Tl() {
+        return si.GkgU(this.__wbg_ptr) >>> 0
+      }
+      Jl(WW, iW, OW, mW) {
+        si.dYab(this.__wbg_ptr, WW, iW, OW, mW)
+      }
+      hl(WW) {
+        si.Zkh1(this.__wbg_ptr, WW)
+      }
+      nl(WW, iW, OW, mW, EW) {
+        const NW = wi(iW, si.qZbx),
+          PW = Mi,
+          LW = ci(OW, si.qZbx),
+          cW = Mi,
+          wW = ti(mW, si.qZbx),
+          tW = Mi,
+          ZW = si.Defp(this.__wbg_ptr, WW, NW, PW, LW, cW, wW, tW, EW);
+        if (ZW[1]) throw xi(ZW[0])
+      }
+      Hl(WW, iW, OW, mW) {
+        const EW = wi(WW, si.qZbx),
+          NW = Mi,
+          PW = ci(iW, si.qZbx),
+          LW = Mi,
+          cW = ti(OW, si.qZbx),
+          wW = Mi,
+          tW = wi(mW, si.qZbx),
+          ZW = Mi,
+          xW = si.NHEf(this.__wbg_ptr, EW, NW, PW, LW, cW, wW, tW, ZW);
+        if (xW[1]) throw xi(xW[0])
+      }
+      vl(WW) {
+        const iW = wi(WW, si.qZbx),
+          OW = Mi,
+          mW = si.ChHL(this.__wbg_ptr, iW, OW);
+        if (mW[1]) throw xi(mW[0])
+      }
+      gl() {
+        return si.zbsQ(this.__wbg_ptr) >>> 0
+      }
+      Dl(WW) {
+        const iW = si.ZQ5D(this.__wbg_ptr, WW);
+        if (iW[2]) throw xi(iW[1]);
+        return iW[0] >>> 0
+      }
+      steer() {
+        return si.MhTv(this.__wbg_ptr) >>> 0
+      }
+      Vl() {
+        const WW = si.O4ju(this.__wbg_ptr);
+        var iW = qW(WW[0], WW[1]).slice();
+        return si.NQBs(WW[0], 8 * WW[1], 8), iW
+      }
+      pl() {
+        return si.npnV(this.__wbg_ptr) >>> 0
+      }
+      Cx() {
+        const WW = si.N0uq(this.__wbg_ptr);
+        var iW, OW, mW = (iW = WW[0], OW = WW[1], iW >>>= 0, (null !== rW && 0 !== rW.byteLength || (rW = new Int32Array(si.memory.buffer)), rW).subarray(iW / 4, iW / 4 + OW)).slice();
+        return si.NQBs(WW[0], 4 * WW[1], 4), mW
+      }
+    }
+    Symbol.dispose && (LW.prototype[Symbol.dispose] = LW.prototype.free);
+    class cW {
+      __destroy_into_raw() {
+        const WW = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, VW.unregister(this), WW
+      }
+      free() {
+        const WW = this.__destroy_into_raw();
+        si.G2BH(WW, 0)
+      }
+      kZ(WW) {
+        const iW = ci(WW, si.qZbx),
+          OW = Mi,
+          mW = si.wAZb(this.__wbg_ptr, iW, OW);
+        if (mW[1]) throw xi(mW[0])
+      }
+      fl() {
+        return si.NFw0(this.__wbg_ptr) >>> 0
+      }
+      Cl() {
+        return si.UpRJ(this.__wbg_ptr) >>> 0
+      }
+      constructor() {
+        const WW = si.F1Z9();
+        return this.__wbg_ptr = WW, VW.register(this, this.__wbg_ptr, this), this
+      }
+      run(WW, iW) {
+        BW(WW, LW);
+        const OW = si.wVde(this.__wbg_ptr, WW.__wbg_ptr, iW);
+        if (OW[2]) throw xi(OW[1]);
+        return OW[0] >>> 0
+      }
+      Xl(WW) {
+        const iW = ci(WW, si.qZbx),
+          OW = Mi;
+        si.WdzA(this.__wbg_ptr, iW, OW)
+      }
+      Bl(WW) {
+        const iW = ci(WW, si.qZbx),
+          OW = Mi;
+        si.BXjk(this.__wbg_ptr, iW, OW)
+      }
+    }
+    Symbol.dispose && (cW.prototype[Symbol.dispose] = cW.prototype.free);
+    class wW {
+      __destroy_into_raw() {
+        const WW = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, pW.unregister(this), WW
+      }
+      free() {
+        const WW = this.__destroy_into_raw();
+        si.rT3f(WW, 0)
+      }
+      Rl(WW, iW) {
+        const OW = wi(WW, si.qZbx),
+          mW = Mi;
+        return si.TxCb(this.__wbg_ptr, OW, mW, iW) >>> 0
+      }
+      Gl(WW, iW, OW) {
+        BW(WW, LW);
+        const mW = wi(OW, si.qZbx),
+          EW = Mi,
+          NW = si.JZq3(this.__wbg_ptr, WW.__wbg_ptr, iW, mW, EW);
+        if (NW[2]) throw xi(NW[1]);
+        return NW[0] >>> 0
+      }
+      ql(WW) {
+        return si.rbs6(this.__wbg_ptr, WW) >>> 0
+      }
+      constructor() {
+        const WW = si.RADm();
+        return this.__wbg_ptr = WW, pW.register(this, this.__wbg_ptr, this), this
+      }
+      scan(WW, iW) {
+        BW(WW, LW);
+        const OW = si.vimU(this.__wbg_ptr, WW.__wbg_ptr, iW);
+        if (OW[2]) throw xi(OW[1]);
+        return OW[0] >>> 0
+      }
+      rl(WW) {
+        const iW = wi(WW, si.qZbx),
+          OW = Mi;
+        si.afwX(this.__wbg_ptr, iW, OW)
+      }
+      al() {
+        return si.Y9t2(this.__wbg_ptr) >>> 0
+      }
+      Il() {
+        return si.RMUj(this.__wbg_ptr) >>> 0
+      }
+    }
+    Symbol.dispose && (wW.prototype[Symbol.dispose] = wW.prototype.free);
+    class tW {
+      __destroy_into_raw() {
+        const WW = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, fW.unregister(this), WW
+      }
+      free() {
+        const WW = this.__destroy_into_raw();
+        si.O3Qz(WW, 0)
+      }
+      Fl(WW) {
+        const iW = si.CbPc(this.__wbg_ptr, WW);
+        if (iW[2]) throw xi(iW[1]);
+        return iW[0] >>> 0
+      }
+      compute(WW, iW, OW, mW) {
+        var EW = Pi(mW) ? 0 : Zi(mW, si.qZbx, si.Ds7I),
+          NW = Mi;
+        const PW = si.kUq2(this.__wbg_ptr, WW, Pi(iW) ? Number.MAX_SAFE_INTEGER : iW | 0, OW, EW, NW);
+        if (PW[2]) throw xi(PW[1]);
+        return PW[0] >>> 0
+      }
+      WA(WW) {
+        const iW = Zi(WW, si.qZbx, si.Ds7I),
+          OW = Mi;
+        si.jYP4(this.__wbg_ptr, iW, OW)
+      }
+      iA() {
+        return si.d4ZJ(this.__wbg_ptr)
+      }
+      OA(WW) {
+        return si.k3e5(this.__wbg_ptr, WW) >>> 0
+      }
+      mA() {
+        return si.SewK(this.__wbg_ptr) >>> 0
+      }
+      EA() {
+        return si.dsR4(this.__wbg_ptr) >>> 0
+      }
+      NA(WW, iW) {
+        const OW = si.K1g5(this.__wbg_ptr, WW, iW);
+        if (OW[1]) throw xi(OW[0])
+      }
+      PA() {
+        return si.iluo(this.__wbg_ptr) >>> 0
+      }
+      LA() {
+        return si.lC1h(this.__wbg_ptr) >>> 0
+      }
+      cA() {
+        return si.f8aJ(this.__wbg_ptr) >>> 0
+      }
+      Ql(WW, iW, OW) {
+        const mW = ci(WW, si.qZbx),
+          EW = Mi,
+          NW = ci(iW, si.qZbx),
+          PW = Mi,
+          LW = si.QGpP(this.__wbg_ptr, mW, EW, NW, PW, OW);
+        if (LW[1]) throw xi(LW[0])
+      }
+      tA() {
+        return si.WFyO(this.__wbg_ptr) >>> 0
+      }
+      mesh(WW, iW, OW, mW, EW) {
+        const NW = si.oUxY(this.__wbg_ptr, WW, iW, OW, mW, EW);
+        if (NW[2]) throw xi(NW[1]);
+        return NW[0] >>> 0
+      }
+      constructor(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW, tW, ZW, xW, lW, AW, bW, jW, UW, kW, sW, MW) {
+        const KW = Li(WW, si.qZbx),
+          SW = Mi,
+          YW = ti(iW, si.qZbx),
+          yW = Mi,
+          TW = ci(OW, si.qZbx),
+          JW = Mi,
+          hW = wi(mW, si.qZbx),
+          HW = Mi,
+          nW = wi(EW, si.qZbx),
+          uW = Mi,
+          oW = ci(NW, si.qZbx),
+          dW = Mi,
+          eW = ci(PW, si.qZbx),
+          vW = Mi,
+          gW = ti(LW, si.qZbx),
+          DW = Mi,
+          VW = ti(cW, si.qZbx),
+          pW = Mi,
+          CW = wi(wW, si.qZbx),
+          XW = Mi;
+        var BW = Pi(tW) ? 0 : Li(tW, si.qZbx),
+          qW = Mi;
+        const RW = ci(ZW, si.qZbx),
+          GW = Mi,
+          IW = wi(xW, si.qZbx),
+          aW = Mi;
+        var rW = Pi(lW) ? 0 : wi(lW, si.qZbx),
+          zW = Mi,
+          FW = Pi(AW) ? 0 : wi(AW, si.qZbx),
+          QW = Mi;
+        const Wi = ti(bW, si.qZbx),
+          ii = Mi,
+          Oi = si.Ab1d(KW, SW, YW, yW, TW, JW, hW, HW, nW, uW, oW, dW, eW, vW, gW, DW, VW, pW, CW, XW, BW, qW, RW, GW, IW, aW, rW, zW, FW, QW, Wi, ii, jW, UW, kW, sW, MW);
+        if (Oi[2]) throw xi(Oi[1]);
+        return this.__wbg_ptr = Oi[0], fW.register(this, this.__wbg_ptr, this), this
+      }
+      wA(WW, iW) {
+        const OW = ci(WW, si.qZbx),
+          mW = Mi,
+          EW = si.QMKW(this.__wbg_ptr, OW, mW, iW);
+        if (EW[3]) throw xi(EW[2]);
+        var NW = GW(EW[0], EW[1]).slice();
+        return si.NQBs(EW[0], 1 * EW[1], 1), NW
+      }
+      ZA(WW) {
+        si.u5Sr(this.__wbg_ptr, Pi(WW) ? 16777215 : WW)
+      }
+      xA(WW) {
+        return si.anWd(this.__wbg_ptr, WW) >>> 0
+      }
+      AA() {
+        return si.Fnv2(this.__wbg_ptr) >>> 0
+      }
+      lA() {
+        const WW = si.V0gd(this.__wbg_ptr);
+        if (WW[2]) throw xi(WW[1]);
+        return 0 !== WW[0]
+      }
+      bA() {
+        return si.NCqH(this.__wbg_ptr) >>> 0
+      }
+      jA() {
+        return si.xPoe(this.__wbg_ptr) >>> 0
+      }
+    }
+    Symbol.dispose && (tW.prototype[Symbol.dispose] = tW.prototype.free);
+    class ZW {
+      __destroy_into_raw() {
+        const WW = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, CW.unregister(this), WW
+      }
+      free() {
+        const WW = this.__destroy_into_raw();
+        si.fy4U(WW, 0)
+      }
+      compute(WW, iW, OW, mW) {
+        var EW = Pi(mW) ? 0 : Zi(mW, si.qZbx, si.Ds7I),
+          NW = Mi;
+        const PW = si.JJOf(this.__wbg_ptr, WW, Pi(iW) ? Number.MAX_SAFE_INTEGER : iW | 0, OW, EW, NW);
+        if (PW[2]) throw xi(PW[1]);
+        return PW[0] >>> 0
+      }
+      WA(WW) {
+        const iW = Zi(WW, si.qZbx, si.Ds7I),
+          OW = Mi;
+        si.LSzm(this.__wbg_ptr, iW, OW)
+      }
+      LA() {
+        return si.N9vO(this.__wbg_ptr) >>> 0
+      }
+      cA() {
+        return si.FXK4(this.__wbg_ptr) >>> 0
+      }
+      UA(WW) {
+        const iW = si.nZUu(this.__wbg_ptr, WW);
+        if (iW[2]) throw xi(iW[1]);
+        return iW[0] >>> 0
+      }
+      constructor(WW, iW, OW, mW, EW, NW) {
+        const PW = Li(WW, si.qZbx),
+          LW = Mi,
+          cW = ti(iW, si.qZbx),
+          wW = Mi,
+          tW = ci(OW, si.qZbx),
+          ZW = Mi,
+          xW = wi(mW, si.qZbx),
+          lW = Mi,
+          AW = si.qMwJ(PW, LW, cW, wW, tW, ZW, xW, lW, EW, NW);
+        if (AW[2]) throw xi(AW[1]);
+        return this.__wbg_ptr = AW[0], CW.register(this, this.__wbg_ptr, this), this
+      }
+      AA() {
+        return si.cMIe(this.__wbg_ptr) >>> 0
+      }
+      lA() {
+        const WW = si.a8GJ(this.__wbg_ptr);
+        if (WW[2]) throw xi(WW[1]);
+        return 0 !== WW[0]
+      }
+      bA() {
+        return si.e8wG(this.__wbg_ptr) >>> 0
+      }
+    }
+
+    function xW() {
+      const WW = si.E0hc();
+      var iW = RW(WW[0], WW[1]).slice();
+      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    }
+
+    function lW(WW, iW) {
+      let OW, mW;
+      try {
+        const EW = Li(WW, si.qZbx),
+          NW = Mi,
+          PW = Zi(iW, si.qZbx, si.Ds7I),
+          LW = Mi,
+          cW = si.f7qI(EW, NW, PW, LW);
+        return OW = cW[0], mW = cW[1], zW(cW[0], cW[1])
+      } finally {
+        si.NQBs(OW, mW, 1)
+      }
+    }
+
+    function AW() {
+      const WW = si.nQNx();
+      var iW = RW(WW[0], WW[1]).slice();
+      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    }
+
+    function bW(WW) {
+      return 0 !== si.xE2f(WW)
+    }
+
+    function jW(WW, iW) {
+      const OW = Zi(WW, si.qZbx, si.Ds7I),
+        mW = Mi,
+        EW = si.A35a(OW, mW, iW);
+      if (EW[1]) throw xi(EW[0])
+    }
+
+    function UW() {
+      si.V18R()
+    }
+
+    function kW() {
+      return si.coZd() >>> 0
+    }
+
+    function sW(WW) {
+      return 0 !== si.DJIf(WW)
+    }
+
+    function MW(WW) {
+      return 0 !== si.N8h8(WW)
+    }
+
+    function KW(WW) {
+      si.akbt(WW)
+    }
+
+    function SW() {
+      return si.YhCq() >>> 0
+    }
+
+    function YW() {
+      return si.FJi0() >>> 0
+    }
+
+    function yW() {
+      return 0 !== si.YQn6()
+    }
+
+    function TW() {
+      const WW = si.MYOh();
+      var iW = RW(WW[0], WW[1]).slice();
+      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    }
+
+    function JW() {
+      const WW = si.x0CV();
+      var iW = RW(WW[0], WW[1]).slice();
+      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    }
+
+    function hW() {
+      const WW = si.ID1h();
+      var iW = RW(WW[0], WW[1]).slice();
+      return si.NQBs(WW[0], 4 * WW[1], 4), iW
+    }
+
+    function HW() {
+      return si.Pfxp() >>> 0
+    }
+
+    function nW() {
+      si.hlbk()
+    }
+
+    function uW() {
+      let WW, iW;
+      try {
+        const OW = si.waU3();
+        return WW = OW[0], iW = OW[1], zW(OW[0], OW[1])
+      } finally {
+        si.NQBs(WW, iW, 1)
+      }
+    }
+
+    function oW(WW) {
+      si.WKG9(XW(WW))
+    }
+
+    function dW() {
+      return {
+        __proto__: null,
+        YXom: {
+          __proto__: null,
+          SKwr: function(WW, iW) {
+            return XW(Error(zW(WW, iW)))
+          },
+          xftO: function(WW, iW) {
+            throw new Error(zW(WW, iW))
+          },
+          WKIv: function(WW) {
+            mi(WW).call()
+          },
+          xsi2: function(WW, iW) {
+            console.error(zW(WW, iW))
+          },
+          yxoH: function() {
+            return performance.now()
+          },
+          lkn2: function(WW) {
+            xi(WW)
+          }
+        }
+      }
+    }
+    Symbol.dispose && (ZW.prototype[Symbol.dispose] = ZW.prototype.free);
+    const eW = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((WW => si.hZNs(WW, 1))),
+      vW = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((WW => si.UAWg(WW, 1))),
+      gW = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((WW => si.Joyz(WW, 1))),
+      DW = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((WW => si.cghE(WW, 1))),
+      VW = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((WW => si.G2BH(WW, 1))),
+      pW = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((WW => si.rT3f(WW, 1))),
+      fW = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((WW => si.O3Qz(WW, 1))),
+      CW = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((WW => si.fy4U(WW, 1)));
+
+    function XW(WW) {
+      Ni === Ei.length && Ei.push(Ei.length + 1);
+      const iW = Ni;
+      return Ni = Ei[iW], Ei[iW] = WW, iW
+    }
+
+    function BW(WW, iW) {
+      if (!(WW instanceof iW)) throw new Error(`expected instance of ${iW.name}`)
+    }
+
+    function qW(WW, iW) {
+      return WW >>>= 0, aW().subarray(WW / 8, WW / 8 + iW)
+    }
+
+    function RW(WW, iW) {
+      return WW >>>= 0, Wi().subarray(WW / 4, WW / 4 + iW)
+    }
+
+    function GW(WW, iW) {
+      return WW >>>= 0, Oi().subarray(WW / 1, WW / 1 + iW)
+    }
+    let IW = null;
+
+    function aW() {
+      return null !== IW && 0 !== IW.byteLength || (IW = new Float64Array(si.memory.buffer)), IW
+    }
+    let rW = null;
+
+    function zW(WW, iW) {
+      return function(WW, iW) {
+        bi += iW, bi >= Ai && (li = new TextDecoder("utf-8", {
+          ignoreBOM: !0,
+          fatal: !0
+        }), li.decode(), bi = iW);
+        return li.decode(Oi().subarray(WW, WW + iW))
+      }(WW >>> 0, iW)
+    }
+    let FW = null;
+    let QW = null;
+
+    function Wi() {
+      return null !== QW && 0 !== QW.byteLength || (QW = new Uint32Array(si.memory.buffer)), QW
+    }
+    let ii = null;
+
+    function Oi() {
+      return null !== ii && 0 !== ii.byteLength || (ii = new Uint8Array(si.memory.buffer)), ii
+    }
+
+    function mi(WW) {
+      return Ei[WW]
+    }
+    let Ei = new Array(1024).fill(void 0);
+    Ei.push(void 0, null, !0, !1);
+    let Ni = Ei.length;
+
+    function Pi(WW) {
+      return void 0 === WW || null === WW
+    }
+
+    function Li(WW, iW) {
+      const OW = iW(2 * WW.length, 2) >>> 0;
+      return (null !== FW && 0 !== FW.byteLength || (FW = new Uint16Array(si.memory.buffer)), FW).set(WW, OW / 2), Mi = WW.length, OW
+    }
+
+    function ci(WW, iW) {
+      const OW = iW(4 * WW.length, 4) >>> 0;
+      return Wi().set(WW, OW / 4), Mi = WW.length, OW
+    }
+
+    function wi(WW, iW) {
+      const OW = iW(1 * WW.length, 1) >>> 0;
+      return Oi().set(WW, OW / 1), Mi = WW.length, OW
+    }
+
+    function ti(WW, iW) {
+      const OW = iW(8 * WW.length, 8) >>> 0;
+      return aW().set(WW, OW / 8), Mi = WW.length, OW
+    }
+
+    function Zi(WW, iW, OW) {
+      if (void 0 === OW) {
+        const OW = ji.encode(WW),
+          mW = iW(OW.length, 1) >>> 0;
+        return Oi().subarray(mW, mW + OW.length).set(OW), Mi = OW.length, mW
+      }
+      let mW = WW.length,
+        EW = iW(mW, 1) >>> 0;
+      const NW = Oi();
+      let PW = 0;
+      for (; PW < mW; PW++) {
+        const iW = WW.charCodeAt(PW);
+        if (iW > 127) break;
+        NW[EW + PW] = iW
+      }
+      if (PW !== mW) {
+        0 !== PW && (WW = WW.slice(PW)), EW = OW(EW, mW, mW = PW + 3 * WW.length, 1) >>> 0;
+        const iW = Oi().subarray(EW + PW, EW + mW);
+        PW += ji.encodeInto(WW, iW).written, EW = OW(EW, mW, PW, 1) >>> 0
+      }
+      return Mi = PW, EW
+    }
+
+    function xi(WW) {
+      const iW = mi(WW);
+      return function(WW) {
+        WW < 1028 || (Ei[WW] = Ni, Ni = WW)
+      }(WW), iW
+    }
+    let li = new TextDecoder("utf-8", {
+      ignoreBOM: !0,
+      fatal: !0
+    });
+    li.decode();
+    const Ai = 2146435072;
+    let bi = 0;
+    const ji = new TextEncoder;
+    "encodeInto" in ji || (ji.encodeInto = function(WW, iW) {
+      const OW = ji.encode(WW);
+      return iW.set(OW), {
+        read: WW.length,
+        written: OW.length
+      }
+    });
+    let Ui, ki, si, Mi = 0;
+
+    function Ki(WW, iW) {
+      return ki = WW, si = WW.exports, Ui = iW, IW = null, rW = null, FW = null, QW = null, ii = null, si.ctR0(), si
+    }
+
+    function Si(WW) {
+      if (void 0 !== si) return si;
+      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
+        module: WW
+      } = WW) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const iW = dW();
+      WW instanceof WebAssembly.Module || (WW = new WebAssembly.Module(WW));
+      return Ki(new WebAssembly.Instance(WW, iW), WW)
+    }
+    async function Yi(WW) {
+      if (void 0 !== si) return si;
+      void 0 !== WW && (Object.getPrototypeOf(WW) === Object.prototype ? ({
+        module_or_path: WW
+      } = WW) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const iW = dW();
+      ("string" === typeof WW || "function" === typeof Request && WW instanceof Request || "function" === typeof URL && WW instanceof URL) && (WW = fetch(WW));
+      const {
+        instance: OW,
+        module: mW
+      } = await async function(WW, iW) {
+        if ("function" === typeof Response && WW instanceof Response) {
+          if (!WW.ok) throw new Error(`failed to fetch Wasm: ${WW.status} ${WW.statusText} fetching '${WW.url}'`);
+          if ("function" === typeof WebAssembly.instantiateStreaming) try {
+            return await WebAssembly.instantiateStreaming(WW, iW)
+          } catch (OW) {
+            if (! function(WW) {
+                switch (WW) {
+                  case "basic":
+                  case "cors":
+                  case "default":
+                    return !0
+                }
+                return !1
+              }(WW.type) || "application/wasm" === WW.headers.get("Content-Type")) throw OW;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", OW)
+          }
+          const mW = await WW.arrayBuffer();
+          return await WebAssembly.instantiate(mW, iW)
+        } {
+          const OW = await WebAssembly.instantiate(WW, iW);
+          return OW instanceof WebAssembly.Instance ? {
+            instance: OW,
+            module: WW
+          } : OW
+        }
+      }(await WW, iW);
+      return Ki(OW, mW)
     }
   },
-  34844: () => {}
+  37286: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => PW,
+      f: () => LW,
+      i: () => cW
+    });
+    var mW = OW(37295),
+      EW = OW(2381),
+      NW = OW(37297);
+    const PW = {
+      name: EW.d,
+      url: () => new OW.U(OW(37306)),
+      init: mW.default,
+      bindings: mW
+    };
+
+    function LW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW,
+        iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PW,
+        OW = arguments.length > 2 ? arguments[2] : void 0;
+      return (0, NW.o)(WW, iW, OW)
+    }
+
+    function cW(WW) {
+      return (0, EW.L)((() => WW), mW, PW)
+    }
+  },
+  37279: (WW, iW, OW) => {
+    function mW(WW, iW) {
+      return new Error(`${WW}: ${iW instanceof Error?`${iW.name}: ${iW.message}`:String(iW)}`, {
+        cause: iW
+      })
+    }
+    OW.d(iW, {
+      e: () => mW
+    })
+  },
+  37271: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => PW,
+      f: () => cW
+    });
+    var mW = OW(2388),
+      EW = OW(7625),
+      NW = OW(37279);
+
+    function PW() {
+      return new URL(new OW.U(OW(37283)).href, globalThis.location?.href).href
+    }
+    let LW = null;
+
+    function cW() {
+      return LW ??= (async () => (0, mW.B)(new URL(PW()), (0, EW.c)("bloxd_wasm_textures")))().catch((WW => {
+        throw (0, NW.e)((0, mW.E)(WW), WW)
+      })), LW
+    }
+  }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

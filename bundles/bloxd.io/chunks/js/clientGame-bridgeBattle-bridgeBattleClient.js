@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  40121: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      default: () => ye
+  40513: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => mW
     });
-    const ye = function(ee, ie, He) {
-      let ye;
+    const mW = function(WW, iW, OW) {
+      let mW;
       return {
-        onCreate: ee => {
-          ye = ee
+        onCreate: WW => {
+          mW = WW
         },
-        onPlayerAltAction: (ee, ie, He, be, Me, Ke) => {
-          Ke && "Mesh" === ye.getEntityType(Ke) && ("Permanent Upgrades" === ye.getEntityName(Ke) ? ye.openShop(ee, !1, "Upgrades") : "Items" === ye.getEntityName(Ke) ? ye.openShop(ee, !1, "Items") : "Prestige" === ye.getEntityName(Ke) && ye.openShop(ee, !1, "Prestige"))
+        onPlayerAltAction: (WW, iW, OW, EW, NW, PW) => {
+          PW && "Mesh" === mW.getEntityType(PW) && ("Permanent Upgrades" === mW.getEntityName(PW) ? mW.openShop(WW, !1, "Upgrades") : "Items" === mW.getEntityName(PW) ? mW.openShop(WW, !1, "Items") : "Prestige" === mW.getEntityName(PW) && mW.openShop(WW, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

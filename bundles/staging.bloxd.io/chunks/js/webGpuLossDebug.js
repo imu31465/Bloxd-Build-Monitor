@@ -1,73 +1,74 @@
-export const id = 80;
-export const ids = [80];
+export const id = 81;
+export const ids = [81];
 export const modules = {
-  37209: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      noteJsEngine: () => ve,
-      noteJsJoin: () => le,
-      noteWasmJoin: () => Se,
-      noteWasmPick: () => ue,
-      noteWebGpuLoss: () => ne,
-      startWebGpuLossDebug: () => Ce
+  37668: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      noteJsEngine: () => fW,
+      noteJsJoin: () => BW,
+      noteWasmJoin: () => qW,
+      noteWasmPick: () => CW,
+      noteWebGpuLoss: () => RW,
+      startWebGpuLossDebug: () => pW
     });
-    var ye = He(335),
-      be = He(18),
-      Me = He(2987),
-      Ke = He(3808),
-      Ue = He(645),
-      Fe = He(97),
-      Je = He(103),
-      oe = He(2996),
-      Re = He(35),
-      ke = He(115),
-      qe = He(325),
-      fe = He(634),
-      Te = He(3037),
-      pe = He(347),
-      Xe = He(345),
-      ze = He(34786);
-    const Be = 40,
-      Ee = 160;
+    var mW = OW(327),
+      EW = OW(25),
+      NW = OW(3831),
+      PW = OW(4666),
+      LW = OW(671),
+      cW = OW(100),
+      wW = OW(109),
+      tW = OW(3837),
+      ZW = OW(39),
+      xW = OW(119),
+      lW = OW(299),
+      AW = OW(315),
+      bW = OW(662),
+      jW = OW(3866),
+      UW = OW(344),
+      kW = OW(339),
+      sW = OW(35150);
+    const MW = 40,
+      KW = 160;
 
-    function ge(ee, ie) {
-      return `"${(ee.length>ie?`${ee.slice(0,ie)}...`:ee).replace(/[^ -~]|["\\]/g,"?")}"`
+    function SW(WW, iW) {
+      return `"${(WW.length>iW?`${WW.slice(0,iW)}...`:WW).replace(/[^ -~]|["\\]/g,"?")}"`
     }
 
-    function Oe(ee) {
-      return ee ? "yes" : "no"
+    function YW(WW) {
+      return WW ? "yes" : "no"
     }
 
-    function de(ee) {
-      var ie;
-      const He = ee.storedRenderer;
-      return [`loss holds ${Oe(ee.lossHolds)}`, `stops packs ${Oe(ee.lossStopsPack)}`, `any loss ${Oe(ee.anyLoss)}`, `old intel ${Oe(ee.oldIntelDriver)}`, `default off for packs ${Oe(ee.defaultOffForPacks)}`, `default off reason ${null!==(ie=ee.defaultOffReason)&&void 0!==ie?ie:"none"}`, `setting ${ee.setting?"on":"off"} (stored ${null===ee.settingStored?"unset":ee.settingStored?"on":"off"})`, `renderer url ${null===ee.urlRenderer?"none":ge(ee.urlRenderer,12)}, stored ${null===He||void 0===He?"none":ge(String(He),12)}`].join(", ")
+    function yW(WW) {
+      var iW;
+      const OW = WW.storedRenderer;
+      return [`loss holds ${YW(WW.lossHolds)}`, `stops packs ${YW(WW.lossStopsPack)}`, `any loss ${YW(WW.anyLoss)}`, `old intel ${YW(WW.oldIntelDriver)}`, `few wasm memories ${YW(WW.fewWasmMemories)}`, `default off for packs ${YW(WW.defaultOffForPacks)}`, `default off reason ${null!==(iW=WW.defaultOffReason)&&void 0!==iW?iW:"none"}`, `setting ${WW.setting?"on":"off"} (stored ${null===WW.settingStored?"unset":WW.settingStored?"on":"off"})`, `renderer url ${null===WW.urlRenderer?"none":SW(WW.urlRenderer,12)}, stored ${null===OW||void 0===OW?"none":SW(String(OW),12)}`].join(", ")
     }
 
-    function We(ee) {
-      if (null === ee) return "no renderer settled";
+    function TW(WW) {
+      if (null === WW) return "no renderer settled";
       const {
-        requested: ie,
-        choice: He,
-        source: ye,
-        fallbackReason: be
-      } = ee;
-      return `renderer requested ${ie}, runs ${He}, from ${ye}${null===be?"":`, fell back: ${ge(be,80)}`}`
+        requested: iW,
+        choice: OW,
+        source: mW,
+        fallbackReason: EW
+      } = WW;
+      return `renderer requested ${iW}, runs ${OW}, from ${mW}${null===EW?"":`, fell back: ${SW(EW,80)}`}`
     }
 
-    function te(ee, ie) {
-      return ee ? `stopping packs: iOS, ${null!==ie&&void 0!==ie?ie:1} losses in a row within a day` : "stopping packs"
+    function JW(WW, iW) {
+      return WW ? `stopping packs: iOS, ${null!==iW&&void 0!==iW?iW:1} losses in a row within a day` : "stopping packs"
     }
 
-    function Ze(ee) {
-      var ie, He, ye;
-      return `pick (wasm): backend ${null!==(ie=ee.backend)&&void 0!==ie?ie:"none"}, webgpu fallback ${null!==(He=ee.reason)&&void 0!==He?He:"none"}, from ${null!==(ye=ee.source)&&void 0!==ye?ye:"none"}, storage pull breaks ${Oe(ee.storagePullBreaks)}; packs run ${Oe("webgpu"===ee.backend)}, else ${ee.noWebGpu}`
+    function hW(WW) {
+      var iW, OW, mW;
+      return `pick (wasm): backend ${null!==(iW=WW.backend)&&void 0!==iW?iW:"none"}, webgpu fallback ${null!==(OW=WW.reason)&&void 0!==OW?OW:"none"}, from ${null!==(mW=WW.source)&&void 0!==mW?mW:"none"}, storage pull breaks ${YW(WW.storagePullBreaks)}; packs run ${YW("webgpu"===WW.backend)}, else ${WW.noWebGpu}`
     }
 
-    function we(ee, ie, He) {
-      return `pack ${null===ee?"(name not read)":ge(ee,Be)} ${ie}${null===He?"":`, ${He} variants`}`
+    function HW(WW, iW, OW) {
+      return `pack ${null===WW?"(name not read)":SW(WW,MW)} ${iW}${null===OW?"":`, ${OW} variants`}`
     }
-    const De = "shaderPack:failedWebGpuOff",
-      Pe = new class {
+    const nW = "shaderPack:failedWebGpuOff",
+      uW = new class {
         constructor() {
           this.joins = 0, this.losses = 0, this.noPackSaid = !1
         }
@@ -75,171 +76,175 @@ export const modules = {
           return this.joins++, this.joins <= 5 ? "detail" : this.joins <= 30 ? "outcome" : 31 === this.joins ? "cap" : "none"
         }
         noPack() {
-          const ee = !this.noPackSaid;
-          return this.noPackSaid = !0, ee
+          const WW = !this.noPackSaid;
+          return this.noPackSaid = !0, WW
         }
         loss() {
           return this.losses++, this.losses <= 10 ? "line" : 11 === this.losses ? "cap" : "none"
         }
       };
-    let Ae = null,
-      Ye = null,
-      Ve = 0;
+    let oW = null,
+      dW = null,
+      eW = 0;
 
-    function ae(ee) {
-      (0, Te.m)("webgpuloss", ee)
+    function vW(WW) {
+      (0, jW.m)("webgpuloss", WW)
     }
 
-    function ce() {
+    function gW() {
       return {
-        lossHolds: (0, qe.C)(),
-        lossStopsPack: (0, qe.H)(),
-        anyLoss: (0, qe.m)(),
-        oldIntelDriver: !0 === Re.i.getItem(ke.H),
-        defaultOffForPacks: be.e.isWebGpuDefaultOff(),
-        defaultOffReason: be.e.webGpuDefaultOffReason(),
-        settingStored: Re.i.getItem(ye.nc),
-        setting: be.e.get("clientEscMenuOptions").useWebGpu,
-        urlRenderer: Je.currentUrl.getSearchParam(oe.e),
-        storedRenderer: Re.i.getItem(oe.h)
+        lossHolds: (0, AW.A)(),
+        lossStopsPack: (0, AW.H)(),
+        anyLoss: (0, AW.l)(),
+        oldIntelDriver: !0 === ZW.i.getItem(xW.A),
+        fewWasmMemories: (0, lW.e)(),
+        defaultOffForPacks: EW.d.isWebGpuDefaultOff(),
+        defaultOffReason: EW.d.webGpuDefaultOffReason(),
+        settingStored: ZW.i.getItem(mW.pc),
+        setting: EW.d.get("clientEscMenuOptions").useWebGpu,
+        urlRenderer: wW.currentUrl.getSearchParam(tW.e),
+        storedRenderer: ZW.i.getItem(tW.h)
       }
     }
 
-    function xe(ee) {
-      return function(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (null === ee || void 0 === ee) return "none";
-        if ("object" !== typeof ee) return `unreadable (${typeof ee})`;
-        const be = ee,
-          Me = "number" === typeof be.at ? be.at : null,
-          Ke = ["browser " + (ie ? "this one" : "another"), null === Me ? "no time" : `set ${((He-Me)/pe.l).toFixed(1)} h ago`, `losses ${"number"===typeof be.losses?be.losses:"unset (1)"}${null!==Me&&He-Me<pe.h?", the last within a day":""}`, `first page ${"hidden"===be.firstPage||"visible"===be.firstPage?be.firstPage:"unset (visible)"}`, `hold step ${"number"===typeof be.holdStep?be.holdStep:"unset (1)"}${ye?" (not read on iOS: a kept loss holds its whole life)":""}`];
-        if (void 0 !== be.reason || void 0 !== be.message) {
-          const ee = "string" === typeof be.reason ? ge(be.reason, Xe.d) : "no reason";
-          Ke.push(`cause ${ee} ${!0===be.causeSent?"reported":"unreported"}`)
+    function DW(WW) {
+      return function(WW, iW, OW) {
+        let mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (null === WW || void 0 === WW) return "none";
+        if ("object" !== typeof WW) return `unreadable (${typeof WW})`;
+        const EW = WW,
+          NW = "number" === typeof EW.at ? EW.at : null,
+          PW = ["browser " + (iW ? "this one" : "another"), null === NW ? "no time" : `set ${((OW-NW)/UW.m).toFixed(1)} h ago`, `losses ${"number"===typeof EW.losses?EW.losses:"unset (1)"}${null!==NW&&OW-NW<UW.k?", the last within a day":""}`, `first page ${"hidden"===EW.firstPage||"visible"===EW.firstPage?EW.firstPage:"unset (visible)"}`, `hold step ${"number"===typeof EW.holdStep?EW.holdStep:"unset (1)"}${mW?" (not read on iOS: a kept loss holds its whole life)":""}`];
+        if (void 0 !== EW.reason || void 0 !== EW.message) {
+          const WW = "string" === typeof EW.reason ? SW(EW.reason, kW.c) : "no reason";
+          PW.push(`cause ${WW} ${!0===EW.causeSent?"reported":"unreported"}`)
         }
-        return Ke.join(", ")
-      }(ee, function(ee) {
+        return PW.join(", ")
+      }(WW, function(WW) {
         try {
-          return "object" === typeof ee && null !== ee && ee.browser === (0, qe.i)()
+          return "object" === typeof WW && null !== WW && WW.browser === (0, AW.h)()
         } catch {
           return !1
         }
-      }(ee), Date.now(), "ios" === (0, Fe.getOperatingSystem)())
+      }(WW), Date.now(), "ios" === (0, cW.getOperatingSystem)())
     }
 
-    function Le() {
-      const ee = (0, qe.s)().now;
-      return "number" === typeof(null === ee || void 0 === ee ? void 0 : ee.losses) ? ee.losses : null
+    function VW() {
+      const WW = (0, AW.t)().now;
+      return "number" === typeof(null === WW || void 0 === WW ? void 0 : WW.losses) ? WW.losses : null
     }
 
-    function Ce() {
+    function pW() {
       const {
-        atLoad: ee,
-        now: ie,
-        unreported: He
-      } = (0, qe.s)(), ye = JSON.stringify(ee) === JSON.stringify(ie) ? "KR" : `now ${xe(ie)}`;
-      ae(`load (${Ue.I?"wasm":"js"}, os ${(0,Fe.getOperatingSystem)()}): stored loss ${xe(ee)}; ${ye}; cause kept apart ${function(ee,ie){if(null===ee||void 0===ee)return"none";const{reason:He,at:ye}="object"===typeof ee?ee:{},be="number"===typeof ye?`
+        atLoad: WW,
+        now: iW,
+        unreported: OW
+      } = (0, AW.t)(), mW = JSON.stringify(WW) === JSON.stringify(iW) ? "EZ" : `now ${DW(iW)}`;
+      vW(`load (${LW.K?"wasm":"js"}, os ${(0,cW.getOperatingSystem)()}): stored loss ${DW(WW)}; ${mW}; cause kept apart ${function(WW,iW){if(null===WW||void 0===WW)return"none";const{reason:OW,at:mW}="object"===typeof WW?WW:{},EW="number"===typeof mW?`
         set $ {
-          ((ie - ye) / pe.l).toFixed(1)
+          ((iW - mW) / UW.m).toFixed(1)
         }
         h ago`:"no time";return`
         $ {
-          "string" === typeof He ? ge(He, Xe.d) : "no reason"
+          "string" === typeof OW ? SW(OW, kW.c) : "no reason"
         }, $ {
-          be
+          EW
         }
-        `}((0,fe.j)(),Date.now())}; unreported ${function(ee,ie){if(null===ee||void 0===ee||"object"!==typeof ee)return"none";const He=ee;return ie.map((ee=>`${ee} ${"number"===typeof He[ee]?He[ee]:0}`)).join(", ")}(He,qe.e)}; webgpu_loss_page ${qe.D}`), ae(`load: ${de(ce())}; pack expected ${(0,Ke.f)(Fe.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
+        `}((0,bW.i)(),Date.now())}; unreported ${function(WW,iW){if(null===WW||void 0===WW||"object"!==typeof WW)return"none";const OW=WW;return iW.map((WW=>`${WW} ${"number"===typeof OW[WW]?OW[WW]:0}`)).join(", ")}(OW,AW.d)}; webgpu_loss_page ${AW.C}`), vW(`load: ${yW(gW())}; pack expected ${(0,PW.c)(cW.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
     }
 
-    function ve(ee) {
-      Ae = ee, ae(function(ee, ie, He) {
-        const ye = ee.setting ? "the setting is on" : (0, ze.b)(ee.packActive, ee.defaultOffForPacks) ? "the pack forces it" : ee.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
-        return `engine (js): useWebGpu ${Oe(ee.useWebGpu)} (${ye}); ${We(ie)}; webgpu fallback ${null!==He&&void 0!==He?He:"unset"}`
-      }(ee, (0, Me.i)(), (0, Fe.getWebGpuFallbackReason)()))
+    function fW(WW) {
+      oW = WW, vW(function(WW, iW, OW) {
+        const mW = WW.setting ? "the setting is on" : (0, sW.c)(WW.packActive, WW.defaultOffForPacks) ? "the pack forces it" : WW.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
+        return `engine (js): useWebGpu ${YW(WW.useWebGpu)} (${mW}); ${TW(iW)}; webgpu fallback ${null!==OW&&void 0!==OW?OW:"unset"}`
+      }(WW, (0, NW.g)(), (0, cW.getWebGpuFallbackReason)()))
     }
 
-    function ue(ee) {
-      Ye = ee, ae(Ze(ee))
+    function CW(WW) {
+      dW = WW, vW(hW(WW))
     }
-    async function me(ee, ie, ye, be) {
-      const Me = ++Ve,
-        Ke = await async function(ee) {
-          var ie, ye;
+    async function XW(WW, iW, mW, EW) {
+      const NW = ++eW,
+        PW = await async function(WW) {
+          var iW, mW;
           const [{
-            shaderPackPage: be,
-            harnessShaderPackMode: Me
+            shaderPackPage: EW,
+            harnessShaderPackMode: NW
           }, {
-            getShaderPackPolicy: Ke
+            getShaderPackPolicy: PW
           }, {
-            packRunsIn: Ue
-          }] = await Promise.all([He.e(130).then((() => He(40056))), He.e(106).then((() => He(44463))), He.e(154).then((() => He(44465)))]), Fe = await be.load();
-          if ("none" === Fe.status) return null;
-          const Je = null !== (ie = Me()) && void 0 !== ie ? ie : Ke(ee),
-            oe = "active" === Fe.status ? Fe.pack.variants : Fe.variants,
-            Re = Ue(oe, Je);
+            packRunsIn: LW
+          }] = await Promise.all([OW.e(138).then((() => OW(40448))), OW.e(108).then((() => OW(44879))), OW.e(162).then((() => OW(44886)))]), cW = await EW.load();
+          if ("none" === cW.status) return null;
+          const wW = null !== (iW = NW()) && void 0 !== iW ? iW : PW(WW),
+            tW = "active" === cW.status ? cW.pack.variants : cW.variants,
+            ZW = LW(tW, wW);
           return {
-            text: `${"active"===Fe.status?we(Fe.pack.name,"active",oe.length):we(null,`blocked (${Fe.messageKey})`,null!==(ye=null===oe||void 0===oe?void 0:oe.length)&&void 0!==ye?ye:null)}; game policy ${Je}, runs in it ${Re?"yes":"no"}`,
-            runs: Re
+            text: `${"active"===cW.status?HW(cW.pack.name,"active",tW.length):HW(null,`blocked (${cW.messageKey})`,null!==(mW=null===tW||void 0===tW?void 0:tW.length)&&void 0!==mW?mW:null)}; game policy ${wW}, runs in it ${ZW?"yes":"no"}`,
+            runs: ZW
           }
-        }(ee);
-      if (null === Ke) return void(Pe.noPack() && ae(`join ${Me}: no shader pack on this page (further joins without one not logged)`));
-      const Ue = Pe.join();
-      if ("none" === Ue) return;
-      if ("cap" === Ue) return void ae(`join ${Me}: further joins not logged`);
-      const Fe = function(ee) {
-          switch (ee.status) {
+        }(WW);
+      if (null === PW) return void(uW.noPack() && vW(`join ${NW}: no shader pack on this page (further joins without one not logged)`));
+      const LW = uW.join();
+      if ("none" === LW) return;
+      if ("cap" === LW) return void vW(`join ${NW}: further joins not logged`);
+      const cW = function(WW) {
+          switch (WW.status) {
             case "ok":
-              return void 0 === ee.couldntRun ? "joined" : `joined without the pack: ${ee.couldntRun}`;
-            case "Ce":
-              return "Ce";
+              return void 0 === WW.couldntRun ? "joined" : `joined without the pack: ${WW.couldntRun}`;
+            case "uW":
+              return "uW";
             case "failed":
-              return `failed: ${ee.messageKey}`
+              return `failed: ${WW.messageKey}`
           }
-        }(ie),
-        Je = ("ok" === ie.status ? ie.couldntRun : "failed" === ie.status ? ie.messageKey : void 0) === De ? `; cause: ${be()}` : "";
-      "outcome" !== Ue ? (ae(`join ${Me}: ${Ke.text}`), Ke.runs && (ae(`join ${Me}: needs WebGPU; ${ye()}`), ae(`join ${Me}: ${de(ce())}`)), ae(`join ${Me}: ${Fe}${Je}`)) : ae(`join ${Me}: ${Fe}${Je}`)
+        }(iW),
+        wW = ("ok" === iW.status ? iW.couldntRun : "failed" === iW.status ? iW.messageKey : void 0) === nW ? `; cause: ${EW()}` : "";
+      "outcome" !== LW ? (vW(`join ${NW}: ${PW.text}`), PW.runs && (vW(`join ${NW}: needs WebGPU; ${mW()}`), vW(`join ${NW}: ${yW(gW())}`)), vW(`join ${NW}: ${cW}${wW}`)) : vW(`join ${NW}: ${cW}${wW}`)
     }
 
-    function le(ee, ie, He) {
-      var ye;
-      const be = null !== (ye = null === ie || void 0 === ie ? void 0 : ie.isRunning()) && void 0 !== ye && ye;
-      return me(ee, He, (() => `Lite runtime ${null===ie?"no":"yes, running "+(be?"yes":"no")}; ${We((0,Me.i)())}`), (() => {
-        return ee = Ae, ie = ce(), He = "ios" === (0, Fe.getOperatingSystem)(), ye = Le(), null === ee ? "engine choice not seen" : ee.packActive ? (0, ze.b)(ee.packActive, ee.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : ie.lossStopsPack ? `a loss ${te(He,ye)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (ie.lossStopsPack ? "" : " (one that doesn't stop packs)");
-        var ee, ie, He, ye
-      }))
+    function BW(WW, iW, OW) {
+      var mW;
+      const EW = null !== (mW = null === iW || void 0 === iW ? void 0 : iW.isRunning()) && void 0 !== mW && mW;
+      return XW(WW, OW, (() => `Lite runtime ${null===iW?"no":"yes, running "+(EW?"yes":"no")}; ${TW((0,NW.g)())}`), (() => function(WW, iW, OW, mW) {
+        if (null === WW) return "engine choice not seen";
+        if (!WW.packActive) return "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (iW.lossStopsPack ? "" : " (one that doesn't stop packs)");
+        if ((0, sW.c)(WW.packActive, WW.defaultOffForPacks)) return "the pack forced WebGPU, yet nothing asked for a renderer: unexpected";
+        if (!iW.lossStopsPack) return (iW.oldIntelDriver ? "old Intel driver verdict" : "few wasm memories or old Intel driver verdict, since cleared") + ", worded off as a loss is stored";
+        return `a loss ${JW(OW,mW)}`
+      }(oW, gW(), "ios" === (0, cW.getOperatingSystem)(), VW())))
     }
 
-    function Se(ee, ie, He) {
-      return me(ee, null !== ie ? {
+    function qW(WW, iW, OW) {
+      return XW(WW, null !== iW ? {
         status: "failed",
-        messageKey: ie
+        messageKey: iW
       } : {
         status: "ok",
-        couldntRun: null !== He && void 0 !== He ? He : void 0
-      }, (() => null === Ye ? "pick not seen" : Ze(Ye)), (() => function(ee, ie, He, ye) {
-        var be, Me, Ke, Ue;
-        return null === ee ? "pick not seen" : "off_after_loss" === ee.reason ? `off after a loss, ${"pack"===ee.source?te(He,ye):`from ${null!==(Ue=ee.source)&&void 0!==Ue?Ue:"none"}`}` : "not_requested" === ee.reason ? `not requested, from ${null!==(Ke=ee.source)&&void 0!==Ke?Ke:"none"} (setting ${ie.setting?"on":"off"})` : `${null!==(be=ee.reason)&&void 0!==be?be:"none"}, from ${null!==(Me=ee.source)&&void 0!==Me?Me:"none"}`
-      }(Ye, ce(), "ios" === (0, Fe.getOperatingSystem)(), Le())))
+        couldntRun: null !== OW && void 0 !== OW ? OW : void 0
+      }, (() => null === dW ? "pick not seen" : hW(dW)), (() => function(WW, iW, OW, mW) {
+        var EW, NW, PW, LW;
+        return null === WW ? "pick not seen" : "off_after_loss" === WW.reason ? `off after a loss, ${"pack"===WW.source?JW(OW,mW):`from ${null!==(LW=WW.source)&&void 0!==LW?LW:"none"}`}` : "not_requested" === WW.reason ? `not requested, from ${null!==(PW=WW.source)&&void 0!==PW?PW:"none"} (setting ${iW.setting?"on":"off"})` : `${null!==(EW=WW.reason)&&void 0!==EW?EW:"none"}, from ${null!==(NW=WW.source)&&void 0!==NW?NW:"none"}`
+      }(dW, gW(), "ios" === (0, cW.getOperatingSystem)(), VW())))
     }
 
-    function ne(ee, ie, He) {
-      const ye = Pe.loss();
-      if ("none" === ye) return;
-      if ("cap" === ye) return void ae("further losses not logged");
-      const be = ce();
-      ae(function(ee, ie, He, ye) {
-        return `loss (${ee}): ${ie}${null===He?"":` ${ge(He,Ee)}`}; ${ye}`
-      }(ee, ie, He, `stored ${xe((0,qe.s)().now)}; holds ${be.lossHolds?"yes":"no"}, stops packs ${be.lossStopsPack?"yes":"no"}`))
+    function RW(WW, iW, OW) {
+      const mW = uW.loss();
+      if ("none" === mW) return;
+      if ("cap" === mW) return void vW("further losses not logged");
+      const EW = gW();
+      vW(function(WW, iW, OW, mW) {
+        return `loss (${WW}): ${iW}${null===OW?"":` ${SW(OW,KW)}`}; ${mW}`
+      }(WW, iW, OW, `stored ${DW((0,AW.t)().now)}; holds ${EW.lossHolds?"yes":"no"}, stops packs ${EW.lossStopsPack?"yes":"no"}`))
     }
   },
-  34786: (ee, ie, He) => {
-    function ye(ee, ie) {
-      return ee && !ie
+  35150: (WW, iW, OW) => {
+    function mW(WW, iW) {
+      return WW && !iW
     }
-    He.d(ie, {
-      b: () => ye
+    OW.d(iW, {
+      c: () => mW
     })
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

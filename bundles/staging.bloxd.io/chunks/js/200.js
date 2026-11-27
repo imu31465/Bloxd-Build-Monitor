@@ -1,40 +1,37 @@
 export const id = 200;
 export const ids = [200];
 export const modules = {
-  9812: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      pageBody: () => ye
+  10287: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const ye = {
-      whatIs: ["Can your team last 99 nights of darkness? Bloxd Escape the Forest is a co-op horror survival game for teams of up to 6, and you can jump in for free straight from your browser. Make camp, keep the fire going, search for the missing children and watch out for whatever comes out after sunset. Get through all 99 nights, then find your way out."],
-      howToPlay: ["Your team starts around the campfire. During the day you'll gather wood, hunt Pigs and Cows for meat and explore the landmarks dotted around the forest. Throw fuel into the fire to level it up. Each new level unlocks crafting recipes and helps you find the lost kids. Bring back Monster Hearts to push the fire even higher.", 'When "Night Approaches" pops up, head back to camp. Monsters are scared of fire, but some nights the Horde attacks, the Monster wakes up or the Warper rises. If you go down, a teammate can revive you with a Revive Splash Potion.', "Every lost kid you find adds days to your count, which gets you closer to 99. Do quests for the Travelling Trader, then follow Maverick the wizard's guidance to the frozen forest. Collect the portal keystones, open the portal and send the kids home."],
-      features: ["Co-op with Up to 6 Players", "Survive 99 Nights, Then See How Much Longer You Can Last", "Level Up the Campfire to Unlock New Recipes", "Rescue the Lost Kids and Send Them Home", "Quests from the Travelling Trader and Maverick the Wizard", "Explore Landmarks like the Graveyard, Frozen Lagoon, Molten Gorge and Mount Doomrock", "Night Attacks from the Horde, the Monster and the Warper", "Revive Teammates and Repair the Respawn Pod", "Show Your Best Score on Your Nametag and Earn Aura XP", "Inferno Mode with a Day Multiplier"],
-      tips: ["Keep the fire fuelled. It's your best protection at night", "Cook Raw Morsels and Steak on the fire before you eat them", 'Get back to camp as soon as you see "Night Approaches"', "Bring Monster Hearts to the fire to reach the higher levels", "Place your Radar near the fire", "Throw a Decoy to distract monsters, or throw an Invisibility Potion to hide", "Fire a Call for Help flare if you go down", "Bring armour, ideally enchanted, before you go hunting for portal keystones"],
-      similarGames: ["horrorHotel", "containmentBreach", "classic_survivalDayNight", "backrooms"],
+    const mW = {
+      whatIs: ["Claim an island, grab the loot and fight for every diamond you can get. Bloxd Sky Islands is a scored PvP match across floating islands, where you explore, mine resources and battle for diamonds and glory. Each phase brings better loot, and whoever has the highest score at the end wins. Don't let the name fool you, it isn't an island-growing game like Skyblock or One Block. There is a PvE mode, though, if you'd rather fight mobs."],
+      howToPlay: ["Place your Protector on an island to claim it. Other players can't change blocks or open chests there, and you'll always respawn on it. You only get one island at a time, but you can release it and claim another later. Then off you go to explore, mine and grab loot as it spawns on the islands.", "Every match has 4 phases. It starts with Gather, when resources and tools spawn. Arms Race comes next with bows and armour. Then Escalation adds explosives and diamond gear, and finally Chaos turns up with guns and rockets. Your score is your kills plus the diamonds you're holding (diamond blocks count as several diamonds). Get knocked out and you'll drop some of your diamonds and items, though you do get a short bit of spawn protection when you come back."],
+      features: ["Solo, Teams, Blitz and PvE Modes", "Claim Your Own Island with a Protector", "4 Phases: Gather, Arms Race, Escalation and Chaos", "Bows, Explosives, Guns, Rockets and Diamond Gear", "Loot Drops, Diamond Surges and Diamond Bounties", "Quests, Perks and Buried Treasure", "Gold, Iron and Wood Helmets for the Top 3 Next Round"],
+      tips: ["Claim an island early so you've got a safe base to respawn on", "Grab tools and resources during Gather, before the big fights kick off", "Hang on to your diamonds. They count towards your score", "Watch the loot timer and get to new drops first", "Don't camp on the diamond island while you're in the lead, or you'll get a bounty and hunters will be able to see you", "Stay for the next round and you get to pick a bonus to start with", "Stuck? Use the shop to teleport to a random island"],
+      similarGames: ["skywars", "bedwars", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Bloxd Escape the Forest?",
-        answer: "A co-op horror survival mode for up to 6 players. You team up, survive 99 nights, rescue the lost kids and send them home through the portal."
+        question: "What is Bloxd Sky Islands?",
+        answer: "A round-based PvP mode. You claim a floating island, gear up through four phases and battle other players for the top score."
       }, {
-        question: "In Escape the Forest, how do you survive 99 nights?",
-        answer: "Keep the campfire fuelled and stay close to it at night, because monsters are scared of fire. Level the fire up, cook your food and stick with your team."
+        question: "How is the winner decided in Bloxd Sky Islands?",
+        answer: "Whoever has the highest score when time runs out. Score is your kills plus the diamonds you're holding, and in Teams the highest-scoring team takes it."
       }, {
-        question: "How many players can team up in Escape the Forest?",
-        answer: "Up to 6 in each game, and others can join to spectate."
+        question: "How do I claim an island in Sky Islands?",
+        answer: "Put your Protector down on an island. Nobody else can change its blocks or open its chests, and you'll always respawn there."
       }, {
-        question: "Where are the lost kids?",
-        answer: "Out in the forest. Level up your fire to find more of them, then go searching. Every kid you find adds to your day count."
+        question: "Which modes does Sky Islands have?",
+        answer: "Solo, Teams, Blitz (a faster match) and PvE. In PvE your score comes from mob kills instead of player kills, so you claim an island and go after mobs."
       }, {
-        question: "What happens if you go down?",
-        answer: "A teammate can revive you with a Revive Splash Potion. You can fire a Call for Help flare too, and the Respawn Pod can bring back players who die."
+        question: "Where do you find diamonds in Sky Islands?",
+        answer: "Mine them, grab them from loot drops and Diamond Surges, or win fights for them. Players drop some of their diamonds when they're knocked out."
       }, {
-        question: "How do you escape the forest?",
-        answer: "Follow Maverick the wizard's guidance to the frozen forest, collect the portal keystones, open the portal and send the kids home."
-      }, {
-        question: "Is there anything after night 99?",
-        answer: "You've beaten the challenge by then, but how much longer can you survive? Your best number of nights survived shows on your nametag."
+        question: "What is a diamond bounty?",
+        answer: "If you're one of the top three scorers and you stay on the diamond island too long, you get a bounty and hunters can see you. Move to another island to get rid of it."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

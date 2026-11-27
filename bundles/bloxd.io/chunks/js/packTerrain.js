@@ -1,240 +1,240 @@
-export const id = 53;
-export const ids = [53];
+export const id = 54;
+export const ids = [54];
 export const modules = {
-  54282: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      MAX_LAYER_WIDTH: () => oe,
-      PackTextures: () => Be,
-      deviceMaxLayerWidth: () => Re,
-      layerWidthFor: () => fe,
-      packFileUrl: () => Te,
-      packFilesOf: () => ze,
-      packTerrainSources: () => pe,
-      webgl1GridColumns: () => ke,
-      webgl1LayerWidth: () => qe
+  54816: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      MAX_LAYER_WIDTH: () => tW,
+      PackTextures: () => sW,
+      deviceMaxLayerWidth: () => ZW,
+      layerWidthFor: () => AW,
+      packFileUrl: () => bW,
+      packFilesOf: () => kW,
+      packTerrainSources: () => jW,
+      webgl1GridColumns: () => xW,
+      webgl1LayerWidth: () => lW
     });
-    var ye = He(4771),
-      be = He(3136),
-      Me = He(41834),
-      Ke = He(41941),
-      Ue = He(54284),
-      Fe = He(41936),
-      Je = He(54292);
-    const oe = {
+    var mW = OW(5072),
+      EW = OW(3953),
+      NW = OW(42222),
+      PW = OW(42356),
+      LW = OW(54820),
+      cW = OW(42348),
+      wW = OW(54829);
+    const tW = {
       webgpu: 128,
       webgl: 128,
       webgl1: 64
     };
 
-    function Re(ee) {
-      return (0, be.d)() || (0, ye.o)() ? Math.min(oe[ee], 64) : oe[ee]
+    function ZW(WW) {
+      return (0, EW.b)() || (0, mW.k)() ? Math.min(tW[WW], 64) : tW[WW]
     }
 
-    function ke(ee) {
-      const ie = Math.ceil(Math.log2(Math.max(1, ee)));
-      return 2 ** Math.ceil(ie / 2)
+    function xW(WW) {
+      const iW = Math.ceil(Math.log2(Math.max(1, WW)));
+      return 2 ** Math.ceil(iW / 2)
     }
 
-    function qe(ee, ie, He) {
-      const ye = null !== He && He > 0 ? He : Me.e.limits.MAX_TEXTURE_SIZE;
-      return fe(Math.max(1, Math.floor(ye / ke(ie))), ee)
+    function lW(WW, iW, OW) {
+      const mW = null !== OW && OW > 0 ? OW : NW.d.limits.MAX_TEXTURE_SIZE;
+      return AW(Math.max(1, Math.floor(mW / xW(iW))), WW)
     }
 
-    function fe(ee, ie) {
-      let He = 1;
-      for (; 2 * He <= Math.min(ee, ie);) He *= 2;
-      return He
+    function AW(WW, iW) {
+      let OW = 1;
+      for (; 2 * OW <= Math.min(WW, iW);) OW *= 2;
+      return OW
     }
 
-    function Te(ee, ie) {
-      return "string" !== typeof ee || "" === ee ? null : "player" === ie || (0, Ue.c)(ee) ? ee : null
+    function bW(WW, iW) {
+      return "string" !== typeof WW || "" === WW ? null : "player" === iW || (0, LW.b)(WW) ? WW : null
     }
-    async function pe(ee, ie, ye) {
-      const be = await He.e(228).then((() => He(34995))),
+    async function jW(WW, iW, mW) {
+      const EW = await OW.e(234).then((() => OW(35332))),
         {
-          sheetLayout: Me,
-          sheetWidth: Ue
-        } = ee;
-      if (Ue > ie) throw new Error(`the pack's atlas is ${Ue} px wide, not within ${ie} px`);
-      if (!(Me.length === be.imagesPerAtlas.length && Me.every(((ee, ie) => ee === be.imagesPerAtlas[ie])))) {
-        const ee = `the pack's atlas is sheets of ${Me.join(", ")} layers, the built atlas's ${be.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
-        if (Me.length < be.imagesPerAtlas.length) throw new Error(ee);
-        console.warn(ee)
+          sheetLayout: NW,
+          sheetWidth: LW
+        } = WW;
+      if (LW > iW) throw new Error(`the pack's atlas is ${LW} px wide, not within ${iW} px`);
+      if (!(NW.length === EW.imagesPerAtlas.length && NW.every(((WW, iW) => WW === EW.imagesPerAtlas[iW])))) {
+        const WW = `the pack's atlas is sheets of ${NW.join(", ")} layers, the built atlas's ${EW.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
+        if (NW.length < EW.imagesPerAtlas.length) throw new Error(WW);
+        console.warn(WW)
       }
       return {
         atlasSheets: [],
-        heldUntil: ee.heldUntil,
-        texture: ie => {
-          var He, Me, Ue;
-          return null !== (He = null !== (Me = null !== (Ue = Te(ee.terrain.texture(ie), ye)) && void 0 !== Ue ? Ue : be.animatedBlockTextures[ie]) && void 0 !== Me ? Me : be.rotatedBlockTextures[ie]) && void 0 !== He ? He : function(ee, ie, He) {
-            var ye, be;
-            const Me = null !== (ye = Ke.e[ee]) && void 0 !== ye ? ye : null;
-            return null === Me ? null : null !== (be = Te(ie.texture(ee), He)) && void 0 !== be ? be : Me
-          }(ie, ee, ye)
+        heldUntil: WW.heldUntil,
+        texture: iW => {
+          var OW, NW, LW;
+          return null !== (OW = null !== (NW = null !== (LW = bW(WW.terrain.texture(iW), mW)) && void 0 !== LW ? LW : EW.animatedBlockTextures[iW]) && void 0 !== NW ? NW : EW.rotatedBlockTextures[iW]) && void 0 !== OW ? OW : function(WW, iW, OW) {
+            var mW, EW;
+            const NW = null !== (mW = PW.e[WW]) && void 0 !== mW ? mW : null;
+            return null === NW ? null : null !== (EW = bW(iW.texture(WW), OW)) && void 0 !== EW ? EW : NW
+          }(iW, WW, mW)
         },
-        decoded: ie => {
-          const He = (0, Fe.j)(ie);
-          return null === He ? null : (async ie => {
-            const He = ee.sheetPixels.at(ie);
-            if (He) {
-              ee.sheetPixels[ie] = null;
-              const ye = Ue > 0 ? He.byteLength / (4 * Ue) : 0;
+        decoded: iW => {
+          const OW = (0, cW.f)(iW);
+          return null === OW ? null : (async iW => {
+            const OW = WW.sheetPixels.at(iW);
+            if (OW) {
+              WW.sheetPixels[iW] = null;
+              const mW = LW > 0 ? OW.byteLength / (4 * LW) : 0;
               return {
-                width: Ue,
-                height: ye,
-                pixels: new Uint8Array(He.buffer, He.byteOffset, He.byteLength)
+                width: LW,
+                height: mW,
+                pixels: new Uint8Array(OW.buffer, OW.byteOffset, OW.byteLength)
               }
             }
-            const be = ee.terrain.atlasSheets.at(ie);
-            if (void 0 === be) throw new Error(`the pack has no atlas sheet ${ie}`);
-            const Me = Te(be, ye);
-            if (null === Me) throw new Error(`the pack's atlas sheet ${ie} isn't a pack file`);
-            return (0, Fe.o)(Me)
-          })(He)
+            const EW = WW.terrain.atlasSheets.at(iW);
+            if (void 0 === EW) throw new Error(`the pack has no atlas sheet ${iW}`);
+            const NW = bW(EW, mW);
+            if (null === NW) throw new Error(`the pack's atlas sheet ${iW} isn't a pack file`);
+            return (0, cW.l)(NW)
+          })(OW)
         }
       }
     }
-    const Xe = new WeakMap;
+    const UW = new WeakMap;
 
-    function ze(ee, ie) {
-      if (null === ee) return null;
-      let He = Xe.get(ee);
-      void 0 === He && (He = {}, Xe.set(ee, He));
-      const ye = He[ie];
-      if (void 0 !== ye) return ye;
+    function kW(WW, iW) {
+      if (null === WW) return null;
+      let OW = UW.get(WW);
+      void 0 === OW && (OW = {}, UW.set(WW, OW));
+      const mW = OW[iW];
+      if (void 0 !== mW) return mW;
       const {
-        armourAtlasUrl: be,
-        texture: Me,
-        model: Ke
-      } = ee, Ue = {
-        armourAtlasUrl: () => Te(be, ie),
-        textureUrl: ee => Te(Me(ee), ie),
-        modelUrl: ee => Te(Ke(ee), ie)
+        armourAtlasUrl: EW,
+        texture: NW,
+        model: PW
+      } = WW, LW = {
+        armourAtlasUrl: () => bW(EW, iW),
+        textureUrl: WW => bW(NW(WW), iW),
+        modelUrl: WW => bW(PW(WW), iW)
       };
-      return He[ie] = Ue, Ue
+      return OW[iW] = LW, LW
     }
-    class Be {
-      constructor(ee) {
-        this.host = ee, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
+    class sW {
+      constructor(WW) {
+        this.host = WW, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
       }
       maxLayerWidth() {
-        return this.maxWidth ??= (async (ee, ie, ye) => {
+        return this.maxWidth ??= (async (WW, iW, mW) => {
           const {
-            backend: be
-          } = this.host, Me = Re(be);
-          if ("webgl1" !== be) return Me;
-          const [Ke, Ue] = await Promise.all([He.e(228).then((() => He(34995))), null !== (ee = null === (ie = (ye = this.host).maxTextureSize) || void 0 === ie ? void 0 : ie.call(ye)) && void 0 !== ee ? ee : null]);
-          return qe(Me, Ke.imagesPerAtlas.length * Math.max(0, ...Ke.imagesPerAtlas), Ue)
-        })().catch((ee => {
-          throw this.maxWidth = null, ee
+            backend: EW
+          } = this.host, NW = ZW(EW);
+          if ("webgl1" !== EW) return NW;
+          const [PW, LW] = await Promise.all([OW.e(234).then((() => OW(35332))), null !== (WW = null === (iW = (mW = this.host).maxTextureSize) || void 0 === iW ? void 0 : iW.call(mW)) && void 0 !== WW ? WW : null]);
+          return lW(NW, PW.imagesPerAtlas.length * Math.max(0, ...PW.imagesPerAtlas), LW)
+        })().catch((WW => {
+          throw this.maxWidth = null, WW
         })), this.maxWidth
       }
       files() {
-        return ze(this.assets, this.owner)
+        return kW(this.assets, this.owner)
       }
       start() {
-        let ee = null;
-        const ie = this.host.feed.subscribe((ie => {
-          const He = ++this.latest,
-            ye = null !== ie.gameSource ? "game" : null !== ee && null !== ee.gameSource ? "join" : "page";
-          ee = ie, this.host.settling(), this.assetsFor(ie).then((ee => this.apply(He, ee, ie, ye).catch((ee => {
-            this.host.warn("the texture pack landed, but reloading what it overrides failed", ee)
-          }))), (ee => {
-            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", ee), this.settled(He, ie, null, {
-              error: ee,
-              source: ye
+        let WW = null;
+        const iW = this.host.feed.subscribe((iW => {
+          const OW = ++this.latest,
+            mW = null !== iW.gameSource ? "game" : null !== WW && null !== WW.gameSource ? "join" : "page";
+          WW = iW, this.host.settling(), this.assetsFor(iW).then((WW => this.apply(OW, WW, iW, mW).catch((WW => {
+            this.host.warn("the texture pack landed, but reloading what it overrides failed", WW)
+          }))), (WW => {
+            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", WW), this.settled(OW, iW, null, {
+              error: WW,
+              source: mW
             })
           }))
         }));
         return () => {
-          ie(), this.latest++, this.ended = !0
+          iW(), this.latest++, this.ended = !0
         }
       }
-      async apply(ee, ie, He, ye) {
+      async apply(WW, iW, OW, mW) {
         const {
-          host: be
+          host: EW
         } = this;
-        if (ee !== this.latest || be.stopped()) return;
-        const Me = (0, Ue.m)(He);
-        if (this.texturesIn(ie, Me) && 0 === this.swapping) return void this.settled(ee, He, ze(ie, Me));
-        let Ke;
+        if (WW !== this.latest || EW.stopped()) return;
+        const NW = (0, LW.k)(OW);
+        if (this.texturesIn(iW, NW) && 0 === this.swapping) return void this.settled(WW, OW, kW(iW, NW));
+        let PW;
         this.swapping++;
-        let Je = null;
+        let wW = null;
         try {
-          Ke = await be.terrain.swap((ee => {
-            var ie;
-            be.warn(`texture pack texture ${null!==(ie=ee.name)&&void 0!==ie?ie:"(all)"} failed`, ee.error), null !== ee.name && null === (0, Fe.j)(ee.name) || (Je = ee.error)
-          }), (async () => be.sourcesOf ? be.sourcesOf(ie) : null === ie ? (0, Fe.l)() : pe(ie, await this.maxLayerWidth(), Me)), {
-            wholeAtlas: null !== ie,
-            wanted: () => ee === this.latest
+          PW = await EW.terrain.swap((WW => {
+            var iW;
+            EW.warn(`texture pack texture ${null!==(iW=WW.name)&&void 0!==iW?iW:"(all)"} failed`, WW.error), null !== WW.name && null === (0, cW.f)(WW.name) || (wW = WW.error)
+          }), (async () => EW.sourcesOf ? EW.sourcesOf(iW) : null === iW ? (0, cW.j)() : jW(iW, await this.maxLayerWidth(), NW)), {
+            wholeAtlas: null !== iW,
+            wanted: () => WW === this.latest
           })
-        } catch (oe) {
-          return be.warn("the texture pack's swap failed: the textures in stay", oe), void this.settled(ee, He, null, {
-            error: oe,
-            source: ye
+        } catch (tW) {
+          return EW.warn("the texture pack's swap failed: the textures in stay", tW), void this.settled(WW, OW, null, {
+            error: tW,
+            source: mW
           })
         } finally {
           this.swapping--
         }
-        if (!0 !== Ke || this.ended) this.settled(ee, He, null, {
-          error: Je,
-          source: ye
+        if (!0 !== PW || this.ended) this.settled(WW, OW, null, {
+          error: wW,
+          source: mW
         });
         else {
-          be.landed(), this.assets = ie, this.owner = Me;
+          EW.landed(), this.assets = iW, this.owner = NW;
           try {
-            be.packSwapped()
+            EW.packSwapped()
           } finally {
-            this.settled(ee, He, this.files())
+            this.settled(WW, OW, this.files())
           }
         }
       }
-      async assetsFor(ee) {
-        var ie;
-        return (null !== (ie = this.host.assetsOf) && void 0 !== ie ? ie : Je.i)(ee, await this.maxLayerWidth())
+      async assetsFor(WW) {
+        var iW;
+        return (null !== (iW = this.host.assetsOf) && void 0 !== iW ? iW : wW.j)(WW, await this.maxLayerWidth())
       }
-      texturesIn(ee, ie) {
-        return ee === this.assets && (null === ee || ie === this.owner)
+      texturesIn(WW, iW) {
+        return WW === this.assets && (null === WW || iW === this.owner)
       }
-      settled(ee, ie, He) {
-        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        ee !== this.latest || this.ended || this.host.stopped() || this.host.settled(ie, He, ye)
+      settled(WW, iW, OW) {
+        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        WW !== this.latest || this.ended || this.host.stopped() || this.host.settled(iW, OW, mW)
       }
     }
   },
-  54294: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      followPagePackFiles: () => Me
+  54833: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      followPagePackFiles: () => NW
     });
-    var ye = He(54282),
-      be = He(54292);
+    var mW = OW(54816),
+      EW = OW(54829);
 
-    function Me(ee, ie, He, Me, Ke) {
-      let Ue, Fe = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : ee => (0, be.i)(ee, (0, ye.deviceMaxLayerWidth)(He)),
-        Je = 0,
-        oe = null;
-      const Re = () => {
-          if (null === oe || null !== oe.gameSource && !ie.showsPage()) return;
-          const He = null === oe.gameSource ? oe : ee.playerState();
-          if (He.pack === Ue) return;
-          Ue = He.pack;
-          const be = ++Je;
-          Fe(He).then((ee => {
-            be === Je && Me((0, ye.packFilesOf)(ee, "player"))
-          }), (ee => {
-            be === Je && (Ue = void 0), Ke("the texture pack's files couldn't be had for the previews: the files in stay", ee)
+    function NW(WW, iW, OW, NW, PW) {
+      let LW, cW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : WW => (0, EW.j)(WW, (0, mW.deviceMaxLayerWidth)(OW)),
+        wW = 0,
+        tW = null;
+      const ZW = () => {
+          if (null === tW || null !== tW.gameSource && !iW.showsPage()) return;
+          const OW = null === tW.gameSource ? tW : WW.playerState();
+          if (OW.pack === LW) return;
+          LW = OW.pack;
+          const EW = ++wW;
+          cW(OW).then((WW => {
+            EW === wW && NW((0, mW.packFilesOf)(WW, "player"))
+          }), (WW => {
+            EW === wW && (LW = void 0), PW("the texture pack's files couldn't be had for the previews: the files in stay", WW)
           }))
         },
-        ke = ee.subscribe((ee => {
-          oe = ee, Re()
+        xW = WW.subscribe((WW => {
+          tW = WW, ZW()
         })),
-        qe = ee.onPlayerPackChange(Re),
-        fe = ie.onPageShown(Re);
+        lW = WW.onPlayerPackChange(ZW),
+        AW = iW.onPageShown(ZW);
       return () => {
-        ke(), qe(), fe(), Je++
+        xW(), lW(), AW(), wW++
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

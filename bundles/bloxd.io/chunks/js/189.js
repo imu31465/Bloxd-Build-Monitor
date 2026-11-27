@@ -1,40 +1,43 @@
 export const id = 189;
 export const ids = [189];
 export const modules = {
-  9750: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      pageBody: () => ye
+  10238: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const ye = {
-      whatIs: ["One block, floating in the sky, with a nametag that says \"I'm your One Block, break me!\" That's how every Bloxd One Block island starts. Break it and it comes straight back as something new, so you keep getting blocks, items and chests. Survive up there, unlock new phases, and slowly turn your tiny island into an empire."],
-      howToPlay: ["Break your One Block. Then break it again. And again. The more blocks you mine, the more phases you unlock, from the Forest and Plains right up to the Volcano and the Moon. Each phase changes what your block turns into, so there's always something new popping up. Once every phase is unlocked, you can switch between them whenever you like.", "To get going, collect 3 Gold Coins from chests. Then bridge over to the portal island nearby and walk into your portal. It takes you to One Village, the Hub. There you can spend coins in the shops, leave them with Bling Bling the banker, do daily and weekly quests and upgrade the guilds. When you're done, type /home or use a portal to head back to your island."],
-      features: ["17 Phases to Unlock, from Forest to the Moon", "Super Mining, Super Digging and Mega Chop Skills", "One Village Hub with Shops, a Bank and Treasure Chests", "Daily and Weekly Quests", "Painter's, Monster Hunter's and Farmer's Guilds", "Chat Events like Trivia, Unscramble and Type the Fastest", "Crops, a Rotating Trader and Double Drop Chance", "Gold Portal Skins for Saving Coins", "Visit Friends' Islands and Keep Multiple Island Saves"],
-      tips: ["Open every chest you find. That's where your Gold Coins come from.", "Put your coins in the bank, where your balance stays safe forever.", "Save 1,000, 50,000 or 1,000,000 coins in the bank to unlock gold portal skins.", "Level up your skills, then right click to use them. They've got a cooldown, so pick your moment.", "Use Mega Chop on trees to find way more chests.", "Only switch on Allow Edit for people you trust. Anyone with it can take your blocks.", "Lost? Type /home and you'll be straight back on your island."],
-      similarGames: ["skyblock", "skyIslands", "classic_survival"],
+    const mW = {
+      whatIs: ["In Bloxd Skywars, everyone starts on their own island in the sky. Only one player is still there at the end. Loot your chests for weapons, armour and blocks, bridge over to your rivals and knock them into the void. It's free-for-all PvP for up to 12 players, and the last one standing takes the win."],
+      howToPlay: ["Each match starts with you in a glass cage on your own island. The cage opens after about 3 seconds, and you can't use items while you're stuck inside. Once you're out, loot your island's chests quickly, because your gear is split between them. Then build a bridge and go after everyone else.", "Chests refill every 2.5 minutes. When \"Chests replenished.\" pops up in chat, it's worth heading back for more loot. After 7 minutes, or as soon as only two players are left, everyone still alive gets a compass pointing at the nearest player. There's nowhere left to hide at that point. Fall into the void and you're out.", "You get Gold for every kill and 20 Gold for a win. Spend Gold and Gems in the shop on new Skywars kits and perks."],
+      features: ["Free-for-All Matches for Up to 12 Players", "Around 30 Kits, from Archer and Builder to Ghost, Sniper, Catapult and Salmon", "Killstreak Perks You Can Buy and Upgrade, like Bridger, Leech and Inferno", "Chests That Refill Every 2.5 Minutes", "A Compass That Tracks the Nearest Player After 7 Minutes or When Two Remain", "Match Modifiers like Lucky Mode, Lifesteal, Explosives Frenzy and Knockback Knockout", "10 Maps: Jungle, Castle, Ice, Bricks, Street, Chess, Food, Aqueduct, Mushroom Land and Warehouse", "Leaderboards"],
+      tips: ["Open every chest on your island before you leave, since your gear is spread across them", "Take your time bridging. One wrong step and you're in the void", "When the chests refill, try to get back to them before your rivals do", "Fight near the edges and use knockback to push enemies off the map", "More kills means more Gold, so you'll unlock new kits faster", "Try kits that suit how you play: Builder for bridging, Archer for range or Tank for armour", "Choose perks to match your style too, like Rusher for speed at the start or Leech for health after kills"],
+      similarGames: ["bedwars", "luckyTowers", "skyIslands"],
       faq: [{
-        question: "What is Bloxd One Block?",
-        answer: "A sky challenge where you start on a single floating block. Break it to get new blocks, items and chests, unlock phases and grow your island into an empire."
+        question: "What is Bloxd Skywars?",
+        answer: "It's a PvP mode on Bloxd.io where every player starts on a floating island. You loot chests, bridge across to your rivals and try to be the last one standing."
       }, {
-        question: "Is Bloxd One Block a skyblock game?",
-        answer: "Sort of. You start with one block in the sky and build everything from there. Bloxd Skyblock is a different mode, though: that one's an RPG with skills, quests and dungeons, while One Block is all about breaking your block to unlock 17 phases."
+        question: "How do you win in Skywars?",
+        answer: "Be the last player alive. Knock everyone else out, or push them off their islands into the void. Winning gets you 20 Gold."
       }, {
-        question: "How many phases are in Bloxd One Block?",
-        answer: "17, from Forest and Plains through Ocean, Desert and Dungeon to the Volcano and the Moon. Mine enough blocks to unlock each one. When you've got them all, you can change phase."
+        question: "Can I play Skywars in my browser?",
+        answer: "Yep. Bloxd.io Skywars runs right in your browser, so you can jump into a match without installing anything."
       }, {
-        question: "How do I get to the Hub in One Block?",
-        answer: "Grab 3 Gold Coins from chests, bridge over to the portal island nearby and walk into your portal. Type /home to come back."
+        question: "What are the best Skywars kits?",
+        answer: "Honestly, it depends how you like to play. Sniper has a one-shot crossbow and Catapult can knock enemies off the map. Ghost can turn invisible, and Builder starts with extra blocks for bridging. You unlock more kits with Gold and Gems."
       }, {
-        question: "Where do One Block coins come from?",
-        answer: "Chests from your One Block and the Hub treasure chests, daily and weekly quests, or watching an ad for coins."
+        question: "What do perks do in Bloxd Skywars?",
+        answer: "Perks give you bonuses while you play. Maniac gives you more damage after kills, Bridger gives you a chance to get placed blocks back and Leech heals you after kills. You can upgrade them to make them stronger."
       }, {
-        question: "How do I open my portal in One Block?",
-        answer: "Type /open in chat. You can also add visitors in your island access settings, even if your portal is closed."
+        question: "How do I get Gold in Skywars?",
+        answer: "Every kill earns Gold, and you get an extra 20 Gold for winning a match."
       }, {
-        question: "Can I have more than one island?",
-        answer: "Yes. The Island Manager lets you create new islands, rename them, load another save or delete one, up to a maximum number of islands."
+        question: "How many players fit in one Skywars match?",
+        answer: "Up to 12 players fight it out in each free-for-all match."
+      }, {
+        question: "What does the compass do in Skywars?",
+        answer: "After 7 minutes, or once only two players are left, everyone still alive gets a compass that points to the nearest player."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

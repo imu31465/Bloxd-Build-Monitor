@@ -1,31 +1,31 @@
-export const id = 69;
-export const ids = [69];
+export const id = 70;
+export const ids = [70];
 export const modules = {
-  41734: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => be,
-      f: () => oe
+  42137: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => EW,
+      e: () => tW
     });
-    const ye = new TextDecoder;
+    const mW = new TextDecoder;
 
-    function be(ee) {
-      const ie = new Me(ee),
-        He = ie.value();
-      if (ie.at !== ee.length) throw new Error(`msgpack: ${ee.length-ie.at} bytes after the value`);
-      return He
+    function EW(WW) {
+      const iW = new NW(WW),
+        OW = iW.value();
+      if (iW.at !== WW.length) throw new Error(`msgpack: ${WW.length-iW.at} bytes after the value`);
+      return OW
     }
-    class Me {
-      constructor(ee) {
-        this.bytes = ee, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(ee.buffer, ee.byteOffset, ee.byteLength)
+    class NW {
+      constructor(WW) {
+        this.bytes = WW, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(WW.buffer, WW.byteOffset, WW.byteLength)
       }
       value() {
-        const ee = this.u8();
-        if (ee <= 127) return ee;
-        if (ee >= 224) return ee - 256;
-        if (ee >= 128 && ee <= 143) return this.map(15 & ee);
-        if (ee >= 144 && ee <= 159) return this.array(15 & ee);
-        if (ee >= 160 && ee <= 191) return this.str(31 & ee);
-        switch (ee) {
+        const WW = this.u8();
+        if (WW <= 127) return WW;
+        if (WW >= 224) return WW - 256;
+        if (WW >= 128 && WW <= 143) return this.map(15 & WW);
+        if (WW >= 144 && WW <= 159) return this.array(15 & WW);
+        if (WW >= 160 && WW <= 191) return this.str(31 & WW);
+        switch (WW) {
           case 192:
             return null;
           case 194:
@@ -89,13 +89,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${ee.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${WW.toString(16)} at ${this.at-1}`)
         }
       }
-      take(ee) {
-        const ie = this.at;
-        if (ie + ee > this.bytes.length) throw new Error(`msgpack: ${ee} bytes past the end at ${ie}`);
-        return this.at = ie + ee, ie
+      take(WW) {
+        const iW = this.at;
+        if (iW + WW > this.bytes.length) throw new Error(`msgpack: ${WW} bytes past the end at ${iW}`);
+        return this.at = iW + WW, iW
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -106,323 +106,323 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(ee) {
-        const ie = this.take(8);
-        return ee ? this.view.getBigInt64(ie, !1) : this.view.getBigUint64(ie, !1)
+      int64(WW) {
+        const iW = this.take(8);
+        return WW ? this.view.getBigInt64(iW, !1) : this.view.getBigUint64(iW, !1)
       }
-      str(ee) {
-        const ie = this.take(ee),
-          He = this.bytes;
-        if (ee < 16) {
-          let be = "";
-          for (let Me = ie; Me < ie + ee; Me++) {
-            const Ke = He[Me];
-            if (Ke >= 128) return ye.decode(He.subarray(ie, ie + ee));
-            be += String.fromCharCode(Ke)
+      str(WW) {
+        const iW = this.take(WW),
+          OW = this.bytes;
+        if (WW < 16) {
+          let EW = "";
+          for (let NW = iW; NW < iW + WW; NW++) {
+            const PW = OW[NW];
+            if (PW >= 128) return mW.decode(OW.subarray(iW, iW + WW));
+            EW += String.fromCharCode(PW)
           }
-          return be
+          return EW
         }
-        return ye.decode(He.subarray(ie, ie + ee))
+        return mW.decode(OW.subarray(iW, iW + WW))
       }
-      bin(ee) {
-        const ie = this.take(ee);
-        return this.bytes.subarray(ie, ie + ee)
+      bin(WW) {
+        const iW = this.take(WW);
+        return this.bytes.subarray(iW, iW + WW)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(ee) {
+      array(WW) {
         this.enter();
-        const ie = [];
-        for (let He = 0; He < ee; He++) ie.push(this.value());
-        return this.depth--, ie
+        const iW = [];
+        for (let OW = 0; OW < WW; OW++) iW.push(this.value());
+        return this.depth--, iW
       }
-      map(ee) {
+      map(WW) {
         this.enter();
-        const ie = {};
-        for (let He = 0; He < ee; He++) {
-          const ee = this.value(),
-            He = this.value();
-          ie["__proto__" === ee ? "__proto_" : String(ee)] = He
+        const iW = {};
+        for (let OW = 0; OW < WW; OW++) {
+          const WW = this.value(),
+            OW = this.value();
+          iW["__proto__" === WW ? "__proto_" : String(WW)] = OW
         }
-        return this.depth--, ie
+        return this.depth--, iW
       }
-      ext(ee) {
-        const ie = this.view.getInt8(this.take(1)),
-          He = this.take(ee);
-        if (0 !== ie) {
-          if (-1 === ie) {
-            if (1 === ee) return new Date(NaN);
-            if (4 === ee) return new Date(1e3 * this.view.getUint32(He, !1));
-            if (8 === ee) {
-              const ee = this.view.getUint32(He, !1),
-                ie = ee >>> 2,
-                ye = 4294967296 * (3 & ee) + this.view.getUint32(He + 4, !1);
-              return new Date(1e3 * ye + ie / 1e6)
+      ext(WW) {
+        const iW = this.view.getInt8(this.take(1)),
+          OW = this.take(WW);
+        if (0 !== iW) {
+          if (-1 === iW) {
+            if (1 === WW) return new Date(NaN);
+            if (4 === WW) return new Date(1e3 * this.view.getUint32(OW, !1));
+            if (8 === WW) {
+              const WW = this.view.getUint32(OW, !1),
+                iW = WW >>> 2,
+                mW = 4294967296 * (3 & WW) + this.view.getUint32(OW + 4, !1);
+              return new Date(1e3 * mW + iW / 1e6)
             }
-            if (12 === ee) {
-              const ee = this.view.getUint32(He, !1),
-                ie = 4294967296 * this.view.getInt32(He + 4, !1) + this.view.getUint32(He + 8, !1);
-              return new Date(1e3 * ie + ee / 1e6)
+            if (12 === WW) {
+              const WW = this.view.getUint32(OW, !1),
+                iW = 4294967296 * this.view.getInt32(OW + 4, !1) + this.view.getUint32(OW + 8, !1);
+              return new Date(1e3 * iW + WW / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${ie} of ${ee} bytes`)
+          throw new Error(`msgpack: ext type ${iW} of ${WW} bytes`)
         }
       }
     }
-    const Ke = new TextEncoder,
-      Ue = -(2n ** 63n),
-      Fe = 2n ** 63n - 1n,
-      Je = 2n ** 64n - 1n;
+    const PW = new TextEncoder,
+      LW = -(2n ** 63n),
+      cW = 2n ** 63n - 1n,
+      wW = 2n ** 64n - 1n;
 
-    function oe(ee) {
-      const ie = new Re;
-      return ie.value(ee, 0), ie.bytes()
+    function tW(WW) {
+      const iW = new ZW;
+      return iW.value(WW, 0), iW.bytes()
     }
-    class Re {
+    class ZW {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(ee, ie) {
-        if (ie > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof ee) {
+      value(WW, iW) {
+        if (iW > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof WW) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(ee ? 195 : 194);
+            return void this.u8(WW ? 195 : 194);
           case "number":
-            return void this.number(ee);
+            return void this.number(WW);
           case "bigint":
-            return void this.bigint(ee);
+            return void this.bigint(WW);
           case "string":
-            return void this.string(ee);
+            return void this.string(WW);
           case "object":
-            if (null === ee) this.u8(192);
-            else if (ee instanceof Uint8Array) this.head(ee.length, 196, -1, 197, 198), this.room(ee.length), this.buf.set(ee, this.at), this.at += ee.length;
-            else if (Array.isArray(ee)) {
-              this.head(ee.length, 220, 144, 220, 221);
-              for (const He of ee) this.value(He, ie + 1)
+            if (null === WW) this.u8(192);
+            else if (WW instanceof Uint8Array) this.head(WW.length, 196, -1, 197, 198), this.room(WW.length), this.buf.set(WW, this.at), this.at += WW.length;
+            else if (Array.isArray(WW)) {
+              this.head(WW.length, 220, 144, 220, 221);
+              for (const OW of WW) this.value(OW, iW + 1)
             } else {
-              var He, ye;
-              if (Object.getPrototypeOf(ee) !== Object.prototype && null !== Object.getPrototypeOf(ee)) throw new Error(`msgpack: can't encode a ${null!==(He=null===(ye=ee.constructor)||void 0===ye?void 0:ye.name)&&void 0!==He?He:"object"}`);
+              var OW, mW;
+              if (Object.getPrototypeOf(WW) !== Object.prototype && null !== Object.getPrototypeOf(WW)) throw new Error(`msgpack: can't encode a ${null!==(OW=null===(mW=WW.constructor)||void 0===mW?void 0:mW.name)&&void 0!==OW?OW:"object"}`);
               {
-                const He = Object.keys(ee);
-                this.head(He.length, 222, 128, 222, 223);
-                for (const ye of He) this.string(ye), this.value(ee[ye], ie + 1)
+                const OW = Object.keys(WW);
+                this.head(OW.length, 222, 128, 222, 223);
+                for (const mW of OW) this.string(mW), this.value(WW[mW], iW + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof ee)
+            throw new Error("msgpack: can't encode a " + typeof WW)
         }
       }
-      number(ee) {
-        Number.isInteger(ee) && ee >= -2147483648 && ee <= 4294967295 ? ee >= 0 ? ee < 128 ? this.u8(ee) : ee < 256 ? (this.u8(204), this.u8(ee)) : ee < 65536 ? (this.u8(205), this.u16(ee)) : (this.u8(206), this.u32(ee)) : ee >= -32 ? this.u8(ee + 256) : ee >= -128 ? (this.u8(208), this.u8(ee + 256)) : ee >= -32768 ? (this.u8(209), this.u16(ee + 65536)) : (this.u8(210), this.u32(ee >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, ee, !1), this.at += 8)
+      number(WW) {
+        Number.isInteger(WW) && WW >= -2147483648 && WW <= 4294967295 ? WW >= 0 ? WW < 128 ? this.u8(WW) : WW < 256 ? (this.u8(204), this.u8(WW)) : WW < 65536 ? (this.u8(205), this.u16(WW)) : (this.u8(206), this.u32(WW)) : WW >= -32 ? this.u8(WW + 256) : WW >= -128 ? (this.u8(208), this.u8(WW + 256)) : WW >= -32768 ? (this.u8(209), this.u16(WW + 65536)) : (this.u8(210), this.u32(WW >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, WW, !1), this.at += 8)
       }
-      bigint(ee) {
-        const ie = ee >= Ue && ee <= Fe;
-        if (!ie && (ee < 0n || ee > Je)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(ie ? 211 : 207), this.room(8), ie ? this.view.setBigInt64(this.at, ee, !1) : this.view.setBigUint64(this.at, ee, !1), this.at += 8
+      bigint(WW) {
+        const iW = WW >= LW && WW <= cW;
+        if (!iW && (WW < 0n || WW > wW)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(iW ? 211 : 207), this.room(8), iW ? this.view.setBigInt64(this.at, WW, !1) : this.view.setBigUint64(this.at, WW, !1), this.at += 8
       }
-      string(ee) {
-        const ie = Ke.encode(ee);
-        this.head(ie.length, 217, 160, 218, 219), this.room(ie.length), this.buf.set(ie, this.at), this.at += ie.length
+      string(WW) {
+        const iW = PW.encode(WW);
+        this.head(iW.length, 217, 160, 218, 219), this.room(iW.length), this.buf.set(iW, this.at), this.at += iW.length
       }
-      head(ee, ie, He, ye, be) {
-        He >= 0 && ee < (160 === He ? 32 : 16) ? this.u8(He | ee) : ie !== ye && ee < 256 ? (this.u8(ie), this.u8(ee)) : ee < 65536 ? (this.u8(ye), this.u16(ee)) : (this.u8(be), this.u32(ee))
+      head(WW, iW, OW, mW, EW) {
+        OW >= 0 && WW < (160 === OW ? 32 : 16) ? this.u8(OW | WW) : iW !== mW && WW < 256 ? (this.u8(iW), this.u8(WW)) : WW < 65536 ? (this.u8(mW), this.u16(WW)) : (this.u8(EW), this.u32(WW))
       }
-      room(ee) {
-        if (this.at + ee <= this.buf.length) return;
-        let ie = 2 * this.buf.length;
-        for (; ie < this.at + ee;) ie *= 2;
-        const He = new Uint8Array(ie);
-        He.set(this.buf.subarray(0, this.at)), this.buf = He, this.view = new DataView(He.buffer)
+      room(WW) {
+        if (this.at + WW <= this.buf.length) return;
+        let iW = 2 * this.buf.length;
+        for (; iW < this.at + WW;) iW *= 2;
+        const OW = new Uint8Array(iW);
+        OW.set(this.buf.subarray(0, this.at)), this.buf = OW, this.view = new DataView(OW.buffer)
       }
-      u8(ee) {
-        this.room(1), this.buf[this.at++] = ee
+      u8(WW) {
+        this.room(1), this.buf[this.at++] = WW
       }
-      u16(ee) {
-        this.room(2), this.view.setUint16(this.at, ee, !1), this.at += 2
+      u16(WW) {
+        this.room(2), this.view.setUint16(this.at, WW, !1), this.at += 2
       }
-      u32(ee) {
-        this.room(4), this.view.setUint32(this.at, ee, !1), this.at += 4
+      u32(WW) {
+        this.room(4), this.view.setUint32(this.at, WW, !1), this.at += 4
       }
     }
   },
-  54258: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      joinRoom: () => Re,
-      leaveHeldSeat: () => Xe,
-      resumeRoom: () => qe
+  54800: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      joinRoom: () => ZW,
+      leaveHeldSeat: () => UW,
+      resumeRoom: () => lW
     });
-    var ye = He(153),
-      be = He(1155),
-      Me = He(37286),
-      Ke = He(41734),
-      Ue = He(5271),
-      Fe = He(41782),
-      Je = He(41999);
-    const oe = Uint8Array.of(13, ...(0, Ke.f)(ye.f));
-    async function Re(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var mW = OW(154),
+      EW = OW(1194),
+      NW = OW(37727),
+      PW = OW(42137),
+      LW = OW(5546),
+      cW = OW(42307),
+      wW = OW(42422);
+    const tW = Uint8Array.of(13, ...(0, PW.e)(mW.f));
+    async function ZW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await ke(ee, ie, He)
-      } catch (be) {
-        var ye;
-        const Me = await (null === (ye = ie.optionsAfterRefusal) || void 0 === ye ? void 0 : ye.call(ie, be));
-        if (!Me) throw be;
-        return ke(ee, {
-          ...ie,
-          joinOptions: Me
+        return await xW(WW, iW, OW)
+      } catch (EW) {
+        var mW;
+        const NW = await (null === (mW = iW.optionsAfterRefusal) || void 0 === mW ? void 0 : mW.call(iW, EW));
+        if (!NW) throw EW;
+        return xW(WW, {
+          ...iW,
+          joinOptions: NW
         }, {
-          ...He,
+          ...OW,
           early: void 0
         })
       }
     }
-    async function ke(ee, ie, He) {
-      var ye;
+    async function xW(WW, iW, OW) {
+      var mW;
       const {
-        signal: Me
-      } = He, Ke = () => (0, Je.g)(ie.endpoint, ie.roomName, ie.joinOptions, He), {
-        early: Ue
-      } = He, Fe = Ue ? null !== (ye = await Ue.take(Me)) && void 0 !== ye ? ye : await Ue.reserveInstead(Ke, Me) : await Ke();
-      return (0, be.r)(Me), pe(ee, ie.endpoint, Fe, He, !1)
+        signal: NW
+      } = OW, PW = () => (0, wW.f)(iW.endpoint, iW.roomName, iW.joinOptions, OW), {
+        early: LW
+      } = OW, cW = LW ? null !== (mW = await LW.take(NW)) && void 0 !== mW ? mW : await LW.reserveInstead(PW, NW) : await PW();
+      return (0, EW.s)(NW), jW(WW, iW.endpoint, cW, OW, !1)
     }
-    async function qe(ee, ie, He, ye) {
-      let Me = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const Ke = await (0, Je.f)(ie, He, ye, Me);
-      return (0, be.r)(Me.signal), pe(ee, ie, Ke, Me, !0)
-    }
-
-    function fe(ee, ie, He) {
-      const ye = (0, Je.j)(ee, ie);
-      return He.createSocket ? He.createSocket(ye) : new WebSocket(ye)
+    async function lW(WW, iW, OW, mW) {
+      let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const PW = await (0, wW.d)(iW, OW, mW, NW);
+      return (0, EW.s)(NW.signal), jW(WW, iW, PW, NW, !0)
     }
 
-    function Te(ee, ie, He) {
-      var ye;
-      let be = !1;
-      return (null !== (ye = ee.setTimer) && void 0 !== ye ? ye : (ee, ie) => {
-        setTimeout(ee, ie)
+    function AW(WW, iW, OW) {
+      const mW = (0, wW.h)(WW, iW);
+      return OW.createSocket ? OW.createSocket(mW) : new WebSocket(mW)
+    }
+
+    function bW(WW, iW, OW) {
+      var mW;
+      let EW = !1;
+      return (null !== (mW = WW.setTimer) && void 0 !== mW ? mW : (WW, iW) => {
+        setTimeout(WW, iW)
       })((() => {
-        be || ie()
-      }), He), () => {
-        be = !0
+        EW || iW()
+      }), OW), () => {
+        EW = !0
       }
     }
-    async function pe(ee, ie, He, ye, Ke) {
+    async function jW(WW, iW, OW, mW, PW) {
       const {
-        signal: Je
-      } = ye, Re = fe(ie, He, ye);
-      let ke = !1,
-        qe = null,
-        pe = null;
-      const Xe = [];
-      let ze = !1,
-        Be = !1;
-      const Ee = ee => {
-        var ie;
-        Be = !0, null === (ie = pe) || void 0 === ie || ie.reject(new Fe.c("the room socket closed before the resume", "closed", ee.code))
+        signal: wW
+      } = mW, ZW = AW(iW, OW, mW);
+      let xW = !1,
+        lW = null,
+        jW = null;
+      const UW = [];
+      let kW = !1,
+        sW = !1;
+      const MW = WW => {
+        var iW;
+        sW = !0, null === (iW = jW) || void 0 === iW || iW.reject(new cW.c("the room socket closed before the resume", "closed", WW.code))
       };
-      Ke && Re.addEventListener("close", Ee);
-      const ge = (ee, ie) => {
-          var He;
-          if (ee === (Ke ? Ue.x.Resumed : Ue.x.Activated)) ze = !0, null === (He = pe) || void 0 === He || He.resolve();
-          else if (!Ke || ee !== Ue.x.ResumeRefused && ee !== Ue.x.Activated)
-            if (ee === Ue.x.Error) {
-              var ye;
-              null === (ye = pe) || void 0 === ye || ye.reject(new Fe.c(`the room refused the join (code ${ie})`, "roomError", ie))
+      PW && ZW.addEventListener("close", MW);
+      const KW = (WW, iW) => {
+          var OW;
+          if (WW === (PW ? LW.A.Resumed : LW.A.Activated)) kW = !0, null === (OW = jW) || void 0 === OW || OW.resolve();
+          else if (!PW || WW !== LW.A.ResumeRefused && WW !== LW.A.Activated)
+            if (WW === LW.A.Error) {
+              var mW;
+              null === (mW = jW) || void 0 === mW || mW.reject(new cW.c(`the room refused the join (code ${iW})`, "roomError", iW))
             } else {
-              var be;
-              null === (be = pe) || void 0 === be || be.reject(new Fe.c("the room socket closed before the join", "closed", ie, null, ke))
+              var EW;
+              null === (EW = jW) || void 0 === EW || EW.reject(new cW.c("the room socket closed before the join", "closed", iW, null, xW))
             }
           else {
-            var Me;
-            null === (Me = pe) || void 0 === Me || Me.reject(new Fe.k("the core refused the resume: it held no game"))
+            var NW;
+            null === (NW = jW) || void 0 === NW || NW.reject(new cW.p("the core refused the resume: it held no game"))
           }
         },
-        Oe = ee.onConnection(((ee, ie, He) => {
-          null === qe ? Xe.push([ee, ie, He]) : ee === qe && ge(ie, He)
+        SW = WW.onConnection(((WW, iW, OW) => {
+          null === lW ? UW.push([WW, iW, OW]) : WW === lW && KW(iW, OW)
         })),
-        de = ee.attachSocket(Re);
-      if (null === de) throw Oe(), new Fe.c("the core could not take the room socket", "attach");
-      var We;
-      (qe = de, Ke) && (null === (We = ye.onAttached) || void 0 === We || We.call(ye));
-      const te = Ke ? null : new Me.c((() => {
-        var ie, He;
-        null === (ie = ee.flushNet) || void 0 === ie || ie.call(ee), null === (He = pe) || void 0 === He || He.reject(new Me.d(ke ? "socket" : "socket_unopened"))
+        YW = WW.attachSocket(ZW);
+      if (null === YW) throw SW(), new cW.c("the core could not take the room socket", "attach");
+      var yW;
+      (lW = YW, PW) && (null === (yW = mW.onAttached) || void 0 === yW || yW.call(mW));
+      const TW = PW ? null : new NW.b((() => {
+        var iW, OW;
+        null === (iW = WW.flushNet) || void 0 === iW || iW.call(WW), null === (OW = jW) || void 0 === OW || OW.reject(new NW.c(xW ? "socket" : "socket_unopened"))
       }));
-      Re.addEventListener("open", (() => {
-        ke = !0, null === te || void 0 === te || te.socketOpened()
+      ZW.addEventListener("open", (() => {
+        xW = !0, null === TW || void 0 === TW || TW.socketOpened()
       }), {
         once: !0
       });
-      let Ze = !1;
-      const we = () => {
-        if (Ze) return;
-        if (Ze = !0, Oe(), Ke && (Re.removeEventListener("close", Ee), !ze && !(null !== Je && void 0 !== Je && Je.aborted && (0, be.f)(Je) instanceof Fe.o))) return void(Be || ee.closeSocket(de));
-        ze && ee.leaveRoom(de) || ee.sendRaw(de, Fe.f) ? Te(ye, (() => {
-          ee.closeSocket(de)
-        }), Fe.d) : ee.closeSocket(de)
+      let JW = !1;
+      const hW = () => {
+        if (JW) return;
+        if (JW = !0, SW(), PW && (ZW.removeEventListener("close", MW), !kW && !(null !== wW && void 0 !== wW && wW.aborted && (0, EW.f)(wW) instanceof cW.t))) return void(sW || WW.closeSocket(YW));
+        kW && WW.leaveRoom(YW) || WW.sendRaw(YW, cW.j) ? bW(mW, (() => {
+          WW.closeSocket(YW)
+        }), cW.e) : WW.closeSocket(YW)
       };
       try {
-        await new Promise(((ie, He) => {
-          const ye = () => {
-            var ie;
-            Ke && (null === (ie = ee.flushNet) || void 0 === ie || ie.call(ee));
-            He((0, be.f)(Je))
+        await new Promise(((iW, OW) => {
+          const mW = () => {
+            var iW;
+            PW && (null === (iW = WW.flushNet) || void 0 === iW || iW.call(WW));
+            OW((0, EW.f)(wW))
           };
-          null === Je || void 0 === Je || Je.addEventListener("abort", ye, {
+          null === wW || void 0 === wW || wW.addEventListener("abort", mW, {
             once: !0
-          }), pe = {
+          }), jW = {
             resolve: () => {
-              null === Je || void 0 === Je || Je.removeEventListener("abort", ye), ie()
+              null === wW || void 0 === wW || wW.removeEventListener("abort", mW), iW()
             },
-            reject: ee => {
-              null === Je || void 0 === Je || Je.removeEventListener("abort", ye), He(ee)
+            reject: WW => {
+              null === wW || void 0 === wW || wW.removeEventListener("abort", mW), OW(WW)
             }
           };
-          for (const [ee, be, Me] of Xe.splice(0)) ee === qe && ge(be, Me)
-        })), null === te || void 0 === te || te.answered()
-      } catch (De) {
-        throw we(), De
+          for (const [WW, EW, NW] of UW.splice(0)) WW === lW && KW(EW, NW)
+        })), null === TW || void 0 === TW || TW.answered()
+      } catch (HW) {
+        throw hW(), HW
       } finally {
-        null === te || void 0 === te || te.stop()
+        null === TW || void 0 === TW || TW.stop()
       }
-      Ke && Re.removeEventListener("close", Ee);
+      PW && ZW.removeEventListener("close", MW);
       return {
-        conn: de,
-        seat: He,
-        leave: we,
+        conn: YW,
+        seat: OW,
+        leave: hW,
         detach: () => {
-          Ze = !0, Oe()
+          JW = !0, SW()
         },
-        endJoinAd: () => !Ze && ee.sendRaw(de, oe)
+        endJoinAd: () => !JW && WW.sendRaw(YW, tW)
       }
     }
-    async function Xe(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function UW(WW, iW, OW) {
+      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const be = fe(ee, await (0, Je.f)(ee, ie, He, ye), ye);
-        be.binaryType = "arraybuffer", await new Promise((ee => {
-          const ie = Te(ye, (() => {
-            be.close(), ee()
-          }), Fe.d);
-          be.addEventListener("open", (() => {
-            be.send(Fe.f)
-          })), be.addEventListener("close", (() => {
-            ie(), ee()
+        const EW = AW(WW, await (0, wW.d)(WW, iW, OW, mW), mW);
+        EW.binaryType = "arraybuffer", await new Promise((WW => {
+          const iW = bW(mW, (() => {
+            EW.close(), WW()
+          }), cW.e);
+          EW.addEventListener("open", (() => {
+            EW.send(cW.j)
+          })), EW.addEventListener("close", (() => {
+            iW(), WW()
           }))
         }))
-      } catch (be) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", be)
+      } catch (EW) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", EW)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

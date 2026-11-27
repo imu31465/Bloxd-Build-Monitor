@@ -1,124 +1,146 @@
 export const id = 165;
 export const ids = [165];
 export const modules = {
-  7365: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      AdMobSdkAdaptor: () => Re
+  7699: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      BloxdDiscordSDK: () => bW,
+      DiscordLoginCancelledError: () => AW,
+      discordPopupTimeoutMs: () => lW
     });
-    var ye = He(1300),
-      be = He(18),
-      Me = He(1682),
-      Ke = He(125),
-      Ue = He(3856),
-      Fe = He(347),
-      Je = He(1746);
-    const oe = {
-      mobileAndroid: {
-        banners: {
-          leaderboard_1: "ca-app-pub-5991928098122027/7081016880",
-          leaderboard_4: "ca-app-pub-5991928098122027/6301601920",
-          leaderboard_5: "ca-app-pub-5991928098122027/7592152779",
-          skyscraper_1: "ca-app-pub-5991928098122027/1026744422",
-          skyscraper_2: "ca-app-pub-5991928098122027/3483866894",
-          square_1: "ca-app-pub-5991928098122027/6381115670"
-        },
-        rewarded: "ca-app-pub-5991928098122027/5726886857",
-        interstitial: "ca-app-pub-5991928098122027/1979213537"
-      },
-      mobileIos: {
-        banners: {
-          leaderboard_1: "ca-app-pub-5991928098122027/4652945503",
-          leaderboard_4: "ca-app-pub-5991928098122027/2921518285",
-          leaderboard_5: "ca-app-pub-5991928098122027/7518781992",
-          skyscraper_1: "ca-app-pub-5991928098122027/8344778507",
-          skyscraper_2: "ca-app-pub-5991928098122027/3781201590",
-          square_1: "ca-app-pub-5991928098122027/2468119924"
-        },
-        rewarded: "ca-app-pub-5991928098122027/5014392212",
-        interstitial: "ca-app-pub-5991928098122027/4405533493"
+    var mW = OW(154),
+      EW = OW(1220),
+      NW = OW(1111),
+      PW = OW(1126),
+      LW = OW.n(PW),
+      cW = OW(1185),
+      wW = OW(39),
+      tW = OW(643),
+      ZW = OW(1422),
+      xW = OW(1189);
+    const lW = 6e5;
+    class AW extends Error {
+      constructor() {
+        super(...arguments), this.name = NW.discordLoginCancelledErrorName
       }
-    };
-    class Re extends ye.d {
-      constructor(ee) {
-        super(), this.name = "admob", this.bannerAutoRefresh = "alwaysOn", this.adUnitIds = void 0, this.bannerPlacementByBloxdId = new Map, this.bannerFirstResponseSeen = new Set, this.fullScreenAdsInFlight = 0, this.adUnitIds = oe[ee], Me.c.on("ads.bannerStatus", (ee => {
-          let {
-            placementId: ie,
-            shown: He,
-            error: ye
-          } = ee;
-          const be = !this.bannerFirstResponseSeen.has(ie);
-          this.bannerFirstResponseSeen.add(ie), be ? ((0, Je.j)(He), He ? console.log(`AD ${ie}: AdMob banner loaded`) : console.warn(`AD ${ie}: AdMob banner failed to load: ${ye}`)) : He || console.warn(`AD ${ie}: AdMob banner refresh failed: ${ye}`)
+    }
+    class bW {
+      constructor() {
+        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = EW.m[xW.d.clientEnvironment];
+        const WW = new URL(this.discordRedirectUrl).origin;
+        window.addEventListener("message", (iW => {
+          var OW;
+          if (iW.origin !== WW || "oauth_authentication_discord" !== (null === (OW = iW.data) || void 0 === OW ? void 0 : OW.type)) return;
+          if ("string" !== typeof iW.data.code || !iW.data.code) return void this.failPopup(new AW("Discord authentication was cancelled on Discord"));
+          const mW = this.popupWindowPromiseResolve;
+          this.resetPopupState(), null === mW || void 0 === mW || mW(iW.data.code)
         }))
       }
-      static async setup() {
-        const ee = "mobileIos" === Ke.siteUsed ? "mobileIos" : "mobileAndroid";
-        return console.log(`AD: AdMobSDK initialised for ${ee}`), new Re(ee)
+      resetPopupState() {
+        null !== this.popupWindowCheckInterval && window.clearInterval(this.popupWindowCheckInterval), null !== this.popupWindowTimeout && window.clearTimeout(this.popupWindowTimeout), this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindowPromise = null, this.popupWindow = null
       }
-      muteGameDuring(ee) {
-        return this.fullScreenAdsInFlight++, be.e.set({
-          soundOnFromAd: !1
-        }), ee.finally((() => {
-          this.fullScreenAdsInFlight--, 0 === this.fullScreenAdsInFlight && be.e.set({
-            soundOnFromAd: !0
-          })
+      failPopup(WW) {
+        var iW;
+        const OW = this.popupWindowPromiseReject;
+        null === (iW = this.popupWindow) || void 0 === iW || iW.close(), this.resetPopupState(), null === OW || void 0 === OW || OW(WW)
+      }
+      openDiscordOAuthWindow() {
+        const WW = xW.d.discordClientID;
+        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${WW}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
+      }
+      async showDiscordAuthPrompt() {
+        return new Promise(((WW, iW) => {
+          ZW.NotificationProvider.showPromptPopup({
+            title: "Discord Login Required",
+            confirmText: "Continue",
+            confirmTooltip: "Open Discord login window",
+            cancelText: "Cancel",
+            cancelTooltip: "Cancel Discord login"
+          }).getResult().then((OW => {
+            !0 === OW ? WW() : iW(new AW("Discord login was cancelled"))
+          })).catch(iW)
         }))
       }
-      playRewarded(ee, ie) {
-        const He = this.adUnitIds.rewarded;
-        this.muteGameDuring(Me.c.request("ads.showRewarded", {
-          placementId: He
-        })).then((He => {
-          let {
-            rewarded: ye
-          } = He;
-          ye ? ee() : ie()
-        }), (ee => {
-          console.warn(`AD ${He}: AdMob rewarded failed:`, ee), ie()
-        }))
+      signInWithPopup() {
+        if (null !== this.popupWindowPromise) return this.popupWindowPromise;
+        const WW = new Promise(((WW, iW) => {
+          this.popupWindowPromiseResolve = WW, this.popupWindowPromiseReject = iW
+        }));
+        return this.popupWindowPromise = WW, wW.e.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
+          this.failPopup(new Error("Discord authentication timed out"))
+        }), lW), this.openPopup(WW).catch((iW => {
+          this.popupWindowPromise === WW && this.failPopup(iW instanceof Error ? iW : new Error(String(iW)))
+        })), WW
       }
-      playVideoAd(ee, ie) {
-        const He = this.adUnitIds.interstitial;
-        this.muteGameDuring(Me.c.request("ads.showInterstitial", {
-          placementId: He
-        })).then((() => {
-          ee()
-        }), (ie => {
-          console.warn(`AD ${He}: AdMob interstitial failed:`, ie), ee()
-        }))
+      async openPopup(WW) {
+        let iW = this.openDiscordOAuthWindow();
+        if (!iW) {
+          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== WW) return;
+          iW = this.openDiscordOAuthWindow()
+        }
+        if (console.log("Discord OAuth window opened:", iW), !iW) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
+        this.popupWindow = iW;
+        const OW = window.setInterval((() => {
+          iW.closed && this.popupWindowPromise === WW && (window.clearInterval(OW), this.popupWindowCheckInterval = null, window.setTimeout((() => {
+            this.popupWindowPromise === WW && this.failPopup(new AW("Discord authentication was cancelled - popup window was closed"))
+          }), 1e3))
+        }), 200);
+        this.popupWindowCheckInterval = OW
       }
-      renderBanner(ee) {
-        const ie = (0, Ue.c)(ee),
-          He = this.adUnitIds.banners[ie];
-        if (void 0 === He) return;
-        const ye = document.getElementById(ee.divId);
-        if (!ye) return void console.warn(`AD ${ie}: AdMob renderBanner called but div ${ee.divId} is not in DOM`);
-        const be = ye.getBoundingClientRect(),
-          Ke = window.innerWidth,
-          oe = window.innerHeight;
-        if (0 === Ke || 0 === oe) return void console.warn(`AD ${ie}: AdMob renderBanner skipped \u2014 viewport has zero dimension`);
-        const Re = {
-          x1: Fe.c.clamp(be.left / Ke * 100, 0, 100),
-          y1: Fe.c.clamp(be.top / oe * 100, 0, 100),
-          x2: Fe.c.clamp(be.right / Ke * 100, 0, 100),
-          y2: Fe.c.clamp(be.bottom / oe * 100, 0, 100)
-        };
-        this.bannerPlacementByBloxdId.set(ie, He), console.log(`AD ${ie}: AdMob renderBanner placementId=${He} box=`, Re), (0, Je.h)("site_sdk"), Me.c.emit("ads.showBanner", {
-          placementId: He,
-          ...Re
-        })
+      async exchangeAuthorizationCodeForAccessToken(WW, iW) {
+        const {
+          accessToken: OW,
+          refreshToken: mW
+        } = await LW()((async () => await (0, NW.postJsonWithMetricsCookiesAndJsonResponse)(`${cW.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
+          authorizationCode: WW,
+          bloxdClientEnvironment: xW.d.clientEnvironment,
+          instanceId: null
+        }, {
+          retries: 0
+        }, iW.getMetricsCookies())), {
+          retries: 3
+        });
+        return wW.e.setItem(this.bloxdDiscordRefreshTokenKey, mW), OW
       }
-      clearBanner(ee) {
-        const ie = (0, Ue.c)(ee),
-          He = this.bannerPlacementByBloxdId.get(ie);
-        void 0 !== He && (this.bannerPlacementByBloxdId.delete(ie), this.bannerFirstResponseSeen.delete(He), console.log(`AD ${ie}: AdMob clearBanner placementId=${He}`), Me.c.emit("ads.hideBanner", {
-          placementId: He
-        }))
+      hasCurrentUser() {
+        const WW = wW.e.getItem(this.bloxdDiscordRefreshTokenKey);
+        return !(0, tW.K)(WW)
       }
-      canShowBloxdAd(ee) {
-        return !1
+      async getCurrentUser(WW) {
+        const iW = wW.e.getItem(this.bloxdDiscordRefreshTokenKey);
+        if (!iW) return null;
+        let OW;
+        try {
+          const mW = await LW()((async () => {
+            try {
+              return await (0, NW.postJsonWithMetricsCookiesAndJsonResponse)(`${cW.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
+                refreshToken: iW
+              }, {
+                retries: 0
+              }, WW.getMetricsCookies())
+            } catch (OW) {
+              if (jW(OW)) throw new(LW().AbortError)(OW);
+              throw OW
+            }
+          }), {
+            retries: 3
+          });
+          OW = mW.accessToken, wW.e.setItem(this.bloxdDiscordRefreshTokenKey, mW.refreshToken)
+        } catch (mW) {
+          return jW(mW) ? (wW.e.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", mW), null)
+        }
+        return {
+          accessToken: OW
+        }
       }
+      signOut() {
+        this.failPopup(new AW("Signed out of Discord during login")), wW.e.removeItem(this.bloxdDiscordRefreshTokenKey)
+      }
+    }
+
+    function jW(WW) {
+      return WW instanceof mW.c && 435 === WW.httpCode
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

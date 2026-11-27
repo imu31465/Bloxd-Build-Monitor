@@ -1,872 +1,364 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  40527: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => ye,
-      d: () => be
+  37527: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => tW,
+      g: () => LW,
+      j: () => wW,
+      n: () => cW,
+      p: () => sW
     });
-    const ye = "The world isn't loaded, so no blocks can be seen.",
-      be = "The world isn't loaded, so nothing in it can be seen."
-  },
-  39896: (ee, ie, He) => {
-    function ye(ee) {
-      return !(!ee.lobbyLeaderboardInfo && !ee.lobbyManage)
-    }
-    He.d(ie, {
-      e: () => ye
-    })
-  },
-  37629: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => be,
-      d: () => ye
-    });
-    const ye = 3,
-      be = {
-        recording: !1,
-        clipping: !1,
-        hasClipBuffer: !1,
-        seconds: 0
+    var mW = OW(649),
+      EW = OW(1876),
+      NW = OW(5551);
+    class PW {
+      constructor(WW, iW) {
+        this.width = WW, this.aZ = iW, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(WW * iW)
       }
-  },
-  37637: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Me,
-      e: () => be
-    });
-    let ye = () => null;
-
-    function be(ee) {
-      ye = ee
-    }
-
-    function Me(ee, ie) {
-      return ye(ee, ie)
-    }
-  },
-  41717: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Te,
-      e: () => Be,
-      g: () => ze,
-      k: () => pe
-    });
-    var ye = He(27),
-      be = He(41721),
-      Me = He(41704),
-      Ke = He(41725),
-      Ue = He(41712),
-      Fe = He(41728),
-      Je = He(41739);
-
-    function oe(ee) {
-      var ie, He;
-      const ye = (0, Me.h)();
-      return ye ? null === (ie = (0, be.c)(ye.api, ee[0], ee[1], ee[2])) || void 0 === ie || null === (He = ie.persisted) || void 0 === He ? void 0 : He.shared : void 0
-    }
-
-    function Re(ee) {
-      return `${ee[0]},${ee[1]},${ee[2]}`
-    }
-    const ke = new Map;
-    let qe = null,
-      fe = 0;
-
-    function Te() {
-      return fe
-    }
-
-    function pe(ee) {
-      const ie = null !== qe && qe.key === Re(ee.pos) ? qe.type : null;
-      if (null === ie) return ee;
-      let He = null;
-      if ("Iron" === ie) {
-        const {
-          cachedPasskey: ie,
-          ...ye
-        } = Xe(ee.pos);
-        He = {
-          SF: null !== ie && void 0 !== ie ? ie : [0, 0, 0, 0],
-          ...ye
+      push(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const OW = this.data,
+          mW = this.next * this.width;
+        for (let EW = 0; EW < this.width; EW++) OW[mW + EW] = WW[iW + EW];
+        this.next = (this.next + 1) % this.aZ, this.size = Math.min(this.size + 1, this.aZ)
+      }
+      rows() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const OW = [],
+          mW = (this.next - this.size + this.aZ) % this.aZ;
+        for (let EW = 0; EW < this.size; EW++) {
+          const NW = (mW + EW) % this.aZ * this.width;
+          this.data[NW + WW] >= iW && OW.push(Array.from(this.data.subarray(NW, NW + this.width)))
         }
+        return OW
       }
-      return {
-        ...ee,
-        type: ie,
-        ironChest: He
+      lines() {
+        return this.rows().map((WW => WW.join(",")))
       }
     }
-
-    function Xe(ee) {
-      const ie = oe(ee),
-        He = null === ie || void 0 === ie ? void 0 : ie.ownerDbId,
-        ye = function(ee) {
-          var ie;
-          let He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : oe(ee);
-          const ye = Re(ee),
-            be = ke.get(ye);
-          return be ? be.lastOpened < (null !== (ie = null === He || void 0 === He ? void 0 : He.passkeyLastUpdated) && void 0 !== ie ? ie : 0) ? (ke.delete(ye), null) : [...be.SF] : null
-        }(ee, ie);
-      return void 0 === He ? {
-        cachedPasskey: ye
-      } : {
-        ownerDbId: He,
-        cachedPasskey: ye
-      }
-    }(0, Je.j)(Ke.e, (ee => {
-      const ie = (0, Fe.g)(Ke.e, ee);
-      if (!(0, Fe.c)(ie) || ie.ti) return;
-      if (fe++, !ie.Ei || null === ie.di) return void(qe = null);
-      const He = Re(ie.di);
-      qe = {
-        key: He,
-        type: ie.Oi
-      }, null !== ie.Wi && ke.set(He, {
-        SF: [...ie.Wi],
-        lastOpened: Date.now()
-      })
-    })), (0, Je.g)((() => {
-      ke.clear(), qe = null, fe++
-    })), (0, Je.i)((() => {
-      null !== qe && (qe = null, fe++, ye.h.yR("chestToggleFromServer", !1, !0))
-    }));
-    const ze = {
-        boardEditRequested: {
-          watch: ee => (0, ye.j)("EditBoard", (ie => {
-            let {
-              pos: He
-            } = ie;
-            if (null === He) return void ee(null);
-            const ye = (0, Me.h)(),
-              be = (0, Me.q)();
-            ye && be && ee(be.readBoardToEdit(ye.api, ye.chunks, He))
-          }))
-        },
-        ironChestOpenRequested: {
-          watch: ee => (0, ye.j)("OpenIronChest", (ie => {
-            let {
-              pos: He
-            } = ie;
-            ee(function(ee) {
-              return {
-                pos: ee,
-                ...Xe(ee)
-              }
-            }(He))
-          }))
-        }
+    const LW = 10,
+      cW = {
+        idle: 0,
+        EZ: 1,
+        mD: 2,
+        ZD: 3,
+        Yj: 4
       },
-      Be = {
-        writeOnBoard(ee) {
-          var ie;
-          let {
-            pos: He,
-            text: ye,
-            textSize: be
-          } = ee;
-          null === (ie = (0, Me.h)()) || void 0 === ie || ie.send(Ue.e.UpdateBoard, (0, Ue.X)({
-            iJ: He,
-            HJ: ye,
-            yJ: be
-          }))
-        },
-        writeBook(ee) {
-          var ie;
-          let {
-            pages: He,
-            title: ye,
-            published: be
-          } = ee;
-          null === (ie = (0, Me.h)()) || void 0 === ie || ie.send(Ue.e.UpdateBook, (0, Ue.$)({
-            BJ: He,
-            EJ: ye,
-            gJ: be
-          }))
-        },
-        writeNameTag(ee) {
-          var ie;
-          null === (ie = (0, Me.h)()) || void 0 === ie || ie.send(Ue.e.UpdateNameTag, ee)
-        },
-        setCustomLobbyBlock(ee) {
-          let {
-            pos: ie,
-            blockName: He
-          } = ee;
-          const ye = (0, Me.q)(),
-            be = (0, Me.h)();
-          ye && be && be.send(Ue.e.SetCustomLobbyBlock, (0, Ue.I)({
-            po: ye.blockIdOf(He),
-            fo: ie
-          }))
-        }
-      }
-  },
-  41751: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Fe,
-      g: () => Ke,
-      i: () => Ue
-    });
-    var ye = He(41694),
-      be = He(5262),
-      Me = He(41704);
-
-    function Ke() {
-      var ee;
-      const ie = null === (ee = (0, Me.h)()) || void 0 === ee ? void 0 : ee.api.localId;
-      return void 0 === ie || ie === ye.$c ? null : String(ie)
-    }
-
-    function Ue(ee) {
-      const ie = (0, Me.h)();
-      if (null !== ie) return ee(ie);
-      let He = null;
-      const ye = (0, be.u)((() => {
-        const ie = (0, Me.h)();
-        null !== ie && null === He && (ye(), He = ee(ie))
-      }));
-      return () => {
-        var ee;
-        ye(), null === (ee = He) || void 0 === ee || ee()
-      }
-    }
-
-    function Fe(ee, ie, He) {
-      return {
-        current: () => {
-          const He = (0, Me.h)();
-          return null === He ? ie : ee(He)()
-        },
-        watch: ie => Ue((ye => {
-          const be = ee(ye);
-          let Me = be();
-          return ie(Me), He((() => {
-            const ee = be();
-            ee !== Me && (Me = ee, ie(ee))
-          }))
-        }))
-      }
-    }
-  },
-  41747: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Je
-    });
-    var ye = He(41704),
-      be = He(41751),
-      Me = He(41759);
-
-    function Ke() {
-      var ee, ie;
-      return null !== (ee = null === (ie = (0, ye.h)()) || void 0 === ie ? void 0 : ie.itemBridgeSources) && void 0 !== ee ? ee : Me.b
-    }
-
-    function Ue(ee) {
-      return {
-        current: () => Ke().states[ee].current(),
-        watch: ie => (0, be.i)((He => {
-          const ye = He.itemBridgeSources.states[ee];
-          return ie(ye.current()), ye.watch(ie)
-        }))
-      }
-    }
-
-    function Fe(ee) {
-      return {
-        watch: ie => (0, be.i)((He => He.itemBridgeSources.events[ee].watch(ie)))
-      }
-    }
-    const Je = {
-      states: {
-        inventory: Ue("inventory"),
-        hotbar: Ue("hotbar"),
-        crafting: Ue("crafting"),
-        heldItemAim: Ue("heldItemAim")
+      wW = {
+        none: 0,
+        skipped: 1,
+        paced: 2,
+        drawn: 3
       },
-      events: {
-        hotbarSlotRequested: Fe("hotbarSlotRequested"),
-        hotbarScrolled: Fe("hotbarScrolled"),
-        numberKeyPressed: Fe("numberKeyPressed"),
-        inventoryDropRequested: Fe("inventoryDropRequested"),
-        chestToggled: Fe("chestToggled"),
-        chestRefreshed: Fe("chestRefreshed"),
-        inventorySynced: Fe("inventorySynced"),
-        enchantingTableOpened: Fe("enchantingTableOpened")
+      tW = {
+        lockGained: 1,
+        lockLost: 2,
+        lockError: 3,
+        visible: 4,
+        hidden: 5,
+        focus: 6,
+        blur: 7,
+        jsClient: 8,
+        wasmClient: 9,
+        droppedCopies: 10,
+        stepsLost: 11,
+        cameraSetsLost: 12
       },
-      commands: {
-        selectHotbarSlot: ee => Ke().commands.selectHotbarSlot(ee),
-        removeInventoryItem: ee => Ke().commands.removeInventoryItem(ee),
-        swapInventorySlots: ee => Ke().commands.swapInventorySlots(ee),
-        moveInventoryItem: ee => Ke().commands.moveInventoryItem(ee),
-        quickMoveInventoryItem: ee => Ke().commands.quickMoveInventoryItem(ee),
-        closeChest: ee => Ke().commands.closeChest(ee),
-        focusCrafting: ee => Ke().commands.focusCrafting(ee),
-        craftRecipe: ee => Ke().commands.craftRecipe(ee),
-        salvageItem: ee => Ke().commands.salvageItem(ee),
-        enchantItem: ee => Ke().commands.enchantItem(ee)
-      },
-      queries: {
-        enchantingOffer: ee => Ke().queries.enchantingOffer(ee)
-      }
+      ZW = 12e3,
+      xW = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      lW = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      AW = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      bW = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      jW = ["nowMs", "change", "count"];
+
+    function UW(WW) {
+      return "js" === WW ? tW.jsClient : tW.wasmClient
     }
-  },
-  41759: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Fe
-    });
-    var ye = He(40527),
-      be = He(37629);
-
-    function Me(ee) {
-      return {
-        current: () => ee,
-        watch: () => () => {}
-      }
-    }
-
-    function Ke() {}
-    const Ue = Object.freeze([0, 0, 0]),
-      Fe = {
-        states: {
-          health: Me({
-            health: null,
-            maxHealth: null,
-            shield: null,
-            maxShield: null
-          }),
-          inventory: Me({
-            player: [],
-            chestOrCreative: [],
-            chest: null,
-            creative: !1,
-            selectedSlot: 0,
-            freeSlots: 0
-          }),
-          hotbar: Me({
-            items: [],
-            ammo: 0,
-            selectedSlot: null
-          }),
-          stationItems: Me({
-            enchantable: {},
-            salvageable: {}
-          }),
-          itemInfo: Me({}),
-          creativeVisibility: Me({
-            publicLobby: !1,
-            shownInGame: {}
-          }),
-          aura: Me(null),
-          heldItemAim: Me({
-            gun: !1,
-            aimable: !1,
-            chargeName: null
-          }),
-          crouching: Me(!1),
-          gliderBoostFuel: Me(0),
-          flight: Me({
-            canFly: !1,
-            flying: !1
-          }),
-          crafting: Me({
-            focus: null,
-            recipes: [],
-            detail: null
-          }),
-          players: Me({
-            ids: [],
-            byId: {},
-            localId: null
-          }),
-          lobbyLeaderboardRows: Me({}),
-          fullInventory: Me(!1),
-          crosshairTarget: Me({
-            interactPrompt: null,
-            blockText: null,
-            neededTool: null
-          }),
-          localPlayerAlive: Me(!0),
-          freeCamera: Me({
-            allowed: !1,
-            movesFly: !1
-          }),
-          replay: Me(null),
-          replayEdits: Me(null),
-          replayRecorder: Me(be.b),
-          replayVideoExporting: Me(!1)
-        },
-        events: {
-          hotbarSlotRequested: {
-            watch: () => () => {}
-          },
-          hotbarScrolled: {
-            watch: () => () => {}
-          },
-          hotbarDropRequested: {
-            watch: () => () => {}
-          },
-          inventoryDropRequested: {
-            watch: () => () => {}
-          },
-          numberKeyPressed: {
-            watch: () => () => {}
-          },
-          chestToggled: {
-            watch: () => () => {}
-          },
-          chestRefreshed: {
-            watch: () => () => {}
-          },
-          inventorySynced: {
-            watch: () => () => {}
-          },
-          enchantingTableOpened: {
-            watch: () => () => {}
-          },
-          cosmeticsUpdated: {
-            watch: () => () => {}
-          },
-          shotDamageToShow: {
-            watch: () => () => {}
-          },
-          boardEditRequested: {
-            watch: () => () => {}
-          },
-          kill: {
-            watch: () => () => {}
-          },
-          chatReceived: {
-            watch: () => () => {}
-          },
-          chatRemoved: {
-            watch: () => () => {}
-          },
-          ironChestOpenRequested: {
-            watch: () => () => {}
-          },
-          localEffectUpdated: {
-            watch: () => () => {}
-          },
-          localPlayerAliveSet: {
-            watch: () => () => {}
-          },
-          replayUiActionRequested: {
-            watch: () => () => {}
-          },
-          replayViewerRequested: {
-            watch: () => () => {}
-          }
-        },
-        commands: {
-          selectHotbarSlot: Ke,
-          removeInventoryItem: () => !1,
-          swapInventorySlots: () => !1,
-          moveInventoryItem: () => !1,
-          quickMoveInventoryItem: () => null,
-          closeChest: Ke,
-          setInventoryOpen: Ke,
-          changeIronChestPasskey: Ke,
-          dragReplayCamera: Ke,
-          applyTemporaryThirdPerson: Ke,
-          holdEmoteWheel: Ke,
-          recordFlyingMiddleText: Ke,
-          focusCrafting: Ke,
-          craftRecipe: () => ({
-            eR: 0,
-            RJ: null,
-            amountAddedToSlot: 0
-          }),
-          salvageItem: () => !1,
-          enchantItem: Ke,
-          setShopOpen: Ke,
-          buyShopItem: Ke,
-          lobbyManage: Ke,
-          sendChatMessage: () => !1,
-          ignorePlayer: Ke,
-          reportPlayer: Ke,
-          reportWorldCodeChat: Ke,
-          requestDiscordReportKey: Ke,
-          reportLobbyOrGame: Ke,
-          playEmote: Ke,
-          updateMyCosmetic: Ke,
-          writeOnBoard: Ke,
-          writeBook: Ke,
-          writeNameTag: Ke,
-          setCustomLobbyBlock: Ke,
-          openIronChest: Ke,
-          sendCodeCollab: Ke,
-          clickCodeBlock: Ke,
-          bindCustomButtonKeys: Ke,
-          pressCustomButton: Ke,
-          moveReplayFreecam: Ke,
-          holdReplayFreecamVertical: Ke,
-          respawn: Ke,
-          wakeUp: Ke,
-          requestLeaderboard: Ke,
-          completeTask: Ke,
-          setServerCookie: Ke,
-          answerUiRequest: Ke,
-          chooseRewardedAd: Ke,
-          setCameraZoom: Ke,
-          setFreeCameraMovesFly: Ke,
-          setBlockHighlight: Ke,
-          setCrosshairInteractPrompt: Ke,
-          setLookSensitivity: Ke,
-          replayAction: Ke,
-          setReplayPlaying: Ke,
-          seekReplay: Ke,
-          setReplayCameraMode: Ke,
-          syncReplayCameraMode: Ke,
-          setReplayCameraKeyframe: Ke,
-          moveReplayCameraKeyframe: Ke,
-          deleteReplayCameraKeyframes: Ke,
-          setReplayPlaybackMark: Ke,
-          cropReplay: () => !1,
-          holdReplayForShaderPackFailure: Ke,
-          exportReplayVideo: Ke,
-          toggleRecording: Ke,
-          saveClip: Ke,
-          setRecorderPrefs: Ke,
-          setReplayViewerOpen: Ke
-        },
-        queries: {
-          enchantingOffer: () => ({
-            perks: [],
-            options: []
-          }),
-          worldCodeAiChunk: () => ye.c,
-          worldCodeAiGameState: () => ye.d
-        },
-        lookups: {
-          localPos: () => Ue,
-          targetedBlockPos: () => null,
-          blockAtViewPoint: () => null,
-          momentumFrac: () => 0,
-          screenPos: () => ({
-            x: 0,
-            y: 0
-          }),
-          cameraZoom: () => 0,
-          freeCameraPos: () => null,
-          blocksStandingOn: () => [],
-          dropAhead: () => !1,
-          replayCamera: () => null,
-          leaveGameReloadsPage: () => !1,
-          codeBlockClickable: () => !1
-        }
-      }
-  },
-  41702: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => te,
-      e: () => We,
-      f: () => Ze,
-      i: () => de,
-      l: () => ge
-    });
-    var ye = He(40091),
-      be = He(1169),
-      Me = He(2018),
-      Ke = He(2022),
-      Ue = He(3608),
-      Fe = He(37637),
-      Je = He(1305),
-      oe = He(41704),
-      Re = He(5291),
-      ke = He(2492),
-      qe = He(41712),
-      fe = He(41717),
-      Te = He(41747);
-    let pe = null;
-
-    function Xe(ee) {
-      const ie = new Map,
-        He = He => {
-          if ("string" !== typeof He) return;
-          let ye = ie.get(He);
-          return void 0 === ye && (ye = ee(He), void 0 !== ye && ie.set(He, ye)), ye
-        };
-      return new Proxy({}, {
-        get: (ee, ie) => He(ie),
-        has: (ee, ie) => void 0 !== He(ie)
-      })
-    }
-
-    function ze(ee) {
-      const ie = (0, Ue.c)(ee);
-      return void 0 !== ie && (0, Ue.g)(ie) === ee
-    }
-
-    function Be(ee) {
-      var ie;
-      const He = null === (ie = (0, oe.h)()) || void 0 === ie ? void 0 : ie.tables;
-      if (void 0 === He || !ze(ee)) return;
-      const ye = {
-          displayName: He.getDisplayName(ee)
-        },
-        be = He.getItemStat(ee, "description");
-      void 0 !== be && null !== be && (ye.description = be);
-      const {
-        rootName: Me
-      } = He.getMetaInfo(ee);
-      Me !== ee && (ye.rootName = Me);
-      const Ke = He.getItemStat(ee, "armourReduction");
-      return void 0 !== Ke && null !== Ke && (ye.armourReduction = Ke), ye
-    }(0, oe.r)((ee => {
-      pe = ee
-    }));
-    const Ee = (0, Ke.d)("DisplayName", "Description");
-
-    function ge() {
-      return Boolean(Me.c.get("useInventory") && Me.c.get("useFullInventory"))
-    }
-    let Oe = null;
-    const de = {
-        inventory: function() {
-          const ee = Te.b.states.inventory;
-          let ie = null;
-          const He = ee => {
-            var He;
-            return null === ee.chest ? ee : ((null === (He = ie) || void 0 === He ? void 0 : He.from) === ee && ie.chestVersion === (0, fe.c)() || (ie = {
-              from: ee,
-              chestVersion: (0, fe.c)(),
-              view: {
-                ...ee,
-                chest: (0, fe.k)(ee.chest)
-              }
-            }), ie.view)
-          };
-          return {
-            current: () => He(ee.current()),
-            watch: ie => ee.watch((ee => {
-              ie(He(ee))
-            }))
-          }
-        }(),
-        crafting: Te.b.states.crafting,
-        stationItems: {
-          current() {
-            var ee;
-            return (null === (ee = Oe) || void 0 === ee ? void 0 : ee.namesVersion) !== (0, Ue.j)() && (Oe = {
-              namesVersion: (0, Ue.j)(),
-              items: {
-                enchantable: Xe((ee => {
-                  const ie = (0, Ue.c)(ee);
-                  return void 0 !== ie && null !== pe && pe.enchantmentPerksOf(ie).length > 0 || void 0
-                })),
-                salvageable: Xe((ee => !(!ze(ee) || null === (0, Fe.d)(ee)) || void 0))
-              }
-            }), Oe.items
-          },
-          watch: () => () => {}
-        },
-        itemInfo: function() {
-          let ee = null;
-          const ie = () => {
-            var ie;
-            return (null === (ie = ee) || void 0 === ie ? void 0 : ie.namesVersion) !== (0, Ue.j)() && (ee = {
-              namesVersion: (0, Ue.j)(),
-              infos: Xe(Be)
-            }), ee.infos
-          };
-          return {
-            current: ie,
-            watch: He => (0, Ke.l)((ye => {
-              ye.some(Ee) && (ee = null, He(ie()))
-            }))
-          }
-        }(),
-        creativeVisibility: (0, Ke.i)((function() {
-          const ee = {};
-          for (const be of null !== (ie = null === (He = pe) || void 0 === He ? void 0 : He.creativeItemIds()) && void 0 !== ie ? ie : []) {
-            var ie, He, Ke, Fe;
-            const Je = (0, Ue.g)(be);
-            if (void 0 === Je) continue;
-            const oe = null !== (Ke = Me.c.get((0, ye.h)(Je, "showInCreativeInven"))) && void 0 !== Ke ? Ke : null === (Fe = pe) || void 0 === Fe ? void 0 : Fe.showInCreativeInvenOf(be);
-            "boolean" === typeof oe && (ee[Je] = oe)
-          }
-          return {
-            publicLobby: (0, be.K)((0, Je.e)().lobbyName),
-            shownInGame: ee
-          }
-        }), ["connectedGameChanged"], (0, Ke.d)("ShowInCreativeInven")),
-        fullInventory: (0, Ke.i)(ge, [], (0, Ke.h)("useInventory", "useFullInventory"))
-      },
-      We = {
-        inventoryDropRequested: Te.b.events.inventoryDropRequested,
-        chestToggled: Te.b.events.chestToggled,
-        chestRefreshed: Te.b.events.chestRefreshed,
-        inventorySynced: Te.b.events.inventorySynced,
-        enchantingTableOpened: Te.b.events.enchantingTableOpened
-      },
-      te = {
-        removeInventoryItem: Te.b.commands.removeInventoryItem,
-        swapInventorySlots: Te.b.commands.swapInventorySlots,
-        moveInventoryItem: Te.b.commands.moveInventoryItem,
-        quickMoveInventoryItem: Te.b.commands.quickMoveInventoryItem,
-        closeChest: Te.b.commands.closeChest,
-        setInventoryOpen(ee) {
-          (0, Re.h)(ke.p.InventoryOpen, ee ? ke.p.InventoryOpen : 0)
-        },
-        focusCrafting: Te.b.commands.focusCrafting,
-        craftRecipe: Te.b.commands.craftRecipe,
-        salvageItem: Te.b.commands.salvageItem,
-        enchantItem: Te.b.commands.enchantItem,
-        changeIronChestPasskey(ee) {
-          var ie;
-          let {
-            pos: He,
-            SF: ye
-          } = ee;
-          null === (ie = (0, oe.h)()) || void 0 === ie || ie.send(qe.e.ChangeIronChestPasskey, (0, qe.i)({
-            di: He,
-            SF: ye
-          }))
-        },
-        openIronChest(ee) {
-          var ie;
-          let {
-            pos: He,
-            SF: ye
-          } = ee;
-          null === (ie = (0, oe.h)()) || void 0 === ie || ie.send(qe.e.OpenIronChest, (0, qe.D)({
-            di: He,
-            SF: ye
-          }))
-        }
-      },
-      Ze = {
-        enchantingOffer: Te.b.queries.enchantingOffer
-      }
-  },
-  41743: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => ye,
-      d: () => oe,
-      g: () => Ke,
-      i: () => be,
-      j: () => Ue,
-      k: () => Je
-    });
-    class ye extends Error {
+    class kW {
       constructor() {
-        super(...arguments), this.name = "CoreCorruption"
+        this.steps = new PW(LW, ZW), this.events = new PW(lW.length, ZW), this.frames = new PW(AW.length, ZW), this.cameraSets = new PW(NW.e, 256), this.changes = new PW(jW.length, 256)
       }
     }
-
-    function be(ee) {
-      return ee instanceof RangeError && /call stack/i.test(ee.message) || ee instanceof Error && "InternalError" === ee.name && /recursion/i.test(ee.message)
-    }
-    const Me = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
-
-    function Ke(ee) {
-      var ie;
-      return ee instanceof WebAssembly.RuntimeError || ee instanceof ye || be(ee) && Me.test(null !== (ie = ee.stack) && void 0 !== ie ? ie : "")
-    }
-
-    function Ue(ee, ie) {
-      if (Ke(ee)) throw ee;
-      console.error(ie, ee)
-    }
-
-    function Fe(ee, ie, He, be, Me) {
-      if (ie % be !== 0 || ie + He > ee.byteLength) throw new ye(`${Me}: ${He} bytes at ${ie}, ${be}-aligned, outside ${ee.byteLength} bytes of memory`)
-    }
-
-    function Je(ee, ie, He, ye, be) {
-      return 0 === He ? null : (Fe(ie, He, ye * ee.BYTES_PER_ELEMENT, ee.BYTES_PER_ELEMENT, be), new ee(ie, He, ye))
-    }
-
-    function oe(ee, ie, He, ye, be) {
-      return 0 === ie ? null : (Fe(ee, ie, He, ye, be), new DataView(ee, ie, He))
+    const sW = new class {
+      constructor() {
+        this.rings = null, this.sample = new Float64Array(lW.length), this.startedClient = null, this.startedAtMs = 0
+      }
+      get client() {
+        return this.startedClient
+      }
+      start(WW, iW) {
+        this.startedClient = WW, this.startedAtMs = performance.now(), null !== this.rings ? this.change(UW(WW)) : iW && this.allocate()
+      }
+      lockGained() {
+        this.allocate(), this.change(tW.lockGained)
+      }
+      allocate() {
+        null === this.rings && (this.rings = new kW, null !== this.startedClient && this.changeAt(this.startedAtMs, UW(this.startedClient), 1))
+      }
+      step(WW, iW) {
+        var OW;
+        WW[iW + 6] !== cW.Yj && (null === (OW = this.rings) || void 0 === OW || OW.steps.push(WW, iW))
+      }
+      cameraSet(WW, iW) {
+        var OW;
+        null === (OW = this.rings) || void 0 === OW || OW.cameraSets.push(WW, iW)
+      }
+      mouseMove(WW, iW) {
+        const OW = this.rings;
+        if (null === OW) return;
+        const mW = this.sample;
+        mW[0] = WW.timeStamp, mW[1] = performance.now(), mW[2] = WW.movementX, mW[3] = WW.movementY, mW[4] = iW ? 1 : 0, OW.events.push(mW)
+      }
+      frame(WW, iW, OW, mW) {
+        const EW = this.rings;
+        if (null === EW || mW === wW.none) return;
+        const NW = this.sample;
+        NW[0] = performance.now(), NW[1] = WW, NW[2] = iW, NW[3] = OW, NW[4] = mW, EW.frames.push(NW)
+      }
+      change(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), WW, iW)
+      }
+      changeAt(WW, iW, OW) {
+        const mW = this.rings;
+        if (null === mW) return;
+        const EW = this.sample;
+        EW[0] = WW, EW[1] = iW, EW[2] = OW, mW.changes.push(EW)
+      }
+      dumpText() {
+        var WW, iW;
+        const OW = this.rings;
+        return [`look records (${this.startedClient}): ${xW.join(",")}`, ...null !== (WW = null === OW || void 0 === OW ? void 0 : OW.steps.lines()) && void 0 !== WW ? WW : [], `mousemove events: ${lW.join(",")}`, ...null !== (iW = null === OW || void 0 === OW ? void 0 : OW.events.lines()) && void 0 !== iW ? iW : []].join("\n")
+      }
+      toJson(WW, iW) {
+        var OW;
+        const EW = WW - 6e4,
+          NW = this.rings,
+          PW = function(WW, iW) {
+            var OW;
+            let mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const NW = null !== (OW = null === WW || void 0 === WW ? void 0 : WW.rows(mW, EW)) && void 0 !== OW ? OW : [];
+            return {
+              columns: iW,
+              fromMs: 0 === NW.length ? null : NW[0][mW],
+              rows: NW
+            }
+          };
+        return {
+          version: mW.d,
+          client: null !== (OW = this.startedClient) && void 0 !== OW ? OW : "not started",
+          savedAt: (new Date).toISOString(),
+          savedAtMs: WW,
+          keptMs: 6e4,
+          page: window.location.href,
+          userAgent: navigator.userAgent,
+          devicePixelRatio: window.devicePixelRatio,
+          screen: {
+            width: window.screen.width,
+            height: window.screen.height
+          },
+          PU: null !== document.pointerLockElement,
+          visibility: document.visibilityState,
+          ...iW,
+          outcomes: cW,
+          frameKinds: wW,
+          changes: tW,
+          lookSteps: PW(null === NW || void 0 === NW ? void 0 : NW.steps, xW),
+          mouseMoves: PW(null === NW || void 0 === NW ? void 0 : NW.events, lW, 1),
+          frames: PW(null === NW || void 0 === NW ? void 0 : NW.frames, AW),
+          cameraSets: PW(null === NW || void 0 === NW ? void 0 : NW.cameraSets, bW),
+          pageChanges: PW(null === NW || void 0 === NW ? void 0 : NW.changes, jW)
+        }
+      }
+      save(WW) {
+        const iW = JSON.stringify(this.toJson(performance.now(), WW));
+        (0, EW.e)(new Blob([iW], {
+          type: "application/json"
+        }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
+      }
     }
   },
-  41704: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => ye,
-      g: () => Xe,
-      h: () => Te,
-      l: () => pe,
-      n: () => ke,
-      o: () => qe,
-      q: () => oe,
-      r: () => Re,
-      u: () => fe
+  37518: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      LOOK_DEBUG_HEADER: () => tW,
+      endLookDebugTake: () => UW,
+      noteLookDroppedCopy: () => kW,
+      saveLookCapture: () => sW,
+      startLookDebug: () => jW
     });
-    class ye extends Error {
-      constructor(ee) {
-        super(`the join's code did not load: ${ee instanceof Error?ee.message:String(ee)}`, {
-          cause: ee
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === ee || void 0 === ee ? void 0 : ee.request
+    var mW = OW(5551),
+      EW = OW(3866),
+      NW = OW(2012);
+    const PW = new Map(Object.entries(mW.k).map((WW => {
+      let [iW, OW] = WW;
+      return [OW, iW]
+    })));
+
+    function LW(WW) {
+      return (0, NW.x)(WW).toFixed(1)
+    }
+
+    function cW(WW, iW) {
+      return `camera set by ${PW.get(WW[iW+1])}: heading ${`${LW(WW[iW+2])} -> ${LW(WW[iW+4])}`} deg, pitch ${`${LW(WW[iW+3])} -> ${LW(WW[iW+5])}`} deg, at ${WW[iW].toFixed(1)} ms`
+    }
+    var wW = OW(37527);
+    const tW = 2;
+
+    function ZW(WW) {
+      return Number.isFinite(WW) ? String(Math.round(10 * WW) / 10) : String(WW)
+    }
+
+    function xW(WW) {
+      return Number.isFinite(WW) ? WW.toFixed(1) : String(WW)
+    }
+    class lW {
+      constructor() {
+        this.frames = 0, this.looked = 0, this.idle = 0, this.mD = 0, this.pastLimit = 0, this.lockSkips = 0, this.Yj = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+      }
+      moved() {
+        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.mD > 0 || this.dropped > 0 || this.cameraSets > 0
+      }
+      hasEvent() {
+        return this.mD > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
       }
     }
-    let be = null,
-      Me = null,
-      Ke = null;
-    const Ue = [];
-    let Fe = null;
-
-    function Je(ee, ie) {
-      try {
-        ee(ie)
-      } catch (He) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", He)
+    class AW {
+      constructor() {
+        var WW = this;
+        this.topicOn = (0, EW.t)("look"), this.remote = (0, EW.x)(), this.tally = new lW, this.takes = null, this.started = !1, this.record = function(iW) {
+          let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          if (wW.p.step(iW, OW), !WW.topicOn) return;
+          const mW = iW[OW],
+            EW = iW[OW + 1],
+            NW = iW[OW + 2],
+            PW = iW[OW + 3],
+            LW = iW[OW + 4],
+            cW = iW[OW + 5],
+            tW = iW[OW + 6],
+            lW = iW[OW + 7],
+            AW = iW[OW + 8],
+            bW = iW[OW + 9],
+            jW = WW.tally;
+          switch (jW.frames++, tW) {
+            case wW.n.idle:
+              return void jW.idle++;
+            case wW.n.Yj:
+              return void jW.Yj++;
+            case wW.n.ZD:
+              return jW.lockSkips++, void(0 === NW && 0 === PW || WW.outlier(`lock skip dropped raw (${ZW(NW)}, ${ZW(PW)}) at ${xW(mW)} ms`))
+          }
+          jW.looked++, Number.isFinite(EW) && (jW.dtMin = Math.min(jW.dtMin, EW), jW.dtMax = Math.max(jW.dtMax, EW), jW.dtSum += EW, EW > 0 && (jW.peakRate = Math.max(jW.peakRate, Math.hypot(LW, cW) / EW))), jW.raw[0] += NW, jW.raw[1] += PW, jW.turned[0] += LW, jW.turned[1] += cW;
+          const UW = Math.abs(NW) > bW || Math.abs(PW) > bW,
+            kW = `raw (${ZW(NW)}, ${ZW(PW)}) over ${xW(EW)} ms, limit ${ZW(bW)}, filter v (${lW.toFixed(3)}, ${AW.toFixed(3)}) px/ms, at ${xW(mW)} ms`;
+          tW === wW.n.mD ? (jW.mD++, WW.outlier(`spike put right: ${kW} -> turned (${ZW(LW)}, ${ZW(cW)})`)) : UW ? (jW.pastLimit++, WW.outlier(`kept past limit: ${kW}`)) : EW > 50 && (jW.longFrames++, WW.remote || WW.outlier(`long frame: ${kW}, turned in full`))
+        }, this.onMouseMove = WW => {
+          const iW = null !== document.pointerLockElement;
+          if (wW.p.mouseMove(WW, iW), !this.topicOn) return;
+          const OW = this.tally,
+            {
+              movementX: mW,
+              movementY: EW
+            } = WW;
+          OW.events++;
+          const NW = Math.max(Math.abs(mW), Math.abs(EW));
+          OW.eventMax = Math.max(OW.eventMax, NW), NW >= 200 && (OW.bigEvents++, this.eventOutlier(`big mousemove (${mW}, ${EW}) at ${xW(WW.timeStamp)} ms, lock ${iW?"BL":"free"}`))
+        }, this.onLockChange = () => {
+          const WW = document.pointerLockElement;
+          WW ? wW.p.lockGained() : wW.p.change(wW.c.lockLost), this.topicOn && (0, EW.m)("look", `pointer lock ${WW?`gained (${WW.tagName.toLowerCase()})`:"lost"} at ${xW(performance.now())} ms`)
+        }, this.onLockError = () => {
+          wW.p.change(wW.c.lockError), this.topicOn && (0, EW.m)("look", `pointer lock request failed at ${xW(performance.now())} ms`)
+        }, this.onVisibility = () => {
+          wW.p.change("hidden" === document.visibilityState ? wW.c.hidden : wW.c.visible), this.topicOn && (0, EW.m)("look", `page ${document.visibilityState} at ${xW(performance.now())} ms`)
+        }, this.onFocus = () => {
+          wW.p.change(wW.c.focus)
+        }, this.onBlur = () => {
+          wW.p.change(wW.c.blur)
+        }, this.flush = () => {
+          if (this.takeRecords(), !this.topicOn) return;
+          const WW = this.tally;
+          if (this.tally = new lW, !WW.moved() || this.remote && !WW.hasEvent()) return;
+          const iW = WW.looked > 0 ? WW.dtSum / WW.looked : NaN,
+            OW = [`${WW.frames} frames (${WW.looked} looked, ${WW.idle} idle${"wasm"===wW.p.client?`, ${WW.Yj} carried`:""})`, `dt avg ${xW(iW)} min ${xW(WW.dtMin)} max ${xW(WW.dtMax)}, ${WW.longFrames} long`, `${WW.events} mousemoves (max ${ZW(WW.eventMax)} px, ${WW.bigEvents} big)`, `raw (${ZW(WW.raw[0])}, ${ZW(WW.raw[1])}) turned (${ZW(WW.turned[0])}, ${ZW(WW.turned[1])})`, `peak ${WW.peakRate.toFixed(2)} px/ms`, `put right ${WW.mD}, past limit ${WW.pastLimit}, lock skips ${WW.lockSkips}`, "lock " + (document.pointerLockElement ? "BL" : "free")];
+          WW.dropped > 0 && OW.push(`${WW.dropped} doubled spike copies dropped`), WW.cameraSets > 0 && OW.push(`${WW.cameraSets} camera sets`), WW.cameraSetsLost > 0 && OW.push(`${WW.cameraSetsLost} camera set records lost`), WW.lost > 0 && OW.push(`${WW.lost} records lost`), WW.suppressed > 0 && OW.push(`${WW.suppressed} outlier lines not shown`), (0, EW.m)("look", `1s: ${OW.join("; ")}`)
+        }
+      }
+      start(WW, iW) {
+        if (wW.p.start(WW, null !== document.pointerLockElement), this.takes = iW, this.topicOn) {
+          const {
+            screen: iW
+          } = window;
+          (0, EW.m)("look", `start: ${WW} client, dpr ${window.devicePixelRatio}, screen ${iW.width}x${iW.height}, pointer lock ${document.pointerLockElement?"BL":"free"}`)
+        }
+        this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
+          capture: !0,
+          passive: !0
+        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, EW.l)("look", (() => wW.p.dumpText())))
+      }
+      outlier(WW) {
+        const iW = this.tally;
+        iW.outliers >= 20 ? iW.suppressed++ : (iW.outliers++, (0, EW.m)("look", WW))
+      }
+      eventOutlier(WW) {
+        const iW = this.tally;
+        iW.eventLines >= 10 ? iW.suppressed++ : (iW.eventLines++, (0, EW.m)("look", WW))
+      }
+      takeRecords() {
+        if (null === this.takes) return;
+        const WW = this.takes.look();
+        if (WW.length >= tW) {
+          this.counted(wW.c.stepsLost, WW[0]), this.counted(wW.c.droppedCopies, WW[1]);
+          for (let iW = tW; iW + wW.g <= WW.length; iW += wW.g) this.record(WW, iW)
+        }
+        const iW = this.takes.cameraSets();
+        if (iW.length >= mW.c) {
+          this.counted(wW.c.cameraSetsLost, iW[0]);
+          for (let WW = mW.c; WW + mW.e <= iW.length; WW += mW.e) wW.p.cameraSet(iW, WW), this.topicOn && (this.tally.cameraSets++, this.outlier(cW(iW, WW)))
+        }
+      }
+      droppedCopy() {
+        this.counted(wW.c.droppedCopies, 1)
+      }
+      counted(WW, iW) {
+        if (0 === iW) return;
+        if (wW.p.change(WW, iW), !this.topicOn) return;
+        const OW = this.tally;
+        WW === wW.c.droppedCopies ? OW.dropped += iW : WW === wW.c.stepsLost ? OW.lost += iW : OW.cameraSetsLost += iW
+      }
+      endTake() {
+        this.takeRecords(), this.takes = null
       }
     }
+    let bW = null;
 
-    function oe() {
-      return Fe
-    }
-
-    function Re(ee) {
-      Ue.push(ee), null !== Fe && Je(ee, Fe)
+    function jW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return bW ??= new AW, bW.start(WW, iW), bW.record
     }
 
-    function ke(ee) {
-      return be ??= Promise.all([He.e(84), He.e(111), He.e(86), He.e(248), He.e(89), He.e(220), He.e(170), He.e(249), He.e(109), He.e(268), He.e(238), He.e(300), He.e(49), He.e(217), He.e(233), He.e(216), He.e(207), He.e(208), He.e(101), He.e(134), He.e(274), He.e(68)]).then((() => He(45791))).then((ie => {
-        ie.loadAudio(ee), Fe = ie;
-        for (const ee of Ue) Je(ee, ie);
-        return ie
-      })).catch((ee => {
-        throw be = null, ee
-      })), be
-    }
-    async function qe(ee, ie) {
-      try {
-        const He = await ke(ee);
-        await He.loadClientGame(ie)
-      } catch (He) {
-        throw new ye(He)
-      }
+    function UW() {
+      var WW;
+      null === (WW = bW) || void 0 === WW || WW.endTake()
     }
 
-    function fe(ee, ie) {
-      Me = {
-        running: ee,
-        shell: ie
-      }
+    function kW() {
+      var WW;
+      null === (WW = bW) || void 0 === WW || WW.droppedCopy()
     }
-
-    function Te() {
-      return Ke
-    }
-    async function pe(ee) {
-      const ie = Me;
-      if ((null === ie || void 0 === ie ? void 0 : ie.running) !== ee) throw new Error("the core's session has ended");
-      const He = await ke(ie.shell.audio).catch((ee => {
-        throw new ye(ee)
-      }));
-      if (null !== Ke) return Ke;
-      if (Me !== ie || ee.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (Ke = He.startGameHost(ee, ie.shell), null === Ke) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return Ke
-    }
-
-    function Xe() {
-      null !== Ke && (null !== Fe ? Fe.endGameHost(Ke) : Ke.closeGame()), Ke = null, Me = null
+    async function sW(WW) {
+      var iW;
+      null === (iW = bW) || void 0 === iW || iW.takeRecords();
+      const {
+        clientHintsRead: mW,
+        debugDeviceLines: EW
+      } = await OW.e(35).then((() => OW(35106)));
+      await mW, wW.p.save({
+        ...WW,
+        device: EW()
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

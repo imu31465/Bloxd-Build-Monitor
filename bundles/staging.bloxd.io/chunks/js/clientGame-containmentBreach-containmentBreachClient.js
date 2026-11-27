@@ -1,22 +1,336 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  39370: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Ke
+  40554: (WW, iW, OW) => {
+    var mW = {
+      "./breach-zero-uncaught.webp": 40559,
+      "./breach-zero.webp": 40568,
+      "./brood-father-uncaught.webp": 40574,
+      "./brood-father.webp": 40576,
+      "./carousel-uncaught.webp": 40580,
+      "./carousel.webp": 40583,
+      "./deadlock-uncaught.webp": 40591,
+      "./deadlock.webp": 40598,
+      "./doom-warlord-uncaught.webp": 40607,
+      "./doom-warlord.webp": 40616,
+      "./frost-revenant-uncaught.webp": 40619,
+      "./frost-revenant.webp": 40626,
+      "./hollow-choir-uncaught.webp": 40635,
+      "./hollow-choir.webp": 40640,
+      "./magma-warden-uncaught.webp": 40648,
+      "./magma-warden.webp": 40652,
+      "./patient-zero-uncaught.webp": 40661,
+      "./patient-zero.webp": 40665,
+      "./siege-engine-uncaught.webp": 40667,
+      "./siege-engine.webp": 40673,
+      "./warp-stalker-uncaught.webp": 40682,
+      "./warp-stalker.webp": 40686
+    };
+
+    function EW(WW) {
+      var iW = NW(WW);
+      return OW(iW)
+    }
+
+    function NW(WW) {
+      if (!OW.o(mW, WW)) {
+        var iW = new Error("Cannot find module '" + WW + "'");
+        throw iW.code = "MODULE_NOT_FOUND", iW
+      }
+      return mW[WW]
+    }
+    EW.keys = function() {
+      return Object.keys(mW)
+    }, EW.resolve = NW, WW.exports = EW, EW.id = 40554
+  },
+  38030: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => yW,
+      h: () => SW,
+      j: () => YW,
+      n: () => AW
     });
-    const ye = 4,
-      be = 12e3,
-      Me = 1e3;
-    class Ke {
+    var mW = OW(1089),
+      EW = OW.n(mW),
+      NW = OW(62),
+      PW = OW(80),
+      LW = OW(1436),
+      cW = OW(1532),
+      wW = OW(1434),
+      tW = OW(1269),
+      ZW = OW(1172),
+      xW = OW(38039),
+      lW = OW(1283);
+
+    function AW(WW) {
+      const [iW, OW] = (0, NW.useState)((() => (0, xW.o)(WW)));
+      return (0, NW.useEffect)((() => (OW((0, xW.o)(WW)), (0, xW.M)((() => {
+        OW((0, xW.o)(WW))
+      })))), [WW]), iW
+    }
+
+    function bW(WW, iW) {
+      "function" === typeof WW ? WW(iW) : WW && (WW.current = iW)
+    }
+
+    function jW(WW) {
+      let {
+        tutorial: iW,
+        step: OW,
+        enabled: mW = !0
+      } = WW;
+      const EW = AW(iW);
+      return mW && EW === OW
+    }
+
+    function UW(WW, iW) {
+      const OW = (0, xW.s)(WW),
+        mW = OW.indexOf(iW);
+      return !OW.slice(mW + 1).some((iW => (0, xW.x)(WW, iW)))
+    }
+
+    function kW(WW, iW, OW, mW) {
+      let {
+        tutorial: EW,
+        step: NW,
+        waitForClick: PW = !1,
+        onPrevious: LW
+      } = WW;
+      const cW = iW && (0, xW.w)(EW, NW),
+        wW = iW && !UW(EW, NW),
+        ZW = PW ? mW : OW;
+      let lW = null;
+      cW ? lW = () => {
+        null === LW || void 0 === LW || LW(), (0, xW.u)(EW, NW)
+      } : wW && (lW = () => {
+        (0, xW.m)(EW)
+      }), (0, tW.r)("popup", null !== ZW && void 0 !== ZW ? ZW : OW, lW, iW && null !== ZW, null, cW ? void 0 : "controller:menusSkipTutorial")
+    }
+
+    function sW(WW) {
+      let {
+        tutorial: iW,
+        step: OW,
+        text: mW,
+        waitForClick: EW = !1,
+        onPrevious: NW
+      } = WW;
+      const {
+        t: PW
+      } = (0, ZW.B)(), LW = UW(iW, OW);
+      return (0, lW.jsxs)(lW.Fragment, {
+        children: [(0, lW.jsx)("div", {
+          className: "TutorialStepText",
+          children: mW
+        }), (0, lW.jsxs)("div", {
+          className: "TutorialStepButtons",
+          children: [(0, xW.w)(iW, OW) && (0, lW.jsx)(cW.h, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              null === NW || void 0 === NW || NW(), (0, xW.u)(iW, OW)
+            },
+            children: PW("tutorial:back")
+          }), !EW && (0, lW.jsx)(cW.f, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, xW.h)(OW)
+            },
+            padDefaultFocus: !0,
+            children: PW(LW ? "tutorial:done" : "tutorial:next")
+          }), !LW && (0, lW.jsx)(cW.h, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, xW.m)(iW)
+            },
+            children: PW("tutorial:skip")
+          })]
+        })]
+      })
+    }
+    const MW = 6;
+
+    function KW(WW) {
+      let {
+        rect: iW,
+        margin: OW
+      } = WW;
+      const mW = Math.max(0, iW.top - OW),
+        EW = iW.bottom + OW,
+        NW = Math.max(0, iW.left - OW),
+        PW = iW.right + OW;
+      return (0, lW.jsxs)(lW.Fragment, {
+        children: [(0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: 0,
+            left: 0,
+            right: 0,
+            height: mW
+          }
+        }), (0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: EW,
+            left: 0,
+            right: 0,
+            bottom: 0
+          }
+        }), (0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: mW,
+            left: 0,
+            width: NW,
+            height: EW - mW
+          }
+        }), (0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: mW,
+            left: PW,
+            right: 0,
+            height: EW - mW
+          }
+        })]
+      })
+    }
+
+    function SW(WW) {
+      let {
+        target: iW,
+        placement: OW,
+        boxRef: mW,
+        className: cW,
+        spotlight: tW = !0,
+        spotlightMargin: ZW = MW,
+        children: xW
+      } = WW;
+      const {
+        getArrowProps: AW,
+        getTooltipProps: bW,
+        setTooltipRef: jW,
+        setTriggerRef: UW,
+        update: kW
+      } = (0, LW.c)({
+        placement: OW,
+        trigger: null,
+        visible: !0,
+        interactive: !0,
+        closeOnOutsideClick: !1,
+        offset: [0, ZW]
+      });
+      (0, NW.useLayoutEffect)((() => {
+        UW(iW)
+      }), [iW, UW]);
+      const sW = function(WW, iW) {
+        const [OW, mW] = (0, NW.useState)(null);
+        return (0, NW.useEffect)((() => {
+          if (!iW || !WW) return void mW(null);
+          let OW = 0,
+            EW = null;
+          const NW = () => {
+            const iW = WW.getBoundingClientRect();
+            EW && iW.left === EW.left && iW.top === EW.top && iW.width === EW.width && iW.height === EW.height || (EW = iW, mW(iW)), OW = requestAnimationFrame(NW)
+          };
+          return NW(), () => {
+            cancelAnimationFrame(OW)
+          }
+        }), [WW, iW]), OW
+      }(iW, tW);
+      (0, NW.useEffect)((() => {
+        null === kW || void 0 === kW || kW()
+      }), [sW, kW]), (0, NW.useEffect)((() => {
+        if (tW || !iW || !kW) return;
+        const WW = new ResizeObserver((() => {
+          kW()
+        }));
+        return WW.observe(iW), iW.parentElement && WW.observe(iW.parentElement), () => {
+          WW.disconnect()
+        }
+      }), [iW, tW, kW]), (0, NW.useEffect)((() => {
+        tW && (null === iW || void 0 === iW || iW.scrollIntoView({
+          block: "nearest",
+          inline: "nearest"
+        }))
+      }), [iW, tW]);
+      const SW = (0, NW.useCallback)((WW => {
+        jW(WW), mW && (mW.current = WW)
+      }), [jW, mW]);
+      return (0, PW.createPortal)((0, lW.jsxs)(lW.Fragment, {
+        children: [sW && (0, lW.jsx)(KW, {
+          rect: sW,
+          margin: ZW
+        }), (0, lW.jsxs)("div", {
+          ref: SW,
+          ...bW({
+            className: EW()("tooltip-container SmallTextLight TutorialStep", cW)
+          }),
+          children: [xW, (0, lW.jsx)("div", {
+            ...AW({
+              className: "tooltip-arrow"
+            })
+          })]
+        })]
+      }), (0, wW.g)())
+    }
+    const YW = (0, NW.forwardRef)((function(WW, iW) {
+      let {
+        placement: OW = "right",
+        children: mW,
+        ...EW
+      } = WW;
+      const PW = jW(EW),
+        LW = (0, NW.useRef)(null),
+        cW = (0, NW.useRef)(null);
+      kW(EW, PW, LW, cW);
+      const [wW, tW] = (0, NW.useState)(null), ZW = mW.ref, xW = (0, NW.useCallback)((WW => {
+        cW.current = WW, tW(WW), bW(iW, WW), bW(ZW, WW)
+      }), [iW, ZW]);
+      return (0, lW.jsxs)(lW.Fragment, {
+        children: [(0, NW.cloneElement)(mW, {
+          ref: xW
+        }), PW && (0, lW.jsx)(SW, {
+          target: wW,
+          placement: OW,
+          boxRef: LW,
+          children: (0, lW.jsx)(sW, {
+            ...EW
+          })
+        })]
+      })
+    }));
+
+    function yW(WW) {
+      const iW = jW(WW),
+        OW = (0, NW.useRef)(null);
+      return kW(WW, iW, OW, null), iW ? (0, PW.createPortal)((0, lW.jsx)("div", {
+        className: "TutorialCentreBackdrop",
+        children: (0, lW.jsx)("div", {
+          ref: OW,
+          className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
+          children: (0, lW.jsx)(sW, {
+            ...WW
+          })
+        })
+      }), (0, wW.g)()) : null
+    }
+  },
+  39775: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => PW
+    });
+    const mW = 4,
+      EW = 12e3,
+      NW = 1e3;
+    class PW {
       constructor() {
         let {
-          limit: ee = ye,
-          windowMs: ie = be,
-          spacingMs: He = Me,
-          now: Ke = Date.now
+          limit: WW = mW,
+          windowMs: iW = EW,
+          spacingMs: OW = NW,
+          now: PW = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = ee, this.windowMs = ie, this.spacingMs = He, this.now = Ke
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = WW, this.windowMs = iW, this.spacingMs = OW, this.now = PW
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -25,61 +339,61 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const ee of this.priority) ee.flush();
+        for (const WW of this.priority) WW.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const ee = this.now();
-        this.sent.push(ee), this.lastSentAt = ee, this.schedule(), this.notify()
+        const WW = this.now();
+        this.sent.push(WW), this.lastSentAt = WW, this.schedule(), this.notify()
       }
-      addPriority(ee) {
-        return this.priority.add(ee), () => {
-          this.priority.delete(ee)
+      addPriority(WW) {
+        return this.priority.add(WW), () => {
+          this.priority.delete(WW)
         }
       }
-      subscribe(ee) {
-        return this.listeners.add(ee), () => {
-          this.listeners.delete(ee)
+      subscribe(WW) {
+        return this.listeners.add(WW), () => {
+          this.listeners.delete(WW)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const ee of this.priority)
-          if (ee.waiting()) return !0;
+        for (const WW of this.priority)
+          if (WW.waiting()) return !0;
         return !1
       }
       prune() {
-        const ee = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= ee;) this.sent.shift()
+        const WW = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= WW;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const ee = this.now(),
-          ie = this.lastSentAt + this.spacingMs,
-          He = Math.min(ie > ee ? ie : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        He !== 1 / 0 && (this.timer = setTimeout((() => {
+        const WW = this.now(),
+          iW = this.lastSentAt + this.spacingMs,
+          OW = Math.min(iW > WW ? iW : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        OW !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, He - ee)))
+        }), Math.max(0, OW - WW)))
       }
       notify() {
-        for (const ee of this.listeners) ee()
+        for (const WW of this.listeners) WW()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  39327: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => ye
+  39733: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW
     });
-    class ye {
-      constructor(ee, ie, He) {
-        this.yR = ee, this.beforeOpen = ie, this.afterClose = He, this.open = !1, this.xf = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.xf && (this.open = !0, this.beforeOpen(this), this.emit())
+    class mW {
+      constructor(WW, iW, OW) {
+        this.iZ = WW, this.beforeOpen = iW, this.afterClose = OW, this.open = !1, this.JA = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.JA && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -92,234 +406,234 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(ee) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(ee)
+      closePanel(WW) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(WW)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.xf = !0
+        this.open = !1, this.emit(), this.JA = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.xf || (this.snapshot = this.buildSnapshot(), this.yR(this.snapshot))
+        this.JA || (this.snapshot = this.buildSnapshot(), this.iZ(this.snapshot))
       }
     }
   },
-  40133: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      default: () => kH
+  40552: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => xO
     });
-    var ye = He(59);
-    var be = He(18),
-      Me = He(1965),
-      Ke = He(27),
-      Ue = He(37424),
-      Fe = He(1053),
-      Je = He.n(Fe),
-      oe = He(1432),
-      Re = He(1127),
-      ke = He(4922),
-      qe = He(1335),
-      fe = He(1438),
-      Te = He(1970),
-      pe = He(1351),
-      Xe = He(1956),
-      ze = He(2029),
-      Be = He(198);
-    const Ee = He(40138),
-      ge = Object.fromEntries(Ee.keys().map((ee => [ee.replace(/^\.\/(.*)\.webp$/, "$1"), Ee(ee)]))),
-      Oe = new Set;
+    var mW = OW(62);
+    var EW = OW(25),
+      NW = OW(2029),
+      PW = OW(27),
+      LW = OW(3361),
+      cW = OW(1089),
+      wW = OW.n(cW),
+      tW = OW(1526),
+      ZW = OW(1172),
+      xW = OW(5238),
+      lW = OW(1414),
+      AW = OW(1532),
+      bW = OW(2032),
+      jW = OW(1434),
+      UW = OW(2021),
+      kW = OW(2075),
+      sW = OW(192);
+    const MW = OW(40554),
+      KW = Object.fromEntries(MW.keys().map((WW => [WW.replace(/^\.\/(.*)\.webp$/, "$1"), MW(WW)]))),
+      SW = new Set;
 
-    function de(ee, ie) {
-      const He = ie ? ee : `${ee}-uncaught`,
-        ye = (0, Be.b)(ge, He);
-      return void 0 !== ye || Oe.has(He) || (Oe.add(He), console.warn(`Containment Breach has no mugshot ${He}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), ye
+    function YW(WW, iW) {
+      const OW = iW ? WW : `${WW}-uncaught`,
+        mW = (0, sW.c)(KW, OW);
+      return void 0 !== mW || SW.has(OW) || (SW.add(OW), console.warn(`Containment Breach has no mugshot ${OW}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), mW
     }
-    var We = He(1228);
-    const te = "containmentBreach",
-      Ze = "Gold Coin";
+    var yW = OW(1283);
+    const TW = "containmentBreach",
+      JW = "Gold Coin";
 
-    function we(ee) {
+    function hW(WW) {
       let {
-        open: ie,
-        onDismiss: He,
-        title: ye,
-        className: be,
-        decor: Me,
-        headerExtra: Ke,
-        status: Ue,
-        statusRefused: Fe = !1,
-        children: oe
-      } = ee;
-      const Re = `${be}Title`;
-      return (0, We.jsx)(ke.e, {
-        show: ie,
-        close: He,
+        open: iW,
+        onDismiss: OW,
+        title: mW,
+        className: EW,
+        decor: NW,
+        headerExtra: PW,
+        status: LW,
+        statusRefused: cW = !1,
+        children: tW
+      } = WW;
+      const ZW = `${EW}Title`;
+      return (0, yW.jsx)(xW.b, {
+        show: iW,
+        close: OW,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, We.jsxs)("section", {
-          className: Je()("ContainmentBoardPanel", be),
+        children: (0, yW.jsxs)("section", {
+          className: wW()("ContainmentBoardPanel", EW),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": Re,
-          children: [Me && (0, We.jsx)("div", {
+          "aria-labelledby": ZW,
+          children: [NW && (0, yW.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: Me
-          }), (0, We.jsxs)("header", {
+            children: NW
+          }), (0, yW.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, We.jsx)("h2", {
-              id: Re,
+            children: [(0, yW.jsx)("h2", {
+              id: ZW,
               className: "VisuallyHidden",
-              children: ye
-            }), Ke, (0, We.jsx)(fe.i, {
-              onClick: He
+              children: mW
+            }), PW, (0, yW.jsx)(AW.l, {
+              onClick: OW
             })]
-          }), (0, We.jsx)("div", {
+          }), (0, yW.jsx)("div", {
             className: "BoardBody",
-            children: oe
-          }), void 0 !== Ue && (0, We.jsx)("footer", {
-            className: Je()("BoardStatus", {
-              Refused: Fe
+            children: tW
+          }), void 0 !== LW && (0, yW.jsx)("footer", {
+            className: wW()("BoardStatus", {
+              Refused: cW
             }),
-            children: Ue
+            children: LW
           })]
         })
       })
     }
 
-    function De(ee) {
+    function HW(WW) {
       let {
-        itemName: ie
-      } = ee;
-      return (0, We.jsx)(Te.c, {
-        itemName: ie,
+        itemName: iW
+      } = WW;
+      return (0, yW.jsx)(bW.b, {
+        itemName: iW,
         amount: 0
       })
     }
 
-    function Pe(ee) {
+    function nW(WW) {
       let {
-        anomalyId: ie,
-        caught: He
-      } = ee;
-      const be = (0, ye.useRef)(null);
-      return (0, qe.e)(be, !He), (0, We.jsx)("span", {
-        ref: be,
-        className: Je()("BoardMugshot", {
-          Uncaught: !He
+        anomalyId: iW,
+        caught: OW
+      } = WW;
+      const EW = (0, mW.useRef)(null);
+      return (0, lW.b)(EW, !OW), (0, yW.jsx)("span", {
+        ref: EW,
+        className: wW()("BoardMugshot", {
+          Uncaught: !OW
         }),
-        children: (0, We.jsx)("img", {
-          src: de(ie, He),
+        children: (0, yW.jsx)("img", {
+          src: YW(iW, OW),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function Ae(ee) {
+    function uW(WW) {
       let {
-        itemName: ie,
-        amount: He,
-        lJ: ye,
-        inTile: be = !1
-      } = ee;
-      return (0, We.jsx)(pe.g, {
+        itemName: iW,
+        amount: OW,
+        BL: mW,
+        inTile: EW = !1
+      } = WW;
+      return (0, yW.jsx)(jW.f, {
         delayShow: 200,
-        hoverOnly: be,
+        hoverOnly: EW,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, We.jsx)(Ve, {
-          itemName: ie,
-          amount: He,
-          lJ: ye
+        tooltipInner: (0, yW.jsx)(dW, {
+          itemName: iW,
+          amount: OW,
+          BL: mW
         }),
-        children: (0, We.jsxs)("span", {
-          className: Je()("BoardChip", {
-            Short: void 0 !== ye && ye < He
+        children: (0, yW.jsxs)("span", {
+          className: wW()("BoardChip", {
+            Short: void 0 !== mW && mW < OW
           }),
-          children: [(0, We.jsx)("span", {
+          children: [(0, yW.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, We.jsx)(De, {
-              itemName: ie
+            children: (0, yW.jsx)(HW, {
+              itemName: iW
             })
-          }), He.toLocaleString()]
+          }), OW.toLocaleString()]
         })
       })
     }
-    const Ye = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const oW = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function Ve(ee) {
-      var ie;
+    function dW(WW) {
+      var iW;
       let {
-        itemName: He,
-        amount: ye,
-        lJ: be
-      } = ee;
+        itemName: OW,
+        amount: mW,
+        BL: EW
+      } = WW;
       const {
-        t: Me
-      } = (0, Re.v)(), Ke = (0, ze.g)("itemInfo", (ee => ee[He])), {
-        lore: Ue,
-        droppedBy: Fe
-      } = function(ee) {
-        if ("string" !== typeof ee) return {
-          lore: ee,
+        t: NW
+      } = (0, ZW.B)(), PW = (0, kW.f)("itemInfo", (WW => WW[OW])), {
+        lore: LW,
+        droppedBy: cW
+      } = function(WW) {
+        if ("string" !== typeof WW) return {
+          lore: WW,
           droppedBy: null
         };
-        const ie = Ye.exec(ee);
-        return null === ie ? {
-          lore: ee,
+        const iW = oW.exec(WW);
+        return null === iW ? {
+          lore: WW,
           droppedBy: null
         } : {
-          lore: "" === ie[1] ? void 0 : ie[1],
-          droppedBy: ie[2]
+          lore: "" === iW[1] ? void 0 : iW[1],
+          droppedBy: iW[2]
         }
-      }(null === Ke || void 0 === Ke ? void 0 : Ke.description);
-      return (0, We.jsxs)("div", {
+      }(null === PW || void 0 === PW ? void 0 : PW.description);
+      return (0, yW.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, We.jsxs)("div", {
+        children: [(0, yW.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, We.jsx)("span", {
+          children: [(0, yW.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, We.jsx)(De, {
-              itemName: He
+            children: (0, yW.jsx)(HW, {
+              itemName: OW
             })
-          }), (0, We.jsx)(Xe.e, {
-            text: null !== (ie = null === Ke || void 0 === Ke ? void 0 : Ke.displayName) && void 0 !== ie ? ie : He,
+          }), (0, yW.jsx)(UW.d, {
+            text: null !== (iW = null === PW || void 0 === PW ? void 0 : PW.displayName) && void 0 !== iW ? iW : OW,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== Ue || null !== Fe) && (0, We.jsxs)("div", {
+        }), (void 0 !== LW || null !== cW) && (0, yW.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== Ue && (0, We.jsx)(Xe.e, {
-            text: Ue,
+          children: [void 0 !== LW && (0, yW.jsx)(UW.d, {
+            text: LW,
             className: "BoardChipTooltipDescription"
-          }), null !== Fe && (0, We.jsxs)("span", {
+          }), null !== cW && (0, yW.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, We.jsx)("span", {
+            children: [(0, yW.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: Me(`${te}:chipDroppedBy`)
-            }), Fe]
+              children: NW(`${TW}:chipDroppedBy`)
+            }), cW]
           })]
-        }), void 0 !== be && (0, We.jsxs)("div", {
-          className: Je()("BoardChipTooltipHeld", {
-            Short: be < ye
+        }), void 0 !== EW && (0, yW.jsxs)("div", {
+          className: wW()("BoardChipTooltipHeld", {
+            Short: EW < mW
           }),
-          children: [(0, We.jsx)("span", {
+          children: [(0, yW.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: Me(`${te}:chipYouHave`)
-          }), (0, We.jsxs)("span", {
+            children: NW(`${TW}:chipYouHave`)
+          }), (0, yW.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, We.jsx)("span", {
+            children: [(0, yW.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: be.toLocaleString()
-            }), ` / ${ye.toLocaleString()}`]
-          }), (0, We.jsx)("span", {
+              children: EW.toLocaleString()
+            }), ` / ${mW.toLocaleString()}`]
+          }), (0, yW.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, We.jsx)("span", {
+            children: (0, yW.jsx)("span", {
               style: {
-                width: (ye > 0 ? 100 * Math.min(1, be / ye) : 100) + "%"
+                width: (mW > 0 ? 100 * Math.min(1, EW / mW) : 100) + "%"
               }
             })
           })]
@@ -327,81 +641,81 @@ export const modules = {
       })
     }
 
-    function ae(ee) {
+    function eW(WW) {
       let {
-        icon: ie,
-        name: He,
-        selected: ye,
-        locked: be,
-        className: Me,
-        buttonRef: Ke,
-        onSelect: Ue,
-        children: Fe
-      } = ee;
-      return (0, We.jsxs)("button", {
-        ref: Ke,
+        icon: iW,
+        name: OW,
+        selected: mW,
+        locked: EW,
+        className: NW,
+        buttonRef: PW,
+        onSelect: LW,
+        children: cW
+      } = WW;
+      return (0, yW.jsxs)("button", {
+        ref: PW,
         type: "button",
-        className: Je()("BoardTile", Me, {
-          Selected: ye,
-          Locked: be
+        className: wW()("BoardTile", NW, {
+          Selected: mW,
+          Locked: EW
         }),
-        onClick: Ue,
-        children: [(0, We.jsx)("span", {
+        onClick: LW,
+        children: [(0, yW.jsx)("span", {
           className: "BoardTileIcon",
-          children: ie
-        }), (0, We.jsx)("span", {
+          children: iW
+        }), (0, yW.jsx)("span", {
           className: "BoardTileName",
-          children: He
-        }), Fe]
+          children: OW
+        }), cW]
       })
     }
 
-    function ce(ee) {
+    function vW(WW) {
       let {
-        icon: ie,
-        name: He,
-        children: ye
-      } = ee;
-      return (0, We.jsxs)("header", {
+        icon: iW,
+        name: OW,
+        children: mW
+      } = WW;
+      return (0, yW.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, We.jsx)("span", {
+        children: [(0, yW.jsx)("span", {
           className: "BoardDetailIcon",
-          children: ie
-        }), (0, We.jsxs)("div", {
+          children: iW
+        }), (0, yW.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, We.jsx)("h3", {
-            children: He
-          }), (0, We.jsx)("span", {
+          children: [(0, yW.jsx)("h3", {
+            children: OW
+          }), (0, yW.jsx)("span", {
             className: "BoardDetailStatus",
-            children: ye
+            children: mW
           })]
         })]
       })
     }
 
-    function xe(ee) {
+    function gW(WW) {
       let {
-        coins: ie,
-        children: He
-      } = ee;
-      return (0, We.jsxs)("div", {
+        coins: iW,
+        children: OW
+      } = WW;
+      return (0, yW.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, We.jsx)(Ae, {
-          itemName: Ze,
-          amount: ie
-        }), He]
+        children: [(0, yW.jsx)(uW, {
+          itemName: JW,
+          amount: iW
+        }), OW]
       })
     }
-    var Le = He(39327);
-    const Ce = "containmentCodexView";
-    class ve extends Le.b {
+    var DW = OW(39733);
+    const VW = "containmentCodexView";
+    class pW extends DW.e {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = ee => {
-          this.selectedId = ee, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = WW => {
+          this.selectedId = WW, this.emit()
         }
       }
-      DR(ee) {
-        this.entries = ee.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      yZ(WW) {
+        this.entries = WW.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -411,55 +725,55 @@ export const modules = {
         }
       }
     }
-    const ue = {
-        codexAnyDifficulty: `${te}:codexNeedsAny`,
-        codexNormalOnly: `${te}:codexNeedsNormal`,
-        codexHardOnly: `${te}:codexNeedsHard`
+    const fW = {
+        codexAnyDifficulty: `${TW}:codexNeedsAny`,
+        codexNormalOnly: `${TW}:codexNeedsNormal`,
+        codexHardOnly: `${TW}:codexNeedsHard`
       },
-      me = {
+      CW = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      le = {
-        codexContained: `${te}:codexContainedBadge`,
-        codexEncountered: `${te}:codexEncounteredBadge`,
-        codexUnidentified: `${te}:codexUnidentifiedBadge`
+      XW = {
+        codexContained: `${TW}:codexContainedBadge`,
+        codexEncountered: `${TW}:codexEncounteredBadge`,
+        codexUnidentified: `${TW}:codexUnidentifiedBadge`
       },
-      Se = ["94%", "81%", "88%", "46%", "72%"];
+      BW = ["94%", "81%", "88%", "46%", "72%"];
 
-    function ne(ee) {
+    function qW(WW) {
       let {
-        entry: ie
-      } = ee;
+        entry: iW
+      } = WW;
       const {
-        t: He
-      } = (0, Re.v)();
-      return (0, We.jsx)("span", {
-        className: Je()("BoardBadge", me[ie.codexEntryState]),
-        children: He(le[ie.codexEntryState])
+        t: OW
+      } = (0, ZW.B)();
+      return (0, yW.jsx)("span", {
+        className: wW()("BoardBadge", CW[iW.codexEntryState]),
+        children: OW(XW[iW.codexEntryState])
       })
     }
 
-    function je(ee) {
+    function RW(WW) {
       const {
-        t: ie
-      } = (0, Re.v)();
-      return "codexUnidentified" === ee.codexEntryState ? ie(`${te}:codexUnidentifiedName`) : ee.codexEntryName
+        t: iW
+      } = (0, ZW.B)();
+      return "codexUnidentified" === WW.codexEntryState ? iW(`${TW}:codexUnidentifiedName`) : WW.codexEntryName
     }
 
-    function se(ee) {
+    function GW(WW) {
       let {
-        entry: ie
-      } = ee;
-      return "codexUnidentified" === ie.codexEntryState ? (0, We.jsx)(De, {
+        entry: iW
+      } = WW;
+      return "codexUnidentified" === iW.codexEntryState ? (0, yW.jsx)(HW, {
         itemName: "Book"
-      }) : (0, We.jsxs)("span", {
+      }) : (0, yW.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, We.jsx)(Pe, {
-          anomalyId: ie.codexEntryId,
-          caught: "codexContained" === ie.codexEntryState
-        }), (0, We.jsx)("img", {
+        children: [(0, yW.jsx)(nW, {
+          anomalyId: iW.codexEntryId,
+          caught: "codexContained" === iW.codexEntryState
+        }), (0, yW.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -468,27 +782,27 @@ export const modules = {
       })
     }
 
-    function Ie(ee) {
+    function IW(WW) {
       let {
-        entry: ie,
-        selected: He,
-        onSelect: ye
-      } = ee;
-      const be = "codexUnidentified" === ie.codexEntryState;
-      return (0, We.jsxs)(ae, {
-        icon: (0, We.jsx)(se, {
-          entry: ie
+        entry: iW,
+        selected: OW,
+        onSelect: mW
+      } = WW;
+      const EW = "codexUnidentified" === iW.codexEntryState;
+      return (0, yW.jsxs)(eW, {
+        icon: (0, yW.jsx)(GW, {
+          entry: iW
         }),
-        name: je(ie),
-        selected: He,
-        locked: be,
-        className: Je()("CodexFolder", me[ie.codexEntryState]),
+        name: RW(iW),
+        selected: OW,
+        locked: EW,
+        className: wW()("CodexFolder", CW[iW.codexEntryState]),
         onSelect: () => {
-          ye(ie.codexEntryId)
+          mW(iW.codexEntryId)
         },
-        children: [!be && (0, We.jsx)(ne, {
-          entry: ie
-        }), be && (0, We.jsx)("img", {
+        children: [!EW && (0, yW.jsx)(qW, {
+          entry: iW
+        }), EW && (0, yW.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -497,176 +811,176 @@ export const modules = {
       })
     }
 
-    function he(ee) {
+    function aW(WW) {
       let {
-        count: ie
-      } = ee;
-      const He = [];
-      for (let ye = Math.min(ie, 25); ye > 0; ye -= 5) He.push(Math.min(ye, 5));
-      return (0, We.jsx)("span", {
+        count: iW
+      } = WW;
+      const OW = [];
+      for (let mW = Math.min(iW, 25); mW > 0; mW -= 5) OW.push(Math.min(mW, 5));
+      return (0, yW.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: He.map(((ee, ie) => (0, We.jsx)("span", {
-          className: Je()("CodexTallyGroup", {
-            Gate: 5 === ee
+        children: OW.map(((WW, iW) => (0, yW.jsx)("span", {
+          className: wW()("CodexTallyGroup", {
+            Gate: 5 === WW
           }),
           children: Array.from({
-            length: Math.min(ee, 4)
-          }, ((ee, ie) => (0, We.jsx)("span", {
+            length: Math.min(WW, 4)
+          }, ((WW, iW) => (0, yW.jsx)("span", {
             className: "CodexTallyMark"
-          }, ie)))
-        }, ie)))
+          }, iW)))
+        }, iW)))
       })
     }
 
-    function Ne(ee) {
+    function rW(WW) {
       let {
-        contained: ie,
-        total: He
-      } = ee;
+        contained: iW,
+        total: OW
+      } = WW;
       const {
-        t: ye
-      } = (0, Re.v)();
-      return (0, We.jsxs)("div", {
+        t: mW
+      } = (0, ZW.B)();
+      return (0, yW.jsxs)("div", {
         className: "CodexProgress",
-        children: [ye(`${te}:codexProgress`, {
-          contained: String(ie),
-          total: String(He)
-        }), (0, We.jsx)("span", {
+        children: [mW(`${TW}:codexProgress`, {
+          contained: String(iW),
+          total: String(OW)
+        }), (0, yW.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, We.jsx)("span", {
+          children: (0, yW.jsx)("span", {
             style: {
-              width: ie / He * 100 + "%"
+              width: iW / OW * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function Ge(ee) {
+    function zW(WW) {
       let {
-        entry: ie,
-        fileNumber: He
-      } = ee;
+        entry: iW,
+        fileNumber: OW
+      } = WW;
       const {
-        t: ye
-      } = (0, Re.v)(), be = "codexContained" === ie.codexEntryState;
-      return (0, We.jsx)("section", {
+        t: mW
+      } = (0, ZW.B)(), EW = "codexContained" === iW.codexEntryState;
+      return (0, yW.jsx)("section", {
         className: "BoardDetail",
-        children: (0, We.jsxs)("article", {
-          className: Je()("CodexDossier", me[ie.codexEntryState]),
-          children: [(0, We.jsx)("span", {
+        children: (0, yW.jsxs)("article", {
+          className: wW()("CodexDossier", CW[iW.codexEntryState]),
+          children: [(0, yW.jsx)("span", {
             className: "CodexFileNumber",
-            children: ye(`${te}:codexFileNumber`, {
-              number: String(He).padStart(3, "0")
+            children: mW(`${TW}:codexFileNumber`, {
+              number: String(OW).padStart(3, "0")
             })
-          }), (0, We.jsx)(ce, {
-            icon: (0, We.jsx)(se, {
-              entry: ie
+          }), (0, yW.jsx)(vW, {
+            icon: (0, yW.jsx)(GW, {
+              entry: iW
             }),
-            name: je(ie),
-            children: (0, We.jsx)(ne, {
-              entry: ie
+            name: RW(iW),
+            children: (0, yW.jsx)(qW, {
+              entry: iW
             })
-          }), be && (0, We.jsxs)(We.Fragment, {
-            children: [(0, We.jsx)("p", {
+          }), EW && (0, yW.jsxs)(yW.Fragment, {
+            children: [(0, yW.jsx)("p", {
               className: "BoardDescription",
-              children: ie.codexEntryLore
-            }), (0, We.jsxs)("p", {
+              children: iW.codexEntryLore
+            }), (0, yW.jsxs)("p", {
               className: "CodexTally",
-              children: [ye(`${te}:codexContainments`, {
-                count: String(ie.codexEntryContainedCount)
-              }), (0, We.jsx)(he, {
-                count: ie.codexEntryContainedCount
+              children: [mW(`${TW}:codexContainments`, {
+                count: String(iW.codexEntryContainedCount)
+              }), (0, yW.jsx)(aW, {
+                count: iW.codexEntryContainedCount
               })]
-            }), (0, We.jsx)("span", {
+            }), (0, yW.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: ye(`${te}:codexContainedBadge`)
+              children: mW(`${TW}:codexContainedBadge`)
             })]
-          }), !be && (0, We.jsxs)(We.Fragment, {
-            children: [(0, We.jsxs)("div", {
+          }), !EW && (0, yW.jsxs)(yW.Fragment, {
+            children: [(0, yW.jsxs)("div", {
               className: "CodexRedaction",
-              children: [Se.map((ee => (0, We.jsx)("span", {
+              children: [BW.map((WW => (0, yW.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: ee
+                  width: WW
                 }
-              }, ee))), (0, We.jsx)("p", {
+              }, WW))), (0, yW.jsx)("p", {
                 className: "CodexRedacted",
-                children: ye(`${te}:codexRedacted`)
+                children: mW(`${TW}:codexRedacted`)
               })]
-            }), "" !== ie.codexEntryHint && (0, We.jsxs)("aside", {
+            }), "" !== iW.codexEntryHint && (0, yW.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, We.jsx)("h4", {
-                children: ye(`${te}:codexHintLabel`)
-              }), (0, We.jsx)("p", {
-                children: ie.codexEntryHint
+              children: [(0, yW.jsx)("h4", {
+                children: mW(`${TW}:codexHintLabel`)
+              }), (0, yW.jsx)("p", {
+                children: iW.codexEntryHint
               })]
-            }), (0, We.jsx)("p", {
+            }), (0, yW.jsx)("p", {
               className: "CodexClearance",
-              children: ye(ue[ie.codexEntryDifficulty])
+              children: mW(fW[iW.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function re(ee) {
+    function FW(WW) {
       let {
-        controller: ie
-      } = ee;
-      const He = (0, oe.j)(Ce, ie.getSnapshot()),
+        controller: iW
+      } = WW;
+      const OW = (0, tW.g)(VW, iW.getSnapshot()),
         {
-          t: ye
-        } = (0, Re.v)();
-      if (0 === He.entries.length) return null;
-      const be = He.entries.find((ee => ee.codexEntryId === He.selectedId)),
-        Me = He.entries.filter((ee => "codexContained" === ee.codexEntryState)).length,
-        Ke = He.entries.map((ee => ee.codexEntryId)).sort().indexOf(be.codexEntryId) + 1;
-      return (0, We.jsxs)(we, {
-        open: He.open,
-        onDismiss: ie.dismiss,
-        title: ye(`${te}:codexTitle`),
+          t: mW
+        } = (0, ZW.B)();
+      if (0 === OW.entries.length) return null;
+      const EW = OW.entries.find((WW => WW.codexEntryId === OW.selectedId)),
+        NW = OW.entries.filter((WW => "codexContained" === WW.codexEntryState)).length,
+        PW = OW.entries.map((WW => WW.codexEntryId)).sort().indexOf(EW.codexEntryId) + 1;
+      return (0, yW.jsxs)(hW, {
+        open: OW.open,
+        onDismiss: iW.dismiss,
+        title: mW(`${TW}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, We.jsx)(Ne, {
-          contained: Me,
-          total: He.entries.length
+        headerExtra: (0, yW.jsx)(rW, {
+          contained: NW,
+          total: OW.entries.length
         }),
-        children: [(0, We.jsx)("div", {
+        children: [(0, yW.jsx)("div", {
           className: "BoardTiles",
-          children: He.entries.map((ee => (0, We.jsx)(Ie, {
-            entry: ee,
-            selected: ee === be,
-            onSelect: ie.select
-          }, ee.codexEntryId)))
-        }), (0, We.jsx)(Ge, {
-          entry: be,
-          fileNumber: Ke
+          children: OW.entries.map((WW => (0, yW.jsx)(IW, {
+            entry: WW,
+            selected: WW === EW,
+            onSelect: iW.select
+          }, WW.codexEntryId)))
+        }), (0, yW.jsx)(zW, {
+          entry: EW,
+          fileNumber: PW
         })]
       })
     }
-    var Qe = He(347);
-    class ei extends Le.b {
-      constructor(ee, ie, He, ye, be, Me) {
-        super(ee, ie, He), this.pacer = ye, this.command = be, this.predict = Me, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = ee => {
-          this.selectedId = ee, this.emit()
-        }, this.act = (ee, ie) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${ee} ${ie}`, this.rollBack)) return;
-          const He = this.predict(this.board, ee, ie);
-          null !== He && (this.board = He.board, this.notice = He.notice, this.emit())
+    var QW = OW(344);
+    class Wi extends DW.e {
+      constructor(WW, iW, OW, mW, EW, NW) {
+        super(WW, iW, OW), this.pacer = mW, this.command = EW, this.predict = NW, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = WW => {
+          this.selectedId = WW, this.emit()
+        }, this.act = (WW, iW) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${WW} ${iW}`, this.rollBack)) return;
+          const OW = this.predict(this.board, WW, iW);
+          null !== OW && (this.board = OW.board, this.notice = OW.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = ye.subscribe((() => {
+        }, this.unsubscribePacer = mW.subscribe((() => {
           this.emit()
         }))
       }
-      DR(ee) {
-        const ie = this.messageOpens(ee);
-        if (ie && this.open) return this.board === this.confirmed && (this.board = ee), this.confirmed = ee, void this.emit();
-        if (this.board = ee, this.confirmed = ee, this.pacer.onReply(), ie) return this.notice = null, this.selectedId = this.openingSelection(ee), void this.show();
-        const He = this.messageNotice(ee);
-        null !== He && (this.notice = He), this.emit()
+      yZ(WW) {
+        const iW = this.messageOpens(WW);
+        if (iW && this.open) return this.board === this.confirmed && (this.board = WW), this.confirmed = WW, void this.emit();
+        if (this.board = WW, this.confirmed = WW, this.pacer.onReply(), iW) return this.notice = null, this.selectedId = this.openingSelection(WW), void this.show();
+        const OW = this.messageNotice(WW);
+        null !== OW && (this.notice = OW), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -676,153 +990,153 @@ export const modules = {
       }
     }
 
-    function ii(ee, ie) {
-      return ee.loadoutCoins >= ie.loadoutCostCoins && ie.loadoutCostParts.every((ie => function(ee, ie) {
-        return Hi(ee, ie).loadoutHeldPartAmount
-      }(ee, ie.loadoutPartCurrency) >= ie.loadoutPartAmount))
+    function ii(WW, iW) {
+      return WW.loadoutCoins >= iW.loadoutCostCoins && iW.loadoutCostParts.every((iW => function(WW, iW) {
+        return Oi(WW, iW).loadoutHeldPartAmount
+      }(WW, iW.loadoutPartCurrency) >= iW.loadoutPartAmount))
     }
 
-    function Hi(ee, ie) {
-      return ee.loadoutHeldParts.find((ee => ee.loadoutHeldPartCurrency === ie))
+    function Oi(WW, iW) {
+      return WW.loadoutHeldParts.find((WW => WW.loadoutHeldPartCurrency === iW))
     }
 
-    function yi(ee, ie) {
-      return ee.loadoutSlots.find((ee => ee.loadoutSlotKind === ie))
+    function mi(WW, iW) {
+      return WW.loadoutSlots.find((WW => WW.loadoutSlotKind === iW))
     }
 
-    function bi(ee) {
-      return ee.loadoutPerks.filter((ee => ee.loadoutPerkEquipped)).length >= ee.loadoutMaxPerks
+    function Ei(WW) {
+      return WW.loadoutPerks.filter((WW => WW.loadoutPerkEquipped)).length >= WW.loadoutMaxPerks
     }
 
-    function Mi(ee, ie, He) {
-      for (const be of ee.loadoutSlots) {
-        const ye = be.loadoutSlotOptions.find((ee => ee.loadoutOptionId === He));
-        if (ye) return "loadoutArmour" === be.loadoutSlotKind ? Ui(ee, be, ye, ie) : Ki(ee, be, ye, ie)
+    function Ni(WW, iW, OW) {
+      for (const EW of WW.loadoutSlots) {
+        const mW = EW.loadoutSlotOptions.find((WW => WW.loadoutOptionId === OW));
+        if (mW) return "loadoutArmour" === EW.loadoutSlotKind ? Li(WW, EW, mW, iW) : Pi(WW, EW, mW, iW)
       }
-      const ye = ee.loadoutPerks.find((ee => ee.loadoutPerkId === He));
-      return ye ? function(ee, ie, He) {
-        const ye = ie.loadoutPerkOwned,
-          be = ie.loadoutPerkEquipped,
-          Me = ie.loadoutPerkName,
-          Ke = bi(ee);
-        if ("loadoutUnlock" === He) {
-          if (ye || !ii(ee, ie.loadoutPerkCost)) return null;
-          const He = {
-            ...ie,
+      const mW = WW.loadoutPerks.find((WW => WW.loadoutPerkId === OW));
+      return mW ? function(WW, iW, OW) {
+        const mW = iW.loadoutPerkOwned,
+          EW = iW.loadoutPerkEquipped,
+          NW = iW.loadoutPerkName,
+          PW = Ei(WW);
+        if ("loadoutUnlock" === OW) {
+          if (mW || !ii(WW, iW.loadoutPerkCost)) return null;
+          const OW = {
+            ...iW,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !Ke
+            loadoutPerkEquipped: !PW
           };
           return {
-            board: Ji(oi(ee, ie.loadoutPerkCost), He),
-            notice: Ri(Ke ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", Me)
+            board: wi(ti(WW, iW.loadoutPerkCost), OW),
+            notice: Zi(PW ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", NW)
           }
         }
-        if ("loadoutUpgrade" === He || !ye || "loadoutEquip" === He === be || !be && Ke) return null;
+        if ("loadoutUpgrade" === OW || !mW || "loadoutEquip" === OW === EW || !EW && PW) return null;
         return {
-          board: Ji(ee, {
-            ...ie,
-            loadoutPerkEquipped: !be
+          board: wi(WW, {
+            ...iW,
+            loadoutPerkEquipped: !EW
           }),
-          notice: Ri(be ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", Me)
+          notice: Zi(EW ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", NW)
         }
-      }(ee, ye, ie) : null
+      }(WW, mW, iW) : null
     }
 
-    function Ki(ee, ie, He, ye) {
-      const be = He.loadoutOptionOwnedTier,
-        Me = He.loadoutOptionName;
-      if ("loadoutEquip" === ye) return 0 === be ? null : {
-        board: Fi(ee, ie, He.loadoutOptionId, null),
-        notice: Ri("loadoutNoticeEquipped", Me)
+    function Pi(WW, iW, OW, mW) {
+      const EW = OW.loadoutOptionOwnedTier,
+        NW = OW.loadoutOptionName;
+      if ("loadoutEquip" === mW) return 0 === EW ? null : {
+        board: ci(WW, iW, OW.loadoutOptionId, null),
+        notice: Zi("loadoutNoticeEquipped", NW)
       };
-      const Ke = "loadoutUnlock" === ye;
-      if (Ke && 0 !== be || "loadoutUpgrade" === ye && (0 === be || be >= He.loadoutOptionTiers.length) || "loadoutUnequip" === ye) return null;
-      const Ue = He.loadoutOptionTiers[be].loadoutTierCost;
-      if (!ii(ee, Ue)) return null;
-      const Fe = {
-          ...He,
-          loadoutOptionOwnedTier: be + 1
+      const PW = "loadoutUnlock" === mW;
+      if (PW && 0 !== EW || "loadoutUpgrade" === mW && (0 === EW || EW >= OW.loadoutOptionTiers.length) || "loadoutUnequip" === mW) return null;
+      const LW = OW.loadoutOptionTiers[EW].loadoutTierCost;
+      if (!ii(WW, LW)) return null;
+      const cW = {
+          ...OW,
+          loadoutOptionOwnedTier: EW + 1
         },
-        Je = Ke ? He.loadoutOptionId : ie.loadoutSlotEquippedId;
+        wW = PW ? OW.loadoutOptionId : iW.loadoutSlotEquippedId;
       return {
-        board: Fi(oi(ee, Ue), ie, Je, Fe),
-        notice: Ke ? Ri("loadoutNoticeUnlocked", Me) : Ri("loadoutNoticeUpgraded", Me, be + 1)
+        board: ci(ti(WW, LW), iW, wW, cW),
+        notice: PW ? Zi("loadoutNoticeUnlocked", NW) : Zi("loadoutNoticeUpgraded", NW, EW + 1)
       }
     }
 
-    function Ui(ee, ie, He, ye) {
-      const be = He.loadoutOptionOwnedTier > 0,
-        Me = He.loadoutOptionName;
-      if ("loadoutEquip" === ye && be) return {
-        board: Fi(ee, ie, He.loadoutOptionId, null),
-        notice: Ri("loadoutNoticeEquipped", Me)
+    function Li(WW, iW, OW, mW) {
+      const EW = OW.loadoutOptionOwnedTier > 0,
+        NW = OW.loadoutOptionName;
+      if ("loadoutEquip" === mW && EW) return {
+        board: ci(WW, iW, OW.loadoutOptionId, null),
+        notice: Zi("loadoutNoticeEquipped", NW)
       };
-      const Ke = He.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== ye || be || !ii(ee, Ke) ? null : {
-        board: Fi(oi(ee, Ke), ie, He.loadoutOptionId, {
-          ...He,
+      const PW = OW.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== mW || EW || !ii(WW, PW) ? null : {
+        board: ci(ti(WW, PW), iW, OW.loadoutOptionId, {
+          ...OW,
           loadoutOptionOwnedTier: 1
         }),
-        notice: Ri("loadoutNoticeUnlocked", Me)
+        notice: Zi("loadoutNoticeUnlocked", NW)
       }
     }
 
-    function Fi(ee, ie, He, ye) {
-      const be = {
-        ...ie,
-        loadoutSlotEquippedId: He,
-        loadoutSlotOptions: ie.loadoutSlotOptions.map((ee => null !== ye && ee.loadoutOptionId === ye.loadoutOptionId ? ye : ee))
+    function ci(WW, iW, OW, mW) {
+      const EW = {
+        ...iW,
+        loadoutSlotEquippedId: OW,
+        loadoutSlotOptions: iW.loadoutSlotOptions.map((WW => null !== mW && WW.loadoutOptionId === mW.loadoutOptionId ? mW : WW))
       };
       return {
-        ...ee,
-        loadoutSlots: ee.loadoutSlots.map((ee => ee === ie ? be : ee))
+        ...WW,
+        loadoutSlots: WW.loadoutSlots.map((WW => WW === iW ? EW : WW))
       }
     }
 
-    function Ji(ee, ie) {
+    function wi(WW, iW) {
       return {
-        ...ee,
-        loadoutPerks: ee.loadoutPerks.map((ee => ee.loadoutPerkId === ie.loadoutPerkId ? ie : ee))
+        ...WW,
+        loadoutPerks: WW.loadoutPerks.map((WW => WW.loadoutPerkId === iW.loadoutPerkId ? iW : WW))
       }
     }
 
-    function oi(ee, ie) {
+    function ti(WW, iW) {
       return {
-        ...ee,
-        loadoutCoins: ee.loadoutCoins - ie.loadoutCostCoins,
-        loadoutHeldParts: ee.loadoutHeldParts.map((ee => {
-          const He = ie.loadoutCostParts.find((ie => ie.loadoutPartCurrency === ee.loadoutHeldPartCurrency));
-          return He ? {
-            ...ee,
-            loadoutHeldPartAmount: ee.loadoutHeldPartAmount - He.loadoutPartAmount
-          } : ee
+        ...WW,
+        loadoutCoins: WW.loadoutCoins - iW.loadoutCostCoins,
+        loadoutHeldParts: WW.loadoutHeldParts.map((WW => {
+          const OW = iW.loadoutCostParts.find((iW => iW.loadoutPartCurrency === WW.loadoutHeldPartCurrency));
+          return OW ? {
+            ...WW,
+            loadoutHeldPartAmount: WW.loadoutHeldPartAmount - OW.loadoutPartAmount
+          } : WW
         }))
       }
     }
 
-    function Ri(ee, ie) {
+    function Zi(WW, iW) {
       return {
-        loadoutNoticeKey: ee,
+        loadoutNoticeKey: WW,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: ie,
+        loadoutNoticeName: iW,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const ki = "containmentLoadoutView";
-    class qi extends ei {
-      constructor(ee, ie, He, ye) {
-        super(ee, ie, He, ye, "loadout", Mi), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = ee => {
-          this.slot = ee, this.selectedId = fi(this.board, ee), this.emit()
+    const xi = "containmentLoadoutView";
+    class li extends Wi {
+      constructor(WW, iW, OW, mW) {
+        super(WW, iW, OW, mW, "loadout", Ni), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = WW => {
+          this.slot = WW, this.selectedId = Ai(this.board, WW), this.emit()
         }
       }
-      messageOpens(ee) {
-        return ee.loadoutMessageOpens
+      messageOpens(WW) {
+        return WW.loadoutMessageOpens
       }
-      messageNotice(ee) {
-        return ee.loadoutNotice
+      messageNotice(WW) {
+        return WW.loadoutNotice
       }
-      openingSelection(ee) {
-        return fi(ee, this.slot)
+      openingSelection(WW) {
+        return Ai(WW, this.slot)
       }
       buildSnapshot() {
         return {
@@ -836,765 +1150,765 @@ export const modules = {
       }
     }
 
-    function fi(ee, ie) {
-      if ("loadoutPerks" === ie) {
-        var He;
-        const ie = ee.loadoutPerks;
-        return (null !== (He = ie.find((ee => ee.loadoutPerkEquipped))) && void 0 !== He ? He : ie[0]).loadoutPerkId
+    function Ai(WW, iW) {
+      if ("loadoutPerks" === iW) {
+        var OW;
+        const iW = WW.loadoutPerks;
+        return (null !== (OW = iW.find((WW => WW.loadoutPerkEquipped))) && void 0 !== OW ? OW : iW[0]).loadoutPerkId
       }
-      return yi(ee, ie).loadoutSlotEquippedId
+      return mi(WW, iW).loadoutSlotEquippedId
     }
-    const Ti = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var Xi = He(37708),
-      zi = He(1215);
-    const Bi = {
-        loadoutPrimary: `${te}:loadoutSlotPrimary`,
-        loadoutSecondary: `${te}:loadoutSlotSecondary`,
-        loadoutOffensive: `${te}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${te}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${te}:loadoutSlotArmour`,
-        loadoutPerks: `${te}:loadoutSlotPerks`
+    const bi = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var ji = OW(38030),
+      Ui = OW(1269);
+    const ki = {
+        loadoutPrimary: `${TW}:loadoutSlotPrimary`,
+        loadoutSecondary: `${TW}:loadoutSlotSecondary`,
+        loadoutOffensive: `${TW}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${TW}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${TW}:loadoutSlotArmour`,
+        loadoutPerks: `${TW}:loadoutSlotPerks`
       },
-      Ei = {
+      si = {
         section: "right",
-        tq: "bottom",
+        Kl: "bottom",
         act: "top"
       },
-      gi = (0, ye.createContext)({
+      Mi = (0, mW.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function Oi() {
+    function Ki() {
       const {
-        step: ee,
-        targetRef: ie
-      } = (0, ye.useContext)(gi);
-      return (He, ye) => (null === ee || void 0 === ee ? void 0 : ee.kind) === He && ee.id === ye ? ie : void 0
+        step: WW,
+        targetRef: iW
+      } = (0, mW.useContext)(Mi);
+      return (OW, mW) => (null === WW || void 0 === WW ? void 0 : WW.kind) === OW && WW.id === mW ? iW : void 0
     }
 
-    function di(ee, ie) {
-      const He = ie.loadoutTargetId;
-      if ("loadoutPerks" === ie.loadoutTargetSection) {
-        const ie = ee.loadoutPerks.find((ee => ee.loadoutPerkId === He));
+    function Si(WW, iW) {
+      const OW = iW.loadoutTargetId;
+      if ("loadoutPerks" === iW.loadoutTargetSection) {
+        const iW = WW.loadoutPerks.find((WW => WW.loadoutPerkId === OW));
         return {
-          name: ie.loadoutPerkName,
-          owned: ie.loadoutPerkOwned,
-          equipped: ie.loadoutPerkEquipped
+          name: iW.loadoutPerkName,
+          owned: iW.loadoutPerkOwned,
+          equipped: iW.loadoutPerkEquipped
         }
       }
-      const ye = yi(ee, ie.loadoutTargetSection),
-        be = ye.loadoutSlotOptions.find((ee => ee.loadoutOptionId === He));
+      const mW = mi(WW, iW.loadoutTargetSection),
+        EW = mW.loadoutSlotOptions.find((WW => WW.loadoutOptionId === OW));
       return {
-        name: be.loadoutOptionName,
-        owned: be.loadoutOptionOwnedTier > 0,
-        equipped: ye.loadoutSlotEquippedId === He
+        name: EW.loadoutOptionName,
+        owned: EW.loadoutOptionOwnedTier > 0,
+        equipped: mW.loadoutSlotEquippedId === OW
       }
     }
 
-    function Wi(ee, ie, He, ye) {
-      const [be, Me] = ee(`${te}:${ie}`, {
-        [He]: "\x01"
+    function Yi(WW, iW, OW, mW) {
+      const [EW, NW] = WW(`${TW}:${iW}`, {
+        [OW]: "\x01"
       }).split("\x01");
-      return (0, We.jsxs)(We.Fragment, {
-        children: [be, (0, We.jsx)("span", {
+      return (0, yW.jsxs)(yW.Fragment, {
+        children: [EW, (0, yW.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: ye
-        }), Me]
+          children: mW
+        }), NW]
       })
     }
 
-    function ti(ee) {
+    function yi(WW) {
       let {
-        view: ie,
-        onDismiss: He,
-        children: be
-      } = ee;
+        view: iW,
+        onDismiss: OW,
+        children: EW
+      } = WW;
       const {
-        t: Me
-      } = (0, Re.v)(), Ke = ie.loadout, Ue = ie.open ? Ke.loadoutWalkthrough.map((ee => ({
-        target: ee,
-        info: di(Ke, ee)
-      }))).find((ee => {
+        t: NW
+      } = (0, ZW.B)(), PW = iW.loadout, LW = iW.open ? PW.loadoutWalkthrough.map((WW => ({
+        target: WW,
+        info: Si(PW, WW)
+      }))).find((WW => {
         let {
-          info: ie
-        } = ee;
-        return !ie.equipped
+          info: iW
+        } = WW;
+        return !iW.equipped
       })) : void 0;
-      let Fe = null,
-        Je = null;
-      if (void 0 !== Ue) {
+      let cW = null,
+        wW = null;
+      if (void 0 !== LW) {
         const {
-          target: ee,
-          info: He
-        } = Ue;
-        ie.slot !== ee.loadoutTargetSection ? (Fe = {
+          target: WW,
+          info: OW
+        } = LW;
+        iW.slot !== WW.loadoutTargetSection ? (cW = {
           kind: "section",
-          id: ee.loadoutTargetSection
-        }, Je = Wi(Me, "loadoutWalkthroughSection", "section", Me(Bi[ee.loadoutTargetSection]))) : ie.selectedId !== ee.loadoutTargetId ? (Fe = {
-          kind: "tq",
-          id: ee.loadoutTargetId
-        }, Je = Wi(Me, "loadoutWalkthroughPick", "name", He.name)) : (Fe = {
+          id: WW.loadoutTargetSection
+        }, wW = Yi(NW, "loadoutWalkthroughSection", "section", NW(ki[WW.loadoutTargetSection]))) : iW.selectedId !== WW.loadoutTargetId ? (cW = {
+          kind: "Kl",
+          id: WW.loadoutTargetId
+        }, wW = Yi(NW, "loadoutWalkthroughPick", "name", OW.name)) : (cW = {
           kind: "act",
-          id: ee.loadoutTargetId
-        }, Je = Wi(Me, He.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", He.name))
+          id: WW.loadoutTargetId
+        }, wW = Yi(NW, OW.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", OW.name))
       }
-      const oe = null === Fe ? null : function(ee) {
-          return `${ee.kind}:${ee.id}`
-        }(Fe),
-        [ke, qe] = (0, ye.useState)(null),
-        fe = (0, ye.useCallback)((ee => {
-          qe((ie => null !== ee ? {
-            key: oe,
-            node: ee
-          } : (null === ie || void 0 === ie ? void 0 : ie.key) === oe ? null : ie))
-        }), [oe]),
-        Te = null !== oe && (null === ke || void 0 === ke ? void 0 : ke.key) === oe ? ke.node : null;
-      return (0, We.jsxs)(gi.Provider, {
+      const tW = null === cW ? null : function(WW) {
+          return `${WW.kind}:${WW.id}`
+        }(cW),
+        [xW, lW] = (0, mW.useState)(null),
+        AW = (0, mW.useCallback)((WW => {
+          lW((iW => null !== WW ? {
+            key: tW,
+            node: WW
+          } : (null === iW || void 0 === iW ? void 0 : iW.key) === tW ? null : iW))
+        }), [tW]),
+        bW = null !== tW && (null === xW || void 0 === xW ? void 0 : xW.key) === tW ? xW.node : null;
+      return (0, yW.jsxs)(Mi.Provider, {
         value: {
-          step: Fe,
-          targetRef: fe
+          step: cW,
+          targetRef: AW
         },
-        children: [be, null !== Fe && null !== Te && (0, We.jsx)(Zi, {
-          target: Te,
-          placement: Ei[Fe.kind],
-          onDismiss: He,
-          children: Je
-        }, oe)]
+        children: [EW, null !== cW && null !== bW && (0, yW.jsx)(Ti, {
+          target: bW,
+          placement: si[cW.kind],
+          onDismiss: OW,
+          children: wW
+        }, tW)]
       })
     }
 
-    function Zi(ee) {
+    function Ti(WW) {
       let {
-        target: ie,
-        placement: He,
-        onDismiss: be,
-        children: Me
-      } = ee;
+        target: iW,
+        placement: OW,
+        onDismiss: EW,
+        children: NW
+      } = WW;
       const {
-        t: Ke
-      } = (0, Re.v)(), Ue = (0, ye.useRef)(ie);
-      return Ue.current = ie, (0, zi.t)("popup", Ue, be), (0, We.jsxs)(Xi.d, {
-        target: ie,
-        placement: He,
+        t: PW
+      } = (0, ZW.B)(), LW = (0, mW.useRef)(iW);
+      return LW.current = iW, (0, Ui.r)("popup", LW, EW), (0, yW.jsxs)(ji.h, {
+        target: iW,
+        placement: OW,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, We.jsxs)("div", {
+        children: [(0, yW.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, We.jsx)("img", {
+          children: [(0, yW.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: Ti,
+            src: bi,
             alt: "",
             draggable: !1
-          }), (0, We.jsx)("span", {
+          }), (0, yW.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: Ke(`${te}:operatorName`)
-          }), (0, We.jsx)(fe.i, {
-            onClick: be,
-            ariaLabel: Ke(`${te}:loadoutWalkthroughClose`),
+            children: PW(`${TW}:operatorName`)
+          }), (0, yW.jsx)(AW.l, {
+            onClick: EW,
+            ariaLabel: PW(`${TW}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, We.jsx)("p", {
+        }), (0, yW.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: Me
+          children: NW
         })]
       })
     }
-    const wi = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const Ji = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function Di(ee) {
+    function Hi(WW) {
       let {
-        cost: ie,
-        loadout: He
-      } = ee;
+        cost: iW,
+        loadout: OW
+      } = WW;
       const {
-        t: ye
-      } = (0, Re.v)();
-      return ie.loadoutCostCoins <= 0 && 0 === ie.loadoutCostParts.length ? (0, We.jsx)("span", {
+        t: mW
+      } = (0, ZW.B)();
+      return iW.loadoutCostCoins <= 0 && 0 === iW.loadoutCostParts.length ? (0, yW.jsx)("span", {
         className: "LoadoutCost",
-        children: ye(`${te}:loadoutFree`)
-      }) : (0, We.jsxs)("span", {
+        children: mW(`${TW}:loadoutFree`)
+      }) : (0, yW.jsxs)("span", {
         className: "LoadoutCost",
-        children: [ie.loadoutCostCoins > 0 && (0, We.jsx)(Ae, {
-          itemName: Ze,
-          amount: ie.loadoutCostCoins,
-          lJ: He.loadoutCoins
-        }), ie.loadoutCostParts.map((ee => {
-          const ie = Hi(He, ee.loadoutPartCurrency);
-          return (0, We.jsx)(Ae, {
-            itemName: ie.loadoutHeldPartItem,
-            amount: ee.loadoutPartAmount,
-            lJ: ie.loadoutHeldPartAmount
-          }, ee.loadoutPartCurrency)
+        children: [iW.loadoutCostCoins > 0 && (0, yW.jsx)(uW, {
+          itemName: JW,
+          amount: iW.loadoutCostCoins,
+          BL: OW.loadoutCoins
+        }), iW.loadoutCostParts.map((WW => {
+          const iW = Oi(OW, WW.loadoutPartCurrency);
+          return (0, yW.jsx)(uW, {
+            itemName: iW.loadoutHeldPartItem,
+            amount: WW.loadoutPartAmount,
+            BL: iW.loadoutHeldPartAmount
+          }, WW.loadoutPartCurrency)
         }))]
       })
     }
-    const Pi = {
-      loadoutStatFireRate: `${te}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${te}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${te}:loadoutUnitSeconds`
+    const ni = {
+      loadoutStatFireRate: `${TW}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${TW}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${TW}:loadoutUnitSeconds`
     };
 
-    function Ai(ee) {
-      return "loadoutStatPotency" === ee.loadoutStatKind ? (0, Qe.T)(ee.loadoutStatValue) : String(ee.loadoutStatValue)
+    function ui(WW) {
+      return "loadoutStatPotency" === WW.loadoutStatKind ? (0, QW.V)(WW.loadoutStatValue) : String(WW.loadoutStatValue)
     }
 
-    function Yi(ee) {
-      var ie;
+    function oi(WW) {
+      var iW;
       let {
-        option: He
-      } = ee;
+        option: OW
+      } = WW;
       const {
-        t: ye
-      } = (0, Re.v)(), be = He.loadoutOptionTiers, Me = null === (ie = be[0]) || void 0 === ie ? void 0 : ie.loadoutTierStats.map((ee => ee.loadoutStatKind));
-      if (!Me || 0 === Me.length) return null;
-      const Ke = He.loadoutOptionOwnedTier,
-        Ue = (ee, ie) => {
-          var He;
-          return null === (He = be[ee]) || void 0 === He ? void 0 : He.loadoutTierStats.find((ee => ee.loadoutStatKind === ie))
+        t: mW
+      } = (0, ZW.B)(), EW = OW.loadoutOptionTiers, NW = null === (iW = EW[0]) || void 0 === iW ? void 0 : iW.loadoutTierStats.map((WW => WW.loadoutStatKind));
+      if (!NW || 0 === NW.length) return null;
+      const PW = OW.loadoutOptionOwnedTier,
+        LW = (WW, iW) => {
+          var OW;
+          return null === (OW = EW[WW]) || void 0 === OW ? void 0 : OW.loadoutTierStats.find((WW => WW.loadoutStatKind === iW))
         };
-      return (0, We.jsxs)("table", {
+      return (0, yW.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, We.jsx)("thead", {
-          children: (0, We.jsxs)("tr", {
-            children: [(0, We.jsx)("th", {}), be.map(((ee, ie) => (0, We.jsx)("th", {
-              className: Je()({
-                Current: ie + 1 === Ke,
-                Next: ie === Ke
+        children: [(0, yW.jsx)("thead", {
+          children: (0, yW.jsxs)("tr", {
+            children: [(0, yW.jsx)("th", {}), EW.map(((WW, iW) => (0, yW.jsx)("th", {
+              className: wW()({
+                Current: iW + 1 === PW,
+                Next: iW === PW
               }),
-              children: ye(`${te}:loadoutTier`, {
-                tier: (0, Qe.T)(ie + 1)
+              children: mW(`${TW}:loadoutTier`, {
+                tier: (0, QW.V)(iW + 1)
               })
-            }, ie)))]
+            }, iW)))]
           })
-        }), (0, We.jsx)("tbody", {
-          children: Me.map((ee => {
-            const ie = Pi[ee];
-            return (0, We.jsxs)("tr", {
-              children: [(0, We.jsxs)("th", {
+        }), (0, yW.jsx)("tbody", {
+          children: NW.map((WW => {
+            const iW = ni[WW];
+            return (0, yW.jsxs)("tr", {
+              children: [(0, yW.jsxs)("th", {
                 scope: "row",
-                children: [ye(`${te}:${ee}`), ie && (0, We.jsx)("span", {
+                children: [mW(`${TW}:${WW}`), iW && (0, yW.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: ye(ie)
+                  children: mW(iW)
                 })]
-              }), be.map(((ie, He) => {
-                const ye = Ue(He, ee),
-                  be = He > 0 ? Ue(He - 1, ee) : void 0,
-                  Me = ye && be ? ye.loadoutStatValue - be.loadoutStatValue : 0,
-                  Fe = wi.has(ee) ? Me < 0 : Me > 0,
-                  oe = He === Ke;
-                return (0, We.jsxs)("td", {
-                  className: Je()({
-                    Current: He + 1 === Ke,
-                    Next: oe,
-                    Gain: Fe,
-                    Owned: He < Ke
+              }), EW.map(((iW, OW) => {
+                const mW = LW(OW, WW),
+                  EW = OW > 0 ? LW(OW - 1, WW) : void 0,
+                  NW = mW && EW ? mW.loadoutStatValue - EW.loadoutStatValue : 0,
+                  cW = Ji.has(WW) ? NW < 0 : NW > 0,
+                  tW = OW === PW;
+                return (0, yW.jsxs)("td", {
+                  className: wW()({
+                    Current: OW + 1 === PW,
+                    Next: tW,
+                    Gain: cW,
+                    Owned: OW < PW
                   }),
-                  children: [oe && Fe && (0, We.jsx)("span", {
+                  children: [tW && cW && (0, yW.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: Me < 0 ? "\u25bc" : "\u25b2"
-                  }), ye ? Ai(ye) : "-"]
-                }, He)
+                    children: NW < 0 ? "\u25bc" : "\u25b2"
+                  }), mW ? ui(mW) : "-"]
+                }, OW)
               }))]
-            }, ee)
+            }, WW)
           }))
         })]
       })
     }
 
-    function Vi(ee) {
+    function di(WW) {
       let {
-        view: ie,
-        controller: He,
-        slot: ye,
-        option: be
-      } = ee;
+        view: iW,
+        controller: OW,
+        slot: mW,
+        option: EW
+      } = WW;
       const {
-        t: Me
-      } = (0, Re.v)(), Ke = ie.loadout, Ue = be.loadoutOptionOwnedTier, Fe = be.loadoutOptionTiers.length, Je = ye.loadoutSlotEquippedId === be.loadoutOptionId, oe = Ue < Fe ? be.loadoutOptionTiers[Ue].loadoutTierCost : null, ke = null !== oe && ii(Ke, oe), qe = be.loadoutOptionId, Te = Oi();
-      return (0, We.jsxs)(We.Fragment, {
-        children: [(0, We.jsx)(ci, {
-          icon: be.loadoutOptionIcon,
-          name: be.loadoutOptionName,
-          status: 0 === Ue ? Me(`${te}:loadoutLocked`) : Fe > 1 ? Me(`${te}:loadoutTier`, {
-            tier: (0, Qe.T)(Ue)
+        t: NW
+      } = (0, ZW.B)(), PW = iW.loadout, LW = EW.loadoutOptionOwnedTier, cW = EW.loadoutOptionTiers.length, wW = mW.loadoutSlotEquippedId === EW.loadoutOptionId, tW = LW < cW ? EW.loadoutOptionTiers[LW].loadoutTierCost : null, xW = null !== tW && ii(PW, tW), lW = EW.loadoutOptionId, bW = Ki();
+      return (0, yW.jsxs)(yW.Fragment, {
+        children: [(0, yW.jsx)(vi, {
+          icon: EW.loadoutOptionIcon,
+          name: EW.loadoutOptionName,
+          status: 0 === LW ? NW(`${TW}:loadoutLocked`) : cW > 1 ? NW(`${TW}:loadoutTier`, {
+            tier: (0, QW.V)(LW)
           }) : null,
-          locked: 0 === Ue,
-          equipped: Je
-        }), (0, We.jsx)("p", {
+          locked: 0 === LW,
+          equipped: wW
+        }), (0, yW.jsx)("p", {
           className: "BoardDescription",
-          children: be.loadoutOptionDescription
-        }), (0, We.jsx)(Yi, {
-          option: be
-        }), (0, We.jsxs)("div", {
-          ref: Te("act", qe),
+          children: EW.loadoutOptionDescription
+        }), (0, yW.jsx)(oi, {
+          option: EW
+        }), (0, yW.jsxs)("div", {
+          ref: bW("act", lW),
           className: "BoardActions",
-          children: [null !== oe && (0, We.jsxs)("div", {
+          children: [null !== tW && (0, yW.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, We.jsx)(Di, {
-              cost: oe,
-              loadout: Ke
-            }), (0, We.jsx)(fe.m, {
-              disabled: !ke || ie.pending,
+            children: [(0, yW.jsx)(Hi, {
+              cost: tW,
+              loadout: PW
+            }), (0, yW.jsx)(AW.n, {
+              disabled: !xW || iW.pending,
               onClick: () => {
-                He.act(0 === Ue ? "loadoutUnlock" : "loadoutUpgrade", qe)
+                OW.act(0 === LW ? "loadoutUnlock" : "loadoutUpgrade", lW)
               },
-              children: 0 === Ue ? Me(`${te}:loadoutUnlock`) : Me(`${te}:loadoutUpgrade`, {
-                tier: (0, Qe.T)(Ue + 1)
+              children: 0 === LW ? NW(`${TW}:loadoutUnlock`) : NW(`${TW}:loadoutUpgrade`, {
+                tier: (0, QW.V)(LW + 1)
               })
             })]
-          }), null === oe && Fe > 1 && (0, We.jsx)("span", {
+          }), null === tW && cW > 1 && (0, yW.jsx)("span", {
             className: "BoardHint",
-            children: Me(`${te}:loadoutMaxed`)
-          }), Ue > 0 && !Je && (0, We.jsx)(fe.c, {
-            disabled: ie.pending,
+            children: NW(`${TW}:loadoutMaxed`)
+          }), LW > 0 && !wW && (0, yW.jsx)(AW.f, {
+            disabled: iW.pending,
             onClick: () => {
-              He.act("loadoutEquip", qe)
+              OW.act("loadoutEquip", lW)
             },
-            children: Me(`${te}:loadoutEquip`)
+            children: NW(`${TW}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function ai(ee) {
+    function ei(WW) {
       let {
-        view: ie,
-        controller: He,
-        perk: ye
-      } = ee;
+        view: iW,
+        controller: OW,
+        perk: mW
+      } = WW;
       const {
-        t: be
-      } = (0, Re.v)(), Me = ie.loadout, Ke = bi(Me), Ue = ye.loadoutPerkId, Fe = Oi();
-      return (0, We.jsxs)(We.Fragment, {
-        children: [(0, We.jsx)(ci, {
-          icon: ye.loadoutPerkIcon,
-          name: ye.loadoutPerkName,
-          status: ye.loadoutPerkOwned ? null : be(`${te}:loadoutLocked`),
-          locked: !ye.loadoutPerkOwned,
-          equipped: ye.loadoutPerkEquipped
-        }), (0, We.jsx)("p", {
+        t: EW
+      } = (0, ZW.B)(), NW = iW.loadout, PW = Ei(NW), LW = mW.loadoutPerkId, cW = Ki();
+      return (0, yW.jsxs)(yW.Fragment, {
+        children: [(0, yW.jsx)(vi, {
+          icon: mW.loadoutPerkIcon,
+          name: mW.loadoutPerkName,
+          status: mW.loadoutPerkOwned ? null : EW(`${TW}:loadoutLocked`),
+          locked: !mW.loadoutPerkOwned,
+          equipped: mW.loadoutPerkEquipped
+        }), (0, yW.jsx)("p", {
           className: "BoardDescription",
-          children: ye.loadoutPerkDescription
-        }), (0, We.jsxs)("div", {
-          ref: Fe("act", Ue),
+          children: mW.loadoutPerkDescription
+        }), (0, yW.jsxs)("div", {
+          ref: cW("act", LW),
           className: "BoardActions",
-          children: [!ye.loadoutPerkOwned && (0, We.jsxs)("div", {
+          children: [!mW.loadoutPerkOwned && (0, yW.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, We.jsx)(Di, {
-              cost: ye.loadoutPerkCost,
-              loadout: Me
-            }), (0, We.jsx)(fe.m, {
-              disabled: !ii(Me, ye.loadoutPerkCost) || ie.pending,
+            children: [(0, yW.jsx)(Hi, {
+              cost: mW.loadoutPerkCost,
+              loadout: NW
+            }), (0, yW.jsx)(AW.n, {
+              disabled: !ii(NW, mW.loadoutPerkCost) || iW.pending,
               onClick: () => {
-                He.act("loadoutUnlock", Ue)
+                OW.act("loadoutUnlock", LW)
               },
-              children: be(`${te}:loadoutUnlock`)
+              children: EW(`${TW}:loadoutUnlock`)
             })]
-          }), ye.loadoutPerkOwned && !ye.loadoutPerkEquipped && (0, We.jsx)(fe.c, {
-            disabled: Ke || ie.pending,
+          }), mW.loadoutPerkOwned && !mW.loadoutPerkEquipped && (0, yW.jsx)(AW.f, {
+            disabled: PW || iW.pending,
             onClick: () => {
-              He.act("loadoutEquip", Ue)
+              OW.act("loadoutEquip", LW)
             },
-            children: be(`${te}:loadoutEquip`)
-          }), ye.loadoutPerkOwned && !ye.loadoutPerkEquipped && Ke && (0, We.jsx)("span", {
+            children: EW(`${TW}:loadoutEquip`)
+          }), mW.loadoutPerkOwned && !mW.loadoutPerkEquipped && PW && (0, yW.jsx)("span", {
             className: "BoardHint",
-            children: be(`${te}:loadoutSocketsFullHint`)
-          }), ye.loadoutPerkEquipped && (0, We.jsx)(fe.M, {
-            disabled: ie.pending,
+            children: EW(`${TW}:loadoutSocketsFullHint`)
+          }), mW.loadoutPerkEquipped && (0, yW.jsx)(AW.Z, {
+            disabled: iW.pending,
             onClick: () => {
-              He.act("loadoutUnequip", Ue)
+              OW.act("loadoutUnequip", LW)
             },
-            children: be(`${te}:loadoutUnequip`)
+            children: EW(`${TW}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function ci(ee) {
+    function vi(WW) {
       let {
-        icon: ie,
-        name: He,
-        status: ye,
-        locked: be,
-        equipped: Me
-      } = ee;
+        icon: iW,
+        name: OW,
+        status: mW,
+        locked: EW,
+        equipped: NW
+      } = WW;
       const {
-        t: Ke
-      } = (0, Re.v)();
-      return (0, We.jsxs)(ce, {
-        icon: (0, We.jsx)(De, {
-          itemName: ie
+        t: PW
+      } = (0, ZW.B)();
+      return (0, yW.jsxs)(vW, {
+        icon: (0, yW.jsx)(HW, {
+          itemName: iW
         }),
-        name: He,
-        children: [null !== ye && (0, We.jsx)("span", {
-          className: Je()("LoadoutStatusText", {
-            Locked: be
+        name: OW,
+        children: [null !== mW && (0, yW.jsx)("span", {
+          className: wW()("LoadoutStatusText", {
+            Locked: EW
           }),
-          children: ye
-        }), Me && (0, We.jsx)("span", {
+          children: mW
+        }), NW && (0, yW.jsx)("span", {
           className: "BoardBadge",
-          children: Ke(`${te}:loadoutEquippedBadge`)
+          children: PW(`${TW}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function xi(ee) {
+    function gi(WW) {
       let {
-        view: ie,
-        controller: He
-      } = ee;
-      const ye = ie.loadout;
-      if ("loadoutPerks" === ie.slot) {
-        const ee = ye.loadoutPerks.find((ee => ee.loadoutPerkId === ie.selectedId));
-        return (0, We.jsx)("section", {
+        view: iW,
+        controller: OW
+      } = WW;
+      const mW = iW.loadout;
+      if ("loadoutPerks" === iW.slot) {
+        const WW = mW.loadoutPerks.find((WW => WW.loadoutPerkId === iW.selectedId));
+        return (0, yW.jsx)("section", {
           className: "BoardDetail",
-          children: ee && (0, We.jsx)(ai, {
-            view: ie,
-            controller: He,
-            perk: ee
+          children: WW && (0, yW.jsx)(ei, {
+            view: iW,
+            controller: OW,
+            perk: WW
           })
         })
       }
-      const be = yi(ye, ie.slot),
-        Me = be.loadoutSlotOptions.find((ee => ee.loadoutOptionId === ie.selectedId));
-      return (0, We.jsx)("section", {
+      const EW = mi(mW, iW.slot),
+        NW = EW.loadoutSlotOptions.find((WW => WW.loadoutOptionId === iW.selectedId));
+      return (0, yW.jsx)("section", {
         className: "BoardDetail",
-        children: Me && (0, We.jsx)(Vi, {
-          view: ie,
-          controller: He,
-          slot: be,
-          option: Me
+        children: NW && (0, yW.jsx)(di, {
+          view: iW,
+          controller: OW,
+          slot: EW,
+          option: NW
         })
       })
     }
 
-    function Li(ee) {
+    function Di(WW) {
       let {
-        owned: ie,
-        total: He
-      } = ee;
-      return He <= 1 ? null : (0, We.jsx)("span", {
+        owned: iW,
+        total: OW
+      } = WW;
+      return OW <= 1 ? null : (0, yW.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: He
-        }, ((ee, He) => (0, We.jsx)("span", {
-          className: Je()("LoadoutPip", {
-            Filled: He < ie
+          length: OW
+        }, ((WW, OW) => (0, yW.jsx)("span", {
+          className: wW()("LoadoutPip", {
+            Filled: OW < iW
           })
-        }, He)))
+        }, OW)))
       })
     }
 
-    function Ci(ee) {
+    function Vi(WW) {
       let {
-        view: ie,
-        controller: He
-      } = ee;
+        view: iW,
+        controller: OW
+      } = WW;
       const {
-        t: ye
-      } = (0, Re.v)(), be = ie.loadout, Me = Oi();
-      return (0, We.jsxs)("nav", {
+        t: mW
+      } = (0, ZW.B)(), EW = iW.loadout, NW = Ki();
+      return (0, yW.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": ye(`${te}:loadoutKit`),
-        children: [be.loadoutSlots.map((ee => {
-          const be = ee.loadoutSlotOptions.find((ie => ie.loadoutOptionId === ee.loadoutSlotEquippedId));
-          return (0, We.jsxs)("button", {
-            ref: Me("section", ee.loadoutSlotKind),
+        "aria-label": mW(`${TW}:loadoutKit`),
+        children: [EW.loadoutSlots.map((WW => {
+          const EW = WW.loadoutSlotOptions.find((iW => iW.loadoutOptionId === WW.loadoutSlotEquippedId));
+          return (0, yW.jsxs)("button", {
+            ref: NW("section", WW.loadoutSlotKind),
             type: "button",
-            className: Je()("LoadoutKitSlot", {
-              Selected: ie.slot === ee.loadoutSlotKind
+            className: wW()("LoadoutKitSlot", {
+              Selected: iW.slot === WW.loadoutSlotKind
             }),
             onClick: () => {
-              He.selectSlot(ee.loadoutSlotKind)
+              OW.selectSlot(WW.loadoutSlotKind)
             },
-            children: [(0, We.jsx)("span", {
+            children: [(0, yW.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: be && (0, We.jsx)(De, {
-                itemName: be.loadoutOptionIcon
+              children: EW && (0, yW.jsx)(HW, {
+                itemName: EW.loadoutOptionIcon
               })
-            }), (0, We.jsxs)("span", {
+            }), (0, yW.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, We.jsxs)("span", {
+              children: [(0, yW.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, We.jsx)("span", {
+                children: [(0, yW.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: ye(Bi[ee.loadoutSlotKind])
-                }), be && (0, We.jsx)(Li, {
-                  owned: be.loadoutOptionOwnedTier,
-                  total: be.loadoutOptionTiers.length
+                  children: mW(ki[WW.loadoutSlotKind])
+                }), EW && (0, yW.jsx)(Di, {
+                  owned: EW.loadoutOptionOwnedTier,
+                  total: EW.loadoutOptionTiers.length
                 })]
-              }), (0, We.jsx)("span", {
+              }), (0, yW.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === be || void 0 === be ? void 0 : be.loadoutOptionName
+                children: null === EW || void 0 === EW ? void 0 : EW.loadoutOptionName
               })]
             })]
-          }, ee.loadoutSlotKind)
-        })), (0, We.jsx)(vi, {
-          view: ie,
-          controller: He
+          }, WW.loadoutSlotKind)
+        })), (0, yW.jsx)(fi, {
+          view: iW,
+          controller: OW
         })]
       })
     }
 
-    function vi(ee) {
+    function fi(WW) {
       let {
-        view: ie,
-        controller: He
-      } = ee;
+        view: iW,
+        controller: OW
+      } = WW;
       const {
-        t: ye
-      } = (0, Re.v)(), be = ie.loadout, Me = be.loadoutPerks.filter((ee => ee.loadoutPerkEquipped)), Ke = Oi();
-      return (0, We.jsxs)("button", {
-        ref: Ke("section", "loadoutPerks"),
+        t: mW
+      } = (0, ZW.B)(), EW = iW.loadout, NW = EW.loadoutPerks.filter((WW => WW.loadoutPerkEquipped)), PW = Ki();
+      return (0, yW.jsxs)("button", {
+        ref: PW("section", "loadoutPerks"),
         type: "button",
-        className: Je()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === ie.slot
+        className: wW()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === iW.slot
         }),
         onClick: () => {
-          He.selectSlot("loadoutPerks")
+          OW.selectSlot("loadoutPerks")
         },
-        children: [(0, We.jsxs)("span", {
+        children: [(0, yW.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, We.jsx)("span", {
+          children: [(0, yW.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: ye(Bi.loadoutPerks)
-          }), (0, We.jsx)("span", {
+            children: mW(ki.loadoutPerks)
+          }), (0, yW.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: ye(`${te}:loadoutPerkCount`, {
-              equipped: String(Me.length),
-              max: String(be.loadoutMaxPerks)
+            children: mW(`${TW}:loadoutPerkCount`, {
+              equipped: String(NW.length),
+              max: String(EW.loadoutMaxPerks)
             })
           })]
-        }), (0, We.jsx)("span", {
+        }), (0, yW.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: be.loadoutMaxPerks
-          }, ((ee, ie) => {
-            const He = Me[ie];
-            return (0, We.jsxs)("span", {
-              className: Je()("LoadoutSocket", {
-                Filled: He,
-                Empty: !He
+            length: EW.loadoutMaxPerks
+          }, ((WW, iW) => {
+            const OW = NW[iW];
+            return (0, yW.jsxs)("span", {
+              className: wW()("LoadoutSocket", {
+                Filled: OW,
+                Empty: !OW
               }),
-              children: [(0, We.jsx)("span", {
+              children: [(0, yW.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: He && (0, We.jsx)(De, {
-                  itemName: He.loadoutPerkIcon
+                children: OW && (0, yW.jsx)(HW, {
+                  itemName: OW.loadoutPerkIcon
                 })
-              }), (0, We.jsx)("span", {
+              }), (0, yW.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: He ? He.loadoutPerkName : ye(`${te}:loadoutPerkSocketEmpty`)
+                children: OW ? OW.loadoutPerkName : mW(`${TW}:loadoutPerkSocketEmpty`)
               })]
-            }, ie)
+            }, iW)
           }))
         })]
       })
     }
 
-    function ui(ee) {
+    function Ci(WW) {
       let {
-        icon: ie,
-        name: He,
-        selected: ye,
-        equipped: be,
-        locked: Me,
-        ownedTier: Ke,
-        tiers: Ue,
-        buttonRef: Fe,
-        onSelect: Je
-      } = ee;
+        icon: iW,
+        name: OW,
+        selected: mW,
+        equipped: EW,
+        locked: NW,
+        ownedTier: PW,
+        tiers: LW,
+        buttonRef: cW,
+        onSelect: wW
+      } = WW;
       const {
-        t: oe
-      } = (0, Re.v)();
-      return (0, We.jsxs)(ae, {
-        icon: (0, We.jsx)(De, {
-          itemName: ie
+        t: tW
+      } = (0, ZW.B)();
+      return (0, yW.jsxs)(eW, {
+        icon: (0, yW.jsx)(HW, {
+          itemName: iW
         }),
-        name: He,
-        selected: ye,
-        locked: Me,
-        buttonRef: Fe,
-        onSelect: Je,
-        children: [be && (0, We.jsx)("span", {
+        name: OW,
+        selected: mW,
+        locked: NW,
+        buttonRef: cW,
+        onSelect: wW,
+        children: [EW && (0, yW.jsx)("span", {
           className: "BoardBadge",
-          children: oe(`${te}:loadoutEquippedBadge`)
-        }), Me && (0, We.jsx)("span", {
+          children: tW(`${TW}:loadoutEquippedBadge`)
+        }), NW && (0, yW.jsx)("span", {
           className: "BoardBadge Muted",
-          children: oe(`${te}:loadoutLocked`)
-        }), !Me && (0, We.jsx)(Li, {
-          owned: Ke,
-          total: Ue
+          children: tW(`${TW}:loadoutLocked`)
+        }), !NW && (0, yW.jsx)(Di, {
+          owned: PW,
+          total: LW
         })]
       })
     }
 
-    function mi(ee) {
+    function Xi(WW) {
       let {
-        view: ie,
-        controller: He
-      } = ee;
-      const ye = ie.loadout,
-        be = Oi();
-      if ("loadoutPerks" === ie.slot) return (0, We.jsx)("div", {
+        view: iW,
+        controller: OW
+      } = WW;
+      const mW = iW.loadout,
+        EW = Ki();
+      if ("loadoutPerks" === iW.slot) return (0, yW.jsx)("div", {
         className: "BoardTiles",
-        children: ye.loadoutPerks.map((ee => (0, We.jsx)(ui, {
-          icon: ee.loadoutPerkIcon,
-          name: ee.loadoutPerkName,
-          selected: ie.selectedId === ee.loadoutPerkId,
-          equipped: ee.loadoutPerkEquipped,
-          locked: !ee.loadoutPerkOwned,
+        children: mW.loadoutPerks.map((WW => (0, yW.jsx)(Ci, {
+          icon: WW.loadoutPerkIcon,
+          name: WW.loadoutPerkName,
+          selected: iW.selectedId === WW.loadoutPerkId,
+          equipped: WW.loadoutPerkEquipped,
+          locked: !WW.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: be("tq", ee.loadoutPerkId),
+          buttonRef: EW("Kl", WW.loadoutPerkId),
           onSelect: () => {
-            He.select(ee.loadoutPerkId)
+            OW.select(WW.loadoutPerkId)
           }
-        }, ee.loadoutPerkId)))
+        }, WW.loadoutPerkId)))
       });
-      const Me = yi(ye, ie.slot);
-      return (0, We.jsx)("div", {
+      const NW = mi(mW, iW.slot);
+      return (0, yW.jsx)("div", {
         className: "BoardTiles",
-        children: Me.loadoutSlotOptions.map((ee => (0, We.jsx)(ui, {
-          icon: ee.loadoutOptionIcon,
-          name: ee.loadoutOptionName,
-          selected: ie.selectedId === ee.loadoutOptionId,
-          equipped: Me.loadoutSlotEquippedId === ee.loadoutOptionId,
-          locked: 0 === ee.loadoutOptionOwnedTier,
-          ownedTier: ee.loadoutOptionOwnedTier,
-          tiers: ee.loadoutOptionTiers.length,
-          buttonRef: be("tq", ee.loadoutOptionId),
+        children: NW.loadoutSlotOptions.map((WW => (0, yW.jsx)(Ci, {
+          icon: WW.loadoutOptionIcon,
+          name: WW.loadoutOptionName,
+          selected: iW.selectedId === WW.loadoutOptionId,
+          equipped: NW.loadoutSlotEquippedId === WW.loadoutOptionId,
+          locked: 0 === WW.loadoutOptionOwnedTier,
+          ownedTier: WW.loadoutOptionOwnedTier,
+          tiers: WW.loadoutOptionTiers.length,
+          buttonRef: EW("Kl", WW.loadoutOptionId),
           onSelect: () => {
-            He.select(ee.loadoutOptionId)
+            OW.select(WW.loadoutOptionId)
           }
-        }, ee.loadoutOptionId)))
+        }, WW.loadoutOptionId)))
       })
     }
 
-    function li(ee) {
+    function Bi(WW) {
       let {
-        loadout: ie
-      } = ee;
-      return (0, We.jsx)(xe, {
-        coins: ie.loadoutCoins,
-        children: ie.loadoutHeldParts.filter((ee => ee.loadoutHeldPartAmount > 0)).map((ee => (0, We.jsx)(Ae, {
-          itemName: ee.loadoutHeldPartItem,
-          amount: ee.loadoutHeldPartAmount
-        }, ee.loadoutHeldPartCurrency)))
+        loadout: iW
+      } = WW;
+      return (0, yW.jsx)(gW, {
+        coins: iW.loadoutCoins,
+        children: iW.loadoutHeldParts.filter((WW => WW.loadoutHeldPartAmount > 0)).map((WW => (0, yW.jsx)(uW, {
+          itemName: WW.loadoutHeldPartItem,
+          amount: WW.loadoutHeldPartAmount
+        }, WW.loadoutHeldPartCurrency)))
       })
     }
 
-    function Si(ee) {
+    function qi(WW) {
       let {
-        controller: ie
-      } = ee;
-      const He = (0, oe.j)(ki, ie.getSnapshot()),
+        controller: iW
+      } = WW;
+      const OW = (0, tW.g)(xi, iW.getSnapshot()),
         {
-          t: ye
-        } = (0, Re.v)();
-      if (null === He.loadout) return null;
-      const be = He.notice;
-      return (0, We.jsx)(ti, {
-        view: He,
-        onDismiss: ie.dismiss,
-        children: (0, We.jsxs)(we, {
-          open: He.open,
-          onDismiss: ie.dismiss,
-          title: ye(`${te}:loadoutTitle`),
+          t: mW
+        } = (0, ZW.B)();
+      if (null === OW.loadout) return null;
+      const EW = OW.notice;
+      return (0, yW.jsx)(yi, {
+        view: OW,
+        onDismiss: iW.dismiss,
+        children: (0, yW.jsxs)(hW, {
+          open: OW.open,
+          onDismiss: iW.dismiss,
+          title: mW(`${TW}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, We.jsx)(li, {
-            loadout: He.loadout
+          headerExtra: (0, yW.jsx)(Bi, {
+            loadout: OW.loadout
           }),
-          statusRefused: null === be || void 0 === be ? void 0 : be.loadoutNoticeRefused,
-          status: (0, We.jsxs)(We.Fragment, {
-            children: [(0, We.jsx)("span", {
+          statusRefused: null === EW || void 0 === EW ? void 0 : EW.loadoutNoticeRefused,
+          status: (0, yW.jsxs)(yW.Fragment, {
+            children: [(0, yW.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: ye(`${te}:loadoutRadioBadge`)
-            }), null !== be && ye(`${te}:${be.loadoutNoticeKey}`, {
-              name: be.loadoutNoticeName,
-              tier: (0, Qe.T)(be.loadoutNoticeTier),
-              max: String(He.loadout.loadoutMaxPerks)
+              children: mW(`${TW}:loadoutRadioBadge`)
+            }), null !== EW && mW(`${TW}:${EW.loadoutNoticeKey}`, {
+              name: EW.loadoutNoticeName,
+              tier: (0, QW.V)(EW.loadoutNoticeTier),
+              max: String(OW.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, We.jsx)(Ci, {
-            view: He,
-            controller: ie
-          }), (0, We.jsx)(mi, {
-            view: He,
-            controller: ie
-          }), (0, We.jsx)(xi, {
-            view: He,
-            controller: ie
+          children: [(0, yW.jsx)(Vi, {
+            view: OW,
+            controller: iW
+          }), (0, yW.jsx)(Xi, {
+            view: OW,
+            controller: iW
+          }), (0, yW.jsx)(gi, {
+            view: OW,
+            controller: iW
           })]
         })
       })
     }
 
-    function ni(ee, ie, He) {
-      const ye = ee.locatorEntries.find((ee => ee.locatorEntryId === He));
-      if (!ye) return null;
-      const be = ye.locatorEntryName;
-      if ("locatorDisarm" === ie) return ye.locatorEntryArmed ? {
-        board: ji(ee, null),
-        notice: si("locatorNoticeDisarmed", be)
+    function Ri(WW, iW, OW) {
+      const mW = WW.locatorEntries.find((WW => WW.locatorEntryId === OW));
+      if (!mW) return null;
+      const EW = mW.locatorEntryName;
+      if ("locatorDisarm" === iW) return mW.locatorEntryArmed ? {
+        board: Gi(WW, null),
+        notice: Ii("locatorNoticeDisarmed", EW)
       } : null;
-      if ("locatorArm" === ie) return ye.locatorEntryOwned && !ye.locatorEntryArmed ? {
-        board: ji(ee, He),
-        notice: si("locatorNoticeArmed", be)
+      if ("locatorArm" === iW) return mW.locatorEntryOwned && !mW.locatorEntryArmed ? {
+        board: Gi(WW, OW),
+        notice: Ii("locatorNoticeArmed", EW)
       } : null;
-      if (ye.locatorEntryOwned || ee.locatorCoins < ye.locatorEntryPrice) return null;
-      const Me = ji({
-        ...ee,
-        locatorCoins: ee.locatorCoins - ye.locatorEntryPrice
-      }, He);
+      if (mW.locatorEntryOwned || WW.locatorCoins < mW.locatorEntryPrice) return null;
+      const NW = Gi({
+        ...WW,
+        locatorCoins: WW.locatorCoins - mW.locatorEntryPrice
+      }, OW);
       return {
         board: {
-          ...Me,
-          locatorEntries: Me.locatorEntries.map((ee => ee.locatorEntryId === He ? {
-            ...ee,
+          ...NW,
+          locatorEntries: NW.locatorEntries.map((WW => WW.locatorEntryId === OW ? {
+            ...WW,
             locatorEntryOwned: !0
-          } : ee))
+          } : WW))
         },
-        notice: si("locatorNoticeBought", be)
+        notice: Ii("locatorNoticeBought", EW)
       }
     }
 
-    function ji(ee, ie) {
+    function Gi(WW, iW) {
       return {
-        ...ee,
-        locatorEntries: ee.locatorEntries.map((ee => {
-          const He = ee.locatorEntryId === ie;
-          return ee.locatorEntryArmed === He ? ee : {
-            ...ee,
-            locatorEntryArmed: He
+        ...WW,
+        locatorEntries: WW.locatorEntries.map((WW => {
+          const OW = WW.locatorEntryId === iW;
+          return WW.locatorEntryArmed === OW ? WW : {
+            ...WW,
+            locatorEntryArmed: OW
           }
         }))
       }
     }
 
-    function si(ee, ie) {
+    function Ii(WW, iW) {
       return {
-        locatorNoticeKey: ee,
+        locatorNoticeKey: WW,
         locatorNoticeRefused: !1,
-        locatorNoticeName: ie
+        locatorNoticeName: iW
       }
     }
-    const Ii = "containmentLocatorView";
-    class Ni extends ei {
-      constructor(ee, ie, He, ye) {
-        super(ee, ie, He, ye, "locator", ni), this.snapshot = this.buildSnapshot()
+    const ai = "containmentLocatorView";
+    class ri extends Wi {
+      constructor(WW, iW, OW, mW) {
+        super(WW, iW, OW, mW, "locator", Ri), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(ee) {
-        return ee.locatorMessageOpens
+      messageOpens(WW) {
+        return WW.locatorMessageOpens
       }
-      messageNotice(ee) {
-        return ee.locatorNotice
+      messageNotice(WW) {
+        return WW.locatorNotice
       }
-      openingSelection(ee) {
-        var ie;
-        const He = ee.locatorEntries;
-        return (null !== (ie = He.find((ee => ee.locatorEntryArmed))) && void 0 !== ie ? ie : He[0]).locatorEntryId
+      openingSelection(WW) {
+        var iW;
+        const OW = WW.locatorEntries;
+        return (null !== (iW = OW.find((WW => WW.locatorEntryArmed))) && void 0 !== iW ? iW : OW[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -1606,245 +1920,245 @@ export const modules = {
         }
       }
     }
-    const Gi = {
-        locatorContained: `${te}:locatorFlavourContained`,
-        locatorEncountered: `${te}:locatorFlavourEncountered`,
-        locatorUnseen: `${te}:locatorFlavourUnseen`
+    const zi = {
+        locatorContained: `${TW}:locatorFlavourContained`,
+        locatorEncountered: `${TW}:locatorFlavourEncountered`,
+        locatorUnseen: `${TW}:locatorFlavourUnseen`
       },
-      ri = {
+      Fi = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${te}:locatorAttunedNormal`,
-        codexHardOnly: `${te}:locatorAttunedHard`
+        codexNormalOnly: `${TW}:locatorAttunedNormal`,
+        codexHardOnly: `${TW}:locatorAttunedHard`
       };
 
     function Qi() {
-      return (0, We.jsx)(We.Fragment, {
+      return (0, yW.jsx)(yW.Fragment, {
         children: Array.from({
           length: 5
-        }, ((ee, ie) => (0, We.jsx)("span", {
+        }, ((WW, iW) => (0, yW.jsx)("span", {
           className: "LocatorFly",
-          children: (0, We.jsx)("img", {
+          children: (0, yW.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, ie)))
+        }, iW)))
       })
     }
 
-    function eH(ee) {
+    function WO(WW) {
       let {
-        entry: ie
-      } = ee;
+        entry: iW
+      } = WW;
       const {
-        t: He
-      } = (0, Re.v)();
-      return ie.locatorEntryArmed ? (0, We.jsx)("span", {
+        t: OW
+      } = (0, ZW.B)();
+      return iW.locatorEntryArmed ? (0, yW.jsx)("span", {
         className: "BoardBadge Armed",
-        children: He(`${te}:locatorArmedBadge`)
-      }) : ie.locatorEntryOwned ? (0, We.jsx)("span", {
+        children: OW(`${TW}:locatorArmedBadge`)
+      }) : iW.locatorEntryOwned ? (0, yW.jsx)("span", {
         className: "BoardBadge",
-        children: He(`${te}:locatorOwnedBadge`)
+        children: OW(`${TW}:locatorOwnedBadge`)
       }) : null
     }
 
-    function iH(ee) {
+    function iO(WW) {
       let {
-        entry: ie,
-        coins: He,
-        inTile: ye = !1
-      } = ee;
-      return (0, We.jsx)(Ae, {
-        itemName: Ze,
-        amount: ie.locatorEntryPrice,
-        lJ: He,
-        inTile: ye
+        entry: iW,
+        coins: OW,
+        inTile: mW = !1
+      } = WW;
+      return (0, yW.jsx)(uW, {
+        itemName: JW,
+        amount: iW.locatorEntryPrice,
+        BL: OW,
+        inTile: mW
       })
     }
 
-    function HH(ee) {
+    function OO(WW) {
       let {
-        view: ie,
-        controller: He,
-        entry: ye
-      } = ee;
+        view: iW,
+        controller: OW,
+        entry: mW
+      } = WW;
       const {
-        t: be
-      } = (0, Re.v)(), Me = ye.locatorEntryId, Ke = ie.locators.locatorEntries.find((ee => ee.locatorEntryArmed && ee !== ye));
-      return (0, We.jsxs)("div", {
+        t: EW
+      } = (0, ZW.B)(), NW = mW.locatorEntryId, PW = iW.locators.locatorEntries.find((WW => WW.locatorEntryArmed && WW !== mW));
+      return (0, yW.jsxs)("div", {
         className: "BoardActions",
-        children: [ye.locatorEntryArmed && (0, We.jsx)(fe.M, {
-          disabled: ie.pending,
+        children: [mW.locatorEntryArmed && (0, yW.jsx)(AW.Z, {
+          disabled: iW.pending,
           onClick: () => {
-            He.act("locatorDisarm", Me)
+            OW.act("locatorDisarm", NW)
           },
-          children: be(`${te}:locatorDisarm`)
-        }), ye.locatorEntryOwned && !ye.locatorEntryArmed && (0, We.jsx)(fe.c, {
-          disabled: ie.pending,
+          children: EW(`${TW}:locatorDisarm`)
+        }), mW.locatorEntryOwned && !mW.locatorEntryArmed && (0, yW.jsx)(AW.f, {
+          disabled: iW.pending,
           onClick: () => {
-            He.act("locatorArm", Me)
+            OW.act("locatorArm", NW)
           },
-          children: be(`${te}:locatorArm`)
-        }), !ye.locatorEntryOwned && (0, We.jsxs)("div", {
+          children: EW(`${TW}:locatorArm`)
+        }), !mW.locatorEntryOwned && (0, yW.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, We.jsx)(iH, {
-            entry: ye,
-            coins: ie.locators.locatorCoins
-          }), (0, We.jsx)(fe.m, {
-            disabled: ie.locators.locatorCoins < ye.locatorEntryPrice || ie.pending,
+          children: [(0, yW.jsx)(iO, {
+            entry: mW,
+            coins: iW.locators.locatorCoins
+          }), (0, yW.jsx)(AW.n, {
+            disabled: iW.locators.locatorCoins < mW.locatorEntryPrice || iW.pending,
             onClick: () => {
-              He.act("locatorBuy", Me)
+              OW.act("locatorBuy", NW)
             },
-            children: be(`${te}:locatorBuy`)
+            children: EW(`${TW}:locatorBuy`)
           })]
-        }), Ke && !ye.locatorEntryArmed && (0, We.jsx)("span", {
+        }), PW && !mW.locatorEntryArmed && (0, yW.jsx)("span", {
           className: "BoardHint",
-          children: be(`${te}:locatorReplacesHint`, {
-            name: Ke.locatorEntryName
+          children: EW(`${TW}:locatorReplacesHint`, {
+            name: PW.locatorEntryName
           })
         })]
       })
     }
 
-    function yH(ee) {
+    function mO(WW) {
       let {
-        entry: ie
-      } = ee;
-      return "locatorUnseen" === ie.locatorEntryStanding ? (0, We.jsx)(De, {
+        entry: iW
+      } = WW;
+      return "locatorUnseen" === iW.locatorEntryStanding ? (0, yW.jsx)(HW, {
         itemName: "Compass"
-      }) : (0, We.jsx)(Pe, {
-        anomalyId: ie.locatorEntryId,
-        caught: "locatorContained" === ie.locatorEntryStanding
+      }) : (0, yW.jsx)(nW, {
+        anomalyId: iW.locatorEntryId,
+        caught: "locatorContained" === iW.locatorEntryStanding
       })
     }
 
-    function bH(ee) {
+    function EO(WW) {
       let {
-        view: ie,
-        controller: He,
-        entry: ye
-      } = ee;
+        view: iW,
+        controller: OW,
+        entry: mW
+      } = WW;
       const {
-        t: be
-      } = (0, Re.v)(), Me = ri[ye.locatorEntryDifficulty];
-      return (0, We.jsxs)("section", {
+        t: EW
+      } = (0, ZW.B)(), NW = Fi[mW.locatorEntryDifficulty];
+      return (0, yW.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, We.jsxs)("div", {
-          className: Je()("LocatorLabel", {
-            Armed: ye.locatorEntryArmed
+        children: [(0, yW.jsxs)("div", {
+          className: wW()("LocatorLabel", {
+            Armed: mW.locatorEntryArmed
           }),
-          children: [(0, We.jsx)(ce, {
-            icon: (0, We.jsx)(yH, {
-              entry: ye
+          children: [(0, yW.jsx)(vW, {
+            icon: (0, yW.jsx)(mO, {
+              entry: mW
             }),
-            name: be(`${te}:locatorName`, {
-              name: ye.locatorEntryName
+            name: EW(`${TW}:locatorName`, {
+              name: mW.locatorEntryName
             }),
-            children: (0, We.jsx)(eH, {
-              entry: ye
+            children: (0, yW.jsx)(WO, {
+              entry: mW
             })
-          }), (0, We.jsx)("p", {
+          }), (0, yW.jsx)("p", {
             className: "BoardDescription",
-            children: be(ye.locatorEntryArmed ? `${te}:locatorFlavourArmed` : Gi[ye.locatorEntryStanding])
-          }), null !== Me && (0, We.jsx)("p", {
+            children: EW(mW.locatorEntryArmed ? `${TW}:locatorFlavourArmed` : zi[mW.locatorEntryStanding])
+          }), null !== NW && (0, yW.jsx)("p", {
             className: "LocatorAttuned",
-            children: be(Me)
-          }), (0, We.jsx)("p", {
+            children: EW(NW)
+          }), (0, yW.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: be(`${te}:locatorUsage`)
+            children: EW(`${TW}:locatorUsage`)
           })]
-        }), (0, We.jsx)(HH, {
-          view: ie,
-          controller: He,
-          entry: ye
+        }), (0, yW.jsx)(OO, {
+          view: iW,
+          controller: OW,
+          entry: mW
         })]
       })
     }
 
-    function MH(ee) {
+    function NO(WW) {
       let {
-        controller: ie
-      } = ee;
-      const He = (0, oe.j)(Ii, ie.getSnapshot()),
+        controller: iW
+      } = WW;
+      const OW = (0, tW.g)(ai, iW.getSnapshot()),
         {
-          t: ye
-        } = (0, Re.v)(),
-        be = He.locators;
-      if (null === be) return null;
-      const Me = be.locatorEntries.find((ee => ee.locatorEntryId === He.selectedId)),
-        Ke = He.notice;
-      return (0, We.jsxs)(we, {
-        open: He.open,
-        onDismiss: ie.dismiss,
-        title: ye(`${te}:locatorTitle`),
+          t: mW
+        } = (0, ZW.B)(),
+        EW = OW.locators;
+      if (null === EW) return null;
+      const NW = EW.locatorEntries.find((WW => WW.locatorEntryId === OW.selectedId)),
+        PW = OW.notice;
+      return (0, yW.jsxs)(hW, {
+        open: OW.open,
+        onDismiss: iW.dismiss,
+        title: mW(`${TW}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, We.jsx)(Qi, {}),
-        headerExtra: (0, We.jsx)(xe, {
-          coins: be.locatorCoins
+        decor: (0, yW.jsx)(Qi, {}),
+        headerExtra: (0, yW.jsx)(gW, {
+          coins: EW.locatorCoins
         }),
-        statusRefused: null === Ke || void 0 === Ke ? void 0 : Ke.locatorNoticeRefused,
-        status: (0, We.jsxs)(We.Fragment, {
-          children: [(0, We.jsx)("span", {
+        statusRefused: null === PW || void 0 === PW ? void 0 : PW.locatorNoticeRefused,
+        status: (0, yW.jsxs)(yW.Fragment, {
+          children: [(0, yW.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: ye(`${te}:locatorKeeperName`)
-          }), null !== Ke && ye(`${te}:${Ke.locatorNoticeKey}`, {
-            name: Ke.locatorNoticeName
+            children: mW(`${TW}:locatorKeeperName`)
+          }), null !== PW && mW(`${TW}:${PW.locatorNoticeKey}`, {
+            name: PW.locatorNoticeName
           })]
         }),
-        children: [(0, We.jsx)("div", {
+        children: [(0, yW.jsx)("div", {
           className: "BoardTiles",
-          children: be.locatorEntries.map((ee => (0, We.jsxs)(ae, {
-            icon: (0, We.jsx)(yH, {
-              entry: ee
+          children: EW.locatorEntries.map((WW => (0, yW.jsxs)(eW, {
+            icon: (0, yW.jsx)(mO, {
+              entry: WW
             }),
-            name: ee.locatorEntryName,
-            selected: ee === Me,
+            name: WW.locatorEntryName,
+            selected: WW === NW,
             locked: !1,
-            className: Je()("LocatorTag", {
-              Armed: ee.locatorEntryArmed
+            className: wW()("LocatorTag", {
+              Armed: WW.locatorEntryArmed
             }),
             onSelect: () => {
-              ie.select(ee.locatorEntryId)
+              iW.select(WW.locatorEntryId)
             },
-            children: [(0, We.jsx)(eH, {
-              entry: ee
-            }), !ee.locatorEntryOwned && (0, We.jsx)(iH, {
-              entry: ee,
-              coins: be.locatorCoins,
+            children: [(0, yW.jsx)(WO, {
+              entry: WW
+            }), !WW.locatorEntryOwned && (0, yW.jsx)(iO, {
+              entry: WW,
+              coins: EW.locatorCoins,
               inTile: !0
             })]
-          }, ee.locatorEntryId)))
-        }), (0, We.jsx)(bH, {
-          view: He,
-          controller: ie,
-          entry: Me
+          }, WW.locatorEntryId)))
+        }), (0, yW.jsx)(EO, {
+          view: OW,
+          controller: iW,
+          entry: NW
         })]
       })
     }
 
-    function KH(ee) {
+    function PO(WW) {
       let {
-        loadout: ie,
-        codex: He,
-        locator: ye
-      } = ee;
-      return (0, We.jsxs)(We.Fragment, {
-        children: [(0, We.jsx)(Si, {
-          controller: ie
-        }), (0, We.jsx)(re, {
-          controller: He
-        }), (0, We.jsx)(MH, {
-          controller: ye
+        loadout: iW,
+        codex: OW,
+        locator: mW
+      } = WW;
+      return (0, yW.jsxs)(yW.Fragment, {
+        children: [(0, yW.jsx)(qi, {
+          controller: iW
+        }), (0, yW.jsx)(FW, {
+          controller: OW
+        }), (0, yW.jsx)(NO, {
+          controller: mW
         })]
       })
     }
-    var UH = He(39370);
-    class FH {
-      constructor(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = ee, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new UH.e({
+    var LO = OW(39775);
+    class cO {
+      constructor(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = WW, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new LO.c({
           spacingMs: 0,
-          now: ie
+          now: iW
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -1852,17 +2166,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(ee, ie) {
+      send(WW, iW) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, ie(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(ee), !0)
+          this.replyTimer = null, this.awaitingReply = !1, iW(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(WW), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(ee) {
-        return this.listeners.add(ee), () => {
-          this.listeners.delete(ee)
+      subscribe(WW) {
+        return this.listeners.add(WW), () => {
+          this.listeners.delete(WW)
         }
       }
       dispose() {
@@ -1872,185 +2186,306 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const ee of this.listeners) ee()
+        for (const WW of this.listeners) WW()
       }
     }
-    var JH = He(39358);
-    const oH = new Map([
-      ["npc_general", Ti],
-      ["npc_tentacle_guy", JH]
+    var wO = OW(39767);
+    const tO = new Map([
+      ["npc_general", bi],
+      ["npc_tentacle_guy", wO]
     ]);
 
-    function RH(ee) {
-      const ie = oH.get(ee);
-      if (void 0 === ie) return null;
-      const He = document.createElement("img");
-      return He.src = ie, He.alt = "", He.draggable = !1, He.style.imageRendering = "pixelated", He
+    function ZO(WW) {
+      const iW = tO.get(WW);
+      if (void 0 === iW) return null;
+      const OW = document.createElement("img");
+      return OW.src = iW, OW.alt = "", OW.draggable = !1, OW.style.imageRendering = "pixelated", OW
     }
-    const kH = function() {
-      let ee, ie = !1,
-        He = null,
-        Fe = null;
-      const Je = [],
-        oe = ee => {
-          for (const ie of Je) ie !== ee && ie.close();
-          (0, Ue.s)()
+    const xO = function() {
+      let WW, iW = !1,
+        OW = null,
+        cW = null;
+      const wW = [],
+        tW = WW => {
+          for (const iW of wW) iW !== WW && iW.close();
+          (0, LW.H)()
         },
-        Re = ee => {
-          ee && (0, Ue.l)()
+        ZW = WW => {
+          WW && (0, LW.q)()
         },
-        ke = new FH((ie => {
-          ee.sendCommand(ie)
+        xW = new cO((iW => {
+          WW.sendCommand(iW)
         })),
-        qe = new qi((ee => {
-          Ke.h.yR(ki, ee, !0)
-        }), oe, Re, ke),
-        fe = new ve((ee => {
-          Ke.h.yR(Ce, ee, !0)
-        }), oe, Re),
-        Te = new Ni((ee => {
-          Ke.h.yR(Ii, ee, !0)
-        }), oe, Re, ke);
-      Je.push(qe, fe, Te);
+        lW = new li((WW => {
+          PW.l.iZ(xi, WW, !0)
+        }), tW, ZW, xW),
+        AW = new pW((WW => {
+          PW.l.iZ(VW, WW, !0)
+        }), tW, ZW),
+        bW = new ri((WW => {
+          PW.l.iZ(ai, WW, !0)
+        }), tW, ZW, xW);
+      wW.push(lW, AW, bW);
       return {
-        onCreate: ie => {
-          ee = ie, He = (0, Ue.z)(null, {
-            content: (0, ye.createElement)(KH, {
-              loadout: qe,
-              codex: fe,
-              locator: Te
+        onCreate: iW => {
+          WW = iW, OW = (0, LW.O)(null, {
+            content: (0, mW.createElement)(PO, {
+              loadout: lW,
+              codex: AW,
+              locator: bW
             }),
             onClose: () => {
-              for (const ee of Je) ee.close()
+              for (const WW of wW) WW.close()
             }
-          }), Fe = (0, Me.c)(RH)
+          }), cW = (0, NW.f)(ZO)
         },
-        onReceivedMessageFromServer: (ee, ie) => {
-          "containmentLoadout" === ee ? qe.DR(ie) : "containmentLoadoutClose" === ee ? qe.isOpen() && (qe.close(), (0, Ue.h)()) : "containmentCodex" === ee ? fe.DR(ie) : "containmentLocator" === ee && Te.DR(ie)
+        onReceivedMessageFromServer: (WW, iW) => {
+          "containmentLoadout" === WW ? lW.yZ(iW) : "containmentLoadoutClose" === WW ? lW.isOpen() && (lW.close(), (0, LW.m)()) : "containmentCodex" === WW ? AW.yZ(iW) : "containmentLocator" === WW && bW.yZ(iW)
         },
-        YR: () => {
-          ie || be.e.get("loadingOverlayVisible") || (ie = !0, ee.sendCommand("containmentEntered"))
+        hZ: () => {
+          iW || EW.d.get("loadingOverlayVisible") || (iW = !0, WW.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var ee, ie;
-          null === (ee = He) || void 0 === ee || ee(), He = null, null === (ie = Fe) || void 0 === ie || ie(), Fe = null;
-          for (const He of Je) He.dispose();
-          ke.dispose()
+          var WW, iW;
+          null === (WW = OW) || void 0 === WW || WW(), OW = null, null === (iW = cW) || void 0 === iW || iW(), cW = null;
+          for (const OW of wW) OW.dispose();
+          xW.dispose()
         }
       }
     }
   },
-  40138: (ee, ie, He) => {
-    var ye = {
-      "./breach-zero-uncaught.webp": 40141,
-      "./breach-zero.webp": 40147,
-      "./brood-father-uncaught.webp": 40149,
-      "./brood-father.webp": 40158,
-      "./carousel-uncaught.webp": 40164,
-      "./carousel.webp": 40170,
-      "./deadlock-uncaught.webp": 40175,
-      "./deadlock.webp": 40180,
-      "./doom-warlord-uncaught.webp": 40182,
-      "./doom-warlord.webp": 40185,
-      "./frost-revenant-uncaught.webp": 40193,
-      "./frost-revenant.webp": 40197,
-      "./hollow-choir-uncaught.webp": 40199,
-      "./hollow-choir.webp": 40204,
-      "./magma-warden-uncaught.webp": 40211,
-      "./magma-warden.webp": 40216,
-      "./patient-zero-uncaught.webp": 40224,
-      "./patient-zero.webp": 40231,
-      "./siege-engine-uncaught.webp": 40238,
-      "./siege-engine.webp": 40245,
-      "./warp-stalker-uncaught.webp": 40250,
-      "./warp-stalker.webp": 40258
-    };
+  38039: (WW, iW, OW) => {
+    OW.d(iW, {
+      C: () => gW,
+      G: () => DW,
+      I: () => eW,
+      M: () => VW,
+      d: () => cW,
+      h: () => HW,
+      i: () => LW,
+      m: () => dW,
+      o: () => JW,
+      s: () => SW,
+      u: () => oW,
+      w: () => uW,
+      x: () => TW,
+      y: () => vW
+    });
+    var mW = OW(39);
+    const EW = {
+        codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
+        worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
+      },
+      NW = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      PW = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      LW = NW.filter((WW => "docsButton" !== WW)),
+      cW = PW.filter((WW => "aiHelperButton" !== WW)),
+      wW = "codeEditorTutorials",
+      tW = {
+        codeBlockIntro: "codeBlockIntroShown",
+        worldCodeIntro: "worldCodeIntroShown"
+      },
+      ZW = {
+        welcome: "welcomeComplete",
+        docsOverview: "docsOverviewComplete",
+        aiHelperOverview: "aiHelperOverviewComplete"
+      };
+    let xW = null,
+      lW = null;
+    const AW = new Set,
+      bW = new Set;
+    let jW = null;
+    const UW = new Set,
+      kW = new Set;
 
-    function be(ee) {
-      var ie = Me(ee);
-      return He(ie)
+    function sW() {
+      kW.forEach((WW => {
+        WW()
+      }))
     }
 
-    function Me(ee) {
-      if (!He.o(ye, ee)) {
-        var ie = new Error("Cannot find module '" + ee + "'");
-        throw ie.code = "MODULE_NOT_FOUND", ie
+    function MW() {
+      if (!xW) {
+        const WW = mW.i.getItem(wW);
+        xW = {
+          codeBlockIntroShown: !1,
+          worldCodeIntroShown: !1,
+          welcomeComplete: !1,
+          docsOverviewComplete: !1,
+          aiHelperOverviewComplete: !1,
+          ..."object" === typeof WW && null !== WW ? WW : {}
+        }
       }
-      return ye[ee]
+      return xW
     }
-    be.keys = function() {
-      return Object.keys(ye)
-    }, be.resolve = Me, ee.exports = be, be.id = 40138
+
+    function KW(WW) {
+      const iW = MW();
+      iW[WW] || (xW = {
+        ...iW,
+        [WW]: !0
+      }, mW.i.setItem(wW, xW))
+    }
+
+    function SW(WW) {
+      return "docsOverview" === WW ? NW : "aiHelperOverview" === WW ? PW : lW ? EW[lW] : []
+    }
+
+    function YW(WW) {
+      return ("worldCodeButton" !== WW || !MW().worldCodeIntroShown) && !UW.has(WW)
+    }
+
+    function yW(WW) {
+      var iW;
+      return (null === (iW = jW) || void 0 === iW ? void 0 : iW.name) === WW ? jW.stepsDone : AW
+    }
+
+    function TW(WW, iW) {
+      if (! function(WW) {
+          return jW ? jW.name === WW : "welcome" === WW
+        }(WW) || !YW(iW) || yW(WW).has(iW)) return !1;
+      if (jW) return !0;
+      const OW = tW[iW];
+      return OW ? !MW()[OW] || bW.has(iW) : !MW()[ZW[WW]]
+    }
+
+    function JW(WW) {
+      var iW;
+      return null !== (iW = SW(WW).find((iW => TW(WW, iW)))) && void 0 !== iW ? iW : null
+    }
+
+    function hW(WW) {
+      var iW;
+      KW(ZW[WW]), (null === (iW = jW) || void 0 === iW ? void 0 : iW.name) === WW && (jW = null)
+    }
+
+    function HW(WW) {
+      const iW = (jW ? [jW.name] : ["welcome", "docsOverview"]).find((iW => JW(iW) === WW));
+      if (!iW) return;
+      yW(iW).add(WW);
+      const OW = tW[WW];
+      OW && (KW(OW), jW || bW.add(WW)), null === JW(iW) && hW(iW), sW()
+    }
+
+    function nW(WW, iW) {
+      const OW = SW(WW),
+        mW = yW(WW);
+      for (let EW = OW.indexOf(iW) - 1; EW >= 0; EW--)
+        if (mW.has(OW[EW]) && YW(OW[EW])) return OW[EW];
+      return null
+    }
+
+    function uW(WW, iW) {
+      return null !== nW(WW, iW)
+    }
+
+    function oW(WW, iW) {
+      const OW = nW(WW, iW);
+      OW && (yW(WW).delete(OW), sW())
+    }
+
+    function dW(WW) {
+      hW(WW), "welcome" === WW && SW("welcome").forEach((WW => {
+        const iW = tW[WW];
+        iW && KW(iW)
+      })), sW()
+    }
+
+    function eW(WW) {
+      jW = {
+        name: WW,
+        stepsDone: new Set
+      }, sW()
+    }
+
+    function vW() {
+      (jW || 0 !== AW.size || 0 !== bW.size) && (jW = null, AW.clear(), bW.clear(), sW())
+    }
+
+    function gW(WW, iW) {
+      const OW = iW ? WW : lW === WW ? null : lW;
+      OW !== lW && (lW = OW, sW())
+    }
+
+    function DW(WW, iW) {
+      UW.has(WW) === iW && (iW ? UW.delete(WW) : UW.add(WW), sW())
+    }
+
+    function VW(WW) {
+      return kW.add(WW), () => {
+        kW.delete(WW)
+      }
+    }
   },
-  40141: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  40559: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  40147: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  40568: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  40149: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  40574: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  40158: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  40576: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  40164: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  40580: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  40170: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  40583: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  40175: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  40591: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  40180: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  40598: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  40182: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/doom-warlord-uncaught.b25b11d54326d386a901.webp"
+  40607: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/doom-warlord-uncaught.b25b11d54326d386a901.webp"
   },
-  40185: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/doom-warlord.d9ef07d4167ff931b0f0.webp"
+  40616: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/doom-warlord.d9ef07d4167ff931b0f0.webp"
   },
-  40193: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  40619: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  40197: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  40626: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  40199: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  40635: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  40204: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  40640: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  40211: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  40648: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  40216: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  40652: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  40224: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  40661: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  40231: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  40665: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  40238: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  40667: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  40245: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  40673: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  40250: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  40682: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  40258: (ee, ie, He) => {
-    ee.exports = He.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  40686: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  39358: ee => {
-    ee.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  39767: WW => {
+    WW.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

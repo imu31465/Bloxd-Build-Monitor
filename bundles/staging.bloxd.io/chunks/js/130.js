@@ -1,318 +1,475 @@
 export const id = 130;
-export const ids = [130, 131, 152];
+export const ids = [130, 715];
 export const modules = {
-  5563: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => ye.e,
-      g: () => be,
-      h: () => ye.m
-    });
-    var ye = He(5570);
-    const be = [!1, !0].flatMap((ee => ["terrain", "liquid", "model"].map((ie => ({
-      strict: ee,
-      program: ie
-    })))))
-  },
-  40056: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      ShaderPackPage: () => Fe,
-      harnessShaderPackMode: () => ke,
-      setHarnessUrlShaderPack: () => Re,
-      shaderPackPage: () => oe
-    });
-    var ye = He(97),
-      be = He(35),
-      Me = (He(3811), He(5563), He(3808)),
-      Ke = He(7296);
-    He(7262);
-    const Ue = {
-      status: "none"
-    };
-    class Fe {
-      constructor() {
-        this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
-      }
-      preload() {
-        if (null === this.stored) {
-          if ((0, Me.j)(ye.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), Je().then((ee => {
-            ee && be.i.removeItem(Me.b)
-          })), this.stored;
-          this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
+  5877: (WW, iW, OW) => {
+    var mW = OW(5886);
+
+    function EW() {}
+
+    function NW() {}
+    NW.resetWarningCache = EW, WW.exports = function() {
+      function WW(WW, iW, OW, EW, NW, PW) {
+        if (PW !== mW) {
+          var LW = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw LW.name = "Invariant Violation", LW
         }
-        return this.stored
       }
-      prefetchHint() {
-        return (0, Me.f)(ye.featureFlags.settings.canUseShaderPacks)
-      }
-      async loadActive() {
-        const ee = await this.load();
-        return "active" === ee.status ? ee.pack : null
-      }
-      load() {
-        return this.pagePack ??= this.read().catch((ee => (console.error("Failed to load the shader pack", ee), Ue))).then((ee => (this.resolved ??= ee, ee))), this.pagePack
-      }
-      hasNone() {
-        var ee;
-        return "none" === (null === (ee = this.resolved) || void 0 === ee ? void 0 : ee.status)
-      }
-      block(ee) {
-        this.resolved = {
-          status: "blocked",
-          messageKey: ee,
-          variants: null
-        }, this.pagePack = Promise.resolve(this.resolved)
-      }
-      compiler() {
-        return this.compiling ??= Promise.all([He.e(89), He.e(149), He.e(156)]).then((() => He(44931))).then((ee => (ee.prefetchCompiler(), ee))), this.compiling
-      }
-      async readStored() {
-        const ee = await Je();
-        return ee && this.compiler().then((ee => ee.reconcileHint())).catch((ee => {
-          console.error("Failed to correct the shader pack hint", ee)
-        })), ee
-      }
-      async read() {
-        const ee = await this.preload();
-        return ee ? (await this.compiler()).compilePagePack(ee) : Ue
-      }
-    }
-    async function Je() {
-      if (!(0, Me.k)(ye.featureFlags.settings.canUseShaderPacks)) return null;
-      try {
-        const ee = await (0, Ke.h)(!0);
-        return ee || be.i.setItem(Me.b, !1), ee
-      } catch (ee) {
-        return console.error("Failed to read the stored shader pack", ee), be.i.removeItem(Me.b), null
-      }
-    }
-    const oe = new Fe;
 
-    function Re(ee, ie) {}
-
-    function ke() {
-      return null
+      function iW() {
+        return WW
+      }
+      WW.isRequired = WW;
+      var OW = {
+        array: WW,
+        bigint: WW,
+        bool: WW,
+        func: WW,
+        number: WW,
+        object: WW,
+        string: WW,
+        symbol: WW,
+        any: WW,
+        arrayOf: iW,
+        element: WW,
+        elementType: WW,
+        instanceOf: iW,
+        node: WW,
+        objectOf: iW,
+        oneOf: iW,
+        oneOfType: iW,
+        shape: iW,
+        exact: iW,
+        checkPropTypes: NW,
+        resetWarningCache: EW
+      };
+      return OW.PropTypes = OW, OW
     }
   },
-  7296: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => be,
-      h: () => Me
+  5868: (WW, iW, OW) => {
+    WW.exports = OW(5877)()
+  },
+  5886: WW => {
+    WW.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  },
+  7595: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => tW
     });
-    var ye = He(35);
-    const be = "shaderPack";
-    async function Me() {
-      var ee;
-      let ie = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (ee = await ye.e.getItem(be, ie)) && void 0 !== ee ? ee : null
+    var mW = OW(1605),
+      EW = OW(1532),
+      NW = OW(1172),
+      PW = OW(7600),
+      LW = OW(7577),
+      cW = OW(7567),
+      wW = OW(1283);
+
+    function tW() {
+      const {
+        t: WW
+      } = (0, NW.B)(), iW = (0, mW.useNavigatePreserveSearch)();
+      return (0, LW.b)(), (0, wW.jsxs)("div", {
+        className: "ShaderPackPublishPage AnimFadeIn",
+        children: [(0, wW.jsx)("div", {
+          className: "ShaderPackPublishBack",
+          children: (0, wW.jsx)(EW.b, {
+            onClick: () => {
+              iW(cW.W)
+            },
+            children: WW("shaderPackListing:backToPacks")
+          })
+        }), (0, wW.jsx)("h1", {
+          className: "ShaderPackPublishTitle",
+          children: WW("shaderPackListing:publishTitle")
+        }), (0, wW.jsx)(PW.ShaderPackPublishForm, {
+          existing: null,
+          onPublished: WW => {
+            iW((0, cW.$)(WW.packId), {
+              replace: !0
+            })
+          }
+        })]
+      })
     }
   },
-  7262: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      loadShaderPackTextures: () => Ke,
-      shaderPackTextures: () => Ue
+  7577: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => xW,
+      c: () => lW,
+      f: () => ZW,
+      j: () => AW
     });
-    var ye = He(5570);
-    let be = null,
-      Me = null;
+    var mW = OW(62),
+      EW = OW(7570),
+      NW = OW(1584),
+      PW = OW(7567),
+      LW = OW(7583),
+      cW = OW(1107);
+    const wW = "shaderPackListingView",
+      tW = "shaderPackListingFilterOpen";
 
-    function Ke() {
-      return Me ??= Promise.all([He.e(84), He.e(206)]).then((() => He(41616))).then((ee => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: ie,
-          textureNameToIndex: He,
-          textureAnimationData: Me
-        } = ee;
-        return be ??= (0, ye.h)(He, Me, ie), be
-      })), Me
+    function ZW() {
+      var WW;
+      const [iW, OW] = (0, LW.d)(wW, EW.F[0]);
+      return [null !== (WW = EW.F.find((WW => WW === iW))) && void 0 !== WW ? WW : EW.F[0], OW]
     }
 
-    function Ue() {
-      if (null === be) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return be
+    function xW() {
+      (0, mW.useEffect)((() => () => {
+        window.location.pathname.startsWith(PW.W) || (0, PW.j)()
+      }), [])
+    }
+
+    function lW() {
+      return (0, LW.d)(tW, !1)
+    }
+
+    function AW() {
+      const {
+        userContext: WW,
+        isUserContextUpdating: iW
+      } = (0, cW.e)(), [OW, EW] = (0, mW.useState)(null), PW = (0, mW.useRef)(new Set);
+
+      function LW(WW, iW) {
+        EW((OW => {
+          const mW = new Set(OW);
+          return iW ? mW.add(WW) : mW.delete(WW), mW
+        }))
+      }
+      return (0, mW.useEffect)((() => {
+        if (iW) return;
+        let OW = !1;
+        return NW.e.getFavouriteShaderPacks(WW).then((WW => {
+          OW || EW(new Set(WW))
+        })).catch((WW => {
+          console.error("Failed to get favourite shader packs", WW), OW || EW(new Set)
+        })), () => {
+          OW = !0
+        }
+      }), [WW, iW]), {
+        isFavourite: WW => null === OW ? null : OW.has(WW),
+        toggle: function(iW) {
+          if (null === OW || PW.current.has(iW)) return;
+          PW.current.add(iW);
+          const mW = !OW.has(iW);
+          LW(iW, mW), (mW ? NW.e.favouriteShaderPack(WW, iW) : NW.e.unfavouriteShaderPack(WW, iW)).catch((WW => {
+            console.error("Failed to change a favourite shader pack", WW), LW(iW, !mW)
+          })).finally((() => {
+            PW.current.delete(iW)
+          }))
+        }
+      }
     }
   },
-  5570: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Ue,
-      d: () => Ke,
-      e: () => ye,
-      h: () => Te,
-      k: () => Re,
-      m: () => be,
-      q: () => Me,
-      r: () => Je,
-      s: () => oe,
-      t: () => ke
+  7567: (WW, iW, OW) => {
+    OW.d(iW, {
+      $: () => cW,
+      B: () => AW,
+      E: () => UW,
+      G: () => hW,
+      K: () => tW,
+      M: () => nW,
+      N: () => bW,
+      Q: () => VW,
+      S: () => gW,
+      W: () => PW,
+      _: () => DW,
+      bb: () => LW,
+      cb: () => eW,
+      d: () => kW,
+      e: () => TW,
+      f: () => jW,
+      fb: () => vW,
+      j: () => xW,
+      jb: () => sW,
+      kb: () => HW,
+      l: () => ZW,
+      p: () => uW,
+      q: () => lW,
+      u: () => oW,
+      y: () => pW
     });
-    const ye = 5;
+    var mW = OW(7570),
+      EW = OW(154),
+      NW = OW(5268);
+    const PW = "/shader-packs",
+      LW = `${PW}/publish`;
 
-    function be(ee) {
-      return ee === ye
+    function cW(WW) {
+      return `${PW}/${encodeURIComponent(WW)}`
+    }
+    let wW = null;
+
+    function tW(WW) {
+      wW = WW
     }
 
-    function Me(ee) {
-      return [...ee.features]
+    function ZW() {
+      return wW
     }
-    const Ke = 262144,
-      Ue = 256,
-      Fe = 256;
 
-    function Je(ee) {
-      if ("object" !== typeof ee || null === ee || Array.isArray(ee)) return "The pack has no files.";
-      const ie = [];
-      for (const [He, ye] of Object.entries(ee)) {
-        if ("string" !== typeof ye) return `${He} isn't text.`;
-        ie.push({
-          path: He,
-          source: ye
+    function xW() {
+      wW = null
+    }
+
+    function lW(WW) {
+      return WW.playerHasRank("developer") || WW.playerHasRank("admin")
+    }
+    const AW = ["terrain", "water", "models", "sunShadows", "strict"],
+      bW = {
+        terrain: "shaderPackListing:filterTerrain",
+        water: "shaderPackListing:filterWater",
+        models: "shaderPackListing:filterModels",
+        sunShadows: "shaderPackListing:filterShadows",
+        strict: "shaderPackListing:filterAllGames"
+      };
+
+    function jW(WW, iW) {
+      return WW.withFeatures.includes(iW) ? "with" : WW.withoutFeatures.includes(iW) ? "without" : null
+    }
+
+    function UW(WW) {
+      return null === WW ? "with" : "with" === WW ? "without" : null
+    }
+
+    function kW(WW) {
+      return "with" === WW ? "only" : null === WW ? "include" : void 0
+    }
+
+    function sW(WW, iW) {
+      const OW = jW(WW, iW),
+        mW = WW => WW.filter((WW => WW !== iW));
+      return {
+        withFeatures: null === OW ? [...WW.withFeatures, iW] : mW(WW.withFeatures),
+        withoutFeatures: "with" === OW ? [...WW.withoutFeatures, iW] : mW(WW.withoutFeatures)
+      }
+    }
+    const MW = "section",
+      KW = "sort",
+      SW = "filters",
+      YW = "q",
+      yW = "banned",
+      TW = "popular",
+      JW = "strict";
+
+    function hW(WW) {
+      var iW, OW, EW;
+      const PW = WW.get(MW),
+        LW = (null !== (iW = WW.get(SW)) && void 0 !== iW ? iW : JW).split(","),
+        cW = WW.get(yW);
+      return {
+        section: "favourites" === PW || "mine" === PW ? PW : "explore",
+        sort: null !== (OW = mW.u.find((iW => iW === WW.get(KW)))) && void 0 !== OW ? OW : TW,
+        withFeatures: AW.filter((WW => LW.includes(WW) && !LW.includes(`-${WW}`))),
+        withoutFeatures: AW.filter((WW => LW.includes(`-${WW}`))),
+        searchQuery: (null === (EW = WW.get(YW)) || void 0 === EW ? void 0 : EW.slice(0, mW.K)) || null,
+        pageNumber: (0, NW.f)(WW.get(NW.b)),
+        banned: "only" === cW ? "with" : "include" === cW ? null : "without"
+      }
+    }
+
+    function HW(WW, iW) {
+      var OW;
+      const mW = dW(iW);
+      (0, NW.j)(WW, MW, "explore" === iW.section ? null : iW.section), (0, NW.j)(WW, KW, iW.sort === TW ? null : iW.sort), (0, NW.j)(WW, SW, mW === JW ? null : mW), (0, NW.j)(WW, YW, iW.searchQuery), (0, NW.j)(WW, yW, null !== (OW = kW(iW.banned)) && void 0 !== OW ? OW : null), (0, NW.m)(WW, iW.pageNumber)
+    }
+
+    function nW(WW) {
+      const iW = new URLSearchParams;
+      return HW(iW, {
+        section: "explore",
+        sort: TW,
+        withFeatures: "strict" === WW ? [WW] : [WW, "strict"],
+        withoutFeatures: [],
+        searchQuery: null,
+        pageNumber: 1,
+        banned: "without"
+      }), `${PW}?${iW.toString()}`
+    }
+
+    function uW(WW) {
+      return dW(WW) === JW
+    }
+
+    function oW(WW) {
+      return null !== WW.searchQuery || "with" === WW.banned || dW(WW) !== JW
+    }
+
+    function dW(WW) {
+      return AW.flatMap((iW => {
+        const OW = jW(WW, iW);
+        return "with" === OW ? [iW] : "without" === OW ? [`-${iW}`] : []
+      })).join(",")
+    }
+    const eW = {
+        popular: "shaderPackListing:sortPopular",
+        updated: "shaderPackListing:sortUpdated",
+        newest: "shaderPackListing:sortNewest"
+      },
+      vW = {
+        forest: "shaderPackListing:viewForest",
+        desert: "shaderPackListing:viewDesert",
+        water: "shaderPackListing:viewWater",
+        night: "shaderPackListing:viewNight",
+        cave: "shaderPackListing:viewCave"
+      };
+
+    function gW(WW) {
+      return Math.round(100 * Math.max(0, 1 - 1 / WW))
+    }
+
+    function DW(WW, iW, OW, EW) {
+      const NW = [];
+      WW.isBanned && NW.push({
+        tone: "warning",
+        text: EW("shaderPackListing:ownerBanned"),
+        detail: null
+      });
+      const {
+        pending: PW
+      } = WW;
+      if (null === WW.brokenError || PW && !PW.error || NW.push({
+          tone: "warning",
+          text: EW("shaderPackListing:ownerBroken"),
+          detail: WW.brokenError
+        }), null !== PW && void 0 !== PW && PW.error) NW.push({
+        tone: "warning",
+        text: EW(iW ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, mW.g)(PW.error) ? null : PW.error
+      });
+      else if (PW) {
+        const WW = null === PW.renderNotBefore ? 0 : PW.renderNotBefore - OW,
+          mW = String(Math.ceil(WW / 6e4)),
+          LW = EW(iW ? WW > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : WW > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: mW
+          });
+        NW.push({
+          tone: "info",
+          text: LW,
+          detail: null
         })
       }
-      return ie.sort(((ee, ie) => Re(ee.path, ie.path))),
-        function(ee) {
-          if (0 === ee.length) return "The pack has no .wgsl files.";
-          if (ee.length > Ue) return `The pack has more than ${Ue} .wgsl files.`;
-          const ie = new Set;
-          for (const {
-              path: He
-            }
-            of ee) {
-            const ee = qe(He);
-            if (null !== ee) return ee;
-            if (ie.has(He)) return `The pack has two files at ${He}.`;
-            ie.add(He)
-          }
-          return ke(ee) > Ke ? `The pack's .wgsl files are over ${Ke/1024} KB in total.` : null
-        }(ie) ?? ie
+      return WW.listed || NW.push({
+        tone: "info",
+        text: EW("shaderPackListing:ownerUnlisted"),
+        detail: null
+      }), NW
     }
 
-    function oe(ee) {
-      const ie = {};
-      for (const He of ee) ie[He.path] = He.source;
-      return ie
+    function VW(WW) {
+      return Math.max(1, Math.round(WW / 1024))
     }
 
-    function Re(ee, ie) {
-      return ee < ie ? -1 : ee > ie ? 1 : 0
+    function pW(WW, iW, OW) {
+      return WW instanceof EW.c && WW.errorMessageForUser ? WW.errorMessageForUser : iW(OW)
     }
+  },
+  7583: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
+    });
+    var mW = OW(62),
+      EW = OW(39);
 
-    function ke(ee) {
-      const ie = new TextEncoder;
-      let He = 0;
-      for (const {
-          source: ye
-        }
-        of ee) He += ie.encode(ye).byteLength;
-      return He
+    function NW(WW, iW) {
+      var OW;
+      const [NW, PW] = (0, mW.useState)(null !== (OW = EW.i.getItem(WW)) && void 0 !== OW ? OW : iW);
+      return [NW, iW => {
+        EW.i.setItem(WW, iW), PW(iW)
+      }]
     }
-
-    function qe(ee) {
-      if (!ee.toLowerCase().endsWith(".wgsl")) return `${ee} isn't a .wgsl file.`;
-      if (ee.length > Fe) return `A file path is over ${Fe} characters.`;
-      if (ee.includes("\\") || /[\u0000-\u001f]/.test(ee)) return `${ee} isn't a valid file path.`;
-      return ee.split("/").some((ee => "" === ee || "." === ee || ".." === ee)) ? `${ee} isn't a valid file path.` : null
+  },
+  7659: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => EW,
+      g: () => NW
+    });
+    var mW = OW(39);
+    const EW = "shaderPack";
+    async function NW() {
+      var WW;
+      let iW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (WW = await mW.f.getItem(EW, iW)) && void 0 !== WW ? WW : null
     }
-    const fe = /^(.*)\[rot\[([1-4])$/;
-
-    function Te(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const ye = new Map;
-      ie.forEach(((ee, ie) => {
-        let {
-          numAnimStates: He,
-          animStartIdx: be
-        } = ee;
-        for (let Me = 1; Me < He; Me++) ye.set(be + Me - 1, ie)
-      }));
-      const be = Object.entries(ee),
-        Me = new Map;
-      for (const [Te, pe] of be) {
-        const ee = fe.exec(Te);
-        "1" === ee?.[2] && Me.set(ee[1], pe + 1)
-      }
-      const Ke = ee => {
-          const ie = fe.exec(ee);
-          return ie && Me.has(ie[1]) ? {
-            root: ie[1],
-            rotation: Number(ie[2]) - 1
-          } : null
+  },
+  7570: (WW, iW, OW) => {
+    OW.d(iW, {
+      B: () => PW,
+      F: () => mW,
+      G: () => xW,
+      K: () => tW,
+      L: () => MW,
+      M: () => ZW,
+      N: () => wW,
+      c: () => AW,
+      d: () => jW,
+      e: () => bW,
+      f: () => lW,
+      g: () => sW,
+      i: () => SW,
+      j: () => cW,
+      n: () => EW,
+      q: () => KW,
+      u: () => NW,
+      x: () => LW
+    });
+    const mW = ["forest", "desert", "water", "night", "cave"];
+    const EW = {
+        full: {
+          width: 3840,
+          height: 2160
         },
-        Ue = new Set(be.map((ee => {
-          let [ie] = ee;
-          return Ke(ie)?.root ?? ie
-        }))),
-        Fe = (ee, He) => {
-          const ye = ee.replace(/_?0$/, "");
-          return (ie[He]?.numAnimStates ?? 0) > 1 && !Ue.has(ye) ? ye : ee
+        large: {
+          width: 1920,
+          height: 1080
         },
-        Je = new Map;
-      for (const [fe, Te] of be) Je.set(Te, Fe(Ke(fe)?.root ?? fe, Te));
-      const oe = be.reduce(((ee, ie) => {
-          let [, He] = ie;
-          return Math.max(ee, He + 1)
-        }), 0),
-        Re = Array.from({
-          length: oe
-        }, ((ee, ie) => ({
-          id: ie + 1,
-          rotation: 0
-        }))),
-        ke = new Map,
-        qe = new Map;
-      for (const [fe, Te] of be) {
-        const ee = Ke(fe),
-          ie = ye.get(Te);
-        if (void 0 !== ie) {
-          const He = Je.get(ie);
-          qe.set(fe, {
-            name: fe,
-            texture: He,
-            kind: "frame"
-          }), ee && !qe.has(ee.root) && qe.set(ee.root, {
-            name: ee.root,
-            texture: He,
-            kind: "frame"
-          });
-          continue
+        thumb: {
+          width: 640,
+          height: 360
         }
-        const He = Je.get(Te),
-          be = ee?.root ?? fe;
-        if (He !== be && qe.set(be, {
-            name: be,
-            texture: He,
-            kind: "frame"
-          }), ee) {
-          const ie = Me.get(ee.root);
-          Re[Te] = {
-            id: ie,
-            rotation: ee.rotation
-          }, ke.set(He, ie), qe.set(fe, {
-            name: fe,
-            texture: He,
-            kind: "rotation"
-          })
-        } else ke.set(He, Te + 1)
-      }
-      for (const fe of ke.keys()) qe.delete(fe);
-      for (const [fe, Te] of He) {
-        const ee = ke.get(Te);
-        void 0 === ee || ke.has(fe) || (ke.set(fe, ee), qe.delete(fe))
-      }
-      return {
-        named: [...ke].sort(((ee, ie) => {
-          let [He] = ee, [ye] = ie;
-          return He < ye ? -1 : He > ye ? 1 : 0
-        })).map((ee => {
-          let [ie, He] = ee;
-          return {
-            name: ie,
-            id: He
-          }
-        })),
-        aliases: [...qe.values()],
-        layers: Re
-      }
+      },
+      NW = ["popular", "updated", "newest"],
+      PW = 3,
+      LW = 32,
+      cW = 300;
+
+    function wW(WW, iW) {
+      return WW.slice(0, iW).replace(/[\uD800-\uDBFF]$/, "")
+    }
+    const tW = 64,
+      ZW = 512,
+      xW = 18e5;
+
+    function lW(WW) {
+      const iW = WW,
+        OW = null === iW || void 0 === iW ? void 0 : iW.files;
+      return "number" === typeof(null === iW || void 0 === iW ? void 0 : iW.apiVersion) && "string" === typeof iW.name && (null === iW.author || "string" === typeof iW.author) && (void 0 === iW.keepCircleShadows || "boolean" === typeof iW.keepCircleShadows) && "object" === typeof OW && null !== OW && Object.values(OW).every((WW => "string" === typeof WW))
+    }
+    const AW = "Bloxdhub",
+      bW = "https://bloxdhub.com/shaders";
+
+    function jW(WW) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(WW)}`
+    }
+    const UW = "Screenshot generation failed.",
+      kW = "Its screenshots couldn't be generated:";
+
+    function sW(WW) {
+      var iW;
+      return WW === UW || null !== (iW = null === WW || void 0 === WW ? void 0 : WW.startsWith(kW)) && void 0 !== iW && iW
+    }
+
+    function MW(WW, iW) {
+      return `shaderPacks/${WW}/${iW}.json`
+    }
+
+    function KW(WW, iW, OW, mW) {
+      return null === iW.renderId ? SW(WW, iW.baselineVersion, OW, mW) : `${WW}/${function(WW,iW,OW,mW){return`shaderPacks/${WW}/${iW}/${OW}-${mW}.webp`}(iW.packId,iW.renderId,OW,mW)}`
+    }
+
+    function SW(WW, iW, OW, mW) {
+      return `${WW}/${function(WW,iW,OW){return`shaderPacks/baseline/${WW}/${iW}-${OW}.webp`}(iW,OW,mW)}`
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

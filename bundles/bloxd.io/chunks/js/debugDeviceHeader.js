@@ -1,87 +1,87 @@
-export const id = 34;
-export const ids = [34];
+export const id = 35;
+export const ids = [35];
 export const modules = {
-  34738: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      clientHintsRead: () => fe,
-      debugDeviceLines: () => pe
+  35106: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      clientHintsRead: () => AW,
+      debugDeviceLines: () => jW
     });
-    var ye = He(645),
-      be = He(97),
-      Me = He(125),
-      Ke = He(123),
-      Ue = He(3586),
-      Fe = He(691);
-    const Je = new Set(["NT 10.0", "10", "10.15.7", "10.15"]);
+    var mW = OW(671),
+      EW = OW(100),
+      NW = OW(136),
+      PW = OW(131),
+      LW = OW(4440),
+      cW = OW(713);
+    const wW = new Set(["NT 10.0", "10", "10.15.7", "10.15"]);
 
-    function oe(ee) {
-      if ("ios" === ee.os) return function(ee) {
-        if (null !== ee.appIosVersion) return `${ee.appIosVersion} (the iOS app's)`;
-        const ie = (0, Fe.b)(ee.userAgent);
-        if (null !== ie) return `${ie} (the in-app browser's iOS token)`;
+    function tW(WW) {
+      if ("ios" === WW.os) return function(WW) {
+        if (null !== WW.appIosVersion) return `${WW.appIosVersion} (the iOS app's)`;
+        const iW = (0, cW.d)(WW.userAgent);
+        if (null !== iW) return `${iW} (the in-app browser's iOS token)`;
         const {
-          browser: He,
-          os: ye
-        } = ee.agent;
-        if ("Safari" === He.name && He.version) return `${He.version} (Safari's version, which follows iOS)`;
-        const be = ye.version;
-        if ("iOS" !== ye.name || !be) return "? (a desktop user agent)";
-        const [Me, Ke = 0] = be.split(".").map(Number);
-        return Me < 18 || 18 === Me && Ke < 6 ? `${be} (user agent)` : `? (the user agent says ${be}, frozen from iOS 26)`
-      }(ee);
-      const ie = ee.hintsPlatformVersion;
-      if (ie) return "windows" === ee.os ? `${ie} (${function(ee){const ie=parseInt(ee,10);if(ie>=13)return"Windows 11";return ie>=1?"Windows 10":"Windows 8.1 or older"}(ie)}, client hints)` : `${ie} (client hints)`;
-      const He = ee.agent.os.version;
-      return He ? Je.has(He) ? `${He} (user agent, which may be frozen)` : `${He} (user agent)` : "?"
+          browser: OW,
+          os: mW
+        } = WW.agent;
+        if ("Safari" === OW.name && OW.version) return `${OW.version} (Safari's version, which follows iOS)`;
+        const EW = mW.version;
+        if ("iOS" !== mW.name || !EW) return "? (a desktop user agent)";
+        const [NW, PW = 0] = EW.split(".").map(Number);
+        return NW < 18 || 18 === NW && PW < 6 ? `${EW} (user agent)` : `? (the user agent says ${EW}, frozen from iOS 26)`
+      }(WW);
+      const iW = WW.hintsPlatformVersion;
+      if (iW) return "windows" === WW.os ? `${iW} (${function(WW){const iW=parseInt(WW,10);if(iW>=13)return"Windows 11";return iW>=1?"Windows 10":"Windows 8.1 or older"}(iW)}, client hints)` : `${iW} (client hints)`;
+      const OW = WW.agent.os.version;
+      return OW ? wW.has(OW) ? `${OW} (user agent, which may be frozen)` : `${OW} (user agent)` : "?"
     }
 
-    function Re(ee) {
-      var ie;
-      const He = (null !== (ie = ee.fullVersionList) && void 0 !== ie ? ie : []).filter((ee => {
+    function ZW(WW) {
+      var iW;
+      const OW = (null !== (iW = WW.fullVersionList) && void 0 !== iW ? iW : []).filter((WW => {
         let {
-          brand: ie
-        } = ee;
-        return !/not.a.brand/i.test(ie)
-      })).map((ee => {
+          brand: iW
+        } = WW;
+        return !/not.a.brand/i.test(iW)
+      })).map((WW => {
         let {
-          brand: ie,
-          version: He
-        } = ee;
-        return `${ie} ${He}`
+          brand: iW,
+          version: OW
+        } = WW;
+        return `${iW} ${OW}`
       }));
-      return `${ee.platform} ${ee.platformVersion||"?"}, ${He.join(", ")||"?"}, ${ee.architecture||"?"} ${ee.bitness||"?"}-bit, model ${ee.model||"?"}, mobile ${ee.mobile}`
+      return `${WW.platform} ${WW.platformVersion||"?"}, ${OW.join(", ")||"?"}, ${WW.architecture||"?"} ${WW.bitness||"?"}-bit, model ${WW.model||"?"}, mobile ${WW.mobile}`
     }
-    let ke = "pending";
-    const qe = navigator.userAgentData;
-    void 0 === qe && (ke = "none (the browser has none)");
-    const fe = void 0 === qe ? Promise.resolve() : qe.getHighEntropyValues(["platformVersion", "fullVersionList", "architecture", "bitness", "model"]).then((ee => {
-      ke = ee
-    }), (ee => {
-      ke = `failed (${String(ee)})`
+    let xW = "pending";
+    const lW = navigator.userAgentData;
+    void 0 === lW && (xW = "none (the browser has none)");
+    const AW = void 0 === lW ? Promise.resolve() : lW.getHighEntropyValues(["platformVersion", "fullVersionList", "architecture", "bitness", "model"]).then((WW => {
+      xW = WW
+    }), (WW => {
+      xW = `failed (${String(WW)})`
     }));
 
-    function Te() {
-      const ee = (0, Ke.D)(),
-        ie = null !== ee && void 0 !== ee ? ee : (0, Ke.p)(),
-        He = (0, Ke.n)();
-      return [ie ? `webgl ${ie.vendor} / ${ie.renderer} (${ee?"the renderer's context":"a probe"})` : "webgl ?", He ? `webgpu adapter ${He.vendor||"?"}/${He.architecture||"?"}` : "webgpu adapter ?"].join("; ")
+    function bW() {
+      const WW = (0, PW.t)(),
+        iW = null !== WW && void 0 !== WW ? WW : (0, PW.j)(),
+        OW = (0, PW.f)();
+      return [iW ? `webgl ${iW.vendor} / ${iW.renderer} (${WW?"the renderer's context":"a probe"})` : "webgl ?", OW ? `webgpu adapter ${OW.vendor||"?"}/${OW.architecture||"?"}` : "webgpu adapter ?"].join("; ")
     }
 
-    function pe() {
-      var ee, ie, He, Ke, Fe, Je;
-      const qe = (0, be.getUserAgentDetails)(),
-        fe = (0, be.getOperatingSystem)(),
-        pe = oe({
-          os: fe,
+    function jW() {
+      var WW, iW, OW, PW, cW, wW;
+      const lW = (0, EW.getUserAgentDetails)(),
+        AW = (0, EW.getOperatingSystem)(),
+        jW = tW({
+          os: AW,
           userAgent: navigator.userAgent,
-          agent: qe,
-          appIosVersion: Ue.f,
-          hintsPlatformVersion: "string" === typeof ke ? void 0 : ke.platformVersion
+          agent: lW,
+          appIosVersion: LW.h,
+          hintsPlatformVersion: "string" === typeof xW ? void 0 : xW.platformVersion
         }),
-        Xe = (0, ye.p)(navigator.platform, navigator.maxTouchPoints, Me.siteUsed, (0, be.getWebGpuSupported)());
-      return [`os ${fe} ${pe}; user agent's ${null!==(ee=qe.os.name)&&void 0!==ee?ee:"?"} ${null!==(ie=qe.os.version)&&void 0!==ie?ie:"?"}, platform ${navigator.platform}, touch points ${navigator.maxTouchPoints}, ${(0,be.getPlatformType)()}`, `browser ${null!==(He=qe.browser.name)&&void 0!==He?He:"?"} ${null!==(Ke=qe.browser.version)&&void 0!==Ke?Ke:"?"}, engine ${null!==(Fe=qe.engine.name)&&void 0!==Fe?Fe:"?"} ${null!==(Je=qe.engine.version)&&void 0!==Je?Je:"?"}`, `client hints ${"string"===typeof ke?ke:Re(ke)}`, `gpu ${Te()}`, `client ${ye.y.client} (${ye.y.reason})`, `surface site ${Me.siteUsed}, subsite ${Me.subsiteUsed}${Me.isIframed?", iframed":""}, capped surface ${null!==Xe&&void 0!==Xe?Xe:"none"}`]
+        UW = (0, mW.q)(navigator.platform, navigator.maxTouchPoints, NW.siteUsed, (0, EW.getWebGpuSupported)());
+      return [`os ${AW} ${jW}; user agent's ${null!==(WW=lW.os.name)&&void 0!==WW?WW:"?"} ${null!==(iW=lW.os.version)&&void 0!==iW?iW:"?"}, platform ${navigator.platform}, touch points ${navigator.maxTouchPoints}, ${(0,EW.getPlatformType)()}`, `browser ${null!==(OW=lW.browser.name)&&void 0!==OW?OW:"?"} ${null!==(PW=lW.browser.version)&&void 0!==PW?PW:"?"}, engine ${null!==(cW=lW.engine.name)&&void 0!==cW?cW:"?"} ${null!==(wW=lW.engine.version)&&void 0!==wW?wW:"?"}`, `client hints ${"string"===typeof xW?xW:ZW(xW)}`, `gpu ${bW()}`, `client ${mW.B.client} (${mW.B.reason})`, `surface site ${NW.siteUsed}, subsite ${NW.subsiteUsed}${NW.isIframed?", iframed":""}, capped surface ${null!==UW&&void 0!==UW?UW:"none"}`]
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

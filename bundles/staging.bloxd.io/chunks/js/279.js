@@ -1,701 +1,944 @@
 export const id = 279;
 export const ids = [279];
 export const modules = {
-  40909: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      default: () => Ie
+  40014: (WW, iW, OW) => {
+    var mW = {
+      "./cape_cow_cream.png": 29007,
+      "./cape_cow_normal.png": 29012,
+      "./cape_creator_level1.png": 29015,
+      "./cape_creator_level2.png": 29018,
+      "./cape_creator_level3.png": 29022,
+      "./cape_none.png": 29027,
+      "./cape_pig.png": 29034,
+      "./cape_sheep.png": 29041,
+      "./cape_super.png": 29044,
+      "./cape_super_inverted.png": 29053,
+      "./cape_youtuber.png": 29057
+    };
+
+    function EW(WW) {
+      var iW = NW(WW);
+      return OW(iW)
+    }
+
+    function NW(WW) {
+      if (!OW.o(mW, WW)) {
+        var iW = new Error("Cannot find module '" + WW + "'");
+        throw iW.code = "MODULE_NOT_FOUND", iW
+      }
+      return mW[WW]
+    }
+    EW.keys = function() {
+      return Object.keys(mW)
+    }, EW.resolve = NW, WW.exports = EW, EW.id = 40014
+  },
+  40380: (WW, iW, OW) => {
+    function mW(WW) {
+      return void 0 === WW ? void 0 : [WW[0], WW[1], WW[2]]
+    }
+
+    function EW(WW) {
+      const iW = WW.particles;
+      return {
+        opts: {
+          texture: iW.texture,
+          aZ: iW.aZ,
+          minLifeTime: iW.minLifeTime,
+          maxLifeTime: iW.maxLifeTime,
+          minSize: iW.minSize,
+          maxSize: iW.maxSize,
+          minEmitPower: iW.minEmitPower,
+          maxEmitPower: iW.maxEmitPower,
+          emitRate: iW.emitRate,
+          gravity: mW(iW.gravity),
+          dir1: mW(iW.dir1),
+          dir2: mW(iW.dir2),
+          colorGradients: iW.colorGradients,
+          blendMode: iW.blendMode
+        },
+        half: [iW.width / 2, iW.height / 2, iW.depth / 2]
+      }
+    }
+    OW.d(iW, {
+      d: () => EW
+    })
+  },
+  40337: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      g: () => wW,
+      h: () => cW,
+      i: () => PW
     });
-    He(7060);
-    var ye = He(59),
-      be = He(40913),
-      Me = He(41195),
-      Ke = He(41306),
-      Ue = He(41357),
-      Fe = He(41380),
-      Je = He(38020),
-      oe = He(37913),
-      Re = He(41520),
-      ke = He(41573),
-      qe = (He(41601), He(1169)),
-      fe = He(186),
-      Te = He(1127),
-      pe = He(18),
-      Xe = He(2957),
-      ze = He(1438),
-      Be = He(1323),
-      Ee = He(7056),
-      ge = He(7069),
-      Oe = He(4836),
-      de = He(1228);
-    const We = 1.2,
-      te = .2,
-      Ze = .0066 * Math.PI / 180,
-      we = new Set(["Escape", "KeyG"]),
-      De = {
-        ArrowLeft: -1,
-        ArrowRight: 1
-      },
-      Pe = "ArrowUp",
-      Ae = new Set([...Object.keys(De), Pe, "ArrowDown"]),
-      Ye = 32,
-      Ve = 1,
-      ae = 10,
-      ce = "F4",
-      xe = "Period",
-      Le = Math.PI / 2 - .001,
-      Ce = Math.PI / 6,
-      ve = Math.PI / 6,
-      ue = 1.08,
-      me = [{
-        name: "X",
-        direction: [1, 0, 0],
-        colour: "#e5534b"
-      }, {
-        name: "Y",
-        direction: [0, 1, 0],
-        colour: "#57ab5a"
-      }, {
-        name: "Z",
-        direction: [0, 0, 1],
-        colour: "#539bf5"
-      }],
-      le = 24,
-      Se = 7,
-      ne = 4,
-      je = .01,
-      se = 4;
+    var mW = OW(192);
+    const EW = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      NW = "PetRoot";
+    let PW = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      LW = EW;
+    new Map, new Map;
 
-    function Ie(ee) {
-      let {
-        heatmap: ie,
-        scale: He,
-        fullyOpaqueFrom: Ve,
-        bounds: Ce,
-        fitBounds: ve,
-        schematic: ue,
-        controls: me,
-        onStepTime: le,
-        onShowAllTime: Se,
-        onTogglePlaying: ne,
-        getReadout: se = null
-      } = ee;
-      const {
-        t: Ie
-      } = (0, Te.v)(), {
-        clientEscMenuOptions: Mi
-      } = (0, pe.m)(["clientEscMenuOptions"]), Fi = (0, ye.useRef)(null), Ji = (0, ye.useRef)(null), oi = (0, ye.useRef)(null), Ri = (0, Xe.e)(Fi), [ki, qi] = (0, ye.useState)(!1), [fi, Ti] = (0, ye.useState)(!1), [Xi, zi] = (0, ye.useState)(!0), Bi = (0, ye.useRef)(!1), [Ei, gi] = (0, ye.useState)(!1), Oi = fi || !Xi && Ei, [di, Wi] = (0, ye.useState)(!1), [ti, Zi] = (0, ye.useState)(!0), [wi, Di] = (0, ye.useState)(null), Pi = Ce.min, [Ai, Yi] = (0, ye.useState)(Pi);
-      Ai[0] === Pi[0] && Ai[1] === Pi[1] && Ai[2] === Pi[2] || (Yi(Pi), null !== wi && Di({
-        ...wi,
-        position: Ki(wi.position, Ki(Ai, Ui(Pi, -1)))
-      }));
-      const Vi = (0, ye.useMemo)((() => function(ee) {
-          return [ee.max[0] - ee.min[0] + 1, ee.max[1] - ee.min[1] + 1, ee.max[2] - ee.min[2] + 1]
-        }(Ce)), [Ce]),
-        ai = (0, ye.useMemo)((() => function(ee, ie) {
-          const He = [],
-            ye = [];
-          for (const [be, Me] of Object.entries(ee.frequencies)) {
-            const ee = Number(be);
-            for (const [be, Ke] of Object.entries(Me)) {
-              const Me = Number(be);
-              for (const [be, Ue] of Object.entries(Ke)) Ue <= 0 || (He.push(ee - ie[0], Me - ie[1], Number(be) - ie[2]), ye.push(Ue))
-            }
-          }
-          return {
-            positions: Int32Array.from(He),
-            values: Float64Array.from(ye),
-            count: ye.length
-          }
-        }(ie, Pi)), [ie, Pi]),
-        ci = We * Mi.cameraFOV / 100,
-        xi = Ri.height > 0 ? Ri.width / Ri.height : 1,
-        Li = (0, ye.useMemo)((() => function(ee, ie) {
-          return {
-            min: [ee.min[0] - ie[0], ee.min[1] - ie[1], ee.min[2] - ie[2]],
-            max: [ee.max[0] - ie[0] + 1, ee.max[1] - ie[1] + 1, ee.max[2] - ie[2] + 1]
-          }
-        }(ve, Pi)), [ve, Pi]),
-        Ci = Hi(Li, xi, ci),
-        vi = null !== wi && void 0 !== wi ? wi : Ci,
-        ui = (0, ye.useRef)({
-          fittedView: Ci,
-          fieldOfView: ci,
-          mouseSensitivity: Mi.mouseSensitivity,
-          canLock: Xi
-        });
-      ui.current = {
-        fittedView: Ci,
-        fieldOfView: ci,
-        mouseSensitivity: Mi.mouseSensitivity,
-        canLock: Xi
-      };
-      const mi = (0, ye.useMemo)((() => {
-          if (!Oi) return null;
-          const ee = (ee, He, ye) => {
-              var be, Me, Ke;
-              return null !== (be = null === (Me = ie.frequencies[ee + Pi[0]]) || void 0 === Me || null === (Ke = Me[He + Pi[1]]) || void 0 === Ke ? void 0 : Ke[ye + Pi[2]]) && void 0 !== be ? be : 0
-            },
-            ye = function(ee, ie, He, ye) {
-              let be = 0,
-                Me = 1 / 0;
-              for (const Re of [0, 1, 2]) {
-                if (0 === ie[Re]) {
-                  if (ee[Re] < 0 || ee[Re] > He[Re]) return null;
-                  continue
-                }
-                const ye = (0 - ee[Re]) / ie[Re],
-                  Ke = (He[Re] - ee[Re]) / ie[Re];
-                be = Math.max(be, Math.min(ye, Ke)), Me = Math.min(Me, Math.max(ye, Ke))
-              }
-              if (be > Me) return null;
-              const Ke = [0, 1, 2].map((ye => Math.min(He[ye] - 1, Math.max(0, Math.floor(ee[ye] + ie[ye] * be))))),
-                Ue = [0, 1, 2].map((ee => Math.sign(ie[ee]))),
-                Fe = [0, 1, 2].map((He => {
-                  if (0 === Ue[He]) return 1 / 0;
-                  return ((Ue[He] > 0 ? Ke[He] + 1 : Ke[He]) - ee[He]) / ie[He]
-                })),
-                Je = [0, 1, 2].map((ee => 0 === Ue[ee] ? 1 / 0 : Math.abs(1 / ie[ee])));
-              let oe = null;
-              for (;;) {
-                const ee = ye(Ke[0], Ke[1], Ke[2]);
-                if (ee >= 1) return Ke;
-                ee > 0 && (oe = [Ke[0], Ke[1], Ke[2]]);
-                const ie = Fe[0] < Fe[1] ? Fe[0] < Fe[2] ? 0 : 2 : Fe[1] < Fe[2] ? 1 : 2;
-                if (Fe[ie] > Me) return oe;
-                if (Ke[ie] += Ue[ie], Fe[ie] += Je[ie], Ke[ie] < 0 || Ke[ie] >= He[ie]) return oe
-              }
-            }(vi.position, ei(vi), Vi, ((ie, ye, be) => (0, Ee.w)(ee(ie, ye, be), He, Ve)));
-          return null === ye ? null : {
-            x: ye[0] + Pi[0],
-            y: ye[1] + Pi[1],
-            z: ye[2] + Pi[2],
-            value: ee(ye[0], ye[1], ye[2])
-          }
-        }), [Oi, ie, Pi, vi, Vi, He, Ve]),
-        {
-          keyHandlers: li
-        } = (0, ge.e)({
-          isEnabled: Oi,
-          claimedKeyCodes: Ae,
-          Ik: ee => {
-            Di((ie => function(ee, ie) {
-              const He = [Math.sin(ee.heading), 0, Math.cos(ee.heading)],
-                ye = Ki(Ki(Ui(He, ie.forward), Ui(ii(ee.heading), ie.right)), [0, ie.up, 0]);
-              return {
-                ...ee,
-                position: Ki(ee.position, ye)
-              }
-            }(null !== ie && void 0 !== ie ? ie : ui.current.fittedView, ee)))
-          },
-          onZoomChange: Wi
-        });
-      (0, ye.useEffect)((() => {
-        const ee = Ji.current;
-        if (!ee) return;
-        let ie;
-        try {
-          ie = function(ee, ie) {
-            const He = new be.b(ee, !0, {
-                stencil: !1
-              }, !0),
-              ye = new Me.b(He),
-              [qe, fe, Te] = Ee.O;
-            ye.clearColor = new Je.e(qe / 255, fe / 255, Te / 255, 1);
-            const pe = new Ke.e("Heatmap3DCamera", oe.rf.Zero(), ye);
-            pe.fov = ie, pe.minZ = .05;
-            const Xe = new Ue.c("Heatmap3DLight", new oe.rf(.4, 1, -.6), ye);
-            Xe.diffuse = Je.Color3.White(), Xe.groundColor = Je.Color3.Black(), Xe.specular = Je.Color3.Black();
-            const ze = new Fe.StandardMaterial("Heatmap3DCellMaterial", ye);
-            ze.diffuseColor = new Je.Color3(.4, .4, .4), ze.emissiveColor = new Je.Color3(.62, .62, .62), ze.specularColor = Je.Color3.Black();
-            const Be = (0, Re.e)("Heatmap3DCells", {
-              size: 1
-            }, ye);
-            Be.material = ze, Be.Mp = !1, Be.Gf = !0, Be.isVisible = !1;
-            const ge = (0, Re.e)("Heatmap3DTranslucentCells", {
-              size: 1
-            }, ye);
-            ge.material = ze, ge.hasVertexAlpha = !0, ge.Mp = !1, ge.Gf = !0, ge.isVisible = !1;
-            const Oe = new Fe.StandardMaterial("Heatmap3DSchematicMaterial", ye);
-            Oe.diffuseColor = new Je.Color3(.6, .6, .6), Oe.emissiveColor = new Je.Color3(.4, .4, .4), Oe.specularColor = Je.Color3.Black();
-            const de = (0, Re.e)("Heatmap3DSchematicBlocks", {
-              size: 1
-            }, ye);
-            de.material = Oe, de.Mp = !1, de.Gf = !0, de.isVisible = !1;
-            const We = (0, ke.c)("Heatmap3DTarget", {
-              lines: Qe([-.52, -.52, -.52], [.52, .52, .52])
-            }, ye);
-            return We.color = new Je.Color3(.06, .14, .23), We.renderingGroupId = 1, We.Mp = !1, We.isVisible = !1, {
-              engine: He,
-              yp: ye,
-              camera: pe,
-              cells: Be,
-              translucentCells: ge,
-              translucent: {
-                nf: new Float32Array(0),
-                colours: new Float32Array(0),
-                count: 0
-              },
-              translucentSortedFrom: null,
-              schematicBlocks: de,
-              targetOutline: We,
-              chunkGrid: null,
-              chunkGridCentre: null,
-              chunkGridOrigin: null,
-              targetFieldOfView: ie,
-              needsRender: !0
-            }
-          }(ee, ui.current.fieldOfView)
-        } catch (He) {
-          return console.error("Failed to start the 3D heatmap", He), void qi(!0)
+    function cW(WW) {
+      var iW;
+      return null !== (iW = (0, mW.c)(PW, WW)) && void 0 !== iW ? iW : null
+    }
+
+    function wW(WW) {
+      var iW;
+      return null !== (iW = (0, mW.c)(LW, WW)) && void 0 !== iW ? iW : null
+    }
+  },
+  40384: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW,
+      f: () => EW,
+      j: () => NW
+    });
+    class mW {
+      constructor() {
+        this.pose = {
+          pos: [0, 0, 0],
+          yaw: 0,
+          mode: "flying",
+          seated: !1,
+          clip: void 0
+        }, this.Sj = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
+      }
+      step(WW) {
+        var iW;
+        const {
+          feet: OW,
+          heading: mW,
+          tuning: PW
+        } = WW, LW = Math.min(Math.max(WW.dt, 0), .1), {
+          pose: cW,
+          Sj: wW,
+          target: tW
+        } = this;
+        if (this.started && LW > 0) {
+          const WW = Math.hypot(OW[0] - this.lastFeet[0], OW[1] - this.lastFeet[1], OW[2] - this.lastFeet[2]);
+          this.speed += (WW / LW - this.speed) * Math.min(LW / .15, 1)
         }
-        return oi.current = ie, ie.engine.runRenderLoop((() => {
-          const ee = ie.camera;
-          ee.fov !== ie.targetFieldOfView && (ee.fov += (ie.targetFieldOfView - ee.fov) * (ee.fov > ie.targetFieldOfView ? .3 : .2), Math.abs(ie.targetFieldOfView - ee.fov) < 5e-4 && (ee.fov = ie.targetFieldOfView), ie.needsRender = !0), ie.needsRender && (ie.yp.render(), ie.needsRender = !ie.yp.isReady() || !ie.engine.areAllEffectsReady())
-        })), () => {
-          oi.current = null, ie.engine.dispose()
+        this.lastFeet[0] = OW[0], this.lastFeet[1] = OW[1], this.lastFeet[2] = OW[2], this.stillS = this.speed > .3 ? 0 : this.stillS + LW;
+        const ZW = this.stillS >= .6 ? "perched" : "flying";
+        "flying" === ZW && "perched" === cW.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += LW, cW.mode = ZW;
+        const xW = Math.sin(mW),
+          lW = Math.cos(mW);
+        "perched" === ZW ? (NW(tW, OW, PW.perchOffset, xW, lW), tW[1] += WW.headTopY - OW[1]) : (NW(tW, OW, PW.followOffset, xW, lW), tW[1] += EW(PW, WW.timeS));
+        const {
+          pos: AW
+        } = cW, bW = Math.hypot(tW[0] - AW[0], tW[1] - AW[1], tW[2] - AW[2]);
+        if (!this.started || bW > 8 || "perched" === ZW && (this.perchLocked || bW < .05)) this.perchLocked = this.started && "perched" === ZW, AW[0] = tW[0], AW[1] = tW[1], AW[2] = tW[2], wW[0] = wW[1] = wW[2] = 0;
+        else {
+          const WW = PW.followStiffness;
+          for (let iW = 0; iW < 3; iW++) wW[iW] += (WW * WW * (tW[iW] - AW[iW]) - 2 * WW * wW[iW]) * LW, AW[iW] += wW[iW] * LW
         }
-      }), []), (0, ye.useEffect)((() => {
-        const ee = Ji.current;
-        if (!ee) return;
-        const ie = () => {
-            Bi.current = !1, Ti(document.pointerLockElement === ee)
-          },
-          He = () => {
-            Bi.current && (Bi.current = !1, zi(!1))
-          },
-          ye = ie => {
-            const He = !ui.current.canLock && document.activeElement === ee && 0 !== (1 & ie.buttons);
-            if (document.pointerLockElement !== ee && !He) return;
-            const ye = ui.current.mouseSensitivity * Ze;
-            Di((ee => function(ee, ie, He) {
-              const ye = 2 * Math.PI;
-              return {
-                ...ee,
-                heading: ((ee.heading + ie) % ye + ye) % ye,
-                pitch: Math.max(-Le, Math.min(Le, ee.pitch + He))
-              }
-            }(null !== ee && void 0 !== ee ? ee : ui.current.fittedView, ie.movementX * ye, ie.movementY * ye)))
-          };
-        return document.addEventListener("pointerlockchange", ie), document.addEventListener("pointerlockerror", He), document.addEventListener("pointermove", ye), () => {
-          document.removeEventListener("pointerlockchange", ie), document.removeEventListener("pointerlockerror", He), document.removeEventListener("pointermove", ye), document.pointerLockElement === ee && (0, Oe.e)()
-        }
-      }), []), (0, ye.useEffect)((() => {
-        const ee = oi.current;
-        null !== ee && 0 !== Ri.width && 0 !== Ri.height && (ee.engine.resize(), ee.needsRender = !0)
-      }), [Ri.width, Ri.height]), (0, ye.useEffect)((() => {
-        const ee = oi.current;
-        null !== ee && (ee.targetFieldOfView = ci * (di ? te : 1))
-      }), [ci, di]), (0, ye.useEffect)((() => {
-        const ee = oi.current;
-        null !== ee && function(ee, ie, He, ye) {
-          const be = [],
-            Me = [],
-            Ke = [],
-            Ue = [];
-          for (let Fe = 0; Fe < ie.count; Fe++) {
-            const ee = ie.values[Fe],
-              Je = (0, Ee.w)(ee, He, ye);
-            if (Je <= 0) continue;
-            const [oe, Re, ke] = (0, Ee.q)((0, Ee.H)(ee, He)), qe = Je >= 1;
-            (qe ? be : Ke).push(ie.positions[3 * Fe] + .5, ie.positions[3 * Fe + 1] + .5, ie.positions[3 * Fe + 2] + .5), (qe ? Me : Ue).push(oe / 255, Re / 255, ke / 255, Je)
+        const jW = mW + PW.yawOffset;
+        var UW;
+        return this.started ? cW.yaw += ((UW = jW - cW.yaw) - 2 * Math.PI * Math.round(UW / (2 * Math.PI))) * Math.min(8 * LW, 1) : cW.yaw = jW, this.started = !0, cW.seated = "perched" === ZW && this.perchLocked, cW.clip = null === (iW = PW.clips) || void 0 === iW ? void 0 : iW[this.bO(ZW)], cW
+      }
+      reset() {
+        this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0, this.pose.mode = "flying", this.pose.seated = !1
+      }
+      bO(WW) {
+        return "perched" === WW ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
+      }
+    }
+
+    function EW(WW, iW) {
+      return WW.bobAmplitude * Math.sin(2 * Math.PI * WW.bobHz * iW)
+    }
+
+    function NW(WW, iW, OW, mW, EW) {
+      const [NW, PW, LW] = OW;
+      WW[0] = iW[0] + NW * EW + LW * mW, WW[1] = iW[1] + PW, WW[2] = iW[2] - NW * mW + LW * EW
+    }
+  },
+  40345: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => NW
+    });
+    var mW = OW(38235),
+      EW = OW(39045);
+
+    function NW(WW, iW) {
+      var OW;
+      WW.blendMode = iW.blendMode, WW.minLifeTime = iW.minLifeTime, WW.maxLifeTime = iW.maxLifeTime, WW.minSize = iW.minSize, WW.maxSize = iW.maxSize, WW.minEmitPower = iW.minEmitPower, WW.maxEmitPower = iW.maxEmitPower;
+      const NW = null !== (OW = iW.gravity) && void 0 !== OW ? OW : [0, 0, 0];
+      WW.gravity = new mW.fA(NW[0], NW[1], NW[2]);
+      for (const mW of iW.colorGradients) WW.addColorGradient(mW.timeFraction, (0, EW.k)(mW.minColor), mW.maxColor ? (0, EW.k)(mW.maxColor) : void 0)
+    }
+  },
+  39965: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => MW,
+      h: () => YW,
+      j: () => SW,
+      n: () => TW,
+      q: () => JW,
+      s: () => sW
+    });
+    var mW = OW(327),
+      EW = OW(39976),
+      NW = OW(3827),
+      PW = OW(3831),
+      LW = OW(39967),
+      cW = OW(39972),
+      wW = OW(25),
+      tW = OW(109),
+      ZW = OW(3941),
+      xW = OW(100),
+      lW = OW(131),
+      AW = OW(39),
+      bW = OW(299),
+      jW = OW(4816),
+      UW = OW(119);
+    const kW = {
+      no_adapter: "start_no_adapter",
+      device: "device_failed"
+    };
+
+    function sW(WW) {
+      var iW;
+      const OW = null !== (iW = tW.currentUrl.getSearchParam(WW)) && void 0 !== iW ? iW : AW.i.getItem(WW);
+      return null === OW || void 0 === OW || "" === OW ? null : "0" !== OW && "false" !== OW && !1 !== OW && 0 !== OW
+    }
+    async function MW(WW, iW) {
+      (0, NW.E)(null);
+      const OW = (0, PW.k)((0, PW.j)(iW.useWebGpu, !0));
+      (0, xW.setWebGpuRequested)("lite" === OW.requested && (0, xW.getWebGpuSupported)());
+      const LW = (0, PW.d)(OW.source);
+      null !== LW && console.info(`Renderer: ${OW.requested} from ${LW}`), null !== OW.fallbackReason && console.warn(`Renderer: ${OW.fallbackReason}`);
+      let tW = OW.fallbackReason;
+      if ("webgl2" !== OW.choice) {
+        const LW = await async function(WW, iW, OW, PW) {
+          const LW = await (0, xW.probeWebGpuAdapter)();
+          if ("usable" !== LW) return (0, xW.setWebGpuFallbackReason)(LW), console.info("No usable WebGPU adapter, rendering with WebGL."), "no usable WebGPU adapter";
+          if (OW && !0 !== AW.i.getItem(mW.pc)) {
+            if (!0 === AW.i.getItem(UW.A)) return (0, xW.setWebGpuFallbackReason)("old_intel_driver"), console.info("The WebGPU adapter is an Intel GPU whose driver is too old for Lite (no shader-f16), rendering with WebGL."), UW.c;
+            if (await (0, bW.p)(), (0, bW.e)()) return (0, xW.setWebGpuFallbackReason)("few_wasm_memories"), console.info("This tab fits too few wasm memories for WebGPU, rendering with WebGL."), bW.b
           }
-          Ge(ee.cells, Float32Array.from(be), Float32Array.from(Me), Me.length / 4), ee.translucent = {
-            nf: Float32Array.from(Ke),
-            colours: Float32Array.from(Ue),
-            count: Ue.length / 4
-          }, ee.translucentSortedFrom = null, re(ee), ee.needsRender = !0
-        }(ee, ai, He, Ve)
-      }), [ai, He, Ve]), (0, ye.useEffect)((() => {
-        const ee = oi.current;
-        null !== ee && function(ee, ie) {
-          ee.chunkGridOrigin = ie, ee.chunkGridCentre = null, Ne(ee)
-        }(ee, Ce.min)
-      }), [Ce]), (0, ye.useEffect)((() => {
-        const ee = oi.current;
-        null !== ee && function(ee, ie, He) {
-          const ye = [],
-            be = [];
-          if (null !== ie) {
+          let tW = "load_failed";
+          try {
             const {
-              positions: ee,
-              colours: Me,
-              count: Ke
-            } = ie.surface;
-            for (let ie = 0; ie < Ke; ie++) {
-              const Ke = [ee[3 * ie], ee[3 * ie + 1], ee[3 * ie + 2]];
-              [0, 1, 2].every((ee => Ke[ee] >= He.min[ee] - Ye && Ke[ee] <= He.max[ee] + Ye)) && (ye.push(Ke[0] - He.min[0] + .5, Ke[1] - He.min[1] + .5, Ke[2] - He.min[2] + .5), be.push(Me[3 * ie] / 255, Me[3 * ie + 1] / 255, Me[3 * ie + 2] / 255, 1))
-            }
-          }
-          Ge(ee.schematicBlocks, Float32Array.from(ye), Float32Array.from(be), be.length / 4), ee.needsRender = !0
-        }(ee, ue, Ce)
-      }), [ue, Ce]), (0, ye.useEffect)((() => {
-        const ee = oi.current;
-        null !== ee && null !== ee.chunkGrid && (ee.chunkGrid.isVisible = ti, ee.needsRender = !0)
-      }), [ti, Ce]), (0, ye.useEffect)((() => {
-        const ee = oi.current;
-        null !== ee && function(ee, ie, He) {
-          const {
-            camera: ye
-          } = ee;
-          ye.position.set(ie.position[0], ie.position[1], ie.position[2]), ye.rotation.set(ie.pitch, ie.heading, 0);
-          const be = (ae + 1) * fe.g.BR * Math.sqrt(3);
-          ye.maxZ = Math.max(be, Math.hypot(...Ki(ie.position, Ui(bi({
-            min: [0, 0, 0],
-            max: He
-          }), -1))) + 2 * Math.hypot(...He)), Ne(ee), re(ee), ee.needsRender = !0
-        }(ee, vi, Vi)
-      }), [vi, Vi]), (0, ye.useEffect)((() => {
-        const ee = oi.current;
-        null !== ee && (ee.targetOutline.isVisible = null !== mi, null !== mi && ee.targetOutline.position.set(mi.x - Pi[0] + .5, mi.y - Pi[1] + .5, mi.z - Pi[2] + .5), ee.needsRender = !0)
-      }), [mi, Pi]);
-      return (0, de.jsxs)("div", {
-        className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: Fi,
-        children: [(0, de.jsx)("canvas", {
-          className: "StudioHeatmapMapCanvas",
-          ref: Ji,
-          style: {
-            width: `${Ri.width}px`,
-            height: `${Ri.height}px`
-          },
-          tabIndex: 0,
-          "aria-label": Ie("3D heatmap"),
-          onClick: () => {
-            const ee = Ji.current;
-            if (null === ee) return;
-            if (ee.focus({
-                preventScroll: !0
-              }), fi || !Xi) return;
-            const ie = ee.requestPointerLock();
-            ie instanceof Promise ? ie.catch((ee => {
-              ee instanceof DOMException && ("WrongDocumentError" === ee.name || "NotSupportedError" === ee.name) && zi(!1)
-            })) : Bi.current = !0
-          },
-          ...li,
-          onKeyDown: ee => {
-            if (Oi && we.has(ee.code)) return ee.preventDefault(), void(() => {
-              const ee = Ji.current;
-              null !== ee && document.pointerLockElement === ee ? (0, Oe.e)() : null === ee || void 0 === ee || ee.blur()
-            })();
-            const ie = De[ee.code];
-            return Oi && void 0 !== ie ? (ee.preventDefault(), void le(ie)) : Oi && (0, ge.b)("replayPlayPause", ee.code) && !(0, ge.b)("Zoom", ee.code) ? (ee.preventDefault(), void(ee.repeat || ne())) : Oi && ee.code === Pe ? (ee.preventDefault(), void Se()) : Oi && ee.code === xe ? (ee.preventDefault(), void Di(null)) : Oi && ee.code === ce ? (ee.preventDefault(), void Zi((ee => !ee))) : void li.onKeyDown(ee)
-          },
-          onFocus: () => {
-            gi(!0)
-          },
-          onBlur: () => {
-            gi(!1), li.onBlur()
-          }
-        }), ki && (0, de.jsx)("div", {
-          className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: Ie("3D view isn't available in this browser.")
-        }), Oi && (0, de.jsx)("div", {
-          className: "StudioHeatmap3DCrosshair"
-        }), (0, de.jsx)("div", {
-          className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: vi.position.map(((ee, ie) => (ee + Pi[ie]).toFixed(2))).join(" ")
-        }), ti && (0, de.jsx)(he, {
-          heading: vi.heading,
-          pitch: vi.pitch,
-          onViewFrom: ee => {
-            const ie = Ui(ee, -1),
-              He = 0 === ie[1] ? {
-                heading: Math.atan2(ie[0], ie[2]),
-                pitch: 0
-              } : {
-                heading: vi.heading,
-                pitch: ie[1] < 0 ? Le : -Le
-              };
-            Di(Hi(Li, xi, ci, He))
-          },
-          onTurn: (ee, ie) => {
-            Di((He => function(ee, ie, He, ye) {
-              return yi(ee, ie, {
-                heading: ee.heading + He * je,
-                pitch: Math.max(-Le, Math.min(Le, ee.pitch + ye * je))
-              })
-            }(null !== He && void 0 !== He ? He : ui.current.fittedView, bi(Li), ee, ie)))
-          },
-          onFlip: () => {
-            Di((ee => function(ee, ie) {
-              return yi(ee, ie, {
-                heading: ee.heading + Math.PI,
-                pitch: -ee.pitch
-              })
-            }(null !== ee && void 0 !== ee ? ee : ui.current.fittedView, bi(Li))))
-          }
-        }), null !== mi && (0, de.jsx)("div", {
-          className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === se ? Ie("studio:heatmapBlockReadout", {
-            x: mi.x,
-            y: mi.y,
-            z: mi.z,
-            count: (0, qe.P)(mi.value)
-          }) : se(mi.x, mi.y, mi.z, mi.value)
-        }), (0, de.jsxs)("div", {
-          className: "StudioHeatmapMapControls",
-          children: [me, (0, de.jsx)(ze.M, {
-            active: null === wi,
-            onClick: () => {
-              Di(null)
-            },
-            children: (0, de.jsx)(Be.e, {
-              name: "eye"
+              create: OW
+            } = await (0, NW.v)(PW).load();
+            tW = "start_failed";
+            const mW = wW.d.antiAliasingOnWebGpuAdapter((0, lW.f)()),
+              EW = (0, cW.i)(WW),
+              LW = (0, cW.e)(EW, {
+                size: WW => (0, ZW.m)(EW, WW)
+              });
+            return await OW(WW, {
+              ROW: mW,
+              sceneDepth: iW.sceneDepth,
+              sunShadow: iW.sunShadow,
+              bufferSize: LW
             })
-          })]
-        })]
-      })
-    }
-
-    function he(ee) {
-      let {
-        heading: ie,
-        pitch: He,
-        onViewFrom: be,
-        onTurn: Me,
-        onFlip: Ke
-      } = ee;
-      const {
-        t: Ue
-      } = (0, Te.v)(), Fe = (0, ye.useRef)(null), Je = ei({
-        heading: ie,
-        pitch: He
-      }), oe = ii(ie), Re = Ji(Je, oe), ke = le + Se + 2, qe = me.flatMap((ee => [1, -1].map((ie => {
-        const He = Ui(ee.direction, ie);
-        return {
-          ...ee,
-          sign: ie,
-          direction: He,
-          endX: ke + Fi(He, oe) * le,
-          endY: ke - Fi(He, Re) * le,
-          depth: Fi(He, Je)
-        }
-      })))).sort(((ee, ie) => ie.depth - ee.depth));
-      return (0, de.jsxs)("svg", {
-        className: "StudioHeatmap3DGizmo",
-        width: 2 * ke,
-        height: 2 * ke,
-        "aria-hidden": !0,
-        onPointerDown: ee => {
-          var ie, He;
-          ee.currentTarget.setPointerCapture(ee.pointerId);
-          const ye = ee.target,
-            be = ye.getAttribute("data-end");
-          Fe.current = {
-            pointerId: ee.pointerId,
-            x: ee.clientX,
-            y: ee.clientY,
-            travel: 0,
-            side: null === be ? null : null !== (ie = null === (He = qe[Number(be)]) || void 0 === He ? void 0 : He.direction) && void 0 !== ie ? ie : null,
-            isOnMiddle: ye.hasAttribute("data-middle")
+          } catch (jW) {
+            const WW = (0, EW.d)(jW);
+            (0, xW.setWebGpuFallbackReason)(WW ? kW[WW] : tW);
+            const iW = null === jW || void 0 === jW ? void 0 : jW.fallbackReason;
+            return "string" === typeof iW ? (console.warn(`Lite could not start, falling back to WebGL: ${String(jW)}`), iW) : (console.error("Failed to initialise the Lite renderer, falling back to WebGL.", jW), "it failed to start (see the console)")
           }
-        },
-        onPointerMove: ee => {
-          const ie = Fe.current;
-          if (null === ie || ie.pointerId !== ee.pointerId) return;
-          const He = ee.clientX - ie.x,
-            ye = ee.clientY - ie.y;
-          ie.x = ee.clientX, ie.y = ee.clientY, ie.travel += Math.abs(He) + Math.abs(ye), ie.travel >= se && Me(He, ye)
-        },
-        onPointerUp: ee => {
-          const ie = Fe.current;
-          Fe.current = null, null === ie || ie.pointerId !== ee.pointerId || ie.travel >= se || (null !== ie.side ? be(ie.side) : ie.isOnMiddle && Ke())
-        },
-        onPointerCancel: () => {
-          Fe.current = null
-        },
-        children: [qe.map(((ee, ie) => {
-          const He = ee.sign > 0;
-          return (0, de.jsxs)("g", {
-            children: [(0, de.jsx)("line", {
-              x1: ke,
-              y1: ke,
-              x2: ee.endX,
-              y2: ee.endY,
-              stroke: ee.colour,
-              strokeOpacity: He ? 1 : .5,
-              strokeWidth: 2,
-              strokeLinecap: "round"
-            }), (0, de.jsx)("circle", {
-              className: "StudioHeatmap3DGizmoEnd",
-              "data-end": ie,
-              cx: ee.endX,
-              cy: ee.endY,
-              r: He ? Se : Se - 1,
-              fill: ee.colour,
-              fillOpacity: He ? 1 : .3,
-              stroke: ee.colour,
-              strokeWidth: He ? 0 : 1.5,
-              children: (0, de.jsx)("title", {
-                children: `${Ue("View from")} ${He?"+":"\u2212"}${ee.name}`
-              })
-            }), He && (0, de.jsx)("text", {
-              pointerEvents: "none",
-              x: ee.endX,
-              y: ee.endY,
-              fill: "#151515",
-              fontSize: 9,
-              fontWeight: "bold",
-              textAnchor: "middle",
-              dominantBaseline: "central",
-              children: ee.name
-            })]
-          }, `${He?"+":"-"}${ee.name}`)
-        })), (0, de.jsx)("circle", {
-          className: "StudioHeatmap3DGizmoEnd",
-          "data-middle": !0,
-          cx: ke,
-          cy: ke,
-          r: ne,
-          fill: "#d0d0d0",
-          fillOpacity: .85,
-          children: (0, de.jsx)("title", {
-            children: Ue("View from the opposite side")
-          })
-        })]
-      })
-    }
-
-    function Ne(ee) {
-      var ie, He, ye;
-      const {
-        chunkGridOrigin: be,
-        camera: Me
-      } = ee;
-      if (null === be) return;
-      const Ke = [Me.position.x, Me.position.y, Me.position.z],
-        Ue = [0, 2].map((ee => Math.floor((Ke[ee] + be[ee]) / fe.g.BR))),
-        Fe = ee.chunkGridCentre;
-      if (null !== Fe && Fe.every(((ee, ie) => ee === Ue[ie]))) return;
-      const Re = null === (ie = null === (He = ee.chunkGrid) || void 0 === He ? void 0 : He.isVisible) || void 0 === ie || ie;
-      null === (ye = ee.chunkGrid) || void 0 === ye || ye.dispose();
-      const [qe, Te] = [0, 2].map(((ee, ie) => {
-        const He = [];
-        for (let ye = Ue[ie] - ae; ye <= Ue[ie] + ae + 1; ye++) He.push(ye * fe.g.BR - be[ee]);
-        return He
-      })), pe = -be[1], Xe = [];
-      for (const Je of Te) Xe.push([new oe.rf(qe[0], pe, Je), new oe.rf(qe[qe.length - 1], pe, Je)]);
-      for (const Je of qe) Xe.push([new oe.rf(Je, pe, Te[0]), new oe.rf(Je, pe, Te[Te.length - 1])]);
-      const ze = (0, ke.c)("Heatmap3DChunkGrid", {
-        lines: Xe
-      }, ee.yp);
-      ze.color = new Je.Color3(.45, .6, .78), ze.Mp = !1, ze.isVisible = Re, ee.chunkGrid = ze, ee.chunkGridCentre = Ue, ee.needsRender = !0
-    }
-
-    function Ge(ee, ie, He, ye) {
-      ee.Bie("matrix", function(ee, ie) {
-        const He = new Float32Array(16 * ie);
-        for (let ye = 0; ye < ie; ye++) {
-          const ie = 16 * ye;
-          He[ie] = 1, He[ie + 5] = 1, He[ie + 10] = 1, He[ie + 12] = ee[3 * ye], He[ie + 13] = ee[3 * ye + 1], He[ie + 14] = ee[3 * ye + 2], He[ie + 15] = 1
-        }
-        return He
-      }(ie, ye), 16, !0), ee.Bie("color", He, 4, !0), ee.isVisible = ye > 0
-    }
-
-    function re(ee) {
-      const {
-        camera: ie,
-        translucent: He
-      } = ee, ye = [ie.position.x, ie.position.y, ie.position.z], be = ee.translucentSortedFrom;
-      if (null !== be && Math.hypot(ye[0] - be[0], ye[1] - be[1], ye[2] - be[2]) < Ve) return;
-      ee.translucentSortedFrom = ye;
-      const Me = new Float64Array(He.count),
-        Ke = new Uint32Array(He.count);
-      for (let Je = 0; Je < He.count; Je++) {
-        const ee = He.nf[3 * Je] - ye[0],
-          ie = He.nf[3 * Je + 1] - ye[1],
-          be = He.nf[3 * Je + 2] - ye[2];
-        Me[Je] = ee * ee + ie * ie + be * be, Ke[Je] = Je
+        }(WW, iW, "setting" === OW.source, OW.choice);
+        if ("lite" === OW.choice && AW.i.setItem(UW.p, "string" === typeof LW), "string" !== typeof LW) return wW.d.followGameGpu((0, lW.f)()), (0, xW.setWebGpuFallbackReason)("none"), (0, PW.o)(OW), (0, NW.E)(LW), {
+          lite: LW
+        };
+        tW = (0, PW.b)(OW.choice, [LW]), WW.replaceWith(WW.cloneNode(!1))
+      } else "lite" === OW.requested ? (0, xW.setWebGpuFallbackReason)("load_failed") : "default" === OW.source && iW.webGpuDefaultOffReason ? (0, xW.setWebGpuFallbackReason)(iW.webGpuDefaultOffReason) : (0, xW.setWebGpuFallbackReason)("not_requested");
+      return (0, PW.o)({
+        ...OW,
+        choice: "webgl2",
+        fallbackReason: tW
+      }), wW.d.followGameGpu(null), {
+        lite: null
       }
-      Ke.sort(((ee, ie) => Me[ie] - Me[ee]));
-      const Ue = new Float32Array(3 * He.count),
-        Fe = new Float32Array(4 * He.count);
-      Ke.forEach(((ee, ie) => {
-        Ue.set(He.nf.subarray(3 * ee, 3 * ee + 3), 3 * ie), Fe.set(He.colours.subarray(4 * ee, 4 * ee + 4), 4 * ie)
-      })), Ge(ee.translucentCells, Ue, Fe, He.count), ee.needsRender = !0
     }
 
-    function Qe(ee, ie) {
-      const He = (He, ye, be) => new oe.rf(0 === He ? ee[0] : ie[0], 0 === ye ? ee[1] : ie[1], 0 === be ? ee[2] : ie[2]),
-        ye = [];
-      for (const be of [0, 1])
-        for (const ee of [0, 1]) ye.push([He(0, be, ee), He(1, be, ee)], [He(be, 0, ee), He(be, 1, ee)], [He(be, ee, 0), He(be, ee, 1)]);
-      return ye
+    function KW() {
+      return Promise.all([OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(298), OW.e(292), OW.e(293), OW.e(277), OW.e(0)]).then((() => OW(53714)))
+    }
+    async function SW() {
+      return (await KW()).createSceneParticleSystem
+    }
+    async function YW() {
+      Promise.all([OW.e(289), OW.e(621)]).then((() => OW(53803))).then((WW => {
+        WW.installImageBitmapTextureLoader()
+      })).catch((() => {}));
+      const [WW, iW] = await Promise.all([KW(), Promise.all([OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(298), OW.e(292), OW.e(293), OW.e(277), OW.e(0)]).then((() => OW(53815))), Promise.all([OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(298), OW.e(292), OW.e(293), OW.e(277), OW.e(0)]).then((() => OW(42601)))]);
+      return (0, LW.h)(iW.SkyMaterial), WW.default
     }
 
-    function ei(ee) {
-      return [Math.sin(ee.heading) * Math.cos(ee.pitch), -Math.sin(ee.pitch), Math.cos(ee.heading) * Math.cos(ee.pitch)]
+    function yW(WW) {
+      return "lite" === (0, PW.k)((0, PW.j)(WW, !1)).choice && (0, xW.getWebGpuSupported)() && !AW.i.getItem(UW.p)
     }
 
-    function ii(ee) {
-      return [Math.cos(ee), 0, -Math.sin(ee)]
+    function TW(WW) {
+      yW(WW) || YW().catch((WW => {
+        console.warn("Failed to prefetch noa's Babylon backend.", WW)
+      }))
     }
 
-    function Hi(ee, ie, He) {
-      let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: Ce,
-        pitch: ve
+    function JW(WW) {
+      (0, jW.e)((() => {
+        yW(WW) ? (0, NW.s)().load().catch((WW => {
+          console.warn("Failed to prefetch the Lite renderer.", WW)
+        })) : TW(WW)
+      }))
+    }
+  },
+  39972: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => LW,
+      i: () => PW
+    });
+    var mW = OW(25),
+      EW = OW(35167),
+      NW = OW(3941);
+
+    function PW(WW) {
+      var iW;
+      return null !== (iW = WW.parentElement) && void 0 !== iW ? iW : WW
+    }
+
+    function LW(WW, iW) {
+      if (WW.clientWidth <= 0 || WW.clientHeight <= 0 || EW.c.isHeld()) return null;
+      const OW = (0, NW.p)(),
+        [PW, LW] = iW.size(OW);
+      return (0, NW.v)(PW, LW, OW, mW.d.get("clientEscMenuOptions").pixelScale)
+    }
+  },
+  40085: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW,
+      d: () => EW
+    });
+    const mW = 2.2;
+
+    function EW(WW) {
+      let iW = 0;
+      return WW > 5 && (iW = .12 * Math.min(WW - 5, 15), WW > 20 && (iW += .01 * (WW - 20))), 1.4 + iW
+    }
+  },
+  40073: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => PW,
+      g: () => LW,
+      k: () => NW,
+      n: () => lW,
+      r: () => cW,
+      t: () => tW,
+      u: () => wW,
+      v: () => xW
+    });
+    var mW = OW(38235),
+      EW = OW(38532);
+    const NW = 0,
+      PW = 1,
+      LW = 18;
+
+    function cW(WW) {
+      return !1 !== WW && (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || arguments.length > 2 && void 0 !== arguments[2] && arguments[2])
+    }
+
+    function wW(WW, iW) {
+      return null !== WW && void 0 !== WW ? WW : iW
+    }
+
+    function tW(WW, iW, OW) {
+      return iW && !OW ? Math.max(1, WW / LW) : 1
+    }
+    const ZW = new WeakMap;
+
+    function xW(WW, iW, OW, EW) {
+      const NW = WW.EY.XiW(OW),
+        PW = NW.offset;
+      PW[0] = PW[1] = PW[2] = 0;
+      const LW = WW.EY.XiW(iW);
+      if (EW || !LW || !NW.mesh.isEnabled() || !NW.mesh.isVisible) return 1;
+      const cW = WW.EY.YG(OW).Yz,
+        wW = WW.camera.mF(),
+        tW = WW.camera.XF(),
+        xW = wW[0] - cW[0],
+        lW = wW[1] - cW[1],
+        AW = wW[2] - cW[2];
+      if (-(tW[0] * xW + tW[1] * lW + tW[2] * AW) <= 0 || Math.hypot(xW, lW, AW) < .1) return 1;
+      const bW = WW.TZ.bD().getFrameId();
+      let jW = ZW.get(LW);
+      if (jW || (jW = {
+          frame: -1,
+          minimum: new mW.fA,
+          maximum: new mW.fA,
+          valid: !1
+        }, ZW.set(LW, jW)), jW.frame !== bW)
+        if (jW.frame = bW, LW.OmW) jW.valid = WW.TZ.nD.getObjectBounds(LW.uD, jW.minimum, jW.maximum);
+        else {
+          jW.minimum.Z5(1 / 0), jW.maximum.Z5(-1 / 0), jW.valid = !1;
+          const WW = [LW.mesh, ...LW.mesh.getChildMeshes(!1)];
+          for (const iW of WW) {
+            if (!("getTotalVertices" in iW) || !iW.isEnabled() || !iW.isVisible || !iW.getTotalVertices()) continue;
+            iW.computeWorldMatrix();
+            const WW = iW.KV().boundingBox;
+            jW.minimum.minimizeInPlace(WW.minimumWorld), jW.maximum.maximizeInPlace(WW.maximumWorld), jW.valid = !0
+          }
+        } if (!jW.valid) return 1;
+      const UW = function(WW, iW, OW, mW, EW) {
+        const NW = iW[0] - WW[0],
+          PW = iW[1] - WW[1],
+          LW = iW[2] - WW[2],
+          cW = Math.hypot(NW, PW, LW),
+          wW = -(EW[0] * NW + EW[1] * PW + EW[2] * LW);
+        if (cW < .1 || wW <= 0) return 0;
+        const tW = (Math.abs(EW[0]) * (mW.x - OW.x) + Math.abs(EW[1]) * (mW.y - OW.y) + Math.abs(EW[2]) * (mW.z - OW.z)) / 2,
+          ZW = -(EW[0] * ((OW.x + mW.x) / 2 - WW[0]) + EW[1] * ((OW.y + mW.y) / 2 - WW[1]) + EW[2] * ((OW.z + mW.z) / 2 - WW[2]));
+        return Math.max(0, Math.min((ZW + tW + .01) / wW, 2 * tW / wW, 1 - .1 / wW))
+      }(cW, wW, jW.minimum, jW.maximum, WW.camera.XF());
+      for (let mW = 0; mW < 3; mW++) PW[mW] = (wW[mW] - cW[mW]) * UW;
+      return 1 - UW
+    }
+
+    function lW(WW, iW) {
+      const {
+        mesh: OW,
+        offset: mW
+      } = WW.EY.XiW(iW), NW = WW.EY.YG(iW).Yz, PW = NW[0] + mW[0], LW = NW[1] + mW[1], cW = NW[2] + mW[2];
+      (0, EW.q)(OW, PW, LW, cW)
+    }
+  },
+  39967: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => wW,
+      h: () => LW,
+      j: () => cW
+    });
+    var mW = OW(38526),
+      EW = OW(38419);
+    const NW = new Set;
+    let PW = null;
+
+    function LW(WW) {
+      PW = WW
+    }
+
+    function cW(WW) {
+      if (!PW) throw new Error("No SkyMaterial: WebGL2's backend installs it");
+      return new PW("sky", WW)
+    }
+
+    function wW(WW, iW, OW) {
+      if (!(0, mW.f)(WW)) return void WW.material.forceCompilation(WW, iW);
+      const PW = () => {
+        if (WW.Ay()) return void NW.delete(WW);
+        const mW = (0, EW.bb)(WW.material);
+        if (![null === mW || void 0 === mW ? void 0 : mW.diffuseTexture, null === mW || void 0 === mW ? void 0 : mW.opacityTexture, null === mW || void 0 === mW ? void 0 : mW.emissiveTexture, null === mW || void 0 === mW ? void 0 : mW.reflectionTexture].every((WW => !WW || OW.prepareTexture(WW)))) return NW.add(WW), void setTimeout(PW, 16);
+        NW.delete(WW), iW()
       };
-      const be = [ee.max[0] - ee.min[0], ee.max[1] - ee.min[1], ee.max[2] - ee.min[2]],
-        Me = ei(ye),
-        Ke = ii(ye.heading),
-        Ue = Ji(Me, Ke),
-        Fe = Math.tan(He / 2),
-        Je = Fe * ie;
-      let oe = 1;
-      for (const Re of [-be[0] / 2, be[0] / 2])
-        for (const ee of [-be[1] / 2, be[1] / 2])
-          for (const ie of [-be[2] / 2, be[2] / 2]) {
-            const He = [Re, ee, ie],
-              ye = Fi(He, Me);
-            oe = Math.max(oe, Math.abs(Fi(He, Ke)) / Je - ye, Math.abs(Fi(He, Ue)) / Fe - ye)
+      PW()
+    }
+  },
+  40070: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => fW,
+      c: () => DW,
+      d: () => zW,
+      e: () => XW,
+      g: () => ti,
+      k: () => Ni,
+      o: () => Ei,
+      p: () => CW,
+      q: () => aW,
+      s: () => BW,
+      u: () => Oi,
+      w: () => Zi
+    });
+    var mW = OW(1172),
+      EW = OW(1244),
+      NW = OW(327),
+      PW = OW(1404),
+      LW = OW(5185),
+      cW = OW(5199),
+      wW = OW(2365),
+      tW = OW(38437),
+      ZW = OW(38431),
+      xW = OW(39083),
+      lW = OW(38694),
+      AW = OW(38576),
+      bW = OW(38364),
+      jW = OW(40073),
+      UW = OW(39120),
+      kW = OW(39913),
+      sW = OW(38411),
+      MW = OW(38502),
+      KW = OW(643),
+      SW = OW(1255),
+      YW = OW(2042),
+      yW = OW(2138),
+      TW = OW(4344),
+      JW = OW(4337),
+      hW = OW(2085),
+      HW = OW(25),
+      nW = OW(10049),
+      uW = OW(5161),
+      oW = OW(5187),
+      dW = OW(5192),
+      eW = OW(37369);
+    const vW = Object.create(null),
+      gW = Object.create(null),
+      DW = {
+        DEFAULT_FONT_SIZE: 47,
+        DEFAULT_SUBTITLE_FONT_SIZE: 30,
+        HORIZONTAL_PADDING: 30,
+        VERTICAL_PADDING: 22,
+        TEXT_SHADOW_WIDTH: 2,
+        TEXT_PLANE_RATIO: .2 / 64,
+        LINE_SPACING: 8,
+        ICON_PADDING: 6,
+        ANIMATE_IN_DELAY: 40,
+        EFFECT_ICON_SIZE: 70
+      },
+      VW = {
+        text: WW => `bolder ${WW}px 'Jetbrains Mono'`
+      },
+      pW = 41,
+      fW = {
+        icon: yW.e,
+        mainRGB: "transparent",
+        chatTag: [],
+        nameTag: {
+          iconRGB: "#f38ab6",
+          iconShadowRGB: "black"
+        },
+        visible: !0
+      };
+
+    function CW(WW, iW) {
+      return WW.flatMap((WW => {
+        var OW;
+        if ("object" === typeof WW && "chatTag" in WW) return [WW];
+        if (qW(WW)) return [WW];
+        if ((0, NW.Cb)(WW)) return [{
+          str: ""
+        }];
+        if ((0, NW.yb)(WW)) {
+          const OW = (0, nW.c)(WW.action);
+          if (OW) {
+            var PW;
+            const mW = WW.style;
+            return [{
+              icon: (0, nW.e)(OW),
+              style: {
+                fontSize: null !== (PW = null === mW || void 0 === mW ? void 0 : mW.fontSize) && void 0 !== PW ? PW : `${iW}px`,
+                opacity: null === mW || void 0 === mW ? void 0 : mW.opacity
+              }
+            }]
           }
+          const mW = (0, hW.r)(WW.action, HW.d.get("isTouchScreen")),
+            EW = (0, hW.n)(WW.action);
+          null === mW && null === EW && console.warn(`No key binding found for action: ${WW.action}`), WW = {
+            str: null !== mW && void 0 !== mW ? mW : (0, hW.m)(EW),
+            style: WW.style
+          }
+        }
+        let LW;
+        return LW = "string" !== typeof WW && "str" in WW ? WW : {
+            str: WW
+          }, null !== (OW = LW.style) && void 0 !== OW && OW.fontSize ? LW.style.fontSize.endsWith("px") || console.warn(new Error("Canvas text font size should be in px").stack) : LW.style ? LW.style.fontSize = `${iW}px` : LW.style = {
+            fontSize: `${iW}px`
+          },
+          function(WW) {
+            if ("object" !== typeof WW.str || !("translationKey" in WW.str)) return [WW];
+            const iW = EW.e.get().getCurrentLanguageCode(),
+              OW = (0, mW.o)(WW.str.params, YW.e.shown),
+              NW = (0, mW.t)(iW, WW.str.translationKey, OW);
+            if (NW.every((WW => "string" === typeof WW))) return [WW];
+            return NW.map((iW => "string" === typeof iW ? {
+              str: iW,
+              style: WW.style
+            } : {
+              icon: iW.icon,
+              style: {
+                fontSize: WW.style.fontSize,
+                opacity: WW.style.opacity
+              }
+            }))
+          }(LW)
+      }))
+    }
+
+    function XW(WW) {
+      const iW = Object.keys(WW).length;
       return {
-        position: Ki([ee.min[0] + be[0] / 2, ee.min[1] + be[1] / 2, ee.min[2] + be[2] / 2], Ui(Me, -oe * ue)),
-        heading: ye.heading,
-        pitch: ye.pitch
+        width: DW.EFFECT_ICON_SIZE * iW,
+        height: iW > 0 ? DW.EFFECT_ICON_SIZE : 0
       }
     }
 
-    function yi(ee, ie, He) {
-      const ye = Mi(ee),
-        be = Mi(He),
-        Me = Ki(ee.position, Ui(ie, -1)),
-        Ke = [0, 1, 2].reduce(((ee, ie) => Ki(ee, Ui(be[ie], Fi(Me, ye[ie])))), [0, 0, 0]);
+    function BW(WW) {
+      return WW && void 0 !== WW.str
+    }
+
+    function qW(WW) {
+      return WW && "object" === typeof WW && "icon" in WW && !("mainRGB" in WW)
+    }
+
+    function RW(WW) {
+      return WW && "object" === typeof WW && "mainRGB" in WW
+    }
+
+    function GW(WW) {
+      var iW, OW;
+      const mW = null !== (iW = BW(WW) ? null === (OW = WW.style) || void 0 === OW ? void 0 : OW.fontSize : void 0) && void 0 !== iW ? iW : `${DW.DEFAULT_FONT_SIZE}px`;
+      return VW.text(Number(mW.replace("px", "")))
+    }
+
+    function IW(WW) {
+      var iW;
+      const OW = null !== (iW = Object.hasOwn(eW.e, WW) ? eW.e[WW] : null) && void 0 !== iW ? iW : (0, PW.e)(WW, (0, PW.m)(WW));
+      return OW || console.warn(`Unknown rank icon "${WW}" \u2014 not in the bundled Font Awesome subset.`), OW
+    }
+
+    function aW(WW) {
+      return RW(WW) ? "" : rW(WW)
+    }
+
+    function rW(WW) {
+      if (!BW(WW)) return "";
+      if ("string" === typeof WW.str) return WW.str;
+      if ("translationKey" in WW.str) {
+        const iW = EW.e.get().getCurrentLanguageCode(),
+          OW = (0, mW.o)(WW.str.params, YW.e.shown);
+        return (0, mW.u)(iW, WW.str.translationKey, OW)
+      }
+      return "entityName" in WW.str ? (0, SW.g)(WW.str.entityName, YW.e.shown) : ""
+    }
+
+    function zW(WW, iW) {
+      if ((0, KW.K)(WW) || 0 === WW.length) return {
+        width: 0,
+        height: 0,
+        sizeCache: []
+      };
+      let OW = 0;
+      for (const PW of WW) {
+        const WW = wi(PW);
+        OW = Math.max(OW, WW)
+      }
+      const mW = OW + DW.VERTICAL_PADDING,
+        EW = [];
+      let NW = 0;
+      NW += Wi(void 0, WW[0]);
+      for (let PW = 0; PW < WW.length; PW++) {
+        const OW = WW[PW],
+          mW = {
+            x: NW,
+            width: 0
+          };
+        NW += FW(OW, iW), NW += Wi(OW, WW[PW + 1]), mW.width = NW - mW.x, EW.push(mW)
+      }
       return {
-        position: Ki(ie, Ke),
-        heading: He.heading,
-        pitch: He.pitch
+        width: NW,
+        height: mW,
+        sizeCache: EW
       }
     }
 
-    function bi(ee) {
-      return Ui(Ki(ee.min, ee.max), .5)
+    function FW(WW, iW) {
+      if (qW(WW)) return wi(WW);
+      if (RW(WW)) return function(WW) {
+        const iW = IW(WW);
+        if (!iW) return pW;
+        const [OW, mW] = iW.icon;
+        return pW * (OW / mW)
+      }(WW.icon) + DW.HORIZONTAL_PADDING;
+      const OW = GW(WW);
+      return function(WW, iW, OW) {
+        return OW.font = iW, OW.measureText(WW).width
+      }(rW(WW), OW, iW)
     }
 
-    function Mi(ee) {
-      const ie = ei(ee),
-        He = ii(ee.heading);
-      return [ie, He, Ji(ie, He)]
+    function QW(WW) {
+      return BW(WW) || qW(WW)
     }
 
-    function Ki(ee, ie) {
-      return [ee[0] + ie[0], ee[1] + ie[1], ee[2] + ie[2]]
+    function Wi(WW, iW) {
+      const OW = QW(WW),
+        mW = QW(iW);
+      return void 0 === WW && !mW || !OW && void 0 === iW ? 0 : OW !== mW ? .5 * DW.HORIZONTAL_PADDING : 0
+    }
+    let ii;
+
+    function Oi() {
+      return ii ??= document.createElement("canvas").getContext("2d"), ii
+    }
+    const mi = () => 0;
+
+    function Ei(WW, iW, OW, mW, EW) {
+      let NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : mi;
+      iW += Wi(void 0, WW[0]);
+      for (let PW = 0; PW < WW.length; PW++) {
+        const LW = WW[PW],
+          cW = Ni(LW, iW, OW, mW, EW, void 0, NW);
+        iW += 0 === cW ? 0 : cW + Wi(LW, WW[PW + 1])
+      }
     }
 
-    function Ui(ee, ie) {
-      return [ee[0] * ie, ee[1] * ie, ee[2] * ie]
+    function Ni(WW, iW, OW, mW, EW, PW) {
+      var ZW;
+      let xW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : mi;
+      if (qW(WW)) {
+        const mW = wi(WW);
+        return function(WW, iW, OW, mW, EW) {
+          var NW;
+          let PW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : mi;
+          const ZW = (0, tW.k)(EW);
+          OW += DW.VERTICAL_PADDING / 2;
+          const xW = PW(),
+            lW = (0, nW.l)(WW.icon),
+            AW = WW => {
+              if (xW === PW())
+                if (ZW.imageSmoothingEnabled = lW, lW && WW.width > WW.height) {
+                  const EW = mW * WW.height / WW.width;
+                  ZW.drawImage(WW, iW, OW + (mW - EW) / 2, mW, EW)
+                } else ZW.drawImage(WW, iW, OW, mW, mW)
+            };
+          if (gW[WW.icon]) return void AW(gW[WW.icon]);
+          if (vW[WW.icon]) {
+            const iW = vW[WW.icon];
+            if (iW.complete) return void AW(iW)
+          }
+          const bW = (0, uW.j)(WW.icon, mW);
+          if (bW) return void AW(bW);
+          const jW = function(WW) {
+              const iW = (0, nW.i)(WW);
+              if (null !== iW) return {
+                url: iW,
+                type: "padGlyph"
+              };
+              if (LW.c.includes(WW)) return {
+                url: JW.d.getTexture(WW, TW.g.ICON).url,
+                type: "ingameIcon"
+              };
+              {
+                var OW;
+                const iW = null === (OW = wW.l.itemsClient[WW]) || void 0 === OW ? void 0 : OW.type;
+                return ci.includes(iW) ? (console.error(new Error(`Invalid icon type ${iW} is not supported in nametags`).stack), {
+                  url: "",
+                  type: ""
+                }) : (0, oW.c)(iW) ? {
+                  url: "",
+                  type: iW
+                } : "GrayscaleArmour" === iW || cW.b[WW] ? {
+                  url: (0, dW.f)(WW),
+                  type: iW,
+                  tint: (0, cW.c)(WW)
+                } : {
+                  url: (0, dW.f)(WW),
+                  type: iW
+                }
+              }
+            }(WW.icon),
+            UW = jW.tint;
+          let sW = jW.url;
+          if ((0, oW.c)(null === (NW = wW.l.itemsClient[WW.icon]) || void 0 === NW ? void 0 : NW.type)) {
+            const iW = WW.icon;
+            if (!wW.l.itemsClient[iW].itemTexture) return void(0, uW.g)(iW, mW).then((WW => {
+              AW(WW), (0, kW.l)(EW)
+            }), (() => {}));
+            sW = (0, dW.f)(iW)
+          }
+          if (!sW) return;
+          const MW = new Image;
+          lW && (MW.crossOrigin = "anonymous");
+          if (MW.src = sW, UW) return void(MW.onload = () => {
+            const iW = function(WW, iW) {
+              let [OW, mW, EW] = iW;
+              const NW = document.createElement("canvas");
+              NW.width = WW.naturalWidth, NW.height = WW.naturalHeight;
+              const PW = NW.getContext("2d");
+              return PW.drawImage(WW, 0, 0), PW.globalCompositeOperation = "multiply", PW.fillStyle = `rgb(${OW}, ${mW}, ${EW})`, PW.fillRect(0, 0, NW.width, NW.height), PW.globalCompositeOperation = "destination-in", PW.drawImage(WW, 0, 0), NW
+            }(MW, UW);
+            gW[WW.icon] = iW, AW(iW), (0, kW.l)(EW)
+          });
+          vW[WW.icon] = MW, MW.onload = () => {
+            AW(MW), (0, kW.l)(EW)
+          }
+        }(WW, iW, OW, mW, EW, xW), mW
+      }
+      const lW = (0, tW.k)(EW);
+      if (RW(WW)) {
+        const EW = null !== PW && void 0 !== PW ? PW : FW(WW, lW);
+        return function(WW, iW, OW, mW, EW, NW) {
+          var PW, LW;
+          NW.fillStyle = WW.mainRGB, NW.fillRect(iW, OW, mW, EW);
+          const cW = IW(WW.icon);
+          if (!cW) return;
+          const wW = (null === (PW = WW.nameTag) || void 0 === PW ? void 0 : PW.iconRGB) || "white",
+            tW = (null === (LW = WW.nameTag) || void 0 === LW ? void 0 : LW.iconShadowRGB) || "black",
+            [ZW, xW, , , lW] = cW.icon,
+            AW = "string" === typeof lW ? lW : lW.join(" "),
+            bW = pW / xW,
+            jW = iW + (mW - ZW * bW) / 2,
+            UW = OW + (EW - pW) / 2,
+            kW = new Path2D(AW),
+            sW = NW;
+          for (const MW of [-1, 1])
+            for (const WW of [-1, 1]) Pi(sW, kW, jW + DW.TEXT_SHADOW_WIDTH * MW, UW + DW.TEXT_SHADOW_WIDTH * WW, bW, tW);
+          Pi(sW, kW, jW, UW, bW, wW)
+        }(WW, iW, OW, EW, mW, lW), EW
+      }
+      const AW = rW(WW);
+      if (0 === AW.length) return 0;
+      const bW = GW(WW);
+      lW.font = bW;
+      const jW = null !== PW && void 0 !== PW ? PW : FW(WW, lW),
+        UW = BW(WW) && null !== (ZW = (0, NW.cc)(WW.style)) && void 0 !== ZW ? ZW : "white";
+      let sW = OW + mW;
+      return sW -= DW.VERTICAL_PADDING, sW += BW(WW) ? 5 : 0,
+        function(WW, iW, OW, mW, EW, NW, PW) {
+          let LW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : DW.TEXT_SHADOW_WIDTH;
+          for (const cW of [-1, 1])
+            for (const EW of [-1, 1]) Li(PW, WW, iW + LW * cW, OW + LW * EW, mW, NW);
+          Li(PW, WW, iW, OW, mW, EW)
+        }(AW, iW, sW, bW, UW, "black", lW), jW
     }
 
-    function Fi(ee, ie) {
-      return ee[0] * ie[0] + ee[1] * ie[1] + ee[2] * ie[2]
+    function Pi(WW, iW, OW, mW, EW, NW) {
+      WW.save(), WW.translate(OW, mW), WW.scale(EW, EW), WW.fillStyle = NW, WW.fill(iW), WW.restore()
     }
 
-    function Ji(ee, ie) {
-      return [ee[1] * ie[2] - ee[2] * ie[1], ee[2] * ie[0] - ee[0] * ie[2], ee[0] * ie[1] - ee[1] * ie[0]]
+    function Li(WW, iW, OW, mW, EW, NW) {
+      WW.font = EW, WW.fillStyle = NW, WW.fillText(iW, OW, mW)
     }
+    const ci = ["Gun"];
+
+    function wi(WW) {
+      if (BW(WW) || qW(WW)) {
+        var iW, OW;
+        const mW = null !== (iW = null === (OW = WW.style) || void 0 === OW ? void 0 : OW.fontSize) && void 0 !== iW ? iW : `${DW.DEFAULT_FONT_SIZE}px`;
+        return Number(mW.replace("px", "")) || DW.DEFAULT_FONT_SIZE
+      }
+      return DW.DEFAULT_FONT_SIZE
+    }
+
+    function ti(WW, iW, OW) {
+      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+        EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        NW = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      const PW = WW.TZ.bD(),
+        LW = (0, kW.g)(WW, `${OW}Tex`, mW, EW, {
+          mipped: ZW.k.nearestLinearMipLinear,
+          unmipped: ZW.k.nearestLinearMipNearest
+        }),
+        cW = (0, xW.r)(WW.TZ, OW, (0, lW.f)({
+          width: 1,
+          height: 1
+        }));
+      cW.metadata = new WW.TZ.Qb, cW.metadata[AW.E] = !0, cW.billboardMode = bW.e.BILLBOARDMODE_ALL, cW.renderingGroupId = jW.c;
+      const wW = WW.EY.add([0, 0, 0], 1, 1, cW, [0, 0, 0]);
+      let tW;
+      WW.EY.zD(wW, WW.EY.names.qS, {
+        MA: iW
+      });
+      const {
+        mirror: KW
+      } = (0, sW.b)({
+        name: `${OW}Mat`,
+        rb: PW,
+        sets: {
+          specularColor: [0, 0, 0],
+          ambientColor: [1.3, 1.3, 1.3],
+          emissiveColor: [1, 1, 1],
+          ...(0, kW.k)(LW)
+        },
+        features: iW => {
+          (0, kW.c)(iW, "planes"), tW = (0, MW.e)(iW, WW.TZ, NW ? {
+            x: 1,
+            y: 1,
+            z: 1,
+            w: 1
+          } : void 0)
+        },
+        unrendered: !0,
+        freeze: !0
+      });
+      return cW.material = KW, NW ? WW.EY.XiW(wW).dLW = !1 : (0, UW.d)(cW), cW.jD.add((() => {
+        KW.dispose(!1, !0)
+      })), {
+        planeEId: wW,
+        plane: cW,
+        texture: LW,
+        lightState: tW
+      }
+    }
+
+    function Zi(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const EW = (0, jW.r)(iW, OW, mW);
+      return WW.renderingGroupId = EW ? jW.c : jW.k, EW
+    }
+  },
+  39913: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => wW,
+      g: () => PW,
+      k: () => cW,
+      l: () => LW
+    });
+    var mW = OW(38437),
+      EW = OW(38419),
+      NW = OW(39915);
+
+    function PW(WW, iW, OW, EW, NW) {
+      const PW = function(WW) {
+          return !WW.TZ.engine.needPOTTextures
+        }(WW),
+        LW = PW ? NW.mipped : NW.unmipped;
+      return (0, mW.o)(WW.TZ.bD(), iW, {
+        width: OW,
+        height: EW,
+        mipmaps: PW,
+        samplingMode: LW,
+        hasAlpha: !0
+      })
+    }
+
+    function LW(WW) {
+      (0, mW.Y)(WW, !0, !WW.sampler.noMipmap)
+    }
+
+    function cW(WW) {
+      return {
+        diffuseTexture: WW,
+        useAlphaFromDiffuseTexture: !0,
+        transparencyMode: EW.n.alphaTestAndBlend,
+        alphaCutOff: .05,
+        alphaMode: EW.b.premultiplied,
+        forceDepthWrite: !0
+      }
+    }
+
+    function wW(WW, iW) {
+      WW.diffuseTexture.sampler.noMipmap || (0, EW.q)(WW, NW.d, {
+        lodBias: NW.b[iW]
+      })
+    }
+  },
+  39976: (WW, iW, OW) => {
+    function mW(WW, iW) {
+      return "object" === typeof WW && null !== WW ? Object.assign(WW, {
+        startStep: iW
+      }) : WW
+    }
+
+    function EW(WW) {
+      return "object" === typeof WW && null !== WW && "startStep" in WW ? WW.startStep : null
+    }
+    OW.d(iW, {
+      d: () => EW,
+      f: () => mW
+    })
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

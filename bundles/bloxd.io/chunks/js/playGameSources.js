@@ -1,184 +1,184 @@
-export const id = 54;
-export const ids = [54];
+export const id = 55;
+export const ids = [55];
 export const modules = {
-  40521: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Fe,
-      f: () => Me,
-      i: () => be
+  40976: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => cW,
+      e: () => NW,
+      i: () => EW
     });
-    const ye = 6e3;
+    const mW = 6e3;
 
-    function be(ee, ie) {
-      return [Math.floor(ee[0] / ie) * ie, Math.floor(ee[1] / ie) * ie, Math.floor(ee[2] / ie) * ie]
+    function EW(WW, iW) {
+      return [Math.floor(WW[0] / iW) * iW, Math.floor(WW[1] / iW) * iW, Math.floor(WW[2] / iW) * iW]
     }
 
-    function Me(ee) {
-      const ie = (null !== ee && void 0 !== ee ? ee : "").match(/-?\d+(?:\.\d+)?/g);
-      return ie && ie.length >= 3 ? [Number(ie[0]), Number(ie[1]), Number(ie[2])] : null
+    function NW(WW) {
+      const iW = (null !== WW && void 0 !== WW ? WW : "").match(/-?\d+(?:\.\d+)?/g);
+      return iW && iW.length >= 3 ? [Number(iW[0]), Number(iW[1]), Number(iW[2])] : null
     }
 
-    function Ke(ee, ie) {
-      return ee === ie ? String(ee) : `${ee}-${ie}`
+    function PW(WW, iW) {
+      return WW === iW ? String(WW) : `${WW}-${iW}`
     }
 
-    function Ue(ee, ie, He, ye) {
-      const be = [];
-      let Me = new Map;
-      for (let Ke = ee[2]; Ke < ee[2] + ie; Ke++) {
-        const Ue = new Map;
-        let Fe = ee[0];
-        for (; Fe < ee[0] + ie;) {
-          const be = ye(Fe, He, Ke);
-          let Je = Fe;
-          for (; Je + 1 < ee[0] + ie && ye(Je + 1, He, Ke) === be;) Je++;
-          if (null !== be) {
-            const ee = `${Fe} ${Je} ${be}`,
-              ie = Me.get(ee);
-            ie ? (ie.z1 = Ke, Me.delete(ee), Ue.set(ee, ie)) : Ue.set(ee, {
-              x0: Fe,
-              x1: Je,
-              z0: Ke,
-              z1: Ke,
-              name: be
+    function LW(WW, iW, OW, mW) {
+      const EW = [];
+      let NW = new Map;
+      for (let PW = WW[2]; PW < WW[2] + iW; PW++) {
+        const LW = new Map;
+        let cW = WW[0];
+        for (; cW < WW[0] + iW;) {
+          const EW = mW(cW, OW, PW);
+          let wW = cW;
+          for (; wW + 1 < WW[0] + iW && mW(wW + 1, OW, PW) === EW;) wW++;
+          if (null !== EW) {
+            const WW = `${cW} ${wW} ${EW}`,
+              iW = NW.get(WW);
+            iW ? (iW.z1 = PW, NW.delete(WW), LW.set(WW, iW)) : LW.set(WW, {
+              x0: cW,
+              x1: wW,
+              z0: PW,
+              z1: PW,
+              name: EW
             })
           }
-          Fe = Je + 1
+          cW = wW + 1
         }
-        be.push(...Me.values()), Me = Ue
+        EW.push(...NW.values()), NW = LW
       }
-      return be.push(...Me.values()), be.sort(((ee, ie) => ee.z0 - ie.z0 || ee.x0 - ie.x0)).map((ee => `x${Ke(ee.x0,ee.x1)} z${Ke(ee.z0,ee.z1)} ${ee.name}`))
+      return EW.push(...NW.values()), EW.sort(((WW, iW) => WW.z0 - iW.z0 || WW.x0 - iW.x0)).map((WW => `x${PW(WW.x0,WW.x1)} z${PW(WW.z0,WW.z1)} ${WW.name}`))
     }
 
-    function Fe(ee, ie, He, be) {
-      let Me = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : ye;
-      const Fe = [ee[0] + ie - 1, ee[1] + ie - 1, ee[2] + ie - 1],
-        Je = null !== be && be.every(((ie, He) => Math.floor(ie) >= ee[He] && Math.floor(ie) <= Fe[He])),
-        oe = [`The chunk from ${ee.join(" ")} to ${Fe.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== be && oe.push(`The player's feet are at ${be.map(Math.floor).join(" ")}, ${Je?"in this chunk":"outside this chunk"}.`);
-      const Re = [];
-      for (let ye = ee[1]; ye <= Fe[1]; ye++) {
-        const be = Ue(ee, ie, ye, He).join("; "),
-          Me = Re[Re.length - 1];
-        (null === Me || void 0 === Me ? void 0 : Me.boxes) === be ? Me.to = ye : Re.push({
-          from: ye,
-          to: ye,
-          boxes: be
+    function cW(WW, iW, OW, EW) {
+      let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : mW;
+      const cW = [WW[0] + iW - 1, WW[1] + iW - 1, WW[2] + iW - 1],
+        wW = null !== EW && EW.every(((iW, OW) => Math.floor(iW) >= WW[OW] && Math.floor(iW) <= cW[OW])),
+        tW = [`The chunk from ${WW.join(" ")} to ${cW.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== EW && tW.push(`The player's feet are at ${EW.map(Math.floor).join(" ")}, ${wW?"in this chunk":"outside this chunk"}.`);
+      const ZW = [];
+      for (let mW = WW[1]; mW <= cW[1]; mW++) {
+        const EW = LW(WW, iW, mW, OW).join("; "),
+          NW = ZW[ZW.length - 1];
+        (null === NW || void 0 === NW ? void 0 : NW.boxes) === EW ? NW.to = mW : ZW.push({
+          from: mW,
+          to: mW,
+          boxes: EW
         })
       }
-      const ke = Re.filter((ee => "" !== ee.boxes));
-      0 === ke.length && oe.push("It is all air.");
-      let qe = oe.join("\n").length;
-      for (const ye of ke) {
-        const ee = `y${Ke(ye.from,ye.to)}: ${ye.boxes}`;
-        if (qe += ee.length + 1, qe > Me) {
-          oe.push(`Cut short: the layers from y${ye.from} up aren't shown, as there are too many blocks.`);
+      const xW = ZW.filter((WW => "" !== WW.boxes));
+      0 === xW.length && tW.push("It is all air.");
+      let lW = tW.join("\n").length;
+      for (const mW of xW) {
+        const WW = `y${PW(mW.from,mW.to)}: ${mW.boxes}`;
+        if (lW += WW.length + 1, lW > NW) {
+          tW.push(`Cut short: the layers from y${mW.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        oe.push(ee)
+        tW.push(WW)
       }
-      return oe.join("\n")
+      return tW.join("\n")
     }
   },
-  9521: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => be
+  10027: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => EW
     });
-    var ye = He(18);
+    var mW = OW(25);
 
-    function be() {
-      return !ye.e.get("isTouchScreen") && null !== document.pointerLockElement
+    function EW() {
+      return !mW.d.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  37780: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke,
-      f: () => Me,
-      g: () => be
+  38107: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      h: () => NW,
+      k: () => EW
     });
-    const ye = [.25, .5, 1, 2, 4, 8, 16];
+    const mW = [.25, .5, 1, 2, 4, 8, 16];
 
-    function be(ee, ie) {
-      const He = ye;
-      let be = He.indexOf(ee);
-      return -1 === be && (be = He.findIndex((ie => ie >= ee)), -1 === be && (be = He.length - 1)), "up" === ie ? He[Math.min(be + 1, He.length - 1)] : He[Math.max(be - 1, 0)]
+    function EW(WW, iW) {
+      const OW = mW;
+      let EW = OW.indexOf(WW);
+      return -1 === EW && (EW = OW.findIndex((iW => iW >= WW)), -1 === EW && (EW = OW.length - 1)), "up" === iW ? OW[Math.min(EW + 1, OW.length - 1)] : OW[Math.max(EW - 1, 0)]
     }
 
-    function Me(ee) {
-      return ee <= ye[0]
+    function NW(WW) {
+      return WW <= mW[0]
     }
 
-    function Ke(ee) {
-      return ee >= ye[ye.length - 1]
+    function PW(WW) {
+      return WW >= mW[mW.length - 1]
     }
   },
-  37301: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => be,
-      g: () => Me
+  37735: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW,
+      g: () => NW
     });
-    let ye = !1;
+    let mW = !1;
 
-    function be() {
-      return ye
+    function EW() {
+      return mW
     }
 
-    function Me(ee) {
-      return ye !== ee && (ye = ee, !0)
+    function NW(WW) {
+      return mW !== WW && (mW = WW, !0)
     }
   },
-  39818: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me
+  40229: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
     });
-    var ye = He(27),
-      be = He(2018);
+    var mW = OW(27),
+      EW = OW(2061);
 
-    function Me(ee) {
+    function NW(WW) {
       let {
-        taskId: ie,
-        progress: He
-      } = ee;
-      const ye = be.c.get("_tasks");
-      null !== ye && void 0 !== ye && ye[ie] && be.c.apply({
+        taskId: iW,
+        progress: OW
+      } = WW;
+      const mW = EW.d.get("_tasks");
+      null !== mW && void 0 !== mW && mW[iW] && EW.d.apply({
         _tasks: {
-          ...ye,
-          [ie]: {
-            ...ye[ie],
-            progress: He
+          ...mW,
+          [iW]: {
+            ...mW[iW],
+            progress: OW
           }
         }
       })
     }
-    ye.h.subscribe("clientTaskProgress", (ee => {
-      Me(ee)
+    mW.l.subscribe("clientTaskProgress", (WW => {
+      NW(WW)
     }))
   },
-  40494: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => qe,
-      h: () => Te,
-      j: () => Je,
-      l: () => Re,
-      o: () => ke,
-      q: () => Fe,
-      s: () => Ke,
-      v: () => oe,
-      y: () => pe
+  40951: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => lW,
+      h: () => bW,
+      i: () => wW,
+      k: () => ZW,
+      o: () => xW,
+      p: () => cW,
+      r: () => PW,
+      t: () => tW,
+      v: () => jW
     });
-    var ye = He(2018),
-      be = He(27),
-      Me = He(2022);
-    const Ke = (0, Me.i)((function() {
-        var ee, ie, He, be;
+    var mW = OW(2061),
+      EW = OW(27),
+      NW = OW(2072);
+    const PW = (0, NW.r)((function() {
+        var WW, iW, OW, EW;
         return {
-          health: null !== (ee = ye.c.get("_health")) && void 0 !== ee ? ee : null,
-          maxHealth: null !== (ie = ye.c.get("_totalMaxHealth")) && void 0 !== ie ? ie : null,
-          shield: null !== (He = ye.c.get("_shield")) && void 0 !== He ? He : null,
-          maxShield: null !== (be = ye.c.get("maxShield")) && void 0 !== be ? be : null
+          health: null !== (WW = mW.d.get("_health")) && void 0 !== WW ? WW : null,
+          maxHealth: null !== (iW = mW.d.get("_totalMaxHealth")) && void 0 !== iW ? iW : null,
+          shield: null !== (OW = mW.d.get("_shield")) && void 0 !== OW ? OW : null,
+          maxShield: null !== (EW = mW.d.get("maxShield")) && void 0 !== EW ? EW : null
         }
-      }), [], (0, Me.h)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      Ue = [{
+      }), [], (0, NW.o)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      LW = [{
         canFly: !1,
         flying: !1
       }, {
@@ -192,966 +192,767 @@ export const modules = {
         flying: !0
       }];
 
-    function Fe(ee, ie) {
-      return Ue[(ee ? 2 : 0) + (ie ? 1 : 0)]
+    function cW(WW, iW) {
+      return LW[(WW ? 2 : 0) + (iW ? 1 : 0)]
     }
-    const Je = (0, Me.i)((function() {
-      var ee;
-      return null !== (ee = ye.c.get("_aura")) && void 0 !== ee ? ee : null
-    }), [], (0, Me.h)("_aura"));
+    const wW = (0, NW.r)((function() {
+      var WW;
+      return null !== (WW = mW.d.get("_aura")) && void 0 !== WW ? WW : null
+    }), [], (0, NW.o)("_aura"));
 
-    function oe(ee) {
+    function tW(WW) {
       return {
-        watch: ie => (0, be.j)("shotPlayer", (He => {
+        watch: iW => (0, EW.n)("shotPlayer", (OW => {
           let {
-            playerId: ye,
-            damage: be,
-            wasCrit: Me,
-            distance: Ke
-          } = He;
-          ee(ye) && ie({
-            damage: be,
-            wasCrit: Me,
-            distance: Ke
+            playerId: mW,
+            damage: EW,
+            wasCrit: NW,
+            distance: PW
+          } = OW;
+          WW(mW) && iW({
+            damage: EW,
+            wasCrit: NW,
+            distance: PW
           })
         }))
       }
     }
 
-    function Re(ee) {
-      return (0, Me.b)("chat", (ie => {
+    function ZW(WW) {
+      return (0, NW.d)("chat", (iW => {
         let {
-          serverChatMsgId: He,
-          worldCodeLineId: ye,
-          content: be,
-          chatterEId: Me,
-          chatterObjectsToReplay: Ke
-        } = ie;
+          serverChatMsgId: OW,
+          worldCodeLineId: mW,
+          content: EW,
+          chatterEId: NW,
+          chatterObjectsToReplay: PW
+        } = iW;
         return {
-          serverChatMsgId: null !== He && void 0 !== He ? He : null,
-          worldCodeLineId: null !== ye && void 0 !== ye ? ye : null,
-          content: be,
-          author: Me ? ee(Me) : null,
-          hiddenFromReplay: !0 === Ke
+          serverChatMsgId: null !== OW && void 0 !== OW ? OW : null,
+          worldCodeLineId: null !== mW && void 0 !== mW ? mW : null,
+          content: EW,
+          author: NW ? WW(NW) : null,
+          hiddenFromReplay: !0 === PW
         }
       }))
     }
-    const ke = (0, Me.b)("chatRemoved");
-    class qe {
+    const xW = (0, NW.d)("chatRemoved");
+    class lW {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const He = this.shown;
-        return ee !== this.needed && (this.needed = ee, this.neededSince = ie, null === ee && (this.shown = null)), this.shown !== this.needed && ie - this.neededSince > 200 && (this.shown = this.needed), this.shown !== He
+      update(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const OW = this.shown;
+        return WW !== this.needed && (this.needed = WW, this.neededSince = iW, null === WW && (this.shown = null)), this.shown !== this.needed && iW - this.neededSince > 200 && (this.shown = this.needed), this.shown !== OW
       }
     }
 
-    function fe(ee) {
+    function AW(WW) {
       return [{
-        translationKey: `touchKeys:${ee}`
+        translationKey: `touchKeys:${WW}`
       }]
     }
-    const Te = {
-      open: fe("open"),
-      close: fe("close"),
-      milk: fe("milk"),
-      shear: fe("shear"),
-      tame: fe("tame"),
-      feed: fe("feed"),
-      ride: fe("ride")
+    const bW = {
+      open: AW("open"),
+      close: AW("close"),
+      milk: AW("milk"),
+      shear: AW("shear"),
+      tame: AW("tame"),
+      feed: AW("feed"),
+      ride: AW("ride")
     };
 
-    function pe(ee) {
+    function jW(WW) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: ee
+        icon: WW
       }]
     }
   },
-  37100: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Ue,
-      g: () => Ke
+  37444: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => LW,
+      e: () => PW
     });
-    var ye = He(3610);
-    let be = null,
-      Me = null;
+    var mW = OW(4459);
+    let EW = null,
+      NW = null;
 
-    function Ke() {
-      return Me ??= He.e(235).then((() => He(37015))).then((ee => {
+    function PW() {
+      return NW ??= OW.e(241).then((() => OW(37314))).then((WW => {
         let {
-          ITEM_SPRITES: ie,
-          ITEM_SPRITES_WITHOUT_FILE: He,
-          ITEM_FILES_WITHOUT_SPRITE: Me
-        } = ee;
-        be = function(ee, ie, He) {
-          const be = new Set,
-            Me = (0, ye.r)(ie);
-          let Ke = 0;
-          for (const [ye, Ue] of ee.entries()) ye === Me[Ke] ? Ke++ : be.add(Ue);
-          if ("" !== He)
-            for (const Ue of He.split(ye.n)) be.add(Ue);
-          return be
-        }(ie.split(ye.n), He, Me)
-      }), (ee => {
-        throw Me = null, ee
-      })), Me
+          ITEM_SPRITES: iW,
+          ITEM_SPRITES_WITHOUT_FILE: OW,
+          ITEM_FILES_WITHOUT_SPRITE: NW
+        } = WW;
+        EW = function(WW, iW, OW) {
+          const EW = new Set,
+            NW = (0, mW.w)(iW);
+          let PW = 0;
+          for (const [mW, LW] of WW.entries()) mW === NW[PW] ? PW++ : EW.add(LW);
+          if ("" !== OW)
+            for (const LW of OW.split(mW.s)) EW.add(LW);
+          return EW
+        }(iW.split(mW.s), OW, NW)
+      }), (WW => {
+        throw NW = null, WW
+      })), NW
     }
 
-    function Ue(ee) {
-      var ie, He;
-      return null !== (ie = null === (He = be) || void 0 === He ? void 0 : He.has(ee)) && void 0 !== ie && ie
+    function LW(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = EW) || void 0 === OW ? void 0 : OW.has(WW)) && void 0 !== iW && iW
     }
   },
-  40509: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => ye,
-      d: () => Me,
-      g: () => be
+  40960: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => mW,
+      h: () => NW,
+      k: () => EW
     });
-    const ye = 128;
+    const mW = 128;
 
-    function be(ee, ie, He, ye) {
-      const be = 2 * ie - 1,
-        Me = 1 - 2 * He,
-        Ke = ee(0) - be * ee(3),
-        Ue = ee(4) - be * ee(7),
-        Fe = ee(8) - be * ee(11),
-        Je = ee(1) - Me * ee(3),
-        oe = ee(5) - Me * ee(7),
-        Re = ee(9) - Me * ee(11);
-      ye[0] = Ue * Re - Fe * oe, ye[1] = Fe * Je - Ke * Re, ye[2] = Ke * oe - Ue * Je;
-      const ke = ye[0] * ee(3) + ye[1] * ee(7) + ye[2] * ee(11) < 0 ? -1 : 1,
-        qe = Math.hypot(ye[0], ye[1], ye[2]) * ke;
-      return ye[0] /= qe, ye[1] /= qe, ye[2] /= qe, ye
+    function EW(WW, iW, OW, mW) {
+      const EW = 2 * iW - 1,
+        NW = 1 - 2 * OW,
+        PW = WW(0) - EW * WW(3),
+        LW = WW(4) - EW * WW(7),
+        cW = WW(8) - EW * WW(11),
+        wW = WW(1) - NW * WW(3),
+        tW = WW(5) - NW * WW(7),
+        ZW = WW(9) - NW * WW(11);
+      mW[0] = LW * ZW - cW * tW, mW[1] = cW * wW - PW * ZW, mW[2] = PW * tW - LW * wW;
+      const xW = mW[0] * WW(3) + mW[1] * WW(7) + mW[2] * WW(11) < 0 ? -1 : 1,
+        lW = Math.hypot(mW[0], mW[1], mW[2]) * xW;
+      return mW[0] /= lW, mW[1] /= lW, mW[2] /= lW, mW
     }
 
-    function Me(ee, ie, He, ye, be, Me) {
-      const Ke = [Math.floor(ie[0]), Math.floor(ie[1]), Math.floor(ie[2])],
-        Ue = [0, 0, 0],
-        Fe = [1 / 0, 1 / 0, 1 / 0],
-        Je = [1 / 0, 1 / 0, 1 / 0];
-      for (let ke = 0; ke < 3; ke++) Ue[ke] = Math.sign(He[ke]), 0 !== Ue[ke] && (Je[ke] = Math.abs(1 / He[ke]), Fe[ke] = (Ke[ke] + (Ue[ke] > 0 ? 1 : 0) - ie[ke]) / He[ke]);
-      let oe = 0,
-        Re = Math.abs(He[0]) > Math.abs(He[1]) ? 0 : 1;
-      for (Math.abs(He[2]) > Math.abs(He[Re]) && (Re = 2); oe <= ye;) {
-        if (ee(Ke[0], Ke[1], Ke[2])) return be[0] = Ke[0], be[1] = Ke[1], be[2] = Ke[2], Me[0] = 0, Me[1] = 0, Me[2] = 0, Me[Re] = -Ue[Re], !0;
-        Re = Fe[0] < Fe[1] ? 0 : 1, Fe[2] < Fe[Re] && (Re = 2), oe = Fe[Re], Ke[Re] += Ue[Re], Fe[Re] += Je[Re]
+    function NW(WW, iW, OW, mW, EW, NW) {
+      const PW = [Math.floor(iW[0]), Math.floor(iW[1]), Math.floor(iW[2])],
+        LW = [0, 0, 0],
+        cW = [1 / 0, 1 / 0, 1 / 0],
+        wW = [1 / 0, 1 / 0, 1 / 0];
+      for (let xW = 0; xW < 3; xW++) LW[xW] = Math.sign(OW[xW]), 0 !== LW[xW] && (wW[xW] = Math.abs(1 / OW[xW]), cW[xW] = (PW[xW] + (LW[xW] > 0 ? 1 : 0) - iW[xW]) / OW[xW]);
+      let tW = 0,
+        ZW = Math.abs(OW[0]) > Math.abs(OW[1]) ? 0 : 1;
+      for (Math.abs(OW[2]) > Math.abs(OW[ZW]) && (ZW = 2); tW <= mW;) {
+        if (WW(PW[0], PW[1], PW[2])) return EW[0] = PW[0], EW[1] = PW[1], EW[2] = PW[2], NW[0] = 0, NW[1] = 0, NW[2] = 0, NW[ZW] = -LW[ZW], !0;
+        ZW = cW[0] < cW[1] ? 0 : 1, cW[2] < cW[ZW] && (ZW = 2), tW = cW[ZW], PW[ZW] += LW[ZW], cW[ZW] += wW[ZW]
       }
       return !1
     }
   },
-  37190: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => we,
-      i: () => De,
-      k: () => ge,
-      m: () => Be,
-      p: () => Oe
+  37640: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => hW,
+      c: () => HW,
+      f: () => KW,
+      g: () => sW,
+      h: () => SW
     });
-    var ye = He(272),
-      be = He(97);
-    const Me = new(He(37192).b)(new URL(He.p + He.u(3), He.b), {
+    var mW = OW(259),
+      EW = OW(100);
+    const NW = new(OW(37646).e)(new URL(OW.p + OW.u(3), OW.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var Ke = He(1851),
-      Ue = He(2173);
-    const Fe = 1e4,
-      Je = 3e4;
-    let oe = null,
-      Re = null,
-      ke = null,
-      qe = !1,
-      fe = 0;
-    const Te = new Map;
-    let pe = null;
-    const Xe = new Map,
-      ze = new Map;
+    var PW = OW(1755),
+      LW = OW(2289);
+    const cW = 1e4,
+      wW = 3e4;
+    let tW = null,
+      ZW = null,
+      xW = null,
+      lW = !1,
+      AW = 0;
+    const bW = new Map;
+    let jW = null;
+    const UW = new Map,
+      kW = new Map;
 
-    function Be(ee) {
-      const ie = new Promise(((ie, He) => {
-        const ye = new Image;
-        ye.crossOrigin = "anonymous", ye.fetchPriority = "high", ye.onload = () => {
-          ie(ye)
-        }, ye.onerror = () => {
-          He(new Error(`A block icon's texture did not load: ${ee.slice(0,100)}`))
-        }, ye.src = ee
+    function sW(WW) {
+      const iW = new Promise(((iW, OW) => {
+        const mW = new Image;
+        mW.crossOrigin = "anonymous", mW.fetchPriority = "high", mW.onload = () => {
+          iW(mW)
+        }, mW.onerror = () => {
+          OW(new Error(`A block icon's texture did not load: ${WW.slice(0,100)}`))
+        }, mW.src = WW
       }));
-      return (0, Ue.f)(ie)
+      return (0, LW.f)(iW)
     }
 
-    function Ee(ee) {
-      var ie, He;
-      qe || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${ee}`), qe = !0, null === (ie = oe) || void 0 === ie || ie.terminate(), oe = null, Re = null, Xe.clear(), ze.clear();
-      for (const ye of Te.values()) ye(null);
-      Te.clear(), null === (He = pe) || void 0 === He || He()
+    function MW(WW) {
+      var iW, OW;
+      lW || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${WW}`), lW = !0, null === (iW = tW) || void 0 === iW || iW.terminate(), tW = null, ZW = null, UW.clear(), kW.clear();
+      for (const mW of bW.values()) mW(null);
+      bW.clear(), null === (OW = jW) || void 0 === OW || OW()
     }
 
-    function ge() {
-      return null !== Re
+    function KW() {
+      return null !== ZW
     }
 
-    function Oe() {
-      return ke ??= async function() {
+    function SW() {
+      return xW ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === ye.c.ios_icon_worker_v1 && (0, be.isWebKit)()) return;
+        if ("page" === mW.d.ios_icon_worker_v1 && (0, EW.isWebKit)()) return;
         try {
-          oe = await async function() {
-            return await Me.ready(), Me.start()
+          tW = await async function() {
+            return await NW.ready(), NW.start()
           }()
-        } catch (Ue) {
-          return void Ee(`did not start (${String(Ue)})`)
+        } catch (LW) {
+          return void MW(`did not start (${String(LW)})`)
         }
-        let ee = () => {};
-        const ie = new Promise((ie => {
-          ee = ie
+        let WW = () => {};
+        const iW = new Promise((iW => {
+          WW = iW
         }));
-        oe.onmessage = ie => {
+        tW.onmessage = iW => {
           let {
-            data: He
-          } = ie;
-          if ("started" === He.type) Re = oe, ee();
-          else if ("failed" === He.type) Ee(`failed a draw (${He.message})`);
+            data: OW
+          } = iW;
+          if ("started" === OW.type) ZW = tW, WW();
+          else if ("failed" === OW.type) MW(`failed a draw (${OW.message})`);
           else {
-            var ye, be;
-            null === (ye = Te.get(He.id)) || void 0 === ye || ye(He.url), Te.delete(He.id), null === (be = pe) || void 0 === be || be()
+            var mW, EW;
+            null === (mW = bW.get(OW.id)) || void 0 === mW || mW(OW.url), bW.delete(OW.id), null === (EW = jW) || void 0 === EW || EW()
           }
-        }, oe.onerror = ie => {
-          ie.preventDefault(), Ee(`stopped (${ie.message||"its script did not load or run"})`), ee()
+        }, tW.onerror = iW => {
+          iW.preventDefault(), MW(`stopped (${iW.message||"its script did not load or run"})`), WW()
         };
-        const He = `did not start in ${Je/1e3} s`;
-        await (0, Ke.k)(ie, Je, He).catch((() => {
-          Ee(He)
+        const OW = `did not start in ${wW/1e3} s`;
+        await (0, PW.o)(iW, wW, OW).catch((() => {
+          MW(OW)
         }))
-      }(), ke
+      }(), xW
     }
 
-    function de() {
-      if (null !== pe || 0 === Te.size) return;
-      const ee = new Promise((ee => {
-          pe = ee
+    function YW() {
+      if (null !== jW || 0 === bW.size) return;
+      const WW = new Promise((WW => {
+          jW = WW
         })),
-        ie = `did not answer in ${Fe/1e3} s`;
-      (0, Ke.k)(ee, Fe, ie).then((() => {
-        pe = null, de()
+        iW = `did not answer in ${cW/1e3} s`;
+      (0, PW.o)(WW, cW, iW).then((() => {
+        jW = null, YW()
       }), (() => {
-        pe = null, Ee(ie)
+        jW = null, MW(iW)
       }))
     }
 
-    function We(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      ee.postMessage(ie, He)
+    function yW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      WW.postMessage(iW, OW)
     }
 
-    function te(ee, ie, He, ye) {
-      let be = ie.get(He);
-      return void 0 === be && (be = ye().then((async ie => {
+    function TW(WW, iW, OW, mW) {
+      let EW = iW.get(OW);
+      return void 0 === EW && (EW = mW().then((async iW => {
         let {
-          image: He,
-          request: ye
-        } = ie;
+          image: OW,
+          request: mW
+        } = iW;
         try {
-          const ie = await createImageBitmap(He);
-          We(ee, ye(ie), [ie])
-        } catch (be) {
-          Ee(`could not take an image (${String(be)})`)
+          const iW = await createImageBitmap(OW);
+          yW(WW, mW(iW), [iW])
+        } catch (EW) {
+          MW(`could not take an image (${String(EW)})`)
         }
-      })), be.catch((() => {
-        ie.get(He) === be && ie.delete(He)
-      })), ie.set(He, be)), be
+      })), EW.catch((() => {
+        iW.get(OW) === EW && iW.delete(OW)
+      })), iW.set(OW, EW)), EW
     }
-    async function Ze(ee, ie) {
-      Oe();
-      const He = Re;
-      if (null === He) return null;
-      if (await ee(He), Re !== He) return null;
-      const ye = ++fe;
-      return new Promise((ee => {
-        Te.set(ye, ee), We(He, ie(ye)), de()
+    async function JW(WW, iW) {
+      SW();
+      const OW = ZW;
+      if (null === OW) return null;
+      if (await WW(OW), ZW !== OW) return null;
+      const mW = ++AW;
+      return new Promise((WW => {
+        bW.set(mW, WW), yW(OW, iW(mW)), YW()
       }))
     }
 
-    function we(ee, ie, He) {
-      return Ze((ie => Promise.all([ee.top, ee.left, ee.right].map((ee => function(ee, ie) {
-        return te(ee, Xe, ie, (async () => ({
-          image: await Be(ie),
-          request: ee => ({
+    function hW(WW, iW, OW) {
+      return JW((iW => Promise.all([WW.top, WW.left, WW.right].map((WW => function(WW, iW) {
+        return TW(WW, UW, iW, (async () => ({
+          image: await sW(iW),
+          request: WW => ({
             type: "texture",
-            url: ie,
-            bitmap: ee
+            url: iW,
+            bitmap: WW
           })
         })))
-      }(ie, ee))))), (ye => ({
+      }(iW, WW))))), (mW => ({
         type: "draw",
-        id: ye,
-        ...ee,
-        size: ie,
-        outlineWidth: He
+        id: mW,
+        ...WW,
+        size: iW,
+        outlineWidth: OW
       })))
     }
 
-    function De(ee, ie, He, ye) {
-      return Ze((He => function(ee, ie, He) {
-        return te(ee, ze, ie, (async () => {
+    function HW(WW, iW, OW, mW) {
+      return JW((OW => function(WW, iW, OW) {
+        return TW(WW, kW, iW, (async () => {
           const {
-            texture: ee,
-            ...ye
-          } = await He();
+            texture: WW,
+            ...mW
+          } = await OW();
           return {
-            image: await Be(ee),
-            request: ee => ({
+            image: await sW(WW),
+            request: WW => ({
               type: "model",
-              name: ie,
-              bitmap: ee,
-              geometry: ye
+              name: iW,
+              bitmap: WW,
+              geometry: mW
             })
           }
         }))
-      }(He, ee, ie)), (ie => ({
+      }(OW, WW, iW)), (iW => ({
         type: "drawModel",
-        id: ie,
-        name: ee,
-        size: He,
-        outlineWidth: ye
+        id: iW,
+        name: WW,
+        size: OW,
+        outlineWidth: mW
       })))
     }
   },
-  40489: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => be
+  40943: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => EW
     });
-    var ye = He(1952);
+    var mW = OW(2012);
 
-    function be(ee, ie, He) {
-      return (0, ye.i)(ee, ie) < He
+    function EW(WW, iW, OW) {
+      return (0, mW.l)(WW, iW) < OW
     }
   },
-  9451: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => be
+  9957: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    var ye = He(1198);
+    var mW = OW(1250);
 
-    function be(ee, ie) {
-      var He, be;
+    function EW(WW, iW) {
+      var OW, EW;
       try {
-        const He = (0, ye.c)();
-        if ("function" === typeof He) {
-          const ye = new He(ee, ie);
-          if (ye.type === ee) return ye
+        const OW = (0, mW.e)();
+        if ("function" === typeof OW) {
+          const mW = new OW(WW, iW);
+          if (mW.type === WW) return mW
         }
       } catch {}
-      const Me = document.createEvent("Event");
-      return Me.initEvent(ee, null !== (He = null === ie || void 0 === ie ? void 0 : ie.bubbles) && void 0 !== He && He, null !== (be = null === ie || void 0 === ie ? void 0 : ie.cancelable) && void 0 !== be && be), Me
+      const NW = document.createEvent("Event");
+      return NW.initEvent(WW, null !== (OW = null === iW || void 0 === iW ? void 0 : iW.bubbles) && void 0 !== OW && OW, null !== (EW = null === iW || void 0 === iW ? void 0 : iW.cancelable) && void 0 !== EW && EW), NW
     }
   },
-  39808: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => oe
+  40216: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => tW
     });
-    var ye = He(1169),
-      be = He(1315),
-      Me = He(18),
-      Ke = He(1294),
-      Ue = He(1305),
-      Fe = He(1502),
-      Je = He(37260);
+    var mW = OW(1217),
+      EW = OW(1365),
+      NW = OW(25),
+      PW = OW(1339),
+      LW = OW(1351),
+      cW = OW(1605),
+      wW = OW(37709);
 
-    function oe(ee) {
+    function tW(WW) {
       let {
-        ee: ie,
-        ie: He
-      } = ee;
-      const oe = null !== ie && void 0 !== ie ? ie : (0, Ue.e)().gameNameWithVariation;
-      (0, ye.J)(oe) && ((0, Je.j)(), (0, Ke.db)((() => {
-        console.log("Received matchmaking order from game server to game", ie), (0, Me.l)("inGameReplay"), (0, Fe.navigatePreserveSearch)((0, be.b)(oe, null !== He && void 0 !== He ? He : void 0))
+        cN: iW,
+        wN: OW
+      } = WW;
+      const tW = null !== iW && void 0 !== iW ? iW : (0, LW.d)().gameNameWithVariation;
+      (0, mW.N)(tW) && ((0, wW.j)(), (0, PW.$)((() => {
+        console.log("Received matchmaking order from game server to game", iW), (0, NW.l)("inGameReplay"), (0, cW.navigatePreserveSearch)((0, EW.e)(tW, null !== OW && void 0 !== OW ? OW : void 0))
       }), "video_start"))
     }
   },
-  40017: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me
+  40416: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => NW
     });
-    var ye = He(27),
-      be = He(2046);
+    var mW = OW(27),
+      EW = OW(2085);
 
-    function Me(ee) {
-      var ie, He;
-      const Me = (0, be.k)(null !== (ie = null === (He = be.q.toggleFreeCam) || void 0 === He ? void 0 : He[0]) && void 0 !== ie ? ie : null);
-      ye.h.yR("showBottomMessage", {
-        message: `Free Camera ${ee?"Enabled":"Disabled"}${Me?` - Press ${Me} to toggle`:""}`,
+    function NW(WW) {
+      var iW, OW;
+      const NW = (0, EW.m)(null !== (iW = null === (OW = EW.v.toggleFreeCam) || void 0 === OW ? void 0 : OW[0]) && void 0 !== iW ? iW : null);
+      mW.l.iZ("showBottomMessage", {
+        message: `Free Camera ${WW?"Enabled":"Disabled"}${NW?` - Press ${NW} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  39802: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => oe,
-      f: () => Fe,
-      h: () => Je,
-      k: () => Re
+  40213: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => tW,
+      f: () => cW,
+      h: () => wW,
+      j: () => ZW
     });
-    var ye = He(1983),
-      be = He(27),
-      Me = He(1340),
-      Ke = He(1205);
-    const Ue = new Map;
+    var mW = OW(2037),
+      EW = OW(27),
+      NW = OW(1422),
+      PW = OW(1255);
+    const LW = new Map;
 
-    function Fe(ee, ie) {
-      be.h.yR("newUiRequest", {
-        id: ee,
-        clientParameters: ie
+    function cW(WW, iW) {
+      EW.l.iZ("newUiRequest", {
+        id: WW,
+        clientParameters: iW
       }, !0)
     }
 
-    function Je(ee) {
-      be.h.yR("removeUiRequest", ee, !0);
-      const ie = Ue.get(ee);
-      ie && (ie.tearDownNotification(), Ue.delete(ee))
+    function wW(WW) {
+      EW.l.iZ("removeUiRequest", WW, !0);
+      const iW = LW.get(WW);
+      iW && (iW.tearDownNotification(), LW.delete(WW))
     }
 
-    function oe() {
-      be.h.yR("clearUiRequests");
-      for (const ee of Ue.values()) ee.tearDownNotification();
-      Ue.clear()
+    function tW() {
+      EW.l.iZ("clearUiRequests");
+      for (const WW of LW.values()) WW.tearDownNotification();
+      LW.clear()
     }
 
-    function Re(ee, ie, He, be) {
-      const Fe = "string" === typeof ie ? {
-          translationKey: ie
-        } : ie,
-        Je = Me.NotificationProvider.showPromptPopup({
-          title: Fe.translationKey,
+    function ZW(WW, iW, OW, EW) {
+      const cW = "string" === typeof iW ? {
+          translationKey: iW
+        } : iW,
+        wW = NW.NotificationProvider.showPromptPopup({
+          title: cW.translationKey,
           textOpts: {
-            title: (0, Ke.j)(Fe.params, ye.gameBridge.latest("hiddenPlayerNames"))
+            title: (0, PW.j)(cW.params, mW.gameBridge.latest("hiddenPlayerNames"))
           },
           confirmText: "general:yes",
           cancelText: "general:no",
-          destructive: He,
+          destructive: OW,
           unlockPointerKey: "uiRequestPopup"
         });
-      Ue.set(ee, Je), Je.getResult().then((ie => {
-        Ue.delete(ee), "notificationTornDown" !== ie && be(ie)
+      LW.set(WW, wW), wW.getResult().then((iW => {
+        LW.delete(WW), "notificationTornDown" !== iW && EW(iW)
       }))
     }
   },
-  40515: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => Re,
-      e: () => ke
+  40969: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => ZW,
+      e: () => xW
     });
-    var ye = He(186),
-      be = He(40521);
-    const Me = 20;
+    var mW = OW(182),
+      EW = OW(40976);
+    const NW = 20;
 
-    function Ke(ee) {
-      return ee.map(Math.floor).join(" ")
+    function PW(WW) {
+      return WW.map(Math.floor).join(" ")
     }
 
-    function Ue(ee) {
-      return null === ee.amount || 1 === ee.amount ? ee.name : `${ee.amount} ${ee.name}`
+    function LW(WW) {
+      return null === WW.amount || 1 === WW.amount ? WW.name : `${WW.amount} ${WW.name}`
     }
-    var Fe = He(40527),
-      Je = He(2018),
-      oe = He(1305);
+    var cW = OW(40980),
+      wW = OW(2061),
+      tW = OW(1351);
 
-    function Re(ee, ie) {
-      if (!ee) return Fe.c;
-      const He = ee.playerFeet();
-      if (!He) return "The player isn't in the world yet, so no blocks can be seen.";
-      const Me = ye.g.BR,
-        Ke = (0, be.i)(null !== ie && void 0 !== ie ? ie : He, Me),
-        Ue = ee.chunkBlocks(Ke);
-      return Ue ? (0, be.b)(Ke, Me, ((ie, He, ye) => {
-        const be = Ue(ie, He, ye);
-        return 0 === be ? null : ee.blockName(be).split("|")[0]
-      }), He) : `The chunk from ${Ke.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${He.map(Math.floor).join(" ")}.`
+    function ZW(WW, iW) {
+      if (!WW) return cW.c;
+      const OW = WW.playerFeet();
+      if (!OW) return "The player isn't in the world yet, so no blocks can be seen.";
+      const NW = mW.f.jZ,
+        PW = (0, EW.i)(null !== iW && void 0 !== iW ? iW : OW, NW),
+        LW = WW.chunkBlocks(PW);
+      return LW ? (0, EW.b)(PW, NW, ((iW, OW, mW) => {
+        const EW = LW(iW, OW, mW);
+        return 0 === EW ? null : WW.blockName(EW).split("|")[0]
+      }), OW) : `The chunk from ${PW.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${OW.map(Math.floor).join(" ")}.`
     }
 
-    function ke(ee) {
-      var ie, He, ye;
-      if (!ee) return Fe.d;
-      const be = ee.playerFeet();
-      if (!be) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function xW(WW) {
+      var iW, OW, mW;
+      if (!WW) return cW.e;
+      const EW = WW.playerFeet();
+      if (!EW) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: Re,
-        heldSlot: ke
-      } = ee.inventory();
-      return function(ee) {
-        const ie = [];
-        null !== ee.game && ie.push(`Game: ${ee.game}.`);
-        const He = null === ee.health ? "" : `, health ${Math.round(ee.health)}${null===ee.maxHealth?"":` of ${Math.round(ee.maxHealth)}`}`;
-        ie.push(`The player (the creator) stands at ${Ke(ee.position)}${He}, ${ee.creative?"in":"not in"} creative mode.`);
-        const ye = ee.slots[ee.heldSlot];
-        ie.push(ye ? `Holding (slot ${ee.heldSlot}): ${Ue(ye)}.` : `Holding nothing (slot ${ee.heldSlot} is empty).`);
-        const be = ee.slots.flatMap(((ee, ie) => ee ? [`slot ${ie}: ${Ue(ee)}`] : []));
-        ie.push(be.length > 0 ? `Inventory: ${be.join(", ")}.` : "Inventory: empty.");
-        const Fe = ie => Math.hypot(ie.position[0] - ee.position[0], ie.position[1] - ee.position[1], ie.position[2] - ee.position[2]),
-          Je = [...ee.nearby].sort(((ee, ie) => Fe(ee) - Fe(ie)));
-        if (0 === Je.length) ie.push("No other players or mobs are near enough to see.");
+        slots: ZW,
+        heldSlot: xW
+      } = WW.inventory();
+      return function(WW) {
+        const iW = [];
+        null !== WW.game && iW.push(`Game: ${WW.game}.`);
+        const OW = null === WW.health ? "" : `, health ${Math.round(WW.health)}${null===WW.maxHealth?"":` of ${Math.round(WW.maxHealth)}`}`;
+        iW.push(`The player (the creator) stands at ${PW(WW.position)}${OW}, ${WW.creative?"in":"not in"} creative mode.`);
+        const mW = WW.slots[WW.heldSlot];
+        iW.push(mW ? `Holding (slot ${WW.heldSlot}): ${LW(mW)}.` : `Holding nothing (slot ${WW.heldSlot} is empty).`);
+        const EW = WW.slots.flatMap(((WW, iW) => WW ? [`slot ${iW}: ${LW(WW)}`] : []));
+        iW.push(EW.length > 0 ? `Inventory: ${EW.join(", ")}.` : "Inventory: empty.");
+        const cW = iW => Math.hypot(iW.position[0] - WW.position[0], iW.position[1] - WW.position[1], iW.position[2] - WW.position[2]),
+          wW = [...WW.nearby].sort(((WW, iW) => cW(WW) - cW(iW)));
+        if (0 === wW.length) iW.push("No other players or mobs are near enough to see.");
         else {
-          ie.push("Near them, nearest first:");
-          for (const ee of Je.slice(0, Me)) {
-            const He = "player" === ee.kind ? `player "${ee.name||"?"}"` : ee.name && ee.name !== ee.kind ? `${ee.kind} "${ee.name}"` : ee.kind,
-              ye = Math.round(Fe(ee));
-            ie.push(`- ${He} at ${Ke(ee.position)}, ${ye} block${1===ye?"":"s"} away`)
+          iW.push("Near them, nearest first:");
+          for (const WW of wW.slice(0, NW)) {
+            const OW = "player" === WW.kind ? `player "${WW.name||"?"}"` : WW.name && WW.name !== WW.kind ? `${WW.kind} "${WW.name}"` : WW.kind,
+              mW = Math.round(cW(WW));
+            iW.push(`- ${OW} at ${PW(WW.position)}, ${mW} block${1===mW?"":"s"} away`)
           }
-          Je.length > Me && ie.push(`- and ${Je.length-Me} more further away`)
+          wW.length > NW && iW.push(`- and ${wW.length-NW} more further away`)
         }
-        return ee.droppedItems > 0 && ie.push(`${ee.droppedItems} dropped item${1===ee.droppedItems?" is":"s are"} on the ground nearby.`), ie.join("\n")
+        return WW.droppedItems > 0 && iW.push(`${WW.droppedItems} dropped item${1===WW.droppedItems?" is":"s are"} on the ground nearby.`), iW.join("\n")
       }({
-        game: null !== (ie = (0, oe.e)().gameNameWithVariation) && void 0 !== ie ? ie : null,
-        position: be,
-        health: null !== (He = Je.c.get("_health")) && void 0 !== He ? He : null,
-        maxHealth: null !== (ye = Je.c.get("_totalMaxHealth")) && void 0 !== ye ? ye : null,
-        creative: !0 === Je.c.get("creative"),
-        heldSlot: ke,
-        slots: Re,
-        nearby: ee.nearby(),
-        droppedItems: ee.droppedItems()
+        game: null !== (iW = (0, tW.d)().gameNameWithVariation) && void 0 !== iW ? iW : null,
+        position: EW,
+        health: null !== (OW = wW.d.get("_health")) && void 0 !== OW ? OW : null,
+        maxHealth: null !== (mW = wW.d.get("_totalMaxHealth")) && void 0 !== mW ? mW : null,
+        creative: !0 === wW.d.get("creative"),
+        heldSlot: xW,
+        slots: ZW,
+        nearby: WW.nearby(),
+        droppedItems: WW.droppedItems()
       })
     }
   },
-  41977: (ee, ie, He) => {
-    He.d(ie, {
-      $: () => Ye,
-      D: () => ae,
-      E: () => Ve,
-      I: () => Ne,
-      M: () => xe,
-      O: () => Pe,
-      P: () => ce,
-      T: () => De,
-      V: () => ne,
-      X: () => Se,
-      d: () => je,
-      f: () => Ce,
-      j: () => Ze,
-      l: () => se,
-      p: () => we,
-      t: () => te,
-      x: () => Le,
-      z: () => Ae
+  42495: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      attachPlayGameSources: () => am,
+      playGameSources: () => Im
     });
-    var ye = He(1385),
-      be = He(27),
-      Me = He(1246),
-      Ke = He(2492),
-      Ue = He(5291),
-      Fe = He(5262);
-    let Je, oe = !1,
-      Re = !1,
-      ke = !1,
-      qe = !1;
-    const fe = 1300,
-      Te = 3e3;
-    let pe = 0,
-      Xe = !1,
-      ze = !1,
-      Be = 0;
-    const Ee = 2;
-    let ge = !1,
-      Oe = !1;
-    const de = new Set,
-      We = new Set;
-
-    function te() {
-      return oe
-    }
-
-    function Ze() {
-      return ze
-    }
-
-    function we() {
-      return Oe
-    }
-
-    function De() {
-      return (0, Me.x)() && !Oe
-    }
-
-    function Pe(ee) {
-      let ie = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (ee !== Oe) {
-        Oe = ee;
-        for (const ee of [...We]) ee(Oe);
-        ie && Se()
-      }
-    }
-
-    function Ae(ee) {
-      return We.add(ee), () => {
-        We.delete(ee)
-      }
-    }
-
-    function Ye() {
-      (0, Ue.h)(Ke.p.Menu, (0, Me.x)() ? 0 : Ke.p.Menu)
-    }
-
-    function Ve() {
-      ze = !1, Be = 0, Ye(), Se()
-    }
-
-    function ae(ee) {
-      return de.add(ee), () => {
-        de.delete(ee)
-      }
-    }
-
-    function ce(ee) {
-      Re = !1, ee !== oe && (oe = ee, qe = !1, clearTimeout(Je), ke = !oe && ge, oe ? (Xe = !1, ze = !1, Be = 0) : De() && !ge && (ze = !0), ge = !1, oe && !De() && he(), Ge(), ke && Se())
-    }
-
-    function xe(ee) {
-      ee !== Xe && (Xe = ee, ee || Se())
-    }
-
-    function Le() {
-      Re = !1, qe || !0 !== me() || (qe = !0, clearTimeout(Je), Je = setTimeout(ve, fe))
-    }
-
-    function Ce() {
-      return (!Re || performance.now() - pe > Te) && (Re = (0, Fe.O)().lockPointer(), pe = performance.now()), Re
-    }
-
-    function ve() {
-      ue() && le() && Ce()
-    }
-
-    function ue() {
-      return De() && !oe && !Xe && !(0, ye.n)()
-    }
-
-    function me() {
-      var ee;
-      return "undefined" === typeof navigator || null === (ee = navigator.userActivation) || void 0 === ee ? void 0 : ee.isActive
-    }
-
-    function le() {
-      return ke && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== me()
-    }
-
-    function Se() {
-      De() ? ue() && !ze && le() && Ce() : oe && !ge && he()
-    }
-
-    function ne() {
-      ze ? navigator.vendor.startsWith("Apple") ? Ie() : Be = Ee : Se()
-    }
-
-    function je() {
-      Be > 0 && 0 === --Be && Ie()
-    }
-
-    function se() {
-      Be = 0
-    }
-
-    function Ie() {
-      ue() && !0 === me() && Ce()
-    }
-
-    function he() {
-      ge = !0, (0, Fe.O)().unlockPointer()
-    }
-
-    function Ne() {
-      Re = !1, ke = !1, qe = !1, clearTimeout(Je), Xe = !1, ze = !1, Be = 0, ge = !1;
-      const ee = oe;
-      oe = !1, ee && Ge()
-    }
-
-    function Ge() {
-      for (const ee of [...de]) ee(oe);
-      be.h.yR("pointerLockUpdate", oe)
-    }
-  },
-  41780: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => ke,
-      d: () => Ue,
-      g: () => Re,
-      i: () => Je,
-      k: () => Ke,
-      l: () => oe,
-      p: () => Fe
-    });
-    let ye = null,
-      be = null,
-      Me = null;
-
-    function Ke(ee) {
-      ye = ee
-    }
-
-    function Ue() {
-      return ye
-    }
-
-    function Fe(ee) {
-      be = ee
-    }
-
-    function Je() {
-      return be
-    }
-
-    function oe(ee) {
-      Me = ee
-    }
-
-    function Re() {
-      return Me
-    }
-
-    function ke() {
-      var ee, ie;
-      return !0 === (null === (ee = be) || void 0 === ee || null === (ie = ee.currentViewer) || void 0 === ie ? void 0 : ie.inPlayback)
-    }
-  },
-  42095: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      attachPlayGameSources: () => Iy,
-      playGameSources: () => sy
-    });
-    var ye = He(1983),
-      be = He(41780),
-      Me = He(5262),
-      Ke = He(41704),
-      Ue = He(42077),
-      Fe = He(40494),
-      Je = He(27),
-      oe = He(5279),
-      Re = He(5271),
-      ke = He(41734),
-      qe = He(41751),
-      fe = He(42103),
-      Te = He(41739);
-    (0, Te.j)(oe.ic.Chat, (ee => {
-      if (ee.payloadKind !== Re.dc.Msgpack) return;
-      const ie = function(ee) {
-        if (null === ee || "object" !== typeof ee || !("content" in ee)) return null;
+    var mW = OW(2037),
+      EW = OW(42373),
+      NW = OW(5533),
+      PW = OW(42109),
+      LW = OW(42479),
+      cW = OW(40951),
+      wW = OW(27),
+      tW = OW(5551),
+      ZW = OW(5546),
+      xW = OW(42137),
+      lW = OW(42174),
+      AW = OW(42502),
+      bW = OW(42149);
+    (0, bW.j)(tW.uc.Chat, (WW => {
+      if (WW.payloadKind !== ZW.hc.Msgpack) return;
+      const iW = function(WW) {
+        if (null === WW || "object" !== typeof WW || !("content" in WW)) return null;
         const {
-          chatMsgId: ie,
-          worldCodeLineId: He,
-          content: ye,
-          chatterEId: be,
-          chatterObjectsToReplay: Me
-        } = ee;
+          chatMsgId: iW,
+          worldCodeLineId: OW,
+          content: mW,
+          chatterEId: EW,
+          chatterObjectsToReplay: NW
+        } = WW;
         return {
-          serverChatMsgId: null !== ie && void 0 !== ie ? ie : void 0,
-          worldCodeLineId: null !== He && void 0 !== He ? He : void 0,
-          content: ye,
-          chatterEId: void 0 === be || null === be ? void 0 : String(be),
-          chatterObjectsToReplay: Me
+          serverChatMsgId: null !== iW && void 0 !== iW ? iW : void 0,
+          worldCodeLineId: null !== OW && void 0 !== OW ? OW : void 0,
+          content: mW,
+          chatterEId: void 0 === EW || null === EW ? void 0 : String(EW),
+          chatterObjectsToReplay: NW
         }
-      }((0, ke.b)(ee.payload));
-      null !== ie && Je.h.yR("chat", ie, !0)
-    })), (0, Te.j)(oe.ic.ChatRemoved, (ee => {
-      if (ee.payloadKind === Re.dc.Msgpack) {
+      }((0, xW.d)(WW.payload));
+      null !== iW && wW.l.iZ("chat", iW, !0)
+    })), (0, bW.j)(tW.uc.ChatRemoved, (WW => {
+      if (WW.payloadKind === ZW.hc.Msgpack) {
         const {
-          chatMsgId: ie
-        } = (0, ke.b)(ee.payload);
-        Je.h.yR("chatRemoved", ie, !0)
+          chatMsgId: iW
+        } = (0, xW.d)(WW.payload);
+        wW.l.iZ("chatRemoved", iW, !0)
       }
     }));
-    const pe = {
-        chatReceived: (0, Fe.l)((function(ee) {
-          var ie, He, ye;
+    const jW = {
+        chatReceived: (0, cW.k)((function(WW) {
+          var iW, OW, mW;
           return {
-            id: ee,
-            name: null !== (ie = fe.f.getName(ee)) && void 0 !== ie ? ie : null,
-            local: (0, qe.g)() === ee,
-            profileEffect: null !== (He = null === (ye = (0, fe.h)(ee)) || void 0 === ye ? void 0 : ye.profileEffect) && void 0 !== He ? He : null
+            id: WW,
+            name: null !== (iW = AW.i.getName(WW)) && void 0 !== iW ? iW : null,
+            local: (0, lW.g)() === WW,
+            profileEffect: null !== (OW = null === (mW = (0, AW.m)(WW)) || void 0 === mW ? void 0 : mW.profileEffect) && void 0 !== OW ? OW : null
           }
         })),
-        chatRemoved: Fe.o
+        chatRemoved: cW.o
       },
-      Xe = {
-        sendChatMessage(ee) {
-          var ie, He;
+      UW = {
+        sendChatMessage(WW) {
+          var iW, OW;
           let {
-            nF: ye,
-            channelName: be
-          } = ee;
-          return null !== (ie = null === (He = (0, Ke.h)()) || void 0 === He ? void 0 : He.clientApi.sendChat(ye, be)) && void 0 !== ie && ie
+            tP: mW,
+            channelName: EW
+          } = WW;
+          return null !== (iW = null === (OW = (0, PW.f)()) || void 0 === OW ? void 0 : OW.clientApi.sendChat(mW, EW)) && void 0 !== iW && iW
         }
       };
-    var ze = He(186),
-      Be = He(2018),
-      Ee = He(41694),
-      ge = He(40489);
-    const Oe = [0, 0, 0],
-      de = {
-        codeBlockClickable(ee) {
-          var ie;
-          const He = (0, Ke.h)();
-          if (null === He || void 0 === He || !He.isSessionLive) return !1;
-          const ye = He.api;
-          if (0 !== (Ee.v.playerFlags(ye.apiView, 0) & Ee.Pd.Crouching)) return !1;
-          const be = ye.queries.directorEntity(ye.localId) >= Ee.pb.BYTES ? ye.memoryData(ye.scratch(), Ee.pb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === be) return !1;
-          for (let Me = 0; Me < 3; Me++) Oe[Me] = Ee.pb.feet(be, 0, Me);
-          return Oe[1] += Ee.pb.eyeHeight(be, 0), (0, ge.b)(Oe, ee, null !== (ie = Be.c.get("blockReach")) && void 0 !== ie ? ie : ze.g.JX)
+    var kW = OW(182),
+      sW = OW(2061),
+      MW = OW(42094),
+      KW = OW(40943);
+    const SW = [0, 0, 0],
+      YW = {
+        codeBlockClickable(WW) {
+          var iW;
+          const OW = (0, PW.f)();
+          if (null === OW || void 0 === OW || !OW.isSessionLive) return !1;
+          const mW = OW.api;
+          if (0 !== (MW.z.playerFlags(mW.apiView, 0) & MW.Ud.Crouching)) return !1;
+          const EW = mW.queries.directorEntity(mW.localId) >= MW.zb.BYTES ? mW.memoryData(mW.scratch(), MW.zb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === EW) return !1;
+          for (let NW = 0; NW < 3; NW++) SW[NW] = MW.zb.feet(EW, 0, NW);
+          return SW[1] += MW.zb.eyeHeight(EW, 0), (0, KW.b)(SW, WW, null !== (iW = sW.d.get("blockReach")) && void 0 !== iW ? iW : kW.f.lU)
         }
       },
-      We = {
-        clickCodeBlock(ee) {
-          var ie;
-          null === (ie = (0, Ke.h)()) || void 0 === ie || ie.clickCodeBlock(ee)
+      yW = {
+        clickCodeBlock(WW) {
+          var iW;
+          null === (iW = (0, PW.f)()) || void 0 === iW || iW.clickCodeBlock(WW)
         }
       };
-    var te = He(41717),
-      Ze = He(42105),
-      we = He(1033),
-      De = He(39829),
-      Pe = He(5255),
-      Ae = He(41725),
-      Ye = He(41712),
-      Ve = He(41728);
+    var TW = OW(42118),
+      JW = OW(42508),
+      hW = OW(1052),
+      HW = OW(40242),
+      nW = OW(5525),
+      uW = OW(42131),
+      oW = OW(42116),
+      dW = OW(42134);
 
-    function ae(ee) {
-      if (null === ee) return null;
-      const ie = [];
-      for (const He of ee) {
-        const ee = Object.keys(He)[0];
-        if ("Be" === ee) {
+    function eW(WW) {
+      if (null === WW) return null;
+      const iW = [];
+      for (const OW of WW) {
+        const WW = Object.keys(OW)[0];
+        if ("Ii" === WW) {
           const {
-            str: ee,
-            style: ye,
-            clickableUrl: be
-          } = He.Be, Me = Object.keys(ee)[0], Ke = ee[Me];
-          "string" !== Me && "styledEntityName" !== Me && "styledTranslatedText" !== Me || ie.push({
-            str: Ke,
-            style: ye,
-            clickableUrl: be
+            str: WW,
+            style: mW,
+            clickableUrl: EW
+          } = OW.Ii, NW = Object.keys(WW)[0], PW = WW[NW];
+          "string" !== NW && "styledEntityName" !== NW && "styledTranslatedText" !== NW || iW.push({
+            str: PW,
+            style: mW,
+            clickableUrl: EW
           })
-        } else ie.push(He[ee])
+        } else iW.push(OW[WW])
       }
-      return ie
+      return iW
     }
-    const ce = {
-      screenPos(ee) {
-        var ie, He;
-        return null !== (ie = null === (He = (0, Ke.h)()) || void 0 === He ? void 0 : He.renderFrame.projectWorldPosToScreenPos(ee)) && void 0 !== ie ? ie : {
+    const vW = {
+      screenPos(WW) {
+        var iW, OW;
+        return null !== (iW = null === (OW = (0, PW.f)()) || void 0 === OW ? void 0 : OW.renderFrame.projectWorldPosToScreenPos(WW)) && void 0 !== iW ? iW : {
           x: 0,
           y: 0
         }
       }
     };
-    let xe = !1;
+    let gW = !1;
 
-    function Le() {
-      xe || (xe = !0, (0, Te.j)(oe.ic.ProgressBarUpdate, (ee => {
-        const ie = (0, Ve.h)(ee);
-        (0, Ve.c)(ie) && Je.h.yR("progressBarUpdate", ie, !0)
-      })), (0, Te.j)(Ae.v, (ee => {
-        const ie = (0, Ve.g)(Ae.v, ee);
-        ie && Je.h.yR("middleScreenBarInitiate", {
-          duration: ie.Ky,
-          Uy: ie.Uy,
-          horizBarRemOffset: ie.Fy
+    function DW() {
+      gW || (gW = !0, (0, bW.j)(tW.uc.ProgressBarUpdate, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && wW.l.iZ("progressBarUpdate", iW, !0)
+      })), (0, bW.j)(uW.v, (WW => {
+        const iW = (0, dW.g)(uW.v, WW);
+        iW && wW.l.iZ("middleScreenBarInitiate", {
+          duration: iW.xN,
+          lN: iW.lN,
+          horizBarRemOffset: iW.bN
         }, !0)
-      })), (0, Te.j)(oe.ic.RemoveMiddleScreenBar, (() => {
-        Je.h.yR("middleScreenBarRemove")
-      })), (0, Te.j)(Ae.$, (ee => {
-        const ie = (0, Ve.g)(Ae.$, ee);
-        if (ie) {
-          var He;
-          const ee = ie.QH ? null === (He = (0, Ke.h)()) || void 0 === He ? void 0 : He.renderFrame.projectDirectionToScreenPos(ie.QH) : void 0;
-          Je.h.yR("sendHitmarker", {
-            Tb: ie.Tb,
-            screenPos: ee
+      })), (0, bW.j)(tW.uc.RemoveMiddleScreenBar, (() => {
+        wW.l.iZ("middleScreenBarRemove")
+      })), (0, bW.j)(uW.hb, (WW => {
+        const iW = (0, dW.g)(uW.hb, WW);
+        if (iW) {
+          var OW;
+          const WW = iW.oi ? null === (OW = (0, PW.f)()) || void 0 === OW ? void 0 : OW.renderFrame.projectDirectionToScreenPos(iW.oi) : void 0;
+          wW.l.iZ("sendHitmarker", {
+            ui: iW.ui,
+            screenPos: WW
           }, !0)
         }
-      })), (0, Te.j)(Ae.db, (ee => {
-        const ie = (0, Ve.g)(Ae.db, ee);
-        if (ie) {
+      })), (0, bW.j)(uW.mb, (WW => {
+        const iW = (0, dW.g)(uW.mb, WW);
+        if (iW) {
           const {
-            id: ee,
-            position: He,
-            style: ye,
-            Ji: be,
-            Ri: Me
-          } = ie;
-          Je.h.yR("setDirectionArrow", {
-            id: ee,
-            position: He,
-            style: ye,
-            text: ae(be),
-            Ri: Me
+            id: WW,
+            position: OW,
+            style: mW,
+            Gi: EW,
+            zi: NW
+          } = iW;
+          wW.l.iZ("setDirectionArrow", {
+            id: WW,
+            position: OW,
+            style: mW,
+            text: eW(EW),
+            zi: NW
           }, !0)
         }
-      })), (0, Te.j)(Ae.h, (ee => {
-        const ie = (0, Ve.g)(Ae.h, ee);
-        ie && Je.h.yR("clearDirectionArrow", {
-          id: ie.id
+      })), (0, bW.j)(uW.d, (WW => {
+        const iW = (0, dW.g)(uW.d, WW);
+        iW && wW.l.iZ("clearDirectionArrow", {
+          id: iW.id
         }, !0)
-      })), (0, Te.j)(Ae.o, (ee => {
-        const ie = (0, Ve.g)(Ae.o, ee);
-        ie && Je.h.yR("flyingMiddleMessage", {
-          content: ae(ie.ze),
-          ge: ie.ge,
-          Oe: ie.Oe
+      })), (0, bW.j)(uW.n, (WW => {
+        const iW = (0, dW.g)(uW.n, WW);
+        iW && wW.l.iZ("flyingMiddleMessage", {
+          content: eW(iW.qN),
+          RN: iW.RN,
+          GN: iW.GN
         }, !0)
-      })), (0, Te.j)(oe.ic.WorldVariation, (ee => {
-        const ie = (0, Ve.h)(ee);
-        if ("string" === typeof ie) {
-          const ee = ie === we.f ? null : {
-            message: `Currently loaded as variation: ${ie}`,
+      })), (0, bW.j)(tW.uc.WorldVariation, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ("string" === typeof iW) {
+          const WW = iW === hW.e ? null : {
+            message: `Currently loaded as variation: ${iW}`,
             type: "Warning"
           };
-          Je.h.yR("showPermanentBottomMessage", ee, !0)
+          wW.l.iZ("showPermanentBottomMessage", WW, !0)
         }
-      })), (0, Te.j)(Ae.E, (ee => {
-        const ie = (0, Ve.g)(Ae.E, ee);
-        ie && function(ee, ie) {
+      })), (0, bW.j)(uW.J, (WW => {
+        const iW = (0, dW.g)(uW.J, WW);
+        iW && function(WW, iW) {
           const {
-            type: He,
-            params: ye
-          } = (0, De.e)(ie), be = {
-            ...ye
+            type: OW,
+            params: mW
+          } = (0, HW.f)(iW), EW = {
+            ...mW
           };
-          for (const Me of De.c) be[Me] && (be[Me] = ae(be[Me]));
-          Pe.d.queueQTE(ee, He, be).getResult().then((ie => {
-            var He;
-            "boolean" === typeof ie && (null === (He = (0, Ke.h)()) || void 0 === He || He.send(Ye.e.QteResponse, {
-              qteId: ee,
-              qteResponse: ie
+          for (const NW of HW.c) EW[NW] && (EW[NW] = eW(EW[NW]));
+          nW.d.queueQTE(WW, OW, EW).getResult().then((iW => {
+            var OW;
+            "boolean" === typeof iW && (null === (OW = (0, PW.f)()) || void 0 === OW || OW.send(oW.e.QteResponse, {
+              qteId: WW,
+              qteResponse: iW
             }))
           }))
-        }(ie.id, ie.Ci)
-      })), (0, Te.j)(Ae.T, (ee => {
-        const ie = (0, Ve.g)(Ae.T, ee);
-        "number" === typeof ie && Pe.d.cancelQTE(ie)
-      })), (0, Te.g)((() => {
-        Pe.d.reset()
-      })), (0, Te.i)((() => {
-        Pe.d.reset()
-      })), (0, Te.j)(oe.ic.EditItemCraftingRecipes, (ee => {
-        const ie = (0, Ve.h)(ee);
-        (0, Ve.c)(ie) && Je.h.yR("craftingRecipesEdited", {
-          itemName: ie.craftingRecipeItemName,
-          recipesForItem: ie.recipesForItem
+        }(iW.id, iW.jN)
+      })), (0, bW.j)(uW.Y, (WW => {
+        const iW = (0, dW.g)(uW.Y, WW);
+        "number" === typeof iW && nW.d.cancelQTE(iW)
+      })), (0, bW.e)((() => {
+        nW.d.reset()
+      })), (0, bW.i)((() => {
+        nW.d.reset()
+      })), (0, bW.j)(tW.uc.EditItemCraftingRecipes, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && wW.l.iZ("craftingRecipesEdited", {
+          itemName: iW.craftingRecipeItemName,
+          recipesForItem: iW.recipesForItem
         })
-      })), (0, Te.j)(Ae.Q, (ee => {
-        const ie = (0, Ve.g)(Ae.Q, ee);
-        ie && Je.h.yR("craftingRecipesEdited", {
-          itemName: ie.SM,
+      })), (0, bW.j)(uW.V, (WW => {
+        const iW = (0, dW.g)(uW.V, WW);
+        iW && wW.l.iZ("craftingRecipesEdited", {
+          itemName: iW.Oi,
           recipesForItem: []
         })
       })))
     }
-    var Ce = He(18);
-    const ve = [{
+    var VW = OW(25);
+    const pW = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -1165,1646 +966,1621 @@ export const modules = {
       movesFly: !0
     }];
 
-    function ue(ee) {
-      return Ee.v.playerFlags(ee.api.apiView, 0)
+    function fW(WW) {
+      return MW.z.playerFlags(WW.api.apiView, 0)
     }
-    const me = {
-        freeCamera: (0, qe.c)((ee => () => {
-          const ie = ee.isSessionLive && 0 !== (ue(ee) & Ee.Pd.FreeCamMoves),
-            He = ee.freeCameraAllowed() && null === Ce.e.get("scriptedCameraFacing");
-          return ve[(He ? 2 : 0) + (ie ? 1 : 0)]
-        }), ve[0], (ee => (0, Me.u)(ee)))
+    const CW = {
+        freeCamera: (0, lW.e)((WW => () => {
+          const iW = WW.isSessionLive && 0 !== (fW(WW) & MW.Ud.FreeCamMoves),
+            OW = WW.freeCameraAllowed() && null === VW.d.get("scriptedCameraFacing");
+          return pW[(OW ? 2 : 0) + (iW ? 1 : 0)]
+        }), pW[0], (WW => (0, NW.v)(WW)))
       },
-      le = {
-        setFreeCameraMovesFly: ee => {
-          var ie;
-          null === (ie = (0, Ke.h)()) || void 0 === ie || ie.setFreeCameraMovesFly(ee)
+      XW = {
+        setFreeCameraMovesFly: WW => {
+          var iW;
+          null === (iW = (0, PW.f)()) || void 0 === iW || iW.setFreeCameraMovesFly(WW)
         }
       },
-      Se = {
+      BW = {
         freeCameraPos: () => {
-          const ee = (0, Ke.h)();
-          return null !== ee && void 0 !== ee && ee.isSessionLive && ee.renderFrame.hasView && 0 !== (ue(ee) & Ee.Pd.FreeCam) ? ee.renderFrame.cameraPosition : null
+          const WW = (0, PW.f)();
+          return null !== WW && void 0 !== WW && WW.isSessionLive && WW.renderFrame.hasView && 0 !== (fW(WW) & MW.Ud.FreeCam) ? WW.renderFrame.cameraPosition : null
         }
       };
-    var ne = He(40017);
-    let je = !1,
-      se = !1;
+    var qW = OW(40416);
+    let RW = !1,
+      GW = !1;
 
-    function Ie() {
-      const ee = (0, Ke.h)();
-      if (null === ee || void 0 === ee || !ee.isSessionLive) return void(je = !1);
-      const ie = 0 !== (Ee.v.playerFlags(ee.api.apiView, 0) & Ee.Pd.FreeCam);
-      ie !== je && (je = ie, (0, ne.e)(ie))
+    function IW() {
+      const WW = (0, PW.f)();
+      if (null === WW || void 0 === WW || !WW.isSessionLive) return void(RW = !1);
+      const iW = 0 !== (MW.z.playerFlags(WW.api.apiView, 0) & MW.Ud.FreeCam);
+      iW !== RW && (RW = iW, (0, qW.e)(iW))
     }
-    var he = He(347),
-      Ne = He(37853),
-      Ge = He(2022);
-    var re = He(42109),
-      Qe = He(41747);
-    const ei = {
+    var aW = OW(344),
+      rW = OW(38195),
+      zW = OW(2072);
+    var FW = OW(42513),
+      QW = OW(42165);
+    const Wi = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
     let ii = "off";
 
-    function Hi(ee) {
-      var ie;
-      return null === ee ? null : {
-        label: null !== (ie = (0, re.c)(ee, "interactionPrompt")) && void 0 !== ie ? ie : null
+    function Oi(WW) {
+      var iW;
+      return null === WW ? null : {
+        label: null !== (iW = (0, FW.c)(WW, "interactionPrompt")) && void 0 !== iW ? iW : null
       }
     }
-    const yi = new Map([
-      [Ee.tc.Open, {
-        label: Fe.h.open
+    const mi = new Map([
+      [MW.Jc.Open, {
+        label: cW.h.open
       }],
-      [Ee.tc.Close, {
-        label: Fe.h.close
+      [MW.Jc.Close, {
+        label: cW.h.close
       }],
-      [Ee.tc.Milk, {
-        label: Fe.h.milk
+      [MW.Jc.Milk, {
+        label: cW.h.milk
       }],
-      [Ee.tc.Shear, {
-        label: Fe.h.shear
+      [MW.Jc.Shear, {
+        label: cW.h.shear
       }],
-      [Ee.tc.Tame, {
-        label: Fe.h.tame
+      [MW.Jc.Tame, {
+        label: cW.h.tame
       }],
-      [Ee.tc.Feed, {
-        label: Fe.h.feed
+      [MW.Jc.Feed, {
+        label: cW.h.feed
       }],
-      [Ee.tc.Ride, {
-        label: Fe.h.ride
+      [MW.Jc.Ride, {
+        label: cW.h.ride
       }]
     ]);
-    class bi {
+    class Ei {
       constructor() {
-        this.target = ei, this.po = Ee.ad, this.optionName = null, this.pickaxe = new Fe.d
+        this.target = Wi, this.NL = MW.nd, this.optionName = null, this.pickaxe = new cW.d
       }
-      read(ee) {
-        var ie;
-        const He = Ee.v.targetBlockId(ee.api.apiView, 0);
-        He !== this.po && (this.po = He, this.optionName = He === Ee.ad ? null : `${ee.tables.getMetaInfo(He).rootName}CrosshairText`);
-        const ye = null === this.optionName ? null : null !== (ie = ee.tables.getClientOption(this.optionName)) && void 0 !== ie ? ie : null;
-        this.pickaxe.update(function(ee, ie) {
-          var He, ye, be;
-          if (0 === (Ee.v.playerFlags(ee.api.apiView, 0) & Ee.Pd.Breaking) || ie === Ee.ad || 0 === ie) return null;
+      read(WW) {
+        var iW;
+        const OW = MW.z.targetBlockId(WW.api.apiView, 0);
+        OW !== this.NL && (this.NL = OW, this.optionName = OW === MW.nd ? null : `${WW.tables.getMetaInfo(OW).rootName}CrosshairText`);
+        const mW = null === this.optionName ? null : null !== (iW = WW.tables.getClientOption(this.optionName)) && void 0 !== iW ? iW : null;
+        this.pickaxe.update(function(WW, iW) {
+          var OW, mW, EW;
+          if (0 === (MW.z.playerFlags(WW.api.apiView, 0) & MW.Ud.Breaking) || iW === MW.nd || 0 === iW) return null;
           const {
-            tables: Me
-          } = ee;
-          if (!0 === Me.getClientOption("creative")) return null;
-          const Ke = Me.nameOfId(ie),
-            Ue = null === (He = ee.items.lJ()) || void 0 === He ? void 0 : He.name,
-            Fe = null !== (ye = Me.getItemStat(Ke, "harvestLevel")) && void 0 !== ye ? ye : 0;
-          return (0, he.Fc)({
-            blockHarvestType: Me.getDefaultItemStat(Ke, "harvestType"),
-            blockHarvestLevel: Me.getDefaultItemStat(Ke, "harvestLevel"),
-            harvestLevel: Fe,
-            heldToolType: void 0 === Ue ? void 0 : Me.getDefaultItemStat(Ue, "harvests"),
-            heldToolLevel: void 0 === Ue ? void 0 : Me.getDefaultItemStat(Ue, "level")
-          }) && null !== (be = Ne.s[Fe]) && void 0 !== be ? be : null
-        }(ee, He)), ee.watchPromptPick(ii);
-        const be = "touch" === ii ? function(ee) {
-          var ie;
-          const He = ee.interactLabel;
-          return He === Ee.tc.Entity ? Hi(ee.promptEntity) : He === Ee.tc.TameWith ? {
-            label: (0, Fe.y)(ee.tables.nameOfId(ee.interactIcon))
-          } : null !== (ie = yi.get(He)) && void 0 !== ie ? ie : null
-        }(ee) : Hi(ee.promptEntity);
-        return this.target = (0, Ge.j)(this.target, {
-          interactPrompt: be,
-          blockText: ye,
+            tables: NW
+          } = WW;
+          if (!0 === NW.getClientOption("creative")) return null;
+          const PW = NW.nameOfId(iW),
+            LW = null === (OW = WW.items.BL()) || void 0 === OW ? void 0 : OW.name,
+            cW = null !== (mW = NW.getItemStat(PW, "harvestLevel")) && void 0 !== mW ? mW : 0;
+          return (0, aW.uc)({
+            blockHarvestType: NW.getDefaultItemStat(PW, "harvestType"),
+            blockHarvestLevel: NW.getDefaultItemStat(PW, "harvestLevel"),
+            harvestLevel: cW,
+            heldToolType: void 0 === LW ? void 0 : NW.getDefaultItemStat(LW, "harvests"),
+            heldToolLevel: void 0 === LW ? void 0 : NW.getDefaultItemStat(LW, "level")
+          }) && null !== (EW = rW.p[cW]) && void 0 !== EW ? EW : null
+        }(WW, OW)), WW.watchPromptPick(ii);
+        const EW = "touch" === ii ? function(WW) {
+          var iW;
+          const OW = WW.interactLabel;
+          return OW === MW.Jc.Entity ? Oi(WW.promptEntity) : OW === MW.Jc.TameWith ? {
+            label: (0, cW.v)(WW.tables.nameOfId(WW.interactIcon))
+          } : null !== (iW = mi.get(OW)) && void 0 !== iW ? iW : null
+        }(WW) : Oi(WW.promptEntity);
+        return this.target = (0, zW.t)(this.target, {
+          interactPrompt: EW,
+          blockText: mW,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let Mi = null;
-    const Ki = {
+    let Ni = null;
+    const Pi = {
       current: () => {
-        var ee, ie;
-        return null !== (ee = null === (ie = Mi) || void 0 === ie ? void 0 : ie.target) && void 0 !== ee ? ee : ei
+        var WW, iW;
+        return null !== (WW = null === (iW = Ni) || void 0 === iW ? void 0 : iW.target) && void 0 !== WW ? WW : Wi
       },
-      watch: ee => {
-        const ie = new bi;
-        Mi = ie;
-        const He = (0, qe.i)((He => {
-          let ye = ie.read(He);
-          ee(ye);
-          const be = (0, Me.w)((() => {
-            const be = ie.read(He);
-            be !== ye && (ye = be, ee(be))
+      watch: WW => {
+        const iW = new Ei;
+        Ni = iW;
+        const OW = (0, lW.k)((OW => {
+          let mW = iW.read(OW);
+          WW(mW);
+          const EW = (0, NW.x)((() => {
+            const EW = iW.read(OW);
+            EW !== mW && (mW = EW, WW(EW))
           }));
           return () => {
-            be(), He.watchPromptPick("off")
+            EW(), OW.watchPromptPick("off")
           }
         }));
         return () => {
-          He(), Mi === ie && (Mi = null)
+          OW(), Ni === iW && (Ni = null)
         }
       }
     };
-    let Ui = 0,
-      Fi = 0;
-    const Ji = {
-        health: Fe.s,
-        aura: Fe.j,
-        hotbar: Qe.b.states.hotbar,
-        heldItemAim: Qe.b.states.heldItemAim,
-        crouching: (0, qe.c)((ee => function(ee) {
-          const ie = () => 0 !== (Ee.v.playerFlags(ee.apiView, 0) & Ee.Pd.Crouching);
+    let Li = 0,
+      ci = 0;
+    const wi = {
+        health: cW.r,
+        aura: cW.i,
+        hotbar: QW.c.states.hotbar,
+        heldItemAim: QW.c.states.heldItemAim,
+        crouching: (0, lW.e)((WW => function(WW) {
+          const iW = () => 0 !== (MW.z.playerFlags(WW.apiView, 0) & MW.Ud.Crouching);
           return {
-            current: ie,
-            watch(ee) {
-              let He = ie();
-              return (0, Me.u)((() => {
-                const ye = ie();
-                ye !== He && (He = ye, ee(ye))
+            current: iW,
+            watch(WW) {
+              let OW = iW();
+              return (0, NW.v)((() => {
+                const mW = iW();
+                mW !== OW && (OW = mW, WW(mW))
               }))
             }
           }
-        }(ee.api).current), !1, (ee => (0, Me.u)(ee))),
-        flight: (0, qe.c)((ee => () => function(ee) {
-          const ie = Ee.v.playerFlags(ee.apiView, 0);
-          return (0, Fe.q)(0 !== (ie & Ee.Pd.CanFly), 0 !== (ie & Ee.Pd.Flying))
-        }(ee.api)), (0, Fe.q)(!1, !1), (ee => (0, Me.u)(ee))),
-        gliderBoostFuel: (0, qe.c)((ee => () => Ee.v.gliderBoostFuel(ee.api.apiView, 0)), 0, (ee => (0, Me.u)(ee))),
-        crosshairTarget: Ki
+        }(WW.api).current), !1, (WW => (0, NW.v)(WW))),
+        flight: (0, lW.e)((WW => () => function(WW) {
+          const iW = MW.z.playerFlags(WW.apiView, 0);
+          return (0, cW.p)(0 !== (iW & MW.Ud.CanFly), 0 !== (iW & MW.Ud.Flying))
+        }(WW.api)), (0, cW.p)(!1, !1), (WW => (0, NW.v)(WW))),
+        gliderBoostFuel: (0, lW.e)((WW => () => MW.z.gliderBoostFuel(WW.api.apiView, 0)), 0, (WW => (0, NW.v)(WW))),
+        crosshairTarget: Pi
       },
-      oi = {
-        hotbarSlotRequested: Qe.b.events.hotbarSlotRequested,
-        hotbarScrolled: Qe.b.events.hotbarScrolled,
-        numberKeyPressed: Qe.b.events.numberKeyPressed,
-        shotDamageToShow: (0, Fe.v)((ee => !0 === (0, re.c)(ee, "showDamageAmounts")))
+      ti = {
+        hotbarSlotRequested: QW.c.events.hotbarSlotRequested,
+        hotbarScrolled: QW.c.events.hotbarScrolled,
+        numberKeyPressed: QW.c.events.numberKeyPressed,
+        shotDamageToShow: (0, cW.t)((WW => !0 === (0, FW.c)(WW, "showDamageAmounts")))
       },
-      Ri = {
-        selectHotbarSlot: Qe.b.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: ee => {
-          ii = ee
+      Zi = {
+        selectHotbarSlot: QW.c.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: WW => {
+          ii = WW
         }
       },
-      ki = {
+      xi = {
         momentumFrac: function() {
-          var ee, ie, He;
-          const ye = (0, Ke.h)(),
-            be = performance.now(),
-            Me = null === ye || void 0 === ye || null === (ee = ye.items.lJ()) || void 0 === ee || null === (ie = ee.attributes) || void 0 === ie || null === (He = ie.customAttributes) || void 0 === He ? void 0 : He.enchantments;
-          return Ui = null !== ye && null !== Me && void 0 !== Me && Me.Momentum ? 0 !== (Ee.v.playerFlags(ye.api.apiView, 0) & Ee.Pd.Breaking) ? Math.max(0, Ee.v.momentumFrac(ye.api.apiView, 0)) : Math.max(0, Ui - (be - Fi) / 1500) : 0, Fi = be, Ui
+          var WW, iW, OW;
+          const mW = (0, PW.f)(),
+            EW = performance.now(),
+            NW = null === mW || void 0 === mW || null === (WW = mW.items.BL()) || void 0 === WW || null === (iW = WW.attributes) || void 0 === iW || null === (OW = iW.customAttributes) || void 0 === OW ? void 0 : OW.enchantments;
+          return Li = null !== mW && null !== NW && void 0 !== NW && NW.Momentum ? 0 !== (MW.z.playerFlags(mW.api.apiView, 0) & MW.Ud.Breaking) ? Math.max(0, MW.z.momentumFrac(mW.api.apiView, 0)) : Math.max(0, Li - (EW - ci) / 1500) : 0, ci = EW, Li
         }
       };
-    var qi = He(41702);
-    const fi = {
-      lobbyManage(ee) {
-        var ie;
-        null === (ie = (0, Ke.h)()) || void 0 === ie || ie.send(Ye.e.LobbyManage, ee)
+    var li = OW(42103);
+    const Ai = {
+      lobbyManage(WW) {
+        var iW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.LobbyManage, WW)
       }
     };
-    var Ti = He(1189),
-      Xi = He(37301),
-      zi = He(9521),
-      Bi = He(1620),
-      Ei = He(2492),
-      gi = He(5282);
-    let Oi = !1;
+    var bi = OW(1230),
+      ji = OW(37735),
+      Ui = OW(10027),
+      ki = OW(1729),
+      si = OW(3305),
+      Mi = OW(5560);
+    let Ki = !1;
 
-    function di(ee) {
-      Oi = ee
+    function Si(WW) {
+      Ki = WW
     }
 
-    function Wi() {
-      "inGame" !== Ce.e.get("gameState") || (0, Bi.q)() || Je.h.yR("ctrlCrouchWithoutFullscreen")
+    function Yi() {
+      "inGame" !== VW.d.get("gameState") || (0, ki.m)() || wW.l.iZ("ctrlCrouchWithoutFullscreen")
     }
-    let ti = !1;
-    const Zi = {
+    let yi = !1;
+    const Ti = {
         OpenEmoteWheel: () => {
-          di(!0), ti = !0, queueMicrotask((() => {
-            ti && (ti = !1, Je.h.yR("requestEmoteWheelHoldOpen"))
+          Si(!0), yi = !0, queueMicrotask((() => {
+            yi && (yi = !1, wW.l.iZ("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          Je.h.yR("toggleFullCoordinateOverlay")
+          wW.l.iZ("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, Xi.e)() || Je.h.yR("YKeyPressed")
+          (0, ji.e)() || wW.l.iZ("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, Xi.e)() || Je.h.yR("XKeyPressed")
+          (0, ji.e)() || wW.l.iZ("XKeyPressed")
         },
-        CtrlCrouch: Wi,
+        CtrlCrouch: Yi,
         "primary-fire": () => {
-          Je.h.yR("mouseState", {
-            sJ: Ti.b.DownFirePrimary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          Je.h.yR("mouseState", {
-            sJ: Ti.b.DownFireSecondary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          Je.h.yR("mouseState", {
-            sJ: Ti.b.TouchDownLong,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.TouchDownLong,
             isDown: !0
           })
         }
       },
-      wi = {
+      Ji = {
         OpenEmoteWheel: () => {
-          di(!1), ti ? (ti = !1, (0, zi.e)() || Je.h.yR("requestEmoteWheelHoldOpen")) : Je.h.yR("requestEmoteWheelHoldRelease")
+          Si(!1), yi ? (yi = !1, (0, Ui.d)() || wW.l.iZ("requestEmoteWheelHoldOpen")) : wW.l.iZ("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: Wi,
+        CtrlCrouch: Yi,
         "primary-fire": () => {
-          Je.h.yR("mouseState", {
-            sJ: Ti.b.UpFirePrimary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          Je.h.yR("mouseState", {
-            sJ: Ti.b.UpFireSecondary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          Je.h.yR("mouseState", {
-            sJ: Ti.b.UpFirePrimary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let Di = !1;
-
-    function Pi() {
-      Di || (Di = !0, (0, gi.j)((ee => {
-        if ((0, be.b)()) return;
-        const ie = (0, gi.f)(ee) ? "primary-fire" : ee.action;
-        var He;
-        if (ee.down) {
-          if (0 === (ee.flags & Ei.d.Synthetic)) {
-            var ye;
-            null === (ye = Zi[ie]) || void 0 === ye || ye.call(Zi)
-          }
-        } else null === (He = wi[ie]) || void 0 === He || He.call(wi)
-      })))
-    }
-    var Ai = He(335),
-      Yi = He(97),
-      Vi = He(35),
-      ai = He(41977),
-      ci = He(1305),
-      xi = He(2518);
-    let Li = !1;
-    const Ci = {
-      sendCodeCollab(ee) {
-        var ie;
-        null === (ie = (0, Ke.h)()) || void 0 === ie || ie.send(Ye.e.CodeCollab, (0, Ye.m)(ee), (0, xi.f)(ee))
-      }
-    };
-    var vi = He(39896),
-      ui = He(9451);
-    let mi = null,
-      li = !1,
-      Si = null;
+    let Hi = !1;
 
     function ni() {
-      return "inGame" === Ce.e.get("gameState") && !(0, Xi.e)()
+      Hi || (Hi = !0, (0, Mi.g)((WW => {
+        if ((0, EW.d)()) return;
+        const iW = (0, Mi.f)(WW) ? "primary-fire" : WW.action;
+        var OW;
+        if (WW.down) {
+          if (0 === (WW.flags & si.e.Synthetic)) {
+            var mW;
+            null === (mW = Ti[iW]) || void 0 === mW || mW.call(Ti)
+          }
+        } else null === (OW = Ji[iW]) || void 0 === OW || OW.call(Ji)
+      })))
     }
-    const ji = {
-        OpenInventory: ee => {
-          (0, Bi.w)(ee, "inventory", (0, qi.l)())
+    var ui = OW(327),
+      oi = OW(100),
+      di = OW(39),
+      ei = OW(42394),
+      vi = OW(1351),
+      gi = OW(3323);
+    let Di = !1;
+    const Vi = {
+      sendCodeCollab(WW) {
+        var iW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.CodeCollab, (0, oW.r)(WW), (0, gi.h)(WW))
+      }
+    };
+    var fi = OW(40305),
+      Ci = OW(9957);
+    let Xi = null,
+      Bi = !1,
+      qi = null;
+
+    function Ri() {
+      return "inGame" === VW.d.get("gameState") && !(0, ji.e)()
+    }
+    const Gi = {
+        OpenInventory: WW => {
+          (0, ki.t)(WW, "inventory", (0, li.h)())
         },
-        OpenShop: ee => {
-          mi && ni() && (0, Bi.u)(ee, Ai.r.SHOP, !mi.shopIsEmpty(Be.c.get("shopInfo")))
+        OpenShop: WW => {
+          Xi && Ri() && (0, ki.s)(WW, ui.m.SHOP, !Xi.shopIsEmpty(sW.d.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: ee => {
-          ni() && (0, Bi.u)(ee, Ai.r.LOBBY_LEADERBOARD, (0, vi.e)({
-            lobbyLeaderboardInfo: Be.c.get("lobbyLeaderboardInfo"),
-            lobbyManage: Be.c.get("lobbyManage")
-          }))
+        OpenLobbyLeaderboard: WW => {
+          var iW, OW;
+          Ri() && (0, ki.x)(WW, (0, fi.d)({
+            lobbyLeaderboardInfo: sW.d.get("lobbyLeaderboardInfo"),
+            lobbyManage: sW.d.get("lobbyManage")
+          }), null !== (iW = null === (OW = Xi) || void 0 === OW ? void 0 : OW.getClientGameLeaderboardKey()) && void 0 !== iW ? iW : null)
         },
-        OpenTasksAndLeaderboard: ee => {
-          var ie;
-          const He = null === (ie = mi) || void 0 === ie ? void 0 : ie.getClientGameMapKey();
-          He ? (0, Bi.y)(ee, !0, He) : (0, Bi.w)(ee, "retentionFeatures", !(!Be.c.get("_tasks") && !Be.c.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: WW => {
+          var iW;
+          const OW = null === (iW = Xi) || void 0 === iW ? void 0 : iW.getClientGameMapKey();
+          OW ? (0, ki.A)(WW, !0, OW) : (0, ki.t)(WW, "retentionFeatures", !(!sW.d.get("_tasks") && !sW.d.get("_availableLeaderboards")))
         },
-        OpenInviteLink: ee => {
-          (0, Bi.w)(ee, "inviteLink", Yi.featureFlags.canUseInviteLinks)
+        OpenInviteLink: WW => {
+          (0, ki.t)(WW, "inviteLink", oi.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: ee => {
-          ni() && function(ee) {
-            const ie = (0, Ke.h)(),
-              He = null !== ie && void 0 !== ie && ie.isSessionLive ? ie.api : null,
-              ye = He ? He.pE(He.localId) : null;
-            (0, Bi.y)(ee, null !== ye && (0, xi.d)((0, ci.e)()), (() => {
-              (0, xi.i)(ye)
+        OpenCodeEditor: WW => {
+          Ri() && function(WW) {
+            const iW = (0, PW.f)(),
+              OW = null !== iW && void 0 !== iW && iW.isSessionLive ? iW.api : null,
+              mW = OW ? OW.Vk(OW.localId) : null;
+            (0, ki.A)(WW, null !== mW && (0, gi.d)((0, vi.d)()), (() => {
+              (0, gi.i)(mW)
             }))
-          }(ee)
+          }(WW)
         },
         HideUi: () => {
-          Je.h.yR("showUi", !1)
+          wW.l.iZ("showUi", !1)
         }
       },
-      si = {
+      Ii = {
         HideUi: () => {
-          Je.h.yR("showUi", !0)
+          wW.l.iZ("showUi", !0)
         }
       };
 
-    function Ii() {
-      li || (li = !0, He.e(173).then((() => He(63776))).then((ee => {
-        mi = ee
-      }), (ee => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", ee)
-      })), (0, ai.D)((ee => {
-        ee || !(0, ai.j)() || (0, Yi.isMobile)() || !Vi.i.getItem("disableFullscreen") || (0, Bi.o)() || Ce.e.set({
-          openEverythingMenuName: Ai.r.SETTINGS
+    function ai() {
+      Bi || (Bi = !0, OW.e(183).then((() => OW(64355))).then((WW => {
+        Xi = WW
+      }), (WW => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", WW)
+      })), (0, ei.z)((WW => {
+        WW || !(0, ei.i)() || (0, oi.isMobile)() || !di.i.getItem("disableFullscreen") || (0, ki.l)() || VW.d.set({
+          openEverythingMenuName: ui.m.SETTINGS
         })
-      })), (0, gi.j)((ee => {
+      })), (0, Mi.g)((WW => {
         let {
-          action: ie,
-          down: He,
-          press: ye
-        } = ee;
-        var Me, Ke;
-        (0, be.b)() || (He ? null === (Me = ji[ie]) || void 0 === Me || Me.call(ji, function(ee) {
-          var ie;
-          if (0 === ee || (null === (ie = Si) || void 0 === ie ? void 0 : ie.press) !== ee) {
-            const ie = {
-              press: ee,
-              event: (0, ui.d)("inputAction")
+          action: iW,
+          down: OW,
+          press: mW
+        } = WW;
+        var NW, PW;
+        (0, EW.d)() || (OW ? null === (NW = Gi[iW]) || void 0 === NW || NW.call(Gi, function(WW) {
+          var iW;
+          if (0 === WW || (null === (iW = qi) || void 0 === iW ? void 0 : iW.press) !== WW) {
+            const iW = {
+              press: WW,
+              event: (0, Ci.e)("inputAction")
             };
-            Si = ie, queueMicrotask((() => {
-              Si === ie && (Si = null)
+            qi = iW, queueMicrotask((() => {
+              qi === iW && (qi = null)
             }))
           }
-          return Si.event
-        }(ye)) : null === (Ke = si[ie]) || void 0 === Ke || Ke.call(si))
+          return qi.event
+        }(mW)) : null === (PW = Ii[iW]) || void 0 === PW || PW.call(Ii))
       })))
     }
-    var Ni = He(39818),
-      Gi = He(39808),
-      ri = He(39802);
+    var ri = OW(40229),
+      zi = OW(40216),
+      Fi = OW(40213);
     const Qi = {
-      completeTask(ee) {
-        var ie;
-        null === (ie = (0, Ke.h)()) || void 0 === ie || ie.send(Ye.e.CompleteTask, (0, Ye.p)(ee))
+      completeTask(WW) {
+        var iW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.CompleteTask, (0, oW.s)(WW))
       },
-      setServerCookie(ee) {
-        var ie;
+      setServerCookie(WW) {
+        var iW;
         let {
-          key: He,
-          value: ye
-        } = ee;
-        null === (ie = (0, Ke.h)()) || void 0 === ie || ie.send(Ye.e.GeneralCookieSet, (0, Ye.v)({
-          bJ: He,
-          MJ: ye
+          key: OW,
+          value: mW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.GeneralCookieSet, (0, oW.A)({
+          bt: OW,
+          jt: mW
         }))
       },
-      answerUiRequest(ee) {
-        var ie;
+      answerUiRequest(WW) {
+        var iW;
         let {
-          id: He,
-          pJ: ye
-        } = ee;
-        null === (ie = (0, Ke.h)()) || void 0 === ie || ie.send(Ye.e.UiRequestResp, (0, Ye.U)({
-          Ro: He,
-          ko: ye,
-          qo: 5
+          id: OW,
+          ct: mW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.UiRequestResp, (0, oW.V)({
+          jP: OW,
+          UP: mW,
+          kP: 5
         }))
       },
-      chooseRewardedAd(ee) {
-        var ie;
+      chooseRewardedAd(WW) {
+        var iW;
         let {
-          id: He,
-          pJ: ye
-        } = ee;
-        null === (ie = (0, Ke.h)()) || void 0 === ie || ie.send(Ye.e.UiRequestResponded, (0, Ye.R)({
-          id: He,
-          pJ: ye
+          id: OW,
+          ct: mW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.UiRequestResponded, (0, oW.U)({
+          id: OW,
+          ct: mW
         }))
       },
-      requestLeaderboard(ee) {
-        var ie;
+      requestLeaderboard(WW) {
+        var iW;
         let {
-          category: He,
-          timeframe: ye,
-          seeTop: be
-        } = ee;
-        null === (ie = (0, Ke.h)()) || void 0 === ie || ie.send(Ye.e.LeaderboardRequest, {
-          category: He,
-          timeframe: ye,
-          seeTop: be
+          category: OW,
+          timeframe: mW,
+          seeTop: EW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.LeaderboardRequest, {
+          category: OW,
+          timeframe: mW,
+          seeTop: EW
         })
       }
     };
-    let eH = !1;
-    const iH = ze.g.KX / 2,
-      HH = [iH, -iH, -iH, -iH, iH, iH, -iH, iH],
-      yH = [0, 0, 0];
+    let WO = !1;
+    const iO = kW.f.tU / 2,
+      OO = [iO, -iO, -iO, -iO, iO, iO, -iO, iO],
+      mO = [0, 0, 0];
 
-    function bH(ee, ie, He) {
-      for (let ye = 0; ye < ee.length; ye += 2)
-        if (ee[ye] === ie && ee[ye + 1] === He) return !0;
+    function EO(WW, iW, OW) {
+      for (let mW = 0; mW < WW.length; mW += 2)
+        if (WW[mW] === iW && WW[mW + 1] === OW) return !0;
       return !1
     }
-    const MH = {
+    const NO = {
       blocksStandingOn: function() {
-        const ee = (0, Ke.h)();
-        if (null === ee) return [];
+        const WW = (0, PW.f)();
+        if (null === WW) return [];
         const {
-          api: ie,
-          chunks: He,
-          tables: ye
-        } = ee;
-        if (!ie.readPosition(ie.localId, yH)) return [];
-        const [be, Me, Ue] = yH, Fe = Math.ceil(Me) - 1, Je = [], oe = [];
-        for (let Ke = 0; Ke < HH.length; Ke += 2) {
-          const ee = be + HH[Ke],
-            ie = Ue + HH[Ke + 1];
-          if (Number.isInteger(ee) || Number.isInteger(ie)) continue;
-          const Me = Math.floor(ee),
-            Re = Math.floor(ie);
-          if (bH(oe, Me, Re)) continue;
-          const ke = He.po(Me, Fe, Re);
-          ye.isSolidBlockId(ke) && (oe.push(Me, Re), Je.push(ye.nameOfId(ke)))
+          api: iW,
+          chunks: OW,
+          tables: mW
+        } = WW;
+        if (!iW.readPosition(iW.localId, mO)) return [];
+        const [EW, NW, LW] = mO, cW = Math.ceil(NW) - 1, wW = [], tW = [];
+        for (let PW = 0; PW < OO.length; PW += 2) {
+          const WW = EW + OO[PW],
+            iW = LW + OO[PW + 1];
+          if (Number.isInteger(WW) || Number.isInteger(iW)) continue;
+          const NW = Math.floor(WW),
+            ZW = Math.floor(iW);
+          if (EO(tW, NW, ZW)) continue;
+          const xW = OW.NL(NW, cW, ZW);
+          mW.isSolidBlockId(xW) && (tW.push(NW, ZW), wW.push(mW.nameOfId(xW)))
         }
-        return Je
+        return wW
       },
       dropAhead: function() {
-        const ee = (0, Ke.h)();
-        return null !== ee && 0 !== (Ee.v.playerFlags(ee.api.apiView, 0) & Ee.Pd.DropAhead)
+        const WW = (0, PW.f)();
+        return null !== WW && 0 !== (MW.z.playerFlags(WW.api.apiView, 0) & MW.Ud.DropAhead)
       }
     };
-    var KH = He(37780),
-      UH = He(39867),
-      FH = He(1340),
-      JH = He(41759);
-    const oH = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      RH = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var PO = OW(38107),
+      LO = OW(40287),
+      cO = OW(1422),
+      wO = OW(42176);
+    const tO = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      ZO = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function kH() {
-      const ee = new Set;
+    function xO() {
+      const WW = new Set;
       return {
-        add: ie => (ee.add(ie), () => {
-          ee.delete(ie)
+        add: iW => (WW.add(iW), () => {
+          WW.delete(iW)
         }),
         fire() {
-          for (const ie of ee) ie()
+          for (const iW of WW) iW()
         }
       }
     }
-    const qH = Object.freeze([]);
+    const lO = Object.freeze([]);
 
-    function fH(ee, ie) {
-      let He, {
-        rereads: ye,
-        followLocalId: be
-      } = ie;
-      const Ke = () => (He = (0, Ge.j)(He, ee()), He);
+    function AO(WW, iW) {
+      let OW, {
+        rereads: mW,
+        followLocalId: EW
+      } = iW;
+      const PW = () => (OW = (0, zW.t)(OW, WW()), OW);
       return {
-        current: Ke,
-        watch(ee) {
-          const ie = (0, fe.d)((ie => {
-            ye(ie) && ee(Ke())
+        current: PW,
+        watch(WW) {
+          const iW = (0, AW.e)((iW => {
+            mW(iW) && WW(PW())
           }));
-          if (!be) return ie;
-          let He = (0, qe.g)();
-          const Ue = (0, Me.w)((() => {
-            const ie = (0, qe.g)();
-            ie !== He && (He = ie, ee(Ke()))
+          if (!EW) return iW;
+          let OW = (0, lW.g)();
+          const LW = (0, NW.x)((() => {
+            const iW = (0, lW.g)();
+            iW !== OW && (OW = iW, WW(PW()))
           }));
           return () => {
-            ie(), Ue()
+            iW(), LW()
           }
         }
       }
     }
-    const TH = {
-        players: fH((function() {
-          const ee = fe.f.ids(),
-            ie = {};
-          for (const Me of ee) {
-            var He, ye, be;
-            ie[Me] = {
-              name: null !== (He = fe.f.getName(Me)) && void 0 !== He ? He : null,
-              ranks: null !== (ye = fe.f.getSetting(Me, "ranks")) && void 0 !== ye ? ye : qH,
-              cosmetics: null !== (be = (0, fe.h)(Me)) && void 0 !== be ? be : null
+    const bO = {
+        players: AO((function() {
+          const WW = AW.i.ids(),
+            iW = {};
+          for (const NW of WW) {
+            var OW, mW, EW;
+            iW[NW] = {
+              name: null !== (OW = AW.i.getName(NW)) && void 0 !== OW ? OW : null,
+              ranks: null !== (mW = AW.i.getSetting(NW, "ranks")) && void 0 !== mW ? mW : lO,
+              cosmetics: null !== (EW = (0, AW.m)(NW)) && void 0 !== EW ? EW : null
             }
           }
           return {
-            ids: ee,
-            byId: ie,
-            localId: (0, qe.g)()
+            ids: WW,
+            byId: iW,
+            localId: (0, lW.g)()
           }
         }), {
-          rereads: ee => "roster" !== ee.kind || ee.members || ee.settings.has("ranks"),
+          rereads: WW => "roster" !== WW.kind || WW.members || WW.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: fH((function() {
-          const ee = {};
-          for (const be of fe.f.ids()) {
-            var ie, He, ye;
-            ee[be] = {
-              colour: null !== (ie = fe.f.getSetting(be, "colorInLobbyLeaderboard")) && void 0 !== ie ? ie : null,
-              values: null !== (He = fe.f.getSetting(be, "lobbyLeaderboardValues")) && void 0 !== He ? He : null,
-              tags: null !== (ye = fe.f.getSetting(be, "lobbyLeaderboardTags")) && void 0 !== ye ? ye : null
+        lobbyLeaderboardRows: AO((function() {
+          const WW = {};
+          for (const EW of AW.i.ids()) {
+            var iW, OW, mW;
+            WW[EW] = {
+              colour: null !== (iW = AW.i.getSetting(EW, "colorInLobbyLeaderboard")) && void 0 !== iW ? iW : null,
+              values: null !== (OW = AW.i.getSetting(EW, "lobbyLeaderboardValues")) && void 0 !== OW ? OW : null,
+              tags: null !== (mW = AW.i.getSetting(EW, "lobbyLeaderboardTags")) && void 0 !== mW ? mW : null
             }
           }
-          return ee
+          return WW
         }), {
-          rereads: function(ee) {
-            if ("roster" !== ee.kind) return "reset" === ee.kind;
+          rereads: function(WW) {
+            if ("roster" !== WW.kind) return "reset" === WW.kind;
             const {
-              members: ie,
-              settings: He
-            } = ee;
-            return ie || He.has("colorInLobbyLeaderboard") || He.has("lobbyLeaderboardValues") || He.has("lobbyLeaderboardTags")
+              members: iW,
+              settings: OW
+            } = WW;
+            return iW || OW.has("colorInLobbyLeaderboard") || OW.has("lobbyLeaderboardValues") || OW.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      pH = {
+      jO = {
         cosmeticsUpdated: {
-          watch: ee => (0, fe.d)((ie => {
-            if ("cosmetics" !== ie.kind) return;
-            const He = (0, qe.g)();
-            ee(ie.updates.map((ee => {
+          watch: WW => (0, AW.e)((iW => {
+            if ("cosmetics" !== iW.kind) return;
+            const OW = (0, lW.g)();
+            WW(iW.updates.map((WW => {
               let {
-                de: ie,
-                te: ye,
-                Ze: be
-              } = ee;
+                EE: iW,
+                NE: mW,
+                PE: EW
+              } = WW;
               return {
-                local: ie === He,
-                te: ye,
-                Ze: be
+                local: iW === OW,
+                NE: mW,
+                PE: EW
               }
             })))
           }))
         }
       };
-    var XH = He(3142),
-      zH = He(1768),
-      BH = He(660),
-      EH = He(42015);
-    let gH = !1,
-      OH = null;
-    const dH = {
-      setShopOpen(ee) {
-        var ie;
-        null === (ie = (0, Ke.h)()) || void 0 === ie || ie.send(Ye.e.ShopMenuChanged, (0, Ye.J)(ee))
+    var UO = OW(3960),
+      kO = OW(1856),
+      sO = OW(683),
+      MO = OW(42432);
+    let KO = !1,
+      SO = null;
+    const YO = {
+      setShopOpen(WW) {
+        var iW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.ShopMenuChanged, (0, oW.P)(WW))
       },
-      buyShopItem(ee) {
-        var ie;
+      buyShopItem(WW) {
+        var iW;
         let {
-          categoryKey: He,
-          itemKey: ye,
-          userInput: be
-        } = ee;
-        null === (ie = (0, Ke.h)()) || void 0 === ie || ie.send(Ye.e.ItemBought, {
-          categoryKey: He,
-          itemKey: ye,
-          shopVersion: Be.c.get("_shopVersion"),
-          userInput: be
+          categoryKey: OW,
+          itemKey: mW,
+          userInput: EW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.ItemBought, {
+          categoryKey: OW,
+          itemKey: mW,
+          shopVersion: sW.d.get("_shopVersion"),
+          userInput: EW
         })
       }
     };
-    let WH = !1;
-    var tH = He(5291);
-    const ZH = Ei.p.LookFrozen | Ei.p.ClicksSuppressed;
+    let yO = !1;
+    var TO = OW(5575);
+    const JO = si.y.LookFrozen | si.y.ClicksSuppressed;
 
-    function wH(ee, ie) {
-      var He;
-      null !== (He = (0, Ke.h)()) && void 0 !== He && He.send(ee, ie) || console.warn(`[bloxd-wasm-client] message ${ee} not sent: no live game or the core's command ring is full`)
-    }(0, Te.j)(Ae.fb, (ee => {
-      const ie = (0, Ve.g)(Ae.fb, ee);
-      void 0 !== ie && Je.h.yR("setDiscordReportKey", ie)
+    function hO(WW, iW) {
+      var OW;
+      null !== (OW = (0, PW.f)()) && void 0 !== OW && OW.send(WW, iW) || console.warn(`[bloxd-wasm-client] message ${WW} not sent: no live game or the core's command ring is full`)
+    }(0, bW.j)(uW.pb, (WW => {
+      const iW = (0, dW.g)(uW.pb, WW);
+      void 0 !== iW && wW.l.iZ("setDiscordReportKey", iW)
     }));
-    const DH = {
-      ignorePlayer(ee) {
-        wH(Ye.e.IgnoreUser, (0, Ye.x)({
-          Xo: ee
+    const HO = {
+      ignorePlayer(WW) {
+        hO(oW.e.IgnoreUser, (0, oW.B)({
+          Nt: WW
         }))
       },
-      reportPlayer(ee) {
+      reportPlayer(WW) {
         let {
-          playerId: ie,
-          chatMsgId: He,
-          policy: ye,
-          details: be
-        } = ee;
-        wH(Ye.e.UserReport, (0, Ye.db)({
-          mF: ie,
-          lF: He,
-          policy: ye,
-          UF: be
+          playerId: iW,
+          chatMsgId: OW,
+          contextChatMsgIds: mW,
+          policy: EW,
+          details: NW
+        } = WW;
+        hO(oW.e.UserReport, (0, oW.gb)({
+          et: iW,
+          vt: OW,
+          policy: EW,
+          PL: NW,
+          gt: mW
         }))
       },
-      reportWorldCodeChat(ee) {
+      reportWorldCodeChat(WW) {
         let {
-          chatMsgId: ie,
-          policy: He,
-          details: ye
-        } = ee;
-        wH(Ye.e.UserReport, (0, Ye.db)({
-          mF: "",
-          lF: ie,
-          policy: He,
-          UF: ye
+          chatMsgId: iW,
+          policy: OW,
+          details: mW
+        } = WW;
+        hO(oW.e.UserReport, (0, oW.gb)({
+          et: "",
+          vt: iW,
+          policy: OW,
+          PL: mW,
+          gt: []
         }))
       },
-      requestDiscordReportKey(ee) {
-        wH(Ye.e.ReqDiscordReportKey, (0, Ye.F)(ee))
+      requestDiscordReportKey(WW) {
+        hO(oW.e.ReqDiscordReportKey, (0, oW.L)(WW))
       },
-      reportLobbyOrGame(ee) {
+      reportLobbyOrGame(WW) {
         let {
-          target: ie,
-          policy: He,
-          details: ye
-        } = ee;
-        "customGame" === ie ? wH(Ye.e.CustomGameReport, (0, Ye.r)({
-          policy: He,
-          UF: ye
-        })) : wH(Ye.e.LobbyReport, (0, Ye.B)({
-          policy: He,
-          UF: ye
+          target: iW,
+          policy: OW,
+          details: mW
+        } = WW;
+        "customGame" === iW ? hO(oW.e.CustomGameReport, (0, oW.w)({
+          policy: OW,
+          PL: mW
+        })) : hO(oW.e.LobbyReport, (0, oW.E)({
+          policy: OW,
+          PL: mW
         }))
       },
-      updateMyCosmetic(ee) {
-        wH(Ye.e.UpdateMyCosmetic, (0, Ye.ab)(ee))
+      updateMyCosmetic(WW) {
+        hO(oW.e.UpdateMyCosmetic, (0, oW.db)(WW))
       },
-      holdEmoteWheel(ee) {
-        !ee || Oi ? (0, tH.h)(ZH, ee ? ZH : 0) : Je.h.yR("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(WW) {
+        !WW || Ki ? (0, TO.j)(JO, WW ? JO : 0) : wW.l.iZ("requestEmoteWheelHoldRelease")
       }
     };
-    var PH = He(42113),
-      AH = He(9961),
-      YH = He(40509);
-    const VH = [0, 0, 0],
-      aH = [0, 0, 0],
-      cH = [0, 0, 0],
-      xH = {
-        blockAtViewPoint(ee) {
+    var nO = OW(42519),
+      uO = OW(5725),
+      oO = OW(40960);
+    const dO = [0, 0, 0],
+      eO = [0, 0, 0],
+      vO = [0, 0, 0],
+      gO = {
+        blockAtViewPoint(WW) {
           let {
-            x: ie,
-            y: He
-          } = ee;
-          const ye = (0, Ke.h)();
-          if (null === ye || void 0 === ye || !ye.renderFrame.hasView) return null;
+            x: iW,
+            y: OW
+          } = WW;
+          const mW = (0, PW.f)();
+          if (null === mW || void 0 === mW || !mW.renderFrame.hasView) return null;
           const {
-            renderFrame: be,
-            clientApi: Me,
-            api: Ue
-          } = ye;
-          let Fe = 0;
-          return (0, YH.d)(((ee, ie, He) => (Fe = Me.getBlockId(ee, ie, He), 0 !== Fe)), be.cameraPosition, (0, YH.g)((ee => Ee.v.viewProj(Ue.apiView, 0, ee)), ie, He, VH), YH.c, aH, cH) ? {
-            pos: [aH[0], aH[1], aH[2]],
-            normal: [cH[0], cH[1], cH[2]],
-            name: (0, AH.e)(Fe)
+            renderFrame: EW,
+            clientApi: NW,
+            api: LW
+          } = mW;
+          let cW = 0;
+          return (0, oO.h)(((WW, iW, OW) => (cW = NW.getBlockId(WW, iW, OW), 0 !== cW)), EW.cameraPosition, (0, oO.k)((WW => MW.z.viewProj(LW.apiView, 0, WW)), iW, OW, dO), oO.d, eO, vO) ? {
+            pos: [eO[0], eO[1], eO[2]],
+            normal: [vO[0], vO[1], vO[2]],
+            name: (0, uO.f)(cW)
           } : null
         }
       },
-      LH = {
-        setBlockHighlight(ee) {
-          var ie;
-          null === (ie = (0, Ke.h)()) || void 0 === ie || ie.setBlockHighlight(ee)
+      DO = {
+        setBlockHighlight(WW) {
+          var iW;
+          null === (iW = (0, PW.f)()) || void 0 === iW || iW.setBlockHighlight(WW)
         }
       };
-    var CH = He(1992),
-      vH = He(42006),
-      uH = He(42116),
-      mH = He(2036),
-      lH = He(37190),
-      SH = He(242);
-    const nH = {
+    var VO = OW(2047),
+      pO = OW(42427),
+      fO = OW(42528),
+      CO = OW(2077),
+      XO = OW(37640),
+      BO = OW(232);
+    const qO = {
         icon: ".EntireInventoryWrapper .InvenBodyRight .InvenItem .DrawnBlockIcon",
         fallbackRem: 3.4,
         asked: new Set
       },
-      jH = {
+      RO = {
         icon: ".EntireInventoryWrapper .LazyLoadedItemWrapper .InvenItem .DrawnBlockIcon",
-        fallbackRem: .9 * nH.fallbackRem,
+        fallbackRem: .9 * qO.fallbackRem,
         asked: new Set
       },
-      sH = 2e3,
-      IH = 4;
-    let hH = [],
-      NH = !1,
-      GH = !1,
-      rH = !1;
-    const QH = new Set,
-      ey = [];
-    let iy = 0,
-      Hy = null;
+      GO = 2e3,
+      IO = 4;
+    let aO = [],
+      rO = !1,
+      zO = !1,
+      FO = !1;
+    const QO = new Set,
+      Wm = [];
+    let im = 0,
+      Om = null;
 
-    function yy() {
-      return NH && (0, lH.k)()
+    function mm() {
+      return rO && (0, XO.f)()
     }
 
-    function by() {
-      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ye.gameBridge.latest("inventory");
-      if (rH && !GH) {
-        for (const He of ee.player) {
-          var ie;
-          if (null !== He) My(null !== (ie = He.icon) && void 0 !== ie ? ie : He.name, nH)
+    function Em() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mW.gameBridge.latest("inventory");
+      if (FO && !zO) {
+        for (const OW of WW.player) {
+          var iW;
+          if (null !== OW) Nm(null !== (iW = OW.icon) && void 0 !== iW ? iW : OW.name, qO)
         }
-        for (const ee of [...Ee.J, ...hH]) My(ee, jH);
-        Uy()
+        for (const WW of [...MW.P, ...aO]) Nm(WW, RO);
+        Lm()
       }
     }
 
-    function My(ee, ie) {
-      ie.asked.has(ee) || QH.has(ee) || ("model" === ye.gameBridge.lookup("itemIcon", ee).kind ? (ie.asked.add(ee), ey.push({
-        name: ee,
-        slot: ie
-      })) : QH.add(ee))
+    function Nm(WW, iW) {
+      iW.asked.has(WW) || QO.has(WW) || ("model" === mW.gameBridge.lookup("itemIcon", WW).kind ? (iW.asked.add(WW), Wm.push({
+        name: WW,
+        slot: iW
+      })) : QO.add(WW))
     }
 
-    function Ky(ee) {
-      hH = ee, by()
+    function Pm(WW) {
+      aO = WW, Em()
     }
 
-    function Uy() {
-      !rH || GH || null !== Hy || 0 === ey.length || iy >= IH || (Hy = (0, SH.e)((() => {
-        Hy = null;
-        const ee = ey.shift();
-        void 0 !== ee && rH && (iy++, async function(ee, ie) {
-          var He, be;
-          if (await (0, lH.p)(), !rH) return void ie.asked.delete(ee);
-          if (!(0, lH.k)()) return void(GH = !0);
-          const Me = window.devicePixelRatio,
-            Ke = null !== (He = null === (be = document.querySelector(ie.icon)) || void 0 === be ? void 0 : be.getBoundingClientRect().width) && void 0 !== He ? He : 0,
-            Ue = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
-            Fe = Math.round((Ke > 0 ? Ke : ie.fallbackRem * Ue) * Me);
+    function Lm() {
+      !FO || zO || null !== Om || 0 === Wm.length || im >= IO || (Om = (0, BO.d)((() => {
+        Om = null;
+        const WW = Wm.shift();
+        void 0 !== WW && FO && (im++, async function(WW, iW) {
+          var OW, EW;
+          if (await (0, XO.h)(), !FO) return void iW.asked.delete(WW);
+          if (!(0, XO.f)()) return void(zO = !0);
+          const NW = window.devicePixelRatio,
+            PW = null !== (OW = null === (EW = document.querySelector(iW.icon)) || void 0 === EW ? void 0 : EW.getBoundingClientRect().width) && void 0 !== OW ? OW : 0,
+            LW = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
+            cW = Math.round((PW > 0 ? PW : iW.fallbackRem * LW) * NW);
           try {
-            await ye.gameBridge.query("blockIcon", {
-              name: ee,
-              size: Fe,
-              lineWidth: (0, mH.d)(Me)
-            }) || ie.asked.delete(ee)
+            await mW.gameBridge.query("blockIcon", {
+              name: WW,
+              size: cW,
+              lineWidth: (0, CO.d)(NW)
+            }) || iW.asked.delete(WW)
           } catch {
-            ie.asked.delete(ee)
+            iW.asked.delete(WW)
           }
-        }(ee.name, ee.slot).finally((() => {
-          iy--, Uy()
-        })), Uy())
+        }(WW.name, WW.slot).finally((() => {
+          im--, Lm()
+        })), Lm())
       }), {
-        timeoutMs: sH
+        timeoutMs: GO
       }))
     }
-    var Fy = He(4883),
-      Jy = He(4864),
-      oy = He(42120),
-      Ry = He(3608),
-      ky = He(3610);
-    let qy = null,
-      fy = null;
+    var cm = OW(5199),
+      wm = OW(5178),
+      tm = OW(42533),
+      Zm = OW(4454),
+      xm = OW(4459);
+    let lm = null,
+      Am = null;
 
-    function Ty(ee) {
-      const ie = ee.startsWith(ky.i),
-        [He, ye = He, be = He] = (ie ? ee.slice(ky.i.length) : ee).split(ky.e);
+    function bm(WW) {
+      const iW = WW.startsWith(xm.k),
+        [OW, mW = OW, EW = OW] = (iW ? WW.slice(xm.k.length) : WW).split(xm.i);
       return {
-        top: He,
-        left: ye,
-        right: be,
-        half: ie
+        top: OW,
+        left: mW,
+        right: EW,
+        half: iW
       }
     }
 
-    function py(ee) {
-      const ie = null === qy ? void 0 : (0, Ry.c)(ee),
-        He = void 0 === ie ? 0 : qy.codes[ie];
-      return 0 === He ? void 0 : qy.pool[He - 1]
+    function jm(WW) {
+      const iW = null === lm ? void 0 : (0, Zm.b)(WW),
+        OW = void 0 === iW ? 0 : lm.codes[iW];
+      return 0 === OW ? void 0 : lm.pool[OW - 1]
     }
-    var Xy = He(3601),
-      zy = He(4853),
-      By = He(4881),
-      Ey = He(37090),
-      gy = He(37096);
-    const Oy = "item:";
-    let dy = null,
-      Wy = null,
-      ty = null,
-      Zy = null,
-      wy = !1,
-      Dy = !1;
+    var Um = OW(4448),
+      km = OW(5166),
+      sm = OW(5195),
+      Mm = OW(37436),
+      Km = OW(37441);
+    const Sm = "item:";
+    let Ym = null,
+      ym = null,
+      Tm = null,
+      Jm = null,
+      hm = !1,
+      Hm = !1;
 
-    function Py() {
-      return Dy || (Dy = !0, (0, By.l)().then((ee => {
-        ee && (0, CH.d)()
-      }))), ty ??= Promise.all([(0, Xy.d)(), (fy ??= He.e(1).then((() => He(63800))).then((ee => {
+    function nm() {
+      return Hm || (Hm = !0, (0, sm.n)().then((WW => {
+        WW && (0, VO.b)()
+      }))), Tm ??= Promise.all([(0, Um.f)(), (Am ??= OW.e(1).then((() => OW(64378))).then((WW => {
         let {
-          BLOCK_FACE_RUNS: ie,
-          BLOCK_FACES: He,
-          MAX_FACE_ITEM_ID: ye
-        } = ee;
-        qy = {
-          codes: (0, ky.s)(ie, ye + 1),
-          pool: He.split(ky.n).map(Ty)
+          BLOCK_FACE_RUNS: iW,
+          BLOCK_FACES: OW,
+          MAX_FACE_ITEM_ID: mW
+        } = WW;
+        lm = {
+          codes: (0, xm.y)(iW, mW + 1),
+          pool: OW.split(xm.s).map(bm)
         }
-      }), (ee => {
-        throw fy = null, ee
-      })), fy), (0, gy.d)(), He.e(220).then((() => He(34897)))]).then((ee => {
-        let [, , ie, He] = ee;
-        ie.followBundledTextures(), dy = ie, Wy = He, (0, CH.d)()
-      }), (ee => {
-        ty = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", ee)
-      })), ty
+      }), (WW => {
+        throw Am = null, WW
+      })), Am), (0, Km.d)(), OW.e(224).then((() => OW(35231)))]).then((WW => {
+        let [, , iW, OW] = WW;
+        iW.followBundledTextures(), Ym = iW, ym = OW, (0, VO.b)()
+      }), (WW => {
+        Tm = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", WW)
+      })), Tm
     }
 
-    function Ay(ee) {
-      var ie, He;
-      return null !== (ie = null === (He = (0, Ey.j)()) || void 0 === He ? void 0 : He.textureUrl(ee)) && void 0 !== ie ? ie : dy.itemSpriteUrl(ee)
+    function um(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = (0, Mm.f)()) || void 0 === OW ? void 0 : OW.textureUrl(WW)) && void 0 !== iW ? iW : Ym.itemSpriteUrl(WW)
     }
 
-    function Yy(ee) {
-      var ie, He;
-      return null !== (ie = null === (He = (0, Ey.j)()) || void 0 === He ? void 0 : He.textureUrl(ee)) && void 0 !== ie ? ie : dy.blockTextureUrl(ee)
+    function om(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = (0, Mm.f)()) || void 0 === OW ? void 0 : OW.textureUrl(WW)) && void 0 !== iW ? iW : Ym.blockTextureUrl(WW)
     }
 
-    function Vy(ee) {
-      var ie;
-      return null !== (ie = (0, Xy.c)(ee)) && void 0 !== ie ? ie : ee
+    function dm(WW) {
+      var iW;
+      return null !== (iW = (0, Um.b)(WW)) && void 0 !== iW ? iW : WW
     }
 
-    function ay(ee, ie) {
-      var He, ye, be;
-      return null !== (He = null !== (ye = null !== (be = Yy(ee)) && void 0 !== be ? be : null === ie || void 0 === ie ? void 0 : ie.rotated[ee]) && void 0 !== ye ? ye : null === ie || void 0 === ie ? void 0 : ie.animated[ee]) && void 0 !== He ? He : dy.notFoundUrl()
+    function em(WW, iW) {
+      var OW, mW, EW;
+      return null !== (OW = null !== (mW = null !== (EW = om(WW)) && void 0 !== EW ? EW : null === iW || void 0 === iW ? void 0 : iW.rotated[WW]) && void 0 !== mW ? mW : null === iW || void 0 === iW ? void 0 : iW.animated[WW]) && void 0 !== OW ? OW : Ym.notFoundUrl()
     }
 
-    function cy(ee) {
-      return void 0 !== (0, Ry.c)(ee) ? ee : /^[1-9][0-9]*$/.test(ee) ? (0, Ry.g)(Number(ee)) : void 0
+    function gm(WW) {
+      return void 0 !== (0, Zm.b)(WW) ? WW : /^[1-9][0-9]*$/.test(WW) ? (0, Zm.d)(Number(WW)) : void 0
     }
 
-    function xy(ee) {
-      var ie;
-      if (ee.startsWith(Oy)) {
-        var He;
-        const ie = (0, Xy.c)(ee.slice(5));
-        return null !== (He = void 0 === ie ? null : Ay(ie)) && void 0 !== He ? He : dy.notFoundUrl()
+    function Dm(WW) {
+      var iW;
+      if (WW.startsWith(Sm)) {
+        var OW;
+        const iW = (0, Um.b)(WW.slice(5));
+        return null !== (OW = void 0 === iW ? null : um(iW)) && void 0 !== OW ? OW : Ym.notFoundUrl()
       }
-      return null !== (ie = dy.particleUrl(ee)) && void 0 !== ie ? ie : dy.notFoundUrl()
+      return null !== (iW = Ym.particleUrl(WW)) && void 0 !== iW ? iW : Ym.notFoundUrl()
     }
 
-    function Ly(ee, ie) {
-      return "StairsBlock" === ee ? ee : ie ? "SlabBlock" : "CubeBlock"
+    function Vm(WW, iW) {
+      return "StairsBlock" === WW ? WW : iW ? "SlabBlock" : "CubeBlock"
     }
-    const Cy = {
-        async blockIcon(ee) {
-          var ie;
+    const pm = {
+        async blockIcon(WW) {
+          var iW;
           let {
-            name: ye,
-            size: be,
-            lineWidth: Me
-          } = ee;
-          await Py();
-          const Ke = null !== (ie = cy(ye)) && void 0 !== ie ? ie : ye,
-            Ue = (0, By.e)(Ke, be, Me);
-          if (null !== Ue) return Ue;
-          const Fe = py(Ke),
-            Je = (0, Ry.c)(Ke),
-            oe = void 0 === Je || null === Wy ? void 0 : Wy.itemTypeNameOf(Je);
-          if (null === dy || void 0 === Fe) return "";
-          const Re = [Fe.top, Fe.left, Fe.right].some((ee => null === Yy(ee))),
-            ke = Re ? await (Zy ??= He.e(228).then((() => He(34995))).then((ee => (wy && (wy = !1, (0, CH.d)()), {
-              rotated: ee.rotatedBlockTextures,
-              animated: ee.animatedBlockTextures
-            })), (ee => (Zy = null, wy = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", ee), null))), Zy) : null;
-          if (Re && null === ke) return "";
-          const qe = {
-              top: ay(Fe.top, ke),
-              left: ay(Fe.left, ke),
-              right: ay(Fe.right, ke),
-              itemType: Ly(oe, Fe.half)
+            name: mW,
+            size: EW,
+            lineWidth: NW
+          } = WW;
+          await nm();
+          const PW = null !== (iW = gm(mW)) && void 0 !== iW ? iW : mW,
+            LW = (0, sm.e)(PW, EW, NW);
+          if (null !== LW) return LW;
+          const cW = jm(PW),
+            wW = (0, Zm.b)(PW),
+            tW = void 0 === wW || null === ym ? void 0 : ym.itemTypeNameOf(wW);
+          if (null === Ym || void 0 === cW) return "";
+          const ZW = [cW.top, cW.left, cW.right].some((WW => null === om(WW))),
+            xW = ZW ? await (Jm ??= OW.e(234).then((() => OW(35332))).then((WW => (hm && (hm = !1, (0, VO.b)()), {
+              rotated: WW.rotatedBlockTextures,
+              animated: WW.animatedBlockTextures
+            })), (WW => (Jm = null, hm = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", WW), null))), Jm) : null;
+          if (ZW && null === xW) return "";
+          const lW = {
+              top: em(cW.top, xW),
+              left: em(cW.left, xW),
+              right: em(cW.right, xW),
+              itemType: Vm(tW, cW.half)
             },
-            fe = (0, Ey.f)(),
-            Te = 0 === fe ? Ke : `${Ke}#${fe}`;
-          return (await (0, zy.b)()).drawBlockIconUrl(Te, be, Me, (() => qe))
+            AW = (0, Mm.d)(),
+            bW = 0 === AW ? PW : `${PW}#${AW}`;
+          return (await (0, km.e)()).drawBlockIconUrl(bW, EW, NW, (() => lW))
         }
       },
-      vy = {
-        itemIcon: function(ee) {
-          var ie, He, be, Me;
-          if (null === dy) return Py(), ye.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(ee);
-          if ((0, Jy.k)(ee)) return {
+      fm = {
+        itemIcon: function(WW) {
+          var iW, OW, EW, NW;
+          if (null === Ym) return nm(), mW.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(WW);
+          if ((0, wm.h)(WW)) return {
             kind: "icon",
-            url: null !== (He = null !== (be = null === (Me = (0, Ey.j)()) || void 0 === Me ? void 0 : Me.textureUrl(ee)) && void 0 !== be ? be : dy.ingameIconUrl(ee)) && void 0 !== He ? He : dy.notFoundUrl()
+            url: null !== (OW = null !== (EW = null === (NW = (0, Mm.f)()) || void 0 === NW ? void 0 : NW.textureUrl(WW)) && void 0 !== EW ? EW : Ym.ingameIconUrl(WW)) && void 0 !== OW ? OW : Ym.notFoundUrl()
           };
-          if (ee.startsWith(Jy.d)) return {
+          if (WW.startsWith(wm.d)) return {
             kind: "icon",
-            url: xy(ee.slice(Jy.d.length))
+            url: Dm(WW.slice(wm.d.length))
           };
-          if (0 === (0, Ry.j)()) return (0, oy.c)(), ye.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(ee);
-          const Ke = null !== (ie = cy(ee)) && void 0 !== ie ? ie : ee,
-            Ue = (0, Ry.c)(Ke),
-            Fe = void 0 === Ue ? void 0 : Wy.itemTypeNameOf(Ue);
-          if (void 0 !== py(Ke)) return {
+          if (0 === (0, Zm.f)()) return (0, tm.e)(), mW.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(WW);
+          const PW = null !== (iW = gm(WW)) && void 0 !== iW ? iW : WW,
+            LW = (0, Zm.b)(PW),
+            cW = void 0 === LW ? void 0 : ym.itemTypeNameOf(LW);
+          if (void 0 !== jm(PW)) return {
             kind: "drawnBlock"
           };
-          const Je = function(ee) {
-            var ie;
-            return null !== (ie = Ay(Vy(ee))) && void 0 !== ie ? ie : dy.notFoundUrl()
-          }(Ke);
-          if ((0, By.i)(Ke) && ! function(ee) {
-              const ie = (0, Ey.j)();
-              return null !== ie && (null !== ie.textureUrl(Vy(ee)) || (0, By.d)(ee).some((ee => null !== ie.modelUrl(ee))))
-            }(Ke)) return {
+          const wW = function(WW) {
+            var iW;
+            return null !== (iW = um(dm(WW))) && void 0 !== iW ? iW : Ym.notFoundUrl()
+          }(PW);
+          if ((0, sm.k)(PW) && ! function(WW) {
+              const iW = (0, Mm.f)();
+              return null !== iW && (null !== iW.textureUrl(dm(WW)) || (0, sm.d)(WW).some((WW => null !== iW.modelUrl(WW))))
+            }(PW)) return {
             kind: "model",
-            url: Je,
-            drawn: (0, By.f)(Ke)
+            url: wW,
+            drawn: (0, sm.h)(PW)
           };
-          if ("Gun" === Fe) return {
+          if ("Gun" === cW) return {
             kind: "gun",
-            url: Je
+            url: wW
           };
-          if (void 0 !== Ue && "GrayscaleArmour" === Wy.itemTypeOf(Ue) || Object.hasOwn(Fy.e, Ke)) {
-            var oe;
-            const ie = null !== (oe = (0, Fy.h)(ee)) && void 0 !== oe ? oe : (0, Fy.h)(Ke);
-            if (ie) return {
+          if (void 0 !== LW && "GrayscaleArmour" === ym.itemTypeOf(LW) || Object.hasOwn(cm.b, PW)) {
+            var tW;
+            const iW = null !== (tW = (0, cm.c)(WW)) && void 0 !== tW ? tW : (0, cm.c)(PW);
+            if (iW) return {
               kind: "item",
-              url: Je,
-              tint: ie
+              url: wW,
+              tint: iW
             }
           }
           return {
             kind: "item",
-            url: Je
+            url: wW
           }
         },
-        hasIcon: function(ee) {
-          return void 0 !== cy(ee) || (0, Jy.k)(ee) || ee.startsWith(Jy.d)
+        hasIcon: function(WW) {
+          return void 0 !== gm(WW) || (0, wm.h)(WW) || WW.startsWith(wm.d)
         },
-        isItemName: function(ee) {
-          return void 0 !== cy(ee)
+        isItemName: function(WW) {
+          return void 0 !== gm(WW)
         }
       };
 
-    function uy() {
-      (0, ye.installPageSources)({
+    function Cm() {
+      (0, mW.installPageSources)({
         commands: {
-          ...ye.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: vH.r,
-          prewarmCreativeIcons: Ky
+          ...mW.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: pO.m,
+          prewarmCreativeIcons: Pm
         },
-        queries: Cy,
+        queries: pm,
         lookups: {
-          ...ye.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...vy,
-          aE: vH.h,
-          drawCallStats: uH.g,
-          iconsDrawAhead: yy
+          ...mW.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...fm,
+          YM: pO.f,
+          drawCallStats: fO.f,
+          iconsDrawAhead: mm
         }
-      }), (0, CH.d)(), Py(), NH || (NH = !0, Je.h.subscribe("gameJoined", (() => {
-        var ee;
-        rH = !1, null === (ee = Hy) || void 0 === ee || ee(), Hy = null;
+      }), (0, VO.b)(), nm(), rO || (rO = !0, wW.l.subscribe("gameJoined", (() => {
+        var WW;
+        FO = !1, null === (WW = Om) || void 0 === WW || WW(), Om = null;
         for (const {
-            name: ie,
-            slot: He
+            name: iW,
+            slot: OW
           }
-          of ey.splice(0)) He.asked.delete(ie)
-      })), Je.h.subscribe("gamePlayable", (() => {
-        rH = !0, by()
-      })), ye.gameBridge.subscribe("inventory", by), ye.gameBridge.subscribe("itemIconsVersion", (() => {
-        QH.clear(), by()
+          of Wm.splice(0)) OW.asked.delete(iW)
+      })), wW.l.subscribe("gamePlayable", (() => {
+        FO = !0, Em()
+      })), mW.gameBridge.subscribe("inventory", Em), mW.gameBridge.subscribe("itemIconsVersion", (() => {
+        QO.clear(), Em()
       })))
     }
-    var my = He(604),
-      ly = He(40515);
+    var Xm = OW(632),
+      Bm = OW(40969);
 
-    function Sy(ee) {
-      if (null === ee || void 0 === ee || !ee.isCoreRunning) return null;
+    function qm(WW) {
+      if (null === WW || void 0 === WW || !WW.isCoreRunning) return null;
       const {
-        api: ie,
-        chunks: He,
-        items: ye,
-        tables: be
-      } = ee;
+        api: iW,
+        chunks: OW,
+        items: mW,
+        tables: EW
+      } = WW;
       return {
         playerFeet() {
-          const ee = ie.pE(ie.localId);
-          return null !== ee && void 0 !== ee && ee.every(Number.isFinite) ? ee : null
+          const WW = iW.Vk(iW.localId);
+          return null !== WW && void 0 !== WW && WW.every(Number.isFinite) ? WW : null
         },
-        chunkBlocks: ee => He.isLoaded(ee[0], ee[1], ee[2]) ? (ee, ie, ye) => He.po(ee, ie, ye) : null,
-        blockName: ee => be.nameOfId(ee),
+        chunkBlocks: WW => OW.isLoaded(WW[0], WW[1], WW[2]) ? (WW, iW, mW) => OW.NL(WW, iW, mW) : null,
+        blockName: WW => EW.nameOfId(WW),
         inventory: () => ({
-          slots: ye.playerItems().map((ee => ee ? {
-            name: ee.name,
-            amount: ee.amount
+          slots: mW.playerItems().map((WW => WW ? {
+            name: WW.name,
+            amount: WW.amount
           } : null)),
-          heldSlot: ye.selectedSlot
+          heldSlot: mW.selectedSlot
         }),
         nearby() {
-          const He = [];
-          for (let be = 0; be < ie.idStr.length; be++) {
-            var ye;
-            const Me = ie.idStr[be],
-              Ke = ie.serverIds[be],
-              Ue = ie.kinds[be];
-            if (null === Me || ie.isLocal(Ke) || Ue >>> Ee.c !== Ee.s.Lifeform) continue;
-            const Fe = ie.pE(Ke),
-              Je = my.j[Ue & Ee.e];
-            Fe && void 0 !== Je && He.push({
-              kind: "Player" === Je ? "player" : Je,
-              name: null !== (ye = ee.clientApi.getEntityName(Me)) && void 0 !== ye ? ye : null,
-              position: Fe
+          const OW = [];
+          for (let EW = 0; EW < iW.idStr.length; EW++) {
+            var mW;
+            const NW = iW.idStr[EW],
+              PW = iW.serverIds[EW],
+              LW = iW.kinds[EW];
+            if (null === NW || iW.isLocal(PW) || LW >>> MW.e !== MW.v.Lifeform) continue;
+            const cW = iW.Vk(PW),
+              wW = Xm.i[LW & MW.g];
+            cW && void 0 !== wW && OW.push({
+              kind: "Player" === wW ? "player" : wW,
+              name: null !== (mW = WW.clientApi.getEntityName(NW)) && void 0 !== mW ? mW : null,
+              position: cW
             })
           }
-          return He
+          return OW
         },
         droppedItems() {
-          let ee = 0;
-          for (let He = 0; He < ie.idStr.length; He++) null !== ie.idStr[He] && ie.kinds[He] >>> Ee.c === Ee.s.Item && ee++;
-          return ee
+          let WW = 0;
+          for (let OW = 0; OW < iW.idStr.length; OW++) null !== iW.idStr[OW] && iW.kinds[OW] >>> MW.e === MW.v.Item && WW++;
+          return WW
         }
       }
     }
-    const ny = {
-        worldCodeAiChunk: ee => Promise.resolve((0, ly.b)(Sy((0, Ke.h)()), ee)),
-        worldCodeAiGameState: () => Promise.resolve((0, ly.e)(Sy((0, Ke.h)())))
+    const Rm = {
+        worldCodeAiChunk: WW => Promise.resolve((0, Bm.d)(qm((0, PW.f)()), WW)),
+        worldCodeAiGameState: () => Promise.resolve((0, Bm.e)(qm((0, PW.f)())))
       },
-      jy = function(ee) {
-        const ie = kH(),
-          ye = kH(),
-          be = new Set,
-          Me = new Set,
-          Ke = () => {
-            var ie, He;
-            return null !== (ie = null === (He = ee.runtime()) || void 0 === He ? void 0 : He.currentViewer) && void 0 !== ie ? ie : null
+      Gm = function(WW) {
+        const iW = xO(),
+          mW = xO(),
+          EW = new Set,
+          NW = new Set,
+          PW = () => {
+            var iW, OW;
+            return null !== (iW = null === (OW = WW.runtime()) || void 0 === OW ? void 0 : OW.currentViewer) && void 0 !== iW ? iW : null
           };
-        let Ue = null,
-          Fe = null;
-        const oe = (ee, ie) => ({
-            current: ee,
-            watch(He) {
-              let ye = ee();
-              return ie.add((() => {
-                const ie = ee();
-                ie !== ye && (ye = ie, He(ie))
+        let LW = null,
+          cW = null;
+        const tW = (WW, iW) => ({
+            current: WW,
+            watch(OW) {
+              let mW = WW();
+              return iW.add((() => {
+                const iW = WW();
+                iW !== mW && (mW = iW, OW(iW))
               }))
             }
           }),
-          ke = ee => ({
-            watch: ie => (ee.add(ie), () => {
-              ee.delete(ie)
+          xW = WW => ({
+            watch: iW => (WW.add(iW), () => {
+              WW.delete(iW)
             })
           }),
-          qe = ee => {
-            const ie = Ke(),
-              He = null === ie || void 0 === ie ? void 0 : ie.view;
-            ie && He && ie.seek(Math.max(0, Math.min(He.totalTicks - 1, He.YR + ee * Re.md)))
+          lW = WW => {
+            const iW = PW(),
+              OW = null === iW || void 0 === iW ? void 0 : iW.view;
+            iW && OW && iW.seek(Math.max(0, Math.min(OW.totalTicks - 1, OW.hZ + WW * ZW.Jd)))
           },
-          fe = {
-            replay: oe((() => {
-              var ee;
-              const ie = Ke(),
-                He = null !== (ee = null === ie || void 0 === ie ? void 0 : ie.view) && void 0 !== ee ? ee : null;
-              return null === ie || null === He || He.state === Re.Yc.None ? (Ue = null, null) : (Ue = (0, Ge.j)(Ue, {
-                id: ie.id,
-                YR: He.YR,
-                totalTicks: He.totalTicks,
-                lV: Re.md,
-                playing: He.state === Re.Yc.Playing,
-                speed: He.speed,
-                cameraMode: He.cameraMode,
-                freecam: "freecam" === He.cameraMode
-              }), Ue)
-            }), ie),
-            replayEdits: oe((() => {
-              var ee;
-              const ie = Ke(),
-                He = null !== (ee = null === ie || void 0 === ie ? void 0 : ie.view) && void 0 !== ee ? ee : null;
-              return null === ie || null === He || He.state === Re.Yc.None ? (Fe = null, null) : (Fe = (0, Ge.j)(Fe, {
-                cameraKeyframes: [...ie.keyframes],
-                playbackMark: He.mark,
-                fileName: ie.fileName,
-                unsavedChanges: ie.unsavedChanges,
-                suggestSaveAs: ie.suggestSaveAs
-              }), Fe)
-            }), ie),
-            replayRecorder: oe((() => {
-              var ie, He;
-              return null !== (ie = null === (He = ee.runtime()) || void 0 === He ? void 0 : He.recorder.current) && void 0 !== ie ? ie : JH.b.states.replayRecorder.current()
-            }), ye),
+          AW = {
+            replay: tW((() => {
+              var WW;
+              const iW = PW(),
+                OW = null !== (WW = null === iW || void 0 === iW ? void 0 : iW.view) && void 0 !== WW ? WW : null;
+              return null === iW || null === OW || OW.state === ZW.td.None ? (LW = null, null) : (LW = (0, zW.t)(LW, {
+                id: iW.id,
+                hZ: OW.hZ,
+                totalTicks: OW.totalTicks,
+                Fv: ZW.Jd,
+                playing: OW.state === ZW.td.Playing,
+                speed: OW.speed,
+                cameraMode: OW.cameraMode,
+                freecam: "freecam" === OW.cameraMode
+              }), LW)
+            }), iW),
+            replayEdits: tW((() => {
+              var WW;
+              const iW = PW(),
+                OW = null !== (WW = null === iW || void 0 === iW ? void 0 : iW.view) && void 0 !== WW ? WW : null;
+              return null === iW || null === OW || OW.state === ZW.td.None ? (cW = null, null) : (cW = (0, zW.t)(cW, {
+                cameraKeyframes: [...iW.keyframes],
+                playbackMark: OW.mark,
+                fileName: iW.fileName,
+                unsavedChanges: iW.unsavedChanges,
+                suggestSaveAs: iW.suggestSaveAs
+              }), cW)
+            }), iW),
+            replayRecorder: tW((() => {
+              var iW, OW;
+              return null !== (iW = null === (OW = WW.runtime()) || void 0 === OW ? void 0 : OW.recorder.current) && void 0 !== iW ? iW : wO.c.states.replayRecorder.current()
+            }), mW),
             replayVideoExporting: {
-              current: UH.d,
-              watch: ee => (0, Je.j)("replayViewer|videoExportChanged", (() => {
-                ee((0, UH.d)())
+              current: LO.b,
+              watch: WW => (0, wW.n)("replayViewer|videoExportChanged", (() => {
+                WW((0, LO.b)())
               }))
             }
           },
-          Te = {
-            replayUiActionRequested: ke(Me),
-            replayViewerRequested: ke(be)
+          bW = {
+            replayUiActionRequested: xW(NW),
+            replayViewerRequested: xW(EW)
           },
-          pe = ee => {
-            for (const ie of be) ie(ee)
+          jW = WW => {
+            for (const iW of EW) iW(WW)
           },
-          Xe = () => {
-            var ye;
-            !0 === (null === (ye = Ke()) || void 0 === ye ? void 0 : ye.isOpen) && Promise.all([He.e(111), He.e(78)]).then((() => He(63783))).then((He => {
+          UW = () => {
+            var mW;
+            !0 === (null === (mW = PW()) || void 0 === mW ? void 0 : mW.isOpen) && Promise.all([OW.e(113), OW.e(79)]).then((() => OW(64363))).then((OW => {
               let {
-                startWasmReplayVideoExport: ye
-              } = He;
-              return ye({
-                viewer: Ke,
+                startWasmReplayVideoExport: mW
+              } = OW;
+              return mW({
+                viewer: PW,
                 canvas: () => {
-                  var ie, He;
-                  return null !== (ie = null === (He = ee.canvas) || void 0 === He ? void 0 : He.call(ee)) && void 0 !== ie ? ie : null
+                  var iW, OW;
+                  return null !== (iW = null === (OW = WW.canvas) || void 0 === OW ? void 0 : OW.call(WW)) && void 0 !== iW ? iW : null
                 },
-                watchViewer: ie.add,
-                requestViewer: pe
+                watchViewer: iW.add,
+                requestViewer: jW
               })
-            }), (ee => {
-              console.error("Couldn't load the video export", ee), FH.NotificationProvider.showAlertPopup({
+            }), (WW => {
+              console.error("Couldn't load the video export", WW), cO.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((ee => {
-              console.error("The video export failed", ee)
+            })).catch((WW => {
+              console.error("The video export failed", WW)
             }))
           },
-          ze = {
-            replayAction(ee) {
-              if ((0, UH.d)()) return;
-              const ie = Ke();
-              switch (ee) {
+          kW = {
+            replayAction(WW) {
+              if ((0, LO.b)()) return;
+              const iW = PW();
+              switch (WW) {
                 case "replaySkipBack":
-                  qe(-1);
+                  lW(-1);
                   break;
                 case "replaySkipForward":
-                  qe(1);
+                  lW(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== ie && void 0 !== ie && ie.view && ie.setSpeed((0, KH.g)(ie.view.speed, "replaySpeedUp" === ee ? "up" : "down"));
+                  null !== iW && void 0 !== iW && iW.view && iW.setSpeed((0, PO.k)(iW.view.speed, "replaySpeedUp" === WW ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === ie || void 0 === ie || ie.addKeyframe()
+                  null === iW || void 0 === iW || iW.addKeyframe()
               }
             },
-            setReplayPlaying(ee) {
-              var ie, He;
-              (0, UH.d)() || (ee ? null === (ie = Ke()) || void 0 === ie || ie.play() : null === (He = Ke()) || void 0 === He || He.pause())
+            setReplayPlaying(WW) {
+              var iW, OW;
+              (0, LO.b)() || (WW ? null === (iW = PW()) || void 0 === iW || iW.play() : null === (OW = PW()) || void 0 === OW || OW.pause())
             },
-            seekReplay(ee) {
-              var ie;
+            seekReplay(WW) {
+              var iW;
               let {
-                YR: He,
-                ignorePlaybackMark: ye
-              } = ee;
-              null === (ie = Ke()) || void 0 === ie || ie.seek(He, null !== ye && void 0 !== ye && ye)
+                hZ: OW,
+                ignorePlaybackMark: mW
+              } = WW;
+              null === (iW = PW()) || void 0 === iW || iW.seek(OW, null !== mW && void 0 !== mW && mW)
             },
-            setReplayCameraMode(ee) {
-              var ie;
-              null === (ie = Ke()) || void 0 === ie || ie.setCameraMode(ee)
+            setReplayCameraMode(WW) {
+              var iW;
+              null === (iW = PW()) || void 0 === iW || iW.setCameraMode(WW)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(ee) {
-              var ie;
-              null === (ie = Ke()) || void 0 === ie || ie.setKeyframe(ee)
+            setReplayCameraKeyframe(WW) {
+              var iW;
+              null === (iW = PW()) || void 0 === iW || iW.setKeyframe(WW)
             },
-            moveReplayCameraKeyframe(ee) {
-              var ie;
+            moveReplayCameraKeyframe(WW) {
+              var iW;
               let {
-                from: He,
-                to: ye
-              } = ee;
-              null === (ie = Ke()) || void 0 === ie || ie.moveKeyframe(He, ye)
+                from: OW,
+                to: mW
+              } = WW;
+              null === (iW = PW()) || void 0 === iW || iW.moveKeyframe(OW, mW)
             },
-            deleteReplayCameraKeyframes(ee) {
-              var ie;
+            deleteReplayCameraKeyframes(WW) {
+              var iW;
               let {
-                start: He,
-                end: ye
-              } = ee;
-              null === (ie = Ke()) || void 0 === ie || ie.deleteKeyframes(He, ye)
+                start: OW,
+                end: mW
+              } = WW;
+              null === (iW = PW()) || void 0 === iW || iW.deleteKeyframes(OW, mW)
             },
-            setReplayPlaybackMark(ee) {
-              var ie;
-              null === (ie = Ke()) || void 0 === ie || ie.setMark(ee)
+            setReplayPlaybackMark(WW) {
+              var iW;
+              null === (iW = PW()) || void 0 === iW || iW.setMark(WW)
             },
-            cropReplay(ee) {
-              var ie, He;
+            cropReplay(WW) {
+              var iW, OW;
               let {
-                start: ye,
-                end: be
-              } = ee;
-              return !(0, UH.d)() && (null !== (ie = null === (He = Ke()) || void 0 === He ? void 0 : He.crop(ye, be)) && void 0 !== ie && ie)
+                start: mW,
+                end: EW
+              } = WW;
+              return !(0, LO.b)() && (null !== (iW = null === (OW = PW()) || void 0 === OW ? void 0 : OW.crop(mW, EW)) && void 0 !== iW && iW)
             },
-            holdReplayForShaderPackFailure(ee) {
-              const ie = Ke();
-              ie && (ie.holdForShaderPackFailure(), function(ee) {
-                He.e(130).then((() => He(40056))).then((ie => {
+            holdReplayForShaderPackFailure(WW) {
+              const iW = PW();
+              iW && (iW.holdForShaderPackFailure(), function(WW) {
+                OW.e(138).then((() => OW(40448))).then((iW => {
                   let {
-                    shaderPackPage: He
-                  } = ie;
-                  He.block(ee)
-                })).catch((ee => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", ee)
+                    shaderPackPage: OW
+                  } = iW;
+                  OW.block(WW)
+                })).catch((WW => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", WW)
                 }))
-              }(ee))
+              }(WW))
             },
             exportReplayVideo() {
-              Xe()
+              UW()
             },
             toggleRecording() {
-              var ie;
-              null === (ie = ee.runtime()) || void 0 === ie || ie.recorder.toggleRecording()
+              var iW;
+              null === (iW = WW.runtime()) || void 0 === iW || iW.recorder.toggleRecording()
             },
             saveClip() {
-              var ie;
-              null === (ie = ee.runtime()) || void 0 === ie || ie.recorder.saveClip()
+              var iW;
+              null === (iW = WW.runtime()) || void 0 === iW || iW.recorder.saveClip()
             },
-            setRecorderPrefs(ie) {
-              var He;
+            setRecorderPrefs(iW) {
+              var OW;
               let {
-                clipping: ye,
-                clipSeconds: be
-              } = ie;
-              null === (He = ee.runtime()) || void 0 === He || He.recorder.setPrefs(ye, be)
+                clipping: mW,
+                clipSeconds: EW
+              } = iW;
+              null === (OW = WW.runtime()) || void 0 === OW || OW.recorder.setPrefs(mW, EW)
             },
-            setReplayViewerOpen(ie) {
-              var He;
-              (0, Xi.g)(ie) && (null === (He = ee.runtime()) || void 0 === He || He.recorder.viewerShown(ie))
+            setReplayViewerOpen(iW) {
+              var OW;
+              (0, ji.g)(iW) && (null === (OW = WW.runtime()) || void 0 === OW || OW.recorder.viewerShown(iW))
             },
-            recordFlyingMiddleText(ie) {
-              var He;
+            recordFlyingMiddleText(iW) {
+              var OW;
               let {
-                content: ye,
-                ge: be,
-                angle: Me,
-                Oe: Ke
-              } = ie;
-              null === (He = ee.runtime()) || void 0 === He || He.recorder.recordFlyingText(JSON.stringify(ye), be, Me, Ke)
+                content: mW,
+                RN: EW,
+                angle: NW,
+                GN: PW
+              } = iW;
+              null === (OW = WW.runtime()) || void 0 === OW || OW.recorder.recordFlyingText(JSON.stringify(mW), EW, NW, PW)
             },
-            dragReplayCamera(ie) {
-              var He;
+            dragReplayCamera(iW) {
+              var OW;
               let {
-                dx: ye,
-                dy: be
-              } = ie;
-              null === (He = ee.freecam()) || void 0 === He || He.drag(ye, be)
+                dx: mW,
+                dy: EW
+              } = iW;
+              null === (OW = WW.freecam()) || void 0 === OW || OW.drag(mW, EW)
             },
-            moveReplayFreecam(ie) {
-              var He;
-              null === (He = ee.freecam()) || void 0 === He || He.move(ie)
+            moveReplayFreecam(iW) {
+              var OW;
+              null === (OW = WW.freecam()) || void 0 === OW || OW.move(iW)
             },
-            holdReplayFreecamVertical(ie) {
-              var He;
+            holdReplayFreecamVertical(iW) {
+              var OW;
               let {
-                action: ye,
-                lJ: be
-              } = ie;
-              null === (He = ee.freecam()) || void 0 === He || He.holdVertical(ye, be)
+                action: mW,
+                BL: EW
+              } = iW;
+              null === (OW = WW.freecam()) || void 0 === OW || OW.holdVertical(mW, EW)
             }
           },
-          Be = ee => {
-            var ie;
-            const He = Ke(),
-              ye = null !== (ie = null === He || void 0 === He ? void 0 : He.view) && void 0 !== ie ? ie : null;
-            oH.has(ee) ? (ee => {
-              for (const ie of Me) ie(ee)
-            })(ee) : RH.has(ee) ? ze.replayAction(ee) : "replayPlayPause" === ee ? He && ye && ye.state !== Re.Yc.None && ze.setReplayPlaying(ye.state !== Re.Yc.Playing) : "replayChangeCameraMode" === ee ? null === He || void 0 === He || He.cycleCameraMode() : "replayExit" === ee ? !0 === (null === He || void 0 === He ? void 0 : He.inPlayback) && (0, ci.o)("/") : "replayExportVideo" === ee && Xe()
+          sW = WW => {
+            var iW;
+            const OW = PW(),
+              mW = null !== (iW = null === OW || void 0 === OW ? void 0 : OW.view) && void 0 !== iW ? iW : null;
+            tO.has(WW) ? (WW => {
+              for (const iW of NW) iW(WW)
+            })(WW) : ZO.has(WW) ? kW.replayAction(WW) : "replayPlayPause" === WW ? OW && mW && mW.state !== ZW.td.None && kW.setReplayPlaying(mW.state !== ZW.td.Playing) : "replayChangeCameraMode" === WW ? null === OW || void 0 === OW || OW.cycleCameraMode() : "replayExit" === WW ? !0 === (null === OW || void 0 === OW ? void 0 : OW.inPlayback) && (0, vi.k)("/") : "replayExportVideo" === WW && UW()
           };
-        let Ee = !1;
+        let MW = !1;
         return {
-          states: fe,
-          events: Te,
-          commands: ze,
+          states: AW,
+          events: bW,
+          commands: kW,
           lookups: {
             replayCamera() {
-              var ie, He, ye;
-              return !0 !== (null === (ie = Ke()) || void 0 === ie ? void 0 : ie.isOpen) ? null : null !== (He = null === (ye = ee.cameraView) || void 0 === ye ? void 0 : ye.call(ee)) && void 0 !== He ? He : null
+              var iW, OW, mW;
+              return !0 !== (null === (iW = PW()) || void 0 === iW ? void 0 : iW.isOpen) ? null : null !== (OW = null === (mW = WW.cameraView) || void 0 === mW ? void 0 : mW.call(WW)) && void 0 !== OW ? OW : null
             },
             leaveGameReloadsPage() {
-              var ee;
-              return !0 === (null === (ee = Ke()) || void 0 === ee ? void 0 : ee.inPlayback)
+              var WW;
+              return !0 === (null === (WW = PW()) || void 0 === WW ? void 0 : WW.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var ee;
-              const He = !0 === (null === (ee = Ke()) || void 0 === ee ? void 0 : ee.inPlayback);
-              He !== Ee && (Ee = He, Je.h.yR("connectedGameChanged")), ie.fire()
+              var WW;
+              const OW = !0 === (null === (WW = PW()) || void 0 === WW ? void 0 : WW.inPlayback);
+              OW !== MW && (MW = OW, wW.l.iZ("connectedGameChanged")), iW.fire()
             },
-            recorderChanged: ye.fire,
-            keyDown: ee => {
-              var ie;
-              switch (ee) {
+            recorderChanged: mW.fire,
+            keyDown: WW => {
+              var iW;
+              switch (WW) {
                 case "recordGame":
-                  return void ze.toggleRecording();
+                  return void kW.toggleRecording();
                 case "recordClip":
-                  return void((0, Xi.e)() || ze.saveClip())
-              }(0, UH.d)() || ("replayViewerOpen" !== ee ? ee.startsWith("replay") && ((0, Xi.e)() || !0 === (null === (ie = Ke()) || void 0 === ie ? void 0 : ie.inPlayback)) && Be(ee) : pe("toggle"))
+                  return void((0, ji.e)() || kW.saveClip())
+              }(0, LO.b)() || ("replayViewerOpen" !== WW ? WW.startsWith("replay") && ((0, ji.e)() || !0 === (null === (iW = PW()) || void 0 === iW ? void 0 : iW.inPlayback)) && sW(WW) : jW("toggle"))
             }
           }
         }
       }({
-        runtime: be.i,
+        runtime: EW.n,
         cameraView: () => {
-          var ee;
-          const ie = null === (ee = (0, Ke.h)()) || void 0 === ee ? void 0 : ee.renderFrame;
-          if (!ie) return null;
-          const [He, ye, be] = ie.cameraPosition, [Me, Ue, Fe] = ie.cameraDirection;
+          var WW;
+          const iW = null === (WW = (0, PW.f)()) || void 0 === WW ? void 0 : WW.renderFrame;
+          if (!iW) return null;
+          const [OW, mW, EW] = iW.cameraPosition, [NW, LW, cW] = iW.cameraDirection;
           return {
-            position: [He, ye, be],
-            direction: [Me, Ue, Fe]
+            position: [OW, mW, EW],
+            direction: [NW, LW, cW]
           }
         },
         canvas: () => {
-          var ee, ie, He;
-          return null !== (ee = null === (ie = (He = (0, Me.O)()).canvas) || void 0 === ie ? void 0 : ie.call(He)) && void 0 !== ee ? ee : null
+          var WW, iW, OW;
+          return null !== (WW = null === (iW = (OW = (0, NW.K)()).canvas) || void 0 === iW ? void 0 : iW.call(OW)) && void 0 !== WW ? WW : null
         },
-        freecam: be.g
+        freecam: EW.j
       }),
-      sy = {
+      Im = {
         states: {
-          ...Ji,
-          ...qi.i,
-          ...jy.states,
-          ...TH,
-          ...me
+          ...wi,
+          ...li.f,
+          ...Gm.states,
+          ...bO,
+          ...CW
         },
         events: {
-          ...oi,
-          ...pe,
-          ...qi.e,
-          ...Ze.e,
-          ...PH.i,
-          ...jy.events,
-          ...pH,
-          ...te.g
+          ...ti,
+          ...jW,
+          ...li.d,
+          ...JW.b,
+          ...nO.k,
+          ...Gm.events,
+          ...jO,
+          ...TW.k
         },
         commands: {
-          ...We,
-          ...Ri,
-          ...Xe,
-          ...qi.b,
+          ...yW,
+          ...Zi,
+          ...UW,
+          ...li.b,
           ...Qi,
-          ...DH,
-          ...te.e,
-          ...Ci,
-          ...jy.commands,
-          ...dH,
-          ...le,
-          ...LH,
-          ...fi
+          ...HO,
+          ...TW.g,
+          ...Vi,
+          ...Gm.commands,
+          ...YO,
+          ...XW,
+          ...DO,
+          ...Ai
         },
         queries: {
-          ...qi.f,
-          ...ny
+          ...li.e,
+          ...Rm
         },
         lookups: {
-          ...ki,
-          ...ce,
-          ...PH.m,
-          ...jy.lookups,
-          ...de,
-          ...MH,
-          ...xH,
-          ...Se
+          ...xi,
+          ...vW,
+          ...nO.l,
+          ...Gm.lookups,
+          ...YW,
+          ...NO,
+          ...gO,
+          ...BW
         }
       };
 
-    function Iy() {
-      (0, Ue.e)(Te.k), (0, be.k)(jy.feed), (0, Ze.i)(), eH || (eH = !0, (0, Te.j)(Ae.j, (ee => {
-        const ie = (0, Ve.g)(Ae.j, ee);
-        "string" === typeof ie && Promise.resolve().then((() => He(4025))).then((ee => {
+    function am() {
+      (0, LW.e)(bW.k), (0, EW.q)(Gm.feed), (0, JW.c)(), WO || (WO = !0, (0, bW.j)(uW.g, (WW => {
+        const iW = (0, dW.g)(uW.g, WW);
+        "string" === typeof iW && Promise.resolve().then((() => OW(4866))).then((WW => {
           let {
-            onCosmeticPackGranted: He
-          } = ee;
-          He(ie)
+            onCosmeticPackGranted: OW
+          } = WW;
+          OW(iW)
         }))
-      })), (0, Te.j)(Ae.ab, (ee => {
-        const ie = (0, Ve.g)(Ae.ab, ee);
-        "number" === typeof ie && Je.h.yR("serverUpdating", Date.now() + ie, !0)
-      })), (0, Te.j)(Ae.C, (ee => {
-        const ie = (0, Ve.g)(Ae.C, ee);
-        if ((0, Ve.c)(ie)) {
+      })), (0, bW.j)(uW.kb, (WW => {
+        const iW = (0, dW.g)(uW.kb, WW);
+        "number" === typeof iW && wW.l.iZ("serverUpdating", Date.now() + iW, !0)
+      })), (0, bW.j)(uW.F, (WW => {
+        const iW = (0, dW.g)(uW.F, WW);
+        if ((0, dW.d)(iW)) {
           const {
-            ee: ee,
-            ie: He
-          } = ie;
-          (0, Gi.c)({
-            ee: "string" === typeof ee ? ee : null,
-            ie: "string" === typeof He ? He : null
+            cN: WW,
+            wN: OW
+          } = iW;
+          (0, zi.d)({
+            cN: "string" === typeof WW ? WW : null,
+            wN: "string" === typeof OW ? OW : null
           })
         }
-      })), (0, Te.j)(oe.ic.NewUiRequest, (ee => {
-        const ie = (0, Ve.h)(ee);
-        (0, Ve.c)(ie) && "number" === typeof ie.id && (0, Ve.c)(ie.clientParameters) && (0, ri.f)(ie.id, ie.clientParameters)
-      })), (0, Te.j)(Ae.V, (ee => {
-        const ie = (0, Ve.g)(Ae.V, ee);
-        "number" === typeof ie && (0, ri.h)(ie)
-      })), (0, Te.i)(ri.d), (0, Te.j)(oe.ic.UiRequestPopup, (ee => {
-        const ie = (0, Ve.h)(ee);
-        if ((0, Ve.c)(ie) && "number" === typeof ie.id && ("string" === typeof ie.text || (0, Ve.c)(ie.text) && "string" === typeof ie.text.translationKey)) {
-          const ee = ie.id;
-          (0, ri.k)(ee, ie.text, !0 === ie.destructive, (ie => {
+      })), (0, bW.j)(tW.uc.NewUiRequest, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && "number" === typeof iW.id && (0, dW.d)(iW.clientParameters) && (0, Fi.f)(iW.id, iW.clientParameters)
+      })), (0, bW.j)(uW.ab, (WW => {
+        const iW = (0, dW.g)(uW.ab, WW);
+        "number" === typeof iW && (0, Fi.h)(iW)
+      })), (0, bW.i)(Fi.c), (0, bW.j)(tW.uc.UiRequestPopup, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW) && "number" === typeof iW.id && ("string" === typeof iW.text || (0, dW.d)(iW.text) && "string" === typeof iW.text.translationKey)) {
+          const WW = iW.id;
+          (0, Fi.j)(WW, iW.text, !0 === iW.destructive, (iW => {
             Qi.answerUiRequest({
-              id: ee,
-              pJ: ie
+              id: WW,
+              ct: iW
             })
           }))
         }
-      })), (0, Te.j)(oe.ic.TopRightHelper, (ee => {
-        const ie = (0, Ve.h)(ee);
-        void 0 !== ie && Je.h.yR("TopRightHelper", ie, !0)
-      })), (0, Te.j)(oe.ic.TaskProgress, (ee => {
-        const ie = (0, Ve.h)(ee);
-        (0, Ve.c)(ie) && "string" === typeof ie.taskId && "number" === typeof ie.progress && (0, Ni.e)({
-          taskId: ie.taskId,
-          progress: ie.progress
+      })), (0, bW.j)(tW.uc.TopRightHelper, (WW => {
+        const iW = (0, dW.j)(WW);
+        void 0 !== iW && wW.l.iZ("TopRightHelper", iW, !0)
+      })), (0, bW.j)(tW.uc.TaskProgress, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && "string" === typeof iW.taskId && "number" === typeof iW.progress && (0, ri.d)({
+          taskId: iW.taskId,
+          progress: iW.progress
         })
-      }))), WH || (WH = !0, (0, Te.j)(Ae.p, (ee => {
-        const ie = (0, Ve.g)(Ae.p, ee);
-        (0, Ve.c)(ie) && Je.h.yR("showShopFromServer", {
-          toggle: ie.Yi,
-          Vi: ie.Vi
+      }))), yO || (yO = !0, (0, bW.j)(uW.o, (WW => {
+        const iW = (0, dW.g)(uW.o, WW);
+        (0, dW.d)(iW) && wW.l.iZ("showShopFromServer", {
+          toggle: iW.Hi,
+          ni: iW.ni
         }, !0)
-      })), (0, Te.j)(oe.ic.OverShopInfo, (ee => {
-        const ie = (0, Ve.h)(ee);
-        (0, Ve.c)(ie) && Je.h.yR("overShopInfo", ie.info, !0)
-      })), (0, Te.j)(oe.ic.ShowShopTutorial, (() => {
-        Je.h.yR("showShopTutorial", null, !0)
-      }))), gH || (gH = !0, (0, Te.g)((() => {
-        var ee;
-        (0, XH.resetLeaveEvents)(), null === (ee = OH) || void 0 === ee || ee(), OH = (0, Te.e)() ? (0, BH.onVisitSessionGameServerConnected)(Te.e) : null, (0, Te.e)() || Je.h.pB()
-      })), (0, Te.j)(oe.ic.SetCookie, (ee => {
-        const ie = (0, Ve.h)(ee),
-          He = (0, ci.e)().gameNameWithVariation;
-        (0, Ve.c)(ie) && "string" === typeof ie.key && null !== He && (0, zH.setCookie)(He, ie.key, ie.value)
-      })), (0, Te.j)(oe.ic.LeaveValues, (ee => {
-        const ie = (0, Ve.h)(ee);
-        if ((0, Ve.c)(ie) && "string" === typeof ie.leaveEventType) {
+      })), (0, bW.j)(tW.uc.OverShopInfo, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && wW.l.iZ("overShopInfo", iW.info, !0)
+      })), (0, bW.j)(tW.uc.ShowShopTutorial, (() => {
+        wW.l.iZ("showShopTutorial", null, !0)
+      }))), KO || (KO = !0, (0, bW.e)((() => {
+        var WW;
+        (0, UO.resetLeaveEvents)(), null === (WW = SO) || void 0 === WW || WW(), SO = (0, bW.c)() ? (0, sO.onVisitSessionGameServerConnected)(bW.c) : null, (0, bW.c)() || wW.l.pU()
+      })), (0, bW.j)(tW.uc.SetCookie, (WW => {
+        const iW = (0, dW.j)(WW),
+          OW = (0, vi.d)().gameNameWithVariation;
+        (0, dW.d)(iW) && "string" === typeof iW.key && null !== OW && (0, kO.setCookie)(OW, iW.key, iW.value)
+      })), (0, bW.j)(tW.uc.LeaveValues, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW) && "string" === typeof iW.leaveEventType) {
           const {
-            leaveEventType: ee,
-            category: He,
-            subCategory: ye,
-            value: be
-          } = ie;
-          (0, XH.updateLeaveValue)({
-            leaveEventType: ee,
-            category: He,
-            subCategory: ye,
-            value: be
+            leaveEventType: WW,
+            category: OW,
+            subCategory: mW,
+            value: EW
+          } = iW;
+          (0, UO.updateLeaveValue)({
+            leaveEventType: WW,
+            category: OW,
+            subCategory: mW,
+            value: EW
           })
         }
-      })), (0, Te.j)(oe.ic.CustomAnalyticsEvent, (ee => {
-        const ie = (0, Ve.h)(ee);
-        if ((0, Ve.c)(ie) && "string" === typeof ie.cat1) {
+      })), (0, bW.j)(tW.uc.CustomAnalyticsEvent, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW) && "string" === typeof iW.cat1) {
           const {
-            cat1: ee,
-            cat2: He,
-            cat3: ye,
-            value: be
-          } = ie;
-          (0, XH.logCustomAnalyticsEvent)({
-            cat1: ee,
-            cat2: He,
-            cat3: ye,
-            value: be
+            cat1: WW,
+            cat2: OW,
+            cat3: mW,
+            value: EW
+          } = iW;
+          (0, UO.logCustomAnalyticsEvent)({
+            cat1: WW,
+            cat2: OW,
+            cat3: mW,
+            value: EW
           })
         }
-      })), (0, Te.j)(oe.ic.ProgressionEvent, (ee => {
-        const ie = (0, Ve.h)(ee);
-        if ((0, Ve.c)(ie)) {
+      })), (0, bW.j)(tW.uc.ProgressionEvent, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW)) {
           const {
-            type: ee,
-            location1: He,
-            location2: ye,
-            location3: be,
-            score: Me
-          } = ie;
-          (0, XH.logProgressionEvent)({
-            type: ee,
-            location1: He,
-            location2: ye,
-            location3: be,
-            score: Me
+            type: WW,
+            location1: OW,
+            location2: mW,
+            location3: EW,
+            score: NW
+          } = iW;
+          (0, UO.logProgressionEvent)({
+            type: WW,
+            location1: OW,
+            location2: mW,
+            location3: EW,
+            score: NW
           })
         }
-      })), (0, Te.j)(oe.ic.ResourceEvent, (ee => {
-        const ie = (0, Ve.h)(ee);
-        if ((0, Ve.c)(ie)) {
+      })), (0, bW.j)(tW.uc.ResourceEvent, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW)) {
           const {
-            type: ee,
-            resourceType: He,
-            amount: ye,
-            category: be,
-            itemName: Me
-          } = ie;
-          (0, XH.logResourceEvent)({
-            type: ee,
-            resourceType: He,
-            amount: ye,
-            category: be,
-            itemName: Me
+            type: WW,
+            resourceType: OW,
+            amount: mW,
+            category: EW,
+            itemName: NW
+          } = iW;
+          (0, UO.logResourceEvent)({
+            type: WW,
+            resourceType: OW,
+            amount: mW,
+            category: EW,
+            itemName: NW
           })
         }
-      })), (0, Te.j)(oe.ic.LeaderboardResponse, (ee => {
-        const ie = (0, Ve.h)(ee);
-        if ((0, Ve.c)(ie)) {
+      })), (0, bW.j)(tW.uc.LeaderboardResponse, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW)) {
           const {
-            category: ee,
-            timeframe: He,
-            data: ye
-          } = ie;
-          Je.h.yR("leaderboardResponse", {
-            category: ee,
-            timeframe: He,
-            data: ye
+            category: WW,
+            timeframe: OW,
+            data: mW
+          } = iW;
+          wW.l.iZ("leaderboardResponse", {
+            category: WW,
+            timeframe: OW,
+            data: mW
           })
         }
-      })), (0, Te.j)(Ae.x, (ee => {
-        const ie = (0, Ve.g)(Ae.x, ee);
-        "string" === typeof ie && (0, EH.b)(ee.conn, ie)
-      })), (0, Te.j)(Ae.z, (ee => {
-        const ie = (0, Ve.g)(Ae.z, ee);
-        "string" === typeof ie && console.error(`[logErrorToConsole]: ${ie}`)
-      }))), Le(), (0, PH.b)(), Li || (Li = !0, (0, Te.j)(Ae.i, (ee => {
-        const ie = (0, Ve.g)(Ae.i, ee);
-        void 0 !== ie && (0, xi.l)(ie)
-      }))), Ii(), Pi(), se || (se = !0, (0, Me.u)(Ie)), ye.gameBridge.attach(sy), uy()
+      })), (0, bW.j)(uW.z, (WW => {
+        const iW = (0, dW.g)(uW.z, WW);
+        "string" === typeof iW && (0, MO.b)(WW.conn, iW)
+      })), (0, bW.j)(uW.C, (WW => {
+        const iW = (0, dW.g)(uW.C, WW);
+        "string" === typeof iW && console.error(`[logErrorToConsole]: ${iW}`)
+      }))), DW(), (0, nO.c)(), Di || (Di = !0, (0, bW.j)(uW.f, (WW => {
+        const iW = (0, dW.g)(uW.f, WW);
+        void 0 !== iW && (0, gi.k)(iW)
+      }))), ai(), ni(), GW || (GW = !0, (0, NW.v)(IW)), mW.gameBridge.attach(Im), Cm()
     }
   },
-  37090: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => oe,
-      f: () => Fe,
-      j: () => Ue,
-      n: () => Je
+  37441: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => PW,
+      d: () => LW
     });
-    var ye = He(1992);
-    let be = null,
-      Me = 0;
-    const Ke = new Set;
+    var mW = OW(37444);
+    let EW = null,
+      NW = null;
 
-    function Ue() {
-      return be
+    function PW() {
+      return EW ??= OW.e(74).then((() => OW(42663))).catch((WW => {
+        throw EW = null, WW
+      })), EW
     }
 
-    function Fe() {
-      return Me
-    }
-
-    function Je(ee) {
-      be = ee, Me++, (0, ye.d)();
-      for (const ie of Ke) ie()
-    }
-
-    function oe(ee) {
-      Ke.add(ee)
+    function LW() {
+      return NW ??= Promise.all([PW(), (0, mW.e)()]).then((WW => {
+        let [iW] = WW;
+        return iW
+      }), (WW => {
+        throw NW = null, WW
+      })), NW
     }
   },
-  37096: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke,
-      d: () => Ue
+  37646: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    var ye = He(37100);
-    let be = null,
-      Me = null;
-
-    function Ke() {
-      return be ??= He.e(73).then((() => He(42260))).catch((ee => {
-        throw be = null, ee
-      })), be
-    }
-
-    function Ue() {
-      return Me ??= Promise.all([Ke(), (0, ye.g)()]).then((ee => {
-        let [ie] = ee;
-        return ie
-      }), (ee => {
-        throw Me = null, ee
-      })), Me
-    }
-  },
-  37192: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => be
-    });
-    const ye = {
-      wait: function(ee) {
-        return new Promise((ie => {
-          setTimeout(ie, ee)
+    const mW = {
+      wait: function(WW) {
+        return new Promise((iW => {
+          setTimeout(iW, WW)
         }))
       },
       stallMs: 2e4
     };
-    class be {
-      constructor(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ye;
-        this.url = ee, this.options = ie, this.timing = He, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = ee
+    class EW {
+      constructor(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mW;
+        this.url = WW, this.options = iW, this.timing = OW, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = WW
       }
       ready() {
         if (null === this.fetched) {
-          const ee = new AbortController;
-          this.fetchAbort = ee, this.fetched = this.fetchWithRetries(ee.signal).then((ie => (this.fetchAbort === ee && (this.fetchAbort = null), ie)))
+          const WW = new AbortController;
+          this.fetchAbort = WW, this.fetched = this.fetchWithRetries(WW.signal).then((iW => (this.fetchAbort === WW && (this.fetchAbort = null), iW)))
         }
         return this.fetched
       }
@@ -2820,56 +2596,56 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(ee) {
-        for (let ie = 0;; ie++) {
-          const He = new URL(this.url);
-          if (ie > 0 && He.searchParams.set("cache-bust", `${Date.now()}-${ie}`), await this.fetchWhole(He, ee)) return this.scriptUrl = He, !0;
-          if (ie >= 3 || ee.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** ie), ee.aborted) return !1
+      async fetchWithRetries(WW) {
+        for (let iW = 0;; iW++) {
+          const OW = new URL(this.url);
+          if (iW > 0 && OW.searchParams.set("cache-bust", `${Date.now()}-${iW}`), await this.fetchWhole(OW, WW)) return this.scriptUrl = OW, !0;
+          if (iW >= 3 || WW.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** iW), WW.aborted) return !1
         }
       }
-      async fetchWhole(ee, ie) {
-        const He = new AbortController;
-        let ye;
-        const be = () => {
-            clearTimeout(ye), ye = setTimeout((() => {
-              He.abort()
+      async fetchWhole(WW, iW) {
+        const OW = new AbortController;
+        let mW;
+        const EW = () => {
+            clearTimeout(mW), mW = setTimeout((() => {
+              OW.abort()
             }), this.timing.stallMs)
           },
-          Me = () => {
-            He.abort()
+          NW = () => {
+            OW.abort()
           };
-        ie.addEventListener("abort", Me, {
+        iW.addEventListener("abort", NW, {
           once: !0
-        }), be();
+        }), EW();
         try {
-          var Ke;
-          const ie = await fetch(ee, {
-            signal: He.signal
+          var PW;
+          const iW = await fetch(WW, {
+            signal: OW.signal
           });
-          if (!ie.ok) return !1;
-          const ye = null === (Ke = ie.body) || void 0 === Ke ? void 0 : Ke.getReader();
-          if (!ye) return !1;
+          if (!iW.ok) return !1;
+          const mW = null === (PW = iW.body) || void 0 === PW ? void 0 : PW.getReader();
+          if (!mW) return !1;
           for (;;) {
             const {
-              done: ee
-            } = await ye.read();
-            if (ee) return !0;
-            be()
+              done: WW
+            } = await mW.read();
+            if (WW) return !0;
+            EW()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(ye), ie.removeEventListener("abort", Me)
+          clearTimeout(mW), iW.removeEventListener("abort", NW)
         }
       }
     }
   },
-  37893: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => ye
+  38214: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => mW
     });
-    const ye = {
+    const mW = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -3029,21 +2805,21 @@ export const modules = {
       }
     }
   },
-  39829: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => ye,
-      e: () => be
+  40242: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => mW,
+      f: () => EW
     });
-    const ye = ["description", "label"];
+    const mW = ["description", "label"];
 
-    function be(ee) {
-      const ie = ee.type;
+    function EW(WW) {
+      const iW = WW.type;
       return {
-        type: ie,
-        params: ee[ie]
+        type: iW,
+        params: WW[iW]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

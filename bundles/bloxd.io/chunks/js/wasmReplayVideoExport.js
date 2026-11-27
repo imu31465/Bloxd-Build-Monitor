@@ -1,77 +1,77 @@
-export const id = 78;
-export const ids = [72, 78, 108];
+export const id = 79;
+export const ids = [73, 79, 110];
 export const modules = {
-  37813: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Re,
-      g: () => ke
+  38146: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => ZW,
+      d: () => xW
     });
-    var ye = He(610),
-      be = He(35),
-      Me = He(37775);
-    const Ke = "replayFileKeptForReload",
-      Ue = "replayFileKeptForReloadAt",
-      Fe = "replayFileKeptForReloadTab",
-      Je = 3e5,
-      oe = 5e3;
-    async function Re(ee, ie) {
-      const He = Date.now(),
-        Me = {
-          at: He,
-          bytes: ee,
-          source: ie
+    var mW = OW(643),
+      EW = OW(39),
+      NW = OW(38105);
+    const PW = "replayFileKeptForReload",
+      LW = "replayFileKeptForReloadAt",
+      cW = "replayFileKeptForReloadTab",
+      wW = 3e5,
+      tW = 5e3;
+    async function ZW(WW, iW) {
+      const OW = Date.now(),
+        NW = {
+          at: OW,
+          bytes: WW,
+          source: iW
         },
-        Je = await Promise.race([(async () => await be.e.setItem(Ue, He) && be.e.setItem(Ke, Me))(), (0, ye.U)(oe).then((() => !1))]);
-      Je || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
-      const Re = {
-        at: He,
-        KR: Je
+        wW = await Promise.race([(async () => await EW.f.setItem(LW, OW) && EW.f.setItem(PW, NW))(), (0, mW.R)(tW).then((() => !1))]);
+      wW || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
+      const ZW = {
+        at: OW,
+        EZ: wW
       };
-      be.m.setItem(Fe, Re)
+      EW.j.setItem(cW, ZW)
     }
-    async function ke() {
-      var ee;
-      const ie = be.m.getItem(Fe);
-      null !== ie && be.m.removeItem(Fe);
-      const He = Date.now(),
-        ye = await be.e.getItem(Ue),
-        oe = null !== ie && He - ie.at <= Je,
-        Re = null !== ie && ye === ie.at;
-      let ke = null;
-      if (null !== ye && (Re || ("number" !== typeof ye || He - ye > Je)) && (ke = oe && Re && ie.KR ? await be.e.getItem(Ke) : null, await Promise.all([be.e.removeItem(Ue), be.e.removeItem(Ke)])), !oe) return null;
-      if ((null === (ee = ke) || void 0 === ee ? void 0 : ee.at) !== ie.at) throw new Error(Me.d.replayNotKept.text);
+    async function xW() {
+      var WW;
+      const iW = EW.j.getItem(cW);
+      null !== iW && EW.j.removeItem(cW);
+      const OW = Date.now(),
+        mW = await EW.f.getItem(LW),
+        tW = null !== iW && OW - iW.at <= wW,
+        ZW = null !== iW && mW === iW.at;
+      let xW = null;
+      if (null !== mW && (ZW || ("number" !== typeof mW || OW - mW > wW)) && (xW = tW && ZW && iW.EZ ? await EW.f.getItem(PW) : null, await Promise.all([EW.f.removeItem(LW), EW.f.removeItem(PW)])), !tW) return null;
+      if ((null === (WW = xW) || void 0 === WW ? void 0 : WW.at) !== iW.at) throw new Error(NW.e.replayNotKept.text);
       return {
-        bytes: ke.bytes,
-        source: ke.source
+        bytes: xW.bytes,
+        source: xW.source
       }
     }
   },
-  37807: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => ye,
-      g: () => Me,
-      j: () => be
+  38142: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW,
+      c: () => NW,
+      g: () => EW
     });
-    const ye = [9];
+    const mW = [9];
 
-    function be(ee) {
-      return ye.includes(ee)
+    function EW(WW) {
+      return mW.includes(WW)
     }
 
-    function Me(ee) {
-      return null !== ee && ee >= 3 && ee < ye[0]
+    function NW(WW) {
+      return null !== WW && WW >= 3 && WW < mW[0]
     }
   },
-  37775: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ke,
-      g: () => Je,
-      k: () => Fe
+  38105: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => PW,
+      i: () => wW,
+      m: () => cW
     });
-    var ye = He(27);
-    const be = 1500,
-      Me = 1e3,
-      Ke = {
+    var mW = OW(27);
+    const EW = 1500,
+      NW = 1e3,
+      PW = {
         recordingStarted: {
           text: "Started recording",
           type: "Success"
@@ -162,29 +162,29 @@ export const modules = {
           type: "Error"
         }
       },
-      Ue = new Set(Object.values(Ke).filter((ee => "Error" === ee.type)).map((ee => ee.text)));
+      LW = new Set(Object.values(PW).filter((WW => "Error" === WW.type)).map((WW => WW.text)));
 
-    function Fe(ee) {
-      return ee instanceof Error && Ue.has(ee.message) ? ee.message : void 0
+    function cW(WW) {
+      return WW instanceof Error && LW.has(WW.message) ? WW.message : void 0
     }
 
-    function Je(ee) {
-      var ie;
-      const He = null !== (ie = ee.timeoutMs) && void 0 !== ie ? ie : "Error" === ee.type ? be : Me;
-      ye.h.yR("showBottomMessage", {
-        message: ee.text,
-        timeoutLength: He,
-        type: ee.type
+    function wW(WW) {
+      var iW;
+      const OW = null !== (iW = WW.timeoutMs) && void 0 !== iW ? iW : "Error" === WW.type ? EW : NW;
+      mW.l.iZ("showBottomMessage", {
+        message: WW.text,
+        timeoutLength: OW,
+        type: WW.type
       })
     }
   },
-  37825: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => ye,
-      d: () => be
+  38153: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW,
+      c: () => EW
     });
-    const ye = "data-replay-ui-active",
-      be = [{
+    const mW = "data-replay-ui-active",
+      EW = [{
         group: "middleTextTop",
         dataAttr: "data-replay-hide-middle-text-top",
         label: "Middle text top"
@@ -234,78 +234,78 @@ export const modules = {
         label: "Everything else"
       }]
   },
-  37828: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Je,
-      h: () => Re,
-      i: () => oe
+  38159: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => wW,
+      i: () => ZW,
+      k: () => tW
     });
-    var ye = He(18),
-      be = He(27),
-      Me = He(37825);
+    var mW = OW(25),
+      EW = OW(27),
+      NW = OW(38153);
 
-    function Ke() {
-      const ee = {};
+    function PW() {
+      const WW = {};
       for (const {
-          group: ie
+          group: iW
         }
-        of Me.d) ee[ie] = !0;
-      return ee
+        of NW.c) WW[iW] = !0;
+      return WW
     }
-    let Ue = Ke();
+    let LW = PW();
 
-    function Fe() {
-      be.h.yR("replayViewer|uiVisibilityChanged")
-    }
-
-    function Je() {
-      return Ue
+    function cW() {
+      EW.l.iZ("replayViewer|uiVisibilityChanged")
     }
 
-    function oe(ee, ie) {
-      Ue[ee] !== ie && (Ue = {
-        ...Ue,
-        [ee]: ie
-      }, "nametag" === ee && ye.e.set({
-        areNametagsHidden: !ie
-      }), Fe())
+    function wW() {
+      return LW
     }
 
-    function Re() {
-      Ue = Ke(), ye.e.set({
+    function tW(WW, iW) {
+      LW[WW] !== iW && (LW = {
+        ...LW,
+        [WW]: iW
+      }, "nametag" === WW && mW.d.set({
+        areNametagsHidden: !iW
+      }), cW())
+    }
+
+    function ZW() {
+      LW = PW(), mW.d.set({
         areNametagsHidden: !1
-      }), Fe()
+      }), cW()
     }
   },
-  40101: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Pe
+  40482: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => nW
     });
-    var ye = He(1790),
-      be = He(1340),
-      Me = He(59),
-      Ke = He(1053),
-      Ue = He.n(Ke),
-      Fe = He(1438),
-      Je = He(97);
-    const oe = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
-      Re = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
+    var mW = OW(1876),
+      EW = OW(1422),
+      NW = OW(62),
+      PW = OW(1089),
+      LW = OW.n(PW),
+      cW = OW(1532),
+      wW = OW(100);
+    const tW = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
+      ZW = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
 
-    function ke(ee) {
-      return "webm" === ee ? oe : Re
+    function xW(WW) {
+      return "webm" === WW ? tW : ZW
     }
 
-    function qe(ee) {
-      for (const ie of ee)
-        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(ie)) return ie;
+    function lW(WW) {
+      for (const iW of WW)
+        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(iW)) return iW;
       return null
     }
 
-    function fe(ee) {
-      return null !== qe(ke(ee))
+    function AW(WW) {
+      return null !== lW(xW(WW))
     }
-    var Te = He(1228);
-    const pe = [{
+    var bW = OW(1283);
+    const jW = [{
       id: "webm",
       label: "WebM",
       description: "Usually less screen tearing, but may not play in all media players."
@@ -315,177 +315,177 @@ export const modules = {
       description: "Works in more players, but may show graphical glitches on some devices."
     }];
 
-    function Xe() {
-      return fe("webm") ? "webm" : fe("mp4") ? "mp4" : "webm"
+    function UW() {
+      return AW("webm") ? "webm" : AW("mp4") ? "mp4" : "webm"
     }
 
-    function ze(ee) {
+    function kW(WW) {
       let {
-        cards: ie
-      } = ee;
-      return (0, Te.jsx)("div", {
+        cards: iW
+      } = WW;
+      return (0, bW.jsx)("div", {
         className: "ReplayVideoExportOptionCards",
-        children: ie.map((ee => (0, Te.jsxs)("div", {
+        children: iW.map((WW => (0, bW.jsxs)("div", {
           className: "ReplayVideoExportOptionColumn",
-          children: [(0, Te.jsx)("div", {
-            className: Ue()("ReplayVideoExportOptionCard", {
-              Selected: ee.selected,
-              Disabled: ee.disabled
+          children: [(0, bW.jsx)("div", {
+            className: LW()("ReplayVideoExportOptionCard", {
+              Selected: WW.selected,
+              Disabled: WW.disabled
             }),
             onClick: () => {
-              ee.disabled || ee.onSelect()
+              WW.disabled || WW.onSelect()
             },
-            children: (0, Te.jsxs)("div", {
+            children: (0, bW.jsxs)("div", {
               className: "ReplayVideoExportOptionCardBody",
-              children: [(0, Te.jsx)("div", {
+              children: [(0, bW.jsx)("div", {
                 className: "ReplayVideoExportOptionCardLabel",
-                children: ee.label
-              }), (0, Te.jsx)("div", {
+                children: WW.label
+              }), (0, bW.jsx)("div", {
                 className: "ReplayVideoExportOptionCardDescription",
-                children: ee.description
+                children: WW.description
               })]
             })
-          }), ee.disabled && ee.disabledReason && (0, Te.jsx)("div", {
+          }), WW.disabled && WW.disabledReason && (0, bW.jsx)("div", {
             className: "ReplayVideoExportOptionError SmallTextLight",
-            children: ee.disabledReason
+            children: WW.disabledReason
           })]
-        }, ee.id)))
+        }, WW.id)))
       })
     }
-    const Be = (0, Me.memo)((function(ee) {
+    const sW = (0, NW.memo)((function(WW) {
       let {
-        hasPlaybackMark: ie,
-        canIncludeUi: He,
-        includeUiDisabledReason: ye,
-        selectionRef: be,
-        closePopup: Ke
-      } = ee;
-      const Ue = fe("webm") || fe("mp4"),
-        [oe, Re] = (0, Me.useState)(Xe),
-        [ke, qe] = (0, Me.useState)(He),
-        Be = Ue && fe(oe);
-      if (!Ue) {
-        const ee = (0, Je.isMobile)() ? "screen recording" : "OBS";
-        return (0, Te.jsxs)("div", {
+        hasPlaybackMark: iW,
+        canIncludeUi: OW,
+        includeUiDisabledReason: mW,
+        selectionRef: EW,
+        closePopup: PW
+      } = WW;
+      const LW = AW("webm") || AW("mp4"),
+        [tW, ZW] = (0, NW.useState)(UW),
+        [xW, lW] = (0, NW.useState)(OW),
+        sW = LW && AW(tW);
+      if (!LW) {
+        const WW = (0, wW.isMobile)() ? "screen recording" : "OBS";
+        return (0, bW.jsxs)("div", {
           className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-          children: [(0, Te.jsx)("div", {
+          children: [(0, bW.jsx)("div", {
             className: "PromptPopupNotificationTitle SmallTextBold",
             children: "Can't export video"
-          }), (0, Te.jsx)("div", {
+          }), (0, bW.jsx)("div", {
             className: "PromptPopupNotificationSubtitle SmallTextLight",
-            children: `Your device does not support exporting. Try recording with an external software like ${ee}.`
-          }), (0, Te.jsx)("div", {
+            children: `Your device does not support exporting. Try recording with an external software like ${WW}.`
+          }), (0, bW.jsx)("div", {
             className: "PromptPopupNotificationBody",
-            children: (0, Te.jsx)(Fe.G, {
+            children: (0, bW.jsx)(cW.O, {
               className: "PromptPopupNotificationBodyButton",
               onClick: () => {
-                be.options = null, Ke()
+                EW.options = null, PW()
               },
               children: "Close"
             })
           })]
         })
       }
-      const Ee = ie ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
-        ge = [{
+      const MW = iW ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
+        KW = [{
           id: "withoutUi",
           label: "Without UI",
           description: "Usually cleaner and sharper.",
-          selected: !ke,
+          selected: !xW,
           disabled: !1,
           disabledReason: null,
           onSelect: () => {
-            qe(!1)
+            lW(!1)
           }
         }, {
           id: "withUi",
           label: "With UI",
           description: "Includes HUD elements. May look worse on some devices.",
-          selected: ke,
-          disabled: !He,
-          disabledReason: ye,
+          selected: xW,
+          disabled: !OW,
+          disabledReason: mW,
           onSelect: () => {
-            qe(!0)
+            lW(!0)
           }
         }],
-        Oe = pe.map((ee => {
-          const ie = fe(ee.id);
+        SW = jW.map((WW => {
+          const iW = AW(WW.id);
           return {
-            id: ee.id,
-            label: ee.label,
-            description: ee.description,
-            selected: oe === ee.id,
-            disabled: !ie,
+            id: WW.id,
+            label: WW.label,
+            description: WW.description,
+            selected: tW === WW.id,
+            disabled: !iW,
             disabledReason: "Your device doesn't support this format",
             onSelect: () => {
-              Re(ee.id)
+              ZW(WW.id)
             }
           }
         }));
-      return (0, Te.jsxs)("div", {
+      return (0, bW.jsxs)("div", {
         className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-        children: [(0, Te.jsx)("div", {
+        children: [(0, bW.jsx)("div", {
           className: "PromptPopupNotificationTitle SmallTextBold",
           children: "Export video?"
-        }), (0, Te.jsx)("div", {
+        }), (0, bW.jsx)("div", {
           className: "PromptPopupNotificationSubtitle SmallTextLight",
-          children: Ee
-        }), (0, Te.jsxs)("div", {
+          children: MW
+        }), (0, bW.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, Te.jsx)("div", {
+          children: [(0, bW.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "UI"
-          }), (0, Te.jsx)(ze, {
-            cards: ge
+          }), (0, bW.jsx)(kW, {
+            cards: KW
           })]
-        }), (0, Te.jsxs)("div", {
+        }), (0, bW.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, Te.jsx)("div", {
+          children: [(0, bW.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "Format"
-          }), (0, Te.jsx)(ze, {
-            cards: Oe
+          }), (0, bW.jsx)(kW, {
+            cards: SW
           })]
-        }), (0, Te.jsxs)("div", {
+        }), (0, bW.jsxs)("div", {
           className: "PromptPopupNotificationBody",
-          children: [(0, Te.jsx)(Fe.m, {
+          children: [(0, bW.jsx)(cW.n, {
             className: "PromptPopupNotificationBodyButton PromptPopupNotificationBodyPrimaryButton",
-            disabled: !Be,
+            disabled: !sW,
             onClick: () => {
-              be.options = {
-                format: oe,
-                includeUi: He && ke
-              }, Ke()
+              EW.options = {
+                format: tW,
+                includeUi: OW && xW
+              }, PW()
             },
             children: "Export"
-          }), (0, Te.jsx)(Fe.G, {
+          }), (0, bW.jsx)(cW.O, {
             className: "PromptPopupNotificationBodyButton",
             onClick: () => {
-              be.options = null, Ke()
+              EW.options = null, PW()
             },
             children: "Cancel"
           })]
         })]
       })
     }));
-    var Ee = He(5338),
-      ge = He(37825),
-      Oe = He(37828);
-    let de = null;
+    var MW = OW(5615),
+      KW = OW(38153),
+      SW = OW(38159);
+    let YW = null;
 
-    function We() {
+    function yW() {
       return function() {
-        const ee = (0, Oe.e)();
+        const WW = (0, SW.e)();
         for (const {
-            group: ie,
-            dataAttr: He
+            group: iW,
+            dataAttr: OW
           }
-          of ge.d)
-          if (He && ee[ie]) return !0;
+          of KW.c)
+          if (OW && WW[iW]) return !0;
         return !1
       }() ? function() {
-        var ee;
-        return "function" === typeof(null === (ee = navigator.mediaDevices) || void 0 === ee ? void 0 : ee.getDisplayMedia)
+        var WW;
+        return "function" === typeof(null === (WW = navigator.mediaDevices) || void 0 === WW ? void 0 : WW.getDisplayMedia)
       }() ? {
         canIncludeUi: !0,
         includeUiDisabledReason: null
@@ -497,344 +497,344 @@ export const modules = {
         includeUiDisabledReason: "No UI to include"
       }
     }
-    async function te(ee, ie, He) {
-      return ee ? async function() {
-        const ee = await navigator.mediaDevices.getDisplayMedia({
+    async function TW(WW, iW, OW) {
+      return WW ? async function() {
+        const WW = await navigator.mediaDevices.getDisplayMedia({
           video: !0,
           audio: !1,
           preferCurrentTab: !0,
           selfBrowserSurface: "include"
         });
-        for (const ie of ee.getAudioTracks()) ie.stop(), ee.removeTrack(ie);
-        return ee
-      }(): ie().captureStream(Math.max(1, Math.round(He)))
+        for (const iW of WW.getAudioTracks()) iW.stop(), WW.removeTrack(iW);
+        return WW
+      }(): iW().captureStream(Math.max(1, Math.round(OW)))
     }
-    var Ze = He(39867);
-    let we = !1;
+    var JW = OW(40287);
+    let hW = !1;
 
-    function De(ee) {
-      ee.holdInput(!1), (0, Ze.f)(!1)
+    function HW(WW) {
+      WW.holdInput(!1), (0, JW.d)(!1)
     }
-    async function Pe(ee) {
-      var ie, He;
-      if ((0, Ze.d)() || we) return;
-      const Me = ee();
-      if (!Me) return;
-      we = !0;
-      let Ke = null;
-      const Ue = Me.playbackMarkInTick,
+    async function nW(WW) {
+      var iW, OW;
+      if ((0, JW.b)() || hW) return;
+      const NW = WW();
+      if (!NW) return;
+      hW = !0;
+      let PW = null;
+      const LW = NW.playbackMarkInTick,
         {
-          canIncludeUi: Fe,
-          includeUiDisabledReason: Je
-        } = We();
+          canIncludeUi: cW,
+          includeUiDisabledReason: wW
+        } = yW();
       try {
-        Ke = await async function(ee) {
+        PW = await async function(WW) {
           let {
-            hasPlaybackMark: ie,
-            canIncludeUi: He,
-            includeUiDisabledReason: ye
-          } = ee;
-          const Me = {
+            hasPlaybackMark: iW,
+            canIncludeUi: OW,
+            includeUiDisabledReason: mW
+          } = WW;
+          const NW = {
               options: null
             },
-            Ke = be.NotificationProvider.showCustomPopup({
-              body: ee => (0, Te.jsx)(Be, {
-                hasPlaybackMark: ie,
-                canIncludeUi: He,
-                includeUiDisabledReason: ye,
-                selectionRef: Me,
-                closePopup: ee
+            PW = EW.NotificationProvider.showCustomPopup({
+              body: WW => (0, bW.jsx)(sW, {
+                hasPlaybackMark: iW,
+                canIncludeUi: OW,
+                includeUiDisabledReason: mW,
+                selectionRef: NW,
+                closePopup: WW
               }),
               disableExitButton: !0,
               disablePressBackgroundToClose: !0,
               unlockPointerKey: "replayVideoExportOptions"
             });
-          return "notificationTornDown" === await Ke.getResult() ? null : Me.options
+          return "notificationTornDown" === await PW.getResult() ? null : NW.options
         }({
-          hasPlaybackMark: null !== Ue,
-          canIncludeUi: Fe,
-          includeUiDisabledReason: Je
+          hasPlaybackMark: null !== LW,
+          canIncludeUi: cW,
+          includeUiDisabledReason: wW
         })
       } finally {
-        we = !1
+        hW = !1
       }
-      if (!Ke) return;
-      const oe = null !== (ie = null === (He = Me.startFailure) || void 0 === He ? void 0 : He.call(Me)) && void 0 !== ie ? ie : null;
-      if (null !== oe) return void be.NotificationProvider.showAlertPopup({
+      if (!PW) return;
+      const tW = null !== (iW = null === (OW = NW.startFailure) || void 0 === OW ? void 0 : OW.call(NW)) && void 0 !== iW ? iW : null;
+      if (null !== tW) return void EW.NotificationProvider.showAlertPopup({
         title: "Video export failed",
-        subtitle: oe
+        subtitle: tW
       });
-      if (! function(ee) {
-          return !(0, Ze.d)() && ((0, Ze.f)(!0), ee.holdInput(!0), !0)
-        }(Me)) return;
-      let Re = null;
+      if (! function(WW) {
+          return !(0, JW.b)() && ((0, JW.d)(!0), WW.holdInput(!0), !0)
+        }(NW)) return;
+      let ZW = null;
       try {
-        Re = await te(Ke.includeUi, (() => Me.canvas()), Me.lV)
-      } catch (Ae) {
-        return console.error("Failed to create video stream for export", Ae), De(Me), void be.NotificationProvider.showAlertPopup({
+        ZW = await TW(PW.includeUi, (() => NW.canvas()), NW.Fv)
+      } catch (uW) {
+        return console.error("Failed to create video stream for export", uW), HW(NW), void EW.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: Ae instanceof Error ? Ae.message : "Could not start capture."
+          subtitle: uW instanceof Error ? uW.message : "Could not start capture."
         })
       }
-      let fe = null;
-      const pe = [];
-      let Xe = null,
-        ze = null;
+      let AW = null;
+      const jW = [];
+      let UW = null,
+        kW = null;
       try {
-        var ge, Oe, Pe;
-        fe = Me.playbackSpeed(), Me.closeViewer(), Me.setPlaybackSpeed(1), Me.pause(), Me.seekToTick(null !== Ue && void 0 !== Ue ? Ue : 0);
-        const ee = await async function() {
-          const ee = Ee.Howler.masterGain;
-          if (!Ee.Howler.ctx || !ee) return null;
-          await Ee.Howler.ctx.resume();
-          const ie = Ee.Howler.ctx.createMediaStreamDestination();
-          ee.connect(ie), de = ie;
-          const [He] = ie.stream.getAudioTracks();
-          return null !== He && void 0 !== He ? He : null
+        var KW, SW, nW;
+        AW = NW.playbackSpeed(), NW.closeViewer(), NW.setPlaybackSpeed(1), NW.pause(), NW.seekToTick(null !== LW && void 0 !== LW ? LW : 0);
+        const WW = await async function() {
+          const WW = MW.Howler.masterGain;
+          if (!MW.Howler.ctx || !WW) return null;
+          await MW.Howler.ctx.resume();
+          const iW = MW.Howler.ctx.createMediaStreamDestination();
+          WW.connect(iW), YW = iW;
+          const [OW] = iW.stream.getAudioTracks();
+          return null !== OW && void 0 !== OW ? OW : null
         }();
-        ze = new MediaStream;
-        for (const ye of Re.getVideoTracks()) ze.addTrack(ye);
-        ee && ze.addTrack(ee);
-        const ie = function(ee) {
-          const ie = qe(ke(ee));
-          if (!ie) throw new Error(`No MediaRecorder mime type available for ${ee}`);
-          return ie
-        }(Ke.format);
-        Xe = new MediaRecorder(ze, {
-          mimeType: ie,
+        kW = new MediaStream;
+        for (const mW of ZW.getVideoTracks()) kW.addTrack(mW);
+        WW && kW.addTrack(WW);
+        const iW = function(WW) {
+          const iW = lW(xW(WW));
+          if (!iW) throw new Error(`No MediaRecorder mime type available for ${WW}`);
+          return iW
+        }(PW.format);
+        UW = new MediaRecorder(kW, {
+          mimeType: iW,
           videoBitsPerSecond: 8e6
-        }), Xe.ondataavailable = ee => {
-          ee.data.size > 0 && pe.push(ee.data)
+        }), UW.ondataavailable = WW => {
+          WW.data.size > 0 && jW.push(WW.data)
         };
-        const He = new Promise((ee => {
-          Xe.onstop = () => {
-            ee()
+        const OW = new Promise((WW => {
+          UW.onstop = () => {
+            WW()
           }
         }));
-        await (null === (ge = Me.seekSettled) || void 0 === ge ? void 0 : ge.call(Me));
-        const [Fe] = Re.getVideoTracks();
-        Xe.start(250), Me.play();
-        const Je = await
-        function(ee, ie, He) {
-          return new Promise((ye => {
-            let be = !1;
-            const Me = ee => {
-                be || (be = !0, Ue(), ie.removeEventListener("ended", Ke), ye(ee))
+        await (null === (KW = NW.seekSettled) || void 0 === KW ? void 0 : KW.call(NW));
+        const [cW] = ZW.getVideoTracks();
+        UW.start(250), NW.play();
+        const wW = await
+        function(WW, iW, OW) {
+          return new Promise((mW => {
+            let EW = !1;
+            const NW = WW => {
+                EW || (EW = !0, LW(), iW.removeEventListener("ended", PW), mW(WW))
               },
-              Ke = () => {
-                Me("captureLost")
+              PW = () => {
+                NW("captureLost")
               },
-              Ue = ee.watchPlayback((() => {
-                ee.isPlaying() || Me("completed")
+              LW = WW.watchPlayback((() => {
+                WW.isPlaying() || NW("completed")
               }));
-            ie.addEventListener("ended", Ke), He.onerror = () => {
-              Me("recorderError")
-            }, "ended" !== ie.readyState ? ee.isPlaying() || Me("completed") : Me("captureLost")
+            iW.addEventListener("ended", PW), OW.onerror = () => {
+              NW("recorderError")
+            }, "ended" !== iW.readyState ? WW.isPlaying() || NW("completed") : NW("captureLost")
           }))
-        }(Me, Fe, Xe);
-        if (Me.pause(), "inactive" !== Xe.state && Xe.stop(), await He, "captureLost" === Je) return void be.NotificationProvider.showAlertPopup({
+        }(NW, cW, UW);
+        if (NW.pause(), "inactive" !== UW.state && UW.stop(), await OW, "captureLost" === wW) return void EW.NotificationProvider.showAlertPopup({
           title: "Video export stopped",
           subtitle: "Screen sharing ended before the replay finished. Nothing was saved."
         });
-        if ("recorderError" === Je) return void be.NotificationProvider.showAlertPopup({
+        if ("recorderError" === wW) return void EW.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "The recorder encountered an error. Nothing was saved."
         });
-        const oe = null !== (Oe = null === (Pe = Me.playbackFailure) || void 0 === Pe ? void 0 : Pe.call(Me)) && void 0 !== Oe ? Oe : null;
-        if (null !== oe) return void be.NotificationProvider.showAlertPopup({
+        const tW = null !== (SW = null === (nW = NW.playbackFailure) || void 0 === nW ? void 0 : nW.call(NW)) && void 0 !== SW ? SW : null;
+        if (null !== tW) return void EW.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: `${oe} Nothing was saved.`
+          subtitle: `${tW} Nothing was saved.`
         });
-        const Te = new Blob(pe, {
-          type: ie
+        const bW = new Blob(jW, {
+          type: iW
         });
-        Te.size > 0 ? (0, ye.e)(Te, function(ee, ie) {
-          const He = function(ee) {
-            return "mp4" === ee ? "mp4" : "webm"
-          }(ie);
-          if (ee) return `${ee.replace(/\.bloxdreplay$/i,"")}.${He}`;
-          return `bloxd-replay-${Date.now()}.${He}`
-        }(Me.fileName(), Ke.format)) : be.NotificationProvider.showAlertPopup({
+        bW.size > 0 ? (0, mW.e)(bW, function(WW, iW) {
+          const OW = function(WW) {
+            return "mp4" === WW ? "mp4" : "webm"
+          }(iW);
+          if (WW) return `${WW.replace(/\.bloxdreplay$/i,"")}.${OW}`;
+          return `bloxd-replay-${Date.now()}.${OW}`
+        }(NW.fileName(), PW.format)) : EW.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "No video data was captured. Try again."
         })
-      } catch (Ae) {
-        console.error("Replay video export failed", Ae), be.NotificationProvider.showAlertPopup({
+      } catch (uW) {
+        console.error("Replay video export failed", uW), EW.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: Ae instanceof Error ? Ae.message : "Something went wrong while exporting."
+          subtitle: uW instanceof Error ? uW.message : "Something went wrong while exporting."
         })
       } finally {
-        if (Xe && "inactive" !== Xe.state) try {
-          Xe.stop()
-        } catch (Ae) {
-          console.error("Failed to stop MediaRecorder", Ae)
+        if (UW && "inactive" !== UW.state) try {
+          UW.stop()
+        } catch (uW) {
+          console.error("Failed to stop MediaRecorder", uW)
         }! function() {
-          const ee = Ee.Howler.masterGain;
-          if (de && ee) {
+          const WW = MW.Howler.masterGain;
+          if (YW && WW) {
             try {
-              ee.disconnect(de)
-            } catch (Ae) {
-              console.error("Failed to disconnect Howler export tee", Ae)
+              WW.disconnect(YW)
+            } catch (uW) {
+              console.error("Failed to disconnect Howler export tee", uW)
             }
-            de = null
-          } else de = null
+            YW = null
+          } else YW = null
         }();
-        for (const ee of Re.getTracks()) ee.stop();
-        if (ze)
-          for (const ee of ze.getTracks()) ee.stop();
-        null !== fe && Me.setPlaybackSpeed(fe), Me.pause(), De(Me), Me.reopenViewer()
+        for (const WW of ZW.getTracks()) WW.stop();
+        if (kW)
+          for (const WW of kW.getTracks()) WW.stop();
+        null !== AW && NW.setPlaybackSpeed(AW), NW.pause(), HW(NW), NW.reopenViewer()
       }
     }
   },
-  5338: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      Howl: () => be.Howl,
-      Howler: () => be.Howler,
-      musicOutput: () => pe,
-      readyAudioContext: () => Xe
+  5615: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      Howl: () => EW.Howl,
+      Howler: () => EW.Howler,
+      musicOutput: () => jW,
+      readyAudioContext: () => UW
     });
-    var ye, be = He(5340),
-      Me = He(3791),
-      Ke = He(5055);
-    const Ue = be.Howler;
+    var mW, EW = OW(5618),
+      NW = OW(4653),
+      PW = OW(5356);
+    const LW = EW.Howler;
 
-    function Fe() {
-      var ee, ie;
-      if (Ue.ctx || !Ue.usingWebAudio || "undefined" === typeof AudioContext || !(0, Ke.f)()) return;
-      const He = navigator.audioSession;
-      let ye;
-      "auto" === (null === He || void 0 === He ? void 0 : He.type) && (He.type = "ambient");
+    function cW() {
+      var WW, iW;
+      if (LW.ctx || !LW.usingWebAudio || "undefined" === typeof AudioContext || !(0, PW.k)()) return;
+      const OW = navigator.audioSession;
+      let mW;
+      "auto" === (null === OW || void 0 === OW ? void 0 : OW.type) && (OW.type = "ambient");
       try {
-        ye = new AudioContext({
+        mW = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const be = ye.createGain();
-      be.gain.setValueAtTime(Ue._muted ? 0 : null !== (ee = Ue._volume) && void 0 !== ee ? ee : 1, ye.currentTime), be.connect(ye.destination), Ue.ctx = ye, Ue.masterGain = be, null === (ie = Ue._setup) || void 0 === ie || ie.call(Ue)
+      const EW = mW.createGain();
+      EW.gain.setValueAtTime(LW._muted ? 0 : null !== (WW = LW._volume) && void 0 !== WW ? WW : 1, mW.currentTime), EW.connect(mW.destination), LW.ctx = mW, LW.masterGain = EW, null === (iW = LW._setup) || void 0 === iW || iW.call(LW)
     }
-    Ue._mobileUnloaded = !0;
-    const Je = Ue.volume.bind(be.Howler);
-    Ue.volume = function() {
-      return Fe(), Je(...arguments)
+    LW._mobileUnloaded = !0;
+    const wW = LW.volume.bind(EW.Howler);
+    LW.volume = function() {
+      return cW(), wW(...arguments)
     };
-    const oe = Ue.mute.bind(be.Howler);
-    Ue.mute = ee => (Fe(), oe(ee));
-    const Re = be.Howl.prototype,
-      ke = Re.init;
+    const tW = LW.mute.bind(EW.Howler);
+    LW.mute = WW => (cW(), tW(WW));
+    const ZW = EW.Howl.prototype,
+      xW = ZW.init;
 
-    function qe() {
-      for (; Ue._html5AudioPool.length < Ue.html5PoolSize;) {
-        const ee = new Audio;
-        ee._unlocked = !0, Ue._releaseHtml5Audio(ee)
+    function lW() {
+      for (; LW._html5AudioPool.length < LW.html5PoolSize;) {
+        const WW = new Audio;
+        WW._unlocked = !0, LW._releaseHtml5Audio(WW)
       }
-      for (const ie of Ue._howls)
-        if (!ie._webAudio)
-          for (const He of ie._getSoundIds()) {
-            var ee;
-            const ye = null === (ee = ie._soundById(He)) || void 0 === ee ? void 0 : ee._node;
-            ye && !ye._unlocked && (ye._unlocked = !0, ye.load())
+      for (const iW of LW._howls)
+        if (!iW._webAudio)
+          for (const OW of iW._getSoundIds()) {
+            var WW;
+            const mW = null === (WW = iW._soundById(OW)) || void 0 === WW ? void 0 : WW._node;
+            mW && !mW._unlocked && (mW._unlocked = !0, mW.load())
           }
     }
-    Re.init = function(ee) {
-      return Fe(), ke.call(this, ee)
-    }, (0, Ke.f)() && (Ue._unlockAudio = () => {
-      const ee = Ue.ctx;
-      if (Ue._audioUnlocked || !ee) return;
-      Ue.autoUnlock = !1;
-      const ie = ee.createBuffer(1, 1, 22050);
-      Ue._scratchBuffer = ie;
-      const He = new AbortController;
-      let ye = "afterPaint";
-      const be = () => {
-          var ye;
-          if (Ue._audioUnlocked) return;
-          null === (ye = Ue._autoResume) || void 0 === ye || ye.call(Ue);
-          const be = ee.createBufferSource();
-          be.buffer = ie, be.connect(ee.destination), be.start(0), ee.resume().catch((() => {})), be.onended = () => {
-            be.disconnect(0), Ue._audioUnlocked = !0, He.abort();
-            for (const ee of Ue._howls) ee._emit("unlock")
+    ZW.init = function(WW) {
+      return cW(), xW.call(this, WW)
+    }, (0, PW.k)() && (LW._unlockAudio = () => {
+      const WW = LW.ctx;
+      if (LW._audioUnlocked || !WW) return;
+      LW.autoUnlock = !1;
+      const iW = WW.createBuffer(1, 1, 22050);
+      LW._scratchBuffer = iW;
+      const OW = new AbortController;
+      let mW = "afterPaint";
+      const EW = () => {
+          var mW;
+          if (LW._audioUnlocked) return;
+          null === (mW = LW._autoResume) || void 0 === mW || mW.call(LW);
+          const EW = WW.createBufferSource();
+          EW.buffer = iW, EW.connect(WW.destination), EW.start(0), WW.resume().catch((() => {})), EW.onended = () => {
+            EW.disconnect(0), LW._audioUnlocked = !0, OW.abort();
+            for (const WW of LW._howls) WW._emit("unlock")
           }
         },
-        Fe = () => {
-          qe(), be()
+        cW = () => {
+          lW(), EW()
         },
-        Je = ie => {
-          if (qe(), "inTap" === ye) {
-            if ("running" === ee.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), be()
-          } else "afterPaint" === ye && (ye = "queued", (0, Me.c)(ie.timeStamp, (() => {
-            ye = "inTap", be()
+        wW = iW => {
+          if (lW(), "inTap" === mW) {
+            if ("running" === WW.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), EW()
+          } else "afterPaint" === mW && (mW = "queued", (0, NW.b)(iW.timeStamp, (() => {
+            mW = "inTap", EW()
           })))
         };
-      for (const Me of ["touchstart", "touchend"]) document.addEventListener(Me, Fe, {
+      for (const NW of ["touchstart", "touchend"]) document.addEventListener(NW, cW, {
         capture: !0,
-        signal: He.signal
+        signal: OW.signal
       });
-      for (const Me of Ke.b) document.addEventListener(Me, Je, {
+      for (const NW of PW.d) document.addEventListener(NW, wW, {
         capture: !0,
-        signal: He.signal
+        signal: OW.signal
       })
     });
-    let fe = 0;
-    const Te = null === (ye = Ue._autoSuspend) || void 0 === ye ? void 0 : ye.bind(be.Howler);
+    let AW = 0;
+    const bW = null === (mW = LW._autoSuspend) || void 0 === mW ? void 0 : mW.bind(EW.Howler);
 
-    function pe() {
-      Xe();
+    function jW() {
+      UW();
       const {
-        ctx: ee,
-        masterGain: ie
-      } = Ue;
-      return ee && ie ? {
-        ctx: ee,
-        destination: ie,
-        holdAwake: ee => {
-          var ie, He;
-          (fe += ee ? 1 : -1, ee) ? null === (ie = Ue._autoResume) || void 0 === ie || ie.call(Ue): null === (He = Ue._autoSuspend) || void 0 === He || He.call(Ue)
+        ctx: WW,
+        masterGain: iW
+      } = LW;
+      return WW && iW ? {
+        ctx: WW,
+        destination: iW,
+        holdAwake: WW => {
+          var iW, OW;
+          (AW += WW ? 1 : -1, WW) ? null === (iW = LW._autoResume) || void 0 === iW || iW.call(LW): null === (OW = LW._autoSuspend) || void 0 === OW || OW.call(LW)
         },
         wake: () => {
-          var ie;
-          "running" !== ee.state && (null === (ie = Ue._autoResume) || void 0 === ie || ie.call(Ue), ee.resume().catch((() => {})))
+          var iW;
+          "running" !== WW.state && (null === (iW = LW._autoResume) || void 0 === iW || iW.call(LW), WW.resume().catch((() => {})))
         }
       } : null
     }
 
-    function Xe() {
-      var ee;
-      (Ue.volume(), Ue.ctx && Ue.autoUnlock) && (null === (ee = Ue._unlockAudio) || void 0 === ee || ee.call(Ue))
+    function UW() {
+      var WW;
+      (LW.volume(), LW.ctx && LW.autoUnlock) && (null === (WW = LW._unlockAudio) || void 0 === WW || WW.call(LW))
     }
-    Te && (Ue._autoSuspend = () => fe > 0 ? be.Howler : Te())
+    bW && (LW._autoSuspend = () => AW > 0 ? EW.Howler : bW())
   },
-  54196: (ee, ie, He) => {
-    He.d(ie, {
-      b: () => ye,
-      e: () => be
+  54737: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW,
+      e: () => EW
     });
-    const ye = ["recording", "freecam", "keyframe"];
+    const mW = ["recording", "freecam", "keyframe"];
 
-    function be() {
-      const ee = crypto.getRandomValues(new Uint32Array(2));
-      return BigInt(ee[1]) << 32n | BigInt(ee[0])
+    function EW() {
+      const WW = crypto.getRandomValues(new Uint32Array(2));
+      return BigInt(WW[1]) << 32n | BigInt(WW[0])
     }
   },
-  63791: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      HOLD_TIMEOUT_MS: () => Je,
-      ReplayViewer: () => Re
+  64370: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      HOLD_TIMEOUT_MS: () => wW,
+      ReplayViewer: () => ZW
     });
-    var ye = He(37775),
-      be = He(37813),
-      Me = He(37807),
-      Ke = He(37828),
-      Ue = He(5271),
-      Fe = He(54196);
-    const Je = 1e4,
-      oe = new Set(["Zf"]);
-    class Re {
-      constructor(ee) {
-        var ie;
-        this.deps = ee, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (ie = ee.now) && void 0 !== ie ? ie : () => performance.now()
+    var mW = OW(38105),
+      EW = OW(38146),
+      NW = OW(38142),
+      PW = OW(38159),
+      LW = OW(5546),
+      cW = OW(54737);
+    const wW = 1e4,
+      tW = new Set(["kA"]);
+    class ZW {
+      constructor(WW) {
+        var iW;
+        this.deps = WW, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (iW = WW.now) && void 0 !== iW ? iW : () => performance.now()
       }
       get inPlayback() {
         return this.playback
@@ -843,123 +843,123 @@ export const modules = {
         return this.lastView
       }
       get isOpen() {
-        return null !== this.lastView && this.lastView.state !== Ue.Yc.None
+        return null !== this.lastView && this.lastView.state !== LW.td.None
       }
       get keyframes() {
         return this.deps.client.keyframes()
       }
-      get lJ() {
+      get BL() {
         return [...this.holds.keys()]
       }
       get savePending() {
         return null !== this.pendingSave
       }
       get saveRefusal() {
-        return this.cropping ? ye.d.cropBusy.text : null
+        return this.cropping ? mW.e.cropBusy.text : null
       }
       get cropping() {
         return this.cropAsked || this.cropRunning
       }
-      async open(ee, ie) {
-        var He, Me, Ke, Fe;
+      async open(WW, iW) {
+        var OW, NW, PW, cW;
         const {
-          client: Je
+          client: wW
         } = this.deps;
         if (!this.playback) {
-          if (!Je.setPlayback(!0)) throw new Error(ye.d.cantOpen.text);
+          if (!wW.setPlayback(!0)) throw new Error(mW.e.cantOpen.text);
           this.playback = !0
         }
         this.hold("opening"), this.loadingOpens++;
-        const oe = this.epoch;
-        let Re;
+        const tW = this.epoch;
+        let ZW;
         try {
-          Re = await Je.open(ee, (() => (0, be.c)(ee, ie)))
+          ZW = await wW.open(WW, (() => (0, EW.b)(WW, iW)))
         } finally {
           this.loadingOpens--
         }
-        if (oe !== this.epoch && "reloading" !== Re) throw new Error(ye.d.coreStopped.text);
-        if ("opening" !== Re) {
+        if (tW !== this.epoch && "reloading" !== ZW) throw new Error(mW.e.coreStopped.text);
+        if ("opening" !== ZW) {
           this.opening || 0 !== this.loadingOpens || this.release("opening");
-          const ee = function(ee) {
-            switch (ee) {
+          const WW = function(WW) {
+            switch (WW) {
               case "reloading":
                 return null;
               case "stopped":
-              case Ue.Rc.ModuleTrap:
-                return ye.d.coreStopped;
-              case Ue.Rc.ModuleLoad:
-                return ye.d.viewerLoadFailed;
-              case Ue.Rc.TooLarge:
-                return ye.d.cantOpen
+              case LW.gd.ModuleTrap:
+                return mW.e.coreStopped;
+              case LW.gd.ModuleLoad:
+                return mW.e.viewerLoadFailed;
+              case LW.gd.TooLarge:
+                return mW.e.cantOpen
             }
-          }(Re);
-          if (null === ee) return;
-          throw new Error(ee.text)
+          }(ZW);
+          if (null === WW) return;
+          throw new Error(WW.text)
         }
-        return this.rejectSave(new Error(ye.d.saveClosed.text)), this.fileName = null !== (He = null !== (Me = ie.fileName) && void 0 !== Me ? Me : null === (Ke = ie.fileHandle) || void 0 === Ke ? void 0 : Ke.name) && void 0 !== He ? He : null, this.fileHandle = null !== (Fe = ie.fileHandle) && void 0 !== Fe ? Fe : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((ee, ie) => {
+        return this.rejectSave(new Error(mW.e.saveClosed.text)), this.fileName = null !== (OW = null !== (NW = iW.fileName) && void 0 !== NW ? NW : null === (PW = iW.fileHandle) || void 0 === PW ? void 0 : PW.name) && void 0 !== OW ? OW : null, this.fileHandle = null !== (cW = iW.fileHandle) && void 0 !== cW ? cW : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((WW, iW) => {
           this.pendingOpen = {
-            resolve: ee,
-            reject: ie
+            resolve: WW,
+            reject: iW
           }
         }))
       }
       play() {
-        this.holds.has("Zf") || this.deps.client.play()
+        this.holds.has("kA") || this.deps.client.play()
       }
       pause() {
         this.deps.client.pause()
       }
       holdForShaderPackFailure() {
-        this.isOpen && this.pause(), this.hold("Zf")
+        this.isOpen && this.pause(), this.hold("kA")
       }
-      seek(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const He = this.lastView;
-        null !== He && (ie || ee < He.YR) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(ee, ie)
+      seek(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const OW = this.lastView;
+        null !== OW && (iW || WW < OW.hZ) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(WW, iW)
       }
-      setSpeed(ee) {
-        this.deps.client.setSpeed(ee)
+      setSpeed(WW) {
+        this.deps.client.setSpeed(WW)
       }
-      setCameraMode(ee) {
-        this.deps.client.setCameraMode(ee)
+      setCameraMode(WW) {
+        this.deps.client.setCameraMode(WW)
       }
       cycleCameraMode() {
-        const ee = this.lastView;
-        null !== ee && ee.state !== Ue.Yc.None && this.setCameraMode(Fe.b[(Fe.b.indexOf(ee.cameraMode) + 1) % Fe.b.length])
+        const WW = this.lastView;
+        null !== WW && WW.state !== LW.td.None && this.setCameraMode(cW.b[(cW.b.indexOf(WW.cameraMode) + 1) % cW.b.length])
       }
       addKeyframe() {
         this.edited(this.deps.client.addKeyframe())
       }
-      setKeyframe(ee) {
-        this.edited(this.deps.client.setKeyframe(ee))
+      setKeyframe(WW) {
+        this.edited(this.deps.client.setKeyframe(WW))
       }
-      moveKeyframe(ee, ie) {
-        this.edited(this.deps.client.moveKeyframe(ee, ie))
+      moveKeyframe(WW, iW) {
+        this.edited(this.deps.client.moveKeyframe(WW, iW))
       }
-      deleteKeyframes(ee, ie) {
-        this.edited(this.deps.client.deleteKeyframes(ee, ie))
+      deleteKeyframes(WW, iW) {
+        this.edited(this.deps.client.deleteKeyframes(WW, iW))
       }
-      setMark(ee) {
-        this.edited(this.deps.client.setMark(ee))
+      setMark(WW) {
+        this.edited(this.deps.client.setMark(WW))
       }
-      crop(ee, ie) {
-        return !(ie <= ee) && (null !== this.pendingSave ? (this.deps.notify(ye.d.saveBusy), !1) : !!this.deps.client.crop(ee, ie) && (this.cropAsked = !0, this.hold("crop"), !0))
+      crop(WW, iW) {
+        return !(iW <= WW) && (null !== this.pendingSave ? (this.deps.notify(mW.e.saveBusy), !1) : !!this.deps.client.crop(WW, iW) && (this.cropAsked = !0, this.hold("crop"), !0))
       }
       save() {
-        return null !== this.pendingSave ? Promise.reject(new Error(ye.d.saveBusy.text)) : new Promise(((ee, ie) => {
-          const He = {
-            resolve: ee,
-            reject: ie
+        return null !== this.pendingSave ? Promise.reject(new Error(mW.e.saveBusy.text)) : new Promise(((WW, iW) => {
+          const OW = {
+            resolve: WW,
+            reject: iW
           };
-          this.pendingSave = He, this.editsAtSave = this.edits, this.deps.client.save((0, Fe.e)()).then((ee => {
-            this.pendingSave === He && this.saveStarted(ee)
-          }), (ee => {
-            this.pendingSave === He && this.rejectSave(ee instanceof Error ? ee : new Error(String(ee)))
+          this.pendingSave = OW, this.editsAtSave = this.edits, this.deps.client.save((0, cW.e)()).then((WW => {
+            this.pendingSave === OW && this.saveStarted(WW)
+          }), (WW => {
+            this.pendingSave === OW && this.rejectSave(WW instanceof Error ? WW : new Error(String(WW)))
           }))
         }))
       }
-      saveStarted(ee) {
-        switch (ee) {
+      saveStarted(WW) {
+        switch (WW) {
           case "sealing":
             return;
           case "busy":
@@ -970,40 +970,40 @@ export const modules = {
             return void this.saveFailed(!1)
         }
       }
-      markSaved(ee, ie) {
-        var He, ye;
-        this.fileHandle = ee, this.fileName = null !== (He = null !== (ye = null === ee || void 0 === ee ? void 0 : ee.name) && void 0 !== ye ? ye : ie) && void 0 !== He ? He : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+      markSaved(WW, iW) {
+        var OW, mW;
+        this.fileHandle = WW, this.fileName = null !== (OW = null !== (mW = null === WW || void 0 === WW ? void 0 : WW.name) && void 0 !== mW ? mW : iW) && void 0 !== OW ? OW : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
       }
       end() {
-        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(ye.d.coreStopped.text)), this.rejectSave(new Error(ye.d.saveClosed.text)), this.lastView = null, this.deps.onChange()
+        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(mW.e.coreStopped.text)), this.rejectSave(new Error(mW.e.saveClosed.text)), this.lastView = null, this.deps.onChange()
       }
       afterFrame() {
-        var ee, ie, He;
-        const ye = this.deps.client.view(),
-          be = ye !== this.lastView;
-        this.lastView = ye, this.opening && null !== ye && ye.state !== Ue.Yc.None && ye.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, Ke.h)()), this.cropAsked ? (this.cropAsked = !1, null !== ye && ye.state === Ue.Yc.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== ye && ye.state !== Ue.Yc.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
-        const Me = 0 === this.settleFrames && 0 === (null !== (ee = null === (ie = (He = this.deps).meshPending) || void 0 === ie ? void 0 : ie.call(He)) && void 0 !== ee ? ee : 0);
-        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && Me && this.release("opening"), this.holds.has("seek") && Me && this.release("seek"), this.holds.has("crop") && !this.cropRunning && Me && this.release("crop");
-        const Fe = this.now();
-        for (const [Ke, Ue] of this.holds) !oe.has(Ke) && Fe - Ue >= Je && this.release(Ke);
-        this.saveRefused && !this.cropping && this.saveFailed(!1), be && this.deps.onChange()
+        var WW, iW, OW;
+        const mW = this.deps.client.view(),
+          EW = mW !== this.lastView;
+        this.lastView = mW, this.opening && null !== mW && mW.state !== LW.td.None && mW.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, PW.i)()), this.cropAsked ? (this.cropAsked = !1, null !== mW && mW.state === LW.td.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== mW && mW.state !== LW.td.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+        const NW = 0 === this.settleFrames && 0 === (null !== (WW = null === (iW = (OW = this.deps).meshPending) || void 0 === iW ? void 0 : iW.call(OW)) && void 0 !== WW ? WW : 0);
+        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && NW && this.release("opening"), this.holds.has("seek") && NW && this.release("seek"), this.holds.has("crop") && !this.cropRunning && NW && this.release("crop");
+        const cW = this.now();
+        for (const [PW, LW] of this.holds) !tW.has(PW) && cW - LW >= wW && this.release(PW);
+        this.saveRefused && !this.cropping && this.saveFailed(!1), EW && this.deps.onChange()
       }
       cropped() {
-        (0, Ke.h)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
+        (0, PW.i)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
       }
-      onFailed(ee) {
-        switch (ee.reason) {
-          case Ue.Rc.TooLarge:
+      onFailed(WW) {
+        switch (WW.reason) {
+          case LW.gd.TooLarge:
             break;
-          case Ue.Rc.Open:
-          case Ue.Rc.NothingStaged: {
+          case LW.gd.Open:
+          case LW.gd.NothingStaged: {
             this.opening = !1, this.release("opening");
-            const ie = (0, Me.g)(ee.version) ? ye.d.replayTooOld : ye.d.cantOpen;
-            null === this.pendingOpen && this.deps.notify(ie), this.settleOpen(new Error(ie.text));
+            const iW = (0, NW.c)(WW.version) ? mW.e.replayTooOld : mW.e.cantOpen;
+            null === this.pendingOpen && this.deps.notify(iW), this.settleOpen(new Error(iW.text));
             break
           }
-          case Ue.Rc.Crop:
-            if (ee.code === Ue.Qc.Busy) {
+          case LW.gd.Crop:
+            if (WW.code === LW.fd.Busy) {
               this.cropBusy();
               break
             }
@@ -1011,166 +1011,166 @@ export const modules = {
               this.saveFailed(!1);
               break
             }
-            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(ye.d.cropFailed);
+            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(mW.e.cropFailed);
             break;
-          case Ue.Rc.ModuleTrap:
-          case Ue.Rc.ModuleLoad:
-          case Ue.Rc.Port:
-            this.moduleEnded(ee.reason === Ue.Rc.ModuleTrap ? ye.d.coreStopped : ye.d.cantOpen);
+          case LW.gd.ModuleTrap:
+          case LW.gd.ModuleLoad:
+          case LW.gd.Port:
+            this.moduleEnded(WW.reason === LW.gd.ModuleTrap ? mW.e.coreStopped : mW.e.cantOpen);
             break;
-          case Ue.Rc.NotLive:
+          case LW.gd.NotLive:
             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
             break;
           default:
-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${ee.reason})`), this.seekAsked = !1, this.release("seek")
+            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${WW.reason})`), this.seekAsked = !1, this.release("seek")
         }
         this.deps.onChange()
       }
-      moduleEnded(ee) {
-        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(ee), this.settleOpen(new Error(ee.text))
+      moduleEnded(WW) {
+        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(WW), this.settleOpen(new Error(WW.text))
       }
-      saveDone(ee) {
-        const ie = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === ie || void 0 === ie || ie.resolve(ee)
+      saveDone(WW) {
+        const iW = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === iW || void 0 === iW || iW.resolve(WW)
       }
-      saveFailed(ee) {
-        this.rejectSave(new Error(ee ? ye.d.saveBusy.text : "The replay couldn't be saved"))
+      saveFailed(WW) {
+        this.rejectSave(new Error(WW ? mW.e.saveBusy.text : "The replay couldn't be saved"))
       }
-      edited(ee) {
-        ee && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
+      edited(WW) {
+        WW && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
       }
       cropBusy() {
-        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(ye.d.cropBusy.text)) : this.deps.notify(ye.d.cropBusy)
+        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(mW.e.cropBusy.text)) : this.deps.notify(mW.e.cropBusy)
       }
       resetInFlight() {
         this.opening = !1, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0
       }
-      settleOpen(ee) {
-        const ie = this.pendingOpen;
-        this.pendingOpen = null, null === ee ? null === ie || void 0 === ie || ie.resolve() : null === ie || void 0 === ie || ie.reject(ee)
+      settleOpen(WW) {
+        const iW = this.pendingOpen;
+        this.pendingOpen = null, null === WW ? null === iW || void 0 === iW || iW.resolve() : null === iW || void 0 === iW || iW.reject(WW)
       }
-      rejectSave(ee) {
-        const ie = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === ie || void 0 === ie || ie.reject(ee)
+      rejectSave(WW) {
+        const iW = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === iW || void 0 === iW || iW.reject(WW)
       }
-      hold(ee) {
-        const ie = 0 === this.holds.size;
-        this.holds.set(ee, this.now()), ie && this.deps.setHoldDraws(!0)
+      hold(WW) {
+        const iW = 0 === this.holds.size;
+        this.holds.set(WW, this.now()), iW && this.deps.setHoldDraws(!0)
       }
-      release(ee) {
-        this.holds.delete(ee) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
+      release(WW) {
+        this.holds.delete(WW) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
       }
       releaseAll() {
         this.holds.size > 0 && (this.holds.clear(), this.deps.setHoldDraws(!1))
       }
     }
   },
-  63783: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      MESH_TAIL_MS: () => Je,
-      PLAY_START_TIMEOUT_MS: () => Ue,
-      startWasmReplayVideoExport: () => Re
+  64363: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      MESH_TAIL_MS: () => wW,
+      PLAY_START_TIMEOUT_MS: () => LW,
+      startWasmReplayVideoExport: () => ZW
     });
-    var ye = He(40101),
-      be = He(63791),
-      Me = He(5271),
-      Ke = He(2503);
-    const Ue = be.HOLD_TIMEOUT_MS + 5e3,
-      Fe = 50,
-      Je = 200;
+    var mW = OW(40482),
+      EW = OW(64370),
+      NW = OW(5546),
+      PW = OW(3310);
+    const LW = EW.HOLD_TIMEOUT_MS + 5e3,
+      cW = 50,
+      wW = 200;
 
-    function oe(ee) {
-      var ie;
-      return (null === (ie = ee.view) || void 0 === ie ? void 0 : ie.state) === Me.Yc.Cropping || ee.lJ.includes("crop")
+    function tW(WW) {
+      var iW;
+      return (null === (iW = WW.view) || void 0 === iW ? void 0 : iW.state) === NW.td.Cropping || WW.BL.includes("crop")
     }
 
-    function Re(ee) {
-      return (0, ye.e)((() => function(ee) {
-        var ie, He, ye, be, Re, ke;
-        const qe = ee.viewer(),
-          fe = null !== (ie = null === qe || void 0 === qe ? void 0 : qe.view) && void 0 !== ie ? ie : null,
-          Te = ee.canvas();
-        if (!qe || !fe || fe.state === Me.Yc.None || 0 === fe.totalTicks || !Te || oe(qe)) return null;
-        const pe = null !== (He = ee.now) && void 0 !== He ? He : () => performance.now(),
-          Xe = qe.id,
-          ze = () => {
-            const ie = ee.viewer();
-            return ie === qe && ie.id === Xe && ie.isOpen ? ie : null
+    function ZW(WW) {
+      return (0, mW.d)((() => function(WW) {
+        var iW, OW, mW, EW, ZW, xW;
+        const lW = WW.viewer(),
+          AW = null !== (iW = null === lW || void 0 === lW ? void 0 : lW.view) && void 0 !== iW ? iW : null,
+          bW = WW.canvas();
+        if (!lW || !AW || AW.state === NW.td.None || 0 === AW.totalTicks || !bW || tW(lW)) return null;
+        const jW = null !== (OW = WW.now) && void 0 !== OW ? OW : () => performance.now(),
+          UW = lW.id,
+          kW = () => {
+            const iW = WW.viewer();
+            return iW === lW && iW.id === UW && iW.isOpen ? iW : null
           },
-          Be = Math.min(null !== (ye = null === (be = fe.mark) || void 0 === be ? void 0 : be.outTick) && void 0 !== ye ? ye : 1 / 0, fe.totalTicks - 1);
-        let Ee = null,
-          ge = !1;
-        const Oe = () => {
-          var ee, ie;
-          return (null === (ee = ze()) || void 0 === ee || null === (ie = ee.view) || void 0 === ie ? void 0 : ie.state) === Me.Yc.Playing
+          sW = Math.min(null !== (mW = null === (EW = AW.mark) || void 0 === EW ? void 0 : EW.outTick) && void 0 !== mW ? mW : 1 / 0, AW.totalTicks - 1);
+        let MW = null,
+          KW = !1;
+        const SW = () => {
+          var WW, iW;
+          return (null === (WW = kW()) || void 0 === WW || null === (iW = WW.view) || void 0 === iW ? void 0 : iW.state) === NW.td.Playing
         };
         return {
-          lV: Me.md,
-          playbackMarkInTick: null !== (Re = null === (ke = fe.mark) || void 0 === ke ? void 0 : ke.inTick) && void 0 !== Re ? Re : null,
+          Fv: NW.Jd,
+          playbackMarkInTick: null !== (ZW = null === (xW = AW.mark) || void 0 === xW ? void 0 : xW.inTick) && void 0 !== ZW ? ZW : null,
           startFailure: () => {
-            const ee = ze();
-            return null === ee ? "Another replay opened. Export it again from there." : oe(ee) ? "Wait for the crop to finish, then export again." : null
+            const WW = kW();
+            return null === WW ? "Another replay opened. Export it again from there." : tW(WW) ? "Wait for the crop to finish, then export again." : null
           },
           fileName: () => {
-            var ee, ie;
-            return null !== (ee = null === (ie = ze()) || void 0 === ie ? void 0 : ie.fileName) && void 0 !== ee ? ee : null
+            var WW, iW;
+            return null !== (WW = null === (iW = kW()) || void 0 === iW ? void 0 : iW.fileName) && void 0 !== WW ? WW : null
           },
           playbackSpeed: () => {
-            var ee, ie, He;
-            return null !== (ee = null === (ie = ze()) || void 0 === ie || null === (He = ie.view) || void 0 === He ? void 0 : He.speed) && void 0 !== ee ? ee : 1
+            var WW, iW, OW;
+            return null !== (WW = null === (iW = kW()) || void 0 === iW || null === (OW = iW.view) || void 0 === OW ? void 0 : OW.speed) && void 0 !== WW ? WW : 1
           },
-          setPlaybackSpeed: ee => {
-            var ie;
-            null === (ie = ze()) || void 0 === ie || ie.setSpeed(ee)
+          setPlaybackSpeed: WW => {
+            var iW;
+            null === (iW = kW()) || void 0 === iW || iW.setSpeed(WW)
           },
           play: () => {
-            var ee;
-            ge = !1, Ee = pe(), null === (ee = ze()) || void 0 === ee || ee.play()
+            var WW;
+            KW = !1, MW = jW(), null === (WW = kW()) || void 0 === WW || WW.play()
           },
           pause: () => {
-            var ee;
-            null === (ee = ze()) || void 0 === ee || ee.pause()
+            var WW;
+            null === (WW = kW()) || void 0 === WW || WW.pause()
           },
-          seekToTick: ee => {
-            var ie;
-            null === (ie = ze()) || void 0 === ie || ie.seek(ee, !0)
+          seekToTick: WW => {
+            var iW;
+            null === (iW = kW()) || void 0 === iW || iW.seek(WW, !0)
           },
-          seekSettled: () => new Promise((ee => {
-            const ie = setInterval((() => {
-              const He = ze();
-              null === He ? (clearInterval(ie), ee()) : He.lJ.includes("seek") || (clearInterval(ie), setTimeout(ee, Je))
-            }), Fe)
+          seekSettled: () => new Promise((WW => {
+            const iW = setInterval((() => {
+              const OW = kW();
+              null === OW ? (clearInterval(iW), WW()) : OW.BL.includes("seek") || (clearInterval(iW), setTimeout(WW, wW))
+            }), cW)
           })),
           isPlaying: () => {
-            var ee, ie, He;
-            return null !== Ee && null !== ze() && (!!Oe() || !ge && (null !== (ee = null === (ie = ze()) || void 0 === ie || null === (He = ie.view) || void 0 === He ? void 0 : He.YR) && void 0 !== ee ? ee : 0) < Be && pe() - Ee < Ue)
+            var WW, iW, OW;
+            return null !== MW && null !== kW() && (!!SW() || !KW && (null !== (WW = null === (iW = kW()) || void 0 === iW || null === (OW = iW.view) || void 0 === OW ? void 0 : OW.hZ) && void 0 !== WW ? WW : 0) < sW && jW() - MW < LW)
           },
-          watchPlayback: ie => {
-            const He = ee.watchViewer((() => {
-                ge ||= null !== Ee && Oe(), ie()
+          watchPlayback: iW => {
+            const OW = WW.watchViewer((() => {
+                KW ||= null !== MW && SW(), iW()
               })),
-              ye = setTimeout(ie, Ue + 1);
+              mW = setTimeout(iW, LW + 1);
             return () => {
-              clearTimeout(ye), He()
+              clearTimeout(mW), OW()
             }
           },
           playbackFailure: () => {
-            var ee, ie;
-            const He = ze();
-            return null === He ? "The replay closed before the video finished." : (null !== (ee = null === (ie = He.view) || void 0 === ie ? void 0 : ie.YR) && void 0 !== ee ? ee : 0) >= Be ? null : ge ? "The replay stopped before the video finished." : "The replay didn't start playing."
+            var WW, iW;
+            const OW = kW();
+            return null === OW ? "The replay closed before the video finished." : (null !== (WW = null === (iW = OW.view) || void 0 === iW ? void 0 : iW.hZ) && void 0 !== WW ? WW : 0) >= sW ? null : KW ? "The replay stopped before the video finished." : "The replay didn't start playing."
           },
-          canvas: () => Te,
+          canvas: () => bW,
           closeViewer: () => {
-            ee.requestViewer("close")
+            WW.requestViewer("close")
           },
           reopenViewer: () => {
-            ee.requestViewer("open")
+            WW.requestViewer("open")
           },
-          holdInput: Ke.f
+          holdInput: PW.g
         }
-      }(ee)))
+      }(WW)))
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

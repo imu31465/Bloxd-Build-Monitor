@@ -1,19 +1,35 @@
 export const id = 672;
 export const ids = [672];
 export const modules = {
-  63952: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      postprocessVertexShaderWGSL: () => Ke
+  64422: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      WorldCodeAiOutOfUsage: () => LW
     });
-    var ye = He(40954);
-    const be = "postprocessVertexShader",
-      Me = "attribute position: vec2<f32>;uniform scale: vec2<f32>;varying vUV: vec2<f32>;const madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.vUV=(vertexInputs.position*madd+madd)*uniforms.scale;vertexOutputs.position=vec4(vertexInputs.position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
-    ye.d.ShadersStoreWGSL[be] || (ye.d.ShadersStoreWGSL[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
+    var mW = OW(1172),
+      EW = OW(3210),
+      NW = OW(1532),
+      PW = OW(1283);
+
+    function LW(WW) {
+      let {
+        onGetSuperRank: iW
+      } = WW;
+      const {
+        t: OW
+      } = (0, mW.B)(), LW = (0, EW.o)(Date.now()), cW = OW(LW.nameKey);
+      return (0, PW.jsxs)("div", {
+        className: "WorldCodeAiOutOfUsage",
+        children: [(0, PW.jsx)("p", {
+          className: "WorldCodeAiOutOfUsageText",
+          children: `You don't have any Super Bot.xd usage left - use Bot.xd or get ${cW} for more usage!`
+        }), (0, PW.jsx)(NW.n, {
+          className: "WorldCodeAiOutOfUsageButton",
+          onClick: iW,
+          children: OW(LW.getKey)
+        })]
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

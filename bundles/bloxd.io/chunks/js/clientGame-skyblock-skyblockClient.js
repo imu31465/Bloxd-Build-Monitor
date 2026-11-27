@@ -1,370 +1,351 @@
-export const id = 30;
-export const ids = [30];
+export const id = 31;
+export const ids = [31];
 export const modules = {
-  5311: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => pe,
-      e: () => Xe
+  5590: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => jW,
+      h: () => UW
     });
-    var ye = He(1053),
-      be = He.n(ye),
-      Me = He(59),
-      Ke = He(1127),
-      Ue = He(5317),
-      Fe = He(1956),
-      Je = He(2532),
-      oe = He(5319),
-      Re = He(1228);
-    const ke = new WeakMap;
-    let qe = 0;
+    var mW = OW(1089),
+      EW = OW.n(mW),
+      NW = OW(62),
+      PW = OW(1172),
+      LW = OW(5593),
+      cW = OW(2021),
+      wW = OW(3332),
+      tW = OW(5599),
+      ZW = OW(1283);
+    const xW = new WeakMap;
+    let lW = 0;
 
-    function fe(ee) {
-      let ie = ke.get(ee);
-      return void 0 === ie && (ie = qe++, ke.set(ee, ie)), ie
+    function AW(WW) {
+      let iW = xW.get(WW);
+      return void 0 === iW && (iW = lW++, xW.set(WW, iW)), iW
     }
 
-    function Te(ee) {
+    function bW(WW) {
       let {
-        piece: ie
-      } = ee;
-      return "space" === ie.kind ? (0, Re.jsx)(Re.Fragment, {
-        children: ie.text
-      }) : (0, Re.jsx)("span", {
+        piece: iW
+      } = WW;
+      return "space" === iW.kind ? (0, ZW.jsx)(ZW.Fragment, {
+        children: iW.text
+      }) : (0, ZW.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${ie.delayMs}ms`
+          "--word-delay": `${iW.delayMs}ms`
         },
-        children: (0, Re.jsx)(Ue.c, {
-          text: "icon" === ie.kind ? `[[${ie.icon}]]` : ie.text
+        children: (0, ZW.jsx)(LW.b, {
+          text: "icon" === iW.kind ? `[[${iW.icon}]]` : iW.text
         })
       })
     }
 
-    function pe(ee) {
+    function jW(WW) {
       let {
-        display: ie
-      } = ee;
+        display: iW
+      } = WW;
       const {
-        selectedLanguage: He
-      } = (0, Ke.v)(), ye = (0, Me.useMemo)((() => (0, oe.e)((0, oe.g)(ie).plan.pieces)), [ie, He.code]);
-      return (0, Re.jsxs)("div", {
-        className: be()("Dialogue", {
-          DialogueAnimateIn: !1 !== ie.animateIn
+        selectedLanguage: OW
+      } = (0, PW.B)(), mW = (0, NW.useMemo)((() => (0, tW.e)((0, tW.g)(iW).plan.pieces)), [iW, OW.code]);
+      return (0, ZW.jsxs)("div", {
+        className: EW()("Dialogue", {
+          DialogueAnimateIn: !1 !== iW.animateIn
         }),
-        children: [ie.speakerName && (0, Re.jsx)(Fe.e, {
-          text: ie.speakerName,
+        children: [iW.speakerName && (0, ZW.jsx)(cW.d, {
+          text: iW.speakerName,
           className: "DialogueSpeaker"
-        }), (0, Re.jsx)("p", {
+        }), (0, ZW.jsx)("p", {
           className: "DialogueLine",
-          children: ye.map(((ee, ie) => 1 === ee.length && "space" === ee[0].kind ? ee[0].text : (0, Re.jsx)("span", {
+          children: mW.map(((WW, iW) => 1 === WW.length && "space" === WW[0].kind ? WW[0].text : (0, ZW.jsx)("span", {
             className: "DialogueGlue",
-            children: ee.map(((ee, ie) => (0, Re.jsx)(Te, {
-              piece: ee
-            }, ie)))
-          }, ie)))
+            children: WW.map(((WW, iW) => (0, ZW.jsx)(bW, {
+              piece: WW
+            }, iW)))
+          }, iW)))
         })]
       })
     }
-    const Xe = (0, Me.memo)((function() {
-      const ee = (0, Je.i)("dialogue");
-      return (0, Re.jsx)("div", {
+    const UW = (0, NW.memo)((function() {
+      const WW = (0, wW.e)("dialogue");
+      return (0, ZW.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: ee && (0, Re.jsx)(pe, {
-          display: ee
-        }, fe(ee))
+        children: WW && (0, ZW.jsx)(jW, {
+          display: WW
+        }, AW(WW))
       })
     }))
   },
-  5317: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ue
+  5593: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => LW
     });
-    var ye = He(59),
-      be = He(335),
-      Me = He(1970),
-      Ke = He(1228);
+    var mW = OW(62),
+      EW = OW(327),
+      NW = OW(2032),
+      PW = OW(1283);
 
-    function Ue(ee) {
+    function LW(WW) {
       let {
-        text: ie
-      } = ee;
-      const He = [];
-      let Ue = "";
-      return (0, be.kc)(ie).forEach(((ee, ie) => {
-        if ("string" === typeof ee || !(0, Me.e)(ee.icon)) return void(Ue += "string" === typeof ee ? ee : ee.icon);
-        const be = Math.max(0, Ue.trimEnd().search(/\S{1,12}$/));
-        He.push((0, Ke.jsxs)(ye.Fragment, {
-          children: [Ue.slice(0, be), (0, Ke.jsxs)("span", {
+        text: iW
+      } = WW;
+      const OW = [];
+      let LW = "";
+      return (0, EW.kc)(iW).forEach(((WW, iW) => {
+        if ("string" === typeof WW || !(0, NW.d)(WW.icon)) return void(LW += "string" === typeof WW ? WW : WW.icon);
+        const EW = Math.max(0, LW.trimEnd().search(/\S{1,12}$/));
+        OW.push((0, PW.jsxs)(mW.Fragment, {
+          children: [LW.slice(0, EW), (0, PW.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [Ue.slice(be), (0, Ke.jsx)("span", {
+            children: [LW.slice(EW), (0, PW.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": ee.icon,
-              children: (0, Ke.jsx)(Me.c, {
-                itemName: ee.icon,
+              "aria-label": WW.icon,
+              children: (0, PW.jsx)(NW.b, {
+                itemName: WW.icon,
                 amount: 0
               })
             })]
           })]
-        }, ie)), Ue = ""
-      })), He.push(Ue), (0, Ke.jsx)(Ke.Fragment, {
-        children: He
+        }, iW)), LW = ""
+      })), OW.push(LW), (0, PW.jsx)(PW.Fragment, {
+        children: OW
       })
     }
   },
-  34867: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me
+  5599: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => eW,
+      g: () => dW
     });
-    var ye = He(4931),
-      be = He(4937);
+    var mW = OW(5605),
+      EW = OW(327);
+    const NW = 120,
+      PW = 260,
+      LW = 1.15,
+      cW = 1.2,
+      wW = 2,
+      tW = 1.08,
+      ZW = .8,
+      xW = .95,
+      lW = 8,
+      AW = "[\"')\\]\u300d\u300f\uff09]*",
+      bW = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${AW}$`),
+      jW = new RegExp(`[?\uff1f]${AW}$`),
+      UW = new RegExp(`[!\uff01]${AW}$`),
+      kW = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      sW = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      MW = new RegExp(`[${sW}]`),
+      KW = new RegExp(`[${sW}]|[^${sW}]+`, "g"),
+      SW = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Me(ee) {
-      let {
-        children: ie,
-        showing: He,
-        globallyUniqueKey: Me,
-        alwaysMountChildren: Ke = !1,
-        doGameplayStartStopOnShow: Ue = !0,
-        keepsMovement: Fe = !1
-      } = ee;
-      return (0, be.e)(!0, He, Me, Fe), (0, ye.c)(Ue, He), He || Ke ? ie : null
-    }
-  },
-  5319: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => ae,
-      g: () => Ve
-    });
-    var ye = He(5326),
-      be = He(335);
-    const Me = 120,
-      Ke = 260,
-      Ue = 1.15,
-      Fe = 1.2,
-      Je = 2,
-      oe = 1.08,
-      Re = .8,
-      ke = .95,
-      qe = 8,
-      fe = "[\"')\\]\u300d\u300f\uff09]*",
-      Te = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${fe}$`),
-      pe = new RegExp(`[?\uff1f]${fe}$`),
-      Xe = new RegExp(`[!\uff01]${fe}$`),
-      ze = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Be = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Ee = new RegExp(`[${Be}]`),
-      ge = new RegExp(`[${Be}]|[^${Be}]+`, "g"),
-      Oe = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
-
-    function de(ee) {
-      let ie = 2166136261;
-      for (let He = 0; He < ee.length; He++) ie ^= ee.charCodeAt(He), ie = Math.imul(ie, 16777619);
-      return (ie >>> 0) / 4294967295 * 2 - 1
+    function YW(WW) {
+      let iW = 2166136261;
+      for (let OW = 0; OW < WW.length; OW++) iW ^= WW.charCodeAt(OW), iW = Math.imul(iW, 16777619);
+      return (iW >>> 0) / 4294967295 * 2 - 1
     }
 
-    function We(ee) {
-      var ie;
-      if (Ee.test(ee)) return 1;
-      const He = ee.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        ye = He.replace(/[^0-9]/g, "");
-      if (ye.length > 0 && !/\p{L}/u.test(He)) return Math.min(ye.length, 4);
-      const be = null !== (ie = He.match(Oe)) && void 0 !== ie ? ie : [];
-      if (0 === be.length) {
-        var Me, Ke;
-        const ee = null !== (Me = null === (Ke = He.match(/\p{L}/gu)) || void 0 === Ke ? void 0 : Ke.length) && void 0 !== Me ? Me : 0;
-        return 0 === ee ? 0 : Math.min(Math.max(1, Math.round(ee / 2.5)), qe)
+    function yW(WW) {
+      var iW;
+      if (MW.test(WW)) return 1;
+      const OW = WW.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        mW = OW.replace(/[^0-9]/g, "");
+      if (mW.length > 0 && !/\p{L}/u.test(OW)) return Math.min(mW.length, 4);
+      const EW = null !== (iW = OW.match(SW)) && void 0 !== iW ? iW : [];
+      if (0 === EW.length) {
+        var NW, PW;
+        const WW = null !== (NW = null === (PW = OW.match(/\p{L}/gu)) || void 0 === PW ? void 0 : PW.length) && void 0 !== NW ? NW : 0;
+        return 0 === WW ? 0 : Math.min(Math.max(1, Math.round(WW / 2.5)), lW)
       }
-      const Ue = He.replace(/[^\p{L}]/gu, ""),
-        Fe = be.length > 1 && "e" === be.at(-1) && Ue.endsWith("e") && !Ue.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(ee.replace(/[^\p{L}]/gu, ""));
-      return Math.min(be.length - (Fe ? 1 : 0), qe)
+      const LW = OW.replace(/[^\p{L}]/gu, ""),
+        cW = EW.length > 1 && "e" === EW.at(-1) && LW.endsWith("e") && !LW.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(WW.replace(/[^\p{L}]/gu, ""));
+      return Math.min(EW.length - (cW ? 1 : 0), lW)
     }
 
-    function te(ee) {
-      return ee.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function TW(WW) {
+      return WW.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Ze(ee) {
-      const ie = ee.replace(/[^\p{L}]/gu, "");
-      return ie.length >= 2 && ie === ie.toUpperCase() && ie !== ie.toLowerCase()
+    function JW(WW) {
+      const iW = WW.replace(/[^\p{L}]/gu, "");
+      return iW.length >= 2 && iW === iW.toUpperCase() && iW !== iW.toLowerCase()
     }
 
-    function we(ee, ie) {
-      var He;
-      const qe = ie && (0, ye.l)(ie),
-        fe = null !== (He = null === qe || void 0 === qe ? void 0 : qe.syllableMs) && void 0 !== He ? He : ye.d,
-        Be = function(ee) {
-          const ie = [];
-          for (const ye of (0, be.kc)(ee))
-            if ("string" === typeof ye)
-              for (const ee of ye.split(/(\s+)/)) {
-                if ("" === ee) continue;
-                if (/^\s+$/.test(ee)) {
-                  ie.push({
+    function hW(WW, iW) {
+      var OW;
+      const lW = iW && (0, mW.h)(iW),
+        AW = null !== (OW = null === lW || void 0 === lW ? void 0 : lW.syllableMs) && void 0 !== OW ? OW : mW.d,
+        sW = function(WW) {
+          const iW = [];
+          for (const mW of (0, EW.kc)(WW))
+            if ("string" === typeof mW)
+              for (const WW of mW.split(/(\s+)/)) {
+                if ("" === WW) continue;
+                if (/^\s+$/.test(WW)) {
+                  iW.push({
                     kind: "space",
-                    text: ee
+                    text: WW
                   });
                   continue
                 }
-                if (!Ee.test(ee)) {
-                  ie.push({
+                if (!MW.test(WW)) {
+                  iW.push({
                     kind: "word",
-                    text: ee,
+                    text: WW,
                     delayMs: 0
                   });
                   continue
                 }
-                let ye = !0;
-                for (const be of null !== (He = ee.match(ge)) && void 0 !== He ? He : []) {
-                  var He;
-                  const ee = ie.at(-1);
-                  ye || "word" !== (null === ee || void 0 === ee ? void 0 : ee.kind) || Ee.test(be) || /[\p{L}\p{N}]/u.test(be) ? (ye || ie.push({
+                let mW = !0;
+                for (const EW of null !== (OW = WW.match(KW)) && void 0 !== OW ? OW : []) {
+                  var OW;
+                  const WW = iW.at(-1);
+                  mW || "word" !== (null === WW || void 0 === WW ? void 0 : WW.kind) || MW.test(EW) || /[\p{L}\p{N}]/u.test(EW) ? (mW || iW.push({
                     kind: "space",
                     text: "\u200b"
-                  }), ie.push({
+                  }), iW.push({
                     kind: "word",
-                    text: be,
+                    text: EW,
                     delayMs: 0
-                  }), ye = !1) : ee.text += be
+                  }), mW = !1) : WW.text += EW
                 }
-              } else ie.push({
+              } else iW.push({
                 kind: "icon",
-                text: ye.icon,
+                text: mW.icon,
                 delayMs: 0
               });
-          return ie
-        }(ee),
-        Oe = [];
-      let we = [];
-      for (const ye of Be) "space" !== ye.kind && (we.push(ye), Te.test(ye.text) && (Oe.push(we), we = []));
-      Oe.push(we);
-      const De = [];
-      let Pe = 0;
-      for (const ye of Oe) {
-        var Ae, Ye;
-        const ee = null !== (Ae = null === (Ye = ye.at(-1)) || void 0 === Ye ? void 0 : Ye.text) && void 0 !== Ae ? Ae : "",
-          ie = pe.test(ee),
-          He = Xe.test(ee),
-          be = ye.map((ee => "word" === ee.kind ? We(ee.text) : 1)),
-          Be = be.findLastIndex((ee => ee > 0));
-        for (const [pe, Xe] of ye.entries()) {
-          const ee = "word" === Xe.kind,
-            ye = be[pe];
-          Xe.delayMs = Pe;
-          for (let be = 0; qe && be < ye; be++) {
+          return iW
+        }(WW),
+        SW = [];
+      let hW = [];
+      for (const mW of sW) "space" !== mW.kind && (hW.push(mW), bW.test(mW.text) && (SW.push(hW), hW = []));
+      SW.push(hW);
+      const HW = [];
+      let nW = 0;
+      for (const mW of SW) {
+        var uW, oW;
+        const WW = null !== (uW = null === (oW = mW.at(-1)) || void 0 === oW ? void 0 : oW.text) && void 0 !== uW ? uW : "",
+          iW = jW.test(WW),
+          OW = UW.test(WW),
+          EW = mW.map((WW => "word" === WW.kind ? yW(WW.text) : 1)),
+          sW = EW.findLastIndex((WW => WW > 0));
+        for (const [jW, UW] of mW.entries()) {
+          const WW = "word" === UW.kind,
+            mW = EW[jW];
+          UW.delayMs = nW;
+          for (let EW = 0; lW && EW < mW; EW++) {
             const {
-              intonation: Me
-            } = qe;
-            let Ke = Be > 0 ? -Me.declineSemitones * (pe / Be) : 0;
-            Ke += de(`${te(Xe.text)}|${be}`) * Me.variationSemitones;
-            const Te = Math.min(1, Me.variationSemitones);
-            let ze = qe.glideSemitones,
-              Ee = 1;
-            He && (Ke += Me.exclaimLiftSemitones, Ee *= Ue), ie && pe === Be && (Ke += Me.questionRiseSemitones * (ye > 1 ? .5 + .5 * be / (ye - 1) : 1), be === ye - 1 && (ze = Math.abs(ze) + Me.questionRiseSemitones / 2)), ee && Ze(Xe.text) && (Ke += Je * Te, Ee *= Fe), ye > 1 && 0 === be && (Ke += Re * Te, Ee *= oe), De.push({
-              atMs: Pe + be * fe,
-              semitones: Ke,
-              glideSemitones: ze,
-              durationMs: be < ye - 1 ? Math.min(qe.durationMs, fe * ke) : qe.durationMs,
-              level: Ee
+              intonation: NW
+            } = lW;
+            let PW = sW > 0 ? -NW.declineSemitones * (jW / sW) : 0;
+            PW += YW(`${TW(UW.text)}|${EW}`) * NW.variationSemitones;
+            const bW = Math.min(1, NW.variationSemitones);
+            let kW = lW.glideSemitones,
+              MW = 1;
+            OW && (PW += NW.exclaimLiftSemitones, MW *= LW), iW && jW === sW && (PW += NW.questionRiseSemitones * (mW > 1 ? .5 + .5 * EW / (mW - 1) : 1), EW === mW - 1 && (kW = Math.abs(kW) + NW.questionRiseSemitones / 2)), WW && JW(UW.text) && (PW += wW * bW, MW *= cW), mW > 1 && 0 === EW && (PW += ZW * bW, MW *= tW), HW.push({
+              atMs: nW + EW * AW,
+              semitones: PW,
+              glideSemitones: kW,
+              durationMs: EW < mW - 1 ? Math.min(lW.durationMs, AW * xW) : lW.durationMs,
+              level: MW
             })
           }
-          Pe += ye * fe + (Te.test(Xe.text) ? Ke : ze.test(Xe.text) ? Me : 0)
+          nW += mW * AW + (bW.test(UW.text) ? PW : kW.test(UW.text) ? NW : 0)
         }
       }
       return {
-        pieces: Be.map((ee => "space" === ee.kind ? ee : "icon" === ee.kind ? {
+        pieces: sW.map((WW => "space" === WW.kind ? WW : "icon" === WW.kind ? {
           kind: "icon",
-          icon: ee.text,
-          delayMs: ee.delayMs
+          icon: WW.text,
+          delayMs: WW.delayMs
         } : {
           kind: "word",
-          text: ee.text,
-          delayMs: ee.delayMs
+          text: WW.text,
+          delayMs: WW.delayMs
         })),
-        blips: De
+        blips: HW
       }
     }
-    var De = He(1127),
-      Pe = He(1196),
-      Ae = He(1988);
+    var HW = OW(1172),
+      nW = OW(1244),
+      uW = OW(2042);
 
-    function Ye(ee) {
-      if ("string" === typeof ee) return ee;
-      const ie = Pe.f.get().getCurrentLanguageCode();
-      return (0, De.o)(ie, ee.translationKey, (0, De.m)(ee.params, Ae.c.shown))
+    function oW(WW) {
+      if ("string" === typeof WW) return WW;
+      const iW = nW.e.get().getCurrentLanguageCode();
+      return (0, HW.p)(iW, WW.translationKey, (0, HW.o)(WW.params, uW.e.shown))
     }
 
-    function Ve(ee) {
-      const ie = void 0 === ee.voice ? null : (0, ye.n)(ee.voice),
-        He = ie && (0, ye.l)(ie);
+    function dW(WW) {
+      const iW = void 0 === WW.voice ? null : (0, mW.j)(WW.voice),
+        OW = iW && (0, mW.h)(iW);
       return {
-        plan: we(Ye(ee.line), He),
-        synth: He
+        plan: hW(oW(WW.line), OW),
+        synth: OW
       }
     }
 
-    function ae(ee) {
-      const ie = [];
-      let He = [];
-      for (const [be, Me] of ee.entries()) {
-        var ye;
-        "space" === Me.kind && (" " !== Me.text || "icon" !== (null === (ye = ee[be + 1]) || void 0 === ye ? void 0 : ye.kind)) ? (He.length > 0 && ie.push(He), ie.push([Me]), He = []) : He.push(Me)
+    function eW(WW) {
+      const iW = [];
+      let OW = [];
+      for (const [EW, NW] of WW.entries()) {
+        var mW;
+        "space" === NW.kind && (" " !== NW.text || "icon" !== (null === (mW = WW[EW + 1]) || void 0 === mW ? void 0 : mW.kind)) ? (OW.length > 0 && iW.push(OW), iW.push([NW]), OW = []) : OW.push(NW)
       }
-      return He.length > 0 && ie.push(He), ie
+      return OW.length > 0 && iW.push(OW), iW
     }
   },
-  39309: (ee, ie, He) => {
-    function ye(ee, ie, He) {
-      const ye = new Set,
-        be = new ResizeObserver(He),
-        Me = () => {
-          const ie = new Set(document.querySelectorAll(ee));
-          let Me = !1;
-          for (const ee of ye) ie.has(ee) || (be.unobserve(ee), ye.delete(ee), Me = !0);
-          for (const ee of ie) ye.has(ee) || (be.observe(ee), Ke.observe(ee, {
+  39701: (WW, iW, OW) => {
+    function mW(WW, iW, OW) {
+      const mW = new Set,
+        EW = new ResizeObserver(OW),
+        NW = () => {
+          const iW = new Set(document.querySelectorAll(WW));
+          let NW = !1;
+          for (const WW of mW) iW.has(WW) || (EW.unobserve(WW), mW.delete(WW), NW = !0);
+          for (const WW of iW) mW.has(WW) || (EW.observe(WW), PW.observe(WW, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), ye.add(ee));
-          Me && He()
+          }), mW.add(WW));
+          NW && OW()
         },
-        Ke = new MutationObserver((ie => {
-          ie.some((ee => "attributes" === ee.type)) && He(), ie.some((ie => function(ee, ie, He) {
-            if ("childList" !== ee.type) return !1;
-            for (const ye of ee.addedNodes)
-              if (ye instanceof Element && (ye.matches(ie) || ye.querySelector(ie))) return !0;
-            for (const ye of ee.removedNodes)
-              if (ye instanceof Element)
-                for (const ee of He)
-                  if (ye.contains(ee)) return !0;
+        PW = new MutationObserver((iW => {
+          iW.some((WW => "attributes" === WW.type)) && OW(), iW.some((iW => function(WW, iW, OW) {
+            if ("childList" !== WW.type) return !1;
+            for (const mW of WW.addedNodes)
+              if (mW instanceof Element && (mW.matches(iW) || mW.querySelector(iW))) return !0;
+            for (const mW of WW.removedNodes)
+              if (mW instanceof Element)
+                for (const WW of OW)
+                  if (mW.contains(WW)) return !0;
             return !1
-          }(ie, ee, ye))) && Me()
+          }(iW, WW, mW))) && NW()
         }));
-      Ke.observe(document.body, {
+      PW.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const Ue of ie) be.observe(Ue);
-      return window.addEventListener("resize", He), Me(), He(), () => {
-        be.disconnect(), Ke.disconnect(), window.removeEventListener("resize", He)
+      for (const LW of iW) EW.observe(LW);
+      return window.addEventListener("resize", OW), NW(), OW(), () => {
+        EW.disconnect(), PW.disconnect(), window.removeEventListener("resize", OW)
       }
     }
-    He.d(ie, {
-      b: () => ye
+    OW.d(iW, {
+      d: () => mW
     })
   },
-  9609: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => Ue,
-      h: () => Fe
+  10114: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => LW,
+      g: () => cW
     });
-    var ye = He(18),
-      be = He(1305),
-      Me = He(97);
-    const Ke = {
+    var mW = OW(25),
+      EW = OW(1351),
+      NW = OW(100);
+    const PW = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -407,41 +388,41 @@ export const modules = {
       }
     };
 
-    function Ue() {
-      return (0, Me.isMobile)() && "function" === typeof navigator.vibrate
+    function LW() {
+      return (0, NW.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const Fe = new class {
-      constructor(ee) {
-        this.deps = ee, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const cW = new class {
+      constructor(WW) {
+        this.deps = WW, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(ee, ie) {
-        var He;
+      play(WW, iW) {
+        var OW;
         if (!this.deps.enabled()) return;
-        const ye = Ke[ee],
-          be = null !== ie && void 0 !== ie ? ie : ye.pattern;
-        if (null === be) return void console.warn("No vibration pattern for", ee);
-        const Me = this.deps.now();
-        Me - this.lastAnyAt < 40 && ye.priority < this.playingPriority || Me - (null !== (He = this.lastAt.get(ee)) && void 0 !== He ? He : -1 / 0) < ye.minGapMs || Me < this.playingUntil && ye.priority < this.playingPriority || (this.lastAt.set(ee, Me), this.lastAnyAt = Me, this.playingUntil = Me + be.reduce(((ee, ie) => ee + ie), 0), this.playingPriority = ye.priority, this.deps.vibrate(be))
+        const mW = PW[WW],
+          EW = null !== iW && void 0 !== iW ? iW : mW.pattern;
+        if (null === EW) return void console.warn("No vibration pattern for", WW);
+        const NW = this.deps.now();
+        NW - this.lastAnyAt < 40 && mW.priority < this.playingPriority || NW - (null !== (OW = this.lastAt.get(WW)) && void 0 !== OW ? OW : -1 / 0) < mW.minGapMs || NW < this.playingUntil && mW.priority < this.playingPriority || (this.lastAt.set(WW, NW), this.lastAnyAt = NW, this.playingUntil = NW + EW.reduce(((WW, iW) => WW + iW), 0), this.playingPriority = mW.priority, this.deps.vibrate(EW))
       }
     }({
-      vibrate: ee => {
-        navigator.vibrate([...ee])
+      vibrate: WW => {
+        navigator.vibrate([...WW])
       },
       now: () => performance.now(),
-      enabled: () => Ue() && ye.e.get("isTouchScreen") && ye.e.get("clientEscMenuOptions").vibration && !(0, be.g)()
+      enabled: () => LW() && mW.d.get("isTouchScreen") && mW.d.get("clientEscMenuOptions").vibration && !(0, EW.f)()
     })
   },
-  5326: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => be,
-      h: () => ye,
-      k: () => Me,
-      l: () => Fe,
-      n: () => Ke
+  5605: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => EW,
+      e: () => mW,
+      g: () => NW,
+      h: () => cW,
+      j: () => PW
     });
-    const ye = ["sine", "triangle", "square", "sawtooth"],
-      be = 55,
-      Me = {
+    const mW = ["sine", "triangle", "square", "sawtooth"],
+      EW = 55,
+      NW = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -580,39 +561,39 @@ export const modules = {
         }
       };
 
-    function Ke(ee) {
-      return "string" !== typeof ee ? ee : Object.hasOwn(Me, ee) ? Me[ee] : null
+    function PW(WW) {
+      return "string" !== typeof WW ? WW : Object.hasOwn(NW, WW) ? NW[WW] : null
     }
 
-    function Ue(ee, ie, He) {
-      return Math.min(He, Math.max(ie, ee))
+    function LW(WW, iW, OW) {
+      return Math.min(OW, Math.max(iW, WW))
     }
 
-    function Fe(ee) {
-      const ie = Ue(ee.durationMs, 10, 500),
-        He = Ue(ee.attackMs, 0, ie),
+    function cW(WW) {
+      const iW = LW(WW.durationMs, 10, 500),
+        OW = LW(WW.attackMs, 0, iW),
         {
-          intonation: be
-        } = ee;
+          intonation: EW
+        } = WW;
       return {
-        waveform: ye.includes(ee.waveform) ? ee.waveform : "sine",
-        pitchHz: Ue(ee.pitchHz, 20, 4e3),
-        glideSemitones: Ue(ee.glideSemitones, -24, 24),
-        durationMs: ie,
-        attackMs: He,
-        releaseMs: Ue(ee.releaseMs, 0, ie - He),
-        lowpassHz: null === ee.lowpassHz ? null : Ue(ee.lowpassHz, 20, 2e4),
-        volume: Ue(ee.volume, 0, 2),
+        waveform: mW.includes(WW.waveform) ? WW.waveform : "sine",
+        pitchHz: LW(WW.pitchHz, 20, 4e3),
+        glideSemitones: LW(WW.glideSemitones, -24, 24),
+        durationMs: iW,
+        attackMs: OW,
+        releaseMs: LW(WW.releaseMs, 0, iW - OW),
+        lowpassHz: null === WW.lowpassHz ? null : LW(WW.lowpassHz, 20, 2e4),
+        volume: LW(WW.volume, 0, 2),
         intonation: {
-          variationSemitones: Ue(be.variationSemitones, 0, 6),
-          declineSemitones: Ue(be.declineSemitones, 0, 12),
-          questionRiseSemitones: Ue(be.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: Ue(be.exclaimLiftSemitones, 0, 12)
+          variationSemitones: LW(EW.variationSemitones, 0, 6),
+          declineSemitones: LW(EW.declineSemitones, 0, 12),
+          questionRiseSemitones: LW(EW.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: LW(EW.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: Ue(ee.syllableMs, 25, 200)
+        syllableMs: LW(WW.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

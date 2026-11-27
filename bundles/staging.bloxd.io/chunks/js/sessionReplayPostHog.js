@@ -1,161 +1,161 @@
-export const id = 61;
-export const ids = [61];
+export const id = 62;
+export const ids = [62];
 export const modules = {
-  40649: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      ReplayPostHog: () => HH
+  41104: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      ReplayPostHog: () => OO
     });
-    var ye = He(3748),
-      be = He(40653),
-      Me = He(40638);
-    const Ke = new Set(["partycode", "lobby", "vm", "invite", "invitecode", "code", "token", "access_token", "id_token", "refresh_token", "auth", "key", "state", "ticket", "jointicket", "secret", "password", "sig", "signature"]),
-      Ue = new Set(["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "bfcid", "irclid", "_kx", "_gl", "yclid", "srsltid", "mc_eid", "s_kwcid", "ef_id", "_hsenc", "mkt_tok"]),
-      Fe = "redacted",
-      Je = /([?&#])([^=&#?\s"']+)=([^&#?\s"'<>\\]*)/g,
-      oe = /(\/play\/[^/?#\s"'<>\\]+\/)[^/?#\s"'<>\\]+/gi,
-      Re = /\/play\//i,
-      ke = /lobby|party/i;
+    var mW = OW(4605),
+      EW = OW(41109),
+      NW = OW(41091);
+    const PW = new Set(["partycode", "lobby", "vm", "invite", "invitecode", "code", "token", "access_token", "id_token", "refresh_token", "auth", "key", "state", "ticket", "jointicket", "secret", "password", "sig", "signature"]),
+      LW = new Set(["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "bfcid", "irclid", "_kx", "_gl", "yclid", "srsltid", "mc_eid", "s_kwcid", "ef_id", "_hsenc", "mkt_tok"]),
+      cW = "redacted",
+      wW = /([?&#])([^=&#?\s"']+)=([^&#?\s"'<>\\]*)/g,
+      tW = /(\/play\/[^/?#\s"'<>\\]+\/)[^/?#\s"'<>\\]+/gi,
+      ZW = /\/play\//i,
+      xW = /lobby|party/i;
 
-    function qe(ee) {
+    function lW(WW) {
       try {
-        return decodeURIComponent(ee)
+        return decodeURIComponent(WW)
       } catch {
         return null
       }
     }
 
-    function fe(ee) {
-      const ie = ee.includes("%") ? qe(ee) : null;
-      if (null === ie || ie === ee) return ee;
-      let He = Te(`?${ie}`).slice(1);
-      return He === ie && (He = fe(ie)), He === ie ? ee : encodeURIComponent(He)
+    function AW(WW) {
+      const iW = WW.includes("%") ? lW(WW) : null;
+      if (null === iW || iW === WW) return WW;
+      let OW = bW(`?${iW}`).slice(1);
+      return OW === iW && (OW = AW(iW)), OW === iW ? WW : encodeURIComponent(OW)
     }
 
-    function Te(ee) {
-      return ee.includes("=") || Re.test(ee) ? ee.replace(Je, ((ee, ie, He, ye) => {
-        var be;
-        const Me = (null !== (be = qe(He)) && void 0 !== be ? be : He).toLowerCase();
-        if (Ke.has(Me)) return `${ie}${He}=${Fe}`;
-        if (Ue.has(Me) && "" !== ye) return `${ie}${He}=<masked>`;
-        const Je = fe(ye);
-        return Je === ye ? ee : `${ie}${He}=${Je}`
-      })).replace(oe, `$1${Fe}`) : ee
+    function bW(WW) {
+      return WW.includes("=") || ZW.test(WW) ? WW.replace(wW, ((WW, iW, OW, mW) => {
+        var EW;
+        const NW = (null !== (EW = lW(OW)) && void 0 !== EW ? EW : OW).toLowerCase();
+        if (PW.has(NW)) return `${iW}${OW}=${cW}`;
+        if (LW.has(NW) && "" !== mW) return `${iW}${OW}=<masked>`;
+        const wW = AW(mW);
+        return wW === mW ? WW : `${iW}${OW}=${wW}`
+      })).replace(tW, `$1${cW}`) : WW
     }
-    const pe = new Set(["href", "src", "srcset", "action", "formaction", "poster", "xlink:href"]);
+    const jW = new Set(["href", "src", "srcset", "action", "formaction", "poster", "xlink:href"]);
 
-    function Xe(ee, ie) {
-      return pe.has(ee.toLowerCase()) ? Te(ie) : ie
-    }
-
-    function ze(ee) {
-      return ke.test(ee) ? Fe : Te(ee)
+    function UW(WW, iW) {
+      return jW.has(WW.toLowerCase()) ? bW(iW) : iW
     }
 
-    function Be(ee) {
-      if (ee)
-        for (const [ie, He] of Object.entries(ee)) "string" === typeof He && (ee[ie] = Te(He))
+    function kW(WW) {
+      return xW.test(WW) ? cW : bW(WW)
     }
 
-    function Ee(ee) {
-      var ie;
-      Array.isArray(ee.payload) && (ee.payload = (ie = ee.payload).some((ee => "string" === typeof ee && ke.test(ee))) ? [JSON.stringify(Fe)] : ie.map((ee => "string" === typeof ee ? Te(ee) : ee))), Array.isArray(ee.trace) && (ee.trace = ee.trace.map((ee => "string" === typeof ee ? Te(ee) : ee)))
+    function sW(WW) {
+      if (WW)
+        for (const [iW, OW] of Object.entries(WW)) "string" === typeof OW && (WW[iW] = bW(OW))
     }
 
-    function ge(ee) {
-      if (null === ee) return null;
-      const ie = ee.properties.$snapshot_data;
-      return Be(ee.properties), Be(ee.properties.$set), Be(ee.properties.$set_once), Be(ee.$set), Be(ee.$set_once),
-        function(ee) {
-          if (Array.isArray(ee))
-            for (const ie of ee) {
-              const ee = null === ie || void 0 === ie ? void 0 : ie.data;
-              if (!ee || "object" !== typeof ee) continue;
-              "string" === typeof ee.href && (ee.href = Te(ee.href));
-              const He = ee.payload;
-              He && "object" === typeof He && (ie.type === ye.b.Plugin && "string" === typeof ee.plugin && ee.plugin.includes("console") ? Ee(He) : Be(He))
+    function MW(WW) {
+      var iW;
+      Array.isArray(WW.payload) && (WW.payload = (iW = WW.payload).some((WW => "string" === typeof WW && xW.test(WW))) ? [JSON.stringify(cW)] : iW.map((WW => "string" === typeof WW ? bW(WW) : WW))), Array.isArray(WW.trace) && (WW.trace = WW.trace.map((WW => "string" === typeof WW ? bW(WW) : WW)))
+    }
+
+    function KW(WW) {
+      if (null === WW) return null;
+      const iW = WW.properties.$snapshot_data;
+      return sW(WW.properties), sW(WW.properties.$set), sW(WW.properties.$set_once), sW(WW.$set), sW(WW.$set_once),
+        function(WW) {
+          if (Array.isArray(WW))
+            for (const iW of WW) {
+              const WW = null === iW || void 0 === iW ? void 0 : iW.data;
+              if (!WW || "object" !== typeof WW) continue;
+              "string" === typeof WW.href && (WW.href = bW(WW.href));
+              const OW = WW.payload;
+              OW && "object" === typeof OW && (iW.type === mW.c.Plugin && "string" === typeof WW.plugin && WW.plugin.includes("console") ? MW(OW) : sW(OW))
             }
-        }(ie), ee
+        }(iW), WW
     }
-    const Oe = new Set(["class", "id", "rel", "type", "role", "tabindex", "width", "height", "dir", "lang", "disabled", "hidden", "checked", "selected", "readonly", "draggable", "media", "charset", "crossorigin", "aria-hidden", "aria-expanded", "aria-selected", "aria-pressed", "aria-checked", "aria-disabled", "xmlns", "viewbox", "d", "fill", "stroke", "stroke-width", "transform", "x", "y", "cx", "cy", "r", "points", "x1", "y1", "x2", "y2", "rx", "ry", "opacity", "fill-rule", "clip-rule", "stroke-linecap", "stroke-linejoin", "preserveaspectratio", "xmlns:xlink", "colspan", "rowspan"]),
-      de = new Set(["_csstext", "rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]),
-      We = new Set(["data-pad-key", "data-pad-repeat"]),
-      te = new Set(["href", "src", "srcset", "xlink:href"]),
-      Ze = new Set(["title", "$title", "message", "detail", "game_display_name"]),
-      we = "img, picture, video";
+    const SW = new Set(["class", "id", "rel", "type", "role", "tabindex", "width", "height", "dir", "lang", "disabled", "hidden", "checked", "selected", "readonly", "draggable", "media", "charset", "crossorigin", "aria-hidden", "aria-expanded", "aria-selected", "aria-pressed", "aria-checked", "aria-disabled", "xmlns", "viewbox", "d", "fill", "stroke", "stroke-width", "transform", "x", "y", "cx", "cy", "r", "points", "x1", "y1", "x2", "y2", "rx", "ry", "opacity", "fill-rule", "clip-rule", "stroke-linecap", "stroke-linejoin", "preserveaspectratio", "xmlns:xlink", "colspan", "rowspan"]),
+      YW = new Set(["_csstext", "rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]),
+      yW = new Set(["data-pad-key", "data-pad-repeat"]),
+      TW = new Set(["href", "src", "srcset", "xlink:href"]),
+      JW = new Set(["title", "$title", "message", "detail", "game_display_name"]),
+      hW = "img, picture, video";
 
-    function De(ee, ie, He) {
-      const ye = ee.toLowerCase();
-      return "style" === ye ? ie.replace(/url\((?:"[^"]*"|'[^']*'|[^)]*)\)/gi, "none") : te.has(ye) && "A" !== He.tagName ? Xe(ee, ie) : Oe.has(ye) || de.has(ye) || ye.startsWith("data-pad-") && !We.has(ye) ? ie : ie.replace(/\S/g, "*")
+    function HW(WW, iW, OW) {
+      const mW = WW.toLowerCase();
+      return "style" === mW ? iW.replace(/url\((?:"[^"]*"|'[^']*'|[^)]*)\)/gi, "none") : TW.has(mW) && "A" !== OW.tagName ? UW(WW, iW) : SW.has(mW) || YW.has(mW) || mW.startsWith("data-pad-") && !yW.has(mW) ? iW : iW.replace(/\S/g, "*")
     }
 
-    function Pe(ee) {
-      if (!/^(https?:\/\/|\/)/i.test(ee)) return ee;
-      let ie;
+    function nW(WW) {
+      if (!/^(https?:\/\/|\/)/i.test(WW)) return WW;
+      let iW;
       try {
-        ie = new URL(ee, "https://bloxd.invalid")
+        iW = new URL(WW, "https://bloxd.invalid")
       } catch {
-        return ee
+        return WW
       }
-      const [He = "", ...ye] = ie.pathname.split("/").slice(1), be = `/${He}${ye.some((ee=>""!==ee))?"/*":""}`;
-      return ee.startsWith("/") ? be : `${ie.origin}${be}`
+      const [OW = "", ...mW] = iW.pathname.split("/").slice(1), EW = `/${OW}${mW.some((WW=>""!==WW))?"/*":""}`;
+      return WW.startsWith("/") ? EW : `${iW.origin}${EW}`
     }
 
-    function Ae(ee) {
-      if (ee)
-        for (const [ie, He] of Object.entries(ee)) Ze.has(ie) ? delete ee[ie] : "string" === typeof He && (ee[ie] = Pe(He))
+    function uW(WW) {
+      if (WW)
+        for (const [iW, OW] of Object.entries(WW)) JW.has(iW) ? delete WW[iW] : "string" === typeof OW && (WW[iW] = nW(OW))
     }
 
-    function Ye(ee) {
-      ! function(ee) {
-        if (Array.isArray(ee))
-          for (const ie of ee) {
-            const ee = null === ie || void 0 === ie ? void 0 : ie.data;
-            ee && "object" === typeof ee && ("string" === typeof ee.href && (ee.href = Pe(ee.href)), ee.payload && "object" === typeof ee.payload && Ae(ee.payload))
+    function oW(WW) {
+      ! function(WW) {
+        if (Array.isArray(WW))
+          for (const iW of WW) {
+            const WW = null === iW || void 0 === iW ? void 0 : iW.data;
+            WW && "object" === typeof WW && ("string" === typeof WW.href && (WW.href = nW(WW.href)), WW.payload && "object" === typeof WW.payload && uW(WW.payload))
           }
-      }(ee.properties.$snapshot_data), Ae(ee.properties), "$screen" === ee.event && String(ee.properties.$screen_name).startsWith("custom: ") && (ee.properties.$screen_name = `custom: ${String(ee.properties.game_analytics_id)}`), Ae(ee.properties.$set), Ae(ee.properties.$set_once), Ae(ee.$set), Ae(ee.$set_once)
+      }(WW.properties.$snapshot_data), uW(WW.properties), "$screen" === WW.event && String(WW.properties.$screen_name).startsWith("custom: ") && (WW.properties.$screen_name = `custom: ${String(WW.properties.game_analytics_id)}`), uW(WW.properties.$set), uW(WW.properties.$set_once), uW(WW.$set), uW(WW.$set_once)
     }
-    const Ve = ye.d.map((ee => `.${ee}`)).join(", "),
-      ae = ["iframe", "script", 'link:not([rel~="stylesheet"])', ".AdBannerContainer > [id]", "#GenericVideoInner", "ins.adsbygoogle", '[id^="google_ads_"]'],
-      ce = [".PadKeyboardPreviewText", ".PadKeyboardPhraseRow"].join(", ");
+    const dW = mW.i.map((WW => `.${WW}`)).join(", "),
+      eW = ["iframe", "script", 'link:not([rel~="stylesheet"])', ".AdBannerContainer > [id]", "#GenericVideoInner", "ins.adsbygoogle", '[id^="google_ads_"]'],
+      vW = [".PadKeyboardPreviewText", ".PadKeyboardPhraseRow"].join(", ");
 
-    function xe(ee, ie) {
-      return null !== ie && void 0 !== ie && ie.closest(Ve) ? ee : ee.replace(/\S/g, "*")
+    function gW(WW, iW) {
+      return null !== iW && void 0 !== iW && iW.closest(dW) ? WW : WW.replace(/\S/g, "*")
     }
 
-    function Le(ee) {
-      const ie = function(ee) {
-        return ee.anonymised ? {
+    function DW(WW) {
+      const iW = function(WW) {
+        return WW.anonymised ? {
           enable_recording_console_log: !1,
           session_recording: {
-            blockSelector: [...ae, we].join(", "),
+            blockSelector: [...eW, hW].join(", "),
             maskTextSelector: "*",
-            maskTextFn: ee.showsChat ? xe : null,
-            maskAttributeFn: De
+            maskTextFn: WW.showsChat ? gW : null,
+            maskAttributeFn: HW
           }
         } : {
           enable_recording_console_log: !0,
           session_recording: {
-            blockSelector: [...ae, (ie = ee.ownOrigins, `img[src^="http"]${ie.map((ee=>`:not([src^="${ee}/"])`)).join("")}`)].join(", "),
-            maskTextSelector: ee.showsChat ? ce : `${ce}, ${Ve}`,
-            maskAttributeFn: Xe
+            blockSelector: [...eW, (iW = WW.ownOrigins, `img[src^="http"]${iW.map((WW=>`:not([src^="${WW}/"])`)).join("")}`)].join(", "),
+            maskTextSelector: WW.showsChat ? vW : `${vW}, ${dW}`,
+            maskAttributeFn: UW
           }
         };
-        var ie
-      }(ee);
+        var iW
+      }(WW);
       return {
-        api_host: ee.apiHost,
+        api_host: WW.apiHost,
         persistence: "memory",
         bootstrap: {
-          distinctID: ee.recordingId,
+          distinctID: WW.recordingId,
           isIdentifiedID: !1,
-          sessionID: ee.recordingId
+          sessionID: WW.recordingId
         },
         person_profiles: "always",
         mask_personal_data_properties: !0,
-        custom_personal_data_properties: [...Ue],
+        custom_personal_data_properties: [...LW],
         session_idle_timeout_seconds: 36e3,
         disable_external_dependency_loading: !0,
-        opt_out_useragent_filter: ee.allowAutomatedBrowsers,
+        opt_out_useragent_filter: WW.allowAutomatedBrowsers,
         capture_pageview: !0,
         capture_pageleave: !0,
         autocapture: !1,
@@ -170,25 +170,25 @@ export const modules = {
         disable_web_experiments: !0,
         advanced_disable_feature_flags: !0,
         advanced_disable_flags: !0,
-        enable_recording_console_log: ie.enable_recording_console_log,
-        before_send: ie => {
-          const He = ge(ie);
-          return null === He || (ee.anonymised && Ye(He), "$snapshot" === He.event ? function(ee, ie) {
+        enable_recording_console_log: iW.enable_recording_console_log,
+        before_send: iW => {
+          const OW = KW(iW);
+          return null === OW || (WW.anonymised && oW(OW), "$snapshot" === OW.event ? function(WW, iW) {
             const {
-              $snapshot_data: He,
-              $window_id: ye
-            } = ee.properties;
+              $snapshot_data: OW,
+              $window_id: mW
+            } = WW.properties;
             try {
-              ie({
-                windowId: ye,
-                events: He
+              iW({
+                windowId: mW,
+                events: OW
               })
-            } catch (be) {
-              console.error("Session replay couldn't take a page recording batch.", be)
+            } catch (EW) {
+              console.error("Session replay couldn't take a page recording batch.", EW)
             }
-          }(He, ee.onDomBatch) : ee.onTimelineEvent(He)), null
+          }(OW, WW.onDomBatch) : WW.onTimelineEvent(OW)), null
         },
-        disable_session_recording: !ee.recordDom,
+        disable_session_recording: !WW.recordDom,
         session_recording: {
           captureCanvas: {
             recordCanvas: !1
@@ -204,165 +204,165 @@ export const modules = {
           full_snapshot_interval_millis: 9e5,
           session_idle_threshold_ms: 18e5,
           sampleRate: 1,
-          ...ie.session_recording
+          ...iW.session_recording
         }
       }
     }
 
-    function Ce() {
+    function VW() {
       return window.__PosthogExtensions__
     }
-    var ve = He(618),
-      ue = He(125);
+    var pW = OW(649),
+      fW = OW(136);
 
-    function me() {
-      var ee;
-      const ie = navigator,
-        He = new Date;
+    function CW() {
+      var WW;
+      const iW = navigator,
+        OW = new Date;
       return {
-        local_hour: He.getHours(),
-        local_weekday: He.getDay(),
-        ...ie.hardwareConcurrency ? {
-          cpu_cores: ie.hardwareConcurrency
+        local_hour: OW.getHours(),
+        local_weekday: OW.getDay(),
+        ...iW.hardwareConcurrency ? {
+          cpu_cores: iW.hardwareConcurrency
         } : {},
-        ...ie.deviceMemory ? {
-          device_memory_gb: ie.deviceMemory
+        ...iW.deviceMemory ? {
+          device_memory_gb: iW.deviceMemory
         } : {},
-        ...null !== (ee = ie.connection) && void 0 !== ee && ee.effectiveType ? {
-          network_type: ie.connection.effectiveType
+        ...null !== (WW = iW.connection) && void 0 !== WW && WW.effectiveType ? {
+          network_type: iW.connection.effectiveType
         } : {}
       }
     }
 
-    function le(ee) {
-      var ie;
-      const He = ee.tags;
+    function XW(WW) {
+      var iW;
+      const OW = WW.tags;
       return {
-        panel_entry_reason: null !== (ie = He.recording_reason) && void 0 !== ie ? ie : "unknown",
+        panel_entry_reason: null !== (iW = OW.recording_reason) && void 0 !== iW ? iW : "unknown",
         panel_entry_date: (new Date).toISOString().slice(0, 10),
-        ...void 0 === He.sample_rate ? {} : {
-          panel_entry_sample_rate: He.sample_rate
+        ...void 0 === OW.sample_rate ? {} : {
+          panel_entry_sample_rate: OW.sample_rate
         }
       }
     }
 
-    function Se(ee, ie) {
+    function BW(WW, iW) {
       return {
-        recording_id: ee.recordingId,
-        recording_scopes: ee.scopes.join(","),
-        dom_recorded: ie
+        recording_id: WW.recordingId,
+        recording_scopes: WW.scopes.join(","),
+        dom_recorded: iW
       }
     }
 
-    function ne(ee, ie) {
-      const He = {};
-      for (const [ye, be] of Object.entries(ie)) He[`${ee}${ye}`] = be;
-      return He
+    function qW(WW, iW) {
+      const OW = {};
+      for (const [mW, EW] of Object.entries(iW)) OW[`${WW}${mW}`] = EW;
+      return OW
     }
-    class je {
-      constructor(ee) {
-        this.options = ee, this.buckets = new Map, this.lastEvictionMs = -1 / 0
+    class RW {
+      constructor(WW) {
+        this.options = WW, this.buckets = new Map, this.lastEvictionMs = -1 / 0
       }
-      allow(ee, ie) {
-        this.evictExpired(ee, ie);
-        let He = this.buckets.get(ee);
-        var ye, be;
-        (void 0 === He || ie - He.startMs >= this.options.windowMs) && (He = {
-          startMs: ie,
+      allow(WW, iW) {
+        this.evictExpired(WW, iW);
+        let OW = this.buckets.get(WW);
+        var mW, EW;
+        (void 0 === OW || iW - OW.startMs >= this.options.windowMs) && (OW = {
+          startMs: iW,
           count: 0,
-          suppressed: null !== (ye = null === (be = He) || void 0 === be ? void 0 : be.suppressed) && void 0 !== ye ? ye : 0
-        }, this.buckets.set(ee, He));
-        if (He.count >= this.options.maxPerWindow) return He.suppressed++, null;
-        He.count++;
-        const Me = He.suppressed;
-        return He.suppressed = 0, Me
+          suppressed: null !== (mW = null === (EW = OW) || void 0 === EW ? void 0 : EW.suppressed) && void 0 !== mW ? mW : 0
+        }, this.buckets.set(WW, OW));
+        if (OW.count >= this.options.maxPerWindow) return OW.suppressed++, null;
+        OW.count++;
+        const NW = OW.suppressed;
+        return OW.suppressed = 0, NW
       }
-      evictExpired(ee, ie) {
-        if (!(ie - this.lastEvictionMs < this.options.windowMs)) {
-          this.lastEvictionMs = ie;
-          for (const [He, ye] of this.buckets) {
-            const be = (ie - ye.startMs) / this.options.windowMs;
-            He !== ee && be >= (0 === ye.suppressed ? 1 : 10) && this.buckets.delete(He)
+      evictExpired(WW, iW) {
+        if (!(iW - this.lastEvictionMs < this.options.windowMs)) {
+          this.lastEvictionMs = iW;
+          for (const [OW, mW] of this.buckets) {
+            const EW = (iW - mW.startMs) / this.options.windowMs;
+            OW !== WW && EW >= (0 === mW.suppressed ? 1 : 10) && this.buckets.delete(OW)
           }
         }
       }
     }
 
-    function se(ee, ie, He) {
-      const ye = new URL(ee);
-      return ye.pathname = `${ye.pathname.replace(/\/+$/,"")}/replay/${encodeURIComponent(ie)}`, ye.searchParams.set("timestamp", String(Math.round(He - 5e3))), ye.toString()
+    function GW(WW, iW, OW) {
+      const mW = new URL(WW);
+      return mW.pathname = `${mW.pathname.replace(/\/+$/,"")}/replay/${encodeURIComponent(iW)}`, mW.searchParams.set("timestamp", String(Math.round(OW - 5e3))), mW.toString()
     }
-    class Ie {
-      constructor(ee) {
-        this.options = ee, this.throttle = new je({
+    class IW {
+      constructor(WW) {
+        this.options = WW, this.throttle = new RW({
           maxPerWindow: 3,
           windowMs: 6e4
         })
       }
-      annotate(ee, ie) {
-        const He = Date.now(),
-          ye = this.throttle.allow("logged", He);
-        var be;
-        null !== ye && this.options.captureError(ee.message || ee.name, {
-          error_name: ee.name || null,
-          error_fingerprint: null !== (be = ie.fingerprint) && void 0 !== be ? be : null,
-          suppressed_since_last: ye
+      annotate(WW, iW) {
+        const OW = Date.now(),
+          mW = this.throttle.allow("logged", OW);
+        var EW;
+        null !== mW && this.options.captureError(WW.message || WW.name, {
+          error_name: WW.name || null,
+          error_fingerprint: null !== (EW = iW.fingerprint) && void 0 !== EW ? EW : null,
+          suppressed_since_last: mW
         });
         return {
           replay_recording_id: this.options.recordingId,
           ...this.options.domRecorded ? {
-            replay_url: se(this.options.dashboardHost, this.options.getSessionId(), He)
+            replay_url: GW(this.options.dashboardHost, this.options.getSessionId(), OW)
           } : {}
         }
       }
     }
 
-    function he(ee) {
-      return ee < 50 ? "<50" : ee < 100 ? "50-100" : ee < 200 ? "100-200" : ee < 400 ? "200-400" : "400+"
+    function aW(WW) {
+      return WW < 50 ? "<50" : WW < 100 ? "50-100" : WW < 200 ? "100-200" : WW < 400 ? "200-400" : "400+"
     }
-    class Ne {
+    class rW {
       constructor() {
         this.gamesJoined = [], this.flags = new Set, this.firstGame = null, this.fpsTags = null, this.maxHitchMs = 0, this.pingSumMs = 0, this.pingSamples = 0, this.maxPingMs = 0, this.unboundKeyPresses = new Map
       }
-      gameJoined(ee, ie) {
-        this.gamesJoined.includes(ee) || this.gamesJoined.push(ee), null === this.firstGame && (this.firstGame = {
-          joinedAtMs: ie,
+      gameJoined(WW, iW) {
+        this.gamesJoined.includes(WW) || this.gamesJoined.push(WW), null === this.firstGame && (this.firstGame = {
+          joinedAtMs: iW,
           leftAtMs: null
         })
       }
-      gameLeft(ee) {
-        null !== this.firstGame && null === this.firstGame.leftAtMs && (this.firstGame.leftAtMs = ee)
+      gameLeft(WW) {
+        null !== this.firstGame && null === this.firstGame.leftAtMs && (this.firstGame.leftAtMs = WW)
       }
-      setFlag(ee) {
-        return !this.flags.has(ee) && (this.flags.add(ee), !0)
+      setFlag(WW) {
+        return !this.flags.has(WW) && (this.flags.add(WW), !0)
       }
-      setFpsTags(ee) {
-        this.fpsTags = ee
+      setFpsTags(WW) {
+        this.fpsTags = WW
       }
-      addHitch(ee) {
-        return !(ee <= this.maxHitchMs) && (this.maxHitchMs = ee, !0)
+      addHitch(WW) {
+        return !(WW <= this.maxHitchMs) && (this.maxHitchMs = WW, !0)
       }
-      addPingSample(ee) {
-        const ie = this.pingTags();
-        this.pingSumMs += ee, this.pingSamples++, this.maxPingMs = Math.max(this.maxPingMs, ee);
-        const He = this.pingTags();
-        return (null === ie || void 0 === ie ? void 0 : ie.ping_avg_bucket) !== (null === He || void 0 === He ? void 0 : He.ping_avg_bucket) || (null === ie || void 0 === ie ? void 0 : ie.ping_max_bucket) !== (null === He || void 0 === He ? void 0 : He.ping_max_bucket)
+      addPingSample(WW) {
+        const iW = this.pingTags();
+        this.pingSumMs += WW, this.pingSamples++, this.maxPingMs = Math.max(this.maxPingMs, WW);
+        const OW = this.pingTags();
+        return (null === iW || void 0 === iW ? void 0 : iW.ping_avg_bucket) !== (null === OW || void 0 === OW ? void 0 : OW.ping_avg_bucket) || (null === iW || void 0 === iW ? void 0 : iW.ping_max_bucket) !== (null === OW || void 0 === OW ? void 0 : OW.ping_max_bucket)
       }
-      addUnboundKeyPresses(ee) {
-        for (const [He, ye] of ee) {
-          var ie;
-          this.unboundKeyPresses.set(He, (null !== (ie = this.unboundKeyPresses.get(He)) && void 0 !== ie ? ie : 0) + ye)
+      addUnboundKeyPresses(WW) {
+        for (const [OW, mW] of WW) {
+          var iW;
+          this.unboundKeyPresses.set(OW, (null !== (iW = this.unboundKeyPresses.get(OW)) && void 0 !== iW ? iW : 0) + mW)
         }
       }
       toProperties() {
-        var ee;
-        let ie = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        var WW;
+        let iW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         return {
           ...{
-            first_game: null !== (ee = this.gamesJoined[0]) && void 0 !== ee ? ee : "",
+            first_game: null !== (WW = this.gamesJoined[0]) && void 0 !== WW ? WW : "",
             games_joined: this.gamesJoined.join(","),
             games_joined_count: this.gamesJoined.length,
-            quick_quit: this.isQuickQuit(ie),
+            quick_quit: this.isQuickQuit(iW),
             had_error: this.flags.has("had_error"),
             disconnected: this.flags.has("disconnected"),
             purchase_intent: this.flags.has("purchase_intent"),
@@ -375,144 +375,144 @@ export const modules = {
         }
       }
       unboundKeyTags() {
-        let ee = 0,
-          ie = "",
-          He = 0;
-        for (const [ye, be] of this.unboundKeyPresses) ee += be, (be > He || be === He && ye < ie) && (ie = ye, He = be);
+        let WW = 0,
+          iW = "",
+          OW = 0;
+        for (const [mW, EW] of this.unboundKeyPresses) WW += EW, (EW > OW || EW === OW && mW < iW) && (iW = mW, OW = EW);
         return {
-          unbound_key_presses: ee,
-          top_unbound_key: ie
+          unbound_key_presses: WW,
+          top_unbound_key: iW
         }
       }
       pingTags() {
         return 0 === this.pingSamples ? null : {
-          ping_avg_bucket: he(this.pingSumMs / this.pingSamples),
-          ping_max_bucket: he(this.maxPingMs)
+          ping_avg_bucket: aW(this.pingSumMs / this.pingSamples),
+          ping_max_bucket: aW(this.maxPingMs)
         }
       }
-      isQuickQuit(ee) {
-        var ie;
+      isQuickQuit(WW) {
+        var iW;
         if (null === this.firstGame) return !1;
-        const He = null !== (ie = this.firstGame.leftAtMs) && void 0 !== ie ? ie : ee;
-        return null !== He && He - this.firstGame.joinedAtMs < ye.j
+        const OW = null !== (iW = this.firstGame.leftAtMs) && void 0 !== iW ? iW : WW;
+        return null !== OW && OW - this.firstGame.joinedAtMs < mW.n
       }
     }
-    var Ge = He(1169),
-      re = He(1036),
-      Qe = He(347),
-      ei = He(1040),
-      ii = He(1033),
-      Hi = He(2966),
-      yi = He(18),
-      bi = He(1983),
-      Mi = He(27),
-      Ki = He(1305),
-      Ui = He(1260),
-      Fi = He(1493),
-      Ji = He(2189),
-      oi = He(1620),
-      Ri = He(40627),
-      ki = He(97),
-      qi = He(40619),
-      fi = He(1281);
-    class Ti {
-      constructor(ee, ie, He) {
-        this.replay = ee, this.quitContext = ie, this.flows = He, this.errorThrottle = new je({
+    var zW = OW(1217),
+      FW = OW(1061),
+      QW = OW(344),
+      Wi = OW(1065),
+      ii = OW(1052),
+      Oi = OW(3822),
+      mi = OW(25),
+      Ei = OW(2037),
+      Ni = OW(27),
+      Pi = OW(1351),
+      Li = OW(1301),
+      ci = OW(1593),
+      wi = OW(2306),
+      ti = OW(1729),
+      Zi = OW(41082),
+      xi = OW(100),
+      li = OW(41073),
+      Ai = OW(1319);
+    class bi {
+      constructor(WW, iW, OW) {
+        this.replay = WW, this.quitContext = iW, this.flows = OW, this.errorThrottle = new RW({
           maxPerWindow: 3,
           windowMs: 6e4
-        }), this.hitchThrottle = new je({
+        }), this.hitchThrottle = new RW({
           maxPerWindow: 5,
           windowMs: 6e4
         }), this.attachedToRender = !1
       }
       start() {
-        window.addEventListener("error", (ee => {
-            const ie = ee.error;
-            this.captureError("error", ee.message, ee.filename ? `${ee.filename}:${ee.lineno}:${ee.colno}` : null, ie instanceof Error ? ie.name : null, (0, qi.c)(ee))
-          })), window.addEventListener("unhandledrejection", (ee => {
-            const ie = ee.reason;
-            this.captureError("unhandled_rejection", ie instanceof Error ? ie.message : String(ie), null, ie instanceof Error ? ie.name : null, (0, qi.c)(ee))
-          })), Mi.h.subscribe("unrecoverableError", (ee => {
-            this.captureError("unrecoverable", ee, null, null, !0)
+        window.addEventListener("error", (WW => {
+            const iW = WW.error;
+            this.captureError("error", WW.message, WW.filename ? `${WW.filename}:${WW.lineno}:${WW.colno}` : null, iW instanceof Error ? iW.name : null, (0, li.c)(WW))
+          })), window.addEventListener("unhandledrejection", (WW => {
+            const iW = WW.reason;
+            this.captureError("unhandled_rejection", iW instanceof Error ? iW.message : String(iW), null, iW instanceof Error ? iW.name : null, (0, li.c)(WW))
+          })), Ni.l.subscribe("unrecoverableError", (WW => {
+            this.captureError("unrecoverable", WW, null, null, !0)
           })),
-          function(ee) {
-            var ie, He;
-            if ("undefined" === typeof PerformanceObserver || null === (ie = null === (He = PerformanceObserver.supportedEntryTypes) || void 0 === He ? void 0 : He.includes("long-animation-frame")) || void 0 === ie || !ie) return;
-            let ye = null;
-            new PerformanceObserver((ie => {
-              for (const Me of ie.getEntries()) {
-                var He, be;
-                const ie = Me,
-                  Ke = !(null !== ye && ie.startTime - ye.endMs < 50) || ie.duration >= 3 * (null !== (He = null === (be = ye) || void 0 === be ? void 0 : be.durationMs) && void 0 !== He ? He : 0);
-                ye = {
-                  endMs: ie.startTime + ie.duration,
-                  durationMs: ie.duration
-                }, !document.hidden && ie.duration >= 100 && Ke && ee({
-                  frameMs: ie.duration,
-                  mainThreadMs: (0, fi.o)(ie)
+          function(WW) {
+            var iW, OW;
+            if ("undefined" === typeof PerformanceObserver || null === (iW = null === (OW = PerformanceObserver.supportedEntryTypes) || void 0 === OW ? void 0 : OW.includes("long-animation-frame")) || void 0 === iW || !iW) return;
+            let mW = null;
+            new PerformanceObserver((iW => {
+              for (const NW of iW.getEntries()) {
+                var OW, EW;
+                const iW = NW,
+                  PW = !(null !== mW && iW.startTime - mW.endMs < 50) || iW.duration >= 3 * (null !== (OW = null === (EW = mW) || void 0 === EW ? void 0 : EW.durationMs) && void 0 !== OW ? OW : 0);
+                mW = {
+                  endMs: iW.startTime + iW.duration,
+                  durationMs: iW.duration
+                }, !document.hidden && iW.duration >= 100 && PW && WW({
+                  frameMs: iW.duration,
+                  mainThreadMs: (0, Ai.l)(iW)
                 })
               }
             })).observe({
               type: "long-animation-frame"
             })
-          }((ee => {
-            this.onFrameHitch(ee)
+          }((WW => {
+            this.onFrameHitch(WW)
           }))
       }
       attachToRender() {
         if (this.attachedToRender) return;
-        const ee = (0, Ui.A)().gameRender();
-        null !== ee && (this.attachedToRender = !0, this.replay.setSessionProperties(Object.fromEntries([
-          ["renderer", ee.renderer],
-          ["gpu_vendor", (0, ki.getGpuVendor)()]
-        ])), ee.canvas.addEventListener("webglcontextlost", (() => {
+        const WW = (0, Li.y)().gameRender();
+        null !== WW && (this.attachedToRender = !0, this.replay.setSessionProperties(Object.fromEntries([
+          ["renderer", WW.renderer],
+          ["gpu_vendor", (0, xi.getGpuVendor)()]
+        ])), WW.canvas.addEventListener("webglcontextlost", (() => {
           this.replay.setFlag("had_error"), this.replay.capture("webgl_context_lost")
-        })), ee.canvas.addEventListener("webglcontextrestored", (() => {
+        })), WW.canvas.addEventListener("webglcontextrestored", (() => {
           this.replay.capture("webgl_context_restored")
         })))
       }
-      captureError(ee, ie, He, be, Me) {
-        const Ke = ze(ie).slice(0, 300);
-        Me && null !== this.flows.stay && this.quitContext.noteError(performance.now());
-        const Ue = this.errorThrottle.allow(`${ee}:${Ke}`, Date.now());
-        null !== Ue && (this.replay.captureClientError(ee, Ke, {
-          source: He,
-          error_name: be,
-          suppressed_since_last: Ue
-        }), this.replay.addReplayMarker(ye.h.error, {
-          kind: ee,
-          message: Ke
+      captureError(WW, iW, OW, EW, NW) {
+        const PW = kW(iW).slice(0, 300);
+        NW && null !== this.flows.stay && this.quitContext.noteError(performance.now());
+        const LW = this.errorThrottle.allow(`${WW}:${PW}`, Date.now());
+        null !== LW && (this.replay.captureClientError(WW, PW, {
+          source: OW,
+          error_name: EW,
+          suppressed_since_last: LW
+        }), this.replay.addReplayMarker(mW.l.error, {
+          kind: WW,
+          message: PW
         }))
       }
-      onFrameHitch(ee) {
+      onFrameHitch(WW) {
         let {
-          frameMs: ie,
-          mainThreadMs: He
-        } = ee;
-        const ye = this.flows.stay;
-        if (null === ye || null === ye.playableAtMs || performance.now() - ye.playableAtMs < 2e3) return;
-        (0, oi.o)() || this.quitContext.noteHitch(performance.now()), this.replay.addHitch(Math.round(ie));
-        const be = this.hitchThrottle.allow("frame_hitch", Date.now());
-        null !== be && this.replay.capture("frame_hitch", {
-          YK: Math.round(ie),
-          main_thread_ms: Math.round(He),
-          game_name_with_variation: ye.name,
-          suppressed_since_last: be
+          frameMs: iW,
+          mainThreadMs: OW
+        } = WW;
+        const mW = this.flows.stay;
+        if (null === mW || null === mW.playableAtMs || performance.now() - mW.playableAtMs < 2e3) return;
+        (0, ti.l)() || this.quitContext.noteHitch(performance.now()), this.replay.addHitch(Math.round(iW));
+        const EW = this.hitchThrottle.allow("frame_hitch", Date.now());
+        null !== EW && this.replay.capture("frame_hitch", {
+          Mc: Math.round(iW),
+          main_thread_ms: Math.round(OW),
+          game_name_with_variation: mW.name,
+          suppressed_since_last: EW
         })
       }
     }
-    var Xi = He(7132),
-      zi = He(335);
-    class Bi {
-      constructor(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.steps = ee, this.furthestIndex = -1, this.heldIndex = -1, this.gateIndex = void 0, this.gateIndex = null === ie ? 1 / 0 : ee.indexOf(ie)
+    var ji = OW(7493),
+      Ui = OW(327);
+    class ki {
+      constructor(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.steps = WW, this.furthestIndex = -1, this.heldIndex = -1, this.gateIndex = void 0, this.gateIndex = null === iW ? 1 / 0 : WW.indexOf(iW)
       }
-      reach(ee) {
-        const ie = this.steps.indexOf(ee);
-        if (ie > this.gateIndex && this.furthestIndex < this.gateIndex) return this.heldIndex = Math.max(this.heldIndex, ie), null;
-        const He = ie === this.gateIndex ? Math.max(ie, this.heldIndex) : ie;
-        return He <= this.furthestIndex ? null : (this.furthestIndex = He, He)
+      reach(WW) {
+        const iW = this.steps.indexOf(WW);
+        if (iW > this.gateIndex && this.furthestIndex < this.gateIndex) return this.heldIndex = Math.max(this.heldIndex, iW), null;
+        const OW = iW === this.gateIndex ? Math.max(iW, this.heldIndex) : iW;
+        return OW <= this.furthestIndex ? null : (this.furthestIndex = OW, OW)
       }
       get furthest() {
         return -1 === this.furthestIndex ? null : this.steps[this.furthestIndex]
@@ -521,7 +521,7 @@ export const modules = {
         return this.furthestIndex
       }
     }
-    const Ei = {
+    const si = {
       unbound_key_burst: {
         count: 4,
         windowMs: 5e3
@@ -539,123 +539,123 @@ export const modules = {
         windowMs: 1e4
       }
     };
-    class gi {
-      constructor(ee) {
-        this.threshold = ee, this.times = [], this.armed = !0, this.lastAtMs = -1 / 0
+    class Mi {
+      constructor(WW) {
+        this.threshold = WW, this.times = [], this.armed = !0, this.lastAtMs = -1 / 0
       }
-      note(ee) {
+      note(WW) {
         const {
-          count: ie,
-          windowMs: He
+          count: iW,
+          windowMs: OW
         } = this.threshold;
-        if (!this.armed && ee - this.lastAtMs >= He && (this.armed = !0), this.lastAtMs = ee, !this.armed) return !1;
-        for (this.times.push(ee); this.times.length > 0 && ee - this.times[0] >= He;) this.times.shift();
-        return !(this.times.length < ie) && (this.times.length = 0, this.armed = !1, !0)
+        if (!this.armed && WW - this.lastAtMs >= OW && (this.armed = !0), this.lastAtMs = WW, !this.armed) return !1;
+        for (this.times.push(WW); this.times.length > 0 && WW - this.times[0] >= OW;) this.times.shift();
+        return !(this.times.length < iW) && (this.times.length = 0, this.armed = !1, !0)
       }
     }
-    class Oi {
-      constructor(ee) {
-        this.onSignal = ee, this.bursts = new Map, this.seen = [], this.signalCount = 0, this.idleCounted = !1;
-        for (const [ie, He] of Object.entries(Ei)) this.bursts.set(ie, new gi(He))
+    class Ki {
+      constructor(WW) {
+        this.onSignal = WW, this.bursts = new Map, this.seen = [], this.signalCount = 0, this.idleCounted = !1;
+        for (const [iW, OW] of Object.entries(si)) this.bursts.set(iW, new Mi(OW))
       }
-      note(ee, ie) {
-        if (this.bursts.get(ee).note(ie)) {
+      note(WW, iW) {
+        if (this.bursts.get(WW).note(iW)) {
           const {
-            count: ie,
-            windowMs: He
-          } = Ei[ee];
-          this.signal(ee, ie, He)
+            count: iW,
+            windowMs: OW
+          } = si[WW];
+          this.signal(WW, iW, OW)
         }
       }
-      checkIdle(ee) {
+      checkIdle(WW) {
         let {
-          nowMs: ie,
-          lastInputAtMs: He,
-          pointerLocked: ye,
-          playable: be,
-          visible: Me
-        } = ee;
-        ie - (null !== He && void 0 !== He ? He : 0) < 3e4 ? this.idleCounted = !1 : !this.idleCounted && ye && be && Me && (this.idleCounted = !0, this.signal("idle_pointer_locked", 1, 3e4))
+          nowMs: iW,
+          lastInputAtMs: OW,
+          pointerLocked: mW,
+          playable: EW,
+          visible: NW
+        } = WW;
+        iW - (null !== OW && void 0 !== OW ? OW : 0) < 3e4 ? this.idleCounted = !1 : !this.idleCounted && mW && EW && NW && (this.idleCounted = !0, this.signal("idle_pointer_locked", 1, 3e4))
       }
       tags() {
-        let ee = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const ie = ee && !this.seen.includes("rage_quit") ? [...this.seen, "rage_quit"] : this.seen;
+        let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const iW = WW && !this.seen.includes("rage_quit") ? [...this.seen, "rage_quit"] : this.seen;
         return {
-          frustration_score: this.signalCount + (ee ? 1 : 0),
-          frustration_signals: ie.join(",")
+          frustration_score: this.signalCount + (WW ? 1 : 0),
+          frustration_signals: iW.join(",")
         }
       }
-      signal(ee, ie, He) {
-        this.signalCount++, this.seen.includes(ee) || this.seen.push(ee), this.onSignal(ee, ie, He)
+      signal(WW, iW, OW) {
+        this.signalCount++, this.seen.includes(WW) || this.seen.push(WW), this.onSignal(WW, iW, OW)
       }
     }
-    const di = Xi.f.indexOf("first_input"),
-      Wi = Xi.f.indexOf("first_move"),
-      ti = {
+    const Si = ji.j.indexOf("first_input"),
+      Yi = ji.j.indexOf("first_move"),
+      yi = {
         keyboardMouse: "keyboard",
         touch: "touch",
         gamepad: "pad"
       };
-    class Zi {
-      constructor(ee, ie, He) {
-        this.replay = ee, this.quitContext = ie, this.deps = He, this.ladder = new Bi(Xi.c, "first_move"), this.frustration = void 0, this.frustrationThrottle = new je({
+    class Ti {
+      constructor(WW, iW, OW) {
+        this.replay = WW, this.quitContext = iW, this.deps = OW, this.ladder = new ki(ji.e, "first_move"), this.frustration = void 0, this.frustrationThrottle = new RW({
           maxPerWindow: 5,
           windowMs: 6e4
-        }), this.activations = new Set, this.currentStay = null, this.moveSubscriptions = [], this.everPlayable = !1, this.everPointerLocked = !1, this.pointerUnlockedAtMs = -1 / 0, this.everythingMenu = null, this.lastGameName = null, this.unsentStepMarkers = [], this.frustration = new Oi(((ee, ie, He) => {
-          this.onFrustration(ee, ie, He)
-        })), ie.setFlowProperties((ee => this.quitProperties(ee)))
+        }), this.activations = new Set, this.currentStay = null, this.moveSubscriptions = [], this.everPlayable = !1, this.everPointerLocked = !1, this.pointerUnlockedAtMs = -1 / 0, this.everythingMenu = null, this.lastGameName = null, this.unsentStepMarkers = [], this.frustration = new Ki(((WW, iW, OW) => {
+          this.onFrustration(WW, iW, OW)
+        })), iW.setFlowProperties((WW => this.quitProperties(WW)))
       }
       get stay() {
         return this.currentStay
       }
       start() {
-        var ee;
-        this.reachStep("page_loaded"), Mi.h.subscribe("sessionReplayStayOpened", (ee => {
-          this.resendStay(ee)
-        })), Mi.h.subscribe("pointerLockUpdate", (ee => {
-          this.pointerLockChanged(ee)
-        })), Mi.h.subscribe("localBlockMined", (() => {
+        var WW;
+        this.reachStep("page_loaded"), Ni.l.subscribe("sessionReplayStayOpened", (WW => {
+          this.resendStay(WW)
+        })), Ni.l.subscribe("pointerLockUpdate", (WW => {
+          this.pointerLockChanged(WW)
+        })), Ni.l.subscribe("localBlockMined", (() => {
           this.blockBroken()
-        })), Mi.h.subscribe("blockChangeRefused", (() => {
+        })), Ni.l.subscribe("blockChangeRefused", (() => {
           this.noteFrustration("block_change_refused")
-        })), Mi.h.subscribe("controlsTutorialShown", (ee => {
-          this.controlsTutorialShown(ee)
-        })), Mi.h.subscribe("showShopTouchTutorial", (ee => {
-          !1 !== ee && this.controlsTutorialShown("shop")
-        })), Mi.h.subscribe("appManagerUpdated|openInGameMenuName", (ee => {
-          this.inGameMenuChanged(ee)
-        })), Mi.h.subscribe("appManagerUpdated|openEverythingMenuName", (ee => {
-          this.everythingMenuChanged(ee)
+        })), Ni.l.subscribe("controlsTutorialShown", (WW => {
+          this.controlsTutorialShown(WW)
+        })), Ni.l.subscribe("showShopTouchTutorial", (WW => {
+          !1 !== WW && this.controlsTutorialShown("shop")
+        })), Ni.l.subscribe("appManagerUpdated|openInGameMenuName", (WW => {
+          this.inGameMenuChanged(WW)
+        })), Ni.l.subscribe("appManagerUpdated|openEverythingMenuName", (WW => {
+          this.everythingMenuChanged(WW)
         })), document.addEventListener("pointerlockerror", (() => {
           this.pointerLockFailed()
-        })), null === (ee = (0, Ri.c)()) || void 0 === ee || ee.onUnboundKey((() => {
+        })), null === (WW = (0, Zi.e)()) || void 0 === WW || WW.onUnboundKey((() => {
           this.unboundKeyPressed()
         }))
       }
       gameLoading() {
         this.reachStep("game_loading")
       }
-      gameJoined(ee, ie, He) {
-        const ye = He && ie === this.lastGameName;
-        this.lastGameName = ie, this.stopWatchingMoves();
-        const be = {
-          name: ie,
+      gameJoined(WW, iW, OW) {
+        const mW = OW && iW === this.lastGameName;
+        this.lastGameName = iW, this.stopWatchingMoves();
+        const EW = {
+          name: iW,
           joinedAtMs: Date.now(),
           playableAtMs: null,
           visiblePlayedMs: 0,
           deaths: 0,
-          ladder: new Bi(Xi.f, "first_move"),
+          ladder: new ki(ji.j, "first_move"),
           unboundKeyPresses: 0
         };
-        return this.currentStay = be, this.reachStayStep("joined"), ee >= 2 && !ye && this.reachStep("second_game"), be
+        return this.currentStay = EW, this.reachStayStep("joined"), WW >= 2 && !mW && this.reachStep("second_game"), EW
       }
       gamePlayable() {
-        const ee = this.currentStay;
-        null !== ee && (ee.playableAtMs = this.deps.now(), this.everPlayable = !0, this.reachStep("game_playable"), this.reachStayStep("game_playable"), this.deps.isPointerLocked() && this.pointerLocked(), this.watchMoves())
+        const WW = this.currentStay;
+        null !== WW && (WW.playableAtMs = this.deps.now(), this.everPlayable = !0, this.reachStep("game_playable"), this.reachStayStep("game_playable"), this.deps.isPointerLocked() && this.pointerLocked(), this.watchMoves())
       }
       input() {
-        const ee = this.currentStay;
-        null === ee || null === ee.playableAtMs || ee.ladder.furthestStepIndex >= di || (this.reachStep("first_input"), this.reachStayStep("first_input"))
+        const WW = this.currentStay;
+        null === WW || null === WW.playableAtMs || WW.ladder.furthestStepIndex >= Si || (this.reachStep("first_input"), this.reachStayStep("first_input"))
       }
       played60s() {
         this.reachStep("played_60s"), this.reachStayStep("played_60s")
@@ -663,11 +663,11 @@ export const modules = {
       gameLeft() {
         this.stopWatchingMoves(), this.currentStay = null
       }
-      YR() {
-        var ee, ie, He;
+      hZ() {
+        var WW, iW, OW;
         this.sendStepMarkers(), this.frustration.checkIdle({
           nowMs: this.deps.now(),
-          lastInputAtMs: Math.max(null !== (ee = this.quitContext.getLastInputAtMs()) && void 0 !== ee ? ee : 0, null !== (ie = null === (He = this.currentStay) || void 0 === He ? void 0 : He.playableAtMs) && void 0 !== ie ? ie : 0),
+          lastInputAtMs: Math.max(null !== (WW = this.quitContext.getLastInputAtMs()) && void 0 !== WW ? WW : 0, null !== (iW = null === (OW = this.currentStay) || void 0 === OW ? void 0 : OW.playableAtMs) && void 0 !== iW ? iW : 0),
           pointerLocked: this.deps.isPointerLocked() && "gamepad" !== this.deps.getInputDevice(),
           playable: this.isPlayable(),
           visible: this.deps.isPageVisible()
@@ -681,43 +681,43 @@ export const modules = {
       }
       moved() {
         this.stopWatchingMoves(), this.activate("first_move", {
-          input: ti[this.deps.getInputDevice()]
+          input: yi[this.deps.getInputDevice()]
         }), this.reachStep("first_move"), this.reachStayStep("first_move")
       }
       blockBroken() {
         this.isPlayable() && (this.activate("first_block_broken"), this.reachStep("first_block"), this.reachStayStep("first_block"))
       }
-      inGameMenuChanged(ee) {
-        null !== ee && this.menuOpened(ee, "inventory" === ee ? "first_inventory_open" : null)
+      inGameMenuChanged(WW) {
+        null !== WW && this.menuOpened(WW, "inventory" === WW ? "first_inventory_open" : null)
       }
-      everythingMenuChanged(ee) {
-        const ie = null === this.everythingMenu;
-        this.everythingMenu = ee, null !== ee && (this.menuOpened(ee, ee === zi.r.SETTINGS ? "first_settings_open" : null), ee === zi.r.SETTINGS && ie && null !== this.currentStay && this.noteFrustration("menu_toggling"))
+      everythingMenuChanged(WW) {
+        const iW = null === this.everythingMenu;
+        this.everythingMenu = WW, null !== WW && (this.menuOpened(WW, WW === Ui.m.SETTINGS ? "first_settings_open" : null), WW === Ui.m.SETTINGS && iW && null !== this.currentStay && this.noteFrustration("menu_toggling"))
       }
-      pointerLockChanged(ee) {
-        ee ? this.pointerLocked() : this.pointerUnlockedAtMs = this.deps.now()
+      pointerLockChanged(WW) {
+        WW ? this.pointerLocked() : this.pointerUnlockedAtMs = this.deps.now()
       }
-      controlsTutorialShown(ee) {
-        const ie = `controls_tutorial_${ee}`;
-        this.activations.has(ie) || (this.activations.add(ie), this.replay.capture("controls_tutorial_shown", {
-          tutorial: ee,
+      controlsTutorialShown(WW) {
+        const iW = `controls_tutorial_${WW}`;
+        this.activations.has(iW) || (this.activations.add(iW), this.replay.capture("controls_tutorial_shown", {
+          tutorial: WW,
           ...this.timing()
         }))
       }
       unboundKeyPressed() {
         this.noteFrustration("unbound_key_burst");
-        const ee = this.currentStay;
-        null !== ee && ee.unboundKeyPresses < Xi.g && (ee.unboundKeyPresses++, this.deps.publishStayProgress({
-          unboundKeyPresses: ee.unboundKeyPresses
+        const WW = this.currentStay;
+        null !== WW && WW.unboundKeyPresses < ji.n && (WW.unboundKeyPresses++, this.deps.publishStayProgress({
+          unboundKeyPresses: WW.unboundKeyPresses
         }))
       }
-      noteFrustration(ee) {
-        this.frustration.note(ee, this.deps.now())
+      noteFrustration(WW) {
+        this.frustration.note(WW, this.deps.now())
       }
-      quitProperties(ee) {
+      quitProperties(WW) {
         return {
           ...this.ladderTags(),
-          ...this.frustration.tags(ee),
+          ...this.frustration.tags(WW),
           never_pointer_locked: this.everPlayable && !this.everPointerLocked && !this.deps.isTouchScreen() && "gamepad" !== this.deps.getInputDevice()
         }
       }
@@ -725,94 +725,94 @@ export const modules = {
         return null !== this.currentStay && null !== this.currentStay.playableAtMs
       }
       ladderTags() {
-        var ee;
+        var WW;
         return {
-          furthest_step: null !== (ee = this.ladder.furthest) && void 0 !== ee ? ee : "",
+          furthest_step: null !== (WW = this.ladder.furthest) && void 0 !== WW ? WW : "",
           furthest_step_index: this.ladder.furthestStepIndex
         }
       }
-      reachStep(ee) {
-        null !== this.ladder.reach(ee) && (this.replay.setSessionProperties(this.ladderTags(), !1), this.unsentStepMarkers.push(Xi.c.indexOf(ee)), this.sendStepMarkers())
+      reachStep(WW) {
+        null !== this.ladder.reach(WW) && (this.replay.setSessionProperties(this.ladderTags(), !1), this.unsentStepMarkers.push(ji.e.indexOf(WW)), this.sendStepMarkers())
       }
       sendStepMarkers() {
-        for (; this.unsentStepMarkers.length > 0 && this.replay.addReplayMarker(ye.h.step, {
+        for (; this.unsentStepMarkers.length > 0 && this.replay.addReplayMarker(mW.l.step, {
             step: this.unsentStepMarkers[0]
           }, !0);) this.unsentStepMarkers.shift()
       }
-      resendStay(ee) {
-        const ie = this.currentStay;
-        var He;
-        null !== ie && ie.name === ee && this.deps.publishStayProgress({
-          furthestStep: null !== (He = ie.ladder.furthest) && void 0 !== He ? He : void 0,
-          unboundKeyPresses: ie.unboundKeyPresses
+      resendStay(WW) {
+        const iW = this.currentStay;
+        var OW;
+        null !== iW && iW.name === WW && this.deps.publishStayProgress({
+          furthestStep: null !== (OW = iW.ladder.furthest) && void 0 !== OW ? OW : void 0,
+          unboundKeyPresses: iW.unboundKeyPresses
         })
       }
-      reachStayStep(ee) {
-        var ie;
-        const He = null === (ie = this.currentStay) || void 0 === ie ? void 0 : ie.ladder;
-        void 0 !== He && null !== He.reach(ee) && this.deps.publishStayProgress({
-          furthestStep: He.furthest
+      reachStayStep(WW) {
+        var iW;
+        const OW = null === (iW = this.currentStay) || void 0 === iW ? void 0 : iW.ladder;
+        void 0 !== OW && null !== OW.reach(WW) && this.deps.publishStayProgress({
+          furthestStep: OW.furthest
         })
       }
-      menuOpened(ee, ie) {
+      menuOpened(WW, iW) {
         this.replay.capture("menu_opened", {
-          menu: ee
-        }), null !== ie && this.activate(ie)
+          menu: WW
+        }), null !== iW && this.activate(iW)
       }
-      activate(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.activations.has(ee) || (this.activations.add(ee), this.replay.capture(ee, {
-          ...ie,
+      activate(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.activations.has(WW) || (this.activations.add(WW), this.replay.capture(WW, {
+          ...iW,
           ...this.timing()
         }))
       }
       timing() {
-        var ee, ie;
-        const He = this.deps.now(),
-          ye = null !== (ee = null === (ie = this.currentStay) || void 0 === ie ? void 0 : ie.playableAtMs) && void 0 !== ee ? ee : null;
+        var WW, iW;
+        const OW = this.deps.now(),
+          mW = null !== (WW = null === (iW = this.currentStay) || void 0 === iW ? void 0 : iW.playableAtMs) && void 0 !== WW ? WW : null;
         return {
-          ms_since_page_load: Math.round(He),
-          ms_since_playable: null === ye ? null : Math.round(He - ye)
+          ms_since_page_load: Math.round(OW),
+          ms_since_playable: null === mW ? null : Math.round(OW - mW)
         }
       }
-      onFrustration(ee, ie, He) {
-        this.replay.setSessionProperties(this.frustration.tags(), !1), this.replay.addReplayMarker(ye.h.frustration, {
-          signal: Xi.e.indexOf(ee)
+      onFrustration(WW, iW, OW) {
+        this.replay.setSessionProperties(this.frustration.tags(), !1), this.replay.addReplayMarker(mW.l.frustration, {
+          signal: ji.h.indexOf(WW)
         });
-        const be = this.frustrationThrottle.allow(ee, Date.now());
-        null !== be && this.replay.capture("frustration_signal", {
-          signal: ee,
-          count: ie,
-          window_ms: He,
-          suppressed_since_last: be
+        const EW = this.frustrationThrottle.allow(WW, Date.now());
+        null !== EW && this.replay.capture("frustration_signal", {
+          signal: WW,
+          count: iW,
+          window_ms: OW,
+          suppressed_since_last: EW
         })
       }
       watchMoves() {
-        var ee, ie;
-        if (0 === this.moveSubscriptions.length && (null !== (ee = null === (ie = this.currentStay) || void 0 === ie ? void 0 : ie.ladder.furthestStepIndex) && void 0 !== ee ? ee : 1 / 0) < Wi) {
-          const ee = () => {
+        var WW, iW;
+        if (0 === this.moveSubscriptions.length && (null !== (WW = null === (iW = this.currentStay) || void 0 === iW ? void 0 : iW.ladder.furthestStepIndex) && void 0 !== WW ? WW : 1 / 0) < Yi) {
+          const WW = () => {
             this.moved()
           };
-          this.moveSubscriptions = [Mi.h.subscribe("usedKeyboard", ee), Mi.h.subscribe("stickMoved", ee)]
+          this.moveSubscriptions = [Ni.l.subscribe("usedKeyboard", WW), Ni.l.subscribe("stickMoved", WW)]
         }
       }
       stopWatchingMoves() {
-        for (const ee of this.moveSubscriptions) Mi.h.unsubscribe(ee);
+        for (const WW of this.moveSubscriptions) Ni.l.unsubscribe(WW);
         this.moveSubscriptions = []
       }
     }
-    const wi = ["quit_after_hitch", "quit_after_death", "quit_during_load", "quit_in_menu", "quit_idle", "quit_after_ad"],
-      Di = ["quit_during_load", "quit_after_ad", "quit_after_death", "quit_after_hitch", "quit_idle", "quit_in_menu"];
+    const Ji = ["quit_after_hitch", "quit_after_death", "quit_during_load", "quit_in_menu", "quit_idle", "quit_after_ad"],
+      Hi = ["quit_during_load", "quit_after_ad", "quit_after_death", "quit_after_hitch", "quit_idle", "quit_in_menu"];
 
-    function Pi(ee) {
-      var ie;
-      return null !== (ie = Di.find((ie => ee.includes(ie)))) && void 0 !== ie ? ie : "none"
+    function ni(WW) {
+      var iW;
+      return null !== (iW = Hi.find((iW => WW.includes(iW)))) && void 0 !== iW ? iW : "none"
     }
 
-    function Ai(ee, ie, He) {
-      return null !== ee && ie - ee < He
+    function ui(WW, iW, OW) {
+      return null !== WW && iW - WW < OW
     }
-    class Yi {
+    class oi {
       constructor() {
         this.history = {
           lastHitchAtMs: null,
@@ -823,20 +823,20 @@ export const modules = {
           adPlaying: !1
         }, this.lastLoadStep = null, this.flowProperties = () => ({})
       }
-      setFlowProperties(ee) {
-        this.flowProperties = ee
+      setFlowProperties(WW) {
+        this.flowProperties = WW
       }
-      noteInput(ee) {
-        this.history.lastInputAtMs = ee
+      noteInput(WW) {
+        this.history.lastInputAtMs = WW
       }
-      noteHitch(ee) {
-        this.history.lastHitchAtMs = ee
+      noteHitch(WW) {
+        this.history.lastHitchAtMs = WW
       }
-      noteDeath(ee) {
-        this.history.lastDeathAtMs = ee
+      noteDeath(WW) {
+        this.history.lastDeathAtMs = WW
       }
-      noteError(ee) {
-        this.history.lastErrorAtMs = ee
+      noteError(WW) {
+        this.history.lastErrorAtMs = WW
       }
       getLastInputAtMs() {
         return this.history.lastInputAtMs
@@ -847,46 +847,46 @@ export const modules = {
       noteAdStarted() {
         this.history.adPlaying = !0
       }
-      noteAdFinished(ee) {
-        this.history.adPlaying = !1, this.history.lastAdFinishedAtMs = ee
+      noteAdFinished(WW) {
+        this.history.adPlaying = !1, this.history.lastAdFinishedAtMs = WW
       }
-      noteLoadStep(ee) {
-        this.lastLoadStep = ee
+      noteLoadStep(WW) {
+        this.lastLoadStep = WW
       }
       getLastLoadStep() {
         return this.lastLoadStep
       }
-      quit(ee) {
-        const ie = function(ee, ie) {
-            var He, ye;
-            const be = [];
-            return Ai(ie.lastHitchAtMs, ee.nowMs, 15e3) && be.push("quit_after_hitch"), Ai(ie.lastDeathAtMs, ee.nowMs, 15e3) && be.push("quit_after_death"), ee.loading ? be.push("quit_during_load") : "page" !== ee.quitFrom || ee.inGame && !ee.menuOpen || be.push("quit_in_menu"), Ai(null !== (He = ie.lastInputAtMs) && void 0 !== He ? He : 0, ee.nowMs, 6e4) || be.push("quit_idle"), (!0 === ie.adPlaying || Ai(null !== (ye = ie.lastAdFinishedAtMs) && void 0 !== ye ? ye : null, ee.nowMs, 3e4)) && be.push("quit_after_ad"), be
-          }(ee, this.history),
-          He = function(ee, ie) {
-            var He;
-            return Ai(ie.lastDeathAtMs, ee, 1e4) || Ai(null !== (He = ie.lastErrorAtMs) && void 0 !== He ? He : null, ee, 1e4)
-          }(ee.nowMs, this.history),
-          ye = {
-            quit_from: ee.quitFrom,
-            in_game: ee.inGame,
-            quit_reasons: ie.join(","),
-            quit_reason: Pi(ie),
-            rage_quit: He,
-            ...this.flowProperties(He)
+      quit(WW) {
+        const iW = function(WW, iW) {
+            var OW, mW;
+            const EW = [];
+            return ui(iW.lastHitchAtMs, WW.nowMs, 15e3) && EW.push("quit_after_hitch"), ui(iW.lastDeathAtMs, WW.nowMs, 15e3) && EW.push("quit_after_death"), WW.loading ? EW.push("quit_during_load") : "page" !== WW.quitFrom || WW.inGame && !WW.menuOpen || EW.push("quit_in_menu"), ui(null !== (OW = iW.lastInputAtMs) && void 0 !== OW ? OW : 0, WW.nowMs, 6e4) || EW.push("quit_idle"), (!0 === iW.adPlaying || ui(null !== (mW = iW.lastAdFinishedAtMs) && void 0 !== mW ? mW : null, WW.nowMs, 3e4)) && EW.push("quit_after_ad"), EW
+          }(WW, this.history),
+          OW = function(WW, iW) {
+            var OW;
+            return ui(iW.lastDeathAtMs, WW, 1e4) || ui(null !== (OW = iW.lastErrorAtMs) && void 0 !== OW ? OW : null, WW, 1e4)
+          }(WW.nowMs, this.history),
+          mW = {
+            quit_from: WW.quitFrom,
+            in_game: WW.inGame,
+            quit_reasons: iW.join(","),
+            quit_reason: ni(iW),
+            rage_quit: OW,
+            ...this.flowProperties(OW)
           };
-        var be;
-        ie.includes("quit_during_load") && (ye.last_load_step = null !== (be = this.lastLoadStep) && void 0 !== be ? be : "none");
-        null !== ee.gameName && (ye.game_name_with_variation = ee.gameName, ye.game_name = (0, Qe.Xb)(ee.gameName));
-        for (const Me of wi) ye[Me] = ie.includes(Me);
+        var EW;
+        iW.includes("quit_during_load") && (mW.last_load_step = null !== (EW = this.lastLoadStep) && void 0 !== EW ? EW : "none");
+        null !== WW.gameName && (mW.game_name_with_variation = WW.gameName, mW.game_name = (0, QW.Tb)(WW.gameName));
+        for (const NW of Ji) mW[NW] = iW.includes(NW);
         return {
-          reasons: ie,
-          properties: ye
+          reasons: iW,
+          properties: mW
         }
       }
     }
-    class Vi {
-      constructor(ee) {
-        this.deps = ee, this.quitContext = new Yi, this.loading = !1, this.inGame = !1, this.switching = !1, this.nextLeaveIsNotAQuit = !1, this.pendingQuit = null, this.exited = !1
+    class di {
+      constructor(WW) {
+        this.deps = WW, this.quitContext = new oi, this.loading = !1, this.inGame = !1, this.switching = !1, this.nextLeaveIsNotAQuit = !1, this.pendingQuit = null, this.exited = !1
       }
       joinStarted() {
         this.loading = !0, this.nextLeaveIsNotAQuit = !1, this.inGame && (this.switching = !0), this.resolvePendingQuitAsSwitch()
@@ -897,36 +897,36 @@ export const modules = {
       gamePlayable() {
         this.loading = !1
       }
-      joinFailed(ee) {
-        this.loading = !1, this.nextLeaveIsNotAQuit = this.inGame, this.deps.capture("join_failed", ee)
+      joinFailed(WW) {
+        this.loading = !1, this.nextLeaveIsNotAQuit = this.inGame, this.deps.capture("join_failed", WW)
       }
       disconnected() {
         this.nextLeaveIsNotAQuit = !0
       }
-      kickedForAfk(ee) {
+      kickedForAfk(WW) {
         this.nextLeaveIsNotAQuit = !0, this.deps.capture("kicked_afk", {
-          game_name_with_variation: ee
+          game_name_with_variation: WW
         })
       }
-      gameLeft(ee) {
-        const ie = this.nextLeaveIsNotAQuit || this.deps.isJoinAbandoned(),
-          He = this.switching,
-          ye = this.loading;
-        if (this.nextLeaveIsNotAQuit = !1, this.switching = !1, this.inGame = !1, null === ee) return;
-        if (He || (this.loading = !1), ie) return void this.quitContext.forgetGame();
-        const be = this.quitContext.quit({
+      gameLeft(WW) {
+        const iW = this.nextLeaveIsNotAQuit || this.deps.isJoinAbandoned(),
+          OW = this.switching,
+          mW = this.loading;
+        if (this.nextLeaveIsNotAQuit = !1, this.switching = !1, this.inGame = !1, null === WW) return;
+        if (OW || (this.loading = !1), iW) return void this.quitContext.forgetGame();
+        const EW = this.quitContext.quit({
           quitFrom: "game",
-          gameName: ee,
+          gameName: WW,
           nowMs: this.deps.now(),
           inGame: !0,
-          loading: ye,
+          loading: mW,
           menuOpen: !1
         });
-        this.quitContext.forgetGame(), He ? this.captureSwitch(be) : this.startPendingQuit(be)
+        this.quitContext.forgetGame(), OW ? this.captureSwitch(EW) : this.startPendingQuit(EW)
       }
-      gameReplayOpened(ee) {
-        this.nextLeaveIsNotAQuit = !0, this.gameLeft(ee), this.deps.capture("game_replay_opened", {
-          from_game_name_with_variation: ee
+      gameReplayOpened(WW) {
+        this.nextLeaveIsNotAQuit = !0, this.gameLeft(WW), this.deps.capture("game_replay_opened", {
+          from_game_name_with_variation: WW
         })
       }
       playPageLeft() {
@@ -939,12 +939,12 @@ export const modules = {
           menuOpen: !1
         })))
       }
-      pageHidden(ee) {
+      pageHidden(WW) {
         if (this.exited) return;
         this.exited = !0;
-        const ie = this.pendingQuit;
-        null !== ie && (clearTimeout(ie.timer), this.pendingQuit = null, this.deps.onGameQuit(ie.quit), this.deps.captureOnExit("quit_context", ie.quit.properties, ie.atEpochMs));
-        const He = {
+        const iW = this.pendingQuit;
+        null !== iW && (clearTimeout(iW.timer), this.pendingQuit = null, this.deps.onGameQuit(iW.quit), this.deps.captureOnExit("quit_context", iW.quit.properties, iW.atEpochMs));
+        const OW = {
             quitFrom: "page",
             gameName: null,
             nowMs: this.deps.now(),
@@ -952,115 +952,115 @@ export const modules = {
             loading: this.loading,
             menuOpen: this.deps.isMenuOpen()
           },
-          ye = this.quitContext.quit(He);
-        this.inGame && this.deps.onGameQuit(ye), this.deps.captureOnExit("quit_context", {
-          ...ee,
-          ...ye.properties
+          mW = this.quitContext.quit(OW);
+        this.inGame && this.deps.onGameQuit(mW), this.deps.captureOnExit("quit_context", {
+          ...WW,
+          ...mW.properties
         })
       }
       pageRestored() {
         this.exited = !1, this.deps.capture("page_restored", {})
       }
-      startPendingQuit(ee) {
+      startPendingQuit(WW) {
         this.resolvePendingQuitAsSwitch();
-        const ie = {
-          quit: ee,
+        const iW = {
+          quit: WW,
           atEpochMs: Date.now(),
           timer: setTimeout((() => {
-            this.pendingQuit === ie && (this.pendingQuit = null, this.deps.onGameQuit(ee), this.deps.capture("quit_context", ee.properties, ie.atEpochMs))
+            this.pendingQuit === iW && (this.pendingQuit = null, this.deps.onGameQuit(WW), this.deps.capture("quit_context", WW.properties, iW.atEpochMs))
           }), 1e4)
         };
-        this.pendingQuit = ie
+        this.pendingQuit = iW
       }
       resolvePendingQuitAsSwitch() {
-        const ee = this.pendingQuit;
-        null !== ee && (clearTimeout(ee.timer), this.pendingQuit = null, "string" === typeof ee.quit.properties.game_name_with_variation && this.captureSwitch(ee.quit))
+        const WW = this.pendingQuit;
+        null !== WW && (clearTimeout(WW.timer), this.pendingQuit = null, "string" === typeof WW.quit.properties.game_name_with_variation && this.captureSwitch(WW.quit))
       }
-      captureSwitch(ee) {
+      captureSwitch(WW) {
         this.deps.capture("game_switched", {
-          from_game_name_with_variation: ee.properties.game_name_with_variation,
-          from_game_name: ee.properties.game_name,
-          after_death: ee.reasons.includes("quit_after_death"),
-          after_hitch: ee.reasons.includes("quit_after_hitch")
+          from_game_name_with_variation: WW.properties.game_name_with_variation,
+          from_game_name: WW.properties.game_name,
+          after_death: WW.reasons.includes("quit_after_death"),
+          after_hitch: WW.reasons.includes("quit_after_hitch")
         })
       }
     }
-    var ai = He(7142);
-    class ci {
-      constructor(ee) {
-        this.replay = ee, this.pointerLockThrottle = new je({
+    var ei = OW(7502);
+    class vi {
+      constructor(WW) {
+        this.replay = WW, this.pointerLockThrottle = new RW({
           maxPerWindow: 10,
           windowMs: 6e4
         }), this.counts = new Map, this.game = null, this.timer = null
       }
-      start(ee) {
-        ee.onUnboundKey((ee => {
-          this.onUnboundKey(ee)
-        })), ee.onPointerLock((ee => {
-          const ie = this.pointerLockThrottle.allow("pointer_lock_changed", Date.now());
-          null !== ie && this.replay.capture("pointer_lock_changed", {
-            locked: ee,
-            in_game: "inGame" === yi.e.get("gameState"),
-            menu_open: (0, oi.o)(),
-            suppressed_since_last: ie
+      start(WW) {
+        WW.onUnboundKey((WW => {
+          this.onUnboundKey(WW)
+        })), WW.onPointerLock((WW => {
+          const iW = this.pointerLockThrottle.allow("pointer_lock_changed", Date.now());
+          null !== iW && this.replay.capture("pointer_lock_changed", {
+            locked: WW,
+            in_game: "inGame" === mi.d.get("gameState"),
+            menu_open: (0, ti.l)(),
+            suppressed_since_last: iW
           })
-        })), Mi.h.subscribe("leaveGame", (() => {
+        })), Ni.l.subscribe("leaveGame", (() => {
           this.flush(!1)
         })), document.addEventListener("visibilitychange", (() => {
           document.hidden && this.flush(!0)
         }))
       }
-      onUnboundKey(ee) {
-        var ie, He;
-        const ye = (0, Ki.e)().gameNameWithVariation;
-        ye !== this.game && (this.flush(!1), this.game = ye);
-        const be = null !== (ie = (0, ai.g)(ee)) && void 0 !== ie ? ie : ee;
-        this.counts.set(be, (null !== (He = this.counts.get(be)) && void 0 !== He ? He : 0) + 1), this.timer ??= setTimeout((() => {
+      onUnboundKey(WW) {
+        var iW, OW;
+        const mW = (0, Pi.d)().gameNameWithVariation;
+        mW !== this.game && (this.flush(!1), this.game = mW);
+        const EW = null !== (iW = (0, ei.g)(WW)) && void 0 !== iW ? iW : WW;
+        this.counts.set(EW, (null !== (OW = this.counts.get(EW)) && void 0 !== OW ? OW : 0) + 1), this.timer ??= setTimeout((() => {
           this.flush(!1)
         }), 1e4 - Date.now() % 1e4)
       }
-      flush(ee) {
+      flush(WW) {
         if (null !== this.timer && (clearTimeout(this.timer), this.timer = null), 0 === this.counts.size) return;
-        const ie = (He = this.counts, [...He].sort(((ee, ie) => ie[1] - ee[1] || (ee[0] < ie[0] ? -1 : 1))));
-        var He;
-        let ye = 0;
-        for (const [, Me] of ie) ye += Me;
-        const be = {
-          key_counts: Object.fromEntries(ie),
-          keys: ie.map((ee => {
-            let [ie] = ee;
-            return ie
+        const iW = (OW = this.counts, [...OW].sort(((WW, iW) => iW[1] - WW[1] || (WW[0] < iW[0] ? -1 : 1))));
+        var OW;
+        let mW = 0;
+        for (const [, NW] of iW) mW += NW;
+        const EW = {
+          key_counts: Object.fromEntries(iW),
+          keys: iW.map((WW => {
+            let [iW] = WW;
+            return iW
           })).join(","),
-          top_key: ie[0][0],
-          presses: ye,
-          game_name: null === this.game ? null : (0, Qe.Xb)(this.game),
+          top_key: iW[0][0],
+          presses: mW,
+          game_name: null === this.game ? null : (0, QW.Tb)(this.game),
           game_name_with_variation: this.game
         };
-        this.replay.addUnboundKeyPresses(this.counts), this.counts.clear(), ee ? this.replay.captureOnExit("unbound_keys", be) : this.replay.capture("unbound_keys", be)
+        this.replay.addUnboundKeyPresses(this.counts), this.counts.clear(), WW ? this.replay.captureOnExit("unbound_keys", EW) : this.replay.capture("unbound_keys", EW)
       }
     }
-    var xi = He(153);
+    var gi = OW(154);
 
-    function Li(ee) {
-      var ie, He;
-      return null !== (ie = null === (He = xi.k[ee]) || void 0 === He ? void 0 : He.toLowerCase()) && void 0 !== ie ? ie : String(ee)
+    function Di(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = gi.k[WW]) || void 0 === OW ? void 0 : OW.toLowerCase()) && void 0 !== iW ? iW : String(WW)
     }
-    class Ci {
-      constructor(ee, ie) {
-        this.replay = ee, this.quitContext = ie, this.startedAtMs = null, this.steps = new Map, this.firstGamePlayable = !1
+    class Vi {
+      constructor(WW, iW) {
+        this.replay = WW, this.quitContext = iW, this.startedAtMs = null, this.steps = new Map, this.firstGamePlayable = !1
       }
       started() {
         this.startedAtMs = Date.now()
       }
-      stepCompleted(ee) {
-        if (this.steps.has(ee)) return;
-        const ie = performance.now();
-        this.steps.set(ee, ie);
-        const He = Li(ee);
-        this.quitContext.noteLoadStep(He), this.firstGamePlayable || this.replay.capture("game_load_step", {
-          load_step: He,
-          step_number: ee,
-          ms_since_page_load: Math.round(ie),
+      stepCompleted(WW) {
+        if (this.steps.has(WW)) return;
+        const iW = performance.now();
+        this.steps.set(WW, iW);
+        const OW = Di(WW);
+        this.quitContext.noteLoadStep(OW), this.firstGamePlayable || this.replay.capture("game_load_step", {
+          load_step: OW,
+          step_number: WW,
+          ms_since_page_load: Math.round(iW),
           ms_since_load_start: null === this.startedAtMs ? null : Date.now() - this.startedAtMs
         })
       }
@@ -1071,151 +1071,151 @@ export const modules = {
         this.startedAtMs = null
       }
       playable() {
-        let ee = null,
-          ie = null;
-        for (const [ye, be] of [...this.steps].sort(((ee, ie) => ee[1] - ie[1]))) null !== ie && (null === ee || be - ie > ee.ms) && (ee = {
-          step: ye,
-          ms: be - ie
-        }), ie = be;
-        const He = null === this.startedAtMs ? null : Date.now() - this.startedAtMs;
+        let WW = null,
+          iW = null;
+        for (const [mW, EW] of [...this.steps].sort(((WW, iW) => WW[1] - iW[1]))) null !== iW && (null === WW || EW - iW > WW.ms) && (WW = {
+          step: mW,
+          ms: EW - iW
+        }), iW = EW;
+        const OW = null === this.startedAtMs ? null : Date.now() - this.startedAtMs;
         return this.firstGamePlayable = !0, this.ended(), {
-          load_ms: He,
-          slowest_load_step: null === ee ? null : Li(ee.step),
-          slowest_load_step_ms: null === ee ? null : Math.round(ee.ms)
+          load_ms: OW,
+          slowest_load_step: null === WW ? null : Di(WW.step),
+          slowest_load_step_ms: null === WW ? null : Math.round(WW.ms)
         }
       }
       resetSteps() {
         this.steps.clear(), this.quitContext.noteLoadStep(null)
       }
     }
-    const vi = ["keydown", "pointerdown", "touchstart"];
-    class ui {
-      constructor(ee) {
-        this.replay = ee, this.firstInGameInputSent = !1
+    const fi = ["keydown", "pointerdown", "touchstart"];
+    class Ci {
+      constructor(WW) {
+        this.replay = WW, this.firstInGameInputSent = !1
       }
       startFirstInputWatch() {
         setTimeout((() => {
-          ! function(ee) {
-            var ie;
-            let He = !1;
-            const ye = (ie, ye, be) => {
-              He || (He = !0, ee(ie, ye, be))
+          ! function(WW) {
+            var iW;
+            let OW = !1;
+            const mW = (iW, mW, EW) => {
+              OW || (OW = !0, WW(iW, mW, EW))
             };
-            if ("undefined" !== typeof PerformanceObserver && null !== (ie = PerformanceObserver.supportedEntryTypes) && void 0 !== ie && ie.includes("first-input")) {
-              const ee = new PerformanceObserver((ie => {
-                const [He] = ie.getEntries();
-                ee.disconnect(), ye(He.name, He.startTime, !0)
+            if ("undefined" !== typeof PerformanceObserver && null !== (iW = PerformanceObserver.supportedEntryTypes) && void 0 !== iW && iW.includes("first-input")) {
+              const WW = new PerformanceObserver((iW => {
+                const [OW] = iW.getEntries();
+                WW.disconnect(), mW(OW.name, OW.startTime, !0)
               }));
-              return void ee.observe({
+              return void WW.observe({
                 type: "first-input",
                 buffered: !0
               })
             }
-            const be = new AbortController,
-              Me = ee => {
-                be.abort(), ye(ee.type, ee.timeStamp, !1)
+            const EW = new AbortController,
+              NW = WW => {
+                EW.abort(), mW(WW.type, WW.timeStamp, !1)
               };
-            for (const Ke of vi) window.addEventListener(Ke, Me, {
+            for (const PW of fi) window.addEventListener(PW, NW, {
               capture: !0,
               passive: !0,
-              signal: be.signal
+              signal: EW.signal
             })
-          }(((ee, ie, He) => {
+          }(((WW, iW, OW) => {
             this.replay.capture("first_input", Object.fromEntries([
-              ["input_type", ee],
-              ["ms_since_page_load", Math.round(ie)],
-              ["buffered", He]
+              ["input_type", WW],
+              ["ms_since_page_load", Math.round(iW)],
+              ["buffered", OW]
             ]))
           }))
         }), 100)
       }
-      onFirstInGameInput(ee, ie) {
+      onFirstInGameInput(WW, iW) {
         this.firstInGameInputSent = !0, this.replay.capture("first_ingame_input", Object.fromEntries([
-          ["input_type", ee],
-          ["ms_since_playable", Math.round(performance.now() - ie)],
+          ["input_type", WW],
+          ["ms_since_playable", Math.round(performance.now() - iW)],
           ["ms_since_page_load", Math.round(performance.now())]
         ]))
       }
       capturePageLoadTiming() {
-        const ee = performance.getEntriesByType("navigation")[0],
-          ie = performance.getEntriesByName("first-contentful-paint")[0];
+        const WW = performance.getEntriesByType("navigation")[0],
+          iW = performance.getEntriesByName("first-contentful-paint")[0];
         this.replay.capture("page_load_timing", {
-          ttfb_ms: ee ? Math.round(ee.responseStart) : null,
-          first_contentful_paint_ms: ie ? Math.round(ie.startTime) : null,
-          dom_content_loaded_ms: ee ? Math.round(ee.domContentLoadedEventEnd) : null,
-          load_ms: ee ? Math.round(ee.loadEventEnd) : null,
-          transfer_kb: ee ? Math.round(ee.transferSize / 1024) : null,
+          ttfb_ms: WW ? Math.round(WW.responseStart) : null,
+          first_contentful_paint_ms: iW ? Math.round(iW.startTime) : null,
+          dom_content_loaded_ms: WW ? Math.round(WW.domContentLoadedEventEnd) : null,
+          load_ms: WW ? Math.round(WW.loadEventEnd) : null,
+          transfer_kb: WW ? Math.round(WW.transferSize / 1024) : null,
           recording_started_ms: Math.round(performance.now())
         })
       }
     }
-    class mi {
-      constructor(ee, ie) {
-        this.replay = ee, this.quitContext = ie, this.settings = yi.e.get("clientEscMenuOptions"), this.pendingSettings = {}, this.settingsTimer = null, this.adRequest = null, this.playingAd = null
+    class Xi {
+      constructor(WW, iW) {
+        this.replay = WW, this.quitContext = iW, this.settings = mi.d.get("clientEscMenuOptions"), this.pendingSettings = {}, this.settingsTimer = null, this.adRequest = null, this.playingAd = null
       }
       start() {
-        Mi.h.subscribe("purchaseStarted", (ee => {
+        Ni.l.subscribe("purchaseStarted", (WW => {
           let {
-            product: ie
-          } = ee;
+            product: iW
+          } = WW;
           this.replay.setFlag("purchase_intent"), this.replay.capture("purchase_started", {
-            product: ie
+            product: iW
           })
-        })), Mi.h.subscribe("purchaseEnded", (ee => {
+        })), Ni.l.subscribe("purchaseEnded", (WW => {
           let {
-            outcome: ie
-          } = ee;
+            outcome: iW
+          } = WW;
           this.replay.capture("purchase_ended", {
-            outcome: ie
+            outcome: iW
           })
-        })), Mi.h.subscribe("adRequested", (ee => {
+        })), Ni.l.subscribe("adRequested", (WW => {
           let {
-            adKind: ie,
-            provider: He
-          } = ee;
+            adKind: iW,
+            provider: OW
+          } = WW;
           this.adRequest = {
-            adKind: ie,
-            provider: He,
+            adKind: iW,
+            provider: OW,
             atMs: performance.now()
           }
-        })), Mi.h.subscribe("appManagerUpdated|soundOnFromAd", (ee => {
-          ee && null !== this.playingAd ? this.onAdFinished() : ee || null !== this.playingAd || this.onAdStarted()
-        })), Mi.h.subscribe("appManagerUpdated|clientEscMenuOptions", (ee => {
-          yi.e.isApplyingDefaults ? this.settings = ee : this.onSettingsChanged(ee)
+        })), Ni.l.subscribe("appManagerUpdated|soundOnFromAd", (WW => {
+          WW && null !== this.playingAd ? this.onAdFinished() : WW || null !== this.playingAd || this.onAdStarted()
+        })), Ni.l.subscribe("appManagerUpdated|clientEscMenuOptions", (WW => {
+          mi.d.isApplyingDefaults ? this.settings = WW : this.onSettingsChanged(WW)
         }))
       }
       onAdStarted() {
-        var ee, ie;
-        const He = performance.now(),
-          ye = null !== this.adRequest && He - this.adRequest.atMs < 6e4 ? this.adRequest : null;
+        var WW, iW;
+        const OW = performance.now(),
+          mW = null !== this.adRequest && OW - this.adRequest.atMs < 6e4 ? this.adRequest : null;
         this.adRequest = null, this.playingAd = {
-          ad_kind: null !== (ee = null === ye || void 0 === ye ? void 0 : ye.adKind) && void 0 !== ee ? ee : "unknown",
-          provider: null !== (ie = null === ye || void 0 === ye ? void 0 : ye.provider) && void 0 !== ie ? ie : null,
-          startedAtMs: He
-        }, this.replay.setFlag("ad_shown"), this.quitContext.noteAdStarted(), this.replay.capture("ad_started", this.adProperties(this.playingAd, He))
+          ad_kind: null !== (WW = null === mW || void 0 === mW ? void 0 : mW.adKind) && void 0 !== WW ? WW : "unknown",
+          provider: null !== (iW = null === mW || void 0 === mW ? void 0 : mW.provider) && void 0 !== iW ? iW : null,
+          startedAtMs: OW
+        }, this.replay.setFlag("ad_shown"), this.quitContext.noteAdStarted(), this.replay.capture("ad_started", this.adProperties(this.playingAd, OW))
       }
       onAdFinished() {
-        const ee = performance.now(),
-          ie = this.playingAd;
-        this.playingAd = null, this.quitContext.noteAdFinished(ee), this.replay.capture("ad_finished", {
-          ...this.adProperties(ie, ee),
-          ad_ms: Math.round(ee - ie.startedAtMs)
+        const WW = performance.now(),
+          iW = this.playingAd;
+        this.playingAd = null, this.quitContext.noteAdFinished(WW), this.replay.capture("ad_finished", {
+          ...this.adProperties(iW, WW),
+          ad_ms: Math.round(WW - iW.startedAtMs)
         })
       }
-      adProperties(ee, ie) {
+      adProperties(WW, iW) {
         return {
-          ad_kind: ee.ad_kind,
-          provider: ee.provider,
-          minutes_since_page_load: Math.floor(ie / 6e4),
-          in_game: "inGame" === yi.e.get("gameState")
+          ad_kind: WW.ad_kind,
+          provider: WW.provider,
+          minutes_since_page_load: Math.floor(iW / 6e4),
+          in_game: "inGame" === mi.d.get("gameState")
         }
       }
-      onSettingsChanged(ee) {
-        Object.assign(this.pendingSettings, function(ee, ie) {
-          const He = {};
-          for (const ye of Object.keys(ie)) ee[ye] !== ie[ye] && (He[ye] = ie[ye]);
-          return He
-        }(this.settings, ee)), this.settings = ee, null !== this.settingsTimer && clearTimeout(this.settingsTimer), this.settingsTimer = setTimeout((() => {
+      onSettingsChanged(WW) {
+        Object.assign(this.pendingSettings, function(WW, iW) {
+          const OW = {};
+          for (const mW of Object.keys(iW)) WW[mW] !== iW[mW] && (OW[mW] = iW[mW]);
+          return OW
+        }(this.settings, WW)), this.settings = WW, null !== this.settingsTimer && clearTimeout(this.settingsTimer), this.settingsTimer = setTimeout((() => {
           this.settingsTimer = null, Object.keys(this.pendingSettings).length > 0 && (this.replay.capture("settings_changed", {
             changed_settings: Object.keys(this.pendingSettings),
             values: this.pendingSettings
@@ -1224,257 +1224,257 @@ export const modules = {
       }
     }
 
-    function li(ee) {
-      switch ((0, Ge.z)(ee)) {
-        case re.e.DISCORD_GUILD:
+    function Bi(WW) {
+      switch ((0, zW.A)(WW)) {
+        case FW.b.DISCORD_GUILD:
           return "discord_guild";
-        case re.e.DISCORD_DM:
+        case FW.b.DISCORD_DM:
           return "discord_dm";
         default:
-          return (0, Ge.K)(ee) ? "public" : "private"
+          return (0, zW.R)(WW) ? "public" : "private"
       }
     }
-    class Si {
-      constructor(ee) {
-        this.replay = ee, this.framesThisTick = 0, this.lastTickMs = performance.now(), this.ticks = 0, this.gamesJoined = 0, this.pageEvents = void 0, this.flows = void 0, this.health = void 0, this.leaves = void 0, this.joinLoad = void 0, this.unsubscribeDeaths = () => {}, this.inputSinceActiveMarker = !1, this.firstMinutePlayedSent = !1, this.pageEvents = new ui(ee), this.leaves = new Vi({
-          capture: (ie, He, ye) => {
-            void 0 === ye ? ee.capture(ie, He) : ee.captureAt(ie, He, ye)
+    class qi {
+      constructor(WW) {
+        this.replay = WW, this.framesThisTick = 0, this.lastTickMs = performance.now(), this.ticks = 0, this.gamesJoined = 0, this.pageEvents = void 0, this.flows = void 0, this.health = void 0, this.leaves = void 0, this.joinLoad = void 0, this.unsubscribeDeaths = () => {}, this.inputSinceActiveMarker = !1, this.firstMinutePlayedSent = !1, this.pageEvents = new Ci(WW), this.leaves = new di({
+          capture: (iW, OW, mW) => {
+            void 0 === mW ? WW.capture(iW, OW) : WW.captureAt(iW, OW, mW)
           },
-          captureOnExit: (ie, He, ye) => {
-            ee.captureOnExit(ie, He, ye)
+          captureOnExit: (iW, OW, mW) => {
+            WW.captureOnExit(iW, OW, mW)
           },
-          onGameQuit: ee => {
+          onGameQuit: WW => {
             let {
-              reasons: ie,
-              properties: He
-            } = ee;
-            const ye = He.game_name_with_variation;
-            Mi.h.yR("sessionReplayGameQuit", {
-              reasons: ie,
-              gameName: "string" === typeof ye ? ye : null
+              reasons: iW,
+              properties: OW
+            } = WW;
+            const mW = OW.game_name_with_variation;
+            Ni.l.iZ("sessionReplayGameQuit", {
+              reasons: iW,
+              gameName: "string" === typeof mW ? mW : null
             })
           },
-          isMenuOpen: oi.o,
-          isJoinAbandoned: Ji.i,
+          isMenuOpen: ti.l,
+          isJoinAbandoned: wi.f,
           now: () => performance.now()
-        }), this.joinLoad = new Ci(ee, this.leaves.quitContext), this.flows = function(ee, ie) {
-          return new Zi(ee, ie, {
+        }), this.joinLoad = new Vi(WW, this.leaves.quitContext), this.flows = function(WW, iW) {
+          return new Ti(WW, iW, {
             now: () => performance.now(),
-            isTouchScreen: () => yi.e.get("isTouchScreen"),
-            getInputDevice: () => yi.e.get("activeInputDevice"),
+            isTouchScreen: () => mi.d.get("isTouchScreen"),
+            getInputDevice: () => mi.d.get("activeInputDevice"),
             isPointerLocked: () => null !== document.pointerLockElement,
             isPageVisible: () => !document.hidden,
-            publishStayProgress: ee => {
-              Mi.h.yR("sessionReplayStayProgress", ee)
+            publishStayProgress: WW => {
+              Ni.l.iZ("sessionReplayStayProgress", WW)
             }
           })
-        }(ee, this.leaves.quitContext), this.health = new Ti(ee, this.leaves.quitContext, this.flows)
+        }(WW, this.leaves.quitContext), this.health = new bi(WW, this.leaves.quitContext, this.flows)
       }
       start() {
-        const ee = (0, Ri.c)(),
-          ie = new ci(this.replay);
-        null !== ee && ie.start(ee), this.pageEvents.capturePageLoadTiming(), this.flows.start();
-        const He = yi.e.get("gameState");
-        "inGame" === He ? this.joinConnectedGame() : "loadingScreen" !== He && "findingLobby" !== He || this.leaves.joinStarted(), this.subscribeToGameFlow(), new mi(this.replay, this.leaves.quitContext).start(), this.health.start(), this.trackInput(), this.pageEvents.startFirstInputWatch(), (0, Ui.r)((() => {
+        const WW = (0, Zi.e)(),
+          iW = new vi(this.replay);
+        null !== WW && iW.start(WW), this.pageEvents.capturePageLoadTiming(), this.flows.start();
+        const OW = mi.d.get("gameState");
+        "inGame" === OW ? this.joinConnectedGame() : "loadingScreen" !== OW && "findingLobby" !== OW || this.leaves.joinStarted(), this.subscribeToGameFlow(), new Xi(this.replay, this.leaves.quitContext).start(), this.health.start(), this.trackInput(), this.pageEvents.startFirstInputWatch(), (0, Li.r)((() => {
           this.framesThisTick++
         })), setInterval((() => {
-          this.qE()
+          this.Hk()
         }), 1e3), window.addEventListener("pagehide", (() => {
-          ie.flush(!0), this.leaves.pageHidden(this.replay.finalTags())
-        })), window.addEventListener("pageshow", (ee => {
-          ee.persisted && this.leaves.pageRestored()
+          iW.flush(!0), this.leaves.pageHidden(this.replay.finalTags())
+        })), window.addEventListener("pageshow", (WW => {
+          WW.persisted && this.leaves.pageRestored()
         }))
       }
       trackInput() {
-        const ee = ee => {
-          var ie, He;
-          this.inputSinceActiveMarker = !0, this.leaves.quitContext.noteInput(ee.timeStamp), this.flows.input();
-          const ye = null !== (ie = null === (He = this.flows.stay) || void 0 === He ? void 0 : He.playableAtMs) && void 0 !== ie ? ie : null;
-          this.pageEvents.firstInGameInputSent || null === ye || this.pageEvents.onFirstInGameInput(ee.type, ye)
+        const WW = WW => {
+          var iW, OW;
+          this.inputSinceActiveMarker = !0, this.leaves.quitContext.noteInput(WW.timeStamp), this.flows.input();
+          const mW = null !== (iW = null === (OW = this.flows.stay) || void 0 === OW ? void 0 : OW.playableAtMs) && void 0 !== iW ? iW : null;
+          this.pageEvents.firstInGameInputSent || null === mW || this.pageEvents.onFirstInGameInput(WW.type, mW)
         };
-        for (const ie of ["keydown", "pointerdown", "pointermove", "wheel"]) window.addEventListener(ie, ee, {
+        for (const iW of ["keydown", "pointerdown", "pointermove", "wheel"]) window.addEventListener(iW, WW, {
           capture: !0,
           passive: !0
         })
       }
       subscribeToGameFlow() {
-        Mi.h.subscribe("joinedGame", (ee => {
+        Ni.l.subscribe("joinedGame", (WW => {
           let {
-            gameNameWithVariation: ie,
-            lobbyName: He
-          } = ee;
-          (0, Ji.i)() || this.onJoinedGame(ie, He)
-        })), Mi.h.subscribe("leaveGame", (() => {
-          var ee, ie;
-          const He = null !== (ee = null === (ie = this.flows.stay) || void 0 === ie ? void 0 : ie.name) && void 0 !== ee ? ee : null;
-          this.onLeftGame(), this.leaves.gameLeft(He)
-        })), Mi.h.subscribe("replayViewer|replayLoaded", (() => {
-          const ee = this.flows.stay;
-          null !== ee && (this.onLeftGame(), this.leaves.gameReplayOpened(ee.name))
-        })), Mi.h.subscribe("matchmakeAndPlayStepCompleted", (ee => {
+            gameNameWithVariation: iW,
+            lobbyName: OW
+          } = WW;
+          (0, wi.f)() || this.onJoinedGame(iW, OW)
+        })), Ni.l.subscribe("leaveGame", (() => {
+          var WW, iW;
+          const OW = null !== (WW = null === (iW = this.flows.stay) || void 0 === iW ? void 0 : iW.name) && void 0 !== WW ? WW : null;
+          this.onLeftGame(), this.leaves.gameLeft(OW)
+        })), Ni.l.subscribe("replayViewer|replayLoaded", (() => {
+          const WW = this.flows.stay;
+          null !== WW && (this.onLeftGame(), this.leaves.gameReplayOpened(WW.name))
+        })), Ni.l.subscribe("matchmakeAndPlayStepCompleted", (WW => {
           let {
-            step: ie
-          } = ee;
-          this.joinLoad.stepCompleted(ie)
-        })), Mi.h.subscribe("leftPlayPage", (() => {
+            step: iW
+          } = WW;
+          this.joinLoad.stepCompleted(iW)
+        })), Ni.l.subscribe("leftPlayPage", (() => {
           this.leaves.playPageLeft(), this.joinLoad.ended()
-        })), Mi.h.subscribe("joinFailed", (ee => {
+        })), Ni.l.subscribe("joinFailed", (WW => {
           let {
-            step: ie,
-            severity: He
-          } = ee;
+            step: iW,
+            severity: OW
+          } = WW;
           this.leaves.joinFailed({
-            step: ie,
-            severity: He,
-            game_name_with_variation: (0, Ki.e)().requestedGameNameWithVariation,
+            step: iW,
+            severity: OW,
+            game_name_with_variation: (0, Pi.d)().requestedGameNameWithVariation,
             last_load_step: this.leaves.quitContext.getLastLoadStep()
           }), this.joinLoad.ended()
-        })), Mi.h.subscribe("kickedForAfk", (() => {
-          var ee, ie;
-          this.leaves.kickedForAfk(null !== (ee = null === (ie = this.flows.stay) || void 0 === ie ? void 0 : ie.name) && void 0 !== ee ? ee : null)
-        })), Mi.h.subscribe("unwantedLeftGame", (ee => {
+        })), Ni.l.subscribe("kickedForAfk", (() => {
+          var WW, iW;
+          this.leaves.kickedForAfk(null !== (WW = null === (iW = this.flows.stay) || void 0 === iW ? void 0 : iW.name) && void 0 !== WW ? WW : null)
+        })), Ni.l.subscribe("unwantedLeftGame", (WW => {
           this.leaves.disconnected(), this.replay.setFlag("disconnected"), this.replay.capture("disconnected", {
-            reason: ee.reason,
-            can_reconnect: ee.canReconnect,
-            automatically_reconnect: ee.automaticallyReconnect,
-            requires_refresh: ee.requiresRefresh
+            reason: WW.reason,
+            can_reconnect: WW.canReconnect,
+            automatically_reconnect: WW.automaticallyReconnect,
+            requires_refresh: WW.requiresRefresh
           })
-        })), Mi.h.subscribe("appManagerUpdated|gameState", (ee => {
-          "loadingScreen" === ee ? this.leaves.joinStarted() : "findingLobby" === ee ? (this.leaves.joinStarted(), this.joinLoad.started(), this.replay.capture("game_loading_started", {
-            entry_source: yi.e.get("gameEntrySource")
-          }), this.flows.gameLoading()) : "inGame" === ee ? this.onPlayable() : "landingPage" === ee && (this.replay.capture("homepage_viewed"), this.replay.capture("$screen", {
+        })), Ni.l.subscribe("appManagerUpdated|gameState", (WW => {
+          "loadingScreen" === WW ? this.leaves.joinStarted() : "findingLobby" === WW ? (this.leaves.joinStarted(), this.joinLoad.started(), this.replay.capture("game_loading_started", {
+            entry_source: mi.d.get("gameEntrySource")
+          }), this.flows.gameLoading()) : "inGame" === WW ? this.onPlayable() : "landingPage" === WW && (this.replay.capture("homepage_viewed"), this.replay.capture("$screen", {
             $screen_name: "homepage"
           }))
-        })), Mi.h.subscribe("appManagerUpdated|gameEntrySource", (ee => {
-          "autoReconnect" !== ee && "manualReconnect" !== ee || this.replay.capture("reconnect_attempted", {
-            automatic: "autoReconnect" === ee
+        })), Ni.l.subscribe("appManagerUpdated|gameEntrySource", (WW => {
+          "autoReconnect" !== WW && "manualReconnect" !== WW || this.replay.capture("reconnect_attempted", {
+            automatic: "autoReconnect" === WW
           })
-        })), Mi.h.subscribe("sessionReplayPlayerKill", (ee => {
+        })), Ni.l.subscribe("sessionReplayPlayerKill", (WW => {
           let {
-            killstreak: ie
-          } = ee;
+            killstreak: iW
+          } = WW;
           this.replay.capture("player_kill", {
-            killstreak: ie
+            killstreak: iW
           })
         }))
       }
       onPlayable() {
-        (0, Ji.i)() || (0, Ki.g)() || (null === this.flows.stay && this.joinConnectedGame(), this.replay.capture("game_playable", {
+        (0, wi.f)() || (0, Pi.f)() || (null === this.flows.stay && this.joinConnectedGame(), this.replay.capture("game_playable", {
           ms_since_page_load: Math.round(performance.now()),
           ...this.joinLoad.playable()
         }), this.leaves.gamePlayable(), this.flows.gamePlayable())
       }
       joinConnectedGame() {
-        if ((0, Ki.g)()) return;
+        if ((0, Pi.f)()) return;
         const {
-          gameNameWithVariation: ee,
-          lobbyName: ie
-        } = (0, Ki.e)();
-        null !== ee && null !== ie ? this.onJoinedGame(ee, ie) : console.warn("Session replay found a game playable with no game joined; not labelling it")
+          gameNameWithVariation: WW,
+          lobbyName: iW
+        } = (0, Pi.d)();
+        null !== WW && null !== iW ? this.onJoinedGame(WW, iW) : console.warn("Session replay found a game playable with no game joined; not labelling it")
       }
-      onJoinedGame(ee, ie) {
+      onJoinedGame(WW, iW) {
         this.replay.takeFullSnapshot();
-        const He = (0, Ge.K)(ie),
-          ye = yi.e.get("gameEntrySource");
-        this.gamesJoined++, this.leaves.gameJoined(), this.flows.gameJoined(this.gamesJoined, ee, "autoReconnect" === ye || "manualReconnect" === ye), "inGame" === yi.e.get("gameState") && this.flows.gamePlayable();
-        const be = Fi.clientSidePartyStateManager.getPartyInformation(),
-          Me = {
-            game_name: (0, Qe.Xb)(ee),
-            game_name_with_variation: ee,
+        const OW = (0, zW.R)(iW),
+          mW = mi.d.get("gameEntrySource");
+        this.gamesJoined++, this.leaves.gameJoined(), this.flows.gameJoined(this.gamesJoined, WW, "autoReconnect" === mW || "manualReconnect" === mW), "inGame" === mi.d.get("gameState") && this.flows.gamePlayable();
+        const EW = ci.clientSidePartyStateManager.getPartyInformation(),
+          NW = {
+            game_name: (0, QW.Tb)(WW),
+            game_name_with_variation: WW,
             game_number: this.gamesJoined,
-            game_analytics_id: (0, ei.c)(ee, He),
-            is_custom_game: (0, ii.k)(ee),
-            lobby_type: li(ie),
-            in_party: null !== be,
-            party_size: null === be ? 0 : be.memberSocialPreviews.length + 1
+            game_analytics_id: (0, Wi.e)(WW, OW),
+            is_custom_game: (0, ii.i)(WW),
+            lobby_type: Bi(iW),
+            in_party: null !== EW,
+            party_size: null === EW ? 0 : EW.memberSocialPreviews.length + 1
           };
-        this.replay.gameJoined(ee, Me), this.replay.capture("game_joined", {
-          ...Me,
-          entry_source: ye
+        this.replay.gameJoined(WW, NW), this.replay.capture("game_joined", {
+          ...NW,
+          entry_source: mW
         }), this.replay.capture("$screen", {
-          $screen_name: Me.is_custom_game ? `custom: ${Me.game_analytics_id}` : Me.game_name
-        }), this.subscribeToDeaths(ee)
+          $screen_name: NW.is_custom_game ? `custom: ${NW.game_analytics_id}` : NW.game_name
+        }), this.subscribeToDeaths(WW)
       }
       onLeftGame() {
         this.joinLoad.forgetStart();
-        const ee = this.flows.stay;
-        null !== ee && (this.replay.capture("game_left", {
-          game_name_with_variation: ee.name,
-          duration_ms: Date.now() - ee.joinedAtMs
+        const WW = this.flows.stay;
+        null !== WW && (this.replay.capture("game_left", {
+          game_name_with_variation: WW.name,
+          duration_ms: Date.now() - WW.joinedAtMs
         }), this.flows.gameLeft(), this.replay.gameLeft(), this.unsubscribeDeaths(), this.unsubscribeDeaths = () => {})
       }
-      subscribeToDeaths(ee) {
+      subscribeToDeaths(WW) {
         this.unsubscribeDeaths();
-        let ie = !0;
-        this.unsubscribeDeaths = bi.gameBridge.subscribe("localPlayerAliveSet", (He => {
-          const be = ie && !He;
-          if (ie = He, be) {
+        let iW = !0;
+        this.unsubscribeDeaths = Ei.gameBridge.subscribe("localPlayerAliveSet", (OW => {
+          const EW = iW && !OW;
+          if (iW = OW, EW) {
             this.leaves.quitContext.noteDeath(performance.now());
-            const [ie, He, be] = bi.gameBridge.lookup("localPos", null), Me = {
-              x: Math.round(ie),
-              y: Math.round(He),
-              z: Math.round(be)
-            }, Ke = this.flows.stay, Ue = null === Ke ? {} : {
-              death_number: ++Ke.deaths,
-              seconds_since_join: Math.round((Date.now() - Ke.joinedAtMs) / 1e3)
+            const [iW, OW, EW] = Ei.gameBridge.lookup("localPos", null), NW = {
+              x: Math.round(iW),
+              y: Math.round(OW),
+              z: Math.round(EW)
+            }, PW = this.flows.stay, LW = null === PW ? {} : {
+              death_number: ++PW.deaths,
+              seconds_since_join: Math.round((Date.now() - PW.joinedAtMs) / 1e3)
             };
             this.replay.capture("player_died", {
-              ...Me,
-              game_name_with_variation: ee,
-              ...Ue
-            }), this.replay.addReplayMarker(ye.h.death, Me)
+              ...NW,
+              game_name_with_variation: WW,
+              ...LW
+            }), this.replay.addReplayMarker(mW.l.death, NW)
           }
         }))
       }
-      qE() {
+      Hk() {
         this.health.attachToRender();
-        const ee = performance.now(),
-          ie = ee - this.lastTickMs,
-          He = ie <= 5e3,
-          be = this.flows.stay;
-        if (null !== be && null !== be.playableAtMs && !document.hidden && He && be.visiblePlayedMs < 6e4 && (be.visiblePlayedMs += ie, be.visiblePlayedMs >= 6e4)) {
-          const ie = Math.round(ee);
+        const WW = performance.now(),
+          iW = WW - this.lastTickMs,
+          OW = iW <= 5e3,
+          EW = this.flows.stay;
+        if (null !== EW && null !== EW.playableAtMs && !document.hidden && OW && EW.visiblePlayedMs < 6e4 && (EW.visiblePlayedMs += iW, EW.visiblePlayedMs >= 6e4)) {
+          const iW = Math.round(WW);
           this.replay.capture("game_played_60s", {
-            game_name_with_variation: be.name,
-            ms_since_page_load: ie,
+            game_name_with_variation: EW.name,
+            ms_since_page_load: iW,
             ...this.firstMinutePlayedSent ? {} : {
-              ttff_ms: ie
+              ttff_ms: iW
             }
           }), this.firstMinutePlayedSent = !0, this.flows.played60s()
         }
-        this.flows.YR();
-        const Me = null !== this.flows.stay && !document.hidden;
-        this.replay.addFpsSample(Me && He && this.framesThisTick > 0 ? 1e3 * this.framesThisTick / ie : null);
-        const Ke = Me ? Hi.c.getLastColyseusPingMs() : null;
-        null !== Ke && this.replay.addPingSample(Ke), this.framesThisTick = 0, this.lastTickMs = ee, this.ticks++, this.ticks % 2 === 0 && (Me && this.inputSinceActiveMarker && this.replay.addReplayMarker(ye.h.active), this.inputSinceActiveMarker = !1), this.replay.markClockIfDue(this.ticks, 30)
+        this.flows.hZ();
+        const NW = null !== this.flows.stay && !document.hidden;
+        this.replay.addFpsSample(NW && OW && this.framesThisTick > 0 ? 1e3 * this.framesThisTick / iW : null);
+        const PW = NW ? Oi.b.getLastColyseusPingMs() : null;
+        null !== PW && this.replay.addPingSample(PW), this.framesThisTick = 0, this.lastTickMs = WW, this.ticks++, this.ticks % 2 === 0 && (NW && this.inputSinceActiveMarker && this.replay.addReplayMarker(mW.l.active), this.inputSinceActiveMarker = !1), this.replay.markClockIfDue(this.ticks, 30)
       }
     }
-    var ni = He(1155),
-      ji = He(1141),
-      si = He(40584);
+    var Ri = OW(1194),
+      Gi = OW(1185),
+      Ii = OW(41035);
 
-    function Ii(ee) {
-      return ee.length + 64
+    function ai(WW) {
+      return WW.length + 64
     }
-    async function Ni() {
+    async function ri() {
       return new Response("{}")
     }
 
-    function Gi(ee, ie, He) {
-      return si.g.fetch(ee, {
+    function zi(WW, iW, OW) {
+      return Ii.f.fetch(WW, {
         method: "POST",
         headers: {
           "Content-Type": "text/plain"
         },
-        body: ie,
-        signal: (0, ni.v)(3e4)
-      }, He)
+        body: iW,
+        signal: (0, Ri.t)(3e4)
+      }, OW)
     }
-    class ri {
-      constructor(ee) {
-        var ie, He, ye;
-        let be = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.uploadToken = ee, this.url = void 0, this.post = void 0, this.isHidden = void 0, this.queue = [], this.retries = [], this.refusedTokens = new Set, this.overflowWarned = !1, this.unloading = !1, this.sendScheduled = !1, this.url = null !== (ie = be.url) && void 0 !== ie ? ie : `${ji.clientSideServerUrls.indexUrl}/index/replay/timeline`, this.post = null !== (He = be.post) && void 0 !== He ? He : Gi, this.isHidden = null !== (ye = be.isHidden) && void 0 !== ye ? ye : () => "hidden" === document.visibilityState
+    class Fi {
+      constructor(WW) {
+        var iW, OW, mW;
+        let EW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.uploadToken = WW, this.url = void 0, this.post = void 0, this.isHidden = void 0, this.queue = [], this.retries = [], this.refusedTokens = new Set, this.overflowWarned = !1, this.unloading = !1, this.sendScheduled = !1, this.url = null !== (iW = EW.url) && void 0 !== iW ? iW : `${Gi.clientSideServerUrls.indexUrl}/index/replay/timeline`, this.post = null !== (OW = EW.post) && void 0 !== OW ? OW : zi, this.isHidden = null !== (mW = EW.isHidden) && void 0 !== mW ? mW : () => "hidden" === document.visibilityState
       }
       start() {
         setInterval((() => {
@@ -1487,30 +1487,30 @@ export const modules = {
           this.unloading = !1
         }))
       }
-      add(ee) {
+      add(WW) {
         if (this.refusedTokens.has(this.uploadToken)) return;
-        const ie = function(ee) {
-            const ie = {
-              ...ee.properties
+        const iW = function(WW) {
+            const iW = {
+              ...WW.properties
             };
-            return void 0 !== ee.$set && (ie.$set = {
-              ...ee.properties.$set,
-              ...ee.$set
-            }), void 0 !== ee.$set_once && (ie.$set_once = {
-              ...ee.$set_once,
-              ...ee.properties.$set_once
-            }), void 0 !== ee.$unset && (ie.$unset = ee.$unset), {
-              uuid: ee.uuid,
-              event: ee.event,
-              timestampMs: ee.timestamp.getTime(),
-              properties: JSON.stringify(ie)
+            return void 0 !== WW.$set && (iW.$set = {
+              ...WW.properties.$set,
+              ...WW.$set
+            }), void 0 !== WW.$set_once && (iW.$set_once = {
+              ...WW.$set_once,
+              ...WW.properties.$set_once
+            }), void 0 !== WW.$unset && (iW.$unset = WW.$unset), {
+              uuid: WW.uuid,
+              event: WW.event,
+              timestampMs: WW.timestamp.getTime(),
+              properties: JSON.stringify(iW)
             }
-          }(ee),
-          He = (0, si.i)(JSON.stringify(ie));
-        ie.properties.length > 32768 || ie.event.length > 64 || Ii(this.uploadToken) + He > 102400 ? console.warn(`Session replay timeline event ${ie.event.slice(0,64)} is too large for index-server; dropped.`) : (this.queue.push({
+          }(WW),
+          OW = (0, Ii.i)(JSON.stringify(iW));
+        iW.properties.length > 32768 || iW.event.length > 64 || ai(this.uploadToken) + OW > 102400 ? console.warn(`Session replay timeline event ${iW.event.slice(0,64)} is too large for index-server; dropped.`) : (this.queue.push({
           uploadToken: this.uploadToken,
-          event: ie,
-          bytes: He,
+          event: iW,
+          bytes: OW,
           attempts: 0
         }), this.trimToCap(), this.queue.length >= 50 ? this.sendQueued() : (this.unloading || this.isHidden()) && this.sendSoon())
       }
@@ -1520,73 +1520,73 @@ export const modules = {
         })))
       }
       flush() {
-        this.retries.length > 0 && (this.queue = [...this.retries, ...this.queue].sort(((ee, ie) => ee.event.timestampMs - ie.event.timestampMs)), this.retries = []), this.sendQueued()
+        this.retries.length > 0 && (this.queue = [...this.retries, ...this.queue].sort(((WW, iW) => WW.event.timestampMs - iW.event.timestampMs)), this.retries = []), this.sendQueued()
       }
       sendQueued() {
         for (; this.queue.length > 0;) {
-          const ee = this.takeBatch();
-          this.refusedTokens.has(ee.uploadToken) || this.send(ee)
+          const WW = this.takeBatch();
+          this.refusedTokens.has(WW.uploadToken) || this.send(WW)
         }
       }
       trimToCap() {
-        let ee = this.retries.length + this.queue.length - 1e3;
-        if (ee <= 0) return void(this.overflowWarned = !1);
-        const ie = Math.min(ee, this.retries.length);
-        this.retries.splice(0, ie), ee -= ie, this.queue.splice(0, ee), this.overflowWarned || (this.overflowWarned = !0, console.warn("Session replay timeline queue is full; dropping its oldest events until it drains."))
+        let WW = this.retries.length + this.queue.length - 1e3;
+        if (WW <= 0) return void(this.overflowWarned = !1);
+        const iW = Math.min(WW, this.retries.length);
+        this.retries.splice(0, iW), WW -= iW, this.queue.splice(0, WW), this.overflowWarned || (this.overflowWarned = !0, console.warn("Session replay timeline queue is full; dropping its oldest events until it drains."))
       }
       takeBatch() {
-        const ee = this.queue.shift(),
-          ie = [ee];
-        let He = Ii(ee.uploadToken) + ee.bytes;
-        for (; this.queue.length > 0 && ie.length < 100 && this.queue[0].uploadToken === ee.uploadToken && He + this.queue[0].bytes <= 32768;) {
-          const ee = this.queue.shift();
-          ie.push(ee), He += ee.bytes
+        const WW = this.queue.shift(),
+          iW = [WW];
+        let OW = ai(WW.uploadToken) + WW.bytes;
+        for (; this.queue.length > 0 && iW.length < 100 && this.queue[0].uploadToken === WW.uploadToken && OW + this.queue[0].bytes <= 32768;) {
+          const WW = this.queue.shift();
+          iW.push(WW), OW += WW.bytes
         }
         return {
-          uploadToken: ee.uploadToken,
-          events: ie
+          uploadToken: WW.uploadToken,
+          events: iW
         }
       }
-      async send(ee) {
-        const ie = await this.sendOnce(ee);
-        if ("refused" === ie && this.refusedTokens.add(ee.uploadToken), "retryLater" !== ie) return;
-        const He = ee.events.filter((ee => ++ee.attempts < 3));
-        He.length < ee.events.length && console.error(`Session replay timeline: dropped ${ee.events.length-He.length} events after 3 attempts.`), this.retries.push(...He), this.trimToCap()
+      async send(WW) {
+        const iW = await this.sendOnce(WW);
+        if ("refused" === iW && this.refusedTokens.add(WW.uploadToken), "retryLater" !== iW) return;
+        const OW = WW.events.filter((WW => ++WW.attempts < 3));
+        OW.length < WW.events.length && console.error(`Session replay timeline: dropped ${WW.events.length-OW.length} events after 3 attempts.`), this.retries.push(...OW), this.trimToCap()
       }
-      async sendOnce(ee) {
-        const ie = {
-            uploadToken: ee.uploadToken,
+      async sendOnce(WW) {
+        const iW = {
+            uploadToken: WW.uploadToken,
             sentAtMs: Date.now(),
-            events: ee.events.map((ee => ee.event))
+            events: WW.events.map((WW => WW.event))
           },
-          He = JSON.stringify(ie);
-        let ye, be = null;
+          OW = JSON.stringify(iW);
+        let mW, EW = null;
         try {
-          ye = await this.post(this.url, He, (0, si.i)(He)), ye.ok && (be = await ye.json())
-        } catch (Me) {
-          return console.warn("Session replay timeline upload failed.", Me), "retryLater"
+          mW = await this.post(this.url, OW, (0, Ii.i)(OW)), mW.ok && (EW = await mW.json())
+        } catch (NW) {
+          return console.warn("Session replay timeline upload failed.", NW), "retryLater"
         }
-        return null === be ? 408 === ye.status || 429 === ye.status || ye.status >= 500 ? "retryLater" : (console.error(`Session replay timeline upload failed with ${ye.status}; dropped ${ee.events.length} events.`), "dropped") : "rejected" in be ? be.retryable ? "retryLater" : (console.warn(`Session replay timeline refused: ${be.reason}; dropping this recording's events.`), "refused") : "sent"
+        return null === EW ? 408 === mW.status || 429 === mW.status || mW.status >= 500 ? "retryLater" : (console.error(`Session replay timeline upload failed with ${mW.status}; dropped ${WW.events.length} events.`), "dropped") : "rejected" in EW ? EW.retryable ? "retryLater" : (console.warn(`Session replay timeline refused: ${EW.reason}; dropping this recording's events.`), "refused") : "sent"
       }
     }
-    var Qi = He(40602),
-      eH = He(5086),
-      iH = He(1268);
-    class HH {
-      constructor(ee) {
-        var ie;
-        this.tags = new Ne, this.fpsMonitor = void 0, this.errorLogLink = void 0, this.lastTagsJson = "", this.clockMarked = !1, this.personUpdateTimer = null, this.expectedSessionId = "", this.recorderPatched = !1, this.gameContextKeys = [], this.firstGameJoined = !1, this.timeline = void 0, this.onDomBatch = void 0;
+    var Qi = OW(41052),
+      WO = OW(5386),
+      iO = OW(1303);
+    class OO {
+      constructor(WW) {
+        var iW;
+        this.tags = new rW, this.fpsMonitor = void 0, this.errorLogLink = void 0, this.lastTagsJson = "", this.clockMarked = !1, this.personUpdateTimer = null, this.expectedSessionId = "", this.recorderPatched = !1, this.gameContextKeys = [], this.firstGameJoined = !1, this.timeline = void 0, this.onDomBatch = void 0;
         const {
-          recording: He
-        } = ee;
-        this.onDomBatch = ee.onDomBatch;
-        const Ke = null !== ee.onDomBatch;
-        Ke && this.patchRecorder(), this.timeline = new ri(He.uploadToken, ee.dryRun ? {
-            post: Ni
+          recording: OW
+        } = WW;
+        this.onDomBatch = WW.onDomBatch;
+        const PW = null !== WW.onDomBatch;
+        PW && this.patchRecorder(), this.timeline = new Fi(OW.uploadToken, WW.dryRun ? {
+            post: ri
           } : {}), this.timeline.start(),
-          function(ee) {
-            const ie = {
-                supportedCompression: [be.c.GZipJS],
+          function(WW) {
+            const iW = {
+                supportedCompression: [EW.c.GZipJS],
                 hasFeatureFlags: !1,
                 sessionRecording: {
                   endpoint: "/s/"
@@ -1596,288 +1596,288 @@ export const modules = {
                 toolbarVersion: "toolbar",
                 isAuthenticated: !1
               },
-              He = window;
-            He._POSTHOG_REMOTE_CONFIG = {
-              ...He._POSTHOG_REMOTE_CONFIG,
-              [ee]: {
-                config: ie
+              OW = window;
+            OW._POSTHOG_REMOTE_CONFIG = {
+              ...OW._POSTHOG_REMOTE_CONFIG,
+              [WW]: {
+                config: iW
               }
             }
-          }(ee.posthog.projectApiKey), be.e.init(ee.posthog.projectApiKey, Le({
-            apiHost: ee.posthog.apiHost,
-            recordingId: He.recordingId,
-            recordDom: Ke,
-            ownOrigins: [window.location.origin, new URL(ji.clientSideServerUrls.s3Url, window.location.href).origin],
-            anonymised: He.anonymised,
-            showsChat: (0, ye.q)(He),
-            allowAutomatedBrowsers: (0, eH.d)((0, eH.i)(), !1),
-            onTimelineEvent: ee => {
-              this.timeline.add(ee), "$pageview" === ee.event && ee.properties.$current_url && this.addReplayMarker("$pageview", {
-                href: ee.properties.$current_url
+          }(WW.posthog.projectApiKey), EW.g.init(WW.posthog.projectApiKey, DW({
+            apiHost: WW.posthog.apiHost,
+            recordingId: OW.recordingId,
+            recordDom: PW,
+            ownOrigins: [window.location.origin, new URL(Gi.clientSideServerUrls.s3Url, window.location.href).origin],
+            anonymised: OW.anonymised,
+            showsChat: (0, mW.s)(OW),
+            allowAutomatedBrowsers: (0, WO.d)((0, WO.g)(), !1),
+            onTimelineEvent: WW => {
+              this.timeline.add(WW), "$pageview" === WW.event && WW.properties.$current_url && this.addReplayMarker("$pageview", {
+                href: WW.properties.$current_url
               })
             },
-            onDomBatch: ee => {
-              this.takeDomBatch(ee)
+            onDomBatch: WW => {
+              this.takeDomBatch(WW)
             }
-          })), Ke && be.e.startSessionRecording({
+          })), PW && EW.g.startSessionRecording({
             sampling: !0
-          }), this.expectedSessionId = He.recordingId, be.e.onSessionId((ee => {
-            ee !== this.expectedSessionId && console.warn(`Session replay: PostHog session ${ee} differs from recording ${this.expectedSessionId}; events carry recording_id.`)
+          }), this.expectedSessionId = OW.recordingId, EW.g.onSessionId((WW => {
+            WW !== this.expectedSessionId && console.warn(`Session replay: PostHog session ${WW} differs from recording ${this.expectedSessionId}; events carry recording_id.`)
           })),
-          function(ee, ie) {
+          function(WW, iW) {
             const {
-              recording: He
-            } = ee, ye = {
-              ...He.tags,
-              site_used: ue.siteUsed,
-              subsite_used: null !== ue.subsiteUsed && void 0 !== ue.subsiteUsed ? ue.subsiteUsed : "",
-              is_iframed: ue.isIframed,
+              recording: OW
+            } = WW, mW = {
+              ...OW.tags,
+              site_used: fW.siteUsed,
+              subsite_used: null !== fW.subsiteUsed && void 0 !== fW.subsiteUsed ? fW.subsiteUsed : "",
+              is_iframed: fW.isIframed,
               entry_path: location.pathname,
-              ...me(),
-              ...Se(He, ie),
-              client_build: ve.b
+              ...CW(),
+              ...BW(OW, iW),
+              client_build: pW.d
             };
-            be.e.register(ye), null !== ee.videoStatus && be.e.register({
-              replay_video_status: ee.videoStatus
-            }), be.e.setPersonProperties(ye, {
-              ...ne("initial_", ye),
-              ...le(He)
+            EW.g.register(mW), null !== WW.videoStatus && EW.g.register({
+              replay_video_status: WW.videoStatus
+            }), EW.g.setPersonProperties(mW, {
+              ...qW("initial_", mW),
+              ...XW(OW)
             })
-          }(ee, Ke), this.fpsMonitor = new Me.c({
-            onEpisodeStarted: ee => {
+          }(WW, PW), this.fpsMonitor = new NW.b({
+            onEpisodeStarted: WW => {
               this.capture("low_fps_started", {
-                avg_fps: Math.round(ee)
-              }), Mi.h.yR("sessionReplayLowFps", {
+                avg_fps: Math.round(WW)
+              }), Ni.l.iZ("sessionReplayLowFps", {
                 low: !0
               })
             },
-            onEpisodeEnded: ee => {
+            onEpisodeEnded: WW => {
               this.capture("low_fps_episode", {
-                duration_ms: ee.durationMs,
-                min_fps: ee.minFps,
-                avg_fps: ee.avgFps
-              }), Mi.h.yR("sessionReplayLowFps", {
+                duration_ms: WW.durationMs,
+                min_fps: WW.minFps,
+                avg_fps: WW.avgFps
+              }), Ni.l.iZ("sessionReplayLowFps", {
                 low: !1
               })
             }
-          }), this.errorLogLink = new Ie({
-            dashboardHost: null !== (ie = ee.posthog.dashboardHost) && void 0 !== ie ? ie : ee.posthog.apiHost,
-            recordingId: He.recordingId,
-            getSessionId: () => be.e.get_session_id(),
-            domRecorded: Ke,
-            captureError: (ee, ie) => {
-              this.captureClientError("logged", ee, ie)
+          }), this.errorLogLink = new IW({
+            dashboardHost: null !== (iW = WW.posthog.dashboardHost) && void 0 !== iW ? iW : WW.posthog.apiHost,
+            recordingId: OW.recordingId,
+            getSessionId: () => EW.g.get_session_id(),
+            domRecorded: PW,
+            captureError: (WW, iW) => {
+              this.captureClientError("logged", WW, iW)
             }
-          }), (0, iH.annotateLoggedErrors)(((ee, ie) => this.errorLogLink.annotate(ee, ie))), new Si(this).start()
+          }), (0, iO.annotateLoggedErrors)(((WW, iW) => this.errorLogLink.annotate(WW, iW))), new qi(this).start()
       }
-      capture(ee) {
-        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        be.e.capture(ee, ie)
+      capture(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        EW.g.capture(WW, iW)
       }
-      captureAt(ee, ie, He) {
-        be.e.capture(ee, ie, {
-          timestamp: new Date(He)
+      captureAt(WW, iW, OW) {
+        EW.g.capture(WW, iW, {
+          timestamp: new Date(OW)
         })
       }
-      captureOnExit(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
-        be.e.capture(ee, ie, {
-          timestamp: new Date(He)
+      captureOnExit(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
+        EW.g.capture(WW, iW, {
+          timestamp: new Date(OW)
         })
       }
-      captureClientError(ee, ie, He) {
+      captureClientError(WW, iW, OW) {
         this.setFlag("had_error"), this.capture("client_error", {
-          kind: ee,
-          message: ze(ie).slice(0, 300),
+          kind: WW,
+          message: kW(iW).slice(0, 300),
           source: null,
           error_name: null,
-          ...He
+          ...OW
         })
       }
       takeFullSnapshot() {
         if (this.tryFullSnapshot()) return;
-        const ee = performance.now() + 1500,
-          ie = setInterval((() => {
-            (this.tryFullSnapshot() || performance.now() >= ee) && clearInterval(ie)
+        const WW = performance.now() + 1500,
+          iW = setInterval((() => {
+            (this.tryFullSnapshot() || performance.now() >= WW) && clearInterval(iW)
           }), 100)
       }
-      setVideoStatus(ee, ie) {
-        be.e.register({
-          replay_video_status: ee
+      setVideoStatus(WW, iW) {
+        EW.g.register({
+          replay_video_status: WW
         });
-        const He = "stopped_cellular" === ee ? "cellular" : "stopped_error" === ee ? "error" : null;
-        null !== He && (this.capture("replay_video_stopped", {
-          reason: He,
-          detail: null === ie ? null : ze(ie).slice(0, 300)
+        const OW = "stopped_cellular" === WW ? "cellular" : "stopped_error" === WW ? "error" : null;
+        null !== OW && (this.capture("replay_video_stopped", {
+          reason: OW,
+          detail: null === iW ? null : kW(iW).slice(0, 300)
         }), this.addReplayMarker("replay_video_stopped", {
-          reason: He
+          reason: OW
         }))
       }
       stopDomRecording() {
-        be.e.stopSessionRecording(), be.e.register({
+        EW.g.stopSessionRecording(), EW.g.register({
           dom_recorded: !1
         })
       }
       optOut() {
-        this.stopDomRecording(), be.e.set_config({
+        this.stopDomRecording(), EW.g.set_config({
           before_send: () => null
         })
       }
-      takeDomBatch(ee) {
-        null !== this.onDomBatch ? this.onDomBatch(ee) : console.warn("Session replay: posthog-js recorded the page of an events-only recording; dropped it")
+      takeDomBatch(WW) {
+        null !== this.onDomBatch ? this.onDomBatch(WW) : console.warn("Session replay: posthog-js recorded the page of an events-only recording; dropped it")
       }
       tryFullSnapshot() {
-        var ee;
-        return !(null === (ee = be.e.sessionRecording) || void 0 === ee || !ee.started) && (Ce().rrweb.record.takeFullSnapshot(), !0)
+        var WW;
+        return !(null === (WW = EW.g.sessionRecording) || void 0 === WW || !WW.started) && (VW().rrweb.record.takeFullSnapshot(), !0)
       }
       patchRecorder() {
         this.recorderPatched || (this.recorderPatched = !0, function() {
-          const ee = Ce().rrwebPlugins,
-            ie = ee.getRecordConsolePlugin;
-          ee.getRecordConsolePlugin = () => ie({
+          const WW = VW().rrwebPlugins,
+            iW = WW.getRecordConsolePlugin;
+          WW.getRecordConsolePlugin = () => iW({
             level: ["warn", "error", "assert"]
           })
         }(), this.markClockOnFullSnapshots())
       }
       markClockOnFullSnapshots() {
-        const ee = Ce().rrweb.record,
-          ie = ee.takeFullSnapshot;
-        ee.takeFullSnapshot = ee => {
-          ie(ee), this.markClock()
+        const WW = VW().rrweb.record,
+          iW = WW.takeFullSnapshot;
+        WW.takeFullSnapshot = WW => {
+          iW(WW), this.markClock()
         }
       }
       markClock() {
-        this.clockMarked = this.addReplayMarker(ye.h.clock, {
+        this.clockMarked = this.addReplayMarker(mW.l.clock, {
           epochMs: (0, Qi.e)(),
           perfNowMs: performance.now()
         }) || this.clockMarked
       }
-      markClockIfDue(ee, ie) {
-        this.clockMarked && ee % ie !== 0 || this.markClock()
+      markClockIfDue(WW, iW) {
+        this.clockMarked && WW % iW !== 0 || this.markClock()
       }
-      addReplayMarker(ee) {
-        var ie, He;
-        let ye = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return (!(arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) || be.e.sessionRecordingStarted()) && null !== (ie = null === (He = be.e.sessionRecording) || void 0 === He ? void 0 : He.tryAddCustomEvent(ee, ye)) && void 0 !== ie && ie
+      addReplayMarker(WW) {
+        var iW, OW;
+        let mW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return (!(arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) || EW.g.sessionRecordingStarted()) && null !== (iW = null === (OW = EW.g.sessionRecording) || void 0 === OW ? void 0 : OW.tryAddCustomEvent(WW, mW)) && void 0 !== iW && iW
       }
-      gameJoined(ee, ie) {
-        this.unregisterGameContext(), this.gameContextKeys = Object.keys(ie), be.e.register(ie), this.firstGameJoined || (this.firstGameJoined = !0, be.e.setPersonProperties(void 0, {
-          first_game_ever: ie.game_name,
-          first_game_ever_with_variation: ie.game_name_with_variation,
-          first_game_ever_analytics_id: ie.game_analytics_id
-        })), this.tags.gameJoined(ee, Date.now()), this.updateTags()
+      gameJoined(WW, iW) {
+        this.unregisterGameContext(), this.gameContextKeys = Object.keys(iW), EW.g.register(iW), this.firstGameJoined || (this.firstGameJoined = !0, EW.g.setPersonProperties(void 0, {
+          first_game_ever: iW.game_name,
+          first_game_ever_with_variation: iW.game_name_with_variation,
+          first_game_ever_analytics_id: iW.game_analytics_id
+        })), this.tags.gameJoined(WW, Date.now()), this.updateTags()
       }
       gameLeft() {
         this.unregisterGameContext(), this.tags.gameLeft(Date.now()), this.fpsMonitor.endEpisode(Date.now()), this.updateTags()
       }
-      setFlag(ee) {
-        this.tags.setFlag(ee) && this.updateTags()
+      setFlag(WW) {
+        this.tags.setFlag(WW) && this.updateTags()
       }
-      addHitch(ee) {
-        this.tags.addHitch(ee) && this.updateTags()
+      addHitch(WW) {
+        this.tags.addHitch(WW) && this.updateTags()
       }
-      setSessionProperties(ee) {
-        let ie = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        be.e.register(ee), ie && be.e.setPersonProperties(ee)
+      setSessionProperties(WW) {
+        let iW = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        EW.g.register(WW), iW && EW.g.setPersonProperties(WW)
       }
-      addPingSample(ee) {
-        this.tags.addPingSample(ee) && this.updateTags()
+      addPingSample(WW) {
+        this.tags.addPingSample(WW) && this.updateTags()
       }
-      addFpsSample(ee) {
-        this.fpsMonitor.addSample(ee, Date.now());
-        const ie = this.fpsMonitor.getTags();
-        null !== ie && (this.tags.setFpsTags(ie), this.updateTags())
+      addFpsSample(WW) {
+        this.fpsMonitor.addSample(WW, Date.now());
+        const iW = this.fpsMonitor.getTags();
+        null !== iW && (this.tags.setFpsTags(iW), this.updateTags())
       }
-      addUnboundKeyPresses(ee) {
-        this.tags.addUnboundKeyPresses(ee), this.updateTags()
+      addUnboundKeyPresses(WW) {
+        this.tags.addUnboundKeyPresses(WW), this.updateTags()
       }
       finalTags() {
         return this.fpsMonitor.endEpisode(Date.now()), this.tags.toProperties(Date.now())
       }
       updateTags() {
-        const ee = this.tags.toProperties(),
-          ie = JSON.stringify(ee);
-        ie !== this.lastTagsJson && (this.lastTagsJson = ie, be.e.register(ee), null === this.personUpdateTimer && (this.personUpdateTimer = setTimeout((() => {
-          this.personUpdateTimer = null, be.e.setPersonProperties(this.tags.toProperties())
+        const WW = this.tags.toProperties(),
+          iW = JSON.stringify(WW);
+        iW !== this.lastTagsJson && (this.lastTagsJson = iW, EW.g.register(WW), null === this.personUpdateTimer && (this.personUpdateTimer = setTimeout((() => {
+          this.personUpdateTimer = null, EW.g.setPersonProperties(this.tags.toProperties())
         }), 0)))
       }
       unregisterGameContext() {
-        for (const ee of this.gameContextKeys) be.e.unregister(ee);
+        for (const WW of this.gameContextKeys) EW.g.unregister(WW);
         this.gameContextKeys = []
       }
     }
   },
-  40602: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me
+  41052: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => NW
     });
-    const ye = 20;
-    let be = Date.now() - performance.now();
+    const mW = 20;
+    let EW = Date.now() - performance.now();
 
-    function Me() {
-      const ee = performance.now(),
-        ie = Date.now();
-      return Math.abs(ie - (ee + be)) > ye && (be = ie - ee), ee + be
+    function NW() {
+      const WW = performance.now(),
+        iW = Date.now();
+      return Math.abs(iW - (WW + EW)) > mW && (EW = iW - WW), WW + EW
     }
   },
-  40584: (ee, ie, He) => {
-    He.d(ie, {
-      d: () => ye,
-      g: () => Me,
-      i: () => be
+  41035: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW,
+      f: () => NW,
+      i: () => EW
     });
-    const ye = 32768;
+    const mW = 32768;
 
-    function be(ee) {
-      return (new TextEncoder).encode(ee).byteLength
+    function EW(WW) {
+      return (new TextEncoder).encode(WW).byteLength
     }
-    const Me = new class {
+    const NW = new class {
       constructor() {
         this.inFlightBytes = 0, this.inFlightLabels = new Map
       }
-      async fetch(ee, ie, He, ye) {
-        if (this.inFlightBytes + He > 49152) return await fetch(ee, ie);
-        this.inFlightBytes += He, this.countLabel(ye, 1);
-        const be = () => {
-          this.inFlightBytes -= He, this.countLabel(ye, -1)
+      async fetch(WW, iW, OW, mW) {
+        if (this.inFlightBytes + OW > 49152) return await fetch(WW, iW);
+        this.inFlightBytes += OW, this.countLabel(mW, 1);
+        const EW = () => {
+          this.inFlightBytes -= OW, this.countLabel(mW, -1)
         };
-        let Me;
+        let NW;
         try {
-          Me = await fetch(ee, {
-            ...ie,
+          NW = await fetch(WW, {
+            ...iW,
             keepalive: !0
           })
-        } catch (Ue) {
-          var Ke;
-          if (be(), null !== (Ke = ie.signal) && void 0 !== Ke && Ke.aborted) throw Ue;
-          return console.info("Session replay keepalive request failed; retrying without keepalive.", Ue), await fetch(ee, ie)
+        } catch (LW) {
+          var PW;
+          if (EW(), null !== (PW = iW.signal) && void 0 !== PW && PW.aborted) throw LW;
+          return console.info("Session replay keepalive request failed; retrying without keepalive.", LW), await fetch(WW, iW)
         }
-        return be(), Me
+        return EW(), NW
       }
-      isInFlight(ee) {
-        var ie;
-        return (null !== (ie = this.inFlightLabels.get(ee)) && void 0 !== ie ? ie : 0) > 0
+      isInFlight(WW) {
+        var iW;
+        return (null !== (iW = this.inFlightLabels.get(WW)) && void 0 !== iW ? iW : 0) > 0
       }
-      sendBeacon(ee, ie) {
-        const He = be(ie);
-        return !(this.inFlightBytes + He > 57344) && this.beaconSent(navigator.sendBeacon(ee, new Blob([ie], {
+      sendBeacon(WW, iW) {
+        const OW = EW(iW);
+        return !(this.inFlightBytes + OW > 57344) && this.beaconSent(navigator.sendBeacon(WW, new Blob([iW], {
           type: "text/plain"
-        })), He)
+        })), OW)
       }
-      sendUploadBeacon(ee, ie, He) {
-        return !(this.inFlightBytes + He > 40960) && this.beaconSent(navigator.sendBeacon(ee, ie), He)
+      sendUploadBeacon(WW, iW, OW) {
+        return !(this.inFlightBytes + OW > 40960) && this.beaconSent(navigator.sendBeacon(WW, iW), OW)
       }
-      countLabel(ee, ie) {
-        var He;
-        void 0 !== ee && this.inFlightLabels.set(ee, (null !== (He = this.inFlightLabels.get(ee)) && void 0 !== He ? He : 0) + ie)
+      countLabel(WW, iW) {
+        var OW;
+        void 0 !== WW && this.inFlightLabels.set(WW, (null !== (OW = this.inFlightLabels.get(WW)) && void 0 !== OW ? OW : 0) + iW)
       }
-      beaconSent(ee, ie) {
-        return ee && (this.inFlightBytes += ie, setTimeout((() => {
-          this.inFlightBytes -= ie
-        }), 1e4)), ee
+      beaconSent(WW, iW) {
+        return WW && (this.inFlightBytes += iW, setTimeout((() => {
+          this.inFlightBytes -= iW
+        }), 1e4)), WW
       }
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

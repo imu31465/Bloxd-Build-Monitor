@@ -1,19 +1,19 @@
 export const id = 695;
 export const ids = [695];
 export const modules = {
-  64416: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      textureMergerPixelShaderWGSL: () => Ke
+  64659: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      fxaaVertexShader: () => PW
     });
-    var ye = He(40954);
-    const be = "textureMergerPixelShader",
-      Me = "#ifdef USE_TEXTURE0\nvar inputTexture0Sampler: sampler;var inputTexture0: texture_2d<f32>;\n#endif\n#ifdef USE_TEXTURE1\nvar inputTexture1Sampler: sampler;var inputTexture1: texture_2d<f32>;\n#endif\n#ifdef USE_TEXTURE2\nvar inputTexture2Sampler: sampler;var inputTexture2: texture_2d<f32>;\n#endif\n#ifdef USE_TEXTURE3\nvar inputTexture3Sampler: sampler;var inputTexture3: texture_2d<f32>;\n#endif\n#ifdef RED_FROM_TEXTURE\nuniform redTextureIndex: i32;uniform redSourceChannel: i32;\n#else\nuniform redConstantValue: f32;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nuniform greenTextureIndex: i32;uniform greenSourceChannel: i32;\n#else\nuniform greenConstantValue: f32;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nuniform blueTextureIndex: i32;uniform blueSourceChannel: i32;\n#else\nuniform blueConstantValue: f32;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nuniform alphaTextureIndex: i32;uniform alphaSourceChannel: i32;\n#else\nuniform alphaConstantValue: f32;\n#endif\nvarying vUV: vec2f;\n#if defined(RED_FROM_TEXTURE) || defined(GREEN_FROM_TEXTURE) || defined(BLUE_FROM_TEXTURE) || defined(ALPHA_FROM_TEXTURE)\nfn sampleTexture(textureIndex: i32,uv: vec2f)->vec4f {switch (textureIndex) {\n#ifdef USE_TEXTURE0\ncase 0: {return textureSample(inputTexture0,inputTexture0Sampler,uv);}\n#endif\n#ifdef USE_TEXTURE1\ncase 1: {return textureSample(inputTexture1,inputTexture1Sampler,uv);}\n#endif\n#ifdef USE_TEXTURE2\ncase 2: {return textureSample(inputTexture2,inputTexture2Sampler,uv);}\n#endif\n#ifdef USE_TEXTURE3\ncase 3: {return textureSample(inputTexture3,inputTexture3Sampler,uv);}\n#endif\ndefault: {return vec4f(0.0,0.0,0.0,1.0); }}}\nfn extractChannel(color: vec4f,channelIndex: i32)->f32 {switch (channelIndex) {case 0: {return color.r; }\ncase 1: {return color.g; }\ncase 2: {return color.b; }\ndefault: {return color.a; }}}\n#endif\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let uv: vec2f=input.vUV;\n#ifdef RED_FROM_TEXTURE\nlet redSample: vec4f=sampleTexture(uniforms.redTextureIndex,uv);let r: f32=extractChannel(redSample,uniforms.redSourceChannel);\n#else\nlet r: f32=uniforms.redConstantValue;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nlet greenSample: vec4f=sampleTexture(uniforms.greenTextureIndex,uv);let g: f32=extractChannel(greenSample,uniforms.greenSourceChannel);\n#else\nlet g: f32=uniforms.greenConstantValue;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nlet blueSample: vec4f=sampleTexture(uniforms.blueTextureIndex,uv);let b: f32=extractChannel(blueSample,uniforms.blueSourceChannel);\n#else\nlet b: f32=uniforms.blueConstantValue;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nlet alphaSample: vec4f=sampleTexture(uniforms.alphaTextureIndex,uv);let a: f32=extractChannel(alphaSample,uniforms.alphaSourceChannel);\n#else\nlet a: f32=uniforms.alphaConstantValue;\n#endif\nfragmentOutputs.color=vec4f(r,g,b,a);}";
-    ye.d.ShadersStoreWGSL[be] || (ye.d.ShadersStoreWGSL[be] = Me);
-    const Ke = {
-      name: be,
-      shader: Me
+    var mW = OW(41392);
+    const EW = "fxaaVertexShader",
+      NW = "attribute vec2 position;uniform vec2 texelSize;varying vec2 vUV;varying vec2 sampleCoordS;varying vec2 sampleCoordE;varying vec2 sampleCoordN;varying vec2 sampleCoordW;varying vec2 sampleCoordNW;varying vec2 sampleCoordSE;varying vec2 sampleCoordNE;varying vec2 sampleCoordSW;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd);sampleCoordS=vUV+vec2( 0.0,1.0)*texelSize;sampleCoordE=vUV+vec2( 1.0,0.0)*texelSize;sampleCoordN=vUV+vec2( 0.0,-1.0)*texelSize;sampleCoordW=vUV+vec2(-1.0,0.0)*texelSize;sampleCoordNW=vUV+vec2(-1.0,-1.0)*texelSize;sampleCoordSE=vUV+vec2( 1.0,1.0)*texelSize;sampleCoordNE=vUV+vec2( 1.0,-1.0)*texelSize;sampleCoordSW=vUV+vec2(-1.0,1.0)*texelSize;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    mW.c.ShadersStore[EW] || (mW.c.ShadersStore[EW] = NW);
+    const PW = {
+      name: EW,
+      shader: NW
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

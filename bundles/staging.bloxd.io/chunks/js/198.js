@@ -1,40 +1,43 @@
 export const id = 198;
 export const ids = [198];
 export const modules = {
-  9801: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      pageBody: () => ye
+  10280: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const ye = {
-      whatIs: ["Don't get infected... or do. Bloxd Infection is a humans vs zombies game where the virus spreads fast and anyone could end up against you. As a human you're racing through obstacles to escape. As a zombie you're part of the horde trying to stop them getting away."],
-      howToPlay: ["Everyone starts out human. After 15 seconds, 3 players turn into the first zombies. Humans follow the arrows and get through the obstacles before the zombies catch up. If a zombie takes you down, that's it, you're infected and on the zombie team now.", "Humans earn points by taking down zombies and shooting the diamonds hidden around the map. Spend those points to unlock the next section and buy guns at gun stations. Be the very last human alive and you'll get a Minigun. Zombies just need to hunt down every human before they escape."],
-      features: ["Up to 18 Players per Match", "Play as Humans or Zombies", "9 Human Kits, Including Veteran, Medic, Scout and Bombardier", "5 Zombie Kits, Including Sprinter, Tank, Puker and Bomber", "Unlock New Sections and Buy Guns with Points", "5 Maps: Hospital, Bunker, Subway, Airport and Farm", "Awards for First Kill, Final Kill and Last Human Alive"],
-      tips: ["Stick together as humans. Zombies find it much harder to pick you off", "Shoot the diamonds for extra points. They'll come back after a while", "Grab a gun at a gun station as soon as you can afford one", "The Medic kit lets you heal yourself and your teammates", "Playing zombie? Try the Sprinter to catch humans fast", "Last human alive? Make that Minigun count"],
-      similarGames: ["murderMystery", "containmentBreach", "shooting", "hideseek"],
+    const mW = {
+      whatIs: ["It all starts on one tiny island floating high in the sky. In Bloxd Skyblock, that little island becomes a full RPG. You'll level up skills, take on quests, beat dungeon bosses and trade at the auction house, and bit by bit your island turns into something special. There's nothing to install, so you can be standing on it in seconds. Fancy starting from a single block instead? Try One Block. After island PvP? That's Sky Islands."],
+      howToPlay: ["Your first quest is an easy one. Gather logs on your island, craft a bridge and cross to the portal to get to the Hub. That's where everyone hangs out. Up Dog the auctioneer runs the Open Market, so you can buy and sell items with other players there. The Banker looks after your Gold Coins, and the quest givers always have something for you to do. From the Hub, portals take you to Manor Farm, the Dungeons and Cragrock Mines (a meteor has just crashed there).", "You've got five skills to level: Foraging, Combat, Mining, Farming and Fishing. Each one goes up by doing the thing. Chop wood and pick flowers for Foraging. Beat creatures for Combat. Break ores for Mining, harvest fully grown crops for Farming and catch fish for Fishing. Every skill has a starter quest that hands you a tool to speed things up, and each Combat level adds a bit more damage. Got Gold Coins to spare? Spend them on decorative blocks in the Instant Buy shop and make your island look exactly how you want."],
+      features: ["Your Own Private Sky Island to Grow and Decorate", "5 Skills to Level Up: Foraging, Combat, Mining, Farming and Fishing", "Quests That Give You an Axe, Sword, Pickaxe, Hoe and Fishing Rod", "Explore the Hub, Manor Farm, Cragrock Mines and the Dungeons", "Timed Dungeons with Boss Fights on Easy, Medium, Hard and Insane", "Buy and Sell Items with Other Players at the Auction House", "Visit Other Players' Islands", "Daily Rewards, Streaks and Leaderboards"],
+      tips: ["Do the skill starter quests early. The tools they give you make everything faster", "Level up Combat before you go into the Dungeons, since every level adds extra damage", "Start each dungeon on Easy and work your way up to Insane", "You can only trade in the Hub, so pop over to Up Dog to sell stuff you don't need", "Play every day to keep your daily reward streak going", "Type /home to get back to your island from anywhere"],
+      similarGames: ["classic_survival", "oneBlock", "skyIslands", "survivalFactory"],
       faq: [{
-        question: "What is Bloxd Infection?",
-        answer: "A humans vs zombies mode for up to 18 players. Humans try to escape through maps full of obstacles, and zombies try to infect everyone before they do."
+        question: "What is Bloxd Skyblock?",
+        answer: "It's a Skyblock RPG. You grow your own private sky island, level up skills, do quests, trade at the auction house and fight dungeon bosses."
       }, {
-        question: "How does the infection spread in Bloxd Infection?",
-        answer: "Humans follow the arrows and get past the obstacles while zombies chase them. Anyone a zombie takes down becomes a zombie too."
+        question: "How do you play Bloxd Skyblock?",
+        answer: "Gather some logs, craft a bridge and cross to the portal to reach the Hub. After that, follow the quests, level your skills and go exploring in Manor Farm, Cragrock Mines and the Dungeons."
       }, {
-        question: "How do humans win?",
-        answer: "Get through all the obstacles and escape before you're infected."
+        question: "What skills are in Bloxd Skyblock?",
+        answer: "Five of them: Foraging, Combat, Mining, Farming and Fishing. You level each one just by doing it, so breaking ores levels Mining and catching fish levels Fishing."
       }, {
-        question: "How do zombies win?",
-        answer: "By infecting every human before they escape."
+        question: "What are the Dungeons in Bloxd Skyblock?",
+        answer: "Timed challenges like the Crumbling Crypt and the Frozen Hollow. You fight through the rooms and then face a boss, such as the Gravewarden or the Frostbound Knight. You can play each dungeon on Easy, Medium, Hard or Insane, and your best times are saved."
       }, {
-        question: "How are points earned?",
-        answer: "Humans get 100 points for taking down a zombie and 25 for an assist, plus extra for shooting diamonds."
+        question: "How do I trade in Bloxd Skyblock?",
+        answer: "Find Up Dog the auctioneer in the Hub and open the Open Market. That's where you buy and sell items with other players, and it only works in the Hub."
       }, {
-        question: "What kits are in Bloxd Infection?",
-        answer: "Humans can pick kits like Veteran, who starts with an AK-47, or Scout, who has a sniper rifle. On the zombie side there's Puker, who can puke acid, and Tank, who has more health. Win awards to earn gold for the kit shop."
+        question: "Can I visit other players' islands?",
+        answer: "You can. Type /visit and a player's name, as long as they're in the same game and their island is open. Owners pick who's allowed in, and /home brings you back to your own island."
       }, {
-        question: "What's the player limit in Infection?",
-        answer: "18 players per match."
+        question: "What happened at Cragrock Mines?",
+        answer: "A huge meteor crashed into it, and the dwarves who live there need your help. Take the portal from the Hub, explore the mines and dig for ores."
+      }, {
+        question: "Does my island save between sessions?",
+        answer: "Yep. Your island, skills, Gold Coins, quests and dungeon progress all save. Log in to an account so nothing gets lost if your browser data is cleared."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

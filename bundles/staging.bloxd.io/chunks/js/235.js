@@ -1,20 +1,330 @@
 export const id = 235;
 export const ids = [235];
 export const modules = {
-  37015: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      ITEM_FILES_WITHOUT_SPRITE: () => Ue,
-      ITEM_SPRITES: () => Me,
-      ITEM_SPRITES_WITHOUT_FILE: () => Ke,
-      ITEM_SPRITE_RUNS: () => be,
-      MAX_SPRITE_ITEM_ID: () => ye
+  37238: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      WasmTextureWorker: () => kW
     });
-    const ye = 10113,
-      be = "$######$################################################%=####################################################################################################################################################$########################################$##################################$##$###?##############################)#)#####$)c'$)#$)############+$&D&#E&#F&#G&######)#)##%)###################################$c$#################$&##R'#S'#T'#U'#V'#W'#X'#Y'#Z'#['#]'#^'#_'1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#$##$&###################################'########O*#P*#Q*#,#-#.#/#0%#######$)U*$)#$)V*$)#$)W*$)#$)X*$)#$)Y*$)#$)Z*$)#$)#$)#$)#$)#$)#$)#####%#.V(G'.:b)*@N(#P'#K($$#######$)H+$)#$)##E+#G+$)###########)###################$&##Z+$/##Z+$(###############################)#)#)#)#)#)#)#)#################################$F$############################################7#9#<#8#:#;#Y-#Z-######-C&-b%-a%-`%-_%-^%-]%-[%-U%-Z%-c%-T%-Y%-X%-W%-V%####%#####$(#$)C.$)#$)##`-#c-*(#$###]-############$####%####O.#P.####%#$&I'##$2###############################################################################################1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#%#$####$##$(Y0$)###$`%#$######$######################$(#########%#######$)S1$)#$)##O1#R1*(#)#)#)#)#)#$)#####$########)#)###)###################################################################-H2-I2-J2-K2-L2-M2-N2-O2-P2-Q2-R2-S2-T2-U2-V2-W22c%#$)#######%#######$)P3$)#$)##L3#O3*(#$$###$&#########################$4#########'#'###################################################'#%###$&#$#H4###I4$#C5Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#############A#A#A#A#A#A#A##F5##)#**#**G6$*###)#'#'#'#$####'#'#'#'#'#'#'#'#'#'#'#'#'#Q$#Q$#########################$##############)#*##*##*##*##*3#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)###)#$&#######.##-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-###########################################C$^&%%$$#####.##-#)#######N$##)#$3#*5`9N$####)#N$.#-#-#$######)#$4#####)Y9########$#####%,(#)###A#####24115131612141S*1F+1b-1Q11N31=1>1?1D'1`&1J)1E'1B1C$1J*1K*1@1A1H*1I*1D$1E$1L*1M*1F$1G'1H'1`)1G*1a)1b)1c)1C*1c*1_&1N*1C&1b%1a%1`%1_%1^%1]%1[%1U%1Z%1c%1T%1Y%1X%1W%1V%1H21I21J21K21L21M21N21O21P21Q21R21S21T21U21V21W21X21Y21Z21[21]21^21_21`21a21b21c21C31D31E31F31G3$$#c$#1b$5b$3b$6b$2b$4b$S*b$F+b$b-b$Q1b$N3b$=b$>b$?b$D'b$`&b$J)b$E'b$Bb$C$b$J*b$K*b$@b$Ab$H*b$I*b$D$b$E$b$L*b$M*b$F$b$G'b$H'b$`)b$G*b$a)b$b)b$c)b$C*b$c*b$_&b$N*b$C&b$b%b$a%b$`%b$_%b$^%b$]%b$[%b$U%b$Z%b$c%b$T%b$Y%b$X%b$W%b$V%b$H2b$I2b$J2b$K2b$L2b$M2b$N2b$O2b$P2b$Q2b$R2b$S2b$T2b$U2b$V2b$W2b$X2b$Y2b$Z2b$[2b$]2b$^2b$_2b$`2b$a2b$b2b$c2b$C3b$D3b$E3b$F3b$G3*&#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)###b%#b%#b%#b%#b%#b%#b%#b%#b%#b%#b%#b*###########A#A#A#A#A#A#A#A#A#A#A#########$:#################$##$B#$I%#$O$#$#####Z<$L$###############$+#$0#########################$L$#$6#############$####$##$+#$U$###########c&*#c&*E>c*&E>$$W=#X=#Y=$&#)#########$=######################################################################################################################L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?########################################################%#%#%#%#%#%#%#%##################################KA#LA#MA#NA#OA#PA#QA#RA#SA#TA#UA#VA#WA#XA#YA#ZA-###)[A#]A%#%#######################%##############`A###########################################################################################bA######################################################################################################################################%#%###%#%###%#%###%#%#########%#%###%#%###%#%#########%#%#####%###%#%###%#%###%#%###%#%#####################%#%###############%#%#%#%#)#%#%#%#%#%#%#%#%#%#%#%#%####################################################ZH$#[H$#]H$#^H$#_H$#`H$#aH$#bH$#cH$#CI$#DI$#EI$#FI$#GI$#HI$#II$#################################################################################################################################################################V/#W/#X/#Y/#Z/#[/#]/#^/#_/#`/#a/#b/#c/#C0#D0#E0#F/#G/#H/#I/#J/#K/#L/#M/#N/#O/#P/#Q/#R/#S/#T/#U/#V.#W.#X.#Y.#Z.#[.#].#^.#_.#`.#a.#b.#c.#C/#D/#E/##########################################################################################################################################################################################################################A################################################################################################################^P$########/`P$##############%#####)####################################################################################V0############%#%###############################################################################################################################################################################################################################################################################################################################################################################################################################################################################################+_E$##################################################+JB#b@#c@#################################################################################################################################################################################################################################################################################################################################################################################################################################################`]$##############################################################################################-#########################################################################################################+NC%##################+#########",
-      Me = "unloaded|dirt|coarse_dirt|sand|clay|gravel|snow|log_maple|log_pine|log_plum|log_cedar|log_aspen|log_jungle|planks_maple|planks_aspen|planks_plum|planks_jungle|planks_pine|planks_cedar|stripped_maple_log|stripped_aspen_log|stripped_plum_log|stripped_jungle_log|stripped_pine_log|stripped_cedar_log|messy_stone|stone|smooth_stone|stone_diorite|stone_diorite_smooth|stone_andesite|stone_andesite_smooth|stone_granite|stone_granite_smooth|sandstone_normal|end_stone|coal_ore|iron_ore|gold_ore|lapis_ore|emerald_ore|diamond_ore|coal_block|iron_block|gold_block|lapis_block|emerald_block|wool_colored_white|wool_colored_orange|wool_colored_magenta|wool_colored_light_blue|wool_colored_yellow|wool_colored_lime|wool_colored_pink|wool_colored_gray|wool_colored_light_grey|wool_colored_cyan|wool_colored_purple|wool_colored_blue|wool_colored_brown|wool_colored_green|wool_colored_red|wool_colored_black|hardened_clay|hardened_clay_stained_white|hardened_clay_stained_orange|hardened_clay_stained_magenta|hardened_clay_stained_light_blue|hardened_clay_stained_yellow|hardened_clay_stained_lime|hardened_clay_stained_pink|hardened_clay_stained_gray|hardened_clay_stained_silver|hardened_clay_stained_cyan|hardened_clay_stained_purple|hardened_clay_stained_blue|hardened_clay_stained_brown|hardened_clay_stained_green|hardened_clay_stained_red|hardened_clay_stained_black|gray_concrete|light_gray_concrete|black_concrete|blue_concrete|brown_concrete|cyan_concrete|light_blue_concrete|lime_concrete|magenta_concrete|orange_concrete|pink_concrete|purple_concrete|red_concrete|white_concrete|green_concrete|yellow_concrete|leaves_pine|leaves_aspen|leaves_maple|leaves_jungle|pumpkin_face_on|glass|glass_black|glass_blue|glass_brown|glass_cyan|glass_gray|glass_light_gray|glass_green|glass_light_blue|glass_lime|glass_magenta|glass_orange|glass_pink|glass_purple|glass_red|glass_white|glass_yellow|glass_silver|redstone_lamp_on|redstone_lamp_off|invisible_solid|brick|stonebrick|nether_brick|netherrack|quartz_block_side|quartz_block_chiseled|stonebrick_carved|stonebrick_mossy|stonebrick_cracked|sandstone_top|chiseled_sandstone|ice|obsidian|hay_block_side|sponge|beacon|glowstone|bedrock|small_cactus|tallgrass|dandelion|poppy|red_tulip|pink_tulip|white_tulip|orange_tulip|oxeye_daisy|blue_orchid|cornflower|allium|azure_bluet|lily_of_the_valley|shadow_rose|furnace|workbench|diamond_block|maple_door|maple_trapdoor|aspen_sapling|maple_sapling|jungle_sapling|plum_sapling|pine_sapling|cedar_sapling|protector|cactus_top|cactus_dry|ladder_maple|vine_coloured|iron_ladder|white_planks|orange_planks|magenta_planks|light_blue_planks|yellow_planks|lime_planks|pink_planks|gray_planks|light_gray_planks|cyan_planks|purple_planks|blue_planks|brown_planks|green_planks|red_planks|black_planks|artisan_bench|wheat_seeds|wheat_stage2|wheat_stage3|wheat_stage4|wheat_stage5|wheat_stage6|wheat|wheat_stage7|farmland|mossy_cobblestone|white_bed|orange_bed|magenta_bed|light_blue_bed|yellow_bed|lime_bed|pink_bed|gray_bed|light_gray_bed|cyan_bed|purple_bed|blue_bed|brown_bed|green_bed|red_bed|black_bed|moonstone_ore|moonstone_block|magma|podzol_top|cut_sandstone|red_sandstone|red_sandstone_top|chiseled_red_sandstone|cut_red_sandstone|green_stone|green_bricks|dark_green_bricks|sandstone_brick|engraved_diorite|diorite_brick|engraved_andesite|andesite_brick|engraved_granite|granite_brick|ice_brick|leaves_plum|leaves_cedar|leaves_palm|log_palm|planks_palm|palm_sapling|pine_door|plum_door|cedar_door|aspen_door|jungle_door|palm_door|pine_trapdoor|plum_trapdoor|cedar_trapdoor|aspen_trapdoor|jungle_trapdoor|palm_trapdoor|red_sand|red_sandstone_brick|rocky_dirt|leaves_maple_autumn|log_pear|planks_pear|leaves_pear|pear_door|pear_trapdoor|pear_sapling|compressed_messy_stone|extra_compressed_messy_stone|super_compressed_messy_stone|hyper_compressed_messy_stone|ultra_compressed_messy_stone|mega_compressed_messy_stone|board|net|cobweb|brown_mushroom_block|red_mushroom_block|mushroom_stem|fireball_block|iceball_block|watermelon_seeds|melon_stem|pumpkin_seeds|melon_seeds|patterned_glass_black|patterned_glass_blue|patterned_glass_brown|patterned_glass_cyan|patterned_glass_gray|patterned_glass_light_gray|patterned_glass_green|patterned_glass_light_blue|patterned_glass_lime|patterned_glass_magenta|patterned_glass_orange|patterned_glass_pink|patterned_glass_purple|patterned_glass_red|patterned_glass_white|patterned_glass_yellow|potion_table|ladder_pine|ladder_plum|ladder_cedar|ladder_aspen|ladder_jungle|ladder_palm|ladder_pear|carpet_black_icon|carpet_blue_icon|carpet_brown_icon|carpet_cyan_icon|carpet_gray_icon|carpet_light_gray_icon|carpet_green_icon|carpet_light_blue_icon|carpet_lime_icon|carpet_magenta_icon|carpet_orange_icon|carpet_pink_icon|carpet_purple_icon|carpet_red_icon|carpet_white_icon|carpet_yellow_icon|rice|rice_stage2|rice_stage3|rice_stage4|rice_stage5|rice_stage6|rice_stage7|cranberries|berry_bush_stage1|berry_bush_stage2|red_mushroom|brown_mushroom|cotton_seeds|cotton_plant_stage1|cotton_plant_stage2|cotton_plant_stage3|protector_tribe|tall_grass_bottom|tall_grass_top|protector_faction|stripped_palm_log|stripped_pear_log|mystery_block|rocket_block|super_rocket_block|grenade_block|log_cherry|stripped_cherry_log|planks_cherry|leaves_cherry|cherry_door|cherry_trapdoor|cherry_sapling|ladder_cherry|bouncy_bomb_block|spikes_wood|spikes_stone|spikes_iron|spikes_gold|spikes_diamond|spikes_kill|corn_seeds|corn_stage1|corn_stage2|corn_stage0|corn_stage3|corn_stage4|corn_stage5|melting_ice|explosive_paint_quick_yellow|explosive_paint_quick_white|explosive_paint_quick_red|explosive_paint_quick_purple|explosive_paint_quick_pink|explosive_paint_quick_orange|explosive_paint_quick_magenta|explosive_paint_quick_lime|explosive_paint_quick_light_gray|explosive_paint_quick_light_blue|explosive_paint_quick_green|explosive_paint_quick_gray|explosive_paint_quick_cyan|explosive_paint_quick_brown|explosive_paint_quick_blue|explosive_paint_quick_black|explosive_paint_seeking_yellow|explosive_paint_seeking_white|explosive_paint_seeking_red|explosive_paint_seeking_purple|explosive_paint_seeking_pink|explosive_paint_seeking_orange|explosive_paint_seeking_magenta|explosive_paint_seeking_lime|explosive_paint_seeking_light_gray|explosive_paint_seeking_light_blue|explosive_paint_seeking_green|explosive_paint_seeking_gray|explosive_paint_seeking_cyan|explosive_paint_seeking_brown|explosive_paint_seeking_blue|explosive_paint_seeking_black|explosive_paint_sticky_yellow|explosive_paint_sticky_white|explosive_paint_sticky_red|explosive_paint_sticky_purple|explosive_paint_sticky_pink|explosive_paint_sticky_orange|explosive_paint_sticky_magenta|explosive_paint_sticky_lime|explosive_paint_sticky_light_gray|explosive_paint_sticky_light_blue|explosive_paint_sticky_green|explosive_paint_sticky_gray|explosive_paint_sticky_cyan|explosive_paint_sticky_brown|explosive_paint_sticky_blue|explosive_paint_sticky_black|white_strongbed|orange_strongbed|magenta_strongbed|light_blue_strongbed|yellow_strongbed|lime_strongbed|pink_strongbed|gray_strongbed|light_gray_strongbed|cyan_strongbed|purple_strongbed|blue_strongbed|brown_strongbed|green_strongbed|red_strongbed|black_strongbed|timed_spike_bomb|fatBrownMushroom|fatRedMushroom|chili_pepper_seeds|code_block|toxin_ball_block|finish_block|obby_death_block|obby_absorb_block|obby_absorb_death_block|pig_spawner_block_icon|cow_spawner_block_icon|sheep_spawner_block_icon|cave_golem_spawner_block_icon|draugr_zombie_spawner_block_icon|draugr_skeleton_spawner_block_icon|empty_spawner_block_icon|frost_golem_spawner_block_icon|frost_zombie_spawner_block_icon|frost_skeleton_spawner_block_icon|snowy_messy_stone|draugr_knight_spawner_block_icon|packed_snow|carved_messy_stone|spectral_grass|log_spectral|stripped_spectral_log|planks_spectral|leaves_spectral|spectral_door|spectral_trapdoor|spectral_sapling|ladder_spectral|wood_enchanting_table|stone_enchanting_table|iron_enchanting_table|gold_enchanting_table|diamond_enchanting_table|pine_grass|pine_fern|fallen_pine_cone|wolf_spawner_block_icon|bear_spawner_block_icon|deer_spawner_block_icon|stag_spawner_block_icon|bone_antlers_icon|gold_antlers_icon|gold_watermelon_stag_spawner_block_icon|salvaging_table|chalk|chalk_yellow|chalk_white|chalk_red|chalk_purple|chalk_pink|chalk_orange|chalk_magenta|chalk_lime|chalk_light_gray|chalk_light_blue|chalk_green|chalk_gray|chalk_cyan|chalk_brown|chalk_blue|chalk_black|chalk_bricks_yellow|chalk_bricks_white|chalk_bricks_red|chalk_bricks_purple|chalk_bricks_pink|chalk_bricks_orange|chalk_bricks_magenta|chalk_bricks_lime|chalk_bricks_light_gray|chalk_bricks_light_blue|chalk_bricks_green|chalk_bricks_gray|chalk_bricks_cyan|chalk_bricks_brown|chalk_bricks_blue|chalk_bricks_black|leaf_bed|jungle_tall_grass_bottom|jungle_tall_grass_top|catnip|log_mango|stripped_mango_log|planks_mango|leaves_mango|mango_door|mango_trapdoor|mango_sapling|ladder_mango|banana_seeds|banana_stem|dangling_rope|dangling_vine|gorilla_spawner_block_icon|wildcat_spawner_block_icon|leaves_maple_fruity|leaves_pine_cone|leaves_plum_fruity|leaves_palm_fruity|leaves_pear_fruity|leaves_cherry_fruity|leaves_mango_fruity|draugr_huntress_spawner_block_icon|magma_golem_spawner_block_icon|horse_spawner_block_icon|tomato_plant_stage0|tomato_plant_stage1|tomato_plant_stage2|tomato_plant_stage2_top|carrot_seeds|potato_seeds|strawberry_bush_stage0|strawberry_bush_stage1|strawberry_bush_stage2|sugar_cane_plant_stage0|sugar_cane_plant_stage1|sugar_cane_plant_stage2|sugar_cane_plant_stage2_top|lettuce_plant_stage0|lettuce_plant_stage1|lettuce_plant_stage2|coffee_plant_stage0|coffee_plant_stage1|coffee_plant_stage2|cauliflower_plant_stage0|cauliflower_plant_stage1|cauliflower_plant_stage2|parsnip_plant_stage0|parsnip_plant_stage1|parsnip_plant_stage2|blueberry_bush_stage0|blueberry_bush_stage1|blueberry_bush_stage2|red_cabbage_stage0|red_cabbage_stage1|red_cabbage_stage2|beetroot_seeds|leaves_aspen_autumn|autumn_fern|crate|potato_block|banner_white|banner_orange|banner_magenta|banner_light_blue|banner_yellow|banner_lime|banner_pink|banner_gray|banner_light_gray|banner_cyan|banner_purple|banner_blue|banner_brown|banner_green|banner_red|banner_black|banner_draugr|spirit_golem_spawner_block_icon|spirit_wolf_spawner_block_icon|spirit_bear_spawner_block_icon|spirit_stag_spawner_block_icon|spirit_gorilla_spawner_block_icon|fertilised_soil|sheep_painting|cow_painting|pig_painting|horse_painting|wolf_painting|deer_painting|wildcat_painting|draugr_warper_spawner_block_icon|active_radar|inactive_radar|yellow_lucky_block|light_blue_lucky_block|gold_trophy|small_pod_magenta_icon|small_pod_light_gray_icon|small_pod_red_icon|frost_wraith_spawner_block_icon|draugr_reaver_spawner_block_icon|small_pod_white_icon|small_pod_orange_icon|small_pod_light_blue_icon|small_pod_yellow_icon|small_pod_lime_icon|small_pod_pink_icon|small_pod_gray_icon|small_pod_cyan_icon|small_pod_purple_icon|small_pod_blue_icon|small_pod_brown_icon|small_pod_green_icon|small_pod_black_icon|banner_skull|banner_rainbow|2_block|bebek_bebek_bebek|bobino_musculino|bobzilla|brra_brra_pachim|capitano_explovissimo|cappuccino_ninjino|chimpanzano_bananano|il_wizardini_del_porko|lucchia_blocchi|monsieur_bedwar|twirlina_cappucina|boiling_pot|chopping_board|frying_pan|hob_boiling|hob_frying|kitchen_worktop|slicing_board|wood_trophy|stone_trophy|iron_trophy|diamond_trophy|moonstone_trophy|white_directional_arrow|orange_directional_arrow|magenta_directional_arrow|light_blue_directional_arrow|yellow_directional_arrow|lime_directional_arrow|pink_directional_arrow|grey_directional_arrow|light_grey_directional_arrow|cyan_directional_arrow|purple_directional_arrow|blue_directional_arrow|brown_directional_arrow|green_directional_arrow|red_directional_arrow|black_directional_arrow|bin|vending_machine|job_application|john_beef|67|wheel|torch|torch_yellow|torch_white|torch_red|torch_purple|torch_pink|torch_orange|torch_magenta|torch_lime|torch_light_gray|torch_light_blue|torch_green|torch_gray|torch_cyan|torch_brown|torch_blue|torch_black|neon_yellow|neon_white|neon_red|neon_purple|neon_pink|neon_orange|neon_magenta|neon_lime|neon_light_gray|neon_light_blue|neon_green|neon_gray|neon_cyan|neon_brown|neon_blue|neon_black|landing_pad|jump_pad_weak|jump_pad|jump_pad_strong|jump_pad_super|ghost_lucky_block|ghost_mystery_block|football|glowing_mushroom|crystal|slime_trail|grass_top|pine_grass_block|jungle_grass_block|pipe|auto_miner|rocket|extractor_pipe|splitter_pipe|solar_panel|wire|filter_pipe|merger_pipe|stalker_spawner_block_icon|lunite_ore|lunite_block|autominer_lunite|bowling_alley_floor|crone_spawner_block_icon|slime_spawner_block_icon|iron_guardian_spawner_block_icon|gold_guardian_spawner_block_icon|diamond_guardian_spawner_block_icon|moonstone_guardian_spawner_block_icon|dry_grass_block|dead_bush|lantern|lily_pad|camel_spawner_block_icon|camel_painting|yellow_lucky_block_rare|yellow_lucky_block_super|log_ancient_maple|noticeboard_standing|noticeboard_standing_top|noticeboard_standing_bottom|noticeboard_standing_left|noticeboard_standing_right|noticeboard_standing_top_left|noticeboard_standing_top_right|noticeboard_standing_bottom_left|noticeboard_standing_bottom_right|noticeboard_standing_leg|noticeboard_wall|noticeboard_wall_top|noticeboard_wall_bottom|noticeboard_wall_left|noticeboard_wall_right|noticeboard_wall_top_left|noticeboard_wall_top_right|noticeboard_wall_bottom_left|noticeboard_wall_bottom_right|tiki_terror_spawner_block_icon|maple_fence|pine_fence|plum_fence|cedar_fence|aspen_fence|jungle_fence|palm_fence|pear_fence|cherry_fence|spectral_fence|mango_fence|noticeboard|pure_coal_ore|pure_iron_ore|pure_gold_ore|pure_diamond_ore|pure_moonstone_ore|maple_fence_gate|pine_fence_gate|plum_fence_gate|cedar_fence_gate|aspen_fence_gate|jungle_fence_gate|palm_fence_gate|pear_fence_gate|cherry_fence_gate|spectral_fence_gate|mango_fence_gate|iron_goofy_golem_spawner_block_icon|gold_goofy_golem_spawner_block_icon|diamond_goofy_golem_spawner_block_icon|moonstone_goofy_golem_spawner_block_icon|crystal_block|rope_block|ash|coal_deposit|iron_deposit|stone_deposit|copper_deposit|gold_deposit|homestead_core|copper_ore|voltite_ore|voltite_deposit|starframe|comet_ore|comet_heart|pure_copper_ore|pure_voltite_ore|darkstone|darkstone_bricks|darkstone_bricks_cracked|darkstone_bricks_lava|darkstone_engraved|darkstone_smooth|scorpion_eggs|showcase|pine_item_pedestal|plum_item_pedestal|cedar_item_pedestal|aspen_item_pedestal|jungle_item_pedestal|palm_item_pedestal|pear_item_pedestal|cherry_item_pedestal|spectral_item_pedestal|mango_item_pedestal|uranium_ore|uranium_deposit|fluid_tank|reactor_frame|reactor_casing|reactor_glass|fuel_port|water_port|output|fuel_rod0|graphite_block|coolant_channel0|reactor_slag|battery_casing|uranium_glass|glow_lamp|jetpack_back|atomic_spire|isotope_comet_ore|isotope_comet_heart|fluid_pipe|scaffolding|nova_trophy|uranium_block|pure_uranium_ore|copper_block|voltite_block|wooden_pickaxe|stone_pickaxe|iron_pickaxe|golden_pickaxe|diamond_pickaxe|moonstone_pickaxe|golem_pickaxe|wooden_axe|stone_axe|iron_axe|golden_axe|diamond_axe|moonstone_axe|artisan_axe|wooden_shovel|stone_shovel|iron_shovel|golden_shovel|diamond_shovel|wooden_sword|stone_sword|iron_sword|golden_sword|diamond_sword|knight_sword|wooden_hoe|stone_hoe|iron_hoe|golden_hoe|diamond_hoe|flashlight|mining_helmet|wood_helmet|iron_helmet|golden_helmet|diamond_helmet|wood_chestplate|iron_chestplate|golden_chestplate|diamond_chestplate|fur_chestplate|wood_leggings|iron_leggings|golden_leggings|diamond_leggings|wood_boots|iron_boots|golden_boots|diamond_boots|spiked_boots|wood_gauntlets|iron_gauntlets|golden_gauntlets|diamond_gauntlets|military_helmet|military_chestplate|military_gauntlets|military_leggings|military_boots|shears|artisan_shears|stick|coal|raw_iron|iron_ingot|iron_fragment|raw_gold|gold_ingot|gold_fragment|diamond|diamond_fragment|moonstone|lunite|moonstone_fragment|bowl|bowl_of_cranberries_1|bowl_of_cranberries_2|bowl_of_cranberries_3|bowl_of_cranberries_4|mushroom_soup|glowing_soup|night_vision_soup|cotton|gold_crop|bucket|water_bucket|lava_bucket|oak_boat|obsidian_boat|speedboat|hang_glider|hang_glider_iron|hang_glider_gold|hang_glider_diamond|hovercraft|yellow_kart|white_kart|red_kart|purple_kart|pink_kart|orange_kart|magenta_kart|lime_kart|light_gray_kart|light_blue_kart|green_kart|gray_kart|cyan_kart|brown_kart|blue_kart|black_kart|off_roader|armored_car|light_blue_car|snowball|pebble|reinforced_pebble|arrow|ball|reinforced_ball|frag_grenade|mining_grenade|smoke_grenade|moonstone_orb|fireball|bouncy_bomb|rpg|super_rpg|grenade_launcher|iceball|67_projectile_base|67_projectile_boosted|moonstone_explosive_side|wood_bow|wood_bow_charging_2|wood_bow_charging_3|wood_bow_charging_4|stone_bow|stone_bow_charging_2|stone_bow_charging_3|stone_bow_charging_4|iron_bow|iron_bow_charging_2|iron_bow_charging_3|iron_bow_charging_4|gold_bow|gold_bow_charging_2|gold_bow_charging_3|gold_bow_charging_4|diamond_bow|diamond_bow_charging_2|diamond_bow_charging_3|diamond_bow_charging_4|wood_crossbow|wood_crossbow_charging_2|wood_crossbow_charging_3|wood_crossbow_charging_4|stone_crossbow|stone_crossbow_charging_2|stone_crossbow_charging_3|stone_crossbow_charging_4|iron_crossbow|iron_crossbow_charging_2|iron_crossbow_charging_3|iron_crossbow_charging_4|gold_crossbow|gold_crossbow_charging_2|gold_crossbow_charging_3|gold_crossbow_charging_4|diamond_crossbow|diamond_crossbow_charging_2|diamond_crossbow_charging_3|diamond_crossbow_charging_4|wood_crossbow_charged|stone_crossbow_charged|iron_crossbow_charged|gold_crossbow_charged|diamond_crossbow_charged|compass|compass_dir_2|compass_dir_3|compass_dir_4|compass_dir_5|compass_dir_6|compass_dir_7|compass_dir_8|compass_dir_9|compass_dir_10|compass_dir_11|compass_dir_12|chunk_map|bread|bowl_of_rice|apple|plum|coconut|cracked_coconut|pear|cherry|banana|watermelon_slice|glistering_watermelon_slice|melon_slice|glistering_melon_slice|pumpkin_pie|corn|cornbread|chili_pepper|mango|carrot|gold_carrot|raw_potato|baked_potato|beetroot|raw_porkchop|cooked_porkchop|raw_beef|steak|raw_mutton|cooked_mutton|raw_venison|cooked_venison|rotten_flesh|rotten_brain|bone|bone_meal|leather|saddle|spirit_saddle|fur|golem_eye|knight_heart|teleport_heart|frost_shard|molten_cog|choir_bell|siege_core|flywheel|radiant_spark|brood_sac|bandolier|name_tag|book|empty_bottle|water_bottle|slowness_potion|splash_slowness_potion|slowness_arrow|poison|splash_poison|poison_arrow|weakness_potion|splash_weakness_potion|weakness_arrow|instant_damage_potion|splash_instant_damage_potion|instant_damage_arrow|milk_potion|splash_milk_potion|milk_arrow|speed_potion|splash_speed_potion|speed_arrow|defense_potion|splash_defense_potion|defense_arrow|strength_potion|splash_strength_potion|strength_arrow|invisibility_potion|splash_invisibility_potion|invisibility_arrow|jump_potion|splash_jump_potion|jump_arrow|knockback_potion|splash_knockback_potion|knockback_arrow|regen_potion|splash_regen_potion|regen_arrow|heal_potion|splash_heal_potion|heal_arrow|haste_potion|splash_haste_potion|haste_arrow|shield_potion|splash_shield_potion|shield_arrow|double_jump_potion|splash_double_jump_potion|double_jump_arrow|heat_resistance_potion|splash_heat_resistance_potion|heat_resistance_arrow|x_ray_vision_potion|splash_x_ray_vision_potion|x_ray_vision_arrow|mining_yield_potion|splash_mining_yield_potion|mining_yield_arrow|brain_rot_potion|splash_brain_rot_potion|brain_rot_arrow|chaos_potion|teleportation_potion|ammo|AK-47|M16|MP40|TAR-21|M1911|Double-barreled|AWP|Deagle|Striker-12|VSR|DMR|Minigun|FMR|SKAR|Block-19|Mini Izu|GPMG|gold_coin|updraft|snowdash|floor_creator|moonstone_remote_explosive|moonstone_remote|ice_bridge|maple_planks_bridge|messy_stone_bridge|yellow_balloon|white_balloon|red_balloon|purple_balloon|pink_balloon|orange_balloon|magenta_balloon|lime_balloon|light_gray_balloon|light_blue_balloon|green_balloon|gray_balloon|cyan_balloon|brown_balloon|blue_balloon|black_balloon|yellow_popup_tower|white_popup_tower|red_popup_tower|purple_popup_tower|pink_popup_tower|orange_popup_tower|magenta_popup_tower|lime_popup_tower|light_gray_popup_tower|light_blue_popup_tower|green_popup_tower|gray_popup_tower|cyan_popup_tower|brown_popup_tower|blue_popup_tower|black_popup_tower|yellow_paintball_gun|white_paintball_gun|red_paintball_gun|purple_paintball_gun|pink_paintball_gun|orange_paintball_gun|magenta_paintball_gun|lime_paintball_gun|light_gray_paintball_gun|light_blue_paintball_gun|green_paintball_gun|gray_paintball_gun|cyan_paintball_gun|brown_paintball_gun|blue_paintball_gun|black_paintball_gun|yellow_paintball|white_paintball|red_paintball|purple_paintball|pink_paintball|orange_paintball|magenta_paintball|lime_paintball|light_gray_paintball|light_blue_paintball|green_paintball|gray_paintball|cyan_paintball|brown_paintball|blue_paintball|black_paintball|yellow_heavy_paintball_gun|white_heavy_paintball_gun|red_heavy_paintball_gun|purple_heavy_paintball_gun|pink_heavy_paintball_gun|orange_heavy_paintball_gun|magenta_heavy_paintball_gun|lime_heavy_paintball_gun|light_gray_heavy_paintball_gun|light_blue_heavy_paintball_gun|green_heavy_paintball_gun|gray_heavy_paintball_gun|cyan_heavy_paintball_gun|brown_heavy_paintball_gun|blue_heavy_paintball_gun|black_heavy_paintball_gun|explosive_paint_yellow|explosive_paint_white|explosive_paint_red|explosive_paint_purple|explosive_paint_pink|explosive_paint_orange|explosive_paint_magenta|explosive_paint_lime|explosive_paint_light_gray|explosive_paint_light_blue|explosive_paint_green|explosive_paint_gray|explosive_paint_cyan|explosive_paint_brown|explosive_paint_blue|explosive_paint_black|yellow_paint_bow|yellow_paint_bow_charging_2|yellow_paint_bow_charging_3|yellow_paint_bow_charging_4|white_paint_bow|white_paint_bow_charging_2|white_paint_bow_charging_3|white_paint_bow_charging_4|red_paint_bow|red_paint_bow_charging_2|red_paint_bow_charging_3|red_paint_bow_charging_4|purple_paint_bow|purple_paint_bow_charging_2|purple_paint_bow_charging_3|purple_paint_bow_charging_4|pink_paint_bow|pink_paint_bow_charging_2|pink_paint_bow_charging_3|pink_paint_bow_charging_4|orange_paint_bow|orange_paint_bow_charging_2|orange_paint_bow_charging_3|orange_paint_bow_charging_4|magenta_paint_bow|magenta_paint_bow_charging_2|magenta_paint_bow_charging_3|magenta_paint_bow_charging_4|lime_paint_bow|lime_paint_bow_charging_2|lime_paint_bow_charging_3|lime_paint_bow_charging_4|light_gray_paint_bow|light_gray_paint_bow_charging_2|light_gray_paint_bow_charging_3|light_gray_paint_bow_charging_4|light_blue_paint_bow|light_blue_paint_bow_charging_2|light_blue_paint_bow_charging_3|light_blue_paint_bow_charging_4|green_paint_bow|green_paint_bow_charging_2|green_paint_bow_charging_3|green_paint_bow_charging_4|gray_paint_bow|gray_paint_bow_charging_2|gray_paint_bow_charging_3|gray_paint_bow_charging_4|cyan_paint_bow|cyan_paint_bow_charging_2|cyan_paint_bow_charging_3|cyan_paint_bow_charging_4|brown_paint_bow|brown_paint_bow_charging_2|brown_paint_bow_charging_3|brown_paint_bow_charging_4|blue_paint_bow|blue_paint_bow_charging_2|blue_paint_bow_charging_3|blue_paint_bow_charging_4|black_paint_bow|black_paint_bow_charging_2|black_paint_bow_charging_3|black_paint_bow_charging_4|pig_spawn_orb|cow_spawn_orb|sheep_spawn_orb|horse_spawn_orb|camel_spawn_orb|iron_goofy_golem_spawn_orb|gold_goofy_golem_spawn_orb|diamond_goofy_golem_spawn_orb|moonstone_goofy_golem_spawn_orb|deer_spawn_orb|slime_spawn_orb|wolf_spawn_orb|wildcat_spawn_orb|spirit_golem_spawn_orb|spirit_wolf_spawn_orb|spirit_bear_spawn_orb|spirit_stag_spawn_orb|spirit_gorilla_spawn_orb|bear_spawn_orb|stag_spawn_orb|gold_watermelon_stag_spawn_orb|gorilla_spawn_orb|cave_golem_spawn_orb|draugr_zombie_spawn_orb|draugr_skeleton_spawn_orb|frost_golem_spawn_orb|frost_zombie_spawn_orb|frost_skeleton_spawn_orb|draugr_knight_spawn_orb|draugr_huntress_spawn_orb|magma_golem_spawn_orb|draugr_warper_spawn_orb|frost_wraith_spawn_orb|draugr_reaver_spawn_orb|stalker_spawn_orb|crone_spawn_orb|iron_guardian_spawn_orb|gold_guardian_spawn_orb|diamond_guardian_spawn_orb|moonstone_guardian_spawn_orb|tiki_terror_spawn_orb|mob_catcher|caught_pig_default|caught_cow_default|caught_cow_cream|caught_sheep_default|caught_horse_default|caught_horse_black|caught_horse_brown|caught_horse_cream|caught_camel_default|caught_camel_brown|caught_iron_goofy_golem_default|caught_iron_goofy_golem_flaking|caught_iron_goofy_golem_patchy|caught_iron_goofy_golem_shedding|caught_iron_goofy_golem_bare|caught_iron_goofy_golem_stone|caught_gold_goofy_golem_default|caught_gold_goofy_golem_flaking|caught_gold_goofy_golem_patchy|caught_gold_goofy_golem_shedding|caught_gold_goofy_golem_bare|caught_gold_goofy_golem_stone|caught_diamond_goofy_golem_default|caught_diamond_goofy_golem_flaking|caught_diamond_goofy_golem_patchy|caught_diamond_goofy_golem_shedding|caught_diamond_goofy_golem_bare|caught_diamond_goofy_golem_stone|caught_moonstone_goofy_golem_default|caught_moonstone_goofy_golem_flaking|caught_moonstone_goofy_golem_patchy|caught_moonstone_goofy_golem_shedding|caught_moonstone_goofy_golem_bare|caught_moonstone_goofy_golem_stone|caught_deer_default|caught_slime_default|caught_wolf_default|caught_wolf_white|caught_wolf_brown|caught_wolf_grey|caught_wolf_spectral|caught_wildcat_default|caught_wildcat_tabby|caught_wildcat_grey|caught_wildcat_black|caught_wildcat_calico|caught_wildcat_siamese|caught_wildcat_leopard|caught_spirit_golem_default|caught_spirit_wolf_default|caught_spirit_bear_default|caught_spirit_stag_default|caught_spirit_gorilla_default|caught_bear_default|caught_stag_default|caught_gold_watermelon_stag_default|caught_gorilla_default|caught_cave_golem_default|caught_cave_golem_iron|caught_draugr_zombie_default|caught_draugr_zombie_longHairChestplate|caught_draugr_zombie_longHairClothed|caught_draugr_zombie_shortHairClothed|caught_draugr_skeleton_default|caught_frost_golem_default|caught_frost_zombie_default|caught_frost_zombie_longHairChestplate|caught_frost_zombie_shortHairClothed|caught_frost_skeleton_default|caught_draugr_knight_default|caught_draugr_huntress_default|caught_magma_golem_default|caught_draugr_warper_default|caught_frost_wraith_default|caught_draugr_reaver_default|caught_stalker_default|caught_stalker_crimson|caught_stalker_frost|caught_stalker_void|caught_crone_default|caught_iron_guardian_default|caught_gold_guardian_default|caught_diamond_guardian_default|caught_moonstone_guardian_default|caught_tiki_terror_default|caught_tiki_terror_titan|caught_tiki_terror_tormentor|caught_tiki_terror_tyrant|caught_npc_default|caught_npc_emma|caught_npc_leo|caught_npc_isabel|caught_npc_sanjay|caught_npc_imara|caught_npc_enoch|caught_npc_sara|caught_npc_carmen|caught_npc_chef|caught_67_default|caught_bobino_musculino_default|caught_capitano_explovissimo_default|caught_desert_fennec_default|caught_armour_collector_default|caught_furnace_knight_default|caught_lil_knight_default|caught_glass_gremlin_default|caught_glass_bro_default|caught_lord_vulcan_default|caught_zombie_default|caught_skeleton_default|caught_mummy_default|caught_scorpion_default|caught_vulcanite_default|caught_evil_tome_default|caught_magma_toad_default|timed_spike_bomb_charging_2|timed_spike_bomb_charging_3|timed_spike_bomb_charging_4|toxin_ball|aura_xp_fragment|aura_xp_orb|aura_xp_potion|splash_aura_xp_potion|aura_xp_arrow|firecracker|firecracker_rainbow|firecracker_yellow|firecracker_white|firecracker_red|firecracker_purple|firecracker_pink|firecracker_orange|firecracker_magenta|firecracker_lime|firecracker_light_gray|firecracker_light_blue|firecracker_green|firecracker_gray|firecracker_cyan|firecracker_brown|firecracker_blue|firecracker_black|firecracker_pebble|firecracker_pebble_rainbow|firecracker_pebble_yellow|firecracker_pebble_white|firecracker_pebble_red|firecracker_pebble_purple|firecracker_pebble_pink|firecracker_pebble_orange|firecracker_pebble_magenta|firecracker_pebble_lime|firecracker_pebble_light_gray|firecracker_pebble_light_blue|firecracker_pebble_green|firecracker_pebble_gray|firecracker_pebble_cyan|firecracker_pebble_brown|firecracker_pebble_blue|firecracker_pebble_black|worldbuilder_wand|strongfish_red|strongfish_green|strongfish_moon|wheatfish|moonfish|bombfish|boomerang_fish|root_flounder|abyss_carp|boulder_bass|barnaclejaw|crystalized_wheatfish|darter|darter_shadow|electric_eel|grass_snapper|jungle_spinefish|mangler_catfish|mossback_arapaima|sandbelly_piranha|shadeback_ray|mudbelly_tilapia|mireback_carp|rotslab_eel|aether_minnow|murkborne_ray|eldertide_leviathan|oarfish|alpha_moon_strongfish|bamboo_catfish|blackwater_bream|blackwater_leviathan|boned_sturgeon|bull_shark|channel_sawfish|coastal_mullet|coelacanth|driftwood_catfish|eagle_ray|giant_grouper|giant_moray|giant_stingray|golden_mahseer|greenfin_loach|mangrove_herring|moonlit_boomerang_fish|moonstone_pupfish|mudline_perch|murk_stingray|needlefish|nomai_moray|pearlescent_moonfish|rainbow_guppy|red_snapper|reedglass_minnow|reef_sardine|root_perch|rust_scad|seahorse|snakehead|spined_stickleback|stone_grouper|sumpback_carp|sunset_minnow|tarpon|threadfin_bream|tri_pointed_needlefish|ellie_fish|armoured_searobin|ash_lionfish|barefrost_toothfish|blackfin_icefish|basalt_pipefish|brimstone_spikefish|cinder_leviathan|crowned_flame_angelfish|deepwater_lanternfish|driftice_capelin|ember_chub|embermark_wrasse|eviota_vader|frost_herring|frost_wolf_eel|frostpaint_notie|frozen_grenadier|giant_trevally|glacial_lanternfish|glacial_silverfish|heatwarp_flounder|hatchetfish|ice_spined_notothenia|iceshelf_skate|icy_sculpin|lavaflow_trout|lavawake_slopefish|magma_sardinella|magma_trout|marbled_moray_cod|molten_lotella_cod|northern_wolffish|paleice_rockcod|permafrost_halibut|pithead|polarflash_electron|pyroclast_eel|pyroscale_grouper|red_pyreside|rimesnouted_lancetfish|scorched_sunfish|scored_dace|silver_dragonfish|snow_haddock|volcanic_catfish|volcanic_semperi|rusty_rod|lucky_rod|sturdy_rod|jungle_rod|draugr_rod|cursed_rod|tangle_resistant_rod|speed_rod|carbon_rod|deep_sea_rod|master_rod|obsidian_rod|molten_magma_rod|frost_rod|black_ice_rod|mythic_rod|acorn|acorn_jelly|cows_milk|cheese|caught_fish|fish_fillet|meaty_bone|blinding_pebble|sheeps_milk|yoghurt_pot|truffle|truffle_oil|oats|porridge|dates|date_pudding|poop|fertiliser|medkit|wood_spear|stone_spear|iron_spear|gold_spear|diamond_spear|moonstone_spear|wood_dagger|stone_dagger|iron_dagger|gold_dagger|diamond_dagger|moonstone_dagger|wood_boomerang|stone_boomerang|iron_boomerang|gold_boomerang|diamond_boomerang|moonstone_boomerang|wood_club|stone_club|iron_club|gold_club|diamond_club|moonstone_club|wood_mace|stone_mace|iron_mace|gold_mace|diamond_mace|moonstone_mace|wood_whip|stone_whip|iron_whip|gold_whip|diamond_whip|moonstone_whip|beef_stew|chicken|coleslaw|egg|fish_n_chips|fried_rice|lettuce|omelette|onion|red_cabbage|roast_dinner|salad|stuffed_pepper|sushi|tomato|veg_soup|clock_wood_midday|clock_wood_midnight|clock_wood_late_night|clock_wood_sunrise|clock_wood_early_day|clock_wood_late_day|clock_wood_sunset|clock_wood_early_night|clock_gold_midday|clock_gold_midnight|clock_gold_late_night|clock_gold_sunrise|clock_gold_early_day|clock_gold_late_day|clock_gold_sunset|clock_gold_early_night|lucky_sword_upgrade|lucky_armour_upgrade|lucky_tools_upgrade|lucky_clover|void_net|lucky_bomb|unlucky_bomb|swap_orb|golden_lucky_clover|amethite|amethite_fragment|amethite_pickaxe|amethite_axe|amethite_shovel|amethite_sword|amethite_hoe|amethite_helmet|amethite_chestplate|amethite_leggings|amethite_boots|amethite_gauntlets|amethite_bow|amethite_bow_charging_2|amethite_bow_charging_3|amethite_bow_charging_4|amethite_crossbow|amethite_crossbow_charging_2|amethite_crossbow_charging_3|amethite_crossbow_charging_4|amethite_crossbow_charged|amethite_spear|amethite_dagger|amethite_boomerang|amethite_club|amethite_mace|amethite_whip|magmasteel|magmasteel_fragment|magmasteel_pickaxe|magmasteel_axe|magmasteel_shovel|magmasteel_sword|magmasteel_hoe|magmasteel_helmet|magmasteel_chestplate|magmasteel_leggings|magmasteel_boots|magmasteel_gauntlets|magmasteel_bow|magmasteel_bow_charging_2|magmasteel_bow_charging_3|magmasteel_bow_charging_4|magmasteel_crossbow|magmasteel_crossbow_charging_2|magmasteel_crossbow_charging_3|magmasteel_crossbow_charging_4|magmasteel_crossbow_charged|magmasteel_spear|magmasteel_dagger|magmasteel_boomerang|magmasteel_club|magmasteel_mace|magmasteel_whip|rubellite|rubellite_fragment|rubellite_pickaxe|rubellite_axe|rubellite_shovel|rubellite_sword|rubellite_hoe|rubellite_helmet|rubellite_chestplate|rubellite_leggings|rubellite_boots|rubellite_gauntlets|rubellite_bow|rubellite_bow_charging_2|rubellite_bow_charging_3|rubellite_bow_charging_4|rubellite_crossbow|rubellite_crossbow_charging_2|rubellite_crossbow_charging_3|rubellite_crossbow_charging_4|rubellite_crossbow_charged|rubellite_spear|rubellite_dagger|rubellite_boomerang|rubellite_club|rubellite_mace|rubellite_whip|serpentite|serpentite_fragment|serpentite_pickaxe|serpentite_axe|serpentite_shovel|serpentite_sword|serpentite_hoe|serpentite_helmet|serpentite_chestplate|serpentite_leggings|serpentite_boots|serpentite_gauntlets|serpentite_bow|serpentite_bow_charging_2|serpentite_bow_charging_3|serpentite_bow_charging_4|serpentite_crossbow|serpentite_crossbow_charging_2|serpentite_crossbow_charging_3|serpentite_crossbow_charging_4|serpentite_crossbow_charged|serpentite_spear|serpentite_dagger|serpentite_boomerang|serpentite_club|serpentite_mace|serpentite_whip|cursemetal_helmet|cursemetal_chestplate|cursemetal_gauntlets|cursemetal_leggings|cursemetal_boots|kingly_amethite_helmet|kingly_amethite_chestplate|kingly_amethite_gauntlets|kingly_amethite_leggings|kingly_amethite_boots|kingly_diamond_helmet|kingly_diamond_chestplate|kingly_diamond_gauntlets|kingly_diamond_leggings|kingly_diamond_boots|sanguine_shard|sanguine_sword|sanguine_bow|sanguine_bow_charging_2|sanguine_bow_charging_3|sanguine_bow_charging_4|sanguine_crossbow|sanguine_crossbow_charging_2|sanguine_crossbow_charging_3|sanguine_crossbow_charging_4|sanguine_crossbow_charged|sanguine_spear|sanguine_dagger|sanguine_club|sanguine_mace|sanguine_whip|sanguine_staff|sanguine_helmet|sanguine_chestplate|sanguine_gauntlets|sanguine_leggings|sanguine_boots|spectral_shard|spectral_sword|spectral_bow|spectral_bow_charging_2|spectral_bow_charging_3|spectral_bow_charging_4|spectral_crossbow|spectral_crossbow_charging_2|spectral_crossbow_charging_3|spectral_crossbow_charging_4|spectral_crossbow_charged|spectral_spear|spectral_dagger|spectral_club|spectral_mace|spectral_whip|spectral_staff|spectral_helmet|spectral_chestplate|spectral_gauntlets|spectral_leggings|spectral_boots|geo_shard|geo_sword|geo_bow|geo_bow_charging_2|geo_bow_charging_3|geo_bow_charging_4|geo_crossbow|geo_crossbow_charging_2|geo_crossbow_charging_3|geo_crossbow_charging_4|geo_crossbow_charged|geo_spear|geo_dagger|geo_club|geo_mace|geo_whip|geo_staff|geo_helmet|geo_chestplate|geo_gauntlets|geo_leggings|geo_boots|astral_shard|astral_sword|astral_bow|astral_bow_charging_2|astral_bow_charging_3|astral_bow_charging_4|astral_crossbow|astral_crossbow_charging_2|astral_crossbow_charging_3|astral_crossbow_charging_4|astral_crossbow_charged|astral_spear|astral_dagger|astral_club|astral_mace|astral_whip|astral_staff|astral_helmet|astral_chestplate|astral_gauntlets|astral_leggings|astral_boots|wooden_key|stone_key|iron_key|gold_key|diamond_key|goldheart_engine|deepbite_drill_tip|empty_fuel_cell|blackfire_fuel_cell|doom_rivet|doom_crest|raw_copper|copper_bar|iron_grit|gold_grit|copper_grit|charcoal|recall_beacon|iron_hammer|iron_plate|copper_wire|motor|machine_parts|relay_coil|deposit_seed_copper|deposit_seed_gold|deposit_seed_voltite|deposit_seed_coal|deposit_seed_iron|deposit_seed_stone|steel_bar|gold_plate|logic_board|machine_hull|raw_voltite|power_coupler|ore_lens|homing_beacon|pull_charm|vein_breaker|voltite_dust|voltite_cell|sky_pack|dusk_moss|star_alloy|moonstone_dust|comet_shard|comet_core|starbore_drill|core_tier_2|core_tier_3|core_tier_4|core_tier_5|arc_caster|voltplate_helmet|voltplate_chestplate|voltplate_gauntlets|voltplate_leggings|voltplate_boots|wood_blade|wood_guard|wood_handle|stone_blade|stone_guard|stone_handle|iron_blade|iron_guard|iron_handle|gold_blade|gold_guard|gold_handle|diamond_blade|diamond_guard|diamond_handle|moonstone_blade|moonstone_guard|moonstone_handle|magmasteel_blade|magmasteel_guard|magmasteel_handle|sanguine_blade|sanguine_guard|sanguine_handle|astral_blade|astral_guard|astral_handle|moonstone_sword|magmaward_fuel|raw_uranium|uranium_grit|uranium_pellet|plutonium_pellet|spent_pellet|glow_dust|biomass|graphite|containment_plate|heat_exchanger|focus_lens|nova_matter|deposit_seed_uranium|reactor_blueprint|wrench|advanced_coupler|nova_upgrade|jetpack|nova_jetpack|nova_helmet|nova_chestplate|nova_gauntlets|nova_leggings|nova_boots|nova_blade|mob_cage|mob_cage_filled|nova_multitool|pocket_terminal|comet_beacon|nova_wrench",
-      Ke = "############################################################################################################################################4+##&###############%####$##3########################0######&#####&####$%###############<#####$#&###%##########'*######G%#####-$#$###7################################'###('######F$$#9-#8##################O$###############(#'##-#$)(##C$####2#######################.###################$$###G'N2##########################",
-      Ue = "amethite_armour_2|astral_armour_2|beetroot_plant_stage0|beetroot_plant_stage1|beetroot_plant_stage2|berry_bush_stage0|book_page|camel_painting_option2|carrot_plant_stage0|carrot_plant_stage1|carrot_plant_stage2|crimson_trapdoor|cursemetal_armour_2|date_pudding_option2|dates_option2|diamond_armour_2|empty_armor_slot_boots|empty_armor_slot_chestplate|empty_armor_slot_gauntlets|empty_armor_slot_helmet|empty_armor_slot_leggings|fur_armour_2|geo_armour_2|gold_armour_2|iron_armour_2|iron_trapdoor|jet_armour_2|kingly_amethite_armour_2|kingly_diamond_armour_2|magmasteel_armour_2|military_armour_2|mob_capsule|mob_capsule_filled|netherite_hoe|nova_armour_2|nova_jet_armour_2|placeholder|potato_plant_stage0|potato_plant_stage1|potato_plant_stage2|potion|rice_seeds|rubellite_armour_2|sanguine_armour_2|serpentite_armour_2|spectral_armour_2|string|vine|voltplate_armour_2|warped_trapdoor|wireless_terminal|wood_armour_2"
+    var mW = OW(632),
+      EW = OW(4379),
+      NW = OW(37245),
+      PW = OW.n(NW);
+
+    function LW() {
+      return PW()('(()=>{var WW={d:(iW,OW)=>{for(var mW in OW)WW.o(OW,mW)&&!WW.o(iW,mW)&&Object.defineProperty(iW,mW,{enumerable:!0,get:OW[mW]})},o:(WW,iW)=>Object.prototype.hasOwnProperty.call(WW,iW),r:WW=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(WW,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(WW,"__esModule",{value:!0})}},iW={};WW.r(iW),WW.d(iW,{At:()=>OW,sw:()=>mW,default:()=>uW,initSync:()=>nW,qt:()=>EW});class OW{__destroy_into_raw(){const WW=this.__wbg_ptr;return this.__wbg_ptr=0,PW.unregister(this),WW}free(){const WW=this.__destroy_into_raw();JW.Jvlw(WW,0)}It(WW){const iW=function(WW,iW){const OW=iW(1*WW.length,1)>>>0;return AW().set(WW,OW/1),hW=WW.length,OW}(WW,JW.yueu),OW=hW;return JW.gUsA(this.__wbg_ptr,iW,OW)>>>0}ux(){const WW=JW.Hx1N(this.__wbg_ptr);var iW=LW(WW[0],WW[1]).slice();return JW.raUB(WW[0],4*WW[1],4),iW}ox(){let WW,iW;try{const OW=JW.c8Ic(this.__wbg_ptr);return WW=OW[0],iW=OW[1],tW(OW[0],OW[1])}finally{JW.raUB(WW,iW,1)}}mb(){return JW.vPz8(this.__wbg_ptr)>>>0}jj(){return JW.XNPk(this.__wbg_ptr)>>>0}yj(){let WW,iW;try{const OW=JW.MRKg(this.__wbg_ptr);return WW=OW[0],iW=OW[1],tW(OW[0],OW[1])}finally{JW.raUB(WW,iW,1)}}Tj(){const WW=JW.W4WZ(this.__wbg_ptr);var iW=LW(WW[0],WW[1]).slice();return JW.raUB(WW[0],4*WW[1],4),iW}Jj(){const WW=JW.CqYj(this.__wbg_ptr);var iW,OW,mW=(iW=WW[0],OW=WW[1],iW>>>=0,wW().subarray(iW/8,iW/8+OW)).slice();return JW.raUB(WW[0],8*WW[1],8),mW}hj(){return JW.WX0o(this.__wbg_ptr)>>>0}oj(WW){const iW=JW.sF5P(this.__wbg_ptr,WW);if(iW[1])throw sW(iW[0])}dj(){JW.pGxZ(this.__wbg_ptr)}vj(){JW.O8K6(this.__wbg_ptr)}uj(){const WW=JW.hI1k(this.__wbg_ptr);if(WW[1])throw sW(WW[0])}Dj(){return JW.VTd6(this.__wbg_ptr)>>>0}ej(){const WW=JW.T6Bh(this.__wbg_ptr);if(WW[1])throw sW(WW[0])}Vj(WW,iW){const OW=JW.PdrX(this.__wbg_ptr,WW,iW);if(OW[1])throw sW(OW[0])}pj(WW){let iW,OW;try{const NW=JW.C3Af(this.__wbg_ptr,WW);var mW=NW[0],EW=NW[1];if(NW[3])throw mW=0,EW=0,sW(NW[2]);return iW=mW,OW=EW,tW(mW,EW)}finally{JW.raUB(iW,OW,1)}}fj(WW){return JW.CsQB(this.__wbg_ptr,WW)>>>0}Cj(WW){return JW.VuI6(this.__wbg_ptr,WW)>>>0}Hj(){const WW=JW.TMNB(this.__wbg_ptr);var iW=LW(WW[0],WW[1]).slice();return JW.raUB(WW[0],4*WW[1],4),iW}Xj(){return 0!==JW.rgK8(this.__wbg_ptr)}constructor(WW,iW,OW,mW,EW,NW){const LW=kW(WW,JW.yueu,JW.yDh8),cW=hW,tW=UW(iW,JW.yueu),ZW=hW,xW=function(WW,iW){const OW=iW(8*WW.length,8)>>>0;return wW().set(WW,OW/8),hW=WW.length,OW}(OW,JW.yueu),lW=hW,AW=UW(mW,JW.yueu),bW=hW,jW=UW(EW,JW.yueu),MW=hW,KW=JW.cVc8(LW,cW,tW,ZW,xW,lW,AW,bW,jW,MW,NW);if(KW[2])throw sW(KW[1]);return this.__wbg_ptr=KW[0],PW.register(this,this.__wbg_ptr,this),this}Bj(){let WW,iW;try{const OW=JW.nUy9(this.__wbg_ptr);return WW=OW[0],iW=OW[1],tW(OW[0],OW[1])}finally{JW.raUB(WW,iW,1)}}qj(WW,iW){const OW=kW(WW,JW.yueu,JW.yDh8),mW=hW,EW=UW(iW,JW.yueu),NW=hW,PW=JW.Uytx(this.__wbg_ptr,OW,mW,EW,NW);if(PW[1])throw sW(PW[0])}Rj(){return JW.w1WD(this.__wbg_ptr)>>>0}Gj(){return JW.sTNy(this.__wbg_ptr)>>>0}gj(){return JW.lYpZ(this.__wbg_ptr)>>>0}nj(){return JW.K7Ss(this.__wbg_ptr)>>>0}warnings(){let WW,iW;try{const OW=JW.fOao(this.__wbg_ptr);return WW=OW[0],iW=OW[1],tW(OW[0],OW[1])}finally{JW.raUB(WW,iW,1)}}}function mW(WW,iW){const OW=kW(WW,JW.yueu,JW.yDh8),mW=hW,EW=JW.DncL(OW,mW,iW);if(EW[1])throw sW(EW[0])}function EW(){JW.eMvG()}function NW(){return{__proto__:null,qik0:{__proto__:null,MiP5:function(WW,iW){return function(WW){jW===bW.length&&bW.push(bW.length+1);const iW=jW;return jW=bW[iW],bW[iW]=WW,iW}(Error(tW(WW,iW)))},X5os:function(WW,iW){throw new Error(tW(WW,iW))},jGqf:function(WW,iW){console.error(tW(WW,iW))}}}}Symbol.dispose&&(OW.prototype[Symbol.dispose]=OW.prototype.free);const PW="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((WW=>JW.Jvlw(WW,1)));function LW(WW,iW){return WW>>>=0,xW().subarray(WW/4,WW/4+iW)}let cW=null;function wW(){return null!==cW&&0!==cW.byteLength||(cW=new Float64Array(JW.memory.buffer)),cW}function tW(WW,iW){return function(WW,iW){SW+=iW,SW>=KW&&(MW=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),MW.decode(),SW=iW);return MW.decode(AW().subarray(WW,WW+iW))}(WW>>>0,iW)}let ZW=null;function xW(){return null!==ZW&&0!==ZW.byteLength||(ZW=new Uint32Array(JW.memory.buffer)),ZW}let lW=null;function AW(){return null!==lW&&0!==lW.byteLength||(lW=new Uint8Array(JW.memory.buffer)),lW}let bW=new Array(1024).fill(void 0);bW.push(void 0,null,!0,!1);let jW=bW.length;function UW(WW,iW){const OW=iW(4*WW.length,4)>>>0;return xW().set(WW,OW/4),hW=WW.length,OW}function kW(WW,iW,OW){if(void 0===OW){const OW=YW.encode(WW),mW=iW(OW.length,1)>>>0;return AW().subarray(mW,mW+OW.length).set(OW),hW=OW.length,mW}let mW=WW.length,EW=iW(mW,1)>>>0;const NW=AW();let PW=0;for(;PW<mW;PW++){const iW=WW.charCodeAt(PW);if(iW>127)break;NW[EW+PW]=iW}if(PW!==mW){0!==PW&&(WW=WW.slice(PW)),EW=OW(EW,mW,mW=PW+3*WW.length,1)>>>0;const iW=AW().subarray(EW+PW,EW+mW);PW+=YW.encodeInto(WW,iW).written,EW=OW(EW,mW,PW,1)>>>0}return hW=PW,EW}function sW(WW){const iW=function(WW){return bW[WW]}(WW);return function(WW){WW<1028||(bW[WW]=jW,jW=WW)}(WW),iW}let MW=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});MW.decode();const KW=2146435072;let SW=0;const YW=new TextEncoder;"encodeInto"in YW||(YW.encodeInto=function(WW,iW){const OW=YW.encode(WW);return iW.set(OW),{read:WW.length,written:OW.length}});let yW,TW,JW,hW=0;function HW(WW,iW){return TW=WW,JW=WW.exports,yW=iW,cW=null,ZW=null,lW=null,JW.rIjY(),JW}function nW(WW){if(void 0!==JW)return JW;void 0!==WW&&(Object.getPrototypeOf(WW)===Object.prototype?({module:WW}=WW):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const iW=NW();WW instanceof WebAssembly.Module||(WW=new WebAssembly.Module(WW));return HW(new WebAssembly.Instance(WW,iW),WW)}async function uW(WW){if(void 0!==JW)return JW;void 0!==WW&&(Object.getPrototypeOf(WW)===Object.prototype?({module_or_path:WW}=WW):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const iW=NW();("string"===typeof WW||"function"===typeof Request&&WW instanceof Request||"function"===typeof URL&&WW instanceof URL)&&(WW=fetch(WW));const{instance:OW,module:mW}=await async function(WW,iW){if("function"===typeof Response&&WW instanceof Response){if(!WW.ok)throw new Error(`failed to fetch Wasm: ${WW.status} ${WW.statusText} fetching \'${WW.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(WW,iW)}catch(OW){if(!function(WW){switch(WW){case"basic":case"cors":case"default":return!0}return!1}(WW.type)||"application/wasm"===WW.headers.get("Content-Type"))throw OW;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",OW)}const mW=await WW.arrayBuffer();return await WebAssembly.instantiate(mW,iW)}{const OW=await WebAssembly.instantiate(WW,iW);return OW instanceof WebAssembly.Instance?{instance:OW,module:WW}:OW}}(await WW,iW);return HW(OW,mW)}let oW=null,dW=null;function eW(WW){if(null!==dW)throw dW;if(null===oW)try{const{memory:OW}=nW({module:WW});oW={wasm:iW,memory:OW}}catch(OW){throw dW=function(WW,iW){return new Error(`${WW}: ${iW instanceof Error?`${iW.name}: ${iW.message}`:String(iW)}`,{cause:iW})}("instantiate",OW),dW}return oW}function vW(WW){return WW instanceof Error?WW.message:String(WW)}const gW=0,DW=1,VW=2,pW=3,fW=4;Error;function CW(WW){return`the texture module didn\'t load (${vW(WW)})`}function XW(WW){return""===WW?[]:WW.split("\\0")}const BW=self;let qW=null,RW=null,GW=gW,IW=0;function aW(WW){const iW=performance.now();var OW,mW;(WW!==GW||iW-IW>=1e3)&&(GW=WW,IW=iW,BW.postMessage({type:"progress",stage:WW,wasmBytes:null!==(OW=null===(mW=RW)||void 0===mW?void 0:mW.buffer.byteLength)&&void 0!==OW?OW:0}))}const{FileReaderSync:rW}=self;function zW(WW){return(new rW).readAsDataURL(new Blob([WW],{type:"image/png"}))}function FW(WW,iW){BW.postMessage({type:"sheet",sheet:WW,pixels:iW},[iW.buffer])}function QW(WW){let iW;aW(DW);try{iW=eW(WW.module)}catch(PW){return void BW.postMessage({type:"failed",reason:CW(PW),moduleLoad:!0})}RW=iW.memory,aW(VW);const{assets:OW,layerCap:mW,warnings:EW,generator:NW}=function(WW,iW,OW,mW,EW,NW,PW){var LW;const{wasm:cW,memory:wW}=WW,{strings:tW,blocks:ZW,numbers:xW,index:lW,armour:AW}=iW,bW=new cW.At(tW,ZW,xW,lW,AW,OW),jW=mW.sources.map((WW=>(null===NW||void 0===NW||NW(VW),bW.It(WW)))),UW=new Uint32Array(2*mW.sourceOfName.length);for(const[hW,HW]of mW.sourceOfName.entries())UW[2*hW]=hW,UW[2*hW+1]=jW[HW];bW.qj(mW.names,UW),null===NW||void 0===NW||NW(pW),bW.Vj(EW,null!==(LW=null===PW||void 0===PW?void 0:PW.layers)&&void 0!==LW?LW:0),null===NW||void 0===NW||NW(fW);const kW={};for(const[hW,HW]of XW(bW.Bj()).entries())null===NW||void 0===NW||NW(fW),kW[HW]=bW.pj(hW);const sW={},MW=bW.ux(),KW=new Map;for(const[hW,HW]of XW(bW.ox()).entries()){const WW=MW[hW];KW.has(WW)||(null===NW||void 0===NW||NW(fW),KW.set(WW,bW.pj(WW))),sW[HW]=KW.get(WW)}bW.dj();const SW=Array.from(bW.Hj()),YW=[],yW=[],TW=(WW,iW)=>new Uint8ClampedArray(wW.buffer,WW,iW).slice();if(PW){for(let WW=0;WW<SW.length;WW++)null===NW||void 0===NW||NW(fW),bW.oj(WW),bW.uj(),YW.push(PW.dataUrl(new Uint8Array(wW.buffer,bW.gj(),bW.Gj()))),PW.onSheet(WW,TW(bW.nj(),bW.Rj()));bW.vj()}const JW=bW.Dj();for(let hW=JW;hW<JW+bW.jj();hW++)null===NW||void 0===NW||NW(fW),YW.push(bW.pj(hW)),yW.push(TW(bW.Cj(hW),bW.fj(hW)));return{assets:{rotatedBlockTextures:kW,animatedBlockTextures:sW,blockAtlasArr:YW,blockAtlasPixels:yW,armourAtlas:bW.pj(bW.mb()),imagesPerAtlas:SW,blockAtlasWidth:bW.hj()},layerCap:bW.Xj()?EW:0,warnings:bW.warnings(),generator:bW}}(iW,WW.inputs,WW.isDefaultPack,{sources:WW.sources,names:WW.names,sourceOfName:WW.sourceOfName},WW.maxLayerWidth,aW,WW.sheetLayers>0?{layers:WW.sheetLayers,onSheet:FW,dataUrl:zW}:void 0);qW=NW,BW.postMessage({type:"required",assets:OW,layerCap:mW,warnings:EW},OW.blockAtlasPixels.map((WW=>WW.buffer)))}self.onmessageerror=()=>{BW.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=WW=>{let{data:iW}=WW;try{"required"===iW.type?QW(iW):function(){if(!qW)throw new Error("No required assets to follow");const{colours:WW,warnings:iW}=function(WW){return WW.ej(),{colours:{blocks:WW.yj(),counts:WW.Tj(),values:WW.Jj()},warnings:WW.warnings()}}(qW);BW.postMessage({type:"optional",...WW,warnings:iW},[WW.counts.buffer,WW.values.buffer])}()}catch(OW){const WW=vW(OW),iW=OW instanceof WebAssembly.RuntimeError?`wasm trapped (${WW})`:WW;BW.postMessage({type:"failed",reason:iW,stack:OW instanceof Error?OW.stack:void 0})}}})();', "Worker", void 0, OW.p + "generation.worker.4a1f1dfe.worker.js")
+    }
+    var cW = OW(37250),
+      wW = OW(4409),
+      tW = OW(4426),
+      ZW = OW(4422),
+      xW = OW(4388);
+
+    function lW(WW) {
+      return "" === WW ? [] : WW.split("\0")
+    }
+
+    function AW(WW) {
+      if ("" !== WW)
+        for (const iW of WW.split("\n")) console.error(iW)
+    }
+
+    function bW(WW, iW) {
+      return async function(WW, iW) {
+        const OW = Object.keys(WW),
+          mW = [],
+          EW = new Map,
+          NW = new Uint32Array(OW.length);
+        for (const [PW, LW] of OW.entries()) {
+          const {
+            url: iW
+          } = WW[LW];
+          EW.has(iW) || (EW.set(iW, mW.length), mW.push(iW)), NW[PW] = EW.get(iW)
+        }
+        return {
+          sources: await iW(mW),
+          names: OW.join("\0"),
+          sourceOfName: NW
+        }
+      }(WW, (async WW => {
+        const OW = await async function(WW, iW) {
+          const OW = new AbortController,
+            mW = () => {
+              OW.abort()
+            };
+          iW.addEventListener("abort", mW);
+          try {
+            const iW = await Promise.all(WW.map((async WW => {
+              try {
+                const iW = await fetch(WW, {
+                  signal: OW.signal
+                });
+                if (!iW.ok) throw new Error(`HTTP ${iW.status}`);
+                return [WW, await iW.blob()]
+              } catch (iW) {
+                throw OW.abort(), new tW.n(tW.m.Fetch, `fetching ${WW} failed: ${(0,ZW.f)(iW)}`)
+              }
+            })));
+            return new Map(iW)
+          } finally {
+            iW.removeEventListener("abort", mW)
+          }
+        }(WW.filter((WW => !WW.startsWith("data:"))), iW);
+        return Promise.all(WW.map((WW => {
+          var iW;
+          return (0, xW.f)(null !== (iW = OW.get(WW)) && void 0 !== iW ? iW : WW)
+        })))
+      }))
+    }
+
+    function jW(WW, iW) {
+      const OW = tW.n.from(WW, iW ? tW.m.Optional : tW.m.Error);
+      return OW.code !== tW.m.Fetch && OW.code !== tW.m.Error && (0, wW.f)(OW.message), OW
+    }
+
+    function UW(WW) {
+      return WW.message ? new Error(`the texture worker failed: ${WW.message}`) : new tW.n(tW.m.Load, "the texture worker failed to start")
+    }
+    class kW {
+      constructor(WW) {
+        this.worker = WW, this.failure = void 0, this.abandonStep = null, WW.addEventListener("error", (WW => {
+          WW.preventDefault(), this.failure ??= UW(WW)
+        }))
+      }
+      static async generateRequired(WW, iW, OW, NW) {
+        let PW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : tW.e,
+          wW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const xW = (0, cW.l)();
+        if (null !== xW) throw jW(new tW.n(tW.m.Load, xW), !1);
+        let lW;
+        const UW = new AbortController;
+        try {
+          lW = new kW(function() {
+            try {
+              return new LW
+            } catch (WW) {
+              throw new tW.n(tW.m.Load, `the texture worker failed to start: ${(0,ZW.f)(WW)}`)
+            }
+          }());
+          const xW = (0, cW.e)().catch((WW => {
+              throw new tW.n(tW.m.Load, function(WW) {
+                return `the texture module didn't load (${(0,ZW.f)(WW)})`
+              }(WW))
+            })),
+            jW = (async () => {
+              const NW = function(WW, iW, OW) {
+                const mW = [],
+                  EW = new Map,
+                  NW = WW => {
+                    let iW = EW.get(WW);
+                    return void 0 === iW && (iW = mW.length, mW.push(WW), EW.set(WW, iW)), iW
+                  },
+                  PW = [],
+                  LW = [],
+                  cW = new Map,
+                  wW = (WW, iW) => {
+                    const OW = "object" === typeof WW && null !== WW && "animTextures" in WW ? WW.animTextures : void 0;
+                    if (!Array.isArray(OW) || !OW.every((WW => "string" === typeof WW))) throw new Error(`Block ${iW} has textureInfo the encoding doesn't cover`);
+                    PW.push(OW.length, ...OW.map(NW))
+                  };
+                let tW = 0;
+                for (const lW in WW) {
+                  const iW = WW[lW];
+                  PW.push(NW(lW));
+                  const OW = (iW.transTex ? 1 : 0) | (iW.dl ? 2 : 0) | (iW.particlesIgnoreBlack ? 4 : 0),
+                    mW = "string" === typeof iW.itemTexture ? NW(iW.itemTexture) : 4294967295,
+                    EW = `${OW},${mW}`,
+                    ZW = iW.textureInfo,
+                    xW = cW.get(ZW);
+                  if ((null === xW || void 0 === xW ? void 0 : xW.fields) !== EW)
+                    if (cW.set(ZW, {
+                        entry: tW++,
+                        fields: EW
+                      }), PW.push(1, OW, mW), "string" === typeof ZW) PW.push(1, NW(ZW));
+                    else if (Array.isArray(ZW)) {
+                    PW.push(3, ZW.length);
+                    for (const WW of ZW) "string" === typeof WW ? PW.push(0, NW(WW)) : "number" === typeof WW ? (PW.push(2, LW.length), LW.push(WW)) : (PW.push(1), wW(WW, lW))
+                  } else ZW ? (PW.push(2), wW(ZW, lW)) : PW.push(0);
+                  else PW.push(0, xW.entry), tW++
+                }
+                const ZW = [];
+                for (const lW in iW) ZW.push(NW(lW), iW[lW]);
+                const xW = new Uint32Array(OW.map(NW));
+                return {
+                  strings: mW.join("\0"),
+                  blocks: new Uint32Array(PW),
+                  numbers: new Float64Array(LW),
+                  index: new Uint32Array(ZW),
+                  armour: xW
+                }
+              }(WW, iW, mW.e.map(EW.i));
+              return {
+                inputs: NW,
+                sources: await bW(OW, UW.signal)
+              }
+            })(),
+            [sW, {
+              inputs: MW,
+              sources: KW
+            }] = await Promise.all([xW, jW]),
+            SW = [MW.blocks.buffer, MW.numbers.buffer, MW.index.buffer, MW.armour.buffer, KW.sourceOfName.buffer];
+          for (const WW of KW.sources) SW.push(WW.buffer);
+          const YW = [],
+            {
+              assets: yW,
+              layerCap: TW,
+              warnings: JW
+            } = await lW.request({
+              type: "required",
+              module: sW,
+              inputs: MW,
+              isDefaultPack: NW,
+              maxLayerWidth: PW,
+              sheetLayers: wW,
+              ...KW
+            }, SW, ((WW, iW) => {
+              YW[WW] = iW
+            }));
+          return wW > 0 && (yW.blockAtlasPixels = function(WW, iW) {
+            const OW = [];
+            for (let mW = 0; mW < iW; mW++) {
+              const EW = WW[mW];
+              if (void 0 === EW) throw new Error(`the texture worker's sheet ${mW} of ${iW} didn't arrive`);
+              OW.push(EW)
+            }
+            return OW
+          }(YW, yW.imagesPerAtlas.length)), AW(JW), {
+            assets: yW,
+            layerCap: TW,
+            worker: lW
+          }
+        } catch (MW) {
+          var sW;
+          throw UW.abort(), null === (sW = lW) || void 0 === sW || sW.terminate(), jW(MW, !1)
+        }
+      }
+      async generateOptional() {
+        let WW;
+        try {
+          WW = await this.request({
+            type: "optional"
+          }, [])
+        } catch (iW) {
+          throw jW(iW, !0)
+        } finally {
+          this.terminate()
+        }
+        return AW(WW.warnings),
+          function(WW) {
+            let {
+              blocks: iW,
+              counts: OW,
+              values: mW
+            } = WW;
+            const EW = {};
+            let NW = 0;
+            for (const [PW, LW] of lW(iW).entries()) {
+              const WW = [];
+              for (let iW = 0; iW < OW[PW]; iW++, NW += 3) WW.push([mW[NW], mW[NW + 1], mW[NW + 2]]);
+              EW[LW] = WW
+            }
+            return EW
+          }(WW)
+      }
+      terminate() {
+        var WW;
+        this.worker.terminate(), null === (WW = this.abandonStep) || void 0 === WW || WW.call(this)
+      }
+      request(WW, iW, OW) {
+        return new Promise(((mW, EW) => {
+          if (void 0 !== this.failure) return void EW(this.failure);
+          let NW = tW.r.None,
+            PW = 0,
+            LW = null;
+          const cW = () => {
+            var WW;
+            null === (WW = LW) || void 0 === WW || WW.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+          };
+          this.abandonStep = () => {
+            cW(), EW(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = iW => {
+            let {
+              data: wW
+            } = iW;
+            var ZW;
+            if ("progress" === wW.type) return NW = wW.stage, PW = wW.wasmBytes, void(null === (ZW = LW) || void 0 === ZW || ZW.restart(NW === tW.r.Generating ? tW.h : tW.l));
+            "sheet" === wW.type && OW ? OW(wW.sheet, wW.pixels) : (cW(), "failed" === wW.type ? EW(wW.moduleLoad ? new tW.n(tW.m.Load, wW.reason) : function(WW, iW) {
+              let {
+                reason: OW,
+                stack: mW
+              } = WW;
+              const EW = new Error(sW(OW, iW));
+              void 0 !== mW && (EW.stack = mW);
+              return EW
+            }(wW, PW)) : wW.type !== WW.type ? EW(new Error(`the texture worker answered ${wW.type} to ${WW.type}`)) : mW(wW))
+          }, this.worker.onerror = WW => {
+            cW(), EW(UW(WW))
+          }, this.worker.onmessageerror = () => {
+            cW(), EW(new Error("the texture worker's answer couldn't be read"))
+          };
+          try {
+            this.worker.postMessage(WW, iW), LW = (0, tW.u)((() => {
+              cW();
+              const iW = new tW.n("required" === WW.type ? `${tW.m.Stalled}${NW}` : tW.m.Optional, sW("the texture worker stopped responding", PW));
+              EW(iW)
+            }))
+          } catch (wW) {
+            cW(), EW(wW)
+          }
+        }))
+      }
+    }
+
+    function sW(WW, iW) {
+      return iW > 0 ? `${WW}, its module's memory ${Math.round(iW/2**20)} MiB` : WW
+    }
+  },
+  37260: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW,
+      d: () => EW,
+      h: () => NW,
+      j: () => PW
+    });
+    const mW = 1024,
+      EW = 1024 * mW;
+
+    function NW(WW) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, WW / EW)))
+    }
+
+    function PW(WW) {
+      return (WW / EW).toFixed(1)
+    }
+  },
+  37245: WW => {
+    WW.exports = function(WW, iW, OW, mW) {
+      var EW = self || window;
+      try {
+        try {
+          var NW;
+          try {
+            NW = new EW.Blob([WW])
+          } catch (wW) {
+            (NW = new(EW.BlobBuilder || EW.WebKitBlobBuilder || EW.MozBlobBuilder || EW.MSBlobBuilder)).append(WW), NW = NW.getBlob()
+          }
+          var PW = EW.URL || EW.webkitURL,
+            LW = PW.createObjectURL(NW),
+            cW = new EW[iW](LW, OW);
+          return PW.revokeObjectURL(LW), cW
+        } catch (wW) {
+          return new EW[iW]("data:application/javascript,".concat(encodeURIComponent(WW)), OW)
+        }
+      } catch (wW) {
+        if (!mW) throw Error("Inline worker is not supported");
+        return new EW[iW](mW, OW)
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,72 +1,72 @@
-export const id = 67;
-export const ids = [67];
+export const id = 68;
+export const ids = [68];
 export const modules = {
-  34964: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      announceStoredTexturePack: () => be.c,
-      takeOneShotTexturePack: () => ye.j
+  35297: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      announceStoredTexturePack: () => EW.c,
+      takeOneShotTexturePack: () => mW.h
     });
-    var ye = He(34968),
-      be = He(34972)
+    var mW = OW(35303),
+      EW = OW(35307)
   },
-  34972: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => be,
-      f: () => Me
+  35307: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => EW,
+      g: () => NW
     });
-    var ye = He(3580);
+    var mW = OW(4431);
 
-    function be() {
+    function EW() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const ee = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const WW = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const ie = new BroadcastChannel(ye.k);
-        ie.postMessage({
-          stored: ee
-        }), ie.close()
+        const iW = new BroadcastChannel(mW.m);
+        iW.postMessage({
+          stored: WW
+        }), iW.close()
       } catch {
         return null
       }
-      return ee
+      return WW
     }
 
-    function Me(ee) {
-      const ie = "object" === typeof ee && null !== ee ? ee.stored : null;
-      return "string" === typeof ie ? ie : null
+    function NW(WW) {
+      const iW = "object" === typeof WW && null !== WW ? WW.stored : null;
+      return "string" === typeof iW ? iW : null
     }
   },
-  34968: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke,
-      g: () => be,
-      j: () => Me
+  35303: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => PW,
+      e: () => EW,
+      h: () => NW
     });
-    var ye = He(3580);
-    async function be(ee, ie, He) {
-      let be = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const Me = Ke(await ee.getItem(ye.g, ie));
-      if (null === Me || be()) return null;
-      const Ue = await ee.getItem(ye.i, ie);
-      return be() ? null : (await async function(ee) {
-        await Promise.all([ee.removeItem(ye.g), ee.removeItem(ye.i)])
-      }(ee).catch(He), {
-        pack: Me,
-        source: "string" === typeof Ue ? Ue : null
+    var mW = OW(4431);
+    async function EW(WW, iW, OW) {
+      let EW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const NW = PW(await WW.getItem(mW.h, iW));
+      if (null === NW || EW()) return null;
+      const LW = await WW.getItem(mW.l, iW);
+      return EW() ? null : (await async function(WW) {
+        await Promise.all([WW.removeItem(mW.h), WW.removeItem(mW.l)])
+      }(WW).catch(OW), {
+        pack: NW,
+        source: "string" === typeof LW ? LW : null
       })
     }
 
-    function Me(ee) {
-      return (0, ye.s)() ? Promise.resolve(null) : be(ee, !1, (ee => {
-        console.error("Error removing temporary texture pack: ", ee)
-      }), ye.s)
+    function NW(WW) {
+      return (0, mW.t)() ? Promise.resolve(null) : EW(WW, !1, (WW => {
+        console.error("Error removing temporary texture pack: ", WW)
+      }), mW.t)
     }
 
-    function Ke(ee) {
-      if ("object" !== typeof ee || null === ee) return null;
-      const ie = ee.metaData;
-      return "object" !== typeof ie || null === ie || "string" !== typeof ie.id ? null : ee
+    function PW(WW) {
+      if ("object" !== typeof WW || null === WW) return null;
+      const iW = WW.metaData;
+      return "object" !== typeof iW || null === iW || "string" !== typeof iW.id ? null : WW
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

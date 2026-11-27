@@ -1,0 +1,720 @@
+.GameBackgroundScreen.GiftOpeningScreen {
+  z-index: 17
+}
+
+.GiftOpening {
+  color: #fff;
+  inset: 0;
+  overflow: hidden;
+  position: fixed
+}
+
+.GiftOpening .GiftOpeningBackdrop {
+  animation: fadeIn .3s ease-out;
+  background: radial-gradient(circle at 50% 58%, color-mix(in srgb, var(--gift-tier) 28%, #0d1030) 0, #070818 55%, #020208 100%);
+  inset: 0;
+  position: absolute
+}
+
+.GiftOpening .GiftOpeningRays {
+  background: repeating-conic-gradient(from 0deg, color-mix(in srgb, var(--gift-tier) 45%, transparent) 0deg 7deg, transparent 7deg 30deg);
+  height: 90vmax;
+  left: 50%;
+  -webkit-mask-image: radial-gradient(closest-side, #000 0, rgba(0, 0, 0, .5) 42%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 0, rgba(0, 0, 0, .5) 42%, transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transition: opacity .4s ease-out;
+  translate: -50% -50%;
+  width: 90vmax
+}
+
+.GiftOpening.GiftOpeningPhase_card .GiftOpeningRays,
+.GiftOpening.GiftOpeningPhase_done .GiftOpeningRays,
+.GiftOpening.GiftOpeningPhase_reveal .GiftOpeningRays {
+  animation: giftOpeningRaysTurn 5s cubic-bezier(.2, .6, .3, 1) both;
+  opacity: 1
+}
+
+.GiftOpening.GiftOpeningPhase_card .GiftOpeningRays:after,
+.GiftOpening.GiftOpeningPhase_done .GiftOpeningRays:after,
+.GiftOpening.GiftOpeningPhase_reveal .GiftOpeningRays:after {
+  animation: giftOpeningRaysTurnBack 5s cubic-bezier(.2, .6, .3, 1) both
+}
+
+.GiftOpening.GiftOpeningPhase_card.GiftOpeningTier1 .GiftOpeningRays,
+.GiftOpening.GiftOpeningPhase_done.GiftOpeningTier1 .GiftOpeningRays,
+.GiftOpening.GiftOpeningPhase_reveal.GiftOpeningTier1 .GiftOpeningRays {
+  opacity: .5
+}
+
+.GiftOpening.GiftOpeningTier3 .GiftOpeningRays:after {
+  background: repeating-conic-gradient(from 15deg, rgba(255, 240, 200, .22) 0deg 3deg, transparent 3deg 22deg);
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.GiftOpening .GiftOpeningStage {
+  height: min(80vmin, 31rem);
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: min(62vmin, 24rem)
+}
+
+.GiftOpening .GiftOpeningCharacter {
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  transform-origin: 50% 85%
+}
+
+.GiftOpening .GiftOpeningCharacter .CharCustomisationPreview,
+.GiftOpening .GiftOpeningCharacter .CharCustomisationPreviewCanvas {
+  height: 100%;
+  outline: none;
+  width: 100%
+}
+
+.GiftOpening .GiftOpeningCharacter .GiftOpeningHead {
+  aspect-ratio: 1;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%
+}
+
+.GiftOpening:not(.GiftOpeningDrawn) .GiftOpeningCharacter .CharCustomisationPreview {
+  visibility: hidden
+}
+
+.GiftOpening .GiftOpeningBadge {
+  align-items: center;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--gift-tier) 60%, transparent), transparent);
+  color: #fcd373;
+  display: flex;
+  font-size: 1.6rem;
+  height: 3.2rem;
+  justify-content: center;
+  position: absolute;
+  right: 8%;
+  top: 12%;
+  width: 3.2rem
+}
+
+.GiftOpening .GiftOpeningBadge img,
+.GiftOpening .GiftOpeningBadge svg {
+  height: 2rem;
+  width: 2rem
+}
+
+.GiftOpening .GiftOpeningBox {
+  bottom: 2%;
+  font-size: min(20vmin, 8rem);
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%)
+}
+
+.GiftOpening .GiftOpeningBox.GiftOpeningBoxIdle .GiftBoxBody {
+  animation: giftOpeningBob 1.2s ease-in-out infinite
+}
+
+.GiftOpening .GiftOpeningBox.GiftOpeningBoxIdle .GiftBoxSeam {
+  animation: giftOpeningSeamBreathe 1.25s ease-in-out infinite
+}
+
+.GiftOpening .GiftOpeningBeam {
+  background: linear-gradient(to top, #fff, var(--gift-tier) 25%, transparent);
+  bottom: calc(2% + min(20vmin, 8rem)*.8);
+  filter: blur(.4rem);
+  height: 120%;
+  left: 50%;
+  mix-blend-mode: screen;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: 50% 100%;
+  width: calc(min(20vmin, 8rem)*.9)
+}
+
+.GiftOpening .GiftOpeningRing {
+  border: .25rem solid var(--gift-tier);
+  border-radius: 50%;
+  bottom: calc(2% + min(20vmin, 8rem)*.75);
+  box-shadow: 0 0 1rem var(--gift-tier), inset 0 0 1rem var(--gift-tier);
+  height: calc(min(20vmin, 8rem)*1.4);
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(.2);
+  transform-origin: 50% 50%;
+  width: calc(min(20vmin, 8rem)*1.4)
+}
+
+.GiftOpening .GiftOpeningFx {
+  height: 100%;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+  width: 100%
+}
+
+.GiftOpening .GiftOpeningFlash {
+  background: #fff;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.GiftOpening .GiftOpeningTap {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  inset: 0;
+  position: absolute
+}
+
+@media(max-height:520px)and (min-aspect-ratio:4/3) {
+
+  .GiftOpening .GiftOpeningRays,
+  .GiftOpening .GiftOpeningStage {
+    left: 34%
+  }
+
+  .GiftOpening .GiftOpeningBackdrop {
+    background: radial-gradient(circle at 34% 58%, color-mix(in srgb, var(--gift-tier) 28%, #0d1030) 0, #070818 55%, #020208 100%)
+  }
+}
+
+@media(max-aspect-ratio:3/4) {
+
+  .GiftOpening .GiftOpeningRays,
+  .GiftOpening .GiftOpeningStage {
+    top: 44%
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .GiftOpening .GiftOpeningBox .GiftBoxBody,
+  .GiftOpening .GiftOpeningBox .GiftBoxSeam,
+  .GiftOpening .GiftOpeningRays,
+  .GiftOpening .GiftOpeningRays:after {
+    animation: none !important
+  }
+}
+
+@keyframes giftOpeningBob {
+  50% {
+    transform: translateY(-3px)
+  }
+}
+
+@keyframes giftOpeningSeamBreathe {
+  50% {
+    opacity: .18
+  }
+}
+
+@keyframes giftOpeningRaysTurn {
+  to {
+    rotate: 50deg
+  }
+}
+
+@keyframes giftOpeningRaysTurnBack {
+  to {
+    rotate: -100deg
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.GiftOpening .GiftOpeningTitle {
+  animation: giftOpeningSlideIn .35s ease-out both;
+  font-size: 1.5rem;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: max(6vh, 2.5rem);
+  transform: translateX(-50%);
+  width: min(90vw, 30rem)
+}
+
+.GiftOpening .GiftOpeningTitle .GiftOpeningIntroMessage {
+  font-size: 1.2rem;
+  margin-top: .5rem
+}
+
+.GiftOpening .GiftOpeningTitle .GiftOpeningIntroLevel {
+  color: #fcd373;
+  font-size: 1.1rem;
+  margin-top: .3rem
+}
+
+.GiftOpening .GiftOpeningHint {
+  animation: fadeIn .3s ease-out both, giftOpeningPulse 1.25s ease-in-out .3s infinite;
+  bottom: max(10vh, 4rem);
+  font-size: 1.3rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%)
+}
+
+.GiftOpening .GiftOpeningCard {
+  bottom: max(15vh, 6.5rem);
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, 1.5rem);
+  transition: opacity .3s ease-out, transform .3s ease-out;
+  width: min(90vw, 26rem)
+}
+
+.GiftOpening .GiftOpeningCard.GiftOpeningCardShown {
+  opacity: 1;
+  transform: translate(-50%)
+}
+
+.GiftOpening .GiftOpeningCard .GiftOpeningItem {
+  font-size: 1.7rem
+}
+
+.GiftOpening .GiftOpeningCard .GiftOpeningCardMessage {
+  font-size: 1.2rem;
+  margin-top: .4rem
+}
+
+.GiftOpening .GiftOpeningCard .GiftOpeningFrom {
+  color: #cfcfcf;
+  font-size: 1.1rem;
+  margin-top: .3rem
+}
+
+.GiftOpening .GiftOpeningSkip {
+  font-size: 1.1rem;
+  min-height: 44px;
+  min-width: 44px;
+  position: absolute;
+  right: max(2vw, .75rem);
+  top: max(2vh, .75rem)
+}
+
+.GiftOpening .GiftOpeningButtons {
+  grid-gap: 1rem;
+  animation: giftOpeningSlideIn .3s ease-out both;
+  bottom: max(5vh, 1.5rem);
+  display: grid;
+  gap: 1rem;
+  grid-auto-columns: minmax(9rem, 1fr);
+  grid-auto-flow: column;
+  left: 50%;
+  max-width: calc(100vw - 2rem);
+  position: absolute;
+  transform: translateX(-50%);
+  width: max-content
+}
+
+.GiftOpening .GiftOpeningButtons .GiftOpeningButton {
+  font-size: 1.4rem
+}
+
+@media(max-height:520px)and (min-aspect-ratio:4/3) {
+
+  .GiftOpening .GiftOpeningButtons,
+  .GiftOpening .GiftOpeningCard,
+  .GiftOpening .GiftOpeningHint,
+  .GiftOpening .GiftOpeningTitle {
+    left: 72%
+  }
+
+  .GiftOpening .GiftOpeningHint {
+    bottom: 18%
+  }
+
+  .GiftOpening .GiftOpeningTitle {
+    top: 30%;
+    width: min(44vw, 24rem)
+  }
+
+  .GiftOpening .GiftOpeningCard {
+    bottom: auto;
+    top: 30%;
+    width: min(44vw, 24rem)
+  }
+
+  .GiftOpening .GiftOpeningButtons {
+    bottom: 14%
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .GiftOpening .GiftOpeningHint {
+    animation: none
+  }
+}
+
+@keyframes giftOpeningSlideIn {
+  0% {
+    opacity: 0;
+    translate: 0 .75rem
+  }
+}
+
+@keyframes giftOpeningPulse {
+  50% {
+    opacity: .55
+  }
+}
+
+.GiftBox {
+  --gift-paper: #e63946;
+  --gift-ribbon: #ffd166;
+  height: 1.7em;
+  position: relative;
+  width: 1.7em
+}
+
+.GiftBox .GiftBoxPlinth {
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--gift-tier) 75%, #fff), color-mix(in srgb, var(--gift-tier) 35%, transparent) 60%, transparent);
+  border-radius: 50%;
+  bottom: .05em;
+  height: .42em;
+  left: 50%;
+  opacity: .85;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 1.9em
+}
+
+.GiftBox .GiftBoxBody {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  perspective: 9em;
+  position: absolute;
+  transform-origin: 50% 85%
+}
+
+.GiftBox .GiftBoxCube {
+  height: 1em;
+  position: relative;
+  transform: rotateX(-22deg) rotateY(-38deg);
+  transform-style: preserve-3d;
+  width: 1em
+}
+
+.GiftBox .GiftBoxFace {
+  backface-visibility: hidden;
+  background: var(--gift-paper);
+  overflow: hidden;
+  position: absolute
+}
+
+.GiftBox .GiftBoxFace:after {
+  background: var(--gift-ribbon);
+  bottom: 0;
+  box-shadow: 0 0 .03em rgba(0, 0, 0, .35);
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: .16em
+}
+
+.GiftBox .GiftBoxFront,
+.GiftBox .GiftBoxSide {
+  height: .8em;
+  left: 0;
+  top: .2em;
+  width: 1em
+}
+
+.GiftBox .GiftBoxFront {
+  transform: translateZ(.5em)
+}
+
+.GiftBox .GiftBoxSide {
+  filter: brightness(.75);
+  transform: rotateY(90deg) translateZ(.5em)
+}
+
+.GiftBox .GiftBoxLid {
+  inset: 0;
+  position: absolute;
+  transform: translateY(-.36em);
+  transform-style: preserve-3d
+}
+
+.GiftBox .GiftBoxLidFront,
+.GiftBox .GiftBoxLidSide {
+  filter: brightness(1.05);
+  height: .26em;
+  left: -.05em;
+  top: .37em;
+  width: 1.1em
+}
+
+.GiftBox .GiftBoxLidFront {
+  transform: translateZ(.55em)
+}
+
+.GiftBox .GiftBoxLidSide {
+  filter: brightness(.8);
+  transform: rotateY(90deg) translateZ(.55em)
+}
+
+.GiftBox .GiftBoxLidTop {
+  filter: brightness(1.15);
+  height: 1.1em;
+  left: -.05em;
+  top: -.05em;
+  transform: rotateX(90deg) translateZ(.13em);
+  width: 1.1em
+}
+
+.GiftBox .GiftBoxLidTop:before {
+  background: var(--gift-ribbon);
+  content: "";
+  height: .16em;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.GiftBox .GiftBoxBow {
+  height: .4em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) translateY(-.28em) rotateY(38deg);
+  width: .7em
+}
+
+.GiftBox .GiftBoxBow .GiftBoxBowLoop {
+  border: .07em solid var(--gift-ribbon);
+  border-radius: 50% 50% 45% 45%;
+  box-sizing: border-box;
+  height: .26em;
+  position: absolute;
+  top: .04em;
+  width: .34em
+}
+
+.GiftBox .GiftBoxBow .GiftBoxBowLeft {
+  left: .02em;
+  transform: rotate(-22deg)
+}
+
+.GiftBox .GiftBoxBow .GiftBoxBowRight {
+  right: .02em;
+  transform: rotate(22deg)
+}
+
+.GiftBox .GiftBoxBow .GiftBoxBowKnot {
+  background: var(--gift-ribbon);
+  filter: brightness(.9);
+  height: .13em;
+  left: 50%;
+  position: absolute;
+  top: .13em;
+  transform: translateX(-50%);
+  width: .13em
+}
+
+.GiftBox .GiftBoxSeam {
+  background: radial-gradient(closest-side, #fff, var(--gift-tier) 45%, transparent);
+  border-radius: 50%;
+  filter: blur(.02em);
+  height: .22em;
+  left: 50%;
+  mix-blend-mode: screen;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  width: 1.4em
+}
+
+.GiftBox .GiftBoxPrint {
+  color: #fff;
+  font-size: .22em;
+  left: 0;
+  letter-spacing: .2em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1
+}
+
+.GiftBox .GiftBoxCracks {
+  fill: none;
+  stroke: rgba(20, 12, 6, .85);
+  stroke-width: 3;
+  height: 100%;
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1
+}
+
+.GiftBoxWrap_classic {
+  --gift-paper: repeating-linear-gradient(45deg, #e63946 0 0.1em, #fff4f0 0.1em 0.2em);
+  --gift-ribbon: #ffd166
+}
+
+.GiftBoxWrap_blocks {
+  --gift-paper: radial-gradient(#6d4426 18%, transparent 20%) 0 0 /0.2em 0.2em, linear-gradient(#6abe30 0 24%, #8a5a33 24%);
+  --gift-ribbon: #7ff3f0
+}
+
+.GiftBoxWrap_blocks .GiftBoxLidFront,
+.GiftBoxWrap_blocks .GiftBoxLidSide,
+.GiftBoxWrap_blocks .GiftBoxLidTop {
+  --gift-paper: radial-gradient(#4f9a20 20%, transparent 22%) 0 0 /0.18em 0.18em, #6abe30
+}
+
+.GiftBoxWrap_gems {
+  --gift-paper: linear-gradient(45deg, #7b3fb5 25%, transparent 25% 75%, #7b3fb5 75%) 0 0 /0.25em 0.25em, linear-gradient(-45deg, #7b3fb5 25%, transparent 25% 75%, #7b3fb5 75%) 0 0 /0.25em 0.25em, #4a1f73;
+  --gift-ribbon: #ff7ad9
+}
+
+.GiftBoxWrap_stars {
+  --gift-paper: radial-gradient(circle at 20% 30%, #fff 0.015em, transparent 0.025em) 0 0 /0.33em 0.33em, radial-gradient(circle at 70% 70%, #fff6b0 0.02em, transparent 0.03em) 0 0 /0.45em 0.45em, linear-gradient(#141a45, #2b2f7a);
+  --gift-ribbon: #d9e2ff
+}
+
+.GiftBoxWrap_legend {
+  --gift-paper: linear-gradient(135deg, #ffe08a, #f5b700 30%, #fff3c4 50%, #e09b00 70%, #ffd75e);
+  --gift-ribbon: linear-gradient(90deg, #ff5d8f, #ffc83d, #7cf29a, #5ab8ff, #b673ff)
+}
+
+.GiftBoxWrap_legend .GiftBoxBow .GiftBoxBowLoop {
+  border-color: #ff5d8f
+}
+
+.GiftBoxWrap_sweater {
+  --gift-paper: repeating-linear-gradient(90deg, transparent 0 0.06em, rgba(0, 0, 0, .08) 0.06em 0.07em), linear-gradient(#c1121f 0 30%, #fff 30% 36%, #2d6a4f 36% 64%, #fff 64% 70%, #c1121f 70%);
+  --gift-ribbon: #f8f9fa
+}
+
+.GiftBoxWrap_festive {
+  --gift-paper: radial-gradient(circle, #2fa155 20%, transparent 22%) 0 0 /0.2em 0.2em, #1f7a3a;
+  --gift-ribbon: #e63946
+}

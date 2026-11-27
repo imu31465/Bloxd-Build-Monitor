@@ -1,509 +1,344 @@
 export const id = 89;
 export const ids = [89];
 export const modules = {
-  5153: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => li,
-      e: () => qH,
-      h: () => Qi,
-      l: () => yH,
-      n: () => Ni,
-      p: () => eH,
-      s: () => Ci,
-      v: () => ji,
-      z: () => Pi,
-      B: () => kH,
-      E: () => RH,
-      H: () => si,
-      I: () => Li
-    });
-    var ye = He(3094);
-    const be = Function.prototype.toString,
-      Me = RegExp.prototype.exec,
-      Ke = Reflect.apply,
-      Ue = Function.prototype.call,
-      Fe = Function.prototype.apply,
-      Je = Function.prototype.bind,
-      oe = Object.defineProperty,
-      Re = Uint8Array;
-    let ke, qe;
-    try {
-      ke = globalThis.crypto, qe = void 0 === ke || null === ke ? void 0 : ke.getRandomValues
-    } catch {}
-    const fe = "bloxdBindApply";
-    let Te;
-    try {
-      const ee = Ue;
-      oe(ee, fe, {
-        __proto__: null,
-        value: Je,
-        configurable: !0
-      });
-      try {
-        Te = ee[fe](Fe)
-      } finally {
-        delete ee[fe]
-      }
-    } catch {}
-    const pe = 16,
-      Xe = 256,
-      ze = 0,
-      Be = 1,
-      Ee = 2,
-      ge = 3;
-    let Oe, de = ze,
-      We = Ke,
-      te = 0;
-
-    function Ze(ee, ie) {
-      return ee === `function ${ie}() { [native code] }` || ee === `function ${ie}() {\n    [native code]\n}`
-    }
-    const we = 0,
-      De = 1,
-      Pe = 2;
-    let Ae = we;
-
-    function Ye(ee, ie, He) {
-      if (Ae === Pe && de === Be && ! function() {
-          const ee = Oe;
-          return te >= Xe && (We(qe, ke, [ee]), te = 0), ee[te++] < 256 / pe
-        }()) return function(ee, ie, He) {
-        return We(ee, ie, He ?? 0)
-      }(...arguments);
-      if (Ae === we || de === Ee) return Ke(ee, ie, He);
-      let ye;
-      Ae = we;
-      try {
-        de === ze && (de = ge, de = function() {
-          const ee = Ke(be, Ke, []);
-          if (Ze(ee, "apply")) return Ee;
-          if (null === Ke(Me, /\(\.\.\.arguments\)/, [ee]) && null === Ke(Me, /^function\s*\(\.\.\.[\w$]+\)/, [ee])) return Ee;
-          if ("function" !== typeof Te || "function" !== typeof Ue || "function" !== typeof Fe || "function" !== typeof Je || "function" !== typeof oe || "function" !== typeof qe || "function" !== typeof Re || !Ze(Ke(be, Ue, []), "call") || !Ze(Ke(be, Fe, []), "apply") || !Ze(Ke(be, Je, []), "bind") || !Ze(Ke(be, oe, []), "defineProperty") || !Ze(Ke(be, qe, []), "getRandomValues") || !Ze(Ke(be, Re, []), "Uint8Array")) return Ee;
-          const ie = Te,
-            He = {},
-            ye = function(ee) {
-              return this === He && ee === He
-            };
-          try {
-            if (!0 !== ie(ye, He, [He])) return Ee;
-            const ee = new Re(Xe);
-            ie(qe, ke, [ee]), Oe = ee
-          } catch {
-            return Ee
-          }
-          return We = ie, Be
-        }()), ye = Ke(ee, ie, He)
-      } catch (fe) {
-        throw de = Ee, fe
-      }
-      return Ae = Pe, ye
-    }
-    let Ve = Ke;
-
-    function ae() {
-      return (Ve === Ke ? 0 : 3) + Ae
-    }
-
-    function ce() {
-      const ee = ae();
-      return Ve = Ke, ee
-    }
-
-    function xe(ee) {
-      Ve = ee >= 3 ? Ye : Ke, Ae = ee % 3
-    }
-    const Le = Function.prototype.toString,
-      Ce = Object.getOwnPropertyDescriptor,
-      ve = Object.prototype.hasOwnProperty,
-      ue = RegExp.prototype.exec,
-      me = TextEncoder.prototype.encodeInto,
-      le = String.prototype.startsWith,
-      Se = Number.prototype.toString,
-      ne = WeakMap.prototype.get,
-      je = WeakMap.prototype.set,
-      se = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      Ie = new TextEncoder,
-      he = new Uint8Array(1024),
-      Ne = 9999999,
-      Ge = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      re = new WeakMap;
-
-    function Qe(ee) {
-      if ("function" !== typeof ee) return "#a0.0";
-      const ie = Ve(ne, re, [ee]);
-      if (void 0 !== ie) return ie;
-      const He = Ve(Le, ee, []),
-        ye = He.length > Ne ? Ne : He.length,
-        be = `#${function(ee,ie){const He=Ve(ue,se,[ie]);if(null===He)return"s";const ye=He[1];if("ProxyObject"===ye)return"p";if(""!==ye)return Ve(le,ye,["bound "])?"b":"n";try{const ie=Ce(ee,"name"),He=void 0!==ie&&Ve(ve,ie,["value"])?ie.value:void 0;return"string"===typeof He&&Ve(le,He,["bound "])?"b":"p"}catch{return"p"}}(ee,He)}${ye}.${function(ee){const{written:ie}=Ve(me,Ie,[ee,he]);let He=2166136261;for(let ye=0;ye<ie;ye++)He=(He^he[ye])>>>0,He=He+(He<<1)+(He<<4)+(He<<7)+(He<<8)+(He<<24)>>>0;return Ve(Se,He,[36])}(He)}`;
-      return Ve(je, re, [ee, be]), be
-    }
-
-    function ei(ee) {
-      const ie = Ve(ue, Ge, [ee]);
-      return null === ie ? ee : ie[1]
-    }
-    var ii = He(3105);
-    const Hi = Function.prototype.toString,
-      yi = Object.getOwnPropertyDescriptor,
-      bi = RegExp.prototype.exec,
-      Mi = Object.prototype.hasOwnProperty,
-      Ki = Set.prototype.has,
-      Ui = WeakMap.prototype.get,
-      Fi = WeakMap.prototype.set,
-      Ji = Reflect.get,
-      oi = Object.getPrototypeOf,
-      Ri = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
-
-    function ki(ee, ie, He) {
-      return {
-        code: ee,
-        holder: ie,
-        key: He,
-        ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${He}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
-      }
-    }
-
-    function qi() {
-      return Ri
-    }
-    const fi = Ri?.Instance.prototype,
-      Ti = Ri?.Memory.prototype;
-
-    function Xi() {
-      return Ti
-    }
-    let zi, Bi;
-    try {
-      const ee = globalThis.crypto,
-        ie = ee?.subtle;
-      zi = ee ? oi(ee) : void 0, Bi = ie ? oi(ie) : void 0
-    } catch {}
-
-    function Ei(ee, ie) {
-      for (let He = ee; void 0 !== He && null !== He; He = oi(He)) {
-        const ee = yi(He, ie);
-        if (ee) return ee
-      }
-    }
-    const gi = [ki("in", qi, "instantiate", {
-      tier: "weighted",
-      onNamespace: !0
-    }), ki("is", qi, "instantiateStreaming", {
-      tier: "weighted",
-      onNamespace: !0
-    }), ki("co", qi, "compile", {
-      tier: "weighted",
-      onNamespace: !0
-    }), ki("cs", qi, "compileStreaming", {
-      tier: "weighted",
-      onNamespace: !0
-    }), ki("mo", qi, "Module", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), ki("it", qi, "Instance", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), ki("me", qi, "Memory", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), ki("ex", (function() {
-      return fi
-    }), "exports", {
-      isGetter: !0,
-      tier: "punished"
-    }), ki("bu", Xi, "buffer", {
-      isGetter: !0,
-      tier: "punished"
-    }), ki("gr", Xi, "grow", {
-      tier: "punished"
-    }), ki("rc", (function() {
-      return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), ki("cr", (function() {
-      return globalThis
-    }), "crypto", {
-      isGetter: !0,
-      tier: "punished",
-      inSecureContext: !0
-    }), ki("su", (function() {
-      return zi
-    }), "subtle", {
-      isGetter: !0,
-      tier: "punished",
-      inSecureContext: !0
-    }), ki("dg", (function() {
-      return Bi
-    }), "digest", {
-      tier: "punished",
-      inSecureContext: !0
-    })];
-
-    function Oi(ee) {
-      let ie;
-      try {
-        const He = Ji(globalThis, ee);
-        ie = "function" === typeof He ? He.prototype : void 0
-      } catch {}
-      return () => ie
-    }
-
-    function di(ee, ie, He) {
-      return He.map((He => ki(ee, ie, He)))
-    }
-    const Wi = ki("rx", Oi("HTMLCanvasElement"), "getContext"),
-      ti = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      Zi = {
-        webgpu: [...di("gd", Oi("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...di("gq", Oi("GPUQueue"), ["submit", "writeBuffer"]), ...di("ge", Oi("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...di("gp", Oi("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), Wi],
-        webgl: [...di("g2", Oi("WebGL2RenderingContext"), [...ti, "drawArraysInstanced", "drawElementsInstanced"]), Wi],
-        webgl1: [...di("g1", Oi("WebGLRenderingContext"), ti), Wi]
-      };
-    let wi = [];
-    const Di = new WeakMap;
-
-    function Pi(ee, ie) {
-      const He = ce();
-      try {
-        Ve(Fi, Di, [ee, ie])
-      } finally {
-        xe(He)
-      }
-    }
-
-    function Ai(ee) {
-      try {
-        const ie = JH(ee),
-          He = Ve(Ui, Di, [ie]);
-        return HH(He, ee) ? Yi(ee, !0) : `${Yi(ee,!1)}${Qe(He??ie)}`
-      } catch {
-        return `${Yi(ee,!1)}${Qe(void 0)}`
-      }
-    }
-
-    function Yi(ee, ie) {
-      let {
-        code: He,
-        key: ye
-      } = ee;
-      return `wh:${He}${ie?"-dbg":""}:${ye}`
-    }
-
-    function Vi(ee) {
-      return Object.values(Zi).flatMap((ie => ie.map((ie => Yi(ie, ee)))))
-    }
-    const ai = new Set(Vi(!0)),
-      ci = new Set([...Vi(!1), ...ai]),
-      xi = Yi(Wi, !1);
-
-    function Li(ee) {
-      wi = Zi[ee]
-    }
-
-    function Ci(ee) {
-      const ie = ce();
-      try {
-        return vi(ee) || vi(ei(ee))
-      } finally {
-        xe(ie)
-      }
-    }
-
-    function vi(ee) {
-      return Ve(Ki, ci, [ee])
-    }
-
-    function ui(ee) {
-      return new Set(gi.filter((ie => ie.tier === ee)).map((ee => `wh:${ee.code}`)))
-    }
-    const mi = ui("punished"),
-      li = !1,
-      Si = new Set(ii.c),
-      ni = ui("weighted");
-
-    function ji(ee) {
-      const ie = ce();
-      try {
-        return Ii(ei(ee))
-      } finally {
-        xe(ie)
-      }
-    }
-
-    function si(ee) {
-      const ie = ce();
-      try {
-        return ei(ee)
-      } finally {
-        xe(ie)
-      }
-    }
-
-    function Ii(ee) {
-      return Ve(Ki, ni, [ee])
-    }
-
-    function Ni(ee) {
-      const ie = ce();
-      try {
-        return Gi(ee)
-      } finally {
-        xe(ie)
-      }
-    }
-
-    function Gi(ee) {
-      return Ve(Ki, Si, [ee])
-    }
-
-    function ri(ee) {
-      return "wb" === ee || Ve(Ki, mi, [ee])
-    }
-
-    function Qi(ee) {
-      const ie = ce();
-      try {
-        return ri(ee) || Gi(ee)
-      } finally {
-        xe(ie)
-      }
-    }
-
-    function eH(ee) {
-      const ie = ce();
-      try {
-        return "wb" === ee || li && ri(ee)
-      } finally {
-        xe(ie)
-      }
-    }
-
-    function iH(ee, ie) {
-      let {
-        isGetter: He
-      } = ie;
-      const ye = yi(ee, He ? "get" : "value");
-      return void 0 === ye ? void 0 : ye.value
-    }
-
-    function HH(ee, ie) {
-      let {
-        isConstructor: He,
-        native: ye
-      } = ie;
-      return "function" === typeof ee && (!(!He && Ve(Mi, ee, ["prototype"])) && null !== Ve(bi, ye, [Ve(Hi, ee, [])]))
-    }
-
-    function yH(ee, ie) {
-      return HH(ee, ki("", (() => {}), ie, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
-        isConstructor: !0
-      } : {}))
-    }
-    let bH = null,
-      MH = !1;
-
-    function KH() {
-      try {
-        return globalThis.WebAssembly === Ri
-      } catch {
-        return !1
-      }
-    }
-
-    function UH(ee) {
-      try {
-        return function(ee) {
-          const {
-            holder: ie,
-            key: He,
-            onNamespace: ye,
-            inSecureContext: be
-          } = ee, Me = ie(), Ke = Ei(Me, He);
-          if (!Ke) return !(be && !0 === globalThis.isSecureContext);
-          const Ue = iH(Ke, ee);
-          if (!HH(Ue, ee)) return !1;
-          if (ye) {
-            const ie = globalThis.WebAssembly;
-            if (ie !== Me && null !== ie && ("object" === typeof ie || "function" === typeof ie)) {
-              const ye = Ji(ie, He);
-              return ye === Ue || void 0 === ye || HH(ye, ee)
-            }
-          }
-          return !0
-        }(ee)
-      } catch {
-        return !1
-      }
-    }
-
-    function FH(ee) {
-      const ie = `wh:${ee.code}`;
-      if ("punished" === ee.tier) return ie;
-      try {
-        return `${ie}${Qe(JH(ee))}`
-      } catch {
-        return `${ie}${Qe(void 0)}`
-      }
-    }
-
-    function JH(ee) {
-      const ie = Ei(ee.holder(), ee.key),
-        He = void 0 === ie ? void 0 : iH(ie, ee);
-      return ee.onNamespace && !KH() && HH(He, ee) ? Ji(globalThis.WebAssembly, ee.key) : He
-    }
-
-    function oH(ee) {
-      if (ri(ee)) return 5;
-      const ie = ei(ee);
-      return Ii(ie) ? 4 : Gi(ee) ? 3 : vi(ie) ? function(ee) {
-        return Ve(Ki, ai, [ee])
-      }(ie) ? -1 : ie === xi ? 0 : 1 : 2
-    }
-
-    function RH() {
-      const ee = function() {
-        const ee = ae();
-        return de === ze || de === Be ? (Ve = Ye, Ae = De) : Ve = Ke, ee
-      }();
-      try {
-        if (null === bH || !ri(bH)) {
-          const ee = function() {
-            if (void 0 === Ri) return null;
-            let ee = KH() ? null : "wh:wa";
-            const ie = ie => {
-              null !== ie && (null === ee || oH(ie) > oH(ee)) && (ee = ie)
-            };
-            for (let He = 0; He < gi.length; He++) {
-              const ee = gi[He];
-              void 0 === ee || UH(ee) || ie(FH(ee))
-            }
-            ie((0, ii.m)());
-            for (let He = 0; He < wi.length; He++) {
-              const ee = wi[He];
-              void 0 === ee || UH(ee) || ie(Ai(ee))
-            }
-            return ee
-          }();
-          (null === bH || null !== ee && oH(ee) > oH(bH)) && (bH = ee)
+  38210: (WW, iW, OW) => {
+    if (OW.d(iW, {
+        b: () => cW,
+        e: () => EW,
+        i: () => PW,
+        j: () => NW,
+        m: () => KW,
+        n: () => UW
+      }), 47 == OW.j) var mW = OW(38214);
+    const EW = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      NW = ["Blade", "Guard", "Handle"],
+      PW = {
+        Wood: {
+          material: "Wood",
+          baseSword: "Wood Sword",
+          value: 1,
+          epithet: "Timber",
+          palette: ["#b88a52", "#7d5a32", "#3d2a14"],
+          trait: null,
+          bladeDamage: 0,
+          guardReduction: 0,
+          handleCooldown: 1,
+          handleKnockback: 0,
+          handleReach: 0
+        },
+        Stone: {
+          material: "Stone",
+          baseSword: "Stone Sword",
+          value: 1,
+          epithet: "Flint",
+          palette: ["#a3a3a3", "#6e6e6e", "#333333"],
+          trait: null,
+          bladeDamage: .03,
+          guardReduction: .02,
+          handleCooldown: .98,
+          handleKnockback: .05,
+          handleReach: 0
+        },
+        Iron: {
+          material: "Iron",
+          baseSword: "Iron Sword",
+          value: 2,
+          epithet: "Ironclad",
+          palette: ["#e6e6e6", "#a8a8a8", "#444444"],
+          trait: "defence",
+          bladeDamage: .06,
+          guardReduction: .05,
+          handleCooldown: .95,
+          handleKnockback: .1,
+          handleReach: 0
+        },
+        Gold: {
+          material: "Gold",
+          baseSword: "Gold Sword",
+          value: 2,
+          epithet: "Gilded",
+          palette: ["#ffe766", "#e0a91d", "#6b4a07"],
+          trait: "coins",
+          bladeDamage: .07,
+          guardReduction: .04,
+          handleCooldown: .94,
+          handleKnockback: .05,
+          handleReach: 0
+        },
+        Diamond: {
+          material: "Diamond",
+          baseSword: "Diamond Sword",
+          value: 4,
+          epithet: "Brilliant",
+          palette: ["#8ff5ec", "#2fbcb0", "#0d4f4a"],
+          trait: "crit",
+          bladeDamage: .12,
+          guardReduction: .07,
+          handleCooldown: .92,
+          handleKnockback: .1,
+          handleReach: 0
+        },
+        Moonstone: {
+          material: "Moonstone",
+          baseSword: "Moonstone Sword",
+          value: 4,
+          epithet: "Moonlit",
+          palette: ["#d9d2ff", "#8f7fe0", "#352a73"],
+          trait: "bossBane",
+          bladeDamage: .15,
+          guardReduction: .08,
+          handleCooldown: .9,
+          handleKnockback: .1,
+          handleReach: .25
+        },
+        Magmasteel: {
+          material: "Magmasteel",
+          baseSword: "Magmasteel Sword",
+          value: 8,
+          epithet: "Molten",
+          palette: ["#ffb347", "#e0461b", "#4f1208"],
+          trait: "firePool",
+          bladeDamage: .29,
+          guardReduction: .1,
+          handleCooldown: .88,
+          handleKnockback: .2,
+          handleReach: .35
+        },
+        Sanguine: {
+          material: "Sanguine",
+          baseSword: "Sanguine Sword",
+          value: 8,
+          epithet: "Crimson",
+          palette: ["#ff6b7a", "#b0172f", "#45040f"],
+          trait: "lifesteal",
+          bladeDamage: .29,
+          guardReduction: .1,
+          handleCooldown: .87,
+          handleKnockback: .15,
+          handleReach: .35
+        },
+        Astral: {
+          material: "Astral",
+          baseSword: "Astral Sword",
+          value: 10,
+          epithet: "Starforged",
+          palette: ["#9fd8ff", "#5a6bff", "#1c1550"],
+          trait: "starfall",
+          bladeDamage: .4,
+          guardReduction: .12,
+          handleCooldown: .83,
+          handleKnockback: .2,
+          handleReach: .5
         }
-      } finally {
-        xe(ee)
+      },
+      LW = 4,
+      cW = "Coal",
+      wW = {
+        Blade: 1,
+        Guard: .6,
+        Handle: .4
+      },
+      tW = 1.15,
+      ZW = 1.35,
+      xW = .06,
+      lW = {
+        defence: {
+          name: "Bulwark",
+          amount: .06,
+          describe: WW => `${yW(.06*WW)} less damage taken`
+        },
+        coins: {
+          name: "Midas",
+          amount: 4,
+          describe: WW => `Mobs you slay drop ${Math.round(4*WW)}+ extra coins`
+        },
+        crit: {
+          name: "Keen Edge",
+          chance: .12,
+          amount: .6,
+          describe: WW => `${yW(.12*WW)} chance to strike for +60% damage`
+        },
+        bossBane: {
+          name: "Bossbane",
+          amount: .2,
+          describe: WW => `+${yW(.2*WW)} damage to bosses`
+        },
+        firePool: {
+          name: "Magma Pool",
+          chance: .15,
+          amount: .12,
+          cooldownMs: 3e3,
+          describe: WW => `${yW(.15*WW)} chance to leave a fire pool under the mob that burns for 3s`
+        },
+        lifesteal: {
+          name: "Bloodthirst",
+          amount: .06,
+          describe: WW => `Heal ${yW(.06*WW)} of the damage you deal`
+        },
+        starfall: {
+          name: "Starfall",
+          chance: .1,
+          amount: .6,
+          cooldownMs: 4e3,
+          describe: WW => `${yW(.1*WW)} chance to call a falling star that hits nearby mobs and slows them`
+        }
+      },
+      AW = {
+        eclipseField: {
+          name: "Eclipse Field",
+          description: "Right-click: slow every mob within 6 blocks for 3s",
+          cooldownMs: 25e3
+        },
+        starfall: {
+          name: "Meteor Shower",
+          description: "Right-click: call five falling stars around you",
+          cooldownMs: 3e4
+        },
+        magmaWave: {
+          name: "Magma Wave",
+          description: "Right-click: lay a line of fire pools ahead of you",
+          cooldownMs: 2e4
+        },
+        bloodPact: {
+          name: "Blood Pact",
+          description: "Right-click: heal 30% of your health",
+          cooldownMs: 4e4
+        },
+        moonDash: {
+          name: "Moon Dash",
+          description: "Right-click: dash forward, striking mobs you pass",
+          cooldownMs: 12e3
+        },
+        warcry: {
+          name: "Warcry",
+          description: "Right-click: deal 30% more damage for 8s",
+          cooldownMs: 35e3
+        },
+        quake: {
+          name: "Quake",
+          description: "Right-click: slam the ground, hurling mobs within 5 blocks",
+          cooldownMs: 18e3
+        },
+        gildedEdge: {
+          name: "Gilded Edge",
+          description: "Right-click: your next 5 hits deal 50% more damage",
+          cooldownMs: 25e3
+        }
+      },
+      bW = 47 == OW.j ? mW.c : null,
+      jW = "skyblock:forged:";
+
+    function UW(WW, iW) {
+      return `${WW} ${iW}`
+    }
+    EW.flatMap((WW => NW.map((iW => UW(WW, iW)))));
+
+    function kW(WW) {
+      let {
+        blade: iW,
+        guard: OW,
+        handle: mW
+      } = WW;
+      return `${jW}${iW.toLowerCase()}-${OW.toLowerCase()}-${mW.toLowerCase()}`
+    }
+
+    function sW(WW) {
+      if (! function(WW) {
+          return "string" === typeof WW && WW.startsWith(jW)
+        }(WW)) return null;
+      const iW = WW.slice(jW.length).split("-").map((WW => EW.find((iW => iW.toLowerCase() === WW))));
+      return 3 !== iW.length || iW.includes(void 0) ? null : {
+        blade: iW[0],
+        guard: iW[1],
+        handle: iW[2]
       }
     }
+    const MW = new Map;
 
-    function kH() {
-      MH = !0
+    function KW(WW) {
+      var iW;
+      let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bW;
+      const mW = "string" === typeof WW ? sW(WW) : WW;
+      if (null === mW) return null;
+      const EW = kW(mW),
+        cW = OW === bW ? MW.get(EW) : void 0;
+      if (void 0 !== cW) return cW;
+      const jW = function(WW, iW) {
+        var OW, mW, EW, cW, bW, jW, UW, sW, MW;
+        const {
+          blade: KW,
+          guard: JW,
+          handle: hW
+        } = WW, HW = PW, nW = KW === JW && JW === hW, uW = YW((1 + HW[KW].bladeDamage) * (nW ? 1 + xW : 1)), oW = null !== (OW = iW.damageMultiplier) && void 0 !== OW ? OW : uW, dW = null !== (mW = iW.cooldownMultiplier) && void 0 !== mW ? mW : HW[hW].handleCooldown, eW = null !== (EW = iW.knockbackMultiplier) && void 0 !== EW ? EW : YW(1 + HW[hW].handleKnockback), vW = null !== (cW = iW.reachBonus) && void 0 !== cW ? cW : HW[hW].handleReach, gW = null !== (bW = iW.damageReduction) && void 0 !== bW ? bW : HW[JW].guardReduction, DW = null !== (jW = iW.traits) && void 0 !== jW ? jW : function(WW) {
+          const iW = {},
+            OW = {};
+          for (const LW of NW) {
+            var mW, EW;
+            const NW = PW[SW(WW, LW)].trait;
+            null !== NW && (iW[NW] = (null !== (mW = iW[NW]) && void 0 !== mW ? mW : 0) + wW[LW], OW[NW] = (null !== (EW = OW[NW]) && void 0 !== EW ? EW : 0) + 1)
+          }
+          for (const NW of Object.keys(iW)) {
+            const WW = 3 === OW[NW] ? ZW : 2 === OW[NW] ? tW : 1;
+            iW[NW] = YW(iW[NW] * WW)
+          }
+          return iW
+        }(WW), VW = null !== (UW = iW.ability) && void 0 !== UW ? UW : null, pW = void 0 !== iW.name, fW = null !== (sW = iW.name) && void 0 !== sW ? sW : nW ? `Pure ${KW} Sword` : `${HW[JW].epithet} ${KW} Sword`, CW = null !== (MW = iW.lore) && void 0 !== MW ? MW : `Forged by the Forge Mother from a ${KW.toLowerCase()} blade, ${JW.toLowerCase()} guard and ${hW.toLowerCase()} handle.`, XW = function(WW) {
+          let {
+            blade: iW,
+            guard: OW,
+            handle: mW
+          } = WW;
+          const EW = PW;
+          return LW * (EW[iW].value + EW[OW].value + EW[mW].value)
+        }(WW), BW = HW[KW].value + HW[JW].value + HW[hW].value, qW = pW ? "Tier 5" : BW <= 4 ? "Tier 1" : BW <= 8 ? "Tier 2" : BW <= 14 ? "Tier 3" : BW <= 22 ? "Tier 4" : "Tier 5", RW = [];
+        1 !== oW && RW.push(`${TW(oW-1)} damage`);
+        1 !== dW && RW.push(`${yW(1/dW-1)} faster strikes`);
+        1 !== eW && RW.push(`${TW(eW-1)} knockback`);
+        vW > 0 && RW.push(`+${vW} reach`);
+        gW > 0 && RW.push(`${yW(gW)} less damage taken while held`);
+        const GW = [];
+        for (const NW of Object.keys(DW)) GW.push(`${lW[NW].name}: ${lW[NW].describe(DW[NW])}`);
+        null !== VW && GW.push(`${AW[VW].name}: ${AW[VW].description}`);
+        return RW.push(...GW), {
+          id: kW(WW),
+          parts: WW,
+          baseSword: HW[KW].baseSword,
+          displayName: fW,
+          lore: CW,
+          properties: RW,
+          effects: GW,
+          named: pW,
+          damageMultiplier: oW,
+          cooldownMultiplier: dW,
+          knockbackMultiplier: eW,
+          reachBonus: vW,
+          damageReduction: gW,
+          traits: DW,
+          ability: VW,
+          coalCost: XW,
+          enchantmentTier: qW,
+          powerMultiplier: YW(oW / dW)
+        }
+      }(mW, null !== (iW = OW[EW]) && void 0 !== iW ? iW : {});
+      return OW === bW && MW.set(EW, jW), jW
     }
 
-    function qH() {
-      if (MH) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && RH(), null !== bH) return bH;
-      if (void 0 === Ri) return "wn:unsupported";
-      const ee = (0, ye.o)();
-      return null === ee ? null : `wn:${ee}`
+    function SW(WW, iW) {
+      return "Blade" === iW ? WW.blade : "Guard" === iW ? WW.guard : WW.handle
+    }
+
+    function YW(WW) {
+      return Math.round(100 * WW) / 100
+    }
+
+    function yW(WW) {
+      return `${Math.round(100*WW)}%`
+    }
+
+    function TW(WW) {
+      return `${WW>=0?"+":""}${yW(WW)}`
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

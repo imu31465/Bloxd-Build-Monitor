@@ -450,6 +450,14 @@ html.PadLargePointer .InventorySlotCursorHints {
   font-size: 1.1rem
 }
 
+.PadKeyboard .PadKeyboardKey.PadKeyboardKeyPhrase .PadKeyboardKeyLabel {
+  min-width: 0;
+  overflow: hidden;
+  padding: 0 .3rem;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
 .PadKeyboard .PadKeyboardKey.PadKeyboardKeyActive {
   color: #ffb914
 }
@@ -774,6 +782,22 @@ html.PadLargePointer .PadCursorView .PadCursorGlyph {
 .EmoteWheelOverlay.PadRadialWheel .PadRadialWheelSlot.PadRadialWheelSlotPicked {
   color: #ffb914;
   transform: translate(-50%, -50%) scale(1.15)
+}
+
+.EmoteWheelOverlay.PadRadialWheel.QuickChatWheel .PadRadialWheelSlot {
+  max-width: 7rem;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.EmoteWheelOverlay.PadRadialWheel.QuickChatWheel .EmoteWheelHint {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  max-width: 9rem;
+  overflow: hidden;
+  overflow-wrap: anywhere
 }
 
 .PadSneakChip {

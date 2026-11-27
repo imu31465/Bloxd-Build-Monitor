@@ -1,289 +1,417 @@
 export const id = 619;
 export const ids = [619];
 export const modules = {
-  44986: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      _BasisTextureLoader: () => ze
+  53646: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => SW
     });
-    var ye, be = He(41203),
-      Me = He(39467),
-      Ke = He(41593),
-      Ue = He(40924);
+    var mW = OW(62),
+      EW = OW(5488),
+      NW = OW(1782),
+      PW = OW(1089),
+      LW = OW.n(PW),
+      cW = OW(1532),
+      wW = OW(1172),
+      tW = OW(5460),
+      ZW = OW(5467),
+      xW = OW(5470),
+      lW = OW(1283);
 
-    function Fe() {
-      const ee = 0,
-        ie = 1,
-        He = 2,
-        ye = 3,
-        be = 6,
-        Me = 8,
-        Ke = 9,
-        Ue = 10,
-        Fe = 14;
-      let Je = null;
-
-      function oe(ee, ie, He, ye, be) {
-        const Me = ee.getImageTranscodedSizeInBytes(ie, He, ye);
-        let Ke = new Uint8Array(Me);
-        if (!ee.transcodeImage(Ke, ie, He, ye, 1, 0)) return null;
-        if (be) {
-          Ke = function(ee, ie, He, ye) {
-            const be = new Uint16Array(4),
-              Me = new Uint16Array(He * ye),
-              Ke = He / 4,
-              Ue = ye / 4;
-            for (let Fe = 0; Fe < Ue; Fe++)
-              for (let ye = 0; ye < Ke; ye++) {
-                const Ue = ie + 8 * (Fe * Ke + ye);
-                be[0] = ee[Ue] | ee[Ue + 1] << 8, be[1] = ee[Ue + 2] | ee[Ue + 3] << 8, be[2] = (2 * (31 & be[0]) + 1 * (31 & be[1])) / 3 | (2 * (2016 & be[0]) + 1 * (2016 & be[1])) / 3 & 2016 | (2 * (63488 & be[0]) + 1 * (63488 & be[1])) / 3 & 63488, be[3] = (2 * (31 & be[1]) + 1 * (31 & be[0])) / 3 | (2 * (2016 & be[1]) + 1 * (2016 & be[0])) / 3 & 2016 | (2 * (63488 & be[1]) + 1 * (63488 & be[0])) / 3 & 63488;
-                for (let ie = 0; ie < 4; ie++) {
-                  const Ke = ee[Ue + 4 + ie];
-                  let Je = (4 * Fe + ie) * He + 4 * ye;
-                  Me[Je++] = be[3 & Ke], Me[Je++] = be[Ke >> 2 & 3], Me[Je++] = be[Ke >> 4 & 3], Me[Je] = be[Ke >> 6 & 3]
-                }
-              }
-            return Me
-          }(Ke, 0, ee.getImageWidth(ie, He) + 3 & -4, ee.getImageHeight(ie, He) + 3 & -4)
-        }
-        return Ke
-      }
-      onmessage = Re => {
-        if ("init" === Re.data.action) {
-          if (Re.data.url) try {
-            importScripts(Re.data.url)
-          } catch (ke) {
-            postMessage({
-              action: "error",
-              error: ke
-            })
-          }
-          Je || (Je = BASIS({
-            wasmBinary: Re.data.wasmBinary
-          })), null !== Je && Je.then((ee => {
-            BASIS = ee, ee.initializeBasis(), postMessage({
-              action: "init"
-            })
-          }))
-        } else if ("transcode" === Re.data.action) {
-          const Je = Re.data.config,
-            ke = Re.data.imageData,
-            qe = new BASIS.BasisFile(ke),
-            fe = function(ee) {
-              const ie = ee.getHasAlpha(),
-                He = ee.getNumImages(),
-                ye = [];
-              for (let be = 0; be < He; be++) {
-                const ie = {
-                    levels: []
-                  },
-                  He = ee.getNumLevels(be);
-                for (let ye = 0; ye < He; ye++) {
-                  const He = {
-                    width: ee.getImageWidth(be, ye),
-                    height: ee.getImageHeight(be, ye)
-                  };
-                  ie.levels.push(He)
-                }
-                ye.push(ie)
-              }
-              return {
-                hasAlpha: ie,
-                images: ye
-              }
-            }(qe);
-          let Te = Re.data.ignoreSupportedFormats ? null : function(Je, oe) {
-              let Re = null;
-              Je.supportedCompressionFormats && (Re = Je.supportedCompressionFormats.astc ? Ue : Je.supportedCompressionFormats.bc7 ? be : Je.supportedCompressionFormats.s3tc ? oe.hasAlpha ? ye : He : Je.supportedCompressionFormats.pvrtc ? oe.hasAlpha ? Ke : Me : Je.supportedCompressionFormats.etc2 ? ie : Je.supportedCompressionFormats.etc1 ? ee : Fe);
-              return Re
-            }(Re.data.config, fe),
-            pe = !1;
-          null === Te && (pe = !0, Te = fe.hasAlpha ? ye : He);
-          let Xe = !0;
-          qe.startTranscoding() || (Xe = !1);
-          const ze = [];
-          for (let ee = 0; ee < fe.images.length && Xe; ee++) {
-            const ie = fe.images[ee];
-            if (void 0 === Je.loadSingleImage || Je.loadSingleImage === ee) {
-              let He = ie.levels.length;
-              !1 === Je.loadMipmapLevels && (He = 1);
-              for (let ye = 0; ye < He; ye++) {
-                const He = ie.levels[ye],
-                  be = oe(qe, ee, ye, Te, pe);
-                if (!be) {
-                  Xe = !1;
-                  break
-                }
-                He.transcodedPixels = be, ze.push(He.transcodedPixels.buffer)
-              }
-            }
-          }
-          qe.close(), qe.delete(), pe && (Te = -1), Xe ? postMessage({
-            action: "transcode",
-            success: Xe,
-            id: Re.data.id,
-            fileInfo: fe,
-            format: Te
-          }, ze) : postMessage({
-            action: "transcode",
-            success: Xe,
-            id: Re.data.id
-          })
-        }
-      }
-    }! function(ee) {
-      ee[ee.cTFETC1 = 0] = "cTFETC1", ee[ee.cTFETC2 = 1] = "cTFETC2", ee[ee.cTFBC1 = 2] = "cTFBC1", ee[ee.cTFBC3 = 3] = "cTFBC3", ee[ee.cTFBC4 = 4] = "cTFBC4", ee[ee.cTFBC5 = 5] = "cTFBC5", ee[ee.cTFBC7 = 6] = "cTFBC7", ee[ee.cTFPVRTC1_4_RGB = 8] = "cTFPVRTC1_4_RGB", ee[ee.cTFPVRTC1_4_RGBA = 9] = "cTFPVRTC1_4_RGBA", ee[ee.cTFASTC_4x4 = 10] = "cTFASTC_4x4", ee[ee.cTFATC_RGB = 11] = "cTFATC_RGB", ee[ee.cTFATC_RGBA_INTERPOLATED_ALPHA = 12] = "cTFATC_RGBA_INTERPOLATED_ALPHA", ee[ee.cTFRGBA32 = 13] = "cTFRGBA32", ee[ee.cTFRGB565 = 14] = "cTFRGB565", ee[ee.cTFBGR565 = 15] = "cTFBGR565", ee[ee.cTFRGBA4444 = 16] = "cTFRGBA4444", ee[ee.cTFFXT1_RGB = 17] = "cTFFXT1_RGB", ee[ee.cTFPVRTC2_4_RGB = 18] = "cTFPVRTC2_4_RGB", ee[ee.cTFPVRTC2_4_RGBA = 19] = "cTFPVRTC2_4_RGBA", ee[ee.cTFETC2_EAC_R11 = 20] = "cTFETC2_EAC_R11", ee[ee.cTFETC2_EAC_RG11 = 21] = "cTFETC2_EAC_RG11"
-    }(ye || (ye = {}));
-    const Je = {
-      JSModuleURL: `${be.h._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.js`,
-      WasmModuleURL: `${be.h._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.wasm`
-    };
-    let oe = null,
-      Re = null,
-      ke = 0;
-    const qe = async () => (oe || (oe = new Promise(((ee, ie) => {
-      Re ? ee(Re) : be.h.LoadFileAsync(be.h.GetBabylonScriptURL(Je.WasmModuleURL)).then((He => {
-        if ("function" !== typeof URL) return ie("Basis transcoder requires an environment with a URL constructor");
-        const ye = URL.createObjectURL(new Blob([`(${Fe})()`], {
-          type: "application/javascript"
-        }));
-        Re = new Worker(ye), async function(ee, ie, He) {
-          return await new Promise(((ye, Me) => {
-            const Ke = ie => {
-              "init" === ie.data.action ? (ee.removeEventListener("message", Ke), ye(ee)) : "error" === ie.data.action && Me(ie.data.error || "error initializing worker")
-            };
-            ee.addEventListener("message", Ke), ee.postMessage({
-              action: "init",
-              url: He ? be.h.GetBabylonScriptURL(He) : void 0,
-              wasmBinary: ie
-            }, [ie])
-          }))
-        }(Re, He, Je.JSModuleURL).then(ee, ie)
-      })).catch(ie)
-    }))), await oe), fe = async (ee, ie) => {
-      const He = ee instanceof ArrayBuffer ? new Uint8Array(ee) : ee;
-      return await new Promise(((ee, ye) => {
-        qe().then((() => {
-          const be = ke++,
-            Me = ie => {
-              "transcode" === ie.data.action && ie.data.id === be && (Re.removeEventListener("message", Me), ie.data.success ? ee(ie.data) : ye("Transcode is not supported on this device"))
-            };
-          Re.addEventListener("message", Me);
-          const Ke = new Uint8Array(He.byteLength);
-          Ke.set(new Uint8Array(He.buffer, He.byteOffset, He.byteLength)), Re.postMessage({
-            action: "transcode",
-            id: be,
-            imageData: Ke,
-            config: ie,
-            ignoreSupportedFormats: false
-          }, [Ke.buffer])
-        }), (ee => {
-          ye(ee)
-        }))
-      }))
-    }, Te = (ee, ie) => {
-      let He = ie._gl?.TEXTURE_2D;
-      ee.isCube && (He = ie._gl?.TEXTURE_CUBE_MAP), ie._bindTextureDirectly(He, ee, !0)
-    }, pe = (ee, ie) => {
-      const He = ee.Nf();
-      for (let be = 0; be < ie.fileInfo.images.length; be++) {
-        const Fe = ie.fileInfo.images[be].levels[0];
-        if (ee._invertVScale = ee.invertY, -1 === ie.format || ie.format === ye.cTFRGB565)
-          if (ee.type = 10, ee.format = 4, !He._features.basisNeedsPOT || Math.log2(Fe.width) % 1 === 0 && Math.log2(Fe.height) % 1 === 0) ee._invertVScale = !ee.invertY, ee.width = Fe.width + 3 & -4, ee.height = Fe.height + 3 & -4, ee.samplingMode = 2, Te(ee, He), He._uploadDataToTextureDirectly(ee, new Uint16Array(Fe.transcodedPixels.buffer), be, 0, 4, !0);
-          else {
-            const ie = new Ue.b(He, 2);
-            ee._invertVScale = ee.invertY, ie.type = 10, ie.format = 4, ie.width = Fe.width + 3 & -4, ie.height = Fe.height + 3 & -4, Te(ie, He), He._uploadDataToTextureDirectly(ie, new Uint16Array(Fe.transcodedPixels.buffer), be, 0, 4, !0), He._rescaleTexture(ie, ee, He.scenes[0], He._getInternalFormat(4), (() => {
-              He._releaseTexture(ie), Te(ee, He)
-            }))
-          }
-        else {
-          ee.width = Fe.width, ee.height = Fe.height, ee.generateMipMaps = ie.fileInfo.images[be].levels.length > 1;
-          const ye = Xe.GetInternalFormatFromBasisFormat(ie.format, He);
-          ee.format = ye, Te(ee, He);
-          const Ue = ie.fileInfo.images[be].levels;
-          for (let ie = 0; ie < Ue.length; ie++) {
-            const Me = Ue[ie];
-            He._uploadCompressedDataToTextureDirectly(ee, ye, Me.width, Me.height, Me.transcodedPixels, be, ie)
-          }!He._features.basisNeedsPOT || Math.log2(ee.width) % 1 === 0 && Math.log2(ee.height) % 1 === 0 || (Me.e.Warn("Loaded .basis texture width and height are not a power of two. Texture wrapping will be set to Texture.CLAMP_ADDRESSMODE as other modes are not supported with non power of two dimensions in webGL 1."), ee._cachedWrapU = Ke.e.CLAMP_ADDRESSMODE, ee._cachedWrapV = Ke.e.CLAMP_ADDRESSMODE)
-        }
-      }
-    }, Xe = {
-      JSModuleURL: Je.JSModuleURL,
-      WasmModuleURL: Je.WasmModuleURL,
-      GetInternalFormatFromBasisFormat: (ee, ie) => {
-        let He;
-        switch (ee) {
-          case ye.cTFETC1:
-            He = 36196;
-            break;
-          case ye.cTFBC1:
-            He = 33776;
-            break;
-          case ye.cTFBC4:
-            He = 33779;
-            break;
-          case ye.cTFASTC_4x4:
-            He = 37808;
-            break;
-          case ye.cTFETC2:
-            He = 37496;
-            break;
-          case ye.cTFBC7:
-            He = 36492
-        }
-        if (void 0 === He) throw "The chosen Basis transcoder format is not currently supported";
-        return He
-      },
-      TranscodeAsync: fe,
-      LoadTextureFromTranscodeResult: pe
-    };
-    class ze {
-      constructor() {
-        this.supportCascades = !1
-      }
-      loadCubeData(ee, ie, He, ye, Me) {
-        if (Array.isArray(ee)) return;
-        const Ke = ie.Nf().getCaps(),
-          Ue = {
-            supportedCompressionFormats: {
-              etc1: !!Ke.etc1,
-              s3tc: !!Ke.s3tc,
-              pvrtc: !!Ke.pvrtc,
-              etc2: !!Ke.etc2,
-              astc: !!Ke.astc,
-              bc7: !!Ke.bptc
-            }
-          };
-        fe(ee, Ue).then((ee => {
-          const He = ee.fileInfo.images[0].levels.length > 1 && ie.generateMipMaps;
-          pe(ie, ee), ie.Nf()._setCubeMapTextureParams(ie, He), ie.isReady = !0, ie.onLoadedObservable.notifyObservers(ie), ie.onLoadedObservable.clear(), ye && ye()
-        })).catch((ee => {
-          be.h.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), ie.isReady = !0, Me && Me(ee)
-        }))
-      }
-      loadData(ee, ie, He) {
-        const ye = ie.Nf().getCaps(),
-          Me = {
-            supportedCompressionFormats: {
-              etc1: !!ye.etc1,
-              s3tc: !!ye.s3tc,
-              pvrtc: !!ye.pvrtc,
-              etc2: !!ye.etc2,
-              astc: !!ye.astc,
-              bc7: !!ye.bptc
-            }
-          };
-        fe(ee, Me).then((ee => {
-          const ye = ee.fileInfo.images[0].levels[0],
-            be = ee.fileInfo.images[0].levels.length > 1 && ie.generateMipMaps;
-          He(ye.width, ye.height, be, -1 !== ee.format, (() => {
-            pe(ie, ee)
-          }))
-        })).catch((ee => {
-          be.h.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), be.h.Warn(`Failed to transcode Basis file: ${ee}`), He(0, 0, !1, !1, (() => {}), !0)
-        }))
-      }
+    function AW(WW) {
+      return WW.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     }
+    tW.c.registerLanguage("javascript", ZW.e), tW.c.registerLanguage("typescript", xW.b);
+
+    function bW(WW, iW) {
+      const OW = AW(WW).replace(/"/g, "&quot;");
+      return `<button type="button" class="DocsCopyButton ${iW}" title="${OW}" aria-label="${OW}"><svg class="DocsCopyIcon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5"/><path d="M10.5 3.5V1.5H1.5v9h2"/></svg><svg class="DocsCopiedIcon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-7.5"/></svg></button>`
+    }
+
+    function jW(WW, iW) {
+      const OW = [],
+        mW = WW.toLowerCase(),
+        EW = iW.toLowerCase();
+      let NW = 0;
+      for (; NW < WW.length;) {
+        const PW = mW.indexOf(EW, NW);
+        if (-1 === PW) {
+          OW.push(WW.slice(NW));
+          break
+        }
+        PW > NW && OW.push(WW.slice(NW, PW)), OW.push((0, lW.jsx)("mark", {
+          className: "DocsHighlight",
+          children: WW.slice(PW, PW + iW.length)
+        }, PW)), NW = PW + iW.length
+      }
+      return OW
+    }
+    var UW = OW(1391),
+      kW = OW(1434),
+      sW = OW(38030),
+      MW = OW(38039);
+    const KW = {
+        clientOptions: {
+          tabStep: "docsClientOptionsTab",
+          tabText: "codeEditor:tutorialClientOptionsTab",
+          pageStep: "docsClientOptions",
+          pageText: "codeEditor:tutorialClientOptions"
+        },
+        apiReference: {
+          tabStep: "docsApiReferenceTab",
+          tabText: "codeEditor:tutorialApiReferenceTab",
+          pageStep: "docsApiReference",
+          pageText: "codeEditor:tutorialApiReference"
+        },
+        callbacks: {
+          tabStep: "docsCallbacksTab",
+          tabText: "codeEditor:tutorialCallbacksTab",
+          pageStep: "docsCallbacks",
+          pageText: "codeEditor:tutorialCallbacks"
+        }
+      },
+      SW = (0, mW.memo)((function(WW) {
+        var iW, OW, PW, ZW, xW, SW, YW;
+        let {
+          popOutDocs: yW,
+          hideDocs: TW,
+          tutorialEnabled: JW
+        } = WW;
+        const [hW, HW] = (0, mW.useState)(EW.b[0].id), nW = (0, mW.useRef)(null), uW = (0, mW.useRef)(null), [oW, dW] = (0, mW.useState)(""), [eW, vW] = (0, mW.useState)(0), [gW, DW] = (0, mW.useState)(null), [VW, pW] = (0, mW.useState)(!1), [fW, CW] = (0, mW.useState)(160), XW = (0, mW.useRef)(!1), BW = (0, mW.useRef)(null), qW = (0, sW.n)("docsOverview"), [RW, GW] = (0, mW.useState)(0), IW = Object.values(KW).some((WW => (null === WW || void 0 === WW ? void 0 : WW.tabStep) === qW));
+        (0, mW.useEffect)((() => {
+          IW && oW.length > 0 && (dW(""), GW((WW => WW + 1)))
+        }), [IW, oW]);
+        const aW = oW.length > 0,
+          rW = (0, mW.useMemo)((() => function(WW) {
+            if (!WW) return [];
+            const iW = WW.toLowerCase(),
+              OW = [];
+            for (const mW of EW.b) {
+              const WW = mW.content.toLowerCase();
+              let EW = 0,
+                NW = -1,
+                PW = 0,
+                LW = WW.indexOf(iW, PW);
+              for (; - 1 !== LW;) - 1 === NW && (NW = LW), EW++, PW = LW + iW.length, LW = WW.indexOf(iW, PW);
+              if (0 === EW) continue;
+              const cW = Math.max(0, NW - 40),
+                wW = Math.min(mW.content.length, NW + iW.length + 40),
+                tW = (cW > 0 ? "..." : "") + mW.content.slice(cW, wW).replace(/\n/g, " ") + (wW < mW.content.length ? "..." : "");
+              OW.push({
+                doc: mW,
+                matchCount: EW,
+                snippet: tW
+              })
+            }
+            return OW.sort(((WW, iW) => iW.matchCount - WW.matchCount)), OW
+          }(oW)), [oW]),
+          zW = aW ? null !== (iW = null !== (OW = null === (PW = rW.find((WW => WW.doc.id === hW))) || void 0 === PW ? void 0 : PW.doc) && void 0 !== OW ? OW : null === (ZW = rW[0]) || void 0 === ZW ? void 0 : ZW.doc) && void 0 !== iW ? iW : null : null !== (xW = EW.b.find((WW => WW.id === hW))) && void 0 !== xW ? xW : EW.b[0],
+          {
+            t: FW
+          } = (0, wW.B)(),
+          QW = FW("codeEditor:copySnippet"),
+          Wi = (0, mW.useMemo)((() => zW ? function(WW, iW, OW, mW) {
+            let EW = iW;
+            EW = EW.replace(/\r\n/g, "\n");
+            const NW = [];
+            EW = EW.replace(/```(\w*)\n([\s\S]*?)```/g, ((WW, iW, mW) => {
+              const EW = NW.length;
+              let PW = AW(mW);
+              try {
+                PW = tW.c.highlight(mW.trimEnd(), {
+                  language: iW
+                }).value
+              } catch (LW) {
+                console.warn("Could not highlight documentation code block", LW)
+              }
+              return NW.push(`<div class="DocsCodeBlockRow"><pre class="DocsCodeBlock" data-lang="${iW}"><code>${PW}</code></pre>${bW(OW,"DocsCopyBlock")}</div>`), `\0PLACEHOLDER_${EW}\0`
+            })), EW = EW.replace(/(`{1,2})([^\n]+?)\1(?!`)/g, ((iW, mW, EW) => {
+              const PW = NW.length,
+                LW = 2 === mW.length ? EW.replace(/^ (.*) $/, "$1") : EW;
+              let cW = AW(LW);
+              try {
+                "apiReference" !== WW && "callbacks" !== WW || (cW = tW.c.highlight(LW.trimEnd().replaceAll("\\|", "|"), {
+                  language: "typescript"
+                }).value)
+              } catch (wW) {
+                console.warn("Could not highlight documentation snippet", wW)
+              }
+              return NW.push(`<span class="DocsInlineCodeRow"><code class="DocsInlineCode">${cW}</code>${bW(OW,"DocsCopyInline")}</span>`), `\0PLACEHOLDER_${PW}\0`
+            })), EW = AW(EW), EW = EW.replace(/^#### (.+)$/gm, '<h4 class="DocsH4">$1</h4>'), EW = EW.replace(/^### (.+)$/gm, '<h3 class="DocsH3">$1</h3>'), EW = EW.replace(/^## (.+)$/gm, '<h2 class="DocsH2">$1</h2>'), EW = EW.replace(/^# (.+)$/gm, '<h1 class="DocsH1">$1</h1>'), EW = EW.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"), EW = EW.replace(/\[([^\]]+)\]\(([^)]+)\)/g, ((WW, iW, OW) => OW.startsWith("#") ? `<a class="DocsAnchor" data-id="${OW}">${iW}</a>` : `<a href="${OW}" target="_blank" rel="noopener noreferrer">${iW}</a>`)), EW = EW.replace(/^(\|.+\|)\n(\|[\s:\-|]+\|)\n((?:\|.+\|\s*\r?\n?)*)/gm, ((WW, iW, OW, mW) => `<table class="DocsTable"><thead><tr>${iW.split("|").slice(1,-1).map((WW=>`<th>${WW.trim()}</th>`)).join("")}</tr></thead><tbody>${mW.trim().split("\n").map((WW=>`<tr>${WW.split("|").slice(1,-1).map((WW=>`<td>${WW.trim()}</td>`)).join("")}</tr>`)).join("")}</tbody></table>`)), EW = EW.replace(/(?:^[ \t]*([*-])[ \t]+.+(?:\n|$))+/gm, ((WW, iW) => function(WW, iW) {
+              const OW = "*" === iW,
+                mW = [];
+              for (const LW of WW.split("\n")) {
+                const WW = LW.match(/^([ \t]*)(?:[*-])[ \t]+(.+)$/);
+                WW && mW.push({
+                  indent: WW[1].replace(/\t/g, "  ").length,
+                  content: WW[2]
+                })
+              }
+              let EW = "";
+              const NW = [],
+                PW = OW ? "ol" : "ul";
+              for (const {
+                  indent: LW,
+                  content: cW
+                }
+                of mW) {
+                for (; NW.length > 0 && LW < NW[NW.length - 1];) EW += `</${PW}></li>`, NW.pop();
+                (0 === NW.length || LW > NW[NW.length - 1]) && (NW.length > 0 && (EW = EW.replace(/<\/li>$/, "")), EW += `<${PW} class="DocsList">`, NW.push(LW)), EW += `<li class="DocsListItem">${cW}</li>`
+              }
+              for (; NW.length > 0;) EW += `</${PW}>`, NW.pop(), NW.length > 0 && (EW += "</li>");
+              return EW
+            }(WW, iW))), EW = EW.replace(/\n{2,}/g, "\n<br/>\n");
+            for (let PW = 0; PW < NW.length; PW++) EW = EW.replace(`\0PLACEHOLDER_${PW}\0`, NW[PW]);
+            if (mW) {
+              const WW = AW(mW).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+                iW = new RegExp(WW, "gi");
+              EW = EW.replace(/([^<>]+)(?=<|$)/g, (WW => WW.replace(iW, (WW => `<mark class="DocsHighlight">${WW}</mark>`))))
+            }
+            return EW
+          }(zW.id, zW.content, QW, aW ? oW : void 0) : ""), [zW, QW, aW, oW]);
+        (0, mW.useEffect)((() => {
+          const WW = uW.current;
+          if (!WW) return;
+          const iW = WW => {
+            var iW, OW, mW, EW, NW;
+            const PW = null === (iW = (OW = WW.target).closest) || void 0 === iW ? void 0 : iW.call(OW, ".DocsCopyButton");
+            if (!PW) return;
+            WW.preventDefault(), WW.stopPropagation();
+            const LW = null !== (mW = null === (EW = PW.parentElement) || void 0 === EW || null === (NW = EW.querySelector("code")) || void 0 === NW ? void 0 : NW.textContent) && void 0 !== mW ? mW : "";
+            navigator.clipboard.writeText(LW.trimEnd()).then((() => {
+              PW.classList.add("Copied"), setTimeout((() => {
+                PW.classList.remove("Copied")
+              }), 1500)
+            })).catch((WW => {
+              console.warn("Could not copy documentation code", WW)
+            }))
+          };
+          return WW.addEventListener("click", iW, !0), () => {
+            WW.removeEventListener("click", iW, !0)
+          }
+        }), []);
+        const [ii, Oi] = (0, mW.useState)(0);
+        (0, mW.useEffect)((() => {
+          if (!aW || !uW.current) return void Oi(0);
+          const WW = uW.current.querySelectorAll(".DocsHighlight").length;
+          Oi(WW)
+        }), [aW, Wi]), (0, mW.useEffect)((() => {
+          if (null === gW || !uW.current) return;
+          DW(null);
+          const WW = uW.current.querySelectorAll(".DocsHighlight");
+          if (0 === WW.length) return;
+          const iW = Math.min(gW, WW.length - 1);
+          vW(iW), WW.forEach((WW => {
+            WW.classList.remove("DocsHighlightActive")
+          })), WW[iW].classList.add("DocsHighlightActive"), WW[iW].scrollIntoView({
+            block: "center",
+            behavior: "smooth"
+          })
+        }), [gW, Wi]);
+        const mi = (0, mW.useCallback)((WW => {
+            if (!uW.current) return;
+            const iW = uW.current.querySelectorAll(".DocsHighlight");
+            if (0 === iW.length) return;
+            const OW = (eW + WW + iW.length) % iW.length;
+            vW(OW), DW(OW)
+          }), [eW]),
+          Ei = (0, mW.useCallback)((WW => {
+            var iW;
+            const OW = null === (iW = KW[WW]) || void 0 === iW ? void 0 : iW.tabStep;
+            OW && OW === qW && (0, MW.h)(OW), WW !== hW ? (pW(!0), HW(WW), vW(0), uW.current && (uW.current.scrollTop = 0), aW && DW(0)) : pW(!VW)
+          }), [aW, hW, VW, qW]),
+          Ni = (0, mW.useCallback)((WW => {
+            var iW;
+            const OW = Array.from((null === (iW = uW.current) || void 0 === iW ? void 0 : iW.querySelectorAll(".DocsH2, .DocsH3")) || []).find((iW => {
+              var OW;
+              return null === (OW = iW.textContent) || void 0 === OW ? void 0 : OW.includes(WW)
+            }));
+            OW && OW.scrollIntoView({
+              block: "start",
+              behavior: "smooth"
+            })
+          }), [uW]),
+          Pi = (0, mW.useCallback)((WW => {
+            var iW, OW;
+            const mW = null !== (iW = null === (OW = nW.current) || void 0 === OW ? void 0 : OW.clientWidth) && void 0 !== iW ? iW : window.innerWidth,
+              EW = Math.max(120, mW - 200);
+            return Math.min(Math.max(WW, 120), EW)
+          }), []),
+          Li = (0, mW.useCallback)((() => {
+            var WW;
+            XW.current && (XW.current = !1, null === (WW = nW.current) || void 0 === WW || WW.classList.remove("DocsSidebarResizing"))
+          }), []),
+          ci = (0, mW.useCallback)((WW => {
+            var iW;
+            WW.preventDefault(), XW.current = !0, null === (iW = nW.current) || void 0 === iW || iW.classList.add("DocsSidebarResizing")
+          }), []);
+        (0, mW.useEffect)((() => {
+          const WW = nW.current,
+            iW = WW => {
+              if (!XW.current || !nW.current) return;
+              const iW = nW.current.getBoundingClientRect().left;
+              CW(Pi(WW.clientX - iW))
+            };
+          return window.addEventListener("mousemove", iW), window.addEventListener("mouseup", Li), () => {
+            window.removeEventListener("mousemove", iW), window.removeEventListener("mouseup", Li), null === WW || void 0 === WW || WW.classList.remove("DocsSidebarResizing")
+          }
+        }), [Pi, Li]);
+        const wi = (0, mW.useCallback)((WW => {
+          if (WW) {
+            const [iW, OW] = WW.slice(1).split("-");
+            OW && (BW.current = {
+              docId: iW,
+              subsection: OW
+            }), iW && Ei(iW)
+          }
+        }), [Ei]);
+        (0, mW.useEffect)((() => {
+          const WW = BW.current;
+          WW && hW === WW.docId && (setTimeout((() => {
+            Ni(WW.subsection)
+          }), 0), BW.current = null)
+        })), (0, mW.useEffect)((() => {
+          if (!uW.current) return;
+          uW.current.querySelectorAll("a.DocsAnchor").forEach((WW => {
+            WW.addEventListener("click", (iW => {
+              iW.preventDefault(), wi(WW.dataset.id)
+            }))
+          }))
+        }), [hW, wi]);
+        const ti = Object.values(KW).find((WW => (null === WW || void 0 === WW ? void 0 : WW.pageStep) === qW));
+        return (0, lW.jsx)(sW.j, {
+          tutorial: "docsOverview",
+          step: null !== (SW = null === ti || void 0 === ti ? void 0 : ti.pageStep) && void 0 !== SW ? SW : "docsPanel",
+          text: FW(null !== (YW = null === ti || void 0 === ti ? void 0 : ti.pageText) && void 0 !== YW ? YW : "codeEditor:tutorialDocsPanel"),
+          enabled: JW,
+          placement: "left",
+          onPrevious: ti ? void 0 : TW,
+          children: (0, lW.jsxs)("div", {
+            className: "DocsPanel",
+            ref: nW,
+            children: [(0, lW.jsxs)("div", {
+              className: "DocsSidebar",
+              style: {
+                width: fW,
+                minWidth: fW,
+                maxWidth: fW
+              },
+              children: [(0, lW.jsx)(NW.b, {
+                className: "DocsSearch",
+                placeholderText: "\ud83d\udd0e Search docs...",
+                onValueChange: WW => {
+                  dW(WW), vW(0), DW(0)
+                }
+              }, RW), (0, lW.jsx)("div", {
+                className: "DocsNavList",
+                children: aW ? rW.map((WW => (0, lW.jsxs)("div", {
+                  className: LW()("DocsNavItem", "SearchResult", {
+                    Active: WW.doc.id === (null === zW || void 0 === zW ? void 0 : zW.id)
+                  }),
+                  "data-pad-focusable": !0,
+                  onClick: () => {
+                    Ei(WW.doc.id)
+                  },
+                  children: [(0, lW.jsxs)("div", {
+                    className: "SearchResultTitle",
+                    children: [WW.doc.title, (0, lW.jsx)("span", {
+                      className: "SearchResultCount",
+                      children: WW.matchCount
+                    })]
+                  }), (0, lW.jsx)("div", {
+                    className: "SearchResultSnippet",
+                    children: jW(WW.snippet, oW)
+                  })]
+                }, WW.doc.id))) : EW.b.map((WW => {
+                  const iW = (0, lW.jsxs)("div", {
+                      className: LW()("DocsNavItem", {
+                        Active: WW.id === (null === zW || void 0 === zW ? void 0 : zW.id)
+                      }),
+                      "data-pad-focusable": !0,
+                      onClick: () => {
+                        Ei(WW.id)
+                      },
+                      children: [(0, lW.jsx)("span", {
+                        className: "DocsNavItemTitle",
+                        children: WW.title
+                      }), WW.subsections && WW.id === (null === zW || void 0 === zW ? void 0 : zW.id) && VW && (0, lW.jsx)("span", {
+                        className: "DocsNavItemSubsectionArrow",
+                        children: (0, lW.jsx)(UW.c, {
+                          name: "angle-down"
+                        })
+                      }), WW.subsections && (WW.id !== (null === zW || void 0 === zW ? void 0 : zW.id) || !VW) && (0, lW.jsx)("span", {
+                        className: "DocsNavItemSubsectionArrow",
+                        children: (0, lW.jsx)(UW.c, {
+                          name: "angle-up"
+                        })
+                      })]
+                    }),
+                    OW = KW[WW.id];
+                  return (0, lW.jsxs)(mW.Fragment, {
+                    children: [OW && (0, lW.jsx)(sW.j, {
+                      tutorial: "docsOverview",
+                      step: OW.tabStep,
+                      text: FW(OW.tabText),
+                      enabled: JW,
+                      placement: "left",
+                      waitForClick: !0,
+                      children: iW
+                    }), !OW && iW, VW && WW.subsections && WW.id === (null === zW || void 0 === zW ? void 0 : zW.id) && WW.subsections.map((WW => (0, lW.jsx)("div", {
+                      className: "DocsNavItem DocsSubsection",
+                      "data-pad-focusable": !0,
+                      onClick: () => {
+                        Ni(WW)
+                      },
+                      children: WW
+                    }, WW)))]
+                  }, WW.id)
+                }))
+              }), (0, lW.jsx)("div", {
+                className: "DocsSidebarButtonContainer",
+                children: (0, lW.jsx)(kW.f, {
+                  tooltipInner: FW("codeEditor:popOutDocsTooltip"),
+                  placement: "top",
+                  children: (0, lW.jsx)(cW.f, {
+                    className: "DocsSidebarButton",
+                    onClick: yW,
+                    children: FW("codeEditor:popOutDocs")
+                  })
+                })
+              })]
+            }), (0, lW.jsx)("div", {
+              className: "DocsSidebarResizeHandle",
+              onMouseDown: ci
+            }), (0, lW.jsxs)("div", {
+              className: "DocsContentWrapper",
+              children: [aW && ii > 0 && (0, lW.jsxs)("div", {
+                className: "DocsMatchNav",
+                children: [(0, lW.jsxs)("span", {
+                  className: "DocsMatchNavLabel",
+                  children: [eW + 1, " / ", ii]
+                }), (0, lW.jsx)("button", {
+                  className: "DocsMatchNavButton",
+                  onClick: () => {
+                    mi(-1)
+                  },
+                  children: "\u25b2"
+                }), (0, lW.jsx)("button", {
+                  className: "DocsMatchNavButton",
+                  onClick: () => {
+                    mi(1)
+                  },
+                  children: "\u25bc"
+                })]
+              }), (0, lW.jsx)("div", {
+                className: "DocsContent",
+                ref: uW,
+                dangerouslySetInnerHTML: {
+                  __html: Wi
+                }
+              })]
+            })]
+          })
+        })
+      }))
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

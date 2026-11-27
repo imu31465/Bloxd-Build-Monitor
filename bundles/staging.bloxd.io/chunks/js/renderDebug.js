@@ -1,30 +1,30 @@
-export const id = 56;
-export const ids = [56];
+export const id = 57;
+export const ids = [57];
 export const modules = {
-  5144: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => oe
+  5424: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => tW
     });
-    var ye = He(18),
-      be = He(27),
-      Me = He(1246),
-      Ke = He(3037);
-    const Ue = 3e4,
-      Fe = 1e3;
+    var mW = OW(25),
+      EW = OW(27),
+      NW = OW(1294),
+      PW = OW(3866);
+    const LW = 3e4,
+      cW = 1e3;
 
-    function Je() {
-      return "visible" === document.visibilityState && "inGame" === ye.e.get("gameState") && (0, Me.x)()
+    function wW() {
+      return "visible" === document.visibilityState && "inGame" === mW.d.get("gameState") && (0, NW.z)()
     }
 
-    function oe(ee, ie) {
-      (0, Ke.r)() || function(ee, ie, He) {
-        let ye = 0;
-        const be = setInterval((() => {
-          ie() && (ye += Fe, ye >= ee && (clearInterval(be), He()))
-        }), Fe)
-      }(Ue, Je, (() => {
-        ie().then((() => {
-          ee(`saved for the player after ${Ue/1e3} s of play`), (0, Ke.B)(), be.h.yR("chat", {
+    function tW(WW, iW) {
+      (0, PW.x)() || function(WW, iW, OW) {
+        let mW = 0;
+        const EW = setInterval((() => {
+          iW() && (mW += cW, mW >= WW && (clearInterval(EW), OW()))
+        }), cW)
+      }(LW, wW, (() => {
+        iW().then((() => {
+          WW(`saved for the player after ${LW/1e3} s of play`), (0, PW.J)(), EW.l.iZ("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  5138: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      installRenderDebug: () => qH,
-      renderDebugPlayable: () => TH,
-      startRenderDebug: () => fH,
-      waitForDraw: () => pH
+  5419: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      installRenderDebug: () => lO,
+      renderDebugPlayable: () => bO,
+      startRenderDebug: () => AO,
+      waitForDraw: () => jO
     });
-    var ye = He(1862),
-      be = He(5144),
-      Me = He(3037);
-    const Ke = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var mW = OW(1943),
+      EW = OW(5424),
+      NW = OW(3866);
+    const PW = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function Ue(ee) {
-      return 7 & ee
+    function LW(WW) {
+      return 7 & WW
     }
 
-    function Fe(ee) {
-      return ee >>> 11 & 1
+    function cW(WW) {
+      return WW >>> 11 & 1
     }
 
-    function Je(ee) {
-      return [1 + (ee >>> 18 & 63), 1 + (ee >>> 24 & 63)]
+    function wW(WW) {
+      return [1 + (WW >>> 18 & 63), 1 + (WW >>> 24 & 63)]
     }
 
-    function oe(ee, ie) {
-      const [He, , ye] = ee, be = Ue(ye), Me = function(ee, ie, He) {
-        return ie + (1 === (22 >>> ee & 1) ? 4 - He : He) & 3
-      }(be, Fe(ye), ie), Ke = be >>> 1, [oe, Re] = Je(He), ke = 1 === Me || 2 === Me ? oe : 0, qe = Me >= 2 ? Re : 0, fe = [63 & He, He >>> 6 & 63, He >>> 12 & 63];
-      return fe[2 === Ke ? 0 : 2] += ke, fe[1 === Ke ? 0 : 1] += qe, fe
+    function tW(WW, iW) {
+      const [OW, , mW] = WW, EW = LW(mW), NW = function(WW, iW, OW) {
+        return iW + (1 === (22 >>> WW & 1) ? 4 - OW : OW) & 3
+      }(EW, cW(mW), iW), PW = EW >>> 1, [tW, ZW] = wW(OW), xW = 1 === NW || 2 === NW ? tW : 0, lW = NW >= 2 ? ZW : 0, AW = [63 & OW, OW >>> 6 & 63, OW >>> 12 & 63];
+      return AW[2 === PW ? 0 : 2] += xW, AW[1 === PW ? 0 : 1] += lW, AW
     }
 
-    function Re(ee) {
-      const ie = Math.max(...Je(ee[0]));
-      return 1 === ie ? "1" : ie <= 4 ? "2-4" : ie <= 16 ? "5-16" : "17-64"
+    function ZW(WW) {
+      const iW = Math.max(...wW(WW[0]));
+      return 1 === iW ? "1" : iW <= 4 ? "2-4" : iW <= 16 ? "5-16" : "17-64"
     }
-    const ke = 16;
+    const xW = 16;
 
-    function qe(ee) {
-      let ie = 2166136261;
-      for (let He = 0; He < ee.length; He++) ie = Math.imul(ie ^ ee[He], 16777619);
-      return ie >>> 0
+    function lW(WW) {
+      let iW = 2166136261;
+      for (let OW = 0; OW < WW.length; OW++) iW = Math.imul(iW ^ WW[OW], 16777619);
+      return iW >>> 0
     }
 
-    function fe(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const ye = Math.max(0, ie - He),
-        be = Math.min(ee.length, ie + He),
-        Me = [];
-      for (let Ke = ye; Ke < be; Ke++) {
-        const He = ee[Ke].toString(16).padStart(2, "0");
-        Me.push(Ke === ie ? `[${He}]` : He)
+    function AW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const mW = Math.max(0, iW - OW),
+        EW = Math.min(WW.length, iW + OW),
+        NW = [];
+      for (let PW = mW; PW < EW; PW++) {
+        const OW = WW[PW].toString(16).padStart(2, "0");
+        NW.push(PW === iW ? `[${OW}]` : OW)
       }
-      return Me.join(" ")
+      return NW.join(" ")
     }
-    const Te = {
+    const bW = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,438 +168,438 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      pe = "_vs2fs_location0";
-    const Xe = 0,
-      ze = 4,
-      Be = 6,
-      Ee = [0, 1, 2, 0, 2, 3],
-      ge = 2048,
-      Oe = 4,
-      de = 256,
-      We = 64,
-      te = 268435456,
-      Ze = 65536,
-      we = /^#version [^\n]*\/\/ program (\S+)$/m;
+      jW = "_vs2fs_location0";
+    const UW = 0,
+      kW = 4,
+      sW = 6,
+      MW = [0, 1, 2, 0, 2, 3],
+      KW = 2048,
+      SW = 4,
+      YW = 256,
+      yW = 64,
+      TW = 268435456,
+      JW = 65536,
+      hW = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function De(ee) {
-      return null === ee.name ? `#${ee.id}` : `#${ee.id} ${ee.name}`
+    function HW(WW) {
+      return null === WW.name ? `#${WW.id}` : `#${WW.id} ${WW.name}`
     }
-    const Pe = [],
-      Ae = new WeakMap,
-      Ye = new WeakMap,
-      Ve = {
+    const nW = [],
+      uW = new WeakMap,
+      oW = new WeakMap,
+      dW = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let ae = 1;
-    const ce = new WeakMap;
+    let eW = 1;
+    const vW = new WeakMap;
 
-    function xe(ee) {
-      if (null === ee) return 0;
-      let ie = ce.get(ee);
-      return void 0 === ie && (ie = ae++, ce.set(ee, ie)), ie
+    function gW(WW) {
+      if (null === WW) return 0;
+      let iW = vW.get(WW);
+      return void 0 === iW && (iW = eW++, vW.set(WW, iW)), iW
     }
-    class Le {
-      constructor(ee, ie) {
-        this.print = ee, this.now = ie, this.shown = 0, this.lJ = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.KR = [], this.dropped = 0
+    class DW {
+      constructor(WW, iW) {
+        this.print = WW, this.now = iW, this.shown = 0, this.BL = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.EZ = [], this.dropped = 0
       }
-      line(ee) {
-        const ie = this.now();
-        if (ie - this.second >= 1e3 && (this.second = ie, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.lJ++, void this.store(ee);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${ee} (the last line here: the rest go to bloxdDebug.save())` : ee)
+      line(WW) {
+        const iW = this.now();
+        if (iW - this.second >= 1e3 && (this.second = iW, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.BL++, void this.store(WW);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${WW} (the last line here: the rest go to bloxdDebug.save())` : WW)
       }
-      keep(ee) {
-        this.sections++, this.store(ee)
+      keep(WW) {
+        this.sections++, this.store(WW)
       }
-      store(ee) {
-        this.KR.push(`${new Date(Date.now()).toISOString()} ${ee}`), this.KR.length > 2e4 && (this.KR.shift(), this.dropped++)
+      store(WW) {
+        this.EZ.push(`${new Date(Date.now()).toISOString()} ${WW}`), this.EZ.length > 2e4 && (this.EZ.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.lJ} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.KR].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.BL} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.EZ].join("\n")
       }
     }
-    let Ce = null;
+    let VW = null;
 
-    function ve() {
-      if (null === Ce) {
-        const ee = new Le((ee => {
-          (0, Me.m)("render", ee)
+    function pW() {
+      if (null === VW) {
+        const WW = new DW((WW => {
+          (0, NW.m)("render", WW)
         }), (() => performance.now()));
-        (0, Me.i)("render", (() => ee.dump())), Ce = ee
+        (0, NW.l)("render", (() => WW.dump())), VW = WW
       }
-      return Ce
+      return VW
     }
 
-    function ue(ee) {
-      ve().line(ee)
+    function fW(WW) {
+      pW().line(WW)
     }
 
-    function me(ee) {
-      ve().keep(ee)
+    function CW(WW) {
+      pW().keep(WW)
     }
 
-    function le(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return ee.length <= ie ? ee : `${ee.slice(0,ie)}... (${ee.length-ie} more characters)`
+    function XW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return WW.length <= iW ? WW : `${WW.slice(0,iW)}... (${WW.length-iW} more characters)`
     }
 
-    function Se(ee, ie, He, ye, be, Me) {
-      const Ke = Ve.pendingCheck;
-      if (null === Ke) return;
-      const Ue = "undefined" !== typeof WebGL2RenderingContext && ee instanceof WebGL2RenderingContext,
-        Fe = {
-          gl: ee,
-          program: He,
-          call: ye,
-          zp: be,
-          instances: Me,
+    function BW(WW, iW, OW, mW, EW, NW) {
+      const PW = dW.pendingCheck;
+      if (null === PW) return;
+      const LW = "undefined" !== typeof WebGL2RenderingContext && WW instanceof WebGL2RenderingContext,
+        cW = {
+          gl: WW,
+          program: OW,
+          call: mW,
+          kj: EW,
+          instances: NW,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (Ke.draws.push(Fe), Ue) try {
-        const ye = function(ee) {
-          const ie = [],
-            He = new Map,
-            ye = Math.min(16, ee.getParameter(Te.MAX_VERTEX_ATTRIBS));
-          for (let be = 0; be < ye; be++) {
-            if (!ee.getVertexAttrib(be, Te.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const ye = ee.getVertexAttrib(be, Te.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              Me = ee.getVertexAttribOffset(be, Te.VERTEX_ATTRIB_ARRAY_POINTER),
-              Ke = ee.getVertexAttrib(be, Te.VERTEX_ATTRIB_ARRAY_STRIDE),
-              Ue = ee.getVertexAttrib(be, Te.VERTEX_ATTRIB_ARRAY_SIZE),
-              Fe = ee.getVertexAttrib(be, Te.VERTEX_ATTRIB_ARRAY_TYPE),
-              Je = "VERTEX_ATTRIB_ARRAY_INTEGER" in ee && ee.getVertexAttrib(be, Te.VERTEX_ATTRIB_ARRAY_INTEGER),
-              oe = "VERTEX_ATTRIB_ARRAY_DIVISOR" in ee ? ee.getVertexAttrib(be, Te.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            He.set(be, {
-              buffer: ye,
-              offset: Me,
-              stride: Ke
-            }), ie.push(`@${be} buf#${xe(ye)} +${Me} stride ${Ke} ${Ue}x0x${Fe.toString(16)}${Je?" int":""} div ${oe}`)
+      if (PW.draws.push(cW), LW) try {
+        const mW = function(WW) {
+          const iW = [],
+            OW = new Map,
+            mW = Math.min(16, WW.getParameter(bW.MAX_VERTEX_ATTRIBS));
+          for (let EW = 0; EW < mW; EW++) {
+            if (!WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const mW = WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              NW = WW.getVertexAttribOffset(EW, bW.VERTEX_ATTRIB_ARRAY_POINTER),
+              PW = WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_STRIDE),
+              LW = WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_SIZE),
+              cW = WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_TYPE),
+              wW = "VERTEX_ATTRIB_ARRAY_INTEGER" in WW && WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_INTEGER),
+              tW = "VERTEX_ATTRIB_ARRAY_DIVISOR" in WW ? WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            OW.set(EW, {
+              buffer: mW,
+              offset: NW,
+              stride: PW
+            }), iW.push(`@${EW} buf#${gW(mW)} +${NW} stride ${PW} ${LW}x0x${cW.toString(16)}${wW?" int":""} div ${tW}`)
           }
           return {
-            lines: ie,
-            byLocation: He
+            lines: iW,
+            byLocation: OW
           }
-        }(ee);
-        if (Fe.attributes = ye.lines, "inst" === He.terrain) {
+        }(WW);
+        if (cW.attributes = mW.lines, "inst" === OW.terrain) {
           const {
-            group: be,
-            chunk: Ue
-          } = function(ee, ie, He) {
-            const ye = ie.get(Be),
-              be = ee.getVertexAttrib(Be, Te.CURRENT_VERTEX_ATTRIB),
-              Me = ye ? `+${ye.offset}` : be ? Array.from(be).slice(0, 3).join(",") : "?";
-            let Ke = He.groups.get(Me);
-            return void 0 === Ke && (Ke = He.groups.size, He.groups.set(Me, Ke)), {
-              group: Ke,
-              chunk: Me
+            group: EW,
+            chunk: LW
+          } = function(WW, iW, OW) {
+            const mW = iW.get(sW),
+              EW = WW.getVertexAttrib(sW, bW.CURRENT_VERTEX_ATTRIB),
+              NW = mW ? `+${mW.offset}` : EW ? Array.from(EW).slice(0, 3).join(",") : "?";
+            let PW = OW.groups.get(NW);
+            return void 0 === PW && (PW = OW.groups.size, OW.groups.set(NW, PW)), {
+              group: PW,
+              chunk: NW
             }
-          }(ee, ye.byLocation, Ke);
-          Fe.group = be, Fe.chunk = Ue;
-          for (const ee of [Xe, ze]) {
-            var Je;
-            const ie = null === (Je = ye.byLocation.get(ee)) || void 0 === Je ? void 0 : Je.buffer;
-            ie && Fe.pages.push({
+          }(WW, mW.byLocation, PW);
+          cW.group = EW, cW.chunk = LW;
+          for (const WW of [UW, kW]) {
+            var wW;
+            const iW = null === (wW = mW.byLocation.get(WW)) || void 0 === wW ? void 0 : wW.buffer;
+            iW && cW.pages.push({
               kind: "buf",
-              buffer: ie
+              buffer: iW
             })
-          }! function(ee, ie, He, ye, be, Me, Ke) {
-            const Ue = ye.get(Xe),
-              Fe = Ke.parts.get(Me);
-            if (void 0 === Fe && Ke.parts.size >= Oe) return;
-            const Je = Math.min(be, We, de - (null !== Fe && void 0 !== Fe ? Fe : 0));
-            if (null === Ue || void 0 === Ue || !Ue.buffer || Je <= 0) return;
-            const oe = ne(ee, ie, He);
-            if (!oe) return;
-            const Re = Ue.stride || 12,
-              ke = Ne(ee, Ue.buffer, Ue.offset, (Je - 1) * Re + 12),
-              qe = new DataView(ke.buffer),
-              fe = function(ee, ie) {
-                const He = function(ee) {
-                    const ie = Qe.get(ee);
-                    if (void 0 !== ie && (null === ie || ee.isProgram(ie))) return ie;
-                    Ve.inProbe = !0;
-                    let He = null;
+          }! function(WW, iW, OW, mW, EW, NW, PW) {
+            const LW = mW.get(UW),
+              cW = PW.parts.get(NW);
+            if (void 0 === cW && PW.parts.size >= SW) return;
+            const wW = Math.min(EW, yW, YW - (null !== cW && void 0 !== cW ? cW : 0));
+            if (null === LW || void 0 === LW || !LW.buffer || wW <= 0) return;
+            const tW = qW(WW, iW, OW);
+            if (!tW) return;
+            const ZW = LW.stride || 12,
+              xW = rW(WW, LW.buffer, LW.offset, (wW - 1) * ZW + 12),
+              lW = new DataView(xW.buffer),
+              AW = function(WW, iW) {
+                const OW = function(WW) {
+                    const iW = QW.get(WW);
+                    if (void 0 !== iW && (null === iW || WW.isProgram(iW))) return iW;
+                    dW.inProbe = !0;
+                    let OW = null;
                     try {
-                      He = je(ee, Ge, re, "fed", "the record feed")
+                      OW = RW(WW, zW, FW, "fed", "the record feed")
                     } finally {
-                      Ve.inProbe = !1
+                      dW.inProbe = !1
                     }
-                    return Qe.set(ee, He), He
-                  }(ee),
-                  ye = He ? he(ee, He, ie, (() => {
-                    ee.drawArraysInstanced(Te.POINTS, 0, 1, ie)
+                    return QW.set(WW, OW), OW
+                  }(WW),
+                  mW = OW ? aW(WW, OW, iW, (() => {
+                    WW.drawArraysInstanced(bW.POINTS, 0, 1, iW)
                   }), "decode probe input (the record feed)") : null;
-                return ye ? new Uint32Array(ye.buffer) : null
-              }(ee, Je);
-            fe || Ke.fed.failed++;
-            const pe = he(ee, oe, 4 * Je, (() => {
-              ee.drawArraysInstanced(Te.POINTS, 0, 4, Je)
+                return mW ? new Uint32Array(mW.buffer) : null
+              }(WW, wW);
+            AW || PW.fed.failed++;
+            const jW = aW(WW, tW, 4 * wW, (() => {
+              WW.drawArraysInstanced(bW.POINTS, 0, 4, wW)
             }));
-            if (!pe) return;
-            Ke.parts.set(Me, (null !== Fe && void 0 !== Fe ? Fe : 0) + Je);
-            for (let Te = 0; Te < Je; Te++) {
-              const ee = Te * Re,
-                ie = [qe.getUint32(ee, !0), qe.getUint32(ee + 4, !0), qe.getUint32(ee + 8, !0)],
-                He = fe ? [fe[3 * Te], fe[3 * Te + 1], fe[3 * Te + 2]] : ie;
-              fe && (Ke.fed.records++, He.some(((ee, He) => ee !== ie[He])) && (Ke.fed.differing++, Ke.fed.first.length < 8 && Ke.fed.first.push(`part ${Me} instance ${Te}: fed ${He.map(bi).join(" ")} buffer ${ie.map(bi).join(" ")}`)));
-              for (let ye = 0; ye < 4; ye++) {
-                const ee = 3 * (4 * Te + ye);
-                Ke.vertices.push({
-                  record: He,
-                  slot: ye,
-                  group: Me,
-                  gpu: [pe[ee], pe[ee + 1], pe[ee + 2]]
+            if (!jW) return;
+            PW.parts.set(NW, (null !== cW && void 0 !== cW ? cW : 0) + wW);
+            for (let bW = 0; bW < wW; bW++) {
+              const WW = bW * ZW,
+                iW = [lW.getUint32(WW, !0), lW.getUint32(WW + 4, !0), lW.getUint32(WW + 8, !0)],
+                OW = AW ? [AW[3 * bW], AW[3 * bW + 1], AW[3 * bW + 2]] : iW;
+              AW && (PW.fed.records++, OW.some(((WW, OW) => WW !== iW[OW])) && (PW.fed.differing++, PW.fed.first.length < 8 && PW.fed.first.push(`part ${NW} instance ${bW}: fed ${OW.map(Ei).join(" ")} buffer ${iW.map(Ei).join(" ")}`)));
+              for (let mW = 0; mW < 4; mW++) {
+                const WW = 3 * (4 * bW + mW);
+                PW.vertices.push({
+                  record: OW,
+                  slot: mW,
+                  group: NW,
+                  gpu: [jW[WW], jW[WW + 1], jW[WW + 2]]
                 })
               }
             }
-          }(ee, ie, He, ye.byLocation, Me, be, Ke)
+          }(WW, iW, OW, mW.byLocation, NW, EW, PW)
         } else {
-          const ye = ei(ee, ie, 16),
-            Me = ei(ee, ie, 8);
-          for (const ee of [ye, Me]) ee && Fe.pages.push({
+          const mW = Wi(WW, iW, 16),
+            NW = Wi(WW, iW, 8);
+          for (const WW of [mW, NW]) WW && cW.pages.push({
             kind: "tex",
-            texture: ee
+            texture: WW
           });
-          ye && function(ee, ie, He, ye, be, Me) {
-            if (Me.parts.size >= Oe) return;
-            const Ke = ne(ee, ie, He);
-            if (!Ke) return;
-            let Ue = 6 * de;
-            const Fe = [];
-            for (const [qe, fe] of be) {
-              const ee = Math.min(fe, Ue, Math.max(6, 6 * Math.floor(de / be.length)));
-              ee > 0 && (Fe.push([qe, ee]), Ue -= ee)
+          mW && function(WW, iW, OW, mW, EW, NW) {
+            if (NW.parts.size >= SW) return;
+            const PW = qW(WW, iW, OW);
+            if (!PW) return;
+            let LW = 6 * YW;
+            const cW = [];
+            for (const [lW, AW] of EW) {
+              const WW = Math.min(AW, LW, Math.max(6, 6 * Math.floor(YW / EW.length)));
+              WW > 0 && (cW.push([lW, WW]), LW -= WW)
             }
-            const Je = Fe.reduce(((ee, ie) => {
-                let [, He] = ie;
-                return ee + He
+            const wW = cW.reduce(((WW, iW) => {
+                let [, OW] = iW;
+                return WW + OW
               }), 0),
-              oe = he(ee, Ke, Je, (() => {
-                for (const [ie, He] of Fe) ee.drawArrays(Te.POINTS, ie, He)
+              tW = aW(WW, PW, wW, (() => {
+                for (const [iW, OW] of cW) WW.drawArrays(bW.POINTS, iW, OW)
               }));
-            if (!oe) return;
-            let Re = 0;
-            for (const [qe, fe] of Fe) {
-              const ie = Math.floor(qe / 6),
-                He = Math.floor((qe + fe - 1) / 6) - ie + 1,
-                be = ii(ee, ye, ge, ie, He);
-              for (let ee = qe; ee < qe + fe; ee++, Re++) {
-                var ke;
-                const He = 4 * (Math.floor(ee / 6) - ie),
-                  ye = [be[He], be[He + 1], be[He + 2]];
-                Me.parts.set(be[He + 3], (null !== (ke = Me.parts.get(be[He + 3])) && void 0 !== ke ? ke : 0) + (ee % 6 === 0 ? 1 : 0)), Me.vertices.push({
-                  record: ye,
-                  slot: Ee[ee % 6],
-                  group: be[He + 3],
-                  gpu: [oe[3 * Re], oe[3 * Re + 1], oe[3 * Re + 2]]
+            if (!tW) return;
+            let ZW = 0;
+            for (const [lW, AW] of cW) {
+              const iW = Math.floor(lW / 6),
+                OW = Math.floor((lW + AW - 1) / 6) - iW + 1,
+                EW = ii(WW, mW, KW, iW, OW);
+              for (let WW = lW; WW < lW + AW; WW++, ZW++) {
+                var xW;
+                const OW = 4 * (Math.floor(WW / 6) - iW),
+                  mW = [EW[OW], EW[OW + 1], EW[OW + 2]];
+                NW.parts.set(EW[OW + 3], (null !== (xW = NW.parts.get(EW[OW + 3])) && void 0 !== xW ? xW : 0) + (WW % 6 === 0 ? 1 : 0)), NW.vertices.push({
+                  record: mW,
+                  slot: MW[WW % 6],
+                  group: EW[OW + 3],
+                  gpu: [tW[3 * ZW], tW[3 * ZW + 1], tW[3 * ZW + 2]]
                 })
               }
             }
-          }(ee, ie, He, ye, be, Ke)
+          }(WW, iW, OW, mW, EW, PW)
         }
-      } catch (oe) {
-        ue(`decode probe failed on program ${De(He)}: ${String(oe)}`)
+      } catch (tW) {
+        fW(`decode probe failed on program ${HW(OW)}: ${String(tW)}`)
       }
     }
 
-    function ne(ee, ie, He) {
-      if (void 0 !== He.probe) return He.probe && se(ee, ie, He.probe), He.probe;
-      He.probe = null, Ve.inProbe = !0;
+    function qW(WW, iW, OW) {
+      if (void 0 !== OW.probe) return OW.probe && GW(WW, iW, OW.probe), OW.probe;
+      OW.probe = null, dW.inProbe = !0;
       try {
-        He.probe = function(ee, ie) {
-          return je(ee, (He = ie.vertex, He.replace(`\nvec3 ${pe} = vec3(0);\n`, `\nout vec3 ${pe};\n`)), ie.fragment, pe, `program ${De(ie)}'s twin`);
-          var He
-        }(ee, He)
+        OW.probe = function(WW, iW) {
+          return RW(WW, (OW = iW.vertex, OW.replace(`\nvec3 ${jW} = vec3(0);\n`, `\nout vec3 ${jW};\n`)), iW.fragment, jW, `program ${HW(iW)}'s twin`);
+          var OW
+        }(WW, OW)
       } finally {
-        Ve.inProbe = !1
+        dW.inProbe = !1
       }
-      return He.probe && se(ee, ie, He.probe), He.probe
+      return OW.probe && GW(WW, iW, OW.probe), OW.probe
     }
 
-    function je(ee, ie, He, ye, be) {
-      const Me = [ee.createShader(Te.VERTEX_SHADER), ee.createShader(Te.FRAGMENT_SHADER)],
-        Ke = ee.createProgram();
-      if (!Ke || !Me[0] || !Me[1]) return null;
-      ee.shaderSource(Me[0], ie), ee.shaderSource(Me[1], He);
-      for (const Fe of Me) ee.compileShader(Fe), ee.attachShader(Ke, Fe);
-      ee.transformFeedbackVaryings(Ke, [ye], Te.INTERLEAVED_ATTRIBS), ee.linkProgram(Ke);
-      for (const Fe of Me) ee.deleteShader(Fe);
-      var Ue;
-      return ee.getProgramParameter(Ke, Te.LINK_STATUS) ? Ke : (ue(`decode probe: ${be} failed to link: ${le(null!==(Ue=ee.getProgramInfoLog(Ke))&&void 0!==Ue?Ue:"",300)}`), ee.deleteProgram(Ke), null)
+    function RW(WW, iW, OW, mW, EW) {
+      const NW = [WW.createShader(bW.VERTEX_SHADER), WW.createShader(bW.FRAGMENT_SHADER)],
+        PW = WW.createProgram();
+      if (!PW || !NW[0] || !NW[1]) return null;
+      WW.shaderSource(NW[0], iW), WW.shaderSource(NW[1], OW);
+      for (const cW of NW) WW.compileShader(cW), WW.attachShader(PW, cW);
+      WW.transformFeedbackVaryings(PW, [mW], bW.INTERLEAVED_ATTRIBS), WW.linkProgram(PW);
+      for (const cW of NW) WW.deleteShader(cW);
+      var LW;
+      return WW.getProgramParameter(PW, bW.LINK_STATUS) ? PW : (fW(`decode probe: ${EW} failed to link: ${XW(null!==(LW=WW.getProgramInfoLog(PW))&&void 0!==LW?LW:"",300)}`), WW.deleteProgram(PW), null)
     }
 
-    function se(ee, ie, He) {
-      const ye = ee.getProgramParameter(ie, Te.ACTIVE_UNIFORM_BLOCKS);
-      for (let Ue = 0; Ue < ye; Ue++) {
-        const ye = ee.getActiveUniformBlockName(ie, Ue),
-          be = null === ye ? Te.INVALID_INDEX : ee.getUniformBlockIndex(He, ye);
-        be !== Te.INVALID_INDEX && ee.uniformBlockBinding(He, be, ee.getActiveUniformBlockParameter(ie, Ue, Te.UNIFORM_BLOCK_BINDING))
+    function GW(WW, iW, OW) {
+      const mW = WW.getProgramParameter(iW, bW.ACTIVE_UNIFORM_BLOCKS);
+      for (let LW = 0; LW < mW; LW++) {
+        const mW = WW.getActiveUniformBlockName(iW, LW),
+          EW = null === mW ? bW.INVALID_INDEX : WW.getUniformBlockIndex(OW, mW);
+        EW !== bW.INVALID_INDEX && WW.uniformBlockBinding(OW, EW, WW.getActiveUniformBlockParameter(iW, LW, bW.UNIFORM_BLOCK_BINDING))
       }
-      const be = ee.getParameter(Te.CURRENT_PROGRAM);
-      ee.useProgram(He);
-      const Me = ee.getProgramParameter(ie, Te.ACTIVE_UNIFORMS),
-        Ke = ee.getActiveUniforms(ie, [...Array(Me).keys()], Te.UNIFORM_BLOCK_INDEX);
-      for (let Ue = 0; Ue < Me; Ue++) {
-        const ye = ee.getActiveUniform(ie, Ue);
-        if (!ye || -1 !== Ke[Ue]) continue;
-        const be = ye.name.replace(/\[0\]$/, "");
-        for (let Me = 0; Me < ye.size; Me++) {
-          const Ke = ye.size > 1 ? `${be}[${Me}]` : ye.name,
-            Ue = ee.getUniformLocation(ie, Ke),
-            Fe = ee.getUniformLocation(He, Ke);
-          Ue && Fe && Ie(ee, Fe, ye.type, ee.getUniform(ie, Ue))
+      const EW = WW.getParameter(bW.CURRENT_PROGRAM);
+      WW.useProgram(OW);
+      const NW = WW.getProgramParameter(iW, bW.ACTIVE_UNIFORMS),
+        PW = WW.getActiveUniforms(iW, [...Array(NW).keys()], bW.UNIFORM_BLOCK_INDEX);
+      for (let LW = 0; LW < NW; LW++) {
+        const mW = WW.getActiveUniform(iW, LW);
+        if (!mW || -1 !== PW[LW]) continue;
+        const EW = mW.name.replace(/\[0\]$/, "");
+        for (let NW = 0; NW < mW.size; NW++) {
+          const PW = mW.size > 1 ? `${EW}[${NW}]` : mW.name,
+            LW = WW.getUniformLocation(iW, PW),
+            cW = WW.getUniformLocation(OW, PW);
+          LW && cW && IW(WW, cW, mW.type, WW.getUniform(iW, LW))
         }
       }
-      ee.useProgram(be)
+      WW.useProgram(EW)
     }
 
-    function Ie(ee, ie, He, ye) {
-      const be = ArrayBuffer.isView(ye) ? Array.from(ye) : [Number(ye)];
-      switch (He) {
-        case Te.FLOAT:
-          return void ee.uniform1f(ie, be[0]);
-        case Te.FLOAT_VEC2:
-          return void ee.uniform2fv(ie, be);
-        case Te.FLOAT_VEC3:
-          return void ee.uniform3fv(ie, be);
-        case Te.FLOAT_VEC4:
-          return void ee.uniform4fv(ie, be);
-        case Te.FLOAT_MAT3:
-          return void ee.uniformMatrix3fv(ie, !1, be);
-        case Te.FLOAT_MAT4:
-          return void ee.uniformMatrix4fv(ie, !1, be);
-        case Te.UNSIGNED_INT:
-          return void ee.uniform1ui(ie, be[0]);
-        case Te.UNSIGNED_INT_VEC2:
-          return void ee.uniform2uiv(ie, be);
-        case Te.UNSIGNED_INT_VEC3:
-          return void ee.uniform3uiv(ie, be);
-        case Te.UNSIGNED_INT_VEC4:
-          return void ee.uniform4uiv(ie, be);
-        case Te.INT_VEC2:
-          return void ee.uniform2iv(ie, be);
-        case Te.INT_VEC3:
-          return void ee.uniform3iv(ie, be);
-        case Te.INT_VEC4:
-          return void ee.uniform4iv(ie, be);
+    function IW(WW, iW, OW, mW) {
+      const EW = ArrayBuffer.isView(mW) ? Array.from(mW) : [Number(mW)];
+      switch (OW) {
+        case bW.FLOAT:
+          return void WW.uniform1f(iW, EW[0]);
+        case bW.FLOAT_VEC2:
+          return void WW.uniform2fv(iW, EW);
+        case bW.FLOAT_VEC3:
+          return void WW.uniform3fv(iW, EW);
+        case bW.FLOAT_VEC4:
+          return void WW.uniform4fv(iW, EW);
+        case bW.FLOAT_MAT3:
+          return void WW.uniformMatrix3fv(iW, !1, EW);
+        case bW.FLOAT_MAT4:
+          return void WW.uniformMatrix4fv(iW, !1, EW);
+        case bW.UNSIGNED_INT:
+          return void WW.uniform1ui(iW, EW[0]);
+        case bW.UNSIGNED_INT_VEC2:
+          return void WW.uniform2uiv(iW, EW);
+        case bW.UNSIGNED_INT_VEC3:
+          return void WW.uniform3uiv(iW, EW);
+        case bW.UNSIGNED_INT_VEC4:
+          return void WW.uniform4uiv(iW, EW);
+        case bW.INT_VEC2:
+          return void WW.uniform2iv(iW, EW);
+        case bW.INT_VEC3:
+          return void WW.uniform3iv(iW, EW);
+        case bW.INT_VEC4:
+          return void WW.uniform4iv(iW, EW);
         default:
-          ee.uniform1i(ie, be[0])
+          WW.uniform1i(iW, EW[0])
       }
     }
 
-    function he(ee, ie, He, ye) {
-      let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const Me = ee.getParameter(Te.CURRENT_PROGRAM),
-        Ke = ee.getParameter(Te.TRANSFORM_FEEDBACK_BINDING),
-        Ue = ee.getParameter(Te.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        Fe = ee.getParameter(Te.COPY_READ_BUFFER_BINDING),
-        Je = ee.isEnabled(Te.RASTERIZER_DISCARD),
-        oe = ee.createTransformFeedback(),
-        Re = ee.createBuffer();
-      Ve.inProbe = !0;
+    function aW(WW, iW, OW, mW) {
+      let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const NW = WW.getParameter(bW.CURRENT_PROGRAM),
+        PW = WW.getParameter(bW.TRANSFORM_FEEDBACK_BINDING),
+        LW = WW.getParameter(bW.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        cW = WW.getParameter(bW.COPY_READ_BUFFER_BINDING),
+        wW = WW.isEnabled(bW.RASTERIZER_DISCARD),
+        tW = WW.createTransformFeedback(),
+        ZW = WW.createBuffer();
+      dW.inProbe = !0;
       try {
-        const Me = ee.getError();
-        Me !== Te.NO_ERROR && ue(`GL error 0x${Me.toString(16)} pending before the decode probe (the renderer's)`), ee.useProgram(ie), ee.bindTransformFeedback(Te.TRANSFORM_FEEDBACK, oe), ee.bindBuffer(Te.TRANSFORM_FEEDBACK_BUFFER, Re), ee.bufferData(Te.TRANSFORM_FEEDBACK_BUFFER, 12 * He, Te.STREAM_READ), ee.bindBufferBase(Te.TRANSFORM_FEEDBACK_BUFFER, 0, Re), ee.enable(Te.RASTERIZER_DISCARD), ee.beginTransformFeedback(Te.POINTS), ye(), ee.endTransformFeedback(), ee.bindBufferBase(Te.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const Ke = ee.getError();
-        if (Ke !== Te.NO_ERROR) return ue(`${be}: GL error 0x${Ke.toString(16)} on the feedback draw`), null;
-        const Ue = new Float32Array(3 * He);
-        return ee.bindBuffer(Te.COPY_READ_BUFFER, Re), ee.getBufferSubData(Te.COPY_READ_BUFFER, 0, Ue), Ue
+        const NW = WW.getError();
+        NW !== bW.NO_ERROR && fW(`GL error 0x${NW.toString(16)} pending before the decode probe (the renderer's)`), WW.useProgram(iW), WW.bindTransformFeedback(bW.TRANSFORM_FEEDBACK, tW), WW.bindBuffer(bW.TRANSFORM_FEEDBACK_BUFFER, ZW), WW.bufferData(bW.TRANSFORM_FEEDBACK_BUFFER, 12 * OW, bW.STREAM_READ), WW.bindBufferBase(bW.TRANSFORM_FEEDBACK_BUFFER, 0, ZW), WW.enable(bW.RASTERIZER_DISCARD), WW.beginTransformFeedback(bW.POINTS), mW(), WW.endTransformFeedback(), WW.bindBufferBase(bW.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const PW = WW.getError();
+        if (PW !== bW.NO_ERROR) return fW(`${EW}: GL error 0x${PW.toString(16)} on the feedback draw`), null;
+        const LW = new Float32Array(3 * OW);
+        return WW.bindBuffer(bW.COPY_READ_BUFFER, ZW), WW.getBufferSubData(bW.COPY_READ_BUFFER, 0, LW), LW
       } finally {
-        Je || ee.disable(Te.RASTERIZER_DISCARD), ee.bindTransformFeedback(Te.TRANSFORM_FEEDBACK, Ke), ee.bindBuffer(Te.TRANSFORM_FEEDBACK_BUFFER, Ue), ee.bindBuffer(Te.COPY_READ_BUFFER, Fe), ee.deleteTransformFeedback(oe), ee.deleteBuffer(Re), ee.useProgram(Me), Ve.inProbe = !1
+        wW || WW.disable(bW.RASTERIZER_DISCARD), WW.bindTransformFeedback(bW.TRANSFORM_FEEDBACK, PW), WW.bindBuffer(bW.TRANSFORM_FEEDBACK_BUFFER, LW), WW.bindBuffer(bW.COPY_READ_BUFFER, cW), WW.deleteTransformFeedback(tW), WW.deleteBuffer(ZW), WW.useProgram(NW), dW.inProbe = !1
       }
     }
 
-    function Ne(ee, ie, He, ye) {
-      const be = ee.getParameter(Te.COPY_READ_BUFFER_BINDING),
-        Me = new Uint8Array(ye);
-      return ee.bindBuffer(Te.COPY_READ_BUFFER, ie), ee.getBufferSubData(Te.COPY_READ_BUFFER, He, Me), ee.bindBuffer(Te.COPY_READ_BUFFER, be), Me
+    function rW(WW, iW, OW, mW) {
+      const EW = WW.getParameter(bW.COPY_READ_BUFFER_BINDING),
+        NW = new Uint8Array(mW);
+      return WW.bindBuffer(bW.COPY_READ_BUFFER, iW), WW.getBufferSubData(bW.COPY_READ_BUFFER, OW, NW), WW.bindBuffer(bW.COPY_READ_BUFFER, EW), NW
     }
-    const Ge = `#version 300 es\nlayout(location = ${Xe}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      re = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      Qe = new WeakMap;
+    const zW = `#version 300 es\nlayout(location = ${UW}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      FW = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      QW = new WeakMap;
 
-    function ei(ee, ie, He) {
-      const ye = ee.getProgramParameter(ie, Te.ACTIVE_UNIFORMS),
-        be = ee.getParameter(Te.ACTIVE_TEXTURE);
+    function Wi(WW, iW, OW) {
+      const mW = WW.getProgramParameter(iW, bW.ACTIVE_UNIFORMS),
+        EW = WW.getParameter(bW.ACTIVE_TEXTURE);
       try {
-        for (let be = 0; be < ye; be++) {
-          const ye = ee.getActiveUniform(ie, be);
-          if ((null === ye || void 0 === ye ? void 0 : ye.type) !== Te.UNSIGNED_INT_SAMPLER_2D) continue;
-          const Me = ee.getUniformLocation(ie, ye.name),
-            Ke = Me ? ee.getUniform(ie, Me) : -1;
-          if (Ke < 0) continue;
-          ee.activeTexture(Te.TEXTURE0 + Ke);
-          const Ue = ee.getParameter(Te.TEXTURE_BINDING_2D);
-          if (Ue && Ye.get(Ue) === He) return Ue
+        for (let EW = 0; EW < mW; EW++) {
+          const mW = WW.getActiveUniform(iW, EW);
+          if ((null === mW || void 0 === mW ? void 0 : mW.type) !== bW.UNSIGNED_INT_SAMPLER_2D) continue;
+          const NW = WW.getUniformLocation(iW, mW.name),
+            PW = NW ? WW.getUniform(iW, NW) : -1;
+          if (PW < 0) continue;
+          WW.activeTexture(bW.TEXTURE0 + PW);
+          const LW = WW.getParameter(bW.TEXTURE_BINDING_2D);
+          if (LW && oW.get(LW) === OW) return LW
         }
         return null
       } finally {
-        ee.activeTexture(be)
+        WW.activeTexture(EW)
       }
     }
 
-    function ii(ee, ie, He, ye, be) {
-      const Me = new Uint32Array(4 * be),
-        Ke = ee.getParameter(Te.READ_FRAMEBUFFER_BINDING),
-        Ue = ee.createFramebuffer();
-      ee.bindFramebuffer(Te.READ_FRAMEBUFFER, Ue), ee.framebufferTexture2D(Te.READ_FRAMEBUFFER, Te.COLOR_ATTACHMENT0, Te.TEXTURE_2D, ie, 0);
+    function ii(WW, iW, OW, mW, EW) {
+      const NW = new Uint32Array(4 * EW),
+        PW = WW.getParameter(bW.READ_FRAMEBUFFER_BINDING),
+        LW = WW.createFramebuffer();
+      WW.bindFramebuffer(bW.READ_FRAMEBUFFER, LW), WW.framebufferTexture2D(bW.READ_FRAMEBUFFER, bW.COLOR_ATTACHMENT0, bW.TEXTURE_2D, iW, 0);
       try {
-        let ie = 0;
-        for (; ie < be;) {
-          const Ke = ye + ie,
-            Ue = Ke % He,
-            Fe = Math.min(be - ie, He - Ue);
-          ee.readPixels(Ue, Math.floor(Ke / He), Fe, 1, Te.RGBA_INTEGER, Te.UNSIGNED_INT, Me.subarray(4 * ie, 4 * (ie + Fe))), ie += Fe
+        let iW = 0;
+        for (; iW < EW;) {
+          const PW = mW + iW,
+            LW = PW % OW,
+            cW = Math.min(EW - iW, OW - LW);
+          WW.readPixels(LW, Math.floor(PW / OW), cW, 1, bW.RGBA_INTEGER, bW.UNSIGNED_INT, NW.subarray(4 * iW, 4 * (iW + cW))), iW += cW
         }
       } finally {
-        ee.bindFramebuffer(Te.READ_FRAMEBUFFER, Ke), ee.deleteFramebuffer(Ue)
+        WW.bindFramebuffer(bW.READ_FRAMEBUFFER, PW), WW.deleteFramebuffer(LW)
       }
-      return Me
+      return NW
     }
 
-    function Hi(ee, ie, He) {
-      let ye = 0,
-        be = 0;
-      for (let Fe = 0; Fe < ie.bytes.length; Fe += Ze) {
-        ye++;
-        const ee = Math.min(Fe + Ze, ie.bytes.length);
-        qe(ie.bytes.subarray(Fe, ee)) !== qe(He.subarray(Fe, ee)) && be++
+    function Oi(WW, iW, OW) {
+      let mW = 0,
+        EW = 0;
+      for (let cW = 0; cW < iW.bytes.length; cW += JW) {
+        mW++;
+        const WW = Math.min(cW + JW, iW.bytes.length);
+        lW(iW.bytes.subarray(cW, WW)) !== lW(OW.subarray(cW, WW)) && EW++
       }
-      const Me = `${ee} ${ie.bytes.length} B cpu ${qe(ie.bytes).toString(16)} gpu ${qe(He).toString(16)}, ${be}/${ye} blocks differ${ie.missed?`, ${ie.missed} GPU-side writes uncopied`:""}`;
-      if (0 === be) return Me;
+      const NW = `${WW} ${iW.bytes.length} B cpu ${lW(iW.bytes).toString(16)} gpu ${lW(OW).toString(16)}, ${EW}/${mW} blocks differ${iW.missed?`, ${iW.missed} GPU-side writes uncopied`:""}`;
+      if (0 === EW) return NW;
       const {
-        count: Ke,
-        offsets: Ue
-      } = function(ee, ie) {
-        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const ye = Math.min(ee.length, ie.length);
-        let be = Math.abs(ee.length - ie.length);
-        const Me = [];
-        for (let Ke = 0; Ke < ye; Ke++) ee[Ke] !== ie[Ke] && (be++, Me.length < He && Me.push(Ke));
+        count: PW,
+        offsets: LW
+      } = function(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const mW = Math.min(WW.length, iW.length);
+        let EW = Math.abs(WW.length - iW.length);
+        const NW = [];
+        for (let PW = 0; PW < mW; PW++) WW[PW] !== iW[PW] && (EW++, NW.length < OW && NW.push(PW));
         return {
-          count: be,
-          offsets: Me
+          count: EW,
+          offsets: NW
         }
-      }(ie.bytes, He);
-      return me([`${Me}: ${Ke} bytes differ`, ...Ue.map((ee => `  +${ee}: cpu ${fe(ie.bytes,ee)} | gpu ${fe(He,ee)}`))].join("\n")), `${Me}: ${Ke} bytes differ, first at ${Ue.join(", ")} (context in the saved file)`
+      }(iW.bytes, OW);
+      return CW([`${NW}: ${PW} bytes differ`, ...LW.map((WW => `  +${WW}: cpu ${AW(iW.bytes,WW)} | gpu ${AW(OW,WW)}`))].join("\n")), `${NW}: ${PW} bytes differ, first at ${LW.join(", ")} (context in the saved file)`
     }
 
-    function yi(ee) {
-      if (0 === ee.vertices.length) return void ue(`decode probe (${ee.reason}): no terrain draw probed (${ee.draws.length} seen)`);
-      const ie = function(ee) {
-          const ie = new Map;
-          for (const ye of ee) {
-            const ee = ie.get(ye.group);
-            ee ? ee.push(ye) : ie.set(ye.group, [ye])
+    function mi(WW) {
+      if (0 === WW.vertices.length) return void fW(`decode probe (${WW.reason}): no terrain draw probed (${WW.draws.length} seen)`);
+      const iW = function(WW) {
+          const iW = new Map;
+          for (const mW of WW) {
+            const WW = iW.get(mW.group);
+            WW ? WW.push(mW) : iW.set(mW.group, [mW])
           }
-          const He = {
-            vertices: ee.length,
+          const OW = {
+            vertices: WW.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -607,67 +607,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [ye, be] of ie) {
-            const ee = new Map,
-              ie = be.map((ie => {
-                const He = oe(ie.record, ie.slot),
-                  ye = [ie.gpu[0] - He[0], ie.gpu[1] - He[1], ie.gpu[2] - He[2]],
-                  be = ye.map((ee => Math.round(64 * ee))).join(","),
-                  Me = ee.get(be);
-                return Me ? Me.count++ : ee.set(be, {
+          for (const [mW, EW] of iW) {
+            const WW = new Map,
+              iW = EW.map((iW => {
+                const OW = tW(iW.record, iW.slot),
+                  mW = [iW.gpu[0] - OW[0], iW.gpu[1] - OW[1], iW.gpu[2] - OW[2]],
+                  EW = mW.map((WW => Math.round(64 * WW))).join(","),
+                  NW = WW.get(EW);
+                return NW ? NW.count++ : WW.set(EW, {
                   count: 1,
-                  offset: ye
-                }), He
+                  offset: mW
+                }), OW
               }));
-            let Me = [0, 0, 0],
-              Ke = 0;
-            for (const He of ee.values()) He.count > Ke && (Ke = He.count, Me = He.offset);
-            He.translations.set(ye, Me), be.forEach(((ee, ye) => {
-              var be;
-              const Ke = [ie[ye][0] + Me[0], ie[ye][1] + Me[1], ie[ye][2] + Me[2]];
-              if (Ke.every(((ie, He) => {
-                  return ye = ee.gpu[He], be = ie, Math.abs(ye - be) <= Math.max(.001, 1e-6 * Math.abs(be));
-                  var ye, be
+            let NW = [0, 0, 0],
+              PW = 0;
+            for (const OW of WW.values()) OW.count > PW && (PW = OW.count, NW = OW.offset);
+            OW.translations.set(mW, NW), EW.forEach(((WW, mW) => {
+              var EW;
+              const PW = [iW[mW][0] + NW[0], iW[mW][1] + NW[1], iW[mW][2] + NW[2]];
+              if (PW.every(((iW, OW) => {
+                  return mW = WW.gpu[OW], EW = iW, Math.abs(mW - EW) <= Math.max(.001, 1e-6 * Math.abs(EW));
+                  var mW, EW
                 }))) return;
-              He.mismatches++, He.byDirection[Ue(ee.record[2])]++, He.byDiagonal[Fe(ee.record[2])]++;
-              const Je = Re(ee.record);
-              He.byBand[Je] = (null !== (be = He.byBand[Je]) && void 0 !== be ? be : 0) + 1, He.first.length < ke && He.first.push({
-                ...ee,
-                expected: Ke
+              OW.mismatches++, OW.byDirection[LW(WW.record[2])]++, OW.byDiagonal[cW(WW.record[2])]++;
+              const wW = ZW(WW.record);
+              OW.byBand[wW] = (null !== (EW = OW.byBand[wW]) && void 0 !== EW ? EW : 0) + 1, OW.first.length < xW && OW.first.push({
+                ...WW,
+                expected: PW
               })
             }))
           }
-          return He
-        }(ee.vertices),
-        He = ie.byDirection.map(((ee, ie) => ee ? `${Ke[ie]} ${ee}` : "")).filter(Boolean).join(" "),
-        ye = Object.entries(ie.byBand).map((ee => {
-          let [ie, He] = ee;
-          return `${ie}: ${He}`
+          return OW
+        }(WW.vertices),
+        OW = iW.byDirection.map(((WW, iW) => WW ? `${PW[iW]} ${WW}` : "")).filter(Boolean).join(" "),
+        mW = Object.entries(iW.byBand).map((WW => {
+          let [iW, OW] = WW;
+          return `${iW}: ${OW}`
         })).join(" ");
-      if (ue(`decode probe (${ee.reason}): ${ie.mismatches}/${ie.vertices} vertices differ from the CPU decode over ${ee.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (ie.mismatches ? ` by direction [${He}] diagonal [0: ${ie.byDiagonal[0]} 1: ${ie.byDiagonal[1]}] extent [${ye}]` : "")), ee.fed.records > 0 || ee.fed.failed > 0) {
-        ue(`decode probe input: ${ee.fed.differing}/${ee.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (ee.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (ee.fed.failed ? `; the feed failed on ${ee.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const ie of ee.fed.first) ue(`  ${ie}`)
+      if (fW(`decode probe (${WW.reason}): ${iW.mismatches}/${iW.vertices} vertices differ from the CPU decode over ${WW.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (iW.mismatches ? ` by direction [${OW}] diagonal [0: ${iW.byDiagonal[0]} 1: ${iW.byDiagonal[1]}] extent [${mW}]` : "")), WW.fed.records > 0 || WW.fed.failed > 0) {
+        fW(`decode probe input: ${WW.fed.differing}/${WW.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (WW.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (WW.fed.failed ? `; the feed failed on ${WW.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const iW of WW.fed.first) fW(`  ${iW}`)
       }
-      for (const be of ie.first) {
-        const [ee, ie, He] = be.record;
-        ue(`  mismatch part ${be.group} r0 ${ee.toString(16)} r1 ${ie.toString(16)} r2 ${He.toString(16)} slot ${be.slot} (${Ke[Ue(He)]}): expected ${be.expected.map(Mi).join(",")} gpu ${be.gpu.map(Mi).join(",")}`)
+      for (const EW of iW.first) {
+        const [WW, iW, OW] = EW.record;
+        fW(`  mismatch part ${EW.group} r0 ${WW.toString(16)} r1 ${iW.toString(16)} r2 ${OW.toString(16)} slot ${EW.slot} (${PW[LW(OW)]}): expected ${EW.expected.map(Ni).join(",")} gpu ${EW.gpu.map(Ni).join(",")}`)
       }
-      me(`decode probe translations: ${[...ie.translations].map((ee=>{let[ie,He]=ee;return`${ie}: ${He.map(Mi).join(",")}`})).join("; ")}`)
+      CW(`decode probe translations: ${[...iW.translations].map((WW=>{let[iW,OW]=WW;return`${iW}: ${OW.map(Ni).join(",")}`})).join("; ")}`)
     }
 
-    function bi(ee) {
-      return ee.toString(16)
+    function Ei(WW) {
+      return WW.toString(16)
     }
 
-    function Mi(ee) {
-      return Number.isInteger(ee) ? String(ee) : ee.toFixed(3)
+    function Ni(WW) {
+      return Number.isInteger(WW) ? String(WW) : WW.toFixed(3)
     }
 
-    function Ki(ee) {
-      return null !== Ve.pendingCheck ? Promise.resolve() : new Promise((ie => {
-        let He = !1;
-        const ye = {
-          reason: ee,
+    function Pi(WW) {
+      return null !== dW.pendingCheck ? Promise.resolve() : new Promise((iW => {
+        let OW = !1;
+        const mW = {
+          reason: WW,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -680,85 +680,85 @@ export const modules = {
             failed: 0
           }
         };
-        Ve.pendingCheck = ye;
-        const be = () => {
-            Ve.pendingCheck = null;
+        dW.pendingCheck = mW;
+        const EW = () => {
+            dW.pendingCheck = null;
             try {
-              ! function(ee) {
-                ue(`draw ranges (${ee.reason}): ${ee.terrainDraws} terrain draws in the frame, the first ${ee.draws.length} here`);
-                for (const ie of ee.draws) {
-                  const ee = ie.zp.slice(0, 8).map((ee => {
-                      let [ie, He] = ee;
-                      return `${ie}+${He}`
+              ! function(WW) {
+                fW(`draw ranges (${WW.reason}): ${WW.terrainDraws} terrain draws in the frame, the first ${WW.draws.length} here`);
+                for (const iW of WW.draws) {
+                  const WW = iW.kj.slice(0, 8).map((WW => {
+                      let [iW, OW] = WW;
+                      return `${iW}+${OW}`
                     })).join(" "),
-                    He = ie.zp.length > 8 ? ` (+${ie.zp.length-8} ranges)` : "";
-                  ue(`  ${De(ie.program)} ${ie.program.terrain} ${ie.call} ${ee}${He} x${ie.instances}${ie.group>=0?` part ${ie.group} chunk ${ie.chunk}`:""} | ${ie.attributes.join(" | ")}`)
+                    OW = iW.kj.length > 8 ? ` (+${iW.kj.length-8} ranges)` : "";
+                  fW(`  ${HW(iW.program)} ${iW.program.terrain} ${iW.call} ${WW}${OW} x${iW.instances}${iW.group>=0?` part ${iW.group} chunk ${iW.chunk}`:""} | ${iW.attributes.join(" | ")}`)
                 }
-              }(ye), yi(ye);
-              ye.draws.some((ee => "undefined" !== typeof WebGL2RenderingContext && ee.gl instanceof WebGL2RenderingContext)) || 0 === ye.draws.length ? function(ee) {
-                const ie = [],
-                  He = new Map;
-                for (const ye of ee)
-                  if ("undefined" !== typeof WebGL2RenderingContext && ye.gl instanceof WebGL2RenderingContext)
-                    for (const ee of ye.pages) He.set("buf" === ee.kind ? ee.buffer : ee.texture, {
-                      page: ee,
-                      gl: ye.gl
+              }(mW), mi(mW);
+              mW.draws.some((WW => "undefined" !== typeof WebGL2RenderingContext && WW.gl instanceof WebGL2RenderingContext)) || 0 === mW.draws.length ? function(WW) {
+                const iW = [],
+                  OW = new Map;
+                for (const mW of WW)
+                  if ("undefined" !== typeof WebGL2RenderingContext && mW.gl instanceof WebGL2RenderingContext)
+                    for (const WW of mW.pages) OW.set("buf" === WW.kind ? WW.buffer : WW.texture, {
+                      page: WW,
+                      gl: mW.gl
                     });
-                for (const [ye, {
-                    page: be,
-                    gl: Me
-                  }] of He) {
-                  const ee = Ae.get(ye);
-                  if (!ee) {
-                    ie.push(`${be.kind}#${xe(ye)}: no CPU copy (${Ve.uncopied} pages over the copy budget)`);
+                for (const [mW, {
+                    page: EW,
+                    gl: NW
+                  }] of OW) {
+                  const WW = uW.get(mW);
+                  if (!WW) {
+                    iW.push(`${EW.kind}#${gW(mW)}: no CPU copy (${dW.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === be.kind) {
-                    ie.push(Hi(`buf#${ee.id}`, ee, Ne(Me, be.buffer, 0, ee.bytes.length)));
+                  if ("buf" === EW.kind) {
+                    iW.push(Oi(`buf#${WW.id}`, WW, rW(NW, EW.buffer, 0, WW.bytes.length)));
                     continue
                   }
-                  const He = ii(Me, be.texture, ee.width, 0, ee.width * ee.height),
-                    Ke = 16 === ee.texelBytes ? new Uint8Array(He.buffer) : new Uint8Array(new Uint16Array(He).buffer);
-                  ie.push(Hi(`tex#${ee.id} (${16===ee.texelBytes?"records":"light"})`, ee, Ke))
+                  const OW = ii(NW, EW.texture, WW.width, 0, WW.width * WW.height),
+                    PW = 16 === WW.texelBytes ? new Uint8Array(OW.buffer) : new Uint8Array(new Uint16Array(OW).buffer);
+                  iW.push(Oi(`tex#${WW.id} (${16===WW.texelBytes?"records":"light"})`, WW, PW))
                 }
-                for (const ye of ie) ue(`page readback ${ye}`)
-              }(ye.draws) : ue("page readback: none on WebGL1 (no buffer readback)")
-            } catch (ee) {
-              ue(`check failed: ${String(ee)}`)
+                for (const mW of iW) fW(`page readback ${mW}`)
+              }(mW.draws) : fW("page readback: none on WebGL1 (no buffer readback)")
+            } catch (WW) {
+              fW(`check failed: ${String(WW)}`)
             }
-            ie()
+            iW()
           },
-          Me = () => {
-            if (ye.draws.length > 0 && !He) return He = !0, void setTimeout(be, 0);
-            He || requestAnimationFrame(Me)
+          NW = () => {
+            if (mW.draws.length > 0 && !OW) return OW = !0, void setTimeout(EW, 0);
+            OW || requestAnimationFrame(NW)
           };
-        requestAnimationFrame(Me), setTimeout((() => {
-          He || (He = !0, be())
+        requestAnimationFrame(NW), setTimeout((() => {
+          OW || (OW = !0, EW())
         }), 5e3)
       }))
     }
-    var Ui = He(5153);
-    const Fi = 20,
-      Ji = 24,
-      oi = Reflect.apply;
+    var Li = OW(5427);
+    const ci = 20,
+      wi = 24,
+      ti = Reflect.apply;
 
-    function Ri(ee, ie, He) {
-      if (!ee) return;
-      const ye = ee[ie];
-      if ("function" === typeof ye) {
-        const be = He(ye);
-        ee[ie] = be, (0, Ui.z)(be, ye)
+    function Zi(WW, iW, OW) {
+      if (!WW) return;
+      const mW = WW[iW];
+      if ("function" === typeof mW) {
+        const EW = OW(mW);
+        WW[iW] = EW, (0, Li.v)(EW, mW)
       }
     }
-    let ki = !1;
-    const qi = new WeakMap,
-      fi = new WeakMap,
-      Ti = new WeakMap,
-      Xi = {
+    let xi = !1;
+    const li = new WeakMap,
+      Ai = new WeakMap,
+      bi = new WeakMap,
+      ji = {
         gl: 0,
         lost: 0
       };
-    let zi = {
+    let Ui = {
         inst: {
           draws: 0,
           faces: 0
@@ -772,307 +772,307 @@ export const modules = {
           faces: 0
         }
       },
-      Bi = {
+      ki = {
         buffer: 0,
         texture: 0
       },
-      Ei = 0;
+      si = 0;
 
-    function gi(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (ee instanceof ArrayBuffer) return new Uint8Array(ee, ie, He || void 0);
-      if (!ArrayBuffer.isView(ee)) return null;
-      const ye = "BYTES_PER_ELEMENT" in ee ? ee.BYTES_PER_ELEMENT : 1,
-        be = ee.byteOffset + ie * ye,
-        Me = He ? He * ye : ee.byteLength - ie * ye;
-      return new Uint8Array(ee.buffer, be, Math.max(0, Me))
+    function Mi(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (WW instanceof ArrayBuffer) return new Uint8Array(WW, iW, OW || void 0);
+      if (!ArrayBuffer.isView(WW)) return null;
+      const mW = "BYTES_PER_ELEMENT" in WW ? WW.BYTES_PER_ELEMENT : 1,
+        EW = WW.byteOffset + iW * mW,
+        NW = OW ? OW * mW : WW.byteLength - iW * mW;
+      return new Uint8Array(WW.buffer, EW, Math.max(0, NW))
     }
 
-    function Oi(ee, ie) {
-      const He = function(ee) {
-        switch (ee) {
-          case Te.ARRAY_BUFFER:
-            return Te.ARRAY_BUFFER_BINDING;
-          case Te.ELEMENT_ARRAY_BUFFER:
-            return Te.ELEMENT_ARRAY_BUFFER_BINDING;
-          case Te.COPY_READ_BUFFER:
-            return Te.COPY_READ_BUFFER_BINDING;
-          case Te.COPY_WRITE_BUFFER:
-            return Te.COPY_WRITE_BUFFER_BINDING;
-          case Te.UNIFORM_BUFFER:
-            return Te.UNIFORM_BUFFER_BINDING;
-          case Te.PIXEL_UNPACK_BUFFER:
-            return Te.PIXEL_UNPACK_BUFFER_BINDING;
-          case Te.TRANSFORM_FEEDBACK_BUFFER:
-            return Te.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function Ki(WW, iW) {
+      const OW = function(WW) {
+        switch (WW) {
+          case bW.ARRAY_BUFFER:
+            return bW.ARRAY_BUFFER_BINDING;
+          case bW.ELEMENT_ARRAY_BUFFER:
+            return bW.ELEMENT_ARRAY_BUFFER_BINDING;
+          case bW.COPY_READ_BUFFER:
+            return bW.COPY_READ_BUFFER_BINDING;
+          case bW.COPY_WRITE_BUFFER:
+            return bW.COPY_WRITE_BUFFER_BINDING;
+          case bW.UNIFORM_BUFFER:
+            return bW.UNIFORM_BUFFER_BINDING;
+          case bW.PIXEL_UNPACK_BUFFER:
+            return bW.PIXEL_UNPACK_BUFFER_BINDING;
+          case bW.TRANSFORM_FEEDBACK_BUFFER:
+            return bW.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(ie);
-      return He ? ee.getParameter(He) : null
+      }(iW);
+      return OW ? WW.getParameter(OW) : null
     }
 
-    function di(ee) {
-      const ie = Ae.get(ee);
-      ie && (Ve.shadowBytes -= ie.bytes.length, Ae.delete(ee))
+    function Si(WW) {
+      const iW = uW.get(WW);
+      iW && (dW.shadowBytes -= iW.bytes.length, uW.delete(WW))
     }
 
-    function Wi(ee, ie) {
-      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      di(ee), Ve.shadowBytes + ie > te ? Ve.uncopied++ : (Ve.shadowBytes += ie, Ae.set(ee, {
-        id: xe(ee),
-        bytes: new Uint8Array(ie),
-        width: He,
-        height: ye,
-        texelBytes: be,
+    function Yi(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      Si(WW), dW.shadowBytes + iW > TW ? dW.uncopied++ : (dW.shadowBytes += iW, uW.set(WW, {
+        id: gW(WW),
+        bytes: new Uint8Array(iW),
+        width: OW,
+        height: mW,
+        texelBytes: EW,
         missed: 0
       }))
     }
 
-    function ti(ee, ie) {
-      for (const He of ["deleteBuffer", "deleteTexture"]) Ri(ee, He, (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        return He[0] && di(He[0]), oi(ee, this, He)
+    function yi(WW, iW) {
+      for (const OW of ["deleteBuffer", "deleteTexture"]) Zi(WW, OW, (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return OW[0] && Si(OW[0]), ti(WW, this, OW)
       }));
-      Ri(ee, "shaderSource", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        return He[0] && "string" === typeof He[1] && qi.set(He[0], He[1]), oi(ee, this, He)
-      })), Ri(ee, "attachShader", (ee => function() {
-        for (var ie, He = arguments.length, ye = new Array(He), be = 0; be < He; be++) ye[be] = arguments[be];
-        const Me = ye[0],
-          Ke = null !== (ie = fi.get(Me)) && void 0 !== ie ? ie : [];
-        return Ke.push(ye[1]), fi.set(Me, Ke), oi(ee, this, ye)
-      })), Ri(ee, "linkProgram", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        const be = oi(ee, this, He);
-        return Ve.inProbe || function(ee, ie) {
-          var He, ye, be;
-          "undefined" !== typeof HTMLCanvasElement && ee.canvas instanceof HTMLCanvasElement && function(ee) {
-            if (Yi.has(ee)) return;
-            Yi.add(ee);
-            for (const ie of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) ee.addEventListener(ie, (ee => {
-              Xi.lost < Fi && (Xi.lost++, ue(`${ie}${"statusMessage"in ee?`: ${String(ee.statusMessage)}`:""}`))
+      Zi(WW, "shaderSource", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return OW[0] && "string" === typeof OW[1] && li.set(OW[0], OW[1]), ti(WW, this, OW)
+      })), Zi(WW, "attachShader", (WW => function() {
+        for (var iW, OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
+        const NW = mW[0],
+          PW = null !== (iW = Ai.get(NW)) && void 0 !== iW ? iW : [];
+        return PW.push(mW[1]), Ai.set(NW, PW), ti(WW, this, mW)
+      })), Zi(WW, "linkProgram", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        return dW.inProbe || function(WW, iW) {
+          var OW, mW, EW;
+          "undefined" !== typeof HTMLCanvasElement && WW.canvas instanceof HTMLCanvasElement && function(WW) {
+            if (oi.has(WW)) return;
+            oi.add(WW);
+            for (const iW of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) WW.addEventListener(iW, (WW => {
+              ji.lost < ci && (ji.lost++, fW(`${iW}${"statusMessage"in WW?`: ${String(WW.statusMessage)}`:""}`))
             }))
-          }(ee.canvas);
-          Ve.context ??= ee;
-          const Me = null !== (He = fi.get(ie)) && void 0 !== He ? He : [];
-          let Ke = "",
-            Ue = "";
-          for (const oe of Me) {
-            var Fe;
-            const ee = null !== (Fe = qi.get(oe)) && void 0 !== Fe ? Fe : "";
-            /\bgl_Position\b/.test(ee) ? Ke = ee : Ue = ee
+          }(WW.canvas);
+          dW.context ??= WW;
+          const NW = null !== (OW = Ai.get(iW)) && void 0 !== OW ? OW : [];
+          let PW = "",
+            LW = "";
+          for (const tW of NW) {
+            var cW;
+            const WW = null !== (cW = li.get(tW)) && void 0 !== cW ? cW : "";
+            /\bgl_Position\b/.test(WW) ? PW = WW : LW = WW
           }
-          const Je = {
-            id: xe(ie),
-            name: null !== (ye = null === (be = we.exec(Ke)) || void 0 === be ? void 0 : be[1]) && void 0 !== ye ? ye : null,
-            gl: ee,
-            vertex: Ke,
-            fragment: Ue,
-            terrain: wi(Ke),
+          const wW = {
+            id: gW(iW),
+            name: null !== (mW = null === (EW = hW.exec(PW)) || void 0 === EW ? void 0 : EW[1]) && void 0 !== mW ? mW : null,
+            gl: WW,
+            vertex: PW,
+            fragment: LW,
+            terrain: Ji(PW),
             checked: !1,
             firstDraw: !1
           };
-          if (Ti.set(ie, Je), Pe.push([ie, Je]), null !== Je.terrain) {
-            const ie = Me.map((ie => {
-              var He;
-              return null !== (He = ee.getShaderInfoLog(ie)) && void 0 !== He ? He : ""
-            })).filter((ee => "" !== ee.trim()));
-            ie.length > 0 && me(`program ${De(Je)} (${Je.terrain}) shader logs:\n${le(ie.join("\n"))}`)
+          if (bi.set(iW, wW), nW.push([iW, wW]), null !== wW.terrain) {
+            const iW = NW.map((iW => {
+              var OW;
+              return null !== (OW = WW.getShaderInfoLog(iW)) && void 0 !== OW ? OW : ""
+            })).filter((WW => "" !== WW.trim()));
+            iW.length > 0 && CW(`program ${HW(wW)} (${wW.terrain}) shader logs:\n${XW(iW.join("\n"))}`)
           }
-        }(this, He[0]), be
-      })), Ri(ee, "bufferData", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        const be = oi(ee, this, He);
-        if (!Ve.inProbe) {
-          const ee = Oi(this, He[0]);
-          if (ee) {
-            var Me, Ke, Ue;
-            const ie = "number" === typeof He[1] ? null : gi(He[1], null !== (Me = He[3]) && void 0 !== Me ? Me : 0, null !== (Ke = He[4]) && void 0 !== Ke ? Ke : 0);
-            var Fe;
-            if (Wi(ee, "number" === typeof He[1] ? He[1] : null !== (Ue = null === ie || void 0 === ie ? void 0 : ie.length) && void 0 !== Ue ? Ue : 0), ie) null === (Fe = Ae.get(ee)) || void 0 === Fe || Fe.bytes.set(ie)
-          }
-        }
-        return be
-      })), Ri(ee, "bufferSubData", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        const be = oi(ee, this, He);
-        if (!Ve.inProbe) {
-          var Me, Ke;
-          const ee = Oi(this, He[0]),
-            ie = ee ? Ae.get(ee) : void 0,
-            ye = gi(He[2], null !== (Me = He[3]) && void 0 !== Me ? Me : 0, null !== (Ke = He[4]) && void 0 !== Ke ? Ke : 0);
-          if (ie && ye) {
-            const ee = He[1];
-            ie.bytes.set(ye.subarray(0, Math.max(0, ie.bytes.length - ee)), ee), Zi("buffer", ie, ee, ye.length)
+        }(this, OW[0]), EW
+      })), Zi(WW, "bufferData", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        if (!dW.inProbe) {
+          const WW = Ki(this, OW[0]);
+          if (WW) {
+            var NW, PW, LW;
+            const iW = "number" === typeof OW[1] ? null : Mi(OW[1], null !== (NW = OW[3]) && void 0 !== NW ? NW : 0, null !== (PW = OW[4]) && void 0 !== PW ? PW : 0);
+            var cW;
+            if (Yi(WW, "number" === typeof OW[1] ? OW[1] : null !== (LW = null === iW || void 0 === iW ? void 0 : iW.length) && void 0 !== LW ? LW : 0), iW) null === (cW = uW.get(WW)) || void 0 === cW || cW.bytes.set(iW)
           }
         }
-        return be
-      })), ie && (Ri(ee, "copyBufferSubData", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        const be = oi(ee, this, He);
-        if (!Ve.inProbe) {
-          const [ee, ie, ye, be, Me] = He, Ke = Oi(this, ee), Ue = Oi(this, ie), Fe = Ke ? Ae.get(Ke) : void 0, Je = Ue ? Ae.get(Ue) : void 0;
-          Je && (Fe ? Je.bytes.set(Fe.bytes.slice(ye, ye + Me), be) : Je.missed++)
-        }
-        return be
-      })), Ri(ee, "texStorage2D", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        const be = oi(ee, this, He),
-          [, , Me, Ke, Ue] = He;
-        if (!Ve.inProbe && (Me === Te.RGBA32UI || Me === Te.RGBA16UI)) {
-          const ee = this.getParameter(Te.TEXTURE_BINDING_2D),
-            ie = Me === Te.RGBA32UI ? 16 : 8;
-          ee && (Ye.set(ee, ie), Wi(ee, Ke * Ue * ie, Ke, Ue, ie))
-        }
-        return be
-      })), Ri(ee, "texSubImage2D", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        const be = oi(ee, this, He);
-        return !Ve.inProbe && He.length >= 9 && He[0] === Te.TEXTURE_2D && 0 === He[1] && function(ee, ie) {
-          var He;
-          const ye = ee.getParameter(Te.TEXTURE_BINDING_2D),
-            be = ye ? Ae.get(ye) : void 0;
-          if (!be) return;
-          const [, , Me, Ke, Ue, Fe] = ie;
-          let Je = gi(ie[8], null !== (He = ie[9]) && void 0 !== He ? He : 0);
-          if (null === Je && "number" === typeof ie[8]) {
-            const He = Oi(ee, Te.PIXEL_UNPACK_BUFFER),
-              ye = He ? Ae.get(He) : void 0;
-            Je = ye ? ye.bytes.subarray(ie[8]) : null
+        return EW
+      })), Zi(WW, "bufferSubData", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        if (!dW.inProbe) {
+          var NW, PW;
+          const WW = Ki(this, OW[0]),
+            iW = WW ? uW.get(WW) : void 0,
+            mW = Mi(OW[2], null !== (NW = OW[3]) && void 0 !== NW ? NW : 0, null !== (PW = OW[4]) && void 0 !== PW ? PW : 0);
+          if (iW && mW) {
+            const WW = OW[1];
+            iW.bytes.set(mW.subarray(0, Math.max(0, iW.bytes.length - WW)), WW), Ti("buffer", iW, WW, mW.length)
           }
-          if (null === Je) return void be.missed++;
-          const oe = ee.getParameter(Te.UNPACK_ROW_LENGTH) || Ue,
-            Re = ee.getParameter(Te.UNPACK_SKIP_ROWS),
-            ke = ee.getParameter(Te.UNPACK_SKIP_PIXELS),
-            qe = be.texelBytes;
-          for (let fe = 0; fe < Fe; fe++) {
-            const ee = ((Re + fe) * oe + ke) * qe,
-              ie = ((Ke + fe) * be.width + Me) * qe;
-            be.bytes.set(Je.subarray(ee, ee + Ue * qe), ie)
+        }
+        return EW
+      })), iW && (Zi(WW, "copyBufferSubData", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        if (!dW.inProbe) {
+          const [WW, iW, mW, EW, NW] = OW, PW = Ki(this, WW), LW = Ki(this, iW), cW = PW ? uW.get(PW) : void 0, wW = LW ? uW.get(LW) : void 0;
+          wW && (cW ? wW.bytes.set(cW.bytes.slice(mW, mW + NW), EW) : wW.missed++)
+        }
+        return EW
+      })), Zi(WW, "texStorage2D", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW),
+          [, , NW, PW, LW] = OW;
+        if (!dW.inProbe && (NW === bW.RGBA32UI || NW === bW.RGBA16UI)) {
+          const WW = this.getParameter(bW.TEXTURE_BINDING_2D),
+            iW = NW === bW.RGBA32UI ? 16 : 8;
+          WW && (oW.set(WW, iW), Yi(WW, PW * LW * iW, PW, LW, iW))
+        }
+        return EW
+      })), Zi(WW, "texSubImage2D", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        return !dW.inProbe && OW.length >= 9 && OW[0] === bW.TEXTURE_2D && 0 === OW[1] && function(WW, iW) {
+          var OW;
+          const mW = WW.getParameter(bW.TEXTURE_BINDING_2D),
+            EW = mW ? uW.get(mW) : void 0;
+          if (!EW) return;
+          const [, , NW, PW, LW, cW] = iW;
+          let wW = Mi(iW[8], null !== (OW = iW[9]) && void 0 !== OW ? OW : 0);
+          if (null === wW && "number" === typeof iW[8]) {
+            const OW = Ki(WW, bW.PIXEL_UNPACK_BUFFER),
+              mW = OW ? uW.get(OW) : void 0;
+            wW = mW ? mW.bytes.subarray(iW[8]) : null
           }
-          Zi("texture", be, (Ke * be.width + Me) * qe, Ue * Fe * qe)
-        }(this, He), be
-      })), Ri(ee, "copyTexSubImage2D", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        const be = He[0] === Te.TEXTURE_2D ? this.getParameter(Te.TEXTURE_BINDING_2D) : null,
-          Me = be ? Ae.get(be) : void 0;
-        return Me && Me.missed++, oi(ee, this, He)
+          if (null === wW) return void EW.missed++;
+          const tW = WW.getParameter(bW.UNPACK_ROW_LENGTH) || LW,
+            ZW = WW.getParameter(bW.UNPACK_SKIP_ROWS),
+            xW = WW.getParameter(bW.UNPACK_SKIP_PIXELS),
+            lW = EW.texelBytes;
+          for (let AW = 0; AW < cW; AW++) {
+            const WW = ((ZW + AW) * tW + xW) * lW,
+              iW = ((PW + AW) * EW.width + NW) * lW;
+            EW.bytes.set(wW.subarray(WW, WW + LW * lW), iW)
+          }
+          Ti("texture", EW, (PW * EW.width + NW) * lW, LW * cW * lW)
+        }(this, OW), EW
+      })), Zi(WW, "copyTexSubImage2D", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = OW[0] === bW.TEXTURE_2D ? this.getParameter(bW.TEXTURE_BINDING_2D) : null,
+          NW = EW ? uW.get(EW) : void 0;
+        return NW && NW.missed++, ti(WW, this, OW)
       })));
-      for (const He of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) Ri(ee, He, (ee => function() {
-        for (var ie = arguments.length, ye = new Array(ie), be = 0; be < ie; be++) ye[be] = arguments[be];
-        const Me = oi(ee, this, ye);
-        return Ve.inProbe || Pi(this, He, ye), Me
+      for (const OW of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) Zi(WW, OW, (WW => function() {
+        for (var iW = arguments.length, mW = new Array(iW), EW = 0; EW < iW; EW++) mW[EW] = arguments[EW];
+        const NW = ti(WW, this, mW);
+        return dW.inProbe || ni(this, OW, mW), NW
       }));
-      Ri(ee, "getExtension", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        const be = oi(ee, this, He);
-        return be && "object" === typeof be && function(ee, ie, He) {
-          const ye = {
+      Zi(WW, "getExtension", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        return EW && "object" === typeof EW && function(WW, iW, OW) {
+          const mW = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(ie in ye) || He.bloxdRenderDebug) return;
-          He.bloxdRenderDebug = !0;
-          for (const be of ye[ie]) {
-            const ie = He[be];
-            "function" === typeof ie && (He[be] = function() {
-              for (var ye = arguments.length, Me = new Array(ye), Ke = 0; Ke < ye; Ke++) Me[Ke] = arguments[Ke];
-              const Ue = oi(ie, He, Me);
-              return Ve.inProbe || Pi(ee, be, Me), Ue
+          if (!(iW in mW) || OW.bloxdRenderDebug) return;
+          OW.bloxdRenderDebug = !0;
+          for (const EW of mW[iW]) {
+            const iW = OW[EW];
+            "function" === typeof iW && (OW[EW] = function() {
+              for (var mW = arguments.length, NW = new Array(mW), PW = 0; PW < mW; PW++) NW[PW] = arguments[PW];
+              const LW = ti(iW, OW, NW);
+              return dW.inProbe || ni(WW, EW, NW), LW
             })
           }
-        }(this, He[0], be), be
+        }(this, OW[0], EW), EW
       }))
     }
 
-    function Zi(ee, ie, He, ye) {
-      Bi[ee] += ye, Ei < 32 && ie.bytes.length >= 1 << 20 && (Ei++, me(`upload ${ee} #${ie.id} +${He} ${ye} B`))
+    function Ti(WW, iW, OW, mW) {
+      ki[WW] += mW, si < 32 && iW.bytes.length >= 1 << 20 && (si++, CW(`upload ${WW} #${iW.id} +${OW} ${mW} B`))
     }
 
-    function wi(ee) {
-      if (!ee.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(ee) || /in uvec3 _p2vs_location0\b/.test(ee) ? "inst" : "tex"
+    function Ji(WW) {
+      if (!WW.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(WW) || /in uvec3 _p2vs_location0\b/.test(WW) ? "inst" : "tex"
     }
 
-    function Di(ee, ie, He) {
-      var ye;
-      if (He.checked) return;
-      He.checked = !0;
-      const be = ee.getProgramParameter(ie, Te.LINK_STATUS),
-        Me = (null !== (ye = ee.getProgramInfoLog(ie)) && void 0 !== ye ? ye : "").trim();
-      var Ke;
-      null === He.terrain && be || (ue(`program ${De(He)} ${null!==(Ke=He.terrain)&&void 0!==Ke?Ke:"other"} link ${be?"ok":"FAILED"}${Me?`: ${le(Me,300)}`:""}`), Me && me(`program ${De(He)} link log:\n${le(Me)}`))
+    function Hi(WW, iW, OW) {
+      var mW;
+      if (OW.checked) return;
+      OW.checked = !0;
+      const EW = WW.getProgramParameter(iW, bW.LINK_STATUS),
+        NW = (null !== (mW = WW.getProgramInfoLog(iW)) && void 0 !== mW ? mW : "").trim();
+      var PW;
+      null === OW.terrain && EW || (fW(`program ${HW(OW)} ${null!==(PW=OW.terrain)&&void 0!==PW?PW:"other"} link ${EW?"ok":"FAILED"}${NW?`: ${XW(NW,300)}`:""}`), NW && CW(`program ${HW(OW)} link log:\n${XW(NW)}`))
     }
 
-    function Pi(ee, ie, He) {
-      var ye;
-      const be = ee.getParameter(Te.CURRENT_PROGRAM),
-        Me = be ? Ti.get(be) : void 0;
-      if (!be || !Me) return;
-      const Ke = null !== (ye = Me.terrain) && void 0 !== ye ? ye : "other",
+    function ni(WW, iW, OW) {
+      var mW;
+      const EW = WW.getParameter(bW.CURRENT_PROGRAM),
+        NW = EW ? bi.get(EW) : void 0;
+      if (!EW || !NW) return;
+      const PW = null !== (mW = NW.terrain) && void 0 !== mW ? mW : "other",
         {
-          zp: Ue,
-          instances: Fe
-        } = function(ee, ie) {
-          switch (ee) {
+          kj: LW,
+          instances: cW
+        } = function(WW, iW) {
+          switch (WW) {
             case "drawArrays":
               return {
-                zp: [
-                  [ie[1], ie[2]]
+                kj: [
+                  [iW[1], iW[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                zp: [
-                  [ie[1], ie[2]]
-                ], instances: ie[3]
+                kj: [
+                  [iW[1], iW[2]]
+                ], instances: iW[3]
               };
             case "drawElements":
               return {
-                zp: [
-                  [0, ie[1]]
+                kj: [
+                  [0, iW[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                zp: [
-                  [0, ie[1]]
-                ], instances: ie[4]
+                kj: [
+                  [0, iW[1]]
+                ], instances: iW[4]
               };
             case "multiDrawArraysWEBGL": {
-              const ee = ie[1],
-                He = ie[3],
-                ye = ie[2],
-                be = ie[4],
-                Me = [];
-              for (let Ke = 0; Ke < ie[5]; Ke++) Me.push([ee[ye + Ke], He[be + Ke]]);
+              const WW = iW[1],
+                OW = iW[3],
+                mW = iW[2],
+                EW = iW[4],
+                NW = [];
+              for (let PW = 0; PW < iW[5]; PW++) NW.push([WW[mW + PW], OW[EW + PW]]);
               return {
-                zp: Me,
+                kj: NW,
                 instances: 1
               }
             }
             default:
               return {
-                zp: [], instances: 0
+                kj: [], instances: 0
               }
           }
-        }(ie, He),
-        Je = "inst" === Me.terrain ? Fe : Ue.reduce(((ee, ie) => {
-          let [, He] = ie;
-          return ee + He
+        }(iW, OW),
+        wW = "inst" === NW.terrain ? cW : LW.reduce(((WW, iW) => {
+          let [, OW] = iW;
+          return WW + OW
         }), 0) / 6;
-      if (zi[Ke].draws++, zi[Ke].faces += Je, null === Me.terrain) return;
-      if (Ve.context = ee, !Me.firstDraw) {
-        Me.firstDraw = !0, Di(ee, be, Me), Ai || (Ai = !0, ue(function(ee) {
-          var ie;
-          const He = ee.getParameter(Te.DEPTH_FUNC),
-            ye = {
+      if (Ui[PW].draws++, Ui[PW].faces += wW, null === NW.terrain) return;
+      if (dW.context = WW, !NW.firstDraw) {
+        NW.firstDraw = !0, Hi(WW, EW, NW), ui || (ui = !0, fW(function(WW) {
+          var iW;
+          const OW = WW.getParameter(bW.DEPTH_FUNC),
+            mW = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1080,319 +1080,319 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let be = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in ee && ee.getParameter(Te.DRAW_FRAMEBUFFER_BINDING)) {
-            const ie = ee;
-            be = ie.getFramebufferAttachmentParameter(Te.DRAW_FRAMEBUFFER, Te.DEPTH_ATTACHMENT, Te.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(ie.getFramebufferAttachmentParameter(Te.DRAW_FRAMEBUFFER,Te.DEPTH_ATTACHMENT,Te.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(ie.getFramebufferAttachmentParameter(Te.DRAW_FRAMEBUFFER,Te.DEPTH_ATTACHMENT,Te.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let EW = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in WW && WW.getParameter(bW.DRAW_FRAMEBUFFER_BINDING)) {
+            const iW = WW;
+            EW = iW.getFramebufferAttachmentParameter(bW.DRAW_FRAMEBUFFER, bW.DEPTH_ATTACHMENT, bW.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(iW.getFramebufferAttachmentParameter(bW.DRAW_FRAMEBUFFER,bW.DEPTH_ATTACHMENT,bW.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(iW.getFramebufferAttachmentParameter(bW.DRAW_FRAMEBUFFER,bW.DEPTH_ATTACHMENT,bW.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const Me = ee.getParameter(Te.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(ie=ye[He])&&void 0!==ie?ie:`0x${He.toString(16)}`} clear ${Me}${516===He||518===He?" (reverse-Z)":""}, samples ${String(ee.getParameter(Te.SAMPLES))}, ${be}`
-        }(ee)));
-        const He = ee.getError();
-        He !== Te.NO_ERROR && Xi.gl < Fi && (Xi.gl++, ue(`GL error 0x${He.toString(16)} after program ${De(Me)}'s first terrain draw (${ie})`))
+          const NW = WW.getParameter(bW.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(iW=mW[OW])&&void 0!==iW?iW:`0x${OW.toString(16)}`} clear ${NW}${516===OW||518===OW?" (reverse-Z)":""}, samples ${String(WW.getParameter(bW.SAMPLES))}, ${EW}`
+        }(WW)));
+        const OW = WW.getError();
+        OW !== bW.NO_ERROR && ji.gl < ci && (ji.gl++, fW(`GL error 0x${OW.toString(16)} after program ${HW(NW)}'s first terrain draw (${iW})`))
       }
-      const oe = Ve.pendingCheck;
-      null !== oe && (oe.terrainDraws++, oe.draws.length < Ji && Se(ee, be, Me, ie, Ue, Fe))
+      const tW = dW.pendingCheck;
+      null !== tW && (tW.terrainDraws++, tW.draws.length < wi && BW(WW, EW, NW, iW, LW, cW))
     }
-    let Ai = !1;
-    const Yi = new WeakSet;
-    var Vi = He(4896),
-      ai = He(5160);
-    const ci = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let xi = !1;
-    const Li = new WeakSet,
-      Ci = new WeakMap,
-      vi = new WeakMap,
-      ui = {
+    let ui = !1;
+    const oi = new WeakSet;
+    var di = OW(5217),
+      ei = OW(5431);
+    const vi = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let gi = !1;
+    const Di = new WeakSet,
+      Vi = new WeakMap,
+      fi = new WeakMap,
+      Ci = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let mi = 0,
-      li = !1,
-      Si = null,
-      ni = {
+    let Xi = 0,
+      Bi = !1,
+      qi = null,
+      Ri = {
         draws: 0,
         faces: 0
       };
 
-    function ji(ee) {
-      const ie = globalThis[ee];
-      return null === ie || void 0 === ie ? void 0 : ie.prototype
+    function Gi(WW) {
+      const iW = globalThis[WW];
+      return null === iW || void 0 === iW ? void 0 : iW.prototype
     }
 
-    function si(ee) {
-      return ee && "function" === typeof ee[Symbol.iterator] ? [...ee].sort().join(" ") : ""
+    function Ii(WW) {
+      return WW && "function" === typeof WW[Symbol.iterator] ? [...WW].sort().join(" ") : ""
     }
 
-    function Ii(ee, ie) {
-      const He = null !== ee && void 0 !== ee ? ee : {},
-        ye = null !== ie && void 0 !== ie ? ie : Object.keys(Object.getPrototypeOf(He)).concat(Object.keys(He));
-      return [...new Set(ye)].filter((ee => "number" === typeof He[ee])).map((ee => `${ee} ${String(He[ee])}`)).join(", ")
+    function ai(WW, iW) {
+      const OW = null !== WW && void 0 !== WW ? WW : {},
+        mW = null !== iW && void 0 !== iW ? iW : Object.keys(Object.getPrototypeOf(OW)).concat(Object.keys(OW));
+      return [...new Set(mW)].filter((WW => "number" === typeof OW[WW])).map((WW => `${WW} ${String(OW[WW])}`)).join(", ")
     }
 
-    function Ni(ee, ie) {
-      var He;
-      const ye = null !== (He = ie.vertex) && void 0 !== He ? He : {};
-      if (ye.module && Li.has(ye.module)) {
-        var be;
-        const He = String(null !== (be = ye.entryPoint) && void 0 !== be ? be : "");
-        if (He.startsWith("vs_packed") && Ci.set(ee, He), !li) {
-          var Me, Ke, Ue, Fe, Je;
-          li = !0;
-          const ee = null !== (Me = ie.depthStencil) && void 0 !== Me ? Me : {},
-            ye = null !== (Ke = ie.multisample) && void 0 !== Ke ? Ke : {},
-            be = String(null !== (Ue = ee.depthCompare) && void 0 !== Ue ? Ue : "");
-          ue(`WebGPU terrain pipeline ${He}: depth ${String(null!==(Fe=ee.format)&&void 0!==Fe?Fe:"none")} ${be}${be.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(Je=ye.count)&&void 0!==Je?Je:1)}`)
+    function ri(WW, iW) {
+      var OW;
+      const mW = null !== (OW = iW.vertex) && void 0 !== OW ? OW : {};
+      if (mW.module && Di.has(mW.module)) {
+        var EW;
+        const OW = String(null !== (EW = mW.entryPoint) && void 0 !== EW ? EW : "");
+        if (OW.startsWith("vs_packed") && Vi.set(WW, OW), !Bi) {
+          var NW, PW, LW, cW, wW;
+          Bi = !0;
+          const WW = null !== (NW = iW.depthStencil) && void 0 !== NW ? NW : {},
+            mW = null !== (PW = iW.multisample) && void 0 !== PW ? PW : {},
+            EW = String(null !== (LW = WW.depthCompare) && void 0 !== LW ? LW : "");
+          fW(`WebGPU terrain pipeline ${OW}: depth ${String(null!==(cW=WW.format)&&void 0!==cW?cW:"none")} ${EW}${EW.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(wW=mW.count)&&void 0!==wW?wW:1)}`)
         }
       }
     }
 
-    function Gi(ee) {
-      Ri(ee, "setPipeline", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        return vi.set(this, He[0]), oi(ee, this, He)
+    function zi(WW) {
+      Zi(WW, "setPipeline", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return fi.set(this, OW[0]), ti(WW, this, OW)
       }));
-      for (const ie of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) Ri(ee, ie, (ee => function() {
-        const He = vi.get(this),
-          ye = He ? Ci.get(He) : void 0;
-        for (var be = arguments.length, Me = new Array(be), Ke = 0; Ke < be; Ke++) Me[Ke] = arguments[Ke];
-        return void 0 !== ye && ri(ie, ye, Me), oi(ee, this, Me)
+      for (const iW of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) Zi(WW, iW, (WW => function() {
+        const OW = fi.get(this),
+          mW = OW ? Vi.get(OW) : void 0;
+        for (var EW = arguments.length, NW = new Array(EW), PW = 0; PW < EW; PW++) NW[PW] = arguments[PW];
+        return void 0 !== mW && Fi(iW, mW, NW), ti(WW, this, NW)
       }))
     }
 
-    function ri(ee, ie, He) {
-      var ye;
-      (ni.draws++, "draw" === ee || "drawIndexed" === ee) && (ni.faces += He[0] * (null !== (ye = He[1]) && void 0 !== ye ? ye : 1) / 6);
-      if (null !== Si && Si.length < Ji) {
-        const ye = ("draw" === ee ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === ee ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((ie, ye) => {
-          const be = ee.endsWith("Indirect") ? He[1] : He[ye];
-          return `${ie} ${String(null!==be&&void 0!==be?be:"instances"===ie?1:0)}`
+    function Fi(WW, iW, OW) {
+      var mW;
+      (Ri.draws++, "draw" === WW || "drawIndexed" === WW) && (Ri.faces += OW[0] * (null !== (mW = OW[1]) && void 0 !== mW ? mW : 1) / 6);
+      if (null !== qi && qi.length < wi) {
+        const mW = ("draw" === WW ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === WW ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((iW, mW) => {
+          const EW = WW.endsWith("Indirect") ? OW[1] : OW[mW];
+          return `${iW} ${String(null!==EW&&void 0!==EW?EW:"instances"===iW?1:0)}`
         }));
-        Si.push(`  ${ie} ${ee} ${ye.join(" ")}`)
+        qi.push(`  ${iW} ${WW} ${mW.join(" ")}`)
       }
     }
 
     function Qi() {
-      if (xi || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      xi = !0, Ri(ji("GPU"), "requestAdapter", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        return oi(ee, this, He).then((ee => {
-          var ie;
-          ee ? function(ee) {
-            var ie;
-            const He = null !== (ie = ee.info) && void 0 !== ie ? ie : {};
-            ue(`WebGPU adapter ${["vendor","architecture","device","description"].map((ee=>{var ie;return`${ee} "${String(null!==(ie=He[ee])&&void 0!==ie?ie:"")}"`})).join(" ")}${ee.isFallbackAdapter?" (fallback)":""}`), ue(`WebGPU adapter features ${si(ee.features)}`), ue(`WebGPU adapter limits ${Ii(ee.limits,ci)}`), me(`WebGPU adapter all limits ${Ii(ee.limits,null)}`)
-          }(ee) : ue(`WebGPU requestAdapter(${JSON.stringify(null!==(ie=He[0])&&void 0!==ie?ie:{})}) gave none`);
-          return ee
+      if (gi || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      gi = !0, Zi(Gi("GPU"), "requestAdapter", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return ti(WW, this, OW).then((WW => {
+          var iW;
+          WW ? function(WW) {
+            var iW;
+            const OW = null !== (iW = WW.info) && void 0 !== iW ? iW : {};
+            fW(`WebGPU adapter ${["vendor","architecture","device","description"].map((WW=>{var iW;return`${WW} "${String(null!==(iW=OW[WW])&&void 0!==iW?iW:"")}"`})).join(" ")}${WW.isFallbackAdapter?" (fallback)":""}`), fW(`WebGPU adapter features ${Ii(WW.features)}`), fW(`WebGPU adapter limits ${ai(WW.limits,vi)}`), CW(`WebGPU adapter all limits ${ai(WW.limits,null)}`)
+          }(WW) : fW(`WebGPU requestAdapter(${JSON.stringify(null!==(iW=OW[0])&&void 0!==iW?iW:{})}) gave none`);
+          return WW
         }))
-      })), Ri(ji("GPUAdapter"), "requestDevice", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        return oi(ee, this, He).then((ee => (function(ee) {
-          ue(`WebGPU device features ${si(ee.features)}`), ue(`WebGPU device limits ${Ii(ee.limits,ci)}`), ee.addEventListener("uncapturederror", (ee => {
-            if (ui.uncaptured < Fi) {
-              var ie, He, ye;
-              ui.uncaptured++;
-              const be = ee.error;
-              ue(`WebGPU uncaptured ${null!==(ie=null===be||void 0===be||null===(He=be.constructor)||void 0===He?void 0:He.name)&&void 0!==ie?ie:"error"}: ${le(String(null!==(ye=null===be||void 0===be?void 0:be.message)&&void 0!==ye?ye:""),600)}`)
+      })), Zi(Gi("GPUAdapter"), "requestDevice", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return ti(WW, this, OW).then((WW => (function(WW) {
+          fW(`WebGPU device features ${Ii(WW.features)}`), fW(`WebGPU device limits ${ai(WW.limits,vi)}`), WW.addEventListener("uncapturederror", (WW => {
+            if (Ci.uncaptured < ci) {
+              var iW, OW, mW;
+              Ci.uncaptured++;
+              const EW = WW.error;
+              fW(`WebGPU uncaptured ${null!==(iW=null===EW||void 0===EW||null===(OW=EW.constructor)||void 0===OW?void 0:OW.name)&&void 0!==iW?iW:"error"}: ${XW(String(null!==(mW=null===EW||void 0===EW?void 0:EW.message)&&void 0!==mW?mW:""),600)}`)
             }
           }));
-          const ie = ee.lost;
-          null === ie || void 0 === ie || ie.then((ee => {
-            var ie;
-            ue(`WebGPU device lost (${String(ee.reason)}): ${le(String(null!==(ie=ee.message)&&void 0!==ie?ie:""),600)}`)
+          const iW = WW.lost;
+          null === iW || void 0 === iW || iW.then((WW => {
+            var iW;
+            fW(`WebGPU device lost (${String(WW.reason)}): ${XW(String(null!==(iW=WW.message)&&void 0!==iW?iW:""),600)}`)
           }))
-        }(ee), ee)), (ee => {
-          throw ue(`WebGPU requestDevice failed: ${String(ee)}`), ee
+        }(WW), WW)), (WW => {
+          throw fW(`WebGPU requestDevice failed: ${String(WW)}`), WW
         }))
       }));
-      const ee = ji("GPUDevice");
-      Ri(ee, "createShaderModule", (ee => function() {
-        for (var ie, He, ye = arguments.length, be = new Array(ye), Me = 0; Me < ye; Me++) be[Me] = arguments[Me];
-        const Ke = oi(ee, this, be);
-        return function(ee, ie) {
-          const He = ie.includes("decodeQuad");
-          He && Li.add(ee);
-          const ye = ee.getCompilationInfo;
-          null === ye || void 0 === ye || ye.call(ee).then((ee => {
-            if (0 === ee.messages.length && !He) return;
-            const ie = {};
-            for (const He of ee.messages) {
-              var ye;
-              ie[String(He.type)] = (null !== (ye = ie[String(He.type)]) && void 0 !== ye ? ye : 0) + 1
+      const WW = Gi("GPUDevice");
+      Zi(WW, "createShaderModule", (WW => function() {
+        for (var iW, OW, mW = arguments.length, EW = new Array(mW), NW = 0; NW < mW; NW++) EW[NW] = arguments[NW];
+        const PW = ti(WW, this, EW);
+        return function(WW, iW) {
+          const OW = iW.includes("decodeQuad");
+          OW && Di.add(WW);
+          const mW = WW.getCompilationInfo;
+          null === mW || void 0 === mW || mW.call(WW).then((WW => {
+            if (0 === WW.messages.length && !OW) return;
+            const iW = {};
+            for (const OW of WW.messages) {
+              var mW;
+              iW[String(OW.type)] = (null !== (mW = iW[String(OW.type)]) && void 0 !== mW ? mW : 0) + 1
             }
-            const be = ee.messages.map((ee => `${String(ee.type)} ${String(ee.lineNum)}:${String(ee.linePos)} ${String(ee.message)}`)).join("\n");
-            ui.compile < Fi && (ui.compile++, ue(`WebGPU ${He?"terrain ":""}shader module compiled: ${JSON.stringify(ie)}${be?` first: ${le(be.split("\n")[0],300)}`:""}`)), be && me(`WebGPU shader module messages:\n${le(be)}`)
+            const EW = WW.messages.map((WW => `${String(WW.type)} ${String(WW.lineNum)}:${String(WW.linePos)} ${String(WW.message)}`)).join("\n");
+            Ci.compile < ci && (Ci.compile++, fW(`WebGPU ${OW?"terrain ":""}shader module compiled: ${JSON.stringify(iW)}${EW?` first: ${XW(EW.split("\n")[0],300)}`:""}`)), EW && CW(`WebGPU shader module messages:\n${XW(EW)}`)
           }))
-        }(Ke, String(null !== (ie = (null !== (He = be[0]) && void 0 !== He ? He : {}).code) && void 0 !== ie ? ie : "")), Ke
-      })), Ri(ee, "createRenderPipeline", (ee => function() {
-        for (var ie, He = arguments.length, ye = new Array(He), be = 0; be < He; be++) ye[be] = arguments[be];
-        const Me = oi(ee, this, ye);
-        return Ni(Me, null !== (ie = ye[0]) && void 0 !== ie ? ie : {}), Me
-      })), Ri(ee, "createRenderPipelineAsync", (ee => function() {
-        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-        return oi(ee, this, He).then((ee => {
-          var ie;
-          return Ni(ee, null !== (ie = He[0]) && void 0 !== ie ? ie : {}), ee
-        }), (ee => {
-          var ie;
-          throw function(ee, ie) {
-            var He, ye, be;
-            if (ui.rejected >= Fi) return;
-            ui.rejected++;
+        }(PW, String(null !== (iW = (null !== (OW = EW[0]) && void 0 !== OW ? OW : {}).code) && void 0 !== iW ? iW : "")), PW
+      })), Zi(WW, "createRenderPipeline", (WW => function() {
+        for (var iW, OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
+        const NW = ti(WW, this, mW);
+        return ri(NW, null !== (iW = mW[0]) && void 0 !== iW ? iW : {}), NW
+      })), Zi(WW, "createRenderPipelineAsync", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return ti(WW, this, OW).then((WW => {
+          var iW;
+          return ri(WW, null !== (iW = OW[0]) && void 0 !== iW ? iW : {}), WW
+        }), (WW => {
+          var iW;
+          throw function(WW, iW) {
+            var OW, mW, EW;
+            if (Ci.rejected >= ci) return;
+            Ci.rejected++;
             const {
-              reason: Me,
-              message: Ke
-            } = null !== ie && void 0 !== ie ? ie : {}, Ue = String(null !== (He = (null !== (ye = ee.vertex) && void 0 !== ye ? ye : {}).entryPoint) && void 0 !== He ? He : "");
-            ue(`WebGPU pipeline "${String(null!==(be=ee.label)&&void 0!==be?be:"")}" ${Ue} rejected (${String(null!==Me&&void 0!==Me?Me:"no reason")}): ${le(String(null!==Ke&&void 0!==Ke?Ke:ie),600)}`)
-          }(null !== (ie = He[0]) && void 0 !== ie ? ie : {}, ee), ee
+              reason: NW,
+              message: PW
+            } = null !== iW && void 0 !== iW ? iW : {}, LW = String(null !== (OW = (null !== (mW = WW.vertex) && void 0 !== mW ? mW : {}).entryPoint) && void 0 !== OW ? OW : "");
+            fW(`WebGPU pipeline "${String(null!==(EW=WW.label)&&void 0!==EW?EW:"")}" ${LW} rejected (${String(null!==NW&&void 0!==NW?NW:"no reason")}): ${XW(String(null!==PW&&void 0!==PW?PW:iW),600)}`)
+          }(null !== (iW = OW[0]) && void 0 !== iW ? iW : {}, WW), WW
         }))
-      })), Ri(ji("GPUCanvasContext"), "configure", (ee => function() {
-        for (var ie, He = arguments.length, ye = new Array(He), be = 0; be < He; be++) ye[be] = arguments[be];
-        const Me = null !== (ie = ye[0]) && void 0 !== ie ? ie : {};
-        var Ke, Ue;
-        mi++ < 3 && ue(`WebGPU canvas ${String(Me.format)} ${String(null!==(Ke=Me.colorSpace)&&void 0!==Ke?Ke:"srgb")} alpha ${String(null!==(Ue=Me.alphaMode)&&void 0!==Ue?Ue:"opaque")}`);
-        return oi(ee, this, ye)
-      })), Gi(ji("GPURenderPassEncoder")), Gi(ji("GPURenderBundleEncoder"))
+      })), Zi(Gi("GPUCanvasContext"), "configure", (WW => function() {
+        for (var iW, OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
+        const NW = null !== (iW = mW[0]) && void 0 !== iW ? iW : {};
+        var PW, LW;
+        Xi++ < 3 && fW(`WebGPU canvas ${String(NW.format)} ${String(null!==(PW=NW.colorSpace)&&void 0!==PW?PW:"srgb")} alpha ${String(null!==(LW=NW.alphaMode)&&void 0!==LW?LW:"opaque")}`);
+        return ti(WW, this, mW)
+      })), zi(Gi("GPURenderPassEncoder")), zi(Gi("GPURenderBundleEncoder"))
     }
-    const eH = 1e4,
-      iH = 6e4,
-      HH = 5e3,
-      yH = 3e3,
-      bH = 100;
-    let MH = null,
-      KH = !1,
-      UH = {
-        ...Vi.b
+    const WO = 1e4,
+      iO = 6e4,
+      OO = 5e3,
+      mO = 3e3,
+      EO = 100;
+    let NO = null,
+      PO = !1,
+      LO = {
+        ...di.b
       },
-      FH = !1,
-      JH = null,
-      oH = 0,
-      RH = () => {};
-    const kH = new Promise((ee => {
-      RH = ee
+      cO = !1,
+      wO = null,
+      tO = 0,
+      ZO = () => {};
+    const xO = new Promise((WW => {
+      ZO = WW
     }));
 
-    function qH() {
-      var ee;
-      KH || (KH = !0, UH = Object.assign(window.bloxdRenderDebug ??= {
-        ...Vi.b
+    function lO() {
+      var WW;
+      PO || (PO = !0, LO = Object.assign(window.bloxdRenderDebug ??= {
+        ...di.b
       }, {
-        faceCull: "0" === (0, Me.n)("faceCull") ? "0" : "1",
-        adrenoProbe: null !== (ee = (0, Me.n)("adrenoProbe")) && void 0 !== ee ? ee : ""
-      }), ue("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), ki || "undefined" === typeof window || (ki = !0, "undefined" !== typeof WebGL2RenderingContext && ti(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && ti(WebGLRenderingContext.prototype, !1)), Qi(), (0, Me.c)("renderProbe", (() => {
-        BH("console")
-      })), XH(), setInterval(gH, HH))
+        faceCull: "0" === (0, NW.p)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (WW = (0, NW.p)("adrenoProbe")) && void 0 !== WW ? WW : ""
+      }), fW("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), xi || "undefined" === typeof window || (xi = !0, "undefined" !== typeof WebGL2RenderingContext && yi(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && yi(WebGLRenderingContext.prototype, !1)), Qi(), (0, NW.e)("renderProbe", (() => {
+        sO("console")
+      })), UO(), setInterval(KO, OO))
     }
 
-    function fH(ee) {
-      var ie, He;
-      qH(), MH = null !== (ie = null === ee || void 0 === ee ? void 0 : ee.backend) && void 0 !== ie ? ie : null;
-      const ye = `, renderer param ${null!==(He=(0,Me.n)("renderer"))&&void 0!==He?He:"none"}, faceCull ${"0"===UH.faceCull?"off (whole parts)":"on"}, adrenoProbe ${UH.adrenoProbe||"none"}`;
-      ue(`${(0,ai.e)(ee)}${null===ee?"":ye}`)
+    function AO(WW) {
+      var iW, OW;
+      lO(), NO = null !== (iW = null === WW || void 0 === WW ? void 0 : WW.backend) && void 0 !== iW ? iW : null;
+      const mW = `, renderer param ${null!==(OW=(0,NW.p)("renderer"))&&void 0!==OW?OW:"none"}, faceCull ${"0"===LO.faceCull?"off (whole parts)":"on"}, adrenoProbe ${LO.adrenoProbe||"none"}`;
+      fW(`${(0,ei.e)(WW)}${null===WW?"":mW}`)
     }
 
-    function TH() {
-      const ee = performance.now(),
-        ie = pH(kH, eH, iH).then((ie => BH(`${Math.round((performance.now()-ee)/1e3)} s after playable${ie?"":", no terrain drawn yet"}`)));
-      (0, be.e)(ue, (async () => {
-        await ie, await JH
+    function bO() {
+      const WW = performance.now(),
+        iW = jO(xO, WO, iO).then((iW => sO(`${Math.round((performance.now()-WW)/1e3)} s after playable${iW?"":", no terrain drawn yet"}`)));
+      (0, EW.c)(fW, (async () => {
+        await iW, await wO
       }))
     }
-    async function pH(ee, ie, He) {
-      const be = (0, ye.e)(He).then((() => !1));
-      return await (0, ye.e)(ie), Promise.race([ee.then((() => !0)), be])
+    async function jO(WW, iW, OW) {
+      const EW = (0, mW.b)(OW).then((() => !1));
+      return await (0, mW.b)(iW), Promise.race([WW.then((() => !0)), EW])
     }
 
-    function XH() {
+    function UO() {
       requestAnimationFrame((() => {
-        oH++, XH()
+        tO++, UO()
       }))
     }
 
-    function zH() {
-      var ee, ie, He;
-      if (FH) return;
-      (FH = !0, ue(`renderer caps ${null!==(ee=UH.caps)&&void 0!==ee?ee:"(not noted)"}; terrain fetch ${null!==(ie=UH.fetch)&&void 0!==ie?ie:"(not noted)"}`), UH.adrenoProbe) && ue(`adrenoProbe ${UH.adrenoProbe} asked; in force (storage fetch only): ${null!==(He=UH.probe)&&void 0!==He?He:"(not noted)"}`);
-      const ye = Ve.context;
-      if (ye) {
-        for (const ee of function(ee) {
-            var ie;
-            const He = [],
-              ye = ee.getExtension("WEBGL_debug_renderer_info"),
-              be = ye ? ee.getParameter(ye.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              Me = ye ? ee.getParameter(ye.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            He.push(`GL ${String(ee.getParameter(ee.VERSION))} | ${String(ee.getParameter(ee.SHADING_LANGUAGE_VERSION))} | ${String(ee.getParameter(ee.VENDOR))} / ${String(ee.getParameter(ee.RENDERER))}`), He.push(`GL unmasked ${be} / ${Me}`);
-            const Ke = [
-              ["MAX_TEXTURE_SIZE", ee.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", ee.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", ee.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", ee.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", ee.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", ee.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", ee.MAX_RENDERBUFFER_SIZE]
+    function kO() {
+      var WW, iW, OW;
+      if (cO) return;
+      (cO = !0, fW(`renderer caps ${null!==(WW=LO.caps)&&void 0!==WW?WW:"(not noted)"}; terrain fetch ${null!==(iW=LO.fetch)&&void 0!==iW?iW:"(not noted)"}`), LO.adrenoProbe) && fW(`adrenoProbe ${LO.adrenoProbe} asked; in force (storage fetch only): ${null!==(OW=LO.probe)&&void 0!==OW?OW:"(not noted)"}`);
+      const mW = dW.context;
+      if (mW) {
+        for (const WW of function(WW) {
+            var iW;
+            const OW = [],
+              mW = WW.getExtension("WEBGL_debug_renderer_info"),
+              EW = mW ? WW.getParameter(mW.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              NW = mW ? WW.getParameter(mW.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            OW.push(`GL ${String(WW.getParameter(WW.VERSION))} | ${String(WW.getParameter(WW.SHADING_LANGUAGE_VERSION))} | ${String(WW.getParameter(WW.VENDOR))} / ${String(WW.getParameter(WW.RENDERER))}`), OW.push(`GL unmasked ${EW} / ${NW}`);
+            const PW = [
+              ["MAX_TEXTURE_SIZE", WW.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", WW.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", WW.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", WW.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", WW.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", WW.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", WW.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in ee && Ke.push(["MAX_UNIFORM_BLOCK_SIZE", ee.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", ee.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", ee.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", ee.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), He.push(`GL limits ${Ke.map((ie=>{let[He,ye]=ie;return`${He} ${String(ee.getParameter(ye))}`})).join(", ")}`);
-            const Ue = (ie, He) => {
-              const ye = ee.getShaderPrecisionFormat(ie, ee.HIGH_FLOAT),
-                be = ee.getShaderPrecisionFormat(ie, ee.HIGH_INT);
-              return `${He} highp float ${ye?`${ye.rangeMin}/${ye.rangeMax}/${ye.precision}`:"?"} int ${be?`${be.rangeMin}/${be.rangeMax}/${be.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in WW && PW.push(["MAX_UNIFORM_BLOCK_SIZE", WW.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", WW.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", WW.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", WW.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), OW.push(`GL limits ${PW.map((iW=>{let[OW,mW]=iW;return`${OW} ${String(WW.getParameter(mW))}`})).join(", ")}`);
+            const LW = (iW, OW) => {
+              const mW = WW.getShaderPrecisionFormat(iW, WW.HIGH_FLOAT),
+                EW = WW.getShaderPrecisionFormat(iW, WW.HIGH_INT);
+              return `${OW} highp float ${mW?`${mW.rangeMin}/${mW.rangeMax}/${mW.precision}`:"?"} int ${EW?`${EW.rangeMin}/${EW.rangeMax}/${EW.precision}`:"?"}`
             };
-            He.push(`GL precision ${Ue(ee.VERTEX_SHADER,"VS")}, ${Ue(ee.FRAGMENT_SHADER,"FS")}`);
-            const Fe = ee.getContextAttributes();
-            return He.push(`GL context ${JSON.stringify(Fe)} drawingBuffer ${ee.drawingBufferWidth}x${ee.drawingBufferHeight}${"drawingBufferFormat"in ee?` format 0x${Number(ee.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in ee?` ${String(ee.drawingBufferColorSpace)}`:""}`), He.push(`GL extensions ${(null!==(ie=ee.getSupportedExtensions())&&void 0!==ie?ie:[]).join(" ")}`), He
-          }(ye)) ue(ee);
+            OW.push(`GL precision ${LW(WW.VERTEX_SHADER,"VS")}, ${LW(WW.FRAGMENT_SHADER,"FS")}`);
+            const cW = WW.getContextAttributes();
+            return OW.push(`GL context ${JSON.stringify(cW)} drawingBuffer ${WW.drawingBufferWidth}x${WW.drawingBufferHeight}${"drawingBufferFormat"in WW?` format 0x${Number(WW.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in WW?` ${String(WW.drawingBufferColorSpace)}`:""}`), OW.push(`GL extensions ${(null!==(iW=WW.getSupportedExtensions())&&void 0!==iW?iW:[]).join(" ")}`), OW
+          }(mW)) fW(WW);
         ! function() {
-          if (!Ve.context) return;
-          let ee = 0,
-            ie = 0;
-          for (const [He, ye] of Pe) !ye.gl.isContextLost() && ye.gl.isProgram(He) && (ie++, Di(ye.gl, He, ye), null !== ye.terrain && ee++);
-          ue(`programs: ${ie} live of ${Pe.length} linked, ${ee} packed terrain; CPU page copies ${Math.round(Ve.shadowBytes/1048576)} MiB (${Ve.uncopied} over budget)`)
+          if (!dW.context) return;
+          let WW = 0,
+            iW = 0;
+          for (const [OW, mW] of nW) !mW.gl.isContextLost() && mW.gl.isProgram(OW) && (iW++, Hi(mW.gl, OW, mW), null !== mW.terrain && WW++);
+          fW(`programs: ${iW} live of ${nW.length} linked, ${WW} packed terrain; CPU page copies ${Math.round(dW.shadowBytes/1048576)} MiB (${dW.uncopied} over budget)`)
         }()
       }
     }
 
-    function BH(ee) {
-      return JH ??= async function(ee) {
-        zH(), "webgpu" === MH ? (EH(), "1" === UH.slotCheck && ue("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), UH.slotCheck = "1", await
-          function(ee) {
-            if (null !== Si) return Promise.resolve();
-            const ie = [];
-            return Si = ie, new Promise((He => {
+    function sO(WW) {
+      return wO ??= async function(WW) {
+        kO(), "webgpu" === NO ? (MO(), "1" === LO.slotCheck && fW("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), LO.slotCheck = "1", await
+          function(WW) {
+            if (null !== qi) return Promise.resolve();
+            const iW = [];
+            return qi = iW, new Promise((OW => {
               setTimeout((() => {
-                Si = null, ue(`WebGPU draw ranges (${ee}): ${ie.length} terrain draws recorded in a second (first ${Ji}; bundles replay without new ones)`);
-                for (const ee of ie) ue(ee);
-                He()
+                qi = null, fW(`WebGPU draw ranges (${WW}): ${iW.length} terrain draws recorded in a second (first ${wi}; bundles replay without new ones)`);
+                for (const WW of iW) fW(WW);
+                OW()
               }), 1e3)
             }))
-          }(ee), await async function() {
-            if (await (0, Vi.f)(UH, "slotCheck", ["1"], yH, bH), "1" === UH.slotCheck) return void ue(`slot check: no answer in ${yH} ms (only the storage fetch has one; a later answer logs on its own)`);
-            EH()
-          }()) : await Ki(ee);
-        ue(`check (${ee}) done: bloxdDebug.save() downloads it all`)
-      }(ee).catch((ie => {
-        ue(`check (${ee}) failed: ${String(ie)}`)
+          }(WW), await async function() {
+            if (await (0, di.e)(LO, "slotCheck", ["1"], mO, EO), "1" === LO.slotCheck) return void fW(`slot check: no answer in ${mO} ms (only the storage fetch has one; a later answer logs on its own)`);
+            MO()
+          }()) : await Pi(WW);
+        fW(`check (${WW}) done: bloxdDebug.save() downloads it all`)
+      }(WW).catch((iW => {
+        fW(`check (${WW}) failed: ${String(iW)}`)
       })).finally((() => {
-        JH = null
-      })), JH
+        wO = null
+      })), wO
     }
 
-    function EH() {
-      void 0 !== UH.slotCheck && "1" !== UH.slotCheck && (ue(UH.slotCheck), delete UH.slotCheck)
+    function MO() {
+      void 0 !== LO.slotCheck && "1" !== LO.slotCheck && (fW(LO.slotCheck), delete LO.slotCheck)
     }
 
-    function gH() {
-      const ee = ee => oH ? (ee / oH).toFixed(1) : "0",
-        ie = function() {
-          const ee = ni;
-          return ni = {
+    function KO() {
+      const WW = WW => tO ? (WW / tO).toFixed(1) : "0",
+        iW = function() {
+          const WW = Ri;
+          return Ri = {
             draws: 0,
             faces: 0
-          }, ee
+          }, WW
         }(),
-        He = function() {
-          const ee = zi;
-          return zi = {
+        OW = function() {
+          const WW = Ui;
+          return Ui = {
             inst: {
               draws: 0,
               faces: 0
@@ -1405,30 +1405,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, ee
+          }, WW
         }(),
-        ye = function() {
-          const ee = Bi;
-          return Bi = {
+        mW = function() {
+          const WW = ki;
+          return ki = {
             buffer: 0,
             texture: 0
-          }, ee
+          }, WW
         }();
-      EH(), ("webgpu" === MH ? ie.draws : He.inst.draws + He.tex.draws) > 0 && RH();
-      const be = "webgpu" === MH ? [`terrain ${ee(ie.draws)} draws ${ee(ie.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((ee => He[ee].draws > 0)).map((ie => `${ie} ${ee(He[ie].draws)} draws ${ee(He[ie].faces)} faces a frame`));
-      ue(`${oH} frames: ${be.join(", ")||"no draws"}; uploaded ${Math.round(ye.buffer/1024)} KiB to buffers, ${Math.round(ye.texture/1024)} KiB to data textures`), oH = 0
+      MO(), ("webgpu" === NO ? iW.draws : OW.inst.draws + OW.tex.draws) > 0 && ZO();
+      const EW = "webgpu" === NO ? [`terrain ${WW(iW.draws)} draws ${WW(iW.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((WW => OW[WW].draws > 0)).map((iW => `${iW} ${WW(OW[iW].draws)} draws ${WW(OW[iW].faces)} faces a frame`));
+      fW(`${tO} frames: ${EW.join(", ")||"no draws"}; uploaded ${Math.round(mW.buffer/1024)} KiB to buffers, ${Math.round(mW.texture/1024)} KiB to data textures`), tO = 0
     }
   },
-  5160: (ee, ie, He) => {
-    function ye(ee) {
-      if (null === ee) return "backend: none picked (no renderer build)";
-      const ie = ee.adapter ? `${ee.adapter.vendor}/${ee.adapter.architecture}` : "none";
-      return `backend ${ee.backend}: reason ${ee.reason}, source ${ee.source}, adapter ${ie}`
+  5431: (WW, iW, OW) => {
+    function mW(WW) {
+      if (null === WW) return "backend: none picked (no renderer build)";
+      const iW = WW.adapter ? `${WW.adapter.vendor}/${WW.adapter.architecture}` : "none";
+      return `backend ${WW.backend}: reason ${WW.reason}, source ${WW.source}, adapter ${iW}`
     }
-    He.d(ie, {
-      e: () => ye
+    OW.d(iW, {
+      e: () => mW
     })
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

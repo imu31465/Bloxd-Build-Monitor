@@ -1,167 +1,167 @@
-export const id = 45;
-export const ids = [45];
+export const id = 46;
+export const ids = [46];
 export const modules = {
-  5166: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      LEAVE_POINTER_MARGIN_PX: () => Ke,
-      RECHECK_MS: () => Me,
-      iframeHost: () => oe,
-      isNear: () => Te,
-      leaveCoverLine: () => ke,
-      overlaps: () => fe,
-      resetLeaveCoverDebugForTest: () => ze,
-      startLeaveCoverDebug: () => Ee,
-      startLeaveCoverProbe: () => Be,
-      whereIs: () => Re
+  5442: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      LEAVE_POINTER_MARGIN_PX: () => PW,
+      RECHECK_MS: () => NW,
+      iframeHost: () => tW,
+      isNear: () => bW,
+      leaveCoverLine: () => xW,
+      overlaps: () => AW,
+      resetLeaveCoverDebugForTest: () => kW,
+      startLeaveCoverDebug: () => MW,
+      startLeaveCoverProbe: () => sW,
+      whereIs: () => ZW
     });
-    var ye = He(5175),
-      be = He(3037);
-    const Me = 2e3,
-      Ke = 32,
-      Ue = 80,
-      Fe = ".EverythingMenuBannerDiv";
+    var mW = OW(5445),
+      EW = OW(3866);
+    const NW = 2e3,
+      PW = 32,
+      LW = 80,
+      cW = ".EverythingMenuBannerDiv";
 
-    function Je(ee) {
-      const ie = ee.trim().replace(/[\s=]+/g, ".").slice(0, Ue);
-      return "" === ie ? "-" : ie
+    function wW(WW) {
+      const iW = WW.trim().replace(/[\s=]+/g, ".").slice(0, LW);
+      return "" === iW ? "-" : iW
     }
 
-    function oe(ee, ie) {
-      const He = ee.getAttribute("src");
-      if (null === He || "" === He.trim()) return "none";
+    function tW(WW, iW) {
+      const OW = WW.getAttribute("src");
+      if (null === OW || "" === OW.trim()) return "none";
       try {
-        const ee = new URL(He, ie);
-        return "http:" === ee.protocol || "https:" === ee.protocol ? ee.hostname : ee.protocol.replace(":", "")
+        const WW = new URL(OW, iW);
+        return "http:" === WW.protocol || "https:" === WW.protocol ? WW.hostname : WW.protocol.replace(":", "")
       } catch {
         return "invalid"
       }
     }
 
-    function Re(ee, ie) {
-      return null !== ee.closest(Fe) ? "banner" : null !== ie && ie.contains(ee) ? "app" : "body"
+    function ZW(WW, iW) {
+      return null !== WW.closest(cW) ? "banner" : null !== iW && iW.contains(WW) ? "app" : "body"
     }
 
-    function ke(ee, ie, He, ye) {
-      var be, Me, Ke, Ue;
-      if (null === ee || ee === ie || ie.contains(ee)) return null;
-      const Fe = null === (be = ee.ownerDocument.defaultView) || void 0 === be ? void 0 : be.getComputedStyle(ee),
-        ke = ee.getBoundingClientRect();
-      return `leave covered ${[["trigger",ye],["where",Re(ee,He)],["tag",ee.tagName.toLowerCase()],["id",Je(ee.id)],["class",Je(null!==(Me=ee.getAttribute("class"))&&void 0!==Me?Me:"")],["z",Je(null!==(Ke=null===Fe||void 0===Fe?void 0:Fe.zIndex)&&void 0!==Ke?Ke:"")],["position",Je(null!==(Ue=null===Fe||void 0===Fe?void 0:Fe.position)&&void 0!==Ue?Ue:"")],["size",`${Math.round(ke.width)}x${Math.round(ke.height)}`],["iframe","IFRAME"===ee.tagName?Je(oe(ee,ee.ownerDocument.baseURI)):"-"]].map((ee=>{let[ie,He]=ee;return`${ie}=${He}`})).join(" ")}`
+    function xW(WW, iW, OW, mW) {
+      var EW, NW, PW, LW;
+      if (null === WW || WW === iW || iW.contains(WW)) return null;
+      const cW = null === (EW = WW.ownerDocument.defaultView) || void 0 === EW ? void 0 : EW.getComputedStyle(WW),
+        xW = WW.getBoundingClientRect();
+      return `leave covered ${[["trigger",mW],["where",ZW(WW,OW)],["tag",WW.tagName.toLowerCase()],["id",wW(WW.id)],["class",wW(null!==(NW=WW.getAttribute("class"))&&void 0!==NW?NW:"")],["z",wW(null!==(PW=null===cW||void 0===cW?void 0:cW.zIndex)&&void 0!==PW?PW:"")],["position",wW(null!==(LW=null===cW||void 0===cW?void 0:cW.position)&&void 0!==LW?LW:"")],["size",`${Math.round(xW.width)}x${Math.round(xW.height)}`],["iframe","IFRAME"===WW.tagName?wW(tW(WW,WW.ownerDocument.baseURI)):"-"]].map((WW=>{let[iW,OW]=WW;return`${iW}=${OW}`})).join(" ")}`
     }
 
-    function qe(ee) {
-      const ie = ee.getBoundingClientRect();
-      return 0 === ie.width || 0 === ie.height ? null : {
-        x: ie.left + ie.width / 2,
-        y: ie.top + ie.height / 2
+    function lW(WW) {
+      const iW = WW.getBoundingClientRect();
+      return 0 === iW.width || 0 === iW.height ? null : {
+        x: iW.left + iW.width / 2,
+        y: iW.top + iW.height / 2
       }
     }
 
-    function fe(ee, ie) {
-      const He = ee.getBoundingClientRect(),
-        ye = ie.getBoundingClientRect();
-      return Math.max(He.left, ye.left) < Math.min(He.right, ye.right) && Math.max(He.top, ye.top) < Math.min(He.bottom, ye.bottom)
+    function AW(WW, iW) {
+      const OW = WW.getBoundingClientRect(),
+        mW = iW.getBoundingClientRect();
+      return Math.max(OW.left, mW.left) < Math.min(OW.right, mW.right) && Math.max(OW.top, mW.top) < Math.min(OW.bottom, mW.bottom)
     }
 
-    function Te(ee, ie, He, ye) {
-      const be = ee.getBoundingClientRect();
-      return ie >= be.left - ye && ie <= be.right + ye && He >= be.top - ye && He <= be.bottom + ye
+    function bW(WW, iW, OW, mW) {
+      const EW = WW.getBoundingClientRect();
+      return iW >= EW.left - mW && iW <= EW.right + mW && OW >= EW.top - mW && OW <= EW.bottom + mW
     }
 
-    function pe(ee) {
-      (0, be.m)("leavecover", ee)
+    function jW(WW) {
+      (0, EW.m)("leavecover", WW)
     }
-    const Xe = new Set;
+    const UW = new Set;
 
-    function ze() {
-      Xe.clear()
+    function kW() {
+      UW.clear()
     }
 
-    function Be(ee) {
-      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pe;
-      const He = ee.ownerDocument,
-        ye = He.defaultView;
-      if (null === ye) return () => {};
-      const be = (ee, He) => {
-          null === ee || Xe.has(He) || (Xe.add(He), ie(ee))
+    function sW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jW;
+      const OW = WW.ownerDocument,
+        mW = OW.defaultView;
+      if (null === mW) return () => {};
+      const EW = (WW, OW) => {
+          null === WW || UW.has(OW) || (UW.add(OW), iW(WW))
         },
-        Ue = ie => {
-          const ye = ee.isConnected ? qe(ee) : null;
-          if (null === ye) return;
-          const Me = He.elementFromPoint(ye.x, ye.y);
-          if (null !== Me) {
-            const ye = He.getElementById("root");
-            be(ke(Me, ee, ye, ie), Re(Me, ye))
+        LW = iW => {
+          const mW = WW.isConnected ? lW(WW) : null;
+          if (null === mW) return;
+          const NW = OW.elementFromPoint(mW.x, mW.y);
+          if (null !== NW) {
+            const mW = OW.getElementById("root");
+            EW(xW(NW, WW, mW, iW), ZW(NW, mW))
           }
         };
-      let Fe = null;
-      const Je = ee => {
-        Fe = {
-          x: ee.clientX,
-          y: ee.clientY
+      let cW = null;
+      const wW = WW => {
+        cW = {
+          x: WW.clientX,
+          y: WW.clientY
         }
       };
-      let oe = null;
-      const ze = () => {
-          oe = setTimeout((() => {
-            oe = null;
-            const ie = He.activeElement;
-            if ("IFRAME" !== (null === ie || void 0 === ie ? void 0 : ie.tagName) || !ee.isConnected) return;
-            const ye = qe(ee),
-              Me = null !== ye && Te(ie, ye.x, ye.y, 0),
-              Ue = Fe,
-              Je = null !== Ue && Te(ee, Ue.x, Ue.y, Ke);
-            if (fe(ie, ee) && (Me || Je)) {
-              const ye = He.getElementById("root");
-              be(ke(ie, ee, ye, "blurIframe"), Re(ie, ye))
+      let tW = null;
+      const kW = () => {
+          tW = setTimeout((() => {
+            tW = null;
+            const iW = OW.activeElement;
+            if ("IFRAME" !== (null === iW || void 0 === iW ? void 0 : iW.tagName) || !WW.isConnected) return;
+            const mW = lW(WW),
+              NW = null !== mW && bW(iW, mW.x, mW.y, 0),
+              LW = cW,
+              wW = null !== LW && bW(WW, LW.x, LW.y, PW);
+            if (AW(iW, WW) && (NW || wW)) {
+              const mW = OW.getElementById("root");
+              EW(xW(iW, WW, mW, "blurIframe"), ZW(iW, mW))
             }
           }), 0)
         },
-        Be = ye.requestAnimationFrame((() => {
-          Ue("open")
+        sW = mW.requestAnimationFrame((() => {
+          LW("open")
         })),
-        Ee = setTimeout((() => {
-          Ue("recheck")
-        }), Me);
-      return ye.addEventListener("pointermove", Je, {
+        MW = setTimeout((() => {
+          LW("recheck")
+        }), NW);
+      return mW.addEventListener("pointermove", wW, {
         capture: !0,
         passive: !0
-      }), ye.addEventListener("pointerdown", Je, {
+      }), mW.addEventListener("pointerdown", wW, {
         capture: !0,
         passive: !0
-      }), ye.addEventListener("blur", ze), () => {
-        ye.cancelAnimationFrame(Be), clearTimeout(Ee), null !== oe && clearTimeout(oe), ye.removeEventListener("pointermove", Je, {
+      }), mW.addEventListener("blur", kW), () => {
+        mW.cancelAnimationFrame(sW), clearTimeout(MW), null !== tW && clearTimeout(tW), mW.removeEventListener("pointermove", wW, {
           capture: !0
-        }), ye.removeEventListener("pointerdown", Je, {
+        }), mW.removeEventListener("pointerdown", wW, {
           capture: !0
-        }), ye.removeEventListener("blur", ze)
+        }), mW.removeEventListener("blur", kW)
       }
     }
 
-    function Ee() {
-      (0, ye.i)(Be)
+    function MW() {
+      (0, mW.k)(sW)
     }
   },
-  5175: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke,
-      e: () => Me,
-      i: () => be
+  5445: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      g: () => NW,
+      k: () => EW
     });
-    let ye = null;
+    let mW = null;
 
-    function be(ee) {
-      ye = ee
+    function EW(WW) {
+      mW = WW
     }
 
-    function Me() {
-      return ye
+    function NW() {
+      return mW
     }
 
-    function Ke(ee) {
-      return "bloxd" === ee.site && !ee.isMobileApp && !ee.isTouchScreen
+    function PW(WW) {
+      return "bloxd" === WW.site && !WW.isMobileApp && !WW.isTouchScreen
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

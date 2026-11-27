@@ -1,30 +1,56 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  34867: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Me
+  37888: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      e: () => EW,
+      f: () => NW
     });
-    var ye = He(4931),
-      be = He(4937);
+    var mW = OW(62);
 
-    function Me(ee) {
-      let {
-        children: ie,
-        showing: He,
-        globallyUniqueKey: Me,
-        alwaysMountChildren: Ke = !1,
-        doGameplayStartStopOnShow: Ue = !0,
-        keepsMovement: Fe = !1
-      } = ee;
-      return (0, be.e)(!0, He, Me, Fe), (0, ye.c)(Ue, He), He || Ke ? ie : null
+    function EW(WW) {
+      return LW(WW, cW)
+    }
+
+    function NW(WW) {
+      return LW(WW, wW)
+    }
+
+    function PW(WW) {
+      return `${Math.floor(WW/60)}:${String(WW%60).padStart(2,"0")}`
+    }
+
+    function LW(WW, iW) {
+      const [, OW] = (0, mW.useState)(null);
+      return (0, mW.useEffect)((() => {
+        if (0 === WW) return;
+        const mW = window.setInterval((() => {
+          const mW = iW(WW);
+          OW((iW => (null === iW || void 0 === iW ? void 0 : iW.endsAt) === WW && iW.value === mW ? iW : {
+            endsAt: WW,
+            value: mW
+          }))
+        }), 250);
+        return () => {
+          window.clearInterval(mW)
+        }
+      }), [WW, iW]), iW(WW)
+    }
+
+    function cW(WW) {
+      return (WW - performance.now()) / 1e3
+    }
+
+    function wW(WW) {
+      return Math.max(0, Math.ceil(cW(WW)))
     }
   },
-  37509: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => be
+  37917: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    const ye = [{
+    const mW = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -41,58 +67,79 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function be(ee, ie, He) {
-      const be = Math.abs(ee - ie),
-        Me = Date.now() - He;
-      for (const Ke of ye)
-        if (ee < Ke.maxDist) return be >= Ke.hardUpdateDist || Me > Ke.timeBetweenSoftChecks && be >= Ke.softUpdateDist;
+    function EW(WW, iW, OW) {
+      const EW = Math.abs(WW - iW),
+        NW = Date.now() - OW;
+      for (const PW of mW)
+        if (WW < PW.maxDist) return EW >= PW.hardUpdateDist || NW > PW.timeBetweenSoftChecks && EW >= PW.softUpdateDist;
       return !1
     }
   },
-  39289: (ee, ie, He) => {
-    He.d(ie, {
-      e: () => Ke,
-      f: () => Ue
+  39672: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => PW,
+      g: () => LW
     });
-    var ye = He(347),
-      be = He(34897),
-      Me = He(3608);
+    var mW = OW(344),
+      EW = OW(35231),
+      NW = OW(4454);
 
-    function Ke(ee) {
-      const ie = (0, Me.c)(ee);
-      return (0, ye.Yb)(ee, void 0 === ie ? void 0 : (0, be.displayNameOf)(ie))
+    function PW(WW) {
+      const iW = (0, NW.b)(WW);
+      return (0, mW.Wb)(WW, void 0 === iW ? void 0 : (0, EW.displayNameOf)(iW))
     }
 
-    function Ue(ee, ie) {
-      return ee(Ke(ie))
+    function LW(WW, iW) {
+      return WW(PW(iW))
     }
   },
-  39291: (ee, ie, He) => {
-    He.d(ie, {
-      c: () => Ke,
-      g: () => Me
+  39677: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => NW,
+      e: () => LW,
+      g: () => PW
     });
-    const ye = new WeakMap;
+    var mW = OW(3451);
+    const EW = "(max-height: 420px), (max-width: 650px)";
 
-    function be(ee) {
-      let ie = ye.get(ee);
-      return ie || (ie = {
-        hidden: ee.hidden,
+    function NW() {
+      return (0, mW.b)(EW)
+    }
+
+    function PW(WW) {
+      return (0, mW.e)(EW, WW)
+    }
+
+    function LW() {
+      return (0, mW.c)(EW)
+    }
+  },
+  39679: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => PW,
+      h: () => NW
+    });
+    const mW = new WeakMap;
+
+    function EW(WW) {
+      let iW = mW.get(WW);
+      return iW || (iW = {
+        hidden: WW.hidden,
         x: NaN,
         y: NaN
-      }, ye.set(ee, ie)), ie
+      }, mW.set(WW, iW)), iW
     }
 
-    function Me(ee, ie) {
-      const He = be(ee);
-      He.hidden !== ie && (He.hidden = ie, ee.hidden = ie)
+    function NW(WW, iW) {
+      const OW = EW(WW);
+      OW.hidden !== iW && (OW.hidden = iW, WW.hidden = iW)
     }
 
-    function Ke(ee, ie, He) {
-      const ye = be(ee);
-      ye.x === ie && ye.y === He || (ye.x = ie, ye.y = He, ee.style.translate = `${ie}vw ${He}vh`)
+    function PW(WW, iW, OW) {
+      const mW = EW(WW);
+      mW.x === iW && mW.y === OW || (mW.x = iW, mW.y = OW, WW.style.translate = `${iW}vw ${OW}vh`)
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

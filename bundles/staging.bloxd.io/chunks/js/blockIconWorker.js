@@ -1,329 +1,329 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var ee = __webpack_require__.u,
-        ie = __webpack_require__.e,
-        He = {},
-        ye = {};
-      __webpack_require__.u = function(ie) {
-        return ee(ie) + (He.hasOwnProperty(ie) ? "?" + He[ie] : "")
-      }, __webpack_require__.e = function(be) {
-        return ie(be).catch((function(ie) {
-          var Me = ye.hasOwnProperty(be) ? ye[be] : 4;
-          if (Me < 1) {
-            var Ke = ee(be);
-            if (ie.message = "Loading chunk " + be + " failed after 4 retries.\n(" + Ke + ")", ie.request = Ke, He[be] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete ye[be]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === ie.code) {
-              var Ue = __webpack_require__.miniCssF(be);
-              ie.message = ie.message.replace("Loading chunk", "Loading CSS chunk").replace(Ke, Ue), ie.request = Ue
+      var WW = __webpack_require__.u,
+        iW = __webpack_require__.e,
+        OW = {},
+        mW = {};
+      __webpack_require__.u = function(iW) {
+        return WW(iW) + (OW.hasOwnProperty(iW) ? "?" + OW[iW] : "")
+      }, __webpack_require__.e = function(EW) {
+        return iW(EW).catch((function(iW) {
+          var NW = mW.hasOwnProperty(EW) ? mW[EW] : 4;
+          if (NW < 1) {
+            var PW = WW(EW);
+            if (iW.message = "Loading chunk " + EW + " failed after 4 retries.\n(" + PW + ")", iW.request = PW, OW[EW] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete mW[EW]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === iW.code) {
+              var LW = __webpack_require__.miniCssF(EW);
+              iW.message = iW.message.replace("Loading chunk", "Loading CSS chunk").replace(PW, LW), iW.request = LW
             }
-            throw ie
+            throw iW
           }
-          return new Promise((function(ee) {
-            var ie = 4 - Me + 1;
+          return new Promise((function(WW) {
+            var iW = 4 - NW + 1;
             setTimeout((function() {
-              var ie = "cache-bust=" + Date.now();
-              He[be] = ie, ye[be] = Me - 1, ee(__webpack_require__.e(be))
-            }), function(ee) {
-              return 500 * Math.pow(2, ee)
-            }(ie))
+              var iW = "cache-bust=" + Date.now();
+              OW[EW] = iW, mW[EW] = NW - 1, WW(__webpack_require__.e(EW))
+            }), function(WW) {
+              return 500 * Math.pow(2, WW)
+            }(iW))
           }))
         }))
       }
     }
   })();
-  const ee = Math.SQRT1_2,
-    ie = Math.SQRT1_2 / 2,
-    He = Math.sqrt(3) / 2,
-    ye = 2 * ee,
-    be = 2 * ie + He;
+  const WW = Math.SQRT1_2,
+    iW = Math.SQRT1_2 / 2,
+    OW = Math.sqrt(3) / 2,
+    mW = 2 * WW,
+    EW = 2 * iW + OW;
 
-  function Me(ie, He) {
-    const ye = He > 0 ? He + 1 : 0,
-      Me = .6 * ie - He / ee;
-    return Math.max(0, Math.min(Me, (ie - 2 * ye) / be))
+  function NW(iW, OW) {
+    const mW = OW > 0 ? OW + 1 : 0,
+      NW = .6 * iW - OW / WW;
+    return Math.max(0, Math.min(NW, (iW - 2 * mW) / EW))
   }
-  const Ke = [15, 15, 15],
-    Ue = {
+  const PW = [15, 15, 15],
+    LW = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function Fe(ee, ie, He, Ke) {
+  function cW(WW, iW, OW, PW) {
     const {
-      vertices: Ue,
-      uvs: Fe,
-      indices: Je,
-      shades: oe
-    } = ee, ke = function(ee, ie) {
-      const He = Me(ee, ie),
-        Ke = ye * He,
-        Ue = be * He;
+      vertices: LW,
+      uvs: cW,
+      indices: wW,
+      shades: tW
+    } = WW, xW = function(WW, iW) {
+      const OW = NW(WW, iW),
+        PW = mW * OW,
+        LW = EW * OW;
       return {
-        left: (ee - Ke) / 2,
-        top: (ee - Ue) / 2,
-        width: Ke,
-        height: Ue
+        left: (WW - PW) / 2,
+        top: (WW - LW) / 2,
+        width: PW,
+        height: LW
       }
-    }(He, Ke), qe = new Float32Array(Ue.length);
-    for (let ye = 0; ye < Ue.length; ye += 3) qe[ye] = ke.left + Ue[ye] * ke.width, qe[ye + 1] = ke.top + Ue[ye + 1] * ke.height, qe[ye + 2] = Ue[ye + 2];
-    const fe = new Float32Array(He * He).fill(-1 / 0),
-      Te = new Uint8ClampedArray(He * He * 4),
-      pe = 255 * ee.alphaCutoff;
-    for (let ye = 0; ye < Je.length; ye += 3) {
-      const [ee, be, Me] = [Je[ye], Je[ye + 1], Je[ye + 2]], [Ke, Ue, Re] = [3 * ee, 3 * be, 3 * Me], [ke, Xe, ze, Be, Ee, ge] = [qe[Ke], qe[Ke + 1], qe[Ue], qe[Ue + 1], qe[Re], qe[Re + 1]], Oe = (ze - ke) * (ge - Xe) - (Ee - ke) * (Be - Xe);
-      if (Math.abs(Oe) < 1e-9) continue;
-      const de = oe[ye / 3],
-        [We, te, Ze, we, De, Pe] = [Fe[2 * ee], Fe[2 * ee + 1], Fe[2 * be], Fe[2 * be + 1], Fe[2 * Me], Fe[2 * Me + 1]],
-        Ae = Math.max(0, Math.floor(Math.min(ke, ze, Ee))),
-        Ye = Math.min(He - 1, Math.ceil(Math.max(ke, ze, Ee))),
-        Ve = Math.max(0, Math.floor(Math.min(Xe, Be, ge))),
-        ae = Math.min(He - 1, Math.ceil(Math.max(Xe, Be, ge)));
-      for (let ye = Ve; ye <= ae; ye++)
-        for (let ee = Ae; ee <= Ye; ee++) {
-          const [be, Me] = [ee + .5, ye + .5], Fe = ((be - ke) * (ge - Xe) - (Ee - ke) * (Me - Xe)) / Oe, Je = ((ze - ke) * (Me - Xe) - (be - ke) * (Be - Xe)) / Oe, oe = 1 - Fe - Je;
-          if (oe < 0 || Fe < 0 || Je < 0) continue;
-          const Ae = oe * qe[Ke + 2] + Fe * qe[Ue + 2] + Je * qe[Re + 2],
-            Ye = ye * He + ee;
-          if (Ae <= fe[Ye]) continue;
-          const Ve = Math.max(0, Math.min(ie.width - 1, Math.floor((oe * We + Fe * Ze + Je * De) * ie.width))),
-            ae = 4 * (Math.max(0, Math.min(ie.height - 1, Math.floor((oe * te + Fe * we + Je * Pe) * ie.height))) * ie.width + Ve);
-          ie.pixels[ae + 3] < pe || (fe[Ye] = Ae, Te[4 * Ye] = ie.pixels[ae] * de, Te[4 * Ye + 1] = ie.pixels[ae + 1] * de, Te[4 * Ye + 2] = ie.pixels[ae + 2] * de, Te[4 * Ye + 3] = 255)
+    }(OW, PW), lW = new Float32Array(LW.length);
+    for (let mW = 0; mW < LW.length; mW += 3) lW[mW] = xW.left + LW[mW] * xW.width, lW[mW + 1] = xW.top + LW[mW + 1] * xW.height, lW[mW + 2] = LW[mW + 2];
+    const AW = new Float32Array(OW * OW).fill(-1 / 0),
+      bW = new Uint8ClampedArray(OW * OW * 4),
+      jW = 255 * WW.alphaCutoff;
+    for (let mW = 0; mW < wW.length; mW += 3) {
+      const [WW, EW, NW] = [wW[mW], wW[mW + 1], wW[mW + 2]], [PW, LW, ZW] = [3 * WW, 3 * EW, 3 * NW], [xW, UW, kW, sW, MW, KW] = [lW[PW], lW[PW + 1], lW[LW], lW[LW + 1], lW[ZW], lW[ZW + 1]], SW = (kW - xW) * (KW - UW) - (MW - xW) * (sW - UW);
+      if (Math.abs(SW) < 1e-9) continue;
+      const YW = tW[mW / 3],
+        [yW, TW, JW, hW, HW, nW] = [cW[2 * WW], cW[2 * WW + 1], cW[2 * EW], cW[2 * EW + 1], cW[2 * NW], cW[2 * NW + 1]],
+        uW = Math.max(0, Math.floor(Math.min(xW, kW, MW))),
+        oW = Math.min(OW - 1, Math.ceil(Math.max(xW, kW, MW))),
+        dW = Math.max(0, Math.floor(Math.min(UW, sW, KW))),
+        eW = Math.min(OW - 1, Math.ceil(Math.max(UW, sW, KW)));
+      for (let mW = dW; mW <= eW; mW++)
+        for (let WW = uW; WW <= oW; WW++) {
+          const [EW, NW] = [WW + .5, mW + .5], cW = ((EW - xW) * (KW - UW) - (MW - xW) * (NW - UW)) / SW, wW = ((kW - xW) * (NW - UW) - (EW - xW) * (sW - UW)) / SW, tW = 1 - cW - wW;
+          if (tW < 0 || cW < 0 || wW < 0) continue;
+          const uW = tW * lW[PW + 2] + cW * lW[LW + 2] + wW * lW[ZW + 2],
+            oW = mW * OW + WW;
+          if (uW <= AW[oW]) continue;
+          const dW = Math.max(0, Math.min(iW.width - 1, Math.floor((tW * yW + cW * JW + wW * HW) * iW.width))),
+            eW = 4 * (Math.max(0, Math.min(iW.height - 1, Math.floor((tW * TW + cW * hW + wW * nW) * iW.height))) * iW.width + dW);
+          iW.pixels[eW + 3] < jW || (AW[oW] = uW, bW[4 * oW] = iW.pixels[eW] * YW, bW[4 * oW + 1] = iW.pixels[eW + 1] * YW, bW[4 * oW + 2] = iW.pixels[eW + 2] * YW, bW[4 * oW + 3] = 255)
         }
     }
-    return Re(Te, He, Ke), Te
+    return ZW(bW, OW, PW), bW
   }
-  let Je = NaN,
-    oe = new Int32Array(0);
+  let wW = NaN,
+    tW = new Int32Array(0);
 
-  function Re(ee, ie, He) {
-    let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ie => 0 !== ee[4 * ie + 3];
-    const be = new Uint8Array(ie * ie);
-    for (let Ke = 0; Ke < ie * ie; Ke++) be[Ke] = ye(Ke) ? 1 : 0;
-    const Me = (ee, He) => ee >= 0 && He >= 0 && ee < ie && He < ie && 0 === be[He * ie + ee],
-      Ue = new Float32Array(ie * ie).fill(1 / 0),
-      Fe = function(ee) {
-        if (ee !== Je) {
-          const ie = Math.ceil(ee + 1),
-            He = [];
-          for (let ye = -ie; ye <= ie; ye++)
-            for (let be = -ie; be <= ie; be++) {
-              const ie = be * be + ye * ye;
-              ie > 0 && ie < (ee + 1) ** 2 && He.push(be, ye, ie)
+  function ZW(WW, iW, OW) {
+    let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : iW => 0 !== WW[4 * iW + 3];
+    const EW = new Uint8Array(iW * iW);
+    for (let PW = 0; PW < iW * iW; PW++) EW[PW] = mW(PW) ? 1 : 0;
+    const NW = (WW, OW) => WW >= 0 && OW >= 0 && WW < iW && OW < iW && 0 === EW[OW * iW + WW],
+      LW = new Float32Array(iW * iW).fill(1 / 0),
+      cW = function(WW) {
+        if (WW !== wW) {
+          const iW = Math.ceil(WW + 1),
+            OW = [];
+          for (let mW = -iW; mW <= iW; mW++)
+            for (let EW = -iW; EW <= iW; EW++) {
+              const iW = EW * EW + mW * mW;
+              iW > 0 && iW < (WW + 1) ** 2 && OW.push(EW, mW, iW)
             }
-          Je = ee, oe = Int32Array.from(He)
+          wW = WW, tW = Int32Array.from(OW)
         }
-        return oe
-      }(He);
-    for (let Ke = 0; Ke < ie; Ke++)
-      for (let ee = 0; ee < ie; ee++) {
-        if (1 === be[Ke * ie + ee] && (Me(ee - 1, Ke) || Me(ee + 1, Ke) || Me(ee, Ke - 1) || Me(ee, Ke + 1)))
-          for (let He = 0; He < Fe.length; He += 3) {
-            const ye = ee + Fe[He],
-              be = Ke + Fe[He + 1];
-            if (ye >= 0 && be >= 0 && ye < ie && be < ie) {
-              const ee = be * ie + ye;
-              Ue[ee] = Math.min(Ue[ee], Fe[He + 2])
+        return tW
+      }(OW);
+    for (let PW = 0; PW < iW; PW++)
+      for (let WW = 0; WW < iW; WW++) {
+        if (1 === EW[PW * iW + WW] && (NW(WW - 1, PW) || NW(WW + 1, PW) || NW(WW, PW - 1) || NW(WW, PW + 1)))
+          for (let OW = 0; OW < cW.length; OW += 3) {
+            const mW = WW + cW[OW],
+              EW = PW + cW[OW + 1];
+            if (mW >= 0 && EW >= 0 && mW < iW && EW < iW) {
+              const WW = EW * iW + mW;
+              LW[WW] = Math.min(LW[WW], cW[OW + 2])
             }
           }
       }
-    for (let Je = 0; Je < ie * ie; Je++) 1 !== be[Je] && Ue[Je] !== 1 / 0 && (ee.set(Ke, 4 * Je), ee[4 * Je + 3] = Math.round(255 * Math.min(1, He + 1 - Math.sqrt(Ue[Je]))))
+    for (let wW = 0; wW < iW * iW; wW++) 1 !== EW[wW] && LW[wW] !== 1 / 0 && (WW.set(PW, 4 * wW), WW[4 * wW + 3] = Math.round(255 * Math.min(1, OW + 1 - Math.sqrt(LW[wW]))))
   }
-  const ke = {
+  const xW = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    qe = {
+    lW = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    fe = {
+    AW = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const Te = 1e-6;
+  const bW = 1e-6;
 
-  function pe(ee, ie, He, ye) {
+  function jW(WW, iW, OW, mW) {
     let {
-      origin: be,
-      across: Me,
-      down: Ke,
-      texture: Ue,
-      rect: [Fe, Je, oe, Re],
-      shade: ke
-    } = ye;
-    const qe = Me.x * Ke.y - Me.y * Ke.x;
-    if (Math.abs(qe) < 1e-9) return;
-    const fe = [be.x, be.x + Me.x, be.x + Ke.x, be.x + Me.x + Ke.x],
-      pe = [be.y, be.y + Me.y, be.y + Ke.y, be.y + Me.y + Ke.y],
-      Xe = Math.max(0, Math.floor(Math.min(...fe))),
-      ze = Math.min(He - 1, Math.ceil(Math.max(...fe))),
-      Be = Math.max(0, Math.floor(Math.min(...pe))),
-      Ee = Math.min(He - 1, Math.ceil(Math.max(...pe)));
-    for (let ge = Be; ge <= Ee; ge++)
-      for (let ye = Xe; ye <= ze; ye++) {
-        const fe = ye + .5 - be.x,
-          pe = ge + .5 - be.y,
-          Xe = (fe * Ke.y - pe * Ke.x) / qe,
-          ze = (Me.x * pe - Me.y * fe) / qe;
-        if (Xe < -Te || Xe > 1 + Te || ze < -Te || ze > 1 + Te) continue;
-        const Be = ge * He + ye;
-        ie[Be] = 1;
-        const Ee = Fe + Math.min(Math.max(Xe, 0), 1) * (oe - Fe),
-          Oe = Je + Math.min(Math.max(ze, 0), 1) * (Re - Je),
-          de = Math.min(Ue.width - 1, Math.floor(Ee * Ue.width)),
-          We = 4 * (Math.min(Ue.height - 1, Math.floor(Oe * Ue.height)) * Ue.width + de),
-          te = Ue.pixels[We + 3] / 255;
-        if (0 === te) continue;
-        const Ze = 4 * Be,
-          we = ee[Ze + 3] / 255 * (1 - te),
-          De = te + we;
-        for (let ie = 0; ie < 3; ie++) ee[Ze + ie] = (Ue.pixels[We + ie] * ke * te + ee[Ze + ie] * we) / De;
-        ee[Ze + 3] = 255 * De
+      origin: EW,
+      across: NW,
+      down: PW,
+      texture: LW,
+      rect: [cW, wW, tW, ZW],
+      shade: xW
+    } = mW;
+    const lW = NW.x * PW.y - NW.y * PW.x;
+    if (Math.abs(lW) < 1e-9) return;
+    const AW = [EW.x, EW.x + NW.x, EW.x + PW.x, EW.x + NW.x + PW.x],
+      jW = [EW.y, EW.y + NW.y, EW.y + PW.y, EW.y + NW.y + PW.y],
+      UW = Math.max(0, Math.floor(Math.min(...AW))),
+      kW = Math.min(OW - 1, Math.ceil(Math.max(...AW))),
+      sW = Math.max(0, Math.floor(Math.min(...jW))),
+      MW = Math.min(OW - 1, Math.ceil(Math.max(...jW)));
+    for (let KW = sW; KW <= MW; KW++)
+      for (let mW = UW; mW <= kW; mW++) {
+        const AW = mW + .5 - EW.x,
+          jW = KW + .5 - EW.y,
+          UW = (AW * PW.y - jW * PW.x) / lW,
+          kW = (NW.x * jW - NW.y * AW) / lW;
+        if (UW < -bW || UW > 1 + bW || kW < -bW || kW > 1 + bW) continue;
+        const sW = KW * OW + mW;
+        iW[sW] = 1;
+        const MW = cW + Math.min(Math.max(UW, 0), 1) * (tW - cW),
+          SW = wW + Math.min(Math.max(kW, 0), 1) * (ZW - wW),
+          YW = Math.min(LW.width - 1, Math.floor(MW * LW.width)),
+          yW = 4 * (Math.min(LW.height - 1, Math.floor(SW * LW.height)) * LW.width + YW),
+          TW = LW.pixels[yW + 3] / 255;
+        if (0 === TW) continue;
+        const JW = 4 * sW,
+          hW = WW[JW + 3] / 255 * (1 - TW),
+          HW = TW + hW;
+        for (let iW = 0; iW < 3; iW++) WW[JW + iW] = (LW.pixels[yW + iW] * xW * TW + WW[JW + iW] * hW) / HW;
+        WW[JW + 3] = 255 * HW
       }
   }
 
-  function Xe(ee, ie, He) {
-    const ye = ee.get(ie);
-    if (void 0 === ye) throw new Error(`no ${He} was sent for ${ie.slice(0,100)}`);
-    return ye
+  function UW(WW, iW, OW) {
+    const mW = WW.get(iW);
+    if (void 0 === mW) throw new Error(`no ${OW} was sent for ${iW.slice(0,100)}`);
+    return mW
   }
-  const ze = {
-      pixelsOf(ee) {
-        const ie = new OffscreenCanvas(ee.width, ee.height),
-          He = ie.getContext("2d");
-        if (!He) throw new Error("no 2D context");
-        return He.drawImage(ee, 0, 0), ee.close(), {
-          width: ie.width,
-          height: ie.height,
-          pixels: He.getImageData(0, 0, ie.width, ie.height).data
+  const kW = {
+      pixelsOf(WW) {
+        const iW = new OffscreenCanvas(WW.width, WW.height),
+          OW = iW.getContext("2d");
+        if (!OW) throw new Error("no 2D context");
+        return OW.drawImage(WW, 0, 0), WW.close(), {
+          width: iW.width,
+          height: iW.height,
+          pixels: OW.getImageData(0, 0, iW.width, iW.height).data
         }
       },
-      async encode(ee, ie) {
-        const He = new OffscreenCanvas(ie, ie),
-          ye = He.getContext("2d");
-        if (!ye) throw new Error("no 2D context");
-        ye.putImageData(new ImageData(ee, ie, ie), 0, 0);
-        const be = await He.convertToBlob();
-        return new Promise(((ee, ie) => {
-          const He = new FileReader;
-          He.onload = () => {
-            ee(He.result)
-          }, He.onerror = () => {
-            var ee;
-            ie(null !== (ee = He.error) && void 0 !== ee ? ee : new Error("the icon did not encode"))
-          }, He.readAsDataURL(be)
+      async encode(WW, iW) {
+        const OW = new OffscreenCanvas(iW, iW),
+          mW = OW.getContext("2d");
+        if (!mW) throw new Error("no 2D context");
+        mW.putImageData(new ImageData(WW, iW, iW), 0, 0);
+        const EW = await OW.convertToBlob();
+        return new Promise(((WW, iW) => {
+          const OW = new FileReader;
+          OW.onload = () => {
+            WW(OW.result)
+          }, OW.onerror = () => {
+            var WW;
+            iW(null !== (WW = OW.error) && void 0 !== WW ? WW : new Error("the icon did not encode"))
+          }, OW.readAsDataURL(EW)
         }))
       }
     },
-    Be = globalThis.WorkerGlobalScope;
-  void 0 !== Be && globalThis instanceof Be && function(ye, be) {
-    const Ke = new Map,
-      Je = new Map,
-      oe = (ee, ie, He) => {
+    sW = globalThis.WorkerGlobalScope;
+  void 0 !== sW && globalThis instanceof sW && function(mW, EW) {
+    const PW = new Map,
+      wW = new Map,
+      tW = (WW, iW, OW) => {
         (async () => {
           try {
-            ye.postMessage({
+            mW.postMessage({
               type: "drawn",
-              id: ee,
-              url: await be.encode(He(), ie)
+              id: WW,
+              url: await EW.encode(OW(), iW)
             })
-          } catch (Me) {
-            ye.postMessage({
+          } catch (NW) {
+            mW.postMessage({
               type: "failed",
-              message: String(Me)
+              message: String(NW)
             })
           }
         })()
       };
-    ye.onmessage = ye => {
+    mW.onmessage = mW => {
       let {
-        data: Te
-      } = ye;
-      if ("texture" === Te.type) Ke.set(Te.url, be.pixelsOf(Te.bitmap));
-      else if ("model" === Te.type) Je.set(Te.name, {
-        geometry: Te.geometry,
-        texture: be.pixelsOf(Te.bitmap)
+        data: bW
+      } = mW;
+      if ("texture" === bW.type) PW.set(bW.url, EW.pixelsOf(bW.bitmap));
+      else if ("model" === bW.type) wW.set(bW.name, {
+        geometry: bW.geometry,
+        texture: EW.pixelsOf(bW.bitmap)
       });
-      else if ("draw" === Te.type) {
+      else if ("draw" === bW.type) {
         const {
-          id: ye,
-          top: be,
-          left: Fe,
-          right: Je,
-          itemType: ze,
-          size: Be,
-          outlineWidth: Ee
-        } = Te;
-        oe(ye, Be, (() => function(ye, be, Ke, Fe) {
-          const Je = Me(Ke, Fe),
-            oe = Je * ee,
-            ke = Je * ie,
-            qe = Je * He,
-            fe = Math.max(...be.boxes.map((ee => ee[4]))),
-            Te = Ke / 2,
-            Xe = ke + (Ke - ke - ke - fe * qe) / 2,
-            ze = (ee, ie, He) => ({
-              x: Te + (ee - He) * oe,
-              y: Xe - ke + (ee + He) * ke + (fe - ie) * qe
+          id: mW,
+          top: EW,
+          left: cW,
+          right: wW,
+          itemType: kW,
+          size: sW,
+          outlineWidth: MW
+        } = bW;
+        tW(mW, sW, (() => function(mW, EW, PW, cW) {
+          const wW = NW(PW, cW),
+            tW = wW * WW,
+            xW = wW * iW,
+            lW = wW * OW,
+            AW = Math.max(...EW.boxes.map((WW => WW[4]))),
+            bW = PW / 2,
+            UW = xW + (PW - xW - xW - AW * lW) / 2,
+            kW = (WW, iW, OW) => ({
+              x: bW + (WW - OW) * tW,
+              y: UW - xW + (WW + OW) * xW + (AW - iW) * lW
             }),
-            Be = (ee, ie, He, ye, Me, Ke) => ({
-              origin: ee,
+            sW = (WW, iW, OW, mW, NW, PW) => ({
+              origin: WW,
               across: {
-                x: ie.x - ee.x,
-                y: ie.y - ee.y
+                x: iW.x - WW.x,
+                y: iW.y - WW.y
               },
               down: {
-                x: He.x - ee.x,
-                y: He.y - ee.y
+                x: OW.x - WW.x,
+                y: OW.y - WW.y
               },
-              texture: ye,
-              rect: be.cropFaces ? Me : [0, 0, 1, 1],
-              shade: Ke
+              texture: mW,
+              rect: EW.cropFaces ? NW : [0, 0, 1, 1],
+              shade: PW
             }),
-            Ee = new Uint8ClampedArray(Ke * Ke * 4),
-            ge = new Uint8Array(Ke * Ke),
-            Oe = Ue;
-          for (const [ee, ie, He, Me, Ue, Re] of be.boxes) {
-            const be = Be(ze(Me, Ue, Re), ze(Me, Ue, He), ze(Me, ie, Re), ye.right, [1 - Re, 1 - Ue, 1 - He, 1 - ie], Oe.right),
-              Fe = Be(ze(ee, Ue, Re), ze(Me, Ue, Re), ze(ee, ie, Re), ye.left, [ee, 1 - Ue, Me, 1 - ie], Oe.left),
-              Je = Be(ze(ee, Ue, He), ze(Me, Ue, He), ze(ee, Ue, Re), ye.top, [ee, He, Me, Re], Oe.top);
-            for (const ee of [be, Fe, Je]) pe(Ee, ge, Ke, ee)
+            MW = new Uint8ClampedArray(PW * PW * 4),
+            KW = new Uint8Array(PW * PW),
+            SW = LW;
+          for (const [WW, iW, OW, NW, LW, ZW] of EW.boxes) {
+            const EW = sW(kW(NW, LW, ZW), kW(NW, LW, OW), kW(NW, iW, ZW), mW.right, [1 - ZW, 1 - LW, 1 - OW, 1 - iW], SW.right),
+              cW = sW(kW(WW, LW, ZW), kW(NW, LW, ZW), kW(WW, iW, ZW), mW.left, [WW, 1 - LW, NW, 1 - iW], SW.left),
+              wW = sW(kW(WW, LW, OW), kW(NW, LW, OW), kW(WW, LW, ZW), mW.top, [WW, OW, NW, ZW], SW.top);
+            for (const WW of [EW, cW, wW]) jW(MW, KW, PW, WW)
           }
-          return Re(Ee, Ke, Fe, (ee => 1 === ge[ee])), Ee
+          return ZW(MW, PW, cW, (WW => 1 === KW[WW])), MW
         }({
-          top: Xe(Ke, be, "texture"),
-          left: Xe(Ke, Fe, "texture"),
-          right: Xe(Ke, Je, "texture")
-        }, function(ee) {
-          return "SlabBlock" === ee ? qe : "StairsBlock" === ee ? fe : ke
-        }(ze), Be, Ee)))
+          top: UW(PW, EW, "texture"),
+          left: UW(PW, cW, "texture"),
+          right: UW(PW, wW, "texture")
+        }, function(WW) {
+          return "SlabBlock" === WW ? lW : "StairsBlock" === WW ? AW : xW
+        }(kW), sW, MW)))
       } else {
         const {
-          id: ee,
-          name: ie,
-          size: He,
-          outlineWidth: ye
-        } = Te;
-        oe(ee, He, (() => {
+          id: WW,
+          name: iW,
+          size: OW,
+          outlineWidth: mW
+        } = bW;
+        tW(WW, OW, (() => {
           const {
-            geometry: ee,
-            texture: be
-          } = Xe(Je, ie, "model");
-          return Fe(ee, be, He, ye)
+            geometry: WW,
+            texture: EW
+          } = UW(wW, iW, "model");
+          return cW(WW, EW, OW, mW)
         }))
       }
-    }, ye.postMessage({
+    }, mW.postMessage({
       type: "started"
     })
-  }(globalThis, ze)
+  }(globalThis, kW)
 })();

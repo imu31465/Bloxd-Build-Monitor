@@ -1,128 +1,128 @@
-/*! For license information please see u88b9b.fa-renderer.2bfaa4f5.chunk.js.LICENSE.txt */
-export const id = 38;
-export const ids = [38];
+/*! For license information please see 1yqdn.fa-renderer.59fd3f7b.chunk.js.LICENSE.txt */
+export const id = 39;
+export const ids = [39];
 export const modules = {
-  7398: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      FontAwesomeIcon: () => We
+  7766: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      FontAwesomeIcon: () => yW
     });
-    var ye = He(7394),
-      be = He(5461),
-      Me = He.n(be),
-      Ke = He(59);
+    var mW = OW(7763),
+      EW = OW(5868),
+      NW = OW.n(EW),
+      PW = OW(62);
 
-    function Ue(ee, ie) {
-      (null == ie || ie > ee.length) && (ie = ee.length);
-      for (var He = 0, ye = Array(ie); He < ie; He++) ye[He] = ee[He];
-      return ye
+    function LW(WW, iW) {
+      (null == iW || iW > WW.length) && (iW = WW.length);
+      for (var OW = 0, mW = Array(iW); OW < iW; OW++) mW[OW] = WW[OW];
+      return mW
     }
 
-    function Fe(ee, ie, He) {
-      return (ie = function(ee) {
-        var ie = function(ee, ie) {
-          if ("object" != typeof ee || !ee) return ee;
-          var He = ee[Symbol.toPrimitive];
-          if (void 0 !== He) {
-            var ye = He.call(ee, ie || "default");
-            if ("object" != typeof ye) return ye;
+    function cW(WW, iW, OW) {
+      return (iW = function(WW) {
+        var iW = function(WW, iW) {
+          if ("object" != typeof WW || !WW) return WW;
+          var OW = WW[Symbol.toPrimitive];
+          if (void 0 !== OW) {
+            var mW = OW.call(WW, iW || "default");
+            if ("object" != typeof mW) return mW;
             throw new TypeError("@@toPrimitive must return a primitive value.")
           }
-          return ("string" === ie ? String : Number)(ee)
-        }(ee, "string");
-        return "symbol" == typeof ie ? ie : ie + ""
-      }(ie)) in ee ? Object.defineProperty(ee, ie, {
-        value: He,
+          return ("string" === iW ? String : Number)(WW)
+        }(WW, "string");
+        return "symbol" == typeof iW ? iW : iW + ""
+      }(iW)) in WW ? Object.defineProperty(WW, iW, {
+        value: OW,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : ee[ie] = He, ee
+      }) : WW[iW] = OW, WW
     }
 
-    function Je(ee, ie) {
-      var He = Object.keys(ee);
+    function wW(WW, iW) {
+      var OW = Object.keys(WW);
       if (Object.getOwnPropertySymbols) {
-        var ye = Object.getOwnPropertySymbols(ee);
-        ie && (ye = ye.filter((function(ie) {
-          return Object.getOwnPropertyDescriptor(ee, ie).enumerable
-        }))), He.push.apply(He, ye)
+        var mW = Object.getOwnPropertySymbols(WW);
+        iW && (mW = mW.filter((function(iW) {
+          return Object.getOwnPropertyDescriptor(WW, iW).enumerable
+        }))), OW.push.apply(OW, mW)
       }
-      return He
+      return OW
     }
 
-    function oe(ee) {
-      for (var ie = 1; ie < arguments.length; ie++) {
-        var He = null != arguments[ie] ? arguments[ie] : {};
-        ie % 2 ? Je(Object(He), !0).forEach((function(ie) {
-          Fe(ee, ie, He[ie])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(ee, Object.getOwnPropertyDescriptors(He)) : Je(Object(He)).forEach((function(ie) {
-          Object.defineProperty(ee, ie, Object.getOwnPropertyDescriptor(He, ie))
+    function tW(WW) {
+      for (var iW = 1; iW < arguments.length; iW++) {
+        var OW = null != arguments[iW] ? arguments[iW] : {};
+        iW % 2 ? wW(Object(OW), !0).forEach((function(iW) {
+          cW(WW, iW, OW[iW])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(WW, Object.getOwnPropertyDescriptors(OW)) : wW(Object(OW)).forEach((function(iW) {
+          Object.defineProperty(WW, iW, Object.getOwnPropertyDescriptor(OW, iW))
         }))
       }
-      return ee
+      return WW
     }
 
-    function Re(ee, ie) {
-      return function(ee) {
-        if (Array.isArray(ee)) return ee
-      }(ee) || function(ee, ie) {
-        var He = null == ee ? null : "undefined" != typeof Symbol && ee[Symbol.iterator] || ee["@@iterator"];
-        if (null != He) {
-          var ye, be, Me, Ke, Ue = [],
-            Fe = !0,
-            Je = !1;
+    function ZW(WW, iW) {
+      return function(WW) {
+        if (Array.isArray(WW)) return WW
+      }(WW) || function(WW, iW) {
+        var OW = null == WW ? null : "undefined" != typeof Symbol && WW[Symbol.iterator] || WW["@@iterator"];
+        if (null != OW) {
+          var mW, EW, NW, PW, LW = [],
+            cW = !0,
+            wW = !1;
           try {
-            if (Me = (He = He.call(ee)).next, 0 === ie) {
-              if (Object(He) !== He) return;
-              Fe = !1
+            if (NW = (OW = OW.call(WW)).next, 0 === iW) {
+              if (Object(OW) !== OW) return;
+              cW = !1
             } else
-              for (; !(Fe = (ye = Me.call(He)).done) && (Ue.push(ye.value), Ue.length !== ie); Fe = !0);
-          } catch (ee) {
-            Je = !0, be = ee
+              for (; !(cW = (mW = NW.call(OW)).done) && (LW.push(mW.value), LW.length !== iW); cW = !0);
+          } catch (WW) {
+            wW = !0, EW = WW
           } finally {
             try {
-              if (!Fe && null != He.return && (Ke = He.return(), Object(Ke) !== Ke)) return
+              if (!cW && null != OW.return && (PW = OW.return(), Object(PW) !== PW)) return
             } finally {
-              if (Je) throw be
+              if (wW) throw EW
             }
           }
-          return Ue
+          return LW
         }
-      }(ee, ie) || fe(ee, ie) || function() {
+      }(WW, iW) || AW(WW, iW) || function() {
         throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function ke(ee) {
-      return function(ee) {
-        if (Array.isArray(ee)) return Ue(ee)
-      }(ee) || function(ee) {
-        if ("undefined" != typeof Symbol && null != ee[Symbol.iterator] || null != ee["@@iterator"]) return Array.from(ee)
-      }(ee) || fe(ee) || function() {
+    function xW(WW) {
+      return function(WW) {
+        if (Array.isArray(WW)) return LW(WW)
+      }(WW) || function(WW) {
+        if ("undefined" != typeof Symbol && null != WW[Symbol.iterator] || null != WW["@@iterator"]) return Array.from(WW)
+      }(WW) || AW(WW) || function() {
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function qe(ee) {
-      return qe = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(ee) {
-        return typeof ee
-      } : function(ee) {
-        return ee && "function" == typeof Symbol && ee.constructor === Symbol && ee !== Symbol.prototype ? "symbol" : typeof ee
-      }, qe(ee)
+    function lW(WW) {
+      return lW = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(WW) {
+        return typeof WW
+      } : function(WW) {
+        return WW && "function" == typeof Symbol && WW.constructor === Symbol && WW !== Symbol.prototype ? "symbol" : typeof WW
+      }, lW(WW)
     }
 
-    function fe(ee, ie) {
-      if (ee) {
-        if ("string" == typeof ee) return Ue(ee, ie);
-        var He = {}.toString.call(ee).slice(8, -1);
-        return "Object" === He && ee.constructor && (He = ee.constructor.name), "Map" === He || "Set" === He ? Array.from(ee) : "Arguments" === He || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(He) ? Ue(ee, ie) : void 0
+    function AW(WW, iW) {
+      if (WW) {
+        if ("string" == typeof WW) return LW(WW, iW);
+        var OW = {}.toString.call(WW).slice(8, -1);
+        return "Object" === OW && WW.constructor && (OW = WW.constructor.name), "Map" === OW || "Set" === OW ? Array.from(WW) : "Arguments" === OW || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(OW) ? LW(WW, iW) : void 0
       }
     }
-    var Te;
+    var bW;
     try {
-      var pe = He(7402);
-      Te = pe.version
-    } catch (Ze) {
-      Te = "undefined" !== typeof process && {
+      var jW = OW(7773);
+      bW = jW.version
+    } catch (JW) {
+      bW = "undefined" !== typeof process && {
         NODE_ENV: "production",
         PUBLIC_URL: "",
         WDS_SOCKET_HOST: void 0,
@@ -133,95 +133,95 @@ export const modules = {
       }.FA_VERSION || "7.0.0"
     }
 
-    function Xe(ee) {
-      var ie = ee.beat,
-        He = ee.fade,
-        ye = ee.beatFade,
-        be = ee.bounce,
-        Me = ee.shake,
-        Ke = ee.flash,
-        Ue = ee.spin,
-        Je = ee.spinPulse,
-        oe = ee.spinReverse,
-        ke = ee.pulse,
-        qe = ee.fixedWidth,
-        fe = ee.inverse,
-        pe = ee.border,
-        Xe = ee.listItem,
-        ze = ee.flip,
-        Be = ee.size,
-        Ee = ee.rotation,
-        ge = ee.pull,
-        Oe = ee.swapOpacity,
-        de = ee.rotateBy,
-        We = ee.widthAuto,
-        te = function(ee, ie) {
-          for (var He = Re(ee.split("-"), 2), ye = He[0], be = He[1], Me = Re(ie.split("-"), 2), Ke = Me[0], Ue = Me[1], Fe = ye.split("."), Je = Ke.split("."), oe = 0; oe < Math.max(Fe.length, Je.length); oe++) {
-            var ke = Fe[oe] || "0",
-              qe = Je[oe] || "0",
-              fe = parseInt(ke, 10),
-              Te = parseInt(qe, 10);
-            if (fe !== Te) return fe > Te
+    function UW(WW) {
+      var iW = WW.beat,
+        OW = WW.fade,
+        mW = WW.beatFade,
+        EW = WW.bounce,
+        NW = WW.shake,
+        PW = WW.flash,
+        LW = WW.spin,
+        wW = WW.spinPulse,
+        tW = WW.spinReverse,
+        xW = WW.pulse,
+        lW = WW.fixedWidth,
+        AW = WW.inverse,
+        jW = WW.border,
+        UW = WW.listItem,
+        kW = WW.flip,
+        sW = WW.size,
+        MW = WW.rotation,
+        KW = WW.pull,
+        SW = WW.swapOpacity,
+        YW = WW.rotateBy,
+        yW = WW.widthAuto,
+        TW = function(WW, iW) {
+          for (var OW = ZW(WW.split("-"), 2), mW = OW[0], EW = OW[1], NW = ZW(iW.split("-"), 2), PW = NW[0], LW = NW[1], cW = mW.split("."), wW = PW.split("."), tW = 0; tW < Math.max(cW.length, wW.length); tW++) {
+            var xW = cW[tW] || "0",
+              lW = wW[tW] || "0",
+              AW = parseInt(xW, 10),
+              bW = parseInt(lW, 10);
+            if (AW !== bW) return AW > bW
           }
-          for (var pe = 0; pe < Math.max(Fe.length, Je.length); pe++) {
-            var Xe = Fe[pe] || "0",
-              ze = Je[pe] || "0";
-            if (Xe !== ze && Xe.length !== ze.length) return Xe.length < ze.length
+          for (var jW = 0; jW < Math.max(cW.length, wW.length); jW++) {
+            var UW = cW[jW] || "0",
+              kW = wW[jW] || "0";
+            if (UW !== kW && UW.length !== kW.length) return UW.length < kW.length
           }
-          return !(be && !Ue)
-        }(Te, "7.0.0"),
-        Ze = Fe(Fe(Fe(Fe(Fe(Fe({
-          "fa-beat": ie,
-          "fa-fade": He,
-          "fa-beat-fade": ye,
-          "fa-bounce": be,
-          "fa-shake": Me,
-          "fa-flash": Ke,
-          "fa-spin": Ue,
-          "fa-spin-reverse": oe,
-          "fa-spin-pulse": Je,
-          "fa-pulse": ke,
-          "fa-fw": qe,
-          "fa-inverse": fe,
-          "fa-border": pe,
-          "fa-li": Xe,
-          "fa-flip": !0 === ze,
-          "fa-flip-horizontal": "horizontal" === ze || "both" === ze,
-          "fa-flip-vertical": "vertical" === ze || "both" === ze
-        }, "fa-".concat(Be), "undefined" !== typeof Be && null !== Be), "fa-rotate-".concat(Ee), "undefined" !== typeof Ee && null !== Ee && 0 !== Ee), "fa-pull-".concat(ge), "undefined" !== typeof ge && null !== ge), "fa-swap-opacity", Oe), "fa-rotate-by", te && de), "fa-width-auto", te && We);
-      return Object.keys(Ze).map((function(ee) {
-        return Ze[ee] ? ee : null
-      })).filter((function(ee) {
-        return ee
+          return !(EW && !LW)
+        }(bW, "7.0.0"),
+        JW = cW(cW(cW(cW(cW(cW({
+          "fa-beat": iW,
+          "fa-fade": OW,
+          "fa-beat-fade": mW,
+          "fa-bounce": EW,
+          "fa-shake": NW,
+          "fa-flash": PW,
+          "fa-spin": LW,
+          "fa-spin-reverse": tW,
+          "fa-spin-pulse": wW,
+          "fa-pulse": xW,
+          "fa-fw": lW,
+          "fa-inverse": AW,
+          "fa-border": jW,
+          "fa-li": UW,
+          "fa-flip": !0 === kW,
+          "fa-flip-horizontal": "horizontal" === kW || "both" === kW,
+          "fa-flip-vertical": "vertical" === kW || "both" === kW
+        }, "fa-".concat(sW), "undefined" !== typeof sW && null !== sW), "fa-rotate-".concat(MW), "undefined" !== typeof MW && null !== MW && 0 !== MW), "fa-pull-".concat(KW), "undefined" !== typeof KW && null !== KW), "fa-swap-opacity", SW), "fa-rotate-by", TW && YW), "fa-width-auto", TW && yW);
+      return Object.keys(JW).map((function(WW) {
+        return JW[WW] ? WW : null
+      })).filter((function(WW) {
+        return WW
       }))
     }
 
-    function ze(ee) {
-      return ie = ee, (ie -= 0) === ie ? ee : (ee = ee.replace(/[\-_\s]+(.)?/g, (function(ee, ie) {
-        return ie ? ie.toUpperCase() : ""
-      }))).substr(0, 1).toLowerCase() + ee.substr(1);
-      var ie
+    function kW(WW) {
+      return iW = WW, (iW -= 0) === iW ? WW : (WW = WW.replace(/[\-_\s]+(.)?/g, (function(WW, iW) {
+        return iW ? iW.toUpperCase() : ""
+      }))).substr(0, 1).toLowerCase() + WW.substr(1);
+      var iW
     }
-    var Be = ["style"];
-    var Ee = !1;
+    var sW = ["style"];
+    var MW = !1;
     try {
-      Ee = !0
-    } catch (Ze) {}
+      MW = !0
+    } catch (JW) {}
 
-    function ge(ee) {
-      return ee && "object" === qe(ee) && ee.prefix && ee.iconName && ee.icon ? ee : ye.parse.icon ? ye.parse.icon(ee) : null === ee ? null : ee && "object" === qe(ee) && ee.prefix && ee.iconName ? ee : Array.isArray(ee) && 2 === ee.length ? {
-        prefix: ee[0],
-        iconName: ee[1]
-      } : "string" === typeof ee ? {
+    function KW(WW) {
+      return WW && "object" === lW(WW) && WW.prefix && WW.iconName && WW.icon ? WW : mW.parse.icon ? mW.parse.icon(WW) : null === WW ? null : WW && "object" === lW(WW) && WW.prefix && WW.iconName ? WW : Array.isArray(WW) && 2 === WW.length ? {
+        prefix: WW[0],
+        iconName: WW[1]
+      } : "string" === typeof WW ? {
         prefix: "fas",
-        iconName: ee
+        iconName: WW
       } : void 0
     }
 
-    function Oe(ee, ie) {
-      return Array.isArray(ie) && ie.length > 0 || !Array.isArray(ie) && ie ? Fe({}, ee, ie) : {}
+    function SW(WW, iW) {
+      return Array.isArray(iW) && iW.length > 0 || !Array.isArray(iW) && iW ? cW({}, WW, iW) : {}
     }
-    var de = {
+    var YW = {
         border: !1,
         className: "",
         mask: null,
@@ -251,369 +251,369 @@ export const modules = {
         swapOpacity: !1,
         widthAuto: !1
       },
-      We = Ke.forwardRef((function(ee, ie) {
-        var He = oe(oe({}, de), ee),
-          be = He.icon,
-          Me = He.mask,
-          Ke = He.symbol,
-          Ue = He.className,
-          Fe = He.title,
-          Je = He.titleId,
-          Re = He.maskId,
-          qe = ge(be),
-          fe = Oe("classes", [].concat(ke(Xe(He)), ke((Ue || "").split(" ")))),
-          Te = Oe("transform", "string" === typeof He.transform ? ye.parse.transform(He.transform) : He.transform),
-          pe = Oe("mask", ge(Me)),
-          ze = (0, ye.icon)(qe, oe(oe(oe(oe({}, fe), Te), pe), {}, {
-            symbol: Ke,
-            title: Fe,
-            titleId: Je,
-            maskId: Re
+      yW = PW.forwardRef((function(WW, iW) {
+        var OW = tW(tW({}, YW), WW),
+          EW = OW.icon,
+          NW = OW.mask,
+          PW = OW.symbol,
+          LW = OW.className,
+          cW = OW.title,
+          wW = OW.titleId,
+          ZW = OW.maskId,
+          lW = KW(EW),
+          AW = SW("classes", [].concat(xW(UW(OW)), xW((LW || "").split(" ")))),
+          bW = SW("transform", "string" === typeof OW.transform ? mW.parse.transform(OW.transform) : OW.transform),
+          jW = SW("mask", KW(NW)),
+          kW = (0, mW.icon)(lW, tW(tW(tW(tW({}, AW), bW), jW), {}, {
+            symbol: PW,
+            title: cW,
+            titleId: wW,
+            maskId: ZW
           }));
-        if (!ze) return function() {
-          var ee;
-          !Ee && console && "function" === typeof console.error && (ee = console).error.apply(ee, arguments)
-        }("Could not find icon", qe), null;
-        var Be = ze.abstract,
-          We = {
-            ref: ie
+        if (!kW) return function() {
+          var WW;
+          !MW && console && "function" === typeof console.error && (WW = console).error.apply(WW, arguments)
+        }("Could not find icon", lW), null;
+        var sW = kW.abstract,
+          yW = {
+            ref: iW
           };
-        return Object.keys(He).forEach((function(ee) {
-          de.hasOwnProperty(ee) || (We[ee] = He[ee])
-        })), te(Be[0], We)
+        return Object.keys(OW).forEach((function(WW) {
+          YW.hasOwnProperty(WW) || (yW[WW] = OW[WW])
+        })), TW(sW[0], yW)
       }));
-    We.displayName = "FontAwesomeIcon", We.propTypes = {
-      beat: Me().bool,
-      border: Me().bool,
-      beatFade: Me().bool,
-      bounce: Me().bool,
-      className: Me().string,
-      fade: Me().bool,
-      flash: Me().bool,
-      mask: Me().oneOfType([Me().object, Me().array, Me().string]),
-      maskId: Me().string,
-      fixedWidth: Me().bool,
-      inverse: Me().bool,
-      flip: Me().oneOf([!0, !1, "horizontal", "vertical", "both"]),
-      icon: Me().oneOfType([Me().object, Me().array, Me().string]),
-      listItem: Me().bool,
-      pull: Me().oneOf(["right", "left"]),
-      pulse: Me().bool,
-      rotation: Me().oneOf([0, 90, 180, 270]),
-      rotateBy: Me().bool,
-      shake: Me().bool,
-      size: Me().oneOf(["2xs", "xs", "sm", "lg", "xl", "2xl", "1x", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"]),
-      spin: Me().bool,
-      spinPulse: Me().bool,
-      spinReverse: Me().bool,
-      symbol: Me().oneOfType([Me().bool, Me().string]),
-      title: Me().string,
-      titleId: Me().string,
-      transform: Me().oneOfType([Me().string, Me().object]),
-      swapOpacity: Me().bool,
-      widthAuto: Me().bool
+    yW.displayName = "FontAwesomeIcon", yW.propTypes = {
+      beat: NW().bool,
+      border: NW().bool,
+      beatFade: NW().bool,
+      bounce: NW().bool,
+      className: NW().string,
+      fade: NW().bool,
+      flash: NW().bool,
+      mask: NW().oneOfType([NW().object, NW().array, NW().string]),
+      maskId: NW().string,
+      fixedWidth: NW().bool,
+      inverse: NW().bool,
+      flip: NW().oneOf([!0, !1, "horizontal", "vertical", "both"]),
+      icon: NW().oneOfType([NW().object, NW().array, NW().string]),
+      listItem: NW().bool,
+      pull: NW().oneOf(["right", "left"]),
+      pulse: NW().bool,
+      rotation: NW().oneOf([0, 90, 180, 270]),
+      rotateBy: NW().bool,
+      shake: NW().bool,
+      size: NW().oneOf(["2xs", "xs", "sm", "lg", "xl", "2xl", "1x", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"]),
+      spin: NW().bool,
+      spinPulse: NW().bool,
+      spinReverse: NW().bool,
+      symbol: NW().oneOfType([NW().bool, NW().string]),
+      title: NW().string,
+      titleId: NW().string,
+      transform: NW().oneOfType([NW().string, NW().object]),
+      swapOpacity: NW().bool,
+      widthAuto: NW().bool
     };
-    var te = function ee(ie, He) {
-      var ye = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      if ("string" === typeof He) return He;
-      var be = (He.children || []).map((function(He) {
-          return ee(ie, He)
+    var TW = function WW(iW, OW) {
+      var mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      if ("string" === typeof OW) return OW;
+      var EW = (OW.children || []).map((function(OW) {
+          return WW(iW, OW)
         })),
-        Me = Object.keys(He.attributes || {}).reduce((function(ee, ie) {
-          var ye = He.attributes[ie];
-          switch (ie) {
+        NW = Object.keys(OW.attributes || {}).reduce((function(WW, iW) {
+          var mW = OW.attributes[iW];
+          switch (iW) {
             case "class":
-              ee.attrs.className = ye, delete He.attributes.class;
+              WW.attrs.className = mW, delete OW.attributes.class;
               break;
             case "style":
-              ee.attrs.style = ye.split(";").map((function(ee) {
-                return ee.trim()
-              })).filter((function(ee) {
-                return ee
-              })).reduce((function(ee, ie) {
-                var He, ye = ie.indexOf(":"),
-                  be = ze(ie.slice(0, ye)),
-                  Me = ie.slice(ye + 1).trim();
-                return be.startsWith("webkit") ? ee[(He = be, He.charAt(0).toUpperCase() + He.slice(1))] = Me : ee[be] = Me, ee
+              WW.attrs.style = mW.split(";").map((function(WW) {
+                return WW.trim()
+              })).filter((function(WW) {
+                return WW
+              })).reduce((function(WW, iW) {
+                var OW, mW = iW.indexOf(":"),
+                  EW = kW(iW.slice(0, mW)),
+                  NW = iW.slice(mW + 1).trim();
+                return EW.startsWith("webkit") ? WW[(OW = EW, OW.charAt(0).toUpperCase() + OW.slice(1))] = NW : WW[EW] = NW, WW
               }), {});
               break;
             default:
-              0 === ie.indexOf("aria-") || 0 === ie.indexOf("data-") ? ee.attrs[ie.toLowerCase()] = ye : ee.attrs[ze(ie)] = ye
+              0 === iW.indexOf("aria-") || 0 === iW.indexOf("data-") ? WW.attrs[iW.toLowerCase()] = mW : WW.attrs[kW(iW)] = mW
           }
-          return ee
+          return WW
         }), {
           attrs: {}
         }),
-        Ke = ye.style,
-        Ue = void 0 === Ke ? {} : Ke,
-        Fe = function(ee, ie) {
-          if (null == ee) return {};
-          var He, ye, be = function(ee, ie) {
-            if (null == ee) return {};
-            var He = {};
-            for (var ye in ee)
-              if ({}.hasOwnProperty.call(ee, ye)) {
-                if (-1 !== ie.indexOf(ye)) continue;
-                He[ye] = ee[ye]
-              } return He
-          }(ee, ie);
+        PW = mW.style,
+        LW = void 0 === PW ? {} : PW,
+        cW = function(WW, iW) {
+          if (null == WW) return {};
+          var OW, mW, EW = function(WW, iW) {
+            if (null == WW) return {};
+            var OW = {};
+            for (var mW in WW)
+              if ({}.hasOwnProperty.call(WW, mW)) {
+                if (-1 !== iW.indexOf(mW)) continue;
+                OW[mW] = WW[mW]
+              } return OW
+          }(WW, iW);
           if (Object.getOwnPropertySymbols) {
-            var Me = Object.getOwnPropertySymbols(ee);
-            for (ye = 0; ye < Me.length; ye++) He = Me[ye], -1 === ie.indexOf(He) && {}.propertyIsEnumerable.call(ee, He) && (be[He] = ee[He])
+            var NW = Object.getOwnPropertySymbols(WW);
+            for (mW = 0; mW < NW.length; mW++) OW = NW[mW], -1 === iW.indexOf(OW) && {}.propertyIsEnumerable.call(WW, OW) && (EW[OW] = WW[OW])
           }
-          return be
-        }(ye, Be);
-      return Me.attrs.style = oe(oe({}, Me.attrs.style), Ue), ie.apply(void 0, [He.tag, oe(oe({}, Me.attrs), Fe)].concat(ke(be)))
-    }.bind(null, Ke.createElement)
+          return EW
+        }(mW, sW);
+      return NW.attrs.style = tW(tW({}, NW.attrs.style), LW), iW.apply(void 0, [OW.tag, tW(tW({}, NW.attrs), cW)].concat(xW(EW)))
+    }.bind(null, PW.createElement)
   },
-  5469: (ee, ie, He) => {
-    var ye = He(5475);
+  5877: (WW, iW, OW) => {
+    var mW = OW(5886);
 
-    function be() {}
+    function EW() {}
 
-    function Me() {}
-    Me.resetWarningCache = be, ee.exports = function() {
-      function ee(ee, ie, He, be, Me, Ke) {
-        if (Ke !== ye) {
-          var Ue = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw Ue.name = "Invariant Violation", Ue
+    function NW() {}
+    NW.resetWarningCache = EW, WW.exports = function() {
+      function WW(WW, iW, OW, EW, NW, PW) {
+        if (PW !== mW) {
+          var LW = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw LW.name = "Invariant Violation", LW
         }
       }
 
-      function ie() {
-        return ee
+      function iW() {
+        return WW
       }
-      ee.isRequired = ee;
-      var He = {
-        array: ee,
-        bigint: ee,
-        bool: ee,
-        func: ee,
-        number: ee,
-        object: ee,
-        string: ee,
-        symbol: ee,
-        any: ee,
-        arrayOf: ie,
-        element: ee,
-        elementType: ee,
-        instanceOf: ie,
-        node: ee,
-        objectOf: ie,
-        oneOf: ie,
-        oneOfType: ie,
-        shape: ie,
-        exact: ie,
-        checkPropTypes: Me,
-        resetWarningCache: be
+      WW.isRequired = WW;
+      var OW = {
+        array: WW,
+        bigint: WW,
+        bool: WW,
+        func: WW,
+        number: WW,
+        object: WW,
+        string: WW,
+        symbol: WW,
+        any: WW,
+        arrayOf: iW,
+        element: WW,
+        elementType: WW,
+        instanceOf: iW,
+        node: WW,
+        objectOf: iW,
+        oneOf: iW,
+        oneOfType: iW,
+        shape: iW,
+        exact: iW,
+        checkPropTypes: NW,
+        resetWarningCache: EW
       };
-      return He.PropTypes = He, He
+      return OW.PropTypes = OW, OW
     }
   },
-  5461: (ee, ie, He) => {
-    ee.exports = He(5469)()
+  5868: (WW, iW, OW) => {
+    WW.exports = OW(5877)()
   },
-  5475: ee => {
-    ee.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  5886: WW => {
+    WW.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  7394: (ee, ie, He) => {
-    function ye(ee, ie) {
-      (null == ie || ie > ee.length) && (ie = ee.length);
-      for (var He = 0, ye = Array(ie); He < ie; He++) ye[He] = ee[He];
-      return ye
+  7763: (WW, iW, OW) => {
+    function mW(WW, iW) {
+      (null == iW || iW > WW.length) && (iW = WW.length);
+      for (var OW = 0, mW = Array(iW); OW < iW; OW++) mW[OW] = WW[OW];
+      return mW
     }
 
-    function be(ee, ie) {
-      for (var He = 0; He < ie.length; He++) {
-        var ye = ie[He];
-        ye.enumerable = ye.enumerable || !1, ye.configurable = !0, "value" in ye && (ye.writable = !0), Object.defineProperty(ee, Re(ye.key), ye)
+    function EW(WW, iW) {
+      for (var OW = 0; OW < iW.length; OW++) {
+        var mW = iW[OW];
+        mW.enumerable = mW.enumerable || !1, mW.configurable = !0, "value" in mW && (mW.writable = !0), Object.defineProperty(WW, ZW(mW.key), mW)
       }
     }
 
-    function Me(ee, ie) {
-      var He = "undefined" != typeof Symbol && ee[Symbol.iterator] || ee["@@iterator"];
-      if (!He) {
-        if (Array.isArray(ee) || (He = qe(ee)) || ie && ee && "number" == typeof ee.length) {
-          He && (ee = He);
-          var ye = 0,
-            be = function() {};
+    function NW(WW, iW) {
+      var OW = "undefined" != typeof Symbol && WW[Symbol.iterator] || WW["@@iterator"];
+      if (!OW) {
+        if (Array.isArray(WW) || (OW = lW(WW)) || iW && WW && "number" == typeof WW.length) {
+          OW && (WW = OW);
+          var mW = 0,
+            EW = function() {};
           return {
-            s: be,
+            s: EW,
             n: function() {
-              return ye >= ee.length ? {
+              return mW >= WW.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: ee[ye++]
+                value: WW[mW++]
               }
             },
-            e: function(ee) {
-              throw ee
+            e: function(WW) {
+              throw WW
             },
-            f: be
+            f: EW
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var Me, Ke = !0,
-        Ue = !1;
+      var NW, PW = !0,
+        LW = !1;
       return {
         s: function() {
-          He = He.call(ee)
+          OW = OW.call(WW)
         },
         n: function() {
-          var ee = He.next();
-          return Ke = ee.done, ee
+          var WW = OW.next();
+          return PW = WW.done, WW
         },
-        e: function(ee) {
-          Ue = !0, Me = ee
+        e: function(WW) {
+          LW = !0, NW = WW
         },
         f: function() {
           try {
-            Ke || null == He.return || He.return()
+            PW || null == OW.return || OW.return()
           } finally {
-            if (Ue) throw Me
+            if (LW) throw NW
           }
         }
       }
     }
 
-    function Ke(ee, ie, He) {
-      return (ie = Re(ie)) in ee ? Object.defineProperty(ee, ie, {
-        value: He,
+    function PW(WW, iW, OW) {
+      return (iW = ZW(iW)) in WW ? Object.defineProperty(WW, iW, {
+        value: OW,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : ee[ie] = He, ee
+      }) : WW[iW] = OW, WW
     }
 
-    function Ue(ee, ie) {
-      var He = Object.keys(ee);
+    function LW(WW, iW) {
+      var OW = Object.keys(WW);
       if (Object.getOwnPropertySymbols) {
-        var ye = Object.getOwnPropertySymbols(ee);
-        ie && (ye = ye.filter((function(ie) {
-          return Object.getOwnPropertyDescriptor(ee, ie).enumerable
-        }))), He.push.apply(He, ye)
+        var mW = Object.getOwnPropertySymbols(WW);
+        iW && (mW = mW.filter((function(iW) {
+          return Object.getOwnPropertyDescriptor(WW, iW).enumerable
+        }))), OW.push.apply(OW, mW)
       }
-      return He
+      return OW
     }
 
-    function Fe(ee) {
-      for (var ie = 1; ie < arguments.length; ie++) {
-        var He = null != arguments[ie] ? arguments[ie] : {};
-        ie % 2 ? Ue(Object(He), !0).forEach((function(ie) {
-          Ke(ee, ie, He[ie])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(ee, Object.getOwnPropertyDescriptors(He)) : Ue(Object(He)).forEach((function(ie) {
-          Object.defineProperty(ee, ie, Object.getOwnPropertyDescriptor(He, ie))
+    function cW(WW) {
+      for (var iW = 1; iW < arguments.length; iW++) {
+        var OW = null != arguments[iW] ? arguments[iW] : {};
+        iW % 2 ? LW(Object(OW), !0).forEach((function(iW) {
+          PW(WW, iW, OW[iW])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(WW, Object.getOwnPropertyDescriptors(OW)) : LW(Object(OW)).forEach((function(iW) {
+          Object.defineProperty(WW, iW, Object.getOwnPropertyDescriptor(OW, iW))
         }))
       }
-      return ee
+      return WW
     }
 
-    function Je(ee, ie) {
-      return function(ee) {
-        if (Array.isArray(ee)) return ee
-      }(ee) || function(ee, ie) {
-        var He = null == ee ? null : "undefined" != typeof Symbol && ee[Symbol.iterator] || ee["@@iterator"];
-        if (null != He) {
-          var ye, be, Me, Ke, Ue = [],
-            Fe = !0,
-            Je = !1;
+    function wW(WW, iW) {
+      return function(WW) {
+        if (Array.isArray(WW)) return WW
+      }(WW) || function(WW, iW) {
+        var OW = null == WW ? null : "undefined" != typeof Symbol && WW[Symbol.iterator] || WW["@@iterator"];
+        if (null != OW) {
+          var mW, EW, NW, PW, LW = [],
+            cW = !0,
+            wW = !1;
           try {
-            if (Me = (He = He.call(ee)).next, 0 === ie) {
-              if (Object(He) !== He) return;
-              Fe = !1
+            if (NW = (OW = OW.call(WW)).next, 0 === iW) {
+              if (Object(OW) !== OW) return;
+              cW = !1
             } else
-              for (; !(Fe = (ye = Me.call(He)).done) && (Ue.push(ye.value), Ue.length !== ie); Fe = !0);
-          } catch (ee) {
-            Je = !0, be = ee
+              for (; !(cW = (mW = NW.call(OW)).done) && (LW.push(mW.value), LW.length !== iW); cW = !0);
+          } catch (WW) {
+            wW = !0, EW = WW
           } finally {
             try {
-              if (!Fe && null != He.return && (Ke = He.return(), Object(Ke) !== Ke)) return
+              if (!cW && null != OW.return && (PW = OW.return(), Object(PW) !== PW)) return
             } finally {
-              if (Je) throw be
+              if (wW) throw EW
             }
           }
-          return Ue
+          return LW
         }
-      }(ee, ie) || qe(ee, ie) || function() {
+      }(WW, iW) || lW(WW, iW) || function() {
         throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function oe(ee) {
-      return function(ee) {
-        if (Array.isArray(ee)) return ye(ee)
-      }(ee) || function(ee) {
-        if ("undefined" != typeof Symbol && null != ee[Symbol.iterator] || null != ee["@@iterator"]) return Array.from(ee)
-      }(ee) || qe(ee) || function() {
+    function tW(WW) {
+      return function(WW) {
+        if (Array.isArray(WW)) return mW(WW)
+      }(WW) || function(WW) {
+        if ("undefined" != typeof Symbol && null != WW[Symbol.iterator] || null != WW["@@iterator"]) return Array.from(WW)
+      }(WW) || lW(WW) || function() {
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function Re(ee) {
-      var ie = function(ee, ie) {
-        if ("object" != typeof ee || !ee) return ee;
-        var He = ee[Symbol.toPrimitive];
-        if (void 0 !== He) {
-          var ye = He.call(ee, ie || "default");
-          if ("object" != typeof ye) return ye;
+    function ZW(WW) {
+      var iW = function(WW, iW) {
+        if ("object" != typeof WW || !WW) return WW;
+        var OW = WW[Symbol.toPrimitive];
+        if (void 0 !== OW) {
+          var mW = OW.call(WW, iW || "default");
+          if ("object" != typeof mW) return mW;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === ie ? String : Number)(ee)
-      }(ee, "string");
-      return "symbol" == typeof ie ? ie : ie + ""
+        return ("string" === iW ? String : Number)(WW)
+      }(WW, "string");
+      return "symbol" == typeof iW ? iW : iW + ""
     }
 
-    function ke(ee) {
-      return ke = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(ee) {
-        return typeof ee
-      } : function(ee) {
-        return ee && "function" == typeof Symbol && ee.constructor === Symbol && ee !== Symbol.prototype ? "symbol" : typeof ee
-      }, ke(ee)
+    function xW(WW) {
+      return xW = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(WW) {
+        return typeof WW
+      } : function(WW) {
+        return WW && "function" == typeof Symbol && WW.constructor === Symbol && WW !== Symbol.prototype ? "symbol" : typeof WW
+      }, xW(WW)
     }
 
-    function qe(ee, ie) {
-      if (ee) {
-        if ("string" == typeof ee) return ye(ee, ie);
-        var He = {}.toString.call(ee).slice(8, -1);
-        return "Object" === He && ee.constructor && (He = ee.constructor.name), "Map" === He || "Set" === He ? Array.from(ee) : "Arguments" === He || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(He) ? ye(ee, ie) : void 0
+    function lW(WW, iW) {
+      if (WW) {
+        if ("string" == typeof WW) return mW(WW, iW);
+        var OW = {}.toString.call(WW).slice(8, -1);
+        return "Object" === OW && WW.constructor && (OW = WW.constructor.name), "Map" === OW || "Set" === OW ? Array.from(WW) : "Arguments" === OW || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(OW) ? mW(WW, iW) : void 0
       }
     }
-    He.r(ie), He.d(ie, {
-      api: () => rH,
-      config: () => bb,
-      counter: () => qb,
-      dom: () => Kb,
-      findIconDefinition: () => Fb,
-      icon: () => ob,
-      layer: () => Rb,
-      library: () => Mb,
-      noAuto: () => yb,
-      parse: () => Ub,
-      text: () => kb,
-      toHtml: () => Jb
+    OW.r(iW), OW.d(iW, {
+      api: () => FO,
+      config: () => NE,
+      counter: () => AE,
+      dom: () => LE,
+      findIconDefinition: () => wE,
+      icon: () => ZE,
+      layer: () => xE,
+      library: () => PE,
+      noAuto: () => EE,
+      parse: () => cE,
+      text: () => lE,
+      toHtml: () => tE
     });
-    var fe = function() {},
-      Te = {},
-      pe = {},
-      Xe = null,
-      ze = {
-        mark: fe,
-        measure: fe
+    var AW = function() {},
+      bW = {},
+      jW = {},
+      UW = null,
+      kW = {
+        mark: AW,
+        measure: AW
       };
     try {
-      "undefined" !== typeof window && (Te = window), "undefined" !== typeof document && (pe = document), "undefined" !== typeof MutationObserver && (Xe = MutationObserver), "undefined" !== typeof performance && (ze = performance)
-    } catch (Se) {}
-    var Be, Ee, ge = (Te.navigator || {}).userAgent,
-      Oe = void 0 === ge ? "" : ge,
-      de = Te,
-      We = pe,
-      te = Xe,
-      Ze = ze,
-      we = (de.document, !!We.documentElement && !!We.head && "function" === typeof We.addEventListener && "function" === typeof We.createElement),
-      De = ~Oe.indexOf("MSIE") || ~Oe.indexOf("Trident/"),
-      Pe = {
+      "undefined" !== typeof window && (bW = window), "undefined" !== typeof document && (jW = document), "undefined" !== typeof MutationObserver && (UW = MutationObserver), "undefined" !== typeof performance && (kW = performance)
+    } catch (BW) {}
+    var sW, MW, KW = (bW.navigator || {}).userAgent,
+      SW = void 0 === KW ? "" : KW,
+      YW = bW,
+      yW = jW,
+      TW = UW,
+      JW = kW,
+      hW = (YW.document, !!yW.documentElement && !!yW.head && "function" === typeof yW.addEventListener && "function" === typeof yW.createElement),
+      HW = ~SW.indexOf("MSIE") || ~SW.indexOf("Trident/"),
+      nW = {
         classic: {
           fa: "solid",
           fas: "solid",
@@ -722,28 +722,28 @@ export const modules = {
           faufsb: "semibold"
         }
       },
-      Ae = ["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"],
-      Ye = "classic",
-      Ve = "duotone",
-      ae = "sharp",
-      ce = "sharp-duotone",
-      xe = "chisel",
-      Le = "etch",
-      Ce = "graphite",
-      ve = "jelly",
-      ue = "jelly-duo",
-      me = "jelly-fill",
-      le = "notdog",
-      Se = "notdog-duo",
-      ne = "slab",
-      je = "slab-press",
-      se = "thumbprint",
-      Ie = "utility",
-      he = "utility-duo",
-      Ne = "utility-fill",
-      Ge = "whiteboard",
-      re = [Ye, Ve, ae, ce, xe, Le, Ce, ve, ue, me, le, Se, ne, je, se, Ie, he, Ne, Ge],
-      Qe = (Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Be = {}, Ye, "Classic"), Ve, "Duotone"), ae, "Sharp"), ce, "Sharp Duotone"), xe, "Chisel"), Le, "Etch"), Ce, "Graphite"), ve, "Jelly"), ue, "Jelly Duo"), me, "Jelly Fill"), Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Be, le, "Notdog"), Se, "Notdog Duo"), ne, "Slab"), je, "Slab Press"), se, "Thumbprint"), Ie, "Utility"), he, "Utility Duo"), Ne, "Utility Fill"), Ge, "Whiteboard"), new Map([
+      uW = ["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"],
+      oW = "classic",
+      dW = "duotone",
+      eW = "sharp",
+      vW = "sharp-duotone",
+      gW = "chisel",
+      DW = "etch",
+      VW = "graphite",
+      pW = "jelly",
+      fW = "jelly-duo",
+      CW = "jelly-fill",
+      XW = "notdog",
+      BW = "notdog-duo",
+      qW = "slab",
+      RW = "slab-press",
+      GW = "thumbprint",
+      IW = "utility",
+      aW = "utility-duo",
+      rW = "utility-fill",
+      zW = "whiteboard",
+      FW = [oW, dW, eW, vW, gW, DW, VW, pW, fW, CW, XW, BW, qW, RW, GW, IW, aW, rW, zW],
+      QW = (PW(PW(PW(PW(PW(PW(PW(PW(PW(PW(sW = {}, oW, "Classic"), dW, "Duotone"), eW, "Sharp"), vW, "Sharp Duotone"), gW, "Chisel"), DW, "Etch"), VW, "Graphite"), pW, "Jelly"), fW, "Jelly Duo"), CW, "Jelly Fill"), PW(PW(PW(PW(PW(PW(PW(PW(PW(sW, XW, "Notdog"), BW, "Notdog Duo"), qW, "Slab"), RW, "Slab Press"), GW, "Thumbprint"), IW, "Utility"), aW, "Utility Duo"), rW, "Utility Fill"), zW, "Whiteboard"), new Map([
         ["classic", {
           defaultShortPrefixId: "fas",
           defaultStyleId: "solid",
@@ -878,26 +878,26 @@ export const modules = {
           defaultFontWeight: 600
         }]
       ])),
-      ei = ["fak", "fa-kit", "fakd", "fa-kit-duotone"],
+      Wi = ["fak", "fa-kit", "fakd", "fa-kit-duotone"],
       ii = {
         fak: "kit",
         "fa-kit": "kit"
       },
-      Hi = {
+      Oi = {
         fakd: "kit-duotone",
         "fa-kit-duotone": "kit-duotone"
       },
-      yi = (Ke(Ke({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
+      mi = (PW(PW({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
         kit: "fak"
       }),
-      bi = {
+      Ei = {
         "kit-duotone": "fakd"
       },
-      Mi = "duotone-group",
-      Ki = "swap-opacity",
-      Ui = "primary",
-      Fi = "secondary",
-      Ji = (Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ee = {}, "classic", "Classic"), "duotone", "Duotone"), "sharp", "Sharp"), "sharp-duotone", "Sharp Duotone"), "chisel", "Chisel"), "etch", "Etch"), "graphite", "Graphite"), "jelly", "Jelly"), "jelly-duo", "Jelly Duo"), "jelly-fill", "Jelly Fill"), Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ke(Ee, "notdog", "Notdog"), "notdog-duo", "Notdog Duo"), "slab", "Slab"), "slab-press", "Slab Press"), "thumbprint", "Thumbprint"), "utility", "Utility"), "utility-duo", "Utility Duo"), "utility-fill", "Utility Fill"), "whiteboard", "Whiteboard"), Ke(Ke({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
+      Ni = "duotone-group",
+      Pi = "swap-opacity",
+      Li = "primary",
+      ci = "secondary",
+      wi = (PW(PW(PW(PW(PW(PW(PW(PW(PW(PW(MW = {}, "classic", "Classic"), "duotone", "Duotone"), "sharp", "Sharp"), "sharp-duotone", "Sharp Duotone"), "chisel", "Chisel"), "etch", "Etch"), "graphite", "Graphite"), "jelly", "Jelly"), "jelly-duo", "Jelly Duo"), "jelly-fill", "Jelly Fill"), PW(PW(PW(PW(PW(PW(PW(PW(PW(MW, "notdog", "Notdog"), "notdog-duo", "Notdog Duo"), "slab", "Slab"), "slab-press", "Slab Press"), "thumbprint", "Thumbprint"), "utility", "Utility"), "utility-duo", "Utility Duo"), "utility-fill", "Utility Fill"), "whiteboard", "Whiteboard"), PW(PW({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
         classic: {
           fab: "fa-brands",
           fad: "fa-duotone",
@@ -969,10 +969,10 @@ export const modules = {
           faufsb: "fa-semibold"
         }
       }),
-      oi = ["fa", "fas", "far", "fal", "fat", "fad", "fadr", "fadl", "fadt", "fab", "fass", "fasr", "fasl", "fast", "fasds", "fasdr", "fasdl", "fasdt", "faslr", "faslpr", "fawsb", "fatl", "fans", "fands", "faes", "fagt", "fajr", "fajfr", "fajdr", "facr", "fausb", "faudsb", "faufsb"].concat(["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"], ["fa-solid", "fa-regular", "fa-light", "fa-thin", "fa-duotone", "fa-brands", "fa-semibold"]),
-      Ri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      ki = Ri.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
-      qi = [].concat(oe(Object.keys({
+      ti = ["fa", "fas", "far", "fal", "fat", "fad", "fadr", "fadl", "fadt", "fab", "fass", "fasr", "fasl", "fast", "fasds", "fasdr", "fasdl", "fasdt", "faslr", "faslpr", "fawsb", "fatl", "fans", "fands", "faes", "fagt", "fajr", "fajfr", "fajdr", "facr", "fausb", "faudsb", "faufsb"].concat(["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"], ["fa-solid", "fa-regular", "fa-light", "fa-thin", "fa-duotone", "fa-brands", "fa-semibold"]),
+      Zi = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      xi = Zi.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
+      li = [].concat(tW(Object.keys({
         classic: ["fas", "far", "fal", "fat", "fad"],
         duotone: ["fadr", "fadl", "fadt"],
         sharp: ["fass", "fasr", "fasl", "fast"],
@@ -992,41 +992,41 @@ export const modules = {
         utility: ["fausb"],
         "utility-duo": ["faudsb"],
         "utility-fill": ["faufsb"]
-      })), ["solid", "regular", "light", "thin", "duotone", "brands", "semibold"], ["aw", "fw", "pull-left", "pull-right"], ["2xs", "xs", "sm", "lg", "xl", "2xl", "beat", "border", "fade", "beat-fade", "bounce", "flip-both", "flip-horizontal", "flip-vertical", "flip", "inverse", "layers", "layers-bottom-left", "layers-bottom-right", "layers-counter", "layers-text", "layers-top-left", "layers-top-right", "li", "pull-end", "pull-start", "pulse", "rotate-180", "rotate-270", "rotate-90", "rotate-by", "shake", "spin-pulse", "spin-reverse", "spin", "stack-1x", "stack-2x", "stack", "ul", "width-auto", "width-fixed", Mi, Ki, Ui, Fi]).concat(Ri.map((function(ee) {
-        return "".concat(ee, "x")
-      }))).concat(ki.map((function(ee) {
-        return "w-".concat(ee)
+      })), ["solid", "regular", "light", "thin", "duotone", "brands", "semibold"], ["aw", "fw", "pull-left", "pull-right"], ["2xs", "xs", "sm", "lg", "xl", "2xl", "beat", "border", "fade", "beat-fade", "bounce", "flip-both", "flip-horizontal", "flip-vertical", "flip", "inverse", "layers", "layers-bottom-left", "layers-bottom-right", "layers-counter", "layers-text", "layers-top-left", "layers-top-right", "li", "pull-end", "pull-start", "pulse", "rotate-180", "rotate-270", "rotate-90", "rotate-by", "shake", "spin-pulse", "spin-reverse", "spin", "stack-1x", "stack-2x", "stack", "ul", "width-auto", "width-fixed", Ni, Pi, Li, ci]).concat(Zi.map((function(WW) {
+        return "".concat(WW, "x")
+      }))).concat(xi.map((function(WW) {
+        return "w-".concat(WW)
       }))),
-      fi = "___FONT_AWESOME___",
-      Ti = "svg-inline--fa",
-      Xi = "data-fa-i2svg",
-      zi = "data-fa-pseudo-element",
-      Bi = "data-prefix",
-      Ei = "data-icon",
-      gi = "fontawesome-i2svg",
-      Oi = ["HTML", "HEAD", "STYLE", "SCRIPT"],
-      di = ["::before", "::after", ":before", ":after"],
-      Wi = function() {
+      Ai = "___FONT_AWESOME___",
+      bi = "svg-inline--fa",
+      ji = "data-fa-i2svg",
+      Ui = "data-fa-pseudo-element",
+      ki = "data-prefix",
+      si = "data-icon",
+      Mi = "fontawesome-i2svg",
+      Ki = ["HTML", "HEAD", "STYLE", "SCRIPT"],
+      Si = ["::before", "::after", ":before", ":after"],
+      Yi = function() {
         try {
           return !0
-        } catch (ee) {
+        } catch (WW) {
           return !1
         }
       }();
 
-    function ti(ee) {
-      return new Proxy(ee, {
-        get: function(ee, ie) {
-          return ie in ee ? ee[ie] : ee[Ye]
+    function yi(WW) {
+      return new Proxy(WW, {
+        get: function(WW, iW) {
+          return iW in WW ? WW[iW] : WW[oW]
         }
       })
     }
-    var Zi = Fe({}, Pe);
-    Zi[Ye] = Fe(Fe(Fe(Fe({}, {
+    var Ti = cW({}, nW);
+    Ti[oW] = cW(cW(cW(cW({}, {
       "fa-duotone": "duotone"
-    }), Pe[Ye]), ii), Hi);
-    var wi = ti(Zi),
-      Di = Fe({}, {
+    }), nW[oW]), ii), Oi);
+    var Ji = yi(Ti),
+      Hi = cW({}, {
         chisel: {
           regular: "facr"
         },
@@ -1098,16 +1098,16 @@ export const modules = {
           semibold: "fawsb"
         }
       });
-    Di[Ye] = Fe(Fe(Fe(Fe({}, {
+    Hi[oW] = cW(cW(cW(cW({}, {
       duotone: "fad"
-    }), Di[Ye]), yi), bi);
-    var Pi = ti(Di),
-      Ai = Fe({}, Ji);
-    Ai[Ye] = Fe(Fe({}, Ai[Ye]), {
+    }), Hi[oW]), mi), Ei);
+    var ni = yi(Hi),
+      ui = cW({}, wi);
+    ui[oW] = cW(cW({}, ui[oW]), {
       fak: "fa-kit"
     });
-    var Yi = ti(Ai),
-      Vi = Fe({}, {
+    var oi = yi(ui),
+      di = cW({}, {
         classic: {
           "fa-brands": "fab",
           "fa-duotone": "fad",
@@ -1179,14 +1179,14 @@ export const modules = {
           "fa-semibold": "faufsb"
         }
       });
-    Vi[Ye] = Fe(Fe({}, Vi[Ye]), {
+    di[oW] = cW(cW({}, di[oW]), {
       "fa-kit": "fak"
     });
-    ti(Vi);
-    var ai = /fa(k|kd|s|r|l|t|d|dr|dl|dt|b|slr|slpr|wsb|tl|ns|nds|es|gt|jr|jfr|jdr|usb|ufsb|udsb|cr|ss|sr|sl|st|sds|sdr|sdl|sdt)?[\-\ ]/,
-      ci = "fa-layers-text",
-      xi = /Font ?Awesome ?([567 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp Duotone|Sharp|Kit|Notdog Duo|Notdog|Chisel|Etch|Graphite|Thumbprint|Jelly Fill|Jelly Duo|Jelly|Utility|Utility Fill|Utility Duo|Slab Press|Slab|Whiteboard)?.*/i,
-      Li = (ti(Fe({}, {
+    yi(di);
+    var ei = /fa(k|kd|s|r|l|t|d|dr|dl|dt|b|slr|slpr|wsb|tl|ns|nds|es|gt|jr|jfr|jdr|usb|ufsb|udsb|cr|ss|sr|sl|st|sds|sdr|sdl|sdt)?[\-\ ]/,
+      vi = "fa-layers-text",
+      gi = /Font ?Awesome ?([567 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp Duotone|Sharp|Kit|Notdog Duo|Notdog|Chisel|Etch|Graphite|Thumbprint|Jelly Fill|Jelly Duo|Jelly|Utility|Utility Fill|Utility Duo|Slab Press|Slab|Whiteboard)?.*/i,
+      Di = (yi(cW({}, {
         classic: {
           900: "fas",
           400: "far",
@@ -1258,15 +1258,15 @@ export const modules = {
           600: "faufsb"
         }
       })), ["class", "data-prefix", "data-icon", "data-fa-transform", "data-fa-mask"]),
-      Ci = {
+      Vi = {
         GROUP: "duotone-group",
         SWAP_OPACITY: "swap-opacity",
         PRIMARY: "primary",
         SECONDARY: "secondary"
       },
-      vi = [].concat(oe(["kit"]), oe(qi)),
-      ui = de.FontAwesomeConfig || {};
-    if (We && "function" === typeof We.querySelector) {
+      fi = [].concat(tW(["kit"]), tW(li)),
+      Ci = YW.FontAwesomeConfig || {};
+    if (yW && "function" === typeof yW.querySelector) {
       [
         ["data-family-prefix", "familyPrefix"],
         ["data-css-prefix", "cssPrefix"],
@@ -1283,24 +1283,24 @@ export const modules = {
         ["data-keep-original-source", "keepOriginalSource"],
         ["data-measure-performance", "measurePerformance"],
         ["data-show-missing-icons", "showMissingIcons"]
-      ].forEach((function(ee) {
-        var ie = Je(ee, 2),
-          He = ie[0],
-          ye = ie[1],
-          be = function(ee) {
-            return "" === ee || "false" !== ee && ("true" === ee || ee)
-          }(function(ee) {
-            var ie = We.querySelector("script[" + ee + "]");
-            if (ie) return ie.getAttribute(ee)
-          }(He));
-        void 0 !== be && null !== be && (ui[ye] = be)
+      ].forEach((function(WW) {
+        var iW = wW(WW, 2),
+          OW = iW[0],
+          mW = iW[1],
+          EW = function(WW) {
+            return "" === WW || "false" !== WW && ("true" === WW || WW)
+          }(function(WW) {
+            var iW = yW.querySelector("script[" + WW + "]");
+            if (iW) return iW.getAttribute(WW)
+          }(OW));
+        void 0 !== EW && null !== EW && (Ci[mW] = EW)
       }))
     }
-    var mi = {
+    var Xi = {
       styleDefault: "solid",
-      familyDefault: Ye,
+      familyDefault: oW,
       cssPrefix: "fa",
-      replacementClass: Ti,
+      replacementClass: bi,
       autoReplaceSvg: !0,
       autoAddCss: !0,
       searchPseudoElements: !1,
@@ -1312,36 +1312,36 @@ export const modules = {
       measurePerformance: !1,
       showMissingIcons: !0
     };
-    ui.familyPrefix && (ui.cssPrefix = ui.familyPrefix);
-    var li = Fe(Fe({}, mi), ui);
-    li.autoReplaceSvg || (li.observeMutations = !1);
-    var Si = {};
-    Object.keys(mi).forEach((function(ee) {
-      Object.defineProperty(Si, ee, {
+    Ci.familyPrefix && (Ci.cssPrefix = Ci.familyPrefix);
+    var Bi = cW(cW({}, Xi), Ci);
+    Bi.autoReplaceSvg || (Bi.observeMutations = !1);
+    var qi = {};
+    Object.keys(Xi).forEach((function(WW) {
+      Object.defineProperty(qi, WW, {
         enumerable: !0,
-        set: function(ie) {
-          li[ee] = ie, ni.forEach((function(ee) {
-            return ee(Si)
+        set: function(iW) {
+          Bi[WW] = iW, Ri.forEach((function(WW) {
+            return WW(qi)
           }))
         },
         get: function() {
-          return li[ee]
+          return Bi[WW]
         }
       })
-    })), Object.defineProperty(Si, "familyPrefix", {
+    })), Object.defineProperty(qi, "familyPrefix", {
       enumerable: !0,
-      set: function(ee) {
-        li.cssPrefix = ee, ni.forEach((function(ee) {
-          return ee(Si)
+      set: function(WW) {
+        Bi.cssPrefix = WW, Ri.forEach((function(WW) {
+          return WW(qi)
         }))
       },
       get: function() {
-        return li.cssPrefix
+        return Bi.cssPrefix
       }
-    }), de.FontAwesomeConfig = Si;
-    var ni = [];
-    var ji = 16,
-      si = {
+    }), YW.FontAwesomeConfig = qi;
+    var Ri = [];
+    var Gi = 16,
+      Ii = {
         size: 16,
         x: 0,
         y: 0,
@@ -1350,369 +1350,369 @@ export const modules = {
         flipY: !1
       };
 
-    function Ii() {
-      for (var ee = 12, ie = ""; ee-- > 0;) ie += "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" [62 * Math.random() | 0];
-      return ie
+    function ai() {
+      for (var WW = 12, iW = ""; WW-- > 0;) iW += "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" [62 * Math.random() | 0];
+      return iW
     }
 
-    function Ni(ee) {
-      for (var ie = [], He = (ee || []).length >>> 0; He--;) ie[He] = ee[He];
-      return ie
+    function ri(WW) {
+      for (var iW = [], OW = (WW || []).length >>> 0; OW--;) iW[OW] = WW[OW];
+      return iW
     }
 
-    function Gi(ee) {
-      return ee.classList ? Ni(ee.classList) : (ee.getAttribute("class") || "").split(" ").filter((function(ee) {
-        return ee
+    function zi(WW) {
+      return WW.classList ? ri(WW.classList) : (WW.getAttribute("class") || "").split(" ").filter((function(WW) {
+        return WW
       }))
     }
 
-    function ri(ee) {
-      return "".concat(ee).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    function Fi(WW) {
+      return "".concat(WW).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     }
 
-    function Qi(ee) {
-      return Object.keys(ee || {}).reduce((function(ie, He) {
-        return ie + "".concat(He, ": ").concat(ee[He].trim(), ";")
+    function Qi(WW) {
+      return Object.keys(WW || {}).reduce((function(iW, OW) {
+        return iW + "".concat(OW, ": ").concat(WW[OW].trim(), ";")
       }), "")
     }
 
-    function eH(ee) {
-      return ee.size !== si.size || ee.x !== si.x || ee.y !== si.y || ee.rotate !== si.rotate || ee.flipX || ee.flipY
+    function WO(WW) {
+      return WW.size !== Ii.size || WW.x !== Ii.x || WW.y !== Ii.y || WW.rotate !== Ii.rotate || WW.flipX || WW.flipY
     }
 
-    function iH() {
-      var ee = "fa",
-        ie = Ti,
-        He = Si.cssPrefix,
-        ye = Si.replacementClass,
-        be = ":root, :host {\n  --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';\n  --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';\n  --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';\n  --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';\n  --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';\n  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';\n  --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';\n  --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';\n  --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';\n  --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';\n  --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';\n  --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';\n  --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';\n  --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';\n  --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';\n  --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';\n  --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';\n  --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';\n  --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';\n  --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';\n}\n\n.svg-inline--fa {\n  box-sizing: content-box;\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285714em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left,\n.svg-inline--fa .fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-pull-right,\n.svg-inline--fa .fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.fa-layers .svg-inline--fa {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-counter-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xs {\n  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-sm {\n  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-lg {\n  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xl {\n  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-2xl {\n  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-width-auto {\n  --fa-width: auto;\n}\n\n.fa-fw,\n.fa-width-fixed {\n  --fa-width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-inline-start: var(--fa-li-margin, 2.5em);\n  padding-inline-start: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n/* Heads Up: Bordered Icons will not be supported in the future!\n  - This feature will be deprecated in the next major release of Font Awesome (v8)!\n  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.\n*/\n/* Notes:\n* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)\n* --@{v.$css-prefix}-border-padding =\n  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)\n  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)\n*/\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.0625em);\n  box-sizing: var(--fa-border-box-sizing, content-box);\n  padding: var(--fa-border-padding, 0.1875em 0.25em);\n}\n\n.fa-pull-left,\n.fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right,\n.fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  animation-name: fa-beat;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  animation-name: fa-bounce;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  animation-name: fa-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  animation-name: fa-beat-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  animation-name: fa-flip;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  animation-name: fa-shake;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  animation-name: fa-spin;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 2s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  animation-name: fa-spin;\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n  .fa-bounce,\n  .fa-fade,\n  .fa-beat-fade,\n  .fa-flip,\n  .fa-pulse,\n  .fa-shake,\n  .fa-spin,\n  .fa-spin-pulse {\n    animation: none !important;\n    transition: none !important;\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    transform: scale(1);\n  }\n  45% {\n    transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-shake {\n  0% {\n    transform: rotate(-15deg);\n  }\n  4% {\n    transform: rotate(15deg);\n  }\n  8%, 24% {\n    transform: rotate(-18deg);\n  }\n  12%, 28% {\n    transform: rotate(18deg);\n  }\n  16% {\n    transform: rotate(-22deg);\n  }\n  20% {\n    transform: rotate(22deg);\n  }\n  32% {\n    transform: rotate(-12deg);\n  }\n  36% {\n    transform: rotate(12deg);\n  }\n  40%, 100% {\n    transform: rotate(0deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  transform: rotate(var(--fa-rotate-angle, 0));\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}\n\n.svg-inline--fa.fa-inverse {\n  fill: var(--fa-inverse, #fff);\n}\n\n.fa-stack {\n  display: inline-block;\n  height: 2em;\n  line-height: 2em;\n  position: relative;\n  vertical-align: middle;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  --fa-width: 1.25em;\n  height: 1em;\n  width: var(--fa-width);\n}\n.svg-inline--fa.fa-stack-2x {\n  --fa-width: 2.5em;\n  height: 2em;\n  width: var(--fa-width);\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  z-index: var(--fa-stack-z-index, auto);\n}";
-      if (He !== ee || ye !== ie) {
-        var Me = new RegExp("\\.".concat(ee, "\\-"), "g"),
-          Ke = new RegExp("\\--".concat(ee, "\\-"), "g"),
-          Ue = new RegExp("\\.".concat(ie), "g");
-        be = be.replace(Me, ".".concat(He, "-")).replace(Ke, "--".concat(He, "-")).replace(Ue, ".".concat(ye))
+    function iO() {
+      var WW = "fa",
+        iW = bi,
+        OW = qi.cssPrefix,
+        mW = qi.replacementClass,
+        EW = ":root, :host {\n  --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';\n  --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';\n  --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';\n  --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';\n  --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';\n  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';\n  --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';\n  --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';\n  --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';\n  --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';\n  --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';\n  --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';\n  --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';\n  --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';\n  --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';\n  --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';\n  --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';\n  --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';\n  --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';\n  --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';\n}\n\n.svg-inline--fa {\n  box-sizing: content-box;\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285714em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left,\n.svg-inline--fa .fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-pull-right,\n.svg-inline--fa .fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.fa-layers .svg-inline--fa {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-counter-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xs {\n  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-sm {\n  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-lg {\n  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xl {\n  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-2xl {\n  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-width-auto {\n  --fa-width: auto;\n}\n\n.fa-fw,\n.fa-width-fixed {\n  --fa-width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-inline-start: var(--fa-li-margin, 2.5em);\n  padding-inline-start: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n/* Heads Up: Bordered Icons will not be supported in the future!\n  - This feature will be deprecated in the next major release of Font Awesome (v8)!\n  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.\n*/\n/* Notes:\n* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)\n* --@{v.$css-prefix}-border-padding =\n  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)\n  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)\n*/\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.0625em);\n  box-sizing: var(--fa-border-box-sizing, content-box);\n  padding: var(--fa-border-padding, 0.1875em 0.25em);\n}\n\n.fa-pull-left,\n.fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right,\n.fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  animation-name: fa-beat;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  animation-name: fa-bounce;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  animation-name: fa-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  animation-name: fa-beat-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  animation-name: fa-flip;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  animation-name: fa-shake;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  animation-name: fa-spin;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 2s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  animation-name: fa-spin;\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n  .fa-bounce,\n  .fa-fade,\n  .fa-beat-fade,\n  .fa-flip,\n  .fa-pulse,\n  .fa-shake,\n  .fa-spin,\n  .fa-spin-pulse {\n    animation: none !important;\n    transition: none !important;\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    transform: scale(1);\n  }\n  45% {\n    transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-shake {\n  0% {\n    transform: rotate(-15deg);\n  }\n  4% {\n    transform: rotate(15deg);\n  }\n  8%, 24% {\n    transform: rotate(-18deg);\n  }\n  12%, 28% {\n    transform: rotate(18deg);\n  }\n  16% {\n    transform: rotate(-22deg);\n  }\n  20% {\n    transform: rotate(22deg);\n  }\n  32% {\n    transform: rotate(-12deg);\n  }\n  36% {\n    transform: rotate(12deg);\n  }\n  40%, 100% {\n    transform: rotate(0deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  transform: rotate(var(--fa-rotate-angle, 0));\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}\n\n.svg-inline--fa.fa-inverse {\n  fill: var(--fa-inverse, #fff);\n}\n\n.fa-stack {\n  display: inline-block;\n  height: 2em;\n  line-height: 2em;\n  position: relative;\n  vertical-align: middle;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  --fa-width: 1.25em;\n  height: 1em;\n  width: var(--fa-width);\n}\n.svg-inline--fa.fa-stack-2x {\n  --fa-width: 2.5em;\n  height: 2em;\n  width: var(--fa-width);\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  z-index: var(--fa-stack-z-index, auto);\n}";
+      if (OW !== WW || mW !== iW) {
+        var NW = new RegExp("\\.".concat(WW, "\\-"), "g"),
+          PW = new RegExp("\\--".concat(WW, "\\-"), "g"),
+          LW = new RegExp("\\.".concat(iW), "g");
+        EW = EW.replace(NW, ".".concat(OW, "-")).replace(PW, "--".concat(OW, "-")).replace(LW, ".".concat(mW))
       }
-      return be
+      return EW
     }
-    var HH = !1;
+    var OO = !1;
 
-    function yH() {
-      Si.autoAddCss && !HH && (! function(ee) {
-        if (ee && we) {
-          var ie = We.createElement("style");
-          ie.setAttribute("type", "text/css"), ie.innerHTML = ee;
-          for (var He = We.head.childNodes, ye = null, be = He.length - 1; be > -1; be--) {
-            var Me = He[be],
-              Ke = (Me.tagName || "").toUpperCase();
-            ["STYLE", "LINK"].indexOf(Ke) > -1 && (ye = Me)
+    function mO() {
+      qi.autoAddCss && !OO && (! function(WW) {
+        if (WW && hW) {
+          var iW = yW.createElement("style");
+          iW.setAttribute("type", "text/css"), iW.innerHTML = WW;
+          for (var OW = yW.head.childNodes, mW = null, EW = OW.length - 1; EW > -1; EW--) {
+            var NW = OW[EW],
+              PW = (NW.tagName || "").toUpperCase();
+            ["STYLE", "LINK"].indexOf(PW) > -1 && (mW = NW)
           }
-          We.head.insertBefore(ie, ye)
+          yW.head.insertBefore(iW, mW)
         }
-      }(iH()), HH = !0)
+      }(iO()), OO = !0)
     }
-    var bH = {
+    var EO = {
         mixout: function() {
           return {
             dom: {
-              css: iH,
-              insertCss: yH
+              css: iO,
+              insertCss: mO
             }
           }
         },
         hooks: function() {
           return {
             beforeDOMElementCreation: function() {
-              yH()
+              mO()
             },
             beforeI2svg: function() {
-              yH()
+              mO()
             }
           }
         }
       },
-      MH = de || {};
-    MH[fi] || (MH[fi] = {}), MH[fi].styles || (MH[fi].styles = {}), MH[fi].hooks || (MH[fi].hooks = {}), MH[fi].shims || (MH[fi].shims = []);
-    var KH = MH[fi],
-      UH = [],
-      FH = function() {
-        We.removeEventListener("DOMContentLoaded", FH), JH = 1, UH.map((function(ee) {
-          return ee()
+      NO = YW || {};
+    NO[Ai] || (NO[Ai] = {}), NO[Ai].styles || (NO[Ai].styles = {}), NO[Ai].hooks || (NO[Ai].hooks = {}), NO[Ai].shims || (NO[Ai].shims = []);
+    var PO = NO[Ai],
+      LO = [],
+      cO = function() {
+        yW.removeEventListener("DOMContentLoaded", cO), wO = 1, LO.map((function(WW) {
+          return WW()
         }))
       },
-      JH = !1;
+      wO = !1;
 
-    function oH(ee) {
-      var ie = ee.tag,
-        He = ee.attributes,
-        ye = void 0 === He ? {} : He,
-        be = ee.children,
-        Me = void 0 === be ? [] : be;
-      return "string" === typeof ee ? ri(ee) : "<".concat(ie, " ").concat(function(ee) {
-        return Object.keys(ee || {}).reduce((function(ie, He) {
-          return ie + "".concat(He, '="').concat(ri(ee[He]), '" ')
+    function tO(WW) {
+      var iW = WW.tag,
+        OW = WW.attributes,
+        mW = void 0 === OW ? {} : OW,
+        EW = WW.children,
+        NW = void 0 === EW ? [] : EW;
+      return "string" === typeof WW ? Fi(WW) : "<".concat(iW, " ").concat(function(WW) {
+        return Object.keys(WW || {}).reduce((function(iW, OW) {
+          return iW + "".concat(OW, '="').concat(Fi(WW[OW]), '" ')
         }), "").trim()
-      }(ye), ">").concat(Me.map(oH).join(""), "</").concat(ie, ">")
+      }(mW), ">").concat(NW.map(tO).join(""), "</").concat(iW, ">")
     }
 
-    function RH(ee, ie, He) {
-      if (ee && ee[ie] && ee[ie][He]) return {
-        prefix: ie,
-        iconName: He,
-        icon: ee[ie][He]
+    function ZO(WW, iW, OW) {
+      if (WW && WW[iW] && WW[iW][OW]) return {
+        prefix: iW,
+        iconName: OW,
+        icon: WW[iW][OW]
       }
     }
-    we && ((JH = (We.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(We.readyState)) || We.addEventListener("DOMContentLoaded", FH));
-    var kH = function(ee, ie, He, ye) {
-      var be, Me, Ke, Ue = Object.keys(ee),
-        Fe = Ue.length,
-        Je = void 0 !== ye ? function(ee, ie) {
-          return function(He, ye, be, Me) {
-            return ee.call(ie, He, ye, be, Me)
+    hW && ((wO = (yW.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(yW.readyState)) || yW.addEventListener("DOMContentLoaded", cO));
+    var xO = function(WW, iW, OW, mW) {
+      var EW, NW, PW, LW = Object.keys(WW),
+        cW = LW.length,
+        wW = void 0 !== mW ? function(WW, iW) {
+          return function(OW, mW, EW, NW) {
+            return WW.call(iW, OW, mW, EW, NW)
           }
-        }(ie, ye) : ie;
-      for (void 0 === He ? (be = 1, Ke = ee[Ue[0]]) : (be = 0, Ke = He); be < Fe; be++) Ke = Je(Ke, ee[Me = Ue[be]], Me, ee);
-      return Ke
+        }(iW, mW) : iW;
+      for (void 0 === OW ? (EW = 1, PW = WW[LW[0]]) : (EW = 0, PW = OW); EW < cW; EW++) PW = wW(PW, WW[NW = LW[EW]], NW, WW);
+      return PW
     };
 
-    function qH(ee) {
-      return 1 !== oe(ee).length ? null : ee.codePointAt(0).toString(16)
+    function lO(WW) {
+      return 1 !== tW(WW).length ? null : WW.codePointAt(0).toString(16)
     }
 
-    function fH(ee) {
-      return Object.keys(ee).reduce((function(ie, He) {
-        var ye = ee[He];
-        return !!ye.icon ? ie[ye.iconName] = ye.icon : ie[He] = ye, ie
+    function AO(WW) {
+      return Object.keys(WW).reduce((function(iW, OW) {
+        var mW = WW[OW];
+        return !!mW.icon ? iW[mW.iconName] = mW.icon : iW[OW] = mW, iW
       }), {})
     }
 
-    function TH(ee, ie) {
-      var He = (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}).skipHooks,
-        ye = void 0 !== He && He,
-        be = fH(ie);
-      "function" !== typeof KH.hooks.addPack || ye ? KH.styles[ee] = Fe(Fe({}, KH.styles[ee] || {}), be) : KH.hooks.addPack(ee, fH(ie)), "fas" === ee && TH("fa", ie)
+    function bO(WW, iW) {
+      var OW = (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}).skipHooks,
+        mW = void 0 !== OW && OW,
+        EW = AO(iW);
+      "function" !== typeof PO.hooks.addPack || mW ? PO.styles[WW] = cW(cW({}, PO.styles[WW] || {}), EW) : PO.hooks.addPack(WW, AO(iW)), "fas" === WW && bO("fa", iW)
     }
-    var pH = KH.styles,
-      XH = KH.shims,
-      zH = Object.keys(Yi),
-      BH = zH.reduce((function(ee, ie) {
-        return ee[ie] = Object.keys(Yi[ie]), ee
+    var jO = PO.styles,
+      UO = PO.shims,
+      kO = Object.keys(oi),
+      sO = kO.reduce((function(WW, iW) {
+        return WW[iW] = Object.keys(oi[iW]), WW
       }), {}),
-      EH = null,
-      gH = {},
-      OH = {},
-      dH = {},
-      WH = {},
-      tH = {};
+      MO = null,
+      KO = {},
+      SO = {},
+      YO = {},
+      yO = {},
+      TO = {};
 
-    function ZH(ee, ie) {
-      var He, ye = ie.split("-"),
-        be = ye[0],
-        Me = ye.slice(1).join("-");
-      return be !== ee || "" === Me || (He = Me, ~vi.indexOf(He)) ? null : Me
+    function JO(WW, iW) {
+      var OW, mW = iW.split("-"),
+        EW = mW[0],
+        NW = mW.slice(1).join("-");
+      return EW !== WW || "" === NW || (OW = NW, ~fi.indexOf(OW)) ? null : NW
     }
-    var wH, DH = function() {
-      var ee = function(ee) {
-        return kH(pH, (function(ie, He, ye) {
-          return ie[ye] = kH(He, ee, {}), ie
+    var hO, HO = function() {
+      var WW = function(WW) {
+        return xO(jO, (function(iW, OW, mW) {
+          return iW[mW] = xO(OW, WW, {}), iW
         }), {})
       };
-      gH = ee((function(ee, ie, He) {
-        (ie[3] && (ee[ie[3]] = He), ie[2]) && ie[2].filter((function(ee) {
-          return "number" === typeof ee
-        })).forEach((function(ie) {
-          ee[ie.toString(16)] = He
+      KO = WW((function(WW, iW, OW) {
+        (iW[3] && (WW[iW[3]] = OW), iW[2]) && iW[2].filter((function(WW) {
+          return "number" === typeof WW
+        })).forEach((function(iW) {
+          WW[iW.toString(16)] = OW
         }));
-        return ee
-      })), OH = ee((function(ee, ie, He) {
-        (ee[He] = He, ie[2]) && ie[2].filter((function(ee) {
-          return "string" === typeof ee
-        })).forEach((function(ie) {
-          ee[ie] = He
+        return WW
+      })), SO = WW((function(WW, iW, OW) {
+        (WW[OW] = OW, iW[2]) && iW[2].filter((function(WW) {
+          return "string" === typeof WW
+        })).forEach((function(iW) {
+          WW[iW] = OW
         }));
-        return ee
-      })), tH = ee((function(ee, ie, He) {
-        var ye = ie[2];
-        return ee[He] = He, ye.forEach((function(ie) {
-          ee[ie] = He
-        })), ee
+        return WW
+      })), TO = WW((function(WW, iW, OW) {
+        var mW = iW[2];
+        return WW[OW] = OW, mW.forEach((function(iW) {
+          WW[iW] = OW
+        })), WW
       }));
-      var ie = "far" in pH || Si.autoFetchSvg,
-        He = kH(XH, (function(ee, He) {
-          var ye = He[0],
-            be = He[1],
-            Me = He[2];
-          return "far" !== be || ie || (be = "fas"), "string" === typeof ye && (ee.names[ye] = {
-            prefix: be,
-            iconName: Me
-          }), "number" === typeof ye && (ee.unicodes[ye.toString(16)] = {
-            prefix: be,
-            iconName: Me
-          }), ee
+      var iW = "far" in jO || qi.autoFetchSvg,
+        OW = xO(UO, (function(WW, OW) {
+          var mW = OW[0],
+            EW = OW[1],
+            NW = OW[2];
+          return "far" !== EW || iW || (EW = "fas"), "string" === typeof mW && (WW.names[mW] = {
+            prefix: EW,
+            iconName: NW
+          }), "number" === typeof mW && (WW.unicodes[mW.toString(16)] = {
+            prefix: EW,
+            iconName: NW
+          }), WW
         }), {
           names: {},
           unicodes: {}
         });
-      dH = He.names, WH = He.unicodes, EH = aH(Si.styleDefault, {
-        family: Si.familyDefault
+      YO = OW.names, yO = OW.unicodes, MO = eO(qi.styleDefault, {
+        family: qi.familyDefault
       })
     };
 
-    function PH(ee, ie) {
-      return (gH[ee] || {})[ie]
+    function nO(WW, iW) {
+      return (KO[WW] || {})[iW]
     }
 
-    function AH(ee, ie) {
-      return (tH[ee] || {})[ie]
+    function uO(WW, iW) {
+      return (TO[WW] || {})[iW]
     }
 
-    function YH(ee) {
-      return dH[ee] || {
+    function oO(WW) {
+      return YO[WW] || {
         prefix: null,
         iconName: null
       }
     }
 
-    function VH() {
-      return EH
+    function dO() {
+      return MO
     }
-    wH = function(ee) {
-      EH = aH(ee.styleDefault, {
-        family: Si.familyDefault
+    hO = function(WW) {
+      MO = eO(WW.styleDefault, {
+        family: qi.familyDefault
       })
-    }, ni.push(wH), DH();
+    }, Ri.push(hO), HO();
 
-    function aH(ee) {
-      var ie = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).family,
-        He = void 0 === ie ? Ye : ie,
-        ye = wi[He][ee];
-      if (He === Ve && !ee) return "fad";
-      var be = Pi[He][ee] || Pi[He][ye],
-        Me = ee in KH.styles ? ee : null;
-      return be || Me || null
+    function eO(WW) {
+      var iW = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).family,
+        OW = void 0 === iW ? oW : iW,
+        mW = Ji[OW][WW];
+      if (OW === dW && !WW) return "fad";
+      var EW = ni[OW][WW] || ni[OW][mW],
+        NW = WW in PO.styles ? WW : null;
+      return EW || NW || null
     }
 
-    function cH(ee) {
-      return ee.sort().filter((function(ee, ie, He) {
-        return He.indexOf(ee) === ie
+    function vO(WW) {
+      return WW.sort().filter((function(WW, iW, OW) {
+        return OW.indexOf(WW) === iW
       }))
     }
-    var xH = oi.concat(ei);
+    var gO = ti.concat(Wi);
 
-    function LH(ee) {
-      var ie = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).skipLookups,
-        He = void 0 !== ie && ie,
-        ye = null,
-        be = cH(ee.filter((function(ee) {
-          return xH.includes(ee)
+    function DO(WW) {
+      var iW = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).skipLookups,
+        OW = void 0 !== iW && iW,
+        mW = null,
+        EW = vO(WW.filter((function(WW) {
+          return gO.includes(WW)
         }))),
-        Me = cH(ee.filter((function(ee) {
-          return !xH.includes(ee)
+        NW = vO(WW.filter((function(WW) {
+          return !gO.includes(WW)
         }))),
-        Ke = Je(be.filter((function(ee) {
-          return ye = ee, !Ae.includes(ee)
+        PW = wW(EW.filter((function(WW) {
+          return mW = WW, !uW.includes(WW)
         })), 1)[0],
-        Ue = void 0 === Ke ? null : Ke,
-        oe = function(ee) {
-          var ie = Ye,
-            He = zH.reduce((function(ee, ie) {
-              return ee[ie] = "".concat(Si.cssPrefix, "-").concat(ie), ee
+        LW = void 0 === PW ? null : PW,
+        tW = function(WW) {
+          var iW = oW,
+            OW = kO.reduce((function(WW, iW) {
+              return WW[iW] = "".concat(qi.cssPrefix, "-").concat(iW), WW
             }), {});
-          return re.forEach((function(ye) {
-            (ee.includes(He[ye]) || ee.some((function(ee) {
-              return BH[ye].includes(ee)
-            }))) && (ie = ye)
-          })), ie
-        }(be),
-        Re = Fe(Fe({}, function(ee) {
-          var ie = [],
-            He = null;
-          return ee.forEach((function(ee) {
-            var ye = ZH(Si.cssPrefix, ee);
-            ye ? He = ye : ee && ie.push(ee)
+          return FW.forEach((function(mW) {
+            (WW.includes(OW[mW]) || WW.some((function(WW) {
+              return sO[mW].includes(WW)
+            }))) && (iW = mW)
+          })), iW
+        }(EW),
+        ZW = cW(cW({}, function(WW) {
+          var iW = [],
+            OW = null;
+          return WW.forEach((function(WW) {
+            var mW = JO(qi.cssPrefix, WW);
+            mW ? OW = mW : WW && iW.push(WW)
           })), {
-            iconName: He,
-            rest: ie
+            iconName: OW,
+            rest: iW
           }
-        }(Me)), {}, {
-          prefix: aH(Ue, {
-            family: oe
+        }(NW)), {}, {
+          prefix: eO(LW, {
+            family: tW
           })
         });
-      return Fe(Fe(Fe({}, Re), function(ee) {
-        var ie = ee.values,
-          He = ee.family,
-          ye = ee.canonical,
-          be = ee.givenPrefix,
-          Me = void 0 === be ? "" : be,
-          Ke = ee.styles,
-          Ue = void 0 === Ke ? {} : Ke,
-          Fe = ee.config,
-          Je = void 0 === Fe ? {} : Fe,
-          oe = He === Ve,
-          Re = ie.includes("fa-duotone") || ie.includes("fad"),
-          ke = "duotone" === Je.familyDefault,
-          qe = "fad" === ye.prefix || "fa-duotone" === ye.prefix;
-        !oe && (Re || ke || qe) && (ye.prefix = "fad");
-        (ie.includes("fa-brands") || ie.includes("fab")) && (ye.prefix = "fab");
-        if (!ye.prefix && CH.includes(He)) {
-          if (Object.keys(Ue).find((function(ee) {
-              return vH.includes(ee)
-            })) || Je.autoFetchSvg) {
-            var fe = Qe.get(He).defaultShortPrefixId;
-            ye.prefix = fe, ye.iconName = AH(ye.prefix, ye.iconName) || ye.iconName
+      return cW(cW(cW({}, ZW), function(WW) {
+        var iW = WW.values,
+          OW = WW.family,
+          mW = WW.canonical,
+          EW = WW.givenPrefix,
+          NW = void 0 === EW ? "" : EW,
+          PW = WW.styles,
+          LW = void 0 === PW ? {} : PW,
+          cW = WW.config,
+          wW = void 0 === cW ? {} : cW,
+          tW = OW === dW,
+          ZW = iW.includes("fa-duotone") || iW.includes("fad"),
+          xW = "duotone" === wW.familyDefault,
+          lW = "fad" === mW.prefix || "fa-duotone" === mW.prefix;
+        !tW && (ZW || xW || lW) && (mW.prefix = "fad");
+        (iW.includes("fa-brands") || iW.includes("fab")) && (mW.prefix = "fab");
+        if (!mW.prefix && VO.includes(OW)) {
+          if (Object.keys(LW).find((function(WW) {
+              return pO.includes(WW)
+            })) || wW.autoFetchSvg) {
+            var AW = QW.get(OW).defaultShortPrefixId;
+            mW.prefix = AW, mW.iconName = uO(mW.prefix, mW.iconName) || mW.iconName
           }
         }
-        "fa" !== ye.prefix && "fa" !== Me || (ye.prefix = VH() || "fas");
-        return ye
+        "fa" !== mW.prefix && "fa" !== NW || (mW.prefix = dO() || "fas");
+        return mW
       }({
-        values: ee,
-        family: oe,
-        styles: pH,
-        config: Si,
-        canonical: Re,
-        givenPrefix: ye
-      })), function(ee, ie, He) {
-        var ye = He.prefix,
-          be = He.iconName;
-        if (ee || !ye || !be) return {
-          prefix: ye,
-          iconName: be
+        values: WW,
+        family: tW,
+        styles: jO,
+        config: qi,
+        canonical: ZW,
+        givenPrefix: mW
+      })), function(WW, iW, OW) {
+        var mW = OW.prefix,
+          EW = OW.iconName;
+        if (WW || !mW || !EW) return {
+          prefix: mW,
+          iconName: EW
         };
-        var Me = "fa" === ie ? YH(be) : {},
-          Ke = AH(ye, be);
-        be = Me.iconName || Ke || be, "far" !== (ye = Me.prefix || ye) || pH.far || !pH.fas || Si.autoFetchSvg || (ye = "fas");
+        var NW = "fa" === iW ? oO(EW) : {},
+          PW = uO(mW, EW);
+        EW = NW.iconName || PW || EW, "far" !== (mW = NW.prefix || mW) || jO.far || !jO.fas || qi.autoFetchSvg || (mW = "fas");
         return {
-          prefix: ye,
-          iconName: be
+          prefix: mW,
+          iconName: EW
         }
-      }(He, ye, Re))
+      }(OW, mW, ZW))
     }
-    var CH = re.filter((function(ee) {
-        return ee !== Ye || ee !== Ve
+    var VO = FW.filter((function(WW) {
+        return WW !== oW || WW !== dW
       })),
-      vH = Object.keys(Ji).filter((function(ee) {
-        return ee !== Ye
-      })).map((function(ee) {
-        return Object.keys(Ji[ee])
+      pO = Object.keys(wi).filter((function(WW) {
+        return WW !== oW
+      })).map((function(WW) {
+        return Object.keys(wi[WW])
       })).flat();
-    var uH = function() {
-        return function(ee, ie, He) {
-          return ie && be(ee.prototype, ie), He && be(ee, He), Object.defineProperty(ee, "prototype", {
+    var fO = function() {
+        return function(WW, iW, OW) {
+          return iW && EW(WW.prototype, iW), OW && EW(WW, OW), Object.defineProperty(WW, "prototype", {
             writable: !1
-          }), ee
-        }((function ee() {
-          ! function(ee, ie) {
-            if (!(ee instanceof ie)) throw new TypeError("Cannot call a class as a function")
-          }(this, ee), this.definitions = {}
+          }), WW
+        }((function WW() {
+          ! function(WW, iW) {
+            if (!(WW instanceof iW)) throw new TypeError("Cannot call a class as a function")
+          }(this, WW), this.definitions = {}
         }), [{
           key: "add",
           value: function() {
-            for (var ee = this, ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
-            var be = He.reduce(this._pullDefinitions, {});
-            Object.keys(be).forEach((function(ie) {
-              ee.definitions[ie] = Fe(Fe({}, ee.definitions[ie] || {}), be[ie]), TH(ie, be[ie]);
-              var He = Yi[Ye][ie];
-              He && TH(He, be[ie]), DH()
+            for (var WW = this, iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+            var EW = OW.reduce(this._pullDefinitions, {});
+            Object.keys(EW).forEach((function(iW) {
+              WW.definitions[iW] = cW(cW({}, WW.definitions[iW] || {}), EW[iW]), bO(iW, EW[iW]);
+              var OW = oi[oW][iW];
+              OW && bO(OW, EW[iW]), HO()
             }))
           }
         }, {
@@ -1722,201 +1722,201 @@ export const modules = {
           }
         }, {
           key: "_pullDefinitions",
-          value: function(ee, ie) {
-            var He = ie.prefix && ie.iconName && ie.icon ? {
-              0: ie
-            } : ie;
-            return Object.keys(He).map((function(ie) {
-              var ye = He[ie],
-                be = ye.prefix,
-                Me = ye.iconName,
-                Ke = ye.icon,
-                Ue = Ke[2];
-              ee[be] || (ee[be] = {}), Ue.length > 0 && Ue.forEach((function(ie) {
-                "string" === typeof ie && (ee[be][ie] = Ke)
-              })), ee[be][Me] = Ke
-            })), ee
+          value: function(WW, iW) {
+            var OW = iW.prefix && iW.iconName && iW.icon ? {
+              0: iW
+            } : iW;
+            return Object.keys(OW).map((function(iW) {
+              var mW = OW[iW],
+                EW = mW.prefix,
+                NW = mW.iconName,
+                PW = mW.icon,
+                LW = PW[2];
+              WW[EW] || (WW[EW] = {}), LW.length > 0 && LW.forEach((function(iW) {
+                "string" === typeof iW && (WW[EW][iW] = PW)
+              })), WW[EW][NW] = PW
+            })), WW
           }
         }])
       }(),
-      mH = [],
-      lH = {},
-      SH = {},
-      nH = Object.keys(SH);
+      CO = [],
+      XO = {},
+      BO = {},
+      qO = Object.keys(BO);
 
-    function jH(ee, ie) {
-      for (var He = arguments.length, ye = new Array(He > 2 ? He - 2 : 0), be = 2; be < He; be++) ye[be - 2] = arguments[be];
-      return (lH[ee] || []).forEach((function(ee) {
-        ie = ee.apply(null, [ie].concat(ye))
-      })), ie
+    function RO(WW, iW) {
+      for (var OW = arguments.length, mW = new Array(OW > 2 ? OW - 2 : 0), EW = 2; EW < OW; EW++) mW[EW - 2] = arguments[EW];
+      return (XO[WW] || []).forEach((function(WW) {
+        iW = WW.apply(null, [iW].concat(mW))
+      })), iW
     }
 
-    function sH(ee) {
-      for (var ie = arguments.length, He = new Array(ie > 1 ? ie - 1 : 0), ye = 1; ye < ie; ye++) He[ye - 1] = arguments[ye];
-      (lH[ee] || []).forEach((function(ee) {
-        ee.apply(null, He)
+    function GO(WW) {
+      for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
+      (XO[WW] || []).forEach((function(WW) {
+        WW.apply(null, OW)
       }))
     }
 
-    function IH() {
-      var ee = arguments[0],
-        ie = Array.prototype.slice.call(arguments, 1);
-      return SH[ee] ? SH[ee].apply(null, ie) : void 0
+    function IO() {
+      var WW = arguments[0],
+        iW = Array.prototype.slice.call(arguments, 1);
+      return BO[WW] ? BO[WW].apply(null, iW) : void 0
     }
 
-    function hH(ee) {
-      "fa" === ee.prefix && (ee.prefix = "fas");
-      var ie = ee.iconName,
-        He = ee.prefix || VH();
-      if (ie) return ie = AH(He, ie) || ie, RH(NH.definitions, He, ie) || RH(KH.styles, He, ie)
+    function aO(WW) {
+      "fa" === WW.prefix && (WW.prefix = "fas");
+      var iW = WW.iconName,
+        OW = WW.prefix || dO();
+      if (iW) return iW = uO(OW, iW) || iW, ZO(rO.definitions, OW, iW) || ZO(PO.styles, OW, iW)
     }
-    var NH = new uH,
-      GH = {
+    var rO = new fO,
+      zO = {
         i2svg: function() {
-          var ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return we ? (sH("beforeI2svg", ee), IH("pseudoElements2svg", ee), IH("i2svg", ee)) : Promise.reject(new Error("Operation requires a DOM of some kind."))
+          var WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return hW ? (GO("beforeI2svg", WW), IO("pseudoElements2svg", WW), IO("i2svg", WW)) : Promise.reject(new Error("Operation requires a DOM of some kind."))
         },
         watch: function() {
-          var ee, ie = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            He = ie.autoReplaceSvgRoot;
-          !1 === Si.autoReplaceSvg && (Si.autoReplaceSvg = !0), Si.observeMutations = !0, ee = function() {
-            QH({
-              autoReplaceSvgRoot: He
-            }), sH("watch", ie)
-          }, we && (JH ? setTimeout(ee, 0) : UH.push(ee))
+          var WW, iW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            OW = iW.autoReplaceSvgRoot;
+          !1 === qi.autoReplaceSvg && (qi.autoReplaceSvg = !0), qi.observeMutations = !0, WW = function() {
+            QO({
+              autoReplaceSvgRoot: OW
+            }), GO("watch", iW)
+          }, hW && (wO ? setTimeout(WW, 0) : LO.push(WW))
         }
       },
-      rH = {
+      FO = {
         noAuto: function() {
-          Si.autoReplaceSvg = !1, Si.observeMutations = !1, sH("noAuto")
+          qi.autoReplaceSvg = !1, qi.observeMutations = !1, GO("noAuto")
         },
-        config: Si,
-        dom: GH,
+        config: qi,
+        dom: zO,
         parse: {
-          icon: function(ee) {
-            if (null === ee) return null;
-            if ("object" === ke(ee) && ee.prefix && ee.iconName) return {
-              prefix: ee.prefix,
-              iconName: AH(ee.prefix, ee.iconName) || ee.iconName
+          icon: function(WW) {
+            if (null === WW) return null;
+            if ("object" === xW(WW) && WW.prefix && WW.iconName) return {
+              prefix: WW.prefix,
+              iconName: uO(WW.prefix, WW.iconName) || WW.iconName
             };
-            if (Array.isArray(ee) && 2 === ee.length) {
-              var ie = 0 === ee[1].indexOf("fa-") ? ee[1].slice(3) : ee[1],
-                He = aH(ee[0]);
+            if (Array.isArray(WW) && 2 === WW.length) {
+              var iW = 0 === WW[1].indexOf("fa-") ? WW[1].slice(3) : WW[1],
+                OW = eO(WW[0]);
               return {
-                prefix: He,
-                iconName: AH(He, ie) || ie
+                prefix: OW,
+                iconName: uO(OW, iW) || iW
               }
             }
-            if ("string" === typeof ee && (ee.indexOf("".concat(Si.cssPrefix, "-")) > -1 || ee.match(ai))) {
-              var ye = LH(ee.split(" "), {
+            if ("string" === typeof WW && (WW.indexOf("".concat(qi.cssPrefix, "-")) > -1 || WW.match(ei))) {
+              var mW = DO(WW.split(" "), {
                 skipLookups: !0
               });
               return {
-                prefix: ye.prefix || VH(),
-                iconName: AH(ye.prefix, ye.iconName) || ye.iconName
+                prefix: mW.prefix || dO(),
+                iconName: uO(mW.prefix, mW.iconName) || mW.iconName
               }
             }
-            if ("string" === typeof ee) {
-              var be = VH();
+            if ("string" === typeof WW) {
+              var EW = dO();
               return {
-                prefix: be,
-                iconName: AH(be, ee) || ee
+                prefix: EW,
+                iconName: uO(EW, WW) || WW
               }
             }
           }
         },
-        library: NH,
-        findIconDefinition: hH,
-        toHtml: oH
+        library: rO,
+        findIconDefinition: aO,
+        toHtml: tO
       },
-      QH = function() {
-        var ee = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).autoReplaceSvgRoot,
-          ie = void 0 === ee ? We : ee;
-        (Object.keys(KH.styles).length > 0 || Si.autoFetchSvg) && we && Si.autoReplaceSvg && rH.dom.i2svg({
-          node: ie
+      QO = function() {
+        var WW = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).autoReplaceSvgRoot,
+          iW = void 0 === WW ? yW : WW;
+        (Object.keys(PO.styles).length > 0 || qi.autoFetchSvg) && hW && qi.autoReplaceSvg && FO.dom.i2svg({
+          node: iW
         })
       };
 
-    function ey(ee, ie) {
-      return Object.defineProperty(ee, "abstract", {
-        get: ie
-      }), Object.defineProperty(ee, "html", {
+    function Wm(WW, iW) {
+      return Object.defineProperty(WW, "abstract", {
+        get: iW
+      }), Object.defineProperty(WW, "html", {
         get: function() {
-          return ee.abstract.map((function(ee) {
-            return oH(ee)
+          return WW.abstract.map((function(WW) {
+            return tO(WW)
           }))
         }
-      }), Object.defineProperty(ee, "node", {
+      }), Object.defineProperty(WW, "node", {
         get: function() {
-          if (we) {
-            var ie = We.createElement("div");
-            return ie.innerHTML = ee.html, ie.children
+          if (hW) {
+            var iW = yW.createElement("div");
+            return iW.innerHTML = WW.html, iW.children
           }
         }
-      }), ee
+      }), WW
     }
 
-    function iy(ee) {
-      var ie = ee.icons,
-        He = ie.main,
-        ye = ie.mask,
-        be = ee.prefix,
-        Me = ee.iconName,
-        Ke = ee.transform,
-        Ue = ee.symbol,
-        Je = ee.maskId,
-        oe = ee.extra,
-        Re = ee.watchable,
-        ke = void 0 !== Re && Re,
-        qe = ye.found ? ye : He,
-        fe = qe.width,
-        Te = qe.height,
-        pe = [Si.replacementClass, Me ? "".concat(Si.cssPrefix, "-").concat(Me) : ""].filter((function(ee) {
-          return -1 === oe.classes.indexOf(ee)
-        })).filter((function(ee) {
-          return "" !== ee || !!ee
-        })).concat(oe.classes).join(" "),
-        Xe = {
+    function im(WW) {
+      var iW = WW.icons,
+        OW = iW.main,
+        mW = iW.mask,
+        EW = WW.prefix,
+        NW = WW.iconName,
+        PW = WW.transform,
+        LW = WW.symbol,
+        wW = WW.maskId,
+        tW = WW.extra,
+        ZW = WW.watchable,
+        xW = void 0 !== ZW && ZW,
+        lW = mW.found ? mW : OW,
+        AW = lW.width,
+        bW = lW.height,
+        jW = [qi.replacementClass, NW ? "".concat(qi.cssPrefix, "-").concat(NW) : ""].filter((function(WW) {
+          return -1 === tW.classes.indexOf(WW)
+        })).filter((function(WW) {
+          return "" !== WW || !!WW
+        })).concat(tW.classes).join(" "),
+        UW = {
           children: [],
-          attributes: Fe(Fe({}, oe.attributes), {}, {
-            "data-prefix": be,
-            "data-icon": Me,
-            class: pe,
-            role: oe.attributes.role || "img",
-            viewBox: "0 0 ".concat(fe, " ").concat(Te)
+          attributes: cW(cW({}, tW.attributes), {}, {
+            "data-prefix": EW,
+            "data-icon": NW,
+            class: jW,
+            role: tW.attributes.role || "img",
+            viewBox: "0 0 ".concat(AW, " ").concat(bW)
           })
         };
-      (function(ee) {
-        return ["aria-label", "aria-labelledby", "title", "role"].some((function(ie) {
-          return ie in ee
+      (function(WW) {
+        return ["aria-label", "aria-labelledby", "title", "role"].some((function(iW) {
+          return iW in WW
         }))
-      })(oe.attributes) || oe.attributes["aria-hidden"] || (Xe.attributes["aria-hidden"] = "true"), ke && (Xe.attributes[Xi] = "");
-      var ze = Fe(Fe({}, Xe), {}, {
-          prefix: be,
-          iconName: Me,
-          main: He,
-          mask: ye,
-          maskId: Je,
-          transform: Ke,
-          symbol: Ue,
-          styles: Fe({}, oe.styles)
+      })(tW.attributes) || tW.attributes["aria-hidden"] || (UW.attributes["aria-hidden"] = "true"), xW && (UW.attributes[ji] = "");
+      var kW = cW(cW({}, UW), {}, {
+          prefix: EW,
+          iconName: NW,
+          main: OW,
+          mask: mW,
+          maskId: wW,
+          transform: PW,
+          symbol: LW,
+          styles: cW({}, tW.styles)
         }),
-        Be = ye.found && He.found ? IH("generateAbstractMask", ze) || {
+        sW = mW.found && OW.found ? IO("generateAbstractMask", kW) || {
           children: [],
           attributes: {}
-        } : IH("generateAbstractIcon", ze) || {
+        } : IO("generateAbstractIcon", kW) || {
           children: [],
           attributes: {}
         },
-        Ee = Be.children,
-        ge = Be.attributes;
-      return ze.children = Ee, ze.attributes = ge, Ue ? function(ee) {
-        var ie = ee.prefix,
-          He = ee.iconName,
-          ye = ee.children,
-          be = ee.attributes,
-          Me = ee.symbol,
-          Ke = !0 === Me ? "".concat(ie, "-").concat(Si.cssPrefix, "-").concat(He) : Me;
+        MW = sW.children,
+        KW = sW.attributes;
+      return kW.children = MW, kW.attributes = KW, LW ? function(WW) {
+        var iW = WW.prefix,
+          OW = WW.iconName,
+          mW = WW.children,
+          EW = WW.attributes,
+          NW = WW.symbol,
+          PW = !0 === NW ? "".concat(iW, "-").concat(qi.cssPrefix, "-").concat(OW) : NW;
         return [{
           tag: "svg",
           attributes: {
@@ -1924,267 +1924,267 @@ export const modules = {
           },
           children: [{
             tag: "symbol",
-            attributes: Fe(Fe({}, be), {}, {
-              id: Ke
+            attributes: cW(cW({}, EW), {}, {
+              id: PW
             }),
-            children: ye
+            children: mW
           }]
         }]
-      }(ze) : function(ee) {
-        var ie = ee.children,
-          He = ee.main,
-          ye = ee.mask,
-          be = ee.attributes,
-          Me = ee.styles,
-          Ke = ee.transform;
-        if (eH(Ke) && He.found && !ye.found) {
-          var Ue = {
-            x: He.width / He.height / 2,
+      }(kW) : function(WW) {
+        var iW = WW.children,
+          OW = WW.main,
+          mW = WW.mask,
+          EW = WW.attributes,
+          NW = WW.styles,
+          PW = WW.transform;
+        if (WO(PW) && OW.found && !mW.found) {
+          var LW = {
+            x: OW.width / OW.height / 2,
             y: .5
           };
-          be.style = Qi(Fe(Fe({}, Me), {}, {
-            "transform-origin": "".concat(Ue.x + Ke.x / 16, "em ").concat(Ue.y + Ke.y / 16, "em")
+          EW.style = Qi(cW(cW({}, NW), {}, {
+            "transform-origin": "".concat(LW.x + PW.x / 16, "em ").concat(LW.y + PW.y / 16, "em")
           }))
         }
         return [{
           tag: "svg",
-          attributes: be,
-          children: ie
+          attributes: EW,
+          children: iW
         }]
-      }(ze)
+      }(kW)
     }
 
-    function Hy(ee) {
-      var ie = ee.content,
-        He = ee.width,
-        ye = ee.height,
-        be = ee.transform,
-        Me = ee.extra,
-        Ke = ee.watchable,
-        Ue = void 0 !== Ke && Ke,
-        Je = Fe(Fe({}, Me.attributes), {}, {
-          class: Me.classes.join(" ")
+    function Om(WW) {
+      var iW = WW.content,
+        OW = WW.width,
+        mW = WW.height,
+        EW = WW.transform,
+        NW = WW.extra,
+        PW = WW.watchable,
+        LW = void 0 !== PW && PW,
+        wW = cW(cW({}, NW.attributes), {}, {
+          class: NW.classes.join(" ")
         });
-      Ue && (Je[Xi] = "");
-      var oe = Fe({}, Me.styles);
-      eH(be) && (oe.transform = function(ee) {
-        var ie = ee.transform,
-          He = ee.width,
-          ye = void 0 === He ? 16 : He,
-          be = ee.height,
-          Me = void 0 === be ? 16 : be,
-          Ke = ee.startCentered,
-          Ue = void 0 !== Ke && Ke,
-          Fe = "";
-        return Fe += Ue && De ? "translate(".concat(ie.x / ji - ye / 2, "em, ").concat(ie.y / ji - Me / 2, "em) ") : Ue ? "translate(calc(-50% + ".concat(ie.x / ji, "em), calc(-50% + ").concat(ie.y / ji, "em)) ") : "translate(".concat(ie.x / ji, "em, ").concat(ie.y / ji, "em) "), Fe += "scale(".concat(ie.size / ji * (ie.flipX ? -1 : 1), ", ").concat(ie.size / ji * (ie.flipY ? -1 : 1), ") "), Fe + "rotate(".concat(ie.rotate, "deg) ")
+      LW && (wW[ji] = "");
+      var tW = cW({}, NW.styles);
+      WO(EW) && (tW.transform = function(WW) {
+        var iW = WW.transform,
+          OW = WW.width,
+          mW = void 0 === OW ? 16 : OW,
+          EW = WW.height,
+          NW = void 0 === EW ? 16 : EW,
+          PW = WW.startCentered,
+          LW = void 0 !== PW && PW,
+          cW = "";
+        return cW += LW && HW ? "translate(".concat(iW.x / Gi - mW / 2, "em, ").concat(iW.y / Gi - NW / 2, "em) ") : LW ? "translate(calc(-50% + ".concat(iW.x / Gi, "em), calc(-50% + ").concat(iW.y / Gi, "em)) ") : "translate(".concat(iW.x / Gi, "em, ").concat(iW.y / Gi, "em) "), cW += "scale(".concat(iW.size / Gi * (iW.flipX ? -1 : 1), ", ").concat(iW.size / Gi * (iW.flipY ? -1 : 1), ") "), cW + "rotate(".concat(iW.rotate, "deg) ")
       }({
-        transform: be,
+        transform: EW,
         startCentered: !0,
-        width: He,
-        height: ye
-      }), oe["-webkit-transform"] = oe.transform);
-      var Re = Qi(oe);
-      Re.length > 0 && (Je.style = Re);
-      var ke = [];
-      return ke.push({
+        width: OW,
+        height: mW
+      }), tW["-webkit-transform"] = tW.transform);
+      var ZW = Qi(tW);
+      ZW.length > 0 && (wW.style = ZW);
+      var xW = [];
+      return xW.push({
         tag: "span",
-        attributes: Je,
-        children: [ie]
-      }), ke
+        attributes: wW,
+        children: [iW]
+      }), xW
     }
-    var yy = KH.styles;
+    var mm = PO.styles;
 
-    function by(ee) {
-      var ie = ee[0],
-        He = ee[1],
-        ye = Je(ee.slice(4), 1)[0];
+    function Em(WW) {
+      var iW = WW[0],
+        OW = WW[1],
+        mW = wW(WW.slice(4), 1)[0];
       return {
         found: !0,
-        width: ie,
-        height: He,
-        icon: Array.isArray(ye) ? {
+        width: iW,
+        height: OW,
+        icon: Array.isArray(mW) ? {
           tag: "g",
           attributes: {
-            class: "".concat(Si.cssPrefix, "-").concat(Ci.GROUP)
+            class: "".concat(qi.cssPrefix, "-").concat(Vi.GROUP)
           },
           children: [{
             tag: "path",
             attributes: {
-              class: "".concat(Si.cssPrefix, "-").concat(Ci.SECONDARY),
+              class: "".concat(qi.cssPrefix, "-").concat(Vi.SECONDARY),
               fill: "currentColor",
-              d: ye[0]
+              d: mW[0]
             }
           }, {
             tag: "path",
             attributes: {
-              class: "".concat(Si.cssPrefix, "-").concat(Ci.PRIMARY),
+              class: "".concat(qi.cssPrefix, "-").concat(Vi.PRIMARY),
               fill: "currentColor",
-              d: ye[1]
+              d: mW[1]
             }
           }]
         } : {
           tag: "path",
           attributes: {
             fill: "currentColor",
-            d: ye
+            d: mW
           }
         }
       }
     }
-    var My = {
+    var Nm = {
       found: !1,
       width: 512,
       height: 512
     };
 
-    function Ky(ee, ie) {
-      var He = ie;
-      return "fa" === ie && null !== Si.styleDefault && (ie = VH()), new Promise((function(ye, be) {
-        if ("fa" === He) {
-          var Me = YH(ee) || {};
-          ee = Me.iconName || ee, ie = Me.prefix || ie
+    function Pm(WW, iW) {
+      var OW = iW;
+      return "fa" === iW && null !== qi.styleDefault && (iW = dO()), new Promise((function(mW, EW) {
+        if ("fa" === OW) {
+          var NW = oO(WW) || {};
+          WW = NW.iconName || WW, iW = NW.prefix || iW
         }
-        if (ee && ie && yy[ie] && yy[ie][ee]) return ye(by(yy[ie][ee]));
-        ! function(ee, ie) {
-          Wi || Si.showMissingIcons || !ee || console.error('Icon with name "'.concat(ee, '" and prefix "').concat(ie, '" is missing.'))
-        }(ee, ie), ye(Fe(Fe({}, My), {}, {
-          icon: Si.showMissingIcons && ee && IH("missingIconAbstract") || {}
+        if (WW && iW && mm[iW] && mm[iW][WW]) return mW(Em(mm[iW][WW]));
+        ! function(WW, iW) {
+          Yi || qi.showMissingIcons || !WW || console.error('Icon with name "'.concat(WW, '" and prefix "').concat(iW, '" is missing.'))
+        }(WW, iW), mW(cW(cW({}, Nm), {}, {
+          icon: qi.showMissingIcons && WW && IO("missingIconAbstract") || {}
         }))
       }))
     }
-    var Uy = function() {},
-      Fy = Si.measurePerformance && Ze && Ze.mark && Ze.measure ? Ze : {
-        mark: Uy,
-        measure: Uy
+    var Lm = function() {},
+      cm = qi.measurePerformance && JW && JW.mark && JW.measure ? JW : {
+        mark: Lm,
+        measure: Lm
       },
-      Jy = 'FA "7.2.0"',
-      oy = function(ee) {
-        Fy.mark("".concat(Jy, " ").concat(ee, " ends")), Fy.measure("".concat(Jy, " ").concat(ee), "".concat(Jy, " ").concat(ee, " begins"), "".concat(Jy, " ").concat(ee, " ends"))
+      wm = 'FA "7.2.0"',
+      tm = function(WW) {
+        cm.mark("".concat(wm, " ").concat(WW, " ends")), cm.measure("".concat(wm, " ").concat(WW), "".concat(wm, " ").concat(WW, " begins"), "".concat(wm, " ").concat(WW, " ends"))
       },
-      Ry = function(ee) {
-        return Fy.mark("".concat(Jy, " ").concat(ee, " begins")),
+      Zm = function(WW) {
+        return cm.mark("".concat(wm, " ").concat(WW, " begins")),
           function() {
-            return oy(ee)
+            return tm(WW)
           }
       },
-      ky = function() {};
+      xm = function() {};
 
-    function qy(ee) {
-      return "string" === typeof(ee.getAttribute ? ee.getAttribute(Xi) : null)
+    function lm(WW) {
+      return "string" === typeof(WW.getAttribute ? WW.getAttribute(ji) : null)
     }
 
-    function fy(ee) {
-      return We.createElementNS("http://www.w3.org/2000/svg", ee)
+    function Am(WW) {
+      return yW.createElementNS("http://www.w3.org/2000/svg", WW)
     }
 
-    function Ty(ee) {
-      return We.createElement(ee)
+    function bm(WW) {
+      return yW.createElement(WW)
     }
 
-    function py(ee) {
-      var ie = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).ceFn,
-        He = void 0 === ie ? "svg" === ee.tag ? fy : Ty : ie;
-      if ("string" === typeof ee) return We.createTextNode(ee);
-      var ye = He(ee.tag);
-      return Object.keys(ee.attributes || []).forEach((function(ie) {
-        ye.setAttribute(ie, ee.attributes[ie])
-      })), (ee.children || []).forEach((function(ee) {
-        ye.appendChild(py(ee, {
-          ceFn: He
+    function jm(WW) {
+      var iW = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).ceFn,
+        OW = void 0 === iW ? "svg" === WW.tag ? Am : bm : iW;
+      if ("string" === typeof WW) return yW.createTextNode(WW);
+      var mW = OW(WW.tag);
+      return Object.keys(WW.attributes || []).forEach((function(iW) {
+        mW.setAttribute(iW, WW.attributes[iW])
+      })), (WW.children || []).forEach((function(WW) {
+        mW.appendChild(jm(WW, {
+          ceFn: OW
         }))
-      })), ye
+      })), mW
     }
-    var Xy = {
-      replace: function(ee) {
-        var ie = ee[0];
-        if (ie.parentNode)
-          if (ee[1].forEach((function(ee) {
-              ie.parentNode.insertBefore(py(ee), ie)
-            })), null === ie.getAttribute(Xi) && Si.keepOriginalSource) {
-            var He = We.createComment(function(ee) {
-              var ie = " ".concat(ee.outerHTML, " ");
-              return "".concat(ie, "Font Awesome fontawesome.com ")
-            }(ie));
-            ie.parentNode.replaceChild(He, ie)
-          } else ie.remove()
+    var Um = {
+      replace: function(WW) {
+        var iW = WW[0];
+        if (iW.parentNode)
+          if (WW[1].forEach((function(WW) {
+              iW.parentNode.insertBefore(jm(WW), iW)
+            })), null === iW.getAttribute(ji) && qi.keepOriginalSource) {
+            var OW = yW.createComment(function(WW) {
+              var iW = " ".concat(WW.outerHTML, " ");
+              return "".concat(iW, "Font Awesome fontawesome.com ")
+            }(iW));
+            iW.parentNode.replaceChild(OW, iW)
+          } else iW.remove()
       },
-      nest: function(ee) {
-        var ie = ee[0],
-          He = ee[1];
-        if (~Gi(ie).indexOf(Si.replacementClass)) return Xy.replace(ee);
-        var ye = new RegExp("".concat(Si.cssPrefix, "-.*"));
-        if (delete He[0].attributes.id, He[0].attributes.class) {
-          var be = He[0].attributes.class.split(" ").reduce((function(ee, ie) {
-            return ie === Si.replacementClass || ie.match(ye) ? ee.toSvg.push(ie) : ee.toNode.push(ie), ee
+      nest: function(WW) {
+        var iW = WW[0],
+          OW = WW[1];
+        if (~zi(iW).indexOf(qi.replacementClass)) return Um.replace(WW);
+        var mW = new RegExp("".concat(qi.cssPrefix, "-.*"));
+        if (delete OW[0].attributes.id, OW[0].attributes.class) {
+          var EW = OW[0].attributes.class.split(" ").reduce((function(WW, iW) {
+            return iW === qi.replacementClass || iW.match(mW) ? WW.toSvg.push(iW) : WW.toNode.push(iW), WW
           }), {
             toNode: [],
             toSvg: []
           });
-          He[0].attributes.class = be.toSvg.join(" "), 0 === be.toNode.length ? ie.removeAttribute("class") : ie.setAttribute("class", be.toNode.join(" "))
+          OW[0].attributes.class = EW.toSvg.join(" "), 0 === EW.toNode.length ? iW.removeAttribute("class") : iW.setAttribute("class", EW.toNode.join(" "))
         }
-        var Me = He.map((function(ee) {
-          return oH(ee)
+        var NW = OW.map((function(WW) {
+          return tO(WW)
         })).join("\n");
-        ie.setAttribute(Xi, ""), ie.innerHTML = Me
+        iW.setAttribute(ji, ""), iW.innerHTML = NW
       }
     };
 
-    function zy(ee) {
-      ee()
+    function km(WW) {
+      WW()
     }
 
-    function By(ee, ie) {
-      var He = "function" === typeof ie ? ie : ky;
-      if (0 === ee.length) He();
+    function sm(WW, iW) {
+      var OW = "function" === typeof iW ? iW : xm;
+      if (0 === WW.length) OW();
       else {
-        var ye = zy;
-        "async" === Si.mutateApproach && (ye = de.requestAnimationFrame || zy), ye((function() {
-          var ie = !0 === Si.autoReplaceSvg ? Xy.replace : Xy[Si.autoReplaceSvg] || Xy.replace,
-            ye = Ry("mutate");
-          ee.map(ie), ye(), He()
+        var mW = km;
+        "async" === qi.mutateApproach && (mW = YW.requestAnimationFrame || km), mW((function() {
+          var iW = !0 === qi.autoReplaceSvg ? Um.replace : Um[qi.autoReplaceSvg] || Um.replace,
+            mW = Zm("mutate");
+          WW.map(iW), mW(), OW()
         }))
       }
     }
-    var Ey = !1;
+    var Mm = !1;
 
-    function gy() {
-      Ey = !0
+    function Km() {
+      Mm = !0
     }
 
-    function Oy() {
-      Ey = !1
+    function Sm() {
+      Mm = !1
     }
-    var dy = null;
+    var Ym = null;
 
-    function Wy(ee) {
-      if (te && Si.observeMutations) {
-        var ie = ee.treeCallback,
-          He = void 0 === ie ? ky : ie,
-          ye = ee.nodeCallback,
-          be = void 0 === ye ? ky : ye,
-          Me = ee.pseudoElementsCallback,
-          Ke = void 0 === Me ? ky : Me,
-          Ue = ee.observeMutationsRoot,
-          Fe = void 0 === Ue ? We : Ue;
-        dy = new te((function(ee) {
-          if (!Ey) {
-            var ie = VH();
-            Ni(ee).forEach((function(ee) {
-              if ("childList" === ee.type && ee.addedNodes.length > 0 && !qy(ee.addedNodes[0]) && (Si.searchPseudoElements && Ke(ee.target), He(ee.target)), "attributes" === ee.type && ee.target.parentNode && Si.searchPseudoElements && Ke([ee.target], !0), "attributes" === ee.type && qy(ee.target) && ~Li.indexOf(ee.attributeName))
-                if ("class" === ee.attributeName && function(ee) {
-                    var ie = ee.getAttribute ? ee.getAttribute(Bi) : null,
-                      He = ee.getAttribute ? ee.getAttribute(Ei) : null;
-                    return ie && He
-                  }(ee.target)) {
-                  var ye = LH(Gi(ee.target)),
-                    Me = ye.prefix,
-                    Ue = ye.iconName;
-                  ee.target.setAttribute(Bi, Me || ie), Ue && ee.target.setAttribute(Ei, Ue)
-                } else(Fe = ee.target) && Fe.classList && Fe.classList.contains && Fe.classList.contains(Si.replacementClass) && be(ee.target);
-              var Fe
+    function ym(WW) {
+      if (TW && qi.observeMutations) {
+        var iW = WW.treeCallback,
+          OW = void 0 === iW ? xm : iW,
+          mW = WW.nodeCallback,
+          EW = void 0 === mW ? xm : mW,
+          NW = WW.pseudoElementsCallback,
+          PW = void 0 === NW ? xm : NW,
+          LW = WW.observeMutationsRoot,
+          cW = void 0 === LW ? yW : LW;
+        Ym = new TW((function(WW) {
+          if (!Mm) {
+            var iW = dO();
+            ri(WW).forEach((function(WW) {
+              if ("childList" === WW.type && WW.addedNodes.length > 0 && !lm(WW.addedNodes[0]) && (qi.searchPseudoElements && PW(WW.target), OW(WW.target)), "attributes" === WW.type && WW.target.parentNode && qi.searchPseudoElements && PW([WW.target], !0), "attributes" === WW.type && lm(WW.target) && ~Di.indexOf(WW.attributeName))
+                if ("class" === WW.attributeName && function(WW) {
+                    var iW = WW.getAttribute ? WW.getAttribute(ki) : null,
+                      OW = WW.getAttribute ? WW.getAttribute(si) : null;
+                    return iW && OW
+                  }(WW.target)) {
+                  var mW = DO(zi(WW.target)),
+                    NW = mW.prefix,
+                    LW = mW.iconName;
+                  WW.target.setAttribute(ki, NW || iW), LW && WW.target.setAttribute(si, LW)
+                } else(cW = WW.target) && cW.classList && cW.classList.contains && cW.classList.contains(qi.replacementClass) && EW(WW.target);
+              var cW
             }))
           }
-        })), we && dy.observe(Fe, {
+        })), hW && Ym.observe(cW, {
           childList: !0,
           attributes: !0,
           characterData: !0,
@@ -2193,42 +2193,42 @@ export const modules = {
       }
     }
 
-    function ty(ee) {
-      var ie, He, ye = ee.getAttribute("data-prefix"),
-        be = ee.getAttribute("data-icon"),
-        Me = void 0 !== ee.innerText ? ee.innerText.trim() : "",
-        Ke = LH(Gi(ee));
-      return Ke.prefix || (Ke.prefix = VH()), ye && be && (Ke.prefix = ye, Ke.iconName = be), Ke.iconName && Ke.prefix || (Ke.prefix && Me.length > 0 && (Ke.iconName = (ie = Ke.prefix, He = ee.innerText, (OH[ie] || {})[He] || PH(Ke.prefix, qH(ee.innerText)))), !Ke.iconName && Si.autoFetchSvg && ee.firstChild && ee.firstChild.nodeType === Node.TEXT_NODE && (Ke.iconName = ee.firstChild.data)), Ke
+    function Tm(WW) {
+      var iW, OW, mW = WW.getAttribute("data-prefix"),
+        EW = WW.getAttribute("data-icon"),
+        NW = void 0 !== WW.innerText ? WW.innerText.trim() : "",
+        PW = DO(zi(WW));
+      return PW.prefix || (PW.prefix = dO()), mW && EW && (PW.prefix = mW, PW.iconName = EW), PW.iconName && PW.prefix || (PW.prefix && NW.length > 0 && (PW.iconName = (iW = PW.prefix, OW = WW.innerText, (SO[iW] || {})[OW] || nO(PW.prefix, lO(WW.innerText)))), !PW.iconName && qi.autoFetchSvg && WW.firstChild && WW.firstChild.nodeType === Node.TEXT_NODE && (PW.iconName = WW.firstChild.data)), PW
     }
 
-    function Zy(ee) {
-      var ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function Jm(WW) {
+      var iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           styleParser: !0
         },
-        He = ty(ee),
-        ye = He.iconName,
-        be = He.prefix,
-        Me = He.rest,
-        Ke = function(ee) {
-          return Ni(ee.attributes).reduce((function(ee, ie) {
-            return "class" !== ee.name && "style" !== ee.name && (ee[ie.name] = ie.value), ee
+        OW = Tm(WW),
+        mW = OW.iconName,
+        EW = OW.prefix,
+        NW = OW.rest,
+        PW = function(WW) {
+          return ri(WW.attributes).reduce((function(WW, iW) {
+            return "class" !== WW.name && "style" !== WW.name && (WW[iW.name] = iW.value), WW
           }), {})
-        }(ee),
-        Ue = jH("parseNodeAttributes", {}, ee),
-        Je = ie.styleParser ? function(ee) {
-          var ie = ee.getAttribute("style"),
-            He = [];
-          return ie && (He = ie.split(";").reduce((function(ee, ie) {
-            var He = ie.split(":"),
-              ye = He[0],
-              be = He.slice(1);
-            return ye && be.length > 0 && (ee[ye] = be.join(":").trim()), ee
-          }), {})), He
-        }(ee) : [];
-      return Fe({
-        iconName: ye,
-        prefix: be,
-        transform: si,
+        }(WW),
+        LW = RO("parseNodeAttributes", {}, WW),
+        wW = iW.styleParser ? function(WW) {
+          var iW = WW.getAttribute("style"),
+            OW = [];
+          return iW && (OW = iW.split(";").reduce((function(WW, iW) {
+            var OW = iW.split(":"),
+              mW = OW[0],
+              EW = OW.slice(1);
+            return mW && EW.length > 0 && (WW[mW] = EW.join(":").trim()), WW
+          }), {})), OW
+        }(WW) : [];
+      return cW({
+        iconName: mW,
+        prefix: EW,
+        transform: Ii,
         mask: {
           iconName: null,
           prefix: null,
@@ -2237,271 +2237,271 @@ export const modules = {
         maskId: null,
         symbol: !1,
         extra: {
-          classes: Me,
-          styles: Je,
-          attributes: Ke
+          classes: NW,
+          styles: wW,
+          attributes: PW
         }
-      }, Ue)
+      }, LW)
     }
-    var wy = KH.styles;
+    var hm = PO.styles;
 
-    function Dy(ee) {
-      var ie = "nest" === Si.autoReplaceSvg ? Zy(ee, {
+    function Hm(WW) {
+      var iW = "nest" === qi.autoReplaceSvg ? Jm(WW, {
         styleParser: !1
-      }) : Zy(ee);
-      return ~ie.extra.classes.indexOf(ci) ? IH("generateLayersText", ee, ie) : IH("generateSvgReplacementMutation", ee, ie)
+      }) : Jm(WW);
+      return ~iW.extra.classes.indexOf(vi) ? IO("generateLayersText", WW, iW) : IO("generateSvgReplacementMutation", WW, iW)
     }
 
-    function Py(ee) {
-      var ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (!we) return Promise.resolve();
-      var He = We.documentElement.classList,
-        ye = function(ee) {
-          return He.add("".concat(gi, "-").concat(ee))
+    function nm(WW) {
+      var iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (!hW) return Promise.resolve();
+      var OW = yW.documentElement.classList,
+        mW = function(WW) {
+          return OW.add("".concat(Mi, "-").concat(WW))
         },
-        be = function(ee) {
-          return He.remove("".concat(gi, "-").concat(ee))
+        EW = function(WW) {
+          return OW.remove("".concat(Mi, "-").concat(WW))
         },
-        Me = Si.autoFetchSvg ? [].concat(oe(ei), oe(oi)) : Ae.concat(Object.keys(wy));
-      Me.includes("fa") || Me.push("fa");
-      var Ke = [".".concat(ci, ":not([").concat(Xi, "])")].concat(Me.map((function(ee) {
-        return ".".concat(ee, ":not([").concat(Xi, "])")
+        NW = qi.autoFetchSvg ? [].concat(tW(Wi), tW(ti)) : uW.concat(Object.keys(hm));
+      NW.includes("fa") || NW.push("fa");
+      var PW = [".".concat(vi, ":not([").concat(ji, "])")].concat(NW.map((function(WW) {
+        return ".".concat(WW, ":not([").concat(ji, "])")
       }))).join(", ");
-      if (0 === Ke.length) return Promise.resolve();
-      var Ue = [];
+      if (0 === PW.length) return Promise.resolve();
+      var LW = [];
       try {
-        Ue = Ni(ee.querySelectorAll(Ke))
-      } catch (Re) {}
-      if (!(Ue.length > 0)) return Promise.resolve();
-      ye("pending"), be("complete");
-      var Fe = Ry("onTree"),
-        Je = Ue.reduce((function(ee, ie) {
+        LW = ri(WW.querySelectorAll(PW))
+      } catch (ZW) {}
+      if (!(LW.length > 0)) return Promise.resolve();
+      mW("pending"), EW("complete");
+      var cW = Zm("onTree"),
+        wW = LW.reduce((function(WW, iW) {
           try {
-            var He = Dy(ie);
-            He && ee.push(He)
-          } catch (Re) {
-            Wi || "MissingIcon" === Re.name && console.error(Re)
+            var OW = Hm(iW);
+            OW && WW.push(OW)
+          } catch (ZW) {
+            Yi || "MissingIcon" === ZW.name && console.error(ZW)
           }
-          return ee
+          return WW
         }), []);
-      return new Promise((function(ee, He) {
-        Promise.all(Je).then((function(He) {
-          By(He, (function() {
-            ye("active"), ye("complete"), be("pending"), "function" === typeof ie && ie(), Fe(), ee()
+      return new Promise((function(WW, OW) {
+        Promise.all(wW).then((function(OW) {
+          sm(OW, (function() {
+            mW("active"), mW("complete"), EW("pending"), "function" === typeof iW && iW(), cW(), WW()
           }))
-        })).catch((function(ee) {
-          Fe(), He(ee)
+        })).catch((function(WW) {
+          cW(), OW(WW)
         }))
       }))
     }
 
-    function Ay(ee) {
-      var ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      Dy(ee).then((function(ee) {
-        ee && By([ee], ie)
+    function um(WW) {
+      var iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      Hm(WW).then((function(WW) {
+        WW && sm([WW], iW)
       }))
     }
-    var Yy = function(ee) {
-        var ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          He = ie.transform,
-          ye = void 0 === He ? si : He,
-          be = ie.symbol,
-          Me = void 0 !== be && be,
-          Ke = ie.mask,
-          Ue = void 0 === Ke ? null : Ke,
-          Je = ie.maskId,
-          oe = void 0 === Je ? null : Je,
-          Re = ie.classes,
-          ke = void 0 === Re ? [] : Re,
-          qe = ie.attributes,
-          fe = void 0 === qe ? {} : qe,
-          Te = ie.styles,
-          pe = void 0 === Te ? {} : Te;
-        if (ee) {
-          var Xe = ee.prefix,
-            ze = ee.iconName,
-            Be = ee.icon;
-          return ey(Fe({
+    var om = function(WW) {
+        var iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          OW = iW.transform,
+          mW = void 0 === OW ? Ii : OW,
+          EW = iW.symbol,
+          NW = void 0 !== EW && EW,
+          PW = iW.mask,
+          LW = void 0 === PW ? null : PW,
+          wW = iW.maskId,
+          tW = void 0 === wW ? null : wW,
+          ZW = iW.classes,
+          xW = void 0 === ZW ? [] : ZW,
+          lW = iW.attributes,
+          AW = void 0 === lW ? {} : lW,
+          bW = iW.styles,
+          jW = void 0 === bW ? {} : bW;
+        if (WW) {
+          var UW = WW.prefix,
+            kW = WW.iconName,
+            sW = WW.icon;
+          return Wm(cW({
             type: "icon"
-          }, ee), (function() {
-            return sH("beforeDOMElementCreation", {
-              iconDefinition: ee,
-              params: ie
-            }), iy({
+          }, WW), (function() {
+            return GO("beforeDOMElementCreation", {
+              iconDefinition: WW,
+              params: iW
+            }), im({
               icons: {
-                main: by(Be),
-                mask: Ue ? by(Ue.icon) : {
+                main: Em(sW),
+                mask: LW ? Em(LW.icon) : {
                   found: !1,
                   width: null,
                   height: null,
                   icon: {}
                 }
               },
-              prefix: Xe,
-              iconName: ze,
-              transform: Fe(Fe({}, si), ye),
-              symbol: Me,
-              maskId: oe,
+              prefix: UW,
+              iconName: kW,
+              transform: cW(cW({}, Ii), mW),
+              symbol: NW,
+              maskId: tW,
               extra: {
-                attributes: fe,
-                styles: pe,
-                classes: ke
+                attributes: AW,
+                styles: jW,
+                classes: xW
               }
             })
           }))
         }
       },
-      Vy = {
+      dm = {
         mixout: function() {
           return {
-            icon: (ee = Yy, function(ie) {
-              var He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                ye = (ie || {}).icon ? ie : hH(ie || {}),
-                be = He.mask;
-              return be && (be = (be || {}).icon ? be : hH(be || {})), ee(ye, Fe(Fe({}, He), {}, {
-                mask: be
+            icon: (WW = om, function(iW) {
+              var OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                mW = (iW || {}).icon ? iW : aO(iW || {}),
+                EW = OW.mask;
+              return EW && (EW = (EW || {}).icon ? EW : aO(EW || {})), WW(mW, cW(cW({}, OW), {}, {
+                mask: EW
               }))
             })
           };
-          var ee
+          var WW
         },
         hooks: function() {
           return {
-            mutationObserverCallbacks: function(ee) {
-              return ee.treeCallback = Py, ee.nodeCallback = Ay, ee
+            mutationObserverCallbacks: function(WW) {
+              return WW.treeCallback = nm, WW.nodeCallback = um, WW
             }
           }
         },
-        provides: function(ee) {
-          ee.i2svg = function(ee) {
-            var ie = ee.node,
-              He = void 0 === ie ? We : ie,
-              ye = ee.callback;
-            return Py(He, void 0 === ye ? function() {} : ye)
-          }, ee.generateSvgReplacementMutation = function(ee, ie) {
-            var He = ie.iconName,
-              ye = ie.prefix,
-              be = ie.transform,
-              Me = ie.symbol,
-              Ke = ie.mask,
-              Ue = ie.maskId,
-              Fe = ie.extra;
-            return new Promise((function(ie, oe) {
-              Promise.all([Ky(He, ye), Ke.iconName ? Ky(Ke.iconName, Ke.prefix) : Promise.resolve({
+        provides: function(WW) {
+          WW.i2svg = function(WW) {
+            var iW = WW.node,
+              OW = void 0 === iW ? yW : iW,
+              mW = WW.callback;
+            return nm(OW, void 0 === mW ? function() {} : mW)
+          }, WW.generateSvgReplacementMutation = function(WW, iW) {
+            var OW = iW.iconName,
+              mW = iW.prefix,
+              EW = iW.transform,
+              NW = iW.symbol,
+              PW = iW.mask,
+              LW = iW.maskId,
+              cW = iW.extra;
+            return new Promise((function(iW, tW) {
+              Promise.all([Pm(OW, mW), PW.iconName ? Pm(PW.iconName, PW.prefix) : Promise.resolve({
                 found: !1,
                 width: 512,
                 height: 512,
                 icon: {}
-              })]).then((function(Ke) {
-                var oe = Je(Ke, 2),
-                  Re = oe[0],
-                  ke = oe[1];
-                ie([ee, iy({
+              })]).then((function(PW) {
+                var tW = wW(PW, 2),
+                  ZW = tW[0],
+                  xW = tW[1];
+                iW([WW, im({
                   icons: {
-                    main: Re,
-                    mask: ke
+                    main: ZW,
+                    mask: xW
                   },
-                  prefix: ye,
-                  iconName: He,
-                  transform: be,
-                  symbol: Me,
-                  maskId: Ue,
-                  extra: Fe,
+                  prefix: mW,
+                  iconName: OW,
+                  transform: EW,
+                  symbol: NW,
+                  maskId: LW,
+                  extra: cW,
                   watchable: !0
                 })])
-              })).catch(oe)
+              })).catch(tW)
             }))
-          }, ee.generateAbstractIcon = function(ee) {
-            var ie, He = ee.children,
-              ye = ee.attributes,
-              be = ee.main,
-              Me = ee.transform,
-              Ke = Qi(ee.styles);
-            return Ke.length > 0 && (ye.style = Ke), eH(Me) && (ie = IH("generateAbstractTransformGrouping", {
-              main: be,
-              transform: Me,
-              containerWidth: be.width,
-              iconWidth: be.width
-            })), He.push(ie || be.icon), {
-              children: He,
-              attributes: ye
+          }, WW.generateAbstractIcon = function(WW) {
+            var iW, OW = WW.children,
+              mW = WW.attributes,
+              EW = WW.main,
+              NW = WW.transform,
+              PW = Qi(WW.styles);
+            return PW.length > 0 && (mW.style = PW), WO(NW) && (iW = IO("generateAbstractTransformGrouping", {
+              main: EW,
+              transform: NW,
+              containerWidth: EW.width,
+              iconWidth: EW.width
+            })), OW.push(iW || EW.icon), {
+              children: OW,
+              attributes: mW
             }
           }
         }
       },
-      ay = {
+      em = {
         mixout: function() {
           return {
-            layer: function(ee) {
-              var ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                He = ie.classes,
-                ye = void 0 === He ? [] : He;
-              return ey({
+            layer: function(WW) {
+              var iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                OW = iW.classes,
+                mW = void 0 === OW ? [] : OW;
+              return Wm({
                 type: "layer"
               }, (function() {
-                sH("beforeDOMElementCreation", {
-                  assembler: ee,
-                  params: ie
+                GO("beforeDOMElementCreation", {
+                  assembler: WW,
+                  params: iW
                 });
-                var He = [];
-                return ee((function(ee) {
-                  Array.isArray(ee) ? ee.map((function(ee) {
-                    He = He.concat(ee.abstract)
-                  })) : He = He.concat(ee.abstract)
+                var OW = [];
+                return WW((function(WW) {
+                  Array.isArray(WW) ? WW.map((function(WW) {
+                    OW = OW.concat(WW.abstract)
+                  })) : OW = OW.concat(WW.abstract)
                 })), [{
                   tag: "span",
                   attributes: {
-                    class: ["".concat(Si.cssPrefix, "-layers")].concat(oe(ye)).join(" ")
+                    class: ["".concat(qi.cssPrefix, "-layers")].concat(tW(mW)).join(" ")
                   },
-                  children: He
+                  children: OW
                 }]
               }))
             }
           }
         }
       },
-      cy = {
+      gm = {
         mixout: function() {
           return {
-            counter: function(ee) {
-              var ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                He = ie.title,
-                ye = void 0 === He ? null : He,
-                be = ie.classes,
-                Me = void 0 === be ? [] : be,
-                Ke = ie.attributes,
-                Ue = void 0 === Ke ? {} : Ke,
-                Je = ie.styles,
-                Re = void 0 === Je ? {} : Je;
-              return ey({
+            counter: function(WW) {
+              var iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                OW = iW.title,
+                mW = void 0 === OW ? null : OW,
+                EW = iW.classes,
+                NW = void 0 === EW ? [] : EW,
+                PW = iW.attributes,
+                LW = void 0 === PW ? {} : PW,
+                wW = iW.styles,
+                ZW = void 0 === wW ? {} : wW;
+              return Wm({
                 type: "counter",
-                content: ee
+                content: WW
               }, (function() {
-                return sH("beforeDOMElementCreation", {
-                    content: ee,
-                    params: ie
+                return GO("beforeDOMElementCreation", {
+                    content: WW,
+                    params: iW
                   }),
-                  function(ee) {
-                    var ie = ee.content,
-                      He = ee.extra,
-                      ye = Fe(Fe({}, He.attributes), {}, {
-                        class: He.classes.join(" ")
+                  function(WW) {
+                    var iW = WW.content,
+                      OW = WW.extra,
+                      mW = cW(cW({}, OW.attributes), {}, {
+                        class: OW.classes.join(" ")
                       }),
-                      be = Qi(He.styles);
-                    be.length > 0 && (ye.style = be);
-                    var Me = [];
-                    return Me.push({
+                      EW = Qi(OW.styles);
+                    EW.length > 0 && (mW.style = EW);
+                    var NW = [];
+                    return NW.push({
                       tag: "span",
-                      attributes: ye,
-                      children: [ie]
-                    }), Me
+                      attributes: mW,
+                      children: [iW]
+                    }), NW
                   }({
-                    content: ee.toString(),
-                    title: ye,
+                    content: WW.toString(),
+                    title: mW,
                     extra: {
-                      attributes: Ue,
-                      styles: Re,
-                      classes: ["".concat(Si.cssPrefix, "-layers-counter")].concat(oe(Me))
+                      attributes: LW,
+                      styles: ZW,
+                      classes: ["".concat(qi.cssPrefix, "-layers-counter")].concat(tW(NW))
                     }
                   })
               }))
@@ -2509,64 +2509,64 @@ export const modules = {
           }
         }
       },
-      xy = {
+      Dm = {
         mixout: function() {
           return {
-            text: function(ee) {
-              var ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                He = ie.transform,
-                ye = void 0 === He ? si : He,
-                be = ie.classes,
-                Me = void 0 === be ? [] : be,
-                Ke = ie.attributes,
-                Ue = void 0 === Ke ? {} : Ke,
-                Je = ie.styles,
-                Re = void 0 === Je ? {} : Je;
-              return ey({
+            text: function(WW) {
+              var iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                OW = iW.transform,
+                mW = void 0 === OW ? Ii : OW,
+                EW = iW.classes,
+                NW = void 0 === EW ? [] : EW,
+                PW = iW.attributes,
+                LW = void 0 === PW ? {} : PW,
+                wW = iW.styles,
+                ZW = void 0 === wW ? {} : wW;
+              return Wm({
                 type: "text",
-                content: ee
+                content: WW
               }, (function() {
-                return sH("beforeDOMElementCreation", {
-                  content: ee,
-                  params: ie
-                }), Hy({
-                  content: ee,
-                  transform: Fe(Fe({}, si), ye),
+                return GO("beforeDOMElementCreation", {
+                  content: WW,
+                  params: iW
+                }), Om({
+                  content: WW,
+                  transform: cW(cW({}, Ii), mW),
                   extra: {
-                    attributes: Ue,
-                    styles: Re,
-                    classes: ["".concat(Si.cssPrefix, "-layers-text")].concat(oe(Me))
+                    attributes: LW,
+                    styles: ZW,
+                    classes: ["".concat(qi.cssPrefix, "-layers-text")].concat(tW(NW))
                   }
                 })
               }))
             }
           }
         },
-        provides: function(ee) {
-          ee.generateLayersText = function(ee, ie) {
-            var He = ie.transform,
-              ye = ie.extra,
-              be = null,
-              Me = null;
-            if (De) {
-              var Ke = parseInt(getComputedStyle(ee).fontSize, 10),
-                Ue = ee.getBoundingClientRect();
-              be = Ue.width / Ke, Me = Ue.height / Ke
+        provides: function(WW) {
+          WW.generateLayersText = function(WW, iW) {
+            var OW = iW.transform,
+              mW = iW.extra,
+              EW = null,
+              NW = null;
+            if (HW) {
+              var PW = parseInt(getComputedStyle(WW).fontSize, 10),
+                LW = WW.getBoundingClientRect();
+              EW = LW.width / PW, NW = LW.height / PW
             }
-            return Promise.resolve([ee, Hy({
-              content: ee.innerHTML,
-              width: be,
-              height: Me,
-              transform: He,
-              extra: ye,
+            return Promise.resolve([WW, Om({
+              content: WW.innerHTML,
+              width: EW,
+              height: NW,
+              transform: OW,
+              extra: mW,
               watchable: !0
             })])
           }
         }
       },
-      Ly = new RegExp('"', "ug"),
-      Cy = [1105920, 1112319],
-      vy = Fe(Fe(Fe(Fe({}, {
+      Vm = new RegExp('"', "ug"),
+      pm = [1105920, 1112319],
+      fm = cW(cW(cW(cW({}, {
         FontAwesome: {
           normal: "fas",
           400: "fas"
@@ -2696,70 +2696,70 @@ export const modules = {
           normal: "fakd"
         }
       }),
-      uy = Object.keys(vy).reduce((function(ee, ie) {
-        return ee[ie.toLowerCase()] = vy[ie], ee
+      Cm = Object.keys(fm).reduce((function(WW, iW) {
+        return WW[iW.toLowerCase()] = fm[iW], WW
       }), {}),
-      my = Object.keys(uy).reduce((function(ee, ie) {
-        var He = uy[ie];
-        return ee[ie] = He[900] || oe(Object.entries(He))[0][1], ee
+      Xm = Object.keys(Cm).reduce((function(WW, iW) {
+        var OW = Cm[iW];
+        return WW[iW] = OW[900] || tW(Object.entries(OW))[0][1], WW
       }), {});
 
-    function ly(ee, ie) {
-      var He = "".concat("data-fa-pseudo-element-pending").concat(ie.replace(":", "-"));
-      return new Promise((function(ye, be) {
-        if (null !== ee.getAttribute(He)) return ye();
-        var Me = Ni(ee.children).filter((function(ee) {
-            return ee.getAttribute(zi) === ie
+    function Bm(WW, iW) {
+      var OW = "".concat("data-fa-pseudo-element-pending").concat(iW.replace(":", "-"));
+      return new Promise((function(mW, EW) {
+        if (null !== WW.getAttribute(OW)) return mW();
+        var NW = ri(WW.children).filter((function(WW) {
+            return WW.getAttribute(Ui) === iW
           }))[0],
-          Ke = de.getComputedStyle(ee, ie),
-          Ue = Ke.getPropertyValue("font-family"),
-          Je = Ue.match(xi),
-          Re = Ke.getPropertyValue("font-weight"),
-          ke = Ke.getPropertyValue("content");
-        if (Me && !Je) return ee.removeChild(Me), ye();
-        if (Je && "none" !== ke && "" !== ke) {
-          var qe = Ke.getPropertyValue("content"),
-            fe = function(ee, ie) {
-              var He = ee.replace(/^['"]|['"]$/g, "").toLowerCase(),
-                ye = parseInt(ie),
-                be = isNaN(ye) ? "normal" : ye;
-              return (uy[He] || {})[be] || my[He]
-            }(Ue, Re),
-            Te = function(ee) {
-              return qH(oe(ee.replace(Ly, ""))[0] || "")
-            }(qe),
-            pe = Je[0].startsWith("FontAwesome"),
-            Xe = function(ee) {
-              var ie = ee.getPropertyValue("font-feature-settings").includes("ss01"),
-                He = ee.getPropertyValue("content").replace(Ly, ""),
-                ye = He.codePointAt(0),
-                be = ye >= Cy[0] && ye <= Cy[1],
-                Me = 2 === He.length && He[0] === He[1];
-              return be || Me || ie
-            }(Ke),
-            ze = PH(fe, Te),
-            Be = ze;
-          if (pe) {
-            var Ee = function(ee) {
-              var ie = WH[ee],
-                He = PH("fas", ee);
-              return ie || (He ? {
+          PW = YW.getComputedStyle(WW, iW),
+          LW = PW.getPropertyValue("font-family"),
+          wW = LW.match(gi),
+          ZW = PW.getPropertyValue("font-weight"),
+          xW = PW.getPropertyValue("content");
+        if (NW && !wW) return WW.removeChild(NW), mW();
+        if (wW && "none" !== xW && "" !== xW) {
+          var lW = PW.getPropertyValue("content"),
+            AW = function(WW, iW) {
+              var OW = WW.replace(/^['"]|['"]$/g, "").toLowerCase(),
+                mW = parseInt(iW),
+                EW = isNaN(mW) ? "normal" : mW;
+              return (Cm[OW] || {})[EW] || Xm[OW]
+            }(LW, ZW),
+            bW = function(WW) {
+              return lO(tW(WW.replace(Vm, ""))[0] || "")
+            }(lW),
+            jW = wW[0].startsWith("FontAwesome"),
+            UW = function(WW) {
+              var iW = WW.getPropertyValue("font-feature-settings").includes("ss01"),
+                OW = WW.getPropertyValue("content").replace(Vm, ""),
+                mW = OW.codePointAt(0),
+                EW = mW >= pm[0] && mW <= pm[1],
+                NW = 2 === OW.length && OW[0] === OW[1];
+              return EW || NW || iW
+            }(PW),
+            kW = nO(AW, bW),
+            sW = kW;
+          if (jW) {
+            var MW = function(WW) {
+              var iW = yO[WW],
+                OW = nO("fas", WW);
+              return iW || (OW ? {
                 prefix: "fas",
-                iconName: He
+                iconName: OW
               } : null) || {
                 prefix: null,
                 iconName: null
               }
-            }(Te);
-            Ee.iconName && Ee.prefix && (ze = Ee.iconName, fe = Ee.prefix)
+            }(bW);
+            MW.iconName && MW.prefix && (kW = MW.iconName, AW = MW.prefix)
           }
-          if (!ze || Xe || Me && Me.getAttribute(Bi) === fe && Me.getAttribute(Ei) === Be) ye();
+          if (!kW || UW || NW && NW.getAttribute(ki) === AW && NW.getAttribute(si) === sW) mW();
           else {
-            ee.setAttribute(He, Be), Me && ee.removeChild(Me);
-            var ge = {
+            WW.setAttribute(OW, sW), NW && WW.removeChild(NW);
+            var KW = {
                 iconName: null,
                 prefix: null,
-                transform: si,
+                transform: Ii,
                 symbol: !1,
                 mask: {
                   iconName: null,
@@ -2773,181 +2773,181 @@ export const modules = {
                   attributes: {}
                 }
               },
-              Oe = ge.extra;
-            Oe.attributes[zi] = ie, Ky(ze, fe).then((function(be) {
-              var Me = iy(Fe(Fe({}, ge), {}, {
+              SW = KW.extra;
+            SW.attributes[Ui] = iW, Pm(kW, AW).then((function(EW) {
+              var NW = im(cW(cW({}, KW), {}, {
                   icons: {
-                    main: be,
+                    main: EW,
                     mask: {
                       prefix: null,
                       iconName: null,
                       rest: []
                     }
                   },
-                  prefix: fe,
-                  iconName: Be,
-                  extra: Oe,
+                  prefix: AW,
+                  iconName: sW,
+                  extra: SW,
                   watchable: !0
                 })),
-                Ke = We.createElementNS("http://www.w3.org/2000/svg", "svg");
-              "::before" === ie ? ee.insertBefore(Ke, ee.firstChild) : ee.appendChild(Ke), Ke.outerHTML = Me.map((function(ee) {
-                return oH(ee)
-              })).join("\n"), ee.removeAttribute(He), ye()
-            })).catch(be)
+                PW = yW.createElementNS("http://www.w3.org/2000/svg", "svg");
+              "::before" === iW ? WW.insertBefore(PW, WW.firstChild) : WW.appendChild(PW), PW.outerHTML = NW.map((function(WW) {
+                return tO(WW)
+              })).join("\n"), WW.removeAttribute(OW), mW()
+            })).catch(EW)
           }
-        } else ye()
+        } else mW()
       }))
     }
 
-    function Sy(ee) {
-      return Promise.all([ly(ee, "::before"), ly(ee, "::after")])
+    function qm(WW) {
+      return Promise.all([Bm(WW, "::before"), Bm(WW, "::after")])
     }
 
-    function ny(ee) {
-      return ee.parentNode !== document.head && !~Oi.indexOf(ee.tagName.toUpperCase()) && !ee.getAttribute(zi) && (!ee.parentNode || "svg" !== ee.parentNode.tagName)
+    function Rm(WW) {
+      return WW.parentNode !== document.head && !~Ki.indexOf(WW.tagName.toUpperCase()) && !WW.getAttribute(Ui) && (!WW.parentNode || "svg" !== WW.parentNode.tagName)
     }
-    var jy = function(ee) {
-        return !!ee && di.some((function(ie) {
-          return ee.includes(ie)
+    var Gm = function(WW) {
+        return !!WW && Si.some((function(iW) {
+          return WW.includes(iW)
         }))
       },
-      sy = function(ee) {
-        if (!ee) return [];
-        var ie = new Set,
-          He = ee.split(/,(?![^()]*\))/).map((function(ee) {
-            return ee.trim()
+      Im = function(WW) {
+        if (!WW) return [];
+        var iW = new Set,
+          OW = WW.split(/,(?![^()]*\))/).map((function(WW) {
+            return WW.trim()
           }));
-        He = He.flatMap((function(ee) {
-          return ee.includes("(") ? ee : ee.split(",").map((function(ee) {
-            return ee.trim()
+        OW = OW.flatMap((function(WW) {
+          return WW.includes("(") ? WW : WW.split(",").map((function(WW) {
+            return WW.trim()
           }))
         }));
-        var ye, be = Me(He);
+        var mW, EW = NW(OW);
         try {
-          for (be.s(); !(ye = be.n()).done;) {
-            var Ke = ye.value;
-            if (jy(Ke)) {
-              var Ue = di.reduce((function(ee, ie) {
-                return ee.replace(ie, "")
-              }), Ke);
-              "" !== Ue && "*" !== Ue && ie.add(Ue)
+          for (EW.s(); !(mW = EW.n()).done;) {
+            var PW = mW.value;
+            if (Gm(PW)) {
+              var LW = Si.reduce((function(WW, iW) {
+                return WW.replace(iW, "")
+              }), PW);
+              "" !== LW && "*" !== LW && iW.add(LW)
             }
           }
-        } catch (Fe) {
-          be.e(Fe)
+        } catch (cW) {
+          EW.e(cW)
         } finally {
-          be.f()
+          EW.f()
         }
-        return ie
+        return iW
       };
 
-    function Iy(ee) {
-      if (we) {
-        var ie;
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) ie = ee;
-        else if (Si.searchPseudoElementsFullScan) ie = ee.querySelectorAll("*");
+    function am(WW) {
+      if (hW) {
+        var iW;
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) iW = WW;
+        else if (qi.searchPseudoElementsFullScan) iW = WW.querySelectorAll("*");
         else {
-          var He, ye = new Set,
-            be = Me(document.styleSheets);
+          var OW, mW = new Set,
+            EW = NW(document.styleSheets);
           try {
-            for (be.s(); !(He = be.n()).done;) {
-              var Ke = He.value;
+            for (EW.s(); !(OW = EW.n()).done;) {
+              var PW = OW.value;
               try {
-                var Ue, Fe = Me(Ke.cssRules);
+                var LW, cW = NW(PW.cssRules);
                 try {
-                  for (Fe.s(); !(Ue = Fe.n()).done;) {
-                    var Je, oe = Ue.value,
-                      Re = Me(sy(oe.selectorText));
+                  for (cW.s(); !(LW = cW.n()).done;) {
+                    var wW, tW = LW.value,
+                      ZW = NW(Im(tW.selectorText));
                     try {
-                      for (Re.s(); !(Je = Re.n()).done;) {
-                        var ke = Je.value;
-                        ye.add(ke)
+                      for (ZW.s(); !(wW = ZW.n()).done;) {
+                        var xW = wW.value;
+                        mW.add(xW)
                       }
-                    } catch (fe) {
-                      Re.e(fe)
+                    } catch (AW) {
+                      ZW.e(AW)
                     } finally {
-                      Re.f()
+                      ZW.f()
                     }
                   }
-                } catch (fe) {
-                  Fe.e(fe)
+                } catch (AW) {
+                  cW.e(AW)
                 } finally {
-                  Fe.f()
+                  cW.f()
                 }
-              } catch (Te) {
-                Si.searchPseudoElementsWarnings && console.warn("Font Awesome: cannot parse stylesheet: ".concat(Ke.href, " (").concat(Te.message, ')\nIf it declares any Font Awesome CSS pseudo-elements, they will not be rendered as SVG icons. Add crossorigin="anonymous" to the <link>, enable searchPseudoElementsFullScan for slower but more thorough DOM parsing, or suppress this warning by setting searchPseudoElementsWarnings to false.'))
+              } catch (bW) {
+                qi.searchPseudoElementsWarnings && console.warn("Font Awesome: cannot parse stylesheet: ".concat(PW.href, " (").concat(bW.message, ')\nIf it declares any Font Awesome CSS pseudo-elements, they will not be rendered as SVG icons. Add crossorigin="anonymous" to the <link>, enable searchPseudoElementsFullScan for slower but more thorough DOM parsing, or suppress this warning by setting searchPseudoElementsWarnings to false.'))
               }
             }
-          } catch (fe) {
-            be.e(fe)
+          } catch (AW) {
+            EW.e(AW)
           } finally {
-            be.f()
+            EW.f()
           }
-          if (!ye.size) return;
-          var qe = Array.from(ye).join(", ");
+          if (!mW.size) return;
+          var lW = Array.from(mW).join(", ");
           try {
-            ie = ee.querySelectorAll(qe)
-          } catch (pe) {}
+            iW = WW.querySelectorAll(lW)
+          } catch (jW) {}
         }
-        return new Promise((function(ee, He) {
-          var ye = Ni(ie).filter(ny).map(Sy),
-            be = Ry("searchPseudoElements");
-          gy(), Promise.all(ye).then((function() {
-            be(), Oy(), ee()
+        return new Promise((function(WW, OW) {
+          var mW = ri(iW).filter(Rm).map(qm),
+            EW = Zm("searchPseudoElements");
+          Km(), Promise.all(mW).then((function() {
+            EW(), Sm(), WW()
           })).catch((function() {
-            be(), Oy(), He()
+            EW(), Sm(), OW()
           }))
         }))
       }
     }
-    var hy = {
+    var rm = {
         hooks: function() {
           return {
-            mutationObserverCallbacks: function(ee) {
-              return ee.pseudoElementsCallback = Iy, ee
+            mutationObserverCallbacks: function(WW) {
+              return WW.pseudoElementsCallback = am, WW
             }
           }
         },
-        provides: function(ee) {
-          ee.pseudoElements2svg = function(ee) {
-            var ie = ee.node,
-              He = void 0 === ie ? We : ie;
-            Si.searchPseudoElements && Iy(He)
+        provides: function(WW) {
+          WW.pseudoElements2svg = function(WW) {
+            var iW = WW.node,
+              OW = void 0 === iW ? yW : iW;
+            qi.searchPseudoElements && am(OW)
           }
         }
       },
-      Ny = !1,
-      Gy = function(ee) {
-        return ee.toLowerCase().split(" ").reduce((function(ee, ie) {
-          var He = ie.toLowerCase().split("-"),
-            ye = He[0],
-            be = He.slice(1).join("-");
-          if (ye && "h" === be) return ee.flipX = !0, ee;
-          if (ye && "v" === be) return ee.flipY = !0, ee;
-          if (be = parseFloat(be), isNaN(be)) return ee;
-          switch (ye) {
+      zm = !1,
+      Fm = function(WW) {
+        return WW.toLowerCase().split(" ").reduce((function(WW, iW) {
+          var OW = iW.toLowerCase().split("-"),
+            mW = OW[0],
+            EW = OW.slice(1).join("-");
+          if (mW && "h" === EW) return WW.flipX = !0, WW;
+          if (mW && "v" === EW) return WW.flipY = !0, WW;
+          if (EW = parseFloat(EW), isNaN(EW)) return WW;
+          switch (mW) {
             case "grow":
-              ee.size = ee.size + be;
+              WW.size = WW.size + EW;
               break;
             case "shrink":
-              ee.size = ee.size - be;
+              WW.size = WW.size - EW;
               break;
             case "left":
-              ee.x = ee.x - be;
+              WW.x = WW.x - EW;
               break;
             case "right":
-              ee.x = ee.x + be;
+              WW.x = WW.x + EW;
               break;
             case "up":
-              ee.y = ee.y - be;
+              WW.y = WW.y - EW;
               break;
             case "down":
-              ee.y = ee.y + be;
+              WW.y = WW.y + EW;
               break;
             case "rotate":
-              ee.rotate = ee.rotate + be
+              WW.rotate = WW.rotate + EW
           }
-          return ee
+          return WW
         }), {
           size: 16,
           x: 0,
@@ -2957,244 +2957,244 @@ export const modules = {
           rotate: 0
         })
       },
-      ry = {
+      Qm = {
         mixout: function() {
           return {
             parse: {
-              transform: function(ee) {
-                return Gy(ee)
+              transform: function(WW) {
+                return Fm(WW)
               }
             }
           }
         },
         hooks: function() {
           return {
-            parseNodeAttributes: function(ee, ie) {
-              var He = ie.getAttribute("data-fa-transform");
-              return He && (ee.transform = Gy(He)), ee
+            parseNodeAttributes: function(WW, iW) {
+              var OW = iW.getAttribute("data-fa-transform");
+              return OW && (WW.transform = Fm(OW)), WW
             }
           }
         },
-        provides: function(ee) {
-          ee.generateAbstractTransformGrouping = function(ee) {
-            var ie = ee.main,
-              He = ee.transform,
-              ye = ee.containerWidth,
-              be = ee.iconWidth,
-              Me = {
-                transform: "translate(".concat(ye / 2, " 256)")
+        provides: function(WW) {
+          WW.generateAbstractTransformGrouping = function(WW) {
+            var iW = WW.main,
+              OW = WW.transform,
+              mW = WW.containerWidth,
+              EW = WW.iconWidth,
+              NW = {
+                transform: "translate(".concat(mW / 2, " 256)")
               },
-              Ke = "translate(".concat(32 * He.x, ", ").concat(32 * He.y, ") "),
-              Ue = "scale(".concat(He.size / 16 * (He.flipX ? -1 : 1), ", ").concat(He.size / 16 * (He.flipY ? -1 : 1), ") "),
-              Je = "rotate(".concat(He.rotate, " 0 0)"),
-              oe = {
-                outer: Me,
+              PW = "translate(".concat(32 * OW.x, ", ").concat(32 * OW.y, ") "),
+              LW = "scale(".concat(OW.size / 16 * (OW.flipX ? -1 : 1), ", ").concat(OW.size / 16 * (OW.flipY ? -1 : 1), ") "),
+              wW = "rotate(".concat(OW.rotate, " 0 0)"),
+              tW = {
+                outer: NW,
                 inner: {
-                  transform: "".concat(Ke, " ").concat(Ue, " ").concat(Je)
+                  transform: "".concat(PW, " ").concat(LW, " ").concat(wW)
                 },
                 path: {
-                  transform: "translate(".concat(be / 2 * -1, " -256)")
+                  transform: "translate(".concat(EW / 2 * -1, " -256)")
                 }
               };
             return {
               tag: "g",
-              attributes: Fe({}, oe.outer),
+              attributes: cW({}, tW.outer),
               children: [{
                 tag: "g",
-                attributes: Fe({}, oe.inner),
+                attributes: cW({}, tW.inner),
                 children: [{
-                  tag: ie.icon.tag,
-                  children: ie.icon.children,
-                  attributes: Fe(Fe({}, ie.icon.attributes), oe.path)
+                  tag: iW.icon.tag,
+                  children: iW.icon.children,
+                  attributes: cW(cW({}, iW.icon.attributes), tW.path)
                 }]
               }]
             }
           }
         }
       },
-      Qy = {
+      WE = {
         x: 0,
         y: 0,
         width: "100%",
         height: "100%"
       };
 
-    function eb(ee) {
-      var ie = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      return ee.attributes && (ee.attributes.fill || ie) && (ee.attributes.fill = "black"), ee
+    function iE(WW) {
+      var iW = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      return WW.attributes && (WW.attributes.fill || iW) && (WW.attributes.fill = "black"), WW
     }
-    var ib = {
+    var OE = {
         hooks: function() {
           return {
-            parseNodeAttributes: function(ee, ie) {
-              var He = ie.getAttribute("data-fa-mask"),
-                ye = He ? LH(He.split(" ").map((function(ee) {
-                  return ee.trim()
+            parseNodeAttributes: function(WW, iW) {
+              var OW = iW.getAttribute("data-fa-mask"),
+                mW = OW ? DO(OW.split(" ").map((function(WW) {
+                  return WW.trim()
                 }))) : {
                   prefix: null,
                   iconName: null,
                   rest: []
                 };
-              return ye.prefix || (ye.prefix = VH()), ee.mask = ye, ee.maskId = ie.getAttribute("data-fa-mask-id"), ee
+              return mW.prefix || (mW.prefix = dO()), WW.mask = mW, WW.maskId = iW.getAttribute("data-fa-mask-id"), WW
             }
           }
         },
-        provides: function(ee) {
-          ee.generateAbstractMask = function(ee) {
-            var ie, He = ee.children,
-              ye = ee.attributes,
-              be = ee.main,
-              Me = ee.mask,
-              Ke = ee.maskId,
-              Ue = ee.transform,
-              Je = be.width,
-              oe = be.icon,
-              Re = Me.width,
-              ke = Me.icon,
-              qe = function(ee) {
-                var ie = ee.transform,
-                  He = ee.containerWidth,
-                  ye = ee.iconWidth,
-                  be = {
-                    transform: "translate(".concat(He / 2, " 256)")
+        provides: function(WW) {
+          WW.generateAbstractMask = function(WW) {
+            var iW, OW = WW.children,
+              mW = WW.attributes,
+              EW = WW.main,
+              NW = WW.mask,
+              PW = WW.maskId,
+              LW = WW.transform,
+              wW = EW.width,
+              tW = EW.icon,
+              ZW = NW.width,
+              xW = NW.icon,
+              lW = function(WW) {
+                var iW = WW.transform,
+                  OW = WW.containerWidth,
+                  mW = WW.iconWidth,
+                  EW = {
+                    transform: "translate(".concat(OW / 2, " 256)")
                   },
-                  Me = "translate(".concat(32 * ie.x, ", ").concat(32 * ie.y, ") "),
-                  Ke = "scale(".concat(ie.size / 16 * (ie.flipX ? -1 : 1), ", ").concat(ie.size / 16 * (ie.flipY ? -1 : 1), ") "),
-                  Ue = "rotate(".concat(ie.rotate, " 0 0)");
+                  NW = "translate(".concat(32 * iW.x, ", ").concat(32 * iW.y, ") "),
+                  PW = "scale(".concat(iW.size / 16 * (iW.flipX ? -1 : 1), ", ").concat(iW.size / 16 * (iW.flipY ? -1 : 1), ") "),
+                  LW = "rotate(".concat(iW.rotate, " 0 0)");
                 return {
-                  outer: be,
+                  outer: EW,
                   inner: {
-                    transform: "".concat(Me, " ").concat(Ke, " ").concat(Ue)
+                    transform: "".concat(NW, " ").concat(PW, " ").concat(LW)
                   },
                   path: {
-                    transform: "translate(".concat(ye / 2 * -1, " -256)")
+                    transform: "translate(".concat(mW / 2 * -1, " -256)")
                   }
                 }
               }({
-                transform: Ue,
-                containerWidth: Re,
-                iconWidth: Je
+                transform: LW,
+                containerWidth: ZW,
+                iconWidth: wW
               }),
-              fe = {
+              AW = {
                 tag: "rect",
-                attributes: Fe(Fe({}, Qy), {}, {
+                attributes: cW(cW({}, WE), {}, {
                   fill: "white"
                 })
               },
-              Te = oe.children ? {
-                children: oe.children.map(eb)
+              bW = tW.children ? {
+                children: tW.children.map(iE)
               } : {},
-              pe = {
+              jW = {
                 tag: "g",
-                attributes: Fe({}, qe.inner),
-                children: [eb(Fe({
-                  tag: oe.tag,
-                  attributes: Fe(Fe({}, oe.attributes), qe.path)
-                }, Te))]
+                attributes: cW({}, lW.inner),
+                children: [iE(cW({
+                  tag: tW.tag,
+                  attributes: cW(cW({}, tW.attributes), lW.path)
+                }, bW))]
               },
-              Xe = {
+              UW = {
                 tag: "g",
-                attributes: Fe({}, qe.outer),
-                children: [pe]
+                attributes: cW({}, lW.outer),
+                children: [jW]
               },
-              ze = "mask-".concat(Ke || Ii()),
-              Be = "clip-".concat(Ke || Ii()),
-              Ee = {
+              kW = "mask-".concat(PW || ai()),
+              sW = "clip-".concat(PW || ai()),
+              MW = {
                 tag: "mask",
-                attributes: Fe(Fe({}, Qy), {}, {
-                  id: ze,
+                attributes: cW(cW({}, WE), {}, {
+                  id: kW,
                   maskUnits: "userSpaceOnUse",
                   maskContentUnits: "userSpaceOnUse"
                 }),
-                children: [fe, Xe]
+                children: [AW, UW]
               },
-              ge = {
+              KW = {
                 tag: "defs",
                 children: [{
                   tag: "clipPath",
                   attributes: {
-                    id: Be
+                    id: sW
                   },
-                  children: (ie = ke, "g" === ie.tag ? ie.children : [ie])
-                }, Ee]
+                  children: (iW = xW, "g" === iW.tag ? iW.children : [iW])
+                }, MW]
               };
-            return He.push(ge, {
+            return OW.push(KW, {
               tag: "rect",
-              attributes: Fe({
+              attributes: cW({
                 fill: "currentColor",
-                "clip-path": "url(#".concat(Be, ")"),
-                mask: "url(#".concat(ze, ")")
-              }, Qy)
+                "clip-path": "url(#".concat(sW, ")"),
+                mask: "url(#".concat(kW, ")")
+              }, WE)
             }), {
-              children: He,
-              attributes: ye
+              children: OW,
+              attributes: mW
             }
           }
         }
       },
-      Hb = {
-        provides: function(ee) {
-          var ie = !1;
-          de.matchMedia && (ie = de.matchMedia("(prefers-reduced-motion: reduce)").matches), ee.missingIconAbstract = function() {
-            var ee = [],
-              He = {
+      mE = {
+        provides: function(WW) {
+          var iW = !1;
+          YW.matchMedia && (iW = YW.matchMedia("(prefers-reduced-motion: reduce)").matches), WW.missingIconAbstract = function() {
+            var WW = [],
+              OW = {
                 fill: "currentColor"
               },
-              ye = {
+              mW = {
                 attributeType: "XML",
                 repeatCount: "indefinite",
                 dur: "2s"
               };
-            ee.push({
+            WW.push({
               tag: "path",
-              attributes: Fe(Fe({}, He), {}, {
+              attributes: cW(cW({}, OW), {}, {
                 d: "M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z"
               })
             });
-            var be = Fe(Fe({}, ye), {}, {
+            var EW = cW(cW({}, mW), {}, {
                 attributeName: "opacity"
               }),
-              Me = {
+              NW = {
                 tag: "circle",
-                attributes: Fe(Fe({}, He), {}, {
+                attributes: cW(cW({}, OW), {}, {
                   cx: "256",
                   cy: "364",
                   r: "28"
                 }),
                 children: []
               };
-            return ie || Me.children.push({
+            return iW || NW.children.push({
               tag: "animate",
-              attributes: Fe(Fe({}, ye), {}, {
+              attributes: cW(cW({}, mW), {}, {
                 attributeName: "r",
                 values: "28;14;28;28;14;28;"
               })
             }, {
               tag: "animate",
-              attributes: Fe(Fe({}, be), {}, {
+              attributes: cW(cW({}, EW), {}, {
                 values: "1;0;1;1;0;1;"
               })
-            }), ee.push(Me), ee.push({
+            }), WW.push(NW), WW.push({
               tag: "path",
-              attributes: Fe(Fe({}, He), {}, {
+              attributes: cW(cW({}, OW), {}, {
                 opacity: "1",
                 d: "M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z"
               }),
-              children: ie ? [] : [{
+              children: iW ? [] : [{
                 tag: "animate",
-                attributes: Fe(Fe({}, be), {}, {
+                attributes: cW(cW({}, EW), {}, {
                   values: "1;0;0;0;0;1;"
                 })
               }]
-            }), ie || ee.push({
+            }), iW || WW.push({
               tag: "path",
-              attributes: Fe(Fe({}, He), {}, {
+              attributes: cW(cW({}, OW), {}, {
                 opacity: "0",
                 d: "M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z"
               }),
               children: [{
                 tag: "animate",
-                attributes: Fe(Fe({}, be), {}, {
+                attributes: cW(cW({}, EW), {}, {
                   values: "0;0;1;1;0;0;"
                 })
               }]
@@ -3203,35 +3203,35 @@ export const modules = {
               attributes: {
                 class: "missing"
               },
-              children: ee
+              children: WW
             }
           }
         }
       };
-    ! function(ee, ie) {
-      var He = ie.mixoutsTo;
-      mH = ee, lH = {}, Object.keys(SH).forEach((function(ee) {
-        -1 === nH.indexOf(ee) && delete SH[ee]
-      })), mH.forEach((function(ee) {
-        var ie = ee.mixout ? ee.mixout() : {};
-        if (Object.keys(ie).forEach((function(ee) {
-            "function" === typeof ie[ee] && (He[ee] = ie[ee]), "object" === ke(ie[ee]) && Object.keys(ie[ee]).forEach((function(ye) {
-              He[ee] || (He[ee] = {}), He[ee][ye] = ie[ee][ye]
+    ! function(WW, iW) {
+      var OW = iW.mixoutsTo;
+      CO = WW, XO = {}, Object.keys(BO).forEach((function(WW) {
+        -1 === qO.indexOf(WW) && delete BO[WW]
+      })), CO.forEach((function(WW) {
+        var iW = WW.mixout ? WW.mixout() : {};
+        if (Object.keys(iW).forEach((function(WW) {
+            "function" === typeof iW[WW] && (OW[WW] = iW[WW]), "object" === xW(iW[WW]) && Object.keys(iW[WW]).forEach((function(mW) {
+              OW[WW] || (OW[WW] = {}), OW[WW][mW] = iW[WW][mW]
             }))
-          })), ee.hooks) {
-          var ye = ee.hooks();
-          Object.keys(ye).forEach((function(ee) {
-            lH[ee] || (lH[ee] = []), lH[ee].push(ye[ee])
+          })), WW.hooks) {
+          var mW = WW.hooks();
+          Object.keys(mW).forEach((function(WW) {
+            XO[WW] || (XO[WW] = []), XO[WW].push(mW[WW])
           }))
         }
-        ee.provides && ee.provides(SH)
+        WW.provides && WW.provides(BO)
       }))
-    }([bH, Vy, ay, cy, xy, hy, {
+    }([EO, dm, em, gm, Dm, rm, {
       mixout: function() {
         return {
           dom: {
             unwatch: function() {
-              gy(), Ny = !0
+              Km(), zm = !0
             }
           }
         }
@@ -3239,47 +3239,47 @@ export const modules = {
       hooks: function() {
         return {
           bootstrap: function() {
-            Wy(jH("mutationObserverCallbacks", {}))
+            ym(RO("mutationObserverCallbacks", {}))
           },
           noAuto: function() {
-            dy && dy.disconnect()
+            Ym && Ym.disconnect()
           },
-          watch: function(ee) {
-            var ie = ee.observeMutationsRoot;
-            Ny ? Oy() : Wy(jH("mutationObserverCallbacks", {
-              observeMutationsRoot: ie
+          watch: function(WW) {
+            var iW = WW.observeMutationsRoot;
+            zm ? Sm() : ym(RO("mutationObserverCallbacks", {
+              observeMutationsRoot: iW
             }))
           }
         }
       }
-    }, ry, ib, Hb, {
+    }, Qm, OE, mE, {
       hooks: function() {
         return {
-          parseNodeAttributes: function(ee, ie) {
-            var He = ie.getAttribute("data-fa-symbol"),
-              ye = null !== He && ("" === He || He);
-            return ee.symbol = ye, ee
+          parseNodeAttributes: function(WW, iW) {
+            var OW = iW.getAttribute("data-fa-symbol"),
+              mW = null !== OW && ("" === OW || OW);
+            return WW.symbol = mW, WW
           }
         }
       }
     }], {
-      mixoutsTo: rH
+      mixoutsTo: FO
     });
-    var yb = rH.noAuto,
-      bb = rH.config,
-      Mb = rH.library,
-      Kb = rH.dom,
-      Ub = rH.parse,
-      Fb = rH.findIconDefinition,
-      Jb = rH.toHtml,
-      ob = rH.icon,
-      Rb = rH.layer,
-      kb = rH.text,
-      qb = rH.counter
+    var EE = FO.noAuto,
+      NE = FO.config,
+      PE = FO.library,
+      LE = FO.dom,
+      cE = FO.parse,
+      wE = FO.findIconDefinition,
+      tE = FO.toHtml,
+      ZE = FO.icon,
+      xE = FO.layer,
+      lE = FO.text,
+      AE = FO.counter
   },
-  7402: ee => {
-    ee.exports = JSON.parse('{"description":"The iconic font, CSS, and SVG framework","keywords":["font","awesome","fontawesome","icon","svg","bootstrap"],"homepage":"https://fontawesome.com","bugs":{"url":"https://github.com/FortAwesome/Font-Awesome/issues"},"author":"The Font Awesome Team (https://github.com/orgs/FortAwesome/people)","repository":{"type":"git","url":"https://github.com/FortAwesome/Font-Awesome"},"engines":{"node":">=6"},"dependencies":{"@fortawesome/fontawesome-common-types":"7.2.0"},"version":"7.2.0","name":"@fortawesome/fontawesome-svg-core","main":"index.js","module":"index.mjs","jsnext:main":"index.mjs","style":"styles.css","license":"MIT","types":"./index.d.ts","exports":{".":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","style":"./styles.css","default":"./index.js"},"./index":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./index.js":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./plugins":{"types":"./index.d.ts","module":"./plugins.mjs","import":"./plugins.mjs","default":"./plugins.mjs"},"./import.macro":"./import.macro.js","./import.macro.js":"./import.macro.js","./styles":"./styles.css","./styles.css":"./styles.css","./package.json":"./package.json"},"sideEffects":["./index.js","./index.mjs","./styles.css"]}')
+  7773: WW => {
+    WW.exports = JSON.parse('{"description":"The iconic font, CSS, and SVG framework","keywords":["font","awesome","fontawesome","icon","svg","bootstrap"],"homepage":"https://fontawesome.com","bugs":{"url":"https://github.com/FortAwesome/Font-Awesome/issues"},"author":"The Font Awesome Team (https://github.com/orgs/FortAwesome/people)","repository":{"type":"git","url":"https://github.com/FortAwesome/Font-Awesome"},"engines":{"node":">=6"},"dependencies":{"@fortawesome/fontawesome-common-types":"7.2.0"},"version":"7.2.0","name":"@fortawesome/fontawesome-svg-core","main":"index.js","module":"index.mjs","jsnext:main":"index.mjs","style":"styles.css","license":"MIT","types":"./index.d.ts","exports":{".":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","style":"./styles.css","default":"./index.js"},"./index":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./index.js":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./plugins":{"types":"./index.d.ts","module":"./plugins.mjs","import":"./plugins.mjs","default":"./plugins.mjs"},"./import.macro":"./import.macro.js","./import.macro.js":"./import.macro.js","./styles":"./styles.css","./styles.css":"./styles.css","./package.json":"./package.json"},"sideEffects":["./index.js","./index.mjs","./styles.css"]}')
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

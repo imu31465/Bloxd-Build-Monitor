@@ -1,0 +1,344 @@
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.Smp2PathCard {
+  animation: Smp2CardIn .35s ease-out;
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-left: .3rem solid #ffb914;
+  border-radius: 0;
+  color: #fff;
+  margin: .5rem .5rem .4rem auto;
+  padding: .55rem .7rem .6rem;
+  pointer-events: none;
+  width: 15rem
+}
+
+.Smp2PathCard .Smp2PathTitle {
+  color: #fcd373;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase
+}
+
+.Smp2PathCard .Smp2PathSegments {
+  display: flex;
+  gap: .2rem;
+  margin: .35rem 0 .45rem
+}
+
+.Smp2PathCard .Smp2PathSegments .Smp2PathSegment {
+  background-color: hsla(0, 0%, 95%, .1);
+  flex: 1 1;
+  height: .3rem;
+  transition: background .3s
+}
+
+.Smp2PathCard .Smp2PathSegments .Smp2PathSegment.Filled {
+  background-color: #ffb914
+}
+
+.Smp2PathCard .Smp2PathSegments .Smp2PathSegment.Current {
+  animation: Smp2Pulse 1.4s ease-in-out infinite;
+  background-color: #b6830e
+}
+
+.Smp2PathCard .Smp2PathStep {
+  align-items: center;
+  animation: Smp2StepIn .4s ease-out;
+  display: flex;
+  gap: .5rem
+}
+
+.Smp2PathCard .Smp2PathStep .Smp2PathStepIcon {
+  align-items: center;
+  background-color: rgba(57, 73, 128, .4);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  display: flex;
+  flex: none;
+  height: 2.2rem;
+  justify-content: center;
+  width: 2.2rem
+}
+
+.Smp2PathCard .Smp2PathStep .Smp2PathStepIcon .ItemWrapper {
+  height: 1.8rem;
+  width: 1.8rem
+}
+
+.Smp2PathCard .Smp2PathStep .Smp2PathStepText {
+  flex: 1 1;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2
+}
+
+.Smp2PathCard .Smp2PathStep .Smp2PathStepProgress {
+  color: #fcd373;
+  font-size: .95rem;
+  font-weight: 800
+}
+
+.Smp2RewardCard {
+  align-items: center;
+  animation: Smp2RewardIn .45s cubic-bezier(.2, 1.4, .4, 1), Smp2RewardOut .4s ease-in calc(var(--smp2-reward-show-ms) - .4s) forwards;
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #ffb914;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  display: flex;
+  gap: .8rem;
+  left: 50%;
+  max-width: 90vw;
+  min-width: 18rem;
+  padding: .7rem 1.1rem .7rem .8rem;
+  pointer-events: none;
+  position: absolute;
+  top: 12%;
+  transform: translateX(-50%);
+  z-index: 7
+}
+
+.Smp2RewardCard .Smp2RewardBurst {
+  animation: Smp2Burst .9s ease-out;
+  background: radial-gradient(circle closest-side, #fcd373, transparent);
+  height: 3rem;
+  left: .8rem;
+  margin-top: -1.5rem;
+  position: absolute;
+  top: 50%;
+  width: 3rem
+}
+
+.Smp2RewardCard .Smp2RewardIcon {
+  height: 3rem;
+  position: relative;
+  width: 3rem
+}
+
+.Smp2RewardCard .Smp2RewardIcon .ItemWrapper {
+  height: 3rem;
+  width: 3rem
+}
+
+.Smp2RewardCard .Smp2RewardText {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem
+}
+
+.Smp2RewardCard .Smp2RewardText strong {
+  color: #fcd373;
+  font-size: 1.25rem
+}
+
+.Smp2RewardCard .Smp2RewardText span {
+  font-size: .95rem
+}
+
+@keyframes Smp2CardIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem)
+  }
+}
+
+@keyframes Smp2StepIn {
+  0% {
+    opacity: 0;
+    transform: translateY(.4rem)
+  }
+}
+
+@keyframes Smp2Pulse {
+  50% {
+    background-color: #ffb914
+  }
+}
+
+@keyframes Smp2RewardIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(.7)
+  }
+}
+
+@keyframes Smp2RewardOut {
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-.8rem)
+  }
+}
+
+@keyframes Smp2Burst {
+  0% {
+    opacity: 1;
+    transform: scale(.3)
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(2.6)
+  }
+}
+
+@media(orientation:portrait)and (max-width:500px) {
+  .Smp2PathCard {
+    padding: .35rem .45rem;
+    width: 9.5rem
+  }
+
+  .Smp2PathCard .Smp2PathStep {
+    gap: .35rem
+  }
+
+  .Smp2PathCard .Smp2PathStep .Smp2PathStepIcon {
+    height: 1.6rem;
+    width: 1.6rem
+  }
+
+  .Smp2PathCard .Smp2PathStep .Smp2PathStepIcon .ItemWrapper {
+    height: 1.3rem;
+    width: 1.3rem
+  }
+
+  .Smp2PathCard .Smp2PathStep .Smp2PathStepText {
+    font-size: .8rem
+  }
+
+  .Smp2RewardCard {
+    min-width: 0;
+    width: 85vw
+  }
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .Smp2PathCard {
+    margin-bottom: .2rem;
+    padding: .25rem .4rem;
+    width: max(12rem, 130px)
+  }
+
+  .Smp2PathCard .Smp2PathSegments,
+  .Smp2PathCard .Smp2PathTitle {
+    display: none
+  }
+
+  .Smp2PathCard .Smp2PathStep .Smp2PathStepIcon {
+    height: 1.5rem;
+    width: 1.5rem
+  }
+
+  .Smp2PathCard .Smp2PathStep .Smp2PathStepIcon .ItemWrapper {
+    height: 1.2rem;
+    width: 1.2rem
+  }
+
+  .Smp2PathCard .Smp2PathStep .Smp2PathStepText {
+    font-size: max(.8rem, 10px)
+  }
+
+  .Smp2RewardCard {
+    min-width: 14rem;
+    top: 6%
+  }
+}

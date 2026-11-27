@@ -1,37 +1,37 @@
 export const id = 194;
 export const ids = [194];
 export const modules = {
-  9779: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      pageBody: () => ye
+  10261: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const ye = {
-      whatIs: ["A string of unique islands, a mysterious land and 114 fish just waiting to be caught. Bloxd Fishing is a relaxing fishing simulator where you explore, catch fish and slowly uncover the secrets of the islands. Take it at your own pace. It's free, there's nothing to install, and you can be fishing in seconds."],
-      howToPlay: ["Cast your line and wait for a bite. When something bites, a catch minigame kicks in. Some fish need a well-timed click, while others use a progress bar or a gravity bar. Win the minigame and the fish is yours. Every fish has its own weight and rarity, going from Common all the way up to Mythic. Sell your catches for coins and spend them on better rods, boats and potions.", "There are 5 islands to explore: Sunhaven, Gloomtide, Eldermire, Embertide and Frostfell. Each one has its own fishing spots, like the Moonpool, Draugr Bay, The Abyss and Embertide Volcano. Unlock new islands with your coins and use the shop to hop between them. Every fish you catch goes in your Bestiary, and you can show off your favourite on your nametag. Keep an eye out for luck events too. They boost your chances of a rare catch for a while."],
-      features: ["5 Islands and Lots of Fishing Spots to Explore", "114 Fish Species to Catch", "7 Rarities, from Common to Mythic", "3 Different Catch Minigames", "16 Fishing Rods, from the Rusty Rod to the Mythic Rod", "Boats, plus Luck Potions in Four Strengths", "A Bestiary to Complete", "Show Off Your Best Fish on Your Nametag", "Random Luck Events"],
-      tips: ["Sell your early catches and save up for a better rod", "Check the rod shops on each island for new rods", "Some spots don't allow every rod, so check before you cast", "Drink a Luck Potion before you fish if you're after rare catches", "Wait untill a luck event to give yourself the best shot at a Mythic", "Your Bestiary shows you which fish you're still missing", "Get a boat if you want to head out on the water"],
-      similarGames: ["greenville", "skyblock", "oneBlock", "classic"],
+    const mW = {
+      whatIs: ["When the sun goes down, the monsters come out. Bloxd Day & Night Survival is a survival mode built around the clock. You mine, craft and build while it's light, then protect your base once it gets dark. Light up your world with torches and see if you can make it through the night. Choose this over regular Survival if you want torches, night-time danger and a Days Survived leaderboard to be the main event. So, how many days can you last?"],
+      howToPlay: ["Use the daylight to gather resources, craft tools and build somewhere safe. Time goes from dawn to day, then dusk to night. The game announces the time, and there's a progress bar showing how far through the cycle you are. Once dusk hits, get ready. At night it gets properly dark and only hostile mobs spawn, right on the surface. That includes the Draugr Huntress and the rare Draugr Warper.", "Torches are your best defence, because hostile mobs won't spawn near light. You get a few free torches when you first join, so stick them around your base. When morning comes, any hostile mobs still out in the sunlight start to burn. Mobs in caves or under cover are fine, though, so watch yourself underground. Sleep in a bed to skip the night, and keep surviving to climb the Days Survived leaderboard."],
+      features: ["Dawn, Day, Dusk and Night Cycle with Time Announcements", "Hostile Mobs That Spawn on the Surface at Night", "Torches to Keep Monsters Away from Your Base", "Free Torches When You First Join", "Sleep in a Bed to Skip the Night", "Days Survived and Days Played Leaderboard", "Mining, Crafting, Base Building and PvP", "Free Private Servers with Day & Night Settings"],
+      tips: ["Get torches up around your base before dusk", "Use the free torches you start with straight away", "Keep an eye on the progress bar so the night doesn't sneak up on you", "Not ready to fight? Stay inside at night", "Wait for sunrise, because monsters left out in the open start to burn", "Careful in caves. Mobs underground don't burn", "Guard your base with Protectors, which you make from diamonds", "In public lobbies, build away from spawn, since the area near spawn resets every few hours"],
+      similarGames: ["classic_survival", "classic", "classic_survivalGuns", "skyblock"],
       faq: [{
-        question: "What is Bloxd Fishing?",
-        answer: "A relaxing fishing game. You explore 5 islands, win catch minigames to reel in fish and fill your Bestiary with rare species."
+        question: "What is Bloxd Day and Night Survival?",
+        answer: "A survival mode on Bloxd.io with a day-night cycle. You build and explore during the day, then use torches to protect your base from the monsters that come out at night."
       }, {
-        question: "How many fish are in Bloxd Fishing?",
-        answer: "114 fish species, spread across 5 islands, in 7 rarities from Common to Mythic."
+        question: "How do I stop monsters spawning near my base in Bloxd?",
+        answer: "Torches. Hostile mobs won't spawn near light, so light up your base and the area around it before night falls."
       }, {
-        question: "How do I catch Mythic fish in Bloxd Fishing?",
-        answer: "Use a better rod, drink a Luck Potion and fish during luck events. Then cross your fingers!"
+        question: "How do I skip the night in Day & Night Survival?",
+        answer: "Sleep in a bed. By default the night gets skipped once more than half the players are asleep. Private-server owners can change that or turn sleeping off."
       }, {
-        question: "Where can I get better rods?",
-        answer: "Sell your fish for coins, then buy new rods from the rod shops on the islands."
+        question: "What happens to monsters when the sun comes up?",
+        answer: "Hostile mobs standing in direct sunlight start to burn. Mobs in caves or under cover are safe, so stay alert if you're underground."
       }, {
-        question: "How do I travel between islands?",
-        answer: "You start on Sunhaven. Spend coins to unlock Gloomtide, Eldermire, Embertide and Frostfell, and once an island's unlocked, use the shop to travel there."
+        question: "How are Days Survived counted?",
+        answer: "One day is a full cycle of day, dusk, night and dawn. Days Survived is how many days in a row you've stayed alive, and it resets when you die. Days Played keeps going no matter what. You'll see both on the lobby leaderboard."
       }, {
-        question: "What are the catch minigames?",
-        answer: "There are three: a timed click, a progress bar and a gravity bar. Each fish uses one of them."
+        question: "Can I change the day and night settings on my own server?",
+        answer: "Yes. On your free private server you can pause the cycle, set the time, pick how many players need to sleep and turn the leaderboard on or off, plus a few other options."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);

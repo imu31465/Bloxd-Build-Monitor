@@ -1,37 +1,37 @@
 export const id = 202;
 export const ids = [202];
 export const modules = {
-  9827: (ee, ie, He) => {
-    He.r(ie), He.d(ie, {
-      pageBody: () => ye
+  10296: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const ye = {
-      whatIs: ["You might not be the only one checking in. Bloxd Horror Hotel sends you down an infinite hallway of hotel rooms, collecting items so you can level up and decorate a room of your own. Anyone can play for free, straight from a browser tab. Just be careful what's waiting behind the doors..."],
-      howToPlay: ["Your stay starts in a tiny room, so first things first: go and complain to the manager. The first upgrade is free. After that, upgrades cost items, beginning with a red bed you'll have to \"borrow\" from someone else's room. Head down the corridor to find what you need. Some doors open into bedrooms with strange guests. Others lead to forests, mines, mazes and buried treasure.", "Got the items? Use the home button on the left to fast travel back. You can keep upgrading all the way to level 22, change your room colours and invite friends round. You also get to decide whether PvP, visitors and editors are allowed in your room. Play nicely, though. Take down too many players in a row and the Angry Hotel Manager steps in, and you won't like what happens next. Oh, and if you hear a sudden spooky sound, there might be a skinwalker close by."],
-      features: ["An Infinite Hallway of Hotel Rooms to Explore", "Forest, Mining, Maze and Buried Treasure Rooms", "Quirky Guests Who Need Your Help", "Upgrade Your Room All the Way to Level 22", "Pick from a Range of Room Colours", "Invite Friends and Control PvP, Visitors and Editors", "A Creepy Skinwalker and a Secret Room to Find"],
-      tips: ["Talk to the manager first and grab your free room upgrade", "Check what your next upgrade costs, then go looking for those items in other rooms", "Help guests with their requests, like the thirsty guest in the desert room", "Use the home button on the left to fast travel back to your room", "Friends need a high enough room level before you can invite them", "Don't go on a streak of attacking other players, or the Angry Hotel Manager will definately step in", "Keep exploring. There's always another room further down the hall"],
-      similarGames: ["ninetyNineNights", "containmentBreach", "backrooms", "murderMystery"],
+    const mW = {
+      whatIs: ["Build machines on your own floating island and watch them work! That's Bloxd Build a Factory 2 in one line. You mine ore, link your machines up with conveyor belts and turn a couple of drills into a massive, fully automated factory. Never played a factory game before? Don't worry, it's easy to pick up. The original Build a Factory is a race to launch a rocket before a shared world resets. This one's about growing your own island."],
+      howToPlay: ["Use your Workbench to make a Machine Bench. Build a Burner Drill, stick it on an ore Deposit and give it fuel, and it starts mining by itself. Belt the ore into a Crusher to turn it into Grit (that's crushed ore), then into a Smelter to make bars. From there you can press bars into plates, spin Copper Bars into wire and make parts like Motors at the Parts Bench. Give your Core the parts it asks for and it moves up a tier, which unlocks better machines.", "For power you've got Generators, Solar Panels and Volt Engines. Drop down into the Wilds below your island to find rare ore, open ruin chests for Salvage and break fallen comets, then head home and build bigger. When you log off, your island pauses and picks up right where it left off when you're back."],
+      features: ["Your Own Floating Factory Island", "Conveyor Belts, Fast Belts, Splitters, Sorting Gates, Belt Lifts and Tunnels", "Drills, Crushers, Smelters, Presses, Wire Mills, Assemblers and More", "Tier Up Your Core to Unlock New Machines, Then Build the Star Spire", "Power from Generators, Solar Panels and Volt Engines", "Explore the Wilds for Rare Ore, Ruin Chests and Comets", "Fill Star Forge Orders for Deposit Seeds and Comet Cores", "Build Several Islands, Play Co-op with Friends or Visit Theirs"],
+      tips: ["Use Deposit Seeds to grow Deposits that never run out", "Crush ore into Grit before you smelt it and you'll get twice the bars", "Teach a Sorting Gate an item and it'll send that item down its own belt", "A Power Coupler makes Crushers, Smelters and Alloy Kilns twice as fast", "Belt spare items into a Storage Silo so your belts don't jam", "Carry an Ore Lens in the Wilds and it'll point you to the nearest rare ore"],
+      similarGames: ["survivalFactory", "skyblock", "oneBlock", "classic_survival"],
       faq: [{
-        question: "What is Bloxd Horror Hotel?",
-        answer: "A spooky exploration game. You wander an endless hotel, collect items from other rooms and use them to upgrade and decorate your own."
+        question: "What is Build a Factory 2 on Bloxd?",
+        answer: "An idle factory builder. You build machines on your own floating island, connect them with conveyor belts and let them make everything for you."
       }, {
-        question: "Does Horror Hotel really have infinite rooms?",
-        answer: "It does. The hallway just keeps going, with bedrooms, forests, mines, mazes and buried treasure rooms to find. There's even a secret room hidden somewhere."
+        question: "Is Build a Factory 2 an idle factory game?",
+        answer: "Partly. Once it's set up, your factory runs by itself while you explore the Wilds or plan your next build. It pauses while you're offline and carries on where it stopped when you come back."
       }, {
-        question: "How do I upgrade my room in Horror Hotel?",
-        answer: "Talk to the manager. The first upgrade's free, then each level costs items you find around the hotel, starting with a red bed."
+        question: "How do I unlock new machines in Build a Factory 2?",
+        answer: "Tier up your Core by giving it the parts it asks for, like Motors and, later on, Logic Boards. Every new tier unlocks more machines and items."
       }, {
-        question: "What is the max room level in Horror Hotel?",
-        answer: "Level 22. Once you hit it, your room is maxed out."
+        question: "What's the best way to power my factory?",
+        answer: "You've got a few options. Burn Coal or Charcoal in a Generator, build Solar Panels (they keep running at night at half power), or run Volt Engines on Voltite Cells for loads of power. Add Charge Vaults to store more."
       }, {
-        question: "Can friends visit my hotel room?",
-        answer: "Yes, as long as their room level is high enough. You can also choose whether to allow visitors, editors and PvP."
+        question: "What are the Wilds?",
+        answer: "The land below your island. Drop down to mine rare ore, loot ruin chests for Salvage, explore the Old Works and break fallen comets for Comet Cores."
       }, {
-        question: "Is Horror Hotel scary?",
-        answer: "A bit! It's spooky, with odd guests, eerie sounds and a skinwalker lurking about. It's creepy rather than gory, and you can explore at your own pace."
+        question: "Can friends help build my factory?",
+        answer: "Definitely. Invite friends to a shared co-op island, or use /visit to have a look around other players' islands."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const ee in modules) Object.freeze(modules[ee]);
+for (const WW in modules) Object.freeze(modules[WW]);
